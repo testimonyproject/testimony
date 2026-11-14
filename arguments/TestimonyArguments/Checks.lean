@@ -118,7 +118,7 @@ info: every entry is a tagged definition, and every key names one: 2404 definiti
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 1979 definitions, 214 entries
+info: every entry is a tagged definition, and every key names one: 1984 definitions, 214 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments

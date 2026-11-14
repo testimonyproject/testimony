@@ -20,7 +20,8 @@ Every party grants what the texts say. Dort says that believers "grieve the Holy
 Spirit" (V, article 5); Calvin, on Ephesians 4:30, that "we grieve him when we
 do not follow his guidance"; the Formula of Concord, that "those who always
 resist the Holy Ghost … are not converted". So the step from the texts to "the
-Spirit's work is resisted" is rated `consensus`.
+Spirit's work is resisted" is rated *consensus*, the highest rating: accepted
+across traditions.
 
 The dispute is the next step, from resistance to the claim that the grace that
 saves can be *finally* refused. "Resist" has two senses. A person can resist for
@@ -52,30 +53,34 @@ unforgivable sin.
 
 ## Two positions between Dort and the Remonstrants
 
-**The Lutherans** of the Formula of Concord (1577) are the reader the closing
-step of the Reformed case did not expect. They hold that conversion is "not only
-in part, but altogether an operation, gift, and present, and work of the Holy
-Ghost alone", and that in it man "does nothing whatever towards it, but only
-suffers what God works in him". That is the third part of sola gratia as Dort
-states it. And they hold that grace can be resisted and lost, which denies the
-second. So the step from "God's work alone" to "grace cannot be finally
-refused" is rated `disputed`, and the Formula is why.
+**The Lutherans** of the Formula of Concord (1577) grant the ground of the
+Reformed case's last step and deny its conclusion. They hold that conversion is
+"not only in part, but altogether an operation, gift, and present, and work of
+the Holy Ghost alone", and that in it man "does nothing whatever towards it, but
+only suffers what God works in him". That is the third part of sola gratia as
+Dort states it. And they deny that grace cannot be refused: "God does not force
+man to become godly", and the perverse will "resists the Holy Ghost, who wishes
+to be efficacious". So the step from "God's work alone" to grace effectual of
+itself, grace that brings about the consent it seeks and so cannot be finally
+refused, is rated *disputed*, and the Formula is why.
 
 **Wesley** holds that "there is a measure of free-will supernaturally restored to
 every man", so that each has "power either to resist or yield to the grace of
 God"; that grace, which "goes before" anything a person does, he calls
-"preventing grace". It is received by faith alone: "Of yourselves cometh neither
-your faith nor your salvation".
+"preventing grace". Faith itself is God's gift: "Of yourselves cometh neither your
+faith nor your salvation". And it is received by faith alone: Wesley defends
+"salvation or justification, by faith only" against the objection that it is
+preaching against holiness (Sermon 1, III.1).
 
 ## The third way
 
 The third way, as it was put to this argument: God gives the one who hears the
-gospel the ability to believe, as Adam and Eve were made able to obey or to eat
-the forbidden fruit (Genesis 2:16–17); the offer of grace is real; and it is
-received by faith alone. Stated that way, it is held by Dort, by the Lutherans
-and by Wesley alike, and it does not decide whether the grace that saves can be
-finally refused: two readings, Dort's and Arminius's, both satisfy it and
-disagree about exactly that (`third_way_leaves_resistibility_open`).
+gospel the ability to believe, as Adam and Eve were made able to stand or to
+fall (Genesis 2:16–17); the offer of grace is real; and it is received by faith
+alone. The reality of the offer is not encoded as a premise, because no party
+here denies it. Stated that way, the third way does not decide whether the grace
+that saves can be finally refused: Dort's reading and Arminius's both satisfy
+it, and disagree about exactly that (`third_way_leaves_resistibility_open`).
 
 What decides it is what kind of help the ability is. Augustine drew the
 distinction. "The aid without which a thing does not come to pass is one thing,
@@ -83,18 +88,20 @@ and the aid by which a thing comes to pass is another." Adam was given the first
 "not that by which it should be brought about that he should persevere, but that
 without which he could not of free will persevere"; the saints are given the
 second, "so that by means of this gift they cannot help persevering" (*On Rebuke
-and Grace*, ch. 34). Read as Adam's kind of help, the third way is Wesley's, and
-it falls to Dort. Read as the saints' kind, it is Dort's, and it falls to the
-Remonstrants (`whatTheAbilityIs`).
+and Grace*, ch. 34). Read as Adam's kind of help, the third way is the reading
+Wesley gives, and it cannot be held together with Dort's position. Read as the
+saints' kind, it is Dort's reading, and it cannot be held together with the
+Remonstrants'. Each break comes at a step or reading rated *disputed*, so
+neither shows the other side right (`whatTheAbilityIs`).
 
-## Each position, concluding what it holds
+## Each position, with its own conclusion
 
-The packages in `Packages` are asked for sola gratia. Weighed against one
-another, each position concludes what it holds, as these do.
+Each position below is stated with the conclusion its own sources draw, not with
+sola gratia, so that it can be weighed against the others.
 
-## Each position holds together
+## Each position can be held without contradiction
 
-Every position weighed below has a model.
+For each position, a reading is written down that makes every premise true.
 
 
 ## How this is checked
@@ -120,8 +127,10 @@ Grounded in scripture alone: Romans 11:6 — if it is by grace, it is no longer 
 <a id="tridentinePosition"></a>
 **`tridentinePosition`** — Trent (Session VI, canon 4)
 
-Trent's position, concluding what it holds: salvation by grace, the will not
-passive, grace not effectual of itself, and not by faith alone.
+Trent's position on the Molinist reading of canon 4: salvation by grace, the
+will not passive, grace not effectual of itself, and not by faith alone. The
+Thomists, who read the canon as compatible with grace effectual of itself, are
+cited against its steps and are not a position here.
 
 <div class="testimony-derivation">
 
@@ -142,8 +151,8 @@ Grounded in scripture alone: Romans 11:6 — if it is by grace, it is no longer 
 <a id="remonstrantPosition"></a>
 **`remonstrantPosition`** — Remonstrant (the Five Articles, 1610)
 
-The Remonstrants' position, concluding what it holds: salvation by grace, and
-grace not effectual of itself.
+The Remonstrants' position: salvation by grace, and a grace that can be
+resisted to the end.
 
 <div class="testimony-derivation">
 
@@ -170,8 +179,8 @@ Grounded in scripture alone: Romans 11:6 — if it is by grace, it is no longer 
 <a id="lutheranPosition"></a>
 **`lutheranPosition`** — Lutheran (the Formula of Concord)
 
-The Lutherans' position, concluding what it holds: salvation by grace, the
-will passive in conversion, grace that can be refused, and faith alone.
+The Lutherans' position: salvation by grace, the will passive in conversion,
+the grace that converts resistible, and faith alone.
 
 <div class="testimony-derivation">
 
@@ -196,8 +205,8 @@ Grounded in scripture alone: Romans 11:6 — if it is by grace, it is no longer 
 <a id="wesleyanPosition"></a>
 **`wesleyanPosition`** — Wesleyan (preventing grace)
 
-Wesley's position, concluding what it holds: salvation by grace, grace that
-can be refused, and faith alone.
+Wesley's position: salvation by grace, a grace that goes before and can be
+refused, and faith alone.
 
 <div class="testimony-derivation">
 
@@ -232,7 +241,7 @@ theorem graceCase_establishes : Establishes graceCase
 <a id="tridentinePosition_establishes"></a>
 **`tridentinePosition_establishes`**
 
-Trent's premises deliver what Trent holds.
+Trent's premises, on the Molinist reading of canon 4, deliver that position.
 
 ```lean
 theorem tridentinePosition_establishes : Establishes tridentinePosition
@@ -242,7 +251,7 @@ theorem tridentinePosition_establishes : Establishes tridentinePosition
 <a id="remonstrantPosition_establishes"></a>
 **`remonstrantPosition_establishes`**
 
-The Remonstrants' premises deliver what they hold.
+The Remonstrants' fourth article delivers grace that can be refused.
 
 ```lean
 theorem remonstrantPosition_establishes : Establishes remonstrantPosition
@@ -252,10 +261,11 @@ theorem remonstrantPosition_establishes : Establishes remonstrantPosition
 <a id="lutheranPosition_establishes"></a>
 **`lutheranPosition_establishes`**
 
-**The Lutheran position holds together, and reaches what it holds**: the
-will passive in conversion, and the grace that does it resistible. Two parts
-that the Reformed closing step joined, held apart by a confession. It does not
-show the Lutherans right, only that their premises deliver their position.
+**The Lutheran premises reach the Lutheran position**: the will passive in
+conversion, and the grace that converts resistible. The Reformed case joins the
+two; the Formula of Concord holds them apart. This does not show the Lutherans
+right, only that their premises deliver their position; that it can be held
+without contradiction is `lutheranPosition_is_satisfiable`.
 
 ```lean
 theorem lutheranPosition_establishes : Establishes lutheranPosition
@@ -265,8 +275,8 @@ theorem lutheranPosition_establishes : Establishes lutheranPosition
 <a id="wesleyanPosition_establishes"></a>
 **`wesleyanPosition_establishes`**
 
-**Wesley's premises reach what Wesley holds**: grace that goes before,
-can be refused, and is received by faith alone.
+Wesley's premises reach grace that goes before, can be refused, and is
+received by faith alone.
 
 ```lean
 theorem wesleyanPosition_establishes : Establishes wesleyanPosition
@@ -276,8 +286,8 @@ theorem wesleyanPosition_establishes : Establishes wesleyanPosition
 <a id="thirdWay_establishes"></a>
 **`thirdWay_establishes`**
 
-**The third way reaches what it says**: salvation by grace, received by
-faith alone.
+The third way's premises reach salvation by grace, received by faith
+alone.
 
 ```lean
 theorem thirdWay_establishes : Establishes thirdWay
@@ -304,7 +314,7 @@ made able to stand or fall, the ability to believe given by God, faith alone,
 and that grace which can be finally refused is not effectual of itself. Whether
 the grace that saves is effectual of itself neither follows nor fails. Arminius's
 reading satisfies every premise and denies it; Dort's satisfies every premise and
-holds it. One fact: the third way, as stated, neither blocks sola gratia nor
+holds it. So the third way, as stated, neither blocks sola gratia nor
 establishes it.
 
 ```lean
@@ -473,8 +483,9 @@ Grounded in scripture alone: Romans 11:6 — if it is by grace, it is no longer 
 <a id="thirdWayAsAidWithoutWhich_is_satisfiable"></a>
 **`thirdWayAsAidWithoutWhich_is_satisfiable`**
 
-**The first reading is fair**: the third way, read as giving Adam's kind of
-help, can be held without contradiction. It is Wesley's position.
+The third way, read as giving Adam's kind of help, can be held without
+contradiction: Arminius's reading satisfies it, and it is the reading Wesley
+gives.
 
 ```lean
 theorem thirdWayAsAidWithoutWhich_is_satisfiable : Satisfiable
@@ -485,8 +496,8 @@ theorem thirdWayAsAidWithoutWhich_is_satisfiable : Satisfiable
 <a id="thirdWayAsAidByWhich_is_satisfiable"></a>
 **`thirdWayAsAidByWhich_is_satisfiable`**
 
-**The second reading is fair**: the third way, read as giving the saints'
-kind of help, can be held without contradiction. It is Dort's position.
+The third way, read as giving the saints' kind of help, can be held without
+contradiction: Dort's reading satisfies it, and it is the reading Dort gives.
 
 ```lean
 theorem thirdWayAsAidByWhich_is_satisfiable : Satisfiable
@@ -521,11 +532,13 @@ theorem dort_does_not_reach_the_saints_kind : Satisfiable (reformed.premises
 **`whereAdamsKindFalls`**
 
 **Why Dort stands against the third way, read as Adam's kind of help.** The
-crux is Dort's step from God's work alone to grace that cannot be finally
-refused, which the Lutherans dispute. With the Romans strand granted, it breaks
-the reading at its three premises: the ability given, the reading of it as a
-help that can be refused, and the step every party grants, that grace which can
-be finally refused is not effectual of itself.
+crux is Dort's step from God's work alone to grace effectual of itself, that is,
+grace that brings about the consent it seeks and so cannot be finally refused;
+the Lutherans dispute it. With the Romans strand granted, the reading of Romans
+9:16 as being about God's mercy in saving, the crux breaks the third way at
+three of its premises: the ability given, the reading of it as a help that can
+be refused, and the step every party grants, that grace which can be finally
+refused is not effectual of itself.
 
 **Why *Reformed (the Canons of Dort)* stands against *The third way (an ability given, received by faith), read as the help without which a person cannot believe, Adam's kind*.**
 
@@ -545,9 +558,10 @@ be finally refused is not effectual of itself.
 **Why the Remonstrants stand against the third way, read as the saints' kind
 of help.** The crux is the step every party grants, that grace which can be
 finally refused is not effectual of itself. With the Remonstrants' reading of
-Acts 7:51 granted, it breaks the reading at its two premises: the ability given,
-and the reading of it as a help that brings believing about. The crux is cheap;
-what the break rests on is the Remonstrants' reading, which Dort denies.
+Acts 7:51 granted, it breaks the third way at two of its premises: the ability
+given, and the reading of it as a help that brings believing about. Every party
+grants that step, so what the break really rests on is the Remonstrants' reading
+of Acts 7:51, which Dort denies.
 
 **Why *Remonstrant (the Five Articles, 1610)* stands against *The third way (an ability given, received by faith), read as the help by which a person believes, the saints' kind*.**
 
@@ -572,14 +586,16 @@ way's: God gives the one who hears the gospel the ability to believe, as Adam wa
 made able to stand or to fall.
 
 Read as Adam's kind of help, the help "without which" a person cannot believe,
-it is Wesley's position. The Remonstrants hold it with them, and it falls to
-Dort, at Dort's step from God's work alone to grace that cannot be finally
-refused, which is rated `disputed` because the Lutherans grant its ground and
-deny its conclusion.
+it is the reading Wesley gives, and the Remonstrants can hold it without
+contradiction. It cannot be held together with Dort's position. The break comes
+at Dort's step from God's work alone to grace effectual of itself, and that step
+is rated *disputed*, because the Lutherans grant its ground and deny its
+conclusion; so the break does not show Dort right.
 
-Read as the saints' kind, the help "by which" a person believes, it is Dort's.
-Dort holds it with it, and it falls to the Remonstrants, at their reading of
-Acts 7:51, which is rated `disputed`.
+Read as the saints' kind, the help "by which" a person believes, it is Dort's
+reading, and Dort can hold it without contradiction. It cannot be held together
+with the Remonstrants' position. The break rests on their reading of Acts 7:51,
+which is rated *disputed* too.
 
 Each reading is fair: the third way read either way can be held without
 contradiction. Which reading its holder means is not something the dilemma

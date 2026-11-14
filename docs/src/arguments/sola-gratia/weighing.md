@@ -13,20 +13,32 @@ computed from their premises and checked by the kernel.
 
 ## How to read the verdicts
 
-- **Defeats.** One position contradicts another (it denies one of the other's
-  premises, its conclusion, or a claim it derives on the way) and is not the
-  weaker of the two. A defeat that runs both ways is a *standoff*.
 - **Weakest link.** A position is only as strong as its least-supported premise
   or step. What every party holds rests on Romans 11:6 and a step rated
-  `consensus`. Every other position rests on at least one reading or step rated
-  `disputed`, the lowest rating, so no rating breaks a standoff between them.
-- **Forced.** Accepted however every standoff is resolved.
-- **Can be defended.** Held by some consistent position that answers every
-  attack on its members, by itself or through an ally.
+  *consensus*, accepted across traditions. Every other position rests on at
+  least one reading or step rated *disputed*, the lowest rating, so no rating
+  breaks a standoff between them.
+- **Defeats.** One position contradicts another (it denies one of the other's
+  premises, its conclusion, or a claim it derives on the way), and its weakest
+  link is not rated below the other's. A defeat that runs both ways is a
+  *standoff*.
+- **Settled before any choice.** What prevails once every unanswered attack is
+  taken into account, before any standoff is decided either way.
+- **Can be defended.** Held by some consistent group of positions that answers
+  every attack on its members, by itself or through an ally. Such a group that
+  no further party can join is a *maximal defensible position*.
+- **Forced.** Held in every maximal defensible position, however the standoffs
+  are resolved. A party is shown not forced by naming a maximal defensible
+  position that does not hold it.
+
+Dort's position here does not carry faith alone: the Reformed case is stated
+from Ephesians 2 and Romans 9, and sola fide is an argument of its own. So Dort
+and Trent are never set against each other over it; they stand off over the
+will's passivity and grace effectual of itself.
 
 ## What the weighing found
 
-Only what every party holds is forced: salvation is by grace
+Only what every party holds is settled before any choice: salvation is by grace
 (`only_grace_prevails`). Everything else is in a standoff with something.
 
 - **Dort stands off against every party that denies part of sola gratia:**
@@ -37,20 +49,22 @@ Only what every party holds is forced: salvation is by grace
   which Trent's ninth canon condemns; with the Lutherans also over the will's
   passivity.
 - **The Remonstrants, the Lutherans, Wesley and the objection do not defeat one
-  another.** They agree that the grace that saves can be finally refused, and
-  differ on what this dispute does not weigh.
+  another.** They agree that the grace that saves can be finally refused. The
+  Lutherans also hold the will passive; the Remonstrants and Wesley are not
+  encoded with a view on that, so nothing here sets them against each other.
 - **The third way is attacked only by Trent**, and only over faith alone. It
   takes no side between Dort and Wesley, and so it can be defended with either:
   with Dort, against Trent (`third_way_defensible_with_dort`); and with the
   Remonstrants, the Lutherans and Wesley, against both Dort and Trent
-  (`third_way_defensible_with_wesley`). That is the dispute's form of what the
-  dilemma over the ability God gives shows: the third way, as stated, has not
-  yet chosen.
+  (`third_way_defensible_with_wesley`). The dilemma found the same thing: until
+  the third way says which kind of help God gives, it has taken neither side.
+- **Trent can be defended with the Remonstrants and the objection**, which agree
+  with it that grace can be resisted, against Dort.
 
-Every party but the first can be defended and none is forced. What would move
-that is a rating: each standoff rests on readings and steps rated `disputed`,
-and a new, cited argument that one side's reading survives what the other side
-says against it could move a rating, and so the verdict.
+Every party can be defended, and only the first is forced: each of the others is
+left out of some maximal defensible position. Each standoff rests on readings
+and steps rated *disputed*, so the verdict moves only if a new, cited argument
+moves one of those ratings.
 
 
 ## How this is checked
@@ -121,9 +135,9 @@ theorem solaGratiaDispute_defeats : ∀ (i j : Party), solaGratiaDispute.defeats
 <a id="graceUnanswered"></a>
 **`graceUnanswered`**
 
-How far the dispute is settled, in one stage. Nothing defeats what every
-party holds, so it comes first, and nothing joins it: every other party has a
-defeater it does not answer.
+How far the dispute is settled before any choice. Nothing defeats what every
+party holds, so it is settled first; and nothing is settled with it, because
+every other party has a defeater that what every party holds does not answer.
 
 **What the dispute forces is exactly *Romans 11:6 (by grace, so not by works)*.**
 
@@ -152,7 +166,7 @@ defeater it does not answer.
 - *Trent (Session VI, canon 4)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
-  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
 - *Remonstrant (the Five Articles, 1610)*, weakest at *disputed*:
@@ -160,12 +174,12 @@ defeater it does not answer.
 - *Lutheran (the Formula of Concord)*, weakest at *disputed*:
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
   - Conversion is God's work alone: God regenerates, and the will does nothing to it — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.90
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Wesleyan (preventing grace)*, weakest at *disputed*:
   - The grace that saves can be finally refused — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *The third way (an ability given, received by faith)*, weakest at *disputed*:
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *The objection from the Spirit's resistance*, weakest at *disputed*:
   - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
@@ -176,7 +190,7 @@ defeater it does not answer.
 **`only_grace_prevails`**
 
 **Only what every party holds prevails: salvation is by grace.** What the
-dispute forces before any choice between rivals is that, and nothing more.
+dispute settles before any choice between rivals is that, and nothing more.
 Nothing defeats it, because every party holds every premise it holds.
 
 What this does not claim: that sola gratia is false, or that any rival is
@@ -217,11 +231,11 @@ answers every attacker itself.
   - an inference step — [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565
   - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
 - *The third way (an ability given, received by faith)*, weakest at *disputed*:
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Trent (Session VI, canon 4)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
-  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
 - *Remonstrant (the Five Articles, 1610)*, weakest at *disputed*:
@@ -229,10 +243,10 @@ answers every attacker itself.
 - *Lutheran (the Formula of Concord)*, weakest at *disputed*:
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
   - Conversion is God's work alone: God regenerates, and the will does nothing to it — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.90
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Wesleyan (preventing grace)*, weakest at *disputed*:
   - The grace that saves can be finally refused — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *The objection from the Spirit's resistance*, weakest at *disputed*:
   - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
@@ -243,7 +257,8 @@ answers every attacker itself.
 **`reformed_defensible`**
 
 **Dort can be defended**, together with what every party holds and the
-third way: some maximal defensible position holds all three.
+third way: some maximal defensible position, one no other party can join,
+holds all three.
 
 ```lean
 theorem reformed_defensible : Framework.CredulouslyAccepted
@@ -285,12 +300,12 @@ they defeat Dort.
 - *Lutheran (the Formula of Concord)*, weakest at *disputed*:
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
   - Conversion is God's work alone: God regenerates, and the will does nothing to it — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.90
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Wesleyan (preventing grace)*, weakest at *disputed*:
   - The grace that saves can be finally refused — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *The third way (an ability given, received by faith)*, weakest at *disputed*:
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *The objection from the Spirit's resistance*, weakest at *disputed*:
   - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
@@ -299,16 +314,16 @@ they defeat Dort.
 - *Trent (Session VI, canon 4)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
-  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
 
 <a id="reformed_not_forced"></a>
 **`reformed_not_forced`**
 
-**Nor is it forced.** A maximal defensible position holds the
-Remonstrants, the Lutherans, Wesley, the third way and the objection, and
-cannot hold Dort with them.
+Nor is Dort forced. A maximal defensible position holds the Remonstrants,
+the Lutherans, Wesley, the third way and the objection, and cannot hold Dort
+with them.
 
 ```lean
 theorem reformed_not_forced : ¬Framework.SkepticallyAccepted
@@ -344,12 +359,12 @@ answer both Dort and Trent.
 - *Lutheran (the Formula of Concord)*, weakest at *disputed*:
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
   - Conversion is God's work alone: God regenerates, and the will does nothing to it — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.90
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Wesleyan (preventing grace)*, weakest at *disputed*:
   - The grace that saves can be finally refused — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *The third way (an ability given, received by faith)*, weakest at *disputed*:
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *The objection from the Spirit's resistance*, weakest at *disputed*:
   - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
@@ -364,7 +379,7 @@ answer both Dort and Trent.
 - *Trent (Session VI, canon 4)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
-  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
 
@@ -383,18 +398,20 @@ theorem lutheran_defensible : Framework.CredulouslyAccepted
 <a id="trentDefended"></a>
 **`trentDefended`**
 
-Why Trent can be defended: it answers every attacker itself.
+Why Trent can be defended: it answers every attacker of its group itself.
 
 ***Trent (Session VI, canon 4)* is accepted on some resolution.**
 
-- A position holding *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)* can be held.
-- None of *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)* defeats another, and each attack on them is answered from among them:
+- A position holding *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* can be held.
+- None of *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* defeats another, and each attack on them is answered from among them:
   - *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
   - *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Lutheran (the Formula of Concord)*.
   - *Wesleyan (preventing grace)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Wesleyan (preventing grace)*.
   - *The third way (an ability given, received by faith)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*.
+  - *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
+  - *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
 
-**What this rests on.** The reasons state 8 defeats and 12 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 10 defeats and 26 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Romans 11:6 (by grace, so not by works)*, weakest at *consensus*:
   - Romans 11:6 — if it is by grace, it is no longer on the basis of works — Rom 11:6
@@ -402,9 +419,126 @@ Why Trent can be defended: it answers every attacker itself.
 - *Trent (Session VI, canon 4)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
-  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+- *Remonstrant (the Five Articles, 1610)*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+- *The objection from the Spirit's resistance*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+  - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
+  - The blasphemy against the Spirit is impenitence to the end: grace refused till death — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.14 a.1; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 74
+  - an inference step — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 43
+- *Reformed (the Canons of Dort)*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves (encoded as a denial, so it ranks disputed) — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 9
+  - an inference step — [Robertson 1931](../../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8; [Calvin 1854](../../bibliography.md#calvin-galatians-ephesians-1854), pp. 228–229
+  - an inference step — [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 600; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+  - an inference step — [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565
+  - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
+- *Lutheran (the Formula of Concord)*, weakest at *disputed*:
+  - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
+  - Conversion is God's work alone: God regenerates, and the will does nothing to it — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.90
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Wesleyan (preventing grace)*, weakest at *disputed*:
+  - The grace that saves can be finally refused — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *The third way (an ability given, received by faith)*, weakest at *disputed*:
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+
+<a id="tridentine_defensible"></a>
+**`tridentine_defensible`**
+
+**Trent can be defended**, with what every party holds, the Remonstrants and
+the objection, which agree with it that grace can be resisted. Only Dort
+attacks the Remonstrants and the objection, and Trent answers Dort.
+
+```lean
+theorem tridentine_defensible : Framework.CredulouslyAccepted
+    solaGratiaDispute.defeats Party.trent
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trentAnsweredByDort"></a>
+**`trentAnsweredByDort`**
+
+Why Trent is not forced: a maximal defensible position holds Dort, and Dort
+defeats Trent.
+
+***Trent (Session VI, canon 4)* is not accepted on every resolution.**
+
+- A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* can be held, and it holds *Reformed (the Canons of Dort)*; *Reformed (the Canons of Dort)* conflicts with *Trent (Session VI, canon 4)*: *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
+- None of *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* defeats another, and each attack on them is answered from among them:
+  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
+  - *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
+  - *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
+  - *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*.
+  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+
+**What this rests on.** The reasons state 11 defeats and 18 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Reformed (the Canons of Dort)*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves (encoded as a denial, so it ranks disputed) — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 9
+  - an inference step — [Robertson 1931](../../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8; [Calvin 1854](../../bibliography.md#calvin-galatians-ephesians-1854), pp. 228–229
+  - an inference step — [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 600; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+  - an inference step — [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565
+  - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
+- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+  - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+- *Romans 11:6 (by grace, so not by works)*, weakest at *consensus*:
+  - Romans 11:6 — if it is by grace, it is no longer on the basis of works — Rom 11:6
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10
+- *The third way (an ability given, received by faith)*, weakest at *disputed*:
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Remonstrant (the Five Articles, 1610)*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+- *Lutheran (the Formula of Concord)*, weakest at *disputed*:
+  - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
+  - Conversion is God's work alone: God regenerates, and the will does nothing to it — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.90
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Wesleyan (preventing grace)*, weakest at *disputed*:
+  - The grace that saves can be finally refused — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *The objection from the Spirit's resistance*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+  - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
+  - The blasphemy against the Spirit is impenitence to the end: grace refused till death — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.14 a.1; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 74
+  - an inference step — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 43
+
+<a id="tridentine_not_forced"></a>
+**`tridentine_not_forced`**
+
+Nor is Trent forced. The maximal defensible position that holds Dort and the
+third way cannot hold Trent with them.
+
+```lean
+theorem tridentine_not_forced : ¬Framework.SkepticallyAccepted
+    solaGratiaDispute.defeats Party.trent
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="remonstrantsAnsweredByDort"></a>
+**`remonstrantsAnsweredByDort`**
+
+Why the Remonstrants are not forced: Dort's position defeats them.
+
+***Remonstrant (the Five Articles, 1610)* is not accepted on every resolution.**
+
+- A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* can be held, and it holds *Reformed (the Canons of Dort)*; *Reformed (the Canons of Dort)* conflicts with *Remonstrant (the Five Articles, 1610)*: *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
+- None of *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* defeats another, and each attack on them is answered from among them:
+  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
+  - *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
+  - *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
+  - *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*.
+  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+
+**What this rests on.** The reasons state 11 defeats and 18 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
 - *Reformed (the Canons of Dort)*, weakest at *disputed*:
   - What Stephen's hearers resisted in Acts 7:51 was the grace that saves (encoded as a denial, so it ranks disputed) — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 9
   - an inference step — [Robertson 1931](../../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8; [Calvin 1854](../../bibliography.md#calvin-galatians-ephesians-1854), pp. 228–229
@@ -413,29 +547,226 @@ Why Trent can be defended: it answers every attacker itself.
   - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
 - *Remonstrant (the Five Articles, 1610)*, weakest at *disputed*:
   - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+- *Romans 11:6 (by grace, so not by works)*, weakest at *consensus*:
+  - Romans 11:6 — if it is by grace, it is no longer on the basis of works — Rom 11:6
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10
+- *The third way (an ability given, received by faith)*, weakest at *disputed*:
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+  - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
 - *Lutheran (the Formula of Concord)*, weakest at *disputed*:
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
   - Conversion is God's work alone: God regenerates, and the will does nothing to it — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.90
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Wesleyan (preventing grace)*, weakest at *disputed*:
   - The grace that saves can be finally refused — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
-- *The third way (an ability given, received by faith)*, weakest at *disputed*:
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *The objection from the Spirit's resistance*, weakest at *disputed*:
   - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
   - The blasphemy against the Spirit is impenitence to the end: grace refused till death — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.14 a.1; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 74
   - an inference step — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 43
 
-<a id="tridentine_defensible"></a>
-**`tridentine_defensible`**
+<a id="remonstrant_not_forced"></a>
+**`remonstrant_not_forced`**
 
-**Trent can be defended**, with what every party holds.
+The Remonstrants can be defended (with the Lutherans and Wesley, as
+`lutheran_defensible` shows), and are not forced: the maximal defensible
+position that holds Dort cannot hold them.
 
 ```lean
-theorem tridentine_defensible : Framework.CredulouslyAccepted
-    solaGratiaDispute.defeats Party.trent
+theorem remonstrant_not_forced : ¬Framework.SkepticallyAccepted
+    solaGratiaDispute.defeats Party.remonstrant
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="lutheransAnsweredByDort"></a>
+**`lutheransAnsweredByDort`**
+
+Why the Lutherans are not forced: Dort's position defeats them.
+
+***Lutheran (the Formula of Concord)* is not accepted on every resolution.**
+
+- A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* can be held, and it holds *Reformed (the Canons of Dort)*; *Reformed (the Canons of Dort)* conflicts with *Lutheran (the Formula of Concord)*: *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*, and *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*.
+- None of *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* defeats another, and each attack on them is answered from among them:
+  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
+  - *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
+  - *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
+  - *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*.
+  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+
+**What this rests on.** The reasons state 11 defeats and 18 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Reformed (the Canons of Dort)*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves (encoded as a denial, so it ranks disputed) — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 9
+  - an inference step — [Robertson 1931](../../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8; [Calvin 1854](../../bibliography.md#calvin-galatians-ephesians-1854), pp. 228–229
+  - an inference step — [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 600; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+  - an inference step — [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565
+  - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
+- *Lutheran (the Formula of Concord)*, weakest at *disputed*:
+  - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
+  - Conversion is God's work alone: God regenerates, and the will does nothing to it — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.90
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Romans 11:6 (by grace, so not by works)*, weakest at *consensus*:
+  - Romans 11:6 — if it is by grace, it is no longer on the basis of works — Rom 11:6
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10
+- *The third way (an ability given, received by faith)*, weakest at *disputed*:
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+  - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+- *Remonstrant (the Five Articles, 1610)*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+- *Wesleyan (preventing grace)*, weakest at *disputed*:
+  - The grace that saves can be finally refused — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *The objection from the Spirit's resistance*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+  - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
+  - The blasphemy against the Spirit is impenitence to the end: grace refused till death — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.14 a.1; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 74
+  - an inference step — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 43
+
+<a id="lutheran_not_forced"></a>
+**`lutheran_not_forced`**
+
+Nor are the Lutherans forced: the maximal defensible position that holds
+Dort cannot hold them.
+
+```lean
+theorem lutheran_not_forced : ¬Framework.SkepticallyAccepted
+    solaGratiaDispute.defeats Party.lutheran
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="wesleyAnsweredByDort"></a>
+**`wesleyAnsweredByDort`**
+
+Why Wesley is not forced: Dort's position defeats him.
+
+***Wesleyan (preventing grace)* is not accepted on every resolution.**
+
+- A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* can be held, and it holds *Reformed (the Canons of Dort)*; *Reformed (the Canons of Dort)* conflicts with *Wesleyan (preventing grace)*: *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*, and *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*.
+- None of *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* defeats another, and each attack on them is answered from among them:
+  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
+  - *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
+  - *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
+  - *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*.
+  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+
+**What this rests on.** The reasons state 11 defeats and 18 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Reformed (the Canons of Dort)*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves (encoded as a denial, so it ranks disputed) — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 9
+  - an inference step — [Robertson 1931](../../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8; [Calvin 1854](../../bibliography.md#calvin-galatians-ephesians-1854), pp. 228–229
+  - an inference step — [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 600; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+  - an inference step — [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565
+  - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
+- *Wesleyan (preventing grace)*, weakest at *disputed*:
+  - The grace that saves can be finally refused — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Romans 11:6 (by grace, so not by works)*, weakest at *consensus*:
+  - Romans 11:6 — if it is by grace, it is no longer on the basis of works — Rom 11:6
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10
+- *The third way (an ability given, received by faith)*, weakest at *disputed*:
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+  - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+- *Remonstrant (the Five Articles, 1610)*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+- *Lutheran (the Formula of Concord)*, weakest at *disputed*:
+  - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
+  - Conversion is God's work alone: God regenerates, and the will does nothing to it — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.90
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *The objection from the Spirit's resistance*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+  - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
+  - The blasphemy against the Spirit is impenitence to the end: grace refused till death — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.14 a.1; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 74
+  - an inference step — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 43
+
+<a id="wesleyan_not_forced"></a>
+**`wesleyan_not_forced`**
+
+Nor is Wesley's position forced: the maximal defensible position that holds
+Dort cannot hold it.
+
+```lean
+theorem wesleyan_not_forced : ¬Framework.SkepticallyAccepted
+    solaGratiaDispute.defeats Party.wesleyan
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="objectionAnsweredByDort"></a>
+**`objectionAnsweredByDort`**
+
+Why the objection is not forced: Dort's position defeats it.
+
+***The objection from the Spirit's resistance* is not accepted on every resolution.**
+
+- A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* can be held, and it holds *Reformed (the Canons of Dort)*; *Reformed (the Canons of Dort)* conflicts with *The objection from the Spirit's resistance*: *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*.
+- None of *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* defeats another, and each attack on them is answered from among them:
+  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
+  - *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
+  - *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
+  - *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*.
+  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+
+**What this rests on.** The reasons state 11 defeats and 18 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+
+- *Reformed (the Canons of Dort)*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves (encoded as a denial, so it ranks disputed) — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 9
+  - an inference step — [Robertson 1931](../../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8; [Calvin 1854](../../bibliography.md#calvin-galatians-ephesians-1854), pp. 228–229
+  - an inference step — [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 600; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+  - an inference step — [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565
+  - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
+- *The objection from the Spirit's resistance*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+  - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
+  - The blasphemy against the Spirit is impenitence to the end: grace refused till death — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.14 a.1; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 74
+  - an inference step — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 43
+- *Romans 11:6 (by grace, so not by works)*, weakest at *consensus*:
+  - Romans 11:6 — if it is by grace, it is no longer on the basis of works — Rom 11:6
+  - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10
+- *The third way (an ability given, received by faith)*, weakest at *disputed*:
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+  - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+- *Remonstrant (the Five Articles, 1610)*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+- *Lutheran (the Formula of Concord)*, weakest at *disputed*:
+  - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
+  - Conversion is God's work alone: God regenerates, and the will does nothing to it — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.90
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+- *Wesleyan (preventing grace)*, weakest at *disputed*:
+  - The grace that saves can be finally refused — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+
+<a id="objection_not_forced"></a>
+**`objection_not_forced`**
+
+Nor is the objection from the Spirit's resistance forced: the maximal
+defensible position that holds Dort cannot hold it.
+
+```lean
+theorem objection_not_forced : ¬Framework.SkepticallyAccepted
+    solaGratiaDispute.defeats Party.objection
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -467,11 +798,11 @@ The third way, defended with Dort.
   - an inference step — [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565
   - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
 - *The third way (an ability given, received by faith)*, weakest at *disputed*:
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Trent (Session VI, canon 4)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
-  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
 - *Remonstrant (the Five Articles, 1610)*, weakest at *disputed*:
@@ -479,10 +810,10 @@ The third way, defended with Dort.
 - *Lutheran (the Formula of Concord)*, weakest at *disputed*:
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
   - Conversion is God's work alone: God regenerates, and the will does nothing to it — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.90
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Wesleyan (preventing grace)*, weakest at *disputed*:
   - The grace that saves can be finally refused — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *The objection from the Spirit's resistance*, weakest at *disputed*:
   - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
@@ -492,9 +823,10 @@ The third way, defended with Dort.
 <a id="third_way_defensible_with_dort"></a>
 **`third_way_defensible_with_dort`**
 
-**The third way can be defended with Dort**, against Trent: Dort answers
-Trent's attack on faith alone, and the third way grants everything Dort
-holds.
+**The third way can be defended with Dort**, against Trent, by the position
+shown above. Trent attacks the third way over faith alone; Dort, which defeats
+Trent over the will and grace, answers that attack; and nothing in the third
+way contradicts Dort.
 
 ```lean
 theorem third_way_defensible_with_dort : Framework.CredulouslyAccepted
@@ -529,12 +861,12 @@ The third way, defended with Wesley.
 - *Lutheran (the Formula of Concord)*, weakest at *disputed*:
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
   - Conversion is God's work alone: God regenerates, and the will does nothing to it — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.90
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Wesleyan (preventing grace)*, weakest at *disputed*:
   - The grace that saves can be finally refused — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *The third way (an ability given, received by faith)*, weakest at *disputed*:
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *The objection from the Spirit's resistance*, weakest at *disputed*:
   - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
@@ -549,16 +881,16 @@ The third way, defended with Wesley.
 - *Trent (Session VI, canon 4)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
-  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
 
 <a id="third_way_defensible_with_wesley"></a>
 **`third_way_defensible_with_wesley`**
 
-**And it can be defended with Wesley**, the Lutherans and the
-Remonstrants, against both Dort and Trent. The third way, as stated, takes no
-side between them.
+It can also be defended with Wesley, the Lutherans and the Remonstrants,
+against both Dort and Trent, by the position shown above. The third way, as
+stated, takes no side between Dort and Wesley.
 
 ```lean
 theorem third_way_defensible_with_wesley : Framework.CredulouslyAccepted
@@ -574,51 +906,53 @@ defeats it.
 
 ***The third way (an ability given, received by faith)* is not accepted on every resolution.**
 
-- A position holding *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)* can be held, and it holds *Trent (Session VI, canon 4)*; *Trent (Session VI, canon 4)* conflicts with *The third way (an ability given, received by faith)*: *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *The third way (an ability given, received by faith)* defeats *Trent (Session VI, canon 4)*.
-- None of *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)* defeats another, and each attack on them is answered from among them:
+- A position holding *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* can be held, and it holds *Trent (Session VI, canon 4)*; *Trent (Session VI, canon 4)* conflicts with *The third way (an ability given, received by faith)*: *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *The third way (an ability given, received by faith)* defeats *Trent (Session VI, canon 4)*.
+- None of *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* defeats another, and each attack on them is answered from among them:
   - *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
   - *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Lutheran (the Formula of Concord)*.
   - *Wesleyan (preventing grace)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Wesleyan (preventing grace)*.
   - *The third way (an ability given, received by faith)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*.
+  - *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
+  - *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
 
-**What this rests on.** The reasons state 8 defeats and 12 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 10 defeats and 26 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Trent (Session VI, canon 4)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
-  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - an inference step — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
 - *The third way (an ability given, received by faith)*, weakest at *disputed*:
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Romans 11:6 (by grace, so not by works)*, weakest at *consensus*:
   - Romans 11:6 — if it is by grace, it is no longer on the basis of works — Rom 11:6
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10
+- *Remonstrant (the Five Articles, 1610)*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+- *The objection from the Spirit's resistance*, weakest at *disputed*:
+  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+  - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
+  - The blasphemy against the Spirit is impenitence to the end: grace refused till death — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.14 a.1; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 74
+  - an inference step — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 43
 - *Reformed (the Canons of Dort)*, weakest at *disputed*:
   - What Stephen's hearers resisted in Acts 7:51 was the grace that saves (encoded as a denial, so it ranks disputed) — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 9
   - an inference step — [Robertson 1931](../../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8; [Calvin 1854](../../bibliography.md#calvin-galatians-ephesians-1854), pp. 228–229
   - an inference step — [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 600; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
   - an inference step — [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565
   - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
-- *Remonstrant (the Five Articles, 1610)*, weakest at *disputed*:
-  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
 - *Lutheran (the Formula of Concord)*, weakest at *disputed*:
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
   - Conversion is God's work alone: God regenerates, and the will does nothing to it — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.90
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 - *Wesleyan (preventing grace)*, weakest at *disputed*:
   - The grace that saves can be finally refused — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397
-  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
-- *The objection from the Spirit's resistance*, weakest at *disputed*:
-  - What Stephen's hearers resisted in Acts 7:51 was the grace that saves — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
-  - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
-  - The blasphemy against the Spirit is impenitence to the end: grace refused till death — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.14 a.1; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 74
-  - an inference step — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 43
+  - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
 
 <a id="third_way_not_forced"></a>
 **`third_way_not_forced`**
 
-**Nor is the third way forced.** A maximal defensible position holds Trent,
+Nor is the third way forced. A maximal defensible position holds Trent,
 which condemns faith alone, and cannot hold the third way with it.
 
 ```lean

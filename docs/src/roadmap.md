@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **288 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **293 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -293,19 +293,24 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `ephesians_strand_establishes` | `Establishes ephesiansStrand` | The Ephesians strand, argued alone, reaches sola gratia. |
 | `romans_strand_establishes` | `Establishes romansStrand` | So does the Romans strand, on one step rated `disputed`. |
 | `gift_of_faith_does_not_settle_resistibility` | `¬Establishes ephesiansWithoutTheGiftStep` | **That faith is God's gift does not settle whether grace can be refused.** Grant everything the Ephesians strand rests on short of its last step: the texts, "this" pointing to the … |
-| `lutheranPosition_establishes` | `Establishes lutheranPosition` | **The Lutheran position holds together, and reaches what it holds**: the will passive in conversion, and the grace that does it resistible. |
-| `wesleyanPosition_establishes` | `Establishes wesleyanPosition` | **Wesley's premises reach what Wesley holds**: grace that goes before, can be refused, and is received by faith alone. |
-| `thirdWay_establishes` | `Establishes thirdWay` | **The third way reaches what it says**: salvation by grace, received by faith alone. |
+| `lutheranPosition_establishes` | `Establishes lutheranPosition` | **The Lutheran premises reach the Lutheran position**: the will passive in conversion, and the grace that converts resistible. |
+| `wesleyanPosition_establishes` | `Establishes wesleyanPosition` | Wesley's premises reach grace that goes before, can be refused, and is received by faith alone. |
+| `thirdWay_establishes` | `Establishes thirdWay` | The third way's premises reach salvation by grace, received by faith alone. |
 | `objection_establishes` | `Establishes objection` | **The objection from the Spirit's resistance is valid on its own grounds.** Grant the texts of resistance and any one of its three readings, and the grace that saves is not … |
 | `third_way_leaves_resistibility_open` | `Independent thirdWay.premises (p Claim.graceIsEffectualOfItself)` | **The third way leaves resistibility open.** Grant everything it says: Adam made able to stand or fall, the ability to believe given by God, faith alone, and that grace which can … |
-| `only_grace_prevails` | `Framework.grounded solaGratiaDispute.defeats = Solver.toSet [Party.grace]` | **Only what every party holds prevails: salvation is by grace.** What the dispute forces before any choice between rivals is that, and nothing more. |
-| `reformed_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.reformed` | **Dort can be defended**, together with what every party holds and the third way: some maximal defensible position holds all three. |
-| `reformed_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.reformed` | **Nor is it forced.** A maximal defensible position holds the Remonstrants, the Lutherans, Wesley, the third way and the objection, and cannot hold Dort with them. |
+| `only_grace_prevails` | `Framework.grounded solaGratiaDispute.defeats = Solver.toSet [Party.grace]` | **Only what every party holds prevails: salvation is by grace.** What the dispute settles before any choice between rivals is that, and nothing more. |
+| `reformed_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.reformed` | **Dort can be defended**, together with what every party holds and the third way: some maximal defensible position, one no other party can join, holds all three. |
+| `reformed_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.reformed` | Nor is Dort forced. |
 | `lutheran_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.lutheran` | **The Lutheran position can be defended**, with the Remonstrants, Wesley, the third way and the objection. |
-| `tridentine_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.trent` | **Trent can be defended**, with what every party holds. |
-| `third_way_defensible_with_dort` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thirdWay` | **The third way can be defended with Dort**, against Trent: Dort answers Trent's attack on faith alone, and the third way grants everything Dort holds. |
-| `third_way_defensible_with_wesley` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thirdWay` | **And it can be defended with Wesley**, the Lutherans and the Remonstrants, against both Dort and Trent. |
-| `third_way_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.thirdWay` | **Nor is the third way forced.** A maximal defensible position holds Trent, which condemns faith alone, and cannot hold the third way with it. |
+| `tridentine_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.trent` | **Trent can be defended**, with what every party holds, the Remonstrants and the objection, which agree with it that grace can be resisted. |
+| `tridentine_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.trent` | Nor is Trent forced. |
+| `remonstrant_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.remonstrant` | The Remonstrants can be defended (with the Lutherans and Wesley, as `lutheran_defensible` shows), and are not forced: the maximal defensible position that holds Dort cannot hold … |
+| `lutheran_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.lutheran` | Nor are the Lutherans forced: the maximal defensible position that holds Dort cannot hold them. |
+| `wesleyan_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.wesleyan` | Nor is Wesley's position forced: the maximal defensible position that holds Dort cannot hold it. |
+| `objection_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.objection` | Nor is the objection from the Spirit's resistance forced: the maximal defensible position that holds Dort cannot hold it. |
+| `third_way_defensible_with_dort` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thirdWay` | **The third way can be defended with Dort**, against Trent, by the position shown above. |
+| `third_way_defensible_with_wesley` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thirdWay` | It can also be defended with Wesley, the Lutherans and the Remonstrants, against both Dort and Trent, by the position shown above. |
+| `third_way_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.thirdWay` | Nor is the third way forced. |
 
 ### [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)
 

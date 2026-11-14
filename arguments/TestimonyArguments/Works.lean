@@ -3518,8 +3518,8 @@ resist or yield to the grace of God". -/
 transcribes them, without the edition's pages; cited by sermon and section.
 Sermon 85, "On Working Out Our Own Salvation", III.4: no man "is wholly void of
 the grace of God … It is more properly termed preventing grace". Sermon 1,
-"Salvation by Faith", III.3: "Of yourselves cometh neither your faith nor your
-salvation". -/
+"Salvation by Faith", III.1, defends "salvation or justification, by faith only",
+and III.3 says "Of yourselves cometh neither your faith nor your salvation". -/
 @[bib_entry] def wesleySermons : BibEntry := .webPage
   { core :=
       { key := "wesley-sermons-1872"

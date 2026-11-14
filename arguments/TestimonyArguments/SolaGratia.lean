@@ -145,23 +145,26 @@ is passive in conversion and grace resistible all the same, and Wesley, for whom
 preventing grace restores to everyone an ability that can be used or refused.
 
 The Lutherans are why the step from God's work alone to grace that cannot be
-finally refused is rated `disputed`. They hold conversion to be "altogether an
-operation, gift, and present, and work of the Holy Ghost alone", and they hold
-that those who "always resist the Holy Ghost … are not converted".
+finally refused is rated *disputed*. They hold conversion to be "altogether an
+operation, gift, and present, and work of the Holy Ghost alone", and they deny
+that grace cannot be refused: "God does not force man to become godly", and the
+perverse will "resists the Holy Ghost, who wishes to be efficacious".
 
 The third way, as it was put to this argument, is that God gives the ability to
-believe as Adam and Eve were made able to obey or to fall, and that the offer is
+believe as Adam and Eve were made able to stand or to fall, and that the offer is
 received by faith alone. As stated, it leaves open whether grace can be finally
 refused (`third_way_leaves_resistibility_open`). Augustine's distinction between
 the help "without which" a thing does not come to pass, which Adam had, and the
-help "by which" it does, which the saints have, is the dilemma it meets: read
-the first way it is Wesley's and falls to Dort, read the second it is Dort's and
-falls to the Remonstrants (`whatTheAbilityIs`).
+help "by which" it does, which the saints have, is the dilemma it meets. Read
+the first way, it is the reading Wesley gives, and it cannot be held together
+with Dort's position; read the second, it is Dort's, and it cannot be held
+together with the Remonstrants'. Both breaks come at steps or readings rated
+*disputed*, so neither shows the other side right (`whatTheAbilityIs`).
 
-Weighed as one dispute, only what every party holds is forced: salvation is by
-grace (`only_grace_prevails`). Every other position, Dort's included, can be
-defended and is not forced, and the third way can be defended with Dort or with
-Wesley.
+Weighed as one dispute, only what every party holds is settled before any
+choice: salvation is by grace (`only_grace_prevails`). Every other position,
+Dort's included, can be defended and is not forced, and the third way can be
+defended with Dort or with Wesley.
 
 ## What is not encoded
 

@@ -13,20 +13,32 @@ computed from their premises and checked by the kernel.
 
 ## How to read the verdicts
 
-- **Defeats.** One position contradicts another (it denies one of the other's
-  premises, its conclusion, or a claim it derives on the way) and is not the
-  weaker of the two. A defeat that runs both ways is a *standoff*.
 - **Weakest link.** A position is only as strong as its least-supported premise
   or step. What every party holds rests on Romans 11:6 and a step rated
-  `consensus`. Every other position rests on at least one reading or step rated
-  `disputed`, the lowest rating, so no rating breaks a standoff between them.
-- **Forced.** Accepted however every standoff is resolved.
-- **Can be defended.** Held by some consistent position that answers every
-  attack on its members, by itself or through an ally.
+  *consensus*, accepted across traditions. Every other position rests on at
+  least one reading or step rated *disputed*, the lowest rating, so no rating
+  breaks a standoff between them.
+- **Defeats.** One position contradicts another (it denies one of the other's
+  premises, its conclusion, or a claim it derives on the way), and its weakest
+  link is not rated below the other's. A defeat that runs both ways is a
+  *standoff*.
+- **Settled before any choice.** What prevails once every unanswered attack is
+  taken into account, before any standoff is decided either way.
+- **Can be defended.** Held by some consistent group of positions that answers
+  every attack on its members, by itself or through an ally. Such a group that
+  no further party can join is a *maximal defensible position*.
+- **Forced.** Held in every maximal defensible position, however the standoffs
+  are resolved. A party is shown not forced by naming a maximal defensible
+  position that does not hold it.
+
+Dort's position here does not carry faith alone: the Reformed case is stated
+from Ephesians 2 and Romans 9, and sola fide is an argument of its own. So Dort
+and Trent are never set against each other over it; they stand off over the
+will's passivity and grace effectual of itself.
 
 ## What the weighing found
 
-Only what every party holds is forced: salvation is by grace
+Only what every party holds is settled before any choice: salvation is by grace
 (`only_grace_prevails`). Everything else is in a standoff with something.
 
 - **Dort stands off against every party that denies part of sola gratia:**
@@ -37,20 +49,22 @@ Only what every party holds is forced: salvation is by grace
   which Trent's ninth canon condemns; with the Lutherans also over the will's
   passivity.
 - **The Remonstrants, the Lutherans, Wesley and the objection do not defeat one
-  another.** They agree that the grace that saves can be finally refused, and
-  differ on what this dispute does not weigh.
+  another.** They agree that the grace that saves can be finally refused. The
+  Lutherans also hold the will passive; the Remonstrants and Wesley are not
+  encoded with a view on that, so nothing here sets them against each other.
 - **The third way is attacked only by Trent**, and only over faith alone. It
   takes no side between Dort and Wesley, and so it can be defended with either:
   with Dort, against Trent (`third_way_defensible_with_dort`); and with the
   Remonstrants, the Lutherans and Wesley, against both Dort and Trent
-  (`third_way_defensible_with_wesley`). That is the dispute's form of what the
-  dilemma over the ability God gives shows: the third way, as stated, has not
-  yet chosen.
+  (`third_way_defensible_with_wesley`). The dilemma found the same thing: until
+  the third way says which kind of help God gives, it has taken neither side.
+- **Trent can be defended with the Remonstrants and the objection**, which agree
+  with it that grace can be resisted, against Dort.
 
-Every party but the first can be defended and none is forced. What would move
-that is a rating: each standoff rests on readings and steps rated `disputed`,
-and a new, cited argument that one side's reading survives what the other side
-says against it could move a rating, and so the verdict.
+Every party can be defended, and only the first is forced: each of the others is
+left out of some maximal defensible position. Each standoff rests on readings
+and steps rated *disputed*, so the verdict moves only if a new, cited argument
+moves one of those ratings.
 -/
 
 namespace TestimonyArguments.SolaGratia
@@ -123,16 +137,16 @@ declare_dispute solaGratiaDispute := partyNode using solaGratiaDefs
 
 /-! ### What the dispute decides -/
 
-/-- How far the dispute is settled, in one stage. Nothing defeats what every
-party holds, so it comes first, and nothing joins it: every other party has a
-defeater it does not answer. -/
+/-- How far the dispute is settled before any choice. Nothing defeats what every
+party holds, so it is settled first; and nothing is settled with it, because
+every other party has a defeater that what every party holds does not answer. -/
 declare_verdict graceUnanswered for solaGratiaDispute :
     .groundedExactly [[.grace]]
       [ (.reformed, .trent), (.trent, .reformed), (.remonstrant, .reformed)
       , (.lutheran, .reformed), (.wesleyan, .reformed), (.thirdWay, .trent)
       , (.objection, .reformed) ]
   /-- **Only what every party holds prevails: salvation is by grace.** What the
-  dispute forces before any choice between rivals is that, and nothing more.
+  dispute settles before any choice between rivals is that, and nothing more.
   Nothing defeats it, because every party holds every premise it holds.
 
   What this does not claim: that sola gratia is false, or that any rival is
@@ -146,7 +160,8 @@ answers every attacker itself. -/
 declare_verdict dortDefended for solaGratiaDispute :
     .credulous .reformed [.grace, .reformed, .thirdWay]
   /-- **Dort can be defended**, together with what every party holds and the
-  third way: some maximal defensible position holds all three. -/
+  third way: some maximal defensible position, one no other party can join,
+  holds all three. -/
   proves @[headline] reformed_defensible
 
 #print axioms reformed_defensible
@@ -156,9 +171,9 @@ they defeat Dort. -/
 declare_verdict dortAnsweredByTheRemonstrants for solaGratiaDispute :
     .notSkeptical .reformed .remonstrant
       [.grace, .remonstrant, .lutheran, .wesleyan, .thirdWay, .objection]
-  /-- **Nor is it forced.** A maximal defensible position holds the
-  Remonstrants, the Lutherans, Wesley, the third way and the objection, and
-  cannot hold Dort with them. -/
+  /-- Nor is Dort forced. A maximal defensible position holds the Remonstrants,
+  the Lutherans, Wesley, the third way and the objection, and cannot hold Dort
+  with them. -/
   proves @[headline] reformed_not_forced
 
 #print axioms reformed_not_forced
@@ -173,19 +188,70 @@ declare_verdict lutheransDefended for solaGratiaDispute :
 
 #print axioms lutheran_defensible
 
-/-- Why Trent can be defended: it answers every attacker itself. -/
-declare_verdict trentDefended for solaGratiaDispute : .credulous .trent [.grace, .trent]
-  /-- **Trent can be defended**, with what every party holds. -/
+/-- Why Trent can be defended: it answers every attacker of its group itself. -/
+declare_verdict trentDefended for solaGratiaDispute :
+    .credulous .trent [.grace, .trent, .remonstrant, .objection]
+  /-- **Trent can be defended**, with what every party holds, the Remonstrants and
+  the objection, which agree with it that grace can be resisted. Only Dort
+  attacks the Remonstrants and the objection, and Trent answers Dort. -/
   proves @[headline] tridentine_defensible
 
 #print axioms tridentine_defensible
 
+/-- Why Trent is not forced: a maximal defensible position holds Dort, and Dort
+defeats Trent. -/
+declare_verdict trentAnsweredByDort for solaGratiaDispute :
+    .notSkeptical .trent .reformed [.grace, .reformed, .thirdWay]
+  /-- Nor is Trent forced. The maximal defensible position that holds Dort and the
+  third way cannot hold Trent with them. -/
+  proves @[headline] tridentine_not_forced
+
+#print axioms tridentine_not_forced
+
+/-- Why the Remonstrants are not forced: Dort's position defeats them. -/
+declare_verdict remonstrantsAnsweredByDort for solaGratiaDispute :
+    .notSkeptical .remonstrant .reformed [.grace, .reformed, .thirdWay]
+  /-- The Remonstrants can be defended (with the Lutherans and Wesley, as
+  `lutheran_defensible` shows), and are not forced: the maximal defensible
+  position that holds Dort cannot hold them. -/
+  proves @[headline] remonstrant_not_forced
+
+#print axioms remonstrant_not_forced
+
+/-- Why the Lutherans are not forced: Dort's position defeats them. -/
+declare_verdict lutheransAnsweredByDort for solaGratiaDispute :
+    .notSkeptical .lutheran .reformed [.grace, .reformed, .thirdWay]
+  /-- Nor are the Lutherans forced: the maximal defensible position that holds
+  Dort cannot hold them. -/
+  proves @[headline] lutheran_not_forced
+
+#print axioms lutheran_not_forced
+
+/-- Why Wesley is not forced: Dort's position defeats him. -/
+declare_verdict wesleyAnsweredByDort for solaGratiaDispute :
+    .notSkeptical .wesleyan .reformed [.grace, .reformed, .thirdWay]
+  /-- Nor is Wesley's position forced: the maximal defensible position that holds
+  Dort cannot hold it. -/
+  proves @[headline] wesleyan_not_forced
+
+#print axioms wesleyan_not_forced
+
+/-- Why the objection is not forced: Dort's position defeats it. -/
+declare_verdict objectionAnsweredByDort for solaGratiaDispute :
+    .notSkeptical .objection .reformed [.grace, .reformed, .thirdWay]
+  /-- Nor is the objection from the Spirit's resistance forced: the maximal
+  defensible position that holds Dort cannot hold it. -/
+  proves @[headline] objection_not_forced
+
+#print axioms objection_not_forced
+
 /-- The third way, defended with Dort. -/
 declare_verdict thirdWayWithDort for solaGratiaDispute :
     .credulous .thirdWay [.grace, .reformed, .thirdWay]
-  /-- **The third way can be defended with Dort**, against Trent: Dort answers
-  Trent's attack on faith alone, and the third way grants everything Dort
-  holds. -/
+  /-- **The third way can be defended with Dort**, against Trent, by the position
+  shown above. Trent attacks the third way over faith alone; Dort, which defeats
+  Trent over the will and grace, answers that attack; and nothing in the third
+  way contradicts Dort. -/
   proves @[headline] third_way_defensible_with_dort
 
 #print axioms third_way_defensible_with_dort
@@ -193,9 +259,9 @@ declare_verdict thirdWayWithDort for solaGratiaDispute :
 /-- The third way, defended with Wesley. -/
 declare_verdict thirdWayWithWesley for solaGratiaDispute :
     .credulous .thirdWay [.grace, .remonstrant, .lutheran, .wesleyan, .thirdWay, .objection]
-  /-- **And it can be defended with Wesley**, the Lutherans and the
-  Remonstrants, against both Dort and Trent. The third way, as stated, takes no
-  side between them. -/
+  /-- It can also be defended with Wesley, the Lutherans and the Remonstrants,
+  against both Dort and Trent, by the position shown above. The third way, as
+  stated, takes no side between Dort and Wesley. -/
   proves @[headline] third_way_defensible_with_wesley
 
 #print axioms third_way_defensible_with_wesley
@@ -203,8 +269,8 @@ declare_verdict thirdWayWithWesley for solaGratiaDispute :
 /-- Why the third way is not forced: a defensible position holds Trent, and Trent
 defeats it. -/
 declare_verdict thirdWayAnsweredByTrent for solaGratiaDispute :
-    .notSkeptical .thirdWay .trent [.grace, .trent]
-  /-- **Nor is the third way forced.** A maximal defensible position holds Trent,
+    .notSkeptical .thirdWay .trent [.grace, .trent, .remonstrant, .objection]
+  /-- Nor is the third way forced. A maximal defensible position holds Trent,
   which condemns faith alone, and cannot hold the third way with it. -/
   proves @[headline] third_way_not_forced
 

@@ -373,7 +373,7 @@ def baseCite : Claim → AtomMeta
       -- `disputed`: Trent condemns it (Session VI, canon 9).
     , source :=
         { primary := concord "Augsburg Confession IV.1–3"
-        , supporting := [.work wesleySermons (.sectionRef "Sermon 1, III.3"), trent "canon 9"]
+        , supporting := [.work wesleySermons (.sectionRef "Sermon 1, III.1"), trent "canon 9"]
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .zechariah1_3WithLamentations5_21 =>

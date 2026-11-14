@@ -104,8 +104,9 @@ def wesleyan : ArgumentPackage Claim :=
 
 /-- **The third way, as it was put to this argument.** As Adam was made able to
 stand or to fall (Genesis 2:16–17), so God gives the one who hears the gospel
-the ability to believe; the offer is real, and grace is received by faith alone.
-Stated this way it does not say what kind of help the ability is, whether one
+the ability to believe, and grace is received by faith alone. That the offer is
+real is part of the third way too, and is not encoded as a premise, because no
+party here denies it. Stated this way it does not say what kind of help the ability is, whether one
 that makes believing possible or one that brings it about. It carries the step
 every party grants, that grace which can be finally refused is not effectual of
 itself, and nothing that would decide whether it can be. -/
