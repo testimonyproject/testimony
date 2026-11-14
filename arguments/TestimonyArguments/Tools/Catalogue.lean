@@ -79,15 +79,19 @@ def spiritBaptismChapters : List Chapter :=
                  , `TestimonyArguments.SpiritBaptism.Sources ]
     , legend := true } ]
 
-/-- The Triune God, set as chapters: what LST says and why it is checked; the
-texts and what each side adds to them; the positions weighed; and the claims,
-as an appendix. -/
+/-- The Triune God, set as chapters: what LST says and why it is checked; for
+each question encoded, the texts and what each side adds to them, then the
+positions weighed; and the claims, as an appendix. -/
 def trinityChapters : List Chapter :=
   [ { slug := "trinity", title := "The Triune God: what Scripture settles, and what it leaves open"
     , modules := [`TestimonyArguments.Trinity] }
+  , { slug := "the-order", title := "Is the Son less than the Father?"
+    , modules := [`TestimonyArguments.Trinity.Order] }
+  , { slug := "weighing-the-order", title := "Weighing the readings of the order texts"
+    , modules := [`TestimonyArguments.Trinity.OrderDispute] }
   , { slug := "the-procession", title := "Does the Spirit proceed from the Son?"
     , modules := [`TestimonyArguments.Trinity.Procession] }
-  , { slug := "weighing", title := "Weighing the positions"
+  , { slug := "weighing", title := "Weighing the positions on the procession"
     , modules := [`TestimonyArguments.Trinity.Dispute] }
   , { slug := "claims", title := "Appendix: the claims and their sources"
     , modules := [`TestimonyArguments.Trinity.Atoms, `TestimonyArguments.Trinity.Sources]

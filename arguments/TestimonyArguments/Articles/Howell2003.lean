@@ -6,6 +6,7 @@ import TestimonyArguments.SolaFide.James
 import Testimony.Logic.Contest
 import Testimony.Logic.Credibility
 import Testimony.Logic.Certificate
+import Testimony.Logic.Declare
 
 /-!
 # TestimonyArguments.Articles.Howell2003 — an article, checked against the library
@@ -244,8 +245,8 @@ explicit, and heard with every party to the library's sola fide dispute. The
 solver then says whether it can be defended — as it says of every party. -/
 
 open Testimony.Logic.Framework
-open TestimonyArguments.SolaFide (Claim baseCite partyNode partyDefeats solaFideDispute
-  solaFideDispute_defeats partyNode_strength partyStrength)
+open TestimonyArguments.SolaFide (Claim baseCite partyNode solaFideDispute
+  solaFideDispute_defeats)
 
 /-- Howell's step, rated: from the verse, read with James's words in Paul's
 senses, to "not by faith alone". Rated `disputed` pending an audit of who grants
@@ -340,7 +341,7 @@ def defeatsTable : Party → Party → Prop
   | .faith, .howell => True
   | .howell, .sola q => howellMeets q = true
   | .sola q, .howell => howellMeets q = true
-  | .sola q, .sola r => partyDefeats q r
+  | .sola q, .sola r => (q, r) ∈ solaFideDispute.defeatsTable
   | _, _ => False
 
 /-- The table is finite, so membership in it is decidable. -/
@@ -351,13 +352,13 @@ instance : DecidableRel defeatsTable := fun i j => by
 def strength : Party → ℕ
   | .howell => 0
   | .faith => 2
-  | .sola q => partyStrength q
+  | .sola q => solaFideDispute.strength q
 
 /-- Each party's weakest link, as its package computes it. -/
 theorem node_strength : ∀ i, (node i).strength = strength i
   | .howell => howellCase_strength
   | .faith => TestimonyArguments.SolaFide.jamesFaithCase_strength
-  | .sola q => partyNode_strength q
+  | .sola q => solaFideDispute.node_strength q
 
 /-- **Who defeats whom in the hearing**, all 289 pairs: what the sola fide
 dispute already proved; Howell's move and Paul's, Peter's and John's cases, both ways;
@@ -400,33 +401,28 @@ theorem hearing_defeats : ∀ i j, hearing.defeats i j ↔ defeatsTable i j := b
 
 /-- The hearing in the form the verdict solver computes with. -/
 def hearingFinite : Solver.Finite hearing.defeats where
-  parties := .howell :: .faith :: TestimonyArguments.SolaFide.solaFideFinite.parties.map .sola
+  parties := .howell :: .faith :: solaFideDispute.finite.parties.map .sola
   complete i := by cases i with | sola q => cases q <;> decide | _ => decide
   defeats i j := decide (defeatsTable i j)
   spec i j := by rw [hearing_defeats]; simp
 
 /-- Why Howell's move cannot be defended: James's faith defeats it, and nothing
 defeats James's faith. -/
-def howellAnswered : Verdict hearing where
-  finite := hearingFinite
-  claim := .indefensible .howell [(.howell, .faith)]
-  checked := by decide +kernel
+declare_verdict howellAnswered for hearing using hearingFinite :
+    .indefensible .howell [(.howell, .faith)]
+  /-- **Howell's argument from the phrase "faith alone" cannot be defended.** It
+  needs James's "faith" to be the faith the Reformers say alone justifies. James
+  calls the faith he denies justifies dead (2:17, 2:26), Trent reads it so
+  (Session VI, ch. 7), and the Reformers' own confession calls their faith "no
+  dead faith" (Westminster XI.2). Every link of that answer is rated
+  `wellSupported` or better, and the move's reply rests on a denial at the bottom.
 
-/-- **Howell's argument from the phrase "faith alone" cannot be defended.** It
-needs James's "faith" to be the faith the Reformers say alone justifies. James
-calls the faith he denies justifies dead (2:17, 2:26), Trent reads it so
-(Session VI, ch. 7), and the Reformers' own confession calls their faith "no
-dead faith" (Westminster XI.2). Every link of that answer is rated
-`wellSupported` or better, and the move's reply rests on a denial at the bottom.
-
-What this does not claim: that James 2:24 is compatible with Paul, or that
-justification is by faith alone. Howell's move stands off against Paul's,
-Peter's and John's cases; it falls to James's own words about faith, which a
-Catholic reader grants. Nor does it touch the Catholic reading of James's
-"by works" (`trent_on_works_defensible`). -/
-theorem howell_indefensible (S : Set Party) (hS : Admissible hearing.defeats S) :
-    Party.howell ∉ S :=
-  howellAnswered.holds S hS
+  What this does not claim: that James 2:24 is compatible with Paul, or that
+  justification is by faith alone. Howell's move stands off against Paul's,
+  Peter's and John's cases; it falls to James's own words about faith, which a
+  Catholic reader grants. Nor does it touch the Catholic reading of James's
+  "by works" (`trent_on_works_defensible`). -/
+  proves howell_indefensible
 
 /-- James's faith derives that the faith James denies is not the Reformers'. -/
 theorem faith_holds :

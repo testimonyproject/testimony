@@ -77,12 +77,38 @@ MARKDOWN_SKIP_DIRS = frozenset({".git", ".lake", "book", "node_modules"})
 
 # What counts as a declaration in a Lean file. Constructors and structure
 # fields are included: `romans3_28` is an atom constructor, and prose cites it.
+# `proves NAME`, with attributes before the name or not, is the theorem a
+# `declare_verdict` command declares (`Testimony.Logic.Declare`).
+PROVES = r"proves(?:\s+@\[[^\]]*\])?"
 LEAN_DECL_RE = re.compile(
-    r"\b(?:theorem|lemma|def|abbrev|structure|inductive|instance|class|axiom|opaque)"
+    r"\b(?:theorem|lemma|def|abbrev|structure|inductive|instance|class|axiom|opaque|"
+    + PROVES + r")"
     r"\s+([A-Za-z_][A-Za-z0-9_.'!?]*)"
 )
 LEAN_CTOR_RE = re.compile(r"^\s*\|\s*([A-Za-z_][A-Za-z0-9_.'!?]*)", re.M)
 LEAN_FIELD_RE = re.compile(r"^\s{2,}([a-z][A-Za-z0-9_']*)\s*:[^=]", re.M)
+# The commands of `Testimony.Logic.Declare` declare names a regex over
+# `theorem`/`def` cannot see: `declare_dispute D` declares `D_defeats`,
+# `D_supports` and `D_partOf`; `declare_rerated R` declares `R_defeats`;
+# `declare_verdict V` and `declare_hearing H` declare `V` and `H`.
+DECLARE_RE = re.compile(r"\bdeclare_(dispute|rerated|verdict|hearing)\s+([A-Za-z_][A-Za-z0-9_'!?]*)")
+DECLARE_SUFFIXES = {
+    "dispute": ("", "_defeats", "_supports", "_partOf"),
+    "rerated": ("_defeats",),
+    "verdict": ("",),
+    "hearing": ("",),
+}
+
+
+def declare_names(code: str) -> set[str]:
+    """The names the `declare_*` commands in `code` declare."""
+    return {
+        name + suffix
+        for kind, name in DECLARE_RE.findall(code)
+        for suffix in DECLARE_SUFFIXES[kind]
+    }
+
+
 # `syntax "establish" ...`, `elab "derive_bib_registry " name:ident ...`: the
 # tactic and command names prose refers to are string literals, not identifiers.
 LEAN_SYNTAX_RE = re.compile(
@@ -278,7 +304,7 @@ def lint_text(path: str, text: str) -> list[Finding]:
             continue
         name = None
         for follow in code[n - 1:]:
-            m = re.search(r"\b(?:theorem|lemma)\s+(\w+)", follow)
+            m = re.search(r"\b(?:theorem|lemma|" + PROVES + r")\s+(\w+)", follow)
             if m:
                 name = m.group(1)
                 break
@@ -293,7 +319,7 @@ def lint_text(path: str, text: str) -> list[Finding]:
         if NOVELTY_PHRASE not in doc:
             name = None
             for follow in code[n - 1:]:
-                m = re.search(r"\b(?:theorem|lemma|def)\s+(\w+)", follow)
+                m = re.search(r"\b(?:theorem|lemma|def|" + PROVES + r")\s+(\w+)", follow)
                 if m:
                     name = m.group(1)
                     break
@@ -578,6 +604,7 @@ def declared_names(texts: dict[str, str]) -> set[str]:
         code = "\n".join(_strip_comments(text.splitlines()))
         for pattern in (LEAN_DECL_RE, LEAN_CTOR_RE, LEAN_FIELD_RE, LEAN_SYNTAX_RE):
             names.update(pattern.findall(code))
+        names.update(declare_names(code))
     return names | {n.rsplit(".", 1)[-1] for n in names}
 
 

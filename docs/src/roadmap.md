@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**7 arguments**, carrying **262 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**7 arguments**, carrying **284 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -154,13 +154,13 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `gospel_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.gospel` | **Paul's gospel can be defended**, together with Paul's, Luke's and Peter's cases and with the argument from Paul's word. |
 | `gospel_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.gospel` | **Nor is it forced.** Trent as Trent states it can still be defended, and Paul's gospel cannot be held with it. |
 | `reformation_dispute_forces_only_pauls_word` | `Framework.grounded reformationAlone.defeats = Solver.toSet (Witness.listSub (fun x => x ∉ [Party.apocalyptic, Party.sanders, Party.critics, Party.jervell]) [Party.lexical, Party.romansOnTheWord])` | **What the Reformation debate forces: the meaning of Paul's word, and nothing else.** Heard as Rome and the Reformers alone, the forced positions are exactly the two arguments … |
-| `trent_defensible_with_pauls_word` | `Framework.CredulouslyAccepted reformationAlone.defeats ⟨Party.trent, ⋯⟩` | **Trent, as Trent states it, can be defended in the Reformation debate, together with the arguments about Paul's word.** A consistent set of positions that answers every attack … |
-| `sola_fide_not_forced_in_the_reformation_dispute` | `¬Framework.SkepticallyAccepted reformationAlone.defeats ⟨Party.pauline, ⋯⟩` | **Nor is sola fide forced there.** Rome and the Reformers, heard alone, tie. |
+| `trent_defensible_with_pauls_word` | `Framework.CredulouslyAccepted reformationAlone.defeats ⟨Party.trent, trentStandsWithPaulsWord._proof_2⟩` | **Trent, as Trent states it, can be defended in the Reformation debate, together with the arguments about Paul's word.** A consistent set of positions that answers every attack … |
+| `sola_fide_not_forced_in_the_reformation_dispute` | `¬Framework.SkepticallyAccepted reformationAlone.defeats ⟨Party.pauline, reformationAnsweredByTrent._proof_2⟩` | **Nor is sola fide forced there.** Rome and the Reformers, heard alone, tie. |
 | `without_trent_pauls_gospel_and_word_prevail` | `Framework.grounded withoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x ∉ [Party.trent, Party.trentOnPaulsWord]) [Party.gospel, Party.lexical, Party.romansOnTheWord])` | **Without Trent, two things are forced.** That justification is not the renewal of the inward person, from Paul's gospel. |
-| `luke_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.dominical, ⋯⟩` | **Without Trent, Luke's case is not forced either.** A consistent set of positions that answers every attack holds Chrysostom, and cannot hold Luke's case with it. |
-| `sola_fide_from_paul_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.pauline, ⋯⟩` | **Without Trent, sola fide from Paul is still not forced.** A consistent set of positions that answers every attack holds Campbell's apocalyptic reading, on which "faith of … |
-| `sola_fide_from_peter_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.apostolic, ⋯⟩` | **Nor from Peter.** A consistent set of positions that answers every attack holds Jervell's reading of Acts 15, on which the yoke is not the law as a condition of salvation, and … |
-| `sola_fide_from_john_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.johannine, ⋯⟩` | **Nor from John.** Remove both of Trent's parties from the hearing: its case, and its definition read as a claim about Paul's word. |
+| `luke_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.dominical, lukeAnsweredByChrysostom._proof_2⟩` | **Without Trent, Luke's case is not forced either.** A consistent set of positions that answers every attack holds Chrysostom, and cannot hold Luke's case with it. |
+| `sola_fide_from_paul_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.pauline, paulAnsweredByCampbell._proof_2⟩` | **Without Trent, sola fide from Paul is still not forced.** A consistent set of positions that answers every attack holds Campbell's apocalyptic reading, on which "faith of … |
+| `sola_fide_from_peter_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.apostolic, peterAnsweredByJervell._proof_2⟩` | **Nor from Peter.** A consistent set of positions that answers every attack holds Jervell's reading of Acts 15, on which the yoke is not the law as a condition of salvation, and … |
+| `sola_fide_from_john_not_forced_without_trent` | `¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.johannine, johnAnsweredByAquinas._proof_2⟩` | **Nor from John.** Remove both of Trent's parties from the hearing: its case, and its definition read as a claim about Paul's word. |
 | `luke18Case_establishes` | `Establishes luke18Case` | **Luke 18 reaches "faith suffices"**, given its step. |
 | `trent_grants_the_parable` | `Grants tridentineCase (⋀[p Claim.luke18_9_14TaxCollectorJustified, p Claim.luke18JustifiedIsVerdict, p Claim.taxCollectorBringsNoWorks])` | **Trent's case is consistent with every word of the parable.** Trent never cites Luke 18. |
 | `matthew7_leaves_the_ground_open` | `Independent [p Claim.matthew7_21_23DoingTheWill] (p Claim.matthew7ObedienceIsAGround)` | **Matthew 7:21–23 leaves open whether obedience is a condition of entry in its own right.** Its words say that the test is doing the Father's will. |
@@ -172,7 +172,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `matthew7_calvin_reading_not_forced` | `¬Framework.SkepticallyAccepted jesusWordsDispute.defeats WordsParty.matthew7Faith` | **Nor is Calvin's.** A consistent set of positions that answers every attack holds Rome's reading, on which obedience is a condition of entry, and cannot hold Calvin's with it. |
 | `matthew19_rome_reading_not_forced` | `¬Framework.SkepticallyAccepted jesusWordsDispute.defeats WordsParty.matthew19Way` | **Rome's reading of Matthew 19 is not forced.** A consistent set of positions that answers every attack holds Calvin's reading, a reply on the law's own terms that shows the young … |
 | `matthew19_calvin_reading_not_forced` | `¬Framework.SkepticallyAccepted jesusWordsDispute.defeats WordsParty.matthew19Legal` | **Nor is Calvin's.** A consistent set of positions that answers every attack holds Rome's reading, on which the commandments are the way to life, and cannot hold Calvin's with it. |
-| `without_trent_luke_is_forced` | `Framework.grounded jesusWordsWithoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x ≠ WordsParty.trent) [WordsParty.luke7, WordsParty.luke18])` | **Without Trent, Luke's two sayings are forced, and Matthew is not.** With Trent not heard, nothing attacks "your faith has saved you" or the tax collector justified. |
+| `without_trent_luke_is_forced` | `Framework.grounded jesusWordsWithoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x ∉ [WordsParty.trent]) [WordsParty.luke7, WordsParty.luke18])` | **Without Trent, Luke's two sayings are forced, and Matthew is not.** With Trent not heard, nothing attacks "your faith has saved you" or the tax collector justified. |
 | `thiefCase_establishes` | `Establishes thiefCase` | **Grant that the thief was promised paradise unbaptised, and that his case bears on the Gospel. |
 | `desireCase_establishes` | `Establishes desireCase` | **Grant Rome's own teaching that the desire brings the fruits of baptism, and the same follows.** |
 | `reformedOnTheDesire_establishes` | `Establishes reformedOnTheDesire` | **The Reformed answer reaches its conclusion**, given its step: the sacrament is not the instrument of justification. |
@@ -274,7 +274,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `trent_not_forced_against_mark7` | `¬Framework.SkepticallyAccepted mark7Dispute.defeats Mark7Party.trent` | **Nor is Trent forced.** A maximal defensible position holds Mark 7's case for sola scriptura, and cannot hold Trent with it. |
 | `mark7_forced_against_mens_commandments` | `Framework.grounded mensCommandmentsHearing.defeats = Solver.toSet (Witness.listSub (Membership.mem [Mark7Party.principle, Mark7Party.mark7, Mark7Party.trentAsMensCommandments]) [Mark7Party.principle, Mark7Party.mark7])` | **Against Rome's tradition read as commandments of men, Mark 7's case is unopposed.** Heard against that reading alone, Mark 7's principle and Mark 7's case for sola scriptura are … |
 | `against_the_apostolic_word_only_the_principle_is_forced` | `Framework.grounded apostolicWordHearing.defeats = Solver.toSet (Witness.listSub (Membership.mem [Mark7Party.principle, Mark7Party.mark7, Mark7Party.trentAsApostolicWord]) [Mark7Party.principle])` | **If Rome's tradition is the apostolic word, Mark 7 forces only its principle** — which that reading grants. |
-| `mark7_not_forced_against_the_apostolic_word` | `¬Framework.SkepticallyAccepted apostolicWordHearing.defeats ⟨Mark7Party.mark7, ⋯⟩` | **So, against the apostolic word, sola scriptura from Mark 7 is not forced.** A defensible position that cannot be enlarged holds Mark 7's principle together with Trent read as … |
+| `mark7_not_forced_against_the_apostolic_word` | `¬Framework.SkepticallyAccepted apostolicWordHearing.defeats ⟨Mark7Party.mark7, mark7AnsweredByTheApostolicWord._proof_2⟩` | **So, against the apostolic word, sola scriptura from Mark 7 is not forced.** A defensible position that cannot be enlarged holds Mark 7's principle together with Trent read as … |
 
 ### [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)
 
@@ -307,11 +307,33 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `western_needs_one_of_its_readings` | `¬Establishes westernOnTheTextsAlone` | **It rests on the three together.** Take away the three readings that divide the sides, and what is left (the texts, John 16:14, the distinction of Son and Spirit, and that the … |
 | `eastern_rests_on_no_one_reading` | `Establishes easternWithoutTheWords ∧ Establishes easternWithoutTheMonarchy` | **The Eastern case rests on neither of its readings alone.** Take away the reading of the Lord's words, or the monarchy of the Father, and the other line still excludes "and the … |
 | `eastern_needs_one_of_its_readings` | `¬Establishes easternOnTheTextsAlone` | **It rests on the two together.** Drop both readings, and the texts, with John 15:26 read as eternal origin, do not exclude "and the Son": the Western reading satisfies everything … |
-| `the_texts_prevail` | `Framework.grounded processionDispute.defeats = {Party.lst}` | **What the texts establish prevails, and nothing more.** What the dispute forces before any choice between rivals is exactly LST's position: the Spirit is related to the Son as … |
+| `the_texts_prevail` | `Framework.grounded processionDispute.defeats = Solver.toSet [Party.lst]` | **What the texts establish prevails, and nothing more.** What the dispute forces before any choice between rivals is exactly LST's position: the Spirit is related to the Son as … |
 | `western_defensible` | `Framework.CredulouslyAccepted processionDispute.defeats Party.western` | **The Western position can be defended**, together with LST's: some maximal defensible position, one no other party can join without losing that, holds both. |
 | `western_not_forced` | `¬Framework.SkepticallyAccepted processionDispute.defeats Party.western` | **Nor is it forced.** A maximal defensible position holds LST's position and the East's, and cannot hold the West's with them. |
 | `eastern_defensible` | `Framework.CredulouslyAccepted processionDispute.defeats Party.eastern` | **The Eastern position can be defended**, together with LST's. |
 | `eastern_not_forced` | `¬Framework.SkepticallyAccepted processionDispute.defeats Party.eastern` | **Nor is it forced.** A maximal defensible position holds LST's position and the West's, and cannot hold the East's with them. |
+| `lstOrder_establishes` | `Establishes lstOrderCase` | **Grant the order texts, and there is a real order of Father and Son.** This is what LST says they establish, and every party here grants it. |
+| `order_texts_leave_lesser_divinity_open` | `Independent lstOrderCase.premises (p Claim.sonLesserInDivinity)` | **The order texts leave open whether the Son is less in his divinity.** Granted the five texts and the order they establish, neither "the Son is less than the Father in his … |
+| `order_texts_leave_eternal_authority_open` | `Independent lstOrderCase.premises (p Claim.eternalAuthorityAndSubmission)` | **The order texts leave open whether the order is eternal.** Granted the texts and the order, neither an eternal relationship of authority and submission nor its denial follows: … |
+| `arianCase_establishes` | `Establishes arianCase` | **Grant John 14:28 read as lesser divinity, and the Son is less than the Father in his divinity.** |
+| `augustineCase_establishes` | `Establishes augustineCase` | **Grant Augustine's two forms, and the Son is not less in his divinity.** |
+| `athanasiusCase_establishes` | `Establishes athanasiusCase` | **Grant Athanasius's reading of "greater", and the Son is not less in his divinity.** |
+| `calvinCase_establishes` | `Establishes calvinCase` | **Grant Calvin's reading, and John 14:28 does not say the Son is less in his divinity.** |
+| `eternalAuthorityCase_establishes` | `Establishes eternalAuthorityCase` | **Grant the order read as eternal, and there is an eternal relationship of authority and submission.** |
+| `equalAuthorityCase_establishes` | `Establishes equalAuthorityCase` | **Grant the Son equal in power, and that eternal subordination would deny it, and there is no eternal subordination in authority.** |
+| `the_order_prevails` | `Framework.grounded orderDispute.defeats = Solver.toSet [OrderParty.lst]` | **What the order texts establish is forced, and nothing more**: a real order of Father and Son in the work of salvation. |
+| `arian_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.arian` | **On the order texts alone, the Arian reading can be defended**: some consistent way of settling the dispute accepts it. |
+| `arian_reading_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.arian` | **The Arian reading is not forced.** One consistent way of settling the dispute, which can take in no further position, holds Augustine's and Athanasius's readings, and the Arian … |
+| `augustine_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.augustine` | **Augustine's reading can be defended**, with Athanasius's. |
+| `augustine_reading_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.augustine` | **Augustine's reading is not forced**: the Arian reading, rated no lower, leaves it out of one consistent settlement. |
+| `athanasius_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.athanasius` | **Athanasius's reading can be defended.** It can be held with Augustine's and with Calvin's, which cannot be held with each other. |
+| `athanasius_reading_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.athanasius` | **Athanasius's reading is not forced**, for the same reason as Augustine's. |
+| `calvin_reading_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.calvin` | **Calvin's reading can be defended**, with Athanasius's, and not with Augustine's, whose reading of the verse it denies. |
+| `calvin_reading_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.calvin` | **Calvin's reading is not forced**: the Arian reading leaves it out of one consistent settlement, and so does Augustine's. |
+| `eternal_order_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.eternal` | **Grudem and Ware's eternal order can be defended.** |
+| `eternal_order_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.eternal` | **The eternal order is not forced**: Giles's position can be held with LST's, and it rules the eternal order out. |
+| `equal_authority_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position can be defended**: held with LST's, it answers Grudem and Ware's position, which is the only one that attacks it. |
+| `equal_authority_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position is not forced** either. |
 
 <!-- END GENERATED: lake exe statusgen -->
 
@@ -780,6 +802,25 @@ finding suggests the two sides may mean different things by "proceeds", which
 is not yet encoded. LST's other graded claims in §3 (each person God; order
 without inequality; eternal generation) are tracked in the same issue.
 
+**The texts of the Son's obedience establish an order, and leave open both
+questions read into them** ([#216]). LST says these texts (John 5:19–30; 14:28;
+20:17; 1 Corinthians 11:3; 15:28) "establish real personal and mediatorial
+order, but they do not by themselves establish inequality of divine nature or an
+eternal hierarchy of command and obedience". All three parts hold
+(`lstOrder_establishes`, `order_texts_leave_lesser_divinity_open`,
+`order_texts_leave_eternal_authority_open`). John 14:28 gets four readings: the
+Arians' lesser divinity, Augustine's two forms, Athanasius's "greater" as the one
+the Son is from, and Calvin's humbled Mediator, who denies that the verse speaks
+of either nature. Weighed, the order is forced (`the_order_prevails`) and every
+reading beyond it stands off, the Arian one included
+(`arian_reading_defensible`): the order texts alone do not settle the Son's
+divinity, which LST confesses from other texts. Grudem and Ware's eternal order
+of authority and Giles's denial of it stand off too. The audit placed both
+disputes in readings, not steps: Sirmium (357) and Gregory of Nazianzus's
+opponents grant "greater as the one he is from" and still conclude a lesser
+Godhead, and Grudem grants the Son's equality in power while denying that eternal
+submission contradicts it.
+
 **And one finding about the method rather than about an argument.** `Entails`
 quantifies over the valuations satisfying the premises, so a premise set with no
 model entails everything. A package assembled from contradictory premises would
@@ -805,14 +846,12 @@ positions on tradition, three objections that do not reduce to one another, the
 two answers to the self-refutation objection, and a dispute over what Jesus'
 rebuke of tradition in Mark 7 decides.
 
-**The rest of the Triune God** ([#216]). The procession is encoded; LST §3's
-other graded claims are not. They are that each person is God and the three are
-not three gods, against the Arians, the modalists and the "a god" of John 1:1
-in the New World Translation; that the texts of the Son's obedience establish
-an order without an inequality of nature or an eternal chain of command,
-against Grudem and Ware; and that eternal generation is a defended synthesis.
-Then the "through the Son" of the Greek fathers as a third position on the
-procession, and an article check of LST's own sentences.
+**The rest of the Triune God** ([#216]). The procession and the order texts are
+encoded; LST §3's other graded claims are not. They are that each person is God
+and the three are not three gods, against the Arians, the modalists and the "a
+god" of John 1:1 in the New World Translation; and that eternal generation is a
+defended synthesis. Then the "through the Son" of the Greek fathers as a third
+position on the procession, and an article check of LST's own sentences.
 
 **Corpus grounding** ([#4]). Importers so `Passage` values resolve against real
 text data (BHSA, OSHB, STEPBible). At that point linguistic premises can cite

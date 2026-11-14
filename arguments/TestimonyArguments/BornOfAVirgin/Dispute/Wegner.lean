@@ -1,11 +1,6 @@
+import Testimony.Logic.Declare
 import TestimonyArguments.Meanings.BornOfAVirgin
 import TestimonyArguments.BornOfAVirgin.Results.Wegner
-import Testimony.Logic.Dispute
-import Testimony.Logic.Horn
-import Testimony.Logic.Solver
-import Testimony.Logic.Verdict
-import Testimony.Logic.Map
-import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Wegner — who prevails over Wegner's objection
@@ -163,104 +158,40 @@ def wegnerPartyNode : WegnerParty → ArgumentPackage Claim
 
 /-- The dispute over Wegner's objection: every party's premises have a model,
 every party establishes its conclusion, and every party's inferences are
-rated. -/
-@[bornOfAVirginDefs]
-def wegnerDispute : Dispute Claim WegnerParty where
-  node := wegnerPartyNode
-  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
-  sound
-    | .wegner => wegner_establishes
-    | .sign => signArgument_establishes
-    | .reply => ordinarySignReply_establishes
-  rated i := by
-    cases i <;> simp [bornOfAVirginDefs, Line.asPackage]
+rated. Every party's weakest link ranks at the bottom. -/
+declare_dispute wegnerDispute := wegnerPartyNode using bornOfAVirginDefs
+  /-- **Who defeats whom**, all nine pairs: the fathers and Wegner defeat each
+  other, the fathers and the reply defeat each other, and nothing else. Every
+  cell is computed from the parties' premises by `Horn.defeats?` and checked by
+  the kernel. -/
+  defeats [(.sign, .wegner), (.wegner, .sign), (.reply, .sign), (.sign, .reply)]
+  /-- **Nothing supports anything** among Wegner, the fathers and the reply, in
+  all nine pairs. Every cell is computed by `supports?` and checked by the
+  kernel. -/
+  supports []
+  /-- **No case is part of another's** here, in all nine pairs, except each
+  party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
+  partOf []
+  /-- The dispute drawn: who defeats whom. -/
+  map wegnerMap
 
 /-- **Wegner and the near-term reply stand together**, in Wegner's own world:
 the word does not denote a virgin, and the sign need not be a miracle. -/
 theorem wegner_stands_with_the_reply : wegnerDispute.StandTogether [.wegner, .reply] := by
   satisfied_by nearTermSignReading [Dispute.StandTogether, bornOfAVirginDefs]
 
-/-- The defeats of the dispute, as a table. -/
-def wegnerPartyDefeats : WegnerParty → WegnerParty → Prop
-  | .sign, .wegner => True
-  | .wegner, .sign => True
-  | .reply, .sign => True
-  | .sign, .reply => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel wegnerPartyDefeats := fun i j => by
-  cases i <;> cases j <;> unfold wegnerPartyDefeats <;> infer_instance
-
-/-- Every party's weakest link ranks at the bottom. -/
-theorem wegnerPartyNode_strength : ∀ i, (wegnerPartyNode i).strength = 0
-  | .wegner => wegnerLexical_strength
-  | .sign => signArgument_strength
-  | .reply => ordinarySignReply_strength
-
-prepare_clauses wegnerDisputeClauses for wegnerDispute
-
-/-- **Who defeats whom**, all nine pairs: the fathers and Wegner defeat each
-other, the fathers and the reply defeat each other, and nothing else. Every
-cell is computed from the parties' premises by `Horn.defeats?` and checked by
-the kernel. -/
-theorem wegnerDispute_defeats :
-    ∀ i j, wegnerDispute.defeats i j ↔ wegnerPartyDefeats i j := by
-  intro i j
-  refine Horn.defeats_iff_of_prepared (wegnerPartyNode_strength i) (wegnerPartyNode_strength j)
-    (wegnerDisputeClauses.spec i) (wegnerDisputeClauses.spec j) ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute in the form the verdict solver computes with. -/
-def wegnerFinite : Solver.Finite wegnerDispute.defeats where
-  parties := [.wegner, .sign, .reply]
-  complete i := by cases i <;> decide
-  defeats i j := decide (wegnerPartyDefeats i j)
-  spec i j := by rw [wegnerDispute_defeats]; simp
-
-/-- **Nothing supports anything** among Wegner, the fathers and the reply, in
-all nine pairs. Every cell is computed by `supports?` and checked by the
-kernel. -/
-theorem wegnerDispute_supports : ∀ i j, ¬ wegnerDispute.supports i j := by
-  intro i j
-  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> horn_certify
-
-/-- **No case is part of another's** here, in all nine pairs, except each
-party's own. Every cell is computed by `partOf?` and checked by the kernel. -/
-theorem wegnerDispute_partOf : ∀ i j, wegnerDispute.partOf i j ↔ i = j := by
-  intro i j
-  refine partOf_iff_of_certified ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute drawn: who defeats whom. -/
-def wegnerMap : ArgumentMap wegnerDispute where
-  finite := wegnerFinite
-  supports _ _ := false
-  supports_spec i j := by simp [wegnerDispute_supports i j]
-  partOf i j := decide (i = j)
-  partOf_spec i j := by rw [wegnerDispute_partOf]; simp
-
 /-- Why nothing prevails: a defeater for each party. -/
-def everyWegnerPartyDefeated : Verdict wegnerDispute where
-  finite := wegnerFinite
-  claim := .nothingGrounded [(.wegner, .sign), (.sign, .wegner), (.reply, .sign)]
-  checked := by decide +kernel
-
-/-- **Nothing prevails.** Every party is defeated by someone — Wegner and the
-reply by the fathers, the fathers by both — so nothing is forced, and the
-grounded extension is empty. -/
-@[headline]
-theorem nothing_prevails_over_wegner : grounded wegnerDispute.defeats = ∅ :=
-  everyWegnerPartyDefeated.holds
+declare_verdict everyWegnerPartyDefeated for wegnerDispute :
+    .nothingGrounded [(.wegner, .sign), (.sign, .wegner), (.reply, .sign)]
+  /-- **Nothing prevails.** Every party is defeated by someone — Wegner and the
+  reply by the fathers, the fathers by both — so nothing is forced, and the
+  grounded extension is empty. -/
+  proves @[headline] nothing_prevails_over_wegner
 
 #print axioms nothing_prevails_over_wegner
 
 /-- Why the fathers alone are one resolution. -/
-def fathersAlone : Verdict wegnerDispute where
-  finite := wegnerFinite
-  claim := .preferred [.sign]
-  checked := by decide +kernel
+declare_verdict fathersAlone for wegnerDispute : .preferred [.sign]
 
 /-- **One resolution: the fathers.** The sign argument alone is admissible — it
 defeats both of its defeaters — and it is in conflict with both of the other
@@ -272,10 +203,7 @@ theorem sign_is_one_resolution : Preferred wegnerDispute.defeats {.sign} :=
 #print axioms sign_is_one_resolution
 
 /-- Why Wegner with the reply is the other resolution. -/
-def wegnerWithTheReply : Verdict wegnerDispute where
-  finite := wegnerFinite
-  claim := .preferred [.wegner, .reply]
-  checked := by decide +kernel
+declare_verdict wegnerWithTheReply for wegnerDispute : .preferred [.wegner, .reply]
 
 /-- **The other resolution: Wegner, with the near-term reply.** Neither defeats
 the other, and between them they answer the fathers, who are the only party to
@@ -302,22 +230,17 @@ theorem wegner_not_skeptically_accepted :
 /-! ### A hearing without the reply -/
 
 /-- Wegner and the fathers alone. -/
-abbrev signAgainstWegner := wegnerDispute.restrict (· ∈ [WegnerParty.wegner, .sign])
+declare_hearing signAgainstWegner := wegnerDispute only [WegnerParty.wegner, .sign]
 
 /-- Why nothing prevails without the reply: Wegner and the fathers defeat each
 other. -/
-def wegnerAndTheFathersTie : Verdict signAgainstWegner where
-  finite := wegnerFinite.restrict (· ∈ [WegnerParty.wegner, .sign])
-  claim := .nothingGrounded (Witness.Table.sub _ [(.wegner, .sign), (.sign, .wegner)])
-  checked := by decide +kernel
-
-/-- **Without the reply, nothing prevails either.** Wegner and the fathers
-defeat each other, so the reply is not what keeps the fathers from prevailing:
-Wegner's rebuttal does, because the fathers' weakest link is no stronger than
-his. -/
-@[headline]
-theorem nothing_prevails_without_the_reply : grounded signAgainstWegner.defeats = ∅ :=
-  wegnerAndTheFathersTie.holds
+declare_verdict wegnerAndTheFathersTie for signAgainstWegner :
+    .nothingGrounded (Witness.Table.sub _ [(.wegner, .sign), (.sign, .wegner)])
+  /-- **Without the reply, nothing prevails either.** Wegner and the fathers
+  defeat each other, so the reply is not what keeps the fathers from prevailing:
+  Wegner's rebuttal does, because the fathers' weakest link is no stronger than
+  his. -/
+  proves @[headline] nothing_prevails_without_the_reply
 
 #print axioms nothing_prevails_without_the_reply
 

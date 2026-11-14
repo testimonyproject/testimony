@@ -154,10 +154,10 @@ open Testimony Testimony.Logic Testimony.Logic.Framework
 example : Horn.defeats? dinahCase driftObjection 1 0 = some true := by decide +kernel
 
 #bench "table: Septuagint, 36 cells" in
-example : ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j := by
+example : ∀ i j, septuagintDispute.defeats i j ↔ (i, j) ∈ septuagintDispute.defeatsTable := by
   intro i j
-  refine Horn.defeats_iff_of_defeats? (septuagintPartyNode_strength i)
-    (septuagintPartyNode_strength j) ?_
+  refine Horn.defeats_iff_of_defeats? (septuagintDispute.node_strength i)
+    (septuagintDispute.node_strength j) ?_
   cases i <;> cases j <;> decide +kernel
 
 #bench "cell, certified: status reading defeats Wegner" in
@@ -165,27 +165,27 @@ example : Defeats dinahCase driftObjection :=
   Horn.defeats_of_certified dinahCase_strength driftObjection_strength (by horn_certify)
 
 #bench "table, certified: Septuagint, 36 cells" in
-example : ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j := by
+example : ∀ i j, septuagintDispute.defeats i j ↔ (i, j) ∈ septuagintDispute.defeatsTable := by
   intro i j
-  refine Horn.defeats_iff_of_certified (septuagintPartyNode_strength i)
-    (septuagintPartyNode_strength j) ?_
+  refine Horn.defeats_iff_of_certified (septuagintDispute.node_strength i)
+    (septuagintDispute.node_strength j) ?_
   cases i <;> cases j <;> horn_certify
 
 #bench "table, prepared: Septuagint, 36 cells" in
-example : ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j := by
+example : ∀ i j, septuagintDispute.defeats i j ↔ (i, j) ∈ septuagintDispute.defeatsTable := by
   intro i j
-  refine Horn.defeats_iff_of_prepared (septuagintPartyNode_strength i)
-    (septuagintPartyNode_strength j) (septuagintDisputeClauses.spec i)
-    (septuagintDisputeClauses.spec j) ?_
+  refine Horn.defeats_iff_of_prepared (septuagintDispute.node_strength i)
+    (septuagintDispute.node_strength j) (septuagintDispute.clauses.spec i)
+    (septuagintDispute.clauses.spec j) ?_
   cases i <;> cases j <;> horn_certify
 
 prepare_parts septuagintBenchParts for septuagintDispute
 
 #bench "table, pruned: Septuagint, 36 cells" in
-example : ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j := by
+example : ∀ i j, septuagintDispute.defeats i j ↔ (i, j) ∈ septuagintDispute.defeatsTable := by
   intro i j
   refine Horn.defeats_iff_of_pruned septuagintBenchParts.injective
-    (septuagintPartyNode_strength i) (septuagintPartyNode_strength j)
+    (septuagintDispute.node_strength i) (septuagintDispute.node_strength j)
     (septuagintBenchParts.spec i) (septuagintBenchParts.spec j) (septuagintBenchParts.valid i)
     (septuagintBenchParts.valid j) (septuagintDispute.consistent i)
     (septuagintDispute.consistent j) ?_
@@ -193,7 +193,7 @@ example : ∀ i j, septuagintDispute.defeats i j ↔ septuagintPartyDefeats i j 
 
 #bench "verdict: Septuagint, grounded in stages" in
 example : Verdict septuagintDispute where
-  finite := septuagintFinite
+  finite := septuagintDispute.finite
   claim := .groundedExactly [[.dinah], [.witness, .usage, .laws]]
     [(.drift, .dinah), (.miller, .dinah)]
   checked := by decide +kernel
@@ -253,16 +253,16 @@ open Testimony Testimony.Logic Testimony.Logic.Framework
 #bench (runs := 1) "table: sola fide, first six rows, 102 cells" in
 example (i : Party)
     (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
-    (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
-  refine Horn.defeats_iff_of_defeats? (partyNode_strength i) (partyNode_strength j) ?_
+    (j : Party) : solaFideDispute.defeats i j ↔ (i, j) ∈ solaFideDispute.defeatsTable := by
+  refine Horn.defeats_iff_of_defeats? (solaFideDispute.node_strength i) (solaFideDispute.node_strength j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> decide +kernel
 
 #bench (runs := 1) "table, certified: sola fide, first six rows, 102 cells" in
 example (i : Party)
     (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
-    (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
-  refine Horn.defeats_iff_of_certified (partyNode_strength i) (partyNode_strength j) ?_
+    (j : Party) : solaFideDispute.defeats i j ↔ (i, j) ∈ solaFideDispute.defeatsTable := by
+  refine Horn.defeats_iff_of_certified (solaFideDispute.node_strength i) (solaFideDispute.node_strength j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
@@ -279,13 +279,15 @@ example : ∀ i j, ¬ solaFideDispute.supports i j := by
   cases i <;> cases j <;> horn_certify
 
 #bench (runs := 1) "part of: sola fide, 289 cells" in
-example : ∀ i j, solaFideDispute.partOf i j ↔ partyPartOf i j := by
+example : ∀ i j, solaFideDispute.partOf i j ↔
+    i = j ∨ (i, j) ∈ [(.critics, .pauline), (.trent, .trentOnPaulsWord)] := by
   intro i j
   refine partOf_iff_of_partOf? ?_
   cases i <;> cases j <;> decide +kernel
 
 #bench (runs := 1) "part of, certified: sola fide, 289 cells" in
-example : ∀ i j, solaFideDispute.partOf i j ↔ partyPartOf i j := by
+example : ∀ i j, solaFideDispute.partOf i j ↔
+    i = j ∨ (i, j) ∈ [(.critics, .pauline), (.trent, .trentOnPaulsWord)] := by
   intro i j
   refine partOf_iff_of_certified ?_
   cases i <;> cases j <;> horn_certify
@@ -303,8 +305,8 @@ prepare_clauses solaFideBenchClauses for solaFideDispute
 #bench (runs := 1) "table, prepared: sola fide, first six rows, 102 cells" in
 example (i : Party)
     (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
-    (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
-  refine Horn.defeats_iff_of_prepared (partyNode_strength i) (partyNode_strength j)
+    (j : Party) : solaFideDispute.defeats i j ↔ (i, j) ∈ solaFideDispute.defeatsTable := by
+  refine Horn.defeats_iff_of_prepared (solaFideDispute.node_strength i) (solaFideDispute.node_strength j)
     (solaFideBenchClauses.spec i) (solaFideBenchClauses.spec j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
@@ -312,26 +314,27 @@ example (i : Party)
 #bench (runs := 1) "table, pruned: sola fide, first six rows, 102 cells" in
 example (i : Party)
     (hi : i ∈ [.pauline, .dominical, .apostolic, .trent, .apocalyptic, .sanders])
-    (j : Party) : solaFideDispute.defeats i j ↔ partyDefeats i j := by
-  refine Horn.defeats_iff_of_pruned solaFideDisputeParts.injective (partyNode_strength i)
-    (partyNode_strength j) (solaFideDisputeParts.spec i) (solaFideDisputeParts.spec j)
-    (solaFideDisputeParts.valid i) (solaFideDisputeParts.valid j) (solaFideDispute.consistent i)
+    (j : Party) : solaFideDispute.defeats i j ↔ (i, j) ∈ solaFideDispute.defeatsTable := by
+  refine Horn.defeats_iff_of_pruned solaFideDispute.parts.injective (solaFideDispute.node_strength i)
+    (solaFideDispute.node_strength j) (solaFideDispute.parts.spec i) (solaFideDispute.parts.spec j)
+    (solaFideDispute.parts.valid i) (solaFideDispute.parts.valid j) (solaFideDispute.consistent i)
     (solaFideDispute.consistent j) ?_
   simp only [List.mem_cons, List.not_mem_nil, or_false] at hi
   rcases hi with rfl | rfl | rfl | rfl | rfl | rfl <;> cases j <;> horn_certify
 
 #bench "strengths: James hearing under evidence, 12 parties" in
 example :
-    ∀ i, ((jamesRegister.rerated .evidence).node i).strength = ratedStrength .evidence i := by
+    ∀ i, ((jamesRegister.rerated .evidence).node i).strength = jamesRegister.strength .evidence i := by
   intro i
   cases i <;> decide +kernel
 
 #bench "row, certified: James hearing under evidence, Trent's word, 12 cells" in
 example (j : JamesParty) :
     (jamesRegister.rerated .evidence).defeats .trentOnTheWord j ↔
-      ratedDefeats .evidence .trentOnTheWord j := by
+      (.trentOnTheWord, j) ∈ jamesRegister.defeatsTable .evidence := by
   refine Horn.defeats_iff_of_certified
-    (rerated_strength .evidence .trentOnTheWord) (rerated_strength .evidence j) ?_
+    (jamesRegister.node_strength .evidence .trentOnTheWord)
+    (jamesRegister.node_strength .evidence j) ?_
   cases j <;> horn_certify
 
 #bench (runs := 1) "joins: sola fide exclusions, 127 claims" in
@@ -340,7 +343,7 @@ example : (Testimony.Semantics.HasMeanings.exclusions (α := Claim)).length = 6 
 
 #bench "verdict: sola fide, only Paul's word unanswered" in
 example : Verdict solaFideDispute where
-  finite := solaFideFinite
+  finite := solaFideDispute.finite
   claim := .groundedExactly [[.lexical, .romansOnTheWord]]
     [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent), (.trent, .pauline)
     , (.apocalyptic, .pauline), (.sanders, .critics), (.critics, .sanders)
@@ -390,18 +393,19 @@ abbrev bothDispute : Dispute (SolaFide.Claim ⊕ SolaScriptura.Claim) Party :=
     (SolaScriptura.mark7Dispute.postulates_satisfiable .principle)
 
 def bothDefeats : Party → Party → Prop
-  | .inl i, .inl j => SolaFide.partyDefeats i j
-  | .inr i, .inr j => SolaScriptura.mark7PartyDefeats i j
+  | .inl i, .inl j => (i, j) ∈ SolaFide.solaFideDispute.defeatsTable
+  | .inr i, .inr j => (i, j) ∈ SolaScriptura.mark7Dispute.defeatsTable
   | _, _ => False
 
 instance : DecidableRel bothDefeats := fun x y => by
   cases x <;> cases y <;> unfold bothDefeats <;> infer_instance
 
-def bothStrength : Party → ℕ := Sum.elim SolaFide.partyStrength SolaScriptura.mark7PartyStrength
+def bothStrength : Party → ℕ :=
+  Sum.elim SolaFide.solaFideDispute.strength SolaScriptura.mark7Dispute.strength
 
 theorem both_strength : ∀ x, (bothDispute.node x).strength = bothStrength x
-  | .inl i => (ArgumentPackage.strength_inl _ _).trans (SolaFide.partyNode_strength i)
-  | .inr j => (ArgumentPackage.strength_inr _ _).trans (SolaScriptura.mark7PartyNode_strength j)
+  | .inl i => (ArgumentPackage.strength_inl _ _).trans (SolaFide.solaFideDispute.node_strength i)
+  | .inr j => (ArgumentPackage.strength_inr _ _).trans (SolaScriptura.mark7Dispute.node_strength j)
 
 #bench (runs := 1) "cross cells, searched: sola fide against Mark 7, 85 cells" in
 example : ∀ i j, ¬ bothDispute.defeats (.inl i) (.inr j) := by
@@ -425,7 +429,7 @@ example : ∀ x y, bothDispute.defeats x y ↔ bothDefeats x y := by
 
 #bench "verdict, composed: sola fide and Mark 7 as one" in
 example : Verdict bothDispute where
-  finite := Dispute.sumFinite SolaFide.solaFideFinite SolaScriptura.mark7Finite
+  finite := Dispute.sumFinite SolaFide.solaFideDispute.finite SolaScriptura.mark7Dispute.finite
   claim := .groundedExactly [[.inl .lexical, .inl .romansOnTheWord, .inr .principle]]
     [ (.inl .pauline, .inl .trent), (.inl .dominical, .inl .trent)
     , (.inl .apostolic, .inl .trent), (.inl .trent, .inl .pauline)

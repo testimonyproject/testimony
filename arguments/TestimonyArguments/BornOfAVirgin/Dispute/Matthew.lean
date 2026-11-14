@@ -1,6 +1,6 @@
+import Testimony.Logic.Declare
 import TestimonyArguments.BornOfAVirgin.Dispute.Septuagint
 import Testimony.Logic.Credibility
-import Testimony.Logic.Certificate
 
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Matthew — Scripture's own reading of the Greek word
@@ -133,63 +133,19 @@ def matthewPartyNode : MatthewParty → ArgumentPackage Claim
 
 /-- The dispute over Scripture's reading of the Greek word: every party's
 premises have a model, every party establishes its conclusion, and every party's
-inferences are rated. -/
-@[bornOfAVirginDefs]
-def matthewDispute : Dispute Claim MatthewParty where
-  node := matthewPartyNode
-  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
-  sound
-    | .matthew => matthewCase_establishes
-    | .drift => driftObjection_establishes
-  rated i := by
-    cases i <;> simp [bornOfAVirginDefs, Line.asPackage]
-
-/-- The defeats of the dispute, as a table: each party defeats the other. -/
-def matthewPartyDefeats : MatthewParty → MatthewParty → Prop
-  | .matthew, .drift => True
-  | .drift, .matthew => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel matthewPartyDefeats := fun i j => by
-  cases i <;> cases j <;> unfold matthewPartyDefeats <;> infer_instance
-
-/-- Both parties' weakest links rank at the bottom. -/
-theorem matthewPartyNode_strength : ∀ i, (matthewPartyNode i).strength = 0
-  | .matthew => matthewCase_strength
-  | .drift => driftObjection_strength
-
-prepare_clauses matthewDisputeClauses for matthewDispute
-
-/-- **Who defeats whom**, all four pairs: Matthew's reading and Wegner defeat
-each other, and nothing else. Every cell is computed from what the parties hold
-by `Horn.defeats?` and checked by the kernel. -/
-theorem matthewDispute_defeats :
-    ∀ i j, matthewDispute.defeats i j ↔ matthewPartyDefeats i j := by
-  intro i j
-  refine Horn.defeats_iff_of_prepared (matthewPartyNode_strength i) (matthewPartyNode_strength j)
-    (matthewDisputeClauses.spec i) (matthewDisputeClauses.spec j) ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute in the form the verdict solver computes with. -/
-def matthewFinite : Solver.Finite matthewDispute.defeats where
-  parties := [.matthew, .drift]
-  complete i := by cases i <;> decide
-  defeats i j := decide (matthewPartyDefeats i j)
-  spec i j := by rw [matthewDispute_defeats]; simp
+inferences are rated. Both parties' weakest links rank at the bottom. -/
+declare_dispute matthewDispute := matthewPartyNode using bornOfAVirginDefs
+  /-- **Who defeats whom**, all four pairs: Matthew's reading and Wegner defeat
+  each other, and nothing else. Every cell is computed from what the parties hold
+  by `Horn.defeats?` and checked by the kernel. -/
+  defeats [(.matthew, .drift), (.drift, .matthew)]
 
 /-- Why nothing prevails: each party is defeated by the other. -/
-def matthewStandoff : Verdict matthewDispute where
-  finite := matthewFinite
-  claim := .nothingGrounded [(.matthew, .drift), (.drift, .matthew)]
-  checked := by decide +kernel
-
-/-- **As the evidence weighs it, nothing prevails** between Matthew's reading and
-Wegner: each defeats the other, and neither outranks the other. -/
-@[headline]
-theorem nothing_prevails_between_matthew_and_wegner :
-    grounded matthewDispute.defeats = ∅ :=
-  matthewStandoff.holds
+declare_verdict matthewStandoff for matthewDispute :
+    .nothingGrounded [(.matthew, .drift), (.drift, .matthew)]
+  /-- **As the evidence weighs it, nothing prevails** between Matthew's reading and
+  Wegner: each defeats the other, and neither outranks the other. -/
+  proves @[headline] nothing_prevails_between_matthew_and_wegner
 
 #print axioms nothing_prevails_between_matthew_and_wegner
 
@@ -255,66 +211,31 @@ def matthewRegister : Register matthewDispute where
     subst h; rfl
   steps := [matthewStep]
 
-/-- Each party's weakest link at a standard's ratings: as cited, except that
-under the Scripture standard Matthew's step is weighed at `plausible`, its
-computed rating there. -/
-def matthewRatedStrength : Standard → MatthewParty → ℕ
-  | .scriptural, .matthew => 1
-  | _, _ => 0
-
-/-- Each party's weakest link, as the re-rated package computes it. -/
-theorem matthew_rerated_strength (s : Standard) :
-    ∀ i, ((matthewRegister.rerated s).node i).strength = matthewRatedStrength s i := by
-  intro i
-  cases s <;> cases i <;> decide +kernel
-
-/-- Who defeats whom at a standard's ratings: under the evidence and tradition
-standards, as in the full dispute; under the Scripture standard, Matthew's
-reading defeats Wegner, and Wegner, now the weaker, does not defeat it. -/
-def matthewRatedDefeats : Standard → MatthewParty → MatthewParty → Prop
-  | .scriptural, .drift, .matthew => False
-  | _, i, j => matthewPartyDefeats i j
-
-/-- The table is finite, so membership in it is decidable. -/
-instance (s : Standard) : DecidableRel (matthewRatedDefeats s) := fun i j => by
-  cases s <;> cases i <;> cases j <;> unfold matthewRatedDefeats matthewPartyDefeats <;>
-    infer_instance
-
-/-- **Who defeats whom at each standard's ratings**, computed from the parties'
-premises and the re-rated inferences and checked by the kernel. -/
-theorem matthew_rerated_defeats (s : Standard) :
-    ∀ i j, (matthewRegister.rerated s).defeats i j ↔ matthewRatedDefeats s i j := by
-  intro i j
-  refine Horn.defeats_iff_of_certified
-    (matthew_rerated_strength s i) (matthew_rerated_strength s j) ?_
-  cases s <;> cases i <;> cases j <;> horn_certify
-
-/-- The dispute at a standard's ratings, in the form the verdict solver computes
-with. -/
-def matthewRatedFinite (s : Standard) : Solver.Finite (matthewRegister.rerated s).defeats where
-  parties := matthewFinite.parties
-  complete := matthewFinite.complete
-  defeats i j := decide (matthewRatedDefeats s i j)
-  spec i j := by rw [matthew_rerated_defeats]; simp
-
-/-- The hearing under a standard, in the form the verdict solver computes with. -/
-abbrev matthewUnderFinite (s : Standard) :=
-  (matthewRatedFinite s).restrict (matthewRegister.admits s)
+/-- The dispute at each standard's ratings. Each party's weakest link is as
+cited, except that under the Scripture standard Matthew's step is weighed at
+`plausible`, its computed rating there. -/
+declare_rerated matthewRegister
+  /-- **Who defeats whom at each standard's ratings**: under the evidence and
+  tradition standards, as in the full dispute; under the Scripture standard,
+  Matthew's reading defeats Wegner, and Wegner, now the weaker, does not defeat
+  it. Computed from the parties' premises and the re-rated inferences and checked
+  by the kernel. -/
+  defeats fun
+    | .scriptural => matthewDispute.defeatsTable.erase (.drift, .matthew)
+    | _ => matthewDispute.defeatsTable
 
 /-- How the hearing under the evidence standard is settled: Wegner is heard, and
 he and Matthew's reading defeat each other. -/
-def matthewUnderEvidenceSettled : Verdict (matthewRegister.hearing .evidence) where
-  finite := matthewUnderFinite .evidence
-  claim := .nothingGrounded (Witness.Table.sub _ [(.matthew, .drift), (.drift, .matthew)])
-  checked := by decide +kernel
+declare_verdict matthewUnderEvidenceSettled for (matthewRegister.hearing .evidence)
+    using (matthewRegister.under .evidence) :
+    .nothingGrounded (Witness.Table.sub _ [(.matthew, .drift), (.drift, .matthew)])
 
 /-- How the hearing under the Scripture standard is settled: Wegner's dissent
 rests on what the standard does not admit against a step grounded in Scripture
 alone, so he is not heard, and Matthew's reading stands unattacked. -/
-def matthewUnderScriptureSettled : Verdict (matthewRegister.hearing .scriptural) where
-  finite := matthewUnderFinite .scriptural
-  claim := .groundedExactly [Witness.listSub _ [.matthew]] (Witness.Table.sub _ [])
-  checked := by decide +kernel
+declare_verdict matthewUnderScriptureSettled for (matthewRegister.hearing .scriptural)
+    using (matthewRegister.under .scriptural) :
+    .groundedExactly [Witness.listSub _ [.matthew]] (Witness.Table.sub _ [])
 
 /-- **Matthew's step turns on the standard, and the hearing and the rating
 agree.** Under the evidence standard Wegner is heard and nothing prevails. Under

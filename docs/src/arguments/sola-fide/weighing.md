@@ -1756,133 +1756,6 @@ def solaFideDispute : Dispute Claim Party :=
     rated := solaFideDispute._proof_20 }
 ```
 
-<a id="reformed_strands_stand_with_the_critics"></a>
-**`reformed_strands_stand_with_the_critics`**
-
-Paul's, Luke's and Peter's cases can be held together with the critics', on the
-reading where Sanders' account of Judaism is denied and everything else holds.
-
-```lean
-theorem reformed_strands_stand_with_the_critics :
-    solaFideDispute.StandTogether [Party.pauline, Party.dominical,
-    Party.apostolic, Party.critics]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="paul_and_luke_stand_with_jervell"></a>
-**`paul_and_luke_stand_with_jervell`**
-
-Paul's case and Luke's can be held together with the critics' and with
-Jervell's.
-
-```lean
-theorem paul_and_luke_stand_with_jervell : solaFideDispute.StandTogether
-    [Party.pauline, Party.dominical, Party.jervell, Party.critics]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="luke_and_acts_stand_with_sanders"></a>
-**`luke_and_acts_stand_with_sanders`**
-
-Luke's case and Peter's can be held together with Sanders': neither rests on the
-reading of "works of the law".
-
-```lean
-theorem luke_and_acts_stand_with_sanders : solaFideDispute.StandTogether
-    [Party.dominical, Party.apostolic, Party.sanders]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="trent_stands_with_sanders_and_jervell"></a>
-**`trent_stands_with_sanders_and_jervell`**
-
-Trent can be held together with Sanders and Jervell.
-
-```lean
-theorem trent_stands_with_sanders_and_jervell : solaFideDispute.StandTogether
-    [Party.trent, Party.sanders, Party.jervell]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="trent_stands_with_the_critics_and_jervell"></a>
-**`trent_stands_with_the_critics_and_jervell`**
-
-Trent can be held together with the critics and Jervell.
-
-```lean
-theorem trent_stands_with_the_critics_and_jervell :
-    solaFideDispute.StandTogether [Party.trent, Party.critics, Party.jervell]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="apocalyptic_stands_with_sanders_and_jervell"></a>
-**`apocalyptic_stands_with_sanders_and_jervell`**
-
-The apocalyptic reading can be held together with Sanders and Jervell.
-
-```lean
-theorem apocalyptic_stands_with_sanders_and_jervell :
-    solaFideDispute.StandTogether [Party.apocalyptic, Party.sanders,
-    Party.jervell]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="apocalyptic_stands_with_the_critics_and_jervell"></a>
-**`apocalyptic_stands_with_the_critics_and_jervell`**
-
-The apocalyptic reading can be held together with the critics and Jervell.
-
-```lean
-theorem apocalyptic_stands_with_the_critics_and_jervell :
-    solaFideDispute.StandTogether [Party.apocalyptic, Party.critics,
-    Party.jervell]
--- axioms: propext, Classical.choice, Quot.sound
-```
-
-<a id="partyDefeats"></a>
-**`partyDefeats`**
-
-Who defeats whom, as a table.
-
-```lean
-def partyDefeats : Party → Party → Prop
-```
-
-<a id="instDecidableRelPartyPartyDefeats"></a>
-**`instDecidableRelPartyPartyDefeats`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelPartyPartyDefeats : DecidableRel partyDefeats
-```
-
-<a id="partyStrength"></a>
-**`partyStrength`**
-
-Each position's weakest link: at the bottom for all but the two arguments about
-Paul's word.
-
-```lean
-def partyStrength : Party → ℕ :=
-  fun x =>
-    match x with
-    | Party.lexical => 2
-    | Party.romansOnTheWord => 2
-    | x => 0
-```
-
-<a id="partyNode_strength"></a>
-**`partyNode_strength`**
-
-Each position's weakest link, as worked out from its premises.
-
-```lean
-theorem partyNode_strength : ∀ (i : Party), (partyNode i).strength =
-    partyStrength i
--- axioms: propext
-```
-
 <a id="solaFideDispute_defeats"></a>
 **`solaFideDispute_defeats`**
 
@@ -1904,34 +1777,56 @@ from the positions' premises and checked by machine. The table above is what
 that working is checked against. None of it is assumed.
 
 ```lean
-theorem solaFideDispute_defeats : ∀ (i j : Party), solaFideDispute.defeats i j
-    ↔ partyDefeats i j
+theorem solaFideDispute_defeats : ∀ (i j : Party),
+ solaFideDispute.defeats i
+    j ↔
+ (i, j) ∈
+ have y :=
+ have y :=
+ have y := [(Party.johannine,
+    Party.chrysostom), (Party.chrysostom, Party.sanctification),
+    (Party.sanctification, Party.chrysostom), (Party.trent,
+    Party.sanctification), (Party.sanctification, Party.trent),
+    (Party.trentOnPaulsWord, Party.sanctification), (Party.sanctification,
+    Party.trentOnPaulsWord)];
+ (Party.chrysostom, Party.pauline) ::
+    (Party.pauline, Party.chrysostom) :: (Party.chrysostom, Party.dominical)
+    :: (Party.dominical, Party.chrysostom) :: (Party.chrysostom,
+    Party.apostolic) :: (Party.apostolic, Party.chrysostom) ::
+    (Party.chrysostom, Party.johannine) :: y;
+ have y := (Party.johannine,
+    Party.trentOnPaulsWord) :: (Party.apocalyptic, Party.johannine) ::
+    (Party.johannine, Party.apocalyptic) :: (Party.aquinas, Party.johannine)
+    :: (Party.johannine, Party.aquinas) :: (Party.luther, Party.aquinas) ::
+    (Party.aquinas, Party.luther) :: y;
+ (Party.trentOnPaulsWord,
+    Party.dominical) :: (Party.trentOnPaulsWord, Party.apostolic) ::
+    (Party.trentOnPaulsWord, Party.apocalyptic) :: (Party.trent,
+    Party.johannine) :: (Party.johannine, Party.trent) ::
+    (Party.trentOnPaulsWord, Party.johannine) :: y;
+ have y :=
+ have y :=
+    (Party.lexical, Party.trentOnPaulsWord) :: (Party.romansOnTheWord,
+    Party.trentOnPaulsWord) :: (Party.pauline, Party.trentOnPaulsWord) ::
+    (Party.dominical, Party.trentOnPaulsWord) :: (Party.apostolic,
+    Party.trentOnPaulsWord) :: (Party.apocalyptic, Party.trentOnPaulsWord) ::
+    (Party.trentOnPaulsWord, Party.pauline) :: y;
+ (Party.critics,
+    Party.sanders) :: (Party.jervell, Party.apostolic) :: (Party.apostolic,
+    Party.jervell) :: (Party.gospel, Party.trent) :: (Party.trent,
+    Party.gospel) :: (Party.gospel, Party.trentOnPaulsWord) ::
+    (Party.trentOnPaulsWord, Party.gospel) :: y;
+ have y :=
+    (Party.apocalyptic, Party.trent) :: (Party.trent, Party.apocalyptic) ::
+    (Party.apocalyptic, Party.pauline) :: (Party.pauline, Party.apocalyptic)
+    :: (Party.sanders, Party.pauline) :: (Party.pauline, Party.sanders) ::
+    (Party.sanders, Party.critics) :: y;
+ (Party.trent, Party.pauline) ::
+    (Party.trent, Party.dominical) :: (Party.trent, Party.apostolic) ::
+    (Party.pauline, Party.trent) :: (Party.dominical, Party.trent) ::
+    (Party.apostolic, Party.trent) :: y
 -- axioms: propext, Classical.choice, Quot.sound
 ```
-
-<a id="solaFideFinite"></a>
-**`solaFideFinite`**
-
-The debate in the form the solver works with: every position, and the table.
-
-```lean
-def solaFideFinite : Solver.Finite solaFideDispute.defeats :=
-  {
-    parties :=
-      [Party.pauline, Party.dominical,
-        Party.apostolic, Party.trent,
-        Party.apocalyptic, Party.sanders,
-        Party.critics, Party.jervell, Party.gospel,
-        Party.lexical, Party.trentOnPaulsWord,
-        Party.romansOnTheWord, Party.johannine,
-        Party.aquinas, Party.luther,
-        Party.chrysostom, Party.sanctification],
-    complete := solaFideFinite._proof_1,
-    defeats := fun i j => decide (partyDefeats i j),
-    spec := solaFideFinite._proof_2 }
-```
-
-#### The dispute as a graph
 
 <a id="solaFideDispute_supports"></a>
 **`solaFideDispute_supports`**
@@ -1950,30 +1845,6 @@ theorem solaFideDispute_supports : ∀ (i j : Party), ¬solaFideDispute.supports
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
-<a id="partyPartOf"></a>
-**`partyPartOf`**
-
-Whose case is contained in whose, as a table. Besides each position's own, there
-are two pairs.
-
-```lean
-def partyPartOf : Party → Party → Prop :=
-  fun x x_1 =>
-    match x, x_1 with
-    | Party.critics, Party.pauline => True
-    | Party.trent, Party.trentOnPaulsWord => True
-    | i, j => i = j
-```
-
-<a id="instDecidableRelPartyPartyPartOf"></a>
-**`instDecidableRelPartyPartyPartOf`**
-
-The table is finite, so membership in it is decidable.
-
-```lean
-def instDecidableRelPartyPartyPartOf : DecidableRel partyPartOf
-```
-
 <a id="solaFideDispute_partOf"></a>
 **`solaFideDispute_partOf`**
 
@@ -1985,7 +1856,8 @@ else. Every answer is worked out and checked by machine.
 
 ```lean
 theorem solaFideDispute_partOf : ∀ (i j : Party), solaFideDispute.partOf i j ↔
-    partyPartOf i j
+    i = j ∨ (i, j) ∈ [(Party.critics, Party.pauline), (Party.trent,
+    Party.trentOnPaulsWord)]
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -2185,6 +2057,89 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 17 *Obedience as sanctification (John 3:36, Matthew 7:21)* | 11 *Trent, against 'not by works', read as what Paul's word means* | attack on a part — already a defeat |
 
 The defeats are the cells of [`solaFideDispute_defeats`](#solaFideDispute_defeats), the supports the cells of [`solaFideDispute_supports`](#solaFideDispute_supports) and the parts the cells of [`solaFideDispute_partOf`](#solaFideDispute_partOf), each computed from the parties' premises and checked by the kernel. The attacks derived through support and through parts are reported, not counted: every verdict is computed from the defeats alone. Every derived attack is already a defeat.
+
+<a id="reformed_strands_stand_with_the_critics"></a>
+**`reformed_strands_stand_with_the_critics`**
+
+Paul's, Luke's and Peter's cases can be held together with the critics', on the
+reading where Sanders' account of Judaism is denied and everything else holds.
+
+```lean
+theorem reformed_strands_stand_with_the_critics :
+    solaFideDispute.StandTogether [Party.pauline, Party.dominical,
+    Party.apostolic, Party.critics]
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="paul_and_luke_stand_with_jervell"></a>
+**`paul_and_luke_stand_with_jervell`**
+
+Paul's case and Luke's can be held together with the critics' and with
+Jervell's.
+
+```lean
+theorem paul_and_luke_stand_with_jervell : solaFideDispute.StandTogether
+    [Party.pauline, Party.dominical, Party.jervell, Party.critics]
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="luke_and_acts_stand_with_sanders"></a>
+**`luke_and_acts_stand_with_sanders`**
+
+Luke's case and Peter's can be held together with Sanders': neither rests on the
+reading of "works of the law".
+
+```lean
+theorem luke_and_acts_stand_with_sanders : solaFideDispute.StandTogether
+    [Party.dominical, Party.apostolic, Party.sanders]
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trent_stands_with_sanders_and_jervell"></a>
+**`trent_stands_with_sanders_and_jervell`**
+
+Trent can be held together with Sanders and Jervell.
+
+```lean
+theorem trent_stands_with_sanders_and_jervell : solaFideDispute.StandTogether
+    [Party.trent, Party.sanders, Party.jervell]
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="trent_stands_with_the_critics_and_jervell"></a>
+**`trent_stands_with_the_critics_and_jervell`**
+
+Trent can be held together with the critics and Jervell.
+
+```lean
+theorem trent_stands_with_the_critics_and_jervell :
+    solaFideDispute.StandTogether [Party.trent, Party.critics, Party.jervell]
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="apocalyptic_stands_with_sanders_and_jervell"></a>
+**`apocalyptic_stands_with_sanders_and_jervell`**
+
+The apocalyptic reading can be held together with Sanders and Jervell.
+
+```lean
+theorem apocalyptic_stands_with_sanders_and_jervell :
+    solaFideDispute.StandTogether [Party.apocalyptic, Party.sanders,
+    Party.jervell]
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="apocalyptic_stands_with_the_critics_and_jervell"></a>
+**`apocalyptic_stands_with_the_critics_and_jervell`**
+
+The apocalyptic reading can be held together with the critics and Jervell.
+
+```lean
+theorem apocalyptic_stands_with_the_critics_and_jervell :
+    solaFideDispute.StandTogether [Party.apocalyptic, Party.critics,
+    Party.jervell]
+-- axioms: propext, Classical.choice, Quot.sound
+```
 
 #### What the dispute decides
 
@@ -3309,20 +3264,6 @@ def reformationAlone : Dispute Claim { i // i ∉ [Party.apocalyptic,
         Party.critics, Party.jervell]
 ```
 
-<a id="reformationAloneFinite"></a>
-**`reformationAloneFinite`**
-
-The Reformation debate, in the form the solver works with.
-
-```lean
-def reformationAloneFinite : Solver.Finite fun i j => solaFideDispute.defeats
-    ↑i ↑j :=
-  solaFideFinite.restrict fun x =>
-    x ∉
-      [Party.apocalyptic, Party.sanders,
-        Party.critics, Party.jervell]
-```
-
 <a id="reformationSettlesTheWord"></a>
 **`reformationSettlesTheWord`**
 
@@ -3508,7 +3449,7 @@ its definition is a claim about what God does.
 
 ```lean
 theorem trent_defensible_with_pauls_word : Framework.CredulouslyAccepted
-    reformationAlone.defeats ⟨Party.trent, ⋯⟩
+    reformationAlone.defeats ⟨Party.trent, trentStandsWithPaulsWord._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -3595,7 +3536,8 @@ Galatians and again in Romans 4 (see `whatTrentsDefinitionClaims`).
 
 ```lean
 theorem sola_fide_not_forced_in_the_reformation_dispute :
-    ¬Framework.SkepticallyAccepted reformationAlone.defeats ⟨Party.pauline, ⋯⟩
+    ¬Framework.SkepticallyAccepted reformationAlone.defeats ⟨Party.pauline,
+    reformationAnsweredByTrent._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -3612,18 +3554,6 @@ with the second, since that is what it rests on.
 def withoutTrent : Dispute Claim { i // i ∉ [Party.trent,
     Party.trentOnPaulsWord] } :=
   solaFideDispute.restrict fun x =>
-    x ∉ [Party.trent, Party.trentOnPaulsWord]
-```
-
-<a id="withoutTrentFinite"></a>
-**`withoutTrentFinite`**
-
-The debate without Trent, in the form the solver works with.
-
-```lean
-def withoutTrentFinite : Solver.Finite fun i j => solaFideDispute.defeats ↑i
-    ↑j :=
-  solaFideFinite.restrict fun x =>
     x ∉ [Party.trent, Party.trentOnPaulsWord]
 ```
 
@@ -3835,7 +3765,7 @@ to "faith suffices".
 
 ```lean
 theorem luke_not_forced_without_trent : ¬Framework.SkepticallyAccepted
-    withoutTrent.defeats ⟨Party.dominical, ⋯⟩
+    withoutTrent.defeats ⟨Party.dominical, lukeAnsweredByChrysostom._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -3925,7 +3855,8 @@ Paul's Greek, not about Rome.
 
 ```lean
 theorem sola_fide_from_paul_not_forced_without_trent :
-    ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.pauline, ⋯⟩
+    ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.pauline,
+    paulAnsweredByCampbell._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -4017,7 +3948,8 @@ John, what believing is (`sola_fide_from_john_not_forced_without_trent`).
 
 ```lean
 theorem sola_fide_from_peter_not_forced_without_trent :
-    ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.apostolic, ⋯⟩
+    ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.apostolic,
+    peterAnsweredByJervell._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -4109,7 +4041,8 @@ argument and Aquinas's each defeat the other, and neither is removed.
 
 ```lean
 theorem sola_fide_from_john_not_forced_without_trent :
-    ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.johannine, ⋯⟩
+    ¬Framework.SkepticallyAccepted withoutTrent.defeats ⟨Party.johannine,
+    johnAnsweredByAquinas._proof_2⟩
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 

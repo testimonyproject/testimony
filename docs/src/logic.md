@@ -835,6 +835,55 @@ where the literature has it, between Campbell and Paul, over the genitive.
 Check the derived attacks before a dispute is merged: every rebuttal on a step
 should already be a defeat, or the difference should be the point.
 
+**Steps 2 and 3, declared as data.** Once the parties are an enumeration and
+each has its package, everything in steps 2 and 3 but the three tables and the
+witnesses follows by rule. `declare_dispute` and `declare_verdict`
+(`Testimony.Logic.Declare`) take only what does not: the packages, the unfold
+set, each table as a list of pairs, and each verdict's witness. They generate the
+rest, with the same proofs written above: each party's strength, computed and
+checked; its clauses, prepared once; every cell of each table, decided and
+checked by the kernel; the solver form; the map; and each verdict with the
+theorem it proves. A table is still a claim the kernel checks, so a wrong pair
+does not build:
+
+```lean
+/-- The dispute over the procession. -/
+declare_dispute processionDispute := partyNode using trinityDefs
+  /-- **Who defeats whom**: one standoff, and nothing else. -/
+  defeats [(.western, .eastern), (.eastern, .western)]
+  /-- **Nothing supports anything.** -/
+  supports []
+  /-- **LST's case is part of both the others'.** -/
+  partOf [(.lst, .western), (.lst, .eastern)]
+  /-- The dispute drawn. -/
+  map processionMap
+
+/-- Why the West can be defended: with LST, it answers the East itself. -/
+declare_verdict westernWithTheTexts for processionDispute :
+    .credulous .western [.lst, .western]
+  /-- **The Western position can be defended.** -/
+  proves @[headline] western_defensible
+```
+
+A part-of table lists only the pairs besides each party's own, since every case
+is part of itself. Each generated declaration sits where its clause is written,
+so the page reads in source order. A large table can be proved a few rows at a
+time (`rows 6`) and over each party's components (`pruned`), as sola fide's
+seventeen-party table is.
+
+Three more commands cover the rest. `declare_hearing H := D only [...]` (or
+`except [...]`) hears some of a dispute's parties and gives the hearing its
+solver form, `H.finite`. `declare_rerated R`, with one table for each standard,
+weighs a register's dispute at each standard's ratings (`Testimony.Logic.Credibility`).
+And `declare_verdict … using F` checks a verdict against a solver form other than
+the dispute's own, such as `R.under .scriptural`.
+
+Every dispute in `TestimonyArguments` is declared this way except one. The
+hearing in `Articles/Howell2003.lean` seats every party to the sola fide dispute
+inside its own, as `.sola q`, so its parties are not an enumeration. Its table is
+written as a function and proved from the sola fide table, and its verdicts use
+`declare_verdict`.
+
 **4. Say why a position stands against a rival.** A verdict says *who*
 survives; a reader also asks *why*. `Because P R` (`Testimony.Logic.Because`)
 answers for one pair, as one checked object. It names a **crux**, one of `P`'s

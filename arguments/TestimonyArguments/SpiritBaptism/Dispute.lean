@@ -1,11 +1,6 @@
 import TestimonyArguments.Meanings.SpiritBaptism
 import TestimonyArguments.SpiritBaptism.Positions
-import Testimony.Logic.Dispute
-import Testimony.Logic.Horn
-import Testimony.Logic.Solver
-import Testimony.Logic.Verdict
-import Testimony.Logic.Map
-import Testimony.Logic.Certificate
+import Testimony.Logic.Declare
 
 /-!
 # TestimonyArguments.SpiritBaptism.Dispute — the four views weighed
@@ -58,25 +53,14 @@ open Testimony
 
 open Testimony Testimony.Logic Testimony.Logic.Framework
 
-/-! ### Strength -/
-
-/-- The conversion view's weakest link is `disputed`, at several places: its
-reading of 1 Corinthians 12:13 and both of its steps. -/
-theorem conversionCase_strength : conversionCase.strength = 0 := by decide
-/-- The Pentecostal view's weakest link is `disputed`, at several places: its
-reading of 1 Corinthians 12:13, of Acts 8 and 19, of Luke's Spirit baptism, of
-the narratives as a pattern, and its step from the instrumental reading. -/
-theorem pentecostalCase_strength : pentecostalCase.strength = 0 := by decide
-/-- The holiness view's weakest link is `disputed`: its premise, and the step
-Wesley contests. -/
-theorem holinessCase_strength : holinessCase.strength = 0 := by decide
-/-- The sacramental view's weakest link is `disputed`, at several places: its
-readings of the rite and both of its steps. -/
-theorem sacramentalCase_strength : sacramentalCase.strength = 0 := by decide
-
 /-! ### The dispute -/
 
-/-- The parties to the dispute over Spirit baptism. -/
+/-- The parties to the dispute over Spirit baptism. Every one's weakest link is
+`disputed`: the conversion view's reading of 1 Corinthians 12:13 and both of its
+steps; the Pentecostal view's readings of 1 Corinthians 12:13, of Acts 8 and 19,
+of Luke's Spirit baptism and of the narratives as a pattern, and its step from
+the instrumental reading; the holiness view's premise and the step Wesley
+contests; and the sacramental view's readings of the rite and both its steps. -/
 inductive View
   /-- At conversion: Dunn, Stott. -/
   | conversion
@@ -98,17 +82,26 @@ def viewNode : View → ArgumentPackage Claim
 
 /-- The dispute over Spirit baptism: every view can be held without
 contradiction, delivers its conclusion, and has its steps rated. -/
-@[spiritBaptismDefs]
-def spiritBaptismDispute : Dispute Claim View where
-  node := viewNode
-  consistent i := Horn.satisfiable_of_certified (by cases i <;> horn_certify)
-  sound
-    | .conversion => conversionCase_establishes
-    | .pentecostal => pentecostalCase_establishes
-    | .holiness => holinessCase_establishes
-    | .sacramental => sacramentalCase_establishes
-  rated i := by
-    cases i <;> simp [spiritBaptismDefs]
+declare_dispute spiritBaptismDispute := viewNode using spiritBaptismDefs
+  /-- **Who defeats whom**, all 16 pairs: four standoffs, and nothing else. The
+  conversion view and each subsequence view defeat each other — "no second to
+  seek" against "a second to seek" — and the Pentecostal view also denies the
+  conversion reading of 1 Corinthians 12:13. The sacramental view and each
+  subsequence view defeat each other on the same point. Every cell is checked by
+  the kernel. -/
+  defeats
+    [ (.conversion, .pentecostal), (.conversion, .holiness)
+    , (.pentecostal, .conversion), (.pentecostal, .sacramental)
+    , (.holiness, .conversion), (.holiness, .sacramental)
+    , (.sacramental, .pentecostal), (.sacramental, .holiness) ]
+  /-- **Nothing supports anything**, in all 16 pairs. Every cell is checked by
+  the kernel. -/
+  supports []
+  /-- Each view's case is part of its own and of no other's. Every cell is
+  checked by the kernel. -/
+  partOf []
+  /-- The dispute over Spirit baptism drawn: who defeats whom. -/
+  map spiritBaptismMap
 
 /-- **The conversion and sacramental views can be held together**: one reading
 satisfies both — every believer baptized in the Spirit at conversion, the Spirit
@@ -128,192 +121,83 @@ theorem the_subsequence_views_stand_together :
     spiritBaptismDispute.StandTogether [.pentecostal, .holiness] := by
   satisfied_by pentecostalReading [Dispute.StandTogether, spiritBaptismDefs]
 
-/-- The defeats of the dispute, as a table. -/
-def viewDefeats : View → View → Prop
-  | .conversion, .pentecostal => True
-  | .conversion, .holiness => True
-  | .pentecostal, .conversion => True
-  | .pentecostal, .sacramental => True
-  | .holiness, .conversion => True
-  | .holiness, .sacramental => True
-  | .sacramental, .pentecostal => True
-  | .sacramental, .holiness => True
-  | _, _ => False
-
-/-- The table is finite, so membership in it is decidable. -/
-instance : DecidableRel viewDefeats := fun i j => by
-  cases i <;> cases j <;> unfold viewDefeats <;> infer_instance
-
-/-- Each view's weakest link: `disputed` for every one. -/
-def viewStrength : View → ℕ := fun _ => 0
-
-/-- Each view's weakest link, as its package computes it. -/
-theorem viewNode_strength : ∀ i, (viewNode i).strength = viewStrength i
-  | .conversion => conversionCase_strength
-  | .pentecostal => pentecostalCase_strength
-  | .holiness => holinessCase_strength
-  | .sacramental => sacramentalCase_strength
-
-prepare_clauses spiritBaptismDisputeClauses for spiritBaptismDispute
-
-/-- **Who defeats whom**, all 16 pairs: four standoffs, and nothing else. The
-conversion view and each subsequence view defeat each other — "no second to
-seek" against "a second to seek" — and the Pentecostal view also denies the
-conversion reading of 1 Corinthians 12:13. The sacramental view and each
-subsequence view defeat each other on the same point. Every cell is computed by
-`Horn.defeats?` and checked by the kernel. -/
-theorem spiritBaptismDispute_defeats :
-    ∀ i j, spiritBaptismDispute.defeats i j ↔ viewDefeats i j := by
-  intro i j
-  refine Horn.defeats_iff_of_prepared (viewNode_strength i) (viewNode_strength j)
-    (spiritBaptismDisputeClauses.spec i) (spiritBaptismDisputeClauses.spec j) ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute in the form the verdict solver computes with. -/
-def spiritBaptismFinite : Solver.Finite spiritBaptismDispute.defeats where
-  parties := [.conversion, .pentecostal, .holiness, .sacramental]
-  complete i := by cases i <;> decide
-  defeats i j := decide (viewDefeats i j)
-  spec i j := by rw [spiritBaptismDispute_defeats]; simp
-
-/-- **Nothing supports anything**, in all 16 pairs. Every cell is computed by
-`supports?` and checked by the kernel. -/
-theorem spiritBaptismDispute_supports : ∀ i j, ¬ spiritBaptismDispute.supports i j := by
-  intro i j
-  refine (supports_iff_of_certified (P := False) ?_).not.mpr id
-  cases i <;> cases j <;> horn_certify
-
-/-- Each view's case is part of its own and of no other's. Every cell is computed
-by `partOf?` and checked by the kernel. -/
-theorem spiritBaptismDispute_partOf : ∀ i j, spiritBaptismDispute.partOf i j ↔ i = j := by
-  intro i j
-  refine partOf_iff_of_certified ?_
-  cases i <;> cases j <;> horn_certify
-
-/-- The dispute over Spirit baptism drawn: who defeats whom. -/
-def spiritBaptismMap : ArgumentMap spiritBaptismDispute where
-  finite := spiritBaptismFinite
-  supports _ _ := false
-  supports_spec i j := by simp [spiritBaptismDispute_supports i j]
-  partOf i j := decide (i = j)
-  partOf_spec i j := by rw [spiritBaptismDispute_partOf]; simp
-
 /-! ### What the dispute decides -/
 
 /-- Why nothing is forced: every view has a defeater. The conversion view has the
 Pentecostal, the Pentecostal and holiness views have the conversion view, and the
 sacramental view has the Pentecostal. -/
-def spiritBaptismSettlesNothing : Verdict spiritBaptismDispute where
-  finite := spiritBaptismFinite
-  claim := .nothingGrounded
-    [ (.conversion, .pentecostal), (.pentecostal, .conversion)
-    , (.holiness, .conversion), (.sacramental, .pentecostal) ]
-  checked := by decide +kernel
+declare_verdict spiritBaptismSettlesNothing for spiritBaptismDispute :
+    .nothingGrounded
+      [ (.conversion, .pentecostal), (.pentecostal, .conversion)
+      , (.holiness, .conversion), (.sacramental, .pentecostal) ]
+  /-- **Nothing is forced.** Every view is in a standoff the dispute cannot
+  resolve, and every weakest link is `disputed`, so no rating breaks a tie.
 
-/-- **Nothing is forced.** Every view is in a standoff the dispute cannot resolve,
-and every weakest link is `disputed`, so no rating breaks a tie.
-
-It does not show that the question is idle. Each view can be defended, and what
-the dispute cannot do is choose between readings rated alike. -/
-@[headline]
-theorem spirit_baptism_forces_nothing : grounded spiritBaptismDispute.defeats = ∅ :=
-  spiritBaptismSettlesNothing.holds
+  It does not show that the question is idle. Each view can be defended, and
+  what the dispute cannot do is choose between readings rated alike. -/
+  proves @[headline] spirit_baptism_forces_nothing
 
 #print axioms spirit_baptism_forces_nothing
 
 /-- Why the conversion view can be defended: it stands with the sacramental view,
 and answers both subsequence views, itself. -/
-def conversionStandsWithTheSacraments : Verdict spiritBaptismDispute where
-  finite := spiritBaptismFinite
-  claim := .credulous .conversion [.conversion, .sacramental]
-  checked := by decide +kernel
-
-/-- **The conversion view can be defended**, with the sacramental view: some
-maximal defensible position — one no other party can join without losing that —
-holds both. -/
-@[headline]
-theorem conversion_defensible : CredulouslyAccepted spiritBaptismDispute.defeats .conversion :=
-  conversionStandsWithTheSacraments.holds
+declare_verdict conversionStandsWithTheSacraments for spiritBaptismDispute :
+    .credulous .conversion [.conversion, .sacramental]
+  /-- **The conversion view can be defended**, with the sacramental view: some
+  maximal defensible position — one no other party can join without losing that —
+  holds both. -/
+  proves @[headline] conversion_defensible
 
 #print axioms conversion_defensible
 
 /-- Why the conversion view is not forced: a defensible position holds the
 Pentecostal view, and it defeats the conversion view. -/
-def conversionAnsweredByPentecost : Verdict spiritBaptismDispute where
-  finite := spiritBaptismFinite
-  claim := .notSkeptical .conversion .pentecostal [.pentecostal, .holiness]
-  checked := by decide +kernel
-
-/-- **Nor is it forced.** A maximal defensible position holds the Pentecostal and
-holiness views, and cannot hold the conversion view with them. -/
-@[headline]
-theorem conversion_not_forced :
-    ¬ SkepticallyAccepted spiritBaptismDispute.defeats .conversion :=
-  conversionAnsweredByPentecost.holds
+declare_verdict conversionAnsweredByPentecost for spiritBaptismDispute :
+    .notSkeptical .conversion .pentecostal [.pentecostal, .holiness]
+  /-- **Nor is it forced.** A maximal defensible position holds the Pentecostal
+  and holiness views, and cannot hold the conversion view with them. -/
+  proves @[headline] conversion_not_forced
 
 #print axioms conversion_not_forced
 
 /-- Why the Pentecostal view can be defended: it stands with the holiness view,
 and answers both the conversion and sacramental views itself. -/
-def pentecostalStandsWithHoliness : Verdict spiritBaptismDispute where
-  finite := spiritBaptismFinite
-  claim := .credulous .pentecostal [.pentecostal, .holiness]
-  checked := by decide +kernel
-
-/-- **The Pentecostal view can be defended**, with the holiness view. -/
-@[headline]
-theorem pentecostal_defensible :
-    CredulouslyAccepted spiritBaptismDispute.defeats .pentecostal :=
-  pentecostalStandsWithHoliness.holds
+declare_verdict pentecostalStandsWithHoliness for spiritBaptismDispute :
+    .credulous .pentecostal [.pentecostal, .holiness]
+  /-- **The Pentecostal view can be defended**, with the holiness view. -/
+  proves @[headline] pentecostal_defensible
 
 #print axioms pentecostal_defensible
 
 /-- Why the Pentecostal view is not forced: a defensible position holds the
 conversion view, and it defeats the Pentecostal view. -/
-def pentecostalAnsweredByConversion : Verdict spiritBaptismDispute where
-  finite := spiritBaptismFinite
-  claim := .notSkeptical .pentecostal .conversion [.conversion, .sacramental]
-  checked := by decide +kernel
-
-/-- **Nor is it forced.** A maximal defensible position holds the conversion and
-sacramental views, and cannot hold the Pentecostal view with them. What would
-decide is argued, not weighed: what the Acts narratives are
-(`pentecostal_cannot_read_acts_as_transitions`). -/
-@[headline]
-theorem pentecostal_not_forced :
-    ¬ SkepticallyAccepted spiritBaptismDispute.defeats .pentecostal :=
-  pentecostalAnsweredByConversion.holds
+declare_verdict pentecostalAnsweredByConversion for spiritBaptismDispute :
+    .notSkeptical .pentecostal .conversion [.conversion, .sacramental]
+  /-- **Nor is it forced.** A maximal defensible position holds the conversion
+  and sacramental views, and cannot hold the Pentecostal view with them. What
+  would decide is argued, not weighed: what the Acts narratives are
+  (`pentecostal_cannot_read_acts_as_transitions`). -/
+  proves @[headline] pentecostal_not_forced
 
 #print axioms pentecostal_not_forced
 
 /-- Why the holiness view can be defended: it stands with the Pentecostal view,
 which answers the conversion and sacramental views. -/
-def holinessStandsWithPentecost : Verdict spiritBaptismDispute where
-  finite := spiritBaptismFinite
-  claim := .credulous .holiness [.pentecostal, .holiness]
-  checked := by decide +kernel
-
-/-- **The holiness view can be defended**, with the Pentecostal view. Not forced,
-for the same reason the Pentecostal view is not. -/
-@[headline]
-theorem holiness_defensible : CredulouslyAccepted spiritBaptismDispute.defeats .holiness :=
-  holinessStandsWithPentecost.holds
+declare_verdict holinessStandsWithPentecost for spiritBaptismDispute :
+    .credulous .holiness [.pentecostal, .holiness]
+  /-- **The holiness view can be defended**, with the Pentecostal view. Not
+  forced, for the same reason the Pentecostal view is not. -/
+  proves @[headline] holiness_defensible
 
 #print axioms holiness_defensible
 
 /-- Why the sacramental view can be defended: it stands with the conversion view,
 which answers both subsequence views. -/
-def sacramentalStandsWithConversion : Verdict spiritBaptismDispute where
-  finite := spiritBaptismFinite
-  claim := .credulous .sacramental [.conversion, .sacramental]
-  checked := by decide +kernel
-
-/-- **The sacramental view can be defended**, with the conversion view. Not
-forced, for the same reason the conversion view is not. -/
-@[headline]
-theorem sacramental_defensible :
-    CredulouslyAccepted spiritBaptismDispute.defeats .sacramental :=
-  sacramentalStandsWithConversion.holds
+declare_verdict sacramentalStandsWithConversion for spiritBaptismDispute :
+    .credulous .sacramental [.conversion, .sacramental]
+  /-- **The sacramental view can be defended**, with the conversion view. Not
+  forced, for the same reason the conversion view is not. -/
+  proves @[headline] sacramental_defensible
 
 #print axioms sacramental_defensible
 

@@ -29,6 +29,7 @@ import Testimony.Logic.Because
 import Testimony.Logic.Verdict
 import Testimony.Logic.Support
 import Testimony.Logic.Map
+import Testimony.Logic.Declare
 import Testimony.Logic.Burden
 import Testimony.Logic.Dilemma
 import Testimony.Logic.Contest
