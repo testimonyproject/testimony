@@ -30,7 +30,12 @@ def all : List Claim :=
   , .receivingIsOrigin, .missionRevealsEternalRelation
   , .sonAndSpiritDistinct, .distinctOnlyByOpposedRelations, .sonNotFromTheSpirit
   , .john15_26SpeaksOfEternalOrigin
-  , .john15_26NamesTheWholeSource, .monarchyOfTheFather, .filioque ]
+  , .john15_26NamesTheWholeSource, .monarchyOfTheFather, .filioque
+  , .sonDoesNothingOfHimself, .fatherIsGreater, .fatherIsGodOfTheRisenSon, .headOfChristIsGod
+  , .sonSubjectAtTheEnd, .sonInTheFormOfGod, .realOrder, .greaterMeansLesserDivinity
+  , .lessInTheFormOfAServant, .greaterAsBegetter, .greaterAsMediatorsState, .orderIsEternal
+  , .sonEqualInPower, .subordinationDeniesEqualPower, .sonLesserInDivinity
+  , .eternalAuthorityAndSubmission ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -39,8 +44,8 @@ theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
 instance meanings : HasMeanings Claim :=
   HasMeanings.ofLabels "The Triune God" all cite all_complete
 
-/-- **None of the 15 atoms is analysed yet.** -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (0, 15) := by decide
+/-- **None of the 31 atoms is analysed yet.** -/
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (0, 31) := by decide
 
 /-- **No joins yet**: with no meaning analysed, no claim's meaning excludes or
 entails another's, so the argument's checks hold no postulates. Analysing a

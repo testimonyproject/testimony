@@ -11,6 +11,7 @@ import TestimonyArguments.Articles.Howell2003
 import Testimony.Checks.Aif
 import Testimony.Checks.Citations
 import Testimony.Checks.Ontology
+import Testimony.Checks.Fallacies
 import Testimony.Checks.Postulates
 import Testimony.Checks.Refutations
 
@@ -26,6 +27,10 @@ them is a change a reviewer sees:
   from its pinned joins and nowhere else;
 - **the shared ontology**: what each of the library's definitions does in each
   argument — where its words are held, and the joins it derives;
+- **fallacies**: every line of reason, read through its argument's meanings,
+  checked for equivocation, begging the question and arguing from silence, as
+  an article's moves are; a line that equivocates on its own terms, or argues
+  from silence alone, fails the build;
 - **postulates**: no package is emptied by its meanings, and no refutation is
   undone by them;
 - **refutations**: `establish` fails, as not Horn, on every package an argument
@@ -79,6 +84,7 @@ Sola fide
   the only means: held by 3, used of a text or voice by 9; derives:
     justificationByFaithAlone excludes baptismIsInstrumentalCause
   the whole ground: held by 3, used of a text or voice by 6; derives nothing
+  the same sense, both ways: stated or denied by 3; derives nothing
 Sola gratia — Ephesians 2:8–9 and Romans 9:16
   joins: 1, with no definition: 1
   not a ground: held by 2, used of a text or voice by 0; derives nothing
@@ -99,11 +105,48 @@ The canonical witness
 #guard_msgs in
 #check_ontology under TestimonyArguments
 
-/-- info: every package has a model with its postulates: 219, and 0 undecided -/
+/--
+info: the charges, against every argument's lines:
+Born in Bethlehem — Micah 5:2
+  lines: 2, read: 0
+Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
+  lines: 41, read: 0
+Sola fide
+  lines: 49, read: 31
+  carry what they deliver in a premise:
+    lexicalLine: its premise denied by paulsJustifyDenotesRenewal
+  need a word to keep its sense, unstated:
+    catholicJamesWordLine: erga, dikaioo
+    catholicJamesWorksLine: erga, dikaioo
+    fruitLine: pistis, erga
+    jamesLexicalLine: dikaioo
+    johannineLine: pisteuo
+    johannineWithoutTrust: pisteuo
+    lexicalLine: dikaioo
+    paulineLine: dikaioo, ergaNomou
+    paulineWithoutPistisChristou: dikaioo, ergaNomou
+    paulineWithoutWorksOfLaw: dikaioo, ergaNomou
+    renewalWordLine: dikaioo
+    romansFourExegesisLine: logizomai, erga
+Sola gratia — Ephesians 2:8–9 and Romans 9:16
+  lines: 11, read: 1
+  carry what they deliver in a premise:
+    refusalLine: its premise denied by graceIsEffectualOfItself
+Sola scriptura
+  lines: 20, read: 1
+The Triune God
+  lines: 13, read: 0
+The canonical witness
+  lines: 8, read: 0
+-/
+#guard_msgs in
+#check_fallacies under TestimonyArguments
+
+/-- info: every package has a model with its postulates: 226, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments
 
-/-- info: every non-entailment survives its postulates: 107, and 4 undecided -/
+/-- info: every non-entailment survives its postulates: 111, and 4 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments
 
@@ -112,13 +155,13 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2404 definitions, 214 entries
+info: every entry is a tagged definition, and every key names one: 2512 definitions, 224 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 1984 definitions, 214 entries
+info: every entry is a tagged definition, and every key names one: 2080 definitions, 224 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments
@@ -138,6 +181,7 @@ SolaFide.solaFideDispute.finite: 67 I, 30 RA, 33 CA, 2 PA, 164 edges
 SolaGratia.solaGratiaDispute.finite: 36 I, 13 RA, 33 CA, 0 PA, 101 edges
 SolaScriptura.mark7Dispute.finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
 SpiritBaptism.spiritBaptismDispute.finite: 15 I, 7 RA, 6 CA, 0 PA, 32 edges
+Trinity.orderDispute.finite: 20 I, 8 RA, 8 CA, 0 PA, 43 edges
 Trinity.processionDispute.finite: 16 I, 6 RA, 2 CA, 0 PA, 26 edges
 and 10 hearings, drawn with the disputes they restrict
 -/

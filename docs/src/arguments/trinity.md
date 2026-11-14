@@ -9,11 +9,13 @@ Claims are numbered once for the whole argument, so P₁ means the same claim in
 
 Every argument is also set for print, the claims linked and the derivations in words as here, in [one PDF](../pdf/arguments.pdf), and each tagged [release](https://github.com/testimonyproject/testimony/releases) of the project carries a copy.
 
-This argument is set in 4 chapters:
+This argument is set in 6 chapters:
 
 - [The Triune God: what Scripture settles, and what it leaves open](trinity.md)
+- [Is the Son less than the Father?](trinity/the-order.md)
+- [Weighing the readings of the order texts](trinity/weighing-the-order.md)
 - [Does the Spirit proceed from the Son?](trinity/the-procession.md)
-- [Weighing the positions](trinity/weighing.md)
+- [Weighing the positions on the procession](trinity/weighing.md)
 - [Appendix: the claims and their sources](trinity/claims.md)
 
 
@@ -61,18 +63,31 @@ of eternal origin. The limit is that "through the Son" is not yet a position of
 its own, so what is checked is "and the Son" against "from the Father alone".
 Each side needs at least one reading of its own beyond the texts. Any one of
 them is enough, so answering one does not answer the side. The chapter
-[Weighing the positions](trinity/weighing.md) sets LST, the West and the East against each other.
+"Weighing the positions" sets LST, the West and the East against each other.
 What the texts establish is accepted however the disagreement is settled. The
 two sides defeat each other, so neither is.
 
+## The second question: is the Son less than the Father?
+
+LST also grades the texts of the Son's obedience: "These texts establish real
+personal and mediatorial order, but they do not by themselves establish
+inequality of divine nature or an eternal hierarchy of command and obedience
+between the divine persons as such." The chapter "Is the Son less than the
+Father?" checks that sentence, and it holds in each of its three parts. The
+texts establish an order of Father and Son in the work of salvation. They leave
+open whether the Son is less than the Father in his divinity, which the Arians
+read John 14:28 to say and Augustine, Athanasius and Calvin each answer
+differently. And they leave open whether the order is eternal, which Wayne
+Grudem and Bruce Ware hold and Kevin Giles denies. Weighed, what the texts
+establish is forced, and every reading beyond it stands off against another.
+That includes the Arian reading, which means only that these few verses do not
+settle the Son's divinity. LST confesses it from other texts, the next question.
+
 ## Still to come
 
-LST's other graded claims in §3 are not yet encoded. They are that the Father,
-the Son and the Spirit are each God and are three persons, not three gods; that
-the texts of the Son's obedience (John 5:19–30; 14:28; 1 Corinthians 15:24–28)
-establish an order without establishing an inequality of nature or an eternal
-chain of command; and that eternal generation is a "defended synthesis" rather
-than a stated proposition. Each has rivals of its own: the Arians, the
-modalists, and those who hold an eternal submission of the Son. The issue that
-tracks this work lists them.
+LST's other graded claims in §3 are not yet encoded: that the Father, the Son
+and the Spirit are each God and are three persons, not three gods, against the
+Arians, the modalists and the "a god" of the New World Translation at John 1:1;
+and that eternal generation is a "defended synthesis" rather than a stated
+proposition. The issue that tracks this work lists them.
 
