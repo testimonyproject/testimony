@@ -3613,6 +3613,61 @@ CCEL gives 1886 and Schaff's preface is dated 1888, so no year is given. -/
   , place := some "New York"
   , volume := some "7" }
 
+/-- Anthony Buzzard, "John 1:1: Caveat Lector (Reader Beware)", *A Journal from
+the Radical Reformation* 10.1 (Fall 2001), read in the PDF on his ministry's site,
+whose running heads give pp. 4–19. Cited for a reading of John 1:1 that grants
+the Word God's own nature and denies that Jesus is that Word made flesh as a
+person who was God: "For John the word was the one God Himself, not a second
+person" (p. 19); "There was no Son of God until the Messiah was conceived in
+history" (p. 17). -/
+@[bib_entry] def buzzardCaveatLector : BibEntry := .article
+  { core :=
+      { key := "buzzard-caveat-lector-2001"
+      , role := .witness
+      , contributors := { authors := [.person "Anthony" "Buzzard"] }
+      , title := "John 1:1: Caveat Lector (Reader Beware)"
+      , year := some { value := 2001 }
+      , identifiers :=
+          [ .url "https://focusonthekingdom.org/John%201%201.pdf" (some "2026-11-14") ] }
+  , journal := "A Journal from the Radical Reformation"
+  , volume := some "10"
+  , issue := some "1"
+  , pages := some (4, 19) }
+
+/-- Joseph Smith's discourse of 16 June 1844, as Thomas Bullock reported it, in
+the Joseph Smith Papers. Cited for "these 3 constit[ute] 3 distinct personages &
+3 Gods" and, with 1 Corinthians 8:4–6, "to us there is but one God pertaining to
+us" (p. [1]). -/
+@[bib_entry] def smithDiscourse1844 : BibEntry := .webPage
+  { core :=
+      { key := "smith-discourse-16-june-1844"
+      , role := .witness
+      , contributors := { authors := [.person "Joseph" "Smith"] }
+      , title := "Discourse, 16 June 1844–A, as Reported by Thomas Bullock"
+      , year := some { value := 1844 }
+      , identifiers :=
+          [ .url ("https://www.josephsmithpapers.org/paper-summary/" ++
+                  "discourse-16-june-1844-a-as-reported-by-thomas-bullock")
+                 (some "2026-11-14") ] } }
+
+/-- Robert Roberts, *Christendom Astray*, eighteen lectures by the Christadelphian
+writer, read in the Internet Archive's scan (christendomastray1884), whose title
+page gives Birmingham and no date; so no year is given. Cited for the Spirit as
+"an agency used by the Father in the accomplishment of His designs" (p. 123),
+"personified" (p. 174), and one with the Father "in the way that light is one
+with the body of the sun" (p. 122). -/
+@[bib_entry] def robertsChristendomAstray : BibEntry := .book
+  { core :=
+      { key := "roberts-christendom-astray"
+      , role := .witness
+      , contributors := { authors := [.person "Robert" "Roberts"] }
+      , title := "Christendom Astray"
+      , subtitle := some "Popular Theology (Both in Faith and Practice) Shewn to Be Unscriptural"
+      , identifiers :=
+          [ .url "https://archive.org/details/christendomastray1884" (some "2026-11-14") ] }
+  , publisher := "R. Roberts"
+  , place := some "Birmingham" }
+
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'

@@ -15,41 +15,50 @@ are three persons.
 ## How to read the verdicts
 
 One position *defeats* another when it denies something the other holds or
-derives, and does not rest on anything rated lower. A position is only as strong
-as its weakest premise or step. Every position here rests on at least one reading
-rated `disputed`, the lowest rating, so when two positions deny each other each
+derives, unless the other is better supported. A position is only as strong as
+its weakest premise or step, rated on four levels: `disputed`, the lowest, then
+`plausible`, `wellSupported` and `consensus`. Every position here rests on at
+least one reading rated `disputed`, so when two positions deny each other each
 defeats the other, and that is a tie. A position is *forced* when it is accepted
-however the ties are settled. It *can be defended* when some consistent way of
-settling them accepts it, and it is *not forced* when another way leaves it out.
-Every defeat is computed from the positions' premises, and Lean checks each
-computation.
+however the ties are settled. It *can be defended* when some group of positions,
+none defeating another and together answering every attack on them, includes it;
+it is *not forced* when another such group leaves it out. Every defeat is
+computed from the positions' premises, and Lean checks each computation.
 
 ## What the weighing found
 
 The ties fall along the two questions. The Witnesses tie with every other
 position, because they deny that the Word is God, which LST and the Oneness
-position both hold, and that the Spirit is a person, which LST's third line holds.
+position both hold; that the Spirit is God, which LST's second line holds; and
+that the Spirit is a person, which its third line holds.
 The Oneness position ties with LST, and with LST's third line, over three persons.
 It does not tie with LST's first two lines, because it holds them: on the Word and
 the Spirit, Oneness and LST stand together (`oneness_stands_with_the_deity`).
 
-So nothing is forced (`deity_forces_nothing`). Each of the three positions can be
-defended, and none is forced (`lst_deity_defensible`, `lst_deity_not_forced`,
-`witnesses_defensible`, `witnesses_not_forced`, `oneness_defensible`,
-`oneness_not_forced`). That the Word is God can be defended, held by LST's
-position and by the Oneness position alike, and it is not forced, because the
-Witnesses' position stands against it (`word_deity_defensible`,
-`word_deity_not_forced`).
+So nothing is forced (`deity_forces_nothing`). LST's position can be defended,
+and the Oneness position, holding LST's first two lines, leaves it out
+(`lst_deity_defensible`, `lst_deity_not_forced`). The Witnesses' position can be
+defended on its own, and LST's leaves it out (`witnesses_defensible`,
+`witnesses_not_forced`). The Oneness position can be defended, and LST's leaves
+it out too (`oneness_defensible`, `oneness_not_forced`). That the Word is God
+can be defended, held by LST's position and by the Oneness position alike, and
+it is not forced, because the Witnesses' position stands against it
+(`word_deity_defensible`, `word_deity_not_forced`).
 
-That is what the solver computes, and it does not favour LST. It does not show that
-the three positions read John 1:1 equally well, or that the question is idle. It
-shows that the weighing cannot choose, because each reading that divides the
-parties is rated `disputed`: Harner's reading of θεός against the brochure's,
-Augustine's reading of John 1:3 against the Witnesses' reading of Colossians 1:15,
-and LST's reading of "with God" against Bernard's. A new, cited argument that one
-of these readings survives what its rivals say against it could move a rating,
-and with it the verdict. The texts this dispute does not hear, listed in the last
-chapter, are where such an argument would be looked for.
+The weighing does not favour LST. Nor does it find the three readings of John 1:1
+equally good, or the question idle. It cannot choose between them, because each
+reading that divides the parties is rated `disputed`: Harner's reading of "God"
+(θεός) in John 1:1 against the brochure's "a god"; Augustine's reading of John 1:3
+against the Witnesses' reading of Colossians 1:15; Calvin's reading of Acts 5:3–4,
+and LST's reading of the Spirit as a person, against the brochure's "active
+force"; and LST's readings of "with God" and of Matthew 28:19 against Bernard's.
+
+Since a position is only as strong as its weakest reading, one better-supported
+reading changes nothing where a position rests on several. LST rests on six, and
+two of its steps are rated `disputed` too. The Spirit line rests on one reading,
+Calvin's, and its step is rated `wellSupported`, so it is where a single new,
+cited argument could matter. The texts this dispute does not hear, listed in the
+last chapter, are where such an argument would be looked for.
 
 
 ## How this is checked
@@ -90,12 +99,12 @@ def deityDispute : Dispute Claim DeityParty :=
 <a id="deityDispute_defeats"></a>
 **`deityDispute_defeats`**
 
-**Who defeats whom**, all 36 pairs. The Witnesses and every other position
-defeat each other: they deny that the Word is God, which LST, its first line and
-the Oneness position hold; that the Spirit is God, which its second line holds;
-and that the Spirit is a person, which its third line holds. The Oneness position
-and LST defeat each other over three persons, and so do the Oneness position and
-LST's third line. Nothing else. Every cell is checked by the kernel.
+**Who defeats whom**, all 36 pairs, each checked by Lean. The Witnesses and
+every other position defeat each other: they deny that the Word is God, which
+LST, its first line and the Oneness position hold; that the Spirit is God,
+which its second line holds; and that the Spirit is a person, which its third
+line holds. The Oneness position and LST defeat each other over three persons,
+and so do the Oneness position and LST's third line. Nothing else.
 
 ```lean
 theorem deityDispute_defeats : ∀ (i j : DeityParty), deityDispute.defeats i j
@@ -116,7 +125,7 @@ theorem deityDispute_defeats : ∀ (i j : DeityParty), deityDispute.defeats i j
 **`deityDispute_supports`**
 
 **Nothing supports anything**, in all 36 pairs: no party's conclusion is a
-premise another party states. Every cell is checked by the kernel.
+premise another party states. Each pair is checked by Lean.
 
 ```lean
 theorem deityDispute_supports : ∀ (i j : DeityParty), ¬deityDispute.supports i
@@ -129,7 +138,7 @@ theorem deityDispute_supports : ∀ (i j : DeityParty), ¬deityDispute.supports 
 
 **LST's first two lines are part of the Oneness case as well as LST's**, and
 its third is part of LST's alone. Otherwise each case is part of its own only.
-Every cell is checked by the kernel.
+Each pair is checked by Lean.
 
 ```lean
 theorem deityDispute_partOf : ∀ (i j : DeityParty), deityDispute.partOf i j ↔
@@ -253,9 +262,9 @@ theorem oneness_stands_with_the_deity : deityDispute.StandTogether
 <a id="deitySettlesNothing"></a>
 **`deitySettlesNothing`**
 
-Why nothing is forced: every position has a defeater it cannot leave
-unanswered. The Witnesses defeat LST and each of its lines; LST defeats the
-Witnesses and the Oneness position.
+Every position is defeated by another, so none stands unchallenged. The
+Witnesses defeat LST and each of its lines; LST defeats the Witnesses and the
+Oneness position.
 
 **Nothing prevails outright: every party is defeated by another.**
 
@@ -269,44 +278,46 @@ Witnesses and the Oneness position.
 **What this rests on.** The reasons state 6 defeats and 0 absences of defeat, each a cell of the defeat table, [`deityDispute_defeats`](#deityDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *A god, not God; a force, not a person (Jehovah's Witnesses)*, weakest at *disputed*:
-  - In John 1:1c θεός without the article means "a god", not God Almighty — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
+  - In "the Word was God" (John 1:1) God, without "the", means "a god" — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
   - "Firstborn of all creation" means the first thing God created — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 14
   - The holy spirit is God's active force, personified, not a person — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), pp. 20–23
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
+  - an inference step — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 23; [Roberts](../../bibliography.md#roberts-christendom-astray), pp. 122–123
 - *One God, three persons (LST)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Smith 1844](../../bibliography.md#smith-discourse-16-june-1844), §page \[1\]
 - *"The Word was God": of God's nature, and not made*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 - *"Not to man but to God": the Spirit is God*, weakest at *disputed*:
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
 - *"With God", and three named: three persons*, weakest at *disputed*:
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
 - *One God, one person (Oneness)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
   - The Word of John 1:1 is God's thought and self-expression, not a second person — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4 and 8, on John 1:1
   - The glory of John 17:5 was the Son's in God's plan before the world — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, The Preexistence of Jesus
   - The one "name" of Matthew 28:19 is Jesus; Father, Son and Spirit are titles — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 6, Matthew 28:19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 
 <a id="deity_forces_nothing"></a>
 **`deity_forces_nothing`**
 
-**Nothing is forced.** Every position is in a standoff the weighing cannot
-resolve, and every one rests on a reading rated `disputed`, so no rating breaks
-a tie.
-
-What this does not claim: that the three positions read the texts equally well,
-or that the question is idle. It claims only that the weighing cannot choose
-between readings rated alike.
+**Nothing is forced.** Every position ties with another, and since every one
+rests on a reading rated `disputed`, no rating breaks a tie. This finds the
+weighing unable to choose between readings rated alike; it does not find them
+equally good, or the question idle.
 
 ```lean
 theorem deity_forces_nothing : Framework.grounded deityDispute.defeats = ∅
@@ -333,40 +344,45 @@ the Oneness position itself.
 **What this rests on.** The reasons state 8 defeats and 18 absences of defeat, each a cell of the defeat table, [`deityDispute_defeats`](#deityDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *One God, three persons (LST)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Smith 1844](../../bibliography.md#smith-discourse-16-june-1844), §page \[1\]
 - *"The Word was God": of God's nature, and not made*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 - *"Not to man but to God": the Spirit is God*, weakest at *disputed*:
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
 - *"With God", and three named: three persons*, weakest at *disputed*:
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
 - *A god, not God; a force, not a person (Jehovah's Witnesses)*, weakest at *disputed*:
-  - In John 1:1c θεός without the article means "a god", not God Almighty — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
+  - In "the Word was God" (John 1:1) God, without "the", means "a god" — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
   - "Firstborn of all creation" means the first thing God created — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 14
   - The holy spirit is God's active force, personified, not a person — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), pp. 20–23
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
+  - an inference step — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 23; [Roberts](../../bibliography.md#roberts-christendom-astray), pp. 122–123
 - *One God, one person (Oneness)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
   - The Word of John 1:1 is God's thought and self-expression, not a second person — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4 and 8, on John 1:1
   - The glory of John 17:5 was the Son's in God's plan before the world — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, The Preexistence of Jesus
   - The one "name" of Matthew 28:19 is Jesus; Father, Son and Spirit are titles — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 6, Matthew 28:19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 
 <a id="lst_deity_defensible"></a>
 **`lst_deity_defensible`**
 
-**LST's position can be defended**, with each of its lines: some maximal
-defensible position, one no other party can join without losing that, holds all
-four.
+**LST's position can be defended**, with each of its lines: there is a
+largest group of positions that can be defended together, one no other party
+can join, and it holds all four.
 
 ```lean
 theorem lst_deity_defensible : Framework.CredulouslyAccepted
@@ -393,39 +409,44 @@ it defeats LST.
 **What this rests on.** The reasons state 8 defeats and 13 absences of defeat, each a cell of the defeat table, [`deityDispute_defeats`](#deityDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *One God, one person (Oneness)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
   - The Word of John 1:1 is God's thought and self-expression, not a second person — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4 and 8, on John 1:1
   - The glory of John 17:5 was the Son's in God's plan before the world — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, The Preexistence of Jesus
   - The one "name" of Matthew 28:19 is Jesus; Father, Son and Spirit are titles — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 6, Matthew 28:19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 - *One God, three persons (LST)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Smith 1844](../../bibliography.md#smith-discourse-16-june-1844), §page \[1\]
 - *"The Word was God": of God's nature, and not made*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 - *"Not to man but to God": the Spirit is God*, weakest at *disputed*:
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
 - *"With God", and three named: three persons*, weakest at *disputed*:
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
 - *A god, not God; a force, not a person (Jehovah's Witnesses)*, weakest at *disputed*:
-  - In John 1:1c θεός without the article means "a god", not God Almighty — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
+  - In "the Word was God" (John 1:1) God, without "the", means "a god" — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
   - "Firstborn of all creation" means the first thing God created — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 14
   - The holy spirit is God's active force, personified, not a person — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), pp. 20–23
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
+  - an inference step — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 23; [Roberts](../../bibliography.md#roberts-christendom-astray), pp. 122–123
 
 <a id="lst_deity_not_forced"></a>
 **`lst_deity_not_forced`**
 
-**Nor is it forced.** A maximal defensible position holds the Oneness
-position and LST's first two lines, and cannot hold LST's with them.
+**LST's position is not forced.** The Oneness position and LST's first two
+lines can be defended as a group, and no such group can also hold LST's.
 
 ```lean
 theorem lst_deity_not_forced : ¬Framework.SkepticallyAccepted
@@ -453,33 +474,38 @@ one attacker, the Witnesses.
 **What this rests on.** The reasons state 8 defeats and 18 absences of defeat, each a cell of the defeat table, [`deityDispute_defeats`](#deityDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *One God, three persons (LST)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Smith 1844](../../bibliography.md#smith-discourse-16-june-1844), §page \[1\]
 - *"The Word was God": of God's nature, and not made*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 - *"Not to man but to God": the Spirit is God*, weakest at *disputed*:
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
 - *"With God", and three named: three persons*, weakest at *disputed*:
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
 - *A god, not God; a force, not a person (Jehovah's Witnesses)*, weakest at *disputed*:
-  - In John 1:1c θεός without the article means "a god", not God Almighty — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
+  - In "the Word was God" (John 1:1) God, without "the", means "a god" — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
   - "Firstborn of all creation" means the first thing God created — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 14
   - The holy spirit is God's active force, personified, not a person — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), pp. 20–23
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
+  - an inference step — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 23; [Roberts](../../bibliography.md#roberts-christendom-astray), pp. 122–123
 - *One God, one person (Oneness)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
   - The Word of John 1:1 is God's thought and self-expression, not a second person — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4 and 8, on John 1:1
   - The glory of John 17:5 was the Son's in God's plan before the world — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, The Preexistence of Jesus
   - The one "name" of Matthew 28:19 is Jesus; Father, Son and Spirit are titles — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 6, Matthew 28:19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 
 <a id="word_deity_defensible"></a>
 **`word_deity_defensible`**
@@ -512,39 +538,44 @@ its own, and defeats it.
 **What this rests on.** The reasons state 10 defeats and 1 absence of defeat, each a cell of the defeat table, [`deityDispute_defeats`](#deityDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *A god, not God; a force, not a person (Jehovah's Witnesses)*, weakest at *disputed*:
-  - In John 1:1c θεός without the article means "a god", not God Almighty — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
+  - In "the Word was God" (John 1:1) God, without "the", means "a god" — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
   - "Firstborn of all creation" means the first thing God created — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 14
   - The holy spirit is God's active force, personified, not a person — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), pp. 20–23
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
+  - an inference step — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 23; [Roberts](../../bibliography.md#roberts-christendom-astray), pp. 122–123
 - *"The Word was God": of God's nature, and not made*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 - *One God, three persons (LST)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Smith 1844](../../bibliography.md#smith-discourse-16-june-1844), §page \[1\]
 - *"Not to man but to God": the Spirit is God*, weakest at *disputed*:
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
 - *"With God", and three named: three persons*, weakest at *disputed*:
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
 - *One God, one person (Oneness)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
   - The Word of John 1:1 is God's thought and self-expression, not a second person — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4 and 8, on John 1:1
   - The glory of John 17:5 was the Son's in God's plan before the world — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, The Preexistence of Jesus
   - The one "name" of Matthew 28:19 is Jesus; Father, Son and Spirit are titles — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 6, Matthew 28:19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 
 <a id="word_deity_not_forced"></a>
 **`word_deity_not_forced`**
 
-**Nor is it forced.** The Witnesses' position, on its own, is a maximal
-defensible position, and it cannot hold that the Word is God.
+**That the Word is God is not forced.** The Witnesses' position can be
+defended on its own, and it denies that the Word is God.
 
 ```lean
 theorem word_deity_not_forced : ¬Framework.SkepticallyAccepted
@@ -571,33 +602,38 @@ itself.
 **What this rests on.** The reasons state 10 defeats and 1 absence of defeat, each a cell of the defeat table, [`deityDispute_defeats`](#deityDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *A god, not God; a force, not a person (Jehovah's Witnesses)*, weakest at *disputed*:
-  - In John 1:1c θεός without the article means "a god", not God Almighty — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
+  - In "the Word was God" (John 1:1) God, without "the", means "a god" — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
   - "Firstborn of all creation" means the first thing God created — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 14
   - The holy spirit is God's active force, personified, not a person — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), pp. 20–23
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
+  - an inference step — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 23; [Roberts](../../bibliography.md#roberts-christendom-astray), pp. 122–123
 - *One God, three persons (LST)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Smith 1844](../../bibliography.md#smith-discourse-16-june-1844), §page \[1\]
 - *"The Word was God": of God's nature, and not made*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 - *"Not to man but to God": the Spirit is God*, weakest at *disputed*:
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
 - *"With God", and three named: three persons*, weakest at *disputed*:
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
 - *One God, one person (Oneness)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
   - The Word of John 1:1 is God's thought and self-expression, not a second person — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4 and 8, on John 1:1
   - The glory of John 17:5 was the Son's in God's plan before the world — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, The Preexistence of Jesus
   - The one "name" of Matthew 28:19 is Jesus; Father, Son and Spirit are titles — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 6, Matthew 28:19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 
 <a id="witnesses_defensible"></a>
 **`witnesses_defensible`**
@@ -630,39 +666,45 @@ theirs.
 **What this rests on.** The reasons state 8 defeats and 18 absences of defeat, each a cell of the defeat table, [`deityDispute_defeats`](#deityDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *One God, three persons (LST)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Smith 1844](../../bibliography.md#smith-discourse-16-june-1844), §page \[1\]
 - *A god, not God; a force, not a person (Jehovah's Witnesses)*, weakest at *disputed*:
-  - In John 1:1c θεός without the article means "a god", not God Almighty — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
+  - In "the Word was God" (John 1:1) God, without "the", means "a god" — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
   - "Firstborn of all creation" means the first thing God created — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 14
   - The holy spirit is God's active force, personified, not a person — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), pp. 20–23
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
+  - an inference step — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 23; [Roberts](../../bibliography.md#roberts-christendom-astray), pp. 122–123
 - *"The Word was God": of God's nature, and not made*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 - *"Not to man but to God": the Spirit is God*, weakest at *disputed*:
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
 - *"With God", and three named: three persons*, weakest at *disputed*:
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
 - *One God, one person (Oneness)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
   - The Word of John 1:1 is God's thought and self-expression, not a second person — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4 and 8, on John 1:1
   - The glory of John 17:5 was the Son's in God's plan before the world — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, The Preexistence of Jesus
   - The one "name" of Matthew 28:19 is Jesus; Father, Son and Spirit are titles — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 6, Matthew 28:19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 
 <a id="witnesses_not_forced"></a>
 **`witnesses_not_forced`**
 
-**Nor is it forced.** A maximal defensible position holds LST's position
-and cannot hold the Witnesses'.
+**The Witnesses' position is not forced.** LST's position, with its three
+lines, can be defended as a group, and no such group can also hold the
+Witnesses'.
 
 ```lean
 theorem witnesses_not_forced : ¬Framework.SkepticallyAccepted
@@ -689,33 +731,38 @@ answers the Witnesses, LST, and LST's third line itself.
 **What this rests on.** The reasons state 8 defeats and 13 absences of defeat, each a cell of the defeat table, [`deityDispute_defeats`](#deityDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *One God, one person (Oneness)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
   - The Word of John 1:1 is God's thought and self-expression, not a second person — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4 and 8, on John 1:1
   - The glory of John 17:5 was the Son's in God's plan before the world — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, The Preexistence of Jesus
   - The one "name" of Matthew 28:19 is Jesus; Father, Son and Spirit are titles — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 6, Matthew 28:19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 - *"The Word was God": of God's nature, and not made*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 - *"Not to man but to God": the Spirit is God*, weakest at *disputed*:
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
 - *One God, three persons (LST)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Smith 1844](../../bibliography.md#smith-discourse-16-june-1844), §page \[1\]
 - *"With God", and three named: three persons*, weakest at *disputed*:
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
 - *A god, not God; a force, not a person (Jehovah's Witnesses)*, weakest at *disputed*:
-  - In John 1:1c θεός without the article means "a god", not God Almighty — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
+  - In "the Word was God" (John 1:1) God, without "the", means "a god" — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
   - "Firstborn of all creation" means the first thing God created — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 14
   - The holy spirit is God's active force, personified, not a person — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), pp. 20–23
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
+  - an inference step — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 23; [Roberts](../../bibliography.md#roberts-christendom-astray), pp. 122–123
 
 <a id="oneness_defensible"></a>
 **`oneness_defensible`**
@@ -748,39 +795,44 @@ defeats it.
 **What this rests on.** The reasons state 8 defeats and 18 absences of defeat, each a cell of the defeat table, [`deityDispute_defeats`](#deityDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *One God, three persons (LST)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Smith 1844](../../bibliography.md#smith-discourse-16-june-1844), §page \[1\]
 - *One God, one person (Oneness)*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
   - The Word of John 1:1 is God's thought and self-expression, not a second person — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4 and 8, on John 1:1
   - The glory of John 17:5 was the Son's in God's plan before the world — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, The Preexistence of Jesus
   - The one "name" of Matthew 28:19 is Jesus; Father, Son and Spirit are titles — [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 6, Matthew 28:19
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 - *"The Word was God": of God's nature, and not made*, weakest at *disputed*:
-  - In John 1:1c θεός says the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - In "the Word was God" (John 1:1) the Word has the nature of the one God — [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - By John 1:3 the Word is not among the things made — [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
+  - an inference step — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion; [Buzzard 2001](../../bibliography.md#buzzard-caveat-lector-2001), pp. 17–19
 - *"Not to man but to God": the Spirit is God*, weakest at *disputed*:
   - In Acts 5:3–4 Peter names the Holy Spirit God — [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
 - *"With God", and three named: three persons*, weakest at *disputed*:
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
   - The Spirit who speaks and is grieved is a person, not a force — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
   - In Matthew 28:19 three are named, and the one name is theirs together — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
 - *A god, not God; a force, not a person (Jehovah's Witnesses)*, weakest at *disputed*:
-  - In John 1:1c θεός without the article means "a god", not God Almighty — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
+  - In "the Word was God" (John 1:1) God, without "the", means "a god" — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
   - "Firstborn of all creation" means the first thing God created — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 14
   - The holy spirit is God's active force, personified, not a person — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), pp. 20–23
-  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+  - "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
+  - an inference step — [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 23; [Roberts](../../bibliography.md#roberts-christendom-astray), pp. 122–123
 
 <a id="oneness_not_forced"></a>
 **`oneness_not_forced`**
 
-**Nor is it forced.** A maximal defensible position holds LST's position
-and cannot hold the Oneness one.
+**The Oneness position is not forced.** The same group of LST and its lines
+leaves it out.
 
 ```lean
 theorem oneness_not_forced : ¬Framework.SkepticallyAccepted

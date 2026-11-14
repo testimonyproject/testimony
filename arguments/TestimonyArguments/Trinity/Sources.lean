@@ -247,16 +247,22 @@ def onEqualPower : Source :=
 
 /-! ### Ratings for the steps over the deity and the persons -/
 
-/-- **The step to the Word's deity is well supported**: its readings already say
-that the Word has the nature of the one God and is not made, and no reader was
-found who grants both and denies that the Word is God. The Oneness writer David
-Bernard grants them and draws the conclusion: "Jesus is the one God" (ch. 4). The
-Witnesses deny the readings, and the readings are rated `disputed`. -/
+/-- **The step to the Word's deity is rated `disputed`**, because a reader grants
+its grounds and denies where it ends. Anthony Buzzard, a biblical unitarian,
+grants that in John 1:1 the Word has God's own nature, and more: "For John the
+word was the one God Himself, not a second person" (2001, p. 19). What he denies
+is that Jesus is that Word as a person who was God: "There was no Son of God
+until the Messiah was conceived in history" (p. 17). So the step from the Word's
+nature to "the Word who became flesh in Jesus is God" is where he parts from LST.
+The Oneness writer David Bernard grants the grounds and draws the conclusion:
+"Jesus is the one God" (ch. 4). The Witnesses deny the grounds. -/
 def onTheWordsDeity : Source :=
   { primary := .work kibbeyLivingSystematicTheology lstOnTheTriuneGod
-  , supporting := [.work bernardOnenessOfGod (.sectionRef "ch. 4, Conclusion")]
+  , supporting :=
+      [ .work bernardOnenessOfGod (.sectionRef "ch. 4, Conclusion")
+      , .work buzzardCaveatLector (.pages 17 19) ]
   , tradition := .christianHistoricalGrammatical
-  , confidence := .wellSupported }
+  , confidence := .disputed }
 
 /-- **The step to the Spirit's deity is well supported**: its reading already
 says that Peter names the Spirit God, and no reader was found who grants that and
@@ -283,12 +289,17 @@ def onThePersons : Source :=
   , tradition := .christianHistoricalGrammatical
   , confidence := .wellSupported }
 
-/-- **Drawing LST's confession together is well supported**: it only joins what
-the three lines deliver to the one God every party confesses. -/
+/-- **Drawing LST's confession together is rated `disputed`.** It does more than
+join what the three lines deliver: it adds that the three persons are one God,
+"not separate gods". Joseph Smith grants every ground, the one God of 1
+Corinthians 8:4–6 included, and denies that: "these 3 constit[ute] 3 distinct
+personages & 3 Gods", though "to us there is but one God pertaining to us"
+(discourse of 16 June 1844, as Thomas Bullock reported it). -/
 def onTheConfession : Source :=
   { primary := .work kibbeyLivingSystematicTheology lstOnTheTriuneGod
+  , supporting := [.work smithDiscourse1844 (.sectionRef "page [1]")]
   , tradition := .christianHistoricalGrammatical
-  , confidence := .wellSupported }
+  , confidence := .disputed }
 
 /-- **The Witnesses' step to a creature is well supported**: its readings already
 say that the Word is "a god" and the first thing God made, and no reader was found
@@ -318,14 +329,17 @@ def onTheForce : Source :=
   , tradition := .jehovahsWitness
   , confidence := .wellSupported }
 
-/-- **That God's force is not God himself is well supported**, given the reading.
-The brochure draws it: the spirit "is not equal to God but is always at his
-disposition and subordinate to him" (p. 23). No reader was found who calls the
-spirit only God's force and also God. -/
+/-- **That God's force is not God himself is rated `disputed`.** The brochure
+draws it: the spirit "is not equal to God but is always at his disposition and
+subordinate to him" (p. 23). But the Christadelphian Robert Roberts grants that
+the Spirit is "an agency used by the Father in the accomplishment of His designs"
+(p. 123), and personified (p. 174), and still holds it one with God: "The Father
+and the Spirit are one", as light "is one with the body of the sun" (p. 122). -/
 def onForceNotGod : Source :=
   { primary := .work watchtowerTrinity (.page 23)
+  , supporting := [.work robertsChristendomAstray (.pages 122 123)]
   , tradition := .jehovahsWitness
-  , confidence := .wellSupported }
+  , confidence := .disputed }
 
 /-- **The Oneness step is well supported**: its readings already say that the
 Word is God's own thought, the glory was in his plan, and the one name is Jesus'.
@@ -548,7 +562,7 @@ def cite : Claim → AtomMeta
     , kind := .textual
     , source := text [{ ref := .verse ⟨.john, 1, 1⟩ }] }
   | .wordWasGod =>
-    { label := "John 1:1 — \"and the Word was God\", θεός without the article"
+    { label := "John 1:1 — \"and the Word was God\": God (θεός), without \"the\""
     , kind := .textual
     , source := text [{ ref := .verse ⟨.john, 1, 1⟩ }] }
   | .allThingsThroughTheWord =>
@@ -580,7 +594,7 @@ def cite : Claim → AtomMeta
     , kind := .textual
     , source := text [{ ref := .verse ⟨.colossians, 1, 15⟩ }] }
   | .wordIsGodByNature =>
-    { label := "In John 1:1c θεός says the Word has the nature of the one God"
+    { label := "In \"the Word was God\" (John 1:1) the Word has the nature of the one God"
     , kind := .interpretive
     , source :=
         { primary := .work harnerAnarthrous .whole
@@ -613,6 +627,7 @@ def cite : Claim → AtomMeta
     , kind := .interpretive
     , source :=
         { primary := .work kibbeyLivingSystematicTheology lstOnTheTriuneGod
+        , supporting := [.work watchtowerTrinity (.page 27)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .threeNamedInOneName =>
@@ -623,7 +638,7 @@ def cite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .wordIsAGod =>
-    { label := "In John 1:1c θεός without the article means \"a god\", not God Almighty"
+    { label := "In \"the Word was God\" (John 1:1) God, without \"the\", means \"a god\""
     , kind := .interpretive
     , source :=
         { primary := .work watchtowerTrinity (.page 27)

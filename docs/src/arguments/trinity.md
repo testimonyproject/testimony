@@ -74,18 +74,24 @@ two sides defeat each other, so neither is.
 LST's section opens with the confession every other claim rests on: "The Father
 is God, the Son is God, and the Holy Spirit is God; they are personally distinct
 without being separate gods," citing John 1:1–18, 20:28 and Acts 5:3–4 among
-others. Unlike the claims below, LST confesses this one as what Scripture
-establishes. Two positions read the same texts against it. Jehovah's Witnesses
-read John 1:1 as "the Word was a god", the Son as the first thing God made, and
-the holy spirit as God's force. Oneness Pentecostals, with David Bernard, confess
-the Son and the Spirit God and deny that they are persons distinct from the
-Father. The chapter [Are the Son and the Spirit God, and three persons?](trinity/the-deity.md) encodes
-all three. Each gives its conclusion from its own readings of the verses, and
-each can be held without contradiction. Weighed, nothing is forced: the
-Witnesses stand off against the other two over the Son and the Spirit, Oneness
-stands off against LST over the three persons, and every reading that divides
-them is rated `disputed`. On the deity of the Word and the Spirit, LST and the
-Oneness position stand together.
+others. LST confesses it as what Scripture establishes, and does not grade it as
+it grades the procession or eternal generation. Two positions read the same texts
+against it. Jehovah's Witnesses read John 1:1 as "the Word was a god", the Son as
+the first thing God made, and the holy spirit as God's force. Oneness
+Pentecostals, with David Bernard, confess that "Jesus is the one God", and that
+Father, Son and Holy Spirit are titles of the one God, not three persons.
+
+The chapter [Are the Son and the Spirit God, and three persons?](trinity/the-deity.md) encodes all
+three. Each position gives its conclusion only with readings of its own, and
+each can be held without contradiction. So the check does not confirm LST's grade
+as it stands: the confession follows from the texts together with LST's readings,
+and each of those readings is rated `disputed`, the lowest of the four ratings,
+because another reader denies it. Whether the texts alone settle the question is
+not tested. Weighed against one another, no position is accepted however the
+disagreements are settled. The Witnesses and each of the other two defeat one
+another over the Son and the Spirit, and Oneness and LST defeat each other over
+the three persons. On the deity of the Word and of the Spirit, LST and Oneness
+stand together.
 
 ## The second question: is the Son less than the Father?
 

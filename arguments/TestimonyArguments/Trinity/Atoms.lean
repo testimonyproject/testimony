@@ -172,9 +172,11 @@ inductive Claim
   /-- Colossians 1:15: the Son "is the image of the invisible God, the firstborn
   of all creation." -/
   | firstbornOfAllCreation
-  /-- **The Nicene reading of John 1:1c.** θεός without the article says what the
-  Word is: he has the nature of the one God. Harner: "the logos has the nature of
-  theos" (as the New World Translation's reference edition quotes him). -/
+  /-- **The Nicene reading of "the Word was God" (John 1:1).** "Nicene", here and
+  below, is named for the creed of Nicaea (325), which confessed the Son of one
+  being with the Father. God (θεός), without "the", says what the Word is: he has
+  the nature of the one God. Harner: "the logos [the Word] has the nature of theos
+  [God]" (as the New World Translation's reference edition quotes him). -/
   | wordIsGodByNature
   /-- **The Nicene reading of John 1:3.** Everything that was made was made through
   the Word, so the Word himself is not among the things made. Augustine: "that by
@@ -195,9 +197,9 @@ inductive Claim
   /-- **The Nicene reading of Matthew 28:19.** Three are named, the Father, the
   Son and the Holy Spirit, and the one "name" is theirs together. -/
   | threeNamedInOneName
-  /-- **The Witnesses' reading of John 1:1c.** θεός without the article means "a
-  god": the Word is "'divine,' 'godlike,' 'a god,' but not Almighty God" (*Should
-  You Believe in the Trinity?*). -/
+  /-- **The Witnesses' reading of "the Word was God" (John 1:1).** God (θεός),
+  without "the", means "a god": the Word is "'divine,' 'godlike,' 'a god,' but not
+  Almighty God" (*Should You Believe in the Trinity?*). -/
   | wordIsAGod
   /-- **The Witnesses' reading of Colossians 1:15.** "Firstborn of all creation"
   means that the Son is the first thing God created, through whom he made all

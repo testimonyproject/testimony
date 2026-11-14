@@ -335,17 +335,17 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `equal_authority_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position can be defended**: held with LST's, it answers Grudem and Ware's position, which is the only one that attacks it. |
 | `equal_authority_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position is not forced** either. |
 | `lstDeity_establishes` | `Establishes lstDeityCase` | **Grant the Nicene readings of John 1:1 and 1:3, of Acts 5:3–4, and of the texts that name three, and LST's confession follows**: the Father, the Son and the Spirit are God, three … |
-| `witnesses_establish` | `Establishes witnessesCase` | **Grant John 1:1c read as "a god" and Colossians 1:15 as the first thing made, and the Son is a creature, not God.** |
+| `witnesses_establish` | `Establishes witnessesCase` | **Grant "the Word was God" (John 1:1) read as "a god" and Colossians 1:15 as the first thing made, and the Son is a creature, not God.** |
 | `oneness_establishes` | `Establishes onenessCase` | **Grant the Oneness readings of John 1:1, 17:5 and Matthew 28:19, and the Father, the Son and the Spirit are one person.** |
-| `deity_forces_nothing` | `Framework.grounded deityDispute.defeats = ∅` | **Nothing is forced.** Every position is in a standoff the weighing cannot resolve, and every one rests on a reading rated `disputed`, so no rating breaks a tie. |
-| `lst_deity_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.lst` | **LST's position can be defended**, with each of its lines: some maximal defensible position, one no other party can join without losing that, holds all four. |
-| `lst_deity_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.lst` | **Nor is it forced.** A maximal defensible position holds the Oneness position and LST's first two lines, and cannot hold LST's with them. |
+| `deity_forces_nothing` | `Framework.grounded deityDispute.defeats = ∅` | **Nothing is forced.** Every position ties with another, and since every one rests on a reading rated `disputed`, no rating breaks a tie. |
+| `lst_deity_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.lst` | **LST's position can be defended**, with each of its lines: there is a largest group of positions that can be defended together, one no other party can join, and it holds all four. |
+| `lst_deity_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.lst` | **LST's position is not forced.** The Oneness position and LST's first two lines can be defended as a group, and no such group can also hold LST's. |
 | `word_deity_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.word` | **That the Word is God can be defended**, with LST's position. |
-| `word_deity_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.word` | **Nor is it forced.** The Witnesses' position, on its own, is a maximal defensible position, and it cannot hold that the Word is God. |
+| `word_deity_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.word` | **That the Word is God is not forced.** The Witnesses' position can be defended on its own, and it denies that the Word is God. |
 | `witnesses_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.witnesses` | **The Witnesses' position can be defended**, on its own. |
-| `witnesses_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.witnesses` | **Nor is it forced.** A maximal defensible position holds LST's position and cannot hold the Witnesses'. |
+| `witnesses_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.witnesses` | **The Witnesses' position is not forced.** LST's position, with its three lines, can be defended as a group, and no such group can also hold the Witnesses'. |
 | `oneness_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.oneness` | **The Oneness position can be defended**, with LST's first two lines. |
-| `oneness_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.oneness` | **Nor is it forced.** A maximal defensible position holds LST's position and cannot hold the Oneness one. |
+| `oneness_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.oneness` | **The Oneness position is not forced.** The same group of LST and its lines leaves it out. |
 
 <!-- END GENERATED: lake exe statusgen -->
 
@@ -846,7 +846,11 @@ position, and Oneness against LST over the three persons. Each position can be
 defended and none is forced, because every reading that divides them, Harner's
 "qualitative" θεός against the brochure's "a god" among them, is rated
 `disputed`. LST and the Oneness position stand together on the Word and the
-Spirit (`oneness_stands_with_the_deity`).
+Spirit (`oneness_stands_with_the_deity`). The audit rated three steps `disputed`
+too: Anthony Buzzard grants the Word God's nature and denies that Jesus is that
+Word as a person who was God; Joseph Smith grants one God, three persons, each
+God, and still says "3 Gods"; and Robert Roberts holds the spirit God's agency yet
+one with God, against the Witnesses' step to "not God".
 
 **And one finding about the method rather than about an argument.** `Entails`
 quantifies over the valuations satisfying the premises, so a premise set with no

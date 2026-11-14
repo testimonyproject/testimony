@@ -37,20 +37,25 @@ other person" (p. 27). The holy spirit is
 "God's active force that he uses to accomplish his will", and "personifying the
 holy spirit" does not "make it a spirit person" (pp. 21, 23).
 
-Philip Harner's study of the same grammar (1973) reads the clause the other way.
-A noun without the article placed before the verb, as θεός is here, is
-"primarily qualitative": it says what kind of thing the Word is. "They indicate
-that the logos has the nature of theos" (as the New World Translation's reference
-edition quotes him). Augustine answers the Arians from John 1:3: "How can it be
-that the Word of God was made, when God by the Word made all things? … that by
-which all things were made could not be made by itself" (*Tractates on John*
-I.11). Calvin reads Acts 5:4 as Peter saying that "he lieth to God who doth lie to
-the Holy Ghost. For the divinity of the Holy Ghost is manifestly proved by this
-form of speech."
+Philip Harner's study of the same grammar (1973) agrees that a noun placed
+before the verb without "the", as θεός is here, is "primarily qualitative": it
+says what kind of thing the Word is. He draws a different conclusion from the
+brochure's. For Harner the quality is God's own: such nouns "indicate that the
+logos [the Word] has the nature of theos [God]" (as the New World Translation's
+reference edition quotes him; his article was not read). Augustine answers the
+Arians, the followers of Arius (died 336), who held the Son the first and
+greatest of God's creatures, from John 1:3: "How can it be that the Word of God
+was made, when God by the Word made all things? … that by which all things were
+made could not be made by itself" (*Tractates on John* I.11). Calvin reads Acts
+5:4 as Peter saying that "he lieth to God who doth lie to the Holy Ghost. For
+the divinity of the Holy Ghost is manifestly proved by this form of speech."
 
-David Bernard's *The Oneness of God* (1983) grants all of that. "Jesus is the one
-God" (ch. 4), and the Holy Spirit is God, as "a comparison of Acts 5:3 with 5:4"
-shows (ch. 6). What he denies is that "with God" means a second person. "The Word
+David Bernard's *The Oneness of God* (1983) reaches the same conclusions from these
+verses: "Jesus is the one God" (ch. 4), and the Holy Spirit is God, as "a
+comparison of Acts 5:3 with 5:4" shows (ch. 6). The Oneness position here is
+given LST's readings of John 1:1, 1:3 and Acts 5:3–4, because they are the
+readings that deliver what Bernard affirms; he is not quoted for Harner's grammar
+or Augustine's argument. What he denies is that "with God" means a second person. "The Word
 was not a separate person or a separate god any more than a man's word is a
 separate person from him. Rather the Word was the thought, plan, or mind of God"
 (ch. 4). When Jesus prays for "the glory that I had with you before the world
@@ -63,7 +68,9 @@ the beginning" (ch. 8). And the "name" of Matthew 28:19 is one name, not three:
 Each verse is a claim of its own, and each reading of it is another, cited to the
 reader who holds it and rated `disputed`, the lowest rating, because the other
 readers deny it. LST's case has three lines. From John 1:1, 1:3 and 20:28, with
-Harner's and Augustine's readings, the Word is God (`wordLine`). From Acts 5:3–4,
+Harner's and Augustine's readings, the Word is God (`wordLine`). John 20:28 is
+among the texts, but every party holds it and no reading of it is a premise, so it
+divides no one here. From Acts 5:3–4,
 with Calvin's reading, the Spirit is God (`spiritLine`). From "with God", the
 glory before the world, the Spirit who says "set apart for me" (Acts 13:2), and
 the three named in Matthew 28:19, each read as LST reads it, there are three
@@ -73,6 +80,21 @@ creature and not God (`witnesses_establish`). The Oneness case holds LST's first
 two lines and adds its own readings of the "with" texts, and gives one person,
 not three (`oneness_establishes`). Each position can be held without
 contradiction.
+
+Three of the steps are rated `disputed` as well, because the rating audit found a
+reader who grants each one's grounds and still denies where it ends. Anthony
+Buzzard, a biblical unitarian, grants that in John 1:1 the Word has God's own
+nature, "the one God Himself, not a second person", and denies that Jesus is that
+Word as a person who was God: "There was no Son of God until the Messiah was
+conceived in history" (2001, pp. 17, 19). Joseph Smith grants the one God of 1
+Corinthians 8:4–6, the Son God, the Spirit God and three persons, and still says
+"these 3 constit[ute] 3 distinct personages & 3 Gods" (1844); so the step that
+draws LST's confession together, three persons and not three gods, is where he
+parts. And the Christadelphian Robert Roberts grants the Witnesses' reading of the
+spirit as God's agency, personified, and holds it one with the Father "in the way
+that light is one with the body of the sun", against their step from a force to
+"not God". None of the three is a party here, and none changes the weighing,
+because each position already rests on a reading rated as low.
 
 These results say what follows from each set of readings. They do not say which
 readings are right, and they do not say that the bare texts, without any reading,
@@ -87,11 +109,15 @@ brochure cites against Thomas's words; and John 10:34, where Jesus quotes "you
 are gods" (Psalm 82:6), from which the brochure argues that the Son "can be and
 is 'a god'" (p. 28). For LST: Hebrews 1:8, Titus 2:13, Romans 9:5, and the texts
 that apply to Jesus what the Old Testament says of the LORD, Isaiah 45:23 in
-Philippians 2:10–11 among them. John 20:28 enters as a text that every party
-grants, with no reading of its own: neither of the brochure's two readings of
-Thomas's words is a premise here, so what divides the parties over the Son is
-carried by their readings of John 1:1, 1:3 and Colossians 1:15. What is found here
-is what these verses and these readings carry, and no more.
+Philippians 2:10–11 among them. Neither of the brochure's two readings of
+Thomas's words is a premise. The Witnesses' answer to John 1:3, that "all things"
+means "all other things", as the New World Translation renders Colossians 1:16,
+is not a premise either, and neither is a reading of "firstborn" as rank on LST's
+side; so Augustine's reading of John 1:3 and the brochure's reading of Colossians
+1:15 do not meet head on. And the brochure does not discuss Acts 5:3–4: the
+Witnesses' denial that the spirit is God rests on its reading of the spirit as
+God's force. What is found here is what these verses and these readings carry,
+and no more.
 
 
 ## How this is checked
@@ -104,8 +130,8 @@ is what these verses and these readings carry, and no more.
 <a id="textsMakeTheWordGod"></a>
 **`textsMakeTheWordGod`**
 
-From John 1:1, 1:3 and 20:28, read as the Nicene readers read them, to the
-Word's being God.
+From John 1:1 and 1:3, as Harner and Augustine read them, with John 20:28, to
+the Word's being God.
 
 <div class="testimony-derivation">
 
@@ -122,10 +148,10 @@ not being made, with Thomas's confession.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-32}{P_{32}}\\) — Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one"
-- (2) \\(\href{claims.html#claim-34}{P_{34}}\\) — John 1:1 — "and the Word was God", θεός without the article
+- (2) \\(\href{claims.html#claim-34}{P_{34}}\\) — John 1:1 — "and the Word was God": God (θεός), without "the"
 - (3) \\(\href{claims.html#claim-35}{P_{35}}\\) — John 1:3 — "all things were made through him"
 - (4) \\(\href{claims.html#claim-36}{P_{36}}\\) — John 20:28 — "Thomas answered him, 'My Lord and my God!'"
-- (5) \\(\href{claims.html#claim-42}{P_{42}}\\) — In John 1:1c θεός says the Word has the nature of the one God
+- (5) \\(\href{claims.html#claim-42}{P_{42}}\\) — In "the Word was God" (John 1:1) the Word has the nature of the one God
 - (6) \\(\href{claims.html#claim-43}{P_{43}}\\) — By John 1:3 the Word is not among the things made
 - (7) \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-36}{P_{36}} \land \href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \href{claims.html#claim-54}{P_{54}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-54}{P_{54}}\\) — *at issue:* The Word who became flesh in Jesus is God, of God's nature and not created
@@ -212,10 +238,10 @@ persons with the Father, one God.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-32}{P_{32}}\\) — Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one"
-- (2) \\(\href{claims.html#claim-34}{P_{34}}\\) — John 1:1 — "and the Word was God", θεός without the article
+- (2) \\(\href{claims.html#claim-34}{P_{34}}\\) — John 1:1 — "and the Word was God": God (θεός), without "the"
 - (3) \\(\href{claims.html#claim-35}{P_{35}}\\) — John 1:3 — "all things were made through him"
 - (4) \\(\href{claims.html#claim-36}{P_{36}}\\) — John 20:28 — "Thomas answered him, 'My Lord and my God!'"
-- (5) \\(\href{claims.html#claim-42}{P_{42}}\\) — In John 1:1c θεός says the Word has the nature of the one God
+- (5) \\(\href{claims.html#claim-42}{P_{42}}\\) — In "the Word was God" (John 1:1) the Word has the nature of the one God
 - (6) \\(\href{claims.html#claim-43}{P_{43}}\\) — By John 1:3 the Word is not among the things made
 - (7) \\(\href{claims.html#claim-37}{P_{37}}\\) — Acts 5:3–4 — "lie to the Holy Spirit … not to man but to God"
 - (8) \\(\href{claims.html#claim-44}{P_{44}}\\) — In Acts 5:3–4 Peter names the Holy Spirit God
@@ -234,7 +260,7 @@ persons with the Father, one God.
 
 </div>
 
-Grounded in scripture alone: Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one", John 1:1 — "and the Word was God", θεός without the article, John 1:3 — "all things were made through him", John 20:28 — "Thomas answered him, 'My Lord and my God!'", Acts 5:3–4 — "lie to the Holy Spirit … not to man but to God", John 1:1 — "the Word was with God", John 17:5 — "the glory that I had with you before the world existed", Acts 13:2; Ephesians 4:30 — the Spirit says "set apart for me", and is grieved, Matthew 28:19 — "in the name of the Father and of the Son and of the Holy Spirit".
+Grounded in scripture alone: Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one", John 1:1 — "and the Word was God": God (θεός), without "the", John 1:3 — "all things were made through him", John 20:28 — "Thomas answered him, 'My Lord and my God!'", Acts 5:3–4 — "lie to the Holy Spirit … not to man but to God", John 1:1 — "the Word was with God", John 17:5 — "the glory that I had with you before the world existed", Acts 13:2; Ephesians 4:30 — the Spirit says "set apart for me", and is grieved, Matthew 28:19 — "in the name of the Father and of the Son and of the Holy Spirit".
 
 <a id="wordCase"></a>
 **`wordCase`** — "The Word was God": of God's nature, and not made
@@ -244,22 +270,23 @@ Grounded in scripture alone: Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-32}{P_{32}}\\) — Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one"
-- (2) \\(\href{claims.html#claim-34}{P_{34}}\\) — John 1:1 — "and the Word was God", θεός without the article
+- (2) \\(\href{claims.html#claim-34}{P_{34}}\\) — John 1:1 — "and the Word was God": God (θεός), without "the"
 - (3) \\(\href{claims.html#claim-35}{P_{35}}\\) — John 1:3 — "all things were made through him"
 - (4) \\(\href{claims.html#claim-36}{P_{36}}\\) — John 20:28 — "Thomas answered him, 'My Lord and my God!'"
-- (5) \\(\href{claims.html#claim-42}{P_{42}}\\) — In John 1:1c θεός says the Word has the nature of the one God
+- (5) \\(\href{claims.html#claim-42}{P_{42}}\\) — In "the Word was God" (John 1:1) the Word has the nature of the one God
 - (6) \\(\href{claims.html#claim-43}{P_{43}}\\) — By John 1:3 the Word is not among the things made
 - (7) \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-36}{P_{36}} \land \href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \href{claims.html#claim-54}{P_{54}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-54}{P_{54}}\\) — *at issue:* The Word who became flesh in Jesus is God, of God's nature and not created
 
 </div>
 
-Grounded in scripture alone: Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one", John 1:1 — "and the Word was God", θεός without the article, John 1:3 — "all things were made through him", John 20:28 — "Thomas answered him, 'My Lord and my God!'".
+Grounded in scripture alone: Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one", John 1:1 — "and the Word was God": God (θεός), without "the", John 1:3 — "all things were made through him", John 20:28 — "Thomas answered him, 'My Lord and my God!'".
 
 <a id="spiritCase"></a>
 **`spiritCase`** — "Not to man but to God": the Spirit is God
 
-**The Spirit is God, on its own.**
+**The Spirit is God**, from Acts 5:3–4 as Calvin reads it, taken as a position
+on its own.
 
 <div class="testimony-derivation">
 
@@ -275,7 +302,8 @@ Grounded in scripture alone: Acts 5:3–4 — "lie to the Holy Spirit … not to
 <a id="personsCase"></a>
 **`personsCase`** — "With God", and three named: three persons
 
-**Three persons, on its own.**
+**Three persons**, from "with God", the glory before the world, the Spirit who
+speaks and the three named, taken as a position on its own.
 
 <div class="testimony-derivation">
 
@@ -310,14 +338,16 @@ a creature.
 <a id="creatureLine"></a>
 **`creatureLine`** — "A god", the firstborn of creation (Jehovah's Witnesses)
 
-**The Witnesses' line on the Son.**
+**The Witnesses' line on the Son**: John 1:1 read as "a god" and Colossians
+1:15 as the first thing God made, so the Son is a creature.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-41}{P_{41}}\\) — Colossians 1:15 — "the firstborn of all creation"
-- (2) \\(\href{claims.html#claim-48}{P_{48}}\\) — In John 1:1c θεός without the article means "a god", not God Almighty
-- (3) \\(\href{claims.html#claim-49}{P_{49}}\\) — "Firstborn of all creation" means the first thing God created
-- (4) \\((\href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-48}{P_{48}} \land \href{claims.html#claim-49}{P_{49}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\)
+- (1) \\(\href{claims.html#claim-34}{P_{34}}\\) — John 1:1 — "and the Word was God": God (θεός), without "the"
+- (2) \\(\href{claims.html#claim-41}{P_{41}}\\) — Colossians 1:15 — "the firstborn of all creation"
+- (3) \\(\href{claims.html#claim-48}{P_{48}}\\) — In "the Word was God" (John 1:1) God, without "the", means "a god"
+- (4) \\(\href{claims.html#claim-49}{P_{49}}\\) — "Firstborn of all creation" means the first thing God created
+- (5) \\((\href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-48}{P_{48}} \land \href{claims.html#claim-49}{P_{49}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-57}{P_{57}}\\) — *at issue:* The Son is a creature, the first of God's works, and not God
 
 </div>
@@ -347,7 +377,8 @@ The Witnesses' step: a force is not a person.
 <a id="forceLine"></a>
 **`forceLine`** — God's active force, personified (Jehovah's Witnesses)
 
-**The Witnesses' line on the Spirit.**
+**The Witnesses' line on the Spirit**: the spirit that speaks and is grieved is
+God's force, personified, so it is not a person.
 
 <div class="testimony-derivation">
 
@@ -373,16 +404,18 @@ God's force is not God himself.
 **`witnessesCase`** — A god, not God; a force, not a person (Jehovah's Witnesses)
 
 **The Witnesses' position**: the Son a creature, and so not God; the holy
-spirit God's force, and so neither a person nor God.
+spirit God's force, and so neither a person nor God. With LST, and against the
+Oneness position, it holds that the Word was with God as one person with another
+(brochure, p. 27).
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-41}{P_{41}}\\) — Colossians 1:15 — "the firstborn of all creation"
-- (2) \\(\href{claims.html#claim-48}{P_{48}}\\) — In John 1:1c θεός without the article means "a god", not God Almighty
-- (3) \\(\href{claims.html#claim-49}{P_{49}}\\) — "Firstborn of all creation" means the first thing God created
-- (4) \\(\href{claims.html#claim-38}{P_{38}}\\) — Acts 13:2; Ephesians 4:30 — the Spirit says "set apart for me", and is grieved
-- (5) \\(\href{claims.html#claim-50}{P_{50}}\\) — The holy spirit is God's active force, personified, not a person
-- (6) \\(\href{claims.html#claim-34}{P_{34}}\\) — John 1:1 — "and the Word was God", θεός without the article
+- (1) \\(\href{claims.html#claim-34}{P_{34}}\\) — John 1:1 — "and the Word was God": God (θεός), without "the"
+- (2) \\(\href{claims.html#claim-41}{P_{41}}\\) — Colossians 1:15 — "the firstborn of all creation"
+- (3) \\(\href{claims.html#claim-48}{P_{48}}\\) — In "the Word was God" (John 1:1) God, without "the", means "a god"
+- (4) \\(\href{claims.html#claim-49}{P_{49}}\\) — "Firstborn of all creation" means the first thing God created
+- (5) \\(\href{claims.html#claim-38}{P_{38}}\\) — Acts 13:2; Ephesians 4:30 — the Spirit says "set apart for me", and is grieved
+- (6) \\(\href{claims.html#claim-50}{P_{50}}\\) — The holy spirit is God's active force, personified, not a person
 - (7) \\(\href{claims.html#claim-36}{P_{36}}\\) — John 20:28 — "Thomas answered him, 'My Lord and my God!'"
 - (8) \\(\href{claims.html#claim-37}{P_{37}}\\) — Acts 5:3–4 — "lie to the Holy Spirit … not to man but to God"
 - (9) \\(\href{claims.html#claim-33}{P_{33}}\\) — John 1:1 — "the Word was with God"
@@ -395,7 +428,7 @@ spirit God's force, and so neither a person nor God.
 
 </div>
 
-Grounded in scripture alone: Colossians 1:15 — "the firstborn of all creation", Acts 13:2; Ephesians 4:30 — the Spirit says "set apart for me", and is grieved, John 1:1 — "and the Word was God", θεός without the article, John 20:28 — "Thomas answered him, 'My Lord and my God!'", Acts 5:3–4 — "lie to the Holy Spirit … not to man but to God", John 1:1 — "the Word was with God".
+Grounded in scripture alone: John 1:1 — "and the Word was God": God (θεός), without "the", Colossians 1:15 — "the firstborn of all creation", Acts 13:2; Ephesians 4:30 — the Spirit says "set apart for me", and is grieved, John 20:28 — "Thomas answered him, 'My Lord and my God!'", Acts 5:3–4 — "lie to the Holy Spirit … not to man but to God", John 1:1 — "the Word was with God".
 
 ### Oneness: one God, one person
 
@@ -414,7 +447,8 @@ name Jesus, so not three persons.
 <a id="onenessLine"></a>
 **`onenessLine`** — God's Word, God's plan, and the one name (Oneness)
 
-**The Oneness line.**
+**Bernard's line**: the Word is God's thought, the glory of John 17:5 was in
+God's plan, and the one name of Matthew 28:19 is Jesus, so not three persons.
 
 <div class="testimony-derivation">
 
@@ -438,10 +472,10 @@ holds, and they are one person with the Father, not three.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-32}{P_{32}}\\) — Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one"
-- (2) \\(\href{claims.html#claim-34}{P_{34}}\\) — John 1:1 — "and the Word was God", θεός without the article
+- (2) \\(\href{claims.html#claim-34}{P_{34}}\\) — John 1:1 — "and the Word was God": God (θεός), without "the"
 - (3) \\(\href{claims.html#claim-35}{P_{35}}\\) — John 1:3 — "all things were made through him"
 - (4) \\(\href{claims.html#claim-36}{P_{36}}\\) — John 20:28 — "Thomas answered him, 'My Lord and my God!'"
-- (5) \\(\href{claims.html#claim-42}{P_{42}}\\) — In John 1:1c θεός says the Word has the nature of the one God
+- (5) \\(\href{claims.html#claim-42}{P_{42}}\\) — In "the Word was God" (John 1:1) the Word has the nature of the one God
 - (6) \\(\href{claims.html#claim-43}{P_{43}}\\) — By John 1:3 the Word is not among the things made
 - (7) \\(\href{claims.html#claim-37}{P_{37}}\\) — Acts 5:3–4 — "lie to the Holy Spirit … not to man but to God"
 - (8) \\(\href{claims.html#claim-44}{P_{44}}\\) — In Acts 5:3–4 Peter names the Holy Spirit God
@@ -458,14 +492,15 @@ holds, and they are one person with the Father, not three.
 
 </div>
 
-Grounded in scripture alone: Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one", John 1:1 — "and the Word was God", θεός without the article, John 1:3 — "all things were made through him", John 20:28 — "Thomas answered him, 'My Lord and my God!'", Acts 5:3–4 — "lie to the Holy Spirit … not to man but to God", John 1:1 — "the Word was with God", John 17:5 — "the glory that I had with you before the world existed", Matthew 28:19 — "in the name of the Father and of the Son and of the Holy Spirit".
+Grounded in scripture alone: Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one", John 1:1 — "and the Word was God": God (θεός), without "the", John 1:3 — "all things were made through him", John 20:28 — "Thomas answered him, 'My Lord and my God!'", Acts 5:3–4 — "lie to the Holy Spirit … not to man but to God", John 1:1 — "the Word was with God", John 17:5 — "the glory that I had with you before the world existed", Matthew 28:19 — "in the name of the Father and of the Son and of the Holy Spirit".
 
 ### Readings, written down
 
 <a id="nicenReading"></a>
 **`nicenReading`**
 
-**The Nicene reading**: every text, every Nicene reading, and the
+**The Nicene reading**, named for the creed of Nicaea (325), which confessed the
+Son of one being with the Father: every text, every Nicene reading, and the
 confession; none of the Witnesses' readings or the Oneness ones.
 
 ```lean
@@ -512,7 +547,7 @@ def witnessesReading : Valuation Claim :=
 <a id="onenessReading"></a>
 **`onenessReading`**
 
-**The Oneness reading**: every text, the Nicene readings of John 1:1c, 1:3
+**The Oneness reading**: every text, the Nicene readings of John 1:1, 1:3
 and Acts 5, the Word and the Spirit God; the Oneness readings, and not three
 persons.
 
@@ -558,7 +593,7 @@ theorem lstDeityCase_is_satisfiable : Satisfiable lstDeityCase.premises
 <a id="witnesses_establish"></a>
 **`witnesses_establish`**
 
-**Grant John 1:1c read as "a god" and Colossians 1:15 as the first thing
+**Grant "the Word was God" (John 1:1) read as "a god" and Colossians 1:15 as the first thing
 made, and the Son is a creature, not God.**
 
 ```lean
@@ -600,7 +635,7 @@ theorem onenessCase_is_satisfiable : Satisfiable onenessCase.premises
 <a id="wordCase_is_satisfiable"></a>
 **`wordCase_is_satisfiable`**
 
-Each of LST's lines, on its own, can be held without contradiction.
+The Word line, on its own, can be held without contradiction.
 
 ```lean
 theorem wordCase_is_satisfiable : Satisfiable wordCase.premises
@@ -630,7 +665,7 @@ theorem personsCase_is_satisfiable : Satisfiable personsCase.premises
 <a id="wordCase_establishes"></a>
 **`wordCase_establishes`**
 
-The Word line delivers what it says.
+From its readings, the Word line gives that the Word is God.
 
 ```lean
 theorem wordCase_establishes : Establishes wordCase
@@ -640,7 +675,7 @@ theorem wordCase_establishes : Establishes wordCase
 <a id="spiritCase_establishes"></a>
 **`spiritCase_establishes`**
 
-The Spirit line delivers what it says.
+From its reading, the Spirit line gives that the Spirit is God.
 
 ```lean
 theorem spiritCase_establishes : Establishes spiritCase
@@ -650,7 +685,7 @@ theorem spiritCase_establishes : Establishes spiritCase
 <a id="personsCase_establishes"></a>
 **`personsCase_establishes`**
 
-The line of three persons delivers what it says.
+From its readings, the line of three persons gives three persons.
 
 ```lean
 theorem personsCase_establishes : Establishes personsCase
