@@ -158,8 +158,17 @@ the help "without which" a thing does not come to pass, which Adam had, and the
 help "by which" it does, which the saints have, is the dilemma it meets. Read
 the first way, it is the reading Wesley gives, and it cannot be held together
 with Dort's position; read the second, it is Dort's, and it cannot be held
-together with the Remonstrants'. Both breaks come at steps or readings rated
-*disputed*, so neither shows the other side right (`whatTheAbilityIs`).
+together with Trent's canon 4, nor, by what the claims mean, with the
+Remonstrants. Both breaks at a premise come at steps rated *disputed*, so
+neither shows the other side right (`whatTheAbilityIs`).
+
+Suppose instead that the Remonstrants are right, and the grace that saves can
+be finally refused. Set beside the Scriptures as the Reformed read them, with
+the claims read as they mean, the supposition has no model at all, and the same
+holds of Ephesians 2 or Romans 9:16 alone
+(`final_refusal_cannot_be_held_with_the_scriptures`). That is sola gratia shown
+from its texts by the contrary, and it is exactly as strong as the readings and
+the disputed steps it rests on.
 
 Weighed as one dispute, only what every party holds is settled before any
 choice: salvation is by grace (`only_grace_prevails`). Every other position,

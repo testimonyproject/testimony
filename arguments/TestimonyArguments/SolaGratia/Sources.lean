@@ -198,16 +198,6 @@ def blasphemyInference : Source :=
   , tradition := .christianHistoricalGrammatical
   , confidence := .disputed }
 
-/-- The rating of the step from "can be finally refused" to "is not effectual of
-itself": `consensus`. It is what the two claims say. The Reformed hold the
-second because they deny the first, and the Remonstrants deny the second because
-they hold the first. -/
-def refusalInference : Source :=
-  { primary := .work schaffCreeds3 (.sectionRef "Five Arminian Articles (1610), art. 4")
-  , supporting := [.work schaffCreeds3 (.sectionRef "Canons of Dort, III/IV, art. 12")]
-  , tradition := .christianHistoricalGrammatical
-  , confidence := .consensus }
-
 /-- The rating of the step from God's work alone to the will's passivity:
 `wellSupported`. The Lutherans, who part from Dort at the next step, grant this
 one: man "does nothing whatever towards it, but only suffers what God works in

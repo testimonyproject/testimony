@@ -239,19 +239,6 @@ grace offered, then that grace can be finally refused.
 
 </div>
 
-<a id="refusalStep"></a>
-**`refusalStep`**
-
-What final refusal means for the second part of the conclusion: grace that
-can be finally refused is not effectual of itself. Rated `consensus`: it is what
-the two claims say, and their meanings exclude each other.
-
-<div class="testimony-derivation">
-
-- \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) — *would deny:* The grace that saves brings about the consent it seeks
-
-</div>
-
 <a id="cooperationStep"></a>
 **`cooperationStep`**
 
@@ -427,18 +414,6 @@ grace that saves, so that grace can be finally refused.
 
 </div>
 
-<a id="refusalLine"></a>
-**`refusalLine`** — Grace that can be finally refused is not effectual of itself
-
-**Final refusal, and what it denies.**
-
-<div class="testimony-derivation">
-
-- (1) \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\)
-- \\(\vdash\\) \\(\lnot \href{claims.html#claim-25}{P_{25}}\\) — *at issue, the denial of:* The grace that saves brings about the consent it seeks
-
-</div>
-
 #### Shared grounds
 
 <a id="reformedShared"></a>
@@ -530,7 +505,6 @@ refuses.
 - (11) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
 - (12) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
 - (13) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-20}{P_{20}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
-- (14) \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) — *would deny:* The grace that saves brings about the consent it seeks
 - \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
@@ -559,8 +533,7 @@ alone.
 - (8) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
 - (9) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
 - (10) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-11}{P_{11}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
-- (11) \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) — *would deny:* The grace that saves brings about the consent it seeks
-- (12) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+- (11) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
 - \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
@@ -585,7 +558,6 @@ that grace can be resisted or yielded to; and it is received by faith alone.
 - (7) \\(\href{claims.html#claim-15}{P_{15}}\\) — Grace is received by faith alone
 - (8) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
 - (9) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
-- (10) \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) — *would deny:* The grace that saves brings about the consent it seeks
 - \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
@@ -600,9 +572,8 @@ stand or to fall (Genesis 2:16–17), so God gives the one who hears the gospel
 the ability to believe, and grace is received by faith alone. That the offer is
 real is part of the third way too, and is not encoded as a premise, because no
 party here denies it. Stated this way it does not say what kind of help the ability is, whether one
-that makes believing possible or one that brings it about. It carries the step
-every party grants, that grace which can be finally refused is not effectual of
-itself, and nothing that would decide whether it can be.
+that makes believing possible or one that brings it about, and it carries
+nothing that would decide whether the grace that saves can be finally refused.
 
 <div class="testimony-derivation">
 
@@ -611,7 +582,6 @@ itself, and nothing that would decide whether it can be.
 - (3) \\(\href{claims.html#claim-14}{P_{14}}\\) — God gives the ability to believe, as Adam was made able to stand or fall
 - (4) \\(\href{claims.html#claim-15}{P_{15}}\\) — Grace is received by faith alone
 - (5) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (6) \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) — *would deny:* The grace that saves brings about the consent it seeks
 - \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-15}{P_{15}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-15}{P_{15}}\\) Grace is received by faith alone
 
 </div>
@@ -626,8 +596,10 @@ the claim that the grace that saves can be finally refused. Two run from the
 texts of resistance: with the Remonstrants' reading of what Stephen's hearers
 resisted, and with the Formula of Concord's reading of grieving the Spirit, that
 it can end in losing him. The third runs from the sin that is never forgiven,
-read with Augustine as impenitence to the end. It concludes the denial of the
-second part of sola gratia, and nothing about the others.
+read with Augustine as impenitence to the end. It concludes that the grace that
+saves can be finally refused. That this denies the second part of sola gratia is
+not a premise of the objection: it is what the two claims mean, and the meanings
+join them (`TestimonyArguments.Meanings.SolaGratia`).
 
 <div class="testimony-derivation">
 
@@ -639,11 +611,10 @@ second part of sola gratia, and nothing about the others.
 - (6) \\(\href{claims.html#claim-8}{P_{8}}\\) — Matthew 12:31–32 — the blasphemy against the Spirit will not be forgiven
 - (7) \\(\href{claims.html#claim-12}{P_{12}}\\) — The blasphemy against the Spirit is impenitence to the end: grace refused till death
 - (8) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
-- (9) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-20}{P_{20}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
-- (10) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-11}{P_{11}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
-- (11) \\((\href{claims.html#claim-8}{P_{8}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
-- (12) \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\)
-- \\(\vdash\\) \\(\lnot \href{claims.html#claim-25}{P_{25}}\\) — *at issue, the denial of:* The grace that saves brings about the consent it seeks
+- (9) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-20}{P_{20}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\)
+- (10) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-11}{P_{11}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\)
+- (11) \\((\href{claims.html#claim-8}{P_{8}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-13}{P_{13}}\\) — *at issue:* The grace that saves can be finally refused
 
 </div>
 
@@ -992,11 +963,14 @@ theorem trent_denies_effectual_grace : Entails tridentine.premises (notP
 <a id="remonstrants_deny_effectual_grace"></a>
 **`remonstrants_deny_effectual_grace`**
 
-The Remonstrants' premises deny the second part: grace can be resisted. Their
-fourth article reads Acts 7:51 so.
+The Remonstrants deny the second part: grace can be resisted. Their fourth
+article reads Acts 7:51 so, and their premises deliver that the grace that saves
+can be finally refused. That this is the denial of grace effectual of itself is
+not a premise of theirs but what the two claims mean: the meanings join them,
+and the theorem is stated over the premises together with that join.
 
 ```lean
-theorem remonstrants_deny_effectual_grace : Entails remonstrant.premises (notP
+theorem remonstrants_deny_effectual_grace : Entails remonstrant.held (notP
     Claim.graceIsEffectualOfItself)
 -- axioms: propext, Quot.sound
 ```

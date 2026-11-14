@@ -91,9 +91,22 @@ without which he could not of free will persevere"; the saints are given the
 second, "so that by means of this gift they cannot help persevering" (*On Rebuke
 and Grace*, ch. 34). Read as Adam's kind of help, the third way is the reading
 Wesley gives, and it cannot be held together with Dort's position. Read as the
-saints' kind, it is Dort's reading, and it cannot be held together with the
-Remonstrants'. Each break comes at a step or reading rated *disputed*, so
-neither shows the other side right (`whatTheAbilityIs`).
+saints' kind, it is Dort's reading, and it cannot be held together with Trent's
+canon 4, nor, by what the claims mean, with the Remonstrants. Each break at a
+premise comes at a step rated *disputed*, so neither shows the other side right
+(`whatTheAbilityIs`).
+
+## The contrary, supposed
+
+Grant the Remonstrants their claim for a moment: the grace that saves can be
+finally refused. Put that beside the Reformed reading of the Scriptures, and
+read the claims as they mean, so that a grace which can be finally refused is
+not a grace that brings believing about. Then nothing can be true all at once.
+The same is so with Ephesians 2 alone, or Romans 9:16 alone
+(`final_refusal_cannot_be_held_with_the_scriptures`). The supposition is not
+refuted by the bare texts: it is refuted by the texts as the Reformed read them,
+and at the steps a cited reader disputes, which is where the Remonstrants, the
+Lutherans and Wesley each part.
 -/
 
 namespace TestimonyArguments.SolaGratia
@@ -128,7 +141,7 @@ resisted to the end. -/
 @[solaGratiaDefs]
 def remonstrantPosition : ArgumentPackage Claim :=
   { remonstrant with
-    conclusion := ⋀ [p .salvationIsByGrace, notP .graceIsEffectualOfItself]
+    conclusion := ⋀ [p .salvationIsByGrace, p .savingGraceCanBeFinallyRefused]
     conclusionLabel := "salvation by grace, which can be resisted and refused" }
 
 /-- The Lutherans' position: salvation by grace, the will passive in conversion,
@@ -138,7 +151,7 @@ def lutheranPosition : ArgumentPackage Claim :=
   { lutheran with
     conclusion :=
       ⋀ [ p .salvationIsByGrace, p .willIsPassiveInRegeneration
-        , notP .graceIsEffectualOfItself, p .faithAloneReceivesGrace ]
+        , p .savingGraceCanBeFinallyRefused, p .faithAloneReceivesGrace ]
     conclusionLabel :=
       "salvation by grace alone, the will passive, grace resistible, through faith alone" }
 
@@ -148,7 +161,7 @@ refused, and faith alone. -/
 def wesleyanPosition : ArgumentPackage Claim :=
   { wesleyan with
     conclusion :=
-      ⋀ [p .salvationIsByGrace, notP .graceIsEffectualOfItself, p .faithAloneReceivesGrace]
+      ⋀ [p .salvationIsByGrace, p .savingGraceCanBeFinallyRefused, p .faithAloneReceivesGrace]
     conclusionLabel := "salvation by grace, which can be refused, received by faith alone" }
 
 /-! ### What each position reaches -/
@@ -215,6 +228,41 @@ theorem third_way_leaves_resistibility_open :
 
 #print axioms third_way_leaves_resistibility_open
 
+/-! ### Final refusal, supposed
+
+What if the Remonstrants are right, and the grace that saves can be finally
+refused? Suppose it, and set the supposition beside the Scriptures as the
+Reformed read them. -/
+
+/-- **Granted the Scriptures as the Reformed read them, final refusal has no
+place.** Suppose the grace that saves can be finally refused. Add that
+supposition to the Reformed premises: Romans 11:6; Ephesians 2, with "this"
+pointing to the whole of being saved by grace through faith; Romans 9:16, read
+as being about salvation; the texts of resistance; and the steps from each to
+God's work alone. Read the claims as they mean, so that grace which can be
+finally refused is not grace that brings believing about. Then no reading makes
+everything true at once. The same holds of either strand alone, Ephesians 2 or
+Romans 9:16, so either text carries it.
+
+What this claims is conditional, as every result here is: on the Reformed
+readings and on the steps from them, four of which are rated *disputed*, each
+on a reader who grants its grounds and denies its conclusion. A reader who
+holds that the grace of God can be finally refused denies one of those steps or
+readings, and the chapters say which: Robertson and Calvin at the step from
+Ephesians 2:8 to faith as a gift, Arminius at the steps to God's work alone,
+and the Lutherans at the step from God's work alone to grace effectual of
+itself. It does not claim the supposition is refuted by the texts alone,
+without those readings. -/
+@[headline]
+theorem final_refusal_cannot_be_held_with_the_scriptures :
+    ¬ Satisfiable (reformed.held ++ [p .savingGraceCanBeFinallyRefused]) ∧
+      ¬ Satisfiable (ephesiansStrand.held ++ [p .savingGraceCanBeFinallyRefused]) ∧
+      ¬ Satisfiable (romansStrand.held ++ [p .savingGraceCanBeFinallyRefused]) :=
+  ⟨not_satisfiable_of_check (by decide +kernel), not_satisfiable_of_check (by decide +kernel),
+    not_satisfiable_of_check (by decide +kernel)⟩
+
+#print axioms final_refusal_cannot_be_held_with_the_scriptures
+
 /-! ### Each position can be held without contradiction
 
 For each position, a reading is written down that makes every premise true. -/
@@ -258,12 +306,13 @@ theorem graceCase_is_satisfiable : Satisfiable graceCase.premises := by
 
 attribute [solaGratiaDefs] ArgumentPackage.readAs
 
-/-- The ability read as Adam's kind of help: it makes believing possible, and the
-grace that gives it can be finally refused. Wesley's reading. -/
+/-- The ability read as Adam's kind of help, "not that by which it should be
+brought about" that a person believes, "but that without which" they could not:
+so the grace that gives it is not effectual of itself. Wesley's reading. -/
 @[solaGratiaDefs]
 def asAidWithoutWhich : Reading Claim :=
   { name := "as the help without which a person cannot believe, Adam's kind"
-  , commits := p .savingGraceCanBeFinallyRefused
+  , commits := notP .graceIsEffectualOfItself
   , source := asAidWithoutWhichSource }
 
 /-- The ability read as the saints' kind of help: the grace that gives it brings
@@ -312,42 +361,44 @@ theorem dort_does_not_reach_the_saints_kind :
 crux is Dort's step from God's work alone to grace effectual of itself, that is,
 grace that brings about the consent it seeks and so cannot be finally refused;
 the Lutherans dispute it. With the Romans strand granted, the reading of Romans
-9:16 as being about God's mercy in saving, the crux breaks the third way at
-three of its premises: the ability given, the reading of it as a help that can
-be refused, and the step every party grants, that grace which can be finally
-refused is not effectual of itself. -/
+9:16 as being about God's mercy in saving, the crux breaks the third way at two
+of its premises: the ability given, and the reading of it as a help that does
+not bring believing about. -/
 def whereAdamsKindFalls : Because reformed thirdWayAsAidWithoutWhich :=
   Because.ofChecks effectualStep
     (caseOf [graceLine, ephesiansLine, giftLine, romansLine, textsOfResistanceLine]
       reformedShared [passiveStep]) []
     [p .romans9_16, p .romans9_16ConcernsSalvation, romansStep]
-    [ p .abilityToBelieveIsGiven
-    , p .abilityToBelieveIsGiven ➝ p .savingGraceCanBeFinallyRefused, refusalStep ]
+    [p .abilityToBelieveIsGiven, p .abilityToBelieveIsGiven ➝ notP .graceIsEffectualOfItself]
     .derives reformed_establishes reformed_is_satisfiable
     (by simp [reformed, caseOf, closingSteps])
     (by simp [solaGratiaDefs, caseOf])
     (by simp [solaGratiaDefs, caseOf])
     (by decide +kernel)
 
-/-- **Why the Remonstrants stand against the third way, read as the saints' kind
-of help.** The crux is the step every party grants, that grace which can be
-finally refused is not effectual of itself. With the Remonstrants' reading of
-Acts 7:51 granted, it breaks the third way at two of its premises: the ability
-given, and the reading of it as a help that brings believing about. Every party
-grants that step, so what the break really rests on is the Remonstrants' reading
-of Acts 7:51, which Dort denies. -/
-def whereTheSaintsKindFalls : Because remonstrantPosition thirdWayAsAidByWhich :=
-  Because.ofChecks refusalStep
-    ([ p .romans11_6, p .acts7_51, p .ephesians4_30, p .thessalonians5_19
-     , p .acts7_51ResistsSavingGrace
-     , p .ephesians2_1to5, p .ephesians2_8to9, p .faithIsGodsGift
-     , p .romans9_16, p .romans9_16ConcernsSalvation ] ++
-     [graceStep, textsOfResistanceStep, resistanceStep]) []
-    [ p .acts7_51, p .ephesians4_30, p .thessalonians5_19, p .acts7_51ResistsSavingGrace
-    , textsOfResistanceStep, resistanceStep ]
+/-- **Why Trent stands against the third way, read as the saints' kind of
+help.** The crux is the second half of Trent's canon 4: the will, moved by God,
+can refuse its consent if it would, so grace is not effectual of itself. With
+that power to refuse granted, it breaks the third way at two of its premises: the
+ability given, and the reading of it as a help that brings believing about. The
+crux is rated *disputed*, because Aquinas grants that the will moved by God
+could, taken simply, refuse, and holds that the man God moves to grace "will
+infallibly attain to it".
+
+The Remonstrants stand against this reading too, but not at a premise either
+side states: their premises deliver that the grace that saves can be finally
+refused, and that excludes grace which brings believing about by what the two
+claims mean. The meanings hold that join, and every dispute over the argument
+holds it; a break at a premise, which is what this records, is Trent's. -/
+def whereTheSaintsKindFalls : Because tridentinePosition thirdWayAsAidByWhich :=
+  Because.ofChecks dissentStep
+    ([ p .romans11_6, p .zechariah1_3WithLamentations5_21, p .freeWillCooperatesByAssenting
+     , p .freeWillCanDissent, notP .faithAloneReceivesGrace ] ++
+     [graceStep, cooperationStep]) []
+    [p .freeWillCanDissent]
     [p .abilityToBelieveIsGiven, p .abilityToBelieveIsGiven ➝ p .graceIsEffectualOfItself]
-    .derives remonstrantPosition_establishes remonstrantPosition_is_satisfiable
-    (by simp [remonstrantPosition, remonstrant, caseOf, solaGratiaDefs])
+    .derives tridentinePosition_establishes tridentinePosition_is_satisfiable
+    (by simp [tridentinePosition, tridentine, caseOf, solaGratiaDefs])
     (by simp [solaGratiaDefs, caseOf])
     (by simp [solaGratiaDefs, caseOf])
     (by decide +kernel)
@@ -365,8 +416,10 @@ conclusion; so the break does not show Dort right.
 
 Read as the saints' kind, the help "by which" a person believes, it is Dort's
 reading, and Dort can hold it without contradiction. It cannot be held together
-with the Remonstrants' position. The break rests on their reading of Acts 7:51,
-which is rated *disputed* too.
+with Trent's canon 4, at the step from the will's power to refuse, which is
+rated *disputed* too: Aquinas grants the power and holds grace effectual all the
+same. Nor can it be held with the Remonstrants, though there the break is in
+what the claims mean rather than at a premise either side states.
 
 Each reading is fair: the third way read either way can be held without
 contradiction. Which reading its holder means is not something the dilemma
@@ -385,7 +438,7 @@ def whatTheAbilityIs : Dilemma thirdWay where
     , { reading := asAidByWhich
       , fair := thirdWayAsAidByWhich_is_satisfiable
       , fates :=
-          [ .falls remonstrantPosition whereTheSaintsKindFalls
+          [ .falls tridentinePosition whereTheSaintsKindFalls
           , .unreached reformed reformed_establishes dort_does_not_reach_the_saints_kind ]
       , answered := by simp } ]
   claim_mem := by simp [solaGratiaDefs, caseOf]

@@ -134,13 +134,6 @@ def blasphemyStep : Formula Claim :=
   ⋀ [p .matthew12_31to32, p .blasphemyIsFinalRefusalOfGrace]
   ➝ p .savingGraceCanBeFinallyRefused
 
-/-- What final refusal means for the second part of the conclusion: grace that
-can be finally refused is not effectual of itself. Rated `consensus`: it is what
-the two claims say, and their meanings exclude each other. -/
-@[solaGratiaDefs]
-def refusalStep : Formula Claim :=
-  p .savingGraceCanBeFinallyRefused ➝ notP .graceIsEffectualOfItself
-
 /-- **Trent's fourth canon, first half.** The will, moved by God, cooperates by
 assenting, as "Return to me" calls on it to; so it is not passive. Rated
 `disputed`: Aquinas grants that grace cooperates with a will that moves and
@@ -259,15 +252,6 @@ def blasphemyLine : Line Claim :=
   , step := blasphemyStep
   , delivers := p .savingGraceCanBeFinallyRefused
   , inference := some blasphemyInference }
-
-/-- **Final refusal, and what it denies.** -/
-@[solaGratiaDefs]
-def refusalLine : Line Claim :=
-  { name := "Grace that can be finally refused is not effectual of itself"
-  , grounds := []
-  , step := refusalStep
-  , delivers := notP .graceIsEffectualOfItself
-  , inference := some refusalInference }
 
 /-! ### Shared grounds -/
 

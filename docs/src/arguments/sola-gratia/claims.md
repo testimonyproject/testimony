@@ -313,27 +313,6 @@ def blasphemyInference : Source :=
     confidence := Confidence.disputed }
 ```
 
-<a id="refusalInference"></a>
-**`refusalInference`**
-
-The rating of the step from "can be finally refused" to "is not effectual of
-itself": `consensus`. It is what the two claims say. The Reformed hold the
-second because they deny the first, and the Remonstrants deny the second because
-they hold the first.
-
-```lean
-def refusalInference : Source :=
-  {
-    primary :=
-      Reference.work schaffCreeds3
-        (Bib.Locus.sectionRef "Five Arminian Articles (1610), art. 4"),
-    supporting :=
-      [Reference.work schaffCreeds3
-          (Bib.Locus.sectionRef "Canons of Dort, III/IV, art. 12")],
-    tradition := Tradition.christianHistoricalGrammatical,
-    confidence := Confidence.consensus }
-```
-
 <a id="passiveInference"></a>
 **`passiveInference`**
 

@@ -129,9 +129,7 @@ Sola fide
     renewalWordLine: dikaioo
     romansFourExegesisLine: logizomai, erga
 Sola gratia — Ephesians 2:8–9 and Romans 9:16
-  lines: 11, read: 1
-  carry what they deliver in a premise:
-    refusalLine: its premise denied by graceIsEffectualOfItself
+  lines: 10, read: 0
 Sola scriptura
   lines: 20, read: 1
 The Triune God
@@ -161,7 +159,7 @@ info: every entry is a tagged definition, and every key names one: 2512 definiti
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 2080 definitions, 224 entries
+info: every entry is a tagged definition, and every key names one: 2077 definitions, 224 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments
@@ -178,7 +176,7 @@ BornOfAVirgin.wegnerDispute.finite: 13 I, 5 RA, 4 CA, 0 PA, 22 edges
 SolaFide.jamesDispute.finite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
 SolaFide.jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
 SolaFide.solaFideDispute.finite: 67 I, 30 RA, 33 CA, 2 PA, 164 edges
-SolaGratia.solaGratiaDispute.finite: 36 I, 13 RA, 33 CA, 0 PA, 101 edges
+SolaGratia.solaGratiaDispute.finite: 36 I, 12 RA, 33 CA, 0 PA, 99 edges
 SolaScriptura.mark7Dispute.finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
 SpiritBaptism.spiritBaptismDispute.finite: 15 I, 7 RA, 6 CA, 0 PA, 32 edges
 Trinity.orderDispute.finite: 20 I, 8 RA, 8 CA, 0 PA, 43 edges

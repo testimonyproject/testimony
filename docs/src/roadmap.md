@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **315 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **316 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -286,7 +286,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `rivals_hold_salvation_by_grace` | `Entails tridentine.premises (p Claim.salvationIsByGrace) ∧ Entails remonstrant.premises (p Claim.salvationIsByGrace)` | Both rivals reach the first part, that salvation is by grace. |
 | `trent_denies_passivity` | `Entails tridentine.premises (notP Claim.willIsPassiveInRegeneration)` | Trent's premises deny the third part, that the will is passive. |
 | `trent_denies_effectual_grace` | `Entails tridentine.premises (notP Claim.graceIsEffectualOfItself)` | Trent's premises deny the second part too, that grace is effectual of itself. |
-| `remonstrants_deny_effectual_grace` | `Entails remonstrant.premises (notP Claim.graceIsEffectualOfItself)` | The Remonstrants' premises deny the second part: grace can be resisted. |
+| `remonstrants_deny_effectual_grace` | `Entails remonstrant.held (notP Claim.graceIsEffectualOfItself)` | The Remonstrants deny the second part: grace can be resisted. |
 | `touto_not_load_bearing` | `Establishes reformedWithoutTouto` | The case does not depend on the reading of "this". |
 | `romans_reading_not_load_bearing` | `Establishes reformedWithoutRomansReading` | Nor does it depend on the reading of Romans 9:16. |
 | `readings_jointly_load_bearing` | `¬Establishes reformedWithoutEitherReading` | The two readings together carry it. |
@@ -298,6 +298,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `thirdWay_establishes` | `Establishes thirdWay` | The third way's premises reach salvation by grace, received by faith alone. |
 | `objection_establishes` | `Establishes objection` | **The objection from the Spirit's resistance is valid on its own grounds.** Grant the texts of resistance and any one of its three readings, and the grace that saves is not … |
 | `third_way_leaves_resistibility_open` | `Independent thirdWay.premises (p Claim.graceIsEffectualOfItself)` | **The third way leaves resistibility open.** Grant everything it says: Adam made able to stand or fall, the ability to believe given by God, faith alone, and that grace which can … |
+| `final_refusal_cannot_be_held_with_the_scriptures` | `¬Satisfiable (reformed.held ++ [p Claim.savingGraceCanBeFinallyRefused]) ∧ ¬Satisfiable (ephesiansStrand.held ++ [p Claim.savingGraceCanBeFinallyRefused]) ∧ ¬Satisfiable (romansStrand.held ++ [p Claim.savingGraceCanBeFinallyRefused])` | **Granted the Scriptures as the Reformed read them, final refusal has no place.** Suppose the grace that saves can be finally refused. |
 | `only_grace_prevails` | `Framework.grounded solaGratiaDispute.defeats = Solver.toSet [Party.grace]` | **Only what every party holds prevails: salvation is by grace.** What the dispute settles before any choice between rivals is that, and nothing more. |
 | `reformed_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.reformed` | **Dort can be defended**, together with what every party holds and the third way: some maximal defensible position, one no other party can join, holds all three. |
 | `reformed_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.reformed` | Nor is Dort forced. |
@@ -885,9 +886,13 @@ grace a disputed step of its own (`lutheranPosition_establishes`). The third
 way, an ability given as Adam was made able, received by faith alone, leaves
 resistibility open (`third_way_leaves_resistibility_open`) until it says what
 kind of help the ability is, and Augustine's "help without which" and "help by
-which" are the two horns of its dilemma. Weighed as one dispute, only salvation
-by grace is settled before any choice (`only_grace_prevails`). The Thomist position, which may
-reach the sharpened conclusion too, is not yet encoded.
+which" are the two horns of its dilemma. Supposing the contrary, that the grace
+that saves can be finally refused, has no model beside the Reformed reading of
+either text, with the claims read as they mean
+(`final_refusal_cannot_be_held_with_the_scriptures`). Weighed as one dispute,
+only salvation by grace is settled before any choice (`only_grace_prevails`).
+The Thomist position, which may reach the sharpened conclusion too, is not yet
+encoded.
 
 **And one finding about the method rather than about an argument.** `Entails`
 quantifies over the valuations satisfying the premises, so a premise set with no

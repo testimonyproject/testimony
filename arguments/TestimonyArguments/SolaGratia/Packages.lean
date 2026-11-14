@@ -60,13 +60,13 @@ def remonstrant : ArgumentPackage Claim :=
   { name := "Remonstrant (the Five Articles, 1610)"
   , cite := remonstrantCite
   , premises :=
-      caseOf [graceLine, textsOfResistanceLine, resistanceLine, refusalLine]
+      caseOf [graceLine, textsOfResistanceLine, resistanceLine]
         [ p .ephesians2_1to5, p .ephesians2_8to9, p .faithIsGodsGift
         , p .romans9_16, p .romans9_16ConcernsSalvation ] []
   , conclusion := solaGratia
   , conclusionLabel := solaGratiaLabel
   , inferences :=
-      [graceInference, textsOfResistanceInference, resistanceInference, refusalInference] }
+      [graceInference, textsOfResistanceInference, resistanceInference] }
 
 /-- **The Lutherans**, from the Formula of Concord (1577) and the Augsburg
 Confession (1530). Conversion is the Holy Spirit's work alone, and in it the
@@ -79,13 +79,12 @@ def lutheran : ArgumentPackage Claim :=
   { name := "Lutheran (the Formula of Concord)"
   , cite := lutheranCite
   , premises :=
-      caseOf [graceLine, textsOfResistanceLine, griefLine, refusalLine]
+      caseOf [graceLine, textsOfResistanceLine, griefLine]
         [p .conversionIsGodsWorkAlone, p .faithAloneReceivesGrace] [passiveStep]
   , conclusion := solaGratia
   , conclusionLabel := solaGratiaLabel
   , inferences :=
-      [ graceInference, textsOfResistanceInference, griefInference, refusalInference
-      , passiveInference ] }
+      [graceInference, textsOfResistanceInference, griefInference, passiveInference] }
 
 /-- **Wesley.** God restores to every person a measure of free will, by the
 grace that goes before ("preventing grace"), so that each is able to believe;
@@ -95,51 +94,52 @@ def wesleyan : ArgumentPackage Claim :=
   { name := "Wesleyan (preventing grace)"
   , cite := wesleyanCite
   , premises :=
-      caseOf [graceLine, textsOfResistanceLine, refusalLine]
+      caseOf [graceLine, textsOfResistanceLine]
         [ p .abilityToBelieveIsGiven, p .savingGraceCanBeFinallyRefused
         , p .faithAloneReceivesGrace ] []
   , conclusion := solaGratia
   , conclusionLabel := solaGratiaLabel
-  , inferences := [graceInference, textsOfResistanceInference, refusalInference] }
+  , inferences := [graceInference, textsOfResistanceInference] }
 
 /-- **The third way, as it was put to this argument.** As Adam was made able to
 stand or to fall (Genesis 2:16–17), so God gives the one who hears the gospel
 the ability to believe, and grace is received by faith alone. That the offer is
 real is part of the third way too, and is not encoded as a premise, because no
 party here denies it. Stated this way it does not say what kind of help the ability is, whether one
-that makes believing possible or one that brings it about. It carries the step
-every party grants, that grace which can be finally refused is not effectual of
-itself, and nothing that would decide whether it can be. -/
+that makes believing possible or one that brings it about, and it carries
+nothing that would decide whether the grace that saves can be finally refused. -/
 @[solaGratiaDefs]
 def thirdWay : ArgumentPackage Claim :=
   { name := "The third way (an ability given, received by faith)"
   , cite := baseCite
   , premises :=
-      caseOf [graceLine, refusalLine]
+      caseOf [graceLine]
         [p .genesis2_16to17, p .abilityToBelieveIsGiven, p .faithAloneReceivesGrace] []
   , conclusion := ⋀ [p .salvationIsByGrace, p .faithAloneReceivesGrace]
   , conclusionLabel :=
       "salvation is by grace, through an ability God gives, received by faith alone"
-  , inferences := [graceInference, refusalInference] }
+  , inferences := [graceInference] }
 
 /-- **The objection from the Spirit's resistance, strengthened.** Three routes to
 the claim that the grace that saves can be finally refused. Two run from the
 texts of resistance: with the Remonstrants' reading of what Stephen's hearers
 resisted, and with the Formula of Concord's reading of grieving the Spirit, that
 it can end in losing him. The third runs from the sin that is never forgiven,
-read with Augustine as impenitence to the end. It concludes the denial of the
-second part of sola gratia, and nothing about the others. -/
+read with Augustine as impenitence to the end. It concludes that the grace that
+saves can be finally refused. That this denies the second part of sola gratia is
+not a premise of the objection: it is what the two claims mean, and the meanings
+join them (`TestimonyArguments.Meanings.SolaGratia`). -/
 @[solaGratiaDefs]
 def objection : ArgumentPackage Claim :=
   { name := "The objection from the Spirit's resistance"
   , cite := remonstrantCite
   , premises :=
-      caseOf [textsOfResistanceLine, resistanceLine, griefLine, blasphemyLine, refusalLine] [] []
-  , conclusion := notP .graceIsEffectualOfItself
-  , conclusionLabel := "the grace that saves is not effectual of itself"
+      caseOf [textsOfResistanceLine, resistanceLine, griefLine, blasphemyLine] [] []
+  , conclusion := p .savingGraceCanBeFinallyRefused
+  , conclusionLabel := "the grace that saves can be finally refused"
   , inferences :=
-      [ textsOfResistanceInference, resistanceInference, griefInference, blasphemyInference
-      , refusalInference ] }
+      [ textsOfResistanceInference, resistanceInference, griefInference
+      , blasphemyInference ] }
 
 /-! ### The position argued for -/
 

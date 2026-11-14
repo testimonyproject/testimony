@@ -1,4 +1,5 @@
 import TestimonyArguments.SolaGratia.Packages
+import TestimonyArguments.Meanings.SolaGratia
 import Testimony.Logic.Tactic
 
 /-!
@@ -125,11 +126,14 @@ theorem trent_denies_effectual_grace :
 
 #print axioms trent_denies_effectual_grace
 
-/-- The Remonstrants' premises deny the second part: grace can be resisted. Their
-fourth article reads Acts 7:51 so. -/
+/-- The Remonstrants deny the second part: grace can be resisted. Their fourth
+article reads Acts 7:51 so, and their premises deliver that the grace that saves
+can be finally refused. That this is the denial of grace effectual of itself is
+not a premise of theirs but what the two claims mean: the meanings join them,
+and the theorem is stated over the premises together with that join. -/
 @[headline]
 theorem remonstrants_deny_effectual_grace :
-    Entails remonstrant.premises (notP .graceIsEffectualOfItself) := by
+    Entails remonstrant.held (notP .graceIsEffectualOfItself) := by
   establish [solaGratiaDefs]
 
 #print axioms remonstrants_deny_effectual_grace
