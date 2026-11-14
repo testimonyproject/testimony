@@ -203,3 +203,9 @@ benchmark = "checks: AIF, every dispute"
 metric = "time"
 up_to = 0.20
 reason = "The check draws every dispute as an AIF graph and checks it against Definition 1.1. Sola gratia (#226) adds a dispute of its own, eight parties: 36 claim nodes, 12 inferences, 33 conflicts, 99 edges. The same work over one more graph, measured on CI at +6.7%."
+
+[[accept]]
+benchmark = "checks: refutations survive their postulates"
+metric = "time"
+up_to = 0.20
+reason = "The check runs over every non-entailment. Sola gratia (#226) adds six (105 to 111): the same work over more results, measured on CI at +6.4%."
