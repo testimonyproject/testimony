@@ -58,6 +58,7 @@ def readOrEmpty (p : System.FilePath) : IO String := do
 
 /-- Entry point. -/
 def main (args : List String) : IO UInt32 := do
+  unless ← reportStrayQuotes "argtex" texPath document do return 1
   if args.contains "--check" then
     if (← readOrEmpty texPath) == document then
       IO.println "argtex: rendered arguments are up to date"
