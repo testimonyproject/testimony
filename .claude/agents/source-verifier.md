@@ -21,6 +21,13 @@ For each work or quotation you are given:
    translation you read. If the text is not public, say so.
 3. **Locations.** A page or section number is verified only if you saw it. If
    you could not, say "cite the work whole".
+4. **Access.** For a journal article, say whether you read it and how: open
+   text, a preview, an abstract only, or not at all. If it is behind a paywall,
+   give the access route from
+   `.claude/skills/supplementing-an-argument/journals.md` so the user can procure
+   it. When you check a journal's access terms, read the publisher's own page,
+   give its URL and the date, and write "not verified" for anything it does not
+   say.
 
 Return a short report per item: verified fields, anything that differs from
 what you were given, and anything you could not verify. Never guess a field to

@@ -18,6 +18,9 @@ register_simp_attr solaFideDefs
 /-- The definitions the sola scriptura proofs unfold. -/
 register_simp_attr solaScripturaDefs
 
+/-- The definitions the sola gratia proofs unfold. -/
+register_simp_attr solaGratiaDefs
+
 /-- The definitions the born-of-a-virgin proofs unfold. -/
 register_simp_attr bornOfAVirginDefs
 
@@ -36,6 +39,7 @@ register_simp_attr trinityDefs
 -- `register_simp_attr` also declares a simproc set, named with a `_proc` suffix
 -- the naming linter cannot see is generated.
 attribute [nolint defsWithUnderscore] Parser.Attr.solaFideDefs_proc
-  Parser.Attr.solaScripturaDefs_proc Parser.Attr.bornOfAVirginDefs_proc
+  Parser.Attr.solaScripturaDefs_proc Parser.Attr.solaGratiaDefs_proc
+  Parser.Attr.bornOfAVirginDefs_proc
   Parser.Attr.bornInBethlehemDefs_proc Parser.Attr.canonicalWitnessDefs_proc
   Parser.Attr.spiritBaptismDefs_proc Parser.Attr.trinityDefs_proc
