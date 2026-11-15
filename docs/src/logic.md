@@ -178,11 +178,14 @@ is what countermodels are for.
 `docs/latex/arguments.tex`: every package set the way
 a logic paper would set it — a legend of numbered propositional variables with
 each one's claim, classification and source, then the premises and conclusion
-in ordinary notation.
+in ordinary notation. It writes each argument again on its own, as
+`docs/latex/arguments/<slug>.tex`, so one argument can be printed and read
+without the rest.
 
 ```sh
 cd arguments && lake exe argtex
 cd ../docs/latex && tectonic arguments.tex    # or xelatex / lualatex
+cd arguments && tectonic sola-fide.tex        # one argument on its own
 ```
 
 A Unicode engine is required: the claims contain Greek and Hebrew. Citations
@@ -282,7 +285,7 @@ lake exe argdoc --check    # CI: fail if a committed page is stale
 `lake exe argtex` writes the same document for print, from the same harvest:
 
 ```sh
-lake exe argtex                             # rewrite docs/latex/arguments.tex
+lake exe argtex                             # rewrite docs/latex/arguments.tex, and each argument's
 cd ../docs/latex && tectonic arguments.tex  # ... and render it
 ```
 
@@ -295,7 +298,8 @@ commands in the PDF. The formulas themselves are rendered once, by
 settings give the reader what saves turning back to the legend: each variable
 in a formula links to its row there, and a derivation puts its claims into the
 legend's words (above), through the one function both renderers call. The
-PDF is typeset by CI and put beside the site, at `pdf/arguments.pdf`.
+PDFs are typeset by CI and put beside the site: the book at `pdf/arguments.pdf`,
+and each argument on its own at `pdf/arguments/<slug>.pdf`.
 
 The practical consequence is for how you write docstrings. They are not
 commentary for the next contributor; they are the page. A module docstring that

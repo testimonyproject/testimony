@@ -34,8 +34,8 @@ pages or weaken trust in a checked result:
   `native_decide`, `bv_decide`, or a raised `maxHeartbeats`.
 - **Hand edits to generated files**: `references.bib`,
   `docs/src/bibliography.md`, `docs/latex/arguments.tex`,
-  `docs/src/arguments/*.md`, and the marked blocks in `docs/src/roadmap.md` and
-  `docs/src/SUMMARY.md`.
+  `docs/latex/arguments/*.tex`, `docs/src/arguments/*.md`, and the marked
+  blocks in `docs/src/roadmap.md` and `docs/src/SUMMARY.md`.
 - **Collapsed relation types**: a quotation recorded as an allusion, typology
   as prediction, or a disputed case given only one of its readings.
 

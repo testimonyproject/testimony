@@ -120,7 +120,7 @@ tool without `--check` and commit what it writes.
 | Tool | Owns |
 |---|---|
 | `bibgen` | `references.bib`, `docs/src/bibliography.md` |
-| `argtex` | `docs/latex/arguments.tex` — the same harvest as `argdoc`, set for print |
+| `argtex` | `docs/latex/arguments.tex` and `docs/latex/arguments/*.tex` — the same harvest as `argdoc`, set for print, together and each argument alone |
 | `statusgen` | the marked block in `docs/src/roadmap.md` |
 | `argdoc` | `docs/src/arguments/*.md`, the marked block in `docs/src/SUMMARY.md` |
 
