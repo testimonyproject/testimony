@@ -46,7 +46,7 @@ def documentTitle : String := "Testimony: arguments in propositional form"
 
 /-- What the notation means and what the document does *not* claim: the same
 for the book and for any one argument printed alone. -/
-def notation : String :=
+def notationNote : String :=
   "Atoms are numbered propositional variables, numbered once per argument, so a " ++
   "variable means the same claim in every position within it; the legend gives each " ++
   "one's claim, its classification, the tradition that holds it and the source that " ++
@@ -63,16 +63,16 @@ carries them. -/
 def note : String :=
   "\\noindent Each argument below is set as its Lean source sets it: the module " ++
   "docstrings as prose, in the order they are written, and under each one the " ++
-  "package, line of reason, countermodel or result it introduces. " ++ notation
+  "package, line of reason, countermodel or result it introduces. " ++ notationNote
 
 /-- The standing note under the title of an argument printed on its own. It
 says where the argument comes from and where the rest of the book is. -/
 def standaloneNote : String :=
-  "\\noindent This argument is one of the Testimony library's, printed on its own; " ++
-  "the whole book, every argument in one document, is \\texttt{arguments.pdf}. It is " ++
-  "set as its Lean source sets it: the module docstrings as prose, in the order they " ++
+  "\\noindent This is one argument of the Testimony library, printed on its own. " ++
+  "The library prints every argument together in \\texttt{arguments.pdf}. This one " ++
+  "is set as its Lean source sets it: the module docstrings as prose, in the order they " ++
   "are written, and under each one the package, line of reason, countermodel or " ++
-  "result it introduces. " ++ notation
+  "result it introduces. " ++ notationNote
 
 /-- The whole document: every catalogued argument, set as `latexDocument` sets
 any package's. -/
