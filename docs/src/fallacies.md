@@ -208,9 +208,15 @@ says instead, and nothing comes back.
 A circle takes at least two moves. "Faith is a means of justification, and works are not, so
 faith is the only means" (`strongerConclusion`) has a conclusion that entails its first premise,
 by what "only" means, and it is still no circle: a conclusion may say more than its premises,
-and nothing the move assumes was drawn from it. The check's first run on the library's own lines
-counted such a move as resting on itself, at sola scriptura's eliminative line, and a move's
-edge to itself is now left out. `circle_cases` pins all three.
+and nothing the move assumes was drawn from it. So a move's edge to itself is left out.
+
+Two such moves to the same conclusion are no circle either (`twoRoutes`). Each conclusion
+carries the other move's premises, because it carries its own, but they are two routes to one
+place: neither draws from the other anything it does not already assume. Sola scriptura's
+eliminative line and Geisler's Tradition 0 line are such a pair, both concluding that Scripture
+is the sole infallible rule. So the check leaves out an edge between two moves with one
+conclusion, and a circle runs through different conclusions. `circle_cases` pins all four
+cases.
 
 ## Argument from silence
 

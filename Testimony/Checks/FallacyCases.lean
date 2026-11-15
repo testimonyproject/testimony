@@ -161,12 +161,22 @@ resting on another, never on itself. -/
 def strongerConclusion : List Move :=
   [argues [.holds (rl .instrumentOf (cn .faith) (cn .justification)), worksNot] faithOnly]
 
+/-- **Two routes to one conclusion**: the stronger conclusion twice, from two sets
+of premises. Each conclusion carries the other's premises, as it carries its own,
+and neither move draws from the other anything it does not already assume. -/
+def twoRoutes : List Move :=
+  [ argues [.holds (rl .instrumentOf (cn .faith) (cn .justification)), worksNot] faithOnly
+  , argues [worksNot, .holds (rl .instrumentOf (cn .faith) (cn .justification))] faithOnly ]
+
 /-- **The circle check, caught and passed over.** Every move of the circle rests,
 through the others, on what it concludes. In the chain, the last move rests on
 the text, and nothing returns to it. The first two still rest on its conclusion,
-so they are not on a circle either. -/
+so they are not on a circle either. A move whose conclusion is stronger than its
+premise rests on nothing but its premises, and two such moves to one conclusion
+are two routes, not a circle. -/
 theorem circle_cases :
-    circular threeCircle = [0, 1, 2] ∧ circular chain = [] ∧ circular strongerConclusion = [] := by
+    circular threeCircle = [0, 1, 2] ∧ circular chain = [] ∧ circular strongerConclusion = [] ∧
+      circular twoRoutes = [] := by
   decide
 
 /-! ### Argument from silence -/
