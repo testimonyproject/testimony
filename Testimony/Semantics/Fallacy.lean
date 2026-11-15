@@ -244,7 +244,11 @@ def reaches (ms : List Move) : List (Nat × List Nat) :=
     match ms[i]?, ms[j]? with
     | some m, some n => m.feeds n
     | _, _ => false
-  let start := idx.map fun i => (i, idx.filter fun j => j != i && feeds i j)
+  let sameConclusion (i j : Nat) : Bool :=
+    match ms[i]?, ms[j]? with
+    | some m, some n => m.conclusion? == n.conclusion?
+    | _, _ => true
+  let start := idx.map fun i => (i, idx.filter fun j => !sameConclusion i j && feeds i j)
   idx.foldl (fun r _ => r.map fun (i, js) =>
     (i, (js ++ js.flatMap fun j => (r.lookup j).getD []).eraseDups)) start
 
@@ -257,7 +261,16 @@ premises — "Scripture is infallible, and no other rule is, so Scripture is the
 sole infallible rule" — is not resting on itself: its conclusion is stronger than
 its premise, as a conclusion may be, and nothing it assumes was drawn from it. So
 a move's edge to itself is left out, and a move is on a circle only if another
-move it rests on rests, in turn, on it. -/
+move it rests on rests, in turn, on it.
+
+Two moves to the same conclusion are left out of each other's reach for the same
+reason. "Scripture is infallible, and no other rule is, so it is the sole
+infallible rule" and "the historical-grammatical method suffices, creeds inform
+without binding, Scripture is infallible and no other rule is, so it is the sole
+infallible rule" each conclude what carries the other's premises. But that is
+each conclusion carrying its own premises, twice over: they are two routes to one
+conclusion, and neither draws anything from the other that it does not already
+assume. A circle runs through different conclusions, each resting on the next. -/
 def circular (ms : List Move) : List Nat :=
   (reaches ms).filterMap fun (i, js) => if js.contains i then some i else none
 
