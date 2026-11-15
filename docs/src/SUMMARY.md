@@ -6,9 +6,11 @@
 
 - [Rationale](./rationale.md)
 - [Scope and limits](./scope-and-limits.md)
+- [Who wrote what](./authorship.md)
 
 # How
 
+- [Hello world: your first argument](./hello-world.md)
 - [Reading the logic](./reading-the-logic.md)
 - [Architecture](./architecture.md)
 - [Encoding arguments](./logic.md)
