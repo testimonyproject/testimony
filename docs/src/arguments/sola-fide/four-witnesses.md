@@ -846,12 +846,26 @@ then the renewal of the inward person is no part of it.
 The step from three things to "Paul's 'justify' does not mean renewal": the verb
 is a courtroom word; Paul has other words for renewal; and a word contributes
 the least meaning its context requires. The method is Silva's, applied as Moo
-applies it to Romans. Rated `wellSupported`: no source cited here accepts the
-three starting points and denies the conclusion. Those who hold that the verb
-means "make righteous", VanLandingham and the Latin tradition from Augustine,
-deny the first starting point, and are weighed in that premise's rating. Those
-who hold that God's verdict renews, Gorman and the *Joint Declaration*, make a
-claim about what God does, not about the word.
+applies it to Romans.
+
+Cited at `wellSupported`, and that rating is held, not settled. Trent keeps the
+first starting point, the verdict, for the justified "are not only reputed, but
+are truly called, and are, just" (Session VI, ch. 7), and denies that the word
+means no more; Augustine himself gives the forensic sense beside "made
+righteous", "deemed, or reckoned as just" (*On the Spirit and the Letter*
+26.45). So a cited reader grants the starting points and denies the conclusion,
+and the checks count Trent's reading a credible critique of this step under
+every standard (`trent_dissents_from_the_definition_steps`). By the library's
+rule that makes the step `disputed`. The rating is held where it is until the
+literature on the contested texts, Romans 6:7 and 1 Corinthians 6:11, has been
+read, in case it answers Trent; until then the disputes weigh the step at
+`wellSupported`, and this is the one place they rest on a rating the rule does
+not license.
+
+Those who deny the first starting point itself, VanLandingham among them, are
+weighed in that premise's rating. Those who hold that God's verdict renews,
+Gorman and the *Joint Declaration*, make a claim about what God does, not about
+the word.
 
 ```lean
 def leastMeaningSource : Source :=
@@ -886,7 +900,7 @@ way of reading Trent's definition, and this line does not reach it
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-49}{P_{49}}\\) — In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good
+- (1) \\(\href{claims.html#claim-49}{P_{49}}\\) — In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous
 - (2) \\(\href{claims.html#claim-50}{P_{50}}\\) — Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’
 - (3) \\(\href{claims.html#claim-51}{P_{51}}\\) — A word contributes the least meaning its context requires; one occurrence does not carry the whole concept
 - (4) \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\)
@@ -1925,7 +1939,7 @@ definition (Session VI, ch. 7).
 - (4) \\(\href{claims.html#claim-47}{P_{47}}\\) — Galatians 5:2–4: you who would be justified by the law are severed from Christ
 - (5) \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-47}{P_{47}}) \rightarrow \href{claims.html#claim-58}{P_{58}}\\) — *would give:* Christ's death for our sins is the whole ground of justification; to add to it is another gospel
 - (6) \\(\href{claims.html#claim-48}{P_{48}}\\) — Romans 8:33–34: it is God who justifies — who is to condemn?
-- (7) \\(\href{claims.html#claim-49}{P_{49}}\\) — In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good
+- (7) \\(\href{claims.html#claim-49}{P_{49}}\\) — In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous
 - (8) \\((\href{claims.html#claim-58}{P_{58}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-48}{P_{48}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-33}{P_{33}}\\) — *at issue, the denial of:* Justification is not remission of sins only, but renewal of the inward man
 
@@ -1968,7 +1982,7 @@ verb, justification is not the renewal of the inward person.
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes
 - (2) \\(\href{claims.html#claim-55}{P_{55}}\\) — Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted
 - (3) \\(\href{claims.html#claim-56}{P_{56}}\\) — ‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one
-- (4) \\(\href{claims.html#claim-49}{P_{49}}\\) — In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good
+- (4) \\(\href{claims.html#claim-49}{P_{49}}\\) — In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous
 - (5) \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\) — *would give:* In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted
 - (6) \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-49}{P_{49}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-33}{P_{33}}\\) — *at issue, the denial of:* Justification is not remission of sins only, but renewal of the inward man
@@ -1988,7 +2002,7 @@ requires. So Paul's "justify" does not mean the renewal of the inward person.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-49}{P_{49}}\\) — In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good
+- (1) \\(\href{claims.html#claim-49}{P_{49}}\\) — In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous
 - (2) \\(\href{claims.html#claim-50}{P_{50}}\\) — Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’
 - (3) \\(\href{claims.html#claim-51}{P_{51}}\\) — A word contributes the least meaning its context requires; one occurrence does not carry the whole concept
 - (4) \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\)

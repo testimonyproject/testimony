@@ -411,15 +411,17 @@ through its argument's meanings a step is a move. `Testimony.Checks.Fallacies` r
 checks over every line the library has, and the build fails if one equivocates on its own terms
 or argues from silence alone. Thirty-two lines can be read today, all of sola fide's and one of
 sola scriptura's; the rest wait on their meanings. None equivocates, and none argues from
-silence. One carries what it delivers in a premise: the sola fide line on Paul's word
-(`lexicalLine`), whose premise that Paul's "justify" is a courtroom word also says, in its own
-words, that "it does not mean to make a person good" — the line's conclusion. That premise is
-the one Trent's reading of Paul's word denies, so as an answer to Trent the line assumes its
-point. The line's other grounds, that Paul names renewal with other words and that a word
-means no more than its context requires, are the argument; the premise should state the
-courtroom sense alone. That change moves pinned joins, so it is left to its own pull request,
-and the report says so until it is made. Twelve lines are conditional on a word keeping its
-sense, unstated, and the report lists the words.
+silence. One line carried what it delivered in a premise when the check was first run: the sola
+fide line on Paul's word (`lexicalLine`), whose premise that Paul's "justify" is a courtroom
+word also said, in its own words, that "it does not mean to make a person good", which was the
+line's conclusion. That premise was the one Trent's reading of Paul's word denies, so as an
+answer to Trent the line assumed its point. The premise now states the courtroom sense alone,
+which is what its lexical sources support, and the line's other grounds carry the rest. What
+that changed is reported where it is weighed: the step about Paul's word, which had stood at
+`wellSupported` because the premise assumed its point, is now disputed by Trent's reading
+under every standard (`trent_dissents_from_the_definition_steps`). No verdict of the sola fide
+dispute moved, since the dispute weighs the step at its cited rating. Twelve lines are
+conditional on a word keeping its sense, unstated, and the report lists the words.
 
 **What the checks are held to.** A check that calls every survey of a word an equivocation,
 or every argument from silence a fallacy, is a debater's reflex written down.

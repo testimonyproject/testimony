@@ -1274,7 +1274,7 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .dikaioIsForensic =>
-    { label := "In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous, not to make good"
+    { label := "In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous"
     , kind := .linguistic
       -- `wellSupported`, not `consensus`. Held across traditions: the standard
       -- lexicon ("render a favorable verdict, vindicate"); Morris's lexical
@@ -1282,6 +1282,11 @@ def baseCite : Claim → AtomMeta
       -- examination; Wright, for whom the verdict confers a status, not a
       -- character; and Fitzmyer, a Catholic exegete, for whom the sinner hears
       -- "a verdict of 'not guilty'". VanLandingham dissents: "make righteous".
+      -- The premise is the verdict sense only. That the word does not also
+      -- mean renewal is the conclusion of the line on Paul's word
+      -- (`lexicalLine`), argued from this and its other grounds, and was
+      -- once part of this premise too, so that the line assumed its point
+      -- against Trent (#223).
     , source :=
         { primary := .work bdag (.sectionRef "s.v. δικαιόω")
         , supporting :=
