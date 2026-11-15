@@ -17,9 +17,11 @@ check.
 
 Each is written here as an **epistemology**: what it admits as grounds, whether a step resting
 on Scripture alone may be answered only from Scripture, and who holds it, cited
-(`Testimony.Logic.Epistemology`). Each says exactly what one of the library's three
-credibility standards says (`each_rule_is_a_standard`). So the standards the ratings have
-always been computed under now have their holders, and no rating moves.
+(`Testimony.Logic.Epistemology`). A fourth, the Orthodox, is cited to Florovsky and Ware.
+Westminster's rule is exactly the library's scriptural standard, and the library's own rule its
+evidence standard (`two_standards_are_rules`). The tradition standard is neither the Catholic
+rule nor the Orthodox one, because it admits authority from every tradition at once, and each
+of those admits only its own. No rating moves.
 
 ## Does each side keep its own rule?
 
@@ -46,12 +48,18 @@ does not state the claim. The Larger Catechism does, at question 77: sanctificat
 "inseparably joined with justification, yet they differ", with a proof under each clause. The
 claim is cited there now, with those proofs, and the four readings keep their rule.
 
-The Catholic rule, as encoded, admits any authority's word, so Trent's readings could not have
-failed this check; that they pass says less than it would under a narrower rule.
+Trent's readings keep their rule, and the check could have failed them. Each rule admits
+authority only from its own tradition, so a Catholic reading resting a claim on Westminster's
+word would fail Trent's rule as a Reformed one resting a claim on Trent's word fails
+Westminster's. Trent's reading of justification rests two claims on Catholic authority alone,
+and the two rules part exactly there: Trent's admits both, Westminster's refuses both
+(`trent_keeps_its_own_rule`).
 
-Three parties are held to no rule. Aquinas, Luther and Chrysostom wrote neither Trent's rule
-nor Westminster's, and the library cites none of their own as a rule; holding them to another's
-would give them a rule they did not write.
+Three parties are held to no rule. Aquinas, Luther and Chrysostom wrote neither Trent's rule,
+nor Westminster's, nor the Orthodox one as Florovsky states it. The library cites none of
+their own as a rule; holding them to another's would give them a rule they did not write.
+Chrysostom is a Father whom the Orthodox and the Catholic traditions both receive, and calling
+him either's would be a claim the library does not argue.
 
 ## What it does not claim
 
@@ -96,19 +104,17 @@ Scripture alone. Trent, Session IV, receives the traditions "received by the Apo
 mouth of Christ himself, or from the Apostles themselves, the Holy Ghost dictating" (Waterworth's
 translation, p. 18); *Dei Verbum* 9 holds the two together.
 
-**As encoded, it is broader than Trent's.** The library's warrants do not say whose authority a
-work is, so this rule admits every authority's word: a council's, but also a Protestant
-confession's or any theologian's. Trent admits the apostolic tradition and the Church's judgement
-of Scripture's sense, not Westminster's word. So a Catholic reading can fail this rule only by
-resting a claim on the library's own proposal, and passing it says less than passing
-Westminster's. Narrowing it needs warrants that know whose authority they are. Neither source
-speaks to arguments from silence, and no principle of reading is recorded until one is cited in
-its words. -/
+It admits authority from the Catholic tradition only: a council's, a Father's or the Church's
+teaching as the Catholic tradition receives it, and not Westminster's word or Calvin's. Whose
+authority a claim rests on is read from the tradition its citation records as advancing it, which
+is a proxy, not a record of who wrote each work. Neither source speaks to arguments from silence,
+and no principle of reading is recorded until one is cited in its words. -/
 def scriptureAndTradition : Epistemology :=
   { name := "Scripture and tradition"
   , statement := "Scripture and the apostolic tradition, received together, are grounds, with " ++
       "evidence; no step is answered from Scripture alone."
   , admits := fun w => w != .assertion
+  , authorityFrom := some .romanCatholic
   , scriptureAlone := false
   , principles := []
   , silence := none
@@ -119,6 +125,30 @@ def scriptureAndTradition : Epistemology :=
           [ .work waterworthTrent (.page 18)
           , .work tannerDecrees (.sectionRef "Vatican II (1965), Dei Verbum 9") ]
       , tradition := .romanCatholic
+      , confidence := .consensus } }
+
+/-- **Scripture in the mind of the Church**: the Orthodox rule. Scripture is read within the
+Church's Tradition, which adds nothing to Scripture but is its living interpretation: the mind
+of the Church, in the consensus of the Fathers and in received conciliar decisions. So
+Scripture, evidence, and the authority of the Fathers and councils as the Orthodox Church
+receives them are grounds, and no step is answered from Scripture alone. It is cited to
+Florovsky and Ware, as the library's sola scriptura argument cites the Orthodox doctrine of
+Tradition; Florovsky rejects the two-sources model outright, which is what sets this rule apart
+from Trent's, though the grounds the two admit are alike in kind. Neither source, as cited here,
+speaks to arguments from silence. -/
+def scriptureInTheMindOfTheChurch : Epistemology :=
+  { name := "Scripture in the mind of the Church"
+  , statement := "Scripture, read within the Church's Tradition: the consensus of the Fathers " ++
+      "and the received councils; no step is answered from Scripture alone."
+  , admits := fun w => w != .assertion
+  , authorityFrom := some .easternOrthodox
+  , scriptureAlone := false
+  , principles := []
+  , silence := none
+  , source :=
+      { primary := .work florovskyBibleChurchTradition .whole
+      , supporting := [.work wareOrthodoxChurch .whole]
+      , tradition := .easternOrthodox
       , confidence := .consensus } }
 
 /-- **Evidence anyone can check**: the library's own rule, for its evidence standard. The texts
@@ -141,16 +171,22 @@ def evidenceAnyoneCanCheck : Epistemology :=
       , tradition := .christianHistoricalGrammatical
       , confidence := .consensus } }
 
-/-- **Each rule is one of the credibility standards.** The Reformed rule admits what the
-scriptural standard admits, the Catholic rule what the tradition standard admits, and the
-library's evidence rule what the evidence standard admits; and each keeps Scripture-alone steps
-to Scripture exactly when its standard does. So every rating computed under the scriptural or
-the tradition standard is a rating under a rule a tradition holds, and under the evidence
-standard, the library's own; nothing computed so far moves. -/
-theorem each_rule_is_a_standard :
+/-- **Two of the standards are rules a side holds; the third is no one's.** The Reformed rule
+admits what the scriptural standard admits, and keeps Scripture-alone steps to Scripture as it
+does; the library's evidence rule admits what the evidence standard admits. So every rating
+computed under those two standards is a rating under a rule someone holds.
+
+The tradition standard is neither the Catholic rule nor the Orthodox one. It admits a council's,
+a confession's or a theologian's word from any tradition, so Westminster's word and Trent's
+alike; each of those rules admits authority only from its own tradition. So a rating computed
+under the tradition standard is a rating under no one's rule: under every tradition's
+authorities at once. Nothing computed so far moves; what changes is what a page can say the
+tradition standard is. -/
+theorem two_standards_are_rules :
     scriptureItsOwnInterpreter.agreesWith .scriptural = true ∧
-      scriptureAndTradition.agreesWith .tradition = true ∧
-      evidenceAnyoneCanCheck.agreesWith .evidence = true := by
+      evidenceAnyoneCanCheck.agreesWith .evidence = true ∧
+      scriptureAndTradition.agreesWith .tradition = false ∧
+      scriptureInTheMindOfTheChurch.agreesWith .tradition = false := by
   decide
 
 /-- **The rule each party to the sola fide dispute professes**, as the side whose reading it is.
@@ -210,11 +246,26 @@ and 1:30; Romans 4:6, 8; Ezekiel 36:27; Hebrews 9:13–14; Romans 3:24–25; Rom
 
 What it does not claim: that the Reformed readings are right, or that the proofs prove the
 claim. It says only that the claim now rests on the kind of ground the readings' own rule admits.
-The Catholic rule, as encoded, admits any authority, so Trent's readings could not have failed
-this check. And it says nothing of steps, whose citations record their ratings, not what they
-rest on. -/
+Whose authority a claim rests on is read from the tradition its citation records, a proxy. And
+it says nothing of steps, whose citations record their ratings, not what they rest on. -/
 theorem sola_fide_own_rules :
     breakTheirRule = [] ∧ heldToNone = [.aquinas, .luther, .chrysostom] := by
+  decide +kernel
+
+/-- **Each rule does work: Trent's readings keep their own and fail Westminster's.** Trent's
+reading of justification asserts two claims on the Catholic tradition's authority alone: that
+justification is not the remission of sins only but the renewal of the inward man, and that the
+justified grow in that renewal by good works done in grace. Its own rule admits both, because
+they rest on authority from its own tradition. Westminster's rule refuses both, because it
+admits no council's or confession's word as a ground. So the Catholic readings pass a rule that
+could have failed them, and the two rules part exactly where the two sides do.
+
+What it does not claim: that either claim is true, or that Trent's authority is wrong to bind.
+It says only that each claim rests on what Trent's rule admits and Westminster's does not. -/
+theorem trent_keeps_its_own_rule :
+    (partyNode .trent).refusedBy scriptureAndTradition = [] ∧
+      (partyNode .trent).refusedBy scriptureItsOwnInterpreter =
+        [.justificationIncludesSanctification, .renewalGrowsThroughGoodWorks] := by
   decide +kernel
 
 end TestimonyArguments.Epistemologies

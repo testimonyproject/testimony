@@ -91,6 +91,12 @@ structure Epistemology where
   statement : String
   /-- The warrants it admits as grounds. -/
   admits : Warrant → Bool
+  /-- Whose authority it admits, when it admits a council's, a confession's or a theologian's
+  word: `none`, anyone's; `some t`, only authority advanced within the tradition `t` — Trent's
+  councils and Fathers for the Catholic rule, not Westminster's word. A claim's tradition is the
+  one its citation records as advancing it, which is a proxy for whose authority it rests on, not
+  a record of who wrote each work cited. -/
+  authorityFrom : Option Tradition := none
   /-- Whether a step resting on Scripture alone may be answered only from Scripture. -/
   scriptureAlone : Bool
   /-- The principles of reading it licenses. -/
@@ -115,15 +121,17 @@ namespace Epistemology
 
 /-- **An epistemology says what a standard says**: it admits exactly the warrants the standard
 admits, and keeps Scripture-alone steps to Scripture exactly when the standard is the scriptural
-one. Then the standard can be given the epistemology's holder, and no credibility result moves. -/
+one, and admits authority from any tradition, as every standard does. Then the standard can be
+given the epistemology's holder, and no credibility result moves. -/
 def agreesWith (E : Epistemology) (s : Standard) : Bool :=
-  Warrant.all.all (fun w => E.admits w == s.admits w) && E.scriptureAlone == (s == .scriptural)
+  Warrant.all.all (fun w => E.admits w == s.admits w) && E.scriptureAlone == (s == .scriptural) &&
+    E.authorityFrom.isNone
 
 /-- Matching a standard means admitting what it admits, warrant by warrant. -/
 theorem admits_eq_of_agreesWith {E : Epistemology} {s : Standard} (h : E.agreesWith s = true)
     (w : Warrant) : E.admits w = s.admits w := by
   simp only [agreesWith, Bool.and_eq_true, List.all_eq_true, beq_iff_eq] at h
-  exact h.1 w (Warrant.mem_all w)
+  exact h.1.1 w (Warrant.mem_all w)
 
 /-- **Whether an epistemology accepts a move's silences**: a move that argues from no silence is
 accepted by all; one that does is accepted freely, only with its expectation stated, or not at
@@ -134,14 +142,21 @@ def acceptsSilences (E : Epistemology) (m : Move) : Option Bool :=
     | .withExpectation => m.fromSilenceAlone.isEmpty
     | .refused => m.silences.isEmpty
 
+/-- **Whether an epistemology admits a cited claim**: it admits the claim's warrant, and, if the
+claim rests on someone's authority, the authority is from the tradition the epistemology admits
+authority from. -/
+def admitsCited (E : Epistemology) (m : AtomMeta) : Bool :=
+  E.admits m.warrant && (m.warrant != .authority || E.authorityFrom.all (· == m.source.tradition))
+
 end Epistemology
 
 namespace ArgumentPackage
 
 /-- **The claims a position asserts that an epistemology does not admit**: each rests on a
-warrant the epistemology refuses. -/
+warrant the epistemology refuses, or on authority from a tradition other than the one whose
+authority it admits. -/
 def refusedBy (E : Epistemology) (pkg : ArgumentPackage α) : List α :=
-  pkg.assertedAtoms.filter fun a => !E.admits (pkg.cite a).warrant
+  pkg.assertedAtoms.filter fun a => !E.admitsCited (pkg.cite a)
 
 end ArgumentPackage
 
