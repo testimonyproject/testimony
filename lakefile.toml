@@ -28,5 +28,5 @@ name = "Testimony"
 name = "TestimonyTools"
 roots = [
   "Testimony.Tools.Docs", "Testimony.Tools.Pages", "Testimony.Tools.Site",
-  "Testimony.Tools.Status", "Testimony.Tools.Bibliography",
+  "Testimony.Tools.Status", "Testimony.Tools.Bibliography", "Testimony.Tools.Maturity",
 ]

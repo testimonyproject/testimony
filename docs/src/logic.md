@@ -245,9 +245,17 @@ every `@[headline]` declaration, with its statement as Lean states it and the
 first sentence of its docstring, grouped by argument in source order.
 
 ```sh
-lake exe statusgen           # rewrite the generated block in docs/src/roadmap.md
-lake exe statusgen --check   # CI: fail if the committed block is stale
+lake exe statusgen           # rewrite the generated blocks in roadmap.md and maturity.md
+lake exe statusgen --check   # CI: fail if a committed block is stale
 ```
+
+It also writes the table on [how far each argument is checked](./maturity.md):
+for every argument, how many claims have analysed meanings, how many lines of
+reason the fallacy checks read and what they found, and how many joins the
+shared ontology finds. The counts are made at build time by
+`derive_maturity_table` (`Testimony.Checks.Maturity`), with the functions the
+checks themselves use, so the page cannot say a check reaches further than it
+does.
 
 Nothing selects the rows. `@[headline]` already marks the results the library
 claims rather than the lemmas supporting them, so the table is the tag's

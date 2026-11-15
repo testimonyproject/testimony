@@ -43,7 +43,7 @@ repository's root:
 ```sh
 lake exe bibgen       # references.bib and docs/src/bibliography.md
 lake exe argdoc       # docs/src/arguments/*.md and the list in docs/src/SUMMARY.md
-lake exe statusgen    # the status table in docs/src/roadmap.md
+lake exe statusgen    # the status table in docs/src/roadmap.md, and docs/src/maturity.md
 lake exe argtex       # docs/latex/arguments.tex
 ```
 
