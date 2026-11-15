@@ -49,6 +49,12 @@ category would have answered it for them.
 - **Tradition** is read both as what is handed on and as the handing on — the
   sola scriptura argument reads Trent's word both ways: a content, or an
   occurrence.
+- **The mind of the Church** is, as Florovsky and Ware describe it, the
+  Church's living mind, guided by the Spirit, of which the consensus of the
+  Fathers and the received councils are the expression. A Protestant reader
+  takes the same consensus for a set of texts that agree, an information object
+  to be measured by Scripture. Which it is lies close to the Orthodox claim that
+  it interprets Scripture infallibly, so its category is left open.
 -/
 
 namespace Testimony.Ontology.Kinds
@@ -105,13 +111,29 @@ def category : Concept → Option Category
   | .abilityToBelieve => some .quality
   | .regeneration => some .event
   | .preparationForJustification => some .process
+  | .essentialDoctrine => some .informationObject
+  | .understandingScripture => some .process
+  | .historicalGrammaticalMethod => some .informationObject
+  | .sourceOfRevelation => some .role
+  | .survivingApostolicTeaching => some .informationObject
+  | .infallibleInterpreter => some .role
+  | .mindOfTheChurch => none
+  | .infallibleAuthority => some .role
+  | .identifyingTheCanon => some .process
+  | .receptionOfTheCanon => some .process
+  | .ministerialAuthority => some .role
+  | .individualBeliever => some .agent
+  | .choosingAnAuthority => some .event
+  | .privateJudgment => some .event
+  | .circularArgument => some .informationObject
+  | .appealToUltimateAuthority => some .informationObject
   | .minutes _ => some .temporalRegion
 
 /-- The concepts whose category is in dispute: each named in the module
 docstring with its reason. -/
 def disputed : List Concept :=
   [ .justification, .salvation, .faith, .grace, .spirit, .eternalLife, .god, .wordOfGod
-  , .tradition ]
+  , .tradition, .mindOfTheChurch ]
 
 /-- **The disputed concepts are exactly those left without a category.** Every
 other concept the vocabulary has is given one; and each of these is left

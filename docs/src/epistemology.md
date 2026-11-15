@@ -145,6 +145,39 @@ not the remission of sins only but the renewal of the inward man, and that the j
 that renewal by good works done in grace. Trent's rule admits both, and Westminster's refuses
 both (`trent_keeps_its_own_rule`). The two rules part exactly where the two sides do.
 
+**In the dispute over Mark 7, the Reformed case fails its rule at one claim.** The argument
+over Scripture alone has one dispute so far. In Mark 7 Jesus rebukes "the tradition of the
+elders" for "making void the word of God", and the dispute asks what that settles between Rome
+and the Reformers. Its five parties are held to their rules the same way:
+
+- Mark 7's case for Scripture alone is the Reformed reading of the passage, and professes
+  Westminster's rule;
+- Trent, as it states its position, and Trent with its tradition read as the apostles' word
+  handed on unwritten, which is what Trent says it receives, profess Trent's;
+- Mark 7's principle, that God's word judges human tradition, is held to none, because it is
+  common ground: Rome grants it in *Dei Verbum* 10 ("this teaching office is not above the word
+  of God"). Every rule the library has encoded admits what it asserts, the passage itself
+  (`marks_principle_meets_every_rule`);
+- Trent with its tradition read as commandments of men is held to none, because no one holds
+  it. The reading is Calvin's (*Institutes* IV.x.23), and Calvin denies Trent; Trent denies the
+  reading.
+
+Trent's readings keep their rule. Mark 7's case does not (`sola_scriptura_own_rules`). To get
+from the principle to Scripture alone it needs one more claim: that no teaching of the apostles
+handed on outside Scripture survives, identifiable as the word of God. The library cites that
+claim to William Whitaker's *Disputation on Holy Scripture* (1588), against Bellarmine, and to
+the Westminster Confession I.6, which says that nothing is to be added to Scripture by
+"traditions of men". Both are a theologian's or a confession's word, and Westminster's rule
+admits neither as a ground. So the Reformed case asks Rome for Scripture and, at this claim,
+rests on what it refuses Rome.
+
+The check does not say that the claim is false, or that it cannot be grounded as Westminster's
+rule asks. Whitaker's sentence is in part a claim of history, that no unwritten tradition can
+be shown to have been always observed by the whole Church, and an argument from the evidence
+for it would be a ground the rule admits. The library has not cited one, and the citation is
+left as it stands until one is found. No verdict moved: nothing weighs a claim by what it rests
+on.
+
 One limit remains. The library's evidence rule admits the same grounds for claims as
 Westminster's, so the check could not have told the two apart: what sets Westminster's rule
 apart is how a Scripture-only step is answered, and steps are not yet checked.
@@ -175,6 +208,9 @@ Holding steps to a rule needs each step to record what licenses it, apart from w
    standard accepts, already weighs a dispute by one rule ([Computed
    ratings](./computed-ratings.md)). With the standards given their holders, a page can say
    "under Westminster's rule this prevails; under Trent's it is contested".
-5. **The other disputes, held to their rules**, beginning with the one over Scripture alone,
-   where the rule is itself the question; and rules of their own for Aquinas, Luther and
-   Chrysostom, once each is cited.
+5. **The other disputes, held to their rules**, and the positions in the argument over
+   Scripture alone that no dispute weighs yet: Geisler's, Mathison's, Kruger's, Barrett's. And
+   rules of their own for Aquinas, Luther and Chrysostom, once each is cited.
+6. **A ground for the Reformed claim that no unwritten apostolic word survives**, cited from
+   the evidence or from Scripture, so that Mark 7's case can be held to its rule and pass, or
+   shown not to.
