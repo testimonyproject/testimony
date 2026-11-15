@@ -96,7 +96,7 @@ package could call (`Testimony.Tools.Site`, `Status`, `Bibliography`, and
 |---|---|---|
 | `bibgen` | `references.bib`, `docs/src/bibliography.md` | the library's `@[bib_entry]` registry and the arguments' |
 | `argtex` | `docs/latex/arguments.tex` | the same harvest as `argdoc` |
-| `statusgen` | the marked block in `docs/src/roadmap.md` | every `@[headline]` result |
+| `statusgen` | the marked blocks in `docs/src/roadmap.md` and `docs/src/maturity.md` | every `@[headline]` result; what the meanings, ontology and fallacy checks reach in each argument |
 | `argdoc` | `docs/src/arguments/*.md`, the marked block in `docs/src/SUMMARY.md` | every documented declaration in an argument's namespace |
 
 `argdoc` and `argtex` are the two that read the *prose*. An argument module is

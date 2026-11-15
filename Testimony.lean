@@ -50,6 +50,7 @@ import Testimony.Checks.Fixture
 import Testimony.Checks.Aif
 import Testimony.Checks.Meanings
 import Testimony.Checks.Fallacies
+import Testimony.Checks.Maturity
 import Testimony.Checks.FallacyCases
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
