@@ -89,10 +89,29 @@ def romansStep : Formula Claim :=
 passive in being made alive. Rated `wellSupported`: the Lutherans, who part from
 Dort on the next step, grant this one. It is taken as what Dort means by the
 phrase: the new life is "a making alive, which God works in us without our aid"
-(III/IV, article 12). -/
+(III/IV, article 12). "Passive" here means that the will is not the agent of its
+new life. Garrigou-Lagrange grants God's work alone and holds the will "does not
+remain passive" under operating grace, but in another sense: its consent
+follows grace "in the genus or order of formal, efficient, and final cause". The
+dilemma over the Thomists' claim sets the two senses apart
+(`whatNotMerelyPassiveMeans`). -/
 @[solaGratiaDefs]
 def passiveStep : Formula Claim :=
   p .conversionIsGodsWorkAlone ➝ p .willIsPassiveInRegeneration
+
+/-- **Aquinas on operating grace.** In converting grace God is the sole mover of
+the will, so God alone is the one who regenerates. -/
+@[solaGratiaDefs]
+def operatingGraceStep : Formula Claim :=
+  p .operatingGraceMovesTheWill ➝ p .conversionIsGodsWorkAlone
+
+/-- **Aquinas on God's intention.** If God moves the will intending that it
+attain grace, the grace brings about what it is given for. Rated `disputed`: the
+Molinists grant the intention and the infallible result, and ascribe it to the
+consent God foreknows, not to the grace. -/
+@[solaGratiaDefs]
+def efficacyStep : Formula Claim :=
+  p .godIntendsWhileMoving ➝ p .graceIsEffectualOfItself
 
 /-- **From God's work alone to the second part of the conclusion: the grace that
 saves cannot be finally refused.** Rated `disputed`: the Formula of Concord holds
@@ -252,6 +271,26 @@ def blasphemyLine : Line Claim :=
   , step := blasphemyStep
   , delivers := p .savingGraceCanBeFinallyRefused
   , inference := some blasphemyInference }
+
+/-- **Operating grace** (Aquinas, I-II q.111 a.2): God alone is the one who
+regenerates. -/
+@[solaGratiaDefs]
+def operatingGraceLine : Line Claim :=
+  { name := "Operating grace: the mind is moved and does not move (Aquinas)"
+  , grounds := [p .operatingGraceMovesTheWill]
+  , step := operatingGraceStep
+  , delivers := p .conversionIsGodsWorkAlone
+  , inference := some operatingGraceInference }
+
+/-- **God's intention in moving** (Aquinas, I-II q.112 a.3): the grace that
+saves brings about the consent it seeks. -/
+@[solaGratiaDefs]
+def efficacyLine : Line Claim :=
+  { name := "God's intention in moving: grace attained infallibly (Aquinas)"
+  , grounds := [p .godIntendsWhileMoving]
+  , step := efficacyStep
+  , delivers := p .graceIsEffectualOfItself
+  , inference := some efficacyInference }
 
 /-! ### Shared grounds -/
 

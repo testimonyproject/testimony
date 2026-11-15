@@ -259,6 +259,65 @@ def asAidByWhichSource : Source :=
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
+/-! ### Aquinas and the Thomists -/
+
+/-- Garrigou-Lagrange's *Grace*, at a chapter and section of the EWTN text. -/
+private def garrigou (loc : String) : Reference :=
+  .work garrigouLagrangeGrace (.sectionRef loc)
+
+/-- The rating of the step from operating grace to God's work alone:
+`wellSupported`. Grant that in converting grace God is the sole mover of the
+will, and no reader was found who denies that God alone is the one who
+regenerates. The Molinists deny the ground instead, placing God as sole mover
+only in the will's first, indeliberate motions; for them the converting act is
+"due to" the will's consent, "in no way" to "the Thomistic predetermination"
+(Pohle, "Molinism"). -/
+def operatingGraceInference : Source :=
+  { primary := .work aquinasSumma (.sectionRef "I-II q.111 a.2")
+  , supporting := [garrigou "ch. IV", .work pohleMolinism .whole]
+  , tradition := .romanCatholic
+  , confidence := .wellSupported }
+
+/-- **The rating of the step from God's intention in moving to grace effectual of
+itself: `disputed`.** The Molinists grant the ground and deny the conclusion.
+They grant that "the decree of God to bestow an efficacious grace upon a man
+involves with metaphysical certainty the free co-operation of the will", and
+deny that the grace brings it about: "the infallible success of efficacious
+grace is not to be ascribed to its own intrinsic nature, but to the Divine
+scientia media", God's knowledge of what a person would freely do (Pohle,
+"Molinism"). Garrigou-Lagrange holds the conclusion: "grace is intrinsically
+efficacious" (*Grace*, ch. VII). -/
+def efficacyInference : Source :=
+  { primary := .work pohleMolinism .whole
+  , supporting := [.work aquinasSumma (.sectionRef "I-II q.112 a.3"), garrigou "ch. VII"]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- Who holds of the will's part what this reading takes "not merely passive" to
+mean: the Molinists, for whom "it is rather the will itself which by its
+consent" renders grace efficacious (Pohle, "Molinism"). Rated `disputed`: no
+Thomist reads his own claim so, and Garrigou-Lagrange says Molina "deviates from
+the teaching of St. Thomas" here. -/
+def asAgentOfNewLifeSource : Source :=
+  { primary := .work pohleMolinism .whole
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- Who reads "not merely passive" as the will acting while God alone is the
+agent of the new life: Garrigou-Lagrange, for whom the will's consent, "although
+as a disposition it precedes it [grace] in the genus or order of material cause,
+it nevertheless follows it in the genus or order of formal, efficient, and final
+cause" (*Grace*, ch. X); and Aquinas, for whom the movement of the free will "is
+not the cause of grace, but the effect" (I-II q.111 a.2 ad 2). Rated `disputed`:
+Garrigou-Lagrange himself lists Calvin's "merely passive" among the errors
+(ch. IV), and a Reformed reader may take that as a denial of the third part in
+Dort's sense, not only in another. -/
+def asDispositionSource : Source :=
+  { primary := garrigou "ch. X"
+  , supporting := [.work aquinasSumma (.sectionRef "I-II q.111 a.2 ad 2")]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
 /-! ### The citations -/
 
 /-- The common list of sources: the texts, the readings, the claims of each
@@ -365,6 +424,48 @@ def baseCite : Claim → AtomMeta
         { primary := concord "Augsburg Confession IV.1–3"
         , supporting := [.work wesleySermons (.sectionRef "Sermon 1, III.1"), trent "canon 9"]
         , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .operatingGraceMovesTheWill =>
+    { label := "In converting grace God is the sole mover: the mind is moved and does not move"
+    , kind := .theological
+      -- `disputed`: the Molinists place God as sole mover only in the will's
+      -- indeliberate first motions (Pohle, "Molinism").
+    , source :=
+        { primary := .work aquinasSumma (.sectionRef "I-II q.111 a.2")
+        , supporting := [garrigou "ch. IV"]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .godIntendsWhileMoving =>
+    { label := "God moves the will intending that it attain grace"
+    , kind := .theological
+    , source :=
+        { primary := .work aquinasSumma (.sectionRef "I-II q.112 a.3")
+        , supporting := [.work pohleMolinism .whole]
+        , tradition := .romanCatholic
+        , confidence := .wellSupported } }
+  | .willIsNotMerelyPassive =>
+    { label := "Under operating grace the will is not merely passive: it freely consents"
+    , kind := .theological
+    , source :=
+        { primary := garrigou "ch. IV"
+        , supporting := [trent "canon 4", waterworth 45]
+        , tradition := .romanCatholic
+        , confidence := .wellSupported } }
+  | .sufficientGraceIsResisted =>
+    { label := "Grace truly sufficient, giving the power to do good, is resisted"
+    , kind := .theological
+    , source :=
+        { primary := garrigou "ch. VI"
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .justifyingGraceCanBeLost =>
+    { label := "Justifying grace, once given, can be lost"
+    , kind := .theological
+      -- `disputed`: Dort holds the perseverance of the saints (Fifth Head).
+    , source :=
+        { primary := .work aquinasSumma (.sectionRef "II-II q.24 a.11")
+        , supporting := [trent "canon 23"]
+        , tradition := .romanCatholic
         , confidence := .disputed } }
   | .zechariah1_3WithLamentations5_21 =>
     { label :=

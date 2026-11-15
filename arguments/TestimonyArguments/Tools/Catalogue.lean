@@ -76,6 +76,8 @@ def solaGratiaChapters : List Chapter :=
                  , `TestimonyArguments.SolaGratia.Results ] }
   , { slug := "freedom-to-refuse", title := "Freedom to refuse, and the ability God gives"
     , modules := [`TestimonyArguments.SolaGratia.ThirdWay] }
+  , { slug := "aquinas", title := "Aquinas and the Catholic schools"
+    , modules := [`TestimonyArguments.SolaGratia.Thomist] }
   , { slug := "weighing", title := "Weighing the positions"
     , modules := [`TestimonyArguments.SolaGratia.Dispute] }
   , { slug := "claims", title := "Appendix: the claims and their sources"

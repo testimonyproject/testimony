@@ -40,7 +40,7 @@ reads them; and canon 4, on the will that cooperates by assenting and can refuse
 if it wishes. -/
 @[solaGratiaDefs]
 def tridentine : ArgumentPackage Claim :=
-  { name := "Trent (Session VI, canon 4)"
+  { name := "Trent (Session VI, canon 4, on the Molinist reading)"
   , cite := tridentineCite
   , premises :=
       caseOf [graceLine, cooperationLine, dissentLine] [notP .faithAloneReceivesGrace] []
