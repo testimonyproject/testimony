@@ -36,6 +36,7 @@ import Testimony.Logic.Contest
 import Testimony.Logic.Warrant
 import Testimony.Logic.Postulates
 import Testimony.Logic.Credibility
+import Testimony.Logic.Epistemology
 import Testimony.Logic.Aif
 import Testimony.Argument
 import Testimony.Semantics.Upper

@@ -18,6 +18,7 @@
 - [Meanings and articles (draft)](./semantics.md)
 - [Checking an argument for fallacies](./fallacies.md)
 - [Computed ratings (design)](./computed-ratings.md)
+- [How each side says we know (draft)](./epistemology.md)
 - [Performance: the engine, measured](./performance.md)
 - [Standards the library aligns to](./standards.md)
 - [Beyond theology: a case of your own](./beyond-theology.md)
