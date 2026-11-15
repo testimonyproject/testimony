@@ -100,7 +100,8 @@ The Triune God
   joins: 0, with no definition: 0
 The canonical witness
   joins: 7, with no definition: 7
-  not a ground: held by 3, used of a text or voice by 0; derives nothing
+  not a ground: held by 3, used of a text or voice by 6; derives nothing
+  the same sense, both ways: stated or denied by 1; derives nothing
 -/
 #guard_msgs in
 #check_ontology under TestimonyArguments
@@ -133,7 +134,12 @@ Sola scriptura
 The Triune God
   lines: 13, read: 0
 The canonical witness
-  lines: 8, read: 0
+  lines: 8, read: 8
+  need a word to keep its sense, unstated:
+    hebrewsLine: pistis
+    johannineLine: pisteuo
+    paulineFaithLine: dikaioo
+    paulineLine: pistis, sozo, erga
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments
@@ -151,13 +157,13 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2512 definitions, 228 entries
+info: every entry is a tagged definition, and every key names one: 2523 definitions, 228 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 2105 definitions, 228 entries
+info: every entry is a tagged definition, and every key names one: 2129 definitions, 228 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments

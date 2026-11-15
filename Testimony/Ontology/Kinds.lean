@@ -105,6 +105,8 @@ def category : Concept → Option Category
   | .abilityToBelieve => some .quality
   | .regeneration => some .event
   | .preparationForJustification => some .process
+  | .noCondemnation => some .state
+  | .verdict => some .event
   | .minutes _ => some .temporalRegion
 
 /-- The concepts whose category is in dispute: each named in the module

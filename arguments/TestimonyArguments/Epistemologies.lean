@@ -1,5 +1,6 @@
 import Testimony.Logic.Epistemology
 import TestimonyArguments.SolaFide
+import TestimonyArguments.CanonicalWitness
 
 /-!
 # TestimonyArguments.Epistemologies — the rules each side professes, and whether it keeps them
@@ -61,12 +62,24 @@ their own as a rule; holding them to another's would give them a rule they did n
 Chrysostom is a Father whom the Orthodox and the Catholic traditions both receive, and calling
 him either's would be a claim the library does not argue.
 
+## The canonical witness
+
+The canonical witness has no dispute, so its parties are its positions. The Reformed case, with
+James and without, and Paul's claim about faith profess Westminster's rule; Trent's two readings
+of James profess Trent's; and the ten positions the library builds by striking readings out of
+the canonical case are held to none, because no one argues them. Every position keeps its rule,
+and every other rule as well (`canonical_witness_own_rules`). That is because every claim each
+position asserts rests on Scripture: the texts are cited to Scripture alone, and the three
+readings the case with James asserts as claims are cited to the verses they read as well as to
+Moo, Calvin and the Larger Catechism. Here the rules cannot part the sides, because the sides
+part in their steps, which the check does not reach.
+
 ## What it does not claim
 
 It does not say which epistemology is right: that is what the sola scriptura dispute is about.
 It does not weigh anything: no verdict and no rating reads it. It checks claims, not steps. And
-it says nothing of parties outside the sola fide dispute, which are the next to be held to their
-rules.
+it says nothing of parties outside the sola fide dispute and the canonical witness, which are
+the next to be held to their rules.
 -/
 
 namespace TestimonyArguments.Epistemologies
@@ -266,6 +279,146 @@ theorem trent_keeps_its_own_rule :
     (partyNode .trent).refusedBy scriptureAndTradition = [] ∧
       (partyNode .trent).refusedBy scriptureItsOwnInterpreter =
         [.justificationIncludesSanctification, .renewalGrowsThroughGoodWorks] := by
+  decide +kernel
+
+/-! ### The canonical witness
+
+The canonical witness has no dispute. Its parties are its positions: the canonical case and the
+case with James, Paul's claim about faith on its own, Trent's reading of James 2:24, and Trent's
+reading of James against the sufficiency of faith. Beside them stand the positions the library
+builds to find what the case rests on, each the canonical case with some of its readings struck
+out. Each is a package, and each is held to the rule of the side whose reading it is. -/
+
+/-- **The positions of the canonical witness**, each a package of the argument
+(`TestimonyArguments.CanonicalWitness`). -/
+inductive CanonicalWitnessParty
+  /-- The canonical witness to faith alone: every corpus on its own reading. -/
+  | canonical
+  /-- The canonical witness with James: faith alone, by a faith never alone. -/
+  | withJames
+  /-- Paul's claim about faith on its own: necessary and sufficient. -/
+  | paulOnFaith
+  /-- Trent, reading James 2:24 as justification increased by works. -/
+  | trent
+  /-- James read against the sufficiency of faith, as Trent reads him. -/
+  | jamesAgainstSufficiency
+  /-- The canonical case without Paul's two readings. -/
+  | withoutPaul
+  /-- The canonical case without Hebrews' reading. -/
+  | withoutHebrews
+  /-- The canonical case without John's reading. -/
+  | withoutJohn
+  /-- The canonical case without Peter's reading. -/
+  | withoutPeter
+  /-- The canonical case without the reading of Jesus' words. -/
+  | withoutJesus
+  /-- The canonical case without the three readings that say works are not the ground. -/
+  | withoutTheWorksWitnesses
+  /-- The canonical case without the three readings that say faith is necessary. -/
+  | withoutTheNecessityWitnesses
+  /-- The canonical case without the four readings that say faith is sufficient. -/
+  | withoutTheSufficiencyWitnesses
+  /-- The canonical case with only Hebrews' reading and that of Jesus' words. -/
+  | hebrewsAndJesus
+  /-- The case with James, without the demonstrative reading of "justified". -/
+  | withJamesUndemonstrated
+deriving DecidableEq, Repr
+
+/-- Each position's package. -/
+def canonicalWitnessPackage : CanonicalWitnessParty → ArgumentPackage CanonicalWitness.Claim
+  | .canonical => CanonicalWitness.canonicalCase
+  | .withJames => CanonicalWitness.canonicalWithJames
+  | .paulOnFaith => CanonicalWitness.paulOnFaith
+  | .trent => CanonicalWitness.tridentine
+  | .jamesAgainstSufficiency => CanonicalWitness.jamesReadAgainstSufficiency
+  | .withoutPaul => CanonicalWitness.withoutPaul
+  | .withoutHebrews => CanonicalWitness.withoutHebrews
+  | .withoutJohn => CanonicalWitness.withoutJohn
+  | .withoutPeter => CanonicalWitness.withoutPeter
+  | .withoutJesus => CanonicalWitness.withoutJesus
+  | .withoutTheWorksWitnesses => CanonicalWitness.withoutTheWorksWitnesses
+  | .withoutTheNecessityWitnesses => CanonicalWitness.withoutTheNecessityWitnesses
+  | .withoutTheSufficiencyWitnesses => CanonicalWitness.withoutTheSufficiencyWitnesses
+  | .hebrewsAndJesus => CanonicalWitness.hebrewsAndJesus
+  | .withJamesUndemonstrated => CanonicalWitness.withJamesUndemonstrated
+
+/-- **The rule each position of the canonical witness professes**, as the side whose reading it
+is.
+
+- The canonical case, the case with James, and Paul's claim about faith profess Westminster's
+  rule. They are the Reformed case: their readings are cited to Schreiner, Calvin and Moo, with
+  Bruce and Marshall beside them, and what they conclude is the Reformed formula, "by faith
+  alone", "by a faith that is never alone", in Westminster's words (XI.2).
+- Trent's reading of James 2:24, and its reading of James against the sufficiency of faith,
+  profess Trent's rule. Both are cited to its Decree on Justification (Session VI, chapter 10
+  and canon 9).
+- The positions with readings struck out profess no rule. No side argues any of them. The
+  library builds each from the canonical case to show which readings the case rests on, and a
+  rule held by no one who argues the position would be a rule given it, not one it wrote. -/
+def professesCanonicalWitness : CanonicalWitnessParty → Option Epistemology
+  | .canonical | .withJames | .paulOnFaith => some scriptureItsOwnInterpreter
+  | .trent | .jamesAgainstSufficiency => some scriptureAndTradition
+  | .withoutPaul | .withoutHebrews | .withoutJohn | .withoutPeter | .withoutJesus
+  | .withoutTheWorksWitnesses | .withoutTheNecessityWitnesses | .withoutTheSufficiencyWitnesses
+  | .hebrewsAndJesus | .withJamesUndemonstrated => none
+
+/-- Every position of the canonical witness, in the order its packages are written. -/
+def canonicalWitnessParties : List CanonicalWitnessParty :=
+  [ .trent, .canonical, .withJames, .withoutPaul, .withoutHebrews, .withoutJohn, .withoutPeter
+  , .withoutJesus, .withoutTheWorksWitnesses, .withoutTheNecessityWitnesses
+  , .withoutTheSufficiencyWitnesses, .hebrewsAndJesus, .withJamesUndemonstrated, .paulOnFaith
+  , .jamesAgainstSufficiency ]
+
+/-- The list has every position. -/
+theorem canonicalWitnessParties_complete : ∀ q, q ∈ canonicalWitnessParties := by
+  intro q; cases q <;> decide
+
+/-- Each position of the canonical witness, held to the rule it professes. -/
+def canonicalWitnessOwnRule (q : CanonicalWitnessParty) :
+    Option (OwnRule CanonicalWitness.Claim) :=
+  (professesCanonicalWitness q).map (canonicalWitnessPackage q).heldTo
+
+/-- The positions of the canonical witness that fail their own rule. -/
+def canonicalWitnessBreakTheirRule : List CanonicalWitnessParty :=
+  canonicalWitnessParties.filter fun q => (canonicalWitnessOwnRule q).any (!·.kept)
+
+/-- The positions of the canonical witness held to no rule. -/
+def canonicalWitnessHeldToNone : List CanonicalWitnessParty :=
+  canonicalWitnessParties.filter fun q => (professesCanonicalWitness q).isNone
+
+/-- The positions of the canonical witness that assert a claim an encoded rule refuses: any of
+the four, whichever the position professes. -/
+def canonicalWitnessRefusedByAnyRule : List CanonicalWitnessParty :=
+  canonicalWitnessParties.filter fun q =>
+    [ scriptureItsOwnInterpreter, scriptureAndTradition, scriptureInTheMindOfTheChurch
+    , evidenceAnyoneCanCheck ].any fun E => !((canonicalWitnessPackage q).refusedBy E).isEmpty
+
+/-- **Every position of the canonical witness keeps the rule it professes, and every other
+rule too.** The Reformed case, with James and without, and Paul's claim about faith keep
+Westminster's rule; Trent's two readings of James keep Trent's. The ten positions with readings
+struck out are held to none.
+
+The check could not part them here, because every claim each position asserts outright rests on
+Scripture. The texts are cited to Scripture alone. The three readings the case with James
+asserts as claims are cited to scholars and to a catechism, and each also to the verses it reads:
+that James 2:14–26 is aimed at a faith without works, to Moo and Johnson and to James 2:19; that
+"justified" in James 2:21–24 means shown to be righteous, to Calvin and to James 2:21–23; that
+justification and sanctification are distinct, to the Larger Catechism, Q. 77, and its proofs.
+Trent asserts only the texts. So no encoded rule, Westminster's, Trent's, the Orthodox or the
+library's own, refuses any claim of any position.
+
+What it does not claim: that either side reads the texts rightly. It checks claims, not steps,
+and the two sides part in their steps — each corpus's reading, and Trent's reading of James
+2:24 — and in what they deny, which a citation does not record. Nor does it reach a position's
+conclusion, which is derived, not asserted: the Reformed formula is cited to Westminster, and
+no rule here is asked whether that citation is a ground. -/
+theorem canonical_witness_own_rules :
+    canonicalWitnessBreakTheirRule = [] ∧
+      canonicalWitnessHeldToNone =
+        [ .withoutPaul, .withoutHebrews, .withoutJohn, .withoutPeter, .withoutJesus
+        , .withoutTheWorksWitnesses, .withoutTheNecessityWitnesses
+        , .withoutTheSufficiencyWitnesses, .hebrewsAndJesus, .withJamesUndemonstrated ] ∧
+      canonicalWitnessRefusedByAnyRule = [] := by
   decide +kernel
 
 end TestimonyArguments.Epistemologies

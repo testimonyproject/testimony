@@ -261,8 +261,9 @@ but does not fail the build, because whether it begs the question depends on who
 addressed to. Pin the report with `#guard_msgs`, as `TestimonyArguments.Checks` does, so that a
 change in what the checks find is a change a reviewer sees.
 
-A line is read only when every claim it uses has a meaning. Today that is 32 lines of the
-library's 133, almost all in sola fide; the rest wait on their arguments' meanings.
+A line is read only when every claim it uses has a meaning. Today that is 40 lines of the
+library's 145, all but one in sola fide and the canonical witness; the rest wait on their
+arguments' meanings.
 
 ### Making the build refuse a case
 
