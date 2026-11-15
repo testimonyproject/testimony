@@ -61,7 +61,7 @@ case "$(uname -m)" in
   *) log "unsupported architecture $(uname -m); skipping tectonic, mdbook and uv"; exit 0 ;;
 esac
 
-# 2. tectonic, for docs/latex/arguments.tex.
+# 2. tectonic, for docs/latex/arguments.tex and each argument's own document.
 if ! command -v tectonic >/dev/null 2>&1 || \
    [[ "$(tectonic --version 2>/dev/null)" != *"$TECTONIC_VERSION"* ]]; then
   log "installing tectonic $TECTONIC_VERSION"

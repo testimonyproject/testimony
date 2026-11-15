@@ -95,7 +95,7 @@ package could call (`Testimony.Tools.Site`, `Status`, `Bibliography`, and
 | Tool | Writes | From |
 |---|---|---|
 | `bibgen` | `references.bib`, `docs/src/bibliography.md` | the library's `@[bib_entry]` registry and the arguments' |
-| `argtex` | `docs/latex/arguments.tex` | the same harvest as `argdoc` |
+| `argtex` | `docs/latex/arguments.tex`, `docs/latex/arguments/<slug>.tex` | the same harvest as `argdoc` |
 | `statusgen` | the marked blocks in `docs/src/roadmap.md` and `docs/src/maturity.md` | every `@[headline]` result; what the meanings, ontology and fallacy checks reach in each argument |
 | `argdoc` | `docs/src/arguments/*.md`, the marked block in `docs/src/SUMMARY.md` | every documented declaration in an argument's namespace |
 
@@ -119,13 +119,22 @@ give, and the turnstile row by the conclusion at issue. The words come from one
 function, `Latex.inWordsWith`, so the two settings cannot come to say different
 things.
 
-Only `arguments.tex` is committed, so the PDF has to be made somewhere. The `PDF`
-workflow (`.github/workflows/pdf.yml`) typesets it with `tectonic`, along with
-the examples' documents, on every pull request that touches what they are made
-from, and a LaTeX error fails there rather than on `main`. The `Docs` workflow
-puts the PDFs beside the site, at `pdf/arguments.pdf`, which every argument page
-links to; the `Release` workflow attaches them to the GitHub release a `v*` tag
-makes.
+`argtex` sets the arguments twice. `arguments.tex` is the book, every argument in
+one document. Under `docs/latex/arguments/` each argument is set again on its
+own, `sola-fide.tex` for sola fide, for a reader who wants one argument and not
+the rest. Nothing has to be added to let an argument stand alone. Each variable
+links to a row of its own argument's legend, no argument refers to another by a
+label, and BibTeX lists only the works a document cites, so each document's
+bibliography is its own.
+
+Only the `.tex` files are committed, so the PDFs have to be made somewhere. The
+`PDF` workflow (`.github/workflows/pdf.yml`) typesets them with `tectonic`, along
+with the examples' documents, on every pull request that touches what they are
+made from, and a LaTeX error fails there rather than on `main`. The `Docs`
+workflow puts the PDFs beside the site: the book at `pdf/arguments.pdf`, and
+each argument at `pdf/arguments/<slug>.pdf`. Every argument's page links to its
+own PDF and to the book. The `Release` workflow attaches all of them to the
+GitHub release a `v*` tag makes.
 
 ### An argument set as chapters
 
