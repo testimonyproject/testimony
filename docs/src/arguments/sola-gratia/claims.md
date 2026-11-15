@@ -71,17 +71,22 @@ either.
 | <a id="claim-13"></a>\\(P_{13}\\) | The grace that saves can be finally refused | theological | Arminian, disputed | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397 |
 | <a id="claim-14"></a>\\(P_{14}\\) | God gives the ability to believe, as Adam was made able to stand or fall | theological | Christian, hist.-gramm., well supported | [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 484; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 85, III.4 |
 | <a id="claim-15"></a>\\(P_{15}\\) | Grace is received by faith alone | theological | Christian, hist.-gramm., disputed | [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9 |
-| <a id="claim-16"></a>\\(P_{16}\\) | Zechariah 1:3 ("return to me, and I will return to you") with Lamentations 5:21 ("restore us to yourself, O Lord") | textual | Christian, hist.-gramm., consensus | Zech 1:3; Lam 5:21; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 5; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 33 |
-| <a id="claim-17"></a>\\(P_{17}\\) | In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith | linguistic | Christian, hist.-gramm., well supported | [Hoehner 2002](../../bibliography.md#hoehner-ephesians-2002), p. 343; [Robertson 1931](../../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8 |
-| <a id="claim-18"></a>\\(P_{18}\\) | Romans 9:16 is about God's mercy in saving, not only in choosing a people for history | interpretive | Christian, hist.-gramm., well supported | [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565; [Abasciano 2006](../../bibliography.md#abasciano-corporate-election-romans-9-2006), p. 351 |
-| <a id="claim-19"></a>\\(P_{19}\\) | Faith itself is God's gift | theological | Christian, hist.-gramm., well supported | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 14; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681 |
-| <a id="claim-20"></a>\\(P_{20}\\) | What Stephen's hearers resisted in Acts 7:51 was the grace that saves | interpretive | Arminian, disputed | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4 |
-| <a id="claim-21"></a>\\(P_{21}\\) | The free will, moved by God, cooperates by assenting to God's call | theological | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45 |
-| <a id="claim-22"></a>\\(P_{22}\\) | The free will, moved by God, can refuse its assent if it wishes | theological | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45 |
-| <a id="claim-23"></a>\\(P_{23}\\) | Conversion is God's work alone: God regenerates, and the will does nothing to it | theological | Reformed Protestant, disputed | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, arts. 10–12 |
-| <a id="claim-24"></a>\\(P_{24}\\) | Salvation is by grace and not earned: grace goes before every saving act | theological | Christian, hist.-gramm., consensus | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), chs. 5, 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 32; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), arts. 3–4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10 |
-| <a id="claim-25"></a>\\(P_{25}\\) | The grace that saves brings about the consent it seeks | theological | Reformed Protestant, disputed | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12 |
-| <a id="claim-26"></a>\\(P_{26}\\) | In being made alive the will is passive, and contributes nothing to it | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §X.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12 |
+| <a id="claim-16"></a>\\(P_{16}\\) | In converting grace God is the sole mover: the mind is moved and does not move | theological | Roman Catholic, disputed | [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Garrigou-Lagrange 1952](../../bibliography.md#garrigou-lagrange-grace-1952), §ch. IV |
+| <a id="claim-17"></a>\\(P_{17}\\) | God moves the will intending that it attain grace | theological | Roman Catholic, well supported | [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Pohle 1911](../../bibliography.md#pohle-molinism-1911) |
+| <a id="claim-18"></a>\\(P_{18}\\) | Under operating grace the will is not merely passive: it freely consents | theological | Roman Catholic, well supported | [Garrigou-Lagrange 1952](../../bibliography.md#garrigou-lagrange-grace-1952), §ch. IV; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45 |
+| <a id="claim-19"></a>\\(P_{19}\\) | Grace truly sufficient, giving the power to do good, is resisted | theological | Roman Catholic, disputed | [Garrigou-Lagrange 1952](../../bibliography.md#garrigou-lagrange-grace-1952), §ch. VI |
+| <a id="claim-20"></a>\\(P_{20}\\) | Justifying grace, once given, can be lost | theological | Roman Catholic, disputed | [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.24 a.11; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23 |
+| <a id="claim-21"></a>\\(P_{21}\\) | Zechariah 1:3 ("return to me, and I will return to you") with Lamentations 5:21 ("restore us to yourself, O Lord") | textual | Christian, hist.-gramm., consensus | Zech 1:3; Lam 5:21; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 5; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 33 |
+| <a id="claim-22"></a>\\(P_{22}\\) | In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith | linguistic | Christian, hist.-gramm., well supported | [Hoehner 2002](../../bibliography.md#hoehner-ephesians-2002), p. 343; [Robertson 1931](../../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8 |
+| <a id="claim-23"></a>\\(P_{23}\\) | Romans 9:16 is about God's mercy in saving, not only in choosing a people for history | interpretive | Christian, hist.-gramm., well supported | [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565; [Abasciano 2006](../../bibliography.md#abasciano-corporate-election-romans-9-2006), p. 351 |
+| <a id="claim-24"></a>\\(P_{24}\\) | Faith itself is God's gift | theological | Christian, hist.-gramm., well supported | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 14; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681 |
+| <a id="claim-25"></a>\\(P_{25}\\) | What Stephen's hearers resisted in Acts 7:51 was the grace that saves | interpretive | Arminian, disputed | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4 |
+| <a id="claim-26"></a>\\(P_{26}\\) | The free will, moved by God, cooperates by assenting to God's call | theological | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45 |
+| <a id="claim-27"></a>\\(P_{27}\\) | The free will, moved by God, can refuse its assent if it wishes | theological | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45 |
+| <a id="claim-28"></a>\\(P_{28}\\) | Conversion is God's work alone: God regenerates, and the will does nothing to it | theological | Reformed Protestant, disputed | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, arts. 10–12 |
+| <a id="claim-29"></a>\\(P_{29}\\) | Salvation is by grace and not earned: grace goes before every saving act | theological | Christian, hist.-gramm., consensus | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), chs. 5, 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 32; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), arts. 3–4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10 |
+| <a id="claim-30"></a>\\(P_{30}\\) | The grace that saves brings about the consent it seeks | theological | Reformed Protestant, disputed | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12 |
+| <a id="claim-31"></a>\\(P_{31}\\) | In being made alive the will is passive, and contributes nothing to it | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §X.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12 |
 
 </div>
 
@@ -389,6 +394,85 @@ def asAidByWhichSource : Source :=
     supporting := [dort✝ 591],
     tradition := Tradition.reformedProtestant,
     confidence := Confidence.disputed }
+```
+
+#### Aquinas and the Thomists
+
+<a id="operatingGraceInference"></a>
+**`operatingGraceInference`**
+
+The rating of the step from operating grace to God's work alone:
+`wellSupported`. Grant that in converting grace God is the sole mover of the
+will, and no reader was found who denies that God alone is the one who
+regenerates. The Molinists deny the ground instead, placing God as sole mover
+only in the will's first, indeliberate motions; for them the converting act is
+"due to" the will's consent, "in no way" to "the Thomistic predetermination"
+(Pohle, "Molinism").
+
+```lean
+def operatingGraceInference : Source :=
+  {
+    primary :=
+      Reference.work aquinasSumma (Bib.Locus.sectionRef "I-II q.111 a.2"),
+    supporting :=
+      [garrigou✝ "ch. IV",
+        Reference.work pohleMolinism],
+    tradition := Tradition.romanCatholic,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="efficacyInference"></a>
+**`efficacyInference`**
+
+**The rating of the step from God's intention in moving to grace effectual of
+itself: `disputed`.** The Molinists grant the ground and deny the conclusion.
+They grant that "the decree of God to bestow an efficacious grace upon a man
+involves with metaphysical certainty the free co-operation of the will", and
+deny that the grace brings it about: "the infallible success of efficacious
+grace is not to be ascribed to its own intrinsic nature, but to the Divine
+scientia media", God's knowledge of what a person would freely do (Pohle,
+"Molinism"). Garrigou-Lagrange holds the conclusion: "grace is intrinsically
+efficacious" (*Grace*, ch. VII).
+
+```lean
+def efficacyInference : Source :=
+  { primary := Reference.work pohleMolinism,
+    supporting :=
+      [Reference.work aquinasSumma (Bib.Locus.sectionRef "I-II q.112 a.3"),
+        garrigou✝ "ch. VII"],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="asAgentOfNewLifeSource"></a>
+**`asAgentOfNewLifeSource`**
+
+Who reads "not merely passive" as making the will a cause of its own new
+life: the Molinists, for whom "it is rather the will itself which by its
+consent" renders grace efficacious (Pohle, "Molinism").
+
+```lean
+def asAgentOfNewLifeSource : Source :=
+  { primary := Reference.work pohleMolinism,
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="asDispositionSource"></a>
+**`asDispositionSource`**
+
+Who reads "not merely passive" as the will acting while God alone is the
+agent of the new life: Garrigou-Lagrange, for whom the will's consent, "although
+as a disposition it precedes it [grace] in the genus or order of material cause,
+it nevertheless follows it in the genus or order of formal, efficient, and final
+cause" (*Grace*, ch. X); and Aquinas, for whom the movement of the free will "is
+not the cause of grace, but the effect" (I-II q.111 a.2 ad 2).
+
+```lean
+def asDispositionSource : Source :=
+  { primary := garrigou✝ "ch. X",
+    supporting :=
+      [Reference.work aquinasSumma
+          (Bib.Locus.sectionRef "I-II q.111 a.2 ad 2")],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 ```
 
 #### The citations

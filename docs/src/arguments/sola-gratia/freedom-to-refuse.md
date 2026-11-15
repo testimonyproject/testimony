@@ -136,8 +136,8 @@ What every party holds: salvation is by grace, from Romans 11:6.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 11:6 — if it is by grace, it is no longer on the basis of works
-- (2) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}}\\) — *at issue:* Salvation is by grace and not earned: grace goes before every saving act
+- (2) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}}\\) — *at issue:* Salvation is by grace and not earned: grace goes before every saving act
 
 </div>
 
@@ -154,14 +154,14 @@ cited against its steps and are not a position here.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 11:6 — if it is by grace, it is no longer on the basis of works
-- (2) \\(\href{claims.html#claim-16}{P_{16}}\\) — Zechariah 1:3 ("return to me, and I will return to you") with Lamentations 5:21 ("restore us to yourself, O Lord")
-- (3) \\(\href{claims.html#claim-21}{P_{21}}\\) — The free will, moved by God, cooperates by assenting to God's call
-- (4) \\(\href{claims.html#claim-22}{P_{22}}\\) — The free will, moved by God, can refuse its assent if it wishes
+- (2) \\(\href{claims.html#claim-21}{P_{21}}\\) — Zechariah 1:3 ("return to me, and I will return to you") with Lamentations 5:21 ("restore us to yourself, O Lord")
+- (3) \\(\href{claims.html#claim-26}{P_{26}}\\) — The free will, moved by God, cooperates by assenting to God's call
+- (4) \\(\href{claims.html#claim-27}{P_{27}}\\) — The free will, moved by God, can refuse its assent if it wishes
 - (5) \\(\lnot \href{claims.html#claim-15}{P_{15}}\\) — *denied:* Grace is received by faith alone
-- (6) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (7) \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \lnot \href{claims.html#claim-26}{P_{26}}\\) — *would deny:* In being made alive the will is passive, and contributes nothing to it
-- (8) \\(\href{claims.html#claim-22}{P_{22}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) — *would deny:* The grace that saves brings about the consent it seeks
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \lnot \href{claims.html#claim-26}{P_{26}} \land \lnot \href{claims.html#claim-25}{P_{25}} \land \lnot \href{claims.html#claim-15}{P_{15}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-26}{P_{26}}\\) *denied:* In being made alive the will is passive, and contributes nothing to it; \\(\href{claims.html#claim-25}{P_{25}}\\) *denied:* The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-15}{P_{15}}\\) *denied:* Grace is received by faith alone
+- (6) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (7) \\((\href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-26}{P_{26}}) \rightarrow \lnot \href{claims.html#claim-31}{P_{31}}\\) — *would deny:* In being made alive the will is passive, and contributes nothing to it
+- (8) \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) — *would deny:* The grace that saves brings about the consent it seeks
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \lnot \href{claims.html#claim-31}{P_{31}} \land \lnot \href{claims.html#claim-30}{P_{30}} \land \lnot \href{claims.html#claim-15}{P_{15}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-31}{P_{31}}\\) *denied:* In being made alive the will is passive, and contributes nothing to it; \\(\href{claims.html#claim-30}{P_{30}}\\) *denied:* The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-15}{P_{15}}\\) *denied:* Grace is received by faith alone
 
 </div>
 
@@ -179,16 +179,16 @@ resisted to the end.
 - (2) \\(\href{claims.html#claim-5}{P_{5}}\\) — Acts 7:51 — you always resist the Holy Spirit
 - (3) \\(\href{claims.html#claim-6}{P_{6}}\\) — Ephesians 4:30 — do not grieve the Holy Spirit of God, by whom you were sealed
 - (4) \\(\href{claims.html#claim-7}{P_{7}}\\) — 1 Thessalonians 5:19 — do not quench the Spirit
-- (5) \\(\href{claims.html#claim-20}{P_{20}}\\) — What Stephen's hearers resisted in Acts 7:51 was the grace that saves
+- (5) \\(\href{claims.html#claim-25}{P_{25}}\\) — What Stephen's hearers resisted in Acts 7:51 was the grace that saves
 - (6) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:1–5 — dead in trespasses, God made us alive together with Christ
 - (7) \\(\href{claims.html#claim-2}{P_{2}}\\) — Ephesians 2:8–9 — by grace you have been saved through faith, and this is not your own doing; it is the gift of God
-- (8) \\(\href{claims.html#claim-19}{P_{19}}\\) — Faith itself is God's gift
+- (8) \\(\href{claims.html#claim-24}{P_{24}}\\) — Faith itself is God's gift
 - (9) \\(\href{claims.html#claim-3}{P_{3}}\\) — Romans 9:16 — it depends not on human will or exertion, but on God, who has mercy
-- (10) \\(\href{claims.html#claim-18}{P_{18}}\\) — Romans 9:16 is about God's mercy in saving, not only in choosing a people for history
-- (11) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (10) \\(\href{claims.html#claim-23}{P_{23}}\\) — Romans 9:16 is about God's mercy in saving, not only in choosing a people for history
+- (11) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
 - (12) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
-- (13) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-20}{P_{20}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-13}{P_{13}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-13}{P_{13}}\\) The grace that saves can be finally refused
+- (13) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-25}{P_{25}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-13}{P_{13}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-13}{P_{13}}\\) The grace that saves can be finally refused
 
 </div>
 
@@ -207,13 +207,13 @@ the grace that converts resistible, and faith alone.
 - (3) \\(\href{claims.html#claim-6}{P_{6}}\\) — Ephesians 4:30 — do not grieve the Holy Spirit of God, by whom you were sealed
 - (4) \\(\href{claims.html#claim-7}{P_{7}}\\) — 1 Thessalonians 5:19 — do not quench the Spirit
 - (5) \\(\href{claims.html#claim-11}{P_{11}}\\) — Those who obstinately resist the Spirit can grieve and lose him
-- (6) \\(\href{claims.html#claim-23}{P_{23}}\\) — Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (6) \\(\href{claims.html#claim-28}{P_{28}}\\) — Conversion is God's work alone: God regenerates, and the will does nothing to it
 - (7) \\(\href{claims.html#claim-15}{P_{15}}\\) — Grace is received by faith alone
-- (8) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (8) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
 - (9) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
 - (10) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-11}{P_{11}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
-- (11) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-26}{P_{26}} \land \href{claims.html#claim-13}{P_{13}} \land \href{claims.html#claim-15}{P_{15}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it; \\(\href{claims.html#claim-13}{P_{13}}\\) The grace that saves can be finally refused; \\(\href{claims.html#claim-15}{P_{15}}\\) Grace is received by faith alone
+- (11) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-31}{P_{31}} \land \href{claims.html#claim-13}{P_{13}} \land \href{claims.html#claim-15}{P_{15}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-31}{P_{31}}\\) In being made alive the will is passive, and contributes nothing to it; \\(\href{claims.html#claim-13}{P_{13}}\\) The grace that saves can be finally refused; \\(\href{claims.html#claim-15}{P_{15}}\\) Grace is received by faith alone
 
 </div>
 
@@ -234,9 +234,9 @@ refused, and faith alone.
 - (5) \\(\href{claims.html#claim-14}{P_{14}}\\) — God gives the ability to believe, as Adam was made able to stand or fall
 - (6) \\(\href{claims.html#claim-13}{P_{13}}\\) — The grace that saves can be finally refused
 - (7) \\(\href{claims.html#claim-15}{P_{15}}\\) — Grace is received by faith alone
-- (8) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (8) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
 - (9) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-13}{P_{13}} \land \href{claims.html#claim-15}{P_{15}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-13}{P_{13}}\\) The grace that saves can be finally refused; \\(\href{claims.html#claim-15}{P_{15}}\\) Grace is received by faith alone
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-13}{P_{13}} \land \href{claims.html#claim-15}{P_{15}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-13}{P_{13}}\\) The grace that saves can be finally refused; \\(\href{claims.html#claim-15}{P_{15}}\\) Grace is received by faith alone
 
 </div>
 
@@ -500,9 +500,9 @@ The third way, with the ability read as Adam's kind of help.
 - (2) \\(\href{claims.html#claim-9}{P_{9}}\\) — Genesis 2:16–17 — of the tree of the knowledge of good and evil you shall not eat
 - (3) \\(\href{claims.html#claim-14}{P_{14}}\\) — God gives the ability to believe, as Adam was made able to stand or fall
 - (4) \\(\href{claims.html#claim-15}{P_{15}}\\) — Grace is received by faith alone
-- (5) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (6) \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) — *would deny:* The grace that saves brings about the consent it seeks
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-15}{P_{15}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-15}{P_{15}}\\) Grace is received by faith alone
+- (5) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (6) \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) — *would deny:* The grace that saves brings about the consent it seeks
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-15}{P_{15}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-15}{P_{15}}\\) Grace is received by faith alone
 
 </div>
 
@@ -519,9 +519,9 @@ The third way, with the ability read as the saints' kind of help.
 - (2) \\(\href{claims.html#claim-9}{P_{9}}\\) — Genesis 2:16–17 — of the tree of the knowledge of good and evil you shall not eat
 - (3) \\(\href{claims.html#claim-14}{P_{14}}\\) — God gives the ability to believe, as Adam was made able to stand or fall
 - (4) \\(\href{claims.html#claim-15}{P_{15}}\\) — Grace is received by faith alone
-- (5) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (6) \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* The grace that saves brings about the consent it seeks
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-15}{P_{15}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-15}{P_{15}}\\) Grace is received by faith alone
+- (5) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (6) \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The grace that saves brings about the consent it seeks
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-15}{P_{15}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-15}{P_{15}}\\) Grace is received by faith alone
 
 </div>
 
@@ -588,14 +588,14 @@ not bring believing about.
 
 **Why *Reformed (the Canons of Dort)* stands against *The third way (an ability given, received by faith), read as the help without which a person cannot believe, Adam's kind*.**
 
-- **The crux:** \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\), a premise of *Reformed (the Canons of Dort)*.
+- **The crux:** \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\), a premise of *Reformed (the Canons of Dort)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-18}{P_{18}}\\), \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-18}{P_{18}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\), which the break also needs.
-- **Where the rival breaks:** \\(\href{claims.html#claim-14}{P_{14}}\\), \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) cannot be held together with \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) and \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-18}{P_{18}}\\), \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-18}{P_{18}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-23}{P_{23}}\\), \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-14}{P_{14}}\\), \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) cannot be held together with \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) and \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-23}{P_{23}}\\), \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
   - \\(\href{claims.html#claim-3}{P_{3}}\\) Romans 9:16 — it depends not on human will or exertion, but on God, who has mercy — *consensus*: Rom 9:16
-  - \\(\href{claims.html#claim-18}{P_{18}}\\) Romans 9:16 is about God's mercy in saving, not only in choosing a people for history — *well supported*: [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565; [Abasciano 2006](../../bibliography.md#abasciano-corporate-election-romans-9-2006), p. 351
-  - \\(\href{claims.html#claim-23}{P_{23}}\\) Conversion is God's work alone: God regenerates, and the will does nothing to it — *disputed*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, arts. 10–12
+  - \\(\href{claims.html#claim-23}{P_{23}}\\) Romans 9:16 is about God's mercy in saving, not only in choosing a people for history — *well supported*: [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565; [Abasciano 2006](../../bibliography.md#abasciano-corporate-election-romans-9-2006), p. 351
+  - \\(\href{claims.html#claim-28}{P_{28}}\\) Conversion is God's work alone: God regenerates, and the will does nothing to it — *disputed*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, arts. 10–12
   - the step itself — *consensus*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10; *disputed*: [Robertson 1931](../../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8; [Calvin 1854](../../bibliography.md#calvin-galatians-ephesians-1854), pp. 228–229; *disputed*: [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 600; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; *disputed*: [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565; *consensus*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 593; [Calvin 1854](../../bibliography.md#calvin-galatians-ephesians-1854), p. 301; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; *well supported*: [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; *disputed*: [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
 
 <a id="whereTheSaintsKindFalls"></a>
@@ -618,12 +618,12 @@ holds it; a break at a premise, which is what this records, is Trent's.
 
 **Why *Trent (Session VI, canon 4)* stands against *The third way (an ability given, received by faith), read as the help by which a person believes, the saints' kind*.**
 
-- **The crux:** \\(\href{claims.html#claim-22}{P_{22}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\), a premise of *Trent (Session VI, canon 4)*.
+- **The crux:** \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\), a premise of *Trent (Session VI, canon 4)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(\href{claims.html#claim-22}{P_{22}}\\), which the break also needs.
-- **Where the rival breaks:** \\(\href{claims.html#claim-14}{P_{14}}\\), \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) cannot be held together with \\(\href{claims.html#claim-22}{P_{22}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) and \\(\href{claims.html#claim-22}{P_{22}}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-27}{P_{27}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-14}{P_{14}}\\), \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) cannot be held together with \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) and \\(\href{claims.html#claim-27}{P_{27}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(\href{claims.html#claim-22}{P_{22}}\\) The free will, moved by God, can refuse its assent if it wishes — *disputed*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - \\(\href{claims.html#claim-27}{P_{27}}\\) The free will, moved by God, can refuse its assent if it wishes — *disputed*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - the step itself — *consensus*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10; *disputed*: [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45; *disputed*: [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
 
 <a id="whatTheAbilityIs"></a>
@@ -654,36 +654,36 @@ which kind of help God gives, and which side depends on the answer.
 
 **Every reading of \\(\href{claims.html#claim-14}{P_{14}}\\), answered.** *The third way (an ability given, received by faith)* holds \\(\href{claims.html#claim-14}{P_{14}}\\). It is read 2 ways here, and each reading is checked; none can be left out.
 
-**1. Read as the help without which a person cannot believe, Adam's kind.** The claim commits *The third way (an ability given, received by faith)* to \\(\lnot \href{claims.html#claim-25}{P_{25}}\\) — so read by [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397; [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 485 (*disputed*).
+**1. Read as the help without which a person cannot believe, Adam's kind.** The claim commits *The third way (an ability given, received by faith)* to \\(\lnot \href{claims.html#claim-30}{P_{30}}\\) — so read by [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 397; [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 485 (*disputed*).
 
 Against *Reformed (the Canons of Dort)*, it cannot be held. Where it breaks:
 
 **Why *Reformed (the Canons of Dort)* stands against *The third way (an ability given, received by faith), read as the help without which a person cannot believe, Adam's kind*.**
 
-- **The crux:** \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\), a premise of *Reformed (the Canons of Dort)*.
+- **The crux:** \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\), a premise of *Reformed (the Canons of Dort)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-18}{P_{18}}\\), \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-18}{P_{18}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\), which the break also needs.
-- **Where the rival breaks:** \\(\href{claims.html#claim-14}{P_{14}}\\), \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) cannot be held together with \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) and \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-18}{P_{18}}\\), \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-18}{P_{18}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-23}{P_{23}}\\), \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-14}{P_{14}}\\), \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) cannot be held together with \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) and \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-23}{P_{23}}\\), \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
   - \\(\href{claims.html#claim-3}{P_{3}}\\) Romans 9:16 — it depends not on human will or exertion, but on God, who has mercy — *consensus*: Rom 9:16
-  - \\(\href{claims.html#claim-18}{P_{18}}\\) Romans 9:16 is about God's mercy in saving, not only in choosing a people for history — *well supported*: [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565; [Abasciano 2006](../../bibliography.md#abasciano-corporate-election-romans-9-2006), p. 351
-  - \\(\href{claims.html#claim-23}{P_{23}}\\) Conversion is God's work alone: God regenerates, and the will does nothing to it — *disputed*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, arts. 10–12
+  - \\(\href{claims.html#claim-23}{P_{23}}\\) Romans 9:16 is about God's mercy in saving, not only in choosing a people for history — *well supported*: [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565; [Abasciano 2006](../../bibliography.md#abasciano-corporate-election-romans-9-2006), p. 351
+  - \\(\href{claims.html#claim-28}{P_{28}}\\) Conversion is God's work alone: God regenerates, and the will does nothing to it — *disputed*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, arts. 10–12
   - the step itself — *consensus*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10; *disputed*: [Robertson 1931](../../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8; [Calvin 1854](../../bibliography.md#calvin-galatians-ephesians-1854), pp. 228–229; *disputed*: [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 600; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; *disputed*: [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565; *consensus*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 593; [Calvin 1854](../../bibliography.md#calvin-galatians-ephesians-1854), p. 301; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; *well supported*: [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; *disputed*: [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
 
 Against *Remonstrant (the Five Articles, 1610)*, it is not reached: *Remonstrant (the Five Articles, 1610)* holds, and can be held together with it.
 
-**2. Read as the help by which a person believes, the saints' kind.** The claim commits *The third way (an ability given, received by faith)* to \\(\href{claims.html#claim-25}{P_{25}}\\) — so read by [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 485; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 591 (*disputed*).
+**2. Read as the help by which a person believes, the saints' kind.** The claim commits *The third way (an ability given, received by faith)* to \\(\href{claims.html#claim-30}{P_{30}}\\) — so read by [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 485; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 591 (*disputed*).
 
 Against *Trent (Session VI, canon 4)*, it cannot be held. Where it breaks:
 
 **Why *Trent (Session VI, canon 4)* stands against *The third way (an ability given, received by faith), read as the help by which a person believes, the saints' kind*.**
 
-- **The crux:** \\(\href{claims.html#claim-22}{P_{22}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\), a premise of *Trent (Session VI, canon 4)*.
+- **The crux:** \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\), a premise of *Trent (Session VI, canon 4)*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(\href{claims.html#claim-22}{P_{22}}\\), which the break also needs.
-- **Where the rival breaks:** \\(\href{claims.html#claim-14}{P_{14}}\\), \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) cannot be held together with \\(\href{claims.html#claim-22}{P_{22}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) and \\(\href{claims.html#claim-22}{P_{22}}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-27}{P_{27}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-14}{P_{14}}\\), \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) cannot be held together with \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) and \\(\href{claims.html#claim-27}{P_{27}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(\href{claims.html#claim-22}{P_{22}}\\) The free will, moved by God, can refuse its assent if it wishes — *disputed*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+  - \\(\href{claims.html#claim-27}{P_{27}}\\) The free will, moved by God, can refuse its assent if it wishes — *disputed*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - the step itself — *consensus*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10; *disputed*: [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45; *disputed*: [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.10 a.4 ad 3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
 
 Against *Reformed (the Canons of Dort)*, it is not reached: *Reformed (the Canons of Dort)* holds, and can be held together with it.

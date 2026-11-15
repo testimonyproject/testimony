@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **316 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **321 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -299,6 +299,8 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `objection_establishes` | `Establishes objection` | **The objection from the Spirit's resistance is valid on its own grounds.** Grant the texts of resistance and any one of its three readings, and the grace that saves is not … |
 | `third_way_leaves_resistibility_open` | `Independent thirdWay.premises (p Claim.graceIsEffectualOfItself)` | **The third way leaves resistibility open.** Grant everything it says: Adam made able to stand or fall, the ability to believe given by God, faith alone, and that grace which can … |
 | `final_refusal_cannot_be_held_with_the_scriptures` | `¬Satisfiable (reformed.held ++ [p Claim.savingGraceCanBeFinallyRefused]) ∧ ¬Satisfiable (ephesiansStrand.held ++ [p Claim.savingGraceCanBeFinallyRefused]) ∧ ¬Satisfiable (romansStrand.held ++ [p Claim.savingGraceCanBeFinallyRefused])` | **Granted the Scriptures as the Reformed read them, final refusal has no place.** Suppose the grace that saves can be finally refused. |
+| `thomists_reach_effectual_grace` | `Entails thomist.premises (p Claim.graceIsEffectualOfItself)` | **The Thomists' premises reach grace effectual of itself**, the second part of sola gratia. |
+| `thomists_leave_passivity_open` | `Independent thomist.premises (p Claim.willIsPassiveInRegeneration)` | **Granted the Thomists' premises, the will's passivity neither follows nor fails.** They hold that God alone regenerates and that the will is not merely passive. |
 | `only_grace_prevails` | `Framework.grounded solaGratiaDispute.defeats = Solver.toSet [Party.grace]` | **Only what every party holds prevails: salvation is by grace.** What the dispute settles before any choice between rivals is that, and nothing more. |
 | `reformed_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.reformed` | **Dort can be defended**, together with what every party holds and the third way: some maximal defensible position, one no other party can join, holds all three. |
 | `reformed_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.reformed` | Nor is Dort forced. |
@@ -312,6 +314,9 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `third_way_defensible_with_dort` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thirdWay` | **The third way can be defended with Dort**, against Trent, by the position shown above. |
 | `third_way_defensible_with_wesley` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thirdWay` | It can also be defended with Wesley, the Lutherans and the Remonstrants, against both Dort and Trent, by the position shown above. |
 | `third_way_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.thirdWay` | Nor is the third way forced. |
+| `dort_stands_with_the_thomists` | `solaGratiaDispute.StandTogether [Party.reformed, Party.thomist]` | **Dort and the Thomists stand together**: one reading satisfies every premise and every conclusion of both, Garrigou-Lagrange's, with "not merely passive" taken as the will … |
+| `thomist_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thomist` | **The Thomists can be defended, with Dort**: some maximal defensible position holds both, with what every party holds. |
+| `thomist_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.thomist` | Nor are the Thomists forced. |
 
 ### [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)
 
@@ -891,8 +896,15 @@ that saves can be finally refused, has no model beside the Reformed reading of
 either text, with the claims read as they mean
 (`final_refusal_cannot_be_held_with_the_scriptures`). Weighed as one dispute,
 only salvation by grace is settled before any choice (`only_grace_prevails`).
-The Thomist position, which may reach the sharpened conclusion too, is not yet
-encoded.
+The Thomists were expected to reach the whole sharpened conclusion, and they
+reach part of it. They reach grace effectual of itself
+(`thomists_reach_effectual_grace`), at a step the Molinists dispute. On the
+will's passivity their premises decide nothing (`thomists_leave_passivity_open`),
+because Garrigou-Lagrange's "not merely passive" places the will's consent after
+grace in the order of efficient cause, and a dilemma answers both readings of
+it. Weighed, Dort and the Thomists stand together
+(`dort_stands_with_the_thomists`), and the Thomists and Trent on the Molinist
+reading stand off, as Rome left them in 1607.
 
 **And one finding about the method rather than about an argument.** `Entails`
 quantifies over the valuations satisfying the premises, so a premise set with no
@@ -919,8 +931,8 @@ tradition, three objections that do not reduce to one another, the two answers
 to the self-refutation objection, and a dispute over what Jesus' rebuke of
 tradition in Mark 7 decides. *Sola gratia* is encoded with Trent and the
 Remonstrants as its rivals, and the Lutherans, Wesley and a third way between
-them, weighed as one dispute ([#24]); what it lacks is a Thomist position and
-John 6:44 as a third strand.
+them, and the Thomists, weighed as one dispute ([#24]); what it lacks is John
+6:44 as a third strand and the perseverance of the saints.
 
 **The rest of the Triune God** ([#216]). The procession and the order texts are
 encoded; LST §3's other graded claims are not. They are that each person is God

@@ -3737,6 +3737,74 @@ it was read; its words are known here as Grudem quotes them (2016). -/
   , publisher := "Kregel Publications"
   , place := some "Grand Rapids, MI" }
 
+/-- Garrigou-Lagrange's commentary on Aquinas's treatise on grace (*Summa*
+I-II qq. 109–114), the Thomist school's case for grace "efficacious of itself,
+intrinsically". Read in the EWTN library's reproduction, which has no page
+numbers; cited by chapter and section. Cited for chapter VII's reply to the
+objection from Trent's canon 4: "the contrary power remains, but under
+efficacious grace man never wills to resist, nor does he". -/
+@[bib_entry] def garrigouLagrangeGrace : BibEntry := .book
+  { core :=
+      { key := "garrigou-lagrange-grace-1952"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "Réginald" "Garrigou-Lagrange"]
+          , translators := [.corporate "Dominican Nuns, Corpus Christi Monastery, Menlo Park"] }
+      , title := "Grace"
+      , subtitle := some "Commentary on the Summa theologica of St. Thomas, Ia IIae, q. 109-14"
+      , year := some { value := 1952 }
+      , identifiers :=
+          [ .url ("https://www.ewtn.com/catholicism/library/" ++
+                  "grace-commentary-on-the-summa-theologica-of-st-thomas-10060")
+                 (some "2026-11-15") ]
+      , note := some "Translation of De gratia. LCCN 52013198; no ISBN." }
+  , publisher := "B. Herder Book Co."
+  , place := some "St. Louis" }
+
+/-- Astrain's article on the Congregatio de Auxiliis, the papal commission on
+grace and free will (1598–1607), in the *Catholic Encyclopedia*, volume 4
+(1908). Cited for how it ended: Paul V's decree of 5 September 1607 "allowed
+each party to defend its own doctrine, enjoined each from censoring or
+condemning the opposite opinion". Read at New Advent; cited whole. -/
+@[bib_entry] def astrainCongregatioDeAuxiliis : BibEntry := .inCollection
+  { core :=
+      { key := "astrain-congregatio-de-auxiliis-1908"
+      , role := .witness
+      , contributors := { authors := [.person "Antonio" "Astrain"] }
+      , title := "Congregatio de Auxiliis"
+      , year := some { value := 1908 }
+      , identifiers :=
+          [ .url "https://www.newadvent.org/cathen/04238a.htm" (some "2026-11-15") ]
+      , note := some "Volume 4." }
+  , containerTitle := "The Catholic Encyclopedia"
+  , containerEditors :=
+      [ .person "Charles G." "Herbermann", .person "Edward A." "Pace", .person "Condé B." "Pallen"
+      , .person "Thomas J." "Shahan", .person "John J." "Wynne" ]
+  , publisher := "Robert Appleton Company"
+  , place := some "New York" }
+
+/-- Pohle's article on Molinism in the *Catholic Encyclopedia*, volume 10
+(1911), reporting the school's position: "the infallible success of efficacious
+grace is not to be ascribed to its own intrinsic nature, but to the Divine
+scientia media", the will "by its consent" rendering grace efficacious. Read at
+New Advent; cited whole. -/
+@[bib_entry] def pohleMolinism : BibEntry := .inCollection
+  { core :=
+      { key := "pohle-molinism-1911"
+      , role := .witness
+      , contributors := { authors := [.person "Joseph" "Pohle"] }
+      , title := "Molinism"
+      , year := some { value := 1911 }
+      , identifiers :=
+          [ .url "https://www.newadvent.org/cathen/10437a.htm" (some "2026-11-15") ]
+      , note := some "Volume 10." }
+  , containerTitle := "The Catholic Encyclopedia"
+  , containerEditors :=
+      [ .person "Charles G." "Herbermann", .person "Edward A." "Pace", .person "Condé B." "Pallen"
+      , .person "Thomas J." "Shahan", .person "John J." "Wynne" ]
+  , publisher := "Robert Appleton Company"
+  , place := some "New York" }
+
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'

@@ -50,6 +50,7 @@
 - [Sola gratia — Ephesians 2:8–9 and Romans 9:16](./arguments/sola-gratia.md)
   - [Two routes: Ephesians 2 and Romans 9](./arguments/sola-gratia/two-routes.md)
   - [Freedom to refuse, and the ability God gives](./arguments/sola-gratia/freedom-to-refuse.md)
+  - [Aquinas and the Catholic schools](./arguments/sola-gratia/aquinas.md)
   - [Weighing the positions](./arguments/sola-gratia/weighing.md)
   - [Appendix: the claims and their sources](./arguments/sola-gratia/claims.md)
 - [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)

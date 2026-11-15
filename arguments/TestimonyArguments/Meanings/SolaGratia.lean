@@ -55,6 +55,8 @@ def all : List Claim :=
   , .ephesians4_30, .thessalonians5_19, .matthew12_31to32, .genesis2_16to17
   , .theSpiritIsResisted, .grievingCanLoseTheSpirit, .blasphemyIsFinalRefusalOfGrace
   , .savingGraceCanBeFinallyRefused, .abilityToBelieveIsGiven, .faithAloneReceivesGrace
+  , .operatingGraceMovesTheWill, .godIntendsWhileMoving, .willIsNotMerelyPassive
+  , .sufficientGraceIsResisted, .justifyingGraceCanBeLost
   , .zechariah1_3WithLamentations5_21, .toutoRefersToTheWhole, .romans9_16ConcernsSalvation
   , .faithIsGodsGift, .acts7_51ResistsSavingGrace, .freeWillCooperatesByAssenting
   , .freeWillCanDissent, .conversionIsGodsWorkAlone, .salvationIsByGrace
@@ -86,8 +88,8 @@ instance meanings : HasMeanings Claim :=
   { argument := "Sola gratia — Ephesians 2:8–9 and Romans 9:16", all
   , complete := all_complete, means }
 
-/-- **Eight of the 26 atoms are analysed**: the ones the dispute turns on. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (8, 26) := by decide
+/-- **Eight of the 31 atoms are analysed**: the ones the dispute turns on. -/
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (8, 31) := by decide
 
 /-- **The sola gratia joins**: each pair of claims whose meanings exclude or
 entail one another, listed, and proved to be exactly what the meanings contain.

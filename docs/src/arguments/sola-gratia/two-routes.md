@@ -91,7 +91,7 @@ Remonstrants' the second.
 
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\)
+- \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-31}{P_{31}}\\)
 
 </div>
 
@@ -105,7 +105,7 @@ and not earned.
 
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
 
 </div>
 
@@ -120,7 +120,7 @@ that faith is the gift of God, but that salvation is given to us by God".
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-17}{P_{17}}) \rightarrow \href{claims.html#claim-19}{P_{19}}\\) — *would give:* Faith itself is God's gift
+- \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-22}{P_{22}}) \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Faith itself is God's gift
 
 </div>
 
@@ -137,7 +137,7 @@ accepted or rejected at his pleasure, but because it is in reality conferred"
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- \\((\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
 
 </div>
 
@@ -152,7 +152,7 @@ mercy goes to believers and can be refused.
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-18}{P_{18}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
 
 </div>
 
@@ -163,11 +163,42 @@ From God's work alone to the third part of the conclusion: the will is
 passive in being made alive. Rated `wellSupported`: the Lutherans, who part from
 Dort on the next step, grant this one. It is taken as what Dort means by the
 phrase: the new life is "a making alive, which God works in us without our aid"
-(III/IV, article 12).
+(III/IV, article 12). "Passive" here means that the will is not the agent of its
+new life. Garrigou-Lagrange grants God's work alone and holds the will "does not
+remain passive" under operating grace, but in another sense: its consent
+follows grace "in the genus or order of formal, efficient, and final cause". The
+dilemma over the Thomists' claim sets the two senses apart
+(`whatNotMerelyPassiveMeans`).
 
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+- \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+
+</div>
+
+<a id="operatingGraceStep"></a>
+**`operatingGraceStep`**
+
+**Aquinas on operating grace.** In converting grace God is the sole mover of
+the will, so God alone is the one who regenerates.
+
+<div class="testimony-derivation">
+
+- \\(\href{claims.html#claim-16}{P_{16}} \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+
+</div>
+
+<a id="efficacyStep"></a>
+**`efficacyStep`**
+
+**Aquinas on God's intention.** If God moves the will intending that it
+attain grace, the grace brings about what it is given for. Rated `disputed`: the
+Molinists grant the intention and the infallible result, and ascribe it to the
+consent God foreknows, not to the grace.
+
+<div class="testimony-derivation">
+
+- \\(\href{claims.html#claim-17}{P_{17}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The grace that saves brings about the consent it seeks
 
 </div>
 
@@ -181,7 +212,7 @@ holds grace resistible all the same.
 
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* The grace that saves brings about the consent it seeks
+- \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The grace that saves brings about the consent it seeks
 
 </div>
 
@@ -208,7 +239,7 @@ Remonstrants' fourth article, made explicit.
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-20}{P_{20}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
+- \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-25}{P_{25}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
 
 </div>
 
@@ -249,7 +280,7 @@ holds that in grace's first effect the mind "is moved and does not move".
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \lnot \href{claims.html#claim-26}{P_{26}}\\) — *would deny:* In being made alive the will is passive, and contributes nothing to it
+- \\((\href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-26}{P_{26}}) \rightarrow \lnot \href{claims.html#claim-31}{P_{31}}\\) — *would deny:* In being made alive the will is passive, and contributes nothing to it
 
 </div>
 
@@ -263,7 +294,7 @@ holds that the man God moves to grace attains it infallibly.
 
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-22}{P_{22}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) — *would deny:* The grace that saves brings about the consent it seeks
+- \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) — *would deny:* The grace that saves brings about the consent it seeks
 
 </div>
 
@@ -278,8 +309,8 @@ the conclusion and nothing more.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 11:6 — if it is by grace, it is no longer on the basis of works
-- (2) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}}\\) — *at issue:* Salvation is by grace and not earned: grace goes before every saving act
+- (2) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}}\\) — *at issue:* Salvation is by grace and not earned: grace goes before every saving act
 
 </div>
 
@@ -293,9 +324,9 @@ conclusion.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-2}{P_{2}}\\) — Ephesians 2:8–9 — by grace you have been saved through faith, and this is not your own doing; it is the gift of God
-- (2) \\(\href{claims.html#claim-17}{P_{17}}\\) — In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith
-- (3) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-17}{P_{17}}) \rightarrow \href{claims.html#claim-19}{P_{19}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-19}{P_{19}}\\) — *at issue:* Faith itself is God's gift
+- (2) \\(\href{claims.html#claim-22}{P_{22}}\\) — In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith
+- (3) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-22}{P_{22}}) \rightarrow \href{claims.html#claim-24}{P_{24}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}}\\) — *at issue:* Faith itself is God's gift
 
 </div>
 
@@ -308,8 +339,8 @@ Ephesians 2:1–5; that faith is God's gift comes from the Ephesians line above.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:1–5 — dead in trespasses, God made us alive together with Christ
-- (2) \\((\href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-23}{P_{23}}\\) — *at issue:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (2) \\((\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-28}{P_{28}}\\) — *at issue:* Conversion is God's work alone: God regenerates, and the will does nothing to it
 
 </div>
 
@@ -322,9 +353,9 @@ without the Ephesians grammar.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-3}{P_{3}}\\) — Romans 9:16 — it depends not on human will or exertion, but on God, who has mercy
-- (2) \\(\href{claims.html#claim-18}{P_{18}}\\) — Romans 9:16 is about God's mercy in saving, not only in choosing a people for history
-- (3) \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-18}{P_{18}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-23}{P_{23}}\\) — *at issue:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (2) \\(\href{claims.html#claim-23}{P_{23}}\\) — Romans 9:16 is about God's mercy in saving, not only in choosing a people for history
+- (3) \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-28}{P_{28}}\\) — *at issue:* Conversion is God's work alone: God regenerates, and the will does nothing to it
 
 </div>
 
@@ -336,10 +367,10 @@ first half of canon 4.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-16}{P_{16}}\\) — Zechariah 1:3 ("return to me, and I will return to you") with Lamentations 5:21 ("restore us to yourself, O Lord")
-- (2) \\(\href{claims.html#claim-21}{P_{21}}\\) — The free will, moved by God, cooperates by assenting to God's call
-- (3) \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \lnot \href{claims.html#claim-26}{P_{26}}\\)
-- \\(\vdash\\) \\(\lnot \href{claims.html#claim-26}{P_{26}}\\) — *at issue, the denial of:* In being made alive the will is passive, and contributes nothing to it
+- (1) \\(\href{claims.html#claim-21}{P_{21}}\\) — Zechariah 1:3 ("return to me, and I will return to you") with Lamentations 5:21 ("restore us to yourself, O Lord")
+- (2) \\(\href{claims.html#claim-26}{P_{26}}\\) — The free will, moved by God, cooperates by assenting to God's call
+- (3) \\((\href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-26}{P_{26}}) \rightarrow \lnot \href{claims.html#claim-31}{P_{31}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-31}{P_{31}}\\) — *at issue, the denial of:* In being made alive the will is passive, and contributes nothing to it
 
 </div>
 
@@ -350,9 +381,9 @@ first half of canon 4.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-22}{P_{22}}\\) — The free will, moved by God, can refuse its assent if it wishes
-- (2) \\(\href{claims.html#claim-22}{P_{22}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\)
-- \\(\vdash\\) \\(\lnot \href{claims.html#claim-25}{P_{25}}\\) — *at issue, the denial of:* The grace that saves brings about the consent it seeks
+- (1) \\(\href{claims.html#claim-27}{P_{27}}\\) — The free will, moved by God, can refuse its assent if it wishes
+- (2) \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-30}{P_{30}}\\) — *at issue, the denial of:* The grace that saves brings about the consent it seeks
 
 </div>
 
@@ -381,8 +412,8 @@ grace that saves, so that grace can be finally refused.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-20}{P_{20}}\\) — What Stephen's hearers resisted in Acts 7:51 was the grace that saves
-- (2) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-20}{P_{20}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\)
+- (1) \\(\href{claims.html#claim-25}{P_{25}}\\) — What Stephen's hearers resisted in Acts 7:51 was the grace that saves
+- (2) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-25}{P_{25}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-13}{P_{13}}\\) — *at issue:* The grace that saves can be finally refused
 
 </div>
@@ -414,6 +445,34 @@ grace that saves, so that grace can be finally refused.
 
 </div>
 
+<a id="operatingGraceLine"></a>
+**`operatingGraceLine`** — Operating grace: the mind is moved and does not move (Aquinas)
+
+**Operating grace** (Aquinas, I-II q.111 a.2): God alone is the one who
+regenerates.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-16}{P_{16}}\\) — In converting grace God is the sole mover: the mind is moved and does not move
+- (2) \\(\href{claims.html#claim-16}{P_{16}} \rightarrow \href{claims.html#claim-28}{P_{28}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-28}{P_{28}}\\) — *at issue:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+
+</div>
+
+<a id="efficacyLine"></a>
+**`efficacyLine`** — God's intention in moving: grace attained infallibly (Aquinas)
+
+**God's intention in moving** (Aquinas, I-II q.112 a.3): the grace that
+saves brings about the consent it seeks.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-17}{P_{17}}\\) — God moves the will intending that it attain grace
+- (2) \\(\href{claims.html#claim-17}{P_{17}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-30}{P_{30}}\\) — *at issue:* The grace that saves brings about the consent it seeks
+
+</div>
+
 #### Shared grounds
 
 <a id="reformedShared"></a>
@@ -426,7 +485,7 @@ saves. The texts of resistance themselves are a line the Reformed walk too.
 
 <div class="testimony-derivation">
 
-- (1) \\(\lnot \href{claims.html#claim-20}{P_{20}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
+- (1) \\(\lnot \href{claims.html#claim-25}{P_{25}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
 
 </div>
 
@@ -438,8 +497,8 @@ the conclusion's last two parts, one step each.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
-- (2) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* The grace that saves brings about the consent it seeks
+- (1) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+- (2) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The grace that saves brings about the consent it seeks
 
 </div>
 
@@ -466,14 +525,14 @@ if it wishes.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 11:6 — if it is by grace, it is no longer on the basis of works
-- (2) \\(\href{claims.html#claim-16}{P_{16}}\\) — Zechariah 1:3 ("return to me, and I will return to you") with Lamentations 5:21 ("restore us to yourself, O Lord")
-- (3) \\(\href{claims.html#claim-21}{P_{21}}\\) — The free will, moved by God, cooperates by assenting to God's call
-- (4) \\(\href{claims.html#claim-22}{P_{22}}\\) — The free will, moved by God, can refuse its assent if it wishes
+- (2) \\(\href{claims.html#claim-21}{P_{21}}\\) — Zechariah 1:3 ("return to me, and I will return to you") with Lamentations 5:21 ("restore us to yourself, O Lord")
+- (3) \\(\href{claims.html#claim-26}{P_{26}}\\) — The free will, moved by God, cooperates by assenting to God's call
+- (4) \\(\href{claims.html#claim-27}{P_{27}}\\) — The free will, moved by God, can refuse its assent if it wishes
 - (5) \\(\lnot \href{claims.html#claim-15}{P_{15}}\\) — *denied:* Grace is received by faith alone
-- (6) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (7) \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \lnot \href{claims.html#claim-26}{P_{26}}\\) — *would deny:* In being made alive the will is passive, and contributes nothing to it
-- (8) \\(\href{claims.html#claim-22}{P_{22}} \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) — *would deny:* The grace that saves brings about the consent it seeks
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
+- (6) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (7) \\((\href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-26}{P_{26}}) \rightarrow \lnot \href{claims.html#claim-31}{P_{31}}\\) — *would deny:* In being made alive the will is passive, and contributes nothing to it
+- (8) \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) — *would deny:* The grace that saves brings about the consent it seeks
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-31}{P_{31}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-30}{P_{30}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-31}{P_{31}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
 
@@ -496,16 +555,16 @@ refuses.
 - (2) \\(\href{claims.html#claim-5}{P_{5}}\\) — Acts 7:51 — you always resist the Holy Spirit
 - (3) \\(\href{claims.html#claim-6}{P_{6}}\\) — Ephesians 4:30 — do not grieve the Holy Spirit of God, by whom you were sealed
 - (4) \\(\href{claims.html#claim-7}{P_{7}}\\) — 1 Thessalonians 5:19 — do not quench the Spirit
-- (5) \\(\href{claims.html#claim-20}{P_{20}}\\) — What Stephen's hearers resisted in Acts 7:51 was the grace that saves
+- (5) \\(\href{claims.html#claim-25}{P_{25}}\\) — What Stephen's hearers resisted in Acts 7:51 was the grace that saves
 - (6) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:1–5 — dead in trespasses, God made us alive together with Christ
 - (7) \\(\href{claims.html#claim-2}{P_{2}}\\) — Ephesians 2:8–9 — by grace you have been saved through faith, and this is not your own doing; it is the gift of God
-- (8) \\(\href{claims.html#claim-19}{P_{19}}\\) — Faith itself is God's gift
+- (8) \\(\href{claims.html#claim-24}{P_{24}}\\) — Faith itself is God's gift
 - (9) \\(\href{claims.html#claim-3}{P_{3}}\\) — Romans 9:16 — it depends not on human will or exertion, but on God, who has mercy
-- (10) \\(\href{claims.html#claim-18}{P_{18}}\\) — Romans 9:16 is about God's mercy in saving, not only in choosing a people for history
-- (11) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (10) \\(\href{claims.html#claim-23}{P_{23}}\\) — Romans 9:16 is about God's mercy in saving, not only in choosing a people for history
+- (11) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
 - (12) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
-- (13) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-20}{P_{20}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
+- (13) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-25}{P_{25}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-31}{P_{31}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-30}{P_{30}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-31}{P_{31}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
 
@@ -528,13 +587,13 @@ alone.
 - (3) \\(\href{claims.html#claim-6}{P_{6}}\\) — Ephesians 4:30 — do not grieve the Holy Spirit of God, by whom you were sealed
 - (4) \\(\href{claims.html#claim-7}{P_{7}}\\) — 1 Thessalonians 5:19 — do not quench the Spirit
 - (5) \\(\href{claims.html#claim-11}{P_{11}}\\) — Those who obstinately resist the Spirit can grieve and lose him
-- (6) \\(\href{claims.html#claim-23}{P_{23}}\\) — Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (6) \\(\href{claims.html#claim-28}{P_{28}}\\) — Conversion is God's work alone: God regenerates, and the will does nothing to it
 - (7) \\(\href{claims.html#claim-15}{P_{15}}\\) — Grace is received by faith alone
-- (8) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (8) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
 - (9) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
 - (10) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-11}{P_{11}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
-- (11) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
+- (11) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-31}{P_{31}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-30}{P_{30}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-31}{P_{31}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
 
@@ -556,9 +615,9 @@ that grace can be resisted or yielded to; and it is received by faith alone.
 - (5) \\(\href{claims.html#claim-14}{P_{14}}\\) — God gives the ability to believe, as Adam was made able to stand or fall
 - (6) \\(\href{claims.html#claim-13}{P_{13}}\\) — The grace that saves can be finally refused
 - (7) \\(\href{claims.html#claim-15}{P_{15}}\\) — Grace is received by faith alone
-- (8) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (8) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
 - (9) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-31}{P_{31}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-30}{P_{30}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-31}{P_{31}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
 
@@ -581,8 +640,8 @@ nothing that would decide whether the grace that saves can be finally refused.
 - (2) \\(\href{claims.html#claim-9}{P_{9}}\\) — Genesis 2:16–17 — of the tree of the knowledge of good and evil you shall not eat
 - (3) \\(\href{claims.html#claim-14}{P_{14}}\\) — God gives the ability to believe, as Adam was made able to stand or fall
 - (4) \\(\href{claims.html#claim-15}{P_{15}}\\) — Grace is received by faith alone
-- (5) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-15}{P_{15}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-15}{P_{15}}\\) Grace is received by faith alone
+- (5) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-15}{P_{15}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-15}{P_{15}}\\) Grace is received by faith alone
 
 </div>
 
@@ -606,12 +665,12 @@ join them (`TestimonyArguments.Meanings.SolaGratia`).
 - (1) \\(\href{claims.html#claim-5}{P_{5}}\\) — Acts 7:51 — you always resist the Holy Spirit
 - (2) \\(\href{claims.html#claim-6}{P_{6}}\\) — Ephesians 4:30 — do not grieve the Holy Spirit of God, by whom you were sealed
 - (3) \\(\href{claims.html#claim-7}{P_{7}}\\) — 1 Thessalonians 5:19 — do not quench the Spirit
-- (4) \\(\href{claims.html#claim-20}{P_{20}}\\) — What Stephen's hearers resisted in Acts 7:51 was the grace that saves
+- (4) \\(\href{claims.html#claim-25}{P_{25}}\\) — What Stephen's hearers resisted in Acts 7:51 was the grace that saves
 - (5) \\(\href{claims.html#claim-11}{P_{11}}\\) — Those who obstinately resist the Spirit can grieve and lose him
 - (6) \\(\href{claims.html#claim-8}{P_{8}}\\) — Matthew 12:31–32 — the blasphemy against the Spirit will not be forgiven
 - (7) \\(\href{claims.html#claim-12}{P_{12}}\\) — The blasphemy against the Spirit is impenitence to the end: grace refused till death
 - (8) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
-- (9) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-20}{P_{20}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\)
+- (9) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-25}{P_{25}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\)
 - (10) \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-11}{P_{11}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\)
 - (11) \\((\href{claims.html#claim-8}{P_{8}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-13}{P_{13}}\\) — *at issue:* The grace that saves can be finally refused
@@ -634,22 +693,22 @@ the conclusion, and the Reformed answer to Acts 7:51.
 
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 11:6 — if it is by grace, it is no longer on the basis of works
 - (2) \\(\href{claims.html#claim-2}{P_{2}}\\) — Ephesians 2:8–9 — by grace you have been saved through faith, and this is not your own doing; it is the gift of God
-- (3) \\(\href{claims.html#claim-17}{P_{17}}\\) — In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith
+- (3) \\(\href{claims.html#claim-22}{P_{22}}\\) — In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith
 - (4) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:1–5 — dead in trespasses, God made us alive together with Christ
 - (5) \\(\href{claims.html#claim-3}{P_{3}}\\) — Romans 9:16 — it depends not on human will or exertion, but on God, who has mercy
-- (6) \\(\href{claims.html#claim-18}{P_{18}}\\) — Romans 9:16 is about God's mercy in saving, not only in choosing a people for history
+- (6) \\(\href{claims.html#claim-23}{P_{23}}\\) — Romans 9:16 is about God's mercy in saving, not only in choosing a people for history
 - (7) \\(\href{claims.html#claim-5}{P_{5}}\\) — Acts 7:51 — you always resist the Holy Spirit
 - (8) \\(\href{claims.html#claim-6}{P_{6}}\\) — Ephesians 4:30 — do not grieve the Holy Spirit of God, by whom you were sealed
 - (9) \\(\href{claims.html#claim-7}{P_{7}}\\) — 1 Thessalonians 5:19 — do not quench the Spirit
-- (10) \\(\lnot \href{claims.html#claim-20}{P_{20}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
-- (11) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (12) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-17}{P_{17}}) \rightarrow \href{claims.html#claim-19}{P_{19}}\\) — *would give:* Faith itself is God's gift
-- (13) \\((\href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
-- (14) \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-18}{P_{18}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (10) \\(\lnot \href{claims.html#claim-25}{P_{25}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
+- (11) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (12) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-22}{P_{22}}) \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Faith itself is God's gift
+- (13) \\((\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (14) \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
 - (15) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
-- (16) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
-- (17) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* The grace that saves brings about the consent it seeks
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
+- (16) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+- (17) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The grace that saves brings about the consent it seeks
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-31}{P_{31}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-30}{P_{30}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-31}{P_{31}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
 
@@ -667,15 +726,15 @@ The Ephesians strand alone: Romans 11:6, Ephesians 2 with its reading of
 
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 11:6 — if it is by grace, it is no longer on the basis of works
 - (2) \\(\href{claims.html#claim-2}{P_{2}}\\) — Ephesians 2:8–9 — by grace you have been saved through faith, and this is not your own doing; it is the gift of God
-- (3) \\(\href{claims.html#claim-17}{P_{17}}\\) — In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith
+- (3) \\(\href{claims.html#claim-22}{P_{22}}\\) — In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith
 - (4) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:1–5 — dead in trespasses, God made us alive together with Christ
-- (5) \\(\lnot \href{claims.html#claim-20}{P_{20}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
-- (6) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (7) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-17}{P_{17}}) \rightarrow \href{claims.html#claim-19}{P_{19}}\\) — *would give:* Faith itself is God's gift
-- (8) \\((\href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
-- (9) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
-- (10) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* The grace that saves brings about the consent it seeks
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
+- (5) \\(\lnot \href{claims.html#claim-25}{P_{25}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
+- (6) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (7) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-22}{P_{22}}) \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Faith itself is God's gift
+- (8) \\((\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (9) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+- (10) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The grace that saves brings about the consent it seeks
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-31}{P_{31}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-30}{P_{30}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-31}{P_{31}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
 
@@ -691,13 +750,13 @@ salvation.
 
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 11:6 — if it is by grace, it is no longer on the basis of works
 - (2) \\(\href{claims.html#claim-3}{P_{3}}\\) — Romans 9:16 — it depends not on human will or exertion, but on God, who has mercy
-- (3) \\(\href{claims.html#claim-18}{P_{18}}\\) — Romans 9:16 is about God's mercy in saving, not only in choosing a people for history
-- (4) \\(\lnot \href{claims.html#claim-20}{P_{20}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
-- (5) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (6) \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-18}{P_{18}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
-- (7) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
-- (8) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* The grace that saves brings about the consent it seeks
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
+- (3) \\(\href{claims.html#claim-23}{P_{23}}\\) — Romans 9:16 is about God's mercy in saving, not only in choosing a people for history
+- (4) \\(\lnot \href{claims.html#claim-25}{P_{25}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
+- (5) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (6) \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (7) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+- (8) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The grace that saves brings about the consent it seeks
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-31}{P_{31}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-30}{P_{30}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-31}{P_{31}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
 
@@ -716,13 +775,13 @@ not read.
 
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 11:6 — if it is by grace, it is no longer on the basis of works
 - (2) \\(\href{claims.html#claim-2}{P_{2}}\\) — Ephesians 2:8–9 — by grace you have been saved through faith, and this is not your own doing; it is the gift of God
-- (3) \\(\href{claims.html#claim-17}{P_{17}}\\) — In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith
+- (3) \\(\href{claims.html#claim-22}{P_{22}}\\) — In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith
 - (4) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:1–5 — dead in trespasses, God made us alive together with Christ
-- (5) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (6) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-17}{P_{17}}) \rightarrow \href{claims.html#claim-19}{P_{19}}\\) — *would give:* Faith itself is God's gift
-- (7) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
-- (8) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* The grace that saves brings about the consent it seeks
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
+- (5) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (6) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-22}{P_{22}}) \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Faith itself is God's gift
+- (7) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+- (8) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The grace that saves brings about the consent it seeks
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-31}{P_{31}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-30}{P_{30}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-31}{P_{31}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
 
@@ -742,19 +801,19 @@ Romans strand is untouched.
 - (2) \\(\href{claims.html#claim-2}{P_{2}}\\) — Ephesians 2:8–9 — by grace you have been saved through faith, and this is not your own doing; it is the gift of God
 - (3) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:1–5 — dead in trespasses, God made us alive together with Christ
 - (4) \\(\href{claims.html#claim-3}{P_{3}}\\) — Romans 9:16 — it depends not on human will or exertion, but on God, who has mercy
-- (5) \\(\href{claims.html#claim-18}{P_{18}}\\) — Romans 9:16 is about God's mercy in saving, not only in choosing a people for history
+- (5) \\(\href{claims.html#claim-23}{P_{23}}\\) — Romans 9:16 is about God's mercy in saving, not only in choosing a people for history
 - (6) \\(\href{claims.html#claim-5}{P_{5}}\\) — Acts 7:51 — you always resist the Holy Spirit
 - (7) \\(\href{claims.html#claim-6}{P_{6}}\\) — Ephesians 4:30 — do not grieve the Holy Spirit of God, by whom you were sealed
 - (8) \\(\href{claims.html#claim-7}{P_{7}}\\) — 1 Thessalonians 5:19 — do not quench the Spirit
-- (9) \\(\lnot \href{claims.html#claim-20}{P_{20}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
-- (10) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (11) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-17}{P_{17}}) \rightarrow \href{claims.html#claim-19}{P_{19}}\\) — *would give:* Faith itself is God's gift
-- (12) \\((\href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
-- (13) \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-18}{P_{18}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (9) \\(\lnot \href{claims.html#claim-25}{P_{25}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
+- (10) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (11) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-22}{P_{22}}) \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Faith itself is God's gift
+- (12) \\((\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (13) \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
 - (14) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
-- (15) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
-- (16) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* The grace that saves brings about the consent it seeks
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
+- (15) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+- (16) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The grace that saves brings about the consent it seeks
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-31}{P_{31}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-30}{P_{30}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-31}{P_{31}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
 
@@ -770,21 +829,21 @@ salvation. The Ephesians strand is untouched.
 
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 11:6 — if it is by grace, it is no longer on the basis of works
 - (2) \\(\href{claims.html#claim-2}{P_{2}}\\) — Ephesians 2:8–9 — by grace you have been saved through faith, and this is not your own doing; it is the gift of God
-- (3) \\(\href{claims.html#claim-17}{P_{17}}\\) — In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith
+- (3) \\(\href{claims.html#claim-22}{P_{22}}\\) — In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith
 - (4) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:1–5 — dead in trespasses, God made us alive together with Christ
 - (5) \\(\href{claims.html#claim-3}{P_{3}}\\) — Romans 9:16 — it depends not on human will or exertion, but on God, who has mercy
 - (6) \\(\href{claims.html#claim-5}{P_{5}}\\) — Acts 7:51 — you always resist the Holy Spirit
 - (7) \\(\href{claims.html#claim-6}{P_{6}}\\) — Ephesians 4:30 — do not grieve the Holy Spirit of God, by whom you were sealed
 - (8) \\(\href{claims.html#claim-7}{P_{7}}\\) — 1 Thessalonians 5:19 — do not quench the Spirit
-- (9) \\(\lnot \href{claims.html#claim-20}{P_{20}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
-- (10) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (11) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-17}{P_{17}}) \rightarrow \href{claims.html#claim-19}{P_{19}}\\) — *would give:* Faith itself is God's gift
-- (12) \\((\href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
-- (13) \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-18}{P_{18}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (9) \\(\lnot \href{claims.html#claim-25}{P_{25}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
+- (10) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (11) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-22}{P_{22}}) \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Faith itself is God's gift
+- (12) \\((\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (13) \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
 - (14) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
-- (15) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
-- (16) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* The grace that saves brings about the consent it seeks
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
+- (15) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+- (16) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The grace that saves brings about the consent it seeks
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-31}{P_{31}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-30}{P_{30}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-31}{P_{31}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
 
@@ -805,15 +864,15 @@ step.
 - (5) \\(\href{claims.html#claim-5}{P_{5}}\\) — Acts 7:51 — you always resist the Holy Spirit
 - (6) \\(\href{claims.html#claim-6}{P_{6}}\\) — Ephesians 4:30 — do not grieve the Holy Spirit of God, by whom you were sealed
 - (7) \\(\href{claims.html#claim-7}{P_{7}}\\) — 1 Thessalonians 5:19 — do not quench the Spirit
-- (8) \\(\lnot \href{claims.html#claim-20}{P_{20}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
-- (9) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
-- (10) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-17}{P_{17}}) \rightarrow \href{claims.html#claim-19}{P_{19}}\\) — *would give:* Faith itself is God's gift
-- (11) \\((\href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
-- (12) \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-18}{P_{18}}) \rightarrow \href{claims.html#claim-23}{P_{23}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (8) \\(\lnot \href{claims.html#claim-25}{P_{25}}\\) — *denied:* What Stephen's hearers resisted in Acts 7:51 was the grace that saves
+- (9) \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (10) \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-22}{P_{22}}) \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Faith itself is God's gift
+- (11) \\((\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (12) \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
 - (13) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
-- (14) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
-- (15) \\(\href{claims.html#claim-23}{P_{23}} \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* The grace that saves brings about the consent it seeks
-- \\(\vdash\\) \\(\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-26}{P_{26}}\\) — *at issue:* \\(\href{claims.html#claim-24}{P_{24}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-25}{P_{25}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-26}{P_{26}}\\) In being made alive the will is passive, and contributes nothing to it
+- (14) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+- (15) \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The grace that saves brings about the consent it seeks
+- \\(\vdash\\) \\(\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}} \land \href{claims.html#claim-31}{P_{31}}\\) — *at issue:* \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act; \\(\href{claims.html#claim-30}{P_{30}}\\) The grace that saves brings about the consent it seeks; \\(\href{claims.html#claim-31}{P_{31}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
 
