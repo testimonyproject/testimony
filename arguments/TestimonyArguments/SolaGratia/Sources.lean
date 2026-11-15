@@ -442,6 +442,112 @@ def asConditionThatCanFailSource : Source :=
   , tradition := .arminian
   , confidence := .disputed }
 
+/-! ### Ratings for the further texts on perseverance -/
+
+/-- **The rating of the step from Romans 8:29–30 to "no one truly justified can
+finally fall away": `disputed`.** Wesley grants the text and denies the
+conclusion. To the objection "For whom he justified, them he also glorified" he
+answers, "This proves no more than that all who are glorified, are pardoned and
+sanctified first" (*Predestination Calmly Considered*, §76), and in his notes:
+"Provided they continued in his goodness … He does not deny that a believer may
+fall away and be cut off between his special calling and his glorification".
+Augustine reads the chain of the called "according to His purpose", and holds
+that other truly justified people fall away (*On Rebuke and Grace*, chs. 14, 23).
+Calvin reads it of "the elect … whom he also inwardly draws" (*Romans*, p. 319)
+and accepts the conclusion, because he also holds that everyone truly justified
+is elect; the step as written here does not carry that claim. -/
+def romans8Inference : Source :=
+  { primary := .work wesleyWorks9 (.page 413)
+  , supporting :=
+      [ .work wesleyNotes (.page 384), .work npnfAugustineAntiPelagian (.pages 480 481)
+      , .work calvinRomans (.pages 319 320) ]
+  , tradition := .arminian
+  , confidence := .disputed }
+
+/-- The rating of the step from Hebrews 10:29, read as describing one truly
+sanctified who falls away, to "the justified can finally fall away":
+`wellSupported`. Wesley draws it: "It is undeniably plain, 1. That the person
+mentioned here, was once sanctified by the blood of the covenant" (*Serious
+Thoughts*, §27). No reader was found who grants the reading and denies the
+conclusion; the dissent, Owen's, is from the reading. -/
+def hebrews10Inference : Source :=
+  { primary := .work wesleyWorks9 (.pages 448 449)
+  , supporting := [.work wesleyWorks9 (.pages 414 415), .work wesleyNotes (.page 585)]
+  , tradition := .arminian
+  , confidence := .wellSupported }
+
+/-- The rating of the step from 2 Peter 2:20–22, read as describing true
+believers who fall back, to "the justified can finally fall away":
+`wellSupported`. Wesley draws it: those who "so effectually know Christ, as by
+that knowledge to have escaped the pollutions of the world, may yet fall back
+into those pollutions, and perish everlastingly" (*Serious Thoughts*, §21). No
+reader was found who grants the reading and denies the conclusion; the dissent,
+Calvin's, is from the reading. -/
+def secondPeterInference : Source :=
+  { primary := .work wesleyWorks9 (.pages 445 446)
+  , supporting := [.work wesleyNotes (.page 625)]
+  , tradition := .arminian
+  , confidence := .wellSupported }
+
+/-- The rating of the step from David's losing the Spirit to "justifying grace
+can be lost": `wellSupported`. The Smalcald Articles draw it, and Trent's
+fifteenth chapter holds the conclusion: grace "is lost … by any other mortal sin
+whatever". No reader was found who grants that David lost the Spirit and denies
+that grace can be lost; Calvin denies the ground. -/
+def davidInference : Source :=
+  { primary := concord "Smalcald Articles III.iii.43"
+  , supporting := [trent "ch. 15", waterworth 42]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- The rating of the step from Psalm 51:11, read as Calvin reads it, to
+"justifying grace is never lost": `wellSupported`. Calvin draws it: "it is their
+duty to hold fast the truth that grace is the incorruptible seed of God, which
+never can perish in any heart where it has been deposited" (*Psalms*, vol. 2,
+p. 300), and Dort says God does not suffer his own "to lose the grace of adoption
+and forfeit the state of justification" (V, article 6). No reader was found who
+grants that David kept the Spirit and denies the conclusion. -/
+def psalmInference : Source :=
+  { primary := .work calvinPsalms2 (.pages 299 300)
+  , supporting := [dort 593]
+  , tradition := .reformedProtestant
+  , confidence := .wellSupported }
+
+/-- The rating of the step from Romans 8:16 to "a believer can know, without a
+special revelation, that he will persevere": `wellSupported`. Dort draws it: the
+assurance "springs from faith in God's promises … from the testimony of the Holy
+Spirit, witnessing with our spirit, that we are children and heirs of God" (V,
+article 10), and Westminster cites the verse for assurance (XVIII.2). No reader
+was found who grants the verse and denies the conclusion. Wesley grants the verse
+to every believer and allows "the full assurance of hope", "Divine evidence
+(wrought in the soul by the same immediate inspiration of the Holy Ghost) of
+persevering grace, and of eternal glory", which "you cannot expect, if you abate
+your diligence" (*Notes*, on Hebrews 6:11). He says the same of the assurance of
+faith, so the "immediate inspiration" is the ordinary witness of the Spirit, and
+that is not a denial. Trent denies the conclusion from another text, 1
+Corinthians 10:12. -/
+def assuranceInference : Source :=
+  { primary := dort 594
+  , supporting :=
+      [ .work westminsterConfession (.sectionRef "XVIII.2")
+      , .work wesleyNotes (.adLoc ⟨.hebrews, 6, 11⟩) ]
+  , tradition := .reformedProtestant
+  , confidence := .wellSupported }
+
+/-- **The rating of the step from 1 Corinthians 10:12 to "no believer can know,
+without a special revelation, that he will persevere": `disputed`.** Trent draws
+it, quoting the verse in its chapter on perseverance: "let those who think
+themselves to stand, take heed lest they fall" (Session VI, ch. 13). Calvin
+grants the verse and denies the conclusion: "let us observe that there are two
+kinds of assurance", and Paul "does not, however, exhort them to be always
+anxiously in doubt as to the will of God, or to tremble from uncertainty as to
+their salvation" (*1 Corinthians*, vol. 1, pp. 329–330). -/
+def cautionInference : Source :=
+  { primary := .work calvinFirstCorinthians (.pages 329 330)
+  , supporting := [trent "ch. 13", .work waterworthTrent (.pages 40 41)]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
 /-! ### The citations -/
 
 /-- The common list of sources: the texts, the readings, the claims of each
@@ -787,6 +893,71 @@ def baseCite : Claim → AtomMeta
         , supporting := [waterworth 47, .work wesleyWorks9 (.page 439)]
         , tradition := .romanCatholic
         , confidence := .disputed } }
+  | .romans8_29to30 =>
+    { label := "Romans 8:29–30 — those whom he justified he also glorified"
+    , kind := .textual
+    , source := text [{ ref := .range ⟨.romans, 8, 29, 8, 30⟩ }] }
+  | .hebrews10_26to29 =>
+    { label :=
+        "Hebrews 10:26–29 — the one who has profaned the blood of the covenant by which " ++
+        "he was sanctified"
+    , kind := .textual
+    , source := text [{ ref := .range ⟨.hebrews, 10, 26, 10, 29⟩ }] }
+  | .secondPeter2_20to22 =>
+    { label :=
+        "2 Peter 2:20–22 — having escaped the defilements of the world, they are again " ++
+        "entangled in them"
+    , kind := .textual
+    , source := text [{ ref := .range ⟨.secondPeter, 2, 20, 2, 22⟩ }] }
+  | .psalm51_11 =>
+    { label := "Psalm 51:11 — take not your Holy Spirit from me"
+    , kind := .textual
+    , source := text [{ ref := .verse ⟨.psalms, 51, 11⟩ }] }
+  | .romans8_16 =>
+    { label := "Romans 8:16 — the Spirit himself bears witness with our spirit"
+    , kind := .textual
+    , source := text [{ ref := .verse ⟨.romans, 8, 16⟩ }] }
+  | .firstCorinthians10_12 =>
+    { label := "1 Corinthians 10:12 — let anyone who thinks that he stands take heed lest he fall"
+    , kind := .textual
+    , source := text [{ ref := .verse ⟨.firstCorinthians, 10, 12⟩ }] }
+  | .hebrews10DescribesTheSanctifiedWhoFall =>
+    { label := "Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away"
+    , kind := .interpretive
+      -- `disputed`: Owen reads the sanctification as "a separation and dedication
+      -- unto God", or as Christ's own (Works 23, p. 545).
+    , source :=
+        { primary := .work wesleyWorks9 (.pages 448 449)
+        , supporting := [.work wesleyNotes (.page 585)]
+        , tradition := .arminian
+        , confidence := .disputed } }
+  | .secondPeter2DescribesBelieversWhoFall =>
+    { label := "2 Peter 2:20–22 describes true believers who fall back into the world"
+    , kind := .interpretive
+      -- `disputed`: Calvin holds that the faithful "do not fall away from the grace
+      -- of God" (Catholic Epistles, p. 411).
+    , source :=
+        { primary := .work wesleyWorks9 (.pages 445 446)
+        , supporting := [.work wesleyNotes (.page 625)]
+        , tradition := .arminian
+        , confidence := .disputed } }
+  | .davidLostTheSpirit =>
+    { label := "In his sin David lost the Holy Spirit and his faith"
+    , kind := .interpretive
+      -- `disputed`: Calvin reads Psalm 51:11 as implying "that the Spirit had not
+      -- altogether been taken away from him" (Psalms 2, p. 299).
+    , source :=
+        { primary := concord "Smalcald Articles III.iii.43"
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .believersCanBeSureOfPersevering =>
+    { label := "A believer can know, without a special revelation, that he will persevere"
+    , kind := .theological
+    , source :=
+        { primary := dort 594
+        , supporting := [.work westminsterConfession (.sectionRef "XVIII.3")]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
 
 /-- The Reformed citations. Dort does not cite Acts 7:51. What it gives is an
 account of those who refuse the call: "It is not the fault of the gospel, nor of
@@ -810,10 +981,50 @@ def reformedCite : Claim → AtomMeta
         { primary := .work calvinHebrews (.pages 137 138)
         , tradition := .reformedProtestant
         , confidence := .disputed } }
+  | .hebrews10DescribesTheSanctifiedWhoFall =>
+    { label := "Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away"
+    , kind := .interpretive
+    , source :=
+        { primary := .work owenHebrews (.pages 545 546)
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .secondPeter2DescribesBelieversWhoFall =>
+    { label := "2 Peter 2:20–22 describes true believers who fall back into the world"
+    , kind := .interpretive
+    , source :=
+        { primary := .work calvinCatholicEpistles (.pages 410 412)
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .davidLostTheSpirit =>
+    { label := "In his sin David lost the Holy Spirit and his faith"
+    , kind := .interpretive
+    , source :=
+        { primary := .work calvinPsalms2 (.pages 299 300)
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
   | a => baseCite a
 
-/-- Trent's citations: the texts and canon 4, as `baseCite` has them. -/
-def tridentineCite : Claim → AtomMeta := baseCite
+/-- Trent's citations: the texts and canon 4, as `baseCite` has them; on
+perseverance, its fifteenth chapter, that grace "is lost … by any other mortal sin
+whatever", and its sixteenth canon, against certainty of persevering. -/
+def tridentineCite : Claim → AtomMeta
+  | .justifyingGraceCanBeLost =>
+    { label := "Justifying grace, once given, can be lost"
+    , kind := .theological
+    , source :=
+        { primary := trent "ch. 15"
+        , supporting := [waterworth 42, trent "canon 23", waterworth 47]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .believersCanBeSureOfPersevering =>
+    { label := "A believer can know, without a special revelation, that he will persevere"
+    , kind := .theological
+    , source :=
+        { primary := trent "canon 16"
+        , supporting := [waterworth 46, trent "ch. 12", .work waterworthTrent (.pages 39 40)]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | a => baseCite a
 
 /-- The Remonstrant citations. That faith is God's gift is cited to Arminius,
 who affirms it on grounds of his own, and not to Dort, which affirms it in a

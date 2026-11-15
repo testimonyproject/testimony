@@ -210,8 +210,11 @@ turn away by their own fault.
 So the chapter on perseverance writes the Reformed conclusion as two claims and
 the claim that joins them, and finds that Augustine parts from Westminster at
 the step from 1 John 2:19 ("they went out from us, but they were not of us"),
-which he reads of those who had true faith and were not elect. Weighed as a
-dispute of its own, Westminster stands off against Augustine and Aquinas, Trent,
+which he reads of those who had true faith and were not elect. It also weighs
+Romans 8:29–30; the texts Wesley reads of believers who fell (Hebrews 6 and 10,
+2 Peter 2); falling for a time, read from David's prayer in Psalm 51:11; and
+whether a believer can know that he will persevere. Weighed as a dispute of its
+own, Westminster stands off against Augustine and Aquinas, Trent,
 the Lutherans and Wesley, and only what the Remonstrants of 1610 granted is
 settled: no power from outside snatches believers out of Christ's hand
 (`only_the_remonstrance_prevails`). Westminster and each of the four can be

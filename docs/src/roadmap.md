@@ -987,7 +987,7 @@ Remonstrants as its rivals, and the Lutherans, Wesley and a third way between
 them, and the Thomists, weighed as one dispute ([#24]); the perseverance of the
 saints is weighed beside it, Westminster against Augustine and Aquinas, Trent,
 the Lutherans and Wesley. What it lacks is John 6:44 as a third strand, and
-Romans 8:29–30 and Hebrews 10 on perseverance.
+1 John 3:9 on perseverance.
 
 **The rest of the Triune God** ([#216]). The procession and the order texts are
 encoded; LST §3's other graded claims are not. They are that each person is God

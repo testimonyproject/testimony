@@ -46,7 +46,7 @@ truly justified are elect. If "the perseverance of the saints" were one claim,
 Augustine agrees about the first and denies the second, so as one claim he would
 seem to contradict Westminster even where he agrees with it.
 
-## The two routes, and where each is disputed
+## The three routes, and where each is disputed
 
 **John 10 and 1 John 2.** From John 10:27–29, the Reformed conclude that the
 elect persevere. Calvin reads the verse so: "the salvation of all the elect is
@@ -68,9 +68,27 @@ wanting to His grace, as he has begun the good work, so will he perfect it"
 (Session VI, ch. 13). So the step from the verse to "no one truly justified can
 finally fall away" is rated *disputed*.
 
-The John route reaches the conclusion without Philippians, and the Philippians
-route reaches it without 1 John 2:19, though it still needs John 10 for the
-elect (`john_strand_establishes`, `philippians_strand_establishes`).
+**Romans 8.** "And those whom he predestined he also called, and those whom he
+called he also justified, and those whom he justified he also glorified"
+(Romans 8:29–30). Read as a chain no link of which drops anyone, it says that
+everyone justified is glorified. Wesley grants the verse and reads the chain
+backwards, so that everyone glorified was first justified, not forwards. To an
+opponent who argued from it he answered: "This proves no more than that all who
+are glorified, are pardoned and sanctified first" (*Predestination Calmly
+Considered*, §76). In his notes on the verse: "He does not deny that a believer
+may fall away and be cut off between his special calling and his glorification".
+Augustine reads the chain as being about those "called according to His
+purpose", the elect, and still holds that others who are truly justified fall
+away. So both grant the verse and deny the step, and it is rated *disputed*.
+Calvin also reads the chain of "the elect … whom he also inwardly draws". He
+accepts the conclusion, but because he also holds that everyone truly justified
+is elect, which the step as written here does not carry.
+
+The John route reaches the conclusion without Philippians or Romans, and the
+Philippians route reaches it without 1 John 2:19, though it still needs John 10
+for the elect (`john_strand_establishes`, `philippians_strand_establishes`). The
+Romans route, like the Philippians route, needs John 10 for the elect, and is not
+checked alone.
 
 ## Augustine, Trent, the Lutherans and Wesley
 
@@ -90,15 +108,44 @@ Four positions hold that one truly justified can finally fall away.
   fall away by their own fault: it "is not as though God were unwilling to
   grant grace for perseverance to those in whom He has begun the good work"
   (Solid Declaration XI.42).
-- **Wesley**, from the condition he reads in John 10 and from Hebrews 6:4–6,
-  "it is impossible, in the case of those who have once been enlightened … and
-  then have fallen away, to restore them again to repentance". He takes it for
-  true believers who fell. "The sum of all is this. If the Scriptures are true,
-  those who are holy or righteous in the judgment of God himself … may
-  nevertheless so fall from God, as to perish everlastingly" (*Serious Thoughts
-  upon the Perseverance of the Saints*, §30). The Reformed answer, with Calvin,
-  is that those described had "some taste of his grace", a knowledge "which
-  afterwards vanishes away", and were never regenerate.
+- **Wesley**, from the condition he reads in John 10 and from three texts he
+  takes of true believers who fell. "The sum of all is this. If the Scriptures
+  are true, those who are holy or righteous in the judgment of God himself …
+  may nevertheless so fall from God, as to perish everlastingly" (*Serious
+  Thoughts upon the Perseverance of the Saints*, §30).
+  - Hebrews 6:4–6: "it is impossible, in the case of those who have once been
+    enlightened, who have tasted the heavenly gift, and have shared in the Holy
+    Spirit, and have tasted the goodness of the word of God and the powers of
+    the age to come, and then have fallen away, to restore them again to
+    repentance". Calvin takes "tasted" at its word: God grants "the reprobate
+    also some taste of his grace", a knowledge "which afterwards vanishes away",
+    while "God indeed favours none but the elect alone with the Spirit of
+    regeneration".
+  - Hebrews 10:29: the one "who has trampled underfoot the Son of God, and has
+    profaned the blood of the covenant by which he was sanctified, and has
+    outraged the Spirit of grace". Wesley: "It is undeniably plain, 1. That the
+    person mentioned here, was once sanctified by the blood of the covenant"
+    (§27). John Owen, the Puritan, gives two answers. If "he" is the apostate,
+    "It is not real or internal sanctification that is here intended, but it is
+    a separation and dedication unto God", the outward setting apart of those who
+    "by baptism, and confession of faith in the church of Christ, were separated
+    from all others". But he holds that "the design of the apostle in the context
+    leads plainly to another application": "It is Christ himself that is spoken
+    of, who was sanctified and dedicated unto God to be an eternal high priest".
+    Either way the verse does not say the apostate was inwardly made holy.
+  - 2 Peter 2:20–22, those who "escaped the defilements of the world through the
+    knowledge of our Lord" and returned, as "the dog returns to its own vomit".
+    Wesley calls their knowledge "an inward, experimental knowledge" (§21), that
+    is, known by experience. Calvin holds that "The faithful also do indeed sin;
+    but as they allow not dominion to sin, they do not fall away from the grace
+    of God", so those who return to the mire were not among the faithful.
+
+  If Hebrews 6, Hebrews 10 or 2 Peter 2 does describe true believers who were
+  lost, it follows that a true believer can be lost, and no one cited here grants
+  the first and denies the second; those steps are rated *well supported*. The
+  disagreement is over what the passages describe, and each of Wesley's readings
+  is rated *disputed*, against Calvin on Hebrews 6 and 2 Peter 2 and Owen on
+  Hebrews 10.
 
 Trent, Wesley and the Lutherans each make the promise hold unless the believer
 turns away: Trent "unless men be themselves wanting to His grace", Wesley "if ye
@@ -108,12 +155,12 @@ simply is the claim that the justified can finally fall away. Taken in the sense
 of Dort's Fifth Head, as a condition God keeps in his own sheep ("God is
 faithful, who having conferred grace, mercifully confirms and powerfully
 preserves them therein, even to the end", V, article 3), it is something Dort
-holds. Both senses are checked against Wesley's position, because he has a
-second ground besides the condition, Hebrews 6, and his conclusion does not
+holds. Both senses are checked against Wesley's position, because he has other
+grounds besides the condition, his three texts, and his conclusion does not
 stand or fall with how the condition is taken (`whatTheConditionMeans`). Wesley
-parts from Dort either way. In Dort's sense of the condition he parts at Calvin's
-reading of Hebrews 6. In his own sense he parts at the step from John 10, the
-step he himself disputes.
+parts from Dort either way. In Dort's sense of the condition he parts at any of
+his three readings; the check names Calvin's reading of Hebrews 6. In his own
+sense he parts at the step from John 10, the step he himself disputes.
 
 ## The Remonstrants left it open
 
@@ -131,36 +178,103 @@ are passages of Scripture which seem to me to wear this aspect" (*Declaration of
 Sentiments*). What the article concludes from John 10:28 leaves the question
 open (`remonstrance_leaves_perseverance_open`).
 
+## Falling for a time
+
+Westminster says that believers "may … fall into grievous sins; and for a time
+continue therein", and "come to be deprived of some measure of their graces and
+comforts" (XVII.3); they do not, it says in XVII.1, fall "totally" from the state
+of grace. Dort names "the lamentable fall of David, Peter, and other saints" (V,
+article 4), and says God does not suffer them "to lose the grace of adoption",
+that is, of being God's children, "and forfeit the state of justification" (V,
+article 6). The Smalcald Articles, Luther's articles of 1537, read David
+otherwise. Against "sectarists" who held that "all those who had once received
+the Spirit … even though they should afterwards sin, would still remain in the
+faith" (III.iii.42), they say that when holy men "happen to fall into manifest
+sins, as David into adultery, murder, and blasphemy, … then faith and the Holy
+Ghost has departed from them" (III.iii.43). Trent holds that "the received grace
+of Justification is lost, not only by infidelity", that is, by losing faith, "but
+also by any other mortal sin whatever" (Session VI, ch. 15); a mortal sin, in
+Catholic teaching, is a grave sin that destroys the life of grace.
+
+The text the Reformed answer from is David's own prayer after his sin: "Cast me
+not away from your presence, and take not your Holy Spirit from me" (Psalm
+51:11). Calvin took the prayer itself as evidence: the words "imply that the
+Spirit had not altogether been taken away from him, however much his gifts had
+been temporarily obscured", and grace is "the incorruptible seed of God, which
+never can perish in any heart where it has been deposited". So the Reformed and
+the Lutherans part over what happened to David. The point on which they divide,
+the *crux*, is Calvin's reading, that David still had the Spirit when he prayed.
+The Smalcald Articles deny it, and each reading is rated *disputed*, so neither
+side wins here (`whereTheyPartOverDavid`). This is the Reformed answer on falling
+for a time; the case that no one truly justified finally falls away does not rest
+on it. The encoding carries the Lutheran claim as "justifying grace can be
+lost", without the words "for a time".
+
+## Knowing that one will persevere
+
+"The Spirit himself bears witness with our spirit that we are children of God"
+(Romans 8:16). Dort says that "true believers for themselves may and do obtain
+assurance" of their perseverance, "according to the measure of their faith" (V,
+article 9), and that it springs "from the testimony of the Holy Spirit,
+witnessing with our spirit, that we are children and heirs of God (Rom. viii.
+16)" (V, article 10). Westminster calls it "an infallible assurance of faith",
+attained "without extraordinary revelation" (XVIII.2–3). Trent condemns anyone
+who says he will have "that great gift of perseverance unto the end" "of an
+absolute and infallible certainty", "unless he have learned this by special
+revelation" (canon 16). In its chapter on perseverance (ch. 13) it quotes Paul:
+"let those who think themselves to stand, take heed lest they fall" (1
+Corinthians 10:12).
+
+Calvin, on that verse, says "there are two kinds of assurance". One "rests on the
+promises of God", and "is inseparable from faith"; the other "arises from
+negligence, when men … give themselves no concern, as if they were beyond the
+reach of danger". Paul warns against the second and leaves the first standing. So
+Trent's case for doubt rests on its step from the verse, and Calvin, granting the
+verse, denies it; the step is rated *disputed* (`whereTheyPartOverAssurance`).
+
+The Reformed step from Romans 8:16 is rated *well supported*. Wesley grants the
+verse to every believer, and he allows an assurance of perseverance too: "The
+full assurance of faith relates to present pardon; the full assurance of hope,
+to future glory", the latter being "Divine evidence (wrought in the soul by the
+same immediate inspiration of the Holy Ghost) of persevering grace, and of
+eternal glory", which "you cannot expect, if you abate your diligence" (*Notes*,
+on Hebrews 6:11). Since he says the same of the assurance of faith, his
+"immediate inspiration" is the ordinary witness of the Spirit, not a special
+revelation, and he does not deny the step.
+
 ## Weighed together
 
 Weighed as one dispute, Westminster stands off against each of the four
 positions that hold the justified can fall away: each defeats the other, so
-between them it is a tie. The four do not attack one another. However the ties
-are settled, the one thing that must be accepted is what the Remonstrants
-concluded from John 10:28: no power from outside snatches believers out of
-Christ's hand (`only_the_remonstrance_prevails`). Westminster and each of the
-four can be defended, which means each is accepted on at least one way of
-settling the ties, and none of the five must be accepted on every way. Every tie
-rests on a reading or step rated *disputed*, so the verdict moves only if a new,
-cited argument moves one of those ratings.
+between them it is a tie. With the Lutherans and Trent the tie is also over
+falling for a time, and with Trent over knowing that one will persevere. The
+four do not attack one another. However the ties are settled, the one thing that
+must be accepted is what the Remonstrants concluded from John 10:28: no power
+from outside snatches believers out of Christ's hand
+(`only_the_remonstrance_prevails`). Westminster and each of the four can be
+defended, which means each is accepted on at least one way of settling the ties,
+and none of the five must be accepted on every way. Every tie rests on a reading
+or step rated *disputed*, so the verdict moves only if a new, cited argument
+moves one of those ratings.
 
 ## What is not encoded
 
-Romans 8:29–30 ("those whom he justified he also glorified") is the third text
-most often cited for perseverance, and Hebrews 10:26–29 and 2 Peter 2:20–21 the
-texts most often set beside Hebrews 6 against it. None is encoded: no reading
-of them was checked against a cited reader with a verified location. Nor is the
-certainty of persevering to the end, which Dort grants to believers "according
-to the measure of their faith" (V, article 9) and Trent's canon 16 denies except
-by special revelation. Nor is falling for a time. Westminster denies that the
-elect fall away "totally", and the Smalcald Articles, Luther's articles of 1537,
-say that when holy men fall into manifest sins, as David did, "faith and the Holy
-Ghost has departed from them". This chapter weighs only falling away finally.
+"No one born of God makes a practice of sinning, for God's seed abides in him"
+(1 John 3:9). Calvin cites it against the opinion that the elect may lose the
+Spirit altogether; the Smalcald Articles cite it for the opposite, that where
+sin has its way "the Holy Ghost and faith are [certainly] not present". No step
+from it is encoded yet. Nor are the readings that take Hebrews 6 and 10 to
+describe true believers but deny that they are lost forever, reading the
+warnings as warnings or as hypothetical; no one holding them has yet been
+checked at a verified page.
+
 Dort itself grants that believers, left to themselves, "could not persevere in a
 state of grace" (V, article 3), and that their falling "with respect to
-themselves is not only possible, but would undoubtedly happen" (V, article 8).
-The claims here are about what God does, which is where the readers part.
+themselves is not only possible, but would undoubtedly happen" (V, article 8). So
+Dort and Wesley agree about what believers could do if left to themselves. They
+part over whether God keeps them, and that is what the claims here are about.
 -/
+
 namespace TestimonyArguments.SolaGratia
 
 open Testimony Testimony.Logic Testimony.Logic.Framework
@@ -232,6 +346,58 @@ outside snatches believers out of it. Rated `consensus`. -/
 def remonstranceStep : Formula Claim :=
   p .john10_27to29 ➝ p .noneSnatchedByForce
 
+/-- Romans 8:30: "those whom he justified he also glorified". So no one truly
+justified can finally fall away. Rated `disputed`: Wesley grants the text and
+answers that "This proves no more than that all who are glorified, are pardoned
+and sanctified first". -/
+@[solaGratiaDefs]
+def romans8Step : Formula Claim :=
+  p .romans8_29to30 ➝ notP .justifiedCanFinallyFallAway
+
+/-- Hebrews 10:29, read as describing one truly sanctified by Christ's blood who
+falls away: so one truly justified can finally fall away. Rated
+`wellSupported`; the dissent is from the reading. -/
+@[solaGratiaDefs]
+def hebrews10Step : Formula Claim :=
+  ⋀ [p .hebrews10_26to29, p .hebrews10DescribesTheSanctifiedWhoFall] ➝
+    p .justifiedCanFinallyFallAway
+
+/-- 2 Peter 2:20–22, read as describing true believers who fall back into the
+world: so one truly justified can finally fall away. Rated `wellSupported`; the
+dissent is from the reading. -/
+@[solaGratiaDefs]
+def secondPeterStep : Formula Claim :=
+  ⋀ [p .secondPeter2_20to22, p .secondPeter2DescribesBelieversWhoFall] ➝
+    p .justifiedCanFinallyFallAway
+
+/-- If David lost the Spirit in his sin, justifying grace can be lost. Rated
+`wellSupported`; Calvin denies the ground. -/
+@[solaGratiaDefs]
+def davidStep : Formula Claim :=
+  p .davidLostTheSpirit ➝ p .justifyingGraceCanBeLost
+
+/-- Psalm 51:11, read as Calvin reads it, that David prayed as one who had not
+lost the Spirit: so justifying grace, once given, is never lost. Rated
+`wellSupported`. -/
+@[solaGratiaDefs]
+def psalmStep : Formula Claim :=
+  ⋀ [p .psalm51_11, notP .davidLostTheSpirit] ➝ notP .justifyingGraceCanBeLost
+
+/-- Romans 8:16: the Spirit "bears witness with our spirit that we are children of
+God". So a believer can know, without a special revelation, that he will
+persevere. Rated `wellSupported`. -/
+@[solaGratiaDefs]
+def assuranceStep : Formula Claim :=
+  p .romans8_16 ➝ p .believersCanBeSureOfPersevering
+
+/-- 1 Corinthians 10:12: "let anyone who thinks that he stands take heed lest he
+fall". So no believer can know, without a special revelation, that he will
+persevere. Rated `disputed`: Calvin grants the verse and denies that it means
+doubt. -/
+@[solaGratiaDefs]
+def cautionStep : Formula Claim :=
+  p .firstCorinthians10_12 ➝ notP .believersCanBeSureOfPersevering
+
 /-! ### The lines -/
 
 /-- **John 10:27–29**: the elect persevere. -/
@@ -298,6 +464,69 @@ def remonstranceLine : Line Claim :=
   , delivers := p .noneSnatchedByForce
   , inference := some remonstranceInference }
 
+/-- **Romans 8:29–30**: no one truly justified can finally fall away. -/
+@[solaGratiaDefs]
+def romans8Line : Line Claim :=
+  { name := "Romans 8:29–30 (\"those whom he justified he also glorified\")"
+  , grounds := [p .romans8_29to30]
+  , step := romans8Step
+  , delivers := notP .justifiedCanFinallyFallAway
+  , inference := some romans8Inference }
+
+/-- **Hebrews 10:26–29**, read as describing one truly sanctified who falls. -/
+@[solaGratiaDefs]
+def hebrews10Line : Line Claim :=
+  { name := "Hebrews 10:29, as describing one truly sanctified who falls away"
+  , grounds := [p .hebrews10_26to29, p .hebrews10DescribesTheSanctifiedWhoFall]
+  , step := hebrews10Step
+  , delivers := p .justifiedCanFinallyFallAway
+  , inference := some hebrews10Inference }
+
+/-- **2 Peter 2:20–22**, read as describing true believers who fall back. -/
+@[solaGratiaDefs]
+def secondPeterLine : Line Claim :=
+  { name := "2 Peter 2:20–22, as describing true believers who fall back"
+  , grounds := [p .secondPeter2_20to22, p .secondPeter2DescribesBelieversWhoFall]
+  , step := secondPeterStep
+  , delivers := p .justifiedCanFinallyFallAway
+  , inference := some secondPeterInference }
+
+/-- **David's fall**, read with the Smalcald Articles: he lost the Spirit. -/
+@[solaGratiaDefs]
+def davidLine : Line Claim :=
+  { name := "David's fall, as losing the Spirit (Smalcald Articles III.iii.43)"
+  , grounds := [p .davidLostTheSpirit]
+  , step := davidStep
+  , delivers := p .justifyingGraceCanBeLost
+  , inference := some davidInference }
+
+/-- **Psalm 51:11**, read with Calvin: David had not lost the Spirit. -/
+@[solaGratiaDefs]
+def psalmLine : Line Claim :=
+  { name := "Psalm 51:11 (\"take not your Holy Spirit from me\"), as Calvin reads it"
+  , grounds := [p .psalm51_11, notP .davidLostTheSpirit]
+  , step := psalmStep
+  , delivers := notP .justifyingGraceCanBeLost
+  , inference := some psalmInference }
+
+/-- **Romans 8:16**: a believer can know that he will persevere. -/
+@[solaGratiaDefs]
+def assuranceLine : Line Claim :=
+  { name := "Romans 8:16 (\"the Spirit himself bears witness with our spirit\")"
+  , grounds := [p .romans8_16]
+  , step := assuranceStep
+  , delivers := p .believersCanBeSureOfPersevering
+  , inference := some assuranceInference }
+
+/-- **1 Corinthians 10:12**: no believer can know that he will persevere. -/
+@[solaGratiaDefs]
+def cautionLine : Line Claim :=
+  { name := "1 Corinthians 10:12 (\"let anyone who thinks that he stands take heed\")"
+  , grounds := [p .firstCorinthians10_12]
+  , step := cautionStep
+  , delivers := notP .believersCanBeSureOfPersevering
+  , inference := some cautionInference }
+
 /-! ### The positions -/
 
 /-- The label every position asked for the falling away shares. -/
@@ -335,66 +564,86 @@ def augustinian : ArgumentPackage Claim :=
 
 /-- **Trent**, from the sixth session (1547): Philippians 1:6, as its thirteenth
 chapter reads it, with the condition "unless men be themselves wanting to His
-grace". -/
+grace"; 1 Corinthians 10:12, which the same chapter quotes, against certainty of
+persevering (canon 16); and its fifteenth chapter, that grace "is lost … by any
+other mortal sin whatever". -/
 @[solaGratiaDefs]
 def trentOnPerseverance : ArgumentPackage Claim :=
-  { name := "Trent (Session VI, chapter 13 and canon 23)"
+  { name := "Trent (Session VI, chapters 13 and 15, canons 16 and 23)"
   , cite := tridentineCite
-  , premises := caseOf [conditionalLine] [p .philippians1_6] []
+  , premises :=
+      caseOf [conditionalLine, cautionLine]
+        [p .philippians1_6, p .justifyingGraceCanBeLost] []
   , conclusion := p .justifiedCanFinallyFallAway
   , conclusionLabel := fallingAwayLabel
-  , inferences := [conditionalInference] }
+  , inferences := [conditionalInference, cautionInference] }
 
 /-- **The Lutherans**, from the Formula of Concord (1577). The elect persevere,
-"from which no one can pluck us, John 10:28" (Solid Declaration XI.45); and those
-in whom God began the good work can fall away by their own fault (XI.42). -/
+"from which no one can pluck us, John 10:28" (Solid Declaration XI.45); those
+in whom God began the good work can fall away by their own fault (XI.42); and,
+from the Smalcald Articles (1537), when holy men fall into manifest sins, as
+David did, "faith and the Holy Ghost has departed from them" (III.iii.43). -/
 @[solaGratiaDefs]
 def lutheranOnPerseverance : ArgumentPackage Claim :=
-  { name := "Lutheran (the Formula of Concord, XI)"
+  { name := "Lutheran (the Formula of Concord, XI; the Smalcald Articles)"
   , cite := lutheranCite
-  , premises := caseOf [conditionalLine] [p .john10_27to29, p .electPersevere] []
+  , premises :=
+      caseOf [conditionalLine, davidLine] [p .john10_27to29, p .electPersevere] []
   , conclusion := ⋀ [p .electPersevere, p .justifiedCanFinallyFallAway]
   , conclusionLabel := "the elect persevere, and some in whom God began the good work fall away"
-  , inferences := [conditionalInference] }
+  , inferences := [conditionalInference, davidInference] }
 
 /-- **Wesley**, from *Serious Thoughts upon the Perseverance of the Saints*
 (1751). John 10:27–29, with the condition he reads in it, "if ye do these
-things, ye shall never fall" (2 Peter 1:10); and Hebrews 6:4–6, read as describing true
-believers who fell. The condition is carried as Wesley states it, with no step
-drawn from it, because what it commits him to is what the dilemma below asks.
-His conclusion comes from Hebrews 6. -/
+things, ye shall never fall" (2 Peter 1:10); and three texts read as describing
+true believers who fell: Hebrews 6:4–6, Hebrews 10:26–29 and 2 Peter 2:20–22.
+The condition is carried as Wesley states it, with no step drawn from it,
+because what it commits him to is what the dilemma below asks. His conclusion
+comes from the three texts. -/
 @[solaGratiaDefs]
 def wesleyOnPerseverance : ArgumentPackage Claim :=
   { name := "Wesley (Serious Thoughts upon the Perseverance of the Saints)"
   , cite := wesleyanCite
-  , premises := caseOf [hebrewsLine] [p .john10_27to29, p .promiseIsConditional] []
+  , premises :=
+      caseOf [hebrewsLine, hebrews10Line, secondPeterLine]
+        [p .john10_27to29, p .promiseIsConditional] []
   , conclusion := p .justifiedCanFinallyFallAway
   , conclusionLabel := fallingAwayLabel
-  , inferences := [hebrewsInference] }
+  , inferences := [hebrewsInference, hebrews10Inference, secondPeterInference] }
 
 /-! ### The position argued for -/
 
-/-- The Reformed answer to Hebrews 6, with Calvin: those described had only
-"some taste" of grace, and were never regenerate. -/
+/-- The Reformed answers to the texts Wesley reads of true believers who fell.
+Hebrews 6, with Calvin: those described had only "some taste" of grace.
+Hebrews 10:29, with Owen: "It is not real or internal sanctification that is
+here intended". 2 Peter 2, with Calvin: "The faithful also do indeed sin; but …
+they do not fall away from the grace of God". -/
 @[solaGratiaDefs]
 def perseveranceShared : List (Formula Claim) :=
-  [p .hebrews6_4to6, notP .hebrews6DescribesBelieversWhoFall]
+  [ p .hebrews6_4to6, notP .hebrews6DescribesBelieversWhoFall
+  , p .hebrews10_26to29, notP .hebrews10DescribesTheSanctifiedWhoFall
+  , p .secondPeter2_20to22, notP .secondPeter2DescribesBelieversWhoFall ]
 
 /-- **The Reformed position**, as Westminster (1647) and Dort (1619) state it.
-Two routes to the claim that no one truly justified can finally fall away: John
-10:27–29 with 1 John 2:19, joined; and Philippians 1:6. With Calvin's answer to
-Hebrews 6. -/
+Three routes to the claim that no one truly justified can finally fall away: John
+10:27–29 with 1 John 2:19, joined; Philippians 1:6; and Romans 8:29–30. With the
+answers to the texts Wesley reads of believers who fell; Psalm 51:11, read with
+Calvin, against losing grace for a time; and Romans 8:16, for assurance. -/
 @[solaGratiaDefs]
 def perseveranceReformed : ArgumentPackage Claim :=
   { name := "Reformed (Westminster XVII; Dort, Fifth Head)"
   , cite := reformedCite
   , premises :=
-      caseOf [john10Line, bridgeLine, philippiansLine] perseveranceShared [joinStep]
+      caseOf
+        [john10Line, bridgeLine, philippiansLine, romans8Line, psalmLine, assuranceLine]
+        perseveranceShared [joinStep]
   , conclusion := perseverance
   , conclusionLabel :=
       "the perseverance of the saints: the elect persevere, and no one truly justified " ++
       "can finally fall away"
-  , inferences := [john10Inference, bridgeInference, philippiansInference, joinInference] }
+  , inferences :=
+      [ john10Inference, bridgeInference, philippiansInference, romans8Inference
+      , psalmInference, assuranceInference, joinInference ] }
 
 /-- The John strand alone: John 10:27–29 and 1 John 2:19, joined. -/
 @[solaGratiaDefs]
@@ -422,16 +671,22 @@ def perseveringReading : Valuation Claim := fun a =>
   match a with
   | .justifiedCanFinallyFallAway => False
   | .hebrews6DescribesBelieversWhoFall => False
+  | .hebrews10DescribesTheSanctifiedWhoFall => False
+  | .secondPeter2DescribesBelieversWhoFall => False
   | .someRegenerateNotGivenPerseverance => False
   | .promiseIsConditional => False
+  | .davidLostTheSpirit => False
+  | .justifyingGraceCanBeLost => False
   | _ => True
 
-/-- A reading on which every rival's premises hold: the elect persevere, and some
-truly justified, not being elect, finally fall away. Not a position the rivals
+/-- A reading on which every rival's premises hold: the elect persevere, some
+truly justified, not being elect, finally fall away, and no believer can know
+without a special revelation that he will persevere. Not a position the rivals
 share: Wesley, for one, is not encoded as holding that the elect persevere. -/
 def fallingAwayReading : Valuation Claim := fun a =>
   match a with
   | .justifiedAreElect => False
+  | .believersCanBeSureOfPersevering => False
   | _ => True
 
 /-! ### What follows -/
@@ -439,7 +694,7 @@ def fallingAwayReading : Valuation Claim := fun a =>
 /-- **The Reformed premises establish the perseverance of the saints**: the
 elect persevere, and no one truly justified can finally fall away. That the
 second follows rests on readings and steps rated `disputed`: the steps from
-John 10 and 1 John 2, and from Philippians 1:6. -/
+John 10 and 1 John 2, from Philippians 1:6, or from Romans 8:29–30. -/
 @[headline]
 theorem perseveranceReformed_establishes : Establishes perseveranceReformed := by
   establish [solaGratiaDefs]
@@ -566,6 +821,56 @@ def whereAugustinePartsFromPhilippians : Because philippiansStrand augustinian :
     (by simp [augustinian, caseOf, solaGratiaDefs])
     (by decide +kernel)
 
+/-! ### Falling for a time, and knowing that one will persevere -/
+
+/-- **Where the Smalcald Articles and Calvin part over David.** The Lutherans read
+David's fall as losing the Spirit and his faith, and so hold that justifying
+grace can be lost. The Reformed answer, in Calvin's words, is his reading of
+David's own prayer, "take not your Holy Spirit from me" (Psalm 51:11):
+the words "imply that the Spirit had not altogether been taken away from him".
+That reading is the crux, and it is rated `disputed`. It is not part of the case
+for the conclusion; it is Westminster's answer to the Lutherans on falling for a
+time. -/
+def whereTheyPartOverDavid : Because perseveranceReformed lutheranOnPerseverance :=
+  Because.ofChecks (notP .davidLostTheSpirit)
+    [p .john10_27to29, p .firstJohn2_19, p .philippians1_6, p .romans8_29to30, p .psalm51_11]
+    ([p .romans8_16] ++ perseveranceShared ++
+      [ john10Step, bridgeStep, philippiansStep, romans8Step, psalmStep, assuranceStep
+      , joinStep ])
+    []
+    [p .davidLostTheSpirit]
+    .answers perseveranceReformed_establishes perseveranceReformed_is_satisfiable
+    (by simp [perseveranceReformed, caseOf, solaGratiaDefs])
+    (by simp)
+    (by simp [lutheranOnPerseverance, caseOf, solaGratiaDefs])
+    (by decide +kernel)
+
+/-- **Where Trent and Dort part over knowing that one will persevere.** Dort holds
+that believers "may and do obtain assurance" of their perseverance, from the
+Spirit "witnessing with our spirit, that we are children and heirs of God"
+(Romans 8:16). Trent condemns anyone who says he will have "that great gift of
+perseverance unto the end" "of an absolute and infallible certainty", "unless he
+have learned this by special revelation" (canon 16), and in its chapter on
+perseverance quotes "let those who think themselves to stand, take heed lest they
+fall" (1 Corinthians 10:12; ch. 13). The crux is Trent's step from that
+verse, rated `disputed`: Calvin grants the verse and answers that "there are two
+kinds of assurance", and that Paul does not tell believers "to tremble from
+uncertainty as to their salvation": the assurance that "rests on the promises of
+God" is "inseparable from faith", and Paul warns only against the one that
+"arises from negligence". -/
+def whereTheyPartOverAssurance : Because trentOnPerseverance perseveranceReformed :=
+  Because.ofChecks cautionStep
+    [ p .promiseIsConditional, p .firstCorinthians10_12, p .philippians1_6
+    , p .justifyingGraceCanBeLost, conditionalStep ]
+    []
+    [p .firstCorinthians10_12]
+    [p .romans8_16, assuranceStep]
+    .answers trentOnPerseverance_establishes trentOnPerseverance_is_satisfiable
+    (by simp [trentOnPerseverance, caseOf, solaGratiaDefs])
+    (by simp [trentOnPerseverance, caseOf, solaGratiaDefs])
+    (by simp [perseveranceReformed, caseOf, solaGratiaDefs])
+    (by decide +kernel)
+
 /-! ### What the condition means -/
 
 /-- The condition read as one God himself keeps: those who are Christ's sheep do
@@ -604,13 +909,18 @@ theorem wesleyAsCanFail_is_satisfiable : Satisfiable wesleyAsCanFail.premises :=
 
 /-- **Why Westminster stands against Wesley, even with the condition read in
 Dort's sense.** Wesley's reading of Hebrews 6:4–6 still delivers that one truly
-justified can finally fall away. The crux is Calvin's reading of the passage,
+justified can finally fall away, as do his readings of Hebrews 10 and 2 Peter 2.
+The crux named here is Calvin's reading of Hebrews 6,
 that those described had only "some taste of his grace". It is Westminster's
 answer to Wesley, rated `disputed`. -/
 def whereWesleysHebrewsFalls : Because perseveranceReformed wesleyAsGodKeeps :=
   Because.ofChecks (notP .hebrews6DescribesBelieversWhoFall)
-    [p .john10_27to29, p .firstJohn2_19, p .philippians1_6, p .hebrews6_4to6]
-    [john10Step, bridgeStep, philippiansStep, joinStep]
+    [ p .john10_27to29, p .firstJohn2_19, p .philippians1_6, p .romans8_29to30
+    , p .psalm51_11, notP .davidLostTheSpirit, p .romans8_16, p .hebrews6_4to6 ]
+    [ p .hebrews10_26to29, notP .hebrews10DescribesTheSanctifiedWhoFall
+    , p .secondPeter2_20to22, notP .secondPeter2DescribesBelieversWhoFall
+    , john10Step, bridgeStep, philippiansStep, romans8Step, psalmStep, assuranceStep
+    , joinStep ]
     []
     [p .hebrews6DescribesBelieversWhoFall]
     .answers perseveranceReformed_establishes perseveranceReformed_is_satisfiable
@@ -637,13 +947,15 @@ def whereWesleysConditionFalls : Because johnStrand wesleyAsCanFail :=
 /-- **What the condition means, read both ways.** The claim is the one Trent,
 the Lutherans and Wesley share: God's promise to keep those he has begun to save
 holds unless the believer turns away. Both senses are checked against Wesley's
-position, because he has a second ground besides the condition, Hebrews 6, so
-his conclusion does not stand or fall with how the condition is taken.
+position, because he has three grounds besides the condition, his readings of
+Hebrews 6, Hebrews 10 and 2 Peter 2, so his conclusion does not stand or fall
+with how the condition is taken.
 
 Taken as a condition God himself keeps, in the sense of Dort's Fifth Head
 (article 3), the condition is something Dort holds. Wesley still cannot be held
-with Westminster, because his reading of Hebrews 6:4–6 delivers the falling away
-by itself; the crux is Calvin's reading of that passage.
+with Westminster, because each of his three readings, of Hebrews 6, Hebrews 10
+and 2 Peter 2, delivers the falling away by itself; the check names Calvin's
+reading of Hebrews 6.
 
 Taken as a condition that can fail, which is how Wesley means it ("a Saint may
 fall away"), the condition is the falling away. It cannot be held with the John
@@ -680,21 +992,24 @@ inductive PerseveranceParty
   Christ's hand. Its weakest link is `consensus`. -/
   | remonstrance
   /-- Westminster and Dort: the elect persevere, and no one truly justified can
-  finally fall away. Its weakest link is `disputed`: each step from a text, and
-  Calvin's reading of Hebrews 6. -/
+  finally fall away. Its weakest link is `disputed`: the steps from John 10, 1
+  John 2, Philippians 1 and Romans 8, and the Reformed readings of Hebrews 6 and
+  10, 2 Peter 2 and Psalm 51. -/
   | reformed
   /-- Augustine and Aquinas: the elect persevere, and some truly justified who
   are not elect fall away. Its weakest link is `disputed`: that some regenerate
   are not given perseverance. -/
   | augustinian
-  /-- Trent: the promise is kept unless men are wanting to God's grace. Its
-  weakest link is `disputed`: that condition. -/
+  /-- Trent: the promise is kept unless men are wanting to God's grace; grace is
+  lost by mortal sin; and no one may be certain of persevering. Its weakest link
+  is `disputed`: the condition, and the step from 1 Corinthians 10:12. -/
   | trent
-  /-- The Lutherans: the elect persevere, and some in whom God began the good
-  work fall away. Its weakest link is `disputed`: the condition. -/
+  /-- The Lutherans: the elect persevere, some in whom God began the good work
+  fall away, and David lost the Spirit. Its weakest link is `disputed`: the
+  condition, and the reading of David's fall. -/
   | lutheran
-  /-- Wesley: Hebrews 6:4–6 describes true believers who fall away. Its weakest
-  link is `disputed`: that reading. -/
+  /-- Wesley: Hebrews 6, Hebrews 10 and 2 Peter 2 describe true believers who
+  fall away. Its weakest link is `disputed`: those readings. -/
   | wesleyan
 deriving DecidableEq
 
@@ -713,7 +1028,9 @@ without contradiction, delivers its conclusion, and has its steps rated. -/
 declare_dispute perseveranceDispute := perseveranceNode using solaGratiaDefs
   /-- **Who defeats whom**, all 36 pairs: eight defeats, four standoffs.
   Westminster stands off against Augustine and Aquinas, Trent, the Lutherans and
-  Wesley, over whether one truly justified can finally fall away. The four do
+  Wesley, over whether one truly justified can finally fall away; with the
+  Lutherans and Trent also over whether grace can be lost for a time, and with
+  Trent over whether a believer can know that he will persevere. The four do
   not attack one another, and nothing attacks the Remonstrance. So each of the
   four can be defended alongside the other three, and none must be accepted,
   because Westminster defeats each of them. Every cell is checked by the

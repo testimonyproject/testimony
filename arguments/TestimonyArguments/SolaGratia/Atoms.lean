@@ -210,6 +210,46 @@ inductive Claim
   What Augustine and Aquinas, Trent, the Lutherans and Wesley hold, each on
   grounds of their own; Westminster and Dort deny it. -/
   | justifiedCanFinallyFallAway
+  /-- Romans 8:29–30: "And those whom he predestined he also called, and those
+  whom he called he also justified, and those whom he justified he also
+  glorified." -/
+  | romans8_29to30
+  /-- Hebrews 10:26–29: "How much worse punishment, do you think, will be
+  deserved by the one who has trampled underfoot the Son of God, and has
+  profaned the blood of the covenant by which he was sanctified, and has
+  outraged the Spirit of grace?" -/
+  | hebrews10_26to29
+  /-- 2 Peter 2:20–22: "For if, after they have escaped the defilements of the
+  world through the knowledge of our Lord and Savior Jesus Christ, they are again
+  entangled in them and overcome, the last state has become worse for them than
+  the first … The dog returns to its own vomit, and the sow, after washing
+  herself, returns to wallow in the mire." -/
+  | secondPeter2_20to22
+  /-- Psalm 51:11: "Cast me not away from your presence, and take not your Holy
+  Spirit from me." David's prayer after his sin with Bathsheba. -/
+  | psalm51_11
+  /-- Romans 8:16: "The Spirit himself bears witness with our spirit that we are
+  children of God." -/
+  | romans8_16
+  /-- 1 Corinthians 10:12: "Therefore let anyone who thinks that he stands take
+  heed lest he fall." -/
+  | firstCorinthians10_12
+  /-- Hebrews 10:29 describes one truly sanctified by Christ's blood who falls
+  away. Wesley's reading: "he was, at least, justified once". -/
+  | hebrews10DescribesTheSanctifiedWhoFall
+  /-- 2 Peter 2:20–22 describes true believers, who had escaped the world's
+  defilements by an inward knowledge of Christ, falling back. Wesley's reading;
+  Calvin's is that "there are many swine who, immediately after washing, roll
+  themselves again in the mud". -/
+  | secondPeter2DescribesBelieversWhoFall
+  /-- In his sin David lost the Holy Spirit, and his faith with it. The Smalcald
+  Articles' reading of David's fall; Calvin's is that "the Spirit had not
+  altogether been taken away from him". -/
+  | davidLostTheSpirit
+  /-- A believer can know, without a special revelation, that he will persevere
+  to the end. Dort (V, articles 9–10) and Westminster (XVIII) hold it; Trent's
+  canon 16 condemns it. -/
+  | believersCanBeSureOfPersevering
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaGratia
