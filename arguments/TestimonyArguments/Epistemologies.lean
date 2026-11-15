@@ -30,25 +30,24 @@ rule. Its steps are not, yet: a step's citation records who disputes it, not wha
 A party that asks its rival for Scripture and rests a claim on a confession's word alone keeps
 two rules.
 
-As the library cites them, four readings in the sola fide dispute rest one claim on a ground
-their own rule does not admit (`sola_fide_own_rules`). Sola fide from Paul, from Peter at
-Jerusalem and from John 6, and the Reformed answer to Chrysostom, each assert that justification
-and sanctification are inseparable but distinct: that God's pardoning and accepting a sinner,
-and his making that sinner holy over a life, always go together and are not the same thing.
-The library cites the claim to Westminster (XIII.1, XI.1) and to Calvin (*Institutes* III.xi.6),
-and to nothing else, and Westminster's rule admits Scripture and evidence, not a confession's or
-a theologian's word.
+Every party held to a rule keeps it (`sola_fide_own_rules`). It was not so when the check was
+first run, and what the check found changed the encoding. Four Reformed readings — sola fide
+from Paul, from Peter at Jerusalem and from John 6, and the Reformed answer to Chrysostom —
+each assert that justification and sanctification are inseparable but distinct: that God's
+pardoning and accepting a sinner, and his making that sinner holy over a life, always go
+together and are not the same thing. The library had cited that claim to the Westminster
+Confession and to Calvin alone, so by Westminster's own rule, which admits Scripture and
+evidence and not a confession's word, the four rested a claim on what they refuse their rival.
 
-A Reformed reader would put the fault on the citation, not the readings. The Confession is a
-subordinate standard: a summary of Scripture, printed with its Scripture proofs, and to cite a
-section of it is, for that reader, to point at those proofs. Calvin, too, says Scripture lists
-the two separately. The library cited the summary and not the texts. One cited text would clear
-all four, because a claim rests on the best of what it cites.
+The fault was the encoding's, not the readings'. A Reformed reader cites the Confession as a
+summary pointing to its Scripture proofs, and the library had cited the summary without the
+proofs. Worse, it had cited the wrong summary: Confession XIII.1 is about sanctification and
+does not state the claim. The Larger Catechism does, at question 77: sanctification is
+"inseparably joined with justification, yet they differ", with a proof under each clause. The
+claim is cited there now, with those proofs, and the four readings keep their rule.
 
-Two limits go with the finding. The library's evidence rule admits the same grounds for claims,
-so the four would fail it too; what sets Westminster's rule apart governs steps, which are not
-yet checked. And the Catholic rule, as encoded, admits any authority's word, so the Catholic
-readings could not fail this way: that they pass says less than that the others fail.
+The Catholic rule, as encoded, admits any authority's word, so Trent's readings could not have
+failed this check; that they pass says less than it would under a narrower rule.
 
 Three parties are held to no rule. Aquinas, Luther and Chrysostom wrote neither Trent's rule
 nor Westminster's, and the library cites none of their own as a rule; holding them to another's
@@ -195,30 +194,27 @@ def breakTheirRule : List Party := parties.filter fun q => (ownRule q).any (!·.
 /-- The parties held to no rule. -/
 def heldToNone : List Party := parties.filter fun q => (professes q).isNone
 
-/-- **As the library cites them, four Reformed readings rest one claim on a ground their own rule
-does not admit.** Sola fide from Paul, from
-Peter at Jerusalem and from John 6, and the Reformed answer to Chrysostom, each assert that
-justification and sanctification are inseparable but distinct. The library cites that claim to
-Westminster (XIII.1, XI.1) and to Calvin (*Institutes* III.xi.6) alone, and Westminster's own
-rule admits Scripture and evidence, not a confession's word or a theologian's. Every other
-party held to a rule asserts only what its rule admits. Aquinas, Luther and Chrysostom are held
-to none.
+/-- **Every party to the sola fide dispute keeps the rule it professes.** Every claim each party
+held to a rule asserts rests on what its rule admits. Aquinas, Luther and Chrysostom are held to
+none.
 
-What it does not claim: that the four readings are wrong, or that the claim has no text. A
-Reformed reader cites the Confession as a summary pointing to its Scripture proofs, and Calvin
-says Scripture lists the two separately; the library cited neither the proofs nor the texts, and
-one cited text would clear all four. The evidence rule admits the same grounds, so the four fail
-it too. The Catholic rule, as encoded, admits any authority, so the Catholic readings could not
-fail this way. Nor does it say anything of steps, whose citations record their ratings, not
-what they rest on. -/
+It did not, when this check was first run. Four Reformed readings — sola fide from Paul, from
+Peter and from John 6, and the Reformed answer to Chrysostom — asserted that justification and
+sanctification are inseparable but distinct, and the library cited that claim to the
+Westminster Confession and to Calvin alone. Westminster's rule does not admit a confession's
+word as a ground, so by their own rule the four rested a claim on what they refuse their rival.
+The check also showed the citation pointing at the wrong place: Confession XIII.1 is about
+sanctification and does not state the claim. The claim is stated in the Larger Catechism, Q. 77,
+with its Scripture proofs, and it is cited there now, with those proofs (1 Corinthians 6:11
+and 1:30; Romans 4:6, 8; Ezekiel 36:27; Hebrews 9:13–14; Romans 3:24–25; Romans 6:6, 14).
+
+What it does not claim: that the Reformed readings are right, or that the proofs prove the
+claim. It says only that the claim now rests on the kind of ground the readings' own rule admits.
+The Catholic rule, as encoded, admits any authority, so Trent's readings could not have failed
+this check. And it says nothing of steps, whose citations record their ratings, not what they
+rest on. -/
 theorem sola_fide_own_rules :
-    breakTheirRule = [.pauline, .apostolic, .johannine, .sanctification] ∧
-      (breakTheirRule.map fun q => (ownRule q).map (·.claims)) =
-        [some [.justificationDistinctFromSanctification],
-          some [.justificationDistinctFromSanctification],
-          some [.justificationDistinctFromSanctification],
-          some [.justificationDistinctFromSanctification]] ∧
-      heldToNone = [.aquinas, .luther, .chrysostom] := by
+    breakTheirRule = [] ∧ heldToNone = [.aquinas, .luther, .chrysostom] := by
   decide +kernel
 
 end TestimonyArguments.Epistemologies

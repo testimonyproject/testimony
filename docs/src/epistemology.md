@@ -98,28 +98,40 @@ Reformed reading. In the dispute over faith alone (*sola fide*):
   Chrysostom wrote before either; the library cites none of these as a rule, and holding them to
   another's would give them a rule they did not write.
 
-**What the check finds** (`sola_fide_own_rules`). As the library cites them, four Reformed
-readings rest one claim on a ground their own rule does not admit: faith alone from Paul, from
-Peter and from John 6, and the Reformed answer to Chrysostom. The claim is that justification and
-sanctification are inseparable but distinct. Justification is God's pardoning a sinner and
-accepting him as righteous; sanctification is his making that sinner holy over a life. The claim
-is that the two always go together and are not the same thing. The library cites it to the
-Westminster Confession (XIII.1, XI.1) and to Calvin (*Institutes* III.xi.6), and to nothing
-else, and Westminster's rule admits Scripture and evidence, not a confession's or a theologian's
-word.
+**What the check found, and what changed because of it.** When the check was first run, four
+Reformed readings failed it: faith alone from Paul, from Peter and from John 6, and the
+Reformed answer to Chrysostom. Each asserts that justification and sanctification are
+inseparable but distinct. Justification is God's pardoning a sinner and accepting him as
+righteous; sanctification is his making that sinner holy over a life; the claim is that the two
+always go together and are not the same thing. The library had cited it to the Westminster
+Confession (XIII.1, XI.1) and to Calvin (*Institutes* III.xi.6), and to nothing else. Westminster's
+rule admits Scripture and evidence, not a confession's or a theologian's word, so as encoded the
+four readings rested a claim on what their own rule refuses their rival.
 
-A Reformed reader would put the fault on the citation, not on the readings. The Confession is a
-subordinate standard: a summary of Scripture, printed with its Scripture proofs, and to cite one
-of its sections is, for that reader, to point at those proofs. Calvin says Scripture lists the
-two separately. The library cited the summary and not the texts, and one cited text would clear
-all four, because a claim rests on the best of what it cites. The other two Reformed readings,
-from Luke 7:50 and Paul's gospel against Trent, keep the rule.
+The fault was in the earlier encoding, not in the readings. A Reformed reader cites the
+Confession as a summary of Scripture, printed with its Scripture proofs, and the library had
+cited the summary without the proofs. It had also cited the wrong summary. Confession XIII.1 is
+about sanctification alone and does not state the claim; the Larger Catechism does, at question
+77: "Although sanctification be inseparably joined with justification, yet they differ". Under
+each clause it prints its proofs: 1 Corinthians 6:11 and 1:30 for "inseparably joined", and for
+the differences Romans 4:6 and 8, Ezekiel 36:27 with Hebrews 9:13–14, Romans 3:24–25, and
+Romans 6:6 and 14. Calvin's text for Scripture distinguishing the two is 1 Corinthians 1:30.
 
-Two limits go with the finding. The library's evidence rule admits the same grounds for claims,
-so the four would fail it too: what sets Westminster's rule apart is how a Scripture-only step
-is answered, and steps are not yet checked. And the Catholic rule, as encoded, admits any
-authority's word, so Trent's readings could not fail this way. That they pass says less than
-that the four fail.
+So the encoding was changed. The claim is now cited to the Larger Catechism, with its proofs,
+in both arguments that assert it, sola fide and the canonical witness. Every party held to a
+rule now keeps it (`sola_fide_own_rules`). No rating and no verdict moved, because nothing
+weighs a claim by what it rests on. What moved is what a reader can check: the texts are on
+the page.
+
+This is what the check is for. A rule each side professes, applied to each side's own claims,
+found a premise the library had cited on a confession's word alone, and pointed to the wrong
+place. Neither showed in any verdict.
+
+Two limits remain. The library's evidence rule admits the same grounds for claims as
+Westminster's, so the check could not have told the two apart: what sets Westminster's rule
+apart is how a Scripture-only step is answered, and steps are not yet checked. And the Catholic
+rule, as encoded, admits any authority's word, so Trent's readings could not have failed this
+way. That they pass says less than it would under a narrower rule.
 
 ## What this does not do
 
