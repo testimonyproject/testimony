@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **331 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **336 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -327,6 +327,21 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `dort_stands_with_the_thomists` | `solaGratiaDispute.StandTogether [Party.reformed, Party.thomist]` | **Dort and the Thomists stand together**: one reading satisfies every premise and every conclusion of both, so neither defeats the other. |
 | `thomist_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thomist` | **The Thomists can be defended, with Dort**: some maximal defensible position holds both, with what every party holds. |
 | `thomist_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.thomist` | Nor are the Thomists forced. |
+| `perseveranceReformed_establishes` | `Establishes perseveranceReformed` | **The Reformed premises establish the perseverance of the saints**: the elect persevere, and no one truly justified can finally fall away. |
+| `john_strand_establishes` | `Establishes johnStrand` | **The John strand reaches the conclusion alone.** John 10:27–29 for the elect, 1 John 2:19 for the truly justified being elect, and the two joined. |
+| `philippians_strand_establishes` | `Establishes philippiansStrand` | **The Philippians strand reaches the conclusion alone**, without 1 John 2:19: Philippians 1:6 for the truly justified, and John 10:27–29 for the elect. |
+| `remonstrance_leaves_perseverance_open` | `Independent remonstrance.premises (p Claim.justifiedCanFinallyFallAway)` | **The Remonstrants' premises leave perseverance open.** Their fifth article grants from John 10:28 that no one plucks believers out of Christ's hand, and leaves whether they can … |
+| `only_the_remonstrance_prevails` | `Framework.grounded perseveranceDispute.defeats = Solver.toSet [PerseveranceParty.remonstrance]` | **Only what the Remonstrants concluded from John 10:28 prevails: no power from outside snatches believers out of Christ's hand.** Every other party is in a tie with another, and … |
+| `perseverance_defensible` | `Framework.CredulouslyAccepted perseveranceDispute.defeats PerseveranceParty.reformed` | **Westminster can be defended**: on at least one way of settling the ties, it is accepted, with the Remonstrance, because it defeats each of the four that attack it. |
+| `perseverance_not_forced` | `¬Framework.SkepticallyAccepted perseveranceDispute.defeats PerseveranceParty.reformed` | **Nor must Westminster be accepted.** On another way of settling the ties, Augustine and Aquinas, Trent, the Lutherans and Wesley are accepted together, and Westminster cannot be … |
+| `augustinian_defensible` | `Framework.CredulouslyAccepted perseveranceDispute.defeats PerseveranceParty.augustinian` | **Augustine and Aquinas can be defended**: accepted together with Trent, the Lutherans and Wesley, who agree that one truly justified can finally fall away, and each of whom … |
+| `augustinian_not_forced` | `¬Framework.SkepticallyAccepted perseveranceDispute.defeats PerseveranceParty.augustinian` | Nor must Augustine and Aquinas be accepted: the way of settling the ties that accepts Westminster cannot accept them. |
+| `trent_on_perseverance_defensible` | `Framework.CredulouslyAccepted perseveranceDispute.defeats PerseveranceParty.trent` | **Trent can be defended** on perseverance, in the same company. |
+| `trent_on_perseverance_not_forced` | `¬Framework.SkepticallyAccepted perseveranceDispute.defeats PerseveranceParty.trent` | Nor must Trent be accepted, for the same reason. |
+| `lutheran_on_perseverance_defensible` | `Framework.CredulouslyAccepted perseveranceDispute.defeats PerseveranceParty.lutheran` | **The Lutherans can be defended** on perseverance, in the same company. |
+| `lutheran_on_perseverance_not_forced` | `¬Framework.SkepticallyAccepted perseveranceDispute.defeats PerseveranceParty.lutheran` | Nor must the Lutherans be accepted, for the same reason. |
+| `wesley_on_perseverance_defensible` | `Framework.CredulouslyAccepted perseveranceDispute.defeats PerseveranceParty.wesleyan` | **Wesley can be defended** on perseverance, in the same company. |
+| `wesley_on_perseverance_not_forced` | `¬Framework.SkepticallyAccepted perseveranceDispute.defeats PerseveranceParty.wesleyan` | Nor must Wesley be accepted, for the same reason. |
 
 ### [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)
 
@@ -969,8 +984,10 @@ tradition, three objections that do not reduce to one another, the two answers
 to the self-refutation objection, and a dispute over what Jesus' rebuke of
 tradition in Mark 7 decides. *Sola gratia* is encoded with Trent and the
 Remonstrants as its rivals, and the Lutherans, Wesley and a third way between
-them, and the Thomists, weighed as one dispute ([#24]); what it lacks is John
-6:44 as a third strand and the perseverance of the saints.
+them, and the Thomists, weighed as one dispute ([#24]); the perseverance of the
+saints is weighed beside it, Westminster against Augustine and Aquinas, Trent,
+the Lutherans and Wesley. What it lacks is John 6:44 as a third strand, and
+Romans 8:29–30 and Hebrews 10 on perseverance.
 
 **The rest of the Triune God** ([#216]). The procession and the order texts are
 encoded; LST §3's other graded claims are not. They are that each person is God

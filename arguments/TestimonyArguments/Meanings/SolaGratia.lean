@@ -60,7 +60,11 @@ def all : List Claim :=
   , .zechariah1_3WithLamentations5_21, .toutoRefersToTheWhole, .romans9_16ConcernsSalvation
   , .faithIsGodsGift, .acts7_51ResistsSavingGrace, .freeWillCooperatesByAssenting
   , .freeWillCanDissent, .conversionIsGodsWorkAlone, .salvationIsByGrace
-  , .graceIsEffectualOfItself, .willIsPassiveInRegeneration ]
+  , .graceIsEffectualOfItself, .willIsPassiveInRegeneration, .john10_27to29
+  , .philippians1_6, .hebrews6_4to6, .firstJohn2_19, .noneSnatchedByForce
+  , .someRegenerateNotGivenPerseverance, .promiseIsConditional, .godKeepsHisSheepInFaith
+  , .hebrews6DescribesBelieversWhoFall, .electPersevere, .justifiedAreElect
+  , .justifiedCanFinallyFallAway ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -89,7 +93,7 @@ instance meanings : HasMeanings Claim :=
   , complete := all_complete, means }
 
 /-- **Eight of the 31 atoms are analysed**: the ones the dispute turns on. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (8, 31) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (8, 43) := by decide
 
 /-- **The sola gratia joins**: each pair of claims whose meanings exclude or
 entail one another, listed, and proved to be exactly what the meanings contain.

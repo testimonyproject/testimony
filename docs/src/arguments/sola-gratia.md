@@ -9,13 +9,14 @@ Claims are numbered once for the whole argument, so P₁ means the same claim in
 
 This argument is also set for print, the claims linked and the derivations in words as here, in [a PDF of its own](../pdf/arguments/sola-gratia.pdf). [One PDF](../pdf/arguments.pdf) holds every argument together, and each tagged [release](https://github.com/testimonyproject/testimony/releases) of the project carries a copy.
 
-This argument is set in 6 chapters:
+This argument is set in 7 chapters:
 
 - [Sola gratia: what everyone grants, and what divides them](sola-gratia.md)
 - [Two routes: Ephesians 2 and Romans 9](sola-gratia/two-routes.md)
 - [Freedom to refuse, and the ability God gives](sola-gratia/freedom-to-refuse.md)
 - [Aquinas and the Catholic schools](sola-gratia/aquinas.md)
 - [Weighing the positions](sola-gratia/weighing.md)
+- [The perseverance of the saints](sola-gratia/perseverance.md)
 - [Appendix: the claims and their sources](sola-gratia/claims.md)
 
 
@@ -205,6 +206,26 @@ choice: salvation is by grace (`only_grace_prevails`). Every other position,
 Dort's included, can be defended and is not forced, and the third way can be
 defended with Dort or with Wesley.
 
+## The perseverance of the saints
+
+If the grace that saves brings about the consent it seeks, can the one it saves
+lose it? Westminster says that the "effectually called", those called in a way
+that brings them to faith, "can neither totally nor finally fall away from the
+state of grace" (XVII.1). Augustine, Aquinas and the Formula of Concord say as
+much of the elect, and still hold that some truly justified fall away: Augustine
+and Aquinas because some given new life by the Spirit are not given
+perseverance, the Lutherans because those in whom God began the good work can
+turn away by their own fault.
+So the chapter on perseverance writes the Reformed conclusion as two claims and
+the claim that joins them, and finds that Augustine parts from Westminster at
+the step from 1 John 2:19 ("they went out from us, but they were not of us"),
+which he reads of those who had true faith and were not elect. Weighed as a
+dispute of its own, Westminster stands off against Augustine and Aquinas, Trent,
+the Lutherans and Wesley, and only what the Remonstrants of 1610 granted is
+settled: no power from outside snatches believers out of Christ's hand
+(`only_the_remonstrance_prevails`). Westminster and each of the four can be
+defended, and none must be accepted.
+
 ## What is not encoded
 
 The Remonstrants' denial of the will's passivity, and Wesley's view of it, are
@@ -212,11 +233,8 @@ not encoded: each position here concludes only what its cited sources say. Nor
 is the cooperation of the renewed will, which Dort, the Formula of Concord and
 Trent all grant in some sense, and which a dilemma over "cooperate" would split.
 
-The perseverance of the saints, which Dort holds and the Thomists and Trent
-deny, is not weighed: the Thomists' claim that justifying grace can be lost is
-encoded, and no Reformed claim against it. Nor is Molina's own *Concordia*,
-which no public English text could be checked against; the Molinist readings
-are cited from Pohle's report of them.
+Molina's own *Concordia* is not encoded, because no public English text could be
+checked against it; the Molinist readings are cited from Pohle's report of them.
 
 John 6:44 ("No one can come to me unless the Father who sent me draws him") is
 the third text most often cited for the Reformed view, and is not encoded
@@ -235,4 +253,5 @@ which is a dispute of its own.
 | `ThirdWay.lean` | freedom to refuse, the Lutherans, Wesley, and the third way's dilemma |
 | `Thomist.lean` | Aquinas and the Catholic schools, and what "not merely passive" means |
 | `Dispute.lean` | the positions weighed, and the verdicts |
+| `Perseverance.lean` | the perseverance of the saints, weighed as a dispute of its own |
 

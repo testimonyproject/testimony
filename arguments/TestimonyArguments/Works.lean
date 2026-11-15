@@ -4134,6 +4134,27 @@ New Advent; cited whole. -/
   , publisher := "Robert Appleton Company"
   , place := some "New York" }
 
+/-- Calvin's commentary on Hebrews, in John Owen's translation for the Calvin
+Translation Society. Cited for his reading of Hebrews 6:4–6 (pp. 137–138): "God
+indeed favours none but the elect alone with the Spirit of regeneration", yet he
+grants "the reprobate also some taste of his grace", a knowledge "which afterwards
+vanishes away". The 1853 printing scanned at the Internet Archive; it carries no
+ISBN. -/
+@[bib_entry] def calvinHebrews : BibEntry := .book
+  { core :=
+      { key := "calvin-hebrews-1853"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "John" "Owen"] }
+      , title := "Commentaries on the Epistle of Paul the Apostle to the Hebrews"
+      , year := some { value := 1853 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentariesowentran00calv"
+                 (some "2026-11-15") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh" }
+
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'

@@ -24265,10 +24265,13 @@ Suppose instead that the Remonstrants are right, and the grace that saves can be
 
 Weighed as one dispute, only what every party holds is settled before any choice: salvation is by grace (\texttt{only\_\allowbreak{}grace\_\allowbreak{}prevails}). Every other position, Dort’s included, can be defended and is not forced, and the third way can be defended with Dort or with Wesley.
 
+\subsubsection*{The perseverance of the saints}
+If the grace that saves brings about the consent it seeks, can the one it saves lose it? Westminster says that the “effectually called”, those called in a way that brings them to faith, “can neither totally nor finally fall away from the state of grace” (XVII.1). Augustine, Aquinas and the Formula of Concord say as much of the elect, and still hold that some truly justified fall away: Augustine and Aquinas because some given new life by the Spirit are not given perseverance, the Lutherans because those in whom God began the good work can turn away by their own fault. So the chapter on perseverance writes the Reformed conclusion as two claims and the claim that joins them, and finds that Augustine parts from Westminster at the step from 1 John 2:19 (“they went out from us, but they were not of us”), which he reads of those who had true faith and were not elect. Weighed as a dispute of its own, Westminster stands off against Augustine and Aquinas, Trent, the Lutherans and Wesley, and only what the Remonstrants of 1610 granted is settled: no power from outside snatches believers out of Christ’s hand (\texttt{only\_\allowbreak{}the\_\allowbreak{}remonstrance\_\allowbreak{}prevails}). Westminster and each of the four can be defended, and none must be accepted.
+
 \subsubsection*{What is not encoded}
 The Remonstrants’ denial of the will’s passivity, and Wesley’s view of it, are not encoded: each position here concludes only what its cited sources say. Nor is the cooperation of the renewed will, which Dort, the Formula of Concord and Trent all grant in some sense, and which a dilemma over “cooperate” would split.
 
-The perseverance of the saints, which Dort holds and the Thomists and Trent deny, is not weighed: the Thomists’ claim that justifying grace can be lost is encoded, and no Reformed claim against it. Nor is Molina’s own \emph{Concordia}, which no public English text could be checked against; the Molinist readings are cited from Pohle’s report of them.
+Molina’s own \emph{Concordia} is not encoded, because no public English text could be checked against it; the Molinist readings are cited from Pohle’s report of them.
 
 John 6:44 (“No one can come to me unless the Father who sent me draws him”) is the third text most often cited for the Reformed view, and is not encoded either. Nor is election, the subject of the first of the Remonstrants’ articles, which is a dispute of its own.
 
@@ -24286,6 +24289,7 @@ John 6:44 (“No one can come to me unless the Father who sent me draws him”) 
 \texttt{Third\allowbreak{}Way.lean} & freedom to refuse, the Lutherans, Wesley, and the third way’s dilemma \\
 \texttt{Thomist.lean} & Aquinas and the Catholic schools, and what “not merely passive” means \\
 \texttt{Dispute.lean} & the positions weighed, and the verdicts \\
+\texttt{Perseverance.lean} & the perseverance of the saints, weighed as a dispute of its own \\
 \bottomrule
 \end{longtable}
 \subsection*{Two routes: Ephesians 2 and Romans 9}
@@ -25420,7 +25424,7 @@ The Thomists accept Trent’s fourth canon: the will, moved by God, cooperates b
 
 Grant the Thomists their premises, and the second part of sola gratia follows: the grace that saves brings about the consent it seeks (\texttt{thomists\_\allowbreak{}reach\_\allowbreak{}effectual\_\allowbreak{}grace}). The step that delivers it is rated \emph{disputed}, because the Molinists grant God’s intention and the infallible result and ascribe the efficacy to the consent God foresees.
 
-Two Thomist claims are about resisting grace, and neither is the claim that the grace that saves can be finally refused. Grace “really sufficient in its own order” (Garrigou-Lagrange, after Lemos) is resisted, and through that resistance the efficacious grace offered with it is withheld. And justifying grace, once given, can be lost: Aquinas holds that the charity of one still on the way (in this life) can be lost, and Trent condemns anyone who says otherwise (canon 23). The grace resisted in the first is not the grace that converts, and the grace lost in the second is grace once given. So they are encoded as claims of their own. Dort parts from the Thomists on the second, the perseverance of the saints, which this argument does not weigh.
+Two Thomist claims are about resisting grace, and neither is the claim that the grace that saves can be finally refused. Grace “really sufficient in its own order” (Garrigou-Lagrange, after Lemos) is resisted, and through that resistance the efficacious grace offered with it is withheld. And justifying grace, once given, can be lost: Aquinas holds that the charity of one still on the way (in this life) can be lost, and Trent condemns anyone who says otherwise (canon 23). The grace resisted in the first is not the grace that converts, and the grace lost in the second is grace once given. So they are encoded as claims of their own. Dort parts from the Thomists on the second, the perseverance of the saints, which the chapter on perseverance weighs, with Aquinas beside Augustine.
 
 \subsubsection*{The word “passive”}
 The Thomists’ operating grace gives them that conversion is God’s work alone. What they do not take is Dort’s next step, from God’s work alone to the will’s passivity. Instead they say the will is “not merely passive”. Garrigou-Lagrange: under operating grace “the will elicits its act vitally, in fact, it freely consents to the divine motion or inspiration, but it does not strictly move itself”, and “in these acts the will does not remain passive”. He lists Calvin’s “merely passive” among the errors. Taken at their face, these words deny the third part of sola gratia.
@@ -27095,9 +27099,1250 @@ theorem thomist_not_forced : ¬Framework.SkepticallyAccepted
     solaGratiaDispute.defeats Party.thomist
 -- axioms: propext, Classical.choice, Quot.sound
 \end{verbatim}}
+\subsection*{The perseverance of the saints}
+\addcontentsline{toc}{subsection}{The perseverance of the saints}
+“My sheep hear my voice, and I know them, and they follow me. I give them eternal life, and they will never perish, and no one will snatch them out of my hand” (John 10:27–28). If the grace that saves brings a person to believe, can the one it saves lose it again? The Westminster Confession of 1647 answers that those “whom God hath accepted in his Beloved, effectually called and sanctified by his Spirit, can neither totally nor finally fall away from the state of grace; but shall certainly persevere therein to the end, and be eternally saved” (XVII.1). To be \emph{effectually called} is to be called in a way that brings one to faith. The Synod of Dort had said the same in its Fifth Head of Doctrine in 1619: God “does not wholly withdraw the Holy Spirit from his own people, even in their melancholy falls” (V, article 6). This is the \emph{perseverance of the saints}.
+
+\subsubsection*{Two claims, and the claim that joins them}
+Westminster’s sentence is about the effectually called, and its tenth chapter makes them the elect, those God chose to save. Of the elect, Augustine had said the same about twelve centuries earlier. Those “called according to God’s purpose” are elected, and those who are not to persevere “are not elected” (\emph{On Rebuke and Grace}, ch. 16). Aquinas says that predestination “most certainly and infallibly takes effect” (\emph{Summa} I q.23 a.6), and the Formula of Concord that God placed the elect’s salvation “in the almighty hand of our Savior Jesus Christ, from which no one can pluck us, John 10:28” (Solid Declaration XI.45). So Augustine, Aquinas and the Lutherans agree with Westminster that the elect persevere, and divide from it over who the elect are. Trent and Wesley are not encoded as taking a side on the elect.
+
+Augustine held that some who are truly \emph{regenerate}, given new life by the Spirit, are not elect: “to some of His own children — whom He has regenerated in Christ — to whom He has given faith, hope, and love, God does not give perseverance also” (ch. 18). The Reformed hold the contrary. Everyone truly justified, that is, put right with God by faith, is among the elect, and those who fall away never had justifying faith. Among the texts they cite is 1 John 2:19: “They went out from us, but they were not of us; for if they had been of us, they would have continued with us.” Calvin puts it so on Hebrews 6: “God indeed favours none but the elect alone with the Spirit of regeneration”.
+
+So the Reformed conclusion is written as two claims: the elect persevere, and no one truly justified can finally fall away. A third claim joins them, that the truly justified are elect. If “the perseverance of the saints” were one claim, “saints” would have to mean both the elect and everyone truly justified. Augustine agrees about the first and denies the second, so as one claim he would seem to contradict Westminster even where he agrees with it.
+
+\subsubsection*{The two routes, and where each is disputed}
+\textbf{John 10 and 1 John 2.} From John 10:27–29, the Reformed conclude that the elect persevere. Calvin reads the verse so: “the salvation of all the elect is not less certain than the power of God is invincible”. Wesley grants the text and reads its promise as conditional, quoting 2 Peter 1:10: “They are \emph{my sheep}, that \emph{hear my voice}, that \emph{follow me} in all holiness. And ‘if ye do these things, ye shall never fall’”. So the step is rated \emph{disputed}, which means that a reader the library cites grants its grounds and denies its conclusion. From 1 John 2:19, the Reformed conclude that the truly justified are elect. Augustine grants the verse and still denies the step: those who left “were not of the number of children, even when they were in the faith of children” (ch. 20). They were not elect, and their faith was real. That step is rated \emph{disputed} too.
+
+\textbf{Philippians 1.} “He who began a good work in you will bring it to completion at the day of Jesus Christ” (Philippians 1:6). Trent’s chapter on perseverance first says that “all ought to place and repose a most firm hope in God’s help”, and then quotes the verse with a condition: “For God, unless men be themselves wanting to His grace, as he has begun the good work, so will he perfect it” (Session VI, ch. 13). So the step from the verse to “no one truly justified can finally fall away” is rated \emph{disputed}.
+
+The John route reaches the conclusion without Philippians, and the Philippians route reaches it without 1 John 2:19, though it still needs John 10 for the elect (\texttt{john\_\allowbreak{}strand\_\allowbreak{}establishes}, \texttt{philippians\_\allowbreak{}strand\_\allowbreak{}establishes}).
+
+\subsubsection*{Augustine, Trent, the Lutherans and Wesley}
+Four positions hold that one truly justified can finally fall away.
+
+\begin{itemize}
+  \item \textbf{Augustine and Aquinas}, on Augustine’s ground that some regenerate are not given perseverance. They hold that the elect persevere as firmly as Westminster does. Augustine’s claim, his grant that the elect persevere, and the Reformed step from 1 John 2:19 cannot all be held together, and the step is where they part (\texttt{where\allowbreak{}Augustine\allowbreak{}Parts\allowbreak{}From\allowbreak{}Johns\allowbreak{}Strand}).
+  \item \textbf{Trent}, from the condition in its chapter 13. Its canon 23 condemns anyone who says “that a man once justified can sin no more, nor lose grace, and that therefore he that falls and sins was never truly justified”. The canon is about losing grace; that it can be lost finally is what the condition says.
+  \item \textbf{The Lutherans}, from the Formula of Concord. They hold that the elect persevere, citing John 10:28, and that some in whom God began the good work fall away by their own fault: it “is not as though God were unwilling to grant grace for perseverance to those in whom He has begun the good work” (Solid Declaration XI.42).
+  \item \textbf{Wesley}, from the condition he reads in John 10 and from Hebrews 6:4–6, “it is impossible, in the case of those who have once been enlightened … and then have fallen away, to restore them again to repentance”. He takes it for true believers who fell. “The sum of all is this. If the Scriptures are true, those who are holy or righteous in the judgment of God himself … may nevertheless so fall from God, as to perish everlastingly” (\emph{Serious Thoughts upon the Perseverance of the Saints}, §30). The Reformed answer, with Calvin, is that those described had “some taste of his grace”, a knowledge “which afterwards vanishes away”, and were never regenerate.
+\end{itemize}
+Trent, Wesley and the Lutherans each make the promise hold unless the believer turns away: Trent “unless men be themselves wanting to His grace”, Wesley “if ye do these things, ye shall never fall”, and the Formula of Concord that those who fall away do so by their own fault. Taken as a condition that can fail, that simply is the claim that the justified can finally fall away. Taken in the sense of Dort’s Fifth Head, as a condition God keeps in his own sheep (“God is faithful, who having conferred grace, mercifully confirms and powerfully preserves them therein, even to the end”, V, article 3), it is something Dort holds. Both senses are checked against Wesley’s position, because he has a second ground besides the condition, Hebrews 6, and his conclusion does not stand or fall with how the condition is taken (\texttt{what\allowbreak{}The\allowbreak{}Condition\allowbreak{}Means}). Wesley parts from Dort either way. In Dort’s sense of the condition he parts at Calvin’s reading of Hebrews 6. In his own sense he parts at the step from John 10, the step he himself disputes.
+
+\subsubsection*{The Remonstrants left it open}
+The Remonstrants, the Dutch followers of Arminius whose Remonstrance of 1610 the Synod of Dort answered, did not deny perseverance. Their fifth article says that Christ, “if only they are ready for the conflict, and desire his help, and are not inactive, keeps them from falling”, so that they cannot be “plucked out of Christ’s hands” (John 10:28). Then it stops: “But whether they are capable, through negligence, of forsaking again the first beginnings of their life in Christ … that must be more particularly determined out of the Holy Scripture, before we ourselves can teach it with the full persuasion of our minds.” Arminius wrote, “I never taught that a true believer can either totally or finally fall away from the faith, and perish; yet I will not conceal, that there are passages of Scripture which seem to me to wear this aspect” (\emph{Declaration of Sentiments}). What the article concludes from John 10:28 leaves the question open (\texttt{remonstrance\_\allowbreak{}leaves\_\allowbreak{}perseverance\_\allowbreak{}open}).
+
+\subsubsection*{Weighed together}
+Weighed as one dispute, Westminster stands off against each of the four positions that hold the justified can fall away: each defeats the other, so between them it is a tie. The four do not attack one another. However the ties are settled, the one thing that must be accepted is what the Remonstrants concluded from John 10:28: no power from outside snatches believers out of Christ’s hand (\texttt{only\_\allowbreak{}the\_\allowbreak{}remonstrance\_\allowbreak{}prevails}). Westminster and each of the four can be defended, which means each is accepted on at least one way of settling the ties, and none of the five must be accepted on every way. Every tie rests on a reading or step rated \emph{disputed}, so the verdict moves only if a new, cited argument moves one of those ratings.
+
+\subsubsection*{What is not encoded}
+Romans 8:29–30 (“those whom he justified he also glorified”) is the third text most often cited for perseverance, and Hebrews 10:26–29 and 2 Peter 2:20–21 the texts most often set beside Hebrews 6 against it. None is encoded: no reading of them was checked against a cited reader with a verified location. Nor is the certainty of persevering to the end, which Dort grants to believers “according to the measure of their faith” (V, article 9) and Trent’s canon 16 denies except by special revelation. Nor is falling for a time. Westminster denies that the elect fall away “totally”, and the Smalcald Articles, Luther’s articles of 1537, say that when holy men fall into manifest sins, as David did, “faith and the Holy Ghost has departed from them”. This chapter weighs only falling away finally. Dort itself grants that believers, left to themselves, “could not persevere in a state of grace” (V, article 3), and that their falling “with respect to themselves is not only possible, but would undoubtedly happen” (V, article 8). The claims here are about what God does, which is where the readers part.
+
+\subsubsection*{The positions weighed}
+Six parties are heard: the Remonstrance, with what it concludes from John 10:28; Westminster and Dort; Augustine and Aquinas; Trent; the Lutherans; and Wesley. One position defeats another when it contradicts something the other holds and its weakest premise or step is rated no lower than the other’s. Who defeats whom is computed from their premises and checked by the kernel.
+
+\subsubsection*{How this is checked}
+\paragraph*{The conclusion}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{perseverance}}\par\nobreak\noindent
+\textbf{The perseverance of the saints}, as two claims: the elect persevere, and no one truly justified can finally fall away. The first, Augustine, Aquinas and the Lutherans hold as firmly as Westminster. The second is where they part.
+
+\begin{derivation}
+  \item[] \(\pvar{TestimonyArguments.SolaGratia}{41} \land \lnot \pvar{TestimonyArguments.SolaGratia}{43}\)
+\end{derivation}
+\paragraph*{The steps}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{john10\allowbreak{}Step}}\par\nobreak\noindent
+John 10:27–29: those the Father gave to Christ “will never perish”. So the elect persevere. Rated \texttt{disputed}: Wesley grants the text and reads its promise as conditional, quoting 2 Peter 1:10.
+
+\begin{derivation}
+  \item[] \(\pvar{TestimonyArguments.SolaGratia}{32} \rightarrow \pvar{TestimonyArguments.SolaGratia}{41}\)\gloss{\emph{would give:} Those God has chosen to save cannot finally fall away from grace}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{bridge\allowbreak{}Step}}\par\nobreak\noindent
+1 John 2:19: “if they had been of us, they would have continued with us”. So everyone truly justified is among the elect, and those who left were never truly justified. Rated \texttt{disputed}: Augustine grants the verse and holds that those who left had true faith and were not elect.
+
+\begin{derivation}
+  \item[] \(\pvar{TestimonyArguments.SolaGratia}{35} \rightarrow \pvar{TestimonyArguments.SolaGratia}{42}\)\gloss{\emph{would give:} Everyone who is truly justified is among the elect}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{join\allowbreak{}Step}}\par\nobreak\noindent
+If the elect persevere and the truly justified are elect, no one truly justified can finally fall away. Rated \texttt{consensus}: it follows from what the words mean.
+
+\begin{derivation}
+  \item[] \((\pvar{TestimonyArguments.SolaGratia}{41} \land \pvar{TestimonyArguments.SolaGratia}{42}) \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{would deny:} One who is truly justified can fall away from grace finally, and perish}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{philippians\allowbreak{}Step}}\par\nobreak\noindent
+Philippians 1:6: he who began a good work will bring it to completion. So no one truly justified can finally fall away. Rated \texttt{disputed}: Trent quotes the verse with “unless men be themselves wanting to His grace”.
+
+\begin{derivation}
+  \item[] \(\pvar{TestimonyArguments.SolaGratia}{33} \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{would deny:} One who is truly justified can fall away from grace finally, and perish}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{conditional\allowbreak{}Step}}\par\nobreak\noindent
+If God’s promise holds unless men are wanting to his grace, one truly justified can finally fall away. Rated \texttt{well\allowbreak{}Supported}.
+
+\begin{derivation}
+  \item[] \(\pvar{TestimonyArguments.SolaGratia}{38} \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{would give:} One who is truly justified can fall away from grace finally, and perish}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{hebrews\allowbreak{}Step}}\par\nobreak\noindent
+Hebrews 6:4–6, read as describing true believers who fall away: so one truly justified can finally fall away. Rated \texttt{well\allowbreak{}Supported}; the dissent is from the reading.
+
+\begin{derivation}
+  \item[] \((\pvar{TestimonyArguments.SolaGratia}{34} \land \pvar{TestimonyArguments.SolaGratia}{40}) \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{would give:} One who is truly justified can fall away from grace finally, and perish}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{augustine\allowbreak{}Step}}\par\nobreak\noindent
+If some whom God has regenerated are not given perseverance, one truly justified can finally fall away. Rated \texttt{well\allowbreak{}Supported}.
+
+\begin{derivation}
+  \item[] \(\pvar{TestimonyArguments.SolaGratia}{37} \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{would give:} One who is truly justified can fall away from grace finally, and perish}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{remonstrance\allowbreak{}Step}}\par\nobreak\noindent
+John 10:28: no one will snatch them out of Christ’s hand. So no power from outside snatches believers out of it. Rated \texttt{consensus}.
+
+\begin{derivation}
+  \item[] \(\pvar{TestimonyArguments.SolaGratia}{32} \rightarrow \pvar{TestimonyArguments.SolaGratia}{36}\)\gloss{\emph{would give:} No power from outside can snatch true believers out of Christ’s hand}
+\end{derivation}
+\paragraph*{The lines}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{john10\allowbreak{}Line}} --- John 10:27–29 (“no one will snatch them out of my hand”)\par\nobreak\noindent
+\textbf{John 10:27–29}: the elect persevere.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{32}\)\gloss{John 10:27–29 — they will never perish, and no one will snatch them out of my hand}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{32} \rightarrow \pvar{TestimonyArguments.SolaGratia}{41}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{41}\)\gloss{\emph{at issue:} Those God has chosen to save cannot finally fall away from grace}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{bridge\allowbreak{}Line}} --- 1 John 2:19 (“they went out from us, but they were not of us”)\par\nobreak\noindent
+\textbf{1 John 2:19}: the truly justified are elect.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{35}\)\gloss{1 John 2:19 — they went out from us, but they were not of us}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{35} \rightarrow \pvar{TestimonyArguments.SolaGratia}{42}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{42}\)\gloss{\emph{at issue:} Everyone who is truly justified is among the elect}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{philippians\allowbreak{}Line}} --- Philippians 1:6 (“he who began a good work in you will bring it to completion”)\par\nobreak\noindent
+\textbf{Philippians 1:6}: no one truly justified can finally fall away.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{33}\)\gloss{Philippians 1:6 — he who began a good work in you will bring it to completion}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{33} \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{at issue, the denial of:} One who is truly justified can fall away from grace finally, and perish}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{conditional\allowbreak{}Line}} --- The promise, kept “unless men be themselves wanting to His grace”\par\nobreak\noindent
+\textbf{The condition}: the promise holds unless men are wanting to God’s grace.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{38}\)\gloss{God’s promise to keep those he has begun to save holds unless they fall away by their own fault}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{38} \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{at issue:} One who is truly justified can fall away from grace finally, and perish}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{hebrews\allowbreak{}Line}} --- Hebrews 6:4–6, as describing true believers who fall away\par\nobreak\noindent
+\textbf{Hebrews 6:4–6}, read as describing true believers who fall away.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{34}\)\gloss{Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{40}\)\gloss{Hebrews 6:4–6 describes true believers who actually fall away}
+  \item[(3)] \((\pvar{TestimonyArguments.SolaGratia}{34} \land \pvar{TestimonyArguments.SolaGratia}{40}) \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{at issue:} One who is truly justified can fall away from grace finally, and perish}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{augustine\allowbreak{}Line}} --- Some regenerate are not given perseverance (Augustine)\par\nobreak\noindent
+\textbf{Augustine}: some regenerate are not given perseverance.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{37}\)\gloss{To some whom God has regenerated, and given faith, hope and love, he does not give perseverance}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{37} \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{at issue:} One who is truly justified can fall away from grace finally, and perish}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{remonstrance\allowbreak{}Line}} --- Remonstrance, article 5 (John 10:28)\par\nobreak\noindent
+\textbf{The Remonstrance, article 5}: no one plucks believers out of Christ’s hand.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{32}\)\gloss{John 10:27–29 — they will never perish, and no one will snatch them out of my hand}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{32} \rightarrow \pvar{TestimonyArguments.SolaGratia}{36}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{36}\)\gloss{\emph{at issue:} No power from outside can snatch true believers out of Christ’s hand}
+\end{derivation}
+\paragraph*{The positions}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{remonstrance}} --- Remonstrance (article 5, 1610)\par\nobreak\noindent
+\textbf{The Remonstrants of 1610}: what their fifth article concludes from John 10:28, that no one plucks believers out of Christ’s hand. The article puts a condition on Christ’s keeping, “if only they are ready for the conflict, and desire his help, and are not inactive”. That is the condition the dilemma below takes two ways, and the article does not say which way it means, so it is not carried here as a premise. It leaves whether believers can fall away by negligence to be “more particularly determined out of the Holy Scripture”.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{32}\)\gloss{John 10:27–29 — they will never perish, and no one will snatch them out of my hand}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{32} \rightarrow \pvar{TestimonyArguments.SolaGratia}{36}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{36}\)\gloss{\emph{at issue:} No power from outside can snatch true believers out of Christ’s hand}
+  \keepwithnext
+\end{derivation}
+\emph{Grounded in scripture alone:} John 10:27–29 — they will never perish, and no one will snatch them out of my hand.
+\par\medskip\noindent\textbf{\texttt{augustinian}} --- Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)\par\nobreak\noindent
+\textbf{Augustine and Aquinas.} The elect persevere; and, on Augustine’s ground, to some whom God has regenerated he does not give perseverance, so one truly justified can finally fall away. They read 1 John 2:19 as Augustine does, of those who were in the faith and were not elect.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{37}\)\gloss{To some whom God has regenerated, and given faith, hope and love, he does not give perseverance}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{41}\)\gloss{Those God has chosen to save cannot finally fall away from grace}
+  \item[(3)] \(\pvar{TestimonyArguments.SolaGratia}{35}\)\gloss{1 John 2:19 — they went out from us, but they were not of us}
+  \item[(4)] \(\pvar{TestimonyArguments.SolaGratia}{37} \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{would give:} One who is truly justified can fall away from grace finally, and perish}
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{41} \land \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{at issue:} \(\pvar{TestimonyArguments.SolaGratia}{41}\) Those God has chosen to save cannot finally fall away from grace; \(\pvar{TestimonyArguments.SolaGratia}{43}\) One who is truly justified can fall away from grace finally, and perish}
+  \keepwithnext
+\end{derivation}
+\emph{Grounded in scripture alone:} 1 John 2:19 — they went out from us, but they were not of us.
+\par\medskip\noindent\textbf{\texttt{trent\allowbreak{}On\allowbreak{}Perseverance}} --- Trent (Session VI, chapter 13 and canon 23)\par\nobreak\noindent
+\textbf{Trent}, from the sixth session (1547): Philippians 1:6, as its thirteenth chapter reads it, with the condition “unless men be themselves wanting to His grace”.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{38}\)\gloss{God’s promise to keep those he has begun to save holds unless they fall away by their own fault}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{33}\)\gloss{Philippians 1:6 — he who began a good work in you will bring it to completion}
+  \item[(3)] \(\pvar{TestimonyArguments.SolaGratia}{38} \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{at issue:} One who is truly justified can fall away from grace finally, and perish}
+  \keepwithnext
+\end{derivation}
+\emph{Grounded in scripture alone:} Philippians 1:6 — he who began a good work in you will bring it to completion.
+\par\medskip\noindent\textbf{\texttt{lutheran\allowbreak{}On\allowbreak{}Perseverance}} --- Lutheran (the Formula of Concord, XI)\par\nobreak\noindent
+\textbf{The Lutherans}, from the Formula of Concord (1577). The elect persevere, “from which no one can pluck us, John 10:28” (Solid Declaration XI.45); and those in whom God began the good work can fall away by their own fault (XI.42).
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{38}\)\gloss{God’s promise to keep those he has begun to save holds unless they fall away by their own fault}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{32}\)\gloss{John 10:27–29 — they will never perish, and no one will snatch them out of my hand}
+  \item[(3)] \(\pvar{TestimonyArguments.SolaGratia}{41}\)\gloss{Those God has chosen to save cannot finally fall away from grace}
+  \item[(4)] \(\pvar{TestimonyArguments.SolaGratia}{38} \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{would give:} One who is truly justified can fall away from grace finally, and perish}
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{41} \land \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{at issue:} \(\pvar{TestimonyArguments.SolaGratia}{41}\) Those God has chosen to save cannot finally fall away from grace; \(\pvar{TestimonyArguments.SolaGratia}{43}\) One who is truly justified can fall away from grace finally, and perish}
+  \keepwithnext
+\end{derivation}
+\emph{Grounded in scripture alone:} John 10:27–29 — they will never perish, and no one will snatch them out of my hand.
+\par\medskip\noindent\textbf{\texttt{wesley\allowbreak{}On\allowbreak{}Perseverance}} --- Wesley (Serious Thoughts upon the Perseverance of the Saints)\par\nobreak\noindent
+\textbf{Wesley}, from \emph{Serious Thoughts upon the Perseverance of the Saints} (1751). John 10:27–29, with the condition he reads in it, “if ye do these things, ye shall never fall” (2 Peter 1:10); and Hebrews 6:4–6, read as describing true believers who fell. The condition is carried as Wesley states it, with no step drawn from it, because what it commits him to is what the dilemma below asks. His conclusion comes from Hebrews 6.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{34}\)\gloss{Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{40}\)\gloss{Hebrews 6:4–6 describes true believers who actually fall away}
+  \item[(3)] \(\pvar{TestimonyArguments.SolaGratia}{32}\)\gloss{John 10:27–29 — they will never perish, and no one will snatch them out of my hand}
+  \breakrow{(4)} \(\pvar{TestimonyArguments.SolaGratia}{38}\)\gloss{God’s promise to keep those he has begun to save holds unless they fall away by their own fault}
+  \item[(5)] \((\pvar{TestimonyArguments.SolaGratia}{34} \land \pvar{TestimonyArguments.SolaGratia}{40}) \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{at issue:} One who is truly justified can fall away from grace finally, and perish}
+  \keepwithnext
+\end{derivation}
+\emph{Grounded in scripture alone:} Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away, John 10:27–29 — they will never perish, and no one will snatch them out of my hand.
+\paragraph*{The position argued for}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{perseverance\allowbreak{}Shared}}\par\nobreak\noindent
+The Reformed answer to Hebrews 6, with Calvin: those described had only “some taste” of grace, and were never regenerate.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{34}\)\gloss{Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away}
+  \item[(2)] \(\lnot \pvar{TestimonyArguments.SolaGratia}{40}\)\gloss{\emph{denied:} Hebrews 6:4–6 describes true believers who actually fall away}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{perseverance\allowbreak{}Reformed}} --- Reformed (Westminster XVII; Dort, Fifth Head)\par\nobreak\noindent
+\textbf{The Reformed position}, as Westminster (1647) and Dort (1619) state it. Two routes to the claim that no one truly justified can finally fall away: John 10:27–29 with 1 John 2:19, joined; and Philippians 1:6. With Calvin’s answer to Hebrews 6.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{32}\)\gloss{John 10:27–29 — they will never perish, and no one will snatch them out of my hand}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{35}\)\gloss{1 John 2:19 — they went out from us, but they were not of us}
+  \item[(3)] \(\pvar{TestimonyArguments.SolaGratia}{33}\)\gloss{Philippians 1:6 — he who began a good work in you will bring it to completion}
+  \breakrow{(4)} \(\pvar{TestimonyArguments.SolaGratia}{34}\)\gloss{Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away}
+  \breakrow{(5)} \(\lnot \pvar{TestimonyArguments.SolaGratia}{40}\)\gloss{\emph{denied:} Hebrews 6:4–6 describes true believers who actually fall away}
+  \breakrow{(6)} \(\pvar{TestimonyArguments.SolaGratia}{32} \rightarrow \pvar{TestimonyArguments.SolaGratia}{41}\)\gloss{\emph{would give:} Those God has chosen to save cannot finally fall away from grace}
+  \breakrow{(7)} \(\pvar{TestimonyArguments.SolaGratia}{35} \rightarrow \pvar{TestimonyArguments.SolaGratia}{42}\)\gloss{\emph{would give:} Everyone who is truly justified is among the elect}
+  \breakrow{(8)} \(\pvar{TestimonyArguments.SolaGratia}{33} \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{would deny:} One who is truly justified can fall away from grace finally, and perish}
+  \item[(9)] \((\pvar{TestimonyArguments.SolaGratia}{41} \land \pvar{TestimonyArguments.SolaGratia}{42}) \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{would deny:} One who is truly justified can fall away from grace finally, and perish}
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{41} \land \lnot \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{at issue:} \(\pvar{TestimonyArguments.SolaGratia}{41}\) Those God has chosen to save cannot finally fall away from grace; \(\pvar{TestimonyArguments.SolaGratia}{43}\) \emph{denied:} One who is truly justified can fall away from grace finally, and perish}
+  \keepwithnext
+\end{derivation}
+\emph{Grounded in scripture alone:} John 10:27–29 — they will never perish, and no one will snatch them out of my hand, 1 John 2:19 — they went out from us, but they were not of us, Philippians 1:6 — he who began a good work in you will bring it to completion, Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away.
+\par\medskip\noindent\textbf{\texttt{john\allowbreak{}Strand}} --- Reformed, the John strand alone\par\nobreak\noindent
+The John strand alone: John 10:27–29 and 1 John 2:19, joined.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{32}\)\gloss{John 10:27–29 — they will never perish, and no one will snatch them out of my hand}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{35}\)\gloss{1 John 2:19 — they went out from us, but they were not of us}
+  \item[(3)] \(\pvar{TestimonyArguments.SolaGratia}{34}\)\gloss{Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away}
+  \breakrow{(4)} \(\lnot \pvar{TestimonyArguments.SolaGratia}{40}\)\gloss{\emph{denied:} Hebrews 6:4–6 describes true believers who actually fall away}
+  \breakrow{(5)} \(\pvar{TestimonyArguments.SolaGratia}{32} \rightarrow \pvar{TestimonyArguments.SolaGratia}{41}\)\gloss{\emph{would give:} Those God has chosen to save cannot finally fall away from grace}
+  \breakrow{(6)} \(\pvar{TestimonyArguments.SolaGratia}{35} \rightarrow \pvar{TestimonyArguments.SolaGratia}{42}\)\gloss{\emph{would give:} Everyone who is truly justified is among the elect}
+  \item[(7)] \((\pvar{TestimonyArguments.SolaGratia}{41} \land \pvar{TestimonyArguments.SolaGratia}{42}) \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{would deny:} One who is truly justified can fall away from grace finally, and perish}
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{41} \land \lnot \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{at issue:} \(\pvar{TestimonyArguments.SolaGratia}{41}\) Those God has chosen to save cannot finally fall away from grace; \(\pvar{TestimonyArguments.SolaGratia}{43}\) \emph{denied:} One who is truly justified can fall away from grace finally, and perish}
+  \keepwithnext
+\end{derivation}
+\emph{Grounded in scripture alone:} John 10:27–29 — they will never perish, and no one will snatch them out of my hand, 1 John 2:19 — they went out from us, but they were not of us, Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away.
+\par\medskip\noindent\textbf{\texttt{philippians\allowbreak{}Strand}} --- Reformed, the Philippians strand alone\par\nobreak\noindent
+The Philippians strand alone, with John 10:27–29 for the elect.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{32}\)\gloss{John 10:27–29 — they will never perish, and no one will snatch them out of my hand}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{33}\)\gloss{Philippians 1:6 — he who began a good work in you will bring it to completion}
+  \item[(3)] \(\pvar{TestimonyArguments.SolaGratia}{34}\)\gloss{Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away}
+  \breakrow{(4)} \(\lnot \pvar{TestimonyArguments.SolaGratia}{40}\)\gloss{\emph{denied:} Hebrews 6:4–6 describes true believers who actually fall away}
+  \breakrow{(5)} \(\pvar{TestimonyArguments.SolaGratia}{32} \rightarrow \pvar{TestimonyArguments.SolaGratia}{41}\)\gloss{\emph{would give:} Those God has chosen to save cannot finally fall away from grace}
+  \item[(6)] \(\pvar{TestimonyArguments.SolaGratia}{33} \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{would deny:} One who is truly justified can fall away from grace finally, and perish}
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{41} \land \lnot \pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{at issue:} \(\pvar{TestimonyArguments.SolaGratia}{41}\) Those God has chosen to save cannot finally fall away from grace; \(\pvar{TestimonyArguments.SolaGratia}{43}\) \emph{denied:} One who is truly justified can fall away from grace finally, and perish}
+  \keepwithnext
+\end{derivation}
+\emph{Grounded in scripture alone:} John 10:27–29 — they will never perish, and no one will snatch them out of my hand, Philippians 1:6 — he who began a good work in you will bring it to completion, Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away.
+\paragraph*{Readings}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{persevering\allowbreak{}Reading}}\par\nobreak\noindent
+The Reformed reading: no one truly justified falls away finally; Hebrews 6 describes those who had only a taste of grace; and no regenerate person is left without perseverance. The promise is not conditional on anything God does not himself keep.
+
+{\small\begin{verbatim}
+def perseveringReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.justifiedCanFinallyFallAway => False
+    | Claim.hebrews6DescribesBelieversWhoFall => False
+    | Claim.someRegenerateNotGivenPerseverance => False
+    | Claim.promiseIsConditional => False
+    | x => True
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{falling\allowbreak{}Away\allowbreak{}Reading}}\par\nobreak\noindent
+A reading on which every rival’s premises hold: the elect persevere, and some truly justified, not being elect, finally fall away. Not a position the rivals share: Wesley, for one, is not encoded as holding that the elect persevere.
+
+{\small\begin{verbatim}
+def fallingAwayReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.justifiedAreElect => False
+    | x => True
+\end{verbatim}}
+\paragraph*{What follows}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{perseverance\allowbreak{}Reformed\_\allowbreak{}establishes}}\par\nobreak\noindent
+\textbf{The Reformed premises establish the perseverance of the saints}: the elect persevere, and no one truly justified can finally fall away. That the second follows rests on readings and steps rated \texttt{disputed}: the steps from John 10 and 1 John 2, and from Philippians 1:6.
+
+{\small\begin{verbatim}
+theorem perseveranceReformed_establishes : Establishes perseveranceReformed
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{perseverance\allowbreak{}Reformed\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+The Reformed premises can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem perseveranceReformed_is_satisfiable : Satisfiable
+    perseveranceReformed.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{john\_\allowbreak{}strand\_\allowbreak{}establishes}}\par\nobreak\noindent
+\textbf{The John strand reaches the conclusion alone.} John 10:27–29 for the elect, 1 John 2:19 for the truly justified being elect, and the two joined.
+
+{\small\begin{verbatim}
+theorem john_strand_establishes : Establishes johnStrand
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{john\allowbreak{}Strand\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+The John strand can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem johnStrand_is_satisfiable : Satisfiable johnStrand.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{philippians\_\allowbreak{}strand\_\allowbreak{}establishes}}\par\nobreak\noindent
+\textbf{The Philippians strand reaches the conclusion alone}, without 1 John 2:19: Philippians 1:6 for the truly justified, and John 10:27–29 for the elect.
+
+{\small\begin{verbatim}
+theorem philippians_strand_establishes : Establishes philippiansStrand
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{philippians\allowbreak{}Strand\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+The Philippians strand can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem philippiansStrand_is_satisfiable : Satisfiable
+    philippiansStrand.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{remonstrance\_\allowbreak{}establishes}}\par\nobreak\noindent
+The Remonstrance’s conclusion follows from its premises.
+
+{\small\begin{verbatim}
+theorem remonstrance_establishes : Establishes remonstrance
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{remonstrance\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+The Remonstrance can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem remonstrance_is_satisfiable : Satisfiable remonstrance.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{remonstrance\_\allowbreak{}leaves\_\allowbreak{}perseverance\_\allowbreak{}open}}\par\nobreak\noindent
+\textbf{The Remonstrants’ premises leave perseverance open.} Their fifth article grants from John 10:28 that no one plucks believers out of Christ’s hand, and leaves whether they can fall away by negligence to be “more particularly determined out of the Holy Scripture”. The Reformed reading satisfies it, and so does a reading on which every rival’s premises hold. So the article neither teaches the perseverance of the saints nor denies it, as Arminius said of himself: “I never taught that a true believer can either totally or finally fall away from the faith, and perish”.
+
+{\small\begin{verbatim}
+theorem remonstrance_leaves_perseverance_open : Independent
+    remonstrance.premises (p Claim.justifiedCanFinallyFallAway)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{augustinian\_\allowbreak{}establishes}}\par\nobreak\noindent
+Augustine and Aquinas’s conclusion follows from their premises.
+
+{\small\begin{verbatim}
+theorem augustinian_establishes : Establishes augustinian
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{augustinian\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Augustine and Aquinas can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem augustinian_is_satisfiable : Satisfiable augustinian.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\allowbreak{}On\allowbreak{}Perseverance\_\allowbreak{}establishes}}\par\nobreak\noindent
+Trent’s conclusion follows from its premises.
+
+{\small\begin{verbatim}
+theorem trentOnPerseverance_establishes : Establishes trentOnPerseverance
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\allowbreak{}On\allowbreak{}Perseverance\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Trent can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem trentOnPerseverance_is_satisfiable : Satisfiable
+    trentOnPerseverance.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{lutheran\allowbreak{}On\allowbreak{}Perseverance\_\allowbreak{}establishes}}\par\nobreak\noindent
+The Lutherans’ conclusion follows from their premises.
+
+{\small\begin{verbatim}
+theorem lutheranOnPerseverance_establishes : Establishes
+    lutheranOnPerseverance
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{lutheran\allowbreak{}On\allowbreak{}Perseverance\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+The Lutherans can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem lutheranOnPerseverance_is_satisfiable : Satisfiable
+    lutheranOnPerseverance.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wesley\allowbreak{}On\allowbreak{}Perseverance\_\allowbreak{}establishes}}\par\nobreak\noindent
+Wesley’s conclusion follows from his premises.
+
+{\small\begin{verbatim}
+theorem wesleyOnPerseverance_establishes : Establishes wesleyOnPerseverance
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wesley\allowbreak{}On\allowbreak{}Perseverance\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Wesley can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem wesleyOnPerseverance_is_satisfiable : Satisfiable
+    wesleyOnPerseverance.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\paragraph*{Where Augustine parts from Westminster}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{where\allowbreak{}Augustine\allowbreak{}Parts\allowbreak{}From\allowbreak{}Johns\allowbreak{}Strand}}\par\nobreak\noindent
+\textbf{Where Augustine parts from the John strand: at 1 John 2:19.} Augustine grants that the elect persevere, and the Reformed step from 1 John 2:19 joins the elect to every one truly justified. Augustine’s claim that some regenerate are not given perseverance, his grant that the elect persevere, and that step cannot all be held together, and the crux is the step. It is rated \texttt{disputed}, and the reader who disputes it is Augustine himself: those who left “were not of the number of children, even when they were in the faith of children”.
+
+\paragraph{Why \emph{Reformed, the John strand alone} stands against \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}.}
+\begin{itemize}
+\item \textbf{The crux:} \(\pvar{TestimonyArguments.SolaGratia}{35} \rightarrow \pvar{TestimonyArguments.SolaGratia}{42}\), a premise of \emph{Reformed, the John strand alone}.
+\item \textbf{What it does:} its conclusion does not follow without it.
+\item \textbf{Granted:} \(\pvar{TestimonyArguments.SolaGratia}{35}\), \((\pvar{TestimonyArguments.SolaGratia}{41} \land \pvar{TestimonyArguments.SolaGratia}{42}) \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\), which the break also needs.
+\item \textbf{Where the rival breaks:} \(\pvar{TestimonyArguments.SolaGratia}{37}\), \(\pvar{TestimonyArguments.SolaGratia}{37} \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\), \(\pvar{TestimonyArguments.SolaGratia}{41}\) cannot be held together with \(\pvar{TestimonyArguments.SolaGratia}{35} \rightarrow \pvar{TestimonyArguments.SolaGratia}{42}\) and \(\pvar{TestimonyArguments.SolaGratia}{35}\), \((\pvar{TestimonyArguments.SolaGratia}{41} \land \pvar{TestimonyArguments.SolaGratia}{42}) \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\); each is needed for the break, and without the crux they stand.
+\item \textbf{What this rests on:}
+\begin{itemize}
+\item \(\pvar{TestimonyArguments.SolaGratia}{35}\) 1 John 2:19 — they went out from us, but they were not of us --- \emph{consensus}: 1 John 2:19
+\item \(\pvar{TestimonyArguments.SolaGratia}{41}\) Those God has chosen to save cannot finally fall away from grace --- \emph{well supported}: \cite[XVII.1]{westminster-confession-1647}; \cite[636]{schaff-creeds-christendom-3-1977}; \cite[593]{schaff-creeds-christendom-3-1977}
+\item \(\pvar{TestimonyArguments.SolaGratia}{42}\) Everyone who is truly justified is among the elect --- \emph{disputed}: \cite[X.4]{westminster-confession-1647}; \cite[137--138]{calvin-hebrews-1853}
+\item \(\pvar{TestimonyArguments.SolaGratia}{43}\) One who is truly justified can fall away from grace finally, and perish --- \emph{disputed}: \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}; \cite[439]{wesley-works-9-1827}
+\item the step itself --- \emph{disputed}: \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \emph{disputed}: \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}; \emph{consensus}: \cite[XVII.1]{westminster-confession-1647}; \cite[636]{schaff-creeds-christendom-3-1977}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{where\allowbreak{}Augustine\allowbreak{}Parts\allowbreak{}From\allowbreak{}Philippians}}\par\nobreak\noindent
+\textbf{Where Augustine’s position meets the Philippians route: at its one step.} Augustine is not cited on Philippians 1:6. The step from the verse to “no one truly justified can finally fall away” is rated \texttt{disputed} because Trent quotes the verse with its condition, and the Formula of Concord cites it while explaining why some fall away.
+
+\paragraph{Why \emph{Reformed, the Philippians strand alone} stands against \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}.}
+\begin{itemize}
+\item \textbf{The crux:} \(\pvar{TestimonyArguments.SolaGratia}{33} \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\), a premise of \emph{Reformed, the Philippians strand alone}.
+\item \textbf{What it does:} its conclusion does not follow without it.
+\item \textbf{Granted:} \(\pvar{TestimonyArguments.SolaGratia}{33}\), which the break also needs.
+\item \textbf{Where the rival breaks:} \(\pvar{TestimonyArguments.SolaGratia}{37}\), \(\pvar{TestimonyArguments.SolaGratia}{37} \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\) cannot be held together with \(\pvar{TestimonyArguments.SolaGratia}{33} \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\) and \(\pvar{TestimonyArguments.SolaGratia}{33}\); each is needed for the break, and without the crux they stand.
+\item \textbf{What this rests on:}
+\begin{itemize}
+\item \(\pvar{TestimonyArguments.SolaGratia}{33}\) Philippians 1:6 — he who began a good work in you will bring it to completion --- \emph{consensus}: Phil 1:6
+\item the step itself --- \emph{disputed}: \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \emph{disputed}: \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}; \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\end{itemize}
+\paragraph*{What the condition means}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{as\allowbreak{}Condition\allowbreak{}God\allowbreak{}Keeps}}\par\nobreak\noindent
+The condition read as one God himself keeps: those who are Christ’s sheep do hear and follow, because God keeps them in faith. Dort’s reading.
+
+{\small\begin{verbatim}
+def asConditionGodKeeps : Reading Claim :=
+  { name := "as a condition God himself keeps in his sheep, Dort's sense",
+    commits := p Claim.godKeepsHisSheepInFaith,
+    source := asConditionGodKeepsSource }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{as\allowbreak{}Condition\allowbreak{}That\allowbreak{}Can\allowbreak{}Fail}}\par\nobreak\noindent
+The condition read as one that can fail: one truly justified can fall away finally. Wesley’s sense.
+
+{\small\begin{verbatim}
+def asConditionThatCanFail : Reading Claim :=
+  { name := "as a condition that can fail, Wesley's sense",
+    commits := p Claim.justifiedCanFinallyFallAway,
+    source := asConditionThatCanFailSource }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wesley\allowbreak{}As\allowbreak{}God\allowbreak{}Keeps}} --- Wesley (Serious Thoughts upon the Perseverance of the Saints), read as a condition God himself keeps in his sheep, Dort’s sense\par\nobreak\noindent
+Wesley, with the condition read in Dort’s sense.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{34}\)\gloss{Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{40}\)\gloss{Hebrews 6:4–6 describes true believers who actually fall away}
+  \item[(3)] \(\pvar{TestimonyArguments.SolaGratia}{32}\)\gloss{John 10:27–29 — they will never perish, and no one will snatch them out of my hand}
+  \breakrow{(4)} \(\pvar{TestimonyArguments.SolaGratia}{38}\)\gloss{God’s promise to keep those he has begun to save holds unless they fall away by their own fault}
+  \breakrow{(5)} \((\pvar{TestimonyArguments.SolaGratia}{34} \land \pvar{TestimonyArguments.SolaGratia}{40}) \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\)
+  \item[(6)] \(\pvar{TestimonyArguments.SolaGratia}{38} \rightarrow \pvar{TestimonyArguments.SolaGratia}{39}\)\gloss{\emph{would give:} Those who are Christ’s sheep do hear and follow, because God keeps them in faith}
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{at issue:} One who is truly justified can fall away from grace finally, and perish}
+  \keepwithnext
+\end{derivation}
+\emph{Grounded in scripture alone:} Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away, John 10:27–29 — they will never perish, and no one will snatch them out of my hand.
+\par\medskip\noindent\textbf{\texttt{wesley\allowbreak{}As\allowbreak{}Can\allowbreak{}Fail}} --- Wesley (Serious Thoughts upon the Perseverance of the Saints), read as a condition that can fail, Wesley’s sense\par\nobreak\noindent
+Wesley, with the condition read in his own sense.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaGratia}{34}\)\gloss{Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaGratia}{40}\)\gloss{Hebrews 6:4–6 describes true believers who actually fall away}
+  \item[(3)] \(\pvar{TestimonyArguments.SolaGratia}{32}\)\gloss{John 10:27–29 — they will never perish, and no one will snatch them out of my hand}
+  \breakrow{(4)} \(\pvar{TestimonyArguments.SolaGratia}{38}\)\gloss{God’s promise to keep those he has begun to save holds unless they fall away by their own fault}
+  \breakrow{(5)} \((\pvar{TestimonyArguments.SolaGratia}{34} \land \pvar{TestimonyArguments.SolaGratia}{40}) \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\)
+  \item[(6)] \(\pvar{TestimonyArguments.SolaGratia}{38} \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaGratia}{43}\)\gloss{\emph{at issue:} One who is truly justified can fall away from grace finally, and perish}
+  \keepwithnext
+\end{derivation}
+\emph{Grounded in scripture alone:} Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away, John 10:27–29 — they will never perish, and no one will snatch them out of my hand.
+\par\medskip\noindent\textbf{\texttt{wesley\allowbreak{}As\allowbreak{}God\allowbreak{}Keeps\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Wesley read the first way can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem wesleyAsGodKeeps_is_satisfiable : Satisfiable
+    wesleyAsGodKeeps.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wesley\allowbreak{}As\allowbreak{}Can\allowbreak{}Fail\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Wesley read the second way can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem wesleyAsCanFail_is_satisfiable : Satisfiable wesleyAsCanFail.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{where\allowbreak{}Wesleys\allowbreak{}Hebrews\allowbreak{}Falls}}\par\nobreak\noindent
+\textbf{Why Westminster stands against Wesley, even with the condition read in Dort’s sense.} Wesley’s reading of Hebrews 6:4–6 still delivers that one truly justified can finally fall away. The crux is Calvin’s reading of the passage, that those described had only “some taste of his grace”. It is Westminster’s answer to Wesley, rated \texttt{disputed}.
+
+\paragraph{Why \emph{Reformed (Westminster XVII; Dort, Fifth Head)} stands against \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints), read as a condition God himself keeps in his sheep, Dort’s sense}.}
+\begin{itemize}
+\item \textbf{The crux:} \(\lnot \pvar{TestimonyArguments.SolaGratia}{40}\), a premise of \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \textbf{What it does:} its conclusion follows without it --- the crux is its answer to \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints), read as a condition God himself keeps in his sheep, Dort’s sense}.
+\item \textbf{Where the rival breaks:} \(\pvar{TestimonyArguments.SolaGratia}{40}\) cannot be held together with \(\lnot \pvar{TestimonyArguments.SolaGratia}{40}\); each is needed for the break, and without the crux they stand.
+\item \textbf{What this rests on:}
+\begin{itemize}
+\item \(\pvar{TestimonyArguments.SolaGratia}{40}\) Hebrews 6:4–6 describes true believers who actually fall away --- \emph{disputed}: \cite[137--138]{calvin-hebrews-1853}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{where\allowbreak{}Wesleys\allowbreak{}Condition\allowbreak{}Falls}}\par\nobreak\noindent
+\textbf{Why the John route stands against Wesley, with the condition taken as he means it.} Then the condition says that one truly justified can finally fall away. The John route needs both its steps to deny that, and the crux is the step from John 10:27–29, the one Wesley himself disputes (§18).
+
+\paragraph{Why \emph{Reformed, the John strand alone} stands against \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints), read as a condition that can fail, Wesley’s sense}.}
+\begin{itemize}
+\item \textbf{The crux:} \(\pvar{TestimonyArguments.SolaGratia}{32} \rightarrow \pvar{TestimonyArguments.SolaGratia}{41}\), a premise of \emph{Reformed, the John strand alone}.
+\item \textbf{What it does:} its conclusion does not follow without it.
+\item \textbf{Granted:} \(\pvar{TestimonyArguments.SolaGratia}{32}\), \(\pvar{TestimonyArguments.SolaGratia}{35}\), \(\pvar{TestimonyArguments.SolaGratia}{35} \rightarrow \pvar{TestimonyArguments.SolaGratia}{42}\), \((\pvar{TestimonyArguments.SolaGratia}{41} \land \pvar{TestimonyArguments.SolaGratia}{42}) \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\), which the break also needs.
+\item \textbf{Where the rival breaks:} \(\pvar{TestimonyArguments.SolaGratia}{38}\), \(\pvar{TestimonyArguments.SolaGratia}{38} \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\) cannot be held together with \(\pvar{TestimonyArguments.SolaGratia}{32} \rightarrow \pvar{TestimonyArguments.SolaGratia}{41}\) and \(\pvar{TestimonyArguments.SolaGratia}{32}\), \(\pvar{TestimonyArguments.SolaGratia}{35}\), \(\pvar{TestimonyArguments.SolaGratia}{35} \rightarrow \pvar{TestimonyArguments.SolaGratia}{42}\), \((\pvar{TestimonyArguments.SolaGratia}{41} \land \pvar{TestimonyArguments.SolaGratia}{42}) \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\); each is needed for the break, and without the crux they stand.
+\item \textbf{What this rests on:}
+\begin{itemize}
+\item \(\pvar{TestimonyArguments.SolaGratia}{32}\) John 10:27–29 — they will never perish, and no one will snatch them out of my hand --- \emph{consensus}: John 10:27-29
+\item \(\pvar{TestimonyArguments.SolaGratia}{35}\) 1 John 2:19 — they went out from us, but they were not of us --- \emph{consensus}: 1 John 2:19
+\item \(\pvar{TestimonyArguments.SolaGratia}{42}\) Everyone who is truly justified is among the elect --- \emph{disputed}: \cite[X.4]{westminster-confession-1647}; \cite[137--138]{calvin-hebrews-1853}
+\item \(\pvar{TestimonyArguments.SolaGratia}{41}\) Those God has chosen to save cannot finally fall away from grace --- \emph{well supported}: \cite[XVII.1]{westminster-confession-1647}; \cite[636]{schaff-creeds-christendom-3-1977}; \cite[593]{schaff-creeds-christendom-3-1977}
+\item \(\pvar{TestimonyArguments.SolaGratia}{43}\) One who is truly justified can fall away from grace finally, and perish --- \emph{disputed}: \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}; \cite[439]{wesley-works-9-1827}
+\item the step itself --- \emph{disputed}: \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \emph{disputed}: \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}; \emph{consensus}: \cite[XVII.1]{westminster-confession-1647}; \cite[636]{schaff-creeds-christendom-3-1977}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{what\allowbreak{}The\allowbreak{}Condition\allowbreak{}Means}}\par\nobreak\noindent
+\textbf{What the condition means, read both ways.} The claim is the one Trent, the Lutherans and Wesley share: God’s promise to keep those he has begun to save holds unless the believer turns away. Both senses are checked against Wesley’s position, because he has a second ground besides the condition, Hebrews 6, so his conclusion does not stand or fall with how the condition is taken.
+
+Taken as a condition God himself keeps, in the sense of Dort’s Fifth Head (article 3), the condition is something Dort holds. Wesley still cannot be held with Westminster, because his reading of Hebrews 6:4–6 delivers the falling away by itself; the crux is Calvin’s reading of that passage.
+
+Taken as a condition that can fail, which is how Wesley means it (“a Saint may fall away”), the condition is the falling away. It cannot be held with the John route, at the step from John 10:27–29, which Wesley disputes.
+
+Each reading is consistent: Wesley read either way can be held without contradiction. Both breaks come at readings and steps rated \texttt{disputed}, so neither shows the other side right.
+
+\paragraph{Every reading of \(P_{38}\), answered.} \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} holds \(\pvar{TestimonyArguments.SolaGratia}{38}\). It is read 2 ways here, and each reading is checked; none can be left out.
+
+\paragraph{1. Read as a condition God himself keeps in his sheep, Dort’s sense.} The claim commits \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} to \(\pvar{TestimonyArguments.SolaGratia}{39}\) --- so read by \cite[593]{schaff-creeds-christendom-3-1977}; \cite[415--416]{calvin-commentary-john-1847} (\emph{disputed}).
+
+Against \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, it cannot be held. Where it breaks:
+\paragraph{Why \emph{Reformed (Westminster XVII; Dort, Fifth Head)} stands against \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints), read as a condition God himself keeps in his sheep, Dort’s sense}.}
+\begin{itemize}
+\item \textbf{The crux:} \(\lnot \pvar{TestimonyArguments.SolaGratia}{40}\), a premise of \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \textbf{What it does:} its conclusion follows without it --- the crux is its answer to \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints), read as a condition God himself keeps in his sheep, Dort’s sense}.
+\item \textbf{Where the rival breaks:} \(\pvar{TestimonyArguments.SolaGratia}{40}\) cannot be held together with \(\lnot \pvar{TestimonyArguments.SolaGratia}{40}\); each is needed for the break, and without the crux they stand.
+\item \textbf{What this rests on:}
+\begin{itemize}
+\item \(\pvar{TestimonyArguments.SolaGratia}{40}\) Hebrews 6:4–6 describes true believers who actually fall away --- \emph{disputed}: \cite[137--138]{calvin-hebrews-1853}
+\end{itemize}
+\end{itemize}
+\paragraph{2. Read as a condition that can fail, Wesley’s sense.} The claim commits \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} to \(\pvar{TestimonyArguments.SolaGratia}{43}\) --- so read by \cite[439]{wesley-works-9-1827}; \cite[444--445]{wesley-works-9-1827} (\emph{disputed}).
+
+Against \emph{Reformed, the John strand alone}, it cannot be held. Where it breaks:
+\paragraph{Why \emph{Reformed, the John strand alone} stands against \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints), read as a condition that can fail, Wesley’s sense}.}
+\begin{itemize}
+\item \textbf{The crux:} \(\pvar{TestimonyArguments.SolaGratia}{32} \rightarrow \pvar{TestimonyArguments.SolaGratia}{41}\), a premise of \emph{Reformed, the John strand alone}.
+\item \textbf{What it does:} its conclusion does not follow without it.
+\item \textbf{Granted:} \(\pvar{TestimonyArguments.SolaGratia}{32}\), \(\pvar{TestimonyArguments.SolaGratia}{35}\), \(\pvar{TestimonyArguments.SolaGratia}{35} \rightarrow \pvar{TestimonyArguments.SolaGratia}{42}\), \((\pvar{TestimonyArguments.SolaGratia}{41} \land \pvar{TestimonyArguments.SolaGratia}{42}) \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\), which the break also needs.
+\item \textbf{Where the rival breaks:} \(\pvar{TestimonyArguments.SolaGratia}{38}\), \(\pvar{TestimonyArguments.SolaGratia}{38} \rightarrow \pvar{TestimonyArguments.SolaGratia}{43}\) cannot be held together with \(\pvar{TestimonyArguments.SolaGratia}{32} \rightarrow \pvar{TestimonyArguments.SolaGratia}{41}\) and \(\pvar{TestimonyArguments.SolaGratia}{32}\), \(\pvar{TestimonyArguments.SolaGratia}{35}\), \(\pvar{TestimonyArguments.SolaGratia}{35} \rightarrow \pvar{TestimonyArguments.SolaGratia}{42}\), \((\pvar{TestimonyArguments.SolaGratia}{41} \land \pvar{TestimonyArguments.SolaGratia}{42}) \rightarrow \lnot \pvar{TestimonyArguments.SolaGratia}{43}\); each is needed for the break, and without the crux they stand.
+\item \textbf{What this rests on:}
+\begin{itemize}
+\item \(\pvar{TestimonyArguments.SolaGratia}{32}\) John 10:27–29 — they will never perish, and no one will snatch them out of my hand --- \emph{consensus}: John 10:27-29
+\item \(\pvar{TestimonyArguments.SolaGratia}{35}\) 1 John 2:19 — they went out from us, but they were not of us --- \emph{consensus}: 1 John 2:19
+\item \(\pvar{TestimonyArguments.SolaGratia}{42}\) Everyone who is truly justified is among the elect --- \emph{disputed}: \cite[X.4]{westminster-confession-1647}; \cite[137--138]{calvin-hebrews-1853}
+\item \(\pvar{TestimonyArguments.SolaGratia}{41}\) Those God has chosen to save cannot finally fall away from grace --- \emph{well supported}: \cite[XVII.1]{westminster-confession-1647}; \cite[636]{schaff-creeds-christendom-3-1977}; \cite[593]{schaff-creeds-christendom-3-1977}
+\item \(\pvar{TestimonyArguments.SolaGratia}{43}\) One who is truly justified can fall away from grace finally, and perish --- \emph{disputed}: \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}; \cite[439]{wesley-works-9-1827}
+\item the step itself --- \emph{disputed}: \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \emph{disputed}: \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}; \emph{consensus}: \cite[XVII.1]{westminster-confession-1647}; \cite[636]{schaff-creeds-christendom-3-1977}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{perseverance\allowbreak{}Node}}\par\nobreak\noindent
+The package each party argues from.
+
+{\small\begin{verbatim}
+def perseveranceNode : PerseveranceParty → ArgumentPackage Claim :=
+  fun x =>
+    match x with
+    | PerseveranceParty.remonstrance => remonstrance
+    | PerseveranceParty.reformed => perseveranceReformed
+    | PerseveranceParty.augustinian => augustinian
+    | PerseveranceParty.trent => trentOnPerseverance
+    | PerseveranceParty.lutheran => lutheranOnPerseverance
+    | PerseveranceParty.wesleyan => wesleyOnPerseverance
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{perseverance\allowbreak{}Dispute}}\par\nobreak\noindent
+The dispute over the perseverance of the saints: every party can be held without contradiction, delivers its conclusion, and has its steps rated.
+
+{\small\begin{verbatim}
+def perseveranceDispute : Dispute Claim PerseveranceParty :=
+  { node := perseveranceNode,
+    consistent := perseveranceDispute._proof_1,
+    sound := perseveranceDispute._proof_2,
+    rated := perseveranceDispute._proof_9 }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{perseverance\allowbreak{}Dispute\_\allowbreak{}defeats}}\par\nobreak\noindent
+\textbf{Who defeats whom}, all 36 pairs: eight defeats, four standoffs. Westminster stands off against Augustine and Aquinas, Trent, the Lutherans and Wesley, over whether one truly justified can finally fall away. The four do not attack one another, and nothing attacks the Remonstrance. So each of the four can be defended alongside the other three, and none must be accepted, because Westminster defeats each of them. Every cell is checked by the kernel.
+
+{\small\begin{verbatim}
+theorem perseveranceDispute_defeats : ∀ (i j : PerseveranceParty),
+    perseveranceDispute.defeats i j ↔ (i, j) ∈ [(PerseveranceParty.reformed,
+    PerseveranceParty.augustinian), (PerseveranceParty.reformed,
+    PerseveranceParty.trent), (PerseveranceParty.reformed,
+    PerseveranceParty.lutheran), (PerseveranceParty.reformed,
+    PerseveranceParty.wesleyan), (PerseveranceParty.augustinian,
+    PerseveranceParty.reformed), (PerseveranceParty.trent,
+    PerseveranceParty.reformed), (PerseveranceParty.lutheran,
+    PerseveranceParty.reformed), (PerseveranceParty.wesleyan,
+    PerseveranceParty.reformed)]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{remonstrance\allowbreak{}Unanswered}}\par\nobreak\noindent
+How far the dispute is settled before any choice. Nothing attacks the Remonstrance; every other party has a defeater that the Remonstrance does not answer.
+
+\paragraph{What the dispute forces is exactly \emph{Remonstrance (article 5, 1610)}.}
+\begin{itemize}
+\item Stage 1: \emph{Remonstrance (article 5, 1610)}.
+\begin{itemize}
+\item \emph{Remonstrance (article 5, 1610)} is defeated by nothing.
+\end{itemize}
+\item Nothing else is forced:
+\begin{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and nothing forced defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, and nothing forced defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Trent (Session VI, chapter 13 and canon 23)}, and nothing forced defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Lutheran (the Formula of Concord, XI)}, and nothing forced defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, and nothing forced defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 5 defeats and 8 absences of defeat, each a cell of the defeat table, \texttt{perseverance\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Remonstrance (article 5, 1610)}, weakest at \emph{consensus}:
+\begin{itemize}
+\item John 10:27–29 — they will never perish, and no one will snatch them out of my hand --- John 10:27-29
+\item an inference step --- \cite[548--549]{schaff-creeds-christendom-3-1977}; \cite[603]{arminius-works-1-1825}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) --- \cite[137--138]{calvin-hebrews-1853}
+\item an inference step --- \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}
+\item an inference step --- \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}
+\item an inference step --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}; \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item To some whom God has regenerated, and given faith, hope and love, he does not give perseverance --- \cite[478]{npnf1-05-1887}; \cite[On Rebuke and Grace, ch. 18]{npnf1-05-1887}
+\end{itemize}
+\item \emph{Trent (Session VI, chapter 13 and canon 23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Lutheran (the Formula of Concord, XI)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away --- \cite[449]{wesley-works-9-1827}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{only\_\allowbreak{}the\_\allowbreak{}remonstrance\_\allowbreak{}prevails}}\par\nobreak\noindent
+\textbf{Only what the Remonstrants concluded from John 10:28 prevails: no power from outside snatches believers out of Christ’s hand.} Every other party is in a tie with another, and this is all that must be accepted however the ties are settled.
+
+What this does not claim: that the perseverance of the saints is false, or that one truly justified can finally fall away. Both are in a standoff, and neither is forced.
+
+{\small\begin{verbatim}
+theorem only_the_remonstrance_prevails : Framework.grounded
+    perseveranceDispute.defeats = Solver.toSet
+    [PerseveranceParty.remonstrance]
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{westminster\allowbreak{}Defended}}\par\nobreak\noindent
+Why Westminster can be defended: with the Remonstrance, it answers every attacker itself.
+
+\paragraph{\emph{Reformed (Westminster XVII; Dort, Fifth Head)} is accepted on some resolution.}
+\begin{itemize}
+\item A position holding \emph{Remonstrance (article 5, 1610)}, \emph{Reformed (Westminster XVII; Dort, Fifth Head)} can be held.
+\item None of \emph{Remonstrance (article 5, 1610)}, \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}.
+\item \emph{Trent (Session VI, chapter 13 and canon 23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Trent (Session VI, chapter 13 and canon 23)}.
+\item \emph{Lutheran (the Formula of Concord, XI)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Lutheran (the Formula of Concord, XI)}.
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 8 defeats and 8 absences of defeat, each a cell of the defeat table, \texttt{perseverance\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Remonstrance (article 5, 1610)}, weakest at \emph{consensus}:
+\begin{itemize}
+\item John 10:27–29 — they will never perish, and no one will snatch them out of my hand --- John 10:27-29
+\item an inference step --- \cite[548--549]{schaff-creeds-christendom-3-1977}; \cite[603]{arminius-works-1-1825}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) --- \cite[137--138]{calvin-hebrews-1853}
+\item an inference step --- \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}
+\item an inference step --- \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}
+\item an inference step --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}; \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item To some whom God has regenerated, and given faith, hope and love, he does not give perseverance --- \cite[478]{npnf1-05-1887}; \cite[On Rebuke and Grace, ch. 18]{npnf1-05-1887}
+\end{itemize}
+\item \emph{Trent (Session VI, chapter 13 and canon 23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Lutheran (the Formula of Concord, XI)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away --- \cite[449]{wesley-works-9-1827}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{perseverance\_\allowbreak{}defensible}}\par\nobreak\noindent
+\textbf{Westminster can be defended}: on at least one way of settling the ties, it is accepted, with the Remonstrance, because it defeats each of the four that attack it.
+
+{\small\begin{verbatim}
+theorem perseverance_defensible : Framework.CredulouslyAccepted
+    perseveranceDispute.defeats PerseveranceParty.reformed
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{westminster\allowbreak{}Answered\allowbreak{}By\allowbreak{}Augustine}}\par\nobreak\noindent
+Why Westminster is not forced: a maximal defensible position holds Augustine and Aquinas, and they defeat Westminster.
+
+\paragraph{\emph{Reformed (Westminster XVII; Dort, Fifth Head)} is not accepted on every resolution.}
+\begin{itemize}
+\item A position holding \emph{Remonstrance (article 5, 1610)}, \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, \emph{Trent (Session VI, chapter 13 and canon 23)}, \emph{Lutheran (the Formula of Concord, XI)}, \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} can be held, and it holds \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}; \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} conflicts with \emph{Reformed (Westminster XVII; Dort, Fifth Head)}: \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}.
+\item None of \emph{Remonstrance (article 5, 1610)}, \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, \emph{Trent (Session VI, chapter 13 and canon 23)}, \emph{Lutheran (the Formula of Concord, XI)}, \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Trent (Session VI, chapter 13 and canon 23)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Lutheran (the Formula of Concord, XI)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 5 defeats and 26 absences of defeat, each a cell of the defeat table, \texttt{perseverance\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item To some whom God has regenerated, and given faith, hope and love, he does not give perseverance --- \cite[478]{npnf1-05-1887}; \cite[On Rebuke and Grace, ch. 18]{npnf1-05-1887}
+\end{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) --- \cite[137--138]{calvin-hebrews-1853}
+\item an inference step --- \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}
+\item an inference step --- \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}
+\item an inference step --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}; \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Remonstrance (article 5, 1610)}, weakest at \emph{consensus}:
+\begin{itemize}
+\item John 10:27–29 — they will never perish, and no one will snatch them out of my hand --- John 10:27-29
+\item an inference step --- \cite[548--549]{schaff-creeds-christendom-3-1977}; \cite[603]{arminius-works-1-1825}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Trent (Session VI, chapter 13 and canon 23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Lutheran (the Formula of Concord, XI)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away --- \cite[449]{wesley-works-9-1827}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{perseverance\_\allowbreak{}not\_\allowbreak{}forced}}\par\nobreak\noindent
+\textbf{Nor must Westminster be accepted.} On another way of settling the ties, Augustine and Aquinas, Trent, the Lutherans and Wesley are accepted together, and Westminster cannot be accepted with them.
+
+{\small\begin{verbatim}
+theorem perseverance_not_forced : ¬Framework.SkepticallyAccepted
+    perseveranceDispute.defeats PerseveranceParty.reformed
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{augustine\allowbreak{}Defended}}\par\nobreak\noindent
+Why Augustine and Aquinas can be defended: with Trent, the Lutherans and Wesley, each of whom defeats Westminster.
+
+\paragraph{\emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} is accepted on some resolution.}
+\begin{itemize}
+\item A position holding \emph{Remonstrance (article 5, 1610)}, \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, \emph{Trent (Session VI, chapter 13 and canon 23)}, \emph{Lutheran (the Formula of Concord, XI)}, \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} can be held.
+\item None of \emph{Remonstrance (article 5, 1610)}, \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, \emph{Trent (Session VI, chapter 13 and canon 23)}, \emph{Lutheran (the Formula of Concord, XI)}, \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Trent (Session VI, chapter 13 and canon 23)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Lutheran (the Formula of Concord, XI)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 5 defeats and 26 absences of defeat, each a cell of the defeat table, \texttt{perseverance\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Remonstrance (article 5, 1610)}, weakest at \emph{consensus}:
+\begin{itemize}
+\item John 10:27–29 — they will never perish, and no one will snatch them out of my hand --- John 10:27-29
+\item an inference step --- \cite[548--549]{schaff-creeds-christendom-3-1977}; \cite[603]{arminius-works-1-1825}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item To some whom God has regenerated, and given faith, hope and love, he does not give perseverance --- \cite[478]{npnf1-05-1887}; \cite[On Rebuke and Grace, ch. 18]{npnf1-05-1887}
+\end{itemize}
+\item \emph{Trent (Session VI, chapter 13 and canon 23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Lutheran (the Formula of Concord, XI)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away --- \cite[449]{wesley-works-9-1827}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) --- \cite[137--138]{calvin-hebrews-1853}
+\item an inference step --- \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}
+\item an inference step --- \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}
+\item an inference step --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}; \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{augustinian\_\allowbreak{}defensible}}\par\nobreak\noindent
+\textbf{Augustine and Aquinas can be defended}: accepted together with Trent, the Lutherans and Wesley, who agree that one truly justified can finally fall away, and each of whom answers Westminster.
+
+{\small\begin{verbatim}
+theorem augustinian_defensible : Framework.CredulouslyAccepted
+    perseveranceDispute.defeats PerseveranceParty.augustinian
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{augustine\allowbreak{}Answered\allowbreak{}By\allowbreak{}Westminster}}\par\nobreak\noindent
+Why Augustine and Aquinas are not forced: Westminster defeats them.
+
+\paragraph{\emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} is not accepted on every resolution.}
+\begin{itemize}
+\item A position holding \emph{Remonstrance (article 5, 1610)}, \emph{Reformed (Westminster XVII; Dort, Fifth Head)} can be held, and it holds \emph{Reformed (Westminster XVII; Dort, Fifth Head)}; \emph{Reformed (Westminster XVII; Dort, Fifth Head)} conflicts with \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}: \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item None of \emph{Remonstrance (article 5, 1610)}, \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}.
+\item \emph{Trent (Session VI, chapter 13 and canon 23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Trent (Session VI, chapter 13 and canon 23)}.
+\item \emph{Lutheran (the Formula of Concord, XI)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Lutheran (the Formula of Concord, XI)}.
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 8 defeats and 8 absences of defeat, each a cell of the defeat table, \texttt{perseverance\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) --- \cite[137--138]{calvin-hebrews-1853}
+\item an inference step --- \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}
+\item an inference step --- \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}
+\item an inference step --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}; \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item To some whom God has regenerated, and given faith, hope and love, he does not give perseverance --- \cite[478]{npnf1-05-1887}; \cite[On Rebuke and Grace, ch. 18]{npnf1-05-1887}
+\end{itemize}
+\item \emph{Remonstrance (article 5, 1610)}, weakest at \emph{consensus}:
+\begin{itemize}
+\item John 10:27–29 — they will never perish, and no one will snatch them out of my hand --- John 10:27-29
+\item an inference step --- \cite[548--549]{schaff-creeds-christendom-3-1977}; \cite[603]{arminius-works-1-1825}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Trent (Session VI, chapter 13 and canon 23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Lutheran (the Formula of Concord, XI)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away --- \cite[449]{wesley-works-9-1827}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{augustinian\_\allowbreak{}not\_\allowbreak{}forced}}\par\nobreak\noindent
+Nor must Augustine and Aquinas be accepted: the way of settling the ties that accepts Westminster cannot accept them.
+
+{\small\begin{verbatim}
+theorem augustinian_not_forced : ¬Framework.SkepticallyAccepted
+    perseveranceDispute.defeats PerseveranceParty.augustinian
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Defended\allowbreak{}On\allowbreak{}Perseverance}}\par\nobreak\noindent
+Why Trent can be defended on perseverance.
+
+\paragraph{\emph{Trent (Session VI, chapter 13 and canon 23)} is accepted on some resolution.}
+\begin{itemize}
+\item A position holding \emph{Remonstrance (article 5, 1610)}, \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, \emph{Trent (Session VI, chapter 13 and canon 23)}, \emph{Lutheran (the Formula of Concord, XI)}, \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} can be held.
+\item None of \emph{Remonstrance (article 5, 1610)}, \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, \emph{Trent (Session VI, chapter 13 and canon 23)}, \emph{Lutheran (the Formula of Concord, XI)}, \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Trent (Session VI, chapter 13 and canon 23)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Lutheran (the Formula of Concord, XI)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 5 defeats and 26 absences of defeat, each a cell of the defeat table, \texttt{perseverance\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Remonstrance (article 5, 1610)}, weakest at \emph{consensus}:
+\begin{itemize}
+\item John 10:27–29 — they will never perish, and no one will snatch them out of my hand --- John 10:27-29
+\item an inference step --- \cite[548--549]{schaff-creeds-christendom-3-1977}; \cite[603]{arminius-works-1-1825}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item To some whom God has regenerated, and given faith, hope and love, he does not give perseverance --- \cite[478]{npnf1-05-1887}; \cite[On Rebuke and Grace, ch. 18]{npnf1-05-1887}
+\end{itemize}
+\item \emph{Trent (Session VI, chapter 13 and canon 23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Lutheran (the Formula of Concord, XI)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away --- \cite[449]{wesley-works-9-1827}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) --- \cite[137--138]{calvin-hebrews-1853}
+\item an inference step --- \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}
+\item an inference step --- \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}
+\item an inference step --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}; \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}on\_\allowbreak{}perseverance\_\allowbreak{}defensible}}\par\nobreak\noindent
+\textbf{Trent can be defended} on perseverance, in the same company.
+
+{\small\begin{verbatim}
+theorem trent_on_perseverance_defensible : Framework.CredulouslyAccepted
+    perseveranceDispute.defeats PerseveranceParty.trent
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{trent\allowbreak{}Answered\allowbreak{}On\allowbreak{}Perseverance}}\par\nobreak\noindent
+Why Trent is not forced on perseverance: Westminster defeats it.
+
+\paragraph{\emph{Trent (Session VI, chapter 13 and canon 23)} is not accepted on every resolution.}
+\begin{itemize}
+\item A position holding \emph{Remonstrance (article 5, 1610)}, \emph{Reformed (Westminster XVII; Dort, Fifth Head)} can be held, and it holds \emph{Reformed (Westminster XVII; Dort, Fifth Head)}; \emph{Reformed (Westminster XVII; Dort, Fifth Head)} conflicts with \emph{Trent (Session VI, chapter 13 and canon 23)}: \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Trent (Session VI, chapter 13 and canon 23)}, and \emph{Trent (Session VI, chapter 13 and canon 23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item None of \emph{Remonstrance (article 5, 1610)}, \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}.
+\item \emph{Trent (Session VI, chapter 13 and canon 23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Trent (Session VI, chapter 13 and canon 23)}.
+\item \emph{Lutheran (the Formula of Concord, XI)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Lutheran (the Formula of Concord, XI)}.
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 8 defeats and 8 absences of defeat, each a cell of the defeat table, \texttt{perseverance\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) --- \cite[137--138]{calvin-hebrews-1853}
+\item an inference step --- \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}
+\item an inference step --- \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}
+\item an inference step --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}; \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Trent (Session VI, chapter 13 and canon 23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Remonstrance (article 5, 1610)}, weakest at \emph{consensus}:
+\begin{itemize}
+\item John 10:27–29 — they will never perish, and no one will snatch them out of my hand --- John 10:27-29
+\item an inference step --- \cite[548--549]{schaff-creeds-christendom-3-1977}; \cite[603]{arminius-works-1-1825}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item To some whom God has regenerated, and given faith, hope and love, he does not give perseverance --- \cite[478]{npnf1-05-1887}; \cite[On Rebuke and Grace, ch. 18]{npnf1-05-1887}
+\end{itemize}
+\item \emph{Lutheran (the Formula of Concord, XI)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away --- \cite[449]{wesley-works-9-1827}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{trent\_\allowbreak{}on\_\allowbreak{}perseverance\_\allowbreak{}not\_\allowbreak{}forced}}\par\nobreak\noindent
+Nor must Trent be accepted, for the same reason.
+
+{\small\begin{verbatim}
+theorem trent_on_perseverance_not_forced : ¬Framework.SkepticallyAccepted
+    perseveranceDispute.defeats PerseveranceParty.trent
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{lutherans\allowbreak{}Defended\allowbreak{}On\allowbreak{}Perseverance}}\par\nobreak\noindent
+Why the Lutherans can be defended on perseverance.
+
+\paragraph{\emph{Lutheran (the Formula of Concord, XI)} is accepted on some resolution.}
+\begin{itemize}
+\item A position holding \emph{Remonstrance (article 5, 1610)}, \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, \emph{Trent (Session VI, chapter 13 and canon 23)}, \emph{Lutheran (the Formula of Concord, XI)}, \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} can be held.
+\item None of \emph{Remonstrance (article 5, 1610)}, \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, \emph{Trent (Session VI, chapter 13 and canon 23)}, \emph{Lutheran (the Formula of Concord, XI)}, \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Trent (Session VI, chapter 13 and canon 23)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Lutheran (the Formula of Concord, XI)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 5 defeats and 26 absences of defeat, each a cell of the defeat table, \texttt{perseverance\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Remonstrance (article 5, 1610)}, weakest at \emph{consensus}:
+\begin{itemize}
+\item John 10:27–29 — they will never perish, and no one will snatch them out of my hand --- John 10:27-29
+\item an inference step --- \cite[548--549]{schaff-creeds-christendom-3-1977}; \cite[603]{arminius-works-1-1825}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item To some whom God has regenerated, and given faith, hope and love, he does not give perseverance --- \cite[478]{npnf1-05-1887}; \cite[On Rebuke and Grace, ch. 18]{npnf1-05-1887}
+\end{itemize}
+\item \emph{Trent (Session VI, chapter 13 and canon 23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Lutheran (the Formula of Concord, XI)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away --- \cite[449]{wesley-works-9-1827}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) --- \cite[137--138]{calvin-hebrews-1853}
+\item an inference step --- \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}
+\item an inference step --- \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}
+\item an inference step --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}; \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{lutheran\_\allowbreak{}on\_\allowbreak{}perseverance\_\allowbreak{}defensible}}\par\nobreak\noindent
+\textbf{The Lutherans can be defended} on perseverance, in the same company.
+
+{\small\begin{verbatim}
+theorem lutheran_on_perseverance_defensible : Framework.CredulouslyAccepted
+    perseveranceDispute.defeats PerseveranceParty.lutheran
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{lutherans\allowbreak{}Answered\allowbreak{}On\allowbreak{}Perseverance}}\par\nobreak\noindent
+Why the Lutherans are not forced on perseverance: Westminster defeats them.
+
+\paragraph{\emph{Lutheran (the Formula of Concord, XI)} is not accepted on every resolution.}
+\begin{itemize}
+\item A position holding \emph{Remonstrance (article 5, 1610)}, \emph{Reformed (Westminster XVII; Dort, Fifth Head)} can be held, and it holds \emph{Reformed (Westminster XVII; Dort, Fifth Head)}; \emph{Reformed (Westminster XVII; Dort, Fifth Head)} conflicts with \emph{Lutheran (the Formula of Concord, XI)}: \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Lutheran (the Formula of Concord, XI)}, and \emph{Lutheran (the Formula of Concord, XI)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item None of \emph{Remonstrance (article 5, 1610)}, \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}.
+\item \emph{Trent (Session VI, chapter 13 and canon 23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Trent (Session VI, chapter 13 and canon 23)}.
+\item \emph{Lutheran (the Formula of Concord, XI)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Lutheran (the Formula of Concord, XI)}.
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 8 defeats and 8 absences of defeat, each a cell of the defeat table, \texttt{perseverance\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) --- \cite[137--138]{calvin-hebrews-1853}
+\item an inference step --- \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}
+\item an inference step --- \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}
+\item an inference step --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}; \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Lutheran (the Formula of Concord, XI)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Remonstrance (article 5, 1610)}, weakest at \emph{consensus}:
+\begin{itemize}
+\item John 10:27–29 — they will never perish, and no one will snatch them out of my hand --- John 10:27-29
+\item an inference step --- \cite[548--549]{schaff-creeds-christendom-3-1977}; \cite[603]{arminius-works-1-1825}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item To some whom God has regenerated, and given faith, hope and love, he does not give perseverance --- \cite[478]{npnf1-05-1887}; \cite[On Rebuke and Grace, ch. 18]{npnf1-05-1887}
+\end{itemize}
+\item \emph{Trent (Session VI, chapter 13 and canon 23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away --- \cite[449]{wesley-works-9-1827}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{lutheran\_\allowbreak{}on\_\allowbreak{}perseverance\_\allowbreak{}not\_\allowbreak{}forced}}\par\nobreak\noindent
+Nor must the Lutherans be accepted, for the same reason.
+
+{\small\begin{verbatim}
+theorem lutheran_on_perseverance_not_forced : ¬Framework.SkepticallyAccepted
+    perseveranceDispute.defeats PerseveranceParty.lutheran
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wesley\allowbreak{}Defended\allowbreak{}On\allowbreak{}Perseverance}}\par\nobreak\noindent
+Why Wesley can be defended on perseverance.
+
+\paragraph{\emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} is accepted on some resolution.}
+\begin{itemize}
+\item A position holding \emph{Remonstrance (article 5, 1610)}, \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, \emph{Trent (Session VI, chapter 13 and canon 23)}, \emph{Lutheran (the Formula of Concord, XI)}, \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} can be held.
+\item None of \emph{Remonstrance (article 5, 1610)}, \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, \emph{Trent (Session VI, chapter 13 and canon 23)}, \emph{Lutheran (the Formula of Concord, XI)}, \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Trent (Session VI, chapter 13 and canon 23)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Lutheran (the Formula of Concord, XI)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, and \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 5 defeats and 26 absences of defeat, each a cell of the defeat table, \texttt{perseverance\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Remonstrance (article 5, 1610)}, weakest at \emph{consensus}:
+\begin{itemize}
+\item John 10:27–29 — they will never perish, and no one will snatch them out of my hand --- John 10:27-29
+\item an inference step --- \cite[548--549]{schaff-creeds-christendom-3-1977}; \cite[603]{arminius-works-1-1825}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item To some whom God has regenerated, and given faith, hope and love, he does not give perseverance --- \cite[478]{npnf1-05-1887}; \cite[On Rebuke and Grace, ch. 18]{npnf1-05-1887}
+\end{itemize}
+\item \emph{Trent (Session VI, chapter 13 and canon 23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Lutheran (the Formula of Concord, XI)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away --- \cite[449]{wesley-works-9-1827}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) --- \cite[137--138]{calvin-hebrews-1853}
+\item an inference step --- \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}
+\item an inference step --- \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}
+\item an inference step --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}; \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{wesley\_\allowbreak{}on\_\allowbreak{}perseverance\_\allowbreak{}defensible}}\par\nobreak\noindent
+\textbf{Wesley can be defended} on perseverance, in the same company.
+
+{\small\begin{verbatim}
+theorem wesley_on_perseverance_defensible : Framework.CredulouslyAccepted
+    perseveranceDispute.defeats PerseveranceParty.wesleyan
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{wesley\allowbreak{}Answered\allowbreak{}On\allowbreak{}Perseverance}}\par\nobreak\noindent
+Why Wesley is not forced on perseverance: Westminster defeats him.
+
+\paragraph{\emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} is not accepted on every resolution.}
+\begin{itemize}
+\item A position holding \emph{Remonstrance (article 5, 1610)}, \emph{Reformed (Westminster XVII; Dort, Fifth Head)} can be held, and it holds \emph{Reformed (Westminster XVII; Dort, Fifth Head)}; \emph{Reformed (Westminster XVII; Dort, Fifth Head)} conflicts with \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}: \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, and \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}.
+\item None of \emph{Remonstrance (article 5, 1610)}, \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats another, and each attack on them is answered from among them:
+\begin{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}.
+\item \emph{Trent (Session VI, chapter 13 and canon 23)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Trent (Session VI, chapter 13 and canon 23)}.
+\item \emph{Lutheran (the Formula of Concord, XI)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Lutheran (the Formula of Concord, XI)}.
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)} defeats \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, and \emph{Reformed (Westminster XVII; Dort, Fifth Head)} defeats \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}.
+\end{itemize}
+\end{itemize}
+\par\noindent\textbf{What this rests on.} The reasons state 8 defeats and 8 absences of defeat, each a cell of the defeat table, \texttt{perseverance\allowbreak{}Dispute\_\allowbreak{}defeats}, computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+\begin{itemize}
+\item \emph{Reformed (Westminster XVII; Dort, Fifth Head)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) --- \cite[137--138]{calvin-hebrews-1853}
+\item an inference step --- \cite[444--445]{wesley-works-9-1827}; \cite[415--416]{calvin-commentary-john-1847}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}
+\item an inference step --- \cite[479--480]{npnf1-05-1887}; \cite[137--138]{calvin-hebrews-1853}; \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}
+\item an inference step --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}; \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\item \emph{Wesley (Serious Thoughts upon the Perseverance of the Saints)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item Hebrews 6:4–6 describes true believers who actually fall away --- \cite[449]{wesley-works-9-1827}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Remonstrance (article 5, 1610)}, weakest at \emph{consensus}:
+\begin{itemize}
+\item John 10:27–29 — they will never perish, and no one will snatch them out of my hand --- John 10:27-29
+\item an inference step --- \cite[548--549]{schaff-creeds-christendom-3-1977}; \cite[603]{arminius-works-1-1825}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \cite[444--445]{wesley-works-9-1827}
+\end{itemize}
+\item \emph{Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item To some whom God has regenerated, and given faith, hope and love, he does not give perseverance --- \cite[478]{npnf1-05-1887}; \cite[On Rebuke and Grace, ch. 18]{npnf1-05-1887}
+\end{itemize}
+\item \emph{Trent (Session VI, chapter 13 and canon 23)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848}
+\end{itemize}
+\item \emph{Lutheran (the Formula of Concord, XI)}, weakest at \emph{disputed}:
+\begin{itemize}
+\item God’s promise to keep those he has begun to save holds unless they fall away by their own fault --- \cite[Solid Declaration XI.42]{concordia-triglotta-1921}
+\end{itemize}
+\end{itemize}
+\par\medskip\noindent\textbf{\texttt{wesley\_\allowbreak{}on\_\allowbreak{}perseverance\_\allowbreak{}not\_\allowbreak{}forced}}\par\nobreak\noindent
+Nor must Wesley be accepted, for the same reason.
+
+{\small\begin{verbatim}
+theorem wesley_on_perseverance_not_forced : ¬Framework.SkepticallyAccepted
+    perseveranceDispute.defeats PerseveranceParty.wesleyan
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
 \subsection*{Appendix: the claims and their sources}
 \addcontentsline{toc}{subsection}{Appendix: the claims and their sources}
-Sixteen claims, in four groups: the texts every party reads, the readings of them that are in dispute, the claims Trent and the Remonstrants add, and the three parts of the conclusion.
+The claims, in groups: the texts every party reads; the readings of them that are in dispute; the claims each rival position adds; the three parts of the conclusion; and, last, the claims of the chapter on the perseverance of the saints.
 
 The conclusion has three parts so that a rival can hold one part and deny another, and both rivals do. Everyone in this dispute says that salvation is by grace and not earned. Only the Reformed say that grace brings about the consent it asks for, and that in being made alive the will contributes nothing.
 
@@ -27151,6 +28396,18 @@ Augustine distinguishes two kinds of help. “The aid without which a thing does
 \pvartarget{TestimonyArguments.SolaGratia}{29}$P_{29}$ & Salvation is by grace and not earned: grace goes before every saving act & theological & Christian, hist.-gramm., consensus & \cite[Trent, Session VI (1547), chs. 5, 8]{tanner-decrees-1990}; \cite[32]{waterworth-trent-1848}; \cite[36]{waterworth-trent-1848}; \cite[Five Arminian Articles (1610), arts. 3–4]{schaff-creeds-christendom-3-1977}; \cite[Canons of Dort, III/IV, art. 10]{schaff-creeds-christendom-3-1977} \\
 \pvartarget{TestimonyArguments.SolaGratia}{30}$P_{30}$ & The grace that saves brings about the consent it seeks & theological & Reformed Protestant, disputed & \cite[Canons of Dort, III/IV, art. 12]{schaff-creeds-christendom-3-1977} \\
 \pvartarget{TestimonyArguments.SolaGratia}{31}$P_{31}$ & In being made alive the will is passive, and contributes nothing to it & theological & Reformed Protestant, disputed & \cite[X.2]{westminster-confession-1647}; \cite[Canons of Dort, III/IV, art. 12]{schaff-creeds-christendom-3-1977} \\
+\pvartarget{TestimonyArguments.SolaGratia}{32}$P_{32}$ & John 10:27–29 — they will never perish, and no one will snatch them out of my hand\textsuperscript{\dag} & textual & Christian, hist.-gramm., consensus & John 10:27-29 \\
+\pvartarget{TestimonyArguments.SolaGratia}{33}$P_{33}$ & Philippians 1:6 — he who began a good work in you will bring it to completion\textsuperscript{\dag} & textual & Christian, hist.-gramm., consensus & Phil 1:6 \\
+\pvartarget{TestimonyArguments.SolaGratia}{34}$P_{34}$ & Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away\textsuperscript{\dag} & textual & Christian, hist.-gramm., consensus & Heb 6:4-6 \\
+\pvartarget{TestimonyArguments.SolaGratia}{35}$P_{35}$ & 1 John 2:19 — they went out from us, but they were not of us\textsuperscript{\dag} & textual & Christian, hist.-gramm., consensus & 1 John 2:19 \\
+\pvartarget{TestimonyArguments.SolaGratia}{36}$P_{36}$ & No power from outside can snatch true believers out of Christ’s hand & theological & Christian, hist.-gramm., consensus & \cite[548]{schaff-creeds-christendom-3-1977}; \cite[Solid Declaration XI.45]{concordia-triglotta-1921}; \cite[444--445]{wesley-works-9-1827} \\
+\pvartarget{TestimonyArguments.SolaGratia}{37}$P_{37}$ & To some whom God has regenerated, and given faith, hope and love, he does not give perseverance & theological & Christian, hist.-gramm., disputed & \cite[478]{npnf1-05-1887}; \cite[On Rebuke and Grace, ch. 18]{npnf1-05-1887} \\
+\pvartarget{TestimonyArguments.SolaGratia}{38}$P_{38}$ & God’s promise to keep those he has begun to save holds unless they fall away by their own fault & theological & Roman Catholic, disputed & \cite[Trent, Session VI (1547), ch. 13]{tanner-decrees-1990}; \cite[40]{waterworth-trent-1848} \\
+\pvartarget{TestimonyArguments.SolaGratia}{39}$P_{39}$ & Those who are Christ’s sheep do hear and follow, because God keeps them in faith & theological & Reformed Protestant, disputed & \cite[593]{schaff-creeds-christendom-3-1977}; \cite[415--416]{calvin-commentary-john-1847} \\
+\pvartarget{TestimonyArguments.SolaGratia}{40}$P_{40}$ & Hebrews 6:4–6 describes true believers who actually fall away & interpretive & Arminian, disputed & \cite[449]{wesley-works-9-1827} \\
+\pvartarget{TestimonyArguments.SolaGratia}{41}$P_{41}$ & Those God has chosen to save cannot finally fall away from grace & theological & Reformed Protestant, well supported & \cite[XVII.1]{westminster-confession-1647}; \cite[636]{schaff-creeds-christendom-3-1977}; \cite[593]{schaff-creeds-christendom-3-1977} \\
+\pvartarget{TestimonyArguments.SolaGratia}{42}$P_{42}$ & Everyone who is truly justified is among the elect & theological & Reformed Protestant, disputed & \cite[X.4]{westminster-confession-1647}; \cite[137--138]{calvin-hebrews-1853} \\
+\pvartarget{TestimonyArguments.SolaGratia}{43}$P_{43}$ & One who is truly justified can fall away from grace finally, and perish & theological & Roman Catholic, disputed & \cite[Trent, Session VI (1547), canon 23]{tanner-decrees-1990}; \cite[47]{waterworth-trent-1848}; \cite[439]{wesley-works-9-1827} \\
 \bottomrule
 \end{longtable}
 
@@ -27375,6 +28632,120 @@ def asDispositionSource : Source :=
           (Bib.Locus.sectionRef "I-II q.111 a.2 ad 2")],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 \end{verbatim}}
+\paragraph*{Ratings for the steps on perseverance}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{john10\allowbreak{}Inference}}\par\nobreak\noindent
+\textbf{The rating of the step from John 10:27–29 to “the elect persevere”: \texttt{disputed}.} Calvin reads it so: “the salvation of all the elect is not less certain than the power of God is invincible” (\emph{John}, vol. 1, p. 416), and the Formula of Concord cites the verse for God’s purpose, “from which no one can pluck us” (Solid Declaration XI.45). Wesley grants the text and denies that it promises anyone perseverance without condition: “In the preceding text, the condition is only implied. In this it is plainly expressed. They are \emph{my sheep}, that \emph{hear my voice}, that \emph{follow me} in all holiness. And ‘if ye do these things, ye shall never fall’” (\emph{Serious Thoughts upon the Perseverance of the Saints}, §18), quoting 2 Peter 1:10.
+
+{\small\begin{verbatim}
+def john10Inference : Source :=
+  { primary := Reference.work wesleyWorks9 (Bib.Locus.pages 444 445),
+    supporting :=
+      [Reference.work calvinJohn (Bib.Locus.pages 415 416),
+        concord✝ "Solid Declaration XI.45"],
+    tradition := Tradition.arminian, confidence := Confidence.disputed }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{bridge\allowbreak{}Inference}}\par\nobreak\noindent
+\textbf{The rating of the step from 1 John 2:19 to “everyone truly justified is among the elect”: \texttt{disputed}.} Augustine grants the text, and reads its “not of us” as not of the elect, and still denies the conclusion: those who fell away “were not of the number of children, even when they were in the faith of children” (\emph{On Rebuke and Grace}, ch. 20). They had true faith and were not elect. Trent condemns the conclusion outright: anathema to anyone who says “that he that falls and sins was never truly justified” (Session VI, canon 23). Calvin draws it: “God indeed favours none but the elect alone with the Spirit of regeneration” (\emph{Hebrews}, p. 138).
+
+{\small\begin{verbatim}
+def bridgeInference : Source :=
+  {
+    primary :=
+      Reference.work npnfAugustineAntiPelagian (Bib.Locus.pages 479 480),
+    supporting :=
+      [Reference.work calvinHebrews (Bib.Locus.pages 137 138),
+        trent✝ "canon 23",
+        waterworth✝ 47],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.disputed }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{join\allowbreak{}Inference}}\par\nobreak\noindent
+The rating of the step from “the elect persevere” and “the truly justified are elect” to “no one truly justified can finally fall away”: \texttt{consensus}. It follows from what the words mean, and no reader was found who grants both grounds and denies the conclusion. The readers who deny the conclusion, Augustine among them, deny the second ground.
+
+{\small\begin{verbatim}
+def joinInference : Source :=
+  {
+    primary :=
+      Reference.work westminsterConfession (Bib.Locus.sectionRef "XVII.1"),
+    supporting := [Reference.work schaffCreeds3 (Bib.Locus.page 636)],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.consensus }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{philippians\allowbreak{}Inference}}\par\nobreak\noindent
+\textbf{The rating of the step from Philippians 1:6 to “no one truly justified can finally fall away”: \texttt{disputed}.} Trent quotes the verse and, in the same sentence, denies that it settles the matter: “For God, unless men be themselves wanting to His grace, as he has begun the good work, so will he perfect it” (Session VI, ch. 13). The Formula of Concord cites it while explaining why some fall away: it “is not as though God were unwilling to grant grace for perseverance to those in whom He has begun the good work” (Solid Declaration XI.42).
+
+{\small\begin{verbatim}
+def philippiansInference : Source :=
+  { primary := trent✝ "ch. 13",
+    supporting :=
+      [waterworth✝ 40,
+        concord✝ "Solid Declaration XI.42"],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{conditional\allowbreak{}Inference}}\par\nobreak\noindent
+The rating of the step from a promise that holds “unless men be themselves wanting to His grace” to “the justified can finally fall away”: \texttt{well\allowbreak{}Supported}. Read as a condition that can fail, the step only says what the condition means, and Trent draws it in canon 23. Read as a condition God himself keeps in those he has begun to save, the ground is a different claim, and the step does not apply to it; the dilemma over the promise sets the two readings out.
+
+{\small\begin{verbatim}
+def conditionalInference : Source :=
+  { primary := trent✝ "canon 23",
+    supporting :=
+      [waterworth✝ 47,
+        Reference.work wesleyWorks9 (Bib.Locus.page 439)],
+    tradition := Tradition.romanCatholic,
+    confidence := Confidence.wellSupported }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{hebrews\allowbreak{}Inference}}\par\nobreak\noindent
+The rating of the step from Hebrews 6:4–6, read as describing true believers who fall away, to “the justified can finally fall away”: \texttt{well\allowbreak{}Supported}. Wesley draws it: “those who are holy or righteous in the judgment of God himself … may nevertheless so fall from God, as to perish everlastingly” (\emph{Serious Thoughts}, §30). No reader was found who grants the reading and denies the conclusion. The dissent is from the reading: Calvin holds that those described had only “some taste of his grace”, a knowledge “which afterwards vanishes away”.
+
+{\small\begin{verbatim}
+def hebrewsInference : Source :=
+  { primary := Reference.work wesleyWorks9 (Bib.Locus.page 449),
+    tradition := Tradition.arminian, confidence := Confidence.wellSupported }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{augustine\allowbreak{}Inference}}\par\nobreak\noindent
+The rating of the step from “some regenerate are not given perseverance” to “the justified can finally fall away”: \texttt{well\allowbreak{}Supported}. Augustine draws it, and Aquinas: “anyone may lose his crown by mortal sin” (I q.23 a.6 ad 1). No reader was found who grants the ground and denies the conclusion; Calvin denies the ground.
+
+{\small\begin{verbatim}
+def augustineInference : Source :=
+  { primary := Reference.work npnfAugustineAntiPelagian (Bib.Locus.page 478),
+    supporting :=
+      [Reference.work aquinasSumma (Bib.Locus.sectionRef "I q.23 a.6 ad 1")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{remonstrance\allowbreak{}Inference}}\par\nobreak\noindent
+The rating of the step from John 10:28 to “no power from outside snatches believers out of Christ’s hand”: \texttt{consensus}. The Remonstrants draw it (fifth article), and every party here grants it.
+
+{\small\begin{verbatim}
+def remonstranceInference : Source :=
+  { primary := Reference.work schaffCreeds3 (Bib.Locus.pages 548 549),
+    supporting :=
+      [Reference.work arminiusWorks1 (Bib.Locus.page 603),
+        concord✝ "Solid Declaration XI.45",
+        Reference.work wesleyWorks9 (Bib.Locus.pages 444 445)],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.consensus }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{as\allowbreak{}Condition\allowbreak{}God\allowbreak{}Keeps\allowbreak{}Source}}\par\nobreak\noindent
+The promise read as a condition God himself keeps: Dort’s “God is faithful, who having conferred grace, mercifully confirms and powerfully preserves them therein, even to the end” (V, article 3).
+
+{\small\begin{verbatim}
+def asConditionGodKeepsSource : Source :=
+  { primary := dort✝ 593,
+    supporting := [Reference.work calvinJohn (Bib.Locus.pages 415 416)],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{as\allowbreak{}Condition\allowbreak{}That\allowbreak{}Can\allowbreak{}Fail\allowbreak{}Source}}\par\nobreak\noindent
+The promise read as a condition that can fail: Wesley’s “a Saint may fall away; … one who is holy or righteous in the judgment of God himself, may nevertheless so fall from God, as to perish everlastingly” (\emph{Serious Thoughts}, §5).
+
+{\small\begin{verbatim}
+def asConditionThatCanFailSource : Source :=
+  { primary := Reference.work wesleyWorks9 (Bib.Locus.page 439),
+    supporting := [Reference.work wesleyWorks9 (Bib.Locus.pages 444 445)],
+    tradition := Tradition.arminian, confidence := Confidence.disputed }
+\end{verbatim}}
 \paragraph*{The citations}
 \leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{base\allowbreak{}Cite}}\par\nobreak\noindent
@@ -27387,22 +28758,7 @@ def baseCite : Claim → AtomMeta
 The Reformed citations. Dort does not cite Acts 7:51. What it gives is an account of those who refuse the call: “It is not the fault of the gospel, nor of Christ offered therein, nor of God, who calls men by the gospel … that those who are called by the ministry of the Word refuse to come and be converted. The fault lies in themselves” (III/IV, article 9). Read with Acts 7:51, that is the Reformed answer: what Stephen’s hearers resisted was the outward call of the preached word, not the grace that saves.
 
 {\small\begin{verbatim}
-def reformedCite : Claim → AtomMeta :=
-  fun x =>
-    match x with
-    | Claim.acts7_51ResistsSavingGrace =>
-      {
-        label :=
-          "What Stephen's hearers resisted in Acts 7:51 was the grace that saves",
-        kind := PremiseKind.interpretive,
-        source :=
-          {
-            primary :=
-              Reference.work schaffCreeds3
-                (Bib.Locus.sectionRef "Canons of Dort, III/IV, art. 9"),
-            tradition := Tradition.reformedProtestant,
-            confidence := Confidence.disputed } }
-    | a => baseCite a
+def reformedCite : Claim → AtomMeta
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}Cite}}\par\nobreak\noindent
 Trent’s citations: the texts and canon 4, as \texttt{base\allowbreak{}Cite} has them.
@@ -27437,6 +28793,12 @@ The Wesleyan citations: Wesley for what Wesley holds.
 
 {\small\begin{verbatim}
 def wesleyanCite : Claim → AtomMeta
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{augustinian\allowbreak{}Cite}}\par\nobreak\noindent
+The citations of Augustine and Aquinas: that the elect persevere, from Augustine’s “they who are not to persevere … are not elected” (\emph{On Rebuke and Grace}, ch. 16) and from Aquinas, for whom predestination “most certainly and infallibly takes effect” (\emph{Summa} I q.23 a.6). That the justified can fall finally, from Aquinas: “anyone may lose his crown by mortal sin” (ad 1).
+
+{\small\begin{verbatim}
+def augustinianCite : Claim → AtomMeta
 \end{verbatim}}
 \clearpage
 \section*{Spirit baptism — at conversion, after it, or in the sacraments}

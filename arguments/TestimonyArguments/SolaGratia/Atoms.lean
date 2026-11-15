@@ -5,9 +5,10 @@ import Testimony.Scripture
 /-!
 # TestimonyArguments.SolaGratia.Atoms — the atomic claims
 
-Sixteen claims, in four groups: the texts every party reads, the readings of
-them that are in dispute, the claims Trent and the Remonstrants add, and the
-three parts of the conclusion.
+The claims, in groups: the texts every party reads; the readings of them that
+are in dispute; the claims each rival position adds; the three parts of the
+conclusion; and, last, the claims of the chapter on the perseverance of the
+saints.
 
 The conclusion has three parts so that a rival can hold one part and deny
 another, and both rivals do. Everyone in this dispute says that salvation is by
@@ -158,6 +159,57 @@ inductive Claim
   life and is no part of bringing it about. **The third part of the
   conclusion**, which Trent's fourth canon condemns. -/
   | willIsPassiveInRegeneration
+  /-- John 10:27–29: "My sheep hear my voice, and I know them, and they follow
+  me. I give them eternal life, and they will never perish, and no one will
+  snatch them out of my hand." The first text of the perseverance of the
+  saints. -/
+  | john10_27to29
+  /-- Philippians 1:6: "And I am sure of this, that he who began a good work in
+  you will bring it to completion at the day of Jesus Christ." -/
+  | philippians1_6
+  /-- Hebrews 6:4–6: "For it is impossible, in the case of those who have once
+  been enlightened, who have tasted the heavenly gift, and have shared in the
+  Holy Spirit … and then have fallen away, to restore them again to
+  repentance." The text most often set against perseverance. -/
+  | hebrews6_4to6
+  /-- 1 John 2:19: "They went out from us, but they were not of us; for if they
+  had been of us, they would have continued with us." -/
+  | firstJohn2_19
+  /-- No power from outside can snatch true believers out of Christ's hand. What
+  the Remonstrants' fifth article grants from John 10:28, and what no party
+  denies. -/
+  | noneSnatchedByForce
+  /-- To some whom God has regenerated, and given faith, hope and love, he does
+  not give perseverance. Augustine, *On Rebuke and Grace*, chapter 18. -/
+  | someRegenerateNotGivenPerseverance
+  /-- God's promise to keep those he has begun to save holds unless they fall
+  away by their own fault. Trent's "unless men be themselves wanting to His
+  grace", Wesley's "if ye do these things, ye shall never fall", and the Formula
+  of Concord's account of those who fall away. Read two ways, which the dilemma
+  over it sets out. -/
+  | promiseIsConditional
+  /-- The God of John 10 keeps the condition himself: those who are his sheep do
+  hear and follow, because he keeps them in faith. Dort's "God is faithful, who
+  having conferred grace, mercifully confirms and powerfully preserves them
+  therein, even to the end" (V, article 3). -/
+  | godKeepsHisSheepInFaith
+  /-- Hebrews 6:4–6 describes true believers who actually fall away. Wesley's
+  reading; Calvin's is that those described had only "some taste" of grace. -/
+  | hebrews6DescribesBelieversWhoFall
+  /-- Those God has chosen and effectually calls cannot finally fall away from
+  grace: they persevere to the end. Westminster XVII.1 says it of the
+  effectually called, and Westminster X.1 makes them the elect. Augustine,
+  Aquinas and the Formula of Concord say it of the elect too. -/
+  | electPersevere
+  /-- Everyone who is truly justified is among the elect: faith that does not
+  last to the end was never justifying faith. The Reformed claim that joins
+  the elect's perseverance to every believer's. Augustine denies it; Trent
+  condemns it (canon 23); the Lutherans and Wesley do not hold it. -/
+  | justifiedAreElect
+  /-- One who is truly justified can fall away from grace finally, and perish.
+  What Augustine and Aquinas, Trent, the Lutherans and Wesley hold, each on
+  grounds of their own; Westminster and Dort deny it. -/
+  | justifiedCanFinallyFallAway
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaGratia
