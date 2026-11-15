@@ -2072,6 +2072,97 @@ Society edition; the modern reprints paginate differently. -/
   , series := some "Parker Society"
   , seriesNumber := some "45" }
 
+/-- Wenham's Tyndale New Testament Lecture for 1953, on what Jesus believed and
+taught about the Old Testament, as a matter of history. Cited for John 10:35 and
+Matthew 5:18 — "What He actually says is, 'The scripture cannot be broken' (Jn.
+x. 35); 'One jot or one tittle shall in no wise pass from the law' (Mt. v. 18)"
+(p. 19) — and for Mark 7: "the displacement of Scripture by 'tradition' (mere
+'precepts of men')" was one of "the twin evils which made that Word of none
+effect" (pp. 15–16). Pages are the printed ones, which the Biblical Studies
+transcription marks. Open Library records the London printing by the Tyndale
+Press, with no ISBN. -/
+@[bib_entry] def wenhamOurLordsView : BibEntry := .book
+  { core :=
+      { key := "wenham-our-lords-view-1953"
+      , contributors := { authors := [.person "J. W." "Wenham"] }
+      , title := "Our Lord's View of the Old Testament"
+      , year := some { value := 1953 }
+      , identifiers :=
+          [ .url "https://biblicalstudies.org.uk/pdf/tp/ot_wenham.pdf" (some "2026-11-15") ]
+      , note := some
+          ("The Tyndale New Testament Lecture for 1953, delivered in Cambridge on " ++
+           "8 July 1953. Published without an ISBN.") }
+  , publisher := "The Tyndale Press"
+  , place := some "London" }
+
+/-- Calvin's commentary on Galatians, for 1:8–9. Paul's "another gospel" is "one
+to which the inventions of other men are added; for the doctrine of the false
+apostles was not entirely contrary, or even different, from that of Paul, but
+corrupted by false additions" (at 1:9). Pringle's translation, which Open
+Library records as the Calvin Translation Society's Edinburgh edition of 1854
+(OL7135919M); read in the Christian Classics Ethereal Library's text. -/
+@[bib_entry] def calvinGalatians : BibEntry := .book
+  { core :=
+      { key := "calvin-commentary-galatians-1854"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "William" "Pringle"] }
+      , title := "Commentaries on the Epistles of Paul to the Galatians and Ephesians"
+      , year := some { value := 1854 }
+      , identifiers :=
+          [ .url "https://ccel.org/ccel/calvin/calcom41/calcom41.iii.iii.ii.html"
+                 (some "2026-11-15") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh" }
+
+/-- Lightfoot's commentary on Colossians, for his note on "the commandments and
+doctrines of men" at 2:22: "The expression is taken ultimately from Isaiah xxix.
+13", and "The coincidences in St Paul's language here with our Lord's words as
+related in the Gospels (Matt. xv. 1—20, Mark vii. 1—23) are striking, and
+suggest that the Apostle had this discourse in his mind" (p. 204). Read in the
+Internet Archive's scan of the Zondervan reprint, which says it is "reprinted
+complete and unabridged from the revised 1879 edition published by MacMillan
+and Company"; the reprint prints no year of its own, so none is given, and the
+page is the reprint's. -/
+@[bib_entry] def lightfootColossians : BibEntry := .book
+  { core :=
+      { key := "lightfoot-colossians-philemon"
+      , contributors := { authors := [.person "J. B." "Lightfoot"] }
+      , title := "Saint Paul's Epistles to the Colossians and to Philemon"
+      , subtitle := some "A Revised Text with Introductions, Notes, and Dissertations"
+      , identifiers :=
+          [ .url "https://archive.org/details/saintpaulsepistl1880ligh" (some "2026-11-15") ]
+      , note := some
+          ("Zondervan reprint of the revised 1879 edition published by Macmillan; " ++
+           "the reprint's year is not printed in it.") }
+  , publisher := "Zondervan Publishing House"
+  , place := some "Grand Rapids" }
+
+/-- Aquinas's lectures on Galatians, for 1:8–9 (c. 1, lect. 2). He grants the
+text, and answers the objection that it forbids teaching anything not written in
+the Gospels and epistles: "nothing is to be taught except what is contained,
+either implicitly or explicitly, in the Gospels and epistles and Sacred
+Scripture", so that "besides that which you have received" means "by adding
+something completely alien". Larcher's translation, as Joseph Kenny's
+transcription gives it; its title page names Magi Books, Albany, 1966. The ISBN
+Open Library lists for the series is not tied to this volume, so none is
+given. -/
+@[bib_entry] def aquinasGalatians : BibEntry := .book
+  { core :=
+      { key := "aquinas-commentary-galatians-1966"
+      , role := .witness
+      , contributors :=
+          { authors := [.single "Thomas Aquinas"]
+          , translators := [.person "F. R." "Larcher"] }
+      , title := "Commentary on Saint Paul's Epistle to the Galatians"
+      , year := some { value := 1966 }
+      , identifiers :=
+          [ .url "https://isidore.co/aquinas/english/SSGalatians.htm" (some "2026-11-15") ] }
+  , publisher := "Magi Books"
+  , place := some "Albany"
+  , series := some "Aquinas Scripture Series" }
+
 /-! ### Sola fide: the wider debate
 
 The positions `SolaFide` did not yet cite from their own sources (#27): the

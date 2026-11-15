@@ -75,10 +75,12 @@ because no one holds it: Trent denies the reading and Calvin, whose reading it i
 Trent.
 
 Here the check finds a fault. Mark 7's case rests the claim its last step needs, that no
-apostolic teaching handed on outside Scripture survives, on Whitaker's word and the Westminster
-Confession's, and Westminster's rule admits neither as a ground. So the Reformed case from
-Mark 7 asks its rival for Scripture and, at that one claim, does not give it
-(`sola_scriptura_own_rules`). Trent's readings keep their rule.
+unwritten tradition can now be shown to be apostolic and so none can bind the conscience as
+God's word, on Whitaker's word and the Westminster Confession's, and Westminster's rule admits
+neither as a ground. So the Reformed case from Mark 7 asks its rival for Scripture and, at that
+one claim, does not give it (`sola_scriptura_own_rules`). The claim is stated as narrowly as
+Whitaker states it, as a claim about what can be proved and not about what the apostles once
+said, and that does not change what it rests on. Trent's readings keep their rule.
 
 ## What it does not claim
 
@@ -340,14 +342,17 @@ def mark7HeldToNone : List SolaScriptura.Mark7Party :=
 The Reformed case from Mark 7 asks its rival for Scripture, and rests one of its two claims on
 something Westminster's rule does not admit. Its claim from the text, that Jesus rebukes the
 elders' tradition for voiding the word of God, rests on Mark 7 itself. Its other claim is the
-one the step to sola scriptura needs: that no apostolic teaching handed on outside Scripture
-survives, identifiable as the word of God. The library cites that claim to Whitaker's
-*Disputation on Holy Scripture* (p. 506), which argues against Bellarmine that Rome can show
-no unwritten tradition to have been always observed by the whole Church, and to the
-Westminster Confession I.6, which says that nothing is to be added to Scripture by "traditions
-of men". Both are a theologian's or a confession's
-word, and Westminster's rule admits Scripture and evidence, not anyone's word. So by its own
-rule the case rests that claim on what it refuses its rival.
+one the step to sola scriptura needs: that no unwritten tradition can now be shown to be
+apostolic, and so none can bind the conscience as the word of God. The library cites that claim
+to Whitaker's *Disputation on Holy Scripture* (question VI, chapter IV, pp. 503–511), which
+answers Bellarmine's five rules for telling a genuine tradition from a spurious one and
+replies that "the papists have no such unwritten tradition which can be certainly shewn to
+have been always observed by the universal church" (p. 506); to the same work at p. 594, "even
+they themselves do not certainly know their own traditions"; and to the Westminster
+Confession I.6, which says that nothing is to be added to Scripture by "traditions of men".
+Both works are a theologian's or a confession's word, and Westminster's rule admits Scripture
+and evidence, not anyone's word. So by its own rule the case rests that claim on what it
+refuses its rival.
 
 Trent, as it states its position and read as the apostolic word, keeps Trent's rule: it rests
 on 2 Thessalonians 2:15, and on tradition as a source of revelation alongside Scripture, which
@@ -355,16 +360,18 @@ the library cites to Session IV itself and to Mathison, Geiselmann and Congar on
 IV decided. Both are grounds Trent's rule admits. Mark 7's principle and Trent read as
 commandments of men are held to no rule, for the reasons `professesSolaScriptura` gives.
 
-What it does not claim: that no apostolic word survives outside Scripture, or that one does.
-Nor that the claim cannot be grounded by Westminster's rule. Whitaker's sentence is in part a
-historical claim, that no unwritten tradition can be shown to have been always observed, and
-an argument from the evidence for it, or from Scripture, would be a ground the rule admits. The
-library has not yet cited one. Whose authority a claim rests on is read from the tradition its
-citation records, a proxy; and the check reads claims, not steps. -/
+What it does not claim: that some unwritten tradition can be shown to be apostolic, or that
+none can. Nor that the claim cannot be grounded by Westminster's rule. It is in part a
+historical claim, about what the record can show, and Whitaker argues it from the traditions
+Bellarmine names, infant baptism among them; an argument from that evidence, cited as
+evidence, or from Scripture, would be a ground the rule admits. The library cites Whitaker as
+a witness to the Reformed position, and has not cited a historian's account of the evidence.
+Whose authority a claim rests on is read from the tradition its citation records, a proxy; and
+the check reads claims, not steps. -/
 theorem sola_scriptura_own_rules :
     mark7BreakTheirRule = [.mark7] ∧
       (SolaScriptura.mark7PartyNode .mark7).refusedBy scriptureItsOwnInterpreter =
-        [.noApostolicWordOutsideScripture] ∧
+        [.noUnwrittenTraditionShownApostolic] ∧
       mark7HeldToNone = [.principle, .trentAsMensCommandments] := by
   decide +kernel
 

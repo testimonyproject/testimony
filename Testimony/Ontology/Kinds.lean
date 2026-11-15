@@ -48,7 +48,11 @@ category would have answered it for them.
   Scripture, or Scripture and Tradition, or Christ. Its category waits on which.
 - **Tradition** is read both as what is handed on and as the handing on — the
   sola scriptura argument reads Trent's word both ways: a content, or an
-  occurrence.
+  occurrence. **Unwritten tradition** is a narrower concept and has a category:
+  it names what Trent says is handed on outside Scripture, "the unwritten
+  traditions … transmitted as it were from hand to hand" (Session IV), and
+  Whitaker, denying that any of them can be shown to be apostolic, speaks of
+  the same contents. Both sides treat it as something told and received.
 - **The mind of the Church** is, as Florovsky and Ware describe it, the
   Church's living mind, guided by the Spirit, of which the consensus of the
   Fathers and the received councils are the expression. A Protestant reader
@@ -115,7 +119,8 @@ def category : Concept → Option Category
   | .understandingScripture => some .process
   | .historicalGrammaticalMethod => some .informationObject
   | .sourceOfRevelation => some .role
-  | .survivingApostolicTeaching => some .informationObject
+  | .unwrittenTradition => some .informationObject
+  | .shownApostolic => some .quality
   | .infallibleInterpreter => some .role
   | .mindOfTheChurch => none
   | .infallibleAuthority => some .role

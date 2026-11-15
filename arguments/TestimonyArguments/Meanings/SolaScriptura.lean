@@ -4,10 +4,11 @@ import TestimonyArguments.SolaScriptura.Sources
 /-!
 # TestimonyArguments.Meanings.SolaScriptura — what each sola scriptura claim says
 
-**Thirty of the forty claims have meanings** (`coverage_now`), and with them
-fourteen of the argument's twenty lines of reason can be read as moves, all of
-whose claims say something the checks can see: the eliminative line, both of
-Mark 7's lines, Geisler's Tradition 0, Trent, Vatican I, the Orthodox line, the
+**Thirty-four of the forty-four claims have meanings** (`coverage_now`), and with
+them fifteen of the argument's twenty-one lines of reason can be read as moves,
+all of whose claims say something the checks can see: the eliminative line, both
+of Mark 7's lines, the line from Jesus' sayings and Paul's letters to the same
+principle, Geisler's Tradition 0, Trent, Vatican I, the Orthodox line, the
 canon objection and Kruger's reply, the interpretive-authority regress and
 Mathison's reply, and Geisler's circularity charge with both replies to it.
 `TestimonyArguments.Meanings.SolaFide` is the fuller worked example of the same
@@ -36,6 +37,20 @@ words that carry a reading are kept as the text has them.
 - **2 Thessalonians 2:15** says that the traditions (παραδόσεις) are to be held
   as what the apostles taught, and that they were taught by spoken word and by
   letter.
+- **John 10:35** says that "the scripture" (ἡ γραφή) cannot be broken, and
+  **Matthew 5:18** that not one jot or one tittle shall pass from the law till
+  all be fulfilled. What cannot be broken, and what shall not pass, are kept as
+  the texts' own phrases.
+- **Galatians 1:8–9** says that whoever preaches any other gospel than the one
+  Paul preached, Paul himself or an angel from heaven, is accursed (ἀνάθεμα).
+  Whether "other" reaches an addition or only something alien is the step's
+  question, and the meaning does not answer it.
+- **Colossians 2:8, 20–22** says that the philosophy Paul warns against is
+  "after the tradition" (παράδοσις) of men and not after Christ, and that the
+  rules "Touch not; taste not; handle not" are commandments of men. The second
+  is the concept Mark 7's meaning uses for the elders' tradition, because
+  Lightfoot traces Paul's phrase to Isaiah 29:13, the verse Jesus quotes in
+  Mark 7.
 
 ## What the doctrinal claims say
 
@@ -56,9 +71,11 @@ Judisch's premise is that the individual settles questions of faith finally,
 and is the one who chooses which body to submit to; Mathison answers that
 choosing is itself private judgement. Geisler charges that Tradition I's
 reasoning is a circular argument, and Barrett answers that every appeal to an
-ultimate authority is one. The premise Mark 7's case needs, that no apostolic
-word survives outside Scripture, says that the apostles' teaching as it survives
-today is part of Scripture.
+ultimate authority is one. The premise Mark 7's case needs says two things: that
+unwritten tradition is not shown to be apostolic, where being shown means being
+proved from evidence that can still be produced, and that it may not be bound on
+the Church as the word of God. It does not say that the apostles taught nothing
+by word of mouth; Whitaker's claim is about proof.
 
 ## What is left unanalysed, and why
 
@@ -127,7 +144,8 @@ Five pairs are left apart, on purpose.
   "word of God" is not the coordinate source's "Scripture", and the meanings
   keep the two terms apart (`trent_grants_marks_principle`).
 - That tradition is a coordinate source of revelation does not, by its
-  wording, say that an apostolic word survives outside Scripture. The library
+  wording, say that any unwritten tradition can be shown to be apostolic. The
+  library
   reads Trent both ways (`TestimonyArguments.SolaScriptura.whatTrentsTraditionIs`).
 - That the magisterium, or the mind of the Church, interprets Scripture
   infallibly does not, by its wording, make it a *rule of faith*. Whether an
@@ -161,7 +179,9 @@ def all : List Claim :=
   , .circularityDefeatsTraditionI, .everyUltimateAuthorityIsCircular
   , .creedalConsensusIsDerivedFromScripture, .scriptureBoundsTheInterpretiveOffice
   , .perspicuityIsLimitedToSalvationEssentials, .godsWordJudgesTradition
-  , .mensCommandmentBindsAsGodsWord, .noApostolicWordOutsideScripture ]
+  , .mensCommandmentBindsAsGodsWord, .noUnwrittenTraditionShownApostolic
+  , .john10_35ScriptureCannotBeBroken, .matthew5_18LawShallNotPass
+  , .galatians1_8AnotherGospelAccursed, .colossians2_8TraditionOfMen ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -180,6 +200,16 @@ theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
 @[nolint defsWithUnderscore] abbrev acts17_11 : PassageRange := vs .acts 17 11
 /-- 2 Thessalonians 2:15. -/
 @[nolint defsWithUnderscore] abbrev thess2_15 : PassageRange := vs .secondThessalonians 2 15
+/-- John 10:35. -/
+@[nolint defsWithUnderscore] abbrev john10_35 : PassageRange := vs .john 10 35
+/-- Matthew 5:18. -/
+@[nolint defsWithUnderscore] abbrev matt5_18 : PassageRange := vs .matthew 5 18
+/-- Galatians 1:8–9. -/
+@[nolint defsWithUnderscore] abbrev gal1_8_9 : PassageRange := rg .galatians 1 8 1 9
+/-- Colossians 2:8. -/
+@[nolint defsWithUnderscore] abbrev col2_8 : PassageRange := vs .colossians 2 8
+/-- Colossians 2:8–22: the warning of 2:8 and the rules of 2:20–22. -/
+@[nolint defsWithUnderscore] abbrev col2_8_22 : PassageRange := rg .colossians 2 8 2 22
 
 /-- "All scripture", the words of 2 Timothy 3:16. -/
 abbrev allScripture : Term := wd .graphe tim3_16
@@ -190,6 +220,10 @@ abbrev eldersTradition : Term :=
 
 /-- The traditions of 2 Thessalonians 2:15, in its own word. -/
 abbrev theTraditions : Term := wd .paradosis thess2_15
+
+/-- The teaching Colossians 2:8 warns against: "philosophy and vain deceit". -/
+abbrev colossianPhilosophy : Term :=
+  pt "the philosophy and vain deceit Paul warns the Colossians against (2:8)" .informationObject
 
 /-- Tradition I's reasoning about Scripture and the creedal consensus, as
 Mathison states it and Geisler charges it. -/
@@ -217,7 +251,7 @@ clear sense another (`accountability_refuses_rather_than_denies`). -/
 abbrev consensusNotPreconditionOfReading : Statement :=
   .holds (.not (rl .precedes (cn .creedalConsensus) (cn .readingScripture)))
 
-/-- **What each sola scriptura atom asserts.** Thirty are analysed; the rest
+/-- **What each sola scriptura atom asserts.** Thirty-four are analysed; the rest
 keep their citations' labels, marked unanalysed, for the reasons the module
 docstring gives. -/
 def means : Claim → Statement
@@ -293,17 +327,38 @@ def means : Claim → Statement
     .also (.holds (rl .judges (cn .wordOfGod) (cn .tradition)))
       (.denied mensCommandmentAsGodsWord)
   | .mensCommandmentBindsAsGodsWord => mensCommandmentAsGodsWord
-  | .noApostolicWordOutsideScripture =>
-    .holds (rl .partOf (cn .survivingApostolicTeaching) (cn .scripture))
+  | .noUnwrittenTraditionShownApostolic =>
+    .also (.holds (.not (rl .isA (cn .unwrittenTradition) (cn .shownApostolic))))
+      (.holds (.not (rl .bindsAs (cn .unwrittenTradition) (cn .wordOfGod))))
+  | .john10_35ScriptureCannotBeBroken =>
+    .says john10_35 <| rl .isA (wd .graphe john10_35)
+      (pt "what cannot be broken (οὐ δύναται λυθῆναι)" .quality)
+  | .matthew5_18LawShallNotPass =>
+    .says matt5_18 <| rl .isA
+      (pt "one jot or one tittle of the law (ἰῶτα ἓν ἢ μία κεραία)" .informationObject)
+      (pt "what shall in no wise pass from the law, till all be fulfilled" .quality)
+  | .galatians1_8AnotherGospelAccursed =>
+    .says gal1_8_9 <| rl .isA
+      (pt ("whoever preaches any other gospel than the one Paul preached, " ++
+          "were it Paul himself or an angel from heaven") .agent)
+      (pt "accursed (ἀνάθεμα)" .quality)
+  | .colossians2_8TraditionOfMen =>
+    .says col2_8_22 <|
+      .both (rl .saidBy (wd .paradosis col2_8) colossianPhilosophy) <|
+        .both (.not (rl .saidBy (pt "Christ" .agent) colossianPhilosophy))
+          (rl .isA
+            (pt "the rules \"Touch not; taste not; handle not\" (2:21)" .informationObject)
+            (cn .commandmentsOfMen))
   | a => .opaque (cite a).label
 
 /-- What each atom of the argument says. -/
 instance meanings : HasMeanings Claim :=
   { argument := "Sola scriptura", all, complete := all_complete, means }
 
-/-- **Thirty of the 40 atoms are analysed**: the texts, in their own words, and
-every claim a line's step reads except the three the module docstring names. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (30, 40) := by decide
+/-- **Thirty-four of the 44 atoms are analysed**: the texts, in their own words,
+and every claim a line's step reads except the three the module docstring
+names. -/
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (34, 44) := by decide
 
 /-- **The sola scriptura joins**: each pair of claims whose meanings exclude or
 entail one another, listed, and proved to be exactly what the meanings contain.

@@ -148,11 +148,39 @@ inductive Claim
   read as receiving commandments of men, is committed to it; Mark 7's principle
   denies it. -/
   | mensCommandmentBindsAsGodsWord
-  /-- No apostolic teaching handed on outside Scripture survives, identifiable
-  as the word of God. **The step from Mark 7 to sola scriptura needs it**, and
-  Rome denies it: the apostles handed on by word as well as by letter
-  (2 Thessalonians 2:15). -/
-  | noApostolicWordOutsideScripture
+  /-- No unwritten tradition can now be shown to be apostolic, and so none can
+  bind the conscience as the word of God. A claim about what can be proved, not
+  about what the apostles once said. Whitaker, answering one by one Bellarmine's
+  five rules for telling a genuine tradition from a spurious one, replies that
+  "the papists have no such unwritten tradition which can be certainly shewn to
+  have been always observed by the universal church". **The step from Mark 7 to
+  sola scriptura needs it**, and Rome denies it: Trent says the gospel's truth
+  and discipline "are contained in the written books, and the unwritten
+  traditions", and *Dei Verbum* 9 says that "it is not from Sacred Scripture
+  alone that the Church draws her certainty about everything which has been
+  revealed". -/
+  | noUnwrittenTraditionShownApostolic
+  /-- John 10:35 — "the scripture cannot be broken". Jesus answers the charge
+  of blasphemy from Psalm 82:6, and rests the answer on this. What the text
+  says, not yet what follows from it. -/
+  | john10_35ScriptureCannotBeBroken
+  /-- Matthew 5:18 — "Till heaven and earth pass, one jot or one tittle shall in
+  no wise pass from the law, till all be fulfilled". The jot (ἰῶτα) is the
+  smallest letter, the tittle (κεραία) the smallest stroke of one. -/
+  | matthew5_18LawShallNotPass
+  /-- Galatians 1:8–9 — "though we, or an angel from heaven, preach any other
+  gospel unto you than that which we have preached unto you, let him be
+  accursed. As we said before, so say I now again, If any man preach any other
+  gospel unto you than that ye have received, let him be accursed." Paul puts
+  his own later preaching, and an angel's, under the gospel he had already
+  preached. -/
+  | galatians1_8AnotherGospelAccursed
+  /-- Colossians 2:8 and 2:20–22 — "Beware lest any man spoil you through
+  philosophy and vain deceit, after the tradition of men, after the rudiments
+  of the world, and not after Christ"; and of the rules "Touch not; taste not;
+  handle not", that they are "after the commandments and doctrines of men".
+  Paul is warning a church, not the elders of Jerusalem. -/
+  | colossians2_8TraditionOfMen
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaScriptura

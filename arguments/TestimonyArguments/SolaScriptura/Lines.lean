@@ -4,7 +4,8 @@ import TestimonyArguments.SolaScriptura.Sources
 # TestimonyArguments.SolaScriptura.Lines — the inference steps and the lines of reason
 
 Three routes reach the conclusion — the classical line, the eliminative line,
-and Mark 7's, which takes two lines — three positions deny it, and three
+and Mark 7's, which takes two lines, and whose principle a further line draws
+from Jesus' sayings and Paul's letters — three positions deny it, and three
 objections attack it from different directions. The objections do not reduce to one
 another: self-refutation says the doctrine fails its own standard, the canon
 objection says an authority outside scripture is needed to identify scripture,
@@ -52,6 +53,21 @@ generalises from one pericope. -/
 def mark7ToPrinciple : Formula Claim :=
   p .mark7TraditionCanNullify ➝ p .godsWordJudgesTradition
 
+/-- **The same principle from Jesus' sayings and Paul's letters**, without Mark 7.
+Jesus says that "the scripture cannot be broken" (John 10:35) and that not "one
+jot or one tittle" shall pass from the law (Matthew 5:18); Paul says that even
+he, or an angel, would be accursed for preaching "any other gospel" than the one
+he had preached (Galatians 1:8–9), and warns a church against teaching "after
+the tradition of men … and not after Christ" (Colossians 2:8, 20–22). Together
+they say what Mark 7 says: God's word judges human tradition. Rated
+`wellSupported`: Aquinas grants Galatians 1:8 and the principle with it, and
+denies only that every addition is "another gospel" (`jesusAndPaulPrincipleInference`). -/
+@[solaScripturaDefs]
+def jesusAndPaulToPrinciple : Formula Claim :=
+  ⋀ [ p .john10_35ScriptureCannotBeBroken, p .matthew5_18LawShallNotPass
+    , p .galatians1_8AnotherGospelAccursed, p .colossians2_8TraditionOfMen ]
+  ➝ p .godsWordJudgesTradition
+
 /-- What the principle says of a commandment of men: it may not be bound on the
 Church as God's word. This is Isaiah 29:13 as Mark 7:7 quotes it. -/
 @[solaScripturaDefs]
@@ -59,15 +75,16 @@ def principleExcludesMensCommandments : Formula Claim :=
   p .godsWordJudgesTradition ➝ notP .mensCommandmentBindsAsGodsWord
 
 /-- **From Mark 7's principle to the sole rule.** If God's word judges human
-tradition, and no apostolic word survives outside Scripture, Scripture is the
-sole infallible rule. Rated `disputed`: Geiselmann holds that Scripture contains
-all revealed content and, as a Catholic after Vatican I, keeps the Magisterium
-as its infallible interpreter; Florovsky holds that tradition adds nothing to
+tradition, and no unwritten tradition can now be shown to be apostolic, so that
+none binds as God's word, Scripture is the sole infallible rule. Rated
+`disputed`: Geiselmann holds that Scripture contains all revealed content and,
+as a Catholic after Vatican I, keeps the Magisterium as its infallible
+interpreter; Florovsky holds that tradition adds nothing to
 Scripture and keeps the mind of the Church as its interpreter. Neither adds a
 word to Scripture; both deny it is the *sole* infallible rule. -/
 @[solaScripturaDefs]
 def principleToSoleRule : Formula Claim :=
-  ⋀ [p .godsWordJudgesTradition, p .noApostolicWordOutsideScripture]
+  ⋀ [p .godsWordJudgesTradition, p .noUnwrittenTraditionShownApostolic]
   ➝ p .scriptureIsSoleInfallibleRule
 
 /-- Geisler's route: the historical-grammatical method suffices, so creeds may
@@ -175,15 +192,30 @@ def mark7Line : Line Claim :=
   , inference := some mark7PrincipleInference }
 
 /-- **From Mark 7 to the sole rule**: the principle, with the premise that no
-apostolic word survives outside Scripture. The principle is carried in by
-`mark7Line`; this line's own ground is the one Rome denies. -/
+unwritten tradition can now be shown to be apostolic. The principle is carried
+in by `mark7Line`, or by `jesusAndPaulLine`; this line's own ground is the one
+Rome denies. -/
 @[solaScripturaDefs]
 def mark7SoleRuleLine : Line Claim :=
   { name := "From Mark 7's principle to the sole rule"
-  , grounds := [p .noApostolicWordOutsideScripture]
+  , grounds := [p .noUnwrittenTraditionShownApostolic]
   , step := principleToSoleRule
   , delivers := p .scriptureIsSoleInfallibleRule
   , inference := some principleToSoleRuleInference }
+
+/-- **Jesus and Paul**, as a line of their own: the same principle as Mark 7's,
+from John 10:35, Matthew 5:18, Galatians 1:8–9 and Colossians 2:8, 20–22. It
+delivers the principle, and no more: what it adds is that the principle does not
+rest on one passage. -/
+@[solaScripturaDefs]
+def jesusAndPaulLine : Line Claim :=
+  { name := "Jesus and Paul (God's word judges human tradition)"
+  , grounds :=
+      [ p .john10_35ScriptureCannotBeBroken, p .matthew5_18LawShallNotPass
+      , p .galatians1_8AnotherGospelAccursed, p .colossians2_8TraditionOfMen ]
+  , step := jesusAndPaulToPrinciple
+  , delivers := p .godsWordJudgesTradition
+  , inference := some jesusAndPaulPrincipleInference }
 
 /-- **Tradition 0**, as Geisler states it rather than as Mathison describes
 it. -/

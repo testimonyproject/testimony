@@ -315,10 +315,14 @@ inductive Concept
   | historicalGrammaticalMethod
   /-- A source of revelation: something from which revealed truth is drawn. -/
   | sourceOfRevelation
-  /-- The apostles' teaching as it survives today, identifiable as theirs: what
-  the Church can still point to as the word the apostles handed on, whether by
-  letter or by word of mouth. -/
-  | survivingApostolicTeaching
+  /-- Unwritten tradition: teaching on faith or morals, or a rule of practice,
+  said to have been handed on from the apostles by word of mouth and not
+  written in Scripture. Trent's "unwritten traditions" (Session IV). -/
+  | unwrittenTradition
+  /-- Shown to be apostolic: proved, from evidence that can still be produced,
+  to have come from the apostles, and not only claimed to. Whitaker's
+  "certainly shewn" (*Disputation*, question VI, chapter IV). -/
+  | shownApostolic
   /-- An infallible interpreter of Scripture: one whose interpretation of it
   cannot err. -/
   | infallibleInterpreter

@@ -163,20 +163,24 @@ and the Reformers. Its five parties are held to their rules the same way:
   reading.
 
 Trent's readings keep their rule. Mark 7's case does not (`sola_scriptura_own_rules`). To get
-from the principle to Scripture alone it needs one more claim: that no teaching of the apostles
-handed on outside Scripture survives, identifiable as the word of God. The library cites that
-claim to William Whitaker's *Disputation on Holy Scripture* (1588), against Bellarmine, and to
-the Westminster Confession I.6, which says that nothing is to be added to Scripture by
-"traditions of men". Both are a theologian's or a confession's word, and Westminster's rule
-admits neither as a ground. So the Reformed case asks Rome for Scripture and, at this claim,
-rests on what it refuses Rome.
+from the principle to Scripture alone it needs one more claim: that no unwritten tradition can
+now be shown to have come from the apostles, and so none can bind the conscience as the word
+of God. That is a claim about proof, not about what the apostles once said, and it is how
+William Whitaker puts it in his *Disputation on Holy Scripture* (1588), answering Bellarmine:
+"the papists have no such unwritten tradition which can be certainly shewn to have been always
+observed by the universal church". The library cites the claim to Whitaker and to the
+Westminster Confession I.6, which says that nothing is to be added to Scripture by "traditions
+of men". Both are a theologian's or a confession's word, and Westminster's rule admits neither
+as a ground. So the Reformed case asks Rome for Scripture and, at this claim, rests on what it
+refuses Rome.
 
-The check does not say that the claim is false, or that it cannot be grounded as Westminster's
-rule asks. Whitaker's sentence is in part a claim of history, that no unwritten tradition can
-be shown to have been always observed by the whole Church, and an argument from the evidence
-for it would be a ground the rule admits. The library has not cited one, and the citation is
-left as it stands until one is found. No verdict moved: nothing weighs a claim by what it rests
-on.
+Stating the claim as narrowly as Whitaker does changes nothing here, because what it rests on
+is the same. The check does not say that the claim is false, or that it cannot be grounded as
+Westminster's rule asks. It is in part a claim of history, about what the record can show,
+and an argument from that evidence would be a ground the rule admits. The library cites
+Whitaker as a witness to the Reformed position, not a historian's account of the evidence,
+and the citation is left as it stands until one is found. No verdict moved: nothing weighs a
+claim by what it rests on.
 
 One limit remains. The library's evidence rule admits the same grounds for claims as
 Westminster's, so the check could not have told the two apart: what sets Westminster's rule
@@ -211,6 +215,6 @@ Holding steps to a rule needs each step to record what licenses it, apart from w
 5. **The other disputes, held to their rules**, and the positions in the argument over
    Scripture alone that no dispute weighs yet: Geisler's, Mathison's, Kruger's, Barrett's. And
    rules of their own for Aquinas, Luther and Chrysostom, once each is cited.
-6. **A ground for the Reformed claim that no unwritten apostolic word survives**, cited from
-   the evidence or from Scripture, so that Mark 7's case can be held to its rule and pass, or
-   shown not to.
+6. **A ground for the Reformed claim that no unwritten tradition can be shown to be
+   apostolic**, cited from the evidence or from Scripture, so that Mark 7's case can be held
+   to its rule and pass, or shown not to.
