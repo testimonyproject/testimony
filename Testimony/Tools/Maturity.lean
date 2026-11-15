@@ -54,6 +54,9 @@ def found (m : Maturity) : String :=
       (if m.carrying == 0 then [] else
         [linesThat m.carrying "carries what it delivers in a premise"
           "carry what they deliver in a premise"]) ++
+      (if m.circular == 0 then [] else
+        [linesThat m.circular "rests on itself through a circle of lines"
+          "rest on one another in a circle"]) ++
       (if m.conditional == 0 then [] else
         [linesThat m.conditional "needs a word kept in one sense, unstated"
           "need a word kept in one sense, unstated"])

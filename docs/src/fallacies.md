@@ -203,7 +203,14 @@ concludes carries a premise of the second, and a circle is a chain of such moves
 to its start. In `threeCircle`, Romans 3:28 teaches faith alone because faith is the only means;
 works are no means because of what Romans 3:28 teaches; and faith is the only means because
 works are none. Every move is on the circle. In `chain`, the last move rests on what the text
-says instead, and nothing comes back. `circle_cases` pins both.
+says instead, and nothing comes back.
+
+A circle takes at least two moves. "Faith is a means of justification, and works are not, so
+faith is the only means" (`strongerConclusion`) has a conclusion that entails its first premise,
+by what "only" means, and it is still no circle: a conclusion may say more than its premises,
+and nothing the move assumes was drawn from it. The check's first run on the library's own lines
+counted such a move as resting on itself, at sola scriptura's eliminative line, and a move's
+edge to itself is now left out. `circle_cases` pins all three.
 
 ## Argument from silence
 
@@ -253,16 +260,21 @@ reports, for each argument:
 - the lines that read a word two ways and need it one;
 - the lines whose premise carries what they deliver, and who denies that premise;
 - the lines that argue from silence alone;
+- the lines that rest on one another in a circle;
 - the lines that are conditional on a word keeping its sense, with the words.
 
 It fails the build on two of these, a line that reads a word two ways or one that argues from
 silence alone: the library may not do what it checks articles for. A carried premise is reported
 but does not fail the build, because whether it begs the question depends on whom the line is
-addressed to. Pin the report with `#guard_msgs`, as `TestimonyArguments.Checks` does, so that a
-change in what the checks find is a change a reviewer sees.
+addressed to. A circle of lines is reported and does not fail the build either. A line does not
+record which position holds it, and a circle is a fault only in one position's reasoning; an
+argument may also encode a circle on purpose, as the charge it weighs. Pin the report with
+`#guard_msgs`, as `TestimonyArguments.Checks` does, so that a change in what the checks find is
+a change a reviewer sees.
 
-A line is read only when every claim it uses has a meaning. Today that is 32 lines of the
-library's 133, almost all in sola fide; the rest wait on their arguments' meanings.
+A line is read only when every claim it uses has a meaning. The
+[maturity page](./maturity.md) counts, for every argument, how many of its lines are read and
+what the checks found in them.
 
 ### Making the build refuse a case
 
