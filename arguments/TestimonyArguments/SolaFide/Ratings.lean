@@ -155,34 +155,41 @@ So each of Trent's three claims is `disputed` under all three standards.
 
 From Trent's side (`trent_dissents_from_the_definition_steps`):
 
-- **Its reading of Paul's word** objects to a starting point of the step about
-  the word, not to the step. That starting point says the verb is a verdict *and
-  not* making righteous, so what Trent concludes is what the starting point
-  denies. The step's support stands at `wellSupported` under all three
-  standards.
+- **Its reading of Paul's word** is an argument against the step about the word,
+  under all three standards. Trent keeps the courtroom sense, the step's first
+  starting point, and argues from Augustine that the word means making righteous
+  as well, which is what the step denies. So the step is `disputed` under every
+  standard.
 - **Its definition, taken as a claim about what God does**, is stated, not
   argued, against Paul's gospel: Trent holds it as a premise.
 - **Its denial that faith suffices** is an argument against Luke 18's step under
   the tradition standard only. Its one starting point is the definition, which
   rests on the council's word.
 
-The question of the word is decided at the two sides' premises. The argument
-from Paul's word holds the courtroom sense as a premise, cited to the lexicon.
-Trent holds the renewal sense, cited to itself and to VanLandingham. Each
-premise, by what it means, denies the other, so against each other each is a
-rival reading and not an argument (`lexicalOnWordAssessment`). That is why the
-argued objection on the word is the one from Romans 4, which reaches its
-conclusion from the text.
+The question of the word is argued from both sides. The argument from Paul's
+word holds the courtroom sense as a premise, cited to the lexicon, and argues
+from it, from Paul's other words for renewal and from the rule of least meaning
+that the word means no more. Trent holds that it means renewal, cited to itself
+and to VanLandingham, and keeps the courtroom sense beside it. Neither premise,
+by what it means, denies the other, so each is an argument against the other
+(`lexicalOnWordAssessment`, `trentWordOnLexicalAssessment`). Romans 4 argues
+against Trent's reading from the text as well.
+
+That was not so before. The courtroom premise used to say the verb is a verdict
+*and not* making righteous, so it contained the conclusion it was used to reach,
+and against Trent the line on Paul's word assumed its point. The fallacy checks
+found it (`Testimony.Checks.Fallacies`), and the premise now says only what its
+lexical sources say.
 
 ## Claims that exclude each other by their meaning
 
 Some claims that are listed separately exclude each other by what they mean.
-"The verb is a verdict, and not making righteous" denies "Paul's verb means
-making righteous" in so many words. Every check here takes those exclusions as
-given (`Meanings.SolaFide.joins`), in the same way for an objection on either
-side, and the list is proved to contain exactly the exclusions the meanings
-imply. Without them, Trent's reading of the word would count as accepting a
-starting point that it in fact denies.
+"Justification includes the remission of sins, and not sanctification" denies
+"justification includes both" in so many words. Every check here takes those
+exclusions as given (`Meanings.SolaFide.joins`), in the same way for an
+objection on either side, and the list is proved to contain exactly the
+exclusions the meanings imply. Without them, a position could count as granting
+a starting point that, by what it means, it denies.
 
 ## The debate heard under each standard
 
@@ -604,13 +611,17 @@ def romansFourOnWordAssessment : Assessment Claim where
   checked := by horn_certify
 
 /-- **The argument from Paul's word, against Trent's definition taken as a claim
-about the word.** It holds as a premise that Paul's "justify" is a verdict and
-*not* making righteous, and that premise, by what it means, already denies
-Trent's reading (`Meanings.SolaFide.joins`). So against that reading it is a
-rival reading held as a premise, and by the checks a disagreement, not an
-argument. It rests on the lexicon, and it stands or falls with that premise's
-own rating. Trent's reading stands in the same place against it
-(`trentWordOnLexicalAssessment`). -/
+about the word.** It holds as a premise that Paul's "justify" is a verdict, cited
+to the lexicon, and argues from that, from Paul's other words for renewal and
+from the rule of least meaning that the word does not also mean renewal. So it
+reaches its denial by a step, and is an argument under all three standards.
+
+It was not one until the premise was split. The premise used to say "a verdict,
+and *not* making righteous", and so already denied Trent's reading: the line
+assumed its point against Trent, and the checks counted it a rival reading
+held as a premise. Trent's reading stands against it in the same way now
+(`trentWordOnLexicalAssessment`): each grants the verdict sense, and each argues
+its own answer to whether that is all the word means. -/
 def lexicalOnWordAssessment : Assessment Claim where
   dissenter := "Paul's word (by the rule of least meaning)"
   against := "Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)"
@@ -618,7 +629,7 @@ def lexicalOnWordAssessment : Assessment Claim where
     { claim := p .paulsJustifyDenotesRenewal
     , position := lexicalCase }
   findings :=
-    { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
+    { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
   checked := by horn_certify
 
@@ -679,9 +690,12 @@ theorem trent_definition_ratings :
             , (.scriptural, .disputedBy
             ["Paul's gospel (Galatians 1; Westminster XI.1)", "Romans 4:3–8"]) ] ∧
       wordPremise.ratings =
-        [ (.evidence, .disputedBy ["Romans 4:3–8, on Paul's word"])
-        , (.tradition, .disputedBy ["Romans 4:3–8, on Paul's word"])
-        , (.scriptural, .disputedBy ["Romans 4:3–8, on Paul's word"]) ] ∧
+        [ (.evidence, .disputedBy ["Romans 4:3–8, on Paul's word",
+            "Paul's word (by the rule of least meaning)"])
+        , (.tradition, .disputedBy ["Romans 4:3–8, on Paul's word",
+            "Paul's word (by the rule of least meaning)"])
+        , (.scriptural, .disputedBy ["Romans 4:3–8, on Paul's word",
+            "Paul's word (by the rule of least meaning)"]) ] ∧
       sufficiencyStep.ratings =
         [ (.evidence, .disputedBy ["Luke 18:9–14 (the tax collector justified)"])
         , (.tradition, .disputedBy ["Luke 18:9–14 (the tax collector justified)"])
@@ -691,12 +705,18 @@ theorem trent_definition_ratings :
 #print axioms trent_definition_ratings
 
 /-- **Trent's reading of Paul's word, against the step about the word.** It argues
-its conclusion from Augustine's explanation. But what it concludes, that Paul's
-"justify" means making righteous, is what the step's first starting point
-denies: that starting point says the verb is a verdict *and not* making
-righteous (`Meanings.SolaFide.joins`). So it objects to that starting point and
-not to the step, and belongs to the rating of the starting point, under any
-standard. -/
+its conclusion from Augustine's explanation: Paul's "justify" means making
+righteous. It can be held with every starting point of the step, the courtroom
+sense among them, because Trent keeps the verdict: the justified "are not only
+reputed, but are truly called, and are, just" (Session VI, ch. 7). So it grants
+the step's grounds and argues against what the step draws from them, and under
+every standard it is an argument against the step.
+
+It was not one until the courtroom premise was split. The premise used to say
+the verb is a verdict *and not* making righteous, so Trent's conclusion denied a
+starting point, and the dissent belonged to that starting point's rating.
+The split puts it where Trent's own words put it: against the step from the
+verdict to "nothing more". -/
 def trentWordOnLexicalAssessment : Assessment Claim where
   dissenter := "Trent, with Augustine (ch. 8)"
   against := lexicalLine.name
@@ -705,7 +725,7 @@ def trentWordOnLexicalAssessment : Assessment Claim where
     , grounds := lexicalLine.grounds
     , position := trentOnTheWordOfPaul }
   findings :=
-    { consistent := true, denies := true, grants := false, argued := true, bareDenial := false
+    { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
   checked := by horn_certify
 
@@ -758,25 +778,41 @@ def lexicalWordStep : RatedStep Claim where
 /-- **The same checks, from Trent's side.** Trent objects three times to the
 Reformed steps over its definition.
 
-- Its reading of Paul's word objects to a starting point of the step about the
-  word, not to the step.
+- Its reading of Paul's word is an argument against the step about the word,
+  under every standard. Trent keeps the courtroom sense, since the justified
+  "are not only reputed, but are truly called, and are, just" (Session VI,
+  ch. 7), and argues from Augustine that the word means making righteous too.
+  So it grants the step's starting points and denies what the step draws from
+  them.
 - Its definition, taken as a claim about what God does, is stated and not argued
   against Paul's gospel.
 - Its denial that faith suffices is an argument against Luke 18's step under the
   tradition standard only, because its one starting point is the definition.
 
-So the support for the step about Paul's word stands at `wellSupported` under
-all three standards: the strongest known objection to it is written down, and
-fails. -/
+So the step about Paul's word is disputed under all three standards, by Trent's
+reading of the word.
+
+This reverses what the checks found before the courtroom premise was split. It
+said the verb is a verdict *and not* making righteous, so it already contained
+the step's conclusion. Trent's reading denied that premise, not the step, and
+the step stood at `wellSupported` because the premise assumed its point. With
+the premise saying only what its lexical sources say, the verdict, Trent's
+objection reaches the step.
+
+What it does not claim: that Trent's reading is right. `disputed` means there
+is an argued objection, not that the objection wins. Nor does it move the
+dispute's verdicts on Paul's word. The dispute weighs this step at its cited
+rating, which this check does not change. -/
 @[headline]
 theorem trent_dissents_from_the_definition_steps :
-    trentWordOnLexicalAssessment.findings.kind = .deniesGrounds ∧
+    trentWordOnLexicalAssessment.findings.kind = .argued ∧
       trentGraceOnGospelAssessment.findings.kind = .asserted ∧
       trentSufficiencyOnLuke18Assessment.profile = [(.evidence, false), (.tradition, true)
       , (.scriptural, false)] ∧
       lexicalWordStep.ratings =
-        [(.evidence, .stands .wellSupported), (.tradition, .stands .wellSupported)
-        , (.scriptural, .stands .wellSupported)] := by
+        [(.evidence, .disputedBy ["Trent, with Augustine (ch. 8)"])
+        , (.tradition, .disputedBy ["Trent, with Augustine (ch. 8)"])
+        , (.scriptural, .disputedBy ["Trent, with Augustine (ch. 8)"])] := by
   decide +kernel
 
 #print axioms trent_dissents_from_the_definition_steps

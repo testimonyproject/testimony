@@ -181,13 +181,20 @@ premise up among an argument's claims (`Move.begsAgainst`) and names who denies 
 
 The library's own reasoning is checked this way too. Each of its arguments is built from **lines
 of reason**, each a single step from stated starting points to a conclusion. One sola fide line
-(`lexicalLine`) argues that Paul's "justify" does not mean to make a person inwardly just. Its
-premise about the word has two halves: Paul's "justify" gives a verdict, and "it does not mean to
-make a person good". The second half is the line's conclusion. Trent's reading of Paul's word
-denies that half and keeps the first, since the justified "are not only reputed, but are truly
-called, and are, just" (Session VI, chapter 7). So as an answer to Trent, the library's own line
-begs the question. The check reports it without failing the build, and the fix is tracked as
-issue #223.
+(`lexicalLine`) argues that Paul's "justify" does not mean to make a person inwardly just. When
+the check was first run, its premise about the word had two halves: Paul's "justify" gives a
+verdict, and "it does not mean to make a person good". The second half was the line's
+conclusion. Trent's reading of Paul's word denies that half and keeps the first, since the
+justified "are not only reputed, but are truly called, and are, just" (Session VI, chapter 7).
+So as an answer to Trent, the library's own line begged the question.
+
+The premise now says only that the word gives a verdict, which is what its lexical sources say,
+and the line has to reach "and nothing more" from its other grounds: Paul's other words for
+renewal, and the rule that a word means no more than its context requires. The checks then
+found what a reader would expect. Trent's reading, which keeps the verdict and adds renewal, is
+now an argument against that step under every standard, where before it had only denied a
+premise (`trent_dissents_from_the_definition_steps`). The line still delivers its conclusion;
+the step it rests on is disputed, and the page on why each step is rated as it is says so.
 
 ### Circular reasoning
 

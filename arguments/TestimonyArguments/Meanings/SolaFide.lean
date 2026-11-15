@@ -195,9 +195,7 @@ def means : Claim → Statement
         (rl .groundOf (cn .christsDeath) (wd .dikaioo (vs .galatians 5 4)))
   | .romans8_33_34 =>
     .says (rg .romans 8 33 8 34) (rl .agentOf (cn .god) (wd .dikaioo (vs .romans 8 33)))
-  | .dikaioIsForensic =>
-    .also (.means .dikaioo (.usage .paul) .verdict)
-      (.denied (.means .dikaioo (.usage .paul) .makeRighteous))
+  | .dikaioIsForensic => .means .dikaioo (.usage .paul) .verdict
   | .paulNamesRenewalOtherwise =>
     .also (.occurs .anakainosis titus3_5) <| .also (.occurs .hagiasmos (vs .romans 6 19))
       (.says titus3_5_7 (rl .distinctFrom (wd .anakainosis titus3_5_7) (wd .dikaioo titus3_5_7)))
@@ -452,8 +450,6 @@ credibility check holds `a → ¬b` for each, as background
 - That justification includes the remission of sins and *not* sanctification
   excludes that it includes both. The denial was always in the meaning; the
   meanings were read, before, only for denials of a whole claim.
-- That Paul's δικαιόω is forensic, which says it means a verdict and *not*
-  making righteous, excludes that it denotes renewal.
 - Trent's Latin Revelation 22:11 and Sirach 18:22 exclude the Greek of each,
   which says the word is not there.
 
@@ -471,7 +467,6 @@ instance joins : HasJoins Claim where
     [ (.james2_24Compatible, .jamesUsesDikaioAsPaul)
     , (.justificationByFaithAlone, .baptismIsInstrumentalCause)
     , (.justificationIsForensicOnly, .justificationIncludesSanctification)
-    , (.dikaioIsForensic, .paulsJustifyDenotesRenewal)
     , (.rev22_11BeJustifiedStill, .rev22_11GreekDoRighteousness)
     , (.sir18_22BeJustifiedToDeath, .sir18_22GreekIsAVow) ]
   exclusions_pinned := by decide +kernel
@@ -486,7 +481,6 @@ argument's packages unfold to this list, so a named reading must satisfy it. -/
       [ p .james2_24Compatible ➝ notP .jamesUsesDikaioAsPaul
       , p .justificationByFaithAlone ➝ notP .baptismIsInstrumentalCause
       , p .justificationIsForensicOnly ➝ notP .justificationIncludesSanctification
-      , p .dikaioIsForensic ➝ notP .paulsJustifyDenotesRenewal
       , p .rev22_11BeJustifiedStill ➝ notP .rev22_11GreekDoRighteousness
       , p .sir18_22BeJustifiedToDeath ➝ notP .sir18_22GreekIsAVow ] :=
   rfl

@@ -139,14 +139,18 @@ Whether the senses exclude each other is itself contested: Trent holds that just
 declares and makes righteous. A postulate saying they do would hand one side's lexicon to both.
 A claim whose meaning says *and not that sense* does exclude the other, and is listed.
 
-Sola fide has six exclusions and no entailments (`TestimonyArguments.Meanings.SolaFide.joins`):
-- Paul's word as renewal, against the forensic sense;
+Sola fide has five exclusions and no entailments (`TestimonyArguments.Meanings.SolaFide.joins`):
 - Trent's Latin of Revelation 22:11, against the Greek;
 - Trent's Latin of Sirach 18:22, against the Greek;
 - "James's δικαιόω is Paul's", against "James 2:24 is compatible with Paul";
 - *faith alone*, against Trent's baptism as the instrumental cause of justification, by what
   "the only means" means;
 - justification as forensic only, against Trent's "justification includes sanctification".
+
+It had a sixth, Paul's word as renewal against the forensic sense, while the forensic premise said
+"a verdict, and not making righteous". It says only "a verdict" now, so the two can be held
+together, as Trent holds them: the justified "are not only reputed, but are truly called, and
+are, just" (Session VI, ch. 7).
 
 Every dissent gets the same background, whichever side it is on. Sola scriptura has one exclusion
 and two entailments (`TestimonyArguments.Meanings.SolaScriptura.joins`): Mark 7's principle against
@@ -174,8 +178,8 @@ no longer stands as a reading to answer. The canonical witness has seven entailm
 (`TestimonyArguments.Meanings.CanonicalWitness.joins`): *faith alone* asserts its three parts, and
 Westminster's "by a faith that is never alone" asserts *faith alone*. Born in Bethlehem was looked
 at and has none: its one pair of rivals can be held together by a reader who takes the oracle as
-fulfilled twice. Without the postulates, Trent's reading of Paul's word would pass as granting the
-lexical step's forensic ground, which it denies.
+fulfilled twice. Without the postulates, a dissent could pass as granting a starting point that its
+own claims deny by what they mean.
 
 Disputes hold them too: every attack is decided over what a party holds, its premises with
 the postulates ([disputes](logic.md#disputes)). In the James dispute this adds one pair of
@@ -226,9 +230,9 @@ a verdict and a rating cannot disagree about which standard they assume.
 | Works are not merely fruit (Trent, ch. 16) | The Reformed harmony | credible | credible | argued from Westminster's proof texts |
 | Justification is renewal (Trent, ch. 7) | Paul's gospel; Romans 4 | credible | credible | argued from the texts |
 | Paul's δικαιόω denotes renewal (Trent, ch. 8) | Romans 4, on Paul's word | credible | credible | glosses the verb by Paul's text |
-| Paul's δικαιόω denotes renewal (Trent, ch. 8) | The lexical case | not credible | not credible | holds the forensic sense as a premise: a rival reading |
+| Paul's δικαιόω denotes renewal (Trent, ch. 8) | The lexical case | credible | credible | argues "no more than the verdict" from the forensic sense, Paul's renewal words and least meaning |
 | Faith does not suffice (Trent, ch. 7, canon 9) | Luke 18:9–14 | credible | credible | argued from the parable |
-| Paul's δικαιόω is not renewal (`lexicalLine`) | Trent, with Augustine | not credible | not credible | denies the step's forensic ground |
+| Paul's δικαιόω is not renewal (`lexicalLine`) | Trent, with Augustine | credible | credible | grants the verdict ("not only reputed", ch. 7) and argues renewal from Augustine |
 | A verdict on a finished work is no renewal | Trent, read as what God does | not credible | not credible | holds the definition as a premise |
 | Faith suffices (`luke18Line`) | Trent, ch. 7, canon 9 | not credible | credible | its one ground, the definition, rests on Trent |
 
@@ -297,14 +301,19 @@ the denial they need as a premise (`trent_on_the_word_is_asserted`,
   a credible critique under both standards. So each of those claims of Trent's is `disputed`
   under both (`trent_definition_ratings`).
 - **Trent's dissents** (`trent_dissents_from_the_definition_steps`). Its reading of Paul's word
-  dissents from the lexical step's ground, not the step, so that step's support stands at
-  `wellSupported` under both standards. Its definition read as what God does is asserted, not
-  argued. Its denial of sufficiency is a critique of Luke 18 under the tradition standard only.
-- **On the word itself, both sides hold their reading as a premise.** The lexical case holds
-  the forensic sense, cited to the lexicon; Trent holds the renewal sense, cited to itself and
-  VanLandingham. Against each other, each is a rival reading, so the question is weighed at
-  those premises' ratings. The argued dissent is Romans 4's, which glosses the verb by Paul's
-  own text.
+  is a critique of the lexical step under both standards: Trent keeps the verdict ("not only
+  reputed, but are truly called, and are, just", ch. 7) and argues from Augustine that the word
+  means making righteous as well. So that step's computed rating is `disputed`. Its definition
+  read as what God does is asserted, not argued. Its denial of sufficiency is a critique of
+  Luke 18 under the tradition standard only.
+- **On the word itself, both sides argue.** The lexical case holds the forensic sense, cited to
+  the lexicon, and argues from it that the word means no more; Trent holds the renewal sense
+  beside the verdict, cited to itself and VanLandingham. Neither premise denies the other, so
+  each is a credible critique of the other, and Romans 4 argues against Trent's reading from
+  Paul's own text as well. Until the courtroom premise was split it said "a verdict, and not
+  making righteous", so it already denied Trent's reading: the lexical case was a rival reading,
+  Trent's dissent fell on that premise and not on the step, and the step stood at
+  `wellSupported` because the premise assumed its point. The fallacy checks found it.
 
 ## Evidence the texts refute
 

@@ -194,8 +194,9 @@ inductive Claim
   | romans8_33_34
   /-- In Paul, "justify" (δικαιόω) is a courtroom word: to declare righteous, to
   give a verdict. Its opposite is to condemn, as in Deuteronomy 25:1 and Romans
-  8:33–34. It does not mean to make a person good. **The premise about the
-  word.** -/
+  8:33–34. **The premise about the word.** It says what the word means, and no
+  more: that it does not *also* mean to make a person good is what the line on
+  Paul's word argues from it, and is not part of it. -/
   | dikaioIsForensic
   /-- Paul has words of his own for renewal: "renewal" (ἀνακαίνωσις; Titus 3:5,
   Romans 12:2) and "sanctification" (ἁγιασμός; Romans 6:19, 22). He sets them

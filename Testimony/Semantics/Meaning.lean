@@ -63,8 +63,7 @@ def analysed (s : Statement) : Bool := s.parts.all (!·.isOpaque)
 /-- **Two meanings exclude each other** when, read for what their words mean
 (`Testimony.Ontology.shared`), each can be held alone and not both together:
 "the word means a verdict, and not making righteous" excludes "the word means
-making righteous" (sola fide's lexical claim and Trent's reading of Paul's
-word); "justification includes the remission of sins, and not sanctification"
+making righteous"; "justification includes the remission of sins, and not sanctification"
 excludes "justification includes both"; and "faith is the only means by which
 justification is received" excludes "baptism is a means by which it is". -/
 def excludes (s t : Statement) : Bool :=

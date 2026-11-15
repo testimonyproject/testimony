@@ -61,7 +61,7 @@ and CI fails when it is out of date. Work on the gaps is tracked in
 |---|---|---|---|---|---|---|
 | [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md) | not yet read | 0 of 7 | 0 of 2 | — | none | 0 |
 | [Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3](./arguments/born-of-a-virgin.md) | meanings begun | 25 of 95 | 0 of 41 | — | 16, 9 through a definition | 1 |
-| [Sola fide](./arguments/sola-fide.md) | lines being checked | 97 of 128 | 31 of 49 | 1 carries what it delivers in a premise; 12 need a word kept in one sense, unstated | 6, 1 through a definition | 4 |
+| [Sola fide](./arguments/sola-fide.md) | lines being checked | 97 of 128 | 31 of 49 | 12 need a word kept in one sense, unstated | 5, 1 through a definition | 4 |
 | [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md) | meanings begun | 5 of 29 | 0 of 8 | — | 7, none of them through a definition | 1 |
 | [Sola scriptura](./arguments/sola-scriptura.md) | lines being checked | 7 of 40 | 1 of 20 | nothing | 3, none of them through a definition | 2 |
 | [Sola gratia — Ephesians 2:8–9 and Romans 9:16](./arguments/sola-gratia.md) | meanings begun | 8 of 31 | 0 of 12 | — | 1, none of them through a definition | 3 |
