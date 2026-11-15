@@ -20,6 +20,8 @@ types, and reports, for each argument:
   claim of the argument denies that premise;
 - the lines that argue from a text's silence without the expectation that would
   carry it;
+- the lines that rest on one another in a circle: each, through the others,
+  resting on what it delivers itself (`Testimony.Semantics.circular`);
 - and the lines that need a word to keep its sense and do not say so, with the
   words. These are conditions, not faults.
 
@@ -28,6 +30,14 @@ or argues from silence alone: the library may not do what it checks articles
 for. A line that carries its conclusion in a premise is reported and does not
 fail the build, because a premise that restates what no one denies begs no
 question; the report says whom it is addressed to.
+
+A circle does not fail the build either, for a reason of its own. A line does not
+record which position holds it, and a circle is a fault only in one position's
+reasoning. Two rivals whose lines happen to feed each other are not reasoning in a
+circle; and an argument may encode a circle on purpose, as the charge it weighs —
+sola scriptura's lines for Geisler's circle are the circle he charges Tradition I
+with. So the report names the lines on a circle, and the page that describes them
+says whose they are.
 -/
 
 namespace Testimony.Checks
@@ -49,6 +59,7 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α]
       let deniers := (m.begsAgainst (α := α)).flatMap (·.2)
       some (n ++ (if deniers.isEmpty then ": denied by no claim of the argument"
         else ": its premise denied by " ++ ", ".intercalate (deniers.map atomName)))
+  let onCircle := (circular (moves.map (·.2))).filterMap fun i => (moves[i]?).map (·.1)
   let conditional := moves.filterMap fun (n, m) =>
     if m.conditionalOn.isEmpty then none else
       some (n ++ ": " ++ ", ".intercalate (m.conditionalOn.map fun w => atomName w))
@@ -60,6 +71,7 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α]
     part "read a word in two senses and need it the same" equivocating ++
     part "carry what they deliver in a premise" carrying ++
     part "argue from silence alone" silent ++
+    part "rest on one another in a circle" onCircle ++
     part "need a word to keep its sense, unstated" conditional
   (String.intercalate "\n" (head ++ body), equivocating.length + silent.length)
 
@@ -117,9 +129,12 @@ elab_rules : command
 /--
 info: the charges, against every argument's lines:
 The fixture
-  lines: 3, read: 1
+  lines: 4, read: 2
   carry what they deliver in a premise:
     byTheHour: its premise denied by lastedTwoHours
+  rest on one another in a circle:
+    byNotTwoHours
+    byTheHour
 -/
 #guard_msgs in
 #check_fallacies under Testimony.Checks.Fixture

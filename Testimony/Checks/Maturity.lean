@@ -42,6 +42,8 @@ structure Maturity where
   carrying : Nat
   /-- Read lines that need a word to keep its sense and do not say so. -/
   conditional : Nat
+  /-- Read lines that rest on one another in a circle (`Testimony.Semantics.circular`). -/
+  circular : Nat
   /-- How many joins its meanings have under the shared ontology. -/
   joins : Nat
   /-- How many of those are found with no definition, from the meanings alone. -/
@@ -65,6 +67,7 @@ def maturityOf (α : Type) [HasMeanings α] [DecidableEq α] (argument : Name)
   , lines := lines.length, read := moves.length
   , carrying := (moves.filter fun m => !m.carriers.isEmpty).length
   , conditional := (moves.filter fun m => !m.conditionalOn.isEmpty).length
+  , circular := (Testimony.Semantics.circular moves).length
   , joins := (HasMeanings.exclusions (α := α)).length + (HasMeanings.entailments (α := α)).length
   , bare := (HasMeanings.exclusionsUnder (α := α) []).length +
       (HasMeanings.entailmentsUnder (α := α) []).length
@@ -106,6 +109,7 @@ def deriveMaturityTable (tableName : Ident) (root : Name) : CommandElabM Unit :=
             , analysed := $(quote m.analysed), claims := $(quote m.claims)
             , lines := $(quote m.lines), read := $(quote m.read)
             , carrying := $(quote m.carrying), conditional := $(quote m.conditional)
+            , circular := $(quote m.circular)
             , joins := $(quote m.joins), bare := $(quote m.bare)
             , definitions := $(quote m.definitions) })
   elabCommand (← `(command|
@@ -126,10 +130,11 @@ namespace MaturityFixture
 derive_maturity_table fixtureMaturity under Testimony.Checks.Fixture
 
 /-- The fixture's counts, as the ontology and fallacy checks above report them:
-one join, three lines, one of them read, and that one carrying its conclusion in
-a premise. -/
-example : fixtureMaturity.map (fun m => (m.lines, m.read, m.carrying, m.joins, m.bare)) =
-    [(3, 1, 1, 1, 0)] := by decide
+one join, four lines, two of them read, one carrying its conclusion in a premise,
+and the two resting on one another in a circle. -/
+example : fixtureMaturity.map
+    (fun m => (m.lines, m.read, m.carrying, m.circular, m.joins, m.bare)) =
+    [(4, 2, 1, 2, 1, 0)] := by decide
 
 end MaturityFixture
 

@@ -152,11 +152,22 @@ def chain : List Move :=
   , argues [.says rom3_28 (rl .instrumentOf (wd .pistis rom3_28) (wd .dikaioo rom3_28))]
       faithOnly ]
 
+/-- **Passed over: a conclusion stronger than its premises.** Faith is a means
+of justification, and works are not, so faith is the only means. The conclusion,
+read for what "only" means, entails the first premise: it says more than the
+premise, as a conclusion may. Nothing the move assumes was drawn from its
+conclusion, so it does not rest on itself. The circle check counts a move as
+resting on another, never on itself. -/
+def strongerConclusion : List Move :=
+  [argues [.holds (rl .instrumentOf (cn .faith) (cn .justification)), worksNot] faithOnly]
+
 /-- **The circle check, caught and passed over.** Every move of the circle rests,
 through the others, on what it concludes. In the chain, the last move rests on
 the text, and nothing returns to it. The first two still rest on its conclusion,
 so they are not on a circle either. -/
-theorem circle_cases : circular threeCircle = [0, 1, 2] ∧ circular chain = [] := by decide
+theorem circle_cases :
+    circular threeCircle = [0, 1, 2] ∧ circular chain = [] ∧ circular strongerConclusion = [] := by
+  decide
 
 /-! ### Argument from silence -/
 

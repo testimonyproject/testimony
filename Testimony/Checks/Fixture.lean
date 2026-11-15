@@ -165,6 +165,17 @@ def byTheHour : Line Claim :=
   , step := p .lastedAnHour ➝ notP .lastedTwoHours
   , delivers := notP .lastedTwoHours }
 
+/-- **A line that rests on `byTheHour`, and that `byTheHour` rests on.** The meeting
+did not last two hours, so it lasted an hour: the converse of `byTheHour`, which
+infers that it did not last two hours from its lasting one. Held together, the two
+lines are a circle, each resting on what the other delivers. For the circle check
+(`Testimony.Checks.Fallacies`). -/
+def byNotTwoHours : Line Claim :=
+  { name := "By not two hours"
+  , grounds := [notP .lastedTwoHours]
+  , step := notP .lastedTwoHours ➝ p .lastedAnHour
+  , delivers := p .lastedAnHour }
+
 /-- The one join: an hour and two hours exclude each other, by what "lasts"
 means (`Testimony.Ontology.Time.oneLength`). -/
 instance joins : HasJoins Claim where
