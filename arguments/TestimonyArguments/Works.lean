@@ -3340,6 +3340,220 @@ EWTN library's page. -/
                  (some "2026-11-12") ] }
   , site := some "EWTN Library" }
 
+/-- Schaff's *Creeds of Christendom*, volume 3, in the fourth edition, revised
+and enlarged, as CCEL reproduces it. It prints the Five Arminian Articles of
+1610, the Remonstrance, at pp. 545–549, and the Canons of the Synod of Dort
+(1618–19) at pp. 550–597, the English of the Canons at pp. 581–597. Schaff's
+English of the Canons is that of the Reformed (Dutch) Church in America and
+omits the Rejection of Errors, which this volume gives only in Latin. Cited for
+both sides of the dispute over sola gratia, by article. -/
+@[bib_entry] def schaffCreeds3 : BibEntry := .book
+  { core :=
+      { key := "schaff-creeds-christendom-3-1977"
+      , role := .authority
+      , contributors := { editors := [.person "Philip" "Schaff"] }
+      , title := "The Creeds of Christendom, with a History and Critical Notes"
+      , subtitle := some "Volume III: The Evangelical Protestant Creeds, with Translations"
+      , year := some { value := 1977 }
+      , identifiers := [.url "https://www.ccel.org/ccel/schaff/creeds3.html" (some "2026-11-13")]
+      , note := some
+          ("Fourth edition, revised and enlarged (Harper & Brothers, 1877; " ++
+           "revised 1905, 1919); Baker's paperback reprint of 1977. The title page " ++
+           "prints ISBN 0-8010-8090-8, which Open Library catalogues for the " ++
+           "three-volume set.") }
+  , publisher := "Baker Book House"
+  , place := some "Grand Rapids, Michigan"
+  , volume := some "3" }
+
+/-- The works of Arminius, in James Nichols's translation, volume 1 (1825),
+read on the New York Public Library copy's scan. It holds the *Declaration of
+Sentiments* he delivered before the States of Holland in 1608, whose section on
+the grace of God is at pp. 597–600, and the *Apology against Thirty-one
+Defamatory Articles*, from p. 669. Cited for p. 600, where he ascribes to grace
+"the commencement, the continuance and the consummation of all good" and
+believes "that many persons resist the Holy Spirit and reject the grace that is
+offered", and p. 681, where he speaks of God, "whose benefit and gift I
+acknowledge faith to be". -/
+@[bib_entry] def arminiusWorks1 : BibEntry := .book
+  { core :=
+      { key := "arminius-works-1-1825"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "James" "Arminius"]
+          , translators := [.person "James" "Nichols"] }
+      , title := "The Works of James Arminius, D.D."
+      , year := some { value := 1825 }
+      , identifiers :=
+          [ .url "https://archive.org/details/worksjamesarmin00nichgoog" (some "2026-11-13") ] }
+  , publisher := "Longman, Hurst, Rees, Orme, Brown and Green"
+  , place := some "London"
+  , volume := some "1" }
+
+/-- The works of Arminius, volume 3, the American edition of 1853, translated
+by W. R. Bagnall to complete Nichols's two volumes. It holds the *Analysis of
+the Ninth Chapter of Romans* at pp. 527–565, cited for Arminius's reading of Romans 9: its
+scope is "That the Gospel, not the law, is the power of God unto salvation, not
+to him that worketh, but to him that believeth", and the willing and running of
+9:16 is the effort by which a man "hopes that he will obtain justification and
+salvation apart from the mercy of God". Read in the Wesley Center's
+transcription; the scan is the University of Toronto's copy. -/
+@[bib_entry] def arminiusWorks3 : BibEntry := .book
+  { core :=
+      { key := "arminius-works-3-1853"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "James" "Arminius"]
+          , translators := [.person "W. R." "Bagnall"] }
+      , title := "The Works of James Arminius, D.D."
+      , year := some { value := 1853 }
+      , identifiers :=
+          [ .url "https://archive.org/details/worksofarminius03armiuoft" (some "2026-11-13")
+          , .url ("https://wesley.nnu.edu/arminianism/the-works-of-james-arminius/" ++
+                  "volume-3/analysis-of-romans-9/") (some "2026-11-13") ] }
+  , publisher := "Derby and Miller; Derby, Orton and Mulligan"
+  , place := some "Auburn and Buffalo, New York"
+  , volume := some "3" }
+
+/-- Robertson's *Word Pictures*, volume 4, on the epistles of Paul. Cited for his
+note on Ephesians 2:8, that "this" (καὶ τοῦτο), being neuter, "refers not to
+[pistis] (feminine) or to [charis] (feminine also), but to the act of being
+saved by grace conditioned on faith on our part". Read in CCEL's text, which
+gives no print pagination; cited by verse. The identifier is Broadman's reprint
+of the volume. -/
+@[bib_entry] def robertsonWordPictures4 : BibEntry := .book
+  { core :=
+      { key := "robertson-word-pictures-4-1931"
+      , role := .witness
+      , contributors := { authors := [.person "A. T." "Robertson"] }
+      , title := "Word Pictures in the New Testament"
+      , subtitle := some "Volume IV: The Epistles of Paul"
+      , year := some { value := 1931 }
+      , identifiers :=
+          [ .isbn "9780805413045"
+          , .url "https://ccel.org/ccel/robertson_at/wp_eph/wp_eph.iii.html" (some "2026-11-13") ] }
+  , publisher := "Broadman Press"
+  , volume := some "4" }
+
+/-- Calvin's commentary on Galatians and Ephesians, in Pringle's translation
+(1854). Cited for his note on Ephesians 2:9, pp. 228–229: "Many persons restrict
+the word gift to faith alone. But Paul is only repeating in other words the
+former sentiment. His meaning is, not that faith is the gift of God, but that
+salvation is given to us by God." The footnote on καὶ τοῦτο at pp. 227–228 is
+Pringle's, quoting Bloomfield, and is not cited as Calvin's. -/
+@[bib_entry] def calvinGalatiansEphesians : BibEntry := .book
+  { core :=
+      { key := "calvin-galatians-ephesians-1854"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "William" "Pringle"] }
+      , title := "Commentaries on the Epistles of Paul to the Galatians and Ephesians"
+      , year := some { value := 1854 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentariesonga00calvuoft" (some "2026-11-13") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh" }
+
+/-- Abasciano's reply to Schreiner on Romans 9. Cited because he grants that the
+chapter is about salvation, "Paul's argument in Romans 9 surely concerns the
+salvation of Israel" (p. 351), while denying, against Schreiner, that it teaches
+the election of individuals unto salvation: the election it speaks of is
+corporate, of a people. -/
+@[bib_entry] def abascianoCorporateElection : BibEntry := .article
+  { core :=
+      { key := "abasciano-corporate-election-romans-9-2006"
+      , contributors := { authors := [.person "Brian J." "Abasciano"] }
+      , title := "Corporate Election in Romans 9: A Reply to Thomas Schreiner"
+      , year := some { value := 2006 }
+      , identifiers :=
+          [ .url "https://www.galaxie.com/article/jets49-2-08" (some "2026-11-13")
+          , .url ("https://evangelicalarminians.org/wp-content/uploads/2009/06/" ++
+                  "Article.-CORPORATE-ELECTION-IN-ROMANS-9.-Final-JETS-Version.pdf")
+                 (some "2026-11-13") ] }
+  , journal := "Journal of the Evangelical Theological Society"
+  , volume := some "49"
+  , issue := some "2"
+  , pages := some (351, 371) }
+
+/-- The *Triglot Concordia* (1921), the Lutheran confessions in German, Latin
+and English, whose English is the translation bookofconcord.org reproduces.
+Cited by article and paragraph for the Formula of Concord and the Augsburg
+Confession where its wording is quoted; Kolb and Wengert's translation, the
+library's other edition, words them differently. Public domain; no ISBN. -/
+@[bib_entry] def concordiaTriglotta : BibEntry := .book
+  { core :=
+      { key := "concordia-triglotta-1921"
+      , role := .authority
+      , contributors := { translators := [.person "W. H. T." "Dau", .person "F." "Bente"] }
+      , title := "Concordia Triglotta"
+      , subtitle := some
+          "The Symbolical Books of the Ev. Lutheran Church, German-Latin-English"
+      , year := some { value := 1921 }
+      , identifiers :=
+          [ .url "https://archive.org/details/concordiatriglot00unse" (some "2026-11-14")
+          , .url "https://bookofconcord.org/about-the-translation/" (some "2026-11-14") ] }
+  , publisher := "Concordia Publishing House"
+  , place := some "St. Louis" }
+
+/-- Wesley's works, volume 9, in the first American edition, read on the
+Internet Archive's scan (its title page reads 1827, its catalogue 1826). Cited
+for *Predestination Calmly Considered*, §§XLVI–XLVII, p. 397: "there is a
+measure of free-will supernaturally restored to every man", and "power either to
+resist or yield to the grace of God". -/
+@[bib_entry] def wesleyWorks9 : BibEntry := .book
+  { core :=
+      { key := "wesley-works-9-1827"
+      , role := .witness
+      , contributors := { authors := [.person "John" "Wesley"] }
+      , title := "The Works of the Rev. John Wesley"
+      , subtitle := some "In Ten Volumes. First American Edition"
+      , year := some { value := 1827 }
+      , identifiers :=
+          [ .url "https://archive.org/details/worksofrevjohnwe09wesl" (some "2026-11-14") ] }
+  , publisher := "J. & J. Harper"
+  , place := some "New York"
+  , volume := some "9" }
+
+/-- Wesley's sermons in Thomas Jackson's edition of 1872, as the Wesley Center
+transcribes them, without the edition's pages; cited by sermon and section.
+Sermon 85, "On Working Out Our Own Salvation", III.4: no man "is wholly void of
+the grace of God … It is more properly termed preventing grace". Sermon 1,
+"Salvation by Faith", III.1, defends "salvation or justification, by faith only",
+and III.3 says "Of yourselves cometh neither your faith nor your salvation". -/
+@[bib_entry] def wesleySermons : BibEntry := .webPage
+  { core :=
+      { key := "wesley-sermons-1872"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Wesley"], editors := [.person "Thomas" "Jackson"] }
+      , title := "The Sermons of John Wesley (1872 Edition)"
+      , year := some { value := 1872 }
+      , identifiers :=
+          [ .url ("https://wesley.nnu.edu/john-wesley/" ++
+                  "the-sermons-of-john-wesley-1872-edition/") (some "2026-11-14") ] }
+  , site := some "Wesley Center Online" }
+
+/-- Schaff's Nicene and Post-Nicene Fathers, first series volume 6, read on the
+Internet Archive's scan of the 1888 printing (CCEL's header says 1886). Cited for
+Augustine's sermon on Matthew 12:32 (Sermon XXI in this volume, LXXI in the
+Benedictine numbering), §20, p. 325: "This impenitence then is 'the blasphemy of
+the Spirit, which shall not be forgiven'". -/
+@[bib_entry] def npnfAugustineSermons : BibEntry := .book
+  { core :=
+      { key := "npnf1-06-1888"
+      , role := .witness
+      , contributors := { editors := [.person "Philip" "Schaff"] }
+      , title :=
+          "A Select Library of the Nicene and Post-Nicene Fathers of the Christian Church"
+      , subtitle := some
+          ("First Series, Volume 6: St. Augustin — Sermon on the Mount; Harmony of " ++
+           "the Gospels; Homilies on the Gospels")
+      , year := some { value := 1888 }
+      , identifiers :=
+          [ .url "https://archive.org/details/aselectlibrary06unknuoft" (some "2026-11-14") ] }
+  , publisher := "The Christian Literature Company"
+  , place := some "New York" }
+
 /-- *Nicene and Post-Nicene Fathers*, first series, volume 3: Augustine, *On the
 Holy Trinity*, tr. Arthur West Haddan, revised by W. G. T. Shedd. Cited for
 *On the Trinity* I.7.14, where Augustine answers those who "say … that the Son
