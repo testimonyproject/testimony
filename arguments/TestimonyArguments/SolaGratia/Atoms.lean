@@ -78,6 +78,34 @@ inductive Claim
   /-- Grace is received by faith alone. Sola fide, which the Reformed, the
   Lutherans and Wesley hold, and Trent condemns (Session VI, canon 9). -/
   | faithAloneReceivesGrace
+  /-- In the grace by which the will is converted, God is the sole mover: "in
+  that effect in which our mind is moved and does not move, but in which God is
+  the sole mover, the operation is attributed to God", which is operating grace,
+  "especially when the will, which hitherto willed evil, begins to will good"
+  (Aquinas, *Summa* I-II q.111 a.2). -/
+  | operatingGraceMovesTheWill
+  /-- God moves the will intending that it attain grace: "if God intends, while
+  moving, that the one whose heart He moves should attain to grace, he will
+  infallibly attain to it" (Aquinas, I-II q.112 a.3). -/
+  | godIntendsWhileMoving
+  /-- Under operating grace the will is not merely passive: it "elicits its act
+  vitally, in fact, it freely consents to the divine motion", and "does not
+  remain passive" (Garrigou-Lagrange). Trent's canon 4 condemns the "merely
+  passive" too. Read two ways, which the dilemma over it sets out. -/
+  | willIsNotMerelyPassive
+  /-- Grace truly sufficient, giving the power to do good, is resisted, and
+  through that resistance the efficacious grace offered with it is withheld. The
+  Thomists' sufficient grace (Garrigou-Lagrange, after Lemos). Not the claim that
+  the grace that saves can be finally refused: the grace resisted here is not the
+  grace that converts. -/
+  | sufficientGraceIsResisted
+  /-- Justifying grace, once given, can be lost: the charity of one still on the
+  way can be lost (Aquinas, II-II q.24 a.11), and Trent condemns anyone who says
+  that a man once justified cannot lose grace (Session VI, canon 23). Dort holds
+  the contrary, the perseverance of the saints (Fifth Head). Not the claim that
+  the grace that saves can be finally refused: this is about grace once given,
+  not about the grace that converts. -/
+  | justifyingGraceCanBeLost
   /-- Zechariah 1:3, "Return to me … and I will return to you", read with
   Lamentations 5:21, "Restore us to yourself, O Lord, that we may be restored."
   Trent pairs the two (Session VI, chapter 5): by the first "we are admonished of

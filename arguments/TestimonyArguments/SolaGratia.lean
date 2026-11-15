@@ -4,6 +4,7 @@ import TestimonyArguments.SolaGratia.Lines
 import TestimonyArguments.SolaGratia.Packages
 import TestimonyArguments.SolaGratia.Results
 import TestimonyArguments.SolaGratia.ThirdWay
+import TestimonyArguments.SolaGratia.Thomist
 import TestimonyArguments.SolaGratia.Dispute
 
 /-!
@@ -40,10 +41,12 @@ Spirit, he is thereby enabled to answer this call". The older name for this is
 The conclusion here has those three parts. Salvation is by grace; the grace that
 saves is *effectual of itself*, that is, it brings about the consent it asks
 for; and the will is passive in being made alive. Each rival holds the first
-part. Trent's canon denies both the others; the Remonstrants deny the second.
+part. Trent's canon, as most read it, denies both the others, and the Thomists
+read it otherwise, in the chapter on Aquinas; the Remonstrants deny the second.
 
-- **Trent** denies the third and the second. Its fourth canon on justification condemns anyone
-  who says that the free will, "moved and excited by God", does not cooperate
+- **Trent**, on the Molinist reading, denies the third and the second. Its
+  fourth canon on justification condemns anyone who says that the free will,
+  "moved and excited by God", does not cooperate
   "by assenting to God exciting and calling", but "as something inanimate, …
   is merely passive". The same canon condemns anyone who says the will "cannot
   refuse its consent, if it would".
@@ -127,9 +130,27 @@ will's own activity after a first moment in which, in Aquinas's words, it "is
 moved and does not move"; Dort says the will once renewed "becomes itself
 active". So both of Trent's steps are rated disputed. Not every Catholic reads
 the canon so: the Molinists, after Luis de Molina, take its "can refuse" to rule
-out a grace effectual of itself, and Rome left the dispute between the two
-schools open in 1607. The rating stands on the Thomist reading, because one
-reader who grants the ground and denies the conclusion is enough.
+out a grace effectual of itself. Paul V's decree of 1607 "allowed each party to
+defend its own doctrine, enjoined each from censoring or condemning the opposite
+opinion" (Astrain, "Congregatio de Auxiliis"). The rating stands on the
+Thomist reading, because one reader who grants the ground and denies the
+conclusion is enough.
+
+## Aquinas and the Catholic schools
+
+The Thomists are a position of their own, in the chapter on Aquinas. They reach
+the second part of sola gratia, grace effectual of itself
+(`thomists_reach_effectual_grace`), at a step the Molinists dispute. On the
+third part, the will's passivity, they say the will "does not remain passive"
+under operating grace, and Garrigou-Lagrange lists Calvin's "merely passive"
+among the errors. But he places the will's consent after grace "in the genus or
+order of formal, efficient, and final cause", so whether that contradicts Dort
+depends on what "passive" means. Their own premises leave it open
+(`thomists_leave_passivity_open`), and the dilemma over the phrase answers both
+readings (`whatNotMerelyPassiveMeans`). Weighed with the others, neither Dort nor
+the Thomists defeats the other, because the Thomist position weighed takes no
+side on the will's passivity; faith alone and perseverance, on which they part,
+Dort's position here does not carry.
 
 ## Freedom to refuse, and two more positions
 
@@ -182,12 +203,11 @@ not encoded: each position here concludes only what its cited sources say. Nor
 is the cooperation of the renewed will, which Dort, the Formula of Concord and
 Trent all grant in some sense, and which a dilemma over "cooperate" would split.
 
-Aquinas and the Thomist school are cited here for two ratings, and are not a
-position of their own. They hold that grace is infallibly effectual, and Aquinas
-puts the infusion of grace first "in the order of nature", before "the
-free-will's movement towards God". Whether they reach the sharpened conclusion,
-and where they part from Dort if they do not, is a question this module does
-not ask.
+The perseverance of the saints, which Dort holds and the Thomists and Trent
+deny, is not weighed: the Thomists' claim that justifying grace can be lost is
+encoded, and no Reformed claim against it. Nor is Molina's own *Concordia*,
+which no public English text could be checked against; the Molinist readings
+are cited from Pohle's report of them.
 
 John 6:44 ("No one can come to me unless the Father who sent me draws him") is
 the third text most often cited for the Reformed view, and is not encoded
@@ -204,5 +224,6 @@ which is a dispute of its own.
 | `Packages.lean` | the positions, and the variants the results ask about |
 | `Results.lean` | what follows, what does not, and which readings carry it |
 | `ThirdWay.lean` | freedom to refuse, the Lutherans, Wesley, and the third way's dilemma |
+| `Thomist.lean` | Aquinas and the Catholic schools, and what "not merely passive" means |
 | `Dispute.lean` | the positions weighed, and the verdicts |
 -/

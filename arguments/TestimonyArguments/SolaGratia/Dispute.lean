@@ -1,14 +1,15 @@
-import TestimonyArguments.SolaGratia.ThirdWay
+import TestimonyArguments.SolaGratia.Thomist
 import Testimony.Logic.Declare
 
 /-!
 # TestimonyArguments.SolaGratia.Dispute — the positions weighed
 
-Eight parties are heard. One holds only what all of them hold: salvation is by
-grace, from Romans 11:6. Then Dort; Trent; the Remonstrants; the Lutherans of
-the Formula of Concord; Wesley; the third way as it was put to this argument;
-and the objection from the Spirit's resistance, with its three routes to the
-claim that the grace that saves can be finally refused. Who defeats whom is
+Nine parties are heard. One holds only what all of them hold: salvation is by
+grace, from Romans 11:6. Then Dort; Trent, on the Molinist reading of its fourth
+canon; the Thomists, on theirs; the Remonstrants; the Lutherans of the Formula
+of Concord; Wesley; the third way as it was put to this argument; and the
+objection from the Spirit's resistance, with its three routes to the claim that
+the grace that saves can be finally refused. Who defeats whom is
 computed from their premises and checked by the kernel.
 
 ## How to read the verdicts
@@ -44,16 +45,33 @@ Only what every party holds is settled before any choice: salvation is by grace
 - **Dort stands off against every party that denies part of sola gratia:**
   Trent, the Remonstrants, the Lutherans, Wesley and the objection. Each of
   them defeats Dort, and Dort defeats each back.
-- **Trent stands off against Dort, the Lutherans, Wesley and the third way.**
-  With the Lutherans, Wesley and the third way the standoff is over faith alone,
-  which Trent's ninth canon condemns; with the Lutherans also over the will's
-  passivity.
+- **Neither Dort nor the Thomists defeats the other**
+  (`dort_stands_with_the_thomists`), because the Thomist position weighed here
+  takes no side on the will's passivity: it holds that the will is "not merely
+  passive" and draws nothing from it. So this does not show that the Thomists
+  hold the third part of sola gratia. In the Molinists' sense the phrase cannot
+  be held with Dort; in Garrigou-Lagrange's it can (the chapter on Aquinas). On
+  faith alone and perseverance, on which they part, Dort's position here carries
+  nothing. So the Thomists can be defended with Dort (`thomist_defensible`).
+- **The Thomists stand off against every party but Dort and what every party
+  holds.** Against the Remonstrants, the Lutherans, Wesley and the objection, the
+  standoff is over grace effectual of itself, which the claim that the grace
+  that saves can be finally refused excludes. Against the third way, the
+  Lutherans and Wesley, it is also over faith alone. Against Trent on the
+  Molinist reading, it is the question Rome left open in 1607.
+- **Trent stands off against Dort, the Thomists, the Lutherans, Wesley and the
+  third way.** With the Thomists the standoff is over grace effectual of itself,
+  the question of the two Catholic schools that Rome left open in 1607
+  (`thomist_not_forced`); with the Lutherans, Wesley and the third way it is
+  over faith alone, which Trent's ninth canon condemns; with the Lutherans also
+  over the will's passivity.
 - **The Remonstrants, the Lutherans, Wesley and the objection do not defeat one
   another.** They agree that the grace that saves can be finally refused. The
   Lutherans also hold the will passive; the Remonstrants and Wesley are not
   encoded with a view on that, so nothing here sets them against each other.
-- **The third way is attacked only by Trent**, and only over faith alone. It
-  takes no side between Dort and Wesley, and so it can be defended with either:
+- **The third way is attacked only over faith alone**, by Trent and by the
+  Thomists. It takes no side between Dort and Wesley, and so it can be defended
+  with either:
   with Dort, against Trent (`third_way_defensible_with_dort`); and with the
   Remonstrants, the Lutherans and Wesley, against both Dort and Trent
   (`third_way_defensible_with_wesley`). The dilemma found the same thing: until
@@ -105,6 +123,11 @@ inductive Party
   `disputed`: each of its three readings, and its step from the unforgivable
   sin. -/
   | objection
+  /-- The Thomists: grace efficacious of itself, Trent's canon 4 read so that it
+  denies neither part of sola gratia, and not faith alone. Its weakest link is
+  `disputed`: the step from God's intention to grace effectual of itself, and
+  operating grace, which the Molinists deny. -/
+  | thomist
 deriving DecidableEq
 
 /-- The package each party argues from. -/
@@ -118,22 +141,29 @@ def partyNode : Party → ArgumentPackage Claim
   | .wesleyan => wesleyanPosition
   | .thirdWay => thirdWay
   | .objection => objection
+  | .thomist => thomistPosition
 
 /-- The dispute over sola gratia: every party can be held without
 contradiction, delivers its conclusion, and has its steps rated. -/
 declare_dispute solaGratiaDispute := partyNode using solaGratiaDefs
-  /-- **Who defeats whom**, all 64 pairs: sixteen defeats, every one of them half
-  of a standoff. Dort stands off against Trent, the Remonstrants, the Lutherans,
-  Wesley and the objection; Trent against Dort, the Lutherans, Wesley and the
-  third way. Nothing attacks what every party holds. Every cell is checked by
-  the kernel. -/
+  /-- **Who defeats whom**, all 81 pairs: twenty-eight defeats, every one of them
+  half of a standoff. Dort stands off against Trent, the Remonstrants, the
+  Lutherans, Wesley and the objection; Trent against Dort, the Lutherans, Wesley,
+  the third way and the Thomists; the Thomists against every party but Dort and
+  what every party holds. Dort and the Thomists defeat neither each other.
+  Nothing attacks what every party holds. Every cell is checked by the kernel. -/
   defeats
     [ (.reformed, .trent), (.reformed, .remonstrant), (.reformed, .lutheran)
     , (.reformed, .wesleyan), (.reformed, .objection)
     , (.trent, .reformed), (.trent, .lutheran), (.trent, .wesleyan), (.trent, .thirdWay)
-    , (.remonstrant, .reformed), (.lutheran, .reformed), (.lutheran, .trent)
-    , (.wesleyan, .reformed), (.wesleyan, .trent), (.thirdWay, .trent)
-    , (.objection, .reformed) ]
+    , (.trent, .thomist)
+    , (.remonstrant, .reformed), (.remonstrant, .thomist)
+    , (.lutheran, .reformed), (.lutheran, .trent), (.lutheran, .thomist)
+    , (.wesleyan, .reformed), (.wesleyan, .trent), (.wesleyan, .thomist)
+    , (.thirdWay, .trent), (.thirdWay, .thomist)
+    , (.objection, .reformed), (.objection, .thomist)
+    , (.thomist, .trent), (.thomist, .remonstrant), (.thomist, .lutheran)
+    , (.thomist, .wesleyan), (.thomist, .thirdWay), (.thomist, .objection) ]
 
 /-! ### What the dispute decides -/
 
@@ -144,7 +174,7 @@ declare_verdict graceUnanswered for solaGratiaDispute :
     .groundedExactly [[.grace]]
       [ (.reformed, .trent), (.trent, .reformed), (.remonstrant, .reformed)
       , (.lutheran, .reformed), (.wesleyan, .reformed), (.thirdWay, .trent)
-      , (.objection, .reformed) ]
+      , (.objection, .reformed), (.thomist, .trent) ]
   /-- **Only what every party holds prevails: salvation is by grace.** What the
   dispute settles before any choice between rivals is that, and nothing more.
   Nothing defeats it, because every party holds every premise it holds.
@@ -275,5 +305,43 @@ declare_verdict thirdWayAnsweredByTrent for solaGratiaDispute :
   proves @[headline] third_way_not_forced
 
 #print axioms third_way_not_forced
+
+/-- **Dort and the Thomists stand together**: one reading satisfies every premise
+and every conclusion of both, so neither defeats the other. The Thomist position
+weighed here takes no side on the will's passivity. It holds that the will is
+"not merely passive" and draws nothing from it, so this result does not show
+that the Thomists hold the third part of sola gratia. Read in the Molinists'
+sense, the phrase cannot be held with Dort (`whereTheAgentReadingFalls`); read in
+Garrigou-Lagrange's, it can (`dort_holds_with_garrigou_lagrange`). They differ on
+faith alone and on perseverance, which this dispute does not weigh between
+them. -/
+@[headline]
+theorem dort_stands_with_the_thomists :
+    solaGratiaDispute.StandTogether [.reformed, .thomist] := by
+  satisfied_by thomistWithDortReading [Dispute.StandTogether, solaGratiaDefs]
+
+#print axioms dort_stands_with_the_thomists
+
+/-- The Thomists, defended with Dort. -/
+declare_verdict thomistsWithDort for solaGratiaDispute :
+    .credulous .thomist [.grace, .reformed, .thomist]
+  /-- **The Thomists can be defended, with Dort**: some maximal defensible
+  position holds both, with what every party holds. Between them they answer
+  every attack on either. -/
+  proves @[headline] thomist_defensible
+
+#print axioms thomist_defensible
+
+/-- Why the Thomists are not forced: a maximal defensible position holds Trent on
+the Molinist reading, and Trent defeats them. -/
+declare_verdict thomistsAnsweredByTrent for solaGratiaDispute :
+    .notSkeptical .thomist .trent [.grace, .trent, .remonstrant, .objection]
+  /-- Nor are the Thomists forced. A maximal defensible position holds Trent on
+  the Molinist reading, with the Remonstrants and the objection, and cannot hold
+  the Thomists with them: the dispute between the two Catholic schools, which
+  Rome left open in 1607, is a standoff here too. -/
+  proves @[headline] thomist_not_forced
+
+#print axioms thomist_not_forced
 
 end TestimonyArguments.SolaGratia
