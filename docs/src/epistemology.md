@@ -4,16 +4,16 @@
 > It names the rules the ratings were already computed under, gives each its holders, and
 > checks whether each side keeps the rule it professes.
 
-A Protestant and a Catholic arguing over Romans 3:28 are seldom arguing only over Romans 3:28.
-Underneath is a disagreement about how anything is known from Scripture at all. The
-Westminster Confession says that "the infallible rule of interpretation of Scripture is the
-Scripture itself" (I.ix), and that the supreme judge of controversies "can be no other but the
-Holy Spirit speaking in the Scripture" (I.x). The Council of Trent receives, beside the written
-books, the traditions "received by the Apostles from the mouth of Christ himself, or from the
-Apostles themselves, the Holy Ghost dictating" (Session IV), and the Second Vatican Council says
-Scripture and tradition are to be accepted with the same devotion (*Dei Verbum* 9). A historian
-reading Paul as one reads any ancient author asks for neither: only the texts, and evidence
-anyone can check.
+A Protestant and a Catholic arguing over Romans 3:28, "a man is justified by faith without the
+deeds of the law", are seldom arguing only over Romans 3:28. Underneath is a disagreement about
+how anything is known from Scripture at all. The Westminster Confession says that "the
+infallible rule of interpretation of Scripture is the Scripture itself" (I.ix), and that the
+supreme judge of controversies "can be no other but the Holy Spirit speaking in the Scripture"
+(I.x). The Council of Trent receives, beside the written books, the traditions "received by the
+Apostles from the mouth of Christ himself, or from the Apostles themselves, the Holy Ghost
+dictating" (Session IV, in Waterworth's translation), and the Second Vatican Council says
+Scripture and tradition are to be accepted with the same devotion (*Dei Verbum* 9). The
+library's own evidence standard asks for neither: only the texts, and evidence anyone can check.
 
 An argument that quietly assumes one of these answers has decided the dispute before hearing
 it. So the library names them.
@@ -21,100 +21,130 @@ it. So the library names them.
 ## What an epistemology is here
 
 An **epistemology** is how a side holds that something is known: the rule by which it decides
-what counts as a reason. The library writes each one as a single value
-(`Testimony.Logic.Epistemology`) with five parts:
+what counts as a reason. The library writes each one as a single value with five parts
+(`Testimony.Logic.Epistemology`):
 
-- **what it admits as grounds.** Every premise in the library rests finally on one of four
-  things: a text of Scripture, evidence anyone can check (a critical text, a lexicon, argued
-  scholarship), the word of a council, a confession or a theologian, or the library's own
-  proposal ([what each position rests on](./semantics.md#what-each-position-rests-on));
-- **whether a step resting on Scripture alone may be answered only from Scripture**;
+- **what it admits as grounds.** Every claim in the library rests finally on one of four
+  things: a text of Scripture; evidence anyone can check, such as a critical text, a lexicon or
+  argued scholarship; the word of a council, a confession or a theologian; or a premise the
+  library puts forward without a source of its own
+  ([what each position rests on](./semantics.md#what-each-position-rests-on));
+- **how an objection to a Scripture-only step must be argued.** An argument moves from claims
+  to a conclusion by **steps**: each step is a "because", and each claim is something the
+  argument asserts. Some rules hold that a step resting on Scripture alone can be answered only
+  from Scripture;
 - **the principles of reading it licenses**, such as "a word means no more than its context
-  needs" (Silva, Barr) or "Scripture does not contradict itself";
-- **how it takes an argument from silence**: never, only when the argument states what the text
-  would have said ([Checking an argument for fallacies](./fallacies.md#argument-from-silence)),
-  or freely. Where its source does not say, the library does not guess;
-- **who holds it**, cited, as a premise is.
+  needs";
+- **how it takes an argument from silence**: never, or only when the argument says why the text
+  would have mentioned the thing had it been so
+  ([Checking an argument for fallacies](./fallacies.md#argument-from-silence)), or freely.
+  Where a rule's source does not say, the library does not guess;
+- **who holds it**, cited, as a claim is.
 
 Three are encoded (`TestimonyArguments.Epistemologies`):
 
-| Rule | Held by | Grounds it admits | Scripture-alone steps |
+| Rule | Held by | Grounds it admits | An objection to a Scripture-only step |
 |---|---|---|---|
-| Scripture its own interpreter | Westminster Confession I.vi, I.ix, I.x | Scripture, evidence | answered from Scripture only |
-| Scripture and tradition | Trent, Session IV; *Dei Verbum* 9 | Scripture, evidence, the Church's teaching | not kept to Scripture |
-| Evidence anyone can check | the library's own evidence standard; Silva | Scripture, evidence | not kept to Scripture |
+| Scripture its own interpreter | Westminster Confession I.vi, I.viii, I.ix, I.x | Scripture, evidence | must itself rest on Scripture |
+| Scripture and tradition | Trent, Session IV; *Dei Verbum* 9 | Scripture and the apostolic tradition, received together; evidence | may rest on tradition or evidence too |
+| Evidence anyone can check | the library's own evidence standard | Scripture, evidence | may rest on evidence too |
 
-None of the three sources speaks to arguments from silence, so none of the three rules does.
+None of the sources speaks to arguments from silence, so none of the rules does. Only the
+library's rule records a principle of reading, the one it cites to Silva. Westminster and Trent
+each have their own, and they will be recorded when they are cited in their own words.
+
+**The Catholic rule, as encoded, is broader than Trent's.** The library knows that a work is a
+council's, a confession's or a theologian's, but not whose. So the rule admits every such word:
+Trent's, but also Westminster's or any theologian's. Trent admits the tradition received from
+the Apostles and the Church's judgement of Scripture's sense, not a Protestant confession. A
+narrower rule needs the library to tell a Catholic authority from any other, and it does not
+yet.
 
 ## The standards, given their holders
 
 The library's credibility checks ([Computed ratings](./computed-ratings.md)) have always been
-run under three standards: evidence, tradition and Scripture. Each was a rule about which
-grounds count, and none was anyone's. Each now turns out to say exactly what one of the
+run under three standards, evidence, tradition and Scripture. Each was a rule about which
+grounds count, written without a holder, and each turns out to say exactly what one of the
 encoded rules says (`each_rule_is_a_standard`):
 
 - the **scriptural** standard is Westminster's rule;
-- the **tradition** standard is Trent's;
-- the **evidence** standard is the historian's.
+- the **tradition** standard is the Catholic rule, as encoded;
+- the **evidence** standard is the library's own.
 
-So every rating computed so far was computed under a rule someone holds, and the page can now
-say whose. No rating and no verdict moved.
+So every rating computed so far was computed under a rule a tradition holds, or, for the
+evidence standard, under the library's own, and the page can now say which. No rating and no
+verdict moved.
 
 ## Does each side keep its own rule?
 
 The charge of a double standard is common in debate: you ask me for Scripture and rest your own
-case on a confession. The library can now check it. A reading is held to the rule of the side
-whose reading it is, and every claim it asserts is checked against that rule
+case on a confession. The library can now check it for claims. A reading is held to the rule of
+the side whose reading it is, and every claim it asserts is checked against that rule
 (`ArgumentPackage.heldTo`).
 
-Which rule a reading professes is declared, party by party, with the reason. It is not read off
-the reading's citations, because a Reformed reading that cites a Catholic exegete is still a
-Reformed reading. In the sola fide dispute, the Reformed readings profess Westminster's rule.
-Trent's readings and Aquinas profess Trent's. The scholars' readings, and the two arguments
-from Paul's word by a method of reading, profess the historian's. Luther and Chrysostom are
-held to none, because the library cites no Lutheran and no Orthodox statement of how Scripture
-is to be read, and holding them to Westminster's or Trent's would give them a rule they did
-not write.
+Which rule a reading professes is declared, reading by reading, with the reason. It is not read
+off the reading's citations, because a Reformed reading that cites a Catholic exegete is still a
+Reformed reading. In the dispute over faith alone (*sola fide*):
 
-**What the check finds** (`sola_fide_own_rules`). Four Reformed readings break their own rule,
-and all four at one premise. Sola fide from Paul, from Peter at Jerusalem and from John 6, and
-the Reformed answer to Chrysostom, each assert that justification and sanctification are
-"inseparable but distinct". The library cites that claim to Westminster (XIII.1, XI.1) and to
-Calvin (*Institutes* III.xi.6), and to nothing else. Westminster's rule admits Scripture and
-evidence. It does not admit a confession's word, Westminster's own included, or a
-theologian's.
+- the Reformed readings profess Westminster's rule: faith alone from Paul, from Jesus' words at
+  Luke 7:50 and in John 6, and from Peter at Jerusalem; Paul's gospel against Trent's
+  definition; and the Reformed answer to Chrysostom;
+- Trent's two readings profess Trent's;
+- the scholars' readings, Sanders and Dunn, their critics, the apocalyptic reading and Jervell,
+  and two arguments about what Paul's word means, the word study and Romans 4, are held to the
+  library's evidence rule: they argue as scholars, from texts and lexica;
+- Aquinas, Luther and Chrysostom are held to none. None of them wrote Trent's rule or
+  Westminster's. Aquinas has his own, Luther's tradition has the Formula of Concord, and
+  Chrysostom wrote before either; the library cites none of these as a rule, and holding them to
+  another's would give them a rule they did not write.
 
-So by their own rule, the four readings owe that claim a text. It is not thereby false. Calvin
-says where to look, for he says Scripture "classes them separately", but the library cites
-Calvin and not the texts he means. The remedy is to cite the texts. Every other party held to a
-rule, Catholic and scholarly alike, asserts only what its own rule admits.
+**What the check finds** (`sola_fide_own_rules`). As the library cites them, four Reformed
+readings rest one claim on a ground their own rule does not admit: faith alone from Paul, from
+Peter and from John 6, and the Reformed answer to Chrysostom. The claim is that justification and
+sanctification are inseparable but distinct. Justification is God's pardoning a sinner and
+accepting him as righteous; sanctification is his making that sinner holy over a life. The claim
+is that the two always go together and are not the same thing. The library cites it to the
+Westminster Confession (XIII.1, XI.1) and to Calvin (*Institutes* III.xi.6), and to nothing
+else, and Westminster's rule admits Scripture and evidence, not a confession's or a theologian's
+word.
+
+A Reformed reader would put the fault on the citation, not on the readings. The Confession is a
+subordinate standard: a summary of Scripture, printed with its Scripture proofs, and to cite one
+of its sections is, for that reader, to point at those proofs. Calvin says Scripture lists the
+two separately. The library cited the summary and not the texts, and one cited text would clear
+all four, because a claim rests on the best of what it cites. The other two Reformed readings,
+from Luke 7:50 and Paul's gospel against Trent, keep the rule.
+
+Two limits go with the finding. The library's evidence rule admits the same grounds for claims,
+so the four would fail it too: what sets Westminster's rule apart is how a Scripture-only step
+is answered, and steps are not yet checked. And the Catholic rule, as encoded, admits any
+authority's word, so Trent's readings could not fail this way. That they pass says less than
+that the four fail.
 
 ## What this does not do
 
-It does not say which rule is right. That is what the sola scriptura dispute is about, and a
-rule built into the solver would settle it by fiat. Every result stays conditional: *under
-this rule, this position rests on what the rule admits.* Nothing here is weighed: no verdict
-and no rating reads it.
+Which rule is right is the question of the dispute over Scripture alone (*sola scriptura*), and
+a rule built into the solver, the program that computes verdicts, would settle that question
+before hearing it. So every result here stays conditional: *under this rule, this reading rests
+on what the rule admits.* No verdict or rating reads it.
 
-It checks claims, and not yet steps. A step's citation in the library records its rating, and
-a step is rated `disputed` by citing the reader who grants its starting points and denies its
-conclusion. So a Reformed step is often cited to Trent's anathema on it, which says who disputes
-the step and nothing about what it rests on. Holding steps to a rule needs each step to record
-what licenses it, apart from who disputes it.
+It checks claims, and not yet steps. A step's citation in the library records its rating, and a
+step is marked as disputed by citing a reader who grants its starting points and denies its
+conclusion. So a Reformed step is often cited to Trent's anathema on it, its formal
+condemnation, which says who disputes the step and nothing about what the step rests on.
+Holding steps to a rule needs each step to record what licenses it, apart from who disputes it.
 
 ## What comes next
 
 1. **Steps, held to a rule**, once a step records what licenses it.
-2. **Principles and silences, held to a rule.** Each rule names the principles it licenses, and
-   the fallacy checks already find the silences a move argues from. A move that reads by a
-   principle its own rule does not license, or argues from a silence its rule refuses, can be
-   charged the same way claims are.
-3. **Verdicts under each rule.** A hearing under a standard already weighs a dispute by one
-   rule ([Computed ratings](./computed-ratings.md)). With the standards given their holders, a
-   page can say "under Westminster's rule this prevails; under Trent's it is contested", and
-   show where the two part.
-4. **The other disputes, held to their rules**, beginning with sola scriptura, where the rule is
-   itself the question.
-5. **A rival for each rule.** Each is cited to its holders, and each has its rivals among the
-   others. A Lutheran and an Orthodox statement of how Scripture is read would let Luther and
-   Chrysostom be held to their own rules.
+2. **A narrower Catholic rule**, once the library can tell whose authority a work is.
+3. **Principles and silences, held to a rule.** Each rule's principles of reading, cited in its
+   own words, and the silences the fallacy checks already find. A move that reads by a principle
+   its own rule does not license can be charged as claims are.
+4. **Verdicts under each rule.** A hearing, the dispute weighed with only the objections a
+   standard accepts, already weighs a dispute by one rule ([Computed
+   ratings](./computed-ratings.md)). With the standards given their holders, a page can say
+   "under Westminster's rule this prevails; under Trent's it is contested".
+5. **The other disputes, held to their rules**, beginning with the one over Scripture alone,
+   where the rule is itself the question; and rules of their own for Aquinas, Luther and
+   Chrysostom, once each is cited.
