@@ -41,10 +41,12 @@ Spirit, he is thereby enabled to answer this call". The older name for this is
 The conclusion here has those three parts. Salvation is by grace; the grace that
 saves is *effectual of itself*, that is, it brings about the consent it asks
 for; and the will is passive in being made alive. Each rival holds the first
-part. Trent's canon denies both the others; the Remonstrants deny the second.
+part. Trent's canon, as most read it, denies both the others, and the Thomists
+read it otherwise, in the chapter on Aquinas; the Remonstrants deny the second.
 
-- **Trent** denies the third and the second. Its fourth canon on justification condemns anyone
-  who says that the free will, "moved and excited by God", does not cooperate
+- **Trent**, on the Molinist reading, denies the third and the second. Its
+  fourth canon on justification condemns anyone who says that the free will,
+  "moved and excited by God", does not cooperate
   "by assenting to God exciting and calling", but "as something inanimate, …
   is merely passive". The same canon condemns anyone who says the will "cannot
   refuse its consent, if it would".
@@ -145,9 +147,10 @@ among the errors. But he places the will's consent after grace "in the genus or
 order of formal, efficient, and final cause", so whether that contradicts Dort
 depends on what "passive" means. Their own premises leave it open
 (`thomists_leave_passivity_open`), and the dilemma over the phrase answers both
-readings (`whatNotMerelyPassiveMeans`). Weighed with the others, Dort and the
-Thomists stand together on everything the dispute weighs; they part on faith
-alone and on perseverance, which sola gratia as stated here does not include.
+readings (`whatNotMerelyPassiveMeans`). Weighed with the others, neither Dort nor
+the Thomists defeats the other, because the Thomist position weighed takes no
+side on the will's passivity; faith alone and perseverance, on which they part,
+Dort's position here does not carry.
 
 ## Freedom to refuse, and two more positions
 

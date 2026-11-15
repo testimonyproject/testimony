@@ -144,7 +144,7 @@ What every party holds: salvation is by grace, from Romans 11:6.
 Grounded in scripture alone: Romans 11:6 — if it is by grace, it is no longer on the basis of works.
 
 <a id="tridentinePosition"></a>
-**`tridentinePosition`** — Trent (Session VI, canon 4)
+**`tridentinePosition`** — Trent (Session VI, canon 4, on the Molinist reading)
 
 Trent's position on the Molinist reading of canon 4: salvation by grace, the
 will not passive, grace not effectual of itself, and not by faith alone. The
@@ -616,9 +616,9 @@ refused, and that excludes grace which brings believing about by what the two
 claims mean. The meanings hold that join, and every dispute over the argument
 holds it; a break at a premise, which is what this records, is Trent's.
 
-**Why *Trent (Session VI, canon 4)* stands against *The third way (an ability given, received by faith), read as the help by which a person believes, the saints' kind*.**
+**Why *Trent (Session VI, canon 4, on the Molinist reading)* stands against *The third way (an ability given, received by faith), read as the help by which a person believes, the saints' kind*.**
 
-- **The crux:** \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\), a premise of *Trent (Session VI, canon 4)*.
+- **The crux:** \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\), a premise of *Trent (Session VI, canon 4, on the Molinist reading)*.
 - **What it does:** its conclusion does not follow without it.
 - **Granted:** \\(\href{claims.html#claim-27}{P_{27}}\\), which the break also needs.
 - **Where the rival breaks:** \\(\href{claims.html#claim-14}{P_{14}}\\), \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) cannot be held together with \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) and \\(\href{claims.html#claim-27}{P_{27}}\\); each is needed for the break, and without the crux they stand.
@@ -674,11 +674,11 @@ Against *Remonstrant (the Five Articles, 1610)*, it is not reached: *Remonstrant
 
 **2. Read as the help by which a person believes, the saints' kind.** The claim commits *The third way (an ability given, received by faith)* to \\(\href{claims.html#claim-30}{P_{30}}\\) — so read by [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 485; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 591 (*disputed*).
 
-Against *Trent (Session VI, canon 4)*, it cannot be held. Where it breaks:
+Against *Trent (Session VI, canon 4, on the Molinist reading)*, it cannot be held. Where it breaks:
 
-**Why *Trent (Session VI, canon 4)* stands against *The third way (an ability given, received by faith), read as the help by which a person believes, the saints' kind*.**
+**Why *Trent (Session VI, canon 4, on the Molinist reading)* stands against *The third way (an ability given, received by faith), read as the help by which a person believes, the saints' kind*.**
 
-- **The crux:** \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\), a premise of *Trent (Session VI, canon 4)*.
+- **The crux:** \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\), a premise of *Trent (Session VI, canon 4, on the Molinist reading)*.
 - **What it does:** its conclusion does not follow without it.
 - **Granted:** \\(\href{claims.html#claim-27}{P_{27}}\\), which the break also needs.
 - **Where the rival breaks:** \\(\href{claims.html#claim-14}{P_{14}}\\), \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) cannot be held together with \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) and \\(\href{claims.html#claim-27}{P_{27}}\\); each is needed for the break, and without the crux they stand.

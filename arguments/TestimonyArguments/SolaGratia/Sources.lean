@@ -293,9 +293,11 @@ def efficacyInference : Source :=
   , tradition := .romanCatholic
   , confidence := .disputed }
 
-/-- Who reads "not merely passive" as making the will a cause of its own new
-life: the Molinists, for whom "it is rather the will itself which by its
-consent" renders grace efficacious (Pohle, "Molinism"). -/
+/-- Who holds of the will's part what this reading takes "not merely passive" to
+mean: the Molinists, for whom "it is rather the will itself which by its
+consent" renders grace efficacious (Pohle, "Molinism"). Rated `disputed`: no
+Thomist reads his own claim so, and Garrigou-Lagrange says Molina "deviates from
+the teaching of St. Thomas" here. -/
 def asAgentOfNewLifeSource : Source :=
   { primary := .work pohleMolinism .whole
   , tradition := .romanCatholic
@@ -306,7 +308,10 @@ agent of the new life: Garrigou-Lagrange, for whom the will's consent, "although
 as a disposition it precedes it [grace] in the genus or order of material cause,
 it nevertheless follows it in the genus or order of formal, efficient, and final
 cause" (*Grace*, ch. X); and Aquinas, for whom the movement of the free will "is
-not the cause of grace, but the effect" (I-II q.111 a.2 ad 2). -/
+not the cause of grace, but the effect" (I-II q.111 a.2 ad 2). Rated `disputed`:
+Garrigou-Lagrange himself lists Calvin's "merely passive" among the errors
+(ch. IV), and a Reformed reader may take that as a denial of the third part in
+Dort's sense, not only in another. -/
 def asDispositionSource : Source :=
   { primary := garrigou "ch. X"
   , supporting := [.work aquinasSumma (.sectionRef "I-II q.111 a.2 ad 2")]

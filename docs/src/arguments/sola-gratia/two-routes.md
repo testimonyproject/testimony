@@ -515,7 +515,7 @@ def closingInferences : List Source :=
 #### The rivals
 
 <a id="tridentine"></a>
-**`tridentine`** — Trent (Session VI, canon 4)
+**`tridentine`** — Trent (Session VI, canon 4, on the Molinist reading)
 
 **Trent**, from the sixth session (1547). Romans 11:6, which its eighth
 chapter quotes; Zechariah 1:3 read with Lamentations 5:21, as its fifth chapter

@@ -45,11 +45,20 @@ Only what every party holds is settled before any choice: salvation is by grace
 - **Dort stands off against every party that denies part of sola gratia:**
   Trent, the Remonstrants, the Lutherans, Wesley and the objection. Each of
   them defeats Dort, and Dort defeats each back.
-- **Dort and the Thomists defeat neither each other.** One reading satisfies
-  both (`dort_stands_with_the_thomists`): Garrigou-Lagrange's, on which the
-  will consents while God alone is the agent of its new life. They differ on
-  faith alone and on perseverance, which Dort's position here does not carry.
-  So the Thomists can be defended with Dort (`thomist_defensible`).
+- **Neither Dort nor the Thomists defeats the other**
+  (`dort_stands_with_the_thomists`), because the Thomist position weighed here
+  takes no side on the will's passivity: it holds that the will is "not merely
+  passive" and draws nothing from it. So this does not show that the Thomists
+  hold the third part of sola gratia. In the Molinists' sense the phrase cannot
+  be held with Dort; in Garrigou-Lagrange's it can (the chapter on Aquinas). On
+  faith alone and perseverance, on which they part, Dort's position here carries
+  nothing. So the Thomists can be defended with Dort (`thomist_defensible`).
+- **The Thomists stand off against every party but Dort and what every party
+  holds.** Against the Remonstrants, the Lutherans, Wesley and the objection, the
+  standoff is over grace effectual of itself, which the claim that the grace
+  that saves can be finally refused excludes. Against the third way, the
+  Lutherans and Wesley, it is also over faith alone. Against Trent on the
+  Molinist reading, it is the question Rome left open in 1607.
 - **Trent stands off against Dort, the Thomists, the Lutherans, Wesley and the
   third way.** With the Thomists the standoff is over grace effectual of itself,
   the question of the two Catholic schools that Rome left open in 1607
@@ -298,10 +307,14 @@ declare_verdict thirdWayAnsweredByTrent for solaGratiaDispute :
 #print axioms third_way_not_forced
 
 /-- **Dort and the Thomists stand together**: one reading satisfies every premise
-and every conclusion of both, Garrigou-Lagrange's, with "not merely passive"
-taken as the will consenting while God alone is the agent. So neither defeats
-the other. They differ on faith alone and on perseverance, which this dispute
-does not weigh between them. -/
+and every conclusion of both, so neither defeats the other. The Thomist position
+weighed here takes no side on the will's passivity. It holds that the will is
+"not merely passive" and draws nothing from it, so this result does not show
+that the Thomists hold the third part of sola gratia. Read in the Molinists'
+sense, the phrase cannot be held with Dort (`whereTheAgentReadingFalls`); read in
+Garrigou-Lagrange's, it can (`dort_holds_with_garrigou_lagrange`). They differ on
+faith alone and on perseverance, which this dispute does not weigh between
+them. -/
 @[headline]
 theorem dort_stands_with_the_thomists :
     solaGratiaDispute.StandTogether [.reformed, .thomist] := by

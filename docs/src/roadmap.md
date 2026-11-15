@@ -300,7 +300,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `third_way_leaves_resistibility_open` | `Independent thirdWay.premises (p Claim.graceIsEffectualOfItself)` | **The third way leaves resistibility open.** Grant everything it says: Adam made able to stand or fall, the ability to believe given by God, faith alone, and that grace which can … |
 | `final_refusal_cannot_be_held_with_the_scriptures` | `¬Satisfiable (reformed.held ++ [p Claim.savingGraceCanBeFinallyRefused]) ∧ ¬Satisfiable (ephesiansStrand.held ++ [p Claim.savingGraceCanBeFinallyRefused]) ∧ ¬Satisfiable (romansStrand.held ++ [p Claim.savingGraceCanBeFinallyRefused])` | **Granted the Scriptures as the Reformed read them, final refusal has no place.** Suppose the grace that saves can be finally refused. |
 | `thomists_reach_effectual_grace` | `Entails thomist.premises (p Claim.graceIsEffectualOfItself)` | **The Thomists' premises reach grace effectual of itself**, the second part of sola gratia. |
-| `thomists_leave_passivity_open` | `Independent thomist.premises (p Claim.willIsPassiveInRegeneration)` | **Granted the Thomists' premises, the will's passivity neither follows nor fails.** They hold that God alone regenerates and that the will is not merely passive. |
+| `thomists_leave_passivity_open` | `Independent thomist.premises (p Claim.willIsPassiveInRegeneration)` | **Granted the Thomists' premises, the will's passivity neither follows nor fails.** Their operating grace gives them that conversion is God's work alone. |
 | `only_grace_prevails` | `Framework.grounded solaGratiaDispute.defeats = Solver.toSet [Party.grace]` | **Only what every party holds prevails: salvation is by grace.** What the dispute settles before any choice between rivals is that, and nothing more. |
 | `reformed_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.reformed` | **Dort can be defended**, together with what every party holds and the third way: some maximal defensible position, one no other party can join, holds all three. |
 | `reformed_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.reformed` | Nor is Dort forced. |
@@ -314,7 +314,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `third_way_defensible_with_dort` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thirdWay` | **The third way can be defended with Dort**, against Trent, by the position shown above. |
 | `third_way_defensible_with_wesley` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thirdWay` | It can also be defended with Wesley, the Lutherans and the Remonstrants, against both Dort and Trent, by the position shown above. |
 | `third_way_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.thirdWay` | Nor is the third way forced. |
-| `dort_stands_with_the_thomists` | `solaGratiaDispute.StandTogether [Party.reformed, Party.thomist]` | **Dort and the Thomists stand together**: one reading satisfies every premise and every conclusion of both, Garrigou-Lagrange's, with "not merely passive" taken as the will … |
+| `dort_stands_with_the_thomists` | `solaGratiaDispute.StandTogether [Party.reformed, Party.thomist]` | **Dort and the Thomists stand together**: one reading satisfies every premise and every conclusion of both, so neither defeats the other. |
 | `thomist_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thomist` | **The Thomists can be defended, with Dort**: some maximal defensible position holds both, with what every party holds. |
 | `thomist_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.thomist` | Nor are the Thomists forced. |
 
@@ -902,9 +902,10 @@ reach part of it. They reach grace effectual of itself
 will's passivity their premises decide nothing (`thomists_leave_passivity_open`),
 because Garrigou-Lagrange's "not merely passive" places the will's consent after
 grace in the order of efficient cause, and a dilemma answers both readings of
-it. Weighed, Dort and the Thomists stand together
-(`dort_stands_with_the_thomists`), and the Thomists and Trent on the Molinist
-reading stand off, as Rome left them in 1607.
+it. Weighed, neither Dort nor the Thomists defeats the other
+(`dort_stands_with_the_thomists`), because the Thomist position takes no side on
+passivity; and the Thomists and Trent on the Molinist reading stand off, as Rome
+left them in 1607.
 
 **And one finding about the method rather than about an argument.** `Entails`
 quantifies over the valuations satisfying the premises, so a premise set with no

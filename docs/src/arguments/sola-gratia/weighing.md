@@ -45,11 +45,20 @@ Only what every party holds is settled before any choice: salvation is by grace
 - **Dort stands off against every party that denies part of sola gratia:**
   Trent, the Remonstrants, the Lutherans, Wesley and the objection. Each of
   them defeats Dort, and Dort defeats each back.
-- **Dort and the Thomists defeat neither each other.** One reading satisfies
-  both (`dort_stands_with_the_thomists`): Garrigou-Lagrange's, on which the
-  will consents while God alone is the agent of its new life. They differ on
-  faith alone and on perseverance, which Dort's position here does not carry.
-  So the Thomists can be defended with Dort (`thomist_defensible`).
+- **Neither Dort nor the Thomists defeats the other**
+  (`dort_stands_with_the_thomists`), because the Thomist position weighed here
+  takes no side on the will's passivity: it holds that the will is "not merely
+  passive" and draws nothing from it. So this does not show that the Thomists
+  hold the third part of sola gratia. In the Molinists' sense the phrase cannot
+  be held with Dort; in Garrigou-Lagrange's it can (the chapter on Aquinas). On
+  faith alone and perseverance, on which they part, Dort's position here carries
+  nothing. So the Thomists can be defended with Dort (`thomist_defensible`).
+- **The Thomists stand off against every party but Dort and what every party
+  holds.** Against the Remonstrants, the Lutherans, Wesley and the objection, the
+  standoff is over grace effectual of itself, which the claim that the grace
+  that saves can be finally refused excludes. Against the third way, the
+  Lutherans and Wesley, it is also over faith alone. Against Trent on the
+  Molinist reading, it is the question Rome left open in 1607.
 - **Trent stands off against Dort, the Thomists, the Lutherans, Wesley and the
   third way.** With the Thomists the standoff is over grace effectual of itself,
   the question of the two Catholic schools that Rome left open in 1607
@@ -161,14 +170,14 @@ every other party has a defeater that what every party holds does not answer.
 - Stage 1: *Romans 11:6 (by grace, so not by works)*.
   - *Romans 11:6 (by grace, so not by works)* is defeated by nothing.
 - Nothing else is forced:
-  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and nothing forced defeats *Trent (Session VI, canon 4)*.
-  - *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*, and nothing forced defeats *Reformed (the Canons of Dort)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*, and nothing forced defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
+  - *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and nothing forced defeats *Reformed (the Canons of Dort)*.
   - *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and nothing forced defeats *Reformed (the Canons of Dort)*.
   - *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*, and nothing forced defeats *Reformed (the Canons of Dort)*.
   - *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*, and nothing forced defeats *Reformed (the Canons of Dort)*.
-  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and nothing forced defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*, and nothing forced defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and nothing forced defeats *Reformed (the Canons of Dort)*.
-  - *Trent (Session VI, canon 4)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*, and nothing forced defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*, and nothing forced defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
 
 **What this rests on.** The reasons state 8 defeats and 11 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
@@ -181,7 +190,7 @@ every other party has a defeater that what every party holds does not answer.
   - an inference step — [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 600; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
   - an inference step — [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565
   - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -238,12 +247,12 @@ answers every attacker itself.
 
 - A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* can be held.
 - None of *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* defeats another, and each attack on them is answered from among them:
-  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
   - *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
   - *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
   - *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*.
-  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The third way (an ability given, received by faith)*, and *The third way (an ability given, received by faith)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
 
 **What this rests on.** The reasons state 13 defeats and 20 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
@@ -259,7 +268,7 @@ answers every attacker itself.
   - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
 - *The third way (an ability given, received by faith)*, weakest at *disputed*:
   - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -314,12 +323,12 @@ they defeat Dort.
   - *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Remonstrant (the Five Articles, 1610)*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
   - *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
-  - *Trent (Session VI, canon 4)* defeats *Lutheran (the Formula of Concord)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Lutheran (the Formula of Concord)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Lutheran (the Formula of Concord)*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
   - *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
-  - *Trent (Session VI, canon 4)* defeats *Wesleyan (preventing grace)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Wesleyan (preventing grace)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Wesleyan (preventing grace)*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
-  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The third way (an ability given, received by faith)*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
   - *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The objection from the Spirit's resistance*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
@@ -351,7 +360,7 @@ they defeat Dort.
   - Those who obstinately resist the Spirit can grieve and lose him — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
   - The blasphemy against the Spirit is impenitence to the end: grace refused till death — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.14 a.1; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 74
   - an inference step — [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 43
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -392,12 +401,12 @@ answer both Dort and Trent.
   - *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Remonstrant (the Five Articles, 1610)*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
   - *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
-  - *Trent (Session VI, canon 4)* defeats *Lutheran (the Formula of Concord)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Lutheran (the Formula of Concord)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Lutheran (the Formula of Concord)*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
   - *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
-  - *Trent (Session VI, canon 4)* defeats *Wesleyan (preventing grace)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Wesleyan (preventing grace)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Wesleyan (preventing grace)*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
-  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The third way (an ability given, received by faith)*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
   - *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The objection from the Spirit's resistance*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
@@ -429,7 +438,7 @@ answer both Dort and Trent.
   - an inference step — [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 600; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
   - an inference step — [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565
   - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -461,26 +470,26 @@ theorem lutheran_defensible : Framework.CredulouslyAccepted
 
 Why Trent can be defended: it answers every attacker of its group itself.
 
-***Trent (Session VI, canon 4)* is accepted on some resolution.**
+***Trent (Session VI, canon 4, on the Molinist reading)* is accepted on some resolution.**
 
-- A position holding *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* can be held.
-- None of *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* defeats another, and each attack on them is answered from among them:
-  - *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
-  - *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Lutheran (the Formula of Concord)*.
-  - *Wesleyan (preventing grace)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Wesleyan (preventing grace)*.
-  - *The third way (an ability given, received by faith)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*.
-  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
-  - *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
-  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
-  - *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
-  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
+- A position holding *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4, on the Molinist reading)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* can be held.
+- None of *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4, on the Molinist reading)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* defeats another, and each attack on them is answered from among them:
+  - *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*.
+  - *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Lutheran (the Formula of Concord)*.
+  - *Wesleyan (preventing grace)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Wesleyan (preventing grace)*.
+  - *The third way (an ability given, received by faith)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*.
+  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
+  - *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*.
+  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
+  - *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*.
+  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
 
 **What this rests on.** The reasons state 14 defeats and 27 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Romans 11:6 (by grace, so not by works)*, weakest at *consensus*:
   - Romans 11:6 — if it is by grace, it is no longer on the basis of works — Rom 11:6
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -536,16 +545,16 @@ theorem tridentine_defensible : Framework.CredulouslyAccepted
 Why Trent is not forced: a maximal defensible position holds Dort, and Dort
 defeats Trent.
 
-***Trent (Session VI, canon 4)* is not accepted on every resolution.**
+***Trent (Session VI, canon 4, on the Molinist reading)* is not accepted on every resolution.**
 
-- A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* can be held, and it holds *Reformed (the Canons of Dort)*; *Reformed (the Canons of Dort)* conflicts with *Trent (Session VI, canon 4)*: *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
+- A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* can be held, and it holds *Reformed (the Canons of Dort)*; *Reformed (the Canons of Dort)* conflicts with *Trent (Session VI, canon 4, on the Molinist reading)*: *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*.
 - None of *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* defeats another, and each attack on them is answered from among them:
-  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
   - *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
   - *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
   - *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*.
-  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The third way (an ability given, received by faith)*, and *The third way (an ability given, received by faith)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
 
 **What this rests on.** The reasons state 13 defeats and 20 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
@@ -556,7 +565,7 @@ defeats Trent.
   - an inference step — [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 600; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
   - an inference step — [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565
   - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -611,12 +620,12 @@ Why the Remonstrants are not forced: Dort's position defeats them.
 
 - A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* can be held, and it holds *Reformed (the Canons of Dort)*; *Reformed (the Canons of Dort)* conflicts with *Remonstrant (the Five Articles, 1610)*: *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
 - None of *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* defeats another, and each attack on them is answered from among them:
-  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
   - *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
   - *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
   - *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*.
-  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The third way (an ability given, received by faith)*, and *The third way (an ability given, received by faith)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
 
 **What this rests on.** The reasons state 13 defeats and 20 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
@@ -634,7 +643,7 @@ Why the Remonstrants are not forced: Dort's position defeats them.
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10
 - *The third way (an ability given, received by faith)*, weakest at *disputed*:
   - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -683,12 +692,12 @@ Why the Lutherans are not forced: Dort's position defeats them.
 
 - A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* can be held, and it holds *Reformed (the Canons of Dort)*; *Reformed (the Canons of Dort)* conflicts with *Lutheran (the Formula of Concord)*: *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*, and *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*.
 - None of *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* defeats another, and each attack on them is answered from among them:
-  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
   - *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
   - *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
   - *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*.
-  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The third way (an ability given, received by faith)*, and *The third way (an ability given, received by faith)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
 
 **What this rests on.** The reasons state 13 defeats and 20 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
@@ -708,7 +717,7 @@ Why the Lutherans are not forced: Dort's position defeats them.
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10
 - *The third way (an ability given, received by faith)*, weakest at *disputed*:
   - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -754,12 +763,12 @@ Why Wesley is not forced: Dort's position defeats him.
 
 - A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* can be held, and it holds *Reformed (the Canons of Dort)*; *Reformed (the Canons of Dort)* conflicts with *Wesleyan (preventing grace)*: *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*, and *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*.
 - None of *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* defeats another, and each attack on them is answered from among them:
-  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
   - *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
   - *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
   - *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*.
-  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The third way (an ability given, received by faith)*, and *The third way (an ability given, received by faith)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
 
 **What this rests on.** The reasons state 13 defeats and 20 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
@@ -778,7 +787,7 @@ Why Wesley is not forced: Dort's position defeats him.
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10
 - *The third way (an ability given, received by faith)*, weakest at *disputed*:
   - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -825,12 +834,12 @@ Why the objection is not forced: Dort's position defeats it.
 
 - A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* can be held, and it holds *Reformed (the Canons of Dort)*; *Reformed (the Canons of Dort)* conflicts with *The objection from the Spirit's resistance*: *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*.
 - None of *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* defeats another, and each attack on them is answered from among them:
-  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
   - *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
   - *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
   - *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*.
-  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The third way (an ability given, received by faith)*, and *The third way (an ability given, received by faith)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
 
 **What this rests on.** The reasons state 13 defeats and 20 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
@@ -851,7 +860,7 @@ Why the objection is not forced: Dort's position defeats it.
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10
 - *The third way (an ability given, received by faith)*, weakest at *disputed*:
   - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -896,12 +905,12 @@ The third way, defended with Dort.
 
 - A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* can be held.
 - None of *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *The third way (an ability given, received by faith)* defeats another, and each attack on them is answered from among them:
-  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
   - *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
   - *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
   - *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*.
-  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The third way (an ability given, received by faith)*, and *The third way (an ability given, received by faith)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
 
 **What this rests on.** The reasons state 13 defeats and 20 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
@@ -917,7 +926,7 @@ The third way, defended with Dort.
   - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
 - *The third way (an ability given, received by faith)*, weakest at *disputed*:
   - Grace is received by faith alone — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -972,12 +981,12 @@ The third way, defended with Wesley.
   - *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Remonstrant (the Five Articles, 1610)*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
   - *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
-  - *Trent (Session VI, canon 4)* defeats *Lutheran (the Formula of Concord)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Lutheran (the Formula of Concord)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Lutheran (the Formula of Concord)*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
   - *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
-  - *Trent (Session VI, canon 4)* defeats *Wesleyan (preventing grace)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Wesleyan (preventing grace)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Wesleyan (preventing grace)*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
-  - *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*, and *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The third way (an ability given, received by faith)*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
   - *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*.
   - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The objection from the Spirit's resistance*, and *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
@@ -1009,7 +1018,7 @@ The third way, defended with Wesley.
   - an inference step — [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 600; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
   - an inference step — [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565
   - an inference step — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.89; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.41
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -1045,21 +1054,21 @@ defeats it.
 
 ***The third way (an ability given, received by faith)* is not accepted on every resolution.**
 
-- A position holding *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* can be held, and it holds *Trent (Session VI, canon 4)*; *Trent (Session VI, canon 4)* conflicts with *The third way (an ability given, received by faith)*: *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*, and *The third way (an ability given, received by faith)* defeats *Trent (Session VI, canon 4)*.
-- None of *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* defeats another, and each attack on them is answered from among them:
-  - *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
-  - *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Lutheran (the Formula of Concord)*.
-  - *Wesleyan (preventing grace)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Wesleyan (preventing grace)*.
-  - *The third way (an ability given, received by faith)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*.
-  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
-  - *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
-  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
-  - *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
-  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
+- A position holding *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4, on the Molinist reading)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* can be held, and it holds *Trent (Session VI, canon 4, on the Molinist reading)*; *Trent (Session VI, canon 4, on the Molinist reading)* conflicts with *The third way (an ability given, received by faith)*: *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*, and *The third way (an ability given, received by faith)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
+- None of *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4, on the Molinist reading)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* defeats another, and each attack on them is answered from among them:
+  - *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*.
+  - *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Lutheran (the Formula of Concord)*.
+  - *Wesleyan (preventing grace)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Wesleyan (preventing grace)*.
+  - *The third way (an ability given, received by faith)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*.
+  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
+  - *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*.
+  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
+  - *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*.
+  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
 
 **What this rests on.** The reasons state 14 defeats and 27 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -1115,10 +1124,14 @@ theorem third_way_not_forced : ¬Framework.SkepticallyAccepted
 **`dort_stands_with_the_thomists`**
 
 **Dort and the Thomists stand together**: one reading satisfies every premise
-and every conclusion of both, Garrigou-Lagrange's, with "not merely passive"
-taken as the will consenting while God alone is the agent. So neither defeats
-the other. They differ on faith alone and on perseverance, which this dispute
-does not weigh between them.
+and every conclusion of both, so neither defeats the other. The Thomist position
+weighed here takes no side on the will's passivity. It holds that the will is
+"not merely passive" and draws nothing from it, so this result does not show
+that the Thomists hold the third part of sola gratia. Read in the Molinists'
+sense, the phrase cannot be held with Dort (`whereTheAgentReadingFalls`); read in
+Garrigou-Lagrange's, it can (`dort_holds_with_garrigou_lagrange`). They differ on
+faith alone and on perseverance, which this dispute does not weigh between
+them.
 
 ```lean
 theorem dort_stands_with_the_thomists : solaGratiaDispute.StandTogether
@@ -1135,12 +1148,12 @@ The Thomists, defended with Dort.
 
 - A position holding *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *Thomist (Aquinas; Garrigou-Lagrange)* can be held.
 - None of *Romans 11:6 (by grace, so not by works)*, *Reformed (the Canons of Dort)*, *Thomist (Aquinas; Garrigou-Lagrange)* defeats another, and each attack on them is answered from among them:
-  - *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Remonstrant (the Five Articles, 1610)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
   - *Lutheran (the Formula of Concord)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
   - *Wesleyan (preventing grace)* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
   - *The objection from the Spirit's resistance* defeats *Reformed (the Canons of Dort)*, and *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*.
-  - *Trent (Session VI, canon 4)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*.
+  - *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*, and *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
   - *Remonstrant (the Five Articles, 1610)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*, and *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*.
   - *Lutheran (the Formula of Concord)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*, and *Reformed (the Canons of Dort)* defeats *Lutheran (the Formula of Concord)*.
   - *Wesleyan (preventing grace)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*, and *Reformed (the Canons of Dort)* defeats *Wesleyan (preventing grace)*.
@@ -1166,7 +1179,7 @@ The Thomists, defended with Dort.
   - Justifying grace, once given, can be lost — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.24 a.11; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.4 a.3; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.113 a.4 ad 1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [Pohle 1911](../../bibliography.md#pohle-molinism-1911); [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Garrigou-Lagrange 1952](../../bibliography.md#garrigou-lagrange-grace-1952), §ch. VII
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -1210,21 +1223,21 @@ the Molinist reading, and Trent defeats them.
 
 ***Thomist (Aquinas; Garrigou-Lagrange)* is not accepted on every resolution.**
 
-- A position holding *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* can be held, and it holds *Trent (Session VI, canon 4)*; *Trent (Session VI, canon 4)* conflicts with *Thomist (Aquinas; Garrigou-Lagrange)*: *Trent (Session VI, canon 4)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*, and *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Trent (Session VI, canon 4)*.
-- None of *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* defeats another, and each attack on them is answered from among them:
-  - *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
-  - *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Lutheran (the Formula of Concord)*.
-  - *Wesleyan (preventing grace)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Wesleyan (preventing grace)*.
-  - *The third way (an ability given, received by faith)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *The third way (an ability given, received by faith)*.
-  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Trent (Session VI, canon 4)*, and *Trent (Session VI, canon 4)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
-  - *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
-  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
-  - *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4)* defeats *Reformed (the Canons of Dort)*.
-  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
+- A position holding *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4, on the Molinist reading)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* can be held, and it holds *Trent (Session VI, canon 4, on the Molinist reading)*; *Trent (Session VI, canon 4, on the Molinist reading)* conflicts with *Thomist (Aquinas; Garrigou-Lagrange)*: *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*, and *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*.
+- None of *Romans 11:6 (by grace, so not by works)*, *Trent (Session VI, canon 4, on the Molinist reading)*, *Remonstrant (the Five Articles, 1610)*, *The objection from the Spirit's resistance* defeats another, and each attack on them is answered from among them:
+  - *Reformed (the Canons of Dort)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*.
+  - *Lutheran (the Formula of Concord)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Lutheran (the Formula of Concord)*.
+  - *Wesleyan (preventing grace)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Wesleyan (preventing grace)*.
+  - *The third way (an ability given, received by faith)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *The third way (an ability given, received by faith)*.
+  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Trent (Session VI, canon 4, on the Molinist reading)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
+  - *Reformed (the Canons of Dort)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*.
+  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *Remonstrant (the Five Articles, 1610)*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
+  - *Reformed (the Canons of Dort)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Reformed (the Canons of Dort)*.
+  - *Thomist (Aquinas; Garrigou-Lagrange)* defeats *The objection from the Spirit's resistance*, and *Trent (Session VI, canon 4, on the Molinist reading)* defeats *Thomist (Aquinas; Garrigou-Lagrange)*.
 
 **What this rests on.** The reasons state 14 defeats and 27 absences of defeat, each a cell of the defeat table, [`solaGratiaDispute_defeats`](#solaGratiaDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
-- *Trent (Session VI, canon 4)*, weakest at *disputed*:
+- *Trent (Session VI, canon 4, on the Molinist reading)*, weakest at *disputed*:
   - The free will, moved by God, cooperates by assenting to God's call — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - The free will, moved by God, can refuse its assent if it wishes — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
   - Grace is received by faith alone (encoded as a denial, so it ranks disputed) — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Augsburg Confession IV.1–3; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 1, III.1; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
