@@ -209,3 +209,9 @@ benchmark = "checks: refutations survive their postulates"
 metric = "time"
 up_to = 0.20
 reason = "The check runs over every non-entailment. Sola gratia (#226) adds six (105 to 111): the same work over more results, measured on CI at +6.4%."
+
+[[accept]]
+benchmark = "checks: ontology"
+metric = "time"
+up_to = 0.10
+reason = "The canonical witness's meanings grow from 5 to 27 of its 29 claims, so the ontology check closes and compares 22 more meanings under every definition, and once more with each definition taken out. CI measured +6.9%; nothing else moved, and no join was added."
