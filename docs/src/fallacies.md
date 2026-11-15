@@ -31,7 +31,7 @@ how they are spelled.
 | Straw man | does an attribution match what its subject holds? | meanings | not yet |
 | Misquotation | does a quotation say what the move says it says? | `says`, then a corpus | not yet |
 | Cherry-picking | which texts on the same words does the move ignore? | a query over meanings | not yet |
-| Double standard | does a party apply its own principle to its own moves? | an epistemology | not yet |
+| Double standard | does a party rest a claim on what its own rule refuses? | `ArgumentPackage.heldTo` | claims built |
 
 The checks for a non sequitur and an indefensible claim work on whole positions rather than
 single moves. A non sequitur is shown by a **countermodel**: a way of taking every premise as

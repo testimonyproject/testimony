@@ -184,10 +184,25 @@ def cite : Claim → AtomMeta
       -- The Epistle to Diognetus, 9: "that the righteousness of One should
       -- justify many transgressors" — another's righteousness, not one's own
       -- renewal. The Catechism cites the epistle itself (CCC 2271).
+      -- The Larger Catechism states the claim (Q. 77), with its proofs: for
+      -- "inseparably joined", 1 Cor 6:11 and 1:30; for the differences, Rom
+      -- 4:6, 8, Ezek 36:27, Heb 9:13–14, Rom 3:24–25 and Rom 6:6, 14. It was
+      -- cited to Confession XIII.1, which does not state it, as the sola fide
+      -- argument's was; the same correction is made in both.
     , source :=
-        { primary := .work westminsterConfession (.sectionRef "XIII.1")
+        { primary := .work westminsterLargerCatechism (.sectionRef "Q. 77")
         , supporting :=
-            [ .work calvinInstitutes (.sectionRef "III.xi.6")
+            [ .scripture
+                [ { ref := .verse ⟨.firstCorinthians, 6, 11⟩ }
+                , { ref := .verse ⟨.firstCorinthians, 1, 30⟩ }
+                , { ref := .verse ⟨.romans, 4, 6⟩ }
+                , { ref := .verse ⟨.romans, 4, 8⟩ }
+                , { ref := .verse ⟨.ezekiel, 36, 27⟩ }
+                , { ref := .range ⟨.hebrews, 9, 13, 9, 14⟩ }
+                , { ref := .range ⟨.romans, 3, 24, 3, 25⟩ }
+                , { ref := .verse ⟨.romans, 6, 6⟩ }
+                , { ref := .verse ⟨.romans, 6, 14⟩ } ]
+            , .work calvinInstitutes (.sectionRef "III.xi.6")
             , .work anf1 (.sectionRef "Epistle to Diognetus 9") ]
         , tradition := .reformedProtestant
         , confidence := .disputed } }

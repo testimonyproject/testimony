@@ -1068,11 +1068,30 @@ def baseCite : Claim → AtomMeta
       -- `disputed`: Trent's canon 11 anathematises justification "by the sole
       -- imputation of the justice of Christ, or by the sole remission of sins".
       -- Calvin: as Christ cannot be divided, the two are inseparable, yet
-      -- Scripture "classes them separately" (III.xi.6).
+      -- Scripture lists them separately, citing 1 Cor 1:30 (III.xi.6; in
+      -- Beveridge's translation, "classes them separately").
+      -- The Larger Catechism states the claim (Q. 77): sanctification is
+      -- "inseparably joined with justification, yet they differ". Its proofs
+      -- are cited with it: for "inseparably joined", 1 Cor 6:11 and 1:30; for
+      -- the differences, Rom 4:6, 8 (righteousness imputed), Ezek 36:27 and
+      -- Heb 9:13–14 (grace infused), Rom 3:24–25 (sin pardoned), Rom 6:6, 14
+      -- (sin subdued). It was cited to Confession XIII.1, which does not state
+      -- it, and to no text; holding the Reformed readings to Westminster's own
+      -- rule found that (TestimonyArguments.Epistemologies).
     , source :=
-        { primary := .work westminsterConfession (.sectionRef "XIII.1")
+        { primary := .work westminsterLargerCatechism (.sectionRef "Q. 77")
         , supporting :=
-            [ .work westminsterConfession (.sectionRef "XI.1")
+            [ .scripture
+                [ { ref := .verse ⟨.firstCorinthians, 6, 11⟩ }
+                , { ref := .verse ⟨.firstCorinthians, 1, 30⟩ }
+                , { ref := .verse ⟨.romans, 4, 6⟩ }
+                , { ref := .verse ⟨.romans, 4, 8⟩ }
+                , { ref := .verse ⟨.ezekiel, 36, 27⟩ }
+                , { ref := .range ⟨.hebrews, 9, 13, 9, 14⟩ }
+                , { ref := .range ⟨.romans, 3, 24, 3, 25⟩ }
+                , { ref := .verse ⟨.romans, 6, 6⟩ }
+                , { ref := .verse ⟨.romans, 6, 14⟩ } ]
+            , .work westminsterConfession (.sectionRef "XI.1")
             , .work calvinInstitutes (.sectionRef "III.xi.6") ]
         , tradition := .reformedProtestant
         , confidence := .disputed } }

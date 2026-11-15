@@ -6,7 +6,7 @@
 Every work cited anywhere in the library, generated from the Lean source.
 Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonyproject/testimony/blob/main/references.bib).
 
-227 entries, of which 33 carry no stable public identifier.
+228 entries, of which 34 carry no stable public identifier.
 
 - <a id="abasciano-corporate-election-romans-9-2006"></a>**`abasciano-corporate-election-romans-9-2006`** — Brian J. Abasciano. *Corporate Election in Romans 9: A Reply to Thomas Schreiner*. *Journal of the Evangelical Theological Society* 49.2: 351–371. 2006. [https://www.galaxie.com/article/jets49-2-08](https://www.galaxie.com/article/jets49-2-08), [https://evangelicalarminians.org/wp-content/uploads/2009/06/Article.-CORPORATE-ELECTION-IN-ROMANS-9.-Final-JETS-Version.pdf](https://evangelicalarminians.org/wp-content/uploads/2009/06/Article.-CORPORATE-ELECTION-IN-ROMANS-9.-Final-JETS-Version.pdf).
 - <a id="achtemeier-1-peter-1996"></a>**`achtemeier-1-peter-1996`** — Paul J. Achtemeier. *1 Peter: A Commentary on First Peter*. Minneapolis: Fortress Press. Hermeneia. 1996. ISBN 9780800660307.
@@ -227,6 +227,7 @@ Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonypro
 - <a id="westerholm-perspectives-2003"></a>**`westerholm-perspectives-2003`** — Stephen Westerholm. *Perspectives Old and New on Paul: The "Lutheran" Paul and His Critics*. Wm. B. Eerdmans. 2003. ISBN 9780802848093.
 - <a id="westermann-genesis-1-11-1984"></a>**`westermann-genesis-1-11-1984`** — Claus Westermann. *Genesis 1–11: A Commentary*. Translated by John J. Scullion. Minneapolis: Augsburg Publishing House. 1984. ISBN 0806619627.
 - <a id="westminster-confession-1647"></a>**`westminster-confession-1647`** — Westminster Assembly. *The Westminster Confession of Faith*. Westminster Assembly. 1647. *(no public identifier)* Cited by chapter and section; no critical edition catalogued.
+- <a id="westminster-larger-catechism-1647"></a>**`westminster-larger-catechism-1647`** — Westminster Assembly. *The Larger Catechism*. Westminster Assembly. 1647. *(no public identifier)* Cited by question; no critical edition catalogued. Scripture proofs as printed in the Orthodox Presbyterian Church's edition with proofs, read 2026-11-15.
 - <a id="whitaker-disputation-1849"></a>**`whitaker-disputation-1849`** — William Whitaker. *A Disputation on Holy Scripture: Against the Papists, Especially Bellarmine and Stapleton*. Translated by William Fitzgerald. Cambridge: Printed at the University Press. Parker Society 45. 1849. *(no public identifier)* Latin original 1588. The Soli Deo Gloria reprint (2000) carries ISBN 9781573580908, the Wipf & Stock reprint (2004) ISBN 9781592445530; neither is the pagination cited here.
 - <a id="woudstra-recent-translations-1971"></a>**`woudstra-recent-translations-1971`** — Marten H. Woudstra. *Recent Translations of Genesis 3:15*. *Calvin Theological Journal* 6: 194–203. 1971. [https://biblicalelearning.org/wp-content/uploads/2022/01/Woudstra_Gen3_15_CTJ.pdf](https://biblicalelearning.org/wp-content/uploads/2022/01/Woudstra_Gen3_15_CTJ.pdf).
 - <a id="wright-justification-2009"></a>**`wright-justification-2009`** — N. T. Wright. *Justification: God's Plan and Paul's Vision*. Downers Grove, IL: IVP Academic. 2009. ISBN 9780830838639.

@@ -365,7 +365,7 @@ rest reuse machinery that exists, or that the open issues propose.
 | Straw man | does an attribution match what its subject holds? | meanings of the position |
 | Misquotation | does a quotation say what the move says it says? | `says`, then the corpus |
 | Cherry-picking | texts on the same words and relation the move ignores | a query over meanings |
-| Double standard | is the article's own principle applied to its own moves? | a refutation on own terms |
+| Double standard | does a party rest a claim on what its own rule refuses? | `ArgumentPackage.heldTo` — claims built ([epistemology](./epistemology.md)) |
 
 ### The three charges a debate reaches for first
 

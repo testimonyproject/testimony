@@ -11,4 +11,5 @@ import TestimonyArguments.SpiritBaptism
 import TestimonyArguments.Trinity
 import TestimonyArguments.Meanings
 import TestimonyArguments.Articles.Howell2003
+import TestimonyArguments.Epistemologies
 import TestimonyArguments.Checks

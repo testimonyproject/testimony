@@ -575,6 +575,21 @@ carries none. -/
       , note := some "Cited by chapter and section; no critical edition catalogued." }
   , publisher := "Westminster Assembly" }
 
+/-- The Westminster Larger Catechism, which the Assembly finished with the Confession. Its
+question 77, "Wherein do justification and sanctification differ?", says the two are
+"inseparably joined" and yet "differ", with Scripture proofs printed clause by clause; cited by
+question. -/
+@[bib_entry] def westminsterLargerCatechism : BibEntry := .book
+  { core :=
+      { key := "westminster-larger-catechism-1647"
+      , role := .authority
+      , contributors := { authors := [.corporate "Westminster Assembly"] }
+      , title := "The Larger Catechism"
+      , year := some { value := 1647 }
+      , note := some ("Cited by question; no critical edition catalogued. Scripture proofs as " ++
+          "printed in the Orthodox Presbyterian Church's edition with proofs, read 2026-11-15.") }
+  , publisher := "Westminster Assembly" }
+
 /-- Miravalle's short Mariology, the source for reading Genesis 3:15 as the
 protoevangelium, "the first reference to Jesus as the future Redeemer of the
 world", and for the remark that it is "strange ... to talk about the 'seed' of a

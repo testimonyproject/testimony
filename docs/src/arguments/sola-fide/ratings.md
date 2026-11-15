@@ -170,12 +170,6 @@ by what it means, denies the other, so each is an argument against the other
 (`lexicalOnWordAssessment`, `trentWordOnLexicalAssessment`). Romans 4 argues
 against Trent's reading from the text as well.
 
-That was not so before. The courtroom premise used to say the verb is a verdict
-*and not* making righteous, so it contained the conclusion it was used to reach,
-and against Trent the line on Paul's word assumed its point. The fallacy checks
-found it (`Testimony.Checks.Fallacies`), and the premise now says only what its
-lexical sources say.
-
 ## Claims that exclude each other by their meaning
 
 Some claims that are listed separately exclude each other by what they mean.
@@ -697,11 +691,7 @@ about the word.** It holds as a premise that Paul's "justify" is a verdict, cite
 to the lexicon, and argues from that, from Paul's other words for renewal and
 from the rule of least meaning that the word does not also mean renewal. So it
 reaches its denial by a step, and is an argument under all three standards.
-
-It was not one until the premise was split. The premise used to say "a verdict,
-and *not* making righteous", and so already denied Trent's reading: the line
-assumed its point against Trent, and the checks counted it a rival reading
-held as a premise. Trent's reading stands against it in the same way now
+Trent's reading stands against it in the same way
 (`trentWordOnLexicalAssessment`): each grants the verdict sense, and each argues
 its own answer to whether that is all the word means.
 
@@ -811,13 +801,8 @@ righteous. It can be held with every starting point of the step, the courtroom
 sense among them, because Trent keeps the verdict: the justified "are not only
 reputed, but are truly called, and are, just" (Session VI, ch. 7). So it grants
 the step's grounds and argues against what the step draws from them, and under
-every standard it is an argument against the step.
-
-It was not one until the courtroom premise was split. The premise used to say
-the verb is a verdict *and not* making righteous, so Trent's conclusion denied a
-starting point, and the dissent belonged to that starting point's rating.
-The split puts it where Trent's own words put it: against the step from the
-verdict to "nothing more".
+every standard it is an argument against the step: against the step from the
+verdict to "nothing more", which is where Trent's own words put it.
 
 **Dissent:** *Trent, with Augustine (ch. 8)*, against *Paul's word (δικαιόω, by the rule of least meaning)*. ✔ A critique: it can be held with the step's grounds, and it argues its denial by a step of its own.
 
@@ -892,13 +877,6 @@ Reformed steps over its definition.
 
 So the step about Paul's word is disputed under all three standards, by Trent's
 reading of the word.
-
-This reverses what the checks found before the courtroom premise was split. It
-said the verb is a verdict *and not* making righteous, so it already contained
-the step's conclusion. Trent's reading denied that premise, not the step, and
-the step stood at `wellSupported` because the premise assumed its point. With
-the premise saying only what its lexical sources say, the verdict, Trent's
-objection reaches the step.
 
 What it does not claim: that Trent's reading is right. `disputed` means there
 is an argued objection, not that the objection wins. Nor does it move the
