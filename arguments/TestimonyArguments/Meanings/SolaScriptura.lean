@@ -251,9 +251,8 @@ def means : Claim → Statement
     .also scriptureInfallible <|
       .also (.holds (rl .isA (cn .scripture) (cn .ruleOfFaith))) noOtherInfallible
   | .traditionIsCoordinateSourceOfRevelation =>
-    .holds <| .both (rl .isA (cn .tradition) (cn .sourceOfRevelation)) <|
-      .both (rl .isA (cn .scripture) (cn .sourceOfRevelation))
-        (.not (rl .judges (cn .scripture) (cn .tradition)))
+    .holds <| .both (rl .isA (cn .tradition) (cn .sourceOfRevelation))
+      (rl .isA (cn .scripture) (cn .sourceOfRevelation))
   | .magisteriumIsInfallible => .holds (rl .isA (cn .magisterium) (cn .infallibleInterpreter))
   | .churchMindIsInfallibleInterpreter =>
     .holds (rl .isA (cn .mindOfTheChurch) (cn .infallibleInterpreter))
