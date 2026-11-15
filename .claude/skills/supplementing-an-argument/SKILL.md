@@ -58,6 +58,14 @@ disputed. Look for grounds that do not depend on either side's authority:
   Vulgate declared authentic at Session IV). This does not strengthen the
   argument; it makes the rival's position intelligible, which is fairness.
 
+Search the journals in `journals.md`, beside this file: JBL, CBQ, *Vetus* and
+*Novum Testamentum*, JSOT, JSNT, JETS, BBR, *Tyndale Bulletin*, IJST, the
+*Christian Apologetics Journal*, with RBL for reviews, TC for textual questions,
+and *New Testament Abstracts* to see what exists before anything is bought. It
+says how a reader without an institution reaches each one. When a source you
+need is behind a paywall, say so, and give the user the reference and the
+access route so they can procure it; never cite what nobody has read.
+
 Delegate identifier and quotation checks to the `source-verifier` agent, and
 read primary texts yourself where they are public (CCEL, Hanover, Crossref).
 Never invent an identifier, a page, or a quotation; cite `.whole` when a

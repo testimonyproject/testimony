@@ -2,6 +2,7 @@ import TestimonyArguments.Meanings.BornInBethlehem
 import TestimonyArguments.Meanings.BornOfAVirgin
 import TestimonyArguments.Meanings.CanonicalWitness
 import TestimonyArguments.Meanings.SolaFide
+import TestimonyArguments.Meanings.SolaGratia
 import TestimonyArguments.Meanings.SolaScriptura
 import TestimonyArguments.Meanings.SpiritBaptism
 import TestimonyArguments.Meanings.Trinity

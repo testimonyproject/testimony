@@ -14,6 +14,9 @@ Given a step — its grounds, its conclusion, and the rating proposed:
 
 1. **Find readers who grant every ground and deny the conclusion.** Look across
    traditions: Catholic, Orthodox, Reformed, Lutheran, critical and patristic.
+   Search the journals in `.claude/skills/supplementing-an-argument/journals.md`,
+   starting from *New Testament Abstracts*, and mark every source you could not
+   read as one to procure, with its access route from that file.
    Include the historical reader the rival's position descends from (for
    justification, Augustine; for Trent's definition, the *Joint Declaration*).
 2. **Sort what you find:**
