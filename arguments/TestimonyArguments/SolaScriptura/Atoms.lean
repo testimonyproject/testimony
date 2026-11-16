@@ -219,6 +219,29 @@ inductive Claim
   cites the same chapter for the authority of councils and holds that "All
   synods or councils since the apostles' times ... may err" (XXXI.4). -/
   | councilBindsWithTheSpiritsAuthority
+  /-- Matthew 23:2–3 — "The scribes and the Pharisees sit in Moses' seat: All
+  therefore whatsoever they bid you observe, that observe and do; but do not ye
+  after their works: for they say, and do not." The "seat" (καθέδρα) is the
+  teacher's chair; "observe" (τηρεῖτε) is the verb Mark 7:9 uses for keeping
+  "your own tradition". What the text says, not yet what follows from it. -/
+  | matthew23_2_3MosesSeat
+  /-- Matthew 23:16–22 — "Woe unto you, ye blind guides, which say, Whosoever
+  shall swear by the temple, it is nothing; but whosoever shall swear by the
+  gold of the temple, he is a debtor!" A teaching of the scribes, about which
+  oaths bind, that Jesus condemns in the same discourse in which he tells the
+  crowd to observe what they bid. -/
+  | matthew23_16_22BlindGuides
+  /-- Those who hold the teaching office in the Church are to be heeded by
+  reason of the seat they hold, in whatever they teach that is not contrary to
+  God's law, even when they themselves live ill. Rome's reading of Matthew
+  23:2–3, in Cornelius a Lapide's words: the seat is "the honour, dignity, and
+  authority of teaching and commanding, which Moses had with the Jews, and to
+  which the Scribes had succeeded", as the chair of Peter is the authority "in
+  which the Roman Pontiffs succeed S. Peter". A claim about authority, not about
+  infallibility. Rated `disputed`: Calvin reads the same verses and holds that
+  Christ bids the people obey the scribes "only so far as they adhere to the
+  pure and simple exposition of the Law". -/
+  | teachingOfficeHeardByItsSeat
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaScriptura

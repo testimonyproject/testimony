@@ -6,6 +6,7 @@ import TestimonyArguments.SolaScriptura.Results
 import TestimonyArguments.SolaScriptura.Mark7
 import TestimonyArguments.SolaScriptura.JesusAndPaul
 import TestimonyArguments.SolaScriptura.Acts15
+import TestimonyArguments.SolaScriptura.MosesSeat
 import TestimonyArguments.SolaScriptura.Dispute
 import TestimonyArguments.SolaScriptura.Hearings
 
@@ -175,6 +176,23 @@ Nor does Rome's reading touch the premise about unwritten tradition: what the
 council handed on was a letter, and the letter is in Scripture
 (`romes_reading_of_acts15_leaves_unwritten_tradition_open`).
 
+## What Moses' seat settles
+
+Jesus also says "The scribes and the Pharisees sit in Moses' seat: All therefore
+whatsoever they bid you observe, that observe and do; but do not ye after their
+works" (Matthew 23:2–3). Calvin reads it as binding the hearers to the law taught
+from that seat, and no further, because in the same discourse Jesus condemns the
+scribes' teaching on oaths (23:16–22), as he condemns the elders' tradition in
+Mark 7. Cornelius a Lapide reads it as an authority of teaching that passes to
+those who succeed to the seat, as the chair of Peter does, to be heeded in
+whatever is not contrary to God's law. Each grants the other's texts, and each
+step is `disputed`. So the two readings cannot be held together, and Mark 7 with
+Matthew 23 leaves the teaching office open
+(`moses_seat_readings_cannot_be_held_together`,
+`mark7_and_moses_seat_leave_the_office_open`). Rome's reading claims authority,
+not infallibility, so it can be held with Mark 7's case for sola scriptura
+(`romes_reading_of_moses_seat_can_be_held_with_mark7s_case`).
+
 ## A limitation worth stating
 
 The final-arbiter reading turns on a distinction between **doctrine**, which
@@ -196,6 +214,7 @@ given the distinction, not that the distinction can be drawn.
 | `Mark7.lean` | Mark 7 and the tradition Trent receives: the packages, the dilemma |
 | `JesusAndPaul.lean` | the same principle from Jesus' sayings and Paul's letters |
 | `Acts15.lean` | the council at Jerusalem, read by the Reformers and by Rome |
+| `MosesSeat.lean` | Moses' seat (Matthew 23:2–3), read by the Reformers and by Rome |
 | `Dispute.lean` | the dispute over Mark 7, weighed, and its verdicts |
 | `Hearings.lean` | the same dispute heard against each reading of Trent |
 -/

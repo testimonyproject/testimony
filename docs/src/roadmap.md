@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **327 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **330 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -272,6 +272,9 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `acts15_readings_cannot_be_held_together` | `¬Satisfiable (acts15Reformed.premises ++ acts15Roman.premises)` | **The two readings of Acts 15 cannot be held together.** One concludes that a council after the apostles may err, the other that a general council binds with the Spirit's … |
 | `acts15_texts_leave_the_council_open` | `Independent acts15Texts (p Claim.councilBindsWithTheSpiritsAuthority)` | **The texts of Acts 15 do not settle the council's authority.** Grant 15:1, 15:10–11, 15:15–17, 15:23–29 and 15:28, and 16:4, without either reading's step: whether a general … |
 | `romes_reading_of_acts15_leaves_unwritten_tradition_open` | `Independent (acts15Roman.premises ++ [p Claim.acts15_23_29DecreeWritten]) (p Claim.noUnwrittenTraditionShownApostolic)` | **Rome's reading of Acts 15 does not reach unwritten tradition.** Grant that "it seemed good to the Holy Ghost, and to us", that the decrees were delivered to keep, Rome's step … |
+| `moses_seat_readings_cannot_be_held_together` | `¬Satisfiable (mosesSeatReformed.premises ++ mosesSeatRoman.premises)` | **The two readings of Moses' seat cannot be held together.** One concludes that the teaching office is heard only as far as it teaches God's word, the other that it is heeded for … |
+| `mark7_and_moses_seat_leave_the_office_open` | `Independent mosesSeatTexts (p Claim.teachingOfficeHeardByItsSeat)` | **Mark 7 and Moses' seat leave the teaching office open.** Grant Mark 7, the principle it delivers that God's word judges human tradition, and Matthew 23:2–3 and 23:16–22, without … |
+| `romes_reading_of_moses_seat_can_be_held_with_mark7s_case` | `Satisfiable (mark7Case.premises ++ mosesSeatRoman.premises)` | **Rome's reading of Moses' seat can be held with Mark 7's case for sola scriptura.** Grant Mark 7, its principle, the premise that no unwritten tradition can now be shown to be … |
 | `marks_principle_prevails` | `Framework.grounded mark7Dispute.defeats = {Mark7Party.principle}` | **Mark 7's principle prevails outright, and it is common ground.** The grounded extension — what the dispute forces before any choice between rivals — is exactly the principle: … |
 | `trent_as_mens_commandments_indefensible` | `∀ (S : Set Mark7Party), Framework.Admissible mark7Dispute.defeats S → Mark7Party.trentAsMensCommandments ∉ S` | **Trent, read as commandments of men, cannot be defended.** No consistent position that answers its attackers can hold it: Mark 7's principle defeats it, and nothing answers the … |
 | `mark7_case_defensible` | `Framework.CredulouslyAccepted mark7Dispute.defeats Mark7Party.mark7` | **Sola scriptura from Mark 7 can be defended.** Some maximal defensible position holds it, with Mark 7's principle. |
@@ -807,7 +810,16 @@ each step from them is `disputed`, and the two cannot be held together
 (`acts15_readings_cannot_be_held_together`); the texts alone leave the council's authority open
 (`acts15_texts_leave_the_council_open`), and what the council handed on was a letter, so Rome's
 reading leaves the premise about unwritten tradition where it was
-(`romes_reading_of_acts15_leaves_unwritten_tradition_open`). Weighing the dispute also moved a
+(`romes_reading_of_acts15_leaves_unwritten_tradition_open`). Moses' seat (Matthew 23:2–3) is
+read both ways too. Calvin reads it as binding the hearers to the law taught from that seat
+"only so far as" the scribes expound it, since in the same discourse Jesus condemns their
+teaching on oaths (23:16–22); Cornelius a Lapide reads it as an authority of teaching that passes
+to those who succeed to the seat, heeded in "all things not contrary to Moses and the Law".
+Each step is `disputed`, the two cannot be held together
+(`moses_seat_readings_cannot_be_held_together`), and Mark 7 with Matthew 23 leaves the office
+open (`mark7_and_moses_seat_leave_the_office_open`). Rome's reading claims authority, not
+infallibility, so it can be held with Mark 7's case for sola scriptura
+(`romes_reading_of_moses_seat_can_be_held_with_mark7s_case`). Weighing the dispute also moved a
 rating. Trent's claim that tradition is a coordinate source of revelation had
 been `wellSupported`. Geiselmann grants Session IV and denies that it canonised
 two coordinate sources, since the council replaced its draft's "partly … partly"

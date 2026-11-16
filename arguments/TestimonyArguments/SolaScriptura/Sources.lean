@@ -169,6 +169,71 @@ def acts15RomanInference : Source :=
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
+/-- The rating of the Reformed step from Matthew 23:2–3 to the teaching office:
+`disputed`. Jesus tells the crowd to observe and do "whatsoever" the scribes and
+Pharisees bid, because they "sit in Moses' seat" (23:2–3). In the same discourse
+he condemns their teaching about oaths, "Woe unto you, ye blind guides, which
+say, Whosoever shall swear by the temple, it is nothing" (23:16–22), and in Mark
+7 and Matthew 15 he condemns the elders' tradition for making void the word of
+God. So, Calvin argues, the seat binds only so far as Moses is taught from it:
+"to sit in the chair of Moses is nothing else than to teach, according to the
+Law of God, how we ought to live", and "Christ exhorts the people to obey the
+scribes, only so far as they adhere to the pure and simple exposition of the
+Law" (pp. 74–75). He answers Rome by name: "The Papists reckon it enough, that
+those who issue laws should possess the title and occupy the station", and if
+Christ had meant to bind consciences to the commandments of men, "there would
+have been no good ground for what he said in another passage, that it is in vain
+to worship God by the commandments of men, (Matthew 15:9.)" (p. 75).
+
+Cornelius a Lapide grants every text the step reads and denies its conclusion.
+He calls the scribes of 23:16 "rightly called by Christ blind guides" (p. 40),
+and he grants that the corban teaching "was contrary to the Law, as Christ
+showed" (p. 32). Yet he reads "all things" as "all things not contrary to Moses
+and the Law", and holds that even the scribes' dogmas that were "vain and
+foolish, and therefore not binding" could "yet serve for the merit of blind and
+simple obedience, and for reverence of the sacerdotal order" (p. 33). So the
+office is heeded for its seat, in what is not contrary to the law, and not only
+where it teaches the law. Lapide reports that Maldonatus, a Catholic too,
+"restricts the word all to such commands alone as are contained in the Law of
+Moses" (p. 33); Maldonatus himself has not been read. So the step is
+`disputed`. -/
+def mosesSeatReformedInference : Source :=
+  { primary := .work aLapideMatthew3 (.pages 32 33)
+  , supporting :=
+      [ .work aLapideMatthew3 (.page 40), .work calvinHarmony3 (.pages 74 75) ]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of Rome's step from Matthew 23:2–3 to the teaching office:
+`disputed`. Jesus bids the crowd observe what the scribes and Pharisees bid,
+because of the seat they sit in, though "they say, and do not" (23:2–3).
+Cornelius a Lapide takes the seat as "the honour, dignity, and authority of
+teaching and commanding, which Moses had with the Jews, and to which the Scribes
+had succeeded", and draws the Church's case from it: "In like manner, the chair
+of S. Peter is used to signify the power and authority of teaching and ruling
+all the faithful throughout the world, in which the Roman Pontiffs succeed S.
+Peter" (p. 32). "Christians ought to bear in mind these words of Christ when they
+see certain Bishops, Pastors, and Magistrates not living in accordance with the
+law of Christ" (p. 33). So the office in the Church is heeded for its seat, even
+when its holders live ill.
+
+Calvin grants the text and denies the conclusion. He grants that the seat
+"denotes, at the same time, a lawful calling; for Christ commands that the
+scribes should be heard, because they were the public teachers of the Church",
+and denies that the station is enough: "That man, therefore, sits in the chair
+of Moses who teaches, not from himself, or at his own suggestion, but according
+to the authority and word of God" (p. 75). So the step is `disputed`.
+
+The step claims authority, not infallibility. Lapide goes on to say that the
+pope "cannot err" when he defines the faith "ex cathedra" (p. 32), but he does
+not draw that from Moses' seat, whose holders he says taught things "contrary to
+the Law"; the step does not claim it. -/
+def mosesSeatRomanInference : Source :=
+  { primary := .work calvinHarmony3 (.pages 74 75)
+  , supporting := [.work aLapideMatthew3 (.pages 32 33)]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
 /-- The rating of Trent's step, from 2 Thessalonians 2:15 and tradition as a
 source of revelation to "Scripture is not the sole rule": `wellSupported`. Once
 the grounds are granted the conclusion all but follows, and no reader was found
@@ -617,6 +682,40 @@ def cite : Claim → AtomMeta
         , supporting :=
             [ .work westminsterConfession (.sectionRef "XXXI.4")
             , .work calvinActs2 (.adLoc ⟨.acts, 15, 28⟩) ]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .matthew23_2_3MosesSeat =>
+    { label :=
+        "Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all " ++
+        "whatsoever they bid you observe, that observe and do; but do not ye after " ++
+        "their works"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.matthew, 23, 2, 23, 3⟩ }]
+        , supporting := [.work wenhamOurLordsView (.page 15)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .matthew23_16_22BlindGuides =>
+    { label :=
+        "Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever " ++
+        "shall swear by the temple, it is nothing"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.matthew, 23, 16, 23, 22⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .teachingOfficeHeardByItsSeat =>
+    { label :=
+        "Those who hold the Church's teaching office are to be heeded for the " ++
+        "seat they hold, in whatever is not contrary to God's law, even when " ++
+        "they live ill"
+    , kind := .theological
+      -- Rome's claim, as Cornelius a Lapide states it at Matthew 23:2–3.
+      -- `disputed`: Calvin reads the same verses and holds that the scribes are
+      -- to be obeyed only so far as they expound the law.
+    , source :=
+        { primary := .work aLapideMatthew3 (.pages 32 33)
+        , supporting := [.work calvinHarmony3 (.pages 74 75)]
         , tradition := .romanCatholic
         , confidence := .disputed } }
   | .perspicuityIsLimitedToSalvationEssentials =>

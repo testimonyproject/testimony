@@ -4,11 +4,11 @@ import TestimonyArguments.SolaScriptura.Sources
 /-!
 # TestimonyArguments.Meanings.SolaScriptura — what each sola scriptura claim says
 
-**Forty-one of the fifty-one claims have meanings** (`coverage_now`), and with
-them seventeen of the argument's twenty-three lines of reason can be read as moves,
+**Forty-four of the fifty-four claims have meanings** (`coverage_now`), and with
+them nineteen of the argument's twenty-five lines of reason can be read as moves,
 all of whose claims say something the checks can see: the eliminative line, both
 of Mark 7's lines, the line from Jesus' sayings and Paul's letters to the same
-principle, both readings of Acts 15, Geisler's Tradition 0, Trent, Vatican I, the
+principle, both readings of Acts 15 and of Moses' seat, Geisler's Tradition 0, Trent, Vatican I, the
 Orthodox line, the canon objection and Kruger's reply, the interpretive-authority
 regress and Mathison's reply, and Geisler's circularity charge with both replies
 to it.
@@ -66,6 +66,12 @@ words that carry a reading are kept as the text has them.
   (παρεδίδοσαν) to the churches to keep. The decree is one particular in all
   three, because 16:4 names it as "the decrees ... ordained of the apostles and
   elders which were at Jerusalem".
+- **Matthew 23:2–3** says that the scribes and the Pharisees sit in Moses' seat
+  (καθέδρα), that whatever they bid is what the hearers are to "observe and do"
+  (ποιήσατε καὶ τηρεῖτε), and that their works are not. **23:16–22** says that
+  their teaching on oaths is the teaching of "blind guides". Whether the seat is
+  heeded for itself or for the law taught from it is the two readings' question,
+  and the meaning does not answer it.
 
 ## What the doctrinal claims say
 
@@ -93,7 +99,10 @@ the Church as the word of God. It does not say that the apostles taught nothing
 by word of mouth; Whitaker's claim is about proof. Rome's reading of Acts 15
 says that a general council's definition of faith, after the apostles, is
 infallible and is the Holy Ghost's as well as the council's; the Reformed
-reading denies it.
+reading denies it. Rome's reading of Moses' seat says that what the Church's
+teaching office teaches, where it is not contrary to God's law, is to be heeded
+for the seat its teachers hold; the Reformed reading denies it. It says nothing
+of whether the office can err, and it is not joined to the claims that do.
 
 ## What is left unanalysed, and why
 
@@ -206,7 +215,8 @@ def all : List Claim :=
   , .galatians1_8AnotherGospelAccursed, .colossians2_8TraditionOfMen
   , .acts15_1CircumcisionAfterMoses, .acts15_10_11YokeAndGrace, .acts15_15_17ProphetsAgree
   , .acts15_23_29DecreeWritten, .acts15_28SeemedGoodToTheHolyGhost, .acts16_4DecreesDelivered
-  , .councilBindsWithTheSpiritsAuthority ]
+  , .councilBindsWithTheSpiritsAuthority, .matthew23_2_3MosesSeat
+  , .matthew23_16_22BlindGuides, .teachingOfficeHeardByItsSeat ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -252,6 +262,10 @@ theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
 @[nolint defsWithUnderscore] abbrev acts15_28 : PassageRange := vs .acts 15 28
 /-- Acts 16:4. -/
 @[nolint defsWithUnderscore] abbrev acts16_4 : PassageRange := vs .acts 16 4
+/-- Matthew 23:2–3. -/
+@[nolint defsWithUnderscore] abbrev matt23_2_3 : PassageRange := rg .matthew 23 2 23 3
+/-- Matthew 23:16–22. -/
+@[nolint defsWithUnderscore] abbrev matt23_16_22 : PassageRange := rg .matthew 23 16 23 22
 
 /-- "All scripture", the words of 2 Timothy 3:16. -/
 abbrev allScripture : Term := wd .graphe tim3_16
@@ -305,7 +319,7 @@ clear sense another (`accountability_refuses_rather_than_denies`). -/
 abbrev consensusNotPreconditionOfReading : Statement :=
   .holds (.not (rl .precedes (cn .creedalConsensus) (cn .readingScripture)))
 
-/-- **What each sola scriptura atom asserts.** Forty-one are analysed; the rest
+/-- **What each sola scriptura atom asserts.** Forty-four are analysed; the rest
 keep their citations' labels, marked unanalysed, for the reasons the module
 docstring gives. -/
 def means : Claim → Statement
@@ -430,16 +444,38 @@ def means : Claim → Statement
   | .councilBindsWithTheSpiritsAuthority =>
     .holds <| .both (rl .isA councilDefinition (cn .infallible))
       (rl .saidBy holyGhost councilDefinition)
+  | .matthew23_2_3MosesSeat =>
+    .says matt23_2_3 <|
+      .both (rl .agentOf (pt "the scribes and the Pharisees" .agent)
+          (pt "sitting in Moses' seat (ἐπὶ τῆς Μωϋσέως καθέδρας)" .event)) <|
+        .both (rl .bindsAs
+            (pt "whatsoever the scribes and the Pharisees bid" .informationObject)
+            (pt "what the hearers are to observe and do (ποιήσατε καὶ τηρεῖτε)"
+              .informationObject))
+          (.not (rl .bindsAs (pt "the works of the scribes and the Pharisees" .event)
+            (pt "what the hearers are to observe and do (ποιήσατε καὶ τηρεῖτε)"
+              .informationObject)))
+  | .matthew23_16_22BlindGuides =>
+    .says matt23_16_22 <| rl .isA
+      (pt ("the scribes' teaching that whosoever shall swear by the temple, it is " ++
+          "nothing, but whosoever shall swear by the gold of the temple, he is a debtor")
+        .informationObject)
+      (pt "the teaching of blind guides (ὁδηγοὶ τυφλοί)" .quality)
+  | .teachingOfficeHeardByItsSeat =>
+    .holds <| rl .bindsAs
+      (pt ("whatever those who hold the Church's teaching office teach, not contrary " ++
+          "to God's law, even when they live ill") .informationObject)
+      (pt "what the faithful are to heed, for the seat its teachers hold" .informationObject)
   | a => .opaque (cite a).label
 
 /-- What each atom of the argument says. -/
 instance meanings : HasMeanings Claim :=
   { argument := "Sola scriptura", all, complete := all_complete, means }
 
-/-- **Forty-one of the 51 atoms are analysed**: the texts, in their own words,
+/-- **Forty-four of the 54 atoms are analysed**: the texts, in their own words,
 and every claim a line's step reads except the three the module docstring
 names. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (41, 51) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (44, 54) := by decide
 
 /-- **The sola scriptura joins**: each pair of claims whose meanings exclude or
 entail one another, listed, and proved to be exactly what the meanings contain.

@@ -2217,6 +2217,63 @@ obstat* and *imprimatur*. Read at New Advent; cited by section. -/
   , publisher := "Robert Appleton Company"
   , place := some "New York" }
 
+/-! ### Sola scriptura: Moses' seat -/
+
+/-- Volume 3 of Calvin's *Harmony of the Evangelists*, in Pringle's translation,
+for Matthew 23:2–3 (pp. 73–76): "to sit in the chair of Moses is nothing else
+than to teach, according to the Law of God, how we ought to live" (p. 74), and
+"Christ exhorts the people to obey the scribes, only so far as they adhere to
+the pure and simple exposition of the Law" (p. 75). The title page reads
+Edinburgh, printed for the Calvin Translation Society, 1846; archive.org's record
+of the same scan gives 1845, the year of volumes 1 and 2. Pages are the printed
+ones, read in that scan; the wording was checked against the Christian Classics
+Ethereal Library's text. Published without an ISBN. -/
+@[bib_entry] def calvinHarmony3 : BibEntry := .book
+  { core :=
+      { key := "calvin-harmony-evangelists-3-1846"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "William" "Pringle"] }
+      , title := "Commentary on a Harmony of the Evangelists, Matthew, Mark, and Luke"
+      , year := some { value := 1846 }
+      , identifiers :=
+          [ .url "https://archive.org/details/harmonyofevangel03calvuoft"
+                 (some "2026-11-16") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "3"
+  , totalVolumes := some 3 }
+
+/-- Cornelius a Lapide, the Jesuit commentator (1567–1637), on Matthew 23:2–3, in
+Mossman's translation: the seat is "the honour, dignity, and authority of
+teaching and commanding, which Moses had with the Jews, and to which the Scribes
+had succeeded", as the chair of Peter is the authority "in which the Roman
+Pontiffs succeed S. Peter" (p. 32); "all things" are "all things not contrary to
+Moses and the Law" (p. 32); and "Christians ought to bear in mind these words of
+Christ when they see certain Bishops, Pastors, and Magistrates not living in
+accordance with the law of Christ" (p. 33). Volume 3 covers Matthew 22–28 and
+Mark. The title page reads fifth edition, Edinburgh, John Grant, 1908; read in
+the Pitts Theology Library's scan at archive.org. Open Library lists the 1908
+Grant printing with no ISBN. -/
+@[bib_entry] def aLapideMatthew3 : BibEntry := .book
+  { core :=
+      { key := "a-lapide-great-commentary-3-1908"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "Cornelius" "à Lapide"]
+          , translators := [.person "Thomas W." "Mossman"] }
+      , title := "The Great Commentary of Cornelius à Lapide"
+      , year := some { value := 1908 }
+      , identifiers :=
+          [ .url "https://archive.org/details/02775964.1385.emory.edu"
+                 (some "2026-11-16") ]
+      , note := some "S. Matthew's Gospel, chapters 22 to 28; S. Mark's Gospel." }
+  , publisher := "John Grant"
+  , place := some "Edinburgh"
+  , edition := some "5th edition"
+  , volume := some "3" }
+
 /-! ### Sola fide: the wider debate
 
 The positions `SolaFide` did not yet cite from their own sources (#27): the

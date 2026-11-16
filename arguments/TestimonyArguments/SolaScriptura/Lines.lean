@@ -8,7 +8,9 @@ and Mark 7's, which takes two lines, and whose principle a further line draws
 from Jesus' sayings and Paul's letters — three positions deny it, and three
 objections attack it from different directions. Two more lines read the council
 at Jerusalem (Acts 15), one as the Reformers read it and one as Rome does, and
-they deliver opposite answers about the authority of councils. The objections do not reduce to one
+they deliver opposite answers about the authority of councils. Two more read
+Moses' seat (Matthew 23:2–3) the same two ways, and deliver opposite answers
+about the teaching office. The objections do not reduce to one
 another: self-refutation says the doctrine fails its own standard, the canon
 objection says an authority outside scripture is needed to identify scripture,
 and the interpretive-authority regress says the authority claimed is the
@@ -94,6 +96,33 @@ apostles cannot err (`acts15RomanInference`). -/
 def acts15ToCouncilWithTheSpirit : Formula Claim :=
   ⋀ [p .acts15_28SeemedGoodToTheHolyGhost, p .acts16_4DecreesDelivered]
   ➝ p .councilBindsWithTheSpiritsAuthority
+
+/-- **Moses' seat, as the Reformers read it.** Jesus bids the crowd observe what
+the scribes and Pharisees bid, because they sit in Moses' seat (Matthew
+23:2–3); in the same discourse he condemns their teaching on oaths as the
+teaching of "blind guides" (23:16–22), and in Mark 7 the elders' tradition as
+making void the word of God. So the seat binds only so far as Moses is taught
+from it: an office in the Church is heard as far as it teaches God's word, and
+not for the seat alone. Rated `disputed`: Cornelius a Lapide grants the texts
+and holds that the scribes were to be obeyed in all "not contrary to Moses and
+the Law" (`mosesSeatReformedInference`). -/
+@[solaScripturaDefs]
+def mosesSeatToTheWordTaught : Formula Claim :=
+  ⋀ [ p .matthew23_2_3MosesSeat, p .matthew23_16_22BlindGuides
+    , p .mark7TraditionCanNullify ]
+  ➝ notP .teachingOfficeHeardByItsSeat
+
+/-- **Moses' seat, as Rome reads it.** Jesus bids the crowd observe what those in
+Moses' seat bid, though "they say, and do not" (Matthew 23:2–3). So the seat
+carries an authority of teaching that passes to those who succeed to it, and in
+the Church those who hold the teaching office are heeded for the seat they
+hold, in what is not contrary to God's law, even when they live ill. Rated
+`disputed`: Calvin grants the text and holds that the scribes were to be obeyed
+"only so far as they adhere to the pure and simple exposition of the Law"
+(`mosesSeatRomanInference`). -/
+@[solaScripturaDefs]
+def mosesSeatToTheOffice : Formula Claim :=
+  p .matthew23_2_3MosesSeat ➝ p .teachingOfficeHeardByItsSeat
 
 /-- What the principle says of a commandment of men: it may not be bound on the
 Church as God's word. This is Isaiah 29:13 as Mark 7:7 quotes it. -/
@@ -268,6 +297,31 @@ def acts15RomanLine : Line Claim :=
   , step := acts15ToCouncilWithTheSpirit
   , delivers := p .councilBindsWithTheSpiritsAuthority
   , inference := some acts15RomanInference }
+
+/-- **Moses' seat, the Reformed reading**, as a line of its own: Matthew 23:2–3,
+the "blind guides" of 23:16–22, and Mark 7. It delivers that an office in the
+Church is not heeded for its seat alone: it is heard as far as it teaches God's
+word. -/
+@[solaScripturaDefs]
+def mosesSeatReformedLine : Line Claim :=
+  { name := "Moses' seat, the Reformed reading (heard as far as it teaches the word)"
+  , grounds :=
+      [ p .matthew23_2_3MosesSeat, p .matthew23_16_22BlindGuides
+      , p .mark7TraditionCanNullify ]
+  , step := mosesSeatToTheWordTaught
+  , delivers := notP .teachingOfficeHeardByItsSeat
+  , inference := some mosesSeatReformedInference }
+
+/-- **Moses' seat, Rome's reading**, as a line of its own: Matthew 23:2–3. It
+delivers that those who hold the Church's teaching office are heeded for the
+seat they hold, in whatever is not contrary to God's law. -/
+@[solaScripturaDefs]
+def mosesSeatRomanLine : Line Claim :=
+  { name := "Moses' seat, Rome's reading (the office heeded for its seat)"
+  , grounds := [p .matthew23_2_3MosesSeat]
+  , step := mosesSeatToTheOffice
+  , delivers := p .teachingOfficeHeardByItsSeat
+  , inference := some mosesSeatRomanInference }
 
 /-- **Tradition 0**, as Geisler states it rather than as Mathison describes
 it. -/

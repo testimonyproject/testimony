@@ -555,12 +555,15 @@ position anyone occupies — it is the witness that the packages built only from
 positive grounds are coherent. -/
 def everythingHoldsReading : Valuation Claim := fun _ => True
 
-/-- The Protestant reading: every claim in this argument holds but one, that a
+/-- The Protestant reading: every claim in this argument holds but two, that a
 general council after the apostles binds with the Spirit's authority and cannot
-err. The Protestant packages read Acts 15 as the Reformers did, and deny it. -/
+err, and that those who hold the Church's teaching office are heeded for the
+seat they hold. The Protestant packages read Acts 15 and Moses' seat as the
+Reformers did, and deny both. -/
 def protestantReading : Valuation Claim := fun a =>
   match a with
   | .councilBindsWithTheSpiritsAuthority => False
+  | .teachingOfficeHeardByItsSeat => False
   | _ => True
 
 /-- The Protestant package has a model, so `protestant_establishes` is not

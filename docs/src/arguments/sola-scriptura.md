@@ -174,6 +174,23 @@ Nor does Rome's reading touch the premise about unwritten tradition: what the
 council handed on was a letter, and the letter is in Scripture
 (`romes_reading_of_acts15_leaves_unwritten_tradition_open`).
 
+### What Moses' seat settles
+
+Jesus also says "The scribes and the Pharisees sit in Moses' seat: All therefore
+whatsoever they bid you observe, that observe and do; but do not ye after their
+works" (Matthew 23:2–3). Calvin reads it as binding the hearers to the law taught
+from that seat, and no further, because in the same discourse Jesus condemns the
+scribes' teaching on oaths (23:16–22), as he condemns the elders' tradition in
+Mark 7. Cornelius a Lapide reads it as an authority of teaching that passes to
+those who succeed to the seat, as the chair of Peter does, to be heeded in
+whatever is not contrary to God's law. Each grants the other's texts, and each
+step is `disputed`. So the two readings cannot be held together, and Mark 7 with
+Matthew 23 leaves the teaching office open
+(`moses_seat_readings_cannot_be_held_together`,
+`mark7_and_moses_seat_leave_the_office_open`). Rome's reading claims authority,
+not infallibility, so it can be held with Mark 7's case for sola scriptura
+(`romes_reading_of_moses_seat_can_be_held_with_mark7s_case`).
+
 ### A limitation worth stating
 
 The final-arbiter reading turns on a distinction between **doctrine**, which
@@ -195,6 +212,7 @@ given the distinction, not that the distinction can be drawn.
 | `Mark7.lean` | Mark 7 and the tradition Trent receives: the packages, the dilemma |
 | `JesusAndPaul.lean` | the same principle from Jesus' sayings and Paul's letters |
 | `Acts15.lean` | the council at Jerusalem, read by the Reformers and by Rome |
+| `MosesSeat.lean` | Moses' seat (Matthew 23:2–3), read by the Reformers and by Rome |
 | `Dispute.lean` | the dispute over Mark 7, weighed, and its verdicts |
 | `Hearings.lean` | the same dispute heard against each reading of Trent |
 
@@ -283,6 +301,9 @@ conclusion — or, where no one was found who does, to whoever grants both.
 | <a id="claim-48"></a>\\(P_{48}\\) | Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things ※ | textual | Christian, hist.-gramm., consensus | Acts 15:28 |
 | <a id="claim-49"></a>\\(P_{49}\\) | Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem ※ | textual | Christian, hist.-gramm., consensus | Acts 16:4 |
 | <a id="claim-50"></a>\\(P_{50}\\) | A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err | theological | Roman Catholic, disputed | [Wilhelm 1908](../bibliography.md#wilhelm-general-councils-1908), §Infallibility of general councils; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §XXXI.4; [Calvin 1844](../bibliography.md#calvin-commentary-acts-volume2-1844), ad loc. Acts 15:28 |
+| <a id="claim-51"></a>\\(P_{51}\\) | Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works | textual | Christian, hist.-gramm., consensus | Matt 23:2-3; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), p. 15 |
+| <a id="claim-52"></a>\\(P_{52}\\) | Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing ※ | textual | Christian, hist.-gramm., consensus | Matt 23:16-22 |
+| <a id="claim-53"></a>\\(P_{53}\\) | Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill | theological | Roman Catholic, disputed | [à Lapide 1908](../bibliography.md#a-lapide-great-commentary-3-1908), pp. 32–33; [Calvin 1846](../bibliography.md#calvin-harmony-evangelists-3-1846), pp. 74–75 |
 
 </div>
 
@@ -455,6 +476,83 @@ def acts15RomanInference : Source :=
     confidence := Confidence.disputed }
 ```
 
+<a id="mosesSeatReformedInference"></a>
+**`mosesSeatReformedInference`**
+
+The rating of the Reformed step from Matthew 23:2–3 to the teaching office:
+`disputed`. Jesus tells the crowd to observe and do "whatsoever" the scribes and
+Pharisees bid, because they "sit in Moses' seat" (23:2–3). In the same discourse
+he condemns their teaching about oaths, "Woe unto you, ye blind guides, which
+say, Whosoever shall swear by the temple, it is nothing" (23:16–22), and in Mark
+7 and Matthew 15 he condemns the elders' tradition for making void the word of
+God. So, Calvin argues, the seat binds only so far as Moses is taught from it:
+"to sit in the chair of Moses is nothing else than to teach, according to the
+Law of God, how we ought to live", and "Christ exhorts the people to obey the
+scribes, only so far as they adhere to the pure and simple exposition of the
+Law" (pp. 74–75). He answers Rome by name: "The Papists reckon it enough, that
+those who issue laws should possess the title and occupy the station", and if
+Christ had meant to bind consciences to the commandments of men, "there would
+have been no good ground for what he said in another passage, that it is in vain
+to worship God by the commandments of men, (Matthew 15:9.)" (p. 75).
+
+Cornelius a Lapide grants every text the step reads and denies its conclusion.
+He calls the scribes of 23:16 "rightly called by Christ blind guides" (p. 40),
+and he grants that the corban teaching "was contrary to the Law, as Christ
+showed" (p. 32). Yet he reads "all things" as "all things not contrary to Moses
+and the Law", and holds that even the scribes' dogmas that were "vain and
+foolish, and therefore not binding" could "yet serve for the merit of blind and
+simple obedience, and for reverence of the sacerdotal order" (p. 33). So the
+office is heeded for its seat, in what is not contrary to the law, and not only
+where it teaches the law. Lapide reports that Maldonatus, a Catholic too,
+"restricts the word all to such commands alone as are contained in the Law of
+Moses" (p. 33); Maldonatus himself has not been read. So the step is
+`disputed`.
+
+```lean
+def mosesSeatReformedInference : Source :=
+  { primary := Reference.work aLapideMatthew3 (Bib.Locus.pages 32 33),
+    supporting :=
+      [Reference.work aLapideMatthew3 (Bib.Locus.page 40),
+        Reference.work calvinHarmony3 (Bib.Locus.pages 74 75)],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="mosesSeatRomanInference"></a>
+**`mosesSeatRomanInference`**
+
+The rating of Rome's step from Matthew 23:2–3 to the teaching office:
+`disputed`. Jesus bids the crowd observe what the scribes and Pharisees bid,
+because of the seat they sit in, though "they say, and do not" (23:2–3).
+Cornelius a Lapide takes the seat as "the honour, dignity, and authority of
+teaching and commanding, which Moses had with the Jews, and to which the Scribes
+had succeeded", and draws the Church's case from it: "In like manner, the chair
+of S. Peter is used to signify the power and authority of teaching and ruling
+all the faithful throughout the world, in which the Roman Pontiffs succeed S.
+Peter" (p. 32). "Christians ought to bear in mind these words of Christ when they
+see certain Bishops, Pastors, and Magistrates not living in accordance with the
+law of Christ" (p. 33). So the office in the Church is heeded for its seat, even
+when its holders live ill.
+
+Calvin grants the text and denies the conclusion. He grants that the seat
+"denotes, at the same time, a lawful calling; for Christ commands that the
+scribes should be heard, because they were the public teachers of the Church",
+and denies that the station is enough: "That man, therefore, sits in the chair
+of Moses who teaches, not from himself, or at his own suggestion, but according
+to the authority and word of God" (p. 75). So the step is `disputed`.
+
+The step claims authority, not infallibility. Lapide goes on to say that the
+pope "cannot err" when he defines the faith "ex cathedra" (p. 32), but he does
+not draw that from Moses' seat, whose holders he says taught things "contrary to
+the Law"; the step does not claim it.
+
+```lean
+def mosesSeatRomanInference : Source :=
+  { primary := Reference.work calvinHarmony3 (Bib.Locus.pages 74 75),
+    supporting := [Reference.work aLapideMatthew3 (Bib.Locus.pages 32 33)],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
 <a id="tridentineInference"></a>
 **`tridentineInference`**
 
@@ -492,7 +590,9 @@ and Mark 7's, which takes two lines, and whose principle a further line draws
 from Jesus' sayings and Paul's letters — three positions deny it, and three
 objections attack it from different directions. Two more lines read the council
 at Jerusalem (Acts 15), one as the Reformers read it and one as Rome does, and
-they deliver opposite answers about the authority of councils. The objections do not reduce to one
+they deliver opposite answers about the authority of councils. Two more read
+Moses' seat (Matthew 23:2–3) the same two ways, and deliver opposite answers
+about the teaching office. The objections do not reduce to one
 another: self-refutation says the doctrine fails its own standard, the canon
 objection says an authority outside scripture is needed to identify scripture,
 and the interpretive-authority regress says the authority claimed is the
@@ -598,6 +698,43 @@ apostles cannot err (`acts15RomanInference`).
 <div class="testimony-derivation">
 
 - \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}}) \rightarrow \href{#claim-50}{P_{50}}\\) — *would give:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+
+</div>
+
+<a id="mosesSeatToTheWordTaught"></a>
+**`mosesSeatToTheWordTaught`**
+
+**Moses' seat, as the Reformers read it.** Jesus bids the crowd observe what
+the scribes and Pharisees bid, because they sit in Moses' seat (Matthew
+23:2–3); in the same discourse he condemns their teaching on oaths as the
+teaching of "blind guides" (23:16–22), and in Mark 7 the elders' tradition as
+making void the word of God. So the seat binds only so far as Moses is taught
+from it: an office in the Church is heard as far as it teaches God's word, and
+not for the seat alone. Rated `disputed`: Cornelius a Lapide grants the texts
+and holds that the scribes were to be obeyed in all "not contrary to Moses and
+the Law" (`mosesSeatReformedInference`).
+
+<div class="testimony-derivation">
+
+- \\((\href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-3}{P_{3}}) \rightarrow \lnot \href{#claim-53}{P_{53}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+
+</div>
+
+<a id="mosesSeatToTheOffice"></a>
+**`mosesSeatToTheOffice`**
+
+**Moses' seat, as Rome reads it.** Jesus bids the crowd observe what those in
+Moses' seat bid, though "they say, and do not" (Matthew 23:2–3). So the seat
+carries an authority of teaching that passes to those who succeed to it, and in
+the Church those who hold the teaching office are heeded for the seat they
+hold, in what is not contrary to God's law, even when they live ill. Rated
+`disputed`: Calvin grants the text and holds that the scribes were to be obeyed
+"only so far as they adhere to the pure and simple exposition of the Law"
+(`mosesSeatRomanInference`).
+
+<div class="testimony-derivation">
+
+- \\(\href{#claim-51}{P_{51}} \rightarrow \href{#claim-53}{P_{53}}\\) — *would give:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 
 </div>
 
@@ -865,6 +1002,39 @@ that a general council binds with the Spirit's authority.
 - (2) \\(\href{#claim-49}{P_{49}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
 - (3) \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}}) \rightarrow \href{#claim-50}{P_{50}}\\)
 - \\(\vdash\\) \\(\href{#claim-50}{P_{50}}\\) — *at issue:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+
+</div>
+
+<a id="mosesSeatReformedLine"></a>
+**`mosesSeatReformedLine`** — Moses' seat, the Reformed reading (heard as far as it teaches the word)
+
+**Moses' seat, the Reformed reading**, as a line of its own: Matthew 23:2–3,
+the "blind guides" of 23:16–22, and Mark 7. It delivers that an office in the
+Church is not heeded for its seat alone: it is heard as far as it teaches God's
+word.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (2) \\(\href{#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
+- (3) \\(\href{#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
+- (4) \\((\href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-3}{P_{3}}) \rightarrow \lnot \href{#claim-53}{P_{53}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-53}{P_{53}}\\) — *at issue, the denial of:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+
+</div>
+
+<a id="mosesSeatRomanLine"></a>
+**`mosesSeatRomanLine`** — Moses' seat, Rome's reading (the office heeded for its seat)
+
+**Moses' seat, Rome's reading**, as a line of its own: Matthew 23:2–3. It
+delivers that those who hold the Church's teaching office are heeded for the
+seat they hold, in whatever is not contrary to God's law.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (2) \\(\href{#claim-51}{P_{51}} \rightarrow \href{#claim-53}{P_{53}}\\)
+- \\(\vdash\\) \\(\href{#claim-53}{P_{53}}\\) — *at issue:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 
 </div>
 
@@ -1200,7 +1370,9 @@ principle it also draws from Jesus' sayings and Paul's letters. Scripture
 is not the only authority but the only infallible one; tradition is ministerial,
 and practices neither commanded nor forbidden need no scriptural warrant. It
 reads the council at Jerusalem as the Reformers did: a council after the
-apostles binds as far as it agrees with Scripture, and may err.
+apostles binds as far as it agrees with Scripture, and may err. And it reads
+Moses' seat (Matthew 23:2–3) as Calvin did: an office in the Church is heard as
+far as it teaches God's word.
 
 <div class="testimony-derivation">
 
@@ -1220,23 +1392,27 @@ apostles binds as far as it agrees with Scripture, and may err.
 - (14) \\(\href{#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
 - (15) \\(\href{#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
 - (16) \\(\href{#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
-- (17) \\(\href{#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
-- (18) \\(\href{#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
-- (19) \\(\href{#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
-- (20) \\(\href{#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
-- (21) \\(\href{#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
-- (22) \\(\href{#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
-- (23) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (24) \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (25) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (26) \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (27) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (28) \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (17) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (18) \\(\href{#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
+- (19) \\(\href{#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
+- (20) \\(\href{#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
+- (21) \\(\href{#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
+- (22) \\(\href{#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
+- (23) \\(\href{#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
+- (24) \\(\href{#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
+- (25) \\(\href{#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
+- (26) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (27) \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (28) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (29) \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (30) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (31) \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (32) \\((\href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-3}{P_{3}}) \rightarrow \lnot \href{#claim-53}{P_{53}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 - \\(\vdash\\) \\(\href{#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
 
-Grounded in scripture alone: Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved, Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved, 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
+Grounded in scripture alone: Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved, Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved, Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing, 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
 
 <a id="tradition0"></a>
 **`tradition0`** — Tradition 0 (creeds informative, not normative)
@@ -1283,15 +1459,19 @@ Grounded in scripture alone: 2 Thessalonians 2:15 — hold to the traditions tau
 **Tradition III**, resting on Vatican I. Kept separate from `tridentine`
 because Mathison argues it escapes several objections to the two-source view
 while incurring its own. It reads the council at Jerusalem as Rome does: a
-general council binds with the Holy Spirit's authority.
+general council binds with the Holy Spirit's authority. And it reads Moses' seat
+(Matthew 23:2–3) as Cornelius a Lapide did: those who hold the Church's teaching
+office are heeded for the seat they hold.
 
 <div class="testimony-derivation">
 
 - (1) \\(\href{#claim-14}{P_{14}}\\) — The magisterium is an infallible interpreter of scripture
 - (2) \\(\href{#claim-48}{P_{48}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
 - (3) \\(\href{#claim-49}{P_{49}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
-- (4) \\(\href{#claim-14}{P_{14}} \rightarrow \lnot \href{#claim-9}{P_{9}}\\) — *would deny:* Scripture is the sole infallible rule of faith
-- (5) \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}}) \rightarrow \href{#claim-50}{P_{50}}\\) — *would give:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (4) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (5) \\(\href{#claim-14}{P_{14}} \rightarrow \lnot \href{#claim-9}{P_{9}}\\) — *would deny:* Scripture is the sole infallible rule of faith
+- (6) \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}}) \rightarrow \href{#claim-50}{P_{50}}\\) — *would give:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (7) \\(\href{#claim-51}{P_{51}} \rightarrow \href{#claim-53}{P_{53}}\\) — *would give:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 - \\(\vdash\\) \\(\href{#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -1435,23 +1615,27 @@ eliminative and Mark 7 routes are untouched.
 - (13) \\(\href{#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
 - (14) \\(\href{#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
 - (15) \\(\href{#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
-- (16) \\(\href{#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
-- (17) \\(\href{#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
-- (18) \\(\href{#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
-- (19) \\(\href{#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
-- (20) \\(\href{#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
-- (21) \\(\href{#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
-- (22) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (23) \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (24) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (25) \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (26) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (27) \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (16) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (17) \\(\href{#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
+- (18) \\(\href{#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
+- (19) \\(\href{#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
+- (20) \\(\href{#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
+- (21) \\(\href{#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
+- (22) \\(\href{#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
+- (23) \\(\href{#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
+- (24) \\(\href{#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
+- (25) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (26) \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (27) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (28) \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (29) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (30) \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (31) \\((\href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-3}{P_{3}}) \rightarrow \lnot \href{#claim-53}{P_{53}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 - \\(\vdash\\) \\(\href{#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
 
-Grounded in scripture alone: Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved, Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved, 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
+Grounded in scripture alone: Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved, Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved, Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing, 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
 
 <a id="classicalStrandWithoutHinge"></a>
 **`classicalStrandWithoutHinge`** — Classical (scripture teaches the principle)
@@ -2342,15 +2526,18 @@ def everythingHoldsReading : Valuation Claim :=
 <a id="protestantReading"></a>
 **`protestantReading`**
 
-The Protestant reading: every claim in this argument holds but one, that a
+The Protestant reading: every claim in this argument holds but two, that a
 general council after the apostles binds with the Spirit's authority and cannot
-err. The Protestant packages read Acts 15 as the Reformers did, and deny it.
+err, and that those who hold the Church's teaching office are heeded for the
+seat they hold. The Protestant packages read Acts 15 and Moses' seat as the
+Reformers did, and deny both.
 
 ```lean
 def protestantReading : Valuation Claim :=
   fun a =>
     match a with
     | Claim.councilBindsWithTheSpiritsAuthority => False
+    | Claim.teachingOfficeHeardByItsSeat => False
     | x => True
 ```
 
@@ -3591,6 +3778,284 @@ the unwritten tradition the Mark 7 case turns on.
 theorem romes_reading_of_acts15_leaves_unwritten_tradition_open : Independent
     (acts15Roman.premises ++ [p Claim.acts15_23_29DecreeWritten]) (p
     Claim.noUnwrittenTraditionShownApostolic)
+-- axioms: propext, Quot.sound
+```
+
+## TestimonyArguments.SolaScriptura.MosesSeat — Moses' seat, read both ways
+
+A reader who has followed Jesus against the elders in Mark 7 meets him, a few
+days before his death, saying something that sounds like the opposite. "The
+scribes and the Pharisees sit in Moses' seat: All therefore whatsoever they bid
+you observe, that observe and do; but do not ye after their works: for they
+say, and do not" (Matthew 23:2–3). The "seat" (καθέδρα) is a teacher's chair.
+The verb for "observe" (τηρεῖτε) is the one Mark 7:9 uses for keeping "your own
+tradition", in the text the SBL Greek New Testament prints; the Nestle-Aland
+edition prints "establish" (στήσητε) there instead. J. W. Wenham, in his 1953
+lecture on Jesus and the Old Testament, finds the saying "even more remarkable"
+than Matthew 5:17–20, and comments: "To Jesus scribal lore was valuable if
+linked with spiritual understanding". Jesus upholds the teaching of men he goes on to
+rebuke. Both sides of the Reformation read the saying, and they read it in
+opposite directions.
+
+### The Reformed reading
+
+The same discourse condemns a teaching of the same scribes: "Woe unto you, ye
+blind guides, which say, Whosoever shall swear by the temple, it is nothing; but
+whosoever shall swear by the gold of the temple, he is a debtor!" (23:16–22). So
+Jesus cannot be binding his hearers to everything the scribes say. Calvin takes
+"Moses' seat" to mean the law taught from it: "to sit in the chair of Moses is
+nothing else than to teach, according to the Law of God, how we ought to live",
+and so "Christ exhorts the people to obey the scribes, only so far as they
+adhere to the pure and simple exposition of the Law". He grants that the seat
+"denotes, at the same time, a lawful calling", and that the scribes were to be
+heard "because they were the public teachers of the Church". What he denies is
+that the station is enough. "The Papists reckon it enough, that those who issue
+laws should possess the title and occupy the station". Were that so, there would
+be "no good ground" for Jesus' saying in Matthew 15:9, the parallel of Mark 7,
+"that it is in vain to worship God by the commandments of men". On this reading
+an office in the Church is heard as far as it teaches God's word, and not for
+its seat alone. The Protestant position reads Matthew 23 this way
+(`mosesSeatReformedLine`).
+
+### Rome's reading
+
+Cornelius a Lapide, the Jesuit commentator of the early seventeenth century,
+reads the seat as "the honour, dignity, and authority of teaching and
+commanding, which Moses had with the Jews, and to which the Scribes had
+succeeded", and draws the Church's case from it: "In like manner, the chair of
+S. Peter is used to signify the power and authority of teaching and ruling all
+the faithful throughout the world, in which the Roman Pontiffs succeed S.
+Peter". Jesus' "all things" means "all things not contrary to Moses and the
+Law": the corban teaching of Mark 7 "was contrary to the Law, as Christ showed",
+and was not to be followed. In everything else the scribes were to be obeyed,
+even in dogmas "vain and foolish, and therefore not binding", which could "yet
+serve for the merit of blind and simple obedience, and for reverence of the
+sacerdotal order". And "Christians ought to bear in mind these words of Christ
+when they see certain Bishops, Pastors, and Magistrates not living in accordance
+with the law of Christ". On this reading those who hold the Church's teaching
+office are heeded for the seat they hold, in whatever is not contrary to God's
+law, even when they live ill. Tradition III, the position resting on Vatican I,
+reads Matthew 23 this way (`mosesSeatRomanLine`).
+
+The claim is one of authority, not of infallibility, which is the power of a
+teaching that cannot err. Lapide goes on to say that the pope "cannot err" when
+he defines the faith, but Moses' seat cannot carry that: the scribes who sat in
+it taught things "contrary to the Law". The library does not draw it from this
+text.
+
+### What the texts settle, and what they do not
+
+The two readers grant each other's texts. Lapide calls the scribes of 23:16
+"rightly called by Christ blind guides", and grants that Jesus condemned the
+corban teaching; Calvin grants that Jesus commands the scribes to be heard. What
+they part over is the measure. For Calvin an office binds as far as it teaches
+the law, and for Lapide in everything not contrary to it. So each reading's step
+is rated `disputed`, a rating given when a cited reader grants a step's texts
+and denies its conclusion. The two readings cannot be held together
+(`moses_seat_readings_cannot_be_held_together`). Grant Mark 7, the principle it
+delivers that God's word judges human tradition, and Matthew 23:2–3 and
+23:16–22, without either step: whether the teaching office is heeded for its
+seat neither follows nor fails (`mark7_and_moses_seat_leave_the_office_open`).
+So each reading holds Jesus' two sayings together, in its own way, and the
+texts alone do not choose between them.
+
+Nor does Rome's reading undo the case for sola scriptura from Mark 7. That case
+concludes that Scripture is the sole infallible rule, and Rome's reading of
+Moses' seat is about authority, not infallibility. A reader can grant both
+(`romes_reading_of_moses_seat_can_be_held_with_mark7s_case`).
+
+These lines join the Protestant and Vatican I positions, and not the dispute
+over Mark 7. None of the parties to that dispute says anything about the
+teaching office, so neither reading of Matthew 23 would meet a party there.
+
+#### The two readings
+
+<a id="mosesSeatReformed"></a>
+**`mosesSeatReformed`** — Moses' seat, the Reformed reading (heard as far as it teaches the word)
+
+**Moses' seat, the Reformed reading**: Matthew 23:2–3, the "blind guides" of
+23:16–22 and Mark 7, and the step from them to the teaching office: an office in
+the Church is heard as far as it teaches God's word, and not for its seat
+alone.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (2) \\(\href{#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
+- (3) \\(\href{#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
+- (4) \\((\href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-3}{P_{3}}) \rightarrow \lnot \href{#claim-53}{P_{53}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-53}{P_{53}}\\) — *at issue, the denial of:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+
+</div>
+
+Grounded in scripture alone: Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing.
+
+<a id="mosesSeatRoman"></a>
+**`mosesSeatRoman`** — Moses' seat, Rome's reading (the office heeded for its seat)
+
+**Moses' seat, Rome's reading**: Matthew 23:2–3, and the step from it to the
+teaching office: those who hold it are heeded for the seat they hold, in
+whatever is not contrary to God's law.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (2) \\(\href{#claim-51}{P_{51}} \rightarrow \href{#claim-53}{P_{53}}\\)
+- \\(\vdash\\) \\(\href{#claim-53}{P_{53}}\\) — *at issue:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="mosesSeatTexts"></a>
+**`mosesSeatTexts`**
+
+Mark 7 and the principle it delivers, with every text either reading of
+Moses' seat reads: Matthew 23:2–3 and 23:16–22. No step from Matthew 23.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
+- (2) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (3) \\(\href{#claim-37}{P_{37}} \rightarrow \lnot \href{#claim-38}{P_{38}}\\) — *would deny:* A commandment of men may rightly be bound on the Church as God's word
+- (4) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (5) \\(\href{#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
+
+</div>
+
+#### Readings, written down
+
+<a id="reformedOnTheSeatReading"></a>
+**`reformedOnTheSeatReading`**
+
+The Reformed world, on Moses' seat: every text holds, no commandment of men
+is bound as God's word, and those who hold the teaching office are heard as far
+as they teach God's word, not for their seat alone.
+
+```lean
+def reformedOnTheSeatReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.mensCommandmentBindsAsGodsWord => False
+    | Claim.teachingOfficeHeardByItsSeat => False
+    | x => True
+```
+
+#### What follows
+
+<a id="mosesSeatReformed_establishes"></a>
+**`mosesSeatReformed_establishes`**
+
+**The Reformed reading of Moses' seat holds, given its step.** From Matthew
+23:2–3, 23:16–22 and Mark 7, the teaching office in the Church is heard as far as
+it teaches God's word, and not for its seat alone. The step is rated `disputed`:
+Cornelius a Lapide grants the texts and holds that the scribes were to be obeyed
+in "all things not contrary to Moses and the Law".
+
+What this does not claim: that the office has no authority. Calvin, who holds
+this reading, says Christ "commands that the scribes should be heard, because
+they were the public teachers of the Church".
+
+```lean
+theorem mosesSeatReformed_establishes : Establishes mosesSeatReformed
+-- axioms: propext, Quot.sound
+```
+
+<a id="mosesSeatReformed_is_satisfiable"></a>
+**`mosesSeatReformed_is_satisfiable`**
+
+The Reformed reading of Moses' seat can be held without contradiction.
+
+```lean
+theorem mosesSeatReformed_is_satisfiable : Satisfiable
+    mosesSeatReformed.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="mosesSeatRoman_establishes"></a>
+**`mosesSeatRoman_establishes`**
+
+**Rome's reading of Moses' seat holds, given its step.** From Matthew
+23:2–3, those who hold the Church's teaching office are heeded for the seat they
+hold, in whatever is not contrary to God's law, even when they live ill. The step
+is rated `disputed`: Calvin grants the text and holds that the scribes were to be
+obeyed "only so far as they adhere to the pure and simple exposition of the
+Law".
+
+What this does not claim: that the office cannot err. Its own reader, Lapide,
+says the scribes in Moses' seat taught things "contrary to the Law".
+
+```lean
+theorem mosesSeatRoman_establishes : Establishes mosesSeatRoman
+-- axioms: propext, Quot.sound
+```
+
+<a id="mosesSeatRoman_is_satisfiable"></a>
+**`mosesSeatRoman_is_satisfiable`**
+
+Rome's reading of Moses' seat can be held without contradiction: Rome's
+world, in which God's word judges human tradition, some unwritten tradition is
+known to be apostolic, and every other claim of the argument holds, among them
+that the teaching office is heeded for its seat.
+
+```lean
+theorem mosesSeatRoman_is_satisfiable : Satisfiable mosesSeatRoman.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="moses_seat_readings_cannot_be_held_together"></a>
+**`moses_seat_readings_cannot_be_held_together`**
+
+**The two readings of Moses' seat cannot be held together.** One concludes
+that the teaching office is heard only as far as it teaches God's word, the
+other that it is heeded for its seat in whatever is not contrary to that word.
+Both grant Matthew 23:2–3, so what they part over is the two steps, each rated
+`disputed`.
+
+What this does not claim: that either reading is wrong. It shows only that a
+reader must choose between them.
+
+```lean
+theorem moses_seat_readings_cannot_be_held_together : ¬Satisfiable
+    (mosesSeatReformed.premises ++ mosesSeatRoman.premises)
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
+<a id="mark7_and_moses_seat_leave_the_office_open"></a>
+**`mark7_and_moses_seat_leave_the_office_open`**
+
+**Mark 7 and Moses' seat leave the teaching office open.** Grant Mark 7, the
+principle it delivers that God's word judges human tradition, and Matthew 23:2–3
+and 23:16–22, without either reading's step from Matthew 23: whether the teaching
+office is heeded for its seat neither follows nor fails. The Reformed reading
+grants every text and the principle, and denies it; Rome's grants them all and
+holds it. So each reading holds Jesus' two sayings together, and the texts by
+themselves choose neither. One fact, not two: the texts establish neither
+reading and block neither.
+
+```lean
+theorem mark7_and_moses_seat_leave_the_office_open : Independent
+    mosesSeatTexts (p Claim.teachingOfficeHeardByItsSeat)
+-- axioms: propext, Quot.sound
+```
+
+<a id="romes_reading_of_moses_seat_can_be_held_with_mark7s_case"></a>
+**`romes_reading_of_moses_seat_can_be_held_with_mark7s_case`**
+
+**Rome's reading of Moses' seat can be held with Mark 7's case for sola
+scriptura.** Grant Mark 7, its principle, the premise that no unwritten tradition
+can now be shown to be apostolic, and the step to the sole rule, and with them
+Rome's reading of Matthew 23:2–3: nothing contradicts. The witness is a world in
+which every claim of the argument holds but one, that a commandment of men may
+be bound as God's word. Rome's reading claims that the teaching office is to be
+heeded, not that it cannot err, so it leaves Scripture the sole infallible rule.
+
+What this does not claim: that the Reformers accept Rome's reading. Calvin
+denies it; the Protestant position holds the Reformed reading instead.
+
+```lean
+theorem romes_reading_of_moses_seat_can_be_held_with_mark7s_case : Satisfiable
+    (mark7Case.premises ++ mosesSeatRoman.premises)
 -- axioms: propext, Quot.sound
 ```
 
