@@ -221,3 +221,9 @@ benchmark = "leaves_open: parity leaves the canon open"
 metric = "time"
 up_to = 0.12
 reason = "Sola scriptura gains four claims (the texts of the line from Jesus to Paul), so each countermodel the check evaluates is a reading of 44 claims, not 40. CI measured +6.8% (8.8 ms to 9.4 ms); the check itself is unchanged."
+
+[[accept]]
+benchmark = "leaves_open: parity leaves the canon open"
+metric = "time"
+up_to = 0.20
+reason = "Acts 15 adds seven claims to sola scriptura (six texts and the claim about councils), so each countermodel the check evaluates is a reading of 51 claims, not 44. CI measured +13.7% (11.7 ms to 13.3 ms); the check itself is unchanged."
