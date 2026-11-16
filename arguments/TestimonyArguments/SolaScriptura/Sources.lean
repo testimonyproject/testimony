@@ -113,6 +113,62 @@ def jesusAndPaulPrincipleInference : Source :=
   , tradition := .christianHistoricalGrammatical
   , confidence := .wellSupported }
 
+/-- The rating of the Reformed step from Acts 15 to councils: `disputed`. The step
+reads the council at Jerusalem as the Reformers did. Men from Judaea taught that
+"Except ye be circumcised after the manner of Moses, ye cannot be saved" (15:1),
+so the oldest custom Israel had was laid on the gentiles as a condition of
+salvation. Peter answered it with the gospel, "through the grace of the Lord
+Jesus Christ we shall be saved, even as they" (15:10–11), and James with
+Scripture, "to this agree the words of the prophets; as it is written" (15:15).
+Calvin draws the conclusion at 15:15: the apostles "took nothing to themselves
+imperiously, but did reverently follow that which was prescribed in the word of
+God", and were not ashamed "to profess themselves to be the scholars of the
+Scripture". So a council after the apostles binds only as far as it agrees with
+the word, and may err. The Westminster Confession says so of councils: their
+decrees bind "if consonant to the Word of God", and "All synods or councils since
+the apostles' times, whether general or particular, may err, and many have
+erred; therefore they are not to be made the rule of faith or practice, but to
+be used as a help in both" (XXXI.3–4, in the numbering of 1647).
+
+Joseph Wilhelm, in the *Catholic Encyclopedia*, reads the same council and
+denies the conclusion. For him the decree of 15:28 shows "the mind of the
+Apostles" about councils: "they put the seal of supreme authority on their
+decisions in attributing them to the joint action of the Spirit of God and of
+themselves", and general councils in union with the pope have the same
+"infallible authority". He grants every text the step reads, as every Catholic
+does. So the step is `disputed`. -/
+def acts15ReformedInference : Source :=
+  { primary := .work wilhelmGeneralCouncils (.sectionRef "Infallibility of general councils")
+  , supporting :=
+      [ .work calvinActs2 (.adLoc ⟨.acts, 15, 15⟩)
+      , .work westminsterConfession (.sectionRef "XXXI.3")
+      , .work westminsterConfession (.sectionRef "XXXI.4") ]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of Rome's step from Acts 15 to councils: `disputed`. The council's
+letter says "it seemed good to the Holy Ghost, and to us" (15:28), and Paul and
+Silas "delivered them the decrees for to keep" in every city (16:4). From these
+Wilhelm concludes that a general council in union with the pope, like the
+council at Jerusalem, binds with the Spirit's authority and cannot err.
+
+The Westminster Confession grants both texts and denies the conclusion. It cites
+Acts 15:27–31 and 16:4 as its proof that a council's decrees, "if consonant to
+the Word of God, are to be received with reverence and submission ... for the
+power whereby they are made, as being an ordinance of God" (XXXI.3), and then
+says that councils since the apostles' times may err and are "not to be made the
+rule of faith or practice" (XXXI.4). Calvin answers 15:28 itself: the apostles
+claimed nothing apart from the Spirit, being "only ministers of the Spirit", and
+"the Papists are doltish who go about, out of these words, to prove that the
+Church hath some authority of her own". So the step is `disputed`. -/
+def acts15RomanInference : Source :=
+  { primary := .work westminsterConfession (.sectionRef "XXXI.4")
+  , supporting :=
+      [ .work westminsterConfession (.sectionRef "XXXI.3")
+      , .work calvinActs2 (.adLoc ⟨.acts, 15, 28⟩) ]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
 /-- The rating of Trent's step, from 2 Thessalonians 2:15 and tradition as a
 source of revelation to "Scripture is not the sole rule": `wellSupported`. Once
 the grounds are granted the conclusion all but follows, and no reader was found
@@ -494,6 +550,75 @@ def cite : Claim → AtomMeta
         , supporting := [.work lightfootColossians (.page 204)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
+  | .acts15_1CircumcisionAfterMoses =>
+    { label :=
+        "Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot " ++
+        "be saved"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.acts, 15, 1⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .acts15_10_11YokeAndGrace =>
+    { label :=
+        "Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; " ++
+        "through the grace of the Lord Jesus Christ we shall be saved"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.acts, 15, 10, 15, 11⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .acts15_15_17ProphetsAgree =>
+    { label :=
+        "Acts 15:15–17 — to this agree the words of the prophets; as it is written " ++
+        "(Amos 9:11–12)"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.acts, 15, 15, 15, 17⟩ }]
+        , supporting := [.work calvinActs2 (.adLoc ⟨.acts, 15, 15⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .acts15_23_29DecreeWritten =>
+    { label := "Acts 15:23–29 — they wrote letters by them: the decree went out in writing"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.acts, 15, 23, 15, 29⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .acts15_28SeemedGoodToTheHolyGhost =>
+    { label :=
+        "Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you " ++
+        "no greater burden than these necessary things"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.acts, 15, 28⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .acts16_4DecreesDelivered =>
+    { label :=
+        "Acts 16:4 — they delivered them the decrees for to keep, that were " ++
+        "ordained of the apostles and elders which were at Jerusalem"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.acts, 16, 4⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .councilBindsWithTheSpiritsAuthority =>
+    { label :=
+        "A general council after the apostles binds with the Holy Spirit's " ++
+        "authority, as the council at Jerusalem did, and cannot err"
+    , kind := .theological
+      -- Rome's claim, as Wilhelm states it at Acts 15:28. `disputed`: the
+      -- Westminster Confession cites the same texts and holds that councils
+      -- since the apostles' times may err (XXXI.3–4).
+    , source :=
+        { primary := .work wilhelmGeneralCouncils
+            (.sectionRef "Infallibility of general councils")
+        , supporting :=
+            [ .work westminsterConfession (.sectionRef "XXXI.4")
+            , .work calvinActs2 (.adLoc ⟨.acts, 15, 28⟩) ]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
   | .perspicuityIsLimitedToSalvationEssentials =>
     { label :=
         "Perspicuity is claimed only for what is necessary for salvation, not " ++

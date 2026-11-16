@@ -410,8 +410,8 @@ what it may be heard to imply is not charged.
 **The library's own lines, checked the same way.** Every line of reason is one step, and read
 through its argument's meanings a step is a move. `Testimony.Checks.Fallacies` runs the three
 checks over every line the library has, and the build fails if one equivocates on its own terms
-or argues from silence alone. Forty-six lines can be read today, thirty-one of sola fide's and
-fifteen of sola scriptura's; the rest wait on their meanings. None equivocates, and none argues
+or argues from silence alone. Forty-eight lines can be read today, thirty-one of sola fide's and
+seventeen of sola scriptura's; the rest wait on their meanings. None equivocates, and none argues
 from silence. One line carried what it delivered in a premise when the check was first run: the sola
 fide line on Paul's word (`lexicalLine`), whose premise that Paul's "justify" is a courtroom
 word also said, in its own words, that "it does not mean to make a person good", which was the

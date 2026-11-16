@@ -6,7 +6,9 @@ import TestimonyArguments.SolaScriptura.Sources
 Three routes reach the conclusion — the classical line, the eliminative line,
 and Mark 7's, which takes two lines, and whose principle a further line draws
 from Jesus' sayings and Paul's letters — three positions deny it, and three
-objections attack it from different directions. The objections do not reduce to one
+objections attack it from different directions. Two more lines read the council
+at Jerusalem (Acts 15), one as the Reformers read it and one as Rome does, and
+they deliver opposite answers about the authority of councils. The objections do not reduce to one
 another: self-refutation says the doctrine fails its own standard, the canon
 objection says an authority outside scripture is needed to identify scripture,
 and the interpretive-authority regress says the authority claimed is the
@@ -67,6 +69,31 @@ def jesusAndPaulToPrinciple : Formula Claim :=
   ⋀ [ p .john10_35ScriptureCannotBeBroken, p .matthew5_18LawShallNotPass
     , p .galatians1_8AnotherGospelAccursed, p .colossians2_8TraditionOfMen ]
   ➝ p .godsWordJudgesTradition
+
+/-- **Acts 15, as the Reformers read it.** Men from Judaea laid the custom of
+Moses on the gentiles as a condition of salvation (15:1); Peter answered with
+the gospel, salvation "through the grace of the Lord Jesus Christ" (15:10–11),
+and James with Scripture, "as it is written" (15:15–17). So the gospel judged
+even the oldest tradition, and the council judged by Scripture: a council after
+the apostles binds only as far as it agrees with the word, and may err. Rated
+`disputed`: Wilhelm grants the texts and holds that general councils define with
+the Spirit's authority (`acts15ReformedInference`). -/
+@[solaScripturaDefs]
+def acts15ToCouncilUnderScripture : Formula Claim :=
+  ⋀ [ p .acts15_1CircumcisionAfterMoses, p .acts15_10_11YokeAndGrace
+    , p .acts15_15_17ProphetsAgree ]
+  ➝ notP .councilBindsWithTheSpiritsAuthority
+
+/-- **Acts 15, as Rome reads it.** The council's letter says "it seemed good to
+the Holy Ghost, and to us" (15:28), and its decrees were "delivered" to the
+churches "for to keep" (16:4). So a general council binds with the Spirit's
+authority, and cannot err. Rated `disputed`: the Westminster Confession cites the
+same texts for the authority of councils and denies that councils since the
+apostles cannot err (`acts15RomanInference`). -/
+@[solaScripturaDefs]
+def acts15ToCouncilWithTheSpirit : Formula Claim :=
+  ⋀ [p .acts15_28SeemedGoodToTheHolyGhost, p .acts16_4DecreesDelivered]
+  ➝ p .councilBindsWithTheSpiritsAuthority
 
 /-- What the principle says of a commandment of men: it may not be bound on the
 Church as God's word. This is Isaiah 29:13 as Mark 7:7 quotes it. -/
@@ -216,6 +243,31 @@ def jesusAndPaulLine : Line Claim :=
   , step := jesusAndPaulToPrinciple
   , delivers := p .godsWordJudgesTradition
   , inference := some jesusAndPaulPrincipleInference }
+
+/-- **Acts 15, the Reformed reading**, as a line of its own: the demand of 15:1,
+answered by Peter's gospel (15:10–11) and James's "as it is written" (15:15–17).
+It delivers that a council after the apostles does not bind with the Spirit's own
+authority: it binds as far as it agrees with Scripture. -/
+@[solaScripturaDefs]
+def acts15ReformedLine : Line Claim :=
+  { name := "Acts 15, the Reformed reading (the council judged by Scripture)"
+  , grounds :=
+      [ p .acts15_1CircumcisionAfterMoses, p .acts15_10_11YokeAndGrace
+      , p .acts15_15_17ProphetsAgree ]
+  , step := acts15ToCouncilUnderScripture
+  , delivers := notP .councilBindsWithTheSpiritsAuthority
+  , inference := some acts15ReformedInference }
+
+/-- **Acts 15, Rome's reading**, as a line of its own: "it seemed good to the Holy
+Ghost, and to us" (15:28), and the decrees delivered to keep (16:4). It delivers
+that a general council binds with the Spirit's authority. -/
+@[solaScripturaDefs]
+def acts15RomanLine : Line Claim :=
+  { name := "Acts 15, Rome's reading (the council binds with the Spirit's authority)"
+  , grounds := [p .acts15_28SeemedGoodToTheHolyGhost, p .acts16_4DecreesDelivered]
+  , step := acts15ToCouncilWithTheSpirit
+  , delivers := p .councilBindsWithTheSpiritsAuthority
+  , inference := some acts15RomanInference }
 
 /-- **Tradition 0**, as Geisler states it rather than as Mathison describes
 it. -/

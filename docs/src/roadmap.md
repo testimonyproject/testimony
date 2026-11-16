@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **324 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **327 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -269,6 +269,9 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `jesusAndPaulPrinciple_establishes` | `Establishes jesusAndPaulPrinciple` | **Jesus and Paul deliver the principle without Mark 7.** God's word judges human tradition, from four texts and the step from them, rated `wellSupported`: Aquinas grants Galatians … |
 | `jesus_and_paul_do_not_reach_the_apostolic_word` | `Satisfiable (jesusAndPaulPrinciple.premises ++ tridentineAsApostolicWord.premises)` | **Jesus and Paul do not reach Trent read as the apostolic word.** Trent, read as receiving the apostolic word handed on unwritten, can be held with every premise of the principle … |
 | `every_text_without_the_hinge_leaves_the_sole_rule_open` | `Independent everyTextWithoutTheHinge (p Claim.scriptureIsSoleInfallibleRule)` | **Every text, without the premise Rome denies, leaves the sole rule open.** Grant Mark 7, John 10:35, Matthew 5:18, Galatians 1:8–9 and Colossians 2, the principle they deliver, … |
+| `acts15_readings_cannot_be_held_together` | `¬Satisfiable (acts15Reformed.premises ++ acts15Roman.premises)` | **The two readings of Acts 15 cannot be held together.** One concludes that a council after the apostles may err, the other that a general council binds with the Spirit's … |
+| `acts15_texts_leave_the_council_open` | `Independent acts15Texts (p Claim.councilBindsWithTheSpiritsAuthority)` | **The texts of Acts 15 do not settle the council's authority.** Grant 15:1, 15:10–11, 15:15–17, 15:23–29 and 15:28, and 16:4, without either reading's step: whether a general … |
+| `romes_reading_of_acts15_leaves_unwritten_tradition_open` | `Independent (acts15Roman.premises ++ [p Claim.acts15_23_29DecreeWritten]) (p Claim.noUnwrittenTraditionShownApostolic)` | **Rome's reading of Acts 15 does not reach unwritten tradition.** Grant that "it seemed good to the Holy Ghost, and to us", that the decrees were delivered to keep, Rome's step … |
 | `marks_principle_prevails` | `Framework.grounded mark7Dispute.defeats = {Mark7Party.principle}` | **Mark 7's principle prevails outright, and it is common ground.** The grounded extension — what the dispute forces before any choice between rivals — is exactly the principle: … |
 | `trent_as_mens_commandments_indefensible` | `∀ (S : Set Mark7Party), Framework.Admissible mark7Dispute.defeats S → Mark7Party.trentAsMensCommandments ∉ S` | **Trent, read as commandments of men, cannot be defended.** No consistent position that answers its attackers can hold it: Mark 7's principle defeats it, and nothing answers the … |
 | `mark7_case_defensible` | `Framework.CredulouslyAccepted mark7Dispute.defeats Mark7Party.mark7` | **Sola scriptura from Mark 7 can be defended.** Some maximal defensible position holds it, with Mark 7's principle. |
@@ -796,7 +799,15 @@ Galatians 1:8–9 and Colossians 2:8, 20–22, deliver it too
 (`jesusAndPaulPrinciple_establishes`), at a step rated `wellSupported` because
 Aquinas grants Galatians 1:8 and the principle with it. Added to Mark 7, they
 still leave the sole rule open without that one premise
-(`every_text_without_the_hinge_leaves_the_sole_rule_open`). Weighing the dispute also moved a
+(`every_text_without_the_hinge_leaves_the_sole_rule_open`). The council at Jerusalem (Acts 15) is
+read both ways. The Reformers read a council that let the gospel judge even the custom of Moses
+and judged by Scripture, "as it is written" (15:15); Rome reads one binding with the Spirit's
+authority, "it seemed good to the Holy Ghost, and to us" (15:28). Each grants the other's texts,
+each step from them is `disputed`, and the two cannot be held together
+(`acts15_readings_cannot_be_held_together`); the texts alone leave the council's authority open
+(`acts15_texts_leave_the_council_open`), and what the council handed on was a letter, so Rome's
+reading leaves the premise about unwritten tradition where it was
+(`romes_reading_of_acts15_leaves_unwritten_tradition_open`). Weighing the dispute also moved a
 rating. Trent's claim that tradition is a coordinate source of revelation had
 been `wellSupported`. Geiselmann grants Session IV and denies that it canonised
 two coordinate sources, since the council replaced its draft's "partly … partly"

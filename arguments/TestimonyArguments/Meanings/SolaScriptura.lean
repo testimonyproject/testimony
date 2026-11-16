@@ -4,13 +4,14 @@ import TestimonyArguments.SolaScriptura.Sources
 /-!
 # TestimonyArguments.Meanings.SolaScriptura — what each sola scriptura claim says
 
-**Thirty-four of the forty-four claims have meanings** (`coverage_now`), and with
-them fifteen of the argument's twenty-one lines of reason can be read as moves,
+**Forty-one of the fifty-one claims have meanings** (`coverage_now`), and with
+them seventeen of the argument's twenty-three lines of reason can be read as moves,
 all of whose claims say something the checks can see: the eliminative line, both
 of Mark 7's lines, the line from Jesus' sayings and Paul's letters to the same
-principle, Geisler's Tradition 0, Trent, Vatican I, the Orthodox line, the
-canon objection and Kruger's reply, the interpretive-authority regress and
-Mathison's reply, and Geisler's circularity charge with both replies to it.
+principle, both readings of Acts 15, Geisler's Tradition 0, Trent, Vatican I, the
+Orthodox line, the canon objection and Kruger's reply, the interpretive-authority
+regress and Mathison's reply, and Geisler's circularity charge with both replies
+to it.
 `TestimonyArguments.Meanings.SolaFide` is the fuller worked example of the same
 work.
 
@@ -51,6 +52,20 @@ words that carry a reading are kept as the text has them.
   is the concept Mark 7's meaning uses for the elders' tradition, because
   Lightfoot traces Paul's phrase to Isaiah 29:13, the verse Jesus quotes in
   Mark 7.
+- **Acts 15:1** says that certain men from Judaea taught that except the
+  gentiles were circumcised "after the manner" (ἔθος, custom) of Moses they
+  could not be saved: what they taught, not that it was so. **15:10–11** says
+  that the yoke (ζυγός) is one "which neither our fathers nor we were able to
+  bear", and that grace is the ground on which "we shall be saved" (σωθῆναι).
+  **15:15–17** says that the words of the prophets, as Amos is written, agree
+  with God's visiting the Gentiles to take out of them a people (15:14).
+- **Acts 15:23–29** says that the decree came by a letter, and **15:28** that it
+  was by the Holy Ghost and by the apostles and elders: "it seemed good to the
+  Holy Ghost, and to us". Whether the Spirit is its ground or its means is left
+  open, as the text leaves it. **16:4** says that the decree was delivered
+  (παρεδίδοσαν) to the churches to keep. The decree is one particular in all
+  three, because 16:4 names it as "the decrees ... ordained of the apostles and
+  elders which were at Jerusalem".
 
 ## What the doctrinal claims say
 
@@ -75,7 +90,10 @@ ultimate authority is one. The premise Mark 7's case needs says two things: that
 unwritten tradition is not shown to be apostolic, where being shown means being
 proved from evidence that can still be produced, and that it may not be bound on
 the Church as the word of God. It does not say that the apostles taught nothing
-by word of mouth; Whitaker's claim is about proof.
+by word of mouth; Whitaker's claim is about proof. Rome's reading of Acts 15
+says that a general council's definition of faith, after the apostles, is
+infallible and is the Holy Ghost's as well as the council's; the Reformed
+reading denies it.
 
 ## What is left unanalysed, and why
 
@@ -151,6 +169,10 @@ Five pairs are left apart, on purpose.
   infallibly does not, by its wording, make it a *rule of faith*. Whether an
   infallible interpreter is a second infallible rule is the dispute itself, and
   it is a rated step (`magisterialDeniesSoleRule`, `orthodoxDeniesSoleRule`).
+  The same holds of a general council's definition of faith: that it cannot
+  err does not, by its wording, make the council a rule of faith beside
+  Scripture, so Rome's reading of Acts 15 is not joined to the claim that no
+  other rule is infallible.
 -/
 
 namespace TestimonyArguments.Meanings.SolaScriptura
@@ -181,7 +203,10 @@ def all : List Claim :=
   , .perspicuityIsLimitedToSalvationEssentials, .godsWordJudgesTradition
   , .mensCommandmentBindsAsGodsWord, .noUnwrittenTraditionShownApostolic
   , .john10_35ScriptureCannotBeBroken, .matthew5_18LawShallNotPass
-  , .galatians1_8AnotherGospelAccursed, .colossians2_8TraditionOfMen ]
+  , .galatians1_8AnotherGospelAccursed, .colossians2_8TraditionOfMen
+  , .acts15_1CircumcisionAfterMoses, .acts15_10_11YokeAndGrace, .acts15_15_17ProphetsAgree
+  , .acts15_23_29DecreeWritten, .acts15_28SeemedGoodToTheHolyGhost, .acts16_4DecreesDelivered
+  , .councilBindsWithTheSpiritsAuthority ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -211,6 +236,23 @@ theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
 /-- Colossians 2:8–22: the warning of 2:8 and the rules of 2:20–22. -/
 @[nolint defsWithUnderscore] abbrev col2_8_22 : PassageRange := rg .colossians 2 8 2 22
 
+/-- Acts 15:1. -/
+@[nolint defsWithUnderscore] abbrev acts15_1 : PassageRange := vs .acts 15 1
+/-- Acts 15:10. -/
+@[nolint defsWithUnderscore] abbrev acts15_10 : PassageRange := vs .acts 15 10
+/-- Acts 15:11. -/
+@[nolint defsWithUnderscore] abbrev acts15_11 : PassageRange := vs .acts 15 11
+/-- Acts 15:10–11. -/
+@[nolint defsWithUnderscore] abbrev acts15_10_11 : PassageRange := rg .acts 15 10 15 11
+/-- Acts 15:15–17. -/
+@[nolint defsWithUnderscore] abbrev acts15_15_17 : PassageRange := rg .acts 15 15 15 17
+/-- Acts 15:23–29. -/
+@[nolint defsWithUnderscore] abbrev acts15_23_29 : PassageRange := rg .acts 15 23 15 29
+/-- Acts 15:28. -/
+@[nolint defsWithUnderscore] abbrev acts15_28 : PassageRange := vs .acts 15 28
+/-- Acts 16:4. -/
+@[nolint defsWithUnderscore] abbrev acts16_4 : PassageRange := vs .acts 16 4
+
 /-- "All scripture", the words of 2 Timothy 3:16. -/
 abbrev allScripture : Term := wd .graphe tim3_16
 
@@ -229,6 +271,18 @@ abbrev colossianPhilosophy : Term :=
 Mathison states it and Geisler charges it. -/
 abbrev traditionIReasoning : Term :=
   pt "Tradition I's reasoning on Scripture and the creedal consensus" .informationObject
+
+/-- The decree of the council at Jerusalem, which Acts 15:23–29 gives and 16:4
+calls "the decrees ... ordained of the apostles and elders". -/
+abbrev jerusalemDecree : Term :=
+  pt "the decree of the council at Jerusalem (Acts 15:23–29)" .informationObject
+
+/-- The Holy Ghost, as Acts 15:28 names him. -/
+abbrev holyGhost : Term := pt "the Holy Ghost" .agent
+
+/-- A general council's definition of faith, after the apostles. -/
+abbrev councilDefinition : Term :=
+  pt "a general council's definition of faith, after the apostles" .informationObject
 
 /-- Scripture is infallible. -/
 abbrev scriptureInfallible : Statement := .holds (rl .isA (cn .scripture) (cn .infallible))
@@ -251,7 +305,7 @@ clear sense another (`accountability_refuses_rather_than_denies`). -/
 abbrev consensusNotPreconditionOfReading : Statement :=
   .holds (.not (rl .precedes (cn .creedalConsensus) (cn .readingScripture)))
 
-/-- **What each sola scriptura atom asserts.** Thirty-four are analysed; the rest
+/-- **What each sola scriptura atom asserts.** Forty-one are analysed; the rest
 keep their citations' labels, marked unanalysed, for the reasons the module
 docstring gives. -/
 def means : Claim → Statement
@@ -349,16 +403,43 @@ def means : Claim → Statement
           (rl .isA
             (pt "the rules \"Touch not; taste not; handle not\" (2:21)" .informationObject)
             (cn .commandmentsOfMen))
+  | .acts15_1CircumcisionAfterMoses =>
+    .says acts15_1 <| rl .agentOf (pt "certain men which came down from Judaea" .agent)
+      (pt ("teaching the brethren that except they be circumcised after the manner " ++
+          "(ἔθος) of Moses, they cannot be saved") .event)
+  | .acts15_10_11YokeAndGrace =>
+    .says acts15_10_11 <|
+      .both (rl .isA (wd .zygos acts15_10)
+          (pt "what neither our fathers nor we were able to bear" .quality))
+        (rl .groundOf (cn .grace) (wd .sozo acts15_11))
+  | .acts15_15_17ProphetsAgree =>
+    .says acts15_15_17 <| rl .consistentWith
+      (pt "the words of the prophets, as Amos 9:11–12 is written" .informationObject)
+      (pt "God's visiting the Gentiles, to take out of them a people for his name (15:14)"
+        .event)
+  | .acts15_23_29DecreeWritten =>
+    .says acts15_23_29 <| rl .saidBy
+      (pt "the letter the apostles and elders wrote to the gentile churches" .informationObject)
+      jerusalemDecree
+  | .acts15_28SeemedGoodToTheHolyGhost =>
+    .says acts15_28 <| .both (rl .saidBy holyGhost jerusalemDecree)
+      (rl .saidBy (pt "the apostles and elders at Jerusalem" .agent) jerusalemDecree)
+  | .acts16_4DecreesDelivered =>
+    .says acts16_4 <| rl .bindsAs jerusalemDecree
+      (pt "what the churches were delivered (παρεδίδοσαν) to keep" .informationObject)
+  | .councilBindsWithTheSpiritsAuthority =>
+    .holds <| .both (rl .isA councilDefinition (cn .infallible))
+      (rl .saidBy holyGhost councilDefinition)
   | a => .opaque (cite a).label
 
 /-- What each atom of the argument says. -/
 instance meanings : HasMeanings Claim :=
   { argument := "Sola scriptura", all, complete := all_complete, means }
 
-/-- **Thirty-four of the 44 atoms are analysed**: the texts, in their own words,
+/-- **Forty-one of the 51 atoms are analysed**: the texts, in their own words,
 and every claim a line's step reads except the three the module docstring
 names. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (34, 44) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (41, 51) := by decide
 
 /-- **The sola scriptura joins**: each pair of claims whose meanings exclude or
 entail one another, listed, and proved to be exactly what the meanings contain.

@@ -555,10 +555,18 @@ position anyone occupies — it is the witness that the packages built only from
 positive grounds are coherent. -/
 def everythingHoldsReading : Valuation Claim := fun _ => True
 
+/-- The Protestant reading: every claim in this argument holds but one, that a
+general council after the apostles binds with the Spirit's authority and cannot
+err. The Protestant packages read Acts 15 as the Reformers did, and deny it. -/
+def protestantReading : Valuation Claim := fun a =>
+  match a with
+  | .councilBindsWithTheSpiritsAuthority => False
+  | _ => True
+
 /-- The Protestant package has a model, so `protestant_establishes` is not
 vacuous. -/
 theorem protestant_is_satisfiable : Satisfiable protestant.premises := by
-  satisfied_by everythingHoldsReading [solaScripturaDefs]
+  satisfied_by protestantReading [solaScripturaDefs]
 
 /-- Tradition 0's package has a model. -/
 theorem tradition0_is_satisfiable : Satisfiable tradition0.premises := by
@@ -570,7 +578,7 @@ since a load-bearing result that held only because its premises were
 contradictory would be precisely backwards. -/
 theorem protestantWithoutHinge_is_satisfiable :
     Satisfiable protestantWithoutHinge.premises := by
-  satisfied_by everythingHoldsReading [solaScripturaDefs]
+  satisfied_by protestantReading [solaScripturaDefs]
 
 /-- Geisler's charge has a model. -/
 theorem geislerCircle_is_satisfiable : Satisfiable geislerCircle.premises := by

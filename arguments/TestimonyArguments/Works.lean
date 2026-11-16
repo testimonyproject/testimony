@@ -564,7 +564,9 @@ treatment, and a check on reading James too readily as Paul's ally. -/
 /-- The Westminster Confession of Faith, for the Reformed formulation that
 saving faith is never alone. Public catalogues list only print-on-demand
 reprints, with no scholarly edition to tie an identifier to, so this entry
-carries none. -/
+carries none. Chapter XXXI, on synods and councils, is cited in the numbering of
+1647 as Schaff prints it (*Creeds of Christendom*, volume 3), where the sections
+the American revision numbers 2 and 3 are 3 and 4. -/
 @[bib_entry] def westminsterConfession : BibEntry := .book
   { core :=
       { key := "westminster-confession-1647"
@@ -2162,6 +2164,58 @@ given. -/
   , publisher := "Magi Books"
   , place := some "Albany"
   , series := some "Aquinas Scripture Series" }
+
+/-! ### Sola scriptura: the council at Jerusalem -/
+
+/-- Calvin on Acts, volume 2, in Beveridge's edition of Fetherstone's translation,
+for chapter 15. At 15:15 the apostles "took nothing to themselves imperiously, but
+did reverently follow that which was prescribed in the word of God", and did not
+count it a disgrace "to profess themselves to be the scholars of the Scripture";
+at 15:16 he notes that Amos "is not cited word for word"; at 15:28 the apostles
+"were only ministers of the Spirit", and "the Papists are doltish who go about,
+out of these words, to prove that the Church hath some authority of her own".
+Archive.org records the volume as Edinburgh, Calvin Translation Society, 1844; read
+in the Christian Classics Ethereal Library's text. Published without an ISBN. -/
+@[bib_entry] def calvinActs2 : BibEntry := .book
+  { core :=
+      { key := "calvin-commentary-acts-volume2-1844"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , editors := [.person "Henry" "Beveridge"]
+          , translators := [.person "Christopher" "Fetherstone"] }
+      , title := "Commentary upon the Acts of the Apostles"
+      , year := some { value := 1844 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentaryuponth02calvuoft"
+                 (some "2026-11-16") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "2" }
+
+/-- Wilhelm's article on general councils in the *Catholic Encyclopedia*, volume 4
+(1908), for its section on the infallibility of general councils: "Such was the
+mind of the Apostles when, at the Council of Jerusalem (Acts 15:28), they put the
+seal of supreme authority on their decisions in attributing them to the joint
+action of the Spirit of God and of themselves: Visum est Spiritui sancto et nobis
+(It hath seemed good to the Holy Ghost and to us)." Published with the *nihil
+obstat* and *imprimatur*. Read at New Advent; cited by section. -/
+@[bib_entry] def wilhelmGeneralCouncils : BibEntry := .inCollection
+  { core :=
+      { key := "wilhelm-general-councils-1908"
+      , role := .witness
+      , contributors := { authors := [.person "Joseph" "Wilhelm"] }
+      , title := "General Councils"
+      , year := some { value := 1908 }
+      , identifiers :=
+          [ .url "https://www.newadvent.org/cathen/04423f.htm" (some "2026-11-16") ]
+      , note := some "Volume 4." }
+  , containerTitle := "The Catholic Encyclopedia"
+  , containerEditors :=
+      [ .person "Charles G." "Herbermann", .person "Edward A." "Pace", .person "Condé B." "Pallen"
+      , .person "Thomas J." "Shahan", .person "John J." "Wynne" ]
+  , publisher := "Robert Appleton Company"
+  , place := some "New York" }
 
 /-! ### Sola fide: the wider debate
 

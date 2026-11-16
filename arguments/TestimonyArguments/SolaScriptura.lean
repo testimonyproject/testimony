@@ -5,6 +5,7 @@ import TestimonyArguments.SolaScriptura.Packages
 import TestimonyArguments.SolaScriptura.Results
 import TestimonyArguments.SolaScriptura.Mark7
 import TestimonyArguments.SolaScriptura.JesusAndPaul
+import TestimonyArguments.SolaScriptura.Acts15
 import TestimonyArguments.SolaScriptura.Dispute
 import TestimonyArguments.SolaScriptura.Hearings
 
@@ -159,6 +160,21 @@ council replaced its draft's "partly … partly" with "and"; Congar judges that
 Trent left the question open. The claim is `disputed` now, and the Tridentine
 party is named "Trent (Tradition II)" rather than by the reading in dispute.
 
+## What the council at Jerusalem settles
+
+Acts 15 is read by both sides. The Reformers read it as a council that let the
+gospel judge even the oldest tradition, the custom of Moses, and that judged by
+Scripture: "to this agree the words of the prophets; as it is written" (15:15).
+Rome reads it as a council binding with the Spirit's authority: "it seemed good
+to the Holy Ghost, and to us" (15:28), its decrees "delivered" to the churches
+"for to keep" (16:4). Each side grants every text the other reads, and each step
+from the texts to councils after the apostles is `disputed`. So the two readings
+cannot be held together, and the texts alone leave the question open
+(`acts15_readings_cannot_be_held_together`, `acts15_texts_leave_the_council_open`).
+Nor does Rome's reading touch the premise about unwritten tradition: what the
+council handed on was a letter, and the letter is in Scripture
+(`romes_reading_of_acts15_leaves_unwritten_tradition_open`).
+
 ## A limitation worth stating
 
 The final-arbiter reading turns on a distinction between **doctrine**, which
@@ -179,6 +195,7 @@ given the distinction, not that the distinction can be drawn.
 | `Results.lean` | every `@[headline]` result on the positions and objections |
 | `Mark7.lean` | Mark 7 and the tradition Trent receives: the packages, the dilemma |
 | `JesusAndPaul.lean` | the same principle from Jesus' sayings and Paul's letters |
+| `Acts15.lean` | the council at Jerusalem, read by the Reformers and by Rome |
 | `Dispute.lean` | the dispute over Mark 7, weighed, and its verdicts |
 | `Hearings.lean` | the same dispute heard against each reading of Trent |
 -/

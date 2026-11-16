@@ -21132,6 +21132,9 @@ Jesus’ rebuke of the elders’ tradition (Mark 7:1–13; Matthew 15:1–9) is 
 
 Weighing it moved a rating. \texttt{tradition\allowbreak{}Is\allowbreak{}Coordinate\allowbreak{}Source\allowbreak{}Of\allowbreak{}Revelation} was \texttt{well\allowbreak{}Supported}, which made no difference while no dispute read it. In the Mark 7 dispute it would have decided who prevails, so it was audited: Geiselmann grants Trent’s Session IV and denies that it canonised two coordinate sources, since the council replaced its draft’s “partly … partly” with “and”; Congar judges that Trent left the question open. The claim is \texttt{disputed} now, and the Tridentine party is named “Trent (Tradition II)” rather than by the reading in dispute.
 
+\subsubsection*{What the council at Jerusalem settles}
+Acts 15 is read by both sides. The Reformers read it as a council that let the gospel judge even the oldest tradition, the custom of Moses, and that judged by Scripture: “to this agree the words of the prophets; as it is written” (15:15). Rome reads it as a council binding with the Spirit’s authority: “it seemed good to the Holy Ghost, and to us” (15:28), its decrees “delivered” to the churches “for to keep” (16:4). Each side grants every text the other reads, and each step from the texts to councils after the apostles is \texttt{disputed}. So the two readings cannot be held together, and the texts alone leave the question open (\texttt{acts15\_\allowbreak{}readings\_\allowbreak{}cannot\_\allowbreak{}be\_\allowbreak{}held\_\allowbreak{}together}, \texttt{acts15\_\allowbreak{}texts\_\allowbreak{}leave\_\allowbreak{}the\_\allowbreak{}council\_\allowbreak{}open}). Nor does Rome’s reading touch the premise about unwritten tradition: what the council handed on was a letter, and the letter is in Scripture (\texttt{romes\_\allowbreak{}reading\_\allowbreak{}of\_\allowbreak{}acts15\_\allowbreak{}leaves\_\allowbreak{}unwritten\_\allowbreak{}tradition\_\allowbreak{}open}).
+
 \subsubsection*{A limitation worth stating}
 The final-arbiter reading turns on a distinction between \textbf{doctrine}, which requires scriptural adjudication, and \textbf{practice} neither commanded nor forbidden, which does not. That is a \emph{scope} distinction, and this fragment is propositional: it cannot quantify. The distinction is carried by atom design and by this docstring, not by the logic. What the encoding shows is what follows given the distinction, not that the distinction can be drawn.
 
@@ -21148,6 +21151,7 @@ The final-arbiter reading turns on a distinction between \textbf{doctrine}, whic
 \texttt{Results.lean} & every \texttt{@[headline]} result on the positions and objections \\
 \texttt{Mark7.lean} & Mark 7 and the tradition Trent receives: the packages, the dilemma \\
 \texttt{Jesus\allowbreak{}And\allowbreak{}Paul.lean} & the same principle from Jesus’ sayings and Paul’s letters \\
+\texttt{Acts15.lean} & the council at Jerusalem, read by the Reformers and by Rome \\
 \texttt{Dispute.lean} & the dispute over Mark 7, weighed, and its verdicts \\
 \texttt{Hearings.lean} & the same dispute heard against each reading of Trent \\
 \bottomrule
@@ -21215,6 +21219,13 @@ A step’s rating is its own, cited to whoever grants its grounds and denies its
 \pvartarget{TestimonyArguments.SolaScriptura}{41}$P_{41}$ & Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled & textual & Christian, hist.-gramm., consensus & Matt 5:18; \cite[15, 19]{wenham-our-lords-view-1953} \\
 \pvartarget{TestimonyArguments.SolaScriptura}{42}$P_{42}$ & Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed & textual & Christian, hist.-gramm., consensus & Gal 1:8-9; \cite[ad loc. Gal 1:9]{calvin-commentary-galatians-1854}; \cite[c. 1, lect. 2]{aquinas-commentary-galatians-1966} \\
 \pvartarget{TestimonyArguments.SolaScriptura}{43}$P_{43}$ & Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men & textual & Christian, hist.-gramm., consensus & Col 2:8; Col 2:20-22; \cite[204]{lightfoot-colossians-philemon} \\
+\pvartarget{TestimonyArguments.SolaScriptura}{44}$P_{44}$ & Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved\textsuperscript{\dag} & textual & Christian, hist.-gramm., consensus & Acts 15:1 \\
+\pvartarget{TestimonyArguments.SolaScriptura}{45}$P_{45}$ & Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved\textsuperscript{\dag} & textual & Christian, hist.-gramm., consensus & Acts 15:10-11 \\
+\pvartarget{TestimonyArguments.SolaScriptura}{46}$P_{46}$ & Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12) & textual & Christian, hist.-gramm., consensus & Acts 15:15-17; \cite[ad loc. Acts 15:15]{calvin-commentary-acts-volume2-1844} \\
+\pvartarget{TestimonyArguments.SolaScriptura}{47}$P_{47}$ & Acts 15:23–29 — they wrote letters by them: the decree went out in writing\textsuperscript{\dag} & textual & Christian, hist.-gramm., consensus & Acts 15:23-29 \\
+\pvartarget{TestimonyArguments.SolaScriptura}{48}$P_{48}$ & Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things\textsuperscript{\dag} & textual & Christian, hist.-gramm., consensus & Acts 15:28 \\
+\pvartarget{TestimonyArguments.SolaScriptura}{49}$P_{49}$ & Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem\textsuperscript{\dag} & textual & Christian, hist.-gramm., consensus & Acts 16:4 \\
+\pvartarget{TestimonyArguments.SolaScriptura}{50}$P_{50}$ & A general council after the apostles binds with the Holy Spirit’s authority, as the council at Jerusalem did, and cannot err & theological & Roman Catholic, disputed & \cite[Infallibility of general councils]{wilhelm-general-councils-1908}; \cite[XXXI.4]{westminster-confession-1647}; \cite[ad loc. Acts 15:28]{calvin-commentary-acts-volume2-1844} \\
 \bottomrule
 \end{longtable}
 
@@ -21258,6 +21269,41 @@ Rated \texttt{well\allowbreak{}Supported}, as Mark 7’s step is, and not \textt
 {\small\begin{verbatim}
 def jesusAndPaulPrincipleInference : Source
 \end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}Reformed\allowbreak{}Inference}}\par\nobreak\noindent
+The rating of the Reformed step from Acts 15 to councils: \texttt{disputed}. The step reads the council at Jerusalem as the Reformers did. Men from Judaea taught that “Except ye be circumcised after the manner of Moses, ye cannot be saved” (15:1), so the oldest custom Israel had was laid on the gentiles as a condition of salvation. Peter answered it with the gospel, “through the grace of the Lord Jesus Christ we shall be saved, even as they” (15:10–11), and James with Scripture, “to this agree the words of the prophets; as it is written” (15:15). Calvin draws the conclusion at 15:15: the apostles “took nothing to themselves imperiously, but did reverently follow that which was prescribed in the word of God”, and were not ashamed “to profess themselves to be the scholars of the Scripture”. So a council after the apostles binds only as far as it agrees with the word, and may err. The Westminster Confession says so of councils: their decrees bind “if consonant to the Word of God”, and “All synods or councils since the apostles’ times, whether general or particular, may err, and many have erred; therefore they are not to be made the rule of faith or practice, but to be used as a help in both” (XXXI.3–4, in the numbering of 1647).
+
+Joseph Wilhelm, in the \emph{Catholic Encyclopedia}, reads the same council and denies the conclusion. For him the decree of 15:28 shows “the mind of the Apostles” about councils: “they put the seal of supreme authority on their decisions in attributing them to the joint action of the Spirit of God and of themselves”, and general councils in union with the pope have the same “infallible authority”. He grants every text the step reads, as every Catholic does. So the step is \texttt{disputed}.
+
+{\small\begin{verbatim}
+def acts15ReformedInference : Source :=
+  {
+    primary :=
+      Reference.work wilhelmGeneralCouncils
+        (Bib.Locus.sectionRef "Infallibility of general councils"),
+    supporting :=
+      [Reference.work calvinActs2
+          (Bib.Locus.adLoc { book := Book.acts, chapter := 15, verse := 15 }),
+        Reference.work westminsterConfession (Bib.Locus.sectionRef "XXXI.3"),
+        Reference.work westminsterConfession (Bib.Locus.sectionRef "XXXI.4")],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}Roman\allowbreak{}Inference}}\par\nobreak\noindent
+The rating of Rome’s step from Acts 15 to councils: \texttt{disputed}. The council’s letter says “it seemed good to the Holy Ghost, and to us” (15:28), and Paul and Silas “delivered them the decrees for to keep” in every city (16:4). From these Wilhelm concludes that a general council in union with the pope, like the council at Jerusalem, binds with the Spirit’s authority and cannot err.
+
+The Westminster Confession grants both texts and denies the conclusion. It cites Acts 15:27–31 and 16:4 as its proof that a council’s decrees, “if consonant to the Word of God, are to be received with reverence and submission ... for the power whereby they are made, as being an ordinance of God” (XXXI.3), and then says that councils since the apostles’ times may err and are “not to be made the rule of faith or practice” (XXXI.4). Calvin answers 15:28 itself: the apostles claimed nothing apart from the Spirit, being “only ministers of the Spirit”, and “the Papists are doltish who go about, out of these words, to prove that the Church hath some authority of her own”. So the step is \texttt{disputed}.
+
+{\small\begin{verbatim}
+def acts15RomanInference : Source :=
+  {
+    primary :=
+      Reference.work westminsterConfession (Bib.Locus.sectionRef "XXXI.4"),
+    supporting :=
+      [Reference.work westminsterConfession (Bib.Locus.sectionRef "XXXI.3"),
+        Reference.work calvinActs2
+          (Bib.Locus.adLoc { book := Book.acts, chapter := 15, verse := 28 })],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+\end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{tridentine\allowbreak{}Inference}}\par\nobreak\noindent
 The rating of Trent’s step, from 2 Thessalonians 2:15 and tradition as a source of revelation to “Scripture is not the sole rule”: \texttt{well\allowbreak{}Supported}. Once the grounds are granted the conclusion all but follows, and no reader was found who grants both and denies it. Protestants deny the second ground instead, and that dissent is weighed in its own rating.
 
@@ -21278,7 +21324,7 @@ Citation and classification for every atom. Total, so nothing is uncited.
 def cite : Claim → AtomMeta
 \end{verbatim}}
 \subsection*{TestimonyArguments.SolaScriptura.Lines — the inference steps and the lines of reason}
-Three routes reach the conclusion — the classical line, the eliminative line, and Mark 7’s, which takes two lines, and whose principle a further line draws from Jesus’ sayings and Paul’s letters — three positions deny it, and three objections attack it from different directions. The objections do not reduce to one another: self-refutation says the doctrine fails its own standard, the canon objection says an authority outside scripture is needed to identify scripture, and the interpretive-authority regress says the authority claimed is the claimant in disguise.
+Three routes reach the conclusion — the classical line, the eliminative line, and Mark 7’s, which takes two lines, and whose principle a further line draws from Jesus’ sayings and Paul’s letters — three positions deny it, and three objections attack it from different directions. Two more lines read the council at Jerusalem (Acts 15), one as the Reformers read it and one as Rome does, and they deliver opposite answers about the authority of councils. The objections do not reduce to one another: self-refutation says the doctrine fails its own standard, the canon objection says an authority outside scripture is needed to identify scripture, and the interpretive-authority regress says the authority claimed is the claimant in disguise.
 
 \textbf{Redundancy does not defend the hinge here.} In \texttt{Sola\allowbreak{}Fide}, adding a second strand defeated an attack on a premise. These objections are not premise attacks: each independently delivers the negation of the conclusion, so a further route to the conclusion does nothing against them. What answers an objection is denying one of \emph{its} grounds, which is why every reply below is written with \texttt{Line.on\allowbreak{}Grounds} — the objection’s own line, with the ground the reply refuses put back as what the reply offers instead.
 
@@ -21307,6 +21353,18 @@ The eliminative route: scripture is infallible, nothing else is, so scripture is
 
 \begin{derivation}
   \item[] \((\pvar{TestimonyArguments.SolaScriptura}{40} \land \pvar{TestimonyArguments.SolaScriptura}{41} \land \pvar{TestimonyArguments.SolaScriptura}{42} \land \pvar{TestimonyArguments.SolaScriptura}{43}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{37}\)\gloss{\emph{would give:} God’s word judges human tradition: no commandment of men may be taught as God’s word, and a tradition that voids God’s command is void}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}To\allowbreak{}Council\allowbreak{}Under\allowbreak{}Scripture}}\par\nobreak\noindent
+\textbf{Acts 15, as the Reformers read it.} Men from Judaea laid the custom of Moses on the gentiles as a condition of salvation (15:1); Peter answered with the gospel, salvation “through the grace of the Lord Jesus Christ” (15:10–11), and James with Scripture, “as it is written” (15:15–17). So the gospel judged even the oldest tradition, and the council judged by Scripture: a council after the apostles binds only as far as it agrees with the word, and may err. Rated \texttt{disputed}: Wilhelm grants the texts and holds that general councils define with the Spirit’s authority (\texttt{acts15\allowbreak{}Reformed\allowbreak{}Inference}).
+
+\begin{derivation}
+  \item[] \((\pvar{TestimonyArguments.SolaScriptura}{44} \land \pvar{TestimonyArguments.SolaScriptura}{45} \land \pvar{TestimonyArguments.SolaScriptura}{46}) \rightarrow \lnot \pvar{TestimonyArguments.SolaScriptura}{50}\)\gloss{\emph{would deny:} A general council after the apostles binds with the Holy Spirit’s authority, as the council at Jerusalem did, and cannot err}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}To\allowbreak{}Council\allowbreak{}With\allowbreak{}The\allowbreak{}Spirit}}\par\nobreak\noindent
+\textbf{Acts 15, as Rome reads it.} The council’s letter says “it seemed good to the Holy Ghost, and to us” (15:28), and its decrees were “delivered” to the churches “for to keep” (16:4). So a general council binds with the Spirit’s authority, and cannot err. Rated \texttt{disputed}: the Westminster Confession cites the same texts for the authority of councils and denies that councils since the apostles cannot err (\texttt{acts15\allowbreak{}Roman\allowbreak{}Inference}).
+
+\begin{derivation}
+  \item[] \((\pvar{TestimonyArguments.SolaScriptura}{48} \land \pvar{TestimonyArguments.SolaScriptura}{49}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{50}\)\gloss{\emph{would give:} A general council after the apostles binds with the Holy Spirit’s authority, as the council at Jerusalem did, and cannot err}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{principle\allowbreak{}Excludes\allowbreak{}Mens\allowbreak{}Commandments}}\par\nobreak\noindent
 What the principle says of a commandment of men: it may not be bound on the Church as God’s word. This is Isaiah 29:13 as Mark 7:7 quotes it.
@@ -21431,6 +21489,25 @@ Leg two: scripture’s clear sense is not obtainable without that consensus.
   \breakrow{(4)} \(\pvar{TestimonyArguments.SolaScriptura}{43}\)\gloss{Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men}
   \item[(5)] \((\pvar{TestimonyArguments.SolaScriptura}{40} \land \pvar{TestimonyArguments.SolaScriptura}{41} \land \pvar{TestimonyArguments.SolaScriptura}{42} \land \pvar{TestimonyArguments.SolaScriptura}{43}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{37}\)
   \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaScriptura}{37}\)\gloss{\emph{at issue:} God’s word judges human tradition: no commandment of men may be taught as God’s word, and a tradition that voids God’s command is void}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}Reformed\allowbreak{}Line}} --- Acts 15, the Reformed reading (the council judged by Scripture)\par\nobreak\noindent
+\textbf{Acts 15, the Reformed reading}, as a line of its own: the demand of 15:1, answered by Peter’s gospel (15:10–11) and James’s “as it is written” (15:15–17). It delivers that a council after the apostles does not bind with the Spirit’s own authority: it binds as far as it agrees with Scripture.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaScriptura}{44}\)\gloss{Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaScriptura}{45}\)\gloss{Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved}
+  \item[(3)] \(\pvar{TestimonyArguments.SolaScriptura}{46}\)\gloss{Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)}
+  \item[(4)] \((\pvar{TestimonyArguments.SolaScriptura}{44} \land \pvar{TestimonyArguments.SolaScriptura}{45} \land \pvar{TestimonyArguments.SolaScriptura}{46}) \rightarrow \lnot \pvar{TestimonyArguments.SolaScriptura}{50}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.SolaScriptura}{50}\)\gloss{\emph{at issue, the denial of:} A general council after the apostles binds with the Holy Spirit’s authority, as the council at Jerusalem did, and cannot err}
+\end{derivation}
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}Roman\allowbreak{}Line}} --- Acts 15, Rome’s reading (the council binds with the Spirit’s authority)\par\nobreak\noindent
+\textbf{Acts 15, Rome’s reading}, as a line of its own: “it seemed good to the Holy Ghost, and to us” (15:28), and the decrees delivered to keep (16:4). It delivers that a general council binds with the Spirit’s authority.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaScriptura}{48}\)\gloss{Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaScriptura}{49}\)\gloss{Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem}
+  \item[(3)] \((\pvar{TestimonyArguments.SolaScriptura}{48} \land \pvar{TestimonyArguments.SolaScriptura}{49}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{50}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaScriptura}{50}\)\gloss{\emph{at issue:} A general council after the apostles binds with the Holy Spirit’s authority, as the council at Jerusalem did, and cannot err}
 \end{derivation}
 \par\medskip\noindent\textbf{\texttt{tradition0\allowbreak{}Line}} --- Tradition 0 (creeds informative, not normative)\par\nobreak\noindent
 \textbf{Tradition 0}, as Geisler states it rather than as Mathison describes it.
@@ -21622,7 +21699,7 @@ The parity replies have no packages at all. What they do is that the disputed pr
 \paragraph*{The positions}
 \leavevmode\par\nobreak
 \par\medskip\noindent\textbf{\texttt{protestant}} --- Protestant (sola scriptura as final arbiter)\par\nobreak\noindent
-\textbf{The Protestant position}: three routes to the conclusion, on the final-arbiter reading — the classical, the eliminative, and Mark 7’s, whose principle it also draws from Jesus’ sayings and Paul’s letters. Scripture is not the only authority but the only infallible one; tradition is ministerial, and practices neither commanded nor forbidden need no scriptural warrant.
+\textbf{The Protestant position}: three routes to the conclusion, on the final-arbiter reading — the classical, the eliminative, and Mark 7’s, whose principle it also draws from Jesus’ sayings and Paul’s letters. Scripture is not the only authority but the only infallible one; tradition is ministerial, and practices neither commanded nor forbidden need no scriptural warrant. It reads the council at Jerusalem as the Reformers did: a council after the apostles binds as far as it agrees with Scripture, and may err.
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.SolaScriptura}{1}\)\gloss{2 Timothy 3:16 — all scripture is God-breathed and profitable}
@@ -21638,21 +21715,25 @@ The parity replies have no packages at all. What they do is that the disputed pr
   \breakrow{(11)} \(\pvar{TestimonyArguments.SolaScriptura}{42}\)\gloss{Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed}
   \breakrow{(12)} \(\pvar{TestimonyArguments.SolaScriptura}{43}\)\gloss{Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men}
   \breakrow{(13)} \(\pvar{TestimonyArguments.SolaScriptura}{39}\)\gloss{No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God}
-  \breakrow{(14)} \(\pvar{TestimonyArguments.SolaScriptura}{4}\)\gloss{Acts 17:11 — the Bereans tested apostolic preaching against scripture}
-  \breakrow{(15)} \(\pvar{TestimonyArguments.SolaScriptura}{5}\)\gloss{2 Thessalonians 2:15 — hold to the traditions taught by word or letter}
-  \breakrow{(16)} \(\pvar{TestimonyArguments.SolaScriptura}{28}\)\gloss{Doctrine develops without new revelation: the deposit is closed}
-  \breakrow{(17)} \(\pvar{TestimonyArguments.SolaScriptura}{19}\)\gloss{Tradition carries real but fallible — ministerial — authority}
-  \breakrow{(18)} \(\pvar{TestimonyArguments.SolaScriptura}{24}\)\gloss{A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant}
-  \breakrow{(19)} \(\pvar{TestimonyArguments.SolaScriptura}{23}\)\gloss{The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from}
-  \breakrow{(20)} \((\pvar{TestimonyArguments.SolaScriptura}{1} \land \pvar{TestimonyArguments.SolaScriptura}{2} \land \pvar{TestimonyArguments.SolaScriptura}{7} \land \pvar{TestimonyArguments.SolaScriptura}{8} \land \pvar{TestimonyArguments.SolaScriptura}{10}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{9}\)
-  \breakrow{(21)} \((\pvar{TestimonyArguments.SolaScriptura}{6} \land \pvar{TestimonyArguments.SolaScriptura}{12}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{9}\)
-  \breakrow{(22)} \(\pvar{TestimonyArguments.SolaScriptura}{3} \rightarrow \pvar{TestimonyArguments.SolaScriptura}{37}\)\gloss{\emph{would give:} God’s word judges human tradition: no commandment of men may be taught as God’s word, and a tradition that voids God’s command is void}
-  \breakrow{(23)} \((\pvar{TestimonyArguments.SolaScriptura}{40} \land \pvar{TestimonyArguments.SolaScriptura}{41} \land \pvar{TestimonyArguments.SolaScriptura}{42} \land \pvar{TestimonyArguments.SolaScriptura}{43}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{37}\)\gloss{\emph{would give:} God’s word judges human tradition: no commandment of men may be taught as God’s word, and a tradition that voids God’s command is void}
-  \item[(24)] \((\pvar{TestimonyArguments.SolaScriptura}{37} \land \pvar{TestimonyArguments.SolaScriptura}{39}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{9}\)
+  \breakrow{(14)} \(\pvar{TestimonyArguments.SolaScriptura}{44}\)\gloss{Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved}
+  \breakrow{(15)} \(\pvar{TestimonyArguments.SolaScriptura}{45}\)\gloss{Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved}
+  \breakrow{(16)} \(\pvar{TestimonyArguments.SolaScriptura}{46}\)\gloss{Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)}
+  \breakrow{(17)} \(\pvar{TestimonyArguments.SolaScriptura}{4}\)\gloss{Acts 17:11 — the Bereans tested apostolic preaching against scripture}
+  \breakrow{(18)} \(\pvar{TestimonyArguments.SolaScriptura}{5}\)\gloss{2 Thessalonians 2:15 — hold to the traditions taught by word or letter}
+  \breakrow{(19)} \(\pvar{TestimonyArguments.SolaScriptura}{28}\)\gloss{Doctrine develops without new revelation: the deposit is closed}
+  \breakrow{(20)} \(\pvar{TestimonyArguments.SolaScriptura}{19}\)\gloss{Tradition carries real but fallible — ministerial — authority}
+  \breakrow{(21)} \(\pvar{TestimonyArguments.SolaScriptura}{24}\)\gloss{A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant}
+  \breakrow{(22)} \(\pvar{TestimonyArguments.SolaScriptura}{23}\)\gloss{The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from}
+  \breakrow{(23)} \((\pvar{TestimonyArguments.SolaScriptura}{1} \land \pvar{TestimonyArguments.SolaScriptura}{2} \land \pvar{TestimonyArguments.SolaScriptura}{7} \land \pvar{TestimonyArguments.SolaScriptura}{8} \land \pvar{TestimonyArguments.SolaScriptura}{10}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{9}\)
+  \breakrow{(24)} \((\pvar{TestimonyArguments.SolaScriptura}{6} \land \pvar{TestimonyArguments.SolaScriptura}{12}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{9}\)
+  \breakrow{(25)} \(\pvar{TestimonyArguments.SolaScriptura}{3} \rightarrow \pvar{TestimonyArguments.SolaScriptura}{37}\)\gloss{\emph{would give:} God’s word judges human tradition: no commandment of men may be taught as God’s word, and a tradition that voids God’s command is void}
+  \breakrow{(26)} \((\pvar{TestimonyArguments.SolaScriptura}{40} \land \pvar{TestimonyArguments.SolaScriptura}{41} \land \pvar{TestimonyArguments.SolaScriptura}{42} \land \pvar{TestimonyArguments.SolaScriptura}{43}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{37}\)\gloss{\emph{would give:} God’s word judges human tradition: no commandment of men may be taught as God’s word, and a tradition that voids God’s command is void}
+  \breakrow{(27)} \((\pvar{TestimonyArguments.SolaScriptura}{37} \land \pvar{TestimonyArguments.SolaScriptura}{39}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{9}\)
+  \item[(28)] \((\pvar{TestimonyArguments.SolaScriptura}{44} \land \pvar{TestimonyArguments.SolaScriptura}{45} \land \pvar{TestimonyArguments.SolaScriptura}{46}) \rightarrow \lnot \pvar{TestimonyArguments.SolaScriptura}{50}\)\gloss{\emph{would deny:} A general council after the apostles binds with the Holy Spirit’s authority, as the council at Jerusalem did, and cannot err}
   \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaScriptura}{9}\)\gloss{\emph{at issue:} Scripture is the sole infallible rule of faith}
   \keepwithnext
 \end{derivation}
-\emph{Grounded in scripture alone:} 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
+\emph{Grounded in scripture alone:} Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved, Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved, 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
 \par\medskip\noindent\textbf{\texttt{tradition0}} --- Tradition 0 (creeds informative, not normative)\par\nobreak\noindent
 \textbf{Tradition 0}, as Geisler states it: creeds inform without binding, and the historical-grammatical method does the work an authoritative interpreter was supposed to do.
 
@@ -21678,15 +21759,18 @@ The parity replies have no packages at all. What they do is that the disputed pr
 \end{derivation}
 \emph{Grounded in scripture alone:} 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
 \par\medskip\noindent\textbf{\texttt{vatican\allowbreak{}I}} --- Tradition III (the magisterium as the one real source)\par\nobreak\noindent
-\textbf{Tradition III}, resting on Vatican I. Kept separate from \texttt{tridentine} because Mathison argues it escapes several objections to the two-source view while incurring its own.
+\textbf{Tradition III}, resting on Vatican I. Kept separate from \texttt{tridentine} because Mathison argues it escapes several objections to the two-source view while incurring its own. It reads the council at Jerusalem as Rome does: a general council binds with the Holy Spirit’s authority.
 
 \begin{derivation}
   \item[(1)] \(\pvar{TestimonyArguments.SolaScriptura}{14}\)\gloss{The magisterium is an infallible interpreter of scripture}
-  \item[(2)] \(\pvar{TestimonyArguments.SolaScriptura}{14} \rightarrow \lnot \pvar{TestimonyArguments.SolaScriptura}{9}\)\gloss{\emph{would deny:} Scripture is the sole infallible rule of faith}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaScriptura}{48}\)\gloss{Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things}
+  \item[(3)] \(\pvar{TestimonyArguments.SolaScriptura}{49}\)\gloss{Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem}
+  \breakrow{(4)} \(\pvar{TestimonyArguments.SolaScriptura}{14} \rightarrow \lnot \pvar{TestimonyArguments.SolaScriptura}{9}\)\gloss{\emph{would deny:} Scripture is the sole infallible rule of faith}
+  \item[(5)] \((\pvar{TestimonyArguments.SolaScriptura}{48} \land \pvar{TestimonyArguments.SolaScriptura}{49}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{50}\)\gloss{\emph{would give:} A general council after the apostles binds with the Holy Spirit’s authority, as the council at Jerusalem did, and cannot err}
   \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaScriptura}{9}\)\gloss{\emph{at issue:} Scripture is the sole infallible rule of faith}
   \keepwithnext
 \end{derivation}
-\emph{No premise here rests on scripture alone.}
+\emph{Grounded in scripture alone:} Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things, Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem.
 \par\medskip\noindent\textbf{\texttt{orthodox}} --- Orthodox (the mind of the Church)\par\nobreak\noindent
 \textbf{The Orthodox position}, on the mind of the Church rather than on a magisterium.
 
@@ -21778,21 +21862,25 @@ The Protestant position with the classical line stripped of the hinge. The elimi
   \breakrow{(10)} \(\pvar{TestimonyArguments.SolaScriptura}{42}\)\gloss{Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed}
   \breakrow{(11)} \(\pvar{TestimonyArguments.SolaScriptura}{43}\)\gloss{Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men}
   \breakrow{(12)} \(\pvar{TestimonyArguments.SolaScriptura}{39}\)\gloss{No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God}
-  \breakrow{(13)} \(\pvar{TestimonyArguments.SolaScriptura}{4}\)\gloss{Acts 17:11 — the Bereans tested apostolic preaching against scripture}
-  \breakrow{(14)} \(\pvar{TestimonyArguments.SolaScriptura}{5}\)\gloss{2 Thessalonians 2:15 — hold to the traditions taught by word or letter}
-  \breakrow{(15)} \(\pvar{TestimonyArguments.SolaScriptura}{28}\)\gloss{Doctrine develops without new revelation: the deposit is closed}
-  \breakrow{(16)} \(\pvar{TestimonyArguments.SolaScriptura}{19}\)\gloss{Tradition carries real but fallible — ministerial — authority}
-  \breakrow{(17)} \(\pvar{TestimonyArguments.SolaScriptura}{24}\)\gloss{A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant}
-  \breakrow{(18)} \(\pvar{TestimonyArguments.SolaScriptura}{23}\)\gloss{The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from}
-  \breakrow{(19)} \((\pvar{TestimonyArguments.SolaScriptura}{1} \land \pvar{TestimonyArguments.SolaScriptura}{2} \land \pvar{TestimonyArguments.SolaScriptura}{7} \land \pvar{TestimonyArguments.SolaScriptura}{8} \land \pvar{TestimonyArguments.SolaScriptura}{10}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{9}\)
-  \breakrow{(20)} \((\pvar{TestimonyArguments.SolaScriptura}{6} \land \pvar{TestimonyArguments.SolaScriptura}{12}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{9}\)
-  \breakrow{(21)} \(\pvar{TestimonyArguments.SolaScriptura}{3} \rightarrow \pvar{TestimonyArguments.SolaScriptura}{37}\)\gloss{\emph{would give:} God’s word judges human tradition: no commandment of men may be taught as God’s word, and a tradition that voids God’s command is void}
-  \breakrow{(22)} \((\pvar{TestimonyArguments.SolaScriptura}{40} \land \pvar{TestimonyArguments.SolaScriptura}{41} \land \pvar{TestimonyArguments.SolaScriptura}{42} \land \pvar{TestimonyArguments.SolaScriptura}{43}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{37}\)\gloss{\emph{would give:} God’s word judges human tradition: no commandment of men may be taught as God’s word, and a tradition that voids God’s command is void}
-  \item[(23)] \((\pvar{TestimonyArguments.SolaScriptura}{37} \land \pvar{TestimonyArguments.SolaScriptura}{39}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{9}\)
+  \breakrow{(13)} \(\pvar{TestimonyArguments.SolaScriptura}{44}\)\gloss{Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved}
+  \breakrow{(14)} \(\pvar{TestimonyArguments.SolaScriptura}{45}\)\gloss{Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved}
+  \breakrow{(15)} \(\pvar{TestimonyArguments.SolaScriptura}{46}\)\gloss{Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)}
+  \breakrow{(16)} \(\pvar{TestimonyArguments.SolaScriptura}{4}\)\gloss{Acts 17:11 — the Bereans tested apostolic preaching against scripture}
+  \breakrow{(17)} \(\pvar{TestimonyArguments.SolaScriptura}{5}\)\gloss{2 Thessalonians 2:15 — hold to the traditions taught by word or letter}
+  \breakrow{(18)} \(\pvar{TestimonyArguments.SolaScriptura}{28}\)\gloss{Doctrine develops without new revelation: the deposit is closed}
+  \breakrow{(19)} \(\pvar{TestimonyArguments.SolaScriptura}{19}\)\gloss{Tradition carries real but fallible — ministerial — authority}
+  \breakrow{(20)} \(\pvar{TestimonyArguments.SolaScriptura}{24}\)\gloss{A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant}
+  \breakrow{(21)} \(\pvar{TestimonyArguments.SolaScriptura}{23}\)\gloss{The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from}
+  \breakrow{(22)} \((\pvar{TestimonyArguments.SolaScriptura}{1} \land \pvar{TestimonyArguments.SolaScriptura}{2} \land \pvar{TestimonyArguments.SolaScriptura}{7} \land \pvar{TestimonyArguments.SolaScriptura}{8} \land \pvar{TestimonyArguments.SolaScriptura}{10}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{9}\)
+  \breakrow{(23)} \((\pvar{TestimonyArguments.SolaScriptura}{6} \land \pvar{TestimonyArguments.SolaScriptura}{12}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{9}\)
+  \breakrow{(24)} \(\pvar{TestimonyArguments.SolaScriptura}{3} \rightarrow \pvar{TestimonyArguments.SolaScriptura}{37}\)\gloss{\emph{would give:} God’s word judges human tradition: no commandment of men may be taught as God’s word, and a tradition that voids God’s command is void}
+  \breakrow{(25)} \((\pvar{TestimonyArguments.SolaScriptura}{40} \land \pvar{TestimonyArguments.SolaScriptura}{41} \land \pvar{TestimonyArguments.SolaScriptura}{42} \land \pvar{TestimonyArguments.SolaScriptura}{43}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{37}\)\gloss{\emph{would give:} God’s word judges human tradition: no commandment of men may be taught as God’s word, and a tradition that voids God’s command is void}
+  \breakrow{(26)} \((\pvar{TestimonyArguments.SolaScriptura}{37} \land \pvar{TestimonyArguments.SolaScriptura}{39}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{9}\)
+  \item[(27)] \((\pvar{TestimonyArguments.SolaScriptura}{44} \land \pvar{TestimonyArguments.SolaScriptura}{45} \land \pvar{TestimonyArguments.SolaScriptura}{46}) \rightarrow \lnot \pvar{TestimonyArguments.SolaScriptura}{50}\)\gloss{\emph{would deny:} A general council after the apostles binds with the Holy Spirit’s authority, as the council at Jerusalem did, and cannot err}
   \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaScriptura}{9}\)\gloss{\emph{at issue:} Scripture is the sole infallible rule of faith}
   \keepwithnext
 \end{derivation}
-\emph{Grounded in scripture alone:} 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
+\emph{Grounded in scripture alone:} Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved, Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved, 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
 \par\medskip\noindent\textbf{\texttt{classical\allowbreak{}Strand\allowbreak{}Without\allowbreak{}Hinge}} --- Classical (scripture teaches the principle)\par\nobreak\noindent
 The classical line alone, stripped of the hinge.
 
@@ -22329,6 +22417,16 @@ The reading on which every claim in this argument holds at once. Not a position 
 {\small\begin{verbatim}
 def everythingHoldsReading : Valuation Claim :=
   fun x => True
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{protestant\allowbreak{}Reading}}\par\nobreak\noindent
+The Protestant reading: every claim in this argument holds but one, that a general council after the apostles binds with the Spirit’s authority and cannot err. The Protestant packages read Acts 15 as the Reformers did, and deny it.
+
+{\small\begin{verbatim}
+def protestantReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.councilBindsWithTheSpiritsAuthority => False
+    | x => True
 \end{verbatim}}
 \par\medskip\noindent\textbf{\texttt{protestant\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
 The Protestant package has a model, so \texttt{protestant\_\allowbreak{}establishes} is not vacuous.
@@ -22893,6 +22991,168 @@ theorem jesus_and_paul_do_not_reach_the_apostolic_word : Satisfiable
 {\small\begin{verbatim}
 theorem every_text_without_the_hinge_leaves_the_sole_rule_open : Independent
     everyTextWithoutTheHinge (p Claim.scriptureIsSoleInfallibleRule)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\subsection*{TestimonyArguments.SolaScriptura.Acts15 — the council at Jerusalem, read both ways}
+Acts 15 tells of the council at Jerusalem, and both sides of the Reformation read it as their own. It begins with a demand: “certain men which came down from Judaea taught the brethren, and said, Except ye be circumcised after the manner of Moses, ye cannot be saved” (15:1). The apostles and elders meet. Peter asks “why tempt ye God, to put a yoke upon the neck of the disciples, which neither our fathers nor we were able to bear? But we believe that through the grace of the Lord Jesus Christ we shall be saved, even as they” (15:10–11). James answers from the prophets: “to this agree the words of the prophets; as it is written, After this I will return, and will build again the tabernacle of David, which is fallen down” (15:15–16, quoting Amos 9:11–12). The council writes to the gentile churches, “For it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things” (15:28), and Paul and Silas, going through the cities, “delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem” (16:4).
+
+James’s words are a quotation, not an allusion: he introduces them “as it is written” (\texttt{acts15\allowbreak{}Quotes\allowbreak{}Amos}). Calvin notes that the place “is not cited word for word as it is in the prophet”. Luke gives Amos close to the Greek translation, the Septuagint. Where the Hebrew of Amos 9:12 reads “That they may possess the remnant of Edom”, the Septuagint reads “that the remnant of men may seek” (ὅπως ἐκζητήσωσιν οἱ κατάλοιποι τῶν ἀνθρώπων), and so does Acts: “That the residue of men might seek after the Lord”.
+
+\subsubsection*{The Reformed reading}
+The custom of Moses was the oldest tradition Israel had, and God had given it. The council did not let even that be laid on the gentiles as a condition of salvation: Peter answered it with the gospel and James with Scripture. So the gospel judged even the oldest tradition, and the council judged by Scripture. Calvin says of 15:15 that the apostles “took nothing to themselves imperiously, but did reverently follow that which was prescribed in the word of God”, and were not ashamed “to profess themselves to be the scholars of the Scripture”. The Westminster Confession draws the rule for councils after them: their decrees bind “if consonant to the Word of God”, and “All synods or councils since the apostles’ times, whether general or particular, may err, and many have erred; therefore they are not to be made the rule of faith or practice, but to be used as a help in both” (XXXI.3–4, in the numbering of 1647). The Protestant position reads Acts 15 this way (\texttt{acts15\allowbreak{}Reformed\allowbreak{}Line}).
+
+\subsubsection*{Rome’s reading}
+The council’s letter claims more than agreement with Scripture: “it seemed good to the Holy Ghost, and to us”. Joseph Wilhelm, writing on general councils in the \emph{Catholic Encyclopedia} of 1908, takes it as “the mind of the Apostles”: they “put the seal of supreme authority on their decisions in attributing them to the joint action of the Spirit of God and of themselves”, and general councils in union with the pope have the same “infallible authority”. The decrees were then handed on to the churches to keep: “delivered” in 16:4 (παρεδίδοσαν) is the verb whose noun is “tradition” (παράδοσις). Tradition III, the position resting on Vatican I, reads Acts 15 this way (\texttt{acts15\allowbreak{}Roman\allowbreak{}Line}).
+
+\subsubsection*{What the texts settle, and what they do not}
+Each reading grants every text the other reads. The Westminster Confession cites Acts 15:27–31 and 16:4 as its own proof that a council’s decrees bind, and Wilhelm, as a Catholic, grants Peter’s and James’s words. What they part over is the step from the texts to councils after the apostles, and each step is rated \texttt{disputed} because the other side’s reader grants its texts and denies its conclusion.
+
+So the two readings cannot be held together (\texttt{acts15\_\allowbreak{}readings\_\allowbreak{}cannot\_\allowbreak{}be\_\allowbreak{}held\_\allowbreak{}together}), and the texts by themselves do not choose between them: grant all six texts, without either step, and whether a council binds with the Spirit’s authority neither follows nor fails (\texttt{acts15\_\allowbreak{}texts\_\allowbreak{}leave\_\allowbreak{}the\_\allowbreak{}council\_\allowbreak{}open}).
+
+Nor does Rome’s reading reach the premise the Mark 7 case for sola scriptura needs, that no unwritten tradition can now be shown to be apostolic. The decrees handed on in 16:4 were not unwritten: “they wrote letters by them” (15:23), and the letter is in Scripture (15:23–29). Grant Rome’s reading of Acts 15 and that the decree was written, and the premise about unwritten tradition is left exactly where it was (\texttt{romes\_\allowbreak{}reading\_\allowbreak{}of\_\allowbreak{}acts15\_\allowbreak{}leaves\_\allowbreak{}unwritten\_\allowbreak{}tradition\_\allowbreak{}open}).
+
+These lines join the Protestant and Vatican I positions, and not the dispute over Mark 7. That dispute is about tradition, and none of its parties says anything about councils, so neither reading of Acts 15 would meet a party there.
+
+\paragraph*{James and Amos}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{acts15\_\allowbreak{}16}}\par\nobreak\noindent
+Acts 15:16 — “After this I will return, and will build again the tabernacle of David”, where James’s quotation of the prophets begins.
+
+{\small\begin{verbatim}
+def acts15_16 : Passage :=
+  { book := Book.acts, chapter := 15, verse := 16 }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{amos9\_\allowbreak{}11}}\par\nobreak\noindent
+Amos 9:11 — “In that day will I raise up the tabernacle of David that is fallen”.
+
+{\small\begin{verbatim}
+def amos9_11 : Passage :=
+  { book := Book.amos, chapter := 9, verse := 11 }
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}Quotes\allowbreak{}Amos}}\par\nobreak\noindent
+\textbf{Acts 15:16–17 quotes Amos 9:11–12.} Typed \texttt{.quotation}, not \texttt{.allusion}: James introduces the words “as it is written”. Calvin notes at 15:16 that they are “not cited word for word as it is in the prophet”; Luke gives them close to the Septuagint.
+
+{\small\begin{verbatim}
+def acts15QuotesAmos : IntertextEdge :=
+  { fromPassage := acts15_16, toPassage := amos9_11,
+    relation := RelationType.quotation,
+    source :=
+      {
+        primary :=
+          Reference.work Bib.na28 (Bib.Locus.apparatus acts15_16),
+        supporting :=
+          [Reference.work Bib.ubs5,
+            Reference.work calvinActs2
+              (Bib.Locus.adLoc acts15_16)],
+        tradition := Tradition.criticalScholarship,
+        confidence := Confidence.consensus } }
+\end{verbatim}}
+\paragraph*{The two readings}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}Reformed}} --- Acts 15, the Reformed reading (the council judged by Scripture)\par\nobreak\noindent
+\textbf{Acts 15, the Reformed reading}: the demand of 15:1, Peter’s answer from the gospel and James’s from Scripture, and the step from them to councils: a council after the apostles binds as far as it agrees with Scripture, and may err.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaScriptura}{44}\)\gloss{Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaScriptura}{45}\)\gloss{Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved}
+  \item[(3)] \(\pvar{TestimonyArguments.SolaScriptura}{46}\)\gloss{Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)}
+  \item[(4)] \((\pvar{TestimonyArguments.SolaScriptura}{44} \land \pvar{TestimonyArguments.SolaScriptura}{45} \land \pvar{TestimonyArguments.SolaScriptura}{46}) \rightarrow \lnot \pvar{TestimonyArguments.SolaScriptura}{50}\)
+  \item[\(\vdash\)] \(\lnot \pvar{TestimonyArguments.SolaScriptura}{50}\)\gloss{\emph{at issue, the denial of:} A general council after the apostles binds with the Holy Spirit’s authority, as the council at Jerusalem did, and cannot err}
+  \keepwithnext
+\end{derivation}
+\emph{Grounded in scripture alone:} Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved, Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved.
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}Roman}} --- Acts 15, Rome’s reading (the council binds with the Spirit’s authority)\par\nobreak\noindent
+\textbf{Acts 15, Rome’s reading}: “it seemed good to the Holy Ghost, and to us”, the decrees delivered to keep, and the step from them to councils: a general council binds with the Holy Spirit’s authority.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaScriptura}{48}\)\gloss{Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaScriptura}{49}\)\gloss{Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem}
+  \item[(3)] \((\pvar{TestimonyArguments.SolaScriptura}{48} \land \pvar{TestimonyArguments.SolaScriptura}{49}) \rightarrow \pvar{TestimonyArguments.SolaScriptura}{50}\)
+  \item[\(\vdash\)] \(\pvar{TestimonyArguments.SolaScriptura}{50}\)\gloss{\emph{at issue:} A general council after the apostles binds with the Holy Spirit’s authority, as the council at Jerusalem did, and cannot err}
+  \keepwithnext
+\end{derivation}
+\emph{Grounded in scripture alone:} Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things, Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem.
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}Texts}}\par\nobreak\noindent
+Every text either reading of Acts 15 reads, and the letter the decree went out in: 15:1, 10–11, 15–17, 23–29 and 28, and 16:4. No step.
+
+\begin{derivation}
+  \item[(1)] \(\pvar{TestimonyArguments.SolaScriptura}{44}\)\gloss{Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved}
+  \item[(2)] \(\pvar{TestimonyArguments.SolaScriptura}{45}\)\gloss{Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved}
+  \item[(3)] \(\pvar{TestimonyArguments.SolaScriptura}{46}\)\gloss{Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)}
+  \breakrow{(4)} \(\pvar{TestimonyArguments.SolaScriptura}{48}\)\gloss{Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things}
+  \item[(5)] \(\pvar{TestimonyArguments.SolaScriptura}{49}\)\gloss{Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem}
+  \item[(6)] \(\pvar{TestimonyArguments.SolaScriptura}{47}\)\gloss{Acts 15:23–29 — they wrote letters by them: the decree went out in writing}
+\end{derivation}
+\paragraph*{Readings, written down}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{reformed\allowbreak{}On\allowbreak{}The\allowbreak{}Council\allowbreak{}Reading}}\par\nobreak\noindent
+The Reformed world, on Acts 15: every text holds, no commandment of men is bound as God’s word, and a council after the apostles may err.
+
+{\small\begin{verbatim}
+def reformedOnTheCouncilReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.mensCommandmentBindsAsGodsWord => False
+    | Claim.councilBindsWithTheSpiritsAuthority => False
+    | x => True
+\end{verbatim}}
+\paragraph*{What follows}
+\leavevmode\par\nobreak
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}Reformed\_\allowbreak{}establishes}}\par\nobreak\noindent
+\textbf{The Reformed reading of Acts 15 holds, given its step.} From 15:1, 15:10–11 and 15:15–17, a council after the apostles does not bind with the Spirit’s own authority: it binds as far as it agrees with Scripture. The step is rated \texttt{disputed}: Wilhelm grants the texts and denies the conclusion.
+
+What this does not claim: that councils have no authority. The Westminster Confession, which holds this reading, says their decrees are “to be received with reverence and submission” when they agree with the word.
+
+{\small\begin{verbatim}
+theorem acts15Reformed_establishes : Establishes acts15Reformed
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}Reformed\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+The Reformed reading of Acts 15 can be held without contradiction.
+
+{\small\begin{verbatim}
+theorem acts15Reformed_is_satisfiable : Satisfiable acts15Reformed.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}Roman\_\allowbreak{}establishes}}\par\nobreak\noindent
+\textbf{Rome’s reading of Acts 15 holds, given its step.} From 15:28 and 16:4, a general council binds with the Holy Spirit’s authority. The step is rated \texttt{disputed}: the Westminster Confession grants the texts and denies the conclusion.
+
+{\small\begin{verbatim}
+theorem acts15Roman_establishes : Establishes acts15Roman
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{acts15\allowbreak{}Roman\_\allowbreak{}is\_\allowbreak{}satisfiable}}\par\nobreak\noindent
+Rome’s reading of Acts 15 can be held without contradiction: Rome’s world, in which God’s word judges human tradition, some unwritten tradition is known to be apostolic, and a general council binds with the Spirit’s authority.
+
+{\small\begin{verbatim}
+theorem acts15Roman_is_satisfiable : Satisfiable acts15Roman.premises
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{acts15\_\allowbreak{}readings\_\allowbreak{}cannot\_\allowbreak{}be\_\allowbreak{}held\_\allowbreak{}together}}\par\nobreak\noindent
+\textbf{The two readings of Acts 15 cannot be held together.} One concludes that a council after the apostles may err, the other that a general council binds with the Spirit’s authority and cannot. Since every text either reads is granted by both, what they part over is the two steps, each rated \texttt{disputed}.
+
+What this does not claim: that either reading is wrong. It shows only that a reader must choose between them.
+
+{\small\begin{verbatim}
+theorem acts15_readings_cannot_be_held_together : ¬Satisfiable
+    (acts15Reformed.premises ++ acts15Roman.premises)
+-- axioms: propext, Classical.choice, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{acts15\_\allowbreak{}texts\_\allowbreak{}leave\_\allowbreak{}the\_\allowbreak{}council\_\allowbreak{}open}}\par\nobreak\noindent
+\textbf{The texts of Acts 15 do not settle the council’s authority.} Grant 15:1, 15:10–11, 15:15–17, 15:23–29 and 15:28, and 16:4, without either reading’s step: whether a general council binds with the Spirit’s authority neither follows nor fails. The Reformed reading grants every text and denies it; Rome’s grants every text and holds it. One fact, not two: the texts alone establish neither reading and block neither.
+
+{\small\begin{verbatim}
+theorem acts15_texts_leave_the_council_open : Independent acts15Texts (p
+    Claim.councilBindsWithTheSpiritsAuthority)
+-- axioms: propext, Quot.sound
+\end{verbatim}}
+\par\medskip\noindent\textbf{\texttt{romes\_\allowbreak{}reading\_\allowbreak{}of\_\allowbreak{}acts15\_\allowbreak{}leaves\_\allowbreak{}unwritten\_\allowbreak{}tradition\_\allowbreak{}open}}\par\nobreak\noindent
+\textbf{Rome’s reading of Acts 15 does not reach unwritten tradition.} Grant that “it seemed good to the Holy Ghost, and to us”, that the decrees were delivered to keep, Rome’s step from them, and that the decree went out as a letter (15:23–29): whether any unwritten tradition can now be shown to be apostolic neither follows nor fails. Rome’s world grants all of it and denies the premise; a world in which every claim of the argument holds grants all of it and holds the premise. What the council handed on was written, so it is no instance of the unwritten tradition the Mark 7 case turns on.
+
+{\small\begin{verbatim}
+theorem romes_reading_of_acts15_leaves_unwritten_tradition_open : Independent
+    (acts15Roman.premises ++ [p Claim.acts15_23_29DecreeWritten]) (p
+    Claim.noUnwrittenTraditionShownApostolic)
 -- axioms: propext, Quot.sound
 \end{verbatim}}
 \subsection*{TestimonyArguments.SolaScriptura.Dispute — what Mark 7 decides between Rome and the Reformers}

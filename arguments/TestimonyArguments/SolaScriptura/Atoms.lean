@@ -181,6 +181,44 @@ inductive Claim
   handle not", that they are "after the commandments and doctrines of men".
   Paul is warning a church, not the elders of Jerusalem. -/
   | colossians2_8TraditionOfMen
+  /-- Acts 15:1 — "And certain men which came down from Judaea taught the
+  brethren, and said, Except ye be circumcised after the manner of Moses, ye
+  cannot be saved." "The manner" (ἔθος) is the custom of Moses: the oldest
+  practice Israel had, and one God himself had given. What the text reports,
+  not yet what follows from it. -/
+  | acts15_1CircumcisionAfterMoses
+  /-- Acts 15:10–11 — Peter at the council: "Now therefore why tempt ye God, to
+  put a yoke upon the neck of the disciples, which neither our fathers nor we
+  were able to bear? But we believe that through the grace of the Lord Jesus
+  Christ we shall be saved, even as they." -/
+  | acts15_10_11YokeAndGrace
+  /-- Acts 15:15–17 — James at the council: "And to this agree the words of the
+  prophets; as it is written, After this I will return, and will build again
+  the tabernacle of David, which is fallen down ... That the residue of men
+  might seek after the Lord, and all the Gentiles, upon whom my name is called".
+  He quotes Amos 9:11–12. -/
+  | acts15_15_17ProphetsAgree
+  /-- Acts 15:23–29 — "And they wrote letters by them after this manner": the
+  council's decree went to the churches as a letter, and the letter is in
+  Scripture. -/
+  | acts15_23_29DecreeWritten
+  /-- Acts 15:28 — the council's letter: "For it seemed good to the Holy Ghost,
+  and to us, to lay upon you no greater burden than these necessary things". -/
+  | acts15_28SeemedGoodToTheHolyGhost
+  /-- Acts 16:4 — "And as they went through the cities, they delivered them the
+  decrees for to keep, that were ordained of the apostles and elders which were
+  at Jerusalem." "Delivered" (παρεδίδοσαν) is the verb whose noun is "tradition"
+  (παράδοσις): the decrees were handed on. -/
+  | acts16_4DecreesDelivered
+  /-- A general council of the Church after the apostles binds with the Holy
+  Spirit's authority, as the council at Jerusalem did: its definition of faith is
+  the Spirit's as well as the council's, and cannot err. Rome's reading of Acts
+  15:28, in Joseph Wilhelm's words: the apostles "put the seal of supreme
+  authority on their decisions in attributing them to the joint action of the
+  Spirit of God and of themselves". Rated `disputed`: the Westminster Confession
+  cites the same chapter for the authority of councils and holds that "All
+  synods or councils since the apostles' times ... may err" (XXXI.4). -/
+  | councilBindsWithTheSpiritsAuthority
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaScriptura
