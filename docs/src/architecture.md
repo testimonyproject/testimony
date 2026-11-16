@@ -141,7 +141,7 @@ argument printed alone, and in the book under each argument's heading, with
 everyone under the book's title. The names come from git history, and they are
 worked out when the PDF is typeset, by `scripts/credits.py`, not written into
 the committed `.tex`. The `.tex` only asks for them (`\credit{…}`), and the
-script writes a `credits.tex` beside it that answers. The reason is when the
+script writes a `credits.def` beside it that answers. The reason is when the
 credit is decided. Many commits here are authored by Claude and name no person,
 and such a commit is credited to whoever merged it. So the credit changes at the
 moment a pull request merges, and a committed document holding it would be

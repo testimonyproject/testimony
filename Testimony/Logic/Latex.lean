@@ -1031,7 +1031,7 @@ def preamble (title : String) (tool : String := "argtex") (author extra : String
   extra ++ "\\begin{document}\n\\maketitle\n"
 
 /-- **Credit, worked out when the document is typeset.** `\credit{key}`
-expands to what `credits.tex`, beside the document, defines for `key`, and to
+expands to what `credits.def`, beside the document, defines for `key`, and to
 nothing without it; `\creditline{key}` sets it centred under a heading, and sets
 nothing at all where there is no credit.
 
@@ -1044,7 +1044,7 @@ def credits : String :=
   "\\csname credit@#1\\endcsname\\fi}\n" ++
   "\\newcommand{\\creditline}[1]{\\ifcsname credit@#1\\endcsname" ++
   "{\\centering\\credit{#1}\\par\\medskip}\\fi}\n" ++
-  "\\InputIfFileExists{credits.tex}{}{}\n"
+  "\\InputIfFileExists{credits.def}{}{}\n"
 
 /-- The table of contents, which the starred sections opt into by hand. -/
 def contents : String := "\\tableofcontents\n"

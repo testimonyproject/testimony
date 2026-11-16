@@ -6,7 +6,7 @@ document names the people behind an argument: under the title of an argument
 printed alone, and (as `\\creditline`) under each argument's heading in the
 book. `\\credit{all}`
 names everyone behind every argument a document holds. The macro expands to
-whatever `credits.tex`, beside the document, defines for that argument, and to
+whatever `credits.def`, beside the document, defines for that argument, and to
 nothing if there is no such file.
 
 This script writes that file. It runs when the PDFs are typeset
@@ -252,7 +252,7 @@ def requests(tex: str) -> list[str]:
 
 
 def credits_file(texts: list[str], commits, merged_by, first_parent) -> str:
-    """`credits.tex` for the documents in one directory."""
+    """`credits.def` for the documents in one directory."""
     keys: list[str] = []
     for t in texts:
         for k in requests(t):
@@ -283,8 +283,10 @@ def main(argv: list[str]) -> int:
     commits = read_commits()
     merged_by, first_parent = merge_map(commits)
     for d in argv:
-        texts = [p.read_text() for p in sorted(Path(d).glob("*.tex")) if p.name != "credits.tex"]
-        out = Path(d) / "credits.tex"
+        texts = [p.read_text() for p in sorted(Path(d).glob("*.tex"))]
+        # Not `.tex`: the PDF workflow typesets every `*.tex` in these
+        # directories, and would take this file for a document.
+        out = Path(d) / "credits.def"
         out.write_text(credits_file(texts, commits, merged_by, first_parent))
         print(f"credits: wrote {out}")
     return 0
