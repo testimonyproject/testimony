@@ -216,14 +216,18 @@ work that cites it has been set down, and a chain of editions comes out in
 order. A cycle cannot be ordered at all, and is set down as it stands rather
 than lost; the rounds are bounded by the number of entries for that reason. -/
 def crossrefOrder (es : List BibEntry) : List BibEntry :=
-  let rec go : Nat → List BibEntry → List BibEntry
+  go es.length es
+where
+  /-- One round, then the rest: the entries no remaining entry cites, in the
+  order given, then the others ordered the same way. `fuel` bounds the rounds;
+  a round that frees nothing is a cycle, set down as it stands. -/
+  go : (fuel : Nat) → List BibEntry → List BibEntry
     | 0, rest => rest
     | _ + 1, [] => []
     | n + 1, rest =>
       let cited := rest.filterMap BibEntry.editionUsed
       let (free, held) := rest.partition fun e => !cited.contains e.key
       if free.isEmpty then rest else free ++ go n held
-  go es.length es
 
 /-- The whole bibliography as a `.bib` file, in `crossrefOrder`. `source` names
 the files the entries are written in, for the do-not-edit header. -/
