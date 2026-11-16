@@ -44,7 +44,7 @@ repository's root:
 lake exe bibgen       # references.bib and docs/src/bibliography.md
 lake exe argdoc       # docs/src/arguments/*.md and the list in docs/src/SUMMARY.md
 lake exe statusgen    # the status table in docs/src/roadmap.md, and docs/src/maturity.md
-lake exe argtex       # docs/latex/arguments.tex
+lake exe argtex       # docs/latex/arguments.tex, and each argument in docs/latex/arguments/
 ```
 
 Each takes `--check`, which CI runs. Never edit what they write: change the

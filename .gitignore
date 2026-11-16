@@ -2,8 +2,9 @@
 docs/book/
 .claude/settings.local.json
 
-# LaTeX build products. `arguments.tex` is generated but committed, like the
-# bibliography chapter; everything the TeX engine derives from it is not.
+# LaTeX build products. `arguments.tex` and each argument's own document under
+# `arguments/` are generated but committed, like the bibliography chapter;
+# everything the TeX engine derives from them is not.
 docs/latex/*.pdf
 docs/latex/*.aux
 docs/latex/*.bbl
@@ -11,6 +12,13 @@ docs/latex/*.blg
 docs/latex/*.log
 docs/latex/*.xdv
 docs/latex/references.bib
+docs/latex/arguments/*.pdf
+docs/latex/arguments/*.aux
+docs/latex/arguments/*.bbl
+docs/latex/arguments/*.blg
+docs/latex/arguments/*.log
+docs/latex/arguments/*.xdv
+docs/latex/arguments/references.bib
 __pycache__/
 
 # Worktrees created for background agents; never part of a change.

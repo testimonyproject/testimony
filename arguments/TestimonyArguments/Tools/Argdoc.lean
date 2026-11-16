@@ -22,7 +22,7 @@ open Testimony.Doc TestimonyArguments.Doc
 def site : Site :=
   { tool := "argdoc", sourceRoot := "arguments/"
   , pagesDir := "../docs/src/arguments", summaryPath := "../docs/src/SUMMARY.md"
-  , pdf := "../pdf/arguments.pdf" }
+  , pdf := "../pdf/arguments.pdf", argumentPdfDir := "../pdf/arguments" }
 
 /-- Entry point. -/
 def main (args : List String) : IO UInt32 := site.run arguments bodies args

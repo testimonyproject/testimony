@@ -34,17 +34,29 @@ structure Site where
   the site is built (`.github/workflows/pdf.yml`), so no page links to a file that
   the repository holds. -/
   pdf : String := ""
+  /-- The directory each argument's own print edition sits in, as a link from a
+  page in the pages directory: `../pdf/arguments`, holding `<slug>.pdf` for each
+  argument. Empty where arguments are printed only together, and the pages then
+  link only to `pdf`. -/
+  argumentPdfDir : String := ""
 
 namespace Site
 
-/-- The sentence that points a reader at the print edition, or nothing where
-there is none. -/
-def printEdition (s : Site) : String :=
+/-- The sentence that points a reader at the print editions, or nothing where
+there are none: this argument's own PDF where there is one, and the book of
+every argument. -/
+def printEdition (s : Site) (a : Argument) : String :=
   if s.pdf.isEmpty then "" else
-    "Every argument is also set for print, the claims linked and the derivations " ++
-    "in words as here, in [one PDF](" ++ s.pdf ++ "), and each tagged " ++
+  let release := "each tagged " ++
     "[release](https://github.com/testimonyproject/testimony/releases) of the project " ++
     "carries a copy.\n\n"
+  if s.argumentPdfDir.isEmpty then
+    "Every argument is also set for print, the claims linked and the derivations " ++
+    "in words as here, in [one PDF](" ++ s.pdf ++ "), and " ++ release
+  else
+    "This argument is also set for print, the claims linked and the derivations " ++
+    "in words as here, in [a PDF of its own](" ++ s.argumentPdfDir ++ "/" ++ a.slug ++
+    ".pdf). [One PDF](" ++ s.pdf ++ ") holds every argument together, and " ++ release
 
 /-- The repository path an argument's sources live at. -/
 def source (s : Site) (a : Argument) : String := s.sourceRoot ++ sourcePath a.ns
@@ -64,7 +76,7 @@ def preamble (s : Site) (a : Argument) : String :=
   "the same variable means the same claim in every position below. " ++
   "[Reading the logic](../reading-the-logic.md) is the short version of what the " ++
   "notation means. A result marked ⚗ is one this library constructs rather than " ++
-  "reports.\n\n" ++ s.printEdition
+  "reports.\n\n" ++ s.printEdition a
 
 /-- One argument's page: the do-not-edit header, the title, the note, the
 generated body. -/
@@ -201,7 +213,7 @@ def chapteredPreamble (s : Site) (a : Argument) : String :=
   "every chapter; the numbered list is in " ++ legendAt ++ ". " ++
   "[Reading the logic](../reading-the-logic.md) is the short version of what the " ++
   "notation means. A result marked ⚗ is one this library constructs rather than " ++
-  "reports.\n\n" ++ s.printEdition
+  "reports.\n\n" ++ s.printEdition a
 
 /-- One argument's pages: one, or one per chapter. -/
 def argumentPages (s : Site) (a : Argument) (b : Body) : List (String × String) :=
