@@ -136,6 +136,27 @@ each argument at `pdf/arguments/<slug>.pdf`. Every argument's page links to its
 own PDF and to the book. The `Release` workflow attaches all of them to the
 GitHub release a `v*` tag makes.
 
+Each document also names the people behind its arguments: under the title of an
+argument printed alone, and in the book under each argument's heading, with
+everyone under the book's title. The names come from git history, and they are
+worked out when the PDF is typeset, by `scripts/credits.py`, not written into
+the committed `.tex`. The `.tex` only asks for them (`\credit{…}`), and the
+script writes a `credits.tex` beside it that answers. The reason is when the
+credit is decided. Many commits here are authored by Claude and name no person,
+and such a commit is credited to whoever merged it. So the credit changes at the
+moment a pull request merges, and a committed document holding it would be
+stale on `main` from then on.
+
+A commit counts for an argument if it touches the argument's own Lean sources,
+where they live now or where they lived before the arguments became a package
+of their own. Regenerating a page touches no source, so it credits no one, and
+works shared between arguments are not divided among them. Names pass through
+`.mailmap`, so one person spelled two ways is listed once. Claude is not listed
+as an author. Where it took part, the credit says so on a line of its own,
+"Written with Claude Code". The script refuses a shallow clone, because a
+history cut short would drop credit for the older work without saying so, so the
+`PDF` workflow checks out the whole history.
+
 ### An argument set as chapters
 
 A long argument reads better as a book than as one page. Its catalogue entry

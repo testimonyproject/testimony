@@ -514,12 +514,25 @@ def latexChapters (a : Argument) (b : Body) : String :=
 /-- **A printable document**: a title, a standing note under it, and a section
 for each argument — its heading the catalogue's title, its body the harvest's
 LaTeX. Every package built on the library sets its documents with it, so they
-are set alike. `tool` is the generator the document says it was made by. -/
+are set alike. `tool` is the generator the document says it was made by.
+
+With `credits`, the document names the people behind its arguments, as
+`Logic.Latex.credits` works them out when it is typeset: one argument's under
+the title of a document that holds only it, and in a document of several,
+everyone's under the title and each argument's under its heading. -/
 def latexDocument (title note : String) (sections : List (Argument × Body))
-    (tool : String := "argtex") : String :=
-  Logic.Latex.preamble title tool ++ note ++ Logic.Latex.contents ++
+    (tool : String := "argtex") (credits : Bool := false) : String :=
+  let alone := sections.length == 1
+  let key := match sections with
+    | [(a, _)] => a.ns.toString
+    | _ => "all"
+  (if credits then
+    Logic.Latex.preamble title tool ("\\credit{" ++ key ++ "}") Logic.Latex.credits
+   else Logic.Latex.preamble title tool) ++
+  note ++ Logic.Latex.contents ++
   String.join (sections.map fun (a, b) =>
     Logic.Latex.sectionHeading a.title ++
+      (if credits && !alone then "\\creditline{" ++ a.ns.toString ++ "}\n\n" else "") ++
       (if a.chapters.isEmpty then b.latex else latexChapters a b)) ++
   Logic.Latex.postamble
 

@@ -12,6 +12,7 @@ docs/latex/*.blg
 docs/latex/*.log
 docs/latex/*.xdv
 docs/latex/references.bib
+docs/latex/credits.tex
 docs/latex/arguments/*.pdf
 docs/latex/arguments/*.aux
 docs/latex/arguments/*.bbl
@@ -19,6 +20,7 @@ docs/latex/arguments/*.blg
 docs/latex/arguments/*.log
 docs/latex/arguments/*.xdv
 docs/latex/arguments/references.bib
+docs/latex/arguments/credits.tex
 __pycache__/
 
 # Worktrees created for background agents; never part of a change.
