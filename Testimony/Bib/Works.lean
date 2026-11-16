@@ -157,6 +157,41 @@ Hebrew text. -/
       , identifiers := [.url "https://github.com/openscriptures/morphhb"] }
   , license := some "CC BY 4.0" }
 
+/-- The SBL Greek New Testament, Holmes's critical text, whose apparatus compares
+it with Westcott–Hort, Tregelles, the NIV's text and the Byzantine text of
+Robinson–Pierpont. Cited for Revelation 22:11, where it marks no variation at
+δικαιοσύνην ποιησάτω. ISBN confirmed at Open Library. Its text is licensed CC BY 4.0, and is the
+text of the library's Greek corpus (`Testimony.Corpus.Greek`). -/
+@[bib_entry] def sblgnt : BibEntry := .criticalEdition
+  { core :=
+      { key := "holmes-sblgnt-2010"
+      , role := .text
+      , contributors := { editors := [.person "Michael W." "Holmes"] }
+      , title := "The Greek New Testament: SBL Edition"
+      , year := some { value := 2010 }
+      , identifiers := [.isbn "9781589835351"] }
+  , publisher := "Society of Biblical Literature"
+  , siglum := some "SBLGNT" }
+
+/-- MACULA Greek, Clear Bible's linguistic annotation of the Greek New Testament,
+in its SBLGNT edition: morphology and syntactic roles for every word, licensed
+CC BY 4.0 by Biblica. The library's Greek corpus (`Testimony.Corpus.Greek`) is
+read from its word table, `SBLGNT/tsv/macula-greek-SBLGNT.tsv`, read on
+2026-11-16; no revision is recorded, so the table's SHA-256 is given in
+`data/greek/macula-sblgnt/README.md`. The tagging is Clear Bible's reading of the
+text, and is cited as theirs. -/
+@[bib_entry] def maculaGreek : BibEntry := .dataset
+  { core :=
+      { key := "clear-macula-greek"
+      , role := .text
+      , contributors := { authors := [.corporate "Clear Bible"] }
+      , title := "MACULA Greek Linguistic Datasets"
+      , subtitle := some "SBLGNT edition"
+      , identifiers :=
+          [.url "https://github.com/Clear-Bible/macula-greek" (some "2026-11-16")] }
+  , license := some "CC BY 4.0"
+  , maintainer := some "Biblica, Inc." }
+
 /-- Berry's dictionary article on the virgin birth. Cited for two things the
 argument from Isaiah 7:14 turns on: that how Isaiah 7:14 was fulfilled in Ahaz's
 own day is itself an open question, and that the semantic range of עַלְמָה does

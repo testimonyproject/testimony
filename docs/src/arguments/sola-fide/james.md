@@ -307,7 +307,7 @@ def textualSource : Source :=
   {
     primary :=
       Reference.work divinoAfflanteSpiritu (Bib.Locus.sectionRef "§16"),
-    supporting := [Reference.work sblgnt, Reference.work nabre],
+    supporting := [Reference.work Bib.sblgnt, Reference.work nabre],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.wellSupported }
 ```
