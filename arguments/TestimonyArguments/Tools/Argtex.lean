@@ -76,7 +76,8 @@ def standaloneNote : String :=
 
 /-- The whole document: every catalogued argument, set as `latexDocument` sets
 any package's. -/
-def document : String := latexDocument documentTitle note (sectionsOf arguments bodies)
+def document : String :=
+  latexDocument documentTitle note (sectionsOf arguments bodies) (credits := true)
 
 /-- Where each argument's own document is written: `<slug>.tex` in this
 directory. -/
@@ -84,7 +85,7 @@ def standaloneDir : System.FilePath := "../docs/latex/arguments"
 
 /-- One argument printed on its own, under its catalogue title. -/
 def standalone (a : Argument) : String :=
-  latexDocument a.title standaloneNote (sectionsOf [a] bodies)
+  latexDocument a.title standaloneNote (sectionsOf [a] bodies) (credits := true)
 
 -- Each argument's document is named by its slug, so two arguments with one slug
 -- would write one file and lose the other. A release attaches every PDF without
