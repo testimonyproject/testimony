@@ -5,6 +5,14 @@ name: PDF
 # package's documents (examples/docs/latex/*.tex), and uploads the PDFs as the
 # `pdfs` artifact: arguments.pdf, arguments/<slug>.pdf and the examples'.
 #
+# Each argument's document names the people behind it. That credit is worked
+# out here, from git history, by scripts/credits.py, and is not in the
+# committed .tex: a commit that names no person is credited to whoever merged
+# it, so the credit changes when a pull request merges. On a pull request the
+# checkout is GitHub's trial merge, whose author GitHub sets to the pull
+# request's, so its PDFs already credit the pull request's own commits to its
+# author, as the real merge will if the author merges it.
+#
 # On a pull request this is the check that the print edition still typesets, so
 # a LaTeX error is caught before it reaches main. docs.yml calls it to put the
 # PDFs beside the site, and release.yml to attach them to a tagged release.
@@ -68,7 +76,12 @@ jobs:
       contents: read
       packages: read
     steps:
+      # The whole history: each document credits the people behind its
+      # arguments, from every commit to them (scripts/credits.py), and refuses a
+      # shallow clone rather than drop the older work's credit.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # The cache ci.yml saves. Restored only: this job builds nothing of its
       # own worth keeping.
@@ -87,8 +100,13 @@ jobs:
       - name: Fetch Mathlib oleans
         run: lake exe cache get
 
+      # The checkout belongs to the runner, not to the container's user, and
+      # git refuses to read a repository someone else owns until told it is
+      # safe.
       - name: Arguments
         run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          python3 scripts/credits.py docs/latex docs/latex/arguments
           cp references.bib docs/latex/
           cp references.bib docs/latex/arguments/
           cd docs/latex

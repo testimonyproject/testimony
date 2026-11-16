@@ -154,6 +154,7 @@ lake exe argdoc                      # regenerate docs/src/arguments/ from the d
 lake exe argtex                      # render arguments to LaTeX: together, and each alone
 (cd ../docs/latex && tectonic arguments.tex)   # ... and to PDF (needs a Unicode engine)
 (cd ../docs/latex/arguments && tectonic sola-fide.tex)   # ... one argument on its own
+python3 ../scripts/credits.py ../docs/latex ../docs/latex/arguments   # names in the PDFs, from git
 
 # In examples/: the examples package, after the library.
 lake build && lake exe exampletex --check
