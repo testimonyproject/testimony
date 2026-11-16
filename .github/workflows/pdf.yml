@@ -1,17 +1,18 @@
 name: PDF
 
-# Typesets the print editions: the arguments (docs/latex/arguments.tex) and the
-# examples package's documents (examples/docs/latex/*.tex), and uploads the
-# PDFs as the `pdfs` artifact.
+# Typesets the print editions: the arguments together (docs/latex/arguments.tex),
+# each argument on its own (docs/latex/arguments/<slug>.tex), and the examples
+# package's documents (examples/docs/latex/*.tex), and uploads the PDFs as the
+# `pdfs` artifact: arguments.pdf, arguments/<slug>.pdf and the examples'.
 #
 # On a pull request this is the check that the print edition still typesets, so
 # a LaTeX error is caught before it reaches main. docs.yml calls it to put the
 # PDFs beside the site, and release.yml to attach them to a tagged release.
 #
-# arguments.tex and the examples' .tex files are generated but committed, and
+# The arguments' and the examples' .tex files are generated but committed, and
 # ci.yml fails a change that leaves them stale, so they are typeset as
 # committed. Their bibliographies are not committed beside them: the arguments'
-# is the committed references.bib at the root, copied in; the examples' is
+# is the committed references.bib at the root, copied beside each; the examples' is
 # written by `lake exe exampletex`, which is why this job builds that package.
 #
 # On a pull request it runs only when the change touches a build input, as
@@ -89,8 +90,11 @@ jobs:
       - name: Arguments
         run: |
           cp references.bib docs/latex/
+          cp references.bib docs/latex/arguments/
           cd docs/latex
           tectonic arguments.tex
+          cd arguments
+          for f in *.tex; do tectonic "$f"; done
 
       # `exampletex` writes the documents and the bibliography beside them;
       # `--check` first, so a stale committed document fails here as in ci.yml
@@ -105,8 +109,9 @@ jobs:
 
       - name: Collect
         run: |
-          mkdir -p pdf
+          mkdir -p pdf/arguments
           cp docs/latex/arguments.pdf pdf/
+          cp docs/latex/arguments/*.pdf pdf/arguments/
           cp examples/docs/latex/*.pdf pdf/
 
       - uses: actions/upload-artifact@v4

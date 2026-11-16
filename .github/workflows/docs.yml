@@ -47,7 +47,8 @@ jobs:
     uses: ./.github/workflows/devcontainer-image.yml
 
   # The print editions, put beside the site so that the argument pages' links
-  # to them resolve (`../pdf/arguments.pdf`).
+  # to them resolve (`../pdf/arguments.pdf`, and `../pdf/arguments/<slug>.pdf`
+  # for each argument on its own).
   pdf:
     permissions:
       contents: read
