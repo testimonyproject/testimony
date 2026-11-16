@@ -53,9 +53,11 @@ theorem tridentine_not_establishes : ¬ Establishes tridentine := by
 #print axioms tridentine_not_establishes
 
 /-- The post-Vatican I reading: the magisterium is the living interpreter, so
-scripture is not the sole infallible rule. -/
+scripture is not the sole infallible rule; and the apostles' office did not end
+with them, but continues in the bishops. -/
 def magisterialReading : Valuation Claim := fun a =>
   match a with
+  | .apostlesOfficeEndedWithThem => False
   | .scriptureIsSoleInfallibleRule => False
   | _ => True
 

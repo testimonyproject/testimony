@@ -34,7 +34,8 @@ principle it also draws from Jesus' sayings and Paul's letters. Scripture
 is not the only authority but the only infallible one; tradition is ministerial,
 and practices neither commanded nor forbidden need no scriptural warrant. It
 reads the council at Jerusalem as the Reformers did: a council after the
-apostles binds as far as it agrees with Scripture, and may err. And it reads
+apostles binds as far as it agrees with Scripture, and may err, because the
+apostles' own office ended with them. And it reads
 Moses' seat (Matthew 23:2–3) as Calvin did: an office in the Church is heard as
 far as it teaches God's word. -/
 @[solaScripturaDefs]
@@ -44,7 +45,7 @@ def protestant : ArgumentPackage Claim :=
   , premises :=
       caseOf
         [ classicalLine, eliminativeLine, mark7Line, jesusAndPaulLine, mark7SoleRuleLine
-        , acts15ReformedLine, mosesSeatReformedLine ]
+        , apostlesOfficeEndedLine, acts15ReformedLine, mosesSeatReformedLine ]
         sharedGrounds []
   , conclusion := p .scriptureIsSoleInfallibleRule
   , conclusionLabel := soleRuleLabel }
@@ -68,15 +69,19 @@ def tridentine : ArgumentPackage Claim :=
 /-- **Tradition III**, resting on Vatican I. Kept separate from `tridentine`
 because Mathison argues it escapes several objections to the two-source view
 while incurring its own. It reads the council at Jerusalem as Rome does: a
-general council binds with the Holy Spirit's authority. And it reads Moses' seat
+general council binds with the Holy Spirit's authority, because the apostles'
+office continues in their successors. And it reads Moses' seat
 (Matthew 23:2–3) as Cornelius a Lapide did: those who hold the Church's teaching
 office are heeded for the seat they hold. -/
 @[solaScripturaDefs]
 def vaticanI : ArgumentPackage Claim :=
   { vaticanLine.asPackage cite soleRuleLabel with
-    premises := caseOf [vaticanLine, acts15RomanLine, mosesSeatRomanLine] [] []
+    premises :=
+      caseOf [vaticanLine, apostolicSuccessionLine, acts15RomanLine, mosesSeatRomanLine] [] []
     conclusion := p .scriptureIsSoleInfallibleRule
-    inferences := acts15RomanLine.inference.toList ++ mosesSeatRomanLine.inference.toList }
+    inferences :=
+      apostolicSuccessionLine.inference.toList ++ acts15RomanLine.inference.toList ++
+        mosesSeatRomanLine.inference.toList }
 
 /-- **The Orthodox position**, on the mind of the Church rather than on a
 magisterium. -/
@@ -146,7 +151,7 @@ def protestantWithoutHinge : ArgumentPackage Claim :=
             [ p .timothy3_16GodBreathed, p .timothy3_17ThoroughlyEquips
             , p .scriptureIsSufficient, p .scriptureIsPerspicuous ]
         , eliminativeLine, mark7Line, jesusAndPaulLine, mark7SoleRuleLine
-        , acts15ReformedLine, mosesSeatReformedLine ]
+        , apostlesOfficeEndedLine, acts15ReformedLine, mosesSeatReformedLine ]
         sharedGrounds [] }
 
 /-- The classical line alone, stripped of the hinge. -/

@@ -4,11 +4,12 @@ import TestimonyArguments.SolaScriptura.Sources
 /-!
 # TestimonyArguments.Meanings.SolaScriptura — what each sola scriptura claim says
 
-**Forty-four of the fifty-four claims have meanings** (`coverage_now`), and with
-them nineteen of the argument's twenty-five lines of reason can be read as moves,
+**Fifty-four of the sixty-four claims have meanings** (`coverage_now`), and with
+them twenty-one of the argument's twenty-seven lines of reason can be read as moves,
 all of whose claims say something the checks can see: the eliminative line, both
 of Mark 7's lines, the line from Jesus' sayings and Paul's letters to the same
-principle, both readings of Acts 15 and of Moses' seat, Geisler's Tradition 0, Trent, Vatican I, the
+principle, both readings of Acts 15, of the apostles' office and of Moses' seat,
+Geisler's Tradition 0, Trent, Vatican I, the
 Orthodox line, the canon objection and Kruger's reply, the interpretive-authority
 regress and Mathison's reply, and Geisler's circularity charge with both replies
 to it.
@@ -66,6 +67,19 @@ words that carry a reading are kept as the text has them.
   (παρεδίδοσαν) to the churches to keep. The decree is one particular in all
   three, because 16:4 names it as "the decrees ... ordained of the apostles and
   elders which were at Jerusalem".
+- **Acts 1:21–22** says that the one ordained in Judas's place had to be one of
+  the men who companied with the apostles and a witness of the resurrection;
+  **1 Corinthians 15:8** that Paul was the last to whom the risen Christ was
+  seen; **2 Peter 3:15–16** that Paul's epistles are wrested as "the other
+  scriptures" are; and **2 Corinthians 1:1** and **Colossians 1:1** that Paul is
+  an apostle and Timothy "our brother". **1 Thessalonians 1:1–2:6** says that
+  the letter is from Paul, Silvanus and Timotheus, and that its writers might
+  have been burdensome "as the apostles of Christ"; whether that takes in all
+  three the meaning leaves open. **Acts 1:20** says that another is to take
+  Judas's bishoprick (ἐπισκοπή), **2 Timothy 2:2** that Timothy is to commit what
+  he heard to faithful men who shall teach others, and Acts 15:6–16:4 that the
+  council was the apostles' and the elders'. **1 Clement 42 and 44** is given as
+  what Clement records, not as what the apostles did.
 - **Matthew 23:2–3** says that the scribes and the Pharisees sit in Moses' seat
   (καθέδρα), that whatever they bid is what the hearers are to "observe and do"
   (ποιήσατε καὶ τηρεῖτε), and that their works are not. **23:16–22** says that
@@ -101,7 +115,9 @@ says that a general council's definition of faith, after the apostles, is
 infallible and is the Holy Ghost's as well as the council's; the Reformed
 reading denies it. Rome's reading of Moses' seat says that what the Church's
 teaching office teaches, where it is not contrary to God's law, is to be heeded
-for the seat its teachers hold; the Reformed reading denies it. It says nothing
+for the seat its teachers hold; the Reformed reading denies it. Calvin's claim
+that the apostles' office ended with them says that their office ended, their
+successors receiving their ministry only; Rome denies it. It says nothing
 of whether the office can err, and it is not joined to the claims that do.
 
 ## What is left unanalysed, and why
@@ -216,7 +232,12 @@ def all : List Claim :=
   , .acts15_1CircumcisionAfterMoses, .acts15_10_11YokeAndGrace, .acts15_15_17ProphetsAgree
   , .acts15_23_29DecreeWritten, .acts15_28SeemedGoodToTheHolyGhost, .acts16_4DecreesDelivered
   , .councilBindsWithTheSpiritsAuthority, .matthew23_2_3MosesSeat
-  , .matthew23_16_22BlindGuides, .teachingOfficeHeardByItsSeat ]
+  , .matthew23_16_22BlindGuides, .teachingOfficeHeardByItsSeat
+  , .acts1_21_22WitnessOfResurrection, .corinthians15_8LastOfAll
+  , .peter3_15_16PaulsEpistlesWithTheScriptures, .salutationsApostleAndBrother
+  , .thessalonians2_6ApostlesOfChrist, .apostlesOfficeEndedWithThem, .acts15ApostlesAndElders
+  , .acts1_20BishoprickLetAnotherTake, .timothy2_2CommitToFaithfulMen
+  , .clement42_44SuccessorsAppointed ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -264,6 +285,25 @@ theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
 @[nolint defsWithUnderscore] abbrev acts16_4 : PassageRange := vs .acts 16 4
 /-- Matthew 23:2–3. -/
 @[nolint defsWithUnderscore] abbrev matt23_2_3 : PassageRange := rg .matthew 23 2 23 3
+/-- Acts 1:20. -/
+@[nolint defsWithUnderscore] abbrev acts1_20 : PassageRange := vs .acts 1 20
+/-- Acts 1:21–22. -/
+@[nolint defsWithUnderscore] abbrev acts1_21_22 : PassageRange := rg .acts 1 21 1 22
+/-- 1 Corinthians 15:8. -/
+@[nolint defsWithUnderscore] abbrev cor15_8 : PassageRange := vs .firstCorinthians 15 8
+/-- 2 Peter 3:15–16. -/
+@[nolint defsWithUnderscore] abbrev pet3_15_16 : PassageRange := rg .secondPeter 3 15 3 16
+/-- 2 Corinthians 1:1. -/
+@[nolint defsWithUnderscore] abbrev cor2_1_1 : PassageRange := vs .secondCorinthians 1 1
+/-- Colossians 1:1. -/
+@[nolint defsWithUnderscore] abbrev col1_1 : PassageRange := vs .colossians 1 1
+/-- 1 Thessalonians 1:1–2:6. -/
+@[nolint defsWithUnderscore] abbrev thess1_1_2_6 : PassageRange :=
+  rg .firstThessalonians 1 1 2 6
+/-- Acts 15:6–16:4, where the council is "the apostles and elders". -/
+@[nolint defsWithUnderscore] abbrev acts15_6_16_4 : PassageRange := rg .acts 15 6 16 4
+/-- 2 Timothy 2:2. -/
+@[nolint defsWithUnderscore] abbrev tim2_2 : PassageRange := vs .secondTimothy 2 2
 /-- Matthew 23:16–22. -/
 @[nolint defsWithUnderscore] abbrev matt23_16_22 : PassageRange := rg .matthew 23 16 23 22
 
@@ -298,6 +338,12 @@ abbrev holyGhost : Term := pt "the Holy Ghost" .agent
 abbrev councilDefinition : Term :=
   pt "a general council's definition of faith, after the apostles" .informationObject
 
+/-- Paul's salutation in 2 Corinthians 1:1 and Colossians 1:1: Paul is an
+apostle of Jesus Christ, and Timothy is "our brother". -/
+abbrev salutation : Content :=
+  .both (rl .isA (pt "Paul" .agent) (pt "an apostle of Jesus Christ by the will of God" .quality))
+    (rl .isA (pt "Timothy" .agent) (pt "our brother" .quality))
+
 /-- Scripture is infallible. -/
 abbrev scriptureInfallible : Statement := .holds (rl .isA (cn .scripture) (cn .infallible))
 
@@ -319,7 +365,7 @@ clear sense another (`accountability_refuses_rather_than_denies`). -/
 abbrev consensusNotPreconditionOfReading : Statement :=
   .holds (.not (rl .precedes (cn .creedalConsensus) (cn .readingScripture)))
 
-/-- **What each sola scriptura atom asserts.** Forty-four are analysed; the rest
+/-- **What each sola scriptura atom asserts.** Fifty-four are analysed; the rest
 keep their citations' labels, marked unanalysed, for the reasons the module
 docstring gives. -/
 def means : Claim → Statement
@@ -461,6 +507,44 @@ def means : Claim → Statement
           "nothing, but whosoever shall swear by the gold of the temple, he is a debtor")
         .informationObject)
       (pt "the teaching of blind guides (ὁδηγοὶ τυφλοί)" .quality)
+  | .acts1_21_22WitnessOfResurrection =>
+    .says acts1_21_22 <| rl .isA (pt "the one ordained in Judas's place" .agent)
+      (pt ("one of the men which companied with the apostles all the time the Lord " ++
+          "Jesus went in and out among them, a witness of his resurrection") .quality)
+  | .corinthians15_8LastOfAll =>
+    .says cor15_8 <| rl .isA (pt "Paul" .agent)
+      (pt "the last of all to whom the risen Christ was seen" .quality)
+  | .peter3_15_16PaulsEpistlesWithTheScriptures =>
+    .says pet3_15_16 <| rl .isA (pt "all Paul's epistles" .informationObject)
+      (pt "what is wrested as the other scriptures are" .quality)
+  | .salutationsApostleAndBrother =>
+    .also (.says cor2_1_1 salutation) (.says col1_1 salutation)
+  | .thessalonians2_6ApostlesOfChrist =>
+    .says thess1_1_2_6 <|
+      .both (rl .saidBy (pt "Paul, and Silvanus, and Timotheus" .agent)
+          (pt "the first letter to the Thessalonians" .informationObject))
+        (rl .isA (pt "the writers of the letter" .agent)
+          (pt "those who might have been burdensome as the apostles of Christ" .quality))
+  | .apostlesOfficeEndedWithThem =>
+    .holds <| rl .isA (pt "the office of the apostles of Christ" .quality)
+      (pt "what ended with the apostles, their successors receiving their ministry only"
+        .quality)
+  | .acts15ApostlesAndElders =>
+    .says acts15_6_16_4 <| .both
+      (rl .agentOf (pt "the apostles at Jerusalem" .agent) (pt "the council at Jerusalem" .event))
+      (rl .agentOf (pt "the elders at Jerusalem" .agent) (pt "the council at Jerusalem" .event))
+  | .acts1_20BishoprickLetAnotherTake =>
+    .says acts1_20 <| rl .agentOf (pt "another, in Judas's place" .agent)
+      (pt "taking his bishoprick (ἐπισκοπή)" .event)
+  | .timothy2_2CommitToFaithfulMen =>
+    .says tim2_2 <| rl .agentOf (pt "Timothy" .agent)
+      (pt ("committing what he heard of Paul to faithful men, who shall be able to " ++
+          "teach others also") .event)
+  | .clement42_44SuccessorsAppointed =>
+    .holds <| rl .agentOf (pt "Clement of Rome" .agent)
+      (pt ("recording (1 Clement 42, 44) that the apostles appointed bishops and " ++
+          "deacons, and instructed that other approved men should succeed them in " ++
+          "their ministry") .event)
   | .teachingOfficeHeardByItsSeat =>
     .holds <| rl .bindsAs
       (pt ("whatever those who hold the Church's teaching office teach, not contrary " ++
@@ -472,10 +556,10 @@ def means : Claim → Statement
 instance meanings : HasMeanings Claim :=
   { argument := "Sola scriptura", all, complete := all_complete, means }
 
-/-- **Forty-four of the 54 atoms are analysed**: the texts, in their own words,
+/-- **Fifty-four of the 64 atoms are analysed**: the texts, in their own words,
 and every claim a line's step reads except the three the module docstring
 names. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (44, 54) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (54, 64) := by decide
 
 /-- **The sola scriptura joins**: each pair of claims whose meanings exclude or
 entail one another, listed, and proved to be exactly what the meanings contain.

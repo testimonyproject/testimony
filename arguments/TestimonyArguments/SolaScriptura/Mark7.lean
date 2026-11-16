@@ -222,9 +222,12 @@ to be apostolic and binds as God's word, so Scripture is not the sole infallible
 Church's consensus a mere product of reading Scripture: for Rome, Scripture and
 Tradition flow from one source (*Dei Verbum* 9). A world must choose here,
 because the meanings exclude the consensus being that product and its being
-needed for Scripture's clear sense (`TestimonyArguments.Meanings.SolaScriptura.joins`). -/
+needed for Scripture's clear sense (`TestimonyArguments.Meanings.SolaScriptura.joins`).
+And the apostles' office did not end with them: bishops succeed to it (*Lumen
+Gentium* 20). -/
 def romeGrantsMarksPrincipleReading : Valuation Claim := fun a =>
   match a with
+  | .apostlesOfficeEndedWithThem => False
   | .creedalConsensusIsDerivedFromScripture => False
   | .mensCommandmentBindsAsGodsWord => False
   | .noUnwrittenTraditionShownApostolic => False

@@ -168,8 +168,14 @@ gospel judge even the oldest tradition, the custom of Moses, and that judged by
 Scripture: "to this agree the words of the prophets; as it is written" (15:15).
 Rome reads it as a council binding with the Spirit's authority: "it seemed good
 to the Holy Ghost, and to us" (15:28), its decrees "delivered" to the churches
-"for to keep" (16:4). Each side grants every text the other reads, and each step
-from the texts to councils after the apostles is `disputed`. So the two readings
+"for to keep" (16:4). Between the two lies the apostles' office. Calvin holds
+that it ended with them, from the eyewitness the apostle in Judas's place had to
+be (Acts 1:21–22) and Paul's being the last to see the risen Christ (1 Corinthians
+15:8); *Lumen Gentium* 20 holds that it continues in the bishops, from "his
+bishoprick let another take" (Acts 1:20), 2 Timothy 2:2 and 1 Clement 44. The texts
+alone leave that open too (`apostolic_texts_leave_the_office_open`). Each side
+grants every text the other reads, and each step from the texts to councils
+after the apostles is `disputed`. So the two readings
 cannot be held together, and the texts alone leave the question open
 (`acts15_readings_cannot_be_held_together`, `acts15_texts_leave_the_council_open`).
 Nor does Rome's reading touch the premise about unwritten tradition: what the

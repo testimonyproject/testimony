@@ -166,8 +166,14 @@ gospel judge even the oldest tradition, the custom of Moses, and that judged by
 Scripture: "to this agree the words of the prophets; as it is written" (15:15).
 Rome reads it as a council binding with the Spirit's authority: "it seemed good
 to the Holy Ghost, and to us" (15:28), its decrees "delivered" to the churches
-"for to keep" (16:4). Each side grants every text the other reads, and each step
-from the texts to councils after the apostles is `disputed`. So the two readings
+"for to keep" (16:4). Between the two lies the apostles' office. Calvin holds
+that it ended with them, from the eyewitness the apostle in Judas's place had to
+be (Acts 1:21–22) and Paul's being the last to see the risen Christ (1 Corinthians
+15:8); *Lumen Gentium* 20 holds that it continues in the bishops, from "his
+bishoprick let another take" (Acts 1:20), 2 Timothy 2:2 and 1 Clement 44. The texts
+alone leave that open too (`apostolic_texts_leave_the_office_open`). Each side
+grants every text the other reads, and each step from the texts to councils
+after the apostles is `disputed`. So the two readings
 cannot be held together, and the texts alone leave the question open
 (`acts15_readings_cannot_be_held_together`, `acts15_texts_leave_the_council_open`).
 Nor does Rome's reading touch the premise about unwritten tradition: what the
@@ -304,6 +310,16 @@ conclusion — or, where no one was found who does, to whoever grants both.
 | <a id="claim-51"></a>\\(P_{51}\\) | Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works | textual | Christian, hist.-gramm., consensus | Matt 23:2-3; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), p. 15 |
 | <a id="claim-52"></a>\\(P_{52}\\) | Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing ※ | textual | Christian, hist.-gramm., consensus | Matt 23:16-22 |
 | <a id="claim-53"></a>\\(P_{53}\\) | Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill | theological | Roman Catholic, disputed | [à Lapide 1908](../bibliography.md#a-lapide-great-commentary-3-1908), pp. 32–33; [Calvin 1846](../bibliography.md#calvin-harmony-evangelists-3-1846), pp. 74–75 |
+| <a id="claim-54"></a>\\(P_{54}\\) | Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection | textual | Christian, hist.-gramm., consensus | Acts 1:21-22; [Calvin 1844](../bibliography.md#calvin-commentary-acts-1844), p. 66 |
+| <a id="claim-55"></a>\\(P_{55}\\) | 1 Corinthians 15:8 — and last of all he was seen of me also ※ | textual | Christian, hist.-gramm., consensus | 1 Cor 15:8 |
+| <a id="claim-56"></a>\\(P_{56}\\) | 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures ※ | textual | Christian, hist.-gramm., consensus | 2 Pet 3:15-16 |
+| <a id="claim-57"></a>\\(P_{57}\\) | 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother ※ | textual | Christian, hist.-gramm., consensus | 2 Cor 1:1; Col 1:1 |
+| <a id="claim-58"></a>\\(P_{58}\\) | 1 Thessalonians 2:6 (with 1:1) — from Paul, Silvanus and Timotheus: we might have been burdensome, as the apostles of Christ | textual | Christian, hist.-gramm., consensus | 1 Thess 1:1; 1 Thess 2:6; [Coppieters 1907](../bibliography.md#coppieters-apostles-1907), §Various meanings; [Calvin 1851](../bibliography.md#calvin-philippians-colossians-thessalonians-1851), ad loc. 1 Thess 2:6 |
+| <a id="claim-59"></a>\\(P_{59}\\) | The apostles' own office ended with them; those after them succeed to their ministry, not to their office | theological | Reformed Protestant, disputed | [Calvin 1846](../bibliography.md#calvin-institutes-beveridge-3-1846), §IV.iii.4–5; [Second Vatican Council 1964](../bibliography.md#vatican-ii-lumen-gentium-1964), §20 |
+| <a id="claim-60"></a>\\(P_{60}\\) | Acts 15:6, 22–23; 16:4 — the apostles and elders came together ※ | textual | Christian, hist.-gramm., consensus | Acts 15:6; Acts 15:22-23; Acts 16:4 |
+| <a id="claim-61"></a>\\(P_{61}\\) | Acts 1:20 — his bishoprick let another take | textual | Christian, hist.-gramm., consensus | Acts 1:20; [Calvin 1844](../bibliography.md#calvin-commentary-acts-1844), p. 65 |
+| <a id="claim-62"></a>\\(P_{62}\\) | 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also ※ | textual | Christian, hist.-gramm., consensus | 2 Tim 2:2 |
+| <a id="claim-63"></a>\\(P_{63}\\) | 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them | historical | Christian, hist.-gramm., consensus | [Clement of Rome](../bibliography.md#clement-first-corinthians-96), §42, 44; [Second Vatican Council 1964](../bibliography.md#vatican-ii-lumen-gentium-1964), §20 |
 
 </div>
 
@@ -476,6 +492,85 @@ def acts15RomanInference : Source :=
     confidence := Confidence.disputed }
 ```
 
+<a id="apostlesOfficeEndedInference"></a>
+**`apostlesOfficeEndedInference`**
+
+The rating of the Reformed step from the texts on the apostles to the end of
+their office: `disputed`. The apostle chosen in Judas's place had to have
+"companied with us all the time that the Lord Jesus went in and out among us",
+to be "a witness with us of his resurrection" (Acts 1:21–22); Paul counts
+himself the last to whom the risen Christ appeared, "last of all he was seen of
+me also, as of one born out of due time" (1 Corinthians 15:8); Peter counts
+Paul's letters with "the other scriptures" (2 Peter 3:15–16); and Paul writes as
+"an apostle of Jesus Christ" with "Timothy our brother" (2 Corinthians 1:1,
+Colossians 1:1). So the apostles were a closed company, and their office ended
+with them. Calvin draws it so. At Acts 1:21 he grants that "Peter doth here
+require such a witness as saw the Lord after his resurrection ... For this did
+serve for the confirmation of faith" (*Acts*, vol. 1, p. 66), and in the
+*Institutes* the offices of apostle, prophet and evangelist "were not instituted
+in the Church to be perpetual", while the twelve, "to the number of whom Paul
+was afterwards added", were "distinguished from others by a peculiar title"
+(IV.iii.4–5).
+
+He grants as much as this too: pastors "have the same function as apostles",
+except that each has a particular church (IV.iii.5), and God has at times
+"raised up Apostles, or at least Evangelists, in their stead, as has been done in
+our time" (IV.iii.4). What ends, for Calvin, is the office, not the preaching.
+
+*Lumen Gentium*, the Second Vatican Council's constitution on the Church, grants
+every text the step reads, as every Catholic does, and denies its conclusion:
+"the apostles' office of nurturing the Church is permanent, and is to be
+exercised without interruption by the sacred order of bishops", and "bishops by
+divine institution have succeeded to the place of the apostles" (§20). So the
+step is `disputed`.
+
+```lean
+def apostlesOfficeEndedInference : Source :=
+  { primary := Reference.work lumenGentium (Bib.Locus.sectionRef "20"),
+    supporting :=
+      [Reference.work calvinInstitutesBeveridge3
+          (Bib.Locus.sectionRef "IV.iii.4–5"),
+        Reference.work calvinActs1 (Bib.Locus.page 66)],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="apostolicSuccessionInference"></a>
+**`apostolicSuccessionInference`**
+
+The rating of Rome's step from the succession texts to the apostles' office
+continuing: `disputed`. Peter applies the Psalm to Judas, "his bishoprick
+(ἐπισκοπή) let another take" (Acts 1:20); Paul bids Timothy "commit thou to
+faithful men, who shall be able to teach others also" (2 Timothy 2:2); and
+Clement of Rome records that the apostles appointed bishops and deacons and
+"afterwards gave instructions, that when these should fall asleep, other
+approved men should succeed them in their ministry" (1 Clement 44). So the
+apostles' office continues in those who succeed them. *Lumen Gentium* 20 draws it
+so, and cites 2 Timothy 2:2 and 1 Clement 44 in its notes: "bishops by divine
+institution have succeeded to the place of the apostles".
+
+Calvin grants the texts and denies the conclusion. At Acts 1:20 he reads
+"bishoprick" as "a jurisdiction or government", and grants that "another may
+succeed him"; at 1:21 he answers that the apostleship "is not without the
+preaching of the gospel", so that "the Popish bishops ... brag that they are
+the successors of the apostles; but wherein are they like unto them?" (*Acts*,
+vol. 1, pp. 65–66). In the *Institutes* the apostolic office was not "instituted
+in the Church to be perpetual" (IV.iii.4). Whether Clement's "succeed them in
+their ministry" means succeeding to the apostles' office or to the ministry of
+the bishops and deacons they appointed is the question itself. So the step is
+`disputed`.
+
+```lean
+def apostolicSuccessionInference : Source :=
+  { primary := Reference.work calvinActs1 (Bib.Locus.pages 65 66),
+    supporting :=
+      [Reference.work calvinInstitutesBeveridge3
+          (Bib.Locus.sectionRef "IV.iii.4"),
+        Reference.work lumenGentium (Bib.Locus.sectionRef "20"),
+        Reference.work clementCorinthians (Bib.Locus.sectionRef "44")],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
 <a id="mosesSeatReformedInference"></a>
 **`mosesSeatReformedInference`**
 
@@ -590,7 +685,9 @@ and Mark 7's, which takes two lines, and whose principle a further line draws
 from Jesus' sayings and Paul's letters — three positions deny it, and three
 objections attack it from different directions. Two more lines read the council
 at Jerusalem (Acts 15), one as the Reformers read it and one as Rome does, and
-they deliver opposite answers about the authority of councils. Two more read
+they deliver opposite answers about the authority of councils. Each rests on a
+line about the apostles' office: that it ended with them, or that it continues
+in their successors. Two more read
 Moses' seat (Matthew 23:2–3) the same two ways, and deliver opposite answers
 about the teaching office. The objections do not reduce to one
 another: self-refutation says the doctrine fails its own standard, the canon
@@ -674,14 +771,16 @@ denies only that every addition is "another gospel" (`jesusAndPaulPrincipleInfer
 Moses on the gentiles as a condition of salvation (15:1); Peter answered with
 the gospel, salvation "through the grace of the Lord Jesus Christ" (15:10–11),
 and James with Scripture, "as it is written" (15:15–17). So the gospel judged
-even the oldest tradition, and the council judged by Scripture: a council after
-the apostles binds only as far as it agrees with the word, and may err. Rated
+even the oldest tradition, and the council judged by Scripture. And the
+apostles' own office ended with them, so a council after them lacks what the
+council at Jerusalem had: it binds only as far as it agrees with the word, and
+may err. The last premise is carried in by `apostlesOfficeEndedLine`. Rated
 `disputed`: Wilhelm grants the texts and holds that general councils define with
 the Spirit's authority (`acts15ReformedInference`).
 
 <div class="testimony-derivation">
 
-- \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}} \land \href{#claim-59}{P_{59}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
 
 </div>
 
@@ -690,14 +789,54 @@ the Spirit's authority (`acts15ReformedInference`).
 
 **Acts 15, as Rome reads it.** The council's letter says "it seemed good to
 the Holy Ghost, and to us" (15:28), and its decrees were "delivered" to the
-churches "for to keep" (16:4). So a general council binds with the Spirit's
-authority, and cannot err. Rated `disputed`: the Westminster Confession cites the
-same texts for the authority of councils and denies that councils since the
-apostles cannot err (`acts15RomanInference`).
+churches "for to keep" (16:4). The council was "the apostles and elders" (15:6,
+22–23; 16:4), and the apostles' office did not end with them but continues in
+those who succeed them. So a general council binds with the Spirit's authority,
+and cannot err. The last premise is carried in by `apostolicSuccessionLine`.
+Rated `disputed`: the Westminster Confession cites the same texts for the
+authority of councils and denies that councils since the apostles cannot err
+(`acts15RomanInference`).
 
 <div class="testimony-derivation">
 
-- \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}}) \rightarrow \href{#claim-50}{P_{50}}\\) — *would give:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}} \land \href{#claim-60}{P_{60}} \land \lnot \href{#claim-59}{P_{59}}) \rightarrow \href{#claim-50}{P_{50}}\\) — *would give:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+
+</div>
+
+<a id="apostlesToTheirOfficeEnded"></a>
+**`apostlesToTheirOfficeEnded`**
+
+**The apostles' office, as the Reformers read it.** The apostle chosen in
+Judas's place had to be one who had "companied with us all the time" and was "a
+witness with us of his resurrection" (Acts 1:21–22); Paul was the last to see
+the risen Christ, "last of all he was seen of me also" (1 Corinthians 15:8);
+Peter counts Paul's letters with "the other scriptures" (2 Peter 3:15–16); and
+Paul writes as "an apostle" beside "Timothy our brother" (2 Corinthians 1:1;
+Colossians 1:1). So the apostles' own office ended with them. Rated `disputed`:
+*Lumen Gentium* 20 grants the texts and holds that the apostles' office is
+permanent in the order of bishops (`apostlesOfficeEndedInference`).
+
+<div class="testimony-derivation">
+
+- \\((\href{#claim-54}{P_{54}} \land \href{#claim-55}{P_{55}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \href{#claim-59}{P_{59}}\\) — *would give:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+
+</div>
+
+<a id="successionToTheOfficeContinuing"></a>
+**`successionToTheOfficeContinuing`**
+
+**The apostles' office, as Rome reads it.** "His bishoprick let another take"
+(Acts 1:20); "commit thou to faithful men, who shall be able to teach others
+also" (2 Timothy 2:2); and Clement records that the apostles appointed bishops
+and deacons, with instructions that "other approved men should succeed them in
+their ministry" (1 Clement 44). So the apostles' office did not end with them.
+Rated `disputed`: Calvin grants the texts and holds that the apostolic office
+was not "instituted in the Church to be perpetual"
+(`apostolicSuccessionInference`).
+
+<div class="testimony-derivation">
+
+- \\((\href{#claim-61}{P_{61}} \land \href{#claim-62}{P_{62}} \land \href{#claim-63}{P_{63}}) \rightarrow \lnot \href{#claim-59}{P_{59}}\\) — *would deny:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
 
 </div>
 
@@ -976,7 +1115,8 @@ rest on one passage.
 
 **Acts 15, the Reformed reading**, as a line of its own: the demand of 15:1,
 answered by Peter's gospel (15:10–11) and James's "as it is written" (15:15–17).
-It delivers that a council after the apostles does not bind with the Spirit's own
+With the apostles' office ended, which `apostlesOfficeEndedLine` carries in, it
+delivers that a council after the apostles does not bind with the Spirit's own
 authority: it binds as far as it agrees with Scripture.
 
 <div class="testimony-derivation">
@@ -984,7 +1124,7 @@ authority: it binds as far as it agrees with Scripture.
 - (1) \\(\href{#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
 - (2) \\(\href{#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
 - (3) \\(\href{#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
-- (4) \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\)
+- (4) \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}} \land \href{#claim-59}{P_{59}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\)
 - \\(\vdash\\) \\(\lnot \href{#claim-50}{P_{50}}\\) — *at issue, the denial of:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
 
 </div>
@@ -993,15 +1133,53 @@ authority: it binds as far as it agrees with Scripture.
 **`acts15RomanLine`** — Acts 15, Rome's reading (the council binds with the Spirit's authority)
 
 **Acts 15, Rome's reading**, as a line of its own: "it seemed good to the Holy
-Ghost, and to us" (15:28), and the decrees delivered to keep (16:4). It delivers
-that a general council binds with the Spirit's authority.
+Ghost, and to us" (15:28), the decrees delivered to keep (16:4), and the council
+of "the apostles and elders" (15:6, 22–23). With the apostles' office continuing,
+which `apostolicSuccessionLine` carries in, it delivers that a general council
+binds with the Spirit's authority.
 
 <div class="testimony-derivation">
 
 - (1) \\(\href{#claim-48}{P_{48}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
 - (2) \\(\href{#claim-49}{P_{49}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
-- (3) \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}}) \rightarrow \href{#claim-50}{P_{50}}\\)
+- (3) \\(\href{#claim-60}{P_{60}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
+- (4) \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}} \land \href{#claim-60}{P_{60}} \land \lnot \href{#claim-59}{P_{59}}) \rightarrow \href{#claim-50}{P_{50}}\\)
 - \\(\vdash\\) \\(\href{#claim-50}{P_{50}}\\) — *at issue:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+
+</div>
+
+<a id="apostlesOfficeEndedLine"></a>
+**`apostlesOfficeEndedLine`** — The apostles' office ended with them (Calvin)
+
+**The apostles' office ended**, as a line of its own: Acts 1:21–22, 1
+Corinthians 15:8, 2 Peter 3:15–16, and Paul's salutations. It delivers that the
+apostles' own office ended with them.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-54}{P_{54}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
+- (2) \\(\href{#claim-55}{P_{55}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
+- (3) \\(\href{#claim-56}{P_{56}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
+- (4) \\(\href{#claim-57}{P_{57}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
+- (5) \\((\href{#claim-54}{P_{54}} \land \href{#claim-55}{P_{55}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \href{#claim-59}{P_{59}}\\)
+- \\(\vdash\\) \\(\href{#claim-59}{P_{59}}\\) — *at issue:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+
+</div>
+
+<a id="apostolicSuccessionLine"></a>
+**`apostolicSuccessionLine`** — The apostles' office continues in their successors (Lumen Gentium 20)
+
+**The apostles' office continues**, as a line of its own: Acts 1:20, 2 Timothy
+2:2, and 1 Clement 42 and 44. It delivers that the apostles' office did not end
+with them.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-61}{P_{61}}\\) — Acts 1:20 — his bishoprick let another take
+- (2) \\(\href{#claim-62}{P_{62}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
+- (3) \\(\href{#claim-63}{P_{63}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
+- (4) \\((\href{#claim-61}{P_{61}} \land \href{#claim-62}{P_{62}} \land \href{#claim-63}{P_{63}}) \rightarrow \lnot \href{#claim-59}{P_{59}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-59}{P_{59}}\\) — *at issue, the denial of:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
 
 </div>
 
@@ -1370,7 +1548,8 @@ principle it also draws from Jesus' sayings and Paul's letters. Scripture
 is not the only authority but the only infallible one; tradition is ministerial,
 and practices neither commanded nor forbidden need no scriptural warrant. It
 reads the council at Jerusalem as the Reformers did: a council after the
-apostles binds as far as it agrees with Scripture, and may err. And it reads
+apostles binds as far as it agrees with Scripture, and may err, because the
+apostles' own office ended with them. And it reads
 Moses' seat (Matthew 23:2–3) as Calvin did: an office in the Church is heard as
 far as it teaches God's word.
 
@@ -1389,30 +1568,35 @@ far as it teaches God's word.
 - (11) \\(\href{#claim-42}{P_{42}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
 - (12) \\(\href{#claim-43}{P_{43}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
 - (13) \\(\href{#claim-39}{P_{39}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
-- (14) \\(\href{#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
-- (15) \\(\href{#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
-- (16) \\(\href{#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
-- (17) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
-- (18) \\(\href{#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
-- (19) \\(\href{#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (20) \\(\href{#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
-- (21) \\(\href{#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
-- (22) \\(\href{#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
-- (23) \\(\href{#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
-- (24) \\(\href{#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
-- (25) \\(\href{#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
-- (26) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (27) \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (28) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (29) \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (30) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (31) \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
-- (32) \\((\href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-3}{P_{3}}) \rightarrow \lnot \href{#claim-53}{P_{53}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- (14) \\(\href{#claim-54}{P_{54}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
+- (15) \\(\href{#claim-55}{P_{55}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
+- (16) \\(\href{#claim-56}{P_{56}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
+- (17) \\(\href{#claim-57}{P_{57}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
+- (18) \\(\href{#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
+- (19) \\(\href{#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
+- (20) \\(\href{#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
+- (21) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (22) \\(\href{#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
+- (23) \\(\href{#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
+- (24) \\(\href{#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
+- (25) \\(\href{#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
+- (26) \\(\href{#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
+- (27) \\(\href{#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
+- (28) \\(\href{#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
+- (29) \\(\href{#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
+- (30) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (31) \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (32) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (33) \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (34) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (35) \\((\href{#claim-54}{P_{54}} \land \href{#claim-55}{P_{55}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \href{#claim-59}{P_{59}}\\) — *would give:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (36) \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}} \land \href{#claim-59}{P_{59}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (37) \\((\href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-3}{P_{3}}) \rightarrow \lnot \href{#claim-53}{P_{53}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 - \\(\vdash\\) \\(\href{#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
 
-Grounded in scripture alone: Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved, Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved, Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing, 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
+Grounded in scripture alone: 1 Corinthians 15:8 — and last of all he was seen of me also, 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures, 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother, Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved, Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved, Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing, 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
 
 <a id="tradition0"></a>
 **`tradition0`** — Tradition 0 (creeds informative, not normative)
@@ -1459,24 +1643,30 @@ Grounded in scripture alone: 2 Thessalonians 2:15 — hold to the traditions tau
 **Tradition III**, resting on Vatican I. Kept separate from `tridentine`
 because Mathison argues it escapes several objections to the two-source view
 while incurring its own. It reads the council at Jerusalem as Rome does: a
-general council binds with the Holy Spirit's authority. And it reads Moses' seat
+general council binds with the Holy Spirit's authority, because the apostles'
+office continues in their successors. And it reads Moses' seat
 (Matthew 23:2–3) as Cornelius a Lapide did: those who hold the Church's teaching
 office are heeded for the seat they hold.
 
 <div class="testimony-derivation">
 
 - (1) \\(\href{#claim-14}{P_{14}}\\) — The magisterium is an infallible interpreter of scripture
-- (2) \\(\href{#claim-48}{P_{48}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
-- (3) \\(\href{#claim-49}{P_{49}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
-- (4) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
-- (5) \\(\href{#claim-14}{P_{14}} \rightarrow \lnot \href{#claim-9}{P_{9}}\\) — *would deny:* Scripture is the sole infallible rule of faith
-- (6) \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}}) \rightarrow \href{#claim-50}{P_{50}}\\) — *would give:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
-- (7) \\(\href{#claim-51}{P_{51}} \rightarrow \href{#claim-53}{P_{53}}\\) — *would give:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- (2) \\(\href{#claim-61}{P_{61}}\\) — Acts 1:20 — his bishoprick let another take
+- (3) \\(\href{#claim-62}{P_{62}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
+- (4) \\(\href{#claim-63}{P_{63}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
+- (5) \\(\href{#claim-48}{P_{48}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
+- (6) \\(\href{#claim-49}{P_{49}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
+- (7) \\(\href{#claim-60}{P_{60}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
+- (8) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (9) \\(\href{#claim-14}{P_{14}} \rightarrow \lnot \href{#claim-9}{P_{9}}\\) — *would deny:* Scripture is the sole infallible rule of faith
+- (10) \\((\href{#claim-61}{P_{61}} \land \href{#claim-62}{P_{62}} \land \href{#claim-63}{P_{63}}) \rightarrow \lnot \href{#claim-59}{P_{59}}\\) — *would deny:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (11) \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}} \land \href{#claim-60}{P_{60}} \land \lnot \href{#claim-59}{P_{59}}) \rightarrow \href{#claim-50}{P_{50}}\\) — *would give:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (12) \\(\href{#claim-51}{P_{51}} \rightarrow \href{#claim-53}{P_{53}}\\) — *would give:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 - \\(\vdash\\) \\(\href{#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
 
-Grounded in scripture alone: Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things, Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem.
+Grounded in scripture alone: 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also, Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things, Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem, Acts 15:6, 22–23; 16:4 — the apostles and elders came together.
 
 <a id="orthodox"></a>
 **`orthodox`** — Orthodox (the mind of the Church)
@@ -1612,30 +1802,35 @@ eliminative and Mark 7 routes are untouched.
 - (10) \\(\href{#claim-42}{P_{42}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
 - (11) \\(\href{#claim-43}{P_{43}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
 - (12) \\(\href{#claim-39}{P_{39}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
-- (13) \\(\href{#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
-- (14) \\(\href{#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
-- (15) \\(\href{#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
-- (16) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
-- (17) \\(\href{#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
-- (18) \\(\href{#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (19) \\(\href{#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
-- (20) \\(\href{#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
-- (21) \\(\href{#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
-- (22) \\(\href{#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
-- (23) \\(\href{#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
-- (24) \\(\href{#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
-- (25) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (26) \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (27) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (28) \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (29) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (30) \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
-- (31) \\((\href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-3}{P_{3}}) \rightarrow \lnot \href{#claim-53}{P_{53}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- (13) \\(\href{#claim-54}{P_{54}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
+- (14) \\(\href{#claim-55}{P_{55}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
+- (15) \\(\href{#claim-56}{P_{56}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
+- (16) \\(\href{#claim-57}{P_{57}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
+- (17) \\(\href{#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
+- (18) \\(\href{#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
+- (19) \\(\href{#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
+- (20) \\(\href{#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (21) \\(\href{#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
+- (22) \\(\href{#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
+- (23) \\(\href{#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
+- (24) \\(\href{#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
+- (25) \\(\href{#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
+- (26) \\(\href{#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
+- (27) \\(\href{#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
+- (28) \\(\href{#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
+- (29) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (30) \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (31) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (32) \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (33) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (34) \\((\href{#claim-54}{P_{54}} \land \href{#claim-55}{P_{55}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \href{#claim-59}{P_{59}}\\) — *would give:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (35) \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}} \land \href{#claim-59}{P_{59}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (36) \\((\href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-3}{P_{3}}) \rightarrow \lnot \href{#claim-53}{P_{53}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 - \\(\vdash\\) \\(\href{#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
 
-Grounded in scripture alone: Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved, Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved, Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing, 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
+Grounded in scripture alone: 1 Corinthians 15:8 — and last of all he was seen of me also, 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures, 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother, Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved, Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved, Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing, 2 Thessalonians 2:15 — hold to the traditions taught by word or letter.
 
 <a id="classicalStrandWithoutHinge"></a>
 **`classicalStrandWithoutHinge`** — Classical (scripture teaches the principle)
@@ -1825,12 +2020,14 @@ theorem tridentine_not_establishes : ¬Establishes tridentine
 **`magisterialReading`**
 
 The post-Vatican I reading: the magisterium is the living interpreter, so
-scripture is not the sole infallible rule.
+scripture is not the sole infallible rule; and the apostles' office did not end
+with them, but continues in the bishops.
 
 ```lean
 def magisterialReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.apostlesOfficeEndedWithThem => False
     | Claim.scriptureIsSoleInfallibleRule => False
     | x => True
 ```
@@ -2984,11 +3181,14 @@ Church's consensus a mere product of reading Scripture: for Rome, Scripture and
 Tradition flow from one source (*Dei Verbum* 9). A world must choose here,
 because the meanings exclude the consensus being that product and its being
 needed for Scripture's clear sense (`TestimonyArguments.Meanings.SolaScriptura.joins`).
+And the apostles' office did not end with them: bishops succeed to it (*Lumen
+Gentium* 20).
 
 ```lean
 def romeGrantsMarksPrincipleReading : Valuation Claim :=
   fun a =>
     match a with
+    | Claim.apostlesOfficeEndedWithThem => False
     | Claim.creedalConsensusIsDerivedFromScripture => False
     | Claim.mensCommandmentBindsAsGodsWord => False
     | Claim.noUnwrittenTraditionShownApostolic => False
@@ -3526,19 +3726,73 @@ decrees were then handed on to the churches to keep: "delivered" in 16:4
 (παρεδίδοσαν) is the verb whose noun is "tradition" (παράδοσις). Tradition III,
 the position resting on Vatican I, reads Acts 15 this way (`acts15RomanLine`).
 
+### Where the readings part: the apostles' office
+
+The council at Jerusalem had apostles in it, and a council after them has none.
+So both readings pass through a second question: did the apostles' own office
+end with them, or does it continue in those who succeed them?
+
+The Reformers say it ended. The apostle chosen in Judas's place had to be one of
+the men "which have companied with us all the time that the Lord Jesus went in
+and out among us", to be "a witness with us of his resurrection" (Acts 1:21–22).
+Paul counts himself the last such witness: "last of all he was seen of me also,
+as of one born out of due time" (1 Corinthians 15:8). Peter puts Paul's letters
+with "the other scriptures" (2 Peter 3:15–16), and Paul writes as "an apostle of
+Jesus Christ" beside "Timothy our brother" (2 Corinthians 1:1; Colossians 1:1).
+Calvin draws the conclusion in the *Institutes*: the offices of apostle,
+prophet and evangelist "were not instituted in the Church to be perpetual", and
+the twelve, "to the number of whom Paul was afterwards added", were
+"distinguished from others by a peculiar title" (IV.iii.4–5). He does not say
+that nothing passes on. Pastors "have the same function as apostles", the
+preaching of the gospel and the sacraments, but not their office
+(`apostlesOfficeEndedLine`).
+
+Rome says it continues. The council was not the apostles alone but "the
+apostles and elders" (15:6, 22–23; 16:4). Peter applies the Psalm to Judas, "his
+bishoprick (ἐπισκοπή) let another take" (Acts 1:20); Paul bids Timothy "commit thou
+to faithful men, who shall be able to teach others also" (2 Timothy 2:2); and
+Clement of Rome, writing to Corinth near the end of the first century, records
+that the apostles appointed bishops and deacons and "afterwards gave
+instructions, that when these should fall asleep, other approved men should
+succeed them in their ministry" (1 Clement 44). The Second Vatican Council
+concludes that "the apostles' office of nurturing the Church is permanent, and
+is to be exercised without interruption by the sacred order of bishops"
+(*Lumen Gentium* 20) (`apostolicSuccessionLine`). Calvin grants Acts 1:20, that
+"another may succeed him", and answers at Acts 1:21 that the apostleship "is not
+without the preaching of the gospel", so that the bishops of his day "brag that
+they are the successors of the apostles; but wherein are they like unto them?"
+
+One text cuts across the Reformed reading of the salutations. 1 Thessalonians is
+from "Paul, and Silvanus, and Timotheus" (1:1), and says "we might have been
+burdensome, as the apostles of Christ" (2:6). If "apostles" takes in Silvanus
+and Timothy, the title was wider than the eyewitnesses. Calvin reads it of Paul
+alone, "inasmuch as he was an Apostle of Christ", and H. Coppieters, in the
+*Catholic Encyclopedia*, lists the verse among the passages "in which the
+extension of the word Apostle is doubtful". The verse is recorded for what it
+says and is a ground of neither line, because no reader cited here builds on it
+either way.
+
+Each step about the office is rated `disputed`. *Lumen Gentium* grants the texts
+of the first and denies its conclusion; Calvin grants those of the second and
+denies its conclusion. So the texts alone leave the question open
+(`apostolic_texts_leave_the_office_open`). Whether the decree's four abstentions
+(15:20, 29) apply the laws Leviticus 17–18 gives for the stranger, so that the
+council applied Moses rather than making new law, is not encoded: no
+commentator who argues it has been read for this library.
+
 ### What the texts settle, and what they do not
 
 Each reading grants every text the other reads. The Westminster Confession
 cites Acts 15:27–31 and 16:4 as its own proof that a council's decrees bind, and
 Wilhelm, as a Catholic, grants Peter's and James's words. What they part over
-is the step from the texts to councils after the apostles, and each step is
-rated `disputed` because the other side's reader grants its texts and denies its
-conclusion.
+is the step from the texts to councils after the apostles, which passes through
+the apostles' office, and each step is rated `disputed` because the other side's
+reader grants its texts and denies its conclusion.
 
 So the two readings cannot be held together
 (`acts15_readings_cannot_be_held_together`), and the texts by themselves do not
-choose between them: grant all six texts, without either step, and whether a council
-binds with the Spirit's authority neither follows nor fails
+choose between them: grant all seven texts, without any step, and whether a
+council binds with the Spirit's authority neither follows nor fails
 (`acts15_texts_leave_the_council_open`).
 
 Nor does Rome's reading reach the premise the Mark 7 case for sola scriptura
@@ -3607,45 +3861,57 @@ def acts15QuotesAmos : IntertextEdge :=
 **`acts15Reformed`** — Acts 15, the Reformed reading (the council judged by Scripture)
 
 **Acts 15, the Reformed reading**: the demand of 15:1, Peter's answer from
-the gospel and James's from Scripture, and the step from them to councils: a
-council after the apostles binds as far as it agrees with Scripture, and may
-err.
+the gospel and James's from Scripture, the texts on the apostles' office and the
+step from them that it ended, and the step to councils: a council after the
+apostles binds as far as it agrees with Scripture, and may err.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
-- (2) \\(\href{#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
-- (3) \\(\href{#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
-- (4) \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\)
+- (1) \\(\href{#claim-54}{P_{54}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
+- (2) \\(\href{#claim-55}{P_{55}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
+- (3) \\(\href{#claim-56}{P_{56}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
+- (4) \\(\href{#claim-57}{P_{57}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
+- (5) \\(\href{#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
+- (6) \\(\href{#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
+- (7) \\(\href{#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
+- (8) \\((\href{#claim-54}{P_{54}} \land \href{#claim-55}{P_{55}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \href{#claim-59}{P_{59}}\\) — *would give:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (9) \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}} \land \href{#claim-59}{P_{59}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\)
 - \\(\vdash\\) \\(\lnot \href{#claim-50}{P_{50}}\\) — *at issue, the denial of:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
 
 </div>
 
-Grounded in scripture alone: Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved, Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved.
+Grounded in scripture alone: 1 Corinthians 15:8 — and last of all he was seen of me also, 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures, 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother, Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved, Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved.
 
 <a id="acts15Roman"></a>
 **`acts15Roman`** — Acts 15, Rome's reading (the council binds with the Spirit's authority)
 
 **Acts 15, Rome's reading**: "it seemed good to the Holy Ghost, and to us",
-the decrees delivered to keep, and the step from them to councils: a general
-council binds with the Holy Spirit's authority.
+the decrees delivered to keep, the council of "the apostles and elders", the
+succession texts and the step from them that the apostles' office continues, and
+the step to councils: a general council binds with the Holy Spirit's
+authority.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{#claim-48}{P_{48}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
-- (2) \\(\href{#claim-49}{P_{49}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
-- (3) \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}}) \rightarrow \href{#claim-50}{P_{50}}\\)
+- (1) \\(\href{#claim-61}{P_{61}}\\) — Acts 1:20 — his bishoprick let another take
+- (2) \\(\href{#claim-62}{P_{62}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
+- (3) \\(\href{#claim-63}{P_{63}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
+- (4) \\(\href{#claim-48}{P_{48}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
+- (5) \\(\href{#claim-49}{P_{49}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
+- (6) \\(\href{#claim-60}{P_{60}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
+- (7) \\((\href{#claim-61}{P_{61}} \land \href{#claim-62}{P_{62}} \land \href{#claim-63}{P_{63}}) \rightarrow \lnot \href{#claim-59}{P_{59}}\\) — *would deny:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (8) \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}} \land \href{#claim-60}{P_{60}} \land \lnot \href{#claim-59}{P_{59}}) \rightarrow \href{#claim-50}{P_{50}}\\)
 - \\(\vdash\\) \\(\href{#claim-50}{P_{50}}\\) — *at issue:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
 
 </div>
 
-Grounded in scripture alone: Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things, Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem.
+Grounded in scripture alone: 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also, Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things, Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem, Acts 15:6, 22–23; 16:4 — the apostles and elders came together.
 
 <a id="acts15Texts"></a>
 **`acts15Texts`**
 
 Every text either reading of Acts 15 reads, and the letter the decree went
-out in: 15:1, 10–11, 15–17, 23–29 and 28, and 16:4. No step.
+out in: 15:1, 6, 10–11, 15–17, 22–29 and 28, and 16:4. No step.
 
 <div class="testimony-derivation">
 
@@ -3654,7 +3920,65 @@ out in: 15:1, 10–11, 15–17, 23–29 and 28, and 16:4. No step.
 - (3) \\(\href{#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
 - (4) \\(\href{#claim-48}{P_{48}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
 - (5) \\(\href{#claim-49}{P_{49}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
-- (6) \\(\href{#claim-47}{P_{47}}\\) — Acts 15:23–29 — they wrote letters by them: the decree went out in writing
+- (6) \\(\href{#claim-60}{P_{60}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
+- (7) \\(\href{#claim-47}{P_{47}}\\) — Acts 15:23–29 — they wrote letters by them: the decree went out in writing
+
+</div>
+
+<a id="apostlesOfficeEnded"></a>
+**`apostlesOfficeEnded`** — The apostles' office ended with them (Calvin)
+
+**The apostles' office ended**: Acts 1:21–22, 1 Corinthians 15:8, 2 Peter
+3:15–16 and Paul's salutations, and Calvin's step from them.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-54}{P_{54}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
+- (2) \\(\href{#claim-55}{P_{55}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
+- (3) \\(\href{#claim-56}{P_{56}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
+- (4) \\(\href{#claim-57}{P_{57}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
+- (5) \\((\href{#claim-54}{P_{54}} \land \href{#claim-55}{P_{55}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \href{#claim-59}{P_{59}}\\)
+- \\(\vdash\\) \\(\href{#claim-59}{P_{59}}\\) — *at issue:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+
+</div>
+
+Grounded in scripture alone: 1 Corinthians 15:8 — and last of all he was seen of me also, 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures, 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother.
+
+<a id="apostolicSuccession"></a>
+**`apostolicSuccession`** — The apostles' office continues in their successors (Lumen Gentium 20)
+
+**The apostles' office continues**: Acts 1:20, 2 Timothy 2:2 and 1 Clement 42
+and 44, and the step from them that *Lumen Gentium* 20 takes.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-61}{P_{61}}\\) — Acts 1:20 — his bishoprick let another take
+- (2) \\(\href{#claim-62}{P_{62}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
+- (3) \\(\href{#claim-63}{P_{63}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
+- (4) \\((\href{#claim-61}{P_{61}} \land \href{#claim-62}{P_{62}} \land \href{#claim-63}{P_{63}}) \rightarrow \lnot \href{#claim-59}{P_{59}}\\)
+- \\(\vdash\\) \\(\lnot \href{#claim-59}{P_{59}}\\) — *at issue, the denial of:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+
+</div>
+
+Grounded in scripture alone: 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also.
+
+<a id="apostolicTexts"></a>
+**`apostolicTexts`**
+
+Every text on the apostles' office either side reads, with 1 Thessalonians
+2:6 and the council of "the apostles and elders". No step.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-54}{P_{54}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
+- (2) \\(\href{#claim-55}{P_{55}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
+- (3) \\(\href{#claim-56}{P_{56}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
+- (4) \\(\href{#claim-57}{P_{57}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
+- (5) \\(\href{#claim-61}{P_{61}}\\) — Acts 1:20 — his bishoprick let another take
+- (6) \\(\href{#claim-62}{P_{62}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
+- (7) \\(\href{#claim-63}{P_{63}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
+- (8) \\(\href{#claim-58}{P_{58}}\\) — 1 Thessalonians 2:6 (with 1:1) — from Paul, Silvanus and Timotheus: we might have been burdensome, as the apostles of Christ
+- (9) \\(\href{#claim-60}{P_{60}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
 
 </div>
 
@@ -3664,7 +3988,8 @@ out in: 15:1, 10–11, 15–17, 23–29 and 28, and 16:4. No step.
 **`reformedOnTheCouncilReading`**
 
 The Reformed world, on Acts 15: every text holds, no commandment of men is
-bound as God's word, and a council after the apostles may err.
+bound as God's word, the apostles' own office ended with them, and a council
+after the apostles may err.
 
 ```lean
 def reformedOnTheCouncilReading : Valuation Claim :=
@@ -3675,15 +4000,34 @@ def reformedOnTheCouncilReading : Valuation Claim :=
     | x => True
 ```
 
+<a id="successionHoldsReading"></a>
+**`successionHoldsReading`**
+
+A world in which every claim of the argument holds but one, that the
+apostles' own office ended with them. It is no one's position; it shows that
+Rome's reading of Acts 15 can be held with the premise about unwritten
+tradition.
+
+```lean
+def successionHoldsReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.apostlesOfficeEndedWithThem => False
+    | x => True
+```
+
 #### What follows
 
 <a id="acts15Reformed_establishes"></a>
 **`acts15Reformed_establishes`**
 
-**The Reformed reading of Acts 15 holds, given its step.** From 15:1, 15:10–11
-and 15:15–17, a council after the apostles does not bind with the Spirit's own
-authority: it binds as far as it agrees with Scripture. The step is rated
-`disputed`: Wilhelm grants the texts and denies the conclusion.
+**The Reformed reading of Acts 15 holds, given its steps.** From 15:1,
+15:10–11 and 15:15–17, and from the apostles' office having ended with them, a
+council after the apostles does not bind with the Spirit's own authority: it
+binds as far as it agrees with Scripture. Both steps are rated `disputed`:
+Wilhelm grants the texts of Acts 15 and denies the conclusion, and *Lumen
+Gentium* 20 grants the texts on the apostles and denies that their office
+ended.
 
 What this does not claim: that councils have no authority. The Westminster
 Confession, which holds this reading, says their decrees are "to be received with
@@ -3707,10 +4051,12 @@ theorem acts15Reformed_is_satisfiable : Satisfiable acts15Reformed.premises
 <a id="acts15Roman_establishes"></a>
 **`acts15Roman_establishes`**
 
-**Rome's reading of Acts 15 holds, given its step.** From 15:28 and 16:4, a
-general council binds with the Holy Spirit's authority. The step is rated
-`disputed`: the Westminster Confession grants the texts and denies the
-conclusion.
+**Rome's reading of Acts 15 holds, given its steps.** From 15:28 and 16:4,
+the council of "the apostles and elders", and the apostles' office continuing in
+their successors, a general council binds with the Holy Spirit's authority. Both
+steps are rated `disputed`: the Westminster Confession grants the texts of Acts
+15 and denies the conclusion, and Calvin grants the succession texts and denies
+that the apostles' office continues.
 
 ```lean
 theorem acts15Roman_establishes : Establishes acts15Roman
@@ -3722,7 +4068,8 @@ theorem acts15Roman_establishes : Establishes acts15Roman
 
 Rome's reading of Acts 15 can be held without contradiction: Rome's world, in
 which God's word judges human tradition, some unwritten tradition is known to be
-apostolic, and a general council binds with the Spirit's authority.
+apostolic, the apostles' office continues in their successors, and a general
+council binds with the Spirit's authority.
 
 ```lean
 theorem acts15Roman_is_satisfiable : Satisfiable acts15Roman.premises
@@ -3734,8 +4081,9 @@ theorem acts15Roman_is_satisfiable : Satisfiable acts15Roman.premises
 
 **The two readings of Acts 15 cannot be held together.** One concludes that a
 council after the apostles may err, the other that a general council binds with
-the Spirit's authority and cannot. Since every text either reads is granted by
-both, what they part over is the two steps, each rated `disputed`.
+the Spirit's authority and cannot. They also part on the way there, over whether
+the apostles' office ended with them. Since every text either reads is granted
+by both, what they part over is the four steps, each rated `disputed`.
 
 What this does not claim: that either reading is wrong. It shows only that a
 reader must choose between them.
@@ -3750,9 +4098,9 @@ theorem acts15_readings_cannot_be_held_together : ¬Satisfiable
 **`acts15_texts_leave_the_council_open`**
 
 **The texts of Acts 15 do not settle the council's authority.** Grant
-15:1, 15:10–11, 15:15–17, 15:23–29 and 15:28, and 16:4, without either reading's
-step: whether a general council binds with the Spirit's authority neither
-follows nor fails. The Reformed reading grants every text and denies it; Rome's
+15:1, 15:6, 15:10–11, 15:15–17, 15:22–29 and 15:28, and 16:4, without either
+reading's step: whether a general council binds with the Spirit's authority
+neither follows nor fails. The Reformed reading grants every text and denies it; Rome's
 grants every text and holds it. One fact, not two: the texts alone establish
 neither reading and block neither.
 
@@ -3767,17 +4115,90 @@ theorem acts15_texts_leave_the_council_open : Independent acts15Texts (p
 
 **Rome's reading of Acts 15 does not reach unwritten tradition.** Grant that
 "it seemed good to the Holy Ghost, and to us", that the decrees were delivered
-to keep, Rome's step from them, and that the decree went out as a letter
-(15:23–29): whether any unwritten tradition can now be shown to be apostolic
-neither follows nor fails. Rome's world grants all of it and denies the premise;
-a world in which every claim of the argument holds grants all of it and holds
-the premise. What the council handed on was written, so it is no instance of
-the unwritten tradition the Mark 7 case turns on.
+to keep, that the council was "the apostles and elders", the texts on the
+apostles' successors, Rome's steps from them, and that the decree went out as a
+letter (15:23–29): whether any unwritten tradition can now be shown to be
+apostolic neither follows nor fails. Rome's world grants all of it and denies
+the premise; a world in which every claim of the argument holds but one, that
+the apostles' office ended with them, grants all of it and holds the premise.
+What the council handed on was written, so it is no instance of the unwritten
+tradition the Mark 7 case turns on.
 
 ```lean
 theorem romes_reading_of_acts15_leaves_unwritten_tradition_open : Independent
     (acts15Roman.premises ++ [p Claim.acts15_23_29DecreeWritten]) (p
     Claim.noUnwrittenTraditionShownApostolic)
+-- axioms: propext, Quot.sound
+```
+
+#### The apostles' office
+
+<a id="apostlesOfficeEnded_establishes"></a>
+**`apostlesOfficeEnded_establishes`**
+
+**The apostles' office ended, given Calvin's step.** From Acts 1:21–22, 1
+Corinthians 15:8, 2 Peter 3:15–16 and Paul's salutations, the apostles' own
+office ended with them. The step is rated `disputed`: *Lumen Gentium* 20 grants
+the texts and holds that the office is permanent in the bishops.
+
+What this does not claim: that nothing of the apostles' work passes on. Calvin,
+who holds it, says pastors "have the same function as apostles".
+
+```lean
+theorem apostlesOfficeEnded_establishes : Establishes apostlesOfficeEnded
+-- axioms: propext, Quot.sound
+```
+
+<a id="apostlesOfficeEnded_is_satisfiable"></a>
+**`apostlesOfficeEnded_is_satisfiable`**
+
+That the apostles' office ended can be held without contradiction.
+
+```lean
+theorem apostlesOfficeEnded_is_satisfiable : Satisfiable
+    apostlesOfficeEnded.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="apostolicSuccession_establishes"></a>
+**`apostolicSuccession_establishes`**
+
+**The apostles' office continues, given Rome's step.** From Acts 1:20, 2
+Timothy 2:2 and 1 Clement 42 and 44, the apostles' office did not end with them.
+The step is rated `disputed`: Calvin grants the texts and holds that the office
+was not "instituted in the Church to be perpetual".
+
+```lean
+theorem apostolicSuccession_establishes : Establishes apostolicSuccession
+-- axioms: propext, Quot.sound
+```
+
+<a id="apostolicSuccession_is_satisfiable"></a>
+**`apostolicSuccession_is_satisfiable`**
+
+That the apostles' office continues can be held without contradiction.
+
+```lean
+theorem apostolicSuccession_is_satisfiable : Satisfiable
+    apostolicSuccession.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="apostolic_texts_leave_the_office_open"></a>
+**`apostolic_texts_leave_the_office_open`**
+
+**The texts on the apostles do not settle whether their office ended.** Grant
+Acts 1:20 and 1:21–22, 1 Corinthians 15:8, 2 Peter 3:15–16, Paul's salutations,
+2 Timothy 2:2, what 1 Clement 42 and 44 records, 1 Thessalonians 2:6, and the
+council of "the apostles and elders", without either side's step: whether the
+apostles' own office ended with them neither follows nor fails. Rome's world
+grants every text and denies it; the Reformed world grants every text and holds
+it. One fact, not two: the texts establish neither reading and block
+neither.
+
+```lean
+theorem apostolic_texts_leave_the_office_open : Independent apostolicTexts (p
+    Claim.apostlesOfficeEndedWithThem)
 -- axioms: propext, Quot.sound
 ```
 

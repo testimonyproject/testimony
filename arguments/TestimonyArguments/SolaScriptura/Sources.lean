@@ -169,6 +169,72 @@ def acts15RomanInference : Source :=
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
+/-- The rating of the Reformed step from the texts on the apostles to the end of
+their office: `disputed`. The apostle chosen in Judas's place had to have
+"companied with us all the time that the Lord Jesus went in and out among us",
+to be "a witness with us of his resurrection" (Acts 1:21–22); Paul counts
+himself the last to whom the risen Christ appeared, "last of all he was seen of
+me also, as of one born out of due time" (1 Corinthians 15:8); Peter counts
+Paul's letters with "the other scriptures" (2 Peter 3:15–16); and Paul writes as
+"an apostle of Jesus Christ" with "Timothy our brother" (2 Corinthians 1:1,
+Colossians 1:1). So the apostles were a closed company, and their office ended
+with them. Calvin draws it so. At Acts 1:21 he grants that "Peter doth here
+require such a witness as saw the Lord after his resurrection ... For this did
+serve for the confirmation of faith" (*Acts*, vol. 1, p. 66), and in the
+*Institutes* the offices of apostle, prophet and evangelist "were not instituted
+in the Church to be perpetual", while the twelve, "to the number of whom Paul
+was afterwards added", were "distinguished from others by a peculiar title"
+(IV.iii.4–5).
+
+He grants as much as this too: pastors "have the same function as apostles",
+except that each has a particular church (IV.iii.5), and God has at times
+"raised up Apostles, or at least Evangelists, in their stead, as has been done in
+our time" (IV.iii.4). What ends, for Calvin, is the office, not the preaching.
+
+*Lumen Gentium*, the Second Vatican Council's constitution on the Church, grants
+every text the step reads, as every Catholic does, and denies its conclusion:
+"the apostles' office of nurturing the Church is permanent, and is to be
+exercised without interruption by the sacred order of bishops", and "bishops by
+divine institution have succeeded to the place of the apostles" (§20). So the
+step is `disputed`. -/
+def apostlesOfficeEndedInference : Source :=
+  { primary := .work lumenGentium (.sectionRef "20")
+  , supporting :=
+      [ .work calvinInstitutesBeveridge3 (.sectionRef "IV.iii.4–5")
+      , .work calvinActs1 (.page 66) ]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of Rome's step from the succession texts to the apostles' office
+continuing: `disputed`. Peter applies the Psalm to Judas, "his bishoprick
+(ἐπισκοπή) let another take" (Acts 1:20); Paul bids Timothy "commit thou to
+faithful men, who shall be able to teach others also" (2 Timothy 2:2); and
+Clement of Rome records that the apostles appointed bishops and deacons and
+"afterwards gave instructions, that when these should fall asleep, other
+approved men should succeed them in their ministry" (1 Clement 44). So the
+apostles' office continues in those who succeed them. *Lumen Gentium* 20 draws it
+so, and cites 2 Timothy 2:2 and 1 Clement 44 in its notes: "bishops by divine
+institution have succeeded to the place of the apostles".
+
+Calvin grants the texts and denies the conclusion. At Acts 1:20 he reads
+"bishoprick" as "a jurisdiction or government", and grants that "another may
+succeed him"; at 1:21 he answers that the apostleship "is not without the
+preaching of the gospel", so that "the Popish bishops ... brag that they are
+the successors of the apostles; but wherein are they like unto them?" (*Acts*,
+vol. 1, pp. 65–66). In the *Institutes* the apostolic office was not "instituted
+in the Church to be perpetual" (IV.iii.4). Whether Clement's "succeed them in
+their ministry" means succeeding to the apostles' office or to the ministry of
+the bishops and deacons they appointed is the question itself. So the step is
+`disputed`. -/
+def apostolicSuccessionInference : Source :=
+  { primary := .work calvinActs1 (.pages 65 66)
+  , supporting :=
+      [ .work calvinInstitutesBeveridge3 (.sectionRef "IV.iii.4")
+      , .work lumenGentium (.sectionRef "20")
+      , .work clementCorinthians (.sectionRef "44") ]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
 /-- The rating of the Reformed step from Matthew 23:2–3 to the teaching office:
 `disputed`. Jesus tells the crowd to observe and do "whatsoever" the scribes and
 Pharisees bid, because they "sit in Moses' seat" (23:2–3). In the same discourse
@@ -718,6 +784,108 @@ def cite : Claim → AtomMeta
         , supporting := [.work calvinHarmony3 (.pages 74 75)]
         , tradition := .romanCatholic
         , confidence := .disputed } }
+  | .acts1_21_22WitnessOfResurrection =>
+    { label :=
+        "Acts 1:21–22 — of these men which have companied with us all the time ... " ++
+        "must one be ordained to be a witness with us of his resurrection"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.acts, 1, 21, 1, 22⟩ }]
+        , supporting := [.work calvinActs1 (.page 66)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .corinthians15_8LastOfAll =>
+    { label := "1 Corinthians 15:8 — and last of all he was seen of me also"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.firstCorinthians, 15, 8⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .peter3_15_16PaulsEpistlesWithTheScriptures =>
+    { label :=
+        "2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do " ++
+        "also the other scriptures"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.secondPeter, 3, 15, 3, 16⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .salutationsApostleAndBrother =>
+    { label :=
+        "2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and " ++
+        "Timothy our brother"
+    , kind := .textual
+    , source :=
+        { primary :=
+            .scripture
+              [ { ref := .verse ⟨.secondCorinthians, 1, 1⟩ }
+              , { ref := .verse ⟨.colossians, 1, 1⟩ } ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .thessalonians2_6ApostlesOfChrist =>
+    { label :=
+        "1 Thessalonians 2:6 (with 1:1) — from Paul, Silvanus and Timotheus: we " ++
+        "might have been burdensome, as the apostles of Christ"
+    , kind := .textual
+    , source :=
+        { primary :=
+            .scripture
+              [ { ref := .verse ⟨.firstThessalonians, 1, 1⟩ }
+              , { ref := .verse ⟨.firstThessalonians, 2, 6⟩ } ]
+        , supporting :=
+            [ .work coppietersApostles (.sectionRef "Various meanings")
+            , .work calvinThessalonians (.adLoc ⟨.firstThessalonians, 2, 6⟩) ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .apostlesOfficeEndedWithThem =>
+    { label :=
+        "The apostles' own office ended with them; those after them succeed to " ++
+        "their ministry, not to their office"
+    , kind := .theological
+      -- Calvin's claim (Institutes IV.iii.4–5). `disputed`: Lumen Gentium 20
+      -- holds that the apostles' office is permanent in the order of bishops.
+    , source :=
+        { primary := .work calvinInstitutesBeveridge3 (.sectionRef "IV.iii.4–5")
+        , supporting := [.work lumenGentium (.sectionRef "20")]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .acts15ApostlesAndElders =>
+    { label := "Acts 15:6, 22–23; 16:4 — the apostles and elders came together"
+    , kind := .textual
+    , source :=
+        { primary :=
+            .scripture
+              [ { ref := .verse ⟨.acts, 15, 6⟩ }, { ref := .range ⟨.acts, 15, 22, 15, 23⟩ }
+              , { ref := .verse ⟨.acts, 16, 4⟩ } ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .acts1_20BishoprickLetAnotherTake =>
+    { label := "Acts 1:20 — his bishoprick let another take"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.acts, 1, 20⟩ }]
+        , supporting := [.work calvinActs1 (.page 65)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .timothy2_2CommitToFaithfulMen =>
+    { label :=
+        "2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach " ++
+        "others also"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.secondTimothy, 2, 2⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .clement42_44SuccessorsAppointed =>
+    { label :=
+        "1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave " ++
+        "instructions that other approved men should succeed them"
+    , kind := .historical
+    , source :=
+        { primary := .work clementCorinthians (.sectionRef "42, 44")
+        , supporting := [.work lumenGentium (.sectionRef "20")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
   | .perspicuityIsLimitedToSalvationEssentials =>
     { label :=
         "Perspicuity is claimed only for what is necessary for salvation, not " ++

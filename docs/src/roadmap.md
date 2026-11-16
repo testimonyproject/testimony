@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **330 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **331 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -270,8 +270,9 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `jesus_and_paul_do_not_reach_the_apostolic_word` | `Satisfiable (jesusAndPaulPrinciple.premises ++ tridentineAsApostolicWord.premises)` | **Jesus and Paul do not reach Trent read as the apostolic word.** Trent, read as receiving the apostolic word handed on unwritten, can be held with every premise of the principle … |
 | `every_text_without_the_hinge_leaves_the_sole_rule_open` | `Independent everyTextWithoutTheHinge (p Claim.scriptureIsSoleInfallibleRule)` | **Every text, without the premise Rome denies, leaves the sole rule open.** Grant Mark 7, John 10:35, Matthew 5:18, Galatians 1:8–9 and Colossians 2, the principle they deliver, … |
 | `acts15_readings_cannot_be_held_together` | `¬Satisfiable (acts15Reformed.premises ++ acts15Roman.premises)` | **The two readings of Acts 15 cannot be held together.** One concludes that a council after the apostles may err, the other that a general council binds with the Spirit's … |
-| `acts15_texts_leave_the_council_open` | `Independent acts15Texts (p Claim.councilBindsWithTheSpiritsAuthority)` | **The texts of Acts 15 do not settle the council's authority.** Grant 15:1, 15:10–11, 15:15–17, 15:23–29 and 15:28, and 16:4, without either reading's step: whether a general … |
-| `romes_reading_of_acts15_leaves_unwritten_tradition_open` | `Independent (acts15Roman.premises ++ [p Claim.acts15_23_29DecreeWritten]) (p Claim.noUnwrittenTraditionShownApostolic)` | **Rome's reading of Acts 15 does not reach unwritten tradition.** Grant that "it seemed good to the Holy Ghost, and to us", that the decrees were delivered to keep, Rome's step … |
+| `acts15_texts_leave_the_council_open` | `Independent acts15Texts (p Claim.councilBindsWithTheSpiritsAuthority)` | **The texts of Acts 15 do not settle the council's authority.** Grant 15:1, 15:6, 15:10–11, 15:15–17, 15:22–29 and 15:28, and 16:4, without either reading's step: whether a … |
+| `romes_reading_of_acts15_leaves_unwritten_tradition_open` | `Independent (acts15Roman.premises ++ [p Claim.acts15_23_29DecreeWritten]) (p Claim.noUnwrittenTraditionShownApostolic)` | **Rome's reading of Acts 15 does not reach unwritten tradition.** Grant that "it seemed good to the Holy Ghost, and to us", that the decrees were delivered to keep, that the … |
+| `apostolic_texts_leave_the_office_open` | `Independent apostolicTexts (p Claim.apostlesOfficeEndedWithThem)` | **The texts on the apostles do not settle whether their office ended.** Grant Acts 1:20 and 1:21–22, 1 Corinthians 15:8, 2 Peter 3:15–16, Paul's salutations, 2 Timothy 2:2, what 1 … |
 | `moses_seat_readings_cannot_be_held_together` | `¬Satisfiable (mosesSeatReformed.premises ++ mosesSeatRoman.premises)` | **The two readings of Moses' seat cannot be held together.** One concludes that the teaching office is heard only as far as it teaches God's word, the other that it is heeded for … |
 | `mark7_and_moses_seat_leave_the_office_open` | `Independent mosesSeatTexts (p Claim.teachingOfficeHeardByItsSeat)` | **Mark 7 and Moses' seat leave the teaching office open.** Grant Mark 7, the principle it delivers that God's word judges human tradition, and Matthew 23:2–3 and 23:16–22, without … |
 | `romes_reading_of_moses_seat_can_be_held_with_mark7s_case` | `Satisfiable (mark7Case.premises ++ mosesSeatRoman.premises)` | **Rome's reading of Moses' seat can be held with Mark 7's case for sola scriptura.** Grant Mark 7, its principle, the premise that no unwritten tradition can now be shown to be … |
@@ -805,8 +806,11 @@ still leave the sole rule open without that one premise
 (`every_text_without_the_hinge_leaves_the_sole_rule_open`). The council at Jerusalem (Acts 15) is
 read both ways. The Reformers read a council that let the gospel judge even the custom of Moses
 and judged by Scripture, "as it is written" (15:15); Rome reads one binding with the Spirit's
-authority, "it seemed good to the Holy Ghost, and to us" (15:28). Each grants the other's texts,
-each step from them is `disputed`, and the two cannot be held together
+authority, "it seemed good to the Holy Ghost, and to us" (15:28). Both pass through the apostles'
+office: Calvin holds that it ended with them (Acts 1:21–22; 1 Corinthians 15:8), and *Lumen
+Gentium* 20 that it continues in the bishops (Acts 1:20; 2 Timothy 2:2; 1 Clement 44), and the
+texts alone leave that open (`apostolic_texts_leave_the_office_open`). Each grants the other's
+texts, each step from them is `disputed`, and the two cannot be held together
 (`acts15_readings_cannot_be_held_together`); the texts alone leave the council's authority open
 (`acts15_texts_leave_the_council_open`), and what the council handed on was a letter, so Rome's
 reading leaves the premise about unwritten tradition where it was

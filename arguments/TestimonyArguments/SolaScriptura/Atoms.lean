@@ -242,6 +242,66 @@ inductive Claim
   Christ bids the people obey the scribes "only so far as they adhere to the
   pure and simple exposition of the Law". -/
   | teachingOfficeHeardByItsSeat
+  /-- Acts 1:21–22 — the qualification for the apostle chosen in Judas's place:
+  "of these men which have companied with us all the time that the Lord Jesus
+  went in and out among us, Beginning from the baptism of John, unto that same
+  day that he was taken up from us, must one be ordained to be a witness with us
+  of his resurrection." What the text says, not yet what follows from it. -/
+  | acts1_21_22WitnessOfResurrection
+  /-- 1 Corinthians 15:8 — Paul, at the end of the list of those to whom the
+  risen Christ appeared: "And last of all he was seen of me also, as of one born
+  out of due time." -/
+  | corinthians15_8LastOfAll
+  /-- 2 Peter 3:15–16 — "our beloved brother Paul also according to the wisdom
+  given unto him hath written unto you; As also in all his epistles ... which
+  they that are unlearned and unstable wrest, as they do also the other
+  scriptures". Paul's letters are counted with "the other scriptures". -/
+  | peter3_15_16PaulsEpistlesWithTheScriptures
+  /-- 2 Corinthians 1:1 and Colossians 1:1 — "Paul, an apostle of Jesus Christ by
+  the will of God, and Timothy our brother" (2 Corinthians; Colossians has
+  "Timotheus our brother"). Paul calls himself an apostle and his companion a
+  brother. -/
+  | salutationsApostleAndBrother
+  /-- 1 Thessalonians 2:6, with 1:1 — the letter is from "Paul, and Silvanus, and
+  Timotheus", and it says "we might have been burdensome, as the apostles of
+  Christ" (2:7 in the Greek editions, where "burdensome" is ἐν βάρει, "of
+  weight"). Whether "apostles" here takes in Silvanus and Timothy the text
+  does not settle. Calvin takes it of Paul, "inasmuch as he was an Apostle of Christ";
+  Coppieters, in the *Catholic Encyclopedia*, lists the verse among the passages
+  "in which the extension of the word Apostle is doubtful". What the text says,
+  and no more. -/
+  | thessalonians2_6ApostlesOfChrist
+  /-- The apostles' own office ended with them. They were the eyewitnesses of the
+  risen Christ, sent to found the churches, and later ministers succeed to
+  their ministry of word and sacrament, not to that office, so a council after
+  them lacks what the council at Jerusalem had. Calvin: the offices of apostle,
+  prophet and evangelist "were not instituted in the Church to be perpetual",
+  and the twelve, with Paul, were "distinguished from others by a peculiar
+  title" (*Institutes* IV.iii.4–5). Rated `disputed`: *Lumen Gentium* 20 holds
+  that "the apostles' office of nurturing the Church is permanent, and is to be
+  exercised without interruption by the sacred order of bishops". -/
+  | apostlesOfficeEndedWithThem
+  /-- Acts 15:6, 22–23 and 16:4 — the council was "the apostles and elders": "the
+  apostles and elders came together for to consider of this matter" (15:6), "it
+  pleased the apostles and elders, with the whole church" (15:22), the letter
+  went from "The apostles and elders and brethren" (15:23), and the decrees were
+  those "ordained of the apostles and elders which were at Jerusalem" (16:4). -/
+  | acts15ApostlesAndElders
+  /-- Acts 1:20 — Peter, of Judas: "For it is written in the book of Psalms, Let
+  his habitation be desolate, and let no man dwell therein: and his bishoprick
+  let another take." "Bishoprick" (ἐπισκοπή) is the office of oversight. -/
+  | acts1_20BishoprickLetAnotherTake
+  /-- 2 Timothy 2:2 — "And the things that thou hast heard of me among many
+  witnesses, the same commit thou to faithful men, who shall be able to teach
+  others also." -/
+  | timothy2_2CommitToFaithfulMen
+  /-- 1 Clement 42 and 44 — Clement of Rome, writing to Corinth near the end of
+  the first century, records that the apostles "appointed the first-fruits [of
+  their labours] ... to be bishops and deacons", and "afterwards gave
+  instructions, that when these should fall asleep, other approved men should
+  succeed them in their ministry". What Clement records, not yet what follows
+  from it; in 44 he calls the same men "presbyters". -/
+  | clement42_44SuccessorsAppointed
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaScriptura

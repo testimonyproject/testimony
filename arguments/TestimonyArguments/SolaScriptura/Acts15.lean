@@ -56,19 +56,73 @@ decrees were then handed on to the churches to keep: "delivered" in 16:4
 (παρεδίδοσαν) is the verb whose noun is "tradition" (παράδοσις). Tradition III,
 the position resting on Vatican I, reads Acts 15 this way (`acts15RomanLine`).
 
+## Where the readings part: the apostles' office
+
+The council at Jerusalem had apostles in it, and a council after them has none.
+So both readings pass through a second question: did the apostles' own office
+end with them, or does it continue in those who succeed them?
+
+The Reformers say it ended. The apostle chosen in Judas's place had to be one of
+the men "which have companied with us all the time that the Lord Jesus went in
+and out among us", to be "a witness with us of his resurrection" (Acts 1:21–22).
+Paul counts himself the last such witness: "last of all he was seen of me also,
+as of one born out of due time" (1 Corinthians 15:8). Peter puts Paul's letters
+with "the other scriptures" (2 Peter 3:15–16), and Paul writes as "an apostle of
+Jesus Christ" beside "Timothy our brother" (2 Corinthians 1:1; Colossians 1:1).
+Calvin draws the conclusion in the *Institutes*: the offices of apostle,
+prophet and evangelist "were not instituted in the Church to be perpetual", and
+the twelve, "to the number of whom Paul was afterwards added", were
+"distinguished from others by a peculiar title" (IV.iii.4–5). He does not say
+that nothing passes on. Pastors "have the same function as apostles", the
+preaching of the gospel and the sacraments, but not their office
+(`apostlesOfficeEndedLine`).
+
+Rome says it continues. The council was not the apostles alone but "the
+apostles and elders" (15:6, 22–23; 16:4). Peter applies the Psalm to Judas, "his
+bishoprick (ἐπισκοπή) let another take" (Acts 1:20); Paul bids Timothy "commit thou
+to faithful men, who shall be able to teach others also" (2 Timothy 2:2); and
+Clement of Rome, writing to Corinth near the end of the first century, records
+that the apostles appointed bishops and deacons and "afterwards gave
+instructions, that when these should fall asleep, other approved men should
+succeed them in their ministry" (1 Clement 44). The Second Vatican Council
+concludes that "the apostles' office of nurturing the Church is permanent, and
+is to be exercised without interruption by the sacred order of bishops"
+(*Lumen Gentium* 20) (`apostolicSuccessionLine`). Calvin grants Acts 1:20, that
+"another may succeed him", and answers at Acts 1:21 that the apostleship "is not
+without the preaching of the gospel", so that the bishops of his day "brag that
+they are the successors of the apostles; but wherein are they like unto them?"
+
+One text cuts across the Reformed reading of the salutations. 1 Thessalonians is
+from "Paul, and Silvanus, and Timotheus" (1:1), and says "we might have been
+burdensome, as the apostles of Christ" (2:6). If "apostles" takes in Silvanus
+and Timothy, the title was wider than the eyewitnesses. Calvin reads it of Paul
+alone, "inasmuch as he was an Apostle of Christ", and H. Coppieters, in the
+*Catholic Encyclopedia*, lists the verse among the passages "in which the
+extension of the word Apostle is doubtful". The verse is recorded for what it
+says and is a ground of neither line, because no reader cited here builds on it
+either way.
+
+Each step about the office is rated `disputed`. *Lumen Gentium* grants the texts
+of the first and denies its conclusion; Calvin grants those of the second and
+denies its conclusion. So the texts alone leave the question open
+(`apostolic_texts_leave_the_office_open`). Whether the decree's four abstentions
+(15:20, 29) apply the laws Leviticus 17–18 gives for the stranger, so that the
+council applied Moses rather than making new law, is not encoded: no
+commentator who argues it has been read for this library.
+
 ## What the texts settle, and what they do not
 
 Each reading grants every text the other reads. The Westminster Confession
 cites Acts 15:27–31 and 16:4 as its own proof that a council's decrees bind, and
 Wilhelm, as a Catholic, grants Peter's and James's words. What they part over
-is the step from the texts to councils after the apostles, and each step is
-rated `disputed` because the other side's reader grants its texts and denies its
-conclusion.
+is the step from the texts to councils after the apostles, which passes through
+the apostles' office, and each step is rated `disputed` because the other side's
+reader grants its texts and denies its conclusion.
 
 So the two readings cannot be held together
 (`acts15_readings_cannot_be_held_together`), and the texts by themselves do not
-choose between them: grant all six texts, without either step, and whether a council
-binds with the Spirit's authority neither follows nor fails
+choose between them: grant all seven texts, without any step, and whether a
+council binds with the Spirit's authority neither follows nor fails
 (`acts15_texts_leave_the_council_open`).
 
 Nor does Rome's reading reach the premise the Mark 7 case for sola scriptura
@@ -117,43 +171,83 @@ def acts15QuotesAmos : IntertextEdge :=
 /-! ### The two readings -/
 
 /-- **Acts 15, the Reformed reading**: the demand of 15:1, Peter's answer from
-the gospel and James's from Scripture, and the step from them to councils: a
-council after the apostles binds as far as it agrees with Scripture, and may
-err. -/
+the gospel and James's from Scripture, the texts on the apostles' office and the
+step from them that it ended, and the step to councils: a council after the
+apostles binds as far as it agrees with Scripture, and may err. -/
 @[solaScripturaDefs]
 def acts15Reformed : ArgumentPackage Claim :=
-  acts15ReformedLine.asPackage cite
-    "a council after the apostles does not bind with the Spirit's own authority"
+  { acts15ReformedLine.asPackage cite
+      "a council after the apostles does not bind with the Spirit's own authority" with
+    premises := caseOf [apostlesOfficeEndedLine, acts15ReformedLine] [] []
+    inferences :=
+      apostlesOfficeEndedLine.inference.toList ++ acts15ReformedLine.inference.toList }
 
 /-- **Acts 15, Rome's reading**: "it seemed good to the Holy Ghost, and to us",
-the decrees delivered to keep, and the step from them to councils: a general
-council binds with the Holy Spirit's authority. -/
+the decrees delivered to keep, the council of "the apostles and elders", the
+succession texts and the step from them that the apostles' office continues, and
+the step to councils: a general council binds with the Holy Spirit's
+authority. -/
 @[solaScripturaDefs]
 def acts15Roman : ArgumentPackage Claim :=
-  acts15RomanLine.asPackage cite "a general council binds with the Spirit's authority"
+  { acts15RomanLine.asPackage cite "a general council binds with the Spirit's authority" with
+    premises := caseOf [apostolicSuccessionLine, acts15RomanLine] [] []
+    inferences :=
+      apostolicSuccessionLine.inference.toList ++ acts15RomanLine.inference.toList }
 
 /-- Every text either reading of Acts 15 reads, and the letter the decree went
-out in: 15:1, 10–11, 15–17, 23–29 and 28, and 16:4. No step. -/
+out in: 15:1, 6, 10–11, 15–17, 22–29 and 28, and 16:4. No step. -/
 @[solaScripturaDefs]
 def acts15Texts : List (Formula Claim) :=
   acts15ReformedLine.grounds ++ acts15RomanLine.grounds ++ [p .acts15_23_29DecreeWritten]
 
+/-- **The apostles' office ended**: Acts 1:21–22, 1 Corinthians 15:8, 2 Peter
+3:15–16 and Paul's salutations, and Calvin's step from them. -/
+@[solaScripturaDefs]
+def apostlesOfficeEnded : ArgumentPackage Claim :=
+  apostlesOfficeEndedLine.asPackage cite "the apostles' own office ended with them"
+
+/-- **The apostles' office continues**: Acts 1:20, 2 Timothy 2:2 and 1 Clement 42
+and 44, and the step from them that *Lumen Gentium* 20 takes. -/
+@[solaScripturaDefs]
+def apostolicSuccession : ArgumentPackage Claim :=
+  apostolicSuccessionLine.asPackage cite "the apostles' office continues in their successors"
+
+/-- Every text on the apostles' office either side reads, with 1 Thessalonians
+2:6 and the council of "the apostles and elders". No step. -/
+@[solaScripturaDefs]
+def apostolicTexts : List (Formula Claim) :=
+  apostlesOfficeEndedLine.grounds ++ apostolicSuccessionLine.grounds ++
+    [p .thessalonians2_6ApostlesOfChrist, p .acts15ApostlesAndElders]
+
 /-! ### Readings, written down -/
 
 /-- The Reformed world, on Acts 15: every text holds, no commandment of men is
-bound as God's word, and a council after the apostles may err. -/
+bound as God's word, the apostles' own office ended with them, and a council
+after the apostles may err. -/
 def reformedOnTheCouncilReading : Valuation Claim := fun a =>
   match a with
   | .mensCommandmentBindsAsGodsWord => False
   | .councilBindsWithTheSpiritsAuthority => False
   | _ => True
 
+/-- A world in which every claim of the argument holds but one, that the
+apostles' own office ended with them. It is no one's position; it shows that
+Rome's reading of Acts 15 can be held with the premise about unwritten
+tradition. -/
+def successionHoldsReading : Valuation Claim := fun a =>
+  match a with
+  | .apostlesOfficeEndedWithThem => False
+  | _ => True
+
 /-! ### What follows -/
 
-/-- **The Reformed reading of Acts 15 holds, given its step.** From 15:1, 15:10–11
-and 15:15–17, a council after the apostles does not bind with the Spirit's own
-authority: it binds as far as it agrees with Scripture. The step is rated
-`disputed`: Wilhelm grants the texts and denies the conclusion.
+/-- **The Reformed reading of Acts 15 holds, given its steps.** From 15:1,
+15:10–11 and 15:15–17, and from the apostles' office having ended with them, a
+council after the apostles does not bind with the Spirit's own authority: it
+binds as far as it agrees with Scripture. Both steps are rated `disputed`:
+Wilhelm grants the texts of Acts 15 and denies the conclusion, and *Lumen
+Gentium* 20 grants the texts on the apostles and denies that their office
+ended.
 
 What this does not claim: that councils have no authority. The Westminster
 Confession, which holds this reading, says their decrees are "to be received with
@@ -167,10 +261,12 @@ theorem acts15Reformed_establishes : Establishes acts15Reformed := by
 theorem acts15Reformed_is_satisfiable : Satisfiable acts15Reformed.premises := by
   satisfied_by reformedOnTheCouncilReading [solaScripturaDefs]
 
-/-- **Rome's reading of Acts 15 holds, given its step.** From 15:28 and 16:4, a
-general council binds with the Holy Spirit's authority. The step is rated
-`disputed`: the Westminster Confession grants the texts and denies the
-conclusion. -/
+/-- **Rome's reading of Acts 15 holds, given its steps.** From 15:28 and 16:4,
+the council of "the apostles and elders", and the apostles' office continuing in
+their successors, a general council binds with the Holy Spirit's authority. Both
+steps are rated `disputed`: the Westminster Confession grants the texts of Acts
+15 and denies the conclusion, and Calvin grants the succession texts and denies
+that the apostles' office continues. -/
 theorem acts15Roman_establishes : Establishes acts15Roman := by
   establish [solaScripturaDefs]
 
@@ -178,14 +274,16 @@ theorem acts15Roman_establishes : Establishes acts15Roman := by
 
 /-- Rome's reading of Acts 15 can be held without contradiction: Rome's world, in
 which God's word judges human tradition, some unwritten tradition is known to be
-apostolic, and a general council binds with the Spirit's authority. -/
+apostolic, the apostles' office continues in their successors, and a general
+council binds with the Spirit's authority. -/
 theorem acts15Roman_is_satisfiable : Satisfiable acts15Roman.premises := by
   satisfied_by romeGrantsMarksPrincipleReading [solaScripturaDefs]
 
 /-- **The two readings of Acts 15 cannot be held together.** One concludes that a
 council after the apostles may err, the other that a general council binds with
-the Spirit's authority and cannot. Since every text either reads is granted by
-both, what they part over is the two steps, each rated `disputed`.
+the Spirit's authority and cannot. They also part on the way there, over whether
+the apostles' office ended with them. Since every text either reads is granted
+by both, what they part over is the four steps, each rated `disputed`.
 
 What this does not claim: that either reading is wrong. It shows only that a
 reader must choose between them. -/
@@ -197,9 +295,9 @@ theorem acts15_readings_cannot_be_held_together :
 #print axioms acts15_readings_cannot_be_held_together
 
 /-- **The texts of Acts 15 do not settle the council's authority.** Grant
-15:1, 15:10–11, 15:15–17, 15:23–29 and 15:28, and 16:4, without either reading's
-step: whether a general council binds with the Spirit's authority neither
-follows nor fails. The Reformed reading grants every text and denies it; Rome's
+15:1, 15:6, 15:10–11, 15:15–17, 15:22–29 and 15:28, and 16:4, without either
+reading's step: whether a general council binds with the Spirit's authority
+neither follows nor fails. The Reformed reading grants every text and denies it; Rome's
 grants every text and holds it. One fact, not two: the texts alone establish
 neither reading and block neither. -/
 @[headline]
@@ -212,18 +310,67 @@ theorem acts15_texts_leave_the_council_open :
 
 /-- **Rome's reading of Acts 15 does not reach unwritten tradition.** Grant that
 "it seemed good to the Holy Ghost, and to us", that the decrees were delivered
-to keep, Rome's step from them, and that the decree went out as a letter
-(15:23–29): whether any unwritten tradition can now be shown to be apostolic
-neither follows nor fails. Rome's world grants all of it and denies the premise;
-a world in which every claim of the argument holds grants all of it and holds
-the premise. What the council handed on was written, so it is no instance of
-the unwritten tradition the Mark 7 case turns on. -/
+to keep, that the council was "the apostles and elders", the texts on the
+apostles' successors, Rome's steps from them, and that the decree went out as a
+letter (15:23–29): whether any unwritten tradition can now be shown to be
+apostolic neither follows nor fails. Rome's world grants all of it and denies
+the premise; a world in which every claim of the argument holds but one, that
+the apostles' office ended with them, grants all of it and holds the premise.
+What the council handed on was written, so it is no instance of the unwritten
+tradition the Mark 7 case turns on. -/
 @[headline]
 theorem romes_reading_of_acts15_leaves_unwritten_tradition_open :
     Independent (acts15Roman.premises ++ [p .acts15_23_29DecreeWritten])
       (p .noUnwrittenTraditionShownApostolic) := by
-  leaves_open romeGrantsMarksPrincipleReading everythingHoldsReading [solaScripturaDefs]
+  leaves_open romeGrantsMarksPrincipleReading successionHoldsReading [solaScripturaDefs]
 
 #print axioms romes_reading_of_acts15_leaves_unwritten_tradition_open
+
+/-! ### The apostles' office -/
+
+/-- **The apostles' office ended, given Calvin's step.** From Acts 1:21–22, 1
+Corinthians 15:8, 2 Peter 3:15–16 and Paul's salutations, the apostles' own
+office ended with them. The step is rated `disputed`: *Lumen Gentium* 20 grants
+the texts and holds that the office is permanent in the bishops.
+
+What this does not claim: that nothing of the apostles' work passes on. Calvin,
+who holds it, says pastors "have the same function as apostles". -/
+theorem apostlesOfficeEnded_establishes : Establishes apostlesOfficeEnded := by
+  establish [solaScripturaDefs]
+
+#print axioms apostlesOfficeEnded_establishes
+
+/-- That the apostles' office ended can be held without contradiction. -/
+theorem apostlesOfficeEnded_is_satisfiable : Satisfiable apostlesOfficeEnded.premises := by
+  satisfied_by reformedOnTheCouncilReading [solaScripturaDefs]
+
+/-- **The apostles' office continues, given Rome's step.** From Acts 1:20, 2
+Timothy 2:2 and 1 Clement 42 and 44, the apostles' office did not end with them.
+The step is rated `disputed`: Calvin grants the texts and holds that the office
+was not "instituted in the Church to be perpetual". -/
+theorem apostolicSuccession_establishes : Establishes apostolicSuccession := by
+  establish [solaScripturaDefs]
+
+#print axioms apostolicSuccession_establishes
+
+/-- That the apostles' office continues can be held without contradiction. -/
+theorem apostolicSuccession_is_satisfiable : Satisfiable apostolicSuccession.premises := by
+  satisfied_by romeGrantsMarksPrincipleReading [solaScripturaDefs]
+
+/-- **The texts on the apostles do not settle whether their office ended.** Grant
+Acts 1:20 and 1:21–22, 1 Corinthians 15:8, 2 Peter 3:15–16, Paul's salutations,
+2 Timothy 2:2, what 1 Clement 42 and 44 records, 1 Thessalonians 2:6, and the
+council of "the apostles and elders", without either side's step: whether the
+apostles' own office ended with them neither follows nor fails. Rome's world
+grants every text and denies it; the Reformed world grants every text and holds
+it. One fact, not two: the texts establish neither reading and block
+neither. -/
+@[headline]
+theorem apostolic_texts_leave_the_office_open :
+    Independent apostolicTexts (p .apostlesOfficeEndedWithThem) := by
+  leaves_open romeGrantsMarksPrincipleReading reformedOnTheCouncilReading
+    [solaScripturaDefs]
+
+#print axioms apostolic_texts_leave_the_office_open
 
 end TestimonyArguments.SolaScriptura

@@ -1828,7 +1828,9 @@ impurities". The Ezekiel reading, from someone who holds it. -/
 
 /-- Calvin on Acts, in Beveridge's edition of Fetherstone's translation. Cited
 for Acts 10:47: the Spirit given before the water "showeth that the Spirit is
-not included in baptism" (454). Published without an ISBN. -/
+not included in baptism" (454). And for Acts 1:20–21 (pp. 65–66): "bishoprick"
+signifies "a jurisdiction or government", and Peter "doth here require such a
+witness as saw the Lord after his resurrection". Published without an ISBN. -/
 @[bib_entry] def calvinActs1 : BibEntry := .book
   { core :=
       { key := "calvin-commentary-acts-1844"
@@ -2273,6 +2275,116 @@ Grant printing with no ISBN. -/
   , place := some "Edinburgh"
   , edition := some "5th edition"
   , volume := some "3" }
+
+/-! ### Sola scriptura: the apostles' office -/
+
+/-- Calvin's *Institutes*, volume 3 of Beveridge's translation, with Book IV, for
+IV.iii.4–5 (pp. 61–63): the offices of apostle, prophet and evangelist "were not
+instituted in the Church to be perpetual, but only to endure so long as churches
+were to be formed where none previously existed", and the twelve, "to the number
+of whom Paul was afterwards added", were "distinguished from others by a
+peculiar title". Cited by section and quoted in Beveridge's words, which is why
+this edition has its own entry beside McNeill and Battles. The title page reads
+Edinburgh, printed for the Calvin Translation Society, 1846; read in the scan at
+archive.org and checked against the Christian Classics Ethereal Library's text.
+Published without an ISBN. -/
+@[bib_entry] def calvinInstitutesBeveridge3 : BibEntry := .book
+  { core :=
+      { key := "calvin-institutes-beveridge-3-1846"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "Henry" "Beveridge"] }
+      , title := "Institutes of the Christian Religion"
+      , year := some { value := 1846 }
+      , identifiers :=
+          [ .url "https://archive.org/details/institutesofchrbeve03calv"
+                 (some "2026-11-16") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "3"
+  , totalVolumes := some 3 }
+
+/-- Calvin on Philippians, Colossians and Thessalonians, in John Pringle's
+translation, for 1 Thessalonians 2:6: he reads the "apostles of Christ" as Paul
+himself, "inasmuch as he was an Apostle of Christ, he deserved to be received
+with a higher degree of respect", and takes the "burden" as authority. The title
+page reads Edinburgh, Calvin Translation Society, 1851; read in the scan at
+archive.org, whose page numbers at this verse are not legible, so it is cited by
+verse, and checked against the Christian Classics Ethereal Library's text.
+Published without an ISBN. -/
+@[bib_entry] def calvinThessalonians : BibEntry := .book
+  { core :=
+      { key := "calvin-philippians-colossians-thessalonians-1851"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "John" "Pringle"] }
+      , title :=
+          "Commentaries on the Epistles of Paul the Apostle to the Philippians, " ++
+          "Colossians, and Thessalonians"
+      , year := some { value := 1851 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentariesonph00calvuoft"
+                 (some "2026-11-16") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh" }
+
+/-- Clement of Rome's letter to the Corinthians, for chapters 42 and 44: the
+apostles "appointed the first-fruits [of their labours], having first proved them
+by the Spirit, to be bishops and deacons", and "afterwards gave instructions,
+that when these should fall asleep, other approved men should succeed them in
+their ministry". *Lumen Gentium* 20 cites chapter 44. Read in the *Ante-Nicene
+Fathers* translation, in the Christian Classics Ethereal Library's text of
+volume 1, and compared with New Advent's. -/
+@[bib_entry] def clementCorinthians : BibEntry := .ancientWork
+  { core :=
+      { key := "clement-first-corinthians-96"
+      , role := .witness
+      , contributors := { authors := [.single "Clement of Rome"] }
+      , title := "First Epistle to the Corinthians" }
+  , originalTitle := some "Πρὸς Κορινθίους"
+  , composed := some { value := 96, approximate := true }
+  , editionUsed := some "roberts-ante-nicene-fathers-1-1885" }
+
+/-- The Second Vatican Council's constitution on the Church, for §20: "the
+apostles' office of nurturing the Church is permanent, and is to be exercised
+without interruption by the sacred order of bishops", and "bishops by divine
+institution have succeeded to the place of the apostles". Its notes to §20 cite 2
+Timothy 2:2 and 1 Clement 44. Read in the Holy See's English text. -/
+@[bib_entry] def lumenGentium : BibEntry := .webPage
+  { core :=
+      { key := "vatican-ii-lumen-gentium-1964"
+      , role := .authority
+      , contributors := { authors := [.single "Second Vatican Council"] }
+      , title := "Lumen Gentium"
+      , year := some { value := 1964 }
+      , identifiers :=
+          [ .url ("https://www.vatican.va/archive/hist_councils/ii_vatican_council/" ++
+                  "documents/vat-ii_const_19641121_lumen-gentium_en.html")
+                 (some "2026-11-16") ] }
+  , site := some "The Holy See" }
+
+/-- Coppieters's article on the apostles in the *Catholic Encyclopedia*, volume 1
+(1907), for 1 Thessalonians 2:6 (2:7 in the Greek and Latin numbering), which he
+lists among the passages "in which the extension of the word Apostle is
+doubtful". Read at New Advent; cited by section. -/
+@[bib_entry] def coppietersApostles : BibEntry := .inCollection
+  { core :=
+      { key := "coppieters-apostles-1907"
+      , role := .witness
+      , contributors := { authors := [.person "Honoré" "Coppieters"] }
+      , title := "Apostles"
+      , year := some { value := 1907 }
+      , identifiers :=
+          [ .url "https://www.newadvent.org/cathen/01626c.htm" (some "2026-11-16") ]
+      , note := some "Volume 1." }
+  , containerTitle := "The Catholic Encyclopedia"
+  , containerEditors :=
+      [ .person "Charles G." "Herbermann", .person "Edward A." "Pace", .person "Condé B." "Pallen"
+      , .person "Thomas J." "Shahan", .person "John J." "Wynne" ]
+  , publisher := "Robert Appleton Company"
+  , place := some "New York" }
 
 /-! ### Sola fide: the wider debate
 
