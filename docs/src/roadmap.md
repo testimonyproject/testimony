@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **321 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **324 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -263,9 +263,12 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `parity_leaves_the_defeat_open` | `Independent defeatUnderParity.premises (p Claim.circularityDefeatsTraditionI)` | **Barrett's parity reply leaves the defeat open.** Concede the circle; deny that it is a defect peculiar to this position, since any appeal to an ultimate authority is circular. |
 | `circle_parity_concedes_the_charge` | `Establishes circleParityConcedingTheCharge` | **The reply does not merely fail to clear the charge — it grants it.** This is the second question, kept because it is worth asking and restated because the answer is stronger … |
 | `mark7Principle_establishes` | `Establishes mark7Principle` | **Mark 7 delivers its principle**: God's word judges human tradition. |
-| `trent_grants_marks_principle` | `Grants tridentineCase (p Claim.godsWordJudgesTradition)` | **Trent grants Mark 7's principle.** Trent's position, as it states it, can be held with the principle and everything Mark 7 says: the reading on which apostolic teaching survives … |
-| `mark7Case_establishes` | `Establishes mark7Case` | **Mark 7's case for sola scriptura holds**, given its premise that no apostolic word survives outside Scripture. |
+| `trent_grants_marks_principle` | `Grants tridentineCase (p Claim.godsWordJudgesTradition)` | **Trent grants Mark 7's principle.** Trent's position, as it states it, can be held with the principle and everything Mark 7 says: the reading on which unwritten tradition is … |
+| `mark7Case_establishes` | `Establishes mark7Case` | **Mark 7's case for sola scriptura holds**, given its premise that no unwritten tradition can now be shown to be apostolic. |
 | `mark7_without_the_hinge_leaves_the_sole_rule_open` | `Independent mark7CaseWithoutTheHinge.premises (p Claim.scriptureIsSoleInfallibleRule)` | **Without that premise, Mark 7 leaves the sole rule open.** Grant the text, the principle, and the step from them to the sole rule: sola scriptura neither follows nor fails. |
+| `jesusAndPaulPrinciple_establishes` | `Establishes jesusAndPaulPrinciple` | **Jesus and Paul deliver the principle without Mark 7.** God's word judges human tradition, from four texts and the step from them, rated `wellSupported`: Aquinas grants Galatians … |
+| `jesus_and_paul_do_not_reach_the_apostolic_word` | `Satisfiable (jesusAndPaulPrinciple.premises ++ tridentineAsApostolicWord.premises)` | **Jesus and Paul do not reach Trent read as the apostolic word.** Trent, read as receiving the apostolic word handed on unwritten, can be held with every premise of the principle … |
+| `every_text_without_the_hinge_leaves_the_sole_rule_open` | `Independent everyTextWithoutTheHinge (p Claim.scriptureIsSoleInfallibleRule)` | **Every text, without the premise Rome denies, leaves the sole rule open.** Grant Mark 7, John 10:35, Matthew 5:18, Galatians 1:8–9 and Colossians 2, the principle they deliver, … |
 | `marks_principle_prevails` | `Framework.grounded mark7Dispute.defeats = {Mark7Party.principle}` | **Mark 7's principle prevails outright, and it is common ground.** The grounded extension — what the dispute forces before any choice between rivals — is exactly the principle: … |
 | `trent_as_mens_commandments_indefensible` | `∀ (S : Set Mark7Party), Framework.Admissible mark7Dispute.defeats S → Mark7Party.trentAsMensCommandments ∉ S` | **Trent, read as commandments of men, cannot be defended.** No consistent position that answers its attackers can hold it: Mark 7's principle defeats it, and nothing answers the … |
 | `mark7_case_defensible` | `Framework.CredulouslyAccepted mark7Dispute.defeats Mark7Party.mark7` | **Sola scriptura from Mark 7 can be defended.** Some maximal defensible position holds it, with Mark 7's principle. |
@@ -785,8 +788,15 @@ contests. Read as the apostolic word handed on unwritten — what Trent says it
 receives — Mark 7 does not reach it (`mark7_does_not_reach_the_apostolic_word`,
 `against_the_apostolic_word_only_the_principle_is_forced`), and the dispute
 moves to what the sola scriptura argument already turned on: whether any
-apostolic word survives outside Scripture, and whether the principle would then
-make Scripture the *sole* infallible rule. Weighing the dispute also moved a
+unwritten tradition can now be shown to be apostolic — Whitaker's claim against
+Bellarmine, a claim about proof — and whether the principle would then make
+Scripture the *sole* infallible rule. Mark 7 is not alone in delivering the
+principle: Jesus' sayings in John 10:35 and Matthew 5:18, and Paul's in
+Galatians 1:8–9 and Colossians 2:8, 20–22, deliver it too
+(`jesusAndPaulPrinciple_establishes`), at a step rated `wellSupported` because
+Aquinas grants Galatians 1:8 and the principle with it. Added to Mark 7, they
+still leave the sole rule open without that one premise
+(`every_text_without_the_hinge_leaves_the_sole_rule_open`). Weighing the dispute also moved a
 rating. Trent's claim that tradition is a coordinate source of revelation had
 been `wellSupported`. Geiselmann grants Session IV and denies that it canonised
 two coordinate sources, since the council replaced its draft's "partly … partly"
