@@ -4,6 +4,7 @@ import TestimonyArguments.SolaScriptura.Lines
 import TestimonyArguments.SolaScriptura.Packages
 import TestimonyArguments.SolaScriptura.Results
 import TestimonyArguments.SolaScriptura.Mark7
+import TestimonyArguments.SolaScriptura.JesusAndPaul
 import TestimonyArguments.SolaScriptura.Dispute
 import TestimonyArguments.SolaScriptura.Hearings
 
@@ -133,12 +134,14 @@ deny either leg and the circle is not there.
 ## What Mark 7 settles
 
 Jesus' rebuke of the elders' tradition (Mark 7:1–13; Matthew 15:1–9) is the
-text the Protestant case most often cites, and it used to sit among the shared
-grounds with no step reading it. It is a line of its own now, and it settles
-less than it is cited for. Its principle — God's word judges human tradition,
+text the Protestant case most often cites. It is a line of its own here, and it
+settles less than it is cited for. Its principle — God's word judges human tradition,
 and no commandment of men may be taught as God's word — is common ground: Rome
 holds it too. From the principle to sola scriptura needs one more premise, that
-no apostolic word survives outside Scripture, and Rome denies it.
+no unwritten tradition can now be shown to be apostolic, and Rome denies it.
+Jesus' sayings in John 10:35 and Matthew 5:18, and Paul's in Galatians 1:8–9
+and Colossians 2, deliver the same principle without Mark 7, and leave the same
+premise to be argued (`every_text_without_the_hinge_leaves_the_sole_rule_open`).
 
 `whatTrentsTraditionIs` is the dilemma a reader of Mark 7 needs. Read as
 commandments of men, Trent's tradition is what Mark 7 condemns; read as the
@@ -175,6 +178,7 @@ given the distinction, not that the distinction can be drawn.
 | `Packages.lean` | the positions, the objections, and the variants the results refute |
 | `Results.lean` | every `@[headline]` result on the positions and objections |
 | `Mark7.lean` | Mark 7 and the tradition Trent receives: the packages, the dilemma |
+| `JesusAndPaul.lean` | the same principle from Jesus' sayings and Paul's letters |
 | `Dispute.lean` | the dispute over Mark 7, weighed, and its verdicts |
 | `Hearings.lean` | the same dispute heard against each reading of Trent |
 -/

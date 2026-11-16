@@ -29,7 +29,8 @@ private def soleRuleLabel : String := "scripture is the sole infallible rule of 
 /-! ### The positions -/
 
 /-- **The Protestant position**: three routes to the conclusion, on the
-final-arbiter reading — the classical, the eliminative, and Mark 7's. Scripture
+final-arbiter reading — the classical, the eliminative, and Mark 7's, whose
+principle it also draws from Jesus' sayings and Paul's letters. Scripture
 is not the only authority but the only infallible one; tradition is ministerial,
 and practices neither commanded nor forbidden need no scriptural warrant. -/
 @[solaScripturaDefs]
@@ -37,7 +38,8 @@ def protestant : ArgumentPackage Claim :=
   { name := "Protestant (sola scriptura as final arbiter)"
   , cite := cite
   , premises :=
-      caseOf [classicalLine, eliminativeLine, mark7Line, mark7SoleRuleLine] sharedGrounds []
+      caseOf [classicalLine, eliminativeLine, mark7Line, jesusAndPaulLine, mark7SoleRuleLine]
+        sharedGrounds []
   , conclusion := p .scriptureIsSoleInfallibleRule
   , conclusionLabel := soleRuleLabel }
 
@@ -132,7 +134,7 @@ def protestantWithoutHinge : ArgumentPackage Claim :=
         [ classicalLine.onGrounds
             [ p .timothy3_16GodBreathed, p .timothy3_17ThoroughlyEquips
             , p .scriptureIsSufficient, p .scriptureIsPerspicuous ]
-        , eliminativeLine, mark7Line, mark7SoleRuleLine ]
+        , eliminativeLine, mark7Line, jesusAndPaulLine, mark7SoleRuleLine ]
         sharedGrounds [] }
 
 /-- The classical line alone, stripped of the hinge. -/

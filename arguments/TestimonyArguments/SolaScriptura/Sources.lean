@@ -34,18 +34,21 @@ conclusion — or, where no one was found who does, to whoever grants both. -/
 /-- The rating of Mark 7's step, from the rebuke to the principle. No reader was
 found who grants the text and denies the principle; Rome grants it outright —
 the teaching office is "not above the word of God" (*Dei Verbum* 10) — and
-Calvin applies Matthew 15:9 to the laws of worship he opposed. Rated
-`wellSupported` rather than `consensus`, because the step generalises from one
-pericope. -/
+Calvin applies Matthew 15:9 to the laws of worship he opposed. Wenham reads the
+passage the same way: "the displacement of Scripture by 'tradition' (mere
+'precepts of men')" was one of "the twin evils which made that Word of none
+effect" (pp. 15–16). Rated `wellSupported` rather than `consensus`, because the
+step generalises from one pericope. -/
 def mark7PrincipleInference : Source :=
   { primary := .work tannerDecrees (.sectionRef "Vatican II (1965), Dei Verbum 10")
-  , supporting := [.work calvinInstitutes (.sectionRef "IV.x.23")]
+  , supporting :=
+      [.work calvinInstitutes (.sectionRef "IV.x.23"), .work wenhamOurLordsView (.pages 15 16)]
   , tradition := .christianHistoricalGrammatical
   , confidence := .wellSupported }
 
 /-- The rating of the step from Mark 7's principle to the sole rule: `disputed`.
-Grant that God's word judges human tradition and that no apostolic teaching
-outside Scripture adds to it, and a reader may still deny that Scripture is the
+Grant that God's word judges human tradition and that no unwritten tradition can
+be shown to be apostolic, and a reader may still deny that Scripture is the
 *sole* infallible rule. Geiselmann is that reader: he holds that Scripture
 contains all revealed content, grants the principle as every Catholic does, and
 as a Catholic after Vatican I still holds the Magisterium an infallible
@@ -59,6 +62,56 @@ def principleToSoleRuleInference : Source :=
       , .work florovskyBibleChurchTradition .whole ]
   , tradition := .romanCatholic
   , confidence := .disputed }
+
+/-- The rating of the step from Jesus' sayings and Paul's letters to the principle:
+`wellSupported`. Jesus says that "the scripture cannot be broken" (John 10:35)
+and that not "one jot or one tittle" shall pass from the law (Matthew 5:18);
+Paul puts even an apostle and an angel under the gospel already preached
+(Galatians 1:8–9), and sets "the tradition of men" against Christ (Colossians
+2:8). From these to the principle that God's word judges human tradition, no
+reader was found who grants the texts and denies the principle.
+
+The nearest to a dissenter is Aquinas, and he grants it. He reads Galatians 1:8
+as Paul wrote it, and answers the objection that it forbids teaching anything
+not written in the Gospels and epistles: "nothing is to be taught except what is
+contained, either implicitly or explicitly, in the Gospels and epistles and
+Sacred Scripture". What he denies is a stronger claim, Calvin's, that "another
+gospel" is any gospel "to which the inventions of other men are added": for
+Aquinas, Paul's "besides" means "adding something completely alien" (his
+lectures on Galatians, chapter 1, lecture 2). Rome's answer in Calvin's day was
+of the same kind, as Calvin reports it at the same verse: "they tell us, that we
+have not in our possession the whole of Paul's preaching". Paul himself commends
+what he handed on by word: "keep the ordinances, as I delivered them to you" (1
+Corinthians 11:2); "hold the traditions which ye have been taught, whether by
+word, or our epistle" (2 Thessalonians 2:15; compare 3:6). On that reading the
+test Paul sets is where a teaching came from, not whether it was written down.
+Both answers grant the principle, and deny that it makes Scripture the only
+measure; that denial is weighed where the argument needs it, at the premise
+about unwritten tradition and at the step to the sole rule, both `disputed`.
+
+Rated `wellSupported`, as Mark 7's step is, and not `consensus`, because the
+step still generalises: John 10:35 and Matthew 5:18 speak of Scripture and the
+law, Galatians 1:8 of the gospel preached, and only Colossians 2 of a tradition
+in the church. Wenham's account of Jesus' teaching is the same as the step's:
+Jesus "repudiates the petty traditions of the elders in favour of a sane and
+spiritually minded attention to the Old Testament" (p. 28, of the grain plucked
+on the sabbath). He also notes the other side of it: of the scribes in Moses'
+seat Jesus says "all things therefore whatsoever they bid you, these do and
+observe" (Matthew 23:2–3), and "To Jesus scribal lore was valuable if linked
+with spiritual understanding" (p. 15). The principle judges tradition; it does
+not abolish it. -/
+def jesusAndPaulPrincipleInference : Source :=
+  { primary := .work aquinasGalatians (.sectionRef "c. 1, lect. 2")
+  , supporting :=
+      [ .work tannerDecrees (.sectionRef "Vatican II (1965), Dei Verbum 10")
+      , .work calvinGalatians (.adLoc ⟨.galatians, 1, 9⟩)
+      , .work wenhamOurLordsView (.pageList [15, 19, 28])
+      , .work lightfootColossians (.page 204)
+      , .scripture
+          [ { ref := .verse ⟨.firstCorinthians, 11, 2⟩ }
+          , { ref := .verse ⟨.secondThessalonians, 3, 6⟩ } ] ]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
 
 /-- The rating of Trent's step, from 2 Thessalonians 2:15 and tradition as a
 source of revelation to "Scripture is not the sole rule": `wellSupported`. Once
@@ -372,19 +425,75 @@ def cite : Claim → AtomMeta
         , supporting := [.work calvinInstitutes (.sectionRef "IV.x.23")]
         , tradition := .reformedProtestant
         , confidence := .disputed } }
-  | .noApostolicWordOutsideScripture =>
+  | .noUnwrittenTraditionShownApostolic =>
     { label :=
-        "No apostolic teaching handed on outside Scripture survives, identifiable " ++
-        "as the word of God"
+        "No unwritten tradition can now be shown to be apostolic, so none can " ++
+        "bind the conscience as the word of God"
     , kind := .theological
-      -- Whitaker: "the papists have no such unwritten tradition which can be
-      -- certainly shewn to have been always observed by the universal church".
-      -- Denied by Rome, from 2 Thessalonians 2:15 and Dei Verbum 9.
+      -- Whitaker, question VI, chapter IV (pp. 503–511), answering Bellarmine's
+      -- five rules: "the papists have no such unwritten tradition which can be
+      -- certainly shewn to have been always observed by the universal church"
+      -- (506); and "if they could with so much clearness and authority prove
+      -- their traditions to be as true as the precepts of scripture, we would
+      -- willingly receive them ... but ... even they themselves do not
+      -- certainly know their own traditions" (594). A claim about proof, not
+      -- about what the apostles said. Denied by Rome: Trent, Session IV
+      -- (Waterworth 18), "the written books, and the unwritten traditions";
+      -- Dei Verbum 9, "it is not from Sacred Scripture alone that the Church
+      -- draws her certainty about everything which has been revealed".
     , source :=
-        { primary := .work whitakerDisputation (.page 506)
-        , supporting := [.work westminsterConfession (.sectionRef "I.6")]
+        { primary := .work whitakerDisputation (.pages 503 511)
+        , supporting :=
+            [ .work whitakerDisputation (.page 594)
+            , .work westminsterConfession (.sectionRef "I.6") ]
         , tradition := .reformedProtestant
         , confidence := .disputed } }
+  | .john10_35ScriptureCannotBeBroken =>
+    { label := "John 10:35 — the scripture cannot be broken"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.john, 10, 35⟩ }]
+        , supporting := [.work wenhamOurLordsView (.page 19)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .matthew5_18LawShallNotPass =>
+    { label :=
+        "Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, " ++
+        "till all be fulfilled"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.matthew, 5, 18⟩ }]
+        , supporting := [.work wenhamOurLordsView (.pageList [15, 19])]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .galatians1_8AnotherGospelAccursed =>
+    { label :=
+        "Galatians 1:8–9 — though we, or an angel from heaven, preach any other " ++
+        "gospel than that which we have preached, let him be accursed"
+    , kind := .textual
+      -- What the text says, which Calvin and Aquinas both grant. They differ
+      -- over what "any other gospel" (παρ' ὃ, "besides") reaches: an addition,
+      -- or only something alien. That is weighed in the step's rating.
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.galatians, 1, 8, 1, 9⟩ }]
+        , supporting :=
+            [ .work calvinGalatians (.adLoc ⟨.galatians, 1, 9⟩)
+            , .work aquinasGalatians (.sectionRef "c. 1, lect. 2") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .colossians2_8TraditionOfMen =>
+    { label :=
+        "Colossians 2:8, 20–22 — after the tradition of men, and not after " ++
+        "Christ; after the commandments and doctrines of men"
+    , kind := .textual
+    , source :=
+        { primary :=
+            .scripture
+              [ { ref := .verse ⟨.colossians, 2, 8⟩ }
+              , { ref := .range ⟨.colossians, 2, 20, 2, 22⟩ } ]
+        , supporting := [.work lightfootColossians (.page 204)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
   | .perspicuityIsLimitedToSalvationEssentials =>
     { label :=
         "Perspicuity is claimed only for what is necessary for salvation, not " ++

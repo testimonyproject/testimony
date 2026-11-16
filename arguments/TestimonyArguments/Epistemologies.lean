@@ -1,5 +1,6 @@
 import Testimony.Logic.Epistemology
 import TestimonyArguments.SolaFide
+import TestimonyArguments.SolaScriptura
 
 /-!
 # TestimonyArguments.Epistemologies — the rules each side professes, and whether it keeps them
@@ -61,12 +62,32 @@ their own as a rule; holding them to another's would give them a rule they did n
 Chrysostom is a Father whom the Orthodox and the Catholic traditions both receive, and calling
 him either's would be a claim the library does not argue.
 
+## The dispute over Mark 7
+
+The sola scriptura argument's one dispute asks what Jesus' rebuke of the elders' tradition in
+Mark 7 settles between Rome and the Reformers. Its parties are held to their rules the same
+way. Mark 7's case for sola scriptura is the Reformed reading and professes Westminster's rule;
+Trent, as it states its position and with its tradition read as the apostolic word, professes
+Trent's. Mark 7's principle, that God's word judges human tradition, is common ground, granted
+by Rome in *Dei Verbum* 10, and is held to no rule; it happens to meet all four
+(`marks_principle_meets_every_rule`). Trent read as commandments of men is held to none,
+because no one holds it: Trent denies the reading and Calvin, whose reading it is, denies
+Trent.
+
+Here the check finds a fault. Mark 7's case rests the claim its last step needs, that no
+unwritten tradition can now be shown to be apostolic and so none can bind the conscience as
+God's word, on Whitaker's word and the Westminster Confession's, and Westminster's rule admits
+neither as a ground. So the Reformed case from Mark 7 asks its rival for Scripture and, at that
+one claim, does not give it (`sola_scriptura_own_rules`). The claim is stated as narrowly as
+Whitaker states it, as a claim about what can be proved and not about what the apostles once
+said, and that does not change what it rests on. Trent's readings keep their rule.
+
 ## What it does not claim
 
 It does not say which epistemology is right: that is what the sola scriptura dispute is about.
 It does not weigh anything: no verdict and no rating reads it. It checks claims, not steps. And
-it says nothing of parties outside the sola fide dispute, which are the next to be held to their
-rules.
+it says nothing of parties outside the sola fide dispute and the dispute over Mark 7, nor of
+the sola scriptura argument's packages that no dispute weighs yet.
 -/
 
 namespace TestimonyArguments.Epistemologies
@@ -266,6 +287,106 @@ theorem trent_keeps_its_own_rule :
     (partyNode .trent).refusedBy scriptureAndTradition = [] ∧
       (partyNode .trent).refusedBy scriptureItsOwnInterpreter =
         [.justificationIncludesSanctification, .renewalGrowsThroughGoodWorks] := by
+  decide +kernel
+
+/-! ### The dispute over Mark 7
+
+The sola scriptura argument has one dispute so far, over what Jesus' rebuke of the elders'
+tradition in Mark 7 settles between Rome and the Reformers
+(`TestimonyArguments.SolaScriptura.mark7Dispute`). Its five parties are held to their rules
+here, as the sola fide parties are above. The argument's other positions — Geisler's
+Tradition 0, Mathison's Tradition I, the canon objection and Kruger's reply to it, Barrett's
+parity reply — are packages that no dispute weighs yet, so none of them is held to a rule. -/
+
+/-- **The rule each party to the dispute over Mark 7 professes**, as the side whose reading it
+is.
+
+- Mark 7's case for sola scriptura is the Reformed reading of the passage, the one the
+  Protestant case has always made from it, and professes Westminster's rule.
+- Trent, as it states its position, and Trent with its tradition read as the apostolic word
+  handed on unwritten, which is what Trent says it receives, profess Trent's rule.
+- Mark 7's principle professes none. It is common ground: Rome grants it in *Dei Verbum* 10 as
+  the Reformers do, and making it either side's would be a claim the library does not argue.
+  It meets every rule the library has encoded all the same
+  (`marks_principle_meets_every_rule`).
+- Trent read as commandments of men professes none, because no one holds it. It is Calvin's
+  reading of what Trent receives (*Institutes* IV.x.23), joined to Trent's own position: Trent
+  denies the reading, and Calvin denies the position. Holding it to either side's rule would
+  charge one of them with asserting what he does not. -/
+def professesSolaScriptura : SolaScriptura.Mark7Party → Option Epistemology
+  | .mark7 => some scriptureItsOwnInterpreter
+  | .trent | .trentAsApostolicWord => some scriptureAndTradition
+  | .principle | .trentAsMensCommandments => none
+
+/-- Every party to the dispute over Mark 7, in the dispute's order. -/
+def mark7Parties : List SolaScriptura.Mark7Party :=
+  [.principle, .mark7, .trent, .trentAsMensCommandments, .trentAsApostolicWord]
+
+/-- The list has every party. -/
+theorem mark7Parties_complete : ∀ q, q ∈ mark7Parties := by intro q; cases q <;> decide
+
+/-- Each party to the dispute over Mark 7, held to the rule it professes. -/
+def ownRuleSolaScriptura (q : SolaScriptura.Mark7Party) :
+    Option (OwnRule SolaScriptura.Claim) :=
+  (professesSolaScriptura q).map (SolaScriptura.mark7PartyNode q).heldTo
+
+/-- The parties to the dispute over Mark 7 that fail their own rule. -/
+def mark7BreakTheirRule : List SolaScriptura.Mark7Party :=
+  mark7Parties.filter fun q => (ownRuleSolaScriptura q).any (!·.kept)
+
+/-- The parties to the dispute over Mark 7 held to no rule. -/
+def mark7HeldToNone : List SolaScriptura.Mark7Party :=
+  mark7Parties.filter fun q => (professesSolaScriptura q).isNone
+
+/-- **Mark 7's case for sola scriptura fails its own rule, at one claim; Trent keeps its own.**
+The Reformed case from Mark 7 asks its rival for Scripture, and rests one of its two claims on
+something Westminster's rule does not admit. Its claim from the text, that Jesus rebukes the
+elders' tradition for voiding the word of God, rests on Mark 7 itself. Its other claim is the
+one the step to sola scriptura needs: that no unwritten tradition can now be shown to be
+apostolic, and so none can bind the conscience as the word of God. The library cites that claim
+to Whitaker's *Disputation on Holy Scripture* (question VI, chapter IV, pp. 503–511), which
+answers Bellarmine's five rules for telling a genuine tradition from a spurious one and
+replies that "the papists have no such unwritten tradition which can be certainly shewn to
+have been always observed by the universal church" (p. 506); to the same work at p. 594, "even
+they themselves do not certainly know their own traditions"; and to the Westminster
+Confession I.6, which says that nothing is to be added to Scripture by "traditions of men".
+Both works are a theologian's or a confession's word, and Westminster's rule admits Scripture
+and evidence, not anyone's word. So by its own rule the case rests that claim on what it
+refuses its rival.
+
+Trent, as it states its position and read as the apostolic word, keeps Trent's rule: it rests
+on 2 Thessalonians 2:15, and on tradition as a source of revelation alongside Scripture, which
+the library cites to Session IV itself and to Mathison, Geiselmann and Congar on what Session
+IV decided. Both are grounds Trent's rule admits. Mark 7's principle and Trent read as
+commandments of men are held to no rule, for the reasons `professesSolaScriptura` gives.
+
+What it does not claim: that some unwritten tradition can be shown to be apostolic, or that
+none can. Nor that the claim cannot be grounded by Westminster's rule. It is in part a
+historical claim, about what the record can show, and Whitaker argues it from the traditions
+Bellarmine names, infant baptism among them; an argument from that evidence, cited as
+evidence, or from Scripture, would be a ground the rule admits. The library cites Whitaker as
+a witness to the Reformed position, and has not cited a historian's account of the evidence.
+Whose authority a claim rests on is read from the tradition its citation records, a proxy; and
+the check reads claims, not steps. -/
+theorem sola_scriptura_own_rules :
+    mark7BreakTheirRule = [.mark7] ∧
+      (SolaScriptura.mark7PartyNode .mark7).refusedBy scriptureItsOwnInterpreter =
+        [.noUnwrittenTraditionShownApostolic] ∧
+      mark7HeldToNone = [.principle, .trentAsMensCommandments] := by
+  decide +kernel
+
+/-- **Mark 7's principle meets every rule the library has encoded.** It is held to none,
+because it is common ground, but each rule admits everything it asserts: its one claim is Mark
+7:1–13 itself, and every rule admits Scripture. So Westminster's rule, Trent's, the Orthodox
+rule and the library's evidence rule can each grant it on its own terms, which is what common
+ground should be.
+
+What it does not claim: that the principle follows from the text. That is its step, rated
+`wellSupported`, and steps are not held to a rule. -/
+theorem marks_principle_meets_every_rule :
+    [scriptureItsOwnInterpreter, scriptureAndTradition, scriptureInTheMindOfTheChurch,
+        evidenceAnyoneCanCheck].all
+      (fun E => ((SolaScriptura.mark7PartyNode .principle).refusedBy E).isEmpty) = true := by
   decide +kernel
 
 end TestimonyArguments.Epistemologies

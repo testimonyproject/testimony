@@ -31,7 +31,8 @@ every other verdict here.
 | Weighing | `Testimony.Logic.Contest` | whether a dispute over a claim survives weighing |
 
 Nothing in the generic layer names an argument. Every argument has an instance: sola fide is
-analysed; sola scriptura, the virgin birth, Spirit baptism and the canonical witness in part, the
+analysed, and sola scriptura nearly so, its texts in their own words and every claim its lines'
+steps read but three; the virgin birth, Spirit baptism and the canonical witness in part, the
 claims whose meanings bear on a join — and, in the virgin birth, the claims about the words of
 Isaiah 7:14 and its versions, the woman it describes and the birth it is read to promise; and born
 in Bethlehem, looked at and found to have no joins, is registered with its citations' labels and
@@ -409,9 +410,9 @@ what it may be heard to imply is not charged.
 **The library's own lines, checked the same way.** Every line of reason is one step, and read
 through its argument's meanings a step is a move. `Testimony.Checks.Fallacies` runs the three
 checks over every line the library has, and the build fails if one equivocates on its own terms
-or argues from silence alone. Thirty-two lines can be read today, all of sola fide's and one of
-sola scriptura's; the rest wait on their meanings. None equivocates, and none argues from
-silence. One line carried what it delivered in a premise when the check was first run: the sola
+or argues from silence alone. Forty-six lines can be read today, thirty-one of sola fide's and
+fifteen of sola scriptura's; the rest wait on their meanings. None equivocates, and none argues
+from silence. One line carried what it delivered in a premise when the check was first run: the sola
 fide line on Paul's word (`lexicalLine`), whose premise that Paul's "justify" is a courtroom
 word also said, in its own words, that "it does not mean to make a person good", which was the
 line's conclusion. That premise was the one Trent's reading of Paul's word denies, so as an

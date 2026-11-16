@@ -15,15 +15,15 @@ sola scriptura?** Heard against that reading alone (`mensCommandmentsHearing`),
 Mark 7's case is forced — but only because nothing left in the hearing contests
 it. The reading is the only party that attacks it, and the principle defeats the
 reading. Mark 7's case still rests on two things rated `disputed`: that no
-apostolic word survives outside Scripture, and the step from the principle to
-the *sole* rule. The reading of Trent as commandments of men contests neither,
+unwritten tradition can be shown to be apostolic, and the step from the
+principle to the *sole* rule. The reading of Trent as commandments of men contests neither,
 and the parties that would are set aside. This is the Protestant polemic at full
 strength — and it holds only on a reading of Trent that Trent itself denies.
 
 **If Rome's tradition is the apostolic word handed on unwritten, what does
 Mark 7 settle?** Heard against that reading (`apostolicWordHearing`), only the
 principle — which the reading grants. Mark 7's case and the reading defeat each
-other at one premise, that no apostolic word survives outside Scripture, and
+other at one premise, that no unwritten tradition can be shown to be apostolic, and
 each side's weakest link is `disputed`. So the dispute chooses neither.
 
 The difference between the two hearings is the whole of what Mark 7 contributes:
@@ -60,7 +60,7 @@ declare_verdict mensCommandmentsHearingSettles for mensCommandmentsHearing :
   What this does not claim: that Rome's tradition is the commandments of men —
   Trent says what it receives came from Christ and the apostles, and the reading
   that says otherwise is rated `disputed`. Nor that Mark 7's case is sound. It
-  still rests on the premise that no apostolic word survives outside Scripture,
+  still rests on the premise that no unwritten tradition can be shown to be apostolic,
   and on a step Geiselmann and Florovsky deny, both `disputed`; no party heard
   here contests either. Trent as it states its position, and Trent read as the
   apostolic word, are set aside. -/
@@ -86,7 +86,7 @@ declare_verdict apostolicWordHearingSettles for apostolicWordHearing :
       (Witness.Table.sub _ [(.mark7, .trentAsApostolicWord), (.trentAsApostolicWord, .mark7)])
   /-- **If Rome's tradition is the apostolic word, Mark 7 forces only its
   principle** — which that reading grants. Mark 7's case and the reading stand off
-  at the premise that no apostolic word survives outside Scripture. -/
+  at the premise that no unwritten tradition can be shown to be apostolic. -/
   proves @[headline] against_the_apostolic_word_only_the_principle_is_forced :
       grounded apostolicWordHearing.defeats = Solver.toSet (Witness.listSub _ [.principle])
 
@@ -101,8 +101,8 @@ declare_verdict mark7AnsweredByTheApostolicWord for apostolicWordHearing :
   forced.** A defensible position that cannot be enlarged holds Mark 7's
   principle together with Trent read as the apostolic word, and cannot hold Mark
   7's case with them. What would decide is argued, not weighed: whether any
-  apostolic word survives outside Scripture, and whether the principle would then
-  make Scripture the *sole* rule. Both are rated `disputed`, and neither is
+  unwritten tradition can be shown to be apostolic, and whether the principle
+  would then make Scripture the *sole* rule. Both are rated `disputed`, and neither is
   something Mark 7 speaks to. -/
   proves @[headline] mark7_not_forced_against_the_apostolic_word
 

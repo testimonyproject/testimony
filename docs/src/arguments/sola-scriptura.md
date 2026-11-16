@@ -134,12 +134,14 @@ deny either leg and the circle is not there.
 ### What Mark 7 settles
 
 Jesus' rebuke of the elders' tradition (Mark 7:1–13; Matthew 15:1–9) is the
-text the Protestant case most often cites, and it used to sit among the shared
-grounds with no step reading it. It is a line of its own now, and it settles
-less than it is cited for. Its principle — God's word judges human tradition,
+text the Protestant case most often cites. It is a line of its own here, and it
+settles less than it is cited for. Its principle — God's word judges human tradition,
 and no commandment of men may be taught as God's word — is common ground: Rome
 holds it too. From the principle to sola scriptura needs one more premise, that
-no apostolic word survives outside Scripture, and Rome denies it.
+no unwritten tradition can now be shown to be apostolic, and Rome denies it.
+Jesus' sayings in John 10:35 and Matthew 5:18, and Paul's in Galatians 1:8–9
+and Colossians 2, deliver the same principle without Mark 7, and leave the same
+premise to be argued (`every_text_without_the_hinge_leaves_the_sole_rule_open`).
 
 `whatTrentsTraditionIs` is the dilemma a reader of Mark 7 needs. Read as
 commandments of men, Trent's tradition is what Mark 7 condemns; read as the
@@ -176,6 +178,7 @@ given the distinction, not that the distinction can be drawn.
 | `Packages.lean` | the positions, the objections, and the variants the results refute |
 | `Results.lean` | every `@[headline]` result on the positions and objections |
 | `Mark7.lean` | Mark 7 and the tradition Trent receives: the packages, the dilemma |
+| `JesusAndPaul.lean` | the same principle from Jesus' sayings and Paul's letters |
 | `Dispute.lean` | the dispute over Mark 7, weighed, and its verdicts |
 | `Hearings.lean` | the same dispute heard against each reading of Trent |
 
@@ -252,7 +255,11 @@ conclusion — or, where no one was found who does, to whoever grants both.
 | <a id="claim-36"></a>\\(P_{36}\\) | Perspicuity is claimed only for what is necessary for salvation, not for all of scripture alike | theological | Reformed Protestant, well supported | [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.7 |
 | <a id="claim-37"></a>\\(P_{37}\\) | God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void | theological | Christian, hist.-gramm., consensus | [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972) |
 | <a id="claim-38"></a>\\(P_{38}\\) | A commandment of men may rightly be bound on the Church as God's word | interpretive | Reformed Protestant, disputed | Mark 7:7; Isa 29:13; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23 |
-| <a id="claim-39"></a>\\(P_{39}\\) | No apostolic teaching handed on outside Scripture survives, identifiable as the word of God | theological | Reformed Protestant, disputed | [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6 |
+| <a id="claim-39"></a>\\(P_{39}\\) | No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God | theological | Reformed Protestant, disputed | [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6 |
+| <a id="claim-40"></a>\\(P_{40}\\) | John 10:35 — the scripture cannot be broken | textual | Christian, hist.-gramm., consensus | John 10:35; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), p. 19 |
+| <a id="claim-41"></a>\\(P_{41}\\) | Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled | textual | Christian, hist.-gramm., consensus | Matt 5:18; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), pp. 15, 19 |
+| <a id="claim-42"></a>\\(P_{42}\\) | Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed | textual | Christian, hist.-gramm., consensus | Gal 1:8-9; [Calvin 1854](../bibliography.md#calvin-commentary-galatians-1854), ad loc. Gal 1:9; [Thomas Aquinas 1966](../bibliography.md#aquinas-commentary-galatians-1966), §c. 1, lect. 2 |
+| <a id="claim-43"></a>\\(P_{43}\\) | Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men | textual | Christian, hist.-gramm., consensus | Col 2:8; Col 2:20-22; [Lightfoot](../bibliography.md#lightfoot-colossians-philemon), p. 204 |
 
 </div>
 
@@ -264,9 +271,11 @@ conclusion — or, where no one was found who does, to whoever grants both.
 The rating of Mark 7's step, from the rebuke to the principle. No reader was
 found who grants the text and denies the principle; Rome grants it outright —
 the teaching office is "not above the word of God" (*Dei Verbum* 10) — and
-Calvin applies Matthew 15:9 to the laws of worship he opposed. Rated
-`wellSupported` rather than `consensus`, because the step generalises from one
-pericope.
+Calvin applies Matthew 15:9 to the laws of worship he opposed. Wenham reads the
+passage the same way: "the displacement of Scripture by 'tradition' (mere
+'precepts of men')" was one of "the twin evils which made that Word of none
+effect" (pp. 15–16). Rated `wellSupported` rather than `consensus`, because the
+step generalises from one pericope.
 
 ```lean
 def mark7PrincipleInference : Source :=
@@ -275,7 +284,8 @@ def mark7PrincipleInference : Source :=
       Reference.work tannerDecrees
         (Bib.Locus.sectionRef "Vatican II (1965), Dei Verbum 10"),
     supporting :=
-      [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "IV.x.23")],
+      [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "IV.x.23"),
+        Reference.work wenhamOurLordsView (Bib.Locus.pages 15 16)],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.wellSupported }
 ```
@@ -284,8 +294,8 @@ def mark7PrincipleInference : Source :=
 **`principleToSoleRuleInference`**
 
 The rating of the step from Mark 7's principle to the sole rule: `disputed`.
-Grant that God's word judges human tradition and that no apostolic teaching
-outside Scripture adds to it, and a reader may still deny that Scripture is the
+Grant that God's word judges human tradition and that no unwritten tradition can
+be shown to be apostolic, and a reader may still deny that Scripture is the
 *sole* infallible rule. Geiselmann is that reader: he holds that Scripture
 contains all revealed content, grants the principle as every Catholic does, and
 as a Catholic after Vatican I still holds the Magisterium an infallible
@@ -301,6 +311,51 @@ def principleToSoleRuleInference : Source :=
           (Bib.Locus.sectionRef "Vatican I (1870), Pastor Aeternus, ch. 4"),
         Reference.work florovskyBibleChurchTradition],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="jesusAndPaulPrincipleInference"></a>
+**`jesusAndPaulPrincipleInference`**
+
+The rating of the step from Jesus' sayings and Paul's letters to the principle:
+`wellSupported`. Jesus says that "the scripture cannot be broken" (John 10:35)
+and that not "one jot or one tittle" shall pass from the law (Matthew 5:18);
+Paul puts even an apostle and an angel under the gospel already preached
+(Galatians 1:8–9), and sets "the tradition of men" against Christ (Colossians
+2:8). From these to the principle that God's word judges human tradition, no
+reader was found who grants the texts and denies the principle.
+
+The nearest to a dissenter is Aquinas, and he grants it. He reads Galatians 1:8
+as Paul wrote it, and answers the objection that it forbids teaching anything
+not written in the Gospels and epistles: "nothing is to be taught except what is
+contained, either implicitly or explicitly, in the Gospels and epistles and
+Sacred Scripture". What he denies is a stronger claim, Calvin's, that "another
+gospel" is any gospel "to which the inventions of other men are added": for
+Aquinas, Paul's "besides" means "adding something completely alien" (his
+lectures on Galatians, chapter 1, lecture 2). Rome's answer in Calvin's day was
+of the same kind, as Calvin reports it at the same verse: "they tell us, that we
+have not in our possession the whole of Paul's preaching". Paul himself commends
+what he handed on by word: "keep the ordinances, as I delivered them to you" (1
+Corinthians 11:2); "hold the traditions which ye have been taught, whether by
+word, or our epistle" (2 Thessalonians 2:15; compare 3:6). On that reading the
+test Paul sets is where a teaching came from, not whether it was written down.
+Both answers grant the principle, and deny that it makes Scripture the only
+measure; that denial is weighed where the argument needs it, at the premise
+about unwritten tradition and at the step to the sole rule, both `disputed`.
+
+Rated `wellSupported`, as Mark 7's step is, and not `consensus`, because the
+step still generalises: John 10:35 and Matthew 5:18 speak of Scripture and the
+law, Galatians 1:8 of the gospel preached, and only Colossians 2 of a tradition
+in the church. Wenham's account of Jesus' teaching is the same as the step's:
+Jesus "repudiates the petty traditions of the elders in favour of a sane and
+spiritually minded attention to the Old Testament" (p. 28, of the grain plucked
+on the sabbath). He also notes the other side of it: of the scribes in Moses'
+seat Jesus says "all things therefore whatsoever they bid you, these do and
+observe" (Matthew 23:2–3), and "To Jesus scribal lore was valuable if linked
+with spiritual understanding" (p. 15). The principle judges tradition; it does
+not abolish it.
+
+```lean
+def jesusAndPaulPrincipleInference : Source
 ```
 
 <a id="tridentineInference"></a>
@@ -336,7 +391,8 @@ def cite : Claim → AtomMeta
 ## TestimonyArguments.SolaScriptura.Lines — the inference steps and the lines of reason
 
 Three routes reach the conclusion — the classical line, the eliminative line,
-and Mark 7's, which takes two lines — three positions deny it, and three
+and Mark 7's, which takes two lines, and whose principle a further line draws
+from Jesus' sayings and Paul's letters — three positions deny it, and three
 objections attack it from different directions. The objections do not reduce to one
 another: self-refutation says the doctrine fails its own standard, the canon
 objection says an authority outside scripture is needed to identify scripture,
@@ -393,6 +449,25 @@ generalises from one pericope.
 
 </div>
 
+<a id="jesusAndPaulToPrinciple"></a>
+**`jesusAndPaulToPrinciple`**
+
+**The same principle from Jesus' sayings and Paul's letters**, without Mark 7.
+Jesus says that "the scripture cannot be broken" (John 10:35) and that not "one
+jot or one tittle" shall pass from the law (Matthew 5:18); Paul says that even
+he, or an angel, would be accursed for preaching "any other gospel" than the one
+he had preached (Galatians 1:8–9), and warns a church against teaching "after
+the tradition of men … and not after Christ" (Colossians 2:8, 20–22). Together
+they say what Mark 7 says: God's word judges human tradition. Rated
+`wellSupported`: Aquinas grants Galatians 1:8 and the principle with it, and
+denies only that every addition is "another gospel" (`jesusAndPaulPrincipleInference`).
+
+<div class="testimony-derivation">
+
+- \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+
+</div>
+
 <a id="principleExcludesMensCommandments"></a>
 **`principleExcludesMensCommandments`**
 
@@ -409,10 +484,11 @@ Church as God's word. This is Isaiah 29:13 as Mark 7:7 quotes it.
 **`principleToSoleRule`**
 
 **From Mark 7's principle to the sole rule.** If God's word judges human
-tradition, and no apostolic word survives outside Scripture, Scripture is the
-sole infallible rule. Rated `disputed`: Geiselmann holds that Scripture contains
-all revealed content and, as a Catholic after Vatican I, keeps the Magisterium
-as its infallible interpreter; Florovsky holds that tradition adds nothing to
+tradition, and no unwritten tradition can now be shown to be apostolic, so that
+none binds as God's word, Scripture is the sole infallible rule. Rated
+`disputed`: Geiselmann holds that Scripture contains all revealed content and,
+as a Catholic after Vatican I, keeps the Magisterium as its infallible
+interpreter; Florovsky holds that tradition adds nothing to
 Scripture and keeps the mind of the Church as its interpreter. Neither adds a
 word to Scripture; both deny it is the *sole* infallible rule.
 
@@ -594,14 +670,34 @@ and the principle it enacts. It delivers the principle, and no more.
 **`mark7SoleRuleLine`** — From Mark 7's principle to the sole rule
 
 **From Mark 7 to the sole rule**: the principle, with the premise that no
-apostolic word survives outside Scripture. The principle is carried in by
-`mark7Line`; this line's own ground is the one Rome denies.
+unwritten tradition can now be shown to be apostolic. The principle is carried
+in by `mark7Line`, or by `jesusAndPaulLine`; this line's own ground is the one
+Rome denies.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{#claim-39}{P_{39}}\\) — No apostolic teaching handed on outside Scripture survives, identifiable as the word of God
+- (1) \\(\href{#claim-39}{P_{39}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
 - (2) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
 - \\(\vdash\\) \\(\href{#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
+
+</div>
+
+<a id="jesusAndPaulLine"></a>
+**`jesusAndPaulLine`** — Jesus and Paul (God's word judges human tradition)
+
+**Jesus and Paul**, as a line of their own: the same principle as Mark 7's,
+from John 10:35, Matthew 5:18, Galatians 1:8–9 and Colossians 2:8, 20–22. It
+delivers the principle, and no more: what it adds is that the principle does not
+rest on one passage.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-40}{P_{40}}\\) — John 10:35 — the scripture cannot be broken
+- (2) \\(\href{#claim-41}{P_{41}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
+- (3) \\(\href{#claim-42}{P_{42}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
+- (4) \\(\href{#claim-43}{P_{43}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
+- (5) \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\)
+- \\(\vdash\\) \\(\href{#claim-37}{P_{37}}\\) — *at issue:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
 
 </div>
 
@@ -932,7 +1028,8 @@ the reply's `Line` is all it needs.
 **`protestant`** — Protestant (sola scriptura as final arbiter)
 
 **The Protestant position**: three routes to the conclusion, on the
-final-arbiter reading — the classical, the eliminative, and Mark 7's. Scripture
+final-arbiter reading — the classical, the eliminative, and Mark 7's, whose
+principle it also draws from Jesus' sayings and Paul's letters. Scripture
 is not the only authority but the only infallible one; tradition is ministerial,
 and practices neither commanded nor forbidden need no scriptural warrant.
 
@@ -946,17 +1043,22 @@ and practices neither commanded nor forbidden need no scriptural warrant.
 - (6) \\(\href{#claim-6}{P_{6}}\\) — Scripture is infallible
 - (7) \\(\href{#claim-12}{P_{12}}\\) — No candidate rule of faith other than scripture is infallible
 - (8) \\(\href{#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (9) \\(\href{#claim-39}{P_{39}}\\) — No apostolic teaching handed on outside Scripture survives, identifiable as the word of God
-- (10) \\(\href{#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
-- (11) \\(\href{#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
-- (12) \\(\href{#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
-- (13) \\(\href{#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
-- (14) \\(\href{#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
-- (15) \\(\href{#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
-- (16) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (17) \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (18) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (19) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (9) \\(\href{#claim-40}{P_{40}}\\) — John 10:35 — the scripture cannot be broken
+- (10) \\(\href{#claim-41}{P_{41}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
+- (11) \\(\href{#claim-42}{P_{42}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
+- (12) \\(\href{#claim-43}{P_{43}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
+- (13) \\(\href{#claim-39}{P_{39}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
+- (14) \\(\href{#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
+- (15) \\(\href{#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
+- (16) \\(\href{#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
+- (17) \\(\href{#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
+- (18) \\(\href{#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
+- (19) \\(\href{#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
+- (20) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (21) \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (22) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (23) \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (24) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
 - \\(\vdash\\) \\(\href{#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -1148,17 +1250,22 @@ eliminative and Mark 7 routes are untouched.
 - (5) \\(\href{#claim-6}{P_{6}}\\) — Scripture is infallible
 - (6) \\(\href{#claim-12}{P_{12}}\\) — No candidate rule of faith other than scripture is infallible
 - (7) \\(\href{#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (8) \\(\href{#claim-39}{P_{39}}\\) — No apostolic teaching handed on outside Scripture survives, identifiable as the word of God
-- (9) \\(\href{#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
-- (10) \\(\href{#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
-- (11) \\(\href{#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
-- (12) \\(\href{#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
-- (13) \\(\href{#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
-- (14) \\(\href{#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
-- (15) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (16) \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\)
-- (17) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (18) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (8) \\(\href{#claim-40}{P_{40}}\\) — John 10:35 — the scripture cannot be broken
+- (9) \\(\href{#claim-41}{P_{41}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
+- (10) \\(\href{#claim-42}{P_{42}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
+- (11) \\(\href{#claim-43}{P_{43}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
+- (12) \\(\href{#claim-39}{P_{39}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
+- (13) \\(\href{#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
+- (14) \\(\href{#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
+- (15) \\(\href{#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
+- (16) \\(\href{#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
+- (17) \\(\href{#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
+- (18) \\(\href{#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
+- (19) \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (20) \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\)
+- (21) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (22) \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (23) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
 - \\(\vdash\\) \\(\href{#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -2189,8 +2296,8 @@ against "the tradition of the elders". Jesus answers with Isaiah 29:13 — "in
 vain do they worship me, teaching as doctrines the commandments of men" — and
 with Corban: a gift vowed to God releases a son from supporting his father and
 mother, "thus making void the word of God by your tradition" (Mark 7:1–13;
-Matthew 15:1–9). The Protestant case has always cited it. Until now it only sat
-among the shared grounds, and no step read it.
+Matthew 15:1–9). The Protestant case has always cited it, and here it is a line
+of reason of its own.
 
 ### What Mark 7 settles
 
@@ -2202,17 +2309,29 @@ win. Trent, as it states its position, can hold every word of it
 (`trent_grants_marks_principle`).
 
 **It does not reach sola scriptura on its own.** From the principle to "Scripture
-is the sole infallible rule" needs one more premise: that no apostolic teaching
-handed on outside Scripture survives as God's word. Without it, Mark 7 leaves the
-sole rule open — neither it nor its denial follows
+is the sole infallible rule" needs one more premise: that no unwritten tradition
+can now be shown to be apostolic, so that none can bind the conscience as God's
+word. That is William Whitaker's claim against Bellarmine in 1588, and it is a
+claim about proof, not about what the apostles once said: "the papists have no
+such unwritten tradition which can be certainly shewn to have been always
+observed by the universal church". Without it, Mark 7 leaves the sole rule open —
+neither it nor its denial follows
 (`mark7_without_the_hinge_leaves_the_sole_rule_open`). With it, the conclusion
-follows (`mark7Case_establishes`), and the premise is rated `disputed`: Rome
-denies it from 2 Thessalonians 2:15 ("by word *or* by letter"). The step itself
-is disputed too. A reader can grant the principle, and grant that nothing
-apostolic survives outside Scripture, and still deny that Scripture is the
-*sole* infallible rule: Florovsky, for whom tradition adds nothing to Scripture
-and the mind of the Church interprets it; or a Catholic who holds Scripture
-materially sufficient and the Magisterium infallible.
+follows (`mark7Case_establishes`), and the premise is rated `disputed`. Rome
+denies it: Trent says the gospel's truth and discipline "are contained in the
+written books, and the unwritten traditions", and *Dei Verbum* 9 says that "it is not from Sacred
+Scripture alone that the Church draws her certainty about everything which has
+been revealed". The step itself is disputed too. A reader can grant the
+principle, and grant that no unwritten tradition can be shown to be apostolic,
+and still deny that Scripture is the *sole* infallible rule: Florovsky, for whom
+tradition adds nothing to Scripture and the mind of the Church interprets it; or
+a Catholic who holds Scripture materially sufficient and the Magisterium
+infallible.
+
+Mark 7 is not the only text for the principle. Jesus' sayings in John 10:35 and
+Matthew 5:18, and Paul's in Galatians 1:8–9 and Colossians 2:8, 20–22, deliver
+it too, and without that premise they leave the sole rule just as open
+(`JesusAndPaul.lean`).
 
 ### What Rome's "tradition" means
 
@@ -2229,13 +2348,13 @@ both readings.
   himself, or from the Apostles themselves, the Holy Ghost dictating" (Session
   IV, in Waterworth's translation) — Mark 7 does not reach it. Nothing in the principle is denied.
   The reading meets the Mark 7 case only at the premise the step to sola
-  scriptura needs, that no apostolic word survives outside Scripture, and that
-  premise is `disputed`.
+  scriptura needs, that no unwritten tradition can be shown to be apostolic,
+  and that premise is `disputed`.
 
 So Mark 7 does not decide between Rome and the Reformers. It moves the question
 to what the sola scriptura argument already turned on: whether any unwritten
-apostolic word survives and can be identified — and, even granting that none
-does, whether the principle then makes Scripture the *sole* infallible rule.
+tradition can be shown to be apostolic — and, even granting that none can,
+whether the principle then makes Scripture the *sole* infallible rule.
 
 #### The quotation
 
@@ -2290,12 +2409,12 @@ No premise here rests on scripture alone.
 **`mark7Case`** — Sola scriptura from Mark 7
 
 **Mark 7's case for sola scriptura**: the principle, and the premise that no
-apostolic word survives outside Scripture.
+unwritten tradition can now be shown to be apostolic.
 
 <div class="testimony-derivation">
 
 - (1) \\(\href{#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (2) \\(\href{#claim-39}{P_{39}}\\) — No apostolic teaching handed on outside Scripture survives, identifiable as the word of God
+- (2) \\(\href{#claim-39}{P_{39}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
 - (3) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
 - (4) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\)
 - \\(\vdash\\) \\(\href{#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
@@ -2305,10 +2424,11 @@ apostolic word survives outside Scripture.
 No premise here rests on scripture alone.
 
 <a id="mark7CaseWithoutTheHinge"></a>
-**`mark7CaseWithoutTheHinge`** — Sola scriptura from Mark 7, without the premise about unwritten apostolic word
+**`mark7CaseWithoutTheHinge`** — Sola scriptura from Mark 7, without the premise about unwritten tradition
 
-Mark 7's case without the premise that no apostolic word survives outside
-Scripture: the text, the principle, and the step to the sole rule.
+Mark 7's case without the premise that no unwritten tradition can now be
+shown to be apostolic: the text, the principle, and the step to the sole
+rule.
 
 <div class="testimony-derivation">
 
@@ -2410,12 +2530,13 @@ def asMensCommandments : Reading Claim :=
 **`asApostolicWord`**
 
 Trent's tradition, **read as the apostolic word handed on unwritten**: some
-apostolic teaching outside Scripture survives as God's word.
+unwritten tradition is known to be apostolic, and binds as God's word.
 
 ```lean
 def asApostolicWord : Reading Claim :=
   { name := "as the apostolic word handed on unwritten",
-    commits := notP Claim.noApostolicWordOutsideScripture,
+    commits :=
+      notP Claim.noUnwrittenTraditionShownApostolic,
     source := trentReadAsApostolicWord }
 ```
 
@@ -2446,7 +2567,7 @@ Trent, with its tradition read as the apostolic word handed on unwritten.
 - (1) \\(\href{#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
 - (2) \\(\href{#claim-13}{P_{13}}\\) — Tradition is a coordinate source of revelation alongside scripture
 - (3) \\((\href{#claim-5}{P_{5}} \land \href{#claim-13}{P_{13}}) \rightarrow \lnot \href{#claim-9}{P_{9}}\\)
-- (4) \\(\href{#claim-13}{P_{13}} \rightarrow \lnot \href{#claim-39}{P_{39}}\\) — *would deny:* No apostolic teaching handed on outside Scripture survives, identifiable as the word of God
+- (4) \\(\href{#claim-13}{P_{13}} \rightarrow \lnot \href{#claim-39}{P_{39}}\\) — *would deny:* No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
 - \\(\vdash\\) \\(\lnot \href{#claim-9}{P_{9}}\\) — *at issue, the denial of:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -2459,7 +2580,8 @@ Grounded in scripture alone: 2 Thessalonians 2:15 — hold to the traditions tau
 **`marksPrincipleReading`**
 
 The Reformed world: Mark 7's text and principle, no commandment of men bound
-as God's word, no apostolic word outside Scripture, and sola scriptura.
+as God's word, no unwritten tradition shown to be apostolic, and sola
+scriptura.
 
 ```lean
 def marksPrincipleReading : Valuation Claim :=
@@ -2473,8 +2595,8 @@ def marksPrincipleReading : Valuation Claim :=
 **`romeGrantsMarksPrincipleReading`**
 
 Rome's world, granting Mark 7: God's word judges human tradition and no
-commandment of men may be bound as God's word; but apostolic teaching survives
-outside Scripture, so Scripture is not the sole infallible rule. Nor is the
+commandment of men may be bound as God's word; but unwritten tradition is known
+to be apostolic and binds as God's word, so Scripture is not the sole infallible rule. Nor is the
 Church's consensus a mere product of reading Scripture: for Rome, Scripture and
 Tradition flow from one source (*Dei Verbum* 9). A world must choose here,
 because the meanings exclude the consensus being that product and its being
@@ -2486,7 +2608,7 @@ def romeGrantsMarksPrincipleReading : Valuation Claim :=
     match a with
     | Claim.creedalConsensusIsDerivedFromScripture => False
     | Claim.mensCommandmentBindsAsGodsWord => False
-    | Claim.noApostolicWordOutsideScripture => False
+    | Claim.noUnwrittenTraditionShownApostolic => False
     | Claim.scriptureIsSoleInfallibleRule => False
     | x => True
 ```
@@ -2535,7 +2657,7 @@ theorem mark7Principle_is_satisfiable : Satisfiable mark7Principle.premises
 
 **Trent grants Mark 7's principle.** Trent's position, as it states it, can
 be held with the principle and everything Mark 7 says: the reading on which
-apostolic teaching survives outside Scripture, and no commandment of men is
+unwritten tradition is known to be apostolic, and no commandment of men is
 bound as God's word.
 
 ```lean
@@ -2548,7 +2670,7 @@ theorem trent_grants_marks_principle : Grants tridentineCase (p
 **`mark7Case_establishes`**
 
 **Mark 7's case for sola scriptura holds**, given its premise that no
-apostolic word survives outside Scripture.
+unwritten tradition can now be shown to be apostolic.
 
 ```lean
 theorem mark7Case_establishes : Establishes mark7Case
@@ -2682,14 +2804,14 @@ of its case for the principle, which follows without it.
 - **What this rests on:**
   - \\(\href{#claim-3}{P_{3}}\\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command — *consensus*: Mark 7:1-13; Matt 15:1-9; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.10
   - \\(\href{#claim-37}{P_{37}}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
-  - the step itself — *well supported*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - the step itself — *well supported*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), pp. 15–16
 
 <a id="whereTheApostolicWordReadingFalls"></a>
 **`whereTheApostolicWordReadingFalls`**
 
 **Why Mark 7's case stands against Trent, read as the apostolic word.** Not
 at the principle, which this reading grants, but at the premise the step to
-sola scriptura needs: that no apostolic teaching survives outside Scripture.
+sola scriptura needs: that no unwritten tradition can be shown to be apostolic.
 The reading denies exactly that, and the premise is rated `disputed`. The step
 from it to the sole rule is `disputed` too, so granting the premise would not
 alone settle the question.
@@ -2700,7 +2822,7 @@ alone settle the question.
 - **What it does:** its conclusion does not follow without it.
 - **Where the rival breaks:** \\(\href{#claim-13}{P_{13}}\\), \\(\href{#claim-13}{P_{13}} \rightarrow \lnot \href{#claim-39}{P_{39}}\\) cannot be held together with \\(\href{#claim-39}{P_{39}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(\href{#claim-39}{P_{39}}\\) No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — *disputed*: [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - \\(\href{#claim-39}{P_{39}}\\) No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — *disputed*: [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
 
 #### The dilemma
 
@@ -2716,8 +2838,8 @@ of men may not be bound as God's word.
 
 Read as the apostolic word handed on unwritten — what Trent says it receives —
 Mark 7's principle does not reach it. It cannot be held with Mark 7's case for
-sola scriptura, but only at that case's own premise that no apostolic word
-survives outside Scripture, which is `disputed`. That is the question the sola
+sola scriptura, but only at that case's own premise that no unwritten tradition
+can be shown to be apostolic, which is `disputed`. That is the question the sola
 scriptura argument already turns on; Mark 7 does not settle it.
 
 Each reading is fair: Trent read either way can be held without contradiction. Which reading
@@ -2739,7 +2861,7 @@ Against *Mark 7: God's word judges human tradition*, it cannot be held. Where it
 - **What this rests on:**
   - \\(\href{#claim-3}{P_{3}}\\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command — *consensus*: Mark 7:1-13; Matt 15:1-9; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.10
   - \\(\href{#claim-37}{P_{37}}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
-  - the step itself — *well supported*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - the step itself — *well supported*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), pp. 15–16
 
 **2. Read as the apostolic word handed on unwritten.** The claim commits *Trent (Tradition II)* to \\(\lnot \href{#claim-39}{P_{39}}\\) — so read by [Council of Trent 1848](../bibliography.md#waterworth-trent-1848), p. 18; [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 9; [Catholic Church 2000](../bibliography.md#catholic-church-catechism-2000), §83 (*consensus*).
 
@@ -2753,7 +2875,219 @@ Against *Sola scriptura from Mark 7*, it cannot be held. Where it breaks:
 - **What it does:** its conclusion does not follow without it.
 - **Where the rival breaks:** \\(\href{#claim-13}{P_{13}}\\), \\(\href{#claim-13}{P_{13}} \rightarrow \lnot \href{#claim-39}{P_{39}}\\) cannot be held together with \\(\href{#claim-39}{P_{39}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(\href{#claim-39}{P_{39}}\\) No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — *disputed*: [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - \\(\href{#claim-39}{P_{39}}\\) No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — *disputed*: [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+
+## TestimonyArguments.SolaScriptura.JesusAndPaul — the same principle, beyond Mark 7
+
+A reader who has followed the case from Mark 7 may fairly ask whether it rests
+on one story. It does not. Jesus says elsewhere that "the scripture cannot be
+broken" (John 10:35), and that "Till heaven and earth pass, one jot or one
+tittle shall in no wise pass from the law, till all be fulfilled" (Matthew
+5:18). Paul writes to the Galatians, "though we, or an angel from heaven, preach
+any other gospel unto you than that which we have preached unto you, let him be
+accursed" (Galatians 1:8), and to the Colossians, "Beware lest any man spoil you
+through philosophy and vain deceit, after the tradition of men, after the
+rudiments of the world, and not after Christ" (Colossians 2:8). Of the rules
+"Touch not; taste not; handle not" he says that they are "after the
+commandments and doctrines of men" (2:21–22).
+
+That last phrase is Isaiah's. J. B. Lightfoot notes that "The expression is
+taken ultimately from Isaiah xxix. 13", the verse Jesus quotes against the
+elders in Mark 7, and that the coincidences between Paul's language and Jesus'
+words in Matthew 15 and Mark 7 "are striking, and suggest that the Apostle had
+this discourse in his mind". So the relation is recorded as an allusion, on
+Lightfoot's authority, and not as a quotation: Paul gives no "as it is written"
+(`colossiansAlludesToIsaiah`, `colossiansAlludesToMark7`).
+
+### What these texts deliver
+
+Together they deliver the principle Mark 7 delivers: God's word judges human
+tradition, and no commandment of men may be taught as God's word
+(`jesusAndPaulPrinciple_establishes`). The step from the texts to the principle
+is rated `wellSupported`, as Mark 7's is. Thomas Aquinas, lecturing on Galatians,
+grants the text and the principle with it: "nothing is to be taught except what
+is contained, either implicitly or explicitly, in the Gospels and epistles and
+Sacred Scripture". What he denies is Calvin's reading of "any other gospel" as
+any gospel "to which the inventions of other men are added". For Aquinas Paul's
+"besides" means "adding something completely alien". That is a dispute about how
+far the principle reaches, not about the principle.
+
+### What they do not deliver
+
+They do not deliver sola scriptura. Add them to Mark 7 and to the step from the
+principle to the sole rule, leave out the one premise Rome denies — that no
+unwritten tradition can now be shown to be apostolic — and the sole rule is
+still open: neither it nor its denial follows
+(`every_text_without_the_hinge_leaves_the_sole_rule_open`). Nor do they reach
+Trent read as the apostolic word handed on unwritten, which can be held with
+every one of them (`jesus_and_paul_do_not_reach_the_apostolic_word`). Rome
+answers that Paul also tells the Corinthians to "keep the ordinances, as I
+delivered them to you" (1 Corinthians 11:2), so that his measure is where a
+teaching came from, not whether it was written down.
+
+So the texts show that the principle does not hang on one story in the Gospels,
+and they leave the Reformation's question where Mark 7 left it. In the dispute
+over Mark 7 the principle already prevails, and the least-supported link in its
+case is rated `wellSupported`, the second of the four ratings. A second route
+rated the same would not change that, so these texts join the Protestant
+position (`protestant`) and not the dispute.
+
+#### Paul and Isaiah 29:13
+
+<a id="colossians2_22"></a>
+**`colossians2_22`**
+
+Colossians 2:22 — "after the commandments and doctrines of men".
+
+```lean
+def colossians2_22 : Passage :=
+  { book := Book.colossians, chapter := 2, verse := 22 }
+```
+
+<a id="colossiansAlludesToIsaiah"></a>
+**`colossiansAlludesToIsaiah`**
+
+**Colossians 2:22 alludes to Isaiah 29:13.** Typed `.allusion`, not
+`.quotation`: Paul introduces no citation, and Lightfoot says only that "The
+expression is taken ultimately from Isaiah xxix. 13" (p. 204). Rated
+`plausible`: only Lightfoot is cited for it, and no reader who denies it has
+been looked for.
+
+```lean
+def colossiansAlludesToIsaiah : IntertextEdge :=
+  { fromPassage := colossians2_22,
+    toPassage := Scripture.isaiah29_13, relation := RelationType.allusion,
+    source :=
+      { primary := Reference.work lightfootColossians (Bib.Locus.page 204),
+        tradition := Tradition.christianHistoricalGrammatical,
+        confidence := Confidence.plausible } }
+```
+
+<a id="colossiansAlludesToMark7"></a>
+**`colossiansAlludesToMark7`**
+
+**Colossians 2:22 alludes to Jesus' words in Mark 7.** Lightfoot finds the
+coincidences with "our Lord's words as related in the Gospels (Matt. xv. 1—20,
+Mark vii. 1—23)" "striking", and judges that they "suggest that the Apostle had
+this discourse in his mind" (p. 204): both argue from the perishing of food, and
+both connect such rules with Isaiah's denunciation. An allusion, and rated
+`plausible`, for the same reasons as `colossiansAlludesToIsaiah`.
+
+```lean
+def colossiansAlludesToMark7 : IntertextEdge :=
+  { fromPassage := colossians2_22, toPassage := Scripture.mark7_7,
+    relation := RelationType.allusion,
+    source :=
+      { primary := Reference.work lightfootColossians (Bib.Locus.page 204),
+        tradition := Tradition.christianHistoricalGrammatical,
+        confidence := Confidence.plausible } }
+```
+
+#### The principle, from Jesus and Paul
+
+<a id="jesusAndPaulPrinciple"></a>
+**`jesusAndPaulPrinciple`** — Jesus and Paul (God's word judges human tradition)
+
+**The principle from Jesus' sayings and Paul's letters**: John 10:35,
+Matthew 5:18, Galatians 1:8–9 and Colossians 2:8, 20–22, and the step from them
+to the principle that God's word judges human tradition. It claims nothing
+about Scripture's place among the rules of faith.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-40}{P_{40}}\\) — John 10:35 — the scripture cannot be broken
+- (2) \\(\href{#claim-41}{P_{41}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
+- (3) \\(\href{#claim-42}{P_{42}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
+- (4) \\(\href{#claim-43}{P_{43}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
+- (5) \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\)
+- \\(\vdash\\) \\(\href{#claim-37}{P_{37}}\\) — *at issue:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="everyTextWithoutTheHinge"></a>
+**`everyTextWithoutTheHinge`**
+
+Every text the argument draws the principle from, Mark 7's and the others,
+with the step from the principle to the sole rule, and without the premise that
+no unwritten tradition can now be shown to be apostolic.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
+- (2) \\(\href{#claim-40}{P_{40}}\\) — John 10:35 — the scripture cannot be broken
+- (3) \\(\href{#claim-41}{P_{41}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
+- (4) \\(\href{#claim-42}{P_{42}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
+- (5) \\(\href{#claim-43}{P_{43}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
+- (6) \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (7) \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (8) \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Scripture is the sole infallible rule of faith
+
+</div>
+
+<a id="jesusAndPaulPrinciple_establishes"></a>
+**`jesusAndPaulPrinciple_establishes`**
+
+**Jesus and Paul deliver the principle without Mark 7.** God's word judges
+human tradition, from four texts and the step from them, rated `wellSupported`:
+Aquinas grants Galatians 1:8 and the principle, and denies only that every
+addition to the gospel is "another gospel".
+
+What this does not claim: that the principle makes Scripture the only measure of
+tradition. Aquinas and Rome grant the principle and deny that.
+
+```lean
+theorem jesusAndPaulPrinciple_establishes : Establishes jesusAndPaulPrinciple
+-- axioms: propext, Quot.sound
+```
+
+<a id="jesusAndPaulPrinciple_is_satisfiable"></a>
+**`jesusAndPaulPrinciple_is_satisfiable`**
+
+The principle from Jesus and Paul can be held without contradiction: the
+Reformed reading.
+
+```lean
+theorem jesusAndPaulPrinciple_is_satisfiable : Satisfiable
+    jesusAndPaulPrinciple.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="jesus_and_paul_do_not_reach_the_apostolic_word"></a>
+**`jesus_and_paul_do_not_reach_the_apostolic_word`**
+
+**Jesus and Paul do not reach Trent read as the apostolic word.** Trent,
+read as receiving the apostolic word handed on unwritten, can be held with every
+premise of the principle from Jesus and Paul: Rome's reading, on which God's
+word judges human tradition and some unwritten tradition is the apostles' own,
+known to be so. The same holds of Mark 7
+(`mark7_does_not_reach_the_apostolic_word`).
+
+```lean
+theorem jesus_and_paul_do_not_reach_the_apostolic_word : Satisfiable
+    (jesusAndPaulPrinciple.premises ++ tridentineAsApostolicWord.premises)
+-- axioms: propext, Quot.sound
+```
+
+<a id="every_text_without_the_hinge_leaves_the_sole_rule_open"></a>
+**`every_text_without_the_hinge_leaves_the_sole_rule_open`**
+
+**Every text, without the premise Rome denies, leaves the sole rule open.**
+Grant Mark 7, John 10:35, Matthew 5:18, Galatians 1:8–9 and Colossians 2, the
+principle they deliver, and the step from the principle to the sole rule; leave
+out only the premise that no unwritten tradition can now be shown to be
+apostolic. Sola scriptura neither follows nor fails. Rome's reading grants all of
+it and denies the sole rule; the Reformed reading grants all of it and holds the
+sole rule. One fact, as with Mark 7 alone
+(`mark7_without_the_hinge_leaves_the_sole_rule_open`): more texts for the
+principle do not supply the premise the step to the sole rule needs.
+
+```lean
+theorem every_text_without_the_hinge_leaves_the_sole_rule_open : Independent
+    everyTextWithoutTheHinge (p Claim.scriptureIsSoleInfallibleRule)
+-- axioms: propext, Quot.sound
+```
 
 ## TestimonyArguments.SolaScriptura.Dispute — what Mark 7 decides between Rome and the Reformers
 
@@ -2788,10 +3122,10 @@ premises and checked by the kernel (see `Testimony.Logic.Dispute`).
 ### The ratings decide one thing here
 
 Every party but one rests on something rated `disputed`. Mark 7's case rests on
-the premise that no apostolic word survives outside Scripture. Trent rests on
-tradition as a source of revelation alongside Scripture — a claim this module's
-audit moved from `wellSupported` to `disputed`, because Geiselmann grants
-Session IV and denies that it canonised two coordinate sources. The reading of
+the premise that no unwritten tradition can now be shown to be apostolic. Trent
+rests on tradition as a source of revelation alongside Scripture, rated
+`disputed` because Geiselmann grants Session IV and denies that it canonised two
+coordinate sources. The reading of
 Trent as commandments of men rests on Calvin's reading, which Rome denies.
 
 The exception is Mark 7's principle. Its text is `consensus`, and its step from
@@ -2821,8 +3155,8 @@ scriptura and Trent, the dispute chooses neither**: each can be defended, and
 neither is forced (`mark7_case_defensible`, `mark7_case_not_forced`,
 `trent_defensible_against_mark7`, `trent_not_forced_against_mark7`). Mark 7 does
 not decide the Reformation's question. What would decide it is argued, not
-weighed: whether any apostolic word survives outside Scripture, and, even
-granting that none does, whether the principle then makes Scripture the *sole*
+weighed: whether any unwritten tradition can be shown to be apostolic, and, even
+granting that none can, whether the principle then makes Scripture the *sole*
 infallible rule. Both are rated `disputed`.
 
 #### Strength
@@ -2842,8 +3176,8 @@ theorem mark7Principle_strength : mark7Principle.strength = 2
 <a id="mark7Case_strength"></a>
 **`mark7Case_strength`**
 
-Mark 7's case rests on the premise that no apostolic word survives outside
-Scripture, rated `disputed`.
+Mark 7's case rests on the premise that no unwritten tradition can now be
+shown to be apostolic, rated `disputed`.
 
 ```lean
 theorem mark7Case_strength : mark7Case.strength = 0
@@ -3034,8 +3368,8 @@ The defeats are the cells of [`mark7Dispute_defeats`](#mark7Dispute_defeats), th
 **`marks_principle_stands_with_trent`**
 
 Mark 7's principle stands with Trent, as Trent states it and read as the
-apostolic word: Rome's world, in which the principle holds and apostolic
-teaching survives outside Scripture.
+apostolic word: Rome's world, in which the principle holds and some unwritten
+tradition is known to be apostolic.
 
 ```lean
 theorem marks_principle_stands_with_trent : mark7Dispute.StandTogether
@@ -3067,9 +3401,9 @@ itself.
 **What this rests on.** The reasons state 4 defeats and 7 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), pp. 15–16
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
   - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II)*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
@@ -3117,12 +3451,12 @@ principle defeats it, and nothing defeats the principle.
 **What this rests on.** The reasons state 1 defeat and 5 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), pp. 15–16
 - *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
   - an inference step — [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
   - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II)*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
@@ -3168,9 +3502,9 @@ answers every party that defeats it — Trent, read or unread — itself.
 **What this rests on.** The reasons state 6 defeats and 7 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), pp. 15–16
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
   - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II)*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
@@ -3215,10 +3549,10 @@ defeats it.
 - *Trent (Tradition II)*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
   - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), pp. 15–16
 - *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
@@ -3233,9 +3567,9 @@ Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apos
 **Nor is it forced.** A maximal defensible position holds Trent, with Mark 7's
 principle and with Trent read as the apostolic word, and cannot hold Mark 7's
 case with it. Their weakest links are all `disputed`, so no rating breaks the
-tie. What would decide it is argued, not weighed: whether any apostolic word
-survives outside Scripture (`whereTheApostolicWordReadingFalls`), and, even
-granting that none does, whether the principle then makes Scripture the *sole*
+tie. What would decide it is argued, not weighed: whether any unwritten
+tradition can be shown to be apostolic (`whereTheApostolicWordReadingFalls`),
+and, even granting that none can, whether the principle then makes Scripture the *sole*
 infallible rule — a step Geiselmann and Florovsky deny.
 
 ```lean
@@ -3261,13 +3595,13 @@ itself.
 **What this rests on.** The reasons state 3 defeats and 13 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), pp. 15–16
 - *Trent (Tradition II)*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
   - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
@@ -3307,12 +3641,12 @@ defeats Trent.
 **What this rests on.** The reasons state 6 defeats and 7 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
   - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II)*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), pp. 15–16
 - *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
   - an inference step — [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
@@ -3350,15 +3684,15 @@ sola scriptura?** Heard against that reading alone (`mensCommandmentsHearing`),
 Mark 7's case is forced — but only because nothing left in the hearing contests
 it. The reading is the only party that attacks it, and the principle defeats the
 reading. Mark 7's case still rests on two things rated `disputed`: that no
-apostolic word survives outside Scripture, and the step from the principle to
-the *sole* rule. The reading of Trent as commandments of men contests neither,
+unwritten tradition can be shown to be apostolic, and the step from the
+principle to the *sole* rule. The reading of Trent as commandments of men contests neither,
 and the parties that would are set aside. This is the Protestant polemic at full
 strength — and it holds only on a reading of Trent that Trent itself denies.
 
 **If Rome's tradition is the apostolic word handed on unwritten, what does
 Mark 7 settle?** Heard against that reading (`apostolicWordHearing`), only the
 principle — which the reading grants. Mark 7's case and the reading defeat each
-other at one premise, that no apostolic word survives outside Scripture, and
+other at one premise, that no unwritten tradition can be shown to be apostolic, and
 each side's weakest link is `disputed`. So the dispute chooses neither.
 
 The difference between the two hearings is the whole of what Mark 7 contributes:
@@ -3403,9 +3737,9 @@ reading answered Mark 7's case has no attacker left, so it comes second.
 **What this rests on.** The reasons state 2 defeats and 5 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), pp. 15–16
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
   - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II), read as commandments of men*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
@@ -3424,7 +3758,7 @@ hearing that attacks the case, and the principle defeats it.
 What this does not claim: that Rome's tradition is the commandments of men —
 Trent says what it receives came from Christ and the apostles, and the reading
 that says otherwise is rated `disputed`. Nor that Mark 7's case is sound. It
-still rests on the premise that no apostolic word survives outside Scripture,
+still rests on the premise that no unwritten tradition can be shown to be apostolic,
 and on a step Geiselmann and Florovsky deny, both `disputed`; no party heard
 here contests either. Trent as it states its position, and Trent read as the
 apostolic word, are set aside.
@@ -3474,9 +3808,9 @@ other.
 **What this rests on.** The reasons state 2 defeats and 5 absences of defeat, each a cell of the defeat table, [`mark7Dispute_defeats`](#mark7Dispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), pp. 15–16
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
   - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
@@ -3488,7 +3822,7 @@ Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apos
 
 **If Rome's tradition is the apostolic word, Mark 7 forces only its
 principle** — which that reading grants. Mark 7's case and the reading stand off
-at the premise that no apostolic word survives outside Scripture.
+at the premise that no unwritten tradition can be shown to be apostolic.
 
 ```lean
 theorem against_the_apostolic_word_only_the_principle_is_forced :
@@ -3515,10 +3849,10 @@ the reading, with the principle, and the reading defeats Mark 7's case.
 - *Trent (Tradition II), read as the apostolic word handed on unwritten*, weakest at *disputed*:
   - Tradition is a coordinate source of revelation alongside scripture — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
 - *Sola scriptura from Mark 7*, weakest at *disputed*:
-  - No apostolic teaching handed on outside Scripture survives, identifiable as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 506; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+  - No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
   - an inference step — [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
 - *Mark 7: God's word judges human tradition*, weakest at *well supported*:
-  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23
+  - an inference step — [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), pp. 15–16
 
 Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apostolic word handed on unwritten*, at the level of the claims: [`whereTheApostolicWordReadingFalls`](#whereTheApostolicWordReadingFalls).
 
@@ -3529,8 +3863,8 @@ Why *Sola scriptura from Mark 7* defeats *Trent (Tradition II), read as the apos
 forced.** A defensible position that cannot be enlarged holds Mark 7's
 principle together with Trent read as the apostolic word, and cannot hold Mark
 7's case with them. What would decide is argued, not weighed: whether any
-apostolic word survives outside Scripture, and whether the principle would then
-make Scripture the *sole* rule. Both are rated `disputed`, and neither is
+unwritten tradition can be shown to be apostolic, and whether the principle
+would then make Scripture the *sole* rule. Both are rated `disputed`, and neither is
 something Mark 7 speaks to.
 
 ```lean
