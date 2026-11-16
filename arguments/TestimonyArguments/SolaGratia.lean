@@ -202,11 +202,16 @@ defended with Dort or with Wesley.
 If the grace that saves brings about the consent it seeks, can the one it saves
 lose it? Westminster says that the "effectually called", those called in a way
 that brings them to faith, "can neither totally nor finally fall away from the
-state of grace" (XVII.1). Augustine, Aquinas and the Formula of Concord say as
-much of the elect, and still hold that some truly justified fall away: Augustine
-and Aquinas because some given new life by the Spirit are not given
-perseverance, the Lutherans because those in whom God began the good work can
-turn away by their own fault.
+state of grace" (XVII.1). Augustine, Aquinas and the Formula of Concord agree
+that those God has predestined to life will persevere to the end. They part from
+Westminster over who those people are. Westminster holds that everyone God
+brings to true faith is among them. Augustine and Aquinas hold that God gives
+some people true faith, hope and love without predestining them to persevere,
+so that in the end they fall away. The Lutherans hold that some in whom God has
+begun the good work turn away by their own fault. The question is who is
+predestined to persevere, not whether God chose them because he foresaw their
+faith, which the chapter does not weigh.
+
 So the chapter on perseverance writes the Reformed conclusion as two claims and
 the claim that joins them, and finds that Augustine parts from Westminster at
 the step from 1 John 2:19 ("they went out from us, but they were not of us"),

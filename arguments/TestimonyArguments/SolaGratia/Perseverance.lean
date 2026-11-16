@@ -26,8 +26,11 @@ infallibly takes effect" (*Summa* I q.23 a.6), and the Formula of Concord that
 God placed the elect's salvation "in the almighty hand of our Savior Jesus
 Christ, from which no one can pluck us, John 10:28" (Solid Declaration XI.45).
 So Augustine, Aquinas and the Lutherans agree with Westminster that the elect
-persevere, and divide from it over who the elect are. Trent and Wesley are not
-encoded as taking a side on the elect.
+persevere, and divide from it over who the elect are: whether everyone God
+brings to true faith is among those predestined to persevere. That is not the
+question of whether God chose them because he foresaw their faith, which this
+chapter does not weigh. Trent and Wesley are not encoded as taking a side on the
+elect.
 
 Augustine held that some who are truly *regenerate*, given new life by the
 Spirit, are not elect: "to some of His own children — whom He has regenerated in

@@ -211,6 +211,18 @@ up_to = 0.20
 reason = "The check runs over every non-entailment. Sola gratia (#226) adds six (105 to 111): the same work over more results, measured on CI at +6.4%."
 
 [[accept]]
+benchmark = "checks: ontology"
+metric = "time"
+up_to = 0.08
+reason = "Sola scriptura's meanings grow from 7 to 30 of its 40 claims, so the ontology check closes and compares 23 more meanings under every definition, and once more with each definition taken out. CI measured +5.5%; nothing else moved, and no join was added."
+
+[[accept]]
+benchmark = "leaves_open: parity leaves the canon open"
+metric = "time"
+up_to = 0.12
+reason = "Sola scriptura gains four claims (the texts of the line from Jesus to Paul), so each countermodel the check evaluates is a reading of 44 claims, not 40. CI measured +6.8% (8.8 ms to 9.4 ms); the check itself is unchanged."
+
+[[accept]]
 benchmark = "checks: postulates, every package"
 metric = "time"
 up_to = 0.20
