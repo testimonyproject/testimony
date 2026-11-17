@@ -2,20 +2,33 @@ import TestimonyArguments.BornOfAVirgin.Packages
 import Testimony.Logic.Tactic
 
 /-!
-# TestimonyArguments.BornOfAVirgin.Results — what does and does not follow
+# TestimonyArguments.BornOfAVirgin.Results — what follows, and what does not
 
-Every result about the strands, each tagged `@[headline]` and each followed by
-`#print axioms` so its trust base is visible in the source. The results about
-Wegner's objection — its validity, its circle, and the replies to it, the
-fathers' sign argument among them — are in `Results.Wegner`.
+Each result takes one position and asks whether its conclusion follows from its
+premises. Where it does, the result says so. Where it does not, the result names
+a consistent way of taking the texts on which every premise holds and the
+conclusion fails. That way of taking them is the rival position, written down,
+and a reader can check it verse by verse.
 
-Entailments are established with `establish`; refutations name a countermodel
-and use `refute_with`. A countermodel here is the rival's reading written down
-as a valuation, which is why each one is a named definition with a docstring
-saying what position it encodes rather than an anonymous function.
+Many results ask what the case depends on. A premise is taken out, everything
+else is kept, and the result says whether the conclusion still follows. If it
+does, the case never needed that premise. The result to read first is the one
+that asks it of all four strands at once (`hinges_jointly_load_bearing`).
 
-Read `hinges_jointly_load_bearing` first. It is the result the four-strand
-encoding exists to make possible.
+The results about the critical denial and the replies to it are here too, and
+the chapter "Was Isaiah's sign only for Ahaz?" weighs them. The results about
+Wegner's objection are in the chapter "Was the woman already pregnant?".
+-/
+
+/-!
+#### How the results are checked
+
+Every result is tagged `@[headline]` and followed by `#print axioms`, so its
+trust base is visible in the source. Entailments are established with
+`establish`; refutations name a countermodel and use `refute_with`. A
+countermodel here is the rival's reading written down as a valuation, which is
+why each one is a named definition with a docstring saying what position it
+encodes rather than an anonymous function.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin
@@ -312,7 +325,7 @@ theorem jesus_satisfies_virgin_birth : Satisfies jesus bornOfAVirgin :=
 
 #print axioms jesus_satisfies_virgin_birth
 
-/-! ### Satisfiability
+/-! #### Satisfiability
 
 `Entails` is vacuously true over a premise set with no model, so a package built
 from contradictory premises would establish its conclusion with every gate

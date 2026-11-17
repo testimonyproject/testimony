@@ -5,9 +5,9 @@ import TestimonyArguments.BornOfAVirgin.Results.Genesis
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Genesis — what "her seed" says of a father
 
-`Results.Genesis` shows that the claim that Genesis 3:15's wording itself
-signifies a birth with no human father rests on one step, Luther's. This module
-weighs that step against the two readings that deny it. Three positions meet:
+The claim that Genesis 3:15's wording itself signifies a birth with no human
+father rests on one step, Luther's. Here that step is weighed that step against
+the two readings that deny it. Three positions meet:
 
 - **Luther on "her seed"** (with Henry): the seed of other women "might rather
   be said to have been the seed of the man", but Mary's was "the true Seed of
@@ -30,10 +30,10 @@ him: "it is not possible that such a form has either promise or prophecy as its
 primary or even its secondary meaning" (318). But it is weighed. The claim is
 rated `disputed` because they deny it, and Luther's step uses it while Leupold's
 and Lewis's do not, so it holds back Luther's case alone, though Leupold and
-Keil hold it too. The virgin birth
-itself is not in question here: Leupold and Keil affirm it, and find it in the
-promise's fulfilment. Whether the promise is fulfilled in Jesus, and whether
-that confirms it as a promise, is weighed in `Dispute.Protoevangelium`.
+Keil hold it too. The virgin birth itself is not in question here: Leupold and
+Keil affirm it, and find it in the promise's fulfilment. Whether the promise is
+fulfilled in Jesus, and whether that confirms it as a promise, is weighed in the
+chapter "Is Genesis 3:15 a promise, fulfilled in Jesus?".
 
 ## How to read the verdicts
 
