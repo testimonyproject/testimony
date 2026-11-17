@@ -46,12 +46,29 @@ as readings are.
   phrase "ὁ λόγος", "the Word", and the word table leaves the role blank on both
   its words, because the role belongs to the phrase.
 
-## What it is for
+## A translation, word by word
 
-The next steps ([#247][issue]) align a translation to these words, so that what a
-rendering adds or leaves out is computed rather than asserted; test grammatical
-rules, Colwell's, Harner's, Sharp's and a translator's own, over every place
-their construction occurs; and let what the text contains enter a dispute as a
-premise every party can check.
+A translation can be aligned to these words: each English word with the Greek
+words it renders, and whether the translator prints it as supplied
+(`Testimony.Corpus.Rendering`). What a translation adds or leaves out is then
+computed rather than asserted. English needs words Greek does not, so an
+addition is not a fault in itself, and the library does not say which additions
+were needed. It says which English words have no Greek behind them, and whether
+the reader was told.
+
+The first case is Colossians 1:16–17. "For by him all things were created" (ESV):
+the Greek has τὰ πάντα, "all things", here and three times more in the two
+verses. The New World Translation of the Jehovah's Witnesses (2013) prints "all
+other things" each time; its 1984 edition had printed "other" in brackets, as a
+supplied word. Aligned word by word, its two verses add "other" four times and
+"they are" once, none of them marked; the ESV's add nothing
+(`colossians_additions`). Whether the context implies "other", as the Witnesses
+hold, is a reading, and stays one. The alignments are the library's own.
+
+## What comes next
+
+The next steps ([#247][issue]) test grammatical rules, Colwell's, Harner's,
+Sharp's and a translator's own, over every place their construction occurs, and
+let what the text contains enter a dispute as a premise every party can check.
 
 [issue]: https://github.com/testimonyproject/testimony/issues/247

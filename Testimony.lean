@@ -48,6 +48,7 @@ import Testimony.Semantics.Discourse
 import Testimony.Semantics.Fallacy
 import Testimony.Ontology
 import Testimony.Corpus.Greek
+import Testimony.Corpus.Rendering
 import Testimony.Checks.Fixture
 import Testimony.Checks.Aif
 import Testimony.Checks.Meanings
