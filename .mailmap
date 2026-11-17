@@ -1,0 +1,3 @@
+# One person, spelled two ways in the history. scripts/credits.py reads names
+# through this file, so each person is credited once.
+Dean Michael Berris <dean.berris@gmail.com> Dean Berris <dean.berris@gmail.com>

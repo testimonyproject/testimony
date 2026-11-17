@@ -53,9 +53,11 @@ theorem tridentine_not_establishes : ¬ Establishes tridentine := by
 #print axioms tridentine_not_establishes
 
 /-- The post-Vatican I reading: the magisterium is the living interpreter, so
-scripture is not the sole infallible rule. -/
+scripture is not the sole infallible rule; and the apostles' office did not end
+with them, but continues in the bishops. -/
 def magisterialReading : Valuation Claim := fun a =>
   match a with
+  | .apostlesOfficeEndedWithThem => False
   | .scriptureIsSoleInfallibleRule => False
   | _ => True
 
@@ -555,10 +557,21 @@ position anyone occupies — it is the witness that the packages built only from
 positive grounds are coherent. -/
 def everythingHoldsReading : Valuation Claim := fun _ => True
 
+/-- The Protestant reading: every claim in this argument holds but two, that a
+general council after the apostles binds with the Spirit's authority and cannot
+err, and that those who hold the Church's teaching office are heeded for the
+seat they hold. The Protestant packages read Acts 15 and Moses' seat as the
+Reformers did, and deny both. -/
+def protestantReading : Valuation Claim := fun a =>
+  match a with
+  | .councilBindsWithTheSpiritsAuthority => False
+  | .teachingOfficeHeardByItsSeat => False
+  | _ => True
+
 /-- The Protestant package has a model, so `protestant_establishes` is not
 vacuous. -/
 theorem protestant_is_satisfiable : Satisfiable protestant.premises := by
-  satisfied_by everythingHoldsReading [solaScripturaDefs]
+  satisfied_by protestantReading [solaScripturaDefs]
 
 /-- Tradition 0's package has a model. -/
 theorem tradition0_is_satisfiable : Satisfiable tradition0.premises := by
@@ -570,7 +583,7 @@ since a load-bearing result that held only because its premises were
 contradictory would be precisely backwards. -/
 theorem protestantWithoutHinge_is_satisfiable :
     Satisfiable protestantWithoutHinge.premises := by
-  satisfied_by everythingHoldsReading [solaScripturaDefs]
+  satisfied_by protestantReading [solaScripturaDefs]
 
 /-- Geisler's charge has a model. -/
 theorem geislerCircle_is_satisfiable : Satisfiable geislerCircle.premises := by

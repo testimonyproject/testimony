@@ -35,10 +35,10 @@ premises and checked by the kernel (see `Testimony.Logic.Dispute`).
 ## The ratings decide one thing here
 
 Every party but one rests on something rated `disputed`. Mark 7's case rests on
-the premise that no apostolic word survives outside Scripture. Trent rests on
-tradition as a source of revelation alongside Scripture — a claim this module's
-audit moved from `wellSupported` to `disputed`, because Geiselmann grants
-Session IV and denies that it canonised two coordinate sources. The reading of
+the premise that no unwritten tradition can now be shown to be apostolic. Trent
+rests on tradition as a source of revelation alongside Scripture, rated
+`disputed` because Geiselmann grants Session IV and denies that it canonised two
+coordinate sources. The reading of
 Trent as commandments of men rests on Calvin's reading, which Rome denies.
 
 The exception is Mark 7's principle. Its text is `consensus`, and its step from
@@ -68,8 +68,8 @@ scriptura and Trent, the dispute chooses neither**: each can be defended, and
 neither is forced (`mark7_case_defensible`, `mark7_case_not_forced`,
 `trent_defensible_against_mark7`, `trent_not_forced_against_mark7`). Mark 7 does
 not decide the Reformation's question. What would decide it is argued, not
-weighed: whether any apostolic word survives outside Scripture, and, even
-granting that none does, whether the principle then makes Scripture the *sole*
+weighed: whether any unwritten tradition can be shown to be apostolic, and, even
+granting that none can, whether the principle then makes Scripture the *sole*
 infallible rule. Both are rated `disputed`.
 -/
 
@@ -85,8 +85,8 @@ open Testimony Testimony.Logic Testimony.Logic.Framework
 `consensus`, and the step from it `wellSupported`, so its weakest link is well
 supported: `2` on the scale from `0`, disputed, to `3`, consensus. -/
 theorem mark7Principle_strength : mark7Principle.strength = 2 := by decide
-/-- Mark 7's case rests on the premise that no apostolic word survives outside
-Scripture, rated `disputed`. -/
+/-- Mark 7's case rests on the premise that no unwritten tradition can now be
+shown to be apostolic, rated `disputed`. -/
 theorem mark7Case_strength : mark7Case.strength = 0 := by decide
 /-- Trent rests on tradition as a coordinate source of revelation, rated
 `disputed`. -/
@@ -153,8 +153,8 @@ declare_dispute mark7Dispute := mark7PartyNode using solaScripturaDefs
   map mark7Map
 
 /-- Mark 7's principle stands with Trent, as Trent states it and read as the
-apostolic word: Rome's world, in which the principle holds and apostolic
-teaching survives outside Scripture. -/
+apostolic word: Rome's world, in which the principle holds and some unwritten
+tradition is known to be apostolic. -/
 theorem marks_principle_stands_with_trent :
     mark7Dispute.StandTogether [.principle, .trent, .trentAsApostolicWord] := by
   satisfied_by romeGrantsMarksPrincipleReading [Dispute.StandTogether, solaScripturaDefs]
@@ -226,9 +226,9 @@ declare_verdict mark7AnsweredByTrent for mark7Dispute :
   /-- **Nor is it forced.** A maximal defensible position holds Trent, with Mark 7's
   principle and with Trent read as the apostolic word, and cannot hold Mark 7's
   case with it. Their weakest links are all `disputed`, so no rating breaks the
-  tie. What would decide it is argued, not weighed: whether any apostolic word
-  survives outside Scripture (`whereTheApostolicWordReadingFalls`), and, even
-  granting that none does, whether the principle then makes Scripture the *sole*
+  tie. What would decide it is argued, not weighed: whether any unwritten
+  tradition can be shown to be apostolic (`whereTheApostolicWordReadingFalls`),
+  and, even granting that none can, whether the principle then makes Scripture the *sole*
   infallible rule — a step Geiselmann and Florovsky deny. -/
   proves @[headline] mark7_case_not_forced
 

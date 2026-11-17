@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **321 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **331 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -263,9 +263,19 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `parity_leaves_the_defeat_open` | `Independent defeatUnderParity.premises (p Claim.circularityDefeatsTraditionI)` | **Barrett's parity reply leaves the defeat open.** Concede the circle; deny that it is a defect peculiar to this position, since any appeal to an ultimate authority is circular. |
 | `circle_parity_concedes_the_charge` | `Establishes circleParityConcedingTheCharge` | **The reply does not merely fail to clear the charge — it grants it.** This is the second question, kept because it is worth asking and restated because the answer is stronger … |
 | `mark7Principle_establishes` | `Establishes mark7Principle` | **Mark 7 delivers its principle**: God's word judges human tradition. |
-| `trent_grants_marks_principle` | `Grants tridentineCase (p Claim.godsWordJudgesTradition)` | **Trent grants Mark 7's principle.** Trent's position, as it states it, can be held with the principle and everything Mark 7 says: the reading on which apostolic teaching survives … |
-| `mark7Case_establishes` | `Establishes mark7Case` | **Mark 7's case for sola scriptura holds**, given its premise that no apostolic word survives outside Scripture. |
+| `trent_grants_marks_principle` | `Grants tridentineCase (p Claim.godsWordJudgesTradition)` | **Trent grants Mark 7's principle.** Trent's position, as it states it, can be held with the principle and everything Mark 7 says: the reading on which unwritten tradition is … |
+| `mark7Case_establishes` | `Establishes mark7Case` | **Mark 7's case for sola scriptura holds**, given its premise that no unwritten tradition can now be shown to be apostolic. |
 | `mark7_without_the_hinge_leaves_the_sole_rule_open` | `Independent mark7CaseWithoutTheHinge.premises (p Claim.scriptureIsSoleInfallibleRule)` | **Without that premise, Mark 7 leaves the sole rule open.** Grant the text, the principle, and the step from them to the sole rule: sola scriptura neither follows nor fails. |
+| `jesusAndPaulPrinciple_establishes` | `Establishes jesusAndPaulPrinciple` | **Jesus and Paul deliver the principle without Mark 7.** God's word judges human tradition, from four texts and the step from them, rated `wellSupported`: Aquinas grants Galatians … |
+| `jesus_and_paul_do_not_reach_the_apostolic_word` | `Satisfiable (jesusAndPaulPrinciple.premises ++ tridentineAsApostolicWord.premises)` | **Jesus and Paul do not reach Trent read as the apostolic word.** Trent, read as receiving the apostolic word handed on unwritten, can be held with every premise of the principle … |
+| `every_text_without_the_hinge_leaves_the_sole_rule_open` | `Independent everyTextWithoutTheHinge (p Claim.scriptureIsSoleInfallibleRule)` | **Every text, without the premise Rome denies, leaves the sole rule open.** Grant Mark 7, John 10:35, Matthew 5:18, Galatians 1:8–9 and Colossians 2, the principle they deliver, … |
+| `acts15_readings_cannot_be_held_together` | `¬Satisfiable (acts15Reformed.premises ++ acts15Roman.premises)` | **The two readings of Acts 15 cannot be held together.** One concludes that a council after the apostles may err, the other that a general council binds with the Spirit's … |
+| `acts15_texts_leave_the_council_open` | `Independent acts15Texts (p Claim.councilBindsWithTheSpiritsAuthority)` | **The texts of Acts 15 do not settle the council's authority.** Grant 15:1, 15:6, 15:10–11, 15:15–17, 15:22–29 and 15:28, and 16:4, without either reading's step: whether a … |
+| `romes_reading_of_acts15_leaves_unwritten_tradition_open` | `Independent (acts15Roman.premises ++ [p Claim.acts15_23_29DecreeWritten]) (p Claim.noUnwrittenTraditionShownApostolic)` | **Rome's reading of Acts 15 does not reach unwritten tradition.** Grant that "it seemed good to the Holy Ghost, and to us", that the decrees were delivered to keep, that the … |
+| `apostolic_texts_leave_the_office_open` | `Independent apostolicTexts (p Claim.apostlesOfficeEndedWithThem)` | **The texts on the apostles do not settle whether their office ended.** Grant Acts 1:20 and 1:21–22, 1 Corinthians 15:8, 2 Peter 3:15–16, Paul's salutations, 2 Timothy 2:2, what 1 … |
+| `moses_seat_readings_cannot_be_held_together` | `¬Satisfiable (mosesSeatReformed.premises ++ mosesSeatRoman.premises)` | **The two readings of Moses' seat cannot be held together.** One concludes that the teaching office is heard only as far as it teaches God's word, the other that it is heeded for … |
+| `mark7_and_moses_seat_leave_the_office_open` | `Independent mosesSeatTexts (p Claim.teachingOfficeHeardByItsSeat)` | **Mark 7 and Moses' seat leave the teaching office open.** Grant Mark 7, the principle it delivers that God's word judges human tradition, and Matthew 23:2–3 and 23:16–22, without … |
+| `romes_reading_of_moses_seat_can_be_held_with_mark7s_case` | `Satisfiable (mark7Case.premises ++ mosesSeatRoman.premises)` | **Rome's reading of Moses' seat can be held with Mark 7's case for sola scriptura.** Grant Mark 7, its principle, the premise that no unwritten tradition can now be shown to be … |
 | `marks_principle_prevails` | `Framework.grounded mark7Dispute.defeats = {Mark7Party.principle}` | **Mark 7's principle prevails outright, and it is common ground.** The grounded extension — what the dispute forces before any choice between rivals — is exactly the principle: … |
 | `trent_as_mens_commandments_indefensible` | `∀ (S : Set Mark7Party), Framework.Admissible mark7Dispute.defeats S → Mark7Party.trentAsMensCommandments ∉ S` | **Trent, read as commandments of men, cannot be defended.** No consistent position that answers its attackers can hold it: Mark 7's principle defeats it, and nothing answers the … |
 | `mark7_case_defensible` | `Framework.CredulouslyAccepted mark7Dispute.defeats Mark7Party.mark7` | **Sola scriptura from Mark 7 can be defended.** Some maximal defensible position holds it, with Mark 7's principle. |
@@ -785,8 +795,35 @@ contests. Read as the apostolic word handed on unwritten — what Trent says it
 receives — Mark 7 does not reach it (`mark7_does_not_reach_the_apostolic_word`,
 `against_the_apostolic_word_only_the_principle_is_forced`), and the dispute
 moves to what the sola scriptura argument already turned on: whether any
-apostolic word survives outside Scripture, and whether the principle would then
-make Scripture the *sole* infallible rule. Weighing the dispute also moved a
+unwritten tradition can now be shown to be apostolic — Whitaker's claim against
+Bellarmine, a claim about proof — and whether the principle would then make
+Scripture the *sole* infallible rule. Mark 7 is not alone in delivering the
+principle: Jesus' sayings in John 10:35 and Matthew 5:18, and Paul's in
+Galatians 1:8–9 and Colossians 2:8, 20–22, deliver it too
+(`jesusAndPaulPrinciple_establishes`), at a step rated `wellSupported` because
+Aquinas grants Galatians 1:8 and the principle with it. Added to Mark 7, they
+still leave the sole rule open without that one premise
+(`every_text_without_the_hinge_leaves_the_sole_rule_open`). The council at Jerusalem (Acts 15) is
+read both ways. The Reformers read a council that let the gospel judge even the custom of Moses
+and judged by Scripture, "as it is written" (15:15); Rome reads one binding with the Spirit's
+authority, "it seemed good to the Holy Ghost, and to us" (15:28). Both pass through the apostles'
+office: Calvin holds that it ended with them (Acts 1:21–22; 1 Corinthians 15:8), and *Lumen
+Gentium* 20 that it continues in the bishops (Acts 1:20; 2 Timothy 2:2; 1 Clement 44), and the
+texts alone leave that open (`apostolic_texts_leave_the_office_open`). Each grants the other's
+texts, each step from them is `disputed`, and the two cannot be held together
+(`acts15_readings_cannot_be_held_together`); the texts alone leave the council's authority open
+(`acts15_texts_leave_the_council_open`), and what the council handed on was a letter, so Rome's
+reading leaves the premise about unwritten tradition where it was
+(`romes_reading_of_acts15_leaves_unwritten_tradition_open`). Moses' seat (Matthew 23:2–3) is
+read both ways too. Calvin reads it as binding the hearers to the law taught from that seat
+"only so far as" the scribes expound it, since in the same discourse Jesus condemns their
+teaching on oaths (23:16–22); Cornelius a Lapide reads it as an authority of teaching that passes
+to those who succeed to the seat, heeded in "all things not contrary to Moses and the Law".
+Each step is `disputed`, the two cannot be held together
+(`moses_seat_readings_cannot_be_held_together`), and Mark 7 with Matthew 23 leaves the office
+open (`mark7_and_moses_seat_leave_the_office_open`). Rome's reading claims authority, not
+infallibility, so it can be held with Mark 7's case for sola scriptura
+(`romes_reading_of_moses_seat_can_be_held_with_mark7s_case`). Weighing the dispute also moved a
 rating. Trent's claim that tradition is a coordinate source of revelation had
 been `wellSupported`. Geiselmann grants Session IV and denies that it canonised
 two coordinate sources, since the council replaced its draft's "partly … partly"

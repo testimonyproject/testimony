@@ -48,7 +48,17 @@ category would have answered it for them.
   Scripture, or Scripture and Tradition, or Christ. Its category waits on which.
 - **Tradition** is read both as what is handed on and as the handing on — the
   sola scriptura argument reads Trent's word both ways: a content, or an
-  occurrence.
+  occurrence. **Unwritten tradition** is a narrower concept and has a category:
+  it names what Trent says is handed on outside Scripture, "the unwritten
+  traditions … transmitted as it were from hand to hand" (Session IV), and
+  Whitaker, denying that any of them can be shown to be apostolic, speaks of
+  the same contents. Both sides treat it as something told and received.
+- **The mind of the Church** is, as Florovsky and Ware describe it, the
+  Church's living mind, guided by the Spirit, of which the consensus of the
+  Fathers and the received councils are the expression. A Protestant reader
+  takes the same consensus for a set of texts that agree, an information object
+  to be measured by Scripture. Which it is lies close to the Orthodox claim that
+  it interprets Scripture infallibly, so its category is left open.
 -/
 
 namespace Testimony.Ontology.Kinds
@@ -107,13 +117,30 @@ def category : Concept → Option Category
   | .preparationForJustification => some .process
   | .noCondemnation => some .state
   | .verdict => some .event
+  | .essentialDoctrine => some .informationObject
+  | .understandingScripture => some .process
+  | .historicalGrammaticalMethod => some .informationObject
+  | .sourceOfRevelation => some .role
+  | .unwrittenTradition => some .informationObject
+  | .shownApostolic => some .quality
+  | .infallibleInterpreter => some .role
+  | .mindOfTheChurch => none
+  | .infallibleAuthority => some .role
+  | .identifyingTheCanon => some .process
+  | .receptionOfTheCanon => some .process
+  | .ministerialAuthority => some .role
+  | .individualBeliever => some .agent
+  | .choosingAnAuthority => some .event
+  | .privateJudgment => some .event
+  | .circularArgument => some .informationObject
+  | .appealToUltimateAuthority => some .informationObject
   | .minutes _ => some .temporalRegion
 
 /-- The concepts whose category is in dispute: each named in the module
 docstring with its reason. -/
 def disputed : List Concept :=
   [ .justification, .salvation, .faith, .grace, .spirit, .eternalLife, .god, .wordOfGod
-  , .tradition ]
+  , .tradition, .mindOfTheChurch ]
 
 /-- **The disputed concepts are exactly those left without a category.** Every
 other concept the vocabulary has is given one; and each of these is left

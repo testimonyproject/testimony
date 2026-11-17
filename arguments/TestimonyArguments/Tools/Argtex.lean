@@ -6,7 +6,16 @@ import TestimonyArguments.Tools.Pages
 `lake exe argtex`, run in `arguments/`, writes `docs/latex/arguments.tex` at the
 repository's root: each argument as a section
 of prose and notation, with a legend of numbered propositional variables giving
-every claim, who holds it and where they say so.
+every claim, who holds it and where they say so. Beside it, under
+`docs/latex/arguments/`, it writes each argument again as a document of its own,
+`sola-fide.tex` for sola fide, so that a reader who wants one argument need not
+take the whole book.
+
+A standalone document needs nothing the book does not already give it. Every
+variable links to a row of its own argument's legend, and no argument refers to
+another by a label, so no link points out of the document. The bibliography is
+BibTeX's, which lists only the works a document cites, so each document's is its
+own.
 
 The prose is the library's own. Until `Testimony.Tools.Pages` existed this tool
 rendered packages and nothing else, under a hand-written paragraph per argument
@@ -21,7 +30,10 @@ rendered statements contain `¬`, `→` and `⊢`:
 ```sh
 lake exe argtex
 cd ../docs/latex && tectonic arguments.tex
+cd arguments && for f in *.tex; do tectonic "$f"; done
 ```
+
+`lake exe argtex --check` fails if any committed document is stale or missing.
 -/
 
 open Lean Testimony Testimony.Doc Testimony.Logic TestimonyArguments.Doc
@@ -32,42 +44,72 @@ def texPath : System.FilePath := "../docs/latex/arguments.tex"
 /-- The document's title. -/
 def documentTitle : String := "Testimony: arguments in propositional form"
 
-/-- The standing note under the title.
-
-Hand-written, and the only hand-written prose in the document: what the
-notation means and what the document does *not* claim are facts about the
-library rather than about any one argument, so no docstring carries them. -/
-def note : String :=
-  "\\noindent Each argument below is set as its Lean source sets it: the module " ++
-  "docstrings as prose, in the order they are written, and under each one the " ++
-  "package, line of reason, countermodel or result it introduces. Atoms are " ++
-  "numbered propositional variables, numbered once per argument, so a variable " ++
-  "means the same claim in every position within it; the legend gives each one's " ++
-  "claim, its classification, the tradition that holds it and the source that " ++
+/-- What the notation means and what the document does *not* claim: the same
+for the book and for any one argument printed alone. -/
+def notationNote : String :=
+  "Atoms are numbered propositional variables, numbered once per argument, so a " ++
+  "variable means the same claim in every position within it; the legend gives each " ++
+  "one's claim, its classification, the tradition that holds it and the source that " ++
   "carries it.\n\n" ++
   "\\noindent Nothing here asserts that the premises are true --- only that the " ++
   "conclusion does or does not follow from them.\n\n"
 
+/-- The standing note under the book's title.
+
+Hand-written, and with `standaloneNote` the only hand-written prose in the
+documents: what the notation means and what a document does *not* claim are
+facts about the library rather than about any one argument, so no docstring
+carries them. -/
+def note : String :=
+  "\\noindent Each argument below is set as its Lean source sets it: the module " ++
+  "docstrings as prose, in the order they are written, and under each one the " ++
+  "package, line of reason, countermodel or result it introduces. " ++ notationNote
+
+/-- The standing note under the title of an argument printed on its own. It
+says where the argument comes from and where the rest of the book is. -/
+def standaloneNote : String :=
+  "\\noindent This is one argument of the Testimony library, printed on its own. " ++
+  "The library prints every argument together in \\texttt{arguments.pdf}. This one " ++
+  "is set as its Lean source sets it: the module docstrings as prose, in the order they " ++
+  "are written, and under each one the package, line of reason, countermodel or " ++
+  "result it introduces. " ++ notationNote
+
 /-- The whole document: every catalogued argument, set as `latexDocument` sets
 any package's. -/
-def document : String := latexDocument documentTitle note (sectionsOf arguments bodies)
+def document : String :=
+  latexDocument documentTitle note (sectionsOf arguments bodies) (credits := true)
 
-/-- Read a file, treating absence as empty so `--check` reports it as stale. -/
-def readOrEmpty (p : System.FilePath) : IO String := do
-  if ← p.pathExists then IO.FS.readFile p else pure ""
+/-- Where each argument's own document is written: `<slug>.tex` in this
+directory. -/
+def standaloneDir : System.FilePath := "../docs/latex/arguments"
+
+/-- One argument printed on its own, under its catalogue title. -/
+def standalone (a : Argument) : String :=
+  latexDocument a.title standaloneNote (sectionsOf [a] bodies) (credits := true)
+
+-- Each argument's document is named by its slug, so two arguments with one slug
+-- would write one file and lose the other. A release attaches every PDF without
+-- its directory (`.github/workflows/release.yml`), so none may be the book's.
+#guard (arguments.map (·.slug)).eraseDups.length == arguments.length
+#guard arguments.all (·.slug != "arguments")
+
+/-- Every file `argtex` writes: the book, then each argument alone. -/
+def files : List (System.FilePath × String) :=
+  (texPath, document) ::
+    arguments.map fun a => (standaloneDir / (a.slug ++ ".tex"), standalone a)
 
 /-- Entry point. -/
 def main (args : List String) : IO UInt32 := do
-  unless ← reportStrayQuotes "argtex" texPath document do return 1
-  if args.contains "--check" then
-    if (← readOrEmpty texPath) == document then
-      IO.println "argtex: rendered arguments are up to date"
-      return 0
-    IO.eprintln s!"argtex: {texPath} is stale — run `lake exe argtex` and commit the result"
-    return 1
-  IO.FS.createDirAll "../docs/latex"
-  IO.FS.writeFile texPath document
-  -- The bibliography must sit beside the document for `\bibliography` to resolve.
-  IO.FS.writeFile "../docs/latex/references.bib" (← IO.FS.readFile "../references.bib")
-  IO.println s!"argtex: wrote {texPath}"
-  return 0
+  let mut clean := true
+  for (path, tex) in files do
+    clean := (← reportStrayQuotes "argtex" path tex) && clean
+  unless clean do return 1
+  let check := args.contains "--check"
+  let code ← writeOrCheck "argtex" files check
+  unless check do
+    -- The bibliography must sit beside each document for `\bibliography` to
+    -- resolve. Not committed: the root's `references.bib` is.
+    let bib ← IO.FS.readFile "../references.bib"
+    IO.FS.writeFile "../docs/latex/references.bib" bib
+    IO.FS.writeFile (standaloneDir / "references.bib") bib
+  return code

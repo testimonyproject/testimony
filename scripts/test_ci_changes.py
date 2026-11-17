@@ -47,6 +47,7 @@ class Classify(unittest.TestCase):
             "docs/src/SUMMARY.md",
             "docs/src/arguments/sola-fide.md",
             "docs/latex/arguments.tex",
+            "docs/latex/arguments/sola-fide.tex",
         ):
             with self.subTest(path=path):
                 self.assertTrue(self.jobs(path)["lean"])

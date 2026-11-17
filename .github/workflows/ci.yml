@@ -94,6 +94,7 @@ jobs:
         run: |
           python3 scripts/test_testimony_lint.py
           python3 scripts/test_ci_changes.py
+          python3 scripts/test_credits.py
 
       - name: Domain linter
         run: python3 scripts/testimony_lint.py

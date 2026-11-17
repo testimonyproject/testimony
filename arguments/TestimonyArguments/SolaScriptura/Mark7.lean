@@ -12,8 +12,8 @@ against "the tradition of the elders". Jesus answers with Isaiah 29:13 — "in
 vain do they worship me, teaching as doctrines the commandments of men" — and
 with Corban: a gift vowed to God releases a son from supporting his father and
 mother, "thus making void the word of God by your tradition" (Mark 7:1–13;
-Matthew 15:1–9). The Protestant case has always cited it. Until now it only sat
-among the shared grounds, and no step read it.
+Matthew 15:1–9). The Protestant case has always cited it, and here it is a line
+of reason of its own.
 
 ## What Mark 7 settles
 
@@ -25,17 +25,29 @@ win. Trent, as it states its position, can hold every word of it
 (`trent_grants_marks_principle`).
 
 **It does not reach sola scriptura on its own.** From the principle to "Scripture
-is the sole infallible rule" needs one more premise: that no apostolic teaching
-handed on outside Scripture survives as God's word. Without it, Mark 7 leaves the
-sole rule open — neither it nor its denial follows
+is the sole infallible rule" needs one more premise: that no unwritten tradition
+can now be shown to be apostolic, so that none can bind the conscience as God's
+word. That is William Whitaker's claim against Bellarmine in 1588, and it is a
+claim about proof, not about what the apostles once said: "the papists have no
+such unwritten tradition which can be certainly shewn to have been always
+observed by the universal church". Without it, Mark 7 leaves the sole rule open —
+neither it nor its denial follows
 (`mark7_without_the_hinge_leaves_the_sole_rule_open`). With it, the conclusion
-follows (`mark7Case_establishes`), and the premise is rated `disputed`: Rome
-denies it from 2 Thessalonians 2:15 ("by word *or* by letter"). The step itself
-is disputed too. A reader can grant the principle, and grant that nothing
-apostolic survives outside Scripture, and still deny that Scripture is the
-*sole* infallible rule: Florovsky, for whom tradition adds nothing to Scripture
-and the mind of the Church interprets it; or a Catholic who holds Scripture
-materially sufficient and the Magisterium infallible.
+follows (`mark7Case_establishes`), and the premise is rated `disputed`. Rome
+denies it: Trent says the gospel's truth and discipline "are contained in the
+written books, and the unwritten traditions", and *Dei Verbum* 9 says that "it is not from Sacred
+Scripture alone that the Church draws her certainty about everything which has
+been revealed". The step itself is disputed too. A reader can grant the
+principle, and grant that no unwritten tradition can be shown to be apostolic,
+and still deny that Scripture is the *sole* infallible rule: Florovsky, for whom
+tradition adds nothing to Scripture and the mind of the Church interprets it; or
+a Catholic who holds Scripture materially sufficient and the Magisterium
+infallible.
+
+Mark 7 is not the only text for the principle. Jesus' sayings in John 10:35 and
+Matthew 5:18, and Paul's in Galatians 1:8–9 and Colossians 2:8, 20–22, deliver
+it too, and without that premise they leave the sole rule just as open
+(`JesusAndPaul.lean`).
 
 ## What Rome's "tradition" means
 
@@ -52,13 +64,13 @@ both readings.
   himself, or from the Apostles themselves, the Holy Ghost dictating" (Session
   IV, in Waterworth's translation) — Mark 7 does not reach it. Nothing in the principle is denied.
   The reading meets the Mark 7 case only at the premise the step to sola
-  scriptura needs, that no apostolic word survives outside Scripture, and that
-  premise is `disputed`.
+  scriptura needs, that no unwritten tradition can be shown to be apostolic,
+  and that premise is `disputed`.
 
 So Mark 7 does not decide between Rome and the Reformers. It moves the question
 to what the sola scriptura argument already turned on: whether any unwritten
-apostolic word survives and can be identified — and, even granting that none
-does, whether the principle then makes Scripture the *sole* infallible rule.
+tradition can be shown to be apostolic — and, even granting that none can,
+whether the principle then makes Scripture the *sole* infallible rule.
 -/
 
 namespace TestimonyArguments.SolaScriptura
@@ -103,7 +115,7 @@ def mark7Principle : ArgumentPackage Claim :=
   , inferences := mark7Line.inference.toList }
 
 /-- **Mark 7's case for sola scriptura**: the principle, and the premise that no
-apostolic word survives outside Scripture. -/
+unwritten tradition can now be shown to be apostolic. -/
 @[solaScripturaDefs]
 def mark7Case : ArgumentPackage Claim :=
   { name := "Sola scriptura from Mark 7"
@@ -113,12 +125,13 @@ def mark7Case : ArgumentPackage Claim :=
   , conclusionLabel := "scripture is the sole infallible rule of faith"
   , inferences := mark7Line.inference.toList ++ mark7SoleRuleLine.inference.toList }
 
-/-- Mark 7's case without the premise that no apostolic word survives outside
-Scripture: the text, the principle, and the step to the sole rule. -/
+/-- Mark 7's case without the premise that no unwritten tradition can now be
+shown to be apostolic: the text, the principle, and the step to the sole
+rule. -/
 @[solaScripturaDefs]
 def mark7CaseWithoutTheHinge : ArgumentPackage Claim :=
   { mark7Case with
-    name := "Sola scriptura from Mark 7, without the premise about unwritten apostolic word"
+    name := "Sola scriptura from Mark 7, without the premise about unwritten tradition"
     premises := caseOf [mark7Line, mark7SoleRuleLine.onGrounds []] [] [] }
 
 /-- **Trent (Tradition II)**, as Mathison reads it: 2 Thessalonians 2:15 and
@@ -176,11 +189,11 @@ def asMensCommandments : Reading Claim :=
   , source := trentReadAsMensCommandments }
 
 /-- Trent's tradition, **read as the apostolic word handed on unwritten**: some
-apostolic teaching outside Scripture survives as God's word. -/
+unwritten tradition is known to be apostolic, and binds as God's word. -/
 @[solaScripturaDefs]
 def asApostolicWord : Reading Claim :=
   { name := "as the apostolic word handed on unwritten"
-  , commits := notP .noApostolicWordOutsideScripture
+  , commits := notP .noUnwrittenTraditionShownApostolic
   , source := trentReadAsApostolicWord }
 
 /-- Trent, with its tradition read as commandments of men. -/
@@ -196,24 +209,28 @@ def tridentineAsApostolicWord : ArgumentPackage Claim :=
 /-! ### Readings, written down -/
 
 /-- The Reformed world: Mark 7's text and principle, no commandment of men bound
-as God's word, no apostolic word outside Scripture, and sola scriptura. -/
+as God's word, no unwritten tradition shown to be apostolic, and sola
+scriptura. -/
 def marksPrincipleReading : Valuation Claim := fun a =>
   match a with
   | .mensCommandmentBindsAsGodsWord => False
   | _ => True
 
 /-- Rome's world, granting Mark 7: God's word judges human tradition and no
-commandment of men may be bound as God's word; but apostolic teaching survives
-outside Scripture, so Scripture is not the sole infallible rule. Nor is the
+commandment of men may be bound as God's word; but unwritten tradition is known
+to be apostolic and binds as God's word, so Scripture is not the sole infallible rule. Nor is the
 Church's consensus a mere product of reading Scripture: for Rome, Scripture and
 Tradition flow from one source (*Dei Verbum* 9). A world must choose here,
 because the meanings exclude the consensus being that product and its being
-needed for Scripture's clear sense (`TestimonyArguments.Meanings.SolaScriptura.joins`). -/
+needed for Scripture's clear sense (`TestimonyArguments.Meanings.SolaScriptura.joins`).
+And the apostles' office did not end with them: bishops succeed to it (*Lumen
+Gentium* 20). -/
 def romeGrantsMarksPrincipleReading : Valuation Claim := fun a =>
   match a with
+  | .apostlesOfficeEndedWithThem => False
   | .creedalConsensusIsDerivedFromScripture => False
   | .mensCommandmentBindsAsGodsWord => False
-  | .noApostolicWordOutsideScripture => False
+  | .noUnwrittenTraditionShownApostolic => False
   | .scriptureIsSoleInfallibleRule => False
   | _ => True
 
@@ -242,7 +259,7 @@ theorem mark7Principle_is_satisfiable : Satisfiable mark7Principle.premises := b
 
 /-- **Trent grants Mark 7's principle.** Trent's position, as it states it, can
 be held with the principle and everything Mark 7 says: the reading on which
-apostolic teaching survives outside Scripture, and no commandment of men is
+unwritten tradition is known to be apostolic, and no commandment of men is
 bound as God's word. -/
 @[headline]
 theorem trent_grants_marks_principle :
@@ -252,7 +269,7 @@ theorem trent_grants_marks_principle :
 #print axioms trent_grants_marks_principle
 
 /-- **Mark 7's case for sola scriptura holds**, given its premise that no
-apostolic word survives outside Scripture. -/
+unwritten tradition can now be shown to be apostolic. -/
 @[headline]
 theorem mark7Case_establishes : Establishes mark7Case := by
   establish [solaScripturaDefs]
@@ -338,15 +355,15 @@ def whereTheMensCommandmentsReadingFalls :
 
 /-- **Why Mark 7's case stands against Trent, read as the apostolic word.** Not
 at the principle, which this reading grants, but at the premise the step to
-sola scriptura needs: that no apostolic teaching survives outside Scripture.
+sola scriptura needs: that no unwritten tradition can be shown to be apostolic.
 The reading denies exactly that, and the premise is rated `disputed`. The step
 from it to the sole rule is `disputed` too, so granting the premise would not
 alone settle the question. -/
 def whereTheApostolicWordReadingFalls : Because mark7Case tridentineAsApostolicWord :=
-  Because.ofChecks (p .noApostolicWordOutsideScripture)
+  Because.ofChecks (p .noUnwrittenTraditionShownApostolic)
     [p .mark7TraditionCanNullify] [mark7ToPrinciple, principleToSoleRule] []
     [ p .traditionIsCoordinateSourceOfRevelation
-    , p .traditionIsCoordinateSourceOfRevelation ➝ notP .noApostolicWordOutsideScripture ]
+    , p .traditionIsCoordinateSourceOfRevelation ➝ notP .noUnwrittenTraditionShownApostolic ]
     .derives mark7Case_establishes mark7Case_is_satisfiable
     (by simp [mark7Case, caseOf, mark7Line, mark7SoleRuleLine])
     (by simp)
@@ -364,8 +381,8 @@ of men may not be bound as God's word.
 
 Read as the apostolic word handed on unwritten — what Trent says it receives —
 Mark 7's principle does not reach it. It cannot be held with Mark 7's case for
-sola scriptura, but only at that case's own premise that no apostolic word
-survives outside Scripture, which is `disputed`. That is the question the sola
+sola scriptura, but only at that case's own premise that no unwritten tradition
+can be shown to be apostolic, which is `disputed`. That is the question the sola
 scriptura argument already turns on; Mark 7 does not settle it.
 
 Each reading is fair: Trent read either way can be held without contradiction. Which reading

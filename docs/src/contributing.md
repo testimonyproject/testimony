@@ -166,6 +166,17 @@ second time.
 See the [style guide](./style-guide.md) for conventions, and
 [Encoding arguments](./logic.md) for how to write a new one.
 
+## How you are credited
+
+Each argument's PDF names the people who worked on it, read from git history
+when the PDF is typeset (`scripts/credits.py`). You are credited for a commit
+that changes the argument's Lean sources if you are its author, or if a
+`Co-Authored-By:` line names you. A commit made by Claude that names no one is
+credited to whoever merged it into `main`. That is right when you merge your own
+work. If someone else will merge it, add a `Co-Authored-By:` line with your own
+name to the commits, so the credit stays with you. If your name appears in the
+history spelled two ways, add a line to `.mailmap` so you are listed once.
+
 ## Pull requests and review
 
 Much of the work here is done with Claude Code, and a pull request should be

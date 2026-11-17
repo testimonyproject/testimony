@@ -1,17 +1,26 @@
 name: PDF
 
-# Typesets the print editions: the arguments (docs/latex/arguments.tex) and the
-# examples package's documents (examples/docs/latex/*.tex), and uploads the
-# PDFs as the `pdfs` artifact.
+# Typesets the print editions: the arguments together (docs/latex/arguments.tex),
+# each argument on its own (docs/latex/arguments/<slug>.tex), and the examples
+# package's documents (examples/docs/latex/*.tex), and uploads the PDFs as the
+# `pdfs` artifact: arguments.pdf, arguments/<slug>.pdf and the examples'.
+#
+# Each argument's document names the people behind it. That credit is worked
+# out here, from git history, by scripts/credits.py, and is not in the
+# committed .tex: a commit that names no person is credited to whoever merged
+# it, so the credit changes when a pull request merges. On a pull request the
+# checkout is GitHub's trial merge, whose author GitHub sets to the pull
+# request's, so its PDFs already credit the pull request's own commits to its
+# author, as the real merge will if the author merges it.
 #
 # On a pull request this is the check that the print edition still typesets, so
 # a LaTeX error is caught before it reaches main. docs.yml calls it to put the
 # PDFs beside the site, and release.yml to attach them to a tagged release.
 #
-# arguments.tex and the examples' .tex files are generated but committed, and
+# The arguments' and the examples' .tex files are generated but committed, and
 # ci.yml fails a change that leaves them stale, so they are typeset as
 # committed. Their bibliographies are not committed beside them: the arguments'
-# is the committed references.bib at the root, copied in; the examples' is
+# is the committed references.bib at the root, copied beside each; the examples' is
 # written by `lake exe exampletex`, which is why this job builds that package.
 #
 # On a pull request it runs only when the change touches a build input, as
@@ -67,7 +76,12 @@ jobs:
       contents: read
       packages: read
     steps:
+      # The whole history: each document credits the people behind its
+      # arguments, from every commit to them (scripts/credits.py), and refuses a
+      # shallow clone rather than drop the older work's credit.
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       # The cache ci.yml saves. Restored only: this job builds nothing of its
       # own worth keeping.
@@ -86,11 +100,19 @@ jobs:
       - name: Fetch Mathlib oleans
         run: lake exe cache get
 
+      # The checkout belongs to the runner, not to the container's user, and
+      # git refuses to read a repository someone else owns until told it is
+      # safe.
       - name: Arguments
         run: |
+          git config --global --add safe.directory "$GITHUB_WORKSPACE"
+          python3 scripts/credits.py docs/latex docs/latex/arguments
           cp references.bib docs/latex/
+          cp references.bib docs/latex/arguments/
           cd docs/latex
           tectonic arguments.tex
+          cd arguments
+          for f in *.tex; do tectonic "$f"; done
 
       # `exampletex` writes the documents and the bibliography beside them;
       # `--check` first, so a stale committed document fails here as in ci.yml
@@ -105,8 +127,9 @@ jobs:
 
       - name: Collect
         run: |
-          mkdir -p pdf
+          mkdir -p pdf/arguments
           cp docs/latex/arguments.pdf pdf/
+          cp docs/latex/arguments/*.pdf pdf/arguments/
           cp examples/docs/latex/*.pdf pdf/
 
       - uses: actions/upload-artifact@v4

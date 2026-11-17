@@ -143,6 +143,23 @@ inductive Lexeme
   | eleos
   /-- ὄνομα, name: "through his name" (Acts 10:43). -/
   | onoma
+  /-- γραφή, scripture: "all scripture" (πᾶσα γραφή) at 2 Timothy 3:16. -/
+  | graphe
+  /-- θεόπνευστος, God-breathed, breathed out by God (2 Timothy 3:16). -/
+  | theopneustos
+  /-- ὠφέλιμος, profitable, useful: "profitable for teaching, for reproof, for
+  correction, and for training in righteousness" (2 Timothy 3:16). -/
+  | ophelimos
+  /-- "Complete, equipped for every good work" (ἄρτιος … πρὸς πᾶν ἔργον ἀγαθὸν
+  ἐξηρτισμένος): what 2 Timothy 3:17 says scripture's profit is for. -/
+  | equippedForEveryGoodWork
+  /-- λόγος τοῦ θεοῦ, the word of God, as Mark 7:13 has it: "making void the word
+  of God by your tradition". The phrase as the text uses it, not the concept a
+  party gives it (`Concept.wordOfGod`). -/
+  | logosTouTheou
+  /-- παράδοσις, tradition: what is handed on. 2 Thessalonians 2:15's
+  "traditions", and Mark 7's "tradition of the elders". -/
+  | paradosis
 deriving DecidableEq, Repr
 
 /-- What a word can mean: a fixed inventory of senses, each named for what it
@@ -315,6 +332,56 @@ inductive Concept
   | noCondemnation
   /-- A verdict: a judge's declaration, acquitting or condemning. -/
   | verdict
+  /-- What must be known, believed and observed for salvation (Westminster
+  Confession I.6–7): essential doctrine, in Geisler's word. -/
+  | essentialDoctrine
+  /-- Understanding Scripture: coming to know what it means. Not the act of
+  reading it (`readingScripture`), nor the sense it yields
+  (`clearSenseOfScripture`). -/
+  | understandingScripture
+  /-- The historical-grammatical method: reading a text for what its words meant
+  in their own language, grammar and historical setting. -/
+  | historicalGrammaticalMethod
+  /-- A source of revelation: something from which revealed truth is drawn. -/
+  | sourceOfRevelation
+  /-- Unwritten tradition: teaching on faith or morals, or a rule of practice,
+  said to have been handed on from the apostles by word of mouth and not
+  written in Scripture. Trent's "unwritten traditions" (Session IV). -/
+  | unwrittenTradition
+  /-- Shown to be apostolic: proved, from evidence that can still be produced,
+  to have come from the apostles, and not only claimed to. Whitaker's
+  "certainly shewn" (*Disputation*, question VI, chapter IV). -/
+  | shownApostolic
+  /-- An infallible interpreter of Scripture: one whose interpretation of it
+  cannot err. -/
+  | infallibleInterpreter
+  /-- The mind of the Church, as the Orthodox speak of it: expressed in the
+  consensus of the Fathers and in the conciliar decisions the whole Church has
+  received. -/
+  | mindOfTheChurch
+  /-- An infallible authority: one that cannot err in what it decides. -/
+  | infallibleAuthority
+  /-- Identifying the canon: coming to know which books are Scripture. -/
+  | identifyingTheCanon
+  /-- The Church's reception of the canon: its receiving, over the early
+  centuries, of these books and not others as Scripture. -/
+  | receptionOfTheCanon
+  /-- Ministerial authority: real authority that serves the word it answers to
+  and can be corrected by it — "ministerial, not magisterial". -/
+  | ministerialAuthority
+  /-- The individual believer, judging for himself. -/
+  | individualBeliever
+  /-- Choosing which body's authority to submit to. -/
+  | choosingAnAuthority
+  /-- An act of private judgement: an individual's own judgement in a matter of
+  faith. -/
+  | privateJudgment
+  /-- A circular argument: what it concludes is among what it rests on, so that
+  only a reader who grants its conclusion grants its premises. -/
+  | circularArgument
+  /-- An appeal to an ultimate authority: arguing for a rule of faith from that
+  rule itself, there being no higher authority to appeal to. -/
+  | appealToUltimateAuthority
   /-- A length of time, in minutes. -/
   | minutes (n : Nat)
 deriving DecidableEq, Repr
@@ -385,6 +452,10 @@ inductive Rel
   /-- The first brings about the second, so that the second does not fail to
   follow: an efficient cause that cannot be frustrated. -/
   | effects
+  /-- The first makes the second void: sets it aside, so that it no longer
+  binds. What Mark 7:13 says the elders' tradition does to the word of God
+  (ἀκυρόω). -/
+  | voids
 deriving DecidableEq, Repr
 
 /-- A principle of reading, held for its own sake. -/

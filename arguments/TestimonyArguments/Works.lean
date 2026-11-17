@@ -564,7 +564,9 @@ treatment, and a check on reading James too readily as Paul's ally. -/
 /-- The Westminster Confession of Faith, for the Reformed formulation that
 saving faith is never alone. Public catalogues list only print-on-demand
 reprints, with no scholarly edition to tie an identifier to, so this entry
-carries none. -/
+carries none. Chapter XXXI, on synods and councils, is cited in the numbering of
+1647 as Schaff prints it (*Creeds of Christendom*, volume 3), where the sections
+the American revision numbers 2 and 3 are 3 and 4. -/
 @[bib_entry] def westminsterConfession : BibEntry := .book
   { core :=
       { key := "westminster-confession-1647"
@@ -1826,7 +1828,9 @@ impurities". The Ezekiel reading, from someone who holds it. -/
 
 /-- Calvin on Acts, in Beveridge's edition of Fetherstone's translation. Cited
 for Acts 10:47: the Spirit given before the water "showeth that the Spirit is
-not included in baptism" (454). Published without an ISBN. -/
+not included in baptism" (454). And for Acts 1:20–21 (pp. 65–66): "bishoprick"
+signifies "a jurisdiction or government", and Peter "doth here require such a
+witness as saw the Lord after his resurrection". Published without an ISBN. -/
 @[bib_entry] def calvinActs1 : BibEntry := .book
   { core :=
       { key := "calvin-commentary-acts-1844"
@@ -2071,6 +2075,316 @@ Society edition; the modern reprints paginate differently. -/
   , place := some "Cambridge"
   , series := some "Parker Society"
   , seriesNumber := some "45" }
+
+/-- Wenham's Tyndale New Testament Lecture for 1953, on what Jesus believed and
+taught about the Old Testament, as a matter of history. Cited for John 10:35 and
+Matthew 5:18 — "What He actually says is, 'The scripture cannot be broken' (Jn.
+x. 35); 'One jot or one tittle shall in no wise pass from the law' (Mt. v. 18)"
+(p. 19) — and for Mark 7: "the displacement of Scripture by 'tradition' (mere
+'precepts of men')" was one of "the twin evils which made that Word of none
+effect" (pp. 15–16). Pages are the printed ones, which the Biblical Studies
+transcription marks. Open Library records the London printing by the Tyndale
+Press, with no ISBN. -/
+@[bib_entry] def wenhamOurLordsView : BibEntry := .book
+  { core :=
+      { key := "wenham-our-lords-view-1953"
+      , contributors := { authors := [.person "J. W." "Wenham"] }
+      , title := "Our Lord's View of the Old Testament"
+      , year := some { value := 1953 }
+      , identifiers :=
+          [ .url "https://biblicalstudies.org.uk/pdf/tp/ot_wenham.pdf" (some "2026-11-15") ]
+      , note := some
+          ("The Tyndale New Testament Lecture for 1953, delivered in Cambridge on " ++
+           "8 July 1953. Published without an ISBN.") }
+  , publisher := "The Tyndale Press"
+  , place := some "London" }
+
+/-- Calvin's commentary on Galatians, for 1:8–9. Paul's "another gospel" is "one
+to which the inventions of other men are added; for the doctrine of the false
+apostles was not entirely contrary, or even different, from that of Paul, but
+corrupted by false additions" (at 1:9). Pringle's translation, which Open
+Library records as the Calvin Translation Society's Edinburgh edition of 1854
+(OL7135919M); read in the Christian Classics Ethereal Library's text. -/
+@[bib_entry] def calvinGalatians : BibEntry := .book
+  { core :=
+      { key := "calvin-commentary-galatians-1854"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "William" "Pringle"] }
+      , title := "Commentaries on the Epistles of Paul to the Galatians and Ephesians"
+      , year := some { value := 1854 }
+      , identifiers :=
+          [ .url "https://ccel.org/ccel/calvin/calcom41/calcom41.iii.iii.ii.html"
+                 (some "2026-11-15") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh" }
+
+/-- Lightfoot's commentary on Colossians, for his note on "the commandments and
+doctrines of men" at 2:22: "The expression is taken ultimately from Isaiah xxix.
+13", and "The coincidences in St Paul's language here with our Lord's words as
+related in the Gospels (Matt. xv. 1—20, Mark vii. 1—23) are striking, and
+suggest that the Apostle had this discourse in his mind" (p. 204). Read in the
+Internet Archive's scan of the Zondervan reprint, which says it is "reprinted
+complete and unabridged from the revised 1879 edition published by MacMillan
+and Company"; the reprint prints no year of its own, so none is given, and the
+page is the reprint's. -/
+@[bib_entry] def lightfootColossians : BibEntry := .book
+  { core :=
+      { key := "lightfoot-colossians-philemon"
+      , contributors := { authors := [.person "J. B." "Lightfoot"] }
+      , title := "Saint Paul's Epistles to the Colossians and to Philemon"
+      , subtitle := some "A Revised Text with Introductions, Notes, and Dissertations"
+      , identifiers :=
+          [ .url "https://archive.org/details/saintpaulsepistl1880ligh" (some "2026-11-15") ]
+      , note := some
+          ("Zondervan reprint of the revised 1879 edition published by Macmillan; " ++
+           "the reprint's year is not printed in it.") }
+  , publisher := "Zondervan Publishing House"
+  , place := some "Grand Rapids" }
+
+/-- Aquinas's lectures on Galatians, for 1:8–9 (c. 1, lect. 2). He grants the
+text, and answers the objection that it forbids teaching anything not written in
+the Gospels and epistles: "nothing is to be taught except what is contained,
+either implicitly or explicitly, in the Gospels and epistles and Sacred
+Scripture", so that "besides that which you have received" means "by adding
+something completely alien". Larcher's translation, as Joseph Kenny's
+transcription gives it; its title page names Magi Books, Albany, 1966. The ISBN
+Open Library lists for the series is not tied to this volume, so none is
+given. -/
+@[bib_entry] def aquinasGalatians : BibEntry := .book
+  { core :=
+      { key := "aquinas-commentary-galatians-1966"
+      , role := .witness
+      , contributors :=
+          { authors := [.single "Thomas Aquinas"]
+          , translators := [.person "F. R." "Larcher"] }
+      , title := "Commentary on Saint Paul's Epistle to the Galatians"
+      , year := some { value := 1966 }
+      , identifiers :=
+          [ .url "https://isidore.co/aquinas/english/SSGalatians.htm" (some "2026-11-15") ] }
+  , publisher := "Magi Books"
+  , place := some "Albany"
+  , series := some "Aquinas Scripture Series" }
+
+/-! ### Sola scriptura: the council at Jerusalem -/
+
+/-- Calvin on Acts, volume 2, in Beveridge's edition of Fetherstone's translation,
+for chapter 15. At 15:15 the apostles "took nothing to themselves imperiously, but
+did reverently follow that which was prescribed in the word of God", and did not
+count it a disgrace "to profess themselves to be the scholars of the Scripture";
+at 15:16 he notes that Amos "is not cited word for word"; at 15:28 the apostles
+"were only ministers of the Spirit", and "the Papists are doltish who go about,
+out of these words, to prove that the Church hath some authority of her own".
+Archive.org records the volume as Edinburgh, Calvin Translation Society, 1844; read
+in the Christian Classics Ethereal Library's text. Published without an ISBN. -/
+@[bib_entry] def calvinActs2 : BibEntry := .book
+  { core :=
+      { key := "calvin-commentary-acts-volume2-1844"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , editors := [.person "Henry" "Beveridge"]
+          , translators := [.person "Christopher" "Fetherstone"] }
+      , title := "Commentary upon the Acts of the Apostles"
+      , year := some { value := 1844 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentaryuponth02calvuoft"
+                 (some "2026-11-16") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "2" }
+
+/-- Wilhelm's article on general councils in the *Catholic Encyclopedia*, volume 4
+(1908), for its section on the infallibility of general councils: "Such was the
+mind of the Apostles when, at the Council of Jerusalem (Acts 15:28), they put the
+seal of supreme authority on their decisions in attributing them to the joint
+action of the Spirit of God and of themselves: Visum est Spiritui sancto et nobis
+(It hath seemed good to the Holy Ghost and to us)." Published with the *nihil
+obstat* and *imprimatur*. Read at New Advent; cited by section. -/
+@[bib_entry] def wilhelmGeneralCouncils : BibEntry := .inCollection
+  { core :=
+      { key := "wilhelm-general-councils-1908"
+      , role := .witness
+      , contributors := { authors := [.person "Joseph" "Wilhelm"] }
+      , title := "General Councils"
+      , year := some { value := 1908 }
+      , identifiers :=
+          [ .url "https://www.newadvent.org/cathen/04423f.htm" (some "2026-11-16") ]
+      , note := some "Volume 4." }
+  , containerTitle := "The Catholic Encyclopedia"
+  , containerEditors :=
+      [ .person "Charles G." "Herbermann", .person "Edward A." "Pace", .person "Condé B." "Pallen"
+      , .person "Thomas J." "Shahan", .person "John J." "Wynne" ]
+  , publisher := "Robert Appleton Company"
+  , place := some "New York" }
+
+/-! ### Sola scriptura: Moses' seat -/
+
+/-- Volume 3 of Calvin's *Harmony of the Evangelists*, in Pringle's translation,
+for Matthew 23:2–3 (pp. 73–76): "to sit in the chair of Moses is nothing else
+than to teach, according to the Law of God, how we ought to live" (p. 74), and
+"Christ exhorts the people to obey the scribes, only so far as they adhere to
+the pure and simple exposition of the Law" (p. 75). The title page reads
+Edinburgh, printed for the Calvin Translation Society, 1846; archive.org's record
+of the same scan gives 1845, the year of volumes 1 and 2. Pages are the printed
+ones, read in that scan; the wording was checked against the Christian Classics
+Ethereal Library's text. Published without an ISBN. -/
+@[bib_entry] def calvinHarmony3 : BibEntry := .book
+  { core :=
+      { key := "calvin-harmony-evangelists-3-1846"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "William" "Pringle"] }
+      , title := "Commentary on a Harmony of the Evangelists, Matthew, Mark, and Luke"
+      , year := some { value := 1846 }
+      , identifiers :=
+          [ .url "https://archive.org/details/harmonyofevangel03calvuoft"
+                 (some "2026-11-16") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "3"
+  , totalVolumes := some 3 }
+
+/-- Cornelius a Lapide, the Jesuit commentator (1567–1637), on Matthew 23:2–3, in
+Mossman's translation: the seat is "the honour, dignity, and authority of
+teaching and commanding, which Moses had with the Jews, and to which the Scribes
+had succeeded", as the chair of Peter is the authority "in which the Roman
+Pontiffs succeed S. Peter" (p. 32); "all things" are "all things not contrary to
+Moses and the Law" (p. 32); and "Christians ought to bear in mind these words of
+Christ when they see certain Bishops, Pastors, and Magistrates not living in
+accordance with the law of Christ" (p. 33). Volume 3 covers Matthew 22–28 and
+Mark. The title page reads fifth edition, Edinburgh, John Grant, 1908; read in
+the Pitts Theology Library's scan at archive.org. Open Library lists the 1908
+Grant printing with no ISBN. -/
+@[bib_entry] def aLapideMatthew3 : BibEntry := .book
+  { core :=
+      { key := "a-lapide-great-commentary-3-1908"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "Cornelius" "à Lapide"]
+          , translators := [.person "Thomas W." "Mossman"] }
+      , title := "The Great Commentary of Cornelius à Lapide"
+      , year := some { value := 1908 }
+      , identifiers :=
+          [ .url "https://archive.org/details/02775964.1385.emory.edu"
+                 (some "2026-11-16") ]
+      , note := some "S. Matthew's Gospel, chapters 22 to 28; S. Mark's Gospel." }
+  , publisher := "John Grant"
+  , place := some "Edinburgh"
+  , edition := some "5th edition"
+  , volume := some "3" }
+
+/-! ### Sola scriptura: the apostles' office -/
+
+/-- Calvin's *Institutes*, volume 3 of Beveridge's translation, with Book IV, for
+IV.iii.4–5 (pp. 61–63): the offices of apostle, prophet and evangelist "were not
+instituted in the Church to be perpetual, but only to endure so long as churches
+were to be formed where none previously existed", and the twelve, "to the number
+of whom Paul was afterwards added", were "distinguished from others by a
+peculiar title". Cited by section and quoted in Beveridge's words, which is why
+this edition has its own entry beside McNeill and Battles. The title page reads
+Edinburgh, printed for the Calvin Translation Society, 1846; read in the scan at
+archive.org and checked against the Christian Classics Ethereal Library's text.
+Published without an ISBN. -/
+@[bib_entry] def calvinInstitutesBeveridge3 : BibEntry := .book
+  { core :=
+      { key := "calvin-institutes-beveridge-3-1846"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "Henry" "Beveridge"] }
+      , title := "Institutes of the Christian Religion"
+      , year := some { value := 1846 }
+      , identifiers :=
+          [ .url "https://archive.org/details/institutesofchrbeve03calv"
+                 (some "2026-11-16") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "3"
+  , totalVolumes := some 3 }
+
+/-- Calvin on Philippians, Colossians and Thessalonians, in John Pringle's
+translation, for 1 Thessalonians 2:6: he reads the "apostles of Christ" as Paul
+himself, "inasmuch as he was an Apostle of Christ, he deserved to be received
+with a higher degree of respect", and takes the "burden" as authority. The title
+page reads Edinburgh, Calvin Translation Society, 1851; read in the scan at
+archive.org, whose page numbers at this verse are not legible, so it is cited by
+verse, and checked against the Christian Classics Ethereal Library's text.
+Published without an ISBN. -/
+@[bib_entry] def calvinThessalonians : BibEntry := .book
+  { core :=
+      { key := "calvin-philippians-colossians-thessalonians-1851"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "John" "Pringle"] }
+      , title :=
+          "Commentaries on the Epistles of Paul the Apostle to the Philippians, " ++
+          "Colossians, and Thessalonians"
+      , year := some { value := 1851 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentariesonph00calvuoft"
+                 (some "2026-11-16") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh" }
+
+/-- Clement of Rome's letter to the Corinthians, for chapters 42 and 44: the
+apostles "appointed the first-fruits [of their labours], having first proved them
+by the Spirit, to be bishops and deacons", and "afterwards gave instructions,
+that when these should fall asleep, other approved men should succeed them in
+their ministry". *Lumen Gentium* 20 cites chapter 44. Read in the *Ante-Nicene
+Fathers* translation, in the Christian Classics Ethereal Library's text of
+volume 1, and compared with New Advent's. -/
+@[bib_entry] def clementCorinthians : BibEntry := .ancientWork
+  { core :=
+      { key := "clement-first-corinthians-96"
+      , role := .witness
+      , contributors := { authors := [.single "Clement of Rome"] }
+      , title := "First Epistle to the Corinthians" }
+  , originalTitle := some "Πρὸς Κορινθίους"
+  , composed := some { value := 96, approximate := true }
+  , editionUsed := some "roberts-ante-nicene-fathers-1-1885" }
+
+/-- The Second Vatican Council's constitution on the Church, for §20: "the
+apostles' office of nurturing the Church is permanent, and is to be exercised
+without interruption by the sacred order of bishops", and "bishops by divine
+institution have succeeded to the place of the apostles". Its notes to §20 cite 2
+Timothy 2:2 and 1 Clement 44. Read in the Holy See's English text. -/
+@[bib_entry] def lumenGentium : BibEntry := .webPage
+  { core :=
+      { key := "vatican-ii-lumen-gentium-1964"
+      , role := .authority
+      , contributors := { authors := [.single "Second Vatican Council"] }
+      , title := "Lumen Gentium"
+      , year := some { value := 1964 }
+      , identifiers :=
+          [ .url ("https://www.vatican.va/archive/hist_councils/ii_vatican_council/" ++
+                  "documents/vat-ii_const_19641121_lumen-gentium_en.html")
+                 (some "2026-11-16") ] }
+  , site := some "The Holy See" }
+
+/-- Coppieters's article on the apostles in the *Catholic Encyclopedia*, volume 1
+(1907), for 1 Thessalonians 2:6 (2:7 in the Greek and Latin numbering), which he
+lists among the passages "in which the extension of the word Apostle is
+doubtful". Read at New Advent; cited by section. -/
+@[bib_entry] def coppietersApostles : BibEntry := .inCollection
+  { core :=
+      { key := "coppieters-apostles-1907"
+      , role := .witness
+      , contributors := { authors := [.person "Honoré" "Coppieters"] }
+      , title := "Apostles"
+      , year := some { value := 1907 }
+      , identifiers :=
+          [ .url "https://www.newadvent.org/cathen/01626c.htm" (some "2026-11-16") ]
+      , note := some "Volume 1." }
+  , containerTitle := "The Catholic Encyclopedia"
+  , containerEditors :=
+      [ .person "Charles G." "Herbermann", .person "Edward A." "Pace", .person "Condé B." "Pallen"
+      , .person "Thomas J." "Shahan", .person "John J." "Wynne" ]
+  , publisher := "Robert Appleton Company"
+  , place := some "New York" }
 
 /-! ### Sola fide: the wider debate
 

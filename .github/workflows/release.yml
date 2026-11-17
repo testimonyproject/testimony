@@ -1,8 +1,11 @@
 name: Release
 
 # A tag `v*` publishes a release carrying the print editions, typeset by
-# pdf.yml from the tagged commit. The site links to the current PDF, which
-# docs.yml puts beside it; a release is the dated copy a reader can cite.
+# pdf.yml from the tagged commit: the book of every argument, each argument on
+# its own, and the examples. The site links to the current PDFs, which docs.yml
+# puts beside it; a release is the dated copy a reader can cite. A release asset
+# has no directory, so each argument's is attached as <slug>.pdf; argtex guards
+# that slugs are unique.
 on:
   push:
     tags: ['v*']
@@ -30,5 +33,7 @@ jobs:
           path: pdf
       - uses: softprops/action-gh-release@v2
         with:
-          files: pdf/*.pdf
+          files: |
+            pdf/*.pdf
+            pdf/arguments/*.pdf
           generate_release_notes: true
