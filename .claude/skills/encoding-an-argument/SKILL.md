@@ -18,6 +18,13 @@ on that page, so write each for that reader:
 - a result is worth adding only if it answers a question that reader asks. See
   "Explaining a result" below for which certificate answers which question.
 
+If this is your first encoding, read `examples/HelloWorld.lean` first: four
+claims, one line of reason, one rival and two results, the smallest complete
+argument, and `docs/src/hello-world.md` explains it symbol by symbol. If the
+person you are working with does not write Lean, load
+`working-with-a-contributor` too; it says what to read back to them before you
+start.
+
 ## Before writing any Lean
 
 Get these from the source literature, not from memory:

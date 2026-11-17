@@ -2,6 +2,14 @@
 
 Cases built on the [Testimony](../README.md) library, and not part of it.
 
+**New here?** Start with [`HelloWorld.lean`](HelloWorld.lean). It is the
+smallest argument the library can check: four claims about Matthew's quotation
+of Micah, one step of reasoning, one rival reading and two results, with a note
+beside every block saying in plain English what it does. The page
+[Hello world](../docs/src/hello-world.md) walks through it, and
+[Contributing with Claude Code](../docs/src/getting-started.md) explains how to
+bring an argument of your own without writing any code.
+
 Testimony is a library for stating arguments so that every premise is explicit,
 cited and contestable, and for checking what follows from them. Its own
 arguments are about Scripture. Nothing in its machinery is: a premise is a
@@ -21,6 +29,7 @@ It is a **strict user** of the library:
 
 | Case | Document | What it shows |
 |---|---|---|
+| [Hello world](HelloWorld.lean) | [`docs/src/hello-world.md`](../docs/src/hello-world.md) | The smallest complete argument, explained symbol by symbol, for a first reading |
 | [The grits](TestimonyExamples/Grits.lean), from *My Cousin Vinny* (1992) | `docs/latex/grits.tex` | Where a witness's five minutes breaks, and why the cross-examination did not stop at "I'm a fast cook" |
 
 ## Building
@@ -34,7 +43,7 @@ fetched twice.
 ```sh
 lake exe cache get && lake build      # at the repository root: the library
 cd examples
-lake build                            # the cases, and the library's checks over them
+lake build                            # the cases, the tutorial, and the library's checks
 lake exe exampletex                   # one LaTeX document per case, under docs/latex/
 cd docs/latex && tectonic grits.tex   # ... and to PDF
 ```
