@@ -195,7 +195,7 @@ jobs:
   # in a few more rounds of that benchmark alone, and a shard fails only if it
   # holds with both readings pooled (p < 0.01); or it fails on a rise in peak
   # memory. Either way, not if the change accepts it with a reason in
-  # arguments/bench/accepted.toml (.claude/skills/optimising-the-engine).
+  # arguments/bench/accepted/ (.claude/skills/optimising-the-engine).
   #
   # The benchmarks are split into shards, each a job on a runner of its own,
   # beside `build` rather than after it: of N shards, shard K takes every N-th
