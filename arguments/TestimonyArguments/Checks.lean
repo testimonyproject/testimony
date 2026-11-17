@@ -92,9 +92,9 @@ Sola gratia — Ephesians 2:8–9 and Romans 9:16
   the whole ground: held by 2, used of a text or voice by 0; derives nothing
 Sola scriptura
   joins: 3, with no definition: 3
-  not a ground: held by 2, used of a text or voice by 0; derives nothing
+  not a ground: held by 2, used of a text or voice by 1; derives nothing
   the only means: held by 2, used of a text or voice by 1; derives nothing
-  the whole ground: held by 2, used of a text or voice by 0; derives nothing
+  the whole ground: held by 2, used of a text or voice by 1; derives nothing
 Spirit baptism
   joins: 2, with no definition: 2
 The Triune God
@@ -130,7 +130,7 @@ Sola fide
 Sola gratia — Ephesians 2:8–9 and Romans 9:16
   lines: 12, read: 0
 Sola scriptura
-  lines: 21, read: 15
+  lines: 27, read: 21
 The Triune God
   lines: 13, read: 0
 The canonical witness
@@ -139,11 +139,11 @@ The canonical witness
 #guard_msgs in
 #check_fallacies under TestimonyArguments
 
-/-- info: every package has a model with its postulates: 231, and 0 undecided -/
+/-- info: every package has a model with its postulates: 237, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments
 
-/-- info: every non-entailment survives its postulates: 115, and 4 undecided -/
+/-- info: every non-entailment survives its postulates: 123, and 4 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments
 
@@ -152,13 +152,13 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2537 definitions, 232 entries
+info: every entry is a tagged definition, and every key names one: 2537 definitions, 241 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 2134 definitions, 232 entries
+info: every entry is a tagged definition, and every key names one: 2211 definitions, 241 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments
