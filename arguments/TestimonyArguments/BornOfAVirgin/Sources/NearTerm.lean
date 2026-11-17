@@ -3,15 +3,12 @@ import TestimonyArguments.BornOfAVirgin.Atoms
 /-!
 # TestimonyArguments.BornOfAVirgin.Sources.NearTerm — the citations of the near-term dispute
 
-The atoms of the dispute over the critical denial, cited here and dispatched
-from `cite` by name: the critic's two premises, that 7:14 was a near-term sign
-to Ahaz and that such a sign excludes a messianic sense, and the grounds of the
-replies to them — Berry's, Postell's Micah counterexample, and Motyer's with
-Compton's. (Postell's Isaiah counterexample rests on atoms the compositional
-strand also uses, and is cited with them in `Sources.lean`.)
-
-They sit apart for the reason `Sources.Wegner` does: `cite` stays one total
-function, and each value below is reached from exactly one of its cases.
+The claims of the dispute over the critical denial: the critic's two premises,
+that 7:14 was a near-term sign to Ahaz and that such a sign excludes a messianic
+sense, and the grounds of the replies to them, Berry's, Postell's Micah
+counterexample, and Motyer's with Compton's. Postell's Isaiah counterexample
+rests on claims the compositional strand also uses, and is cited with them
+above.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin

@@ -3,11 +3,11 @@ import TestimonyArguments.Meanings.BornOfAVirgin
 import TestimonyArguments.BornOfAVirgin.Results.Septuagint
 
 /-!
-# TestimonyArguments.BornOfAVirgin.Dispute.Septuagint — what the Septuagint's word meant
+# TestimonyArguments.BornOfAVirgin.Dispute.Septuagint — the word weighed against its rivals
 
-`Results.Septuagint` shows that the Septuagint's witness rests on one claim: that
-παρθένος, in its translator's Greek, means a virgin. This module weighs that
-claim against its rival. Six positions meet:
+The Septuagint's witness rests on one claim, that παρθένος, in its
+translator's Greek, means a virgin. Here that claim is weighed against its
+rival. Six positions meet:
 
 - **The Septuagint as a witness** (Irenaeus): Jews translated Isaiah before
   Christ and wrote a word that means a virgin, so they read the woman as one.
@@ -34,8 +34,8 @@ claim against its rival. Six positions meet:
   victim after she has been attacked" (*Born Divine*). The word is said there of
   a woman no longer a virgin, so it did not by itself connote virginity, and the
   laws' virginity is the context's. His case as the texts leave it: his other
-  example, Joel 1:8, is struck, because the Greek reads otherwise
-  (`Dispute.Miller`).
+  example, Joel 1:8, is struck, because the Greek reads otherwise (below,
+  under "a dissent, with what the texts refute struck").
 
 ## What this dispute does not decide
 
@@ -49,7 +49,8 @@ prediction does not survive the replies, on those premises and ratings; it does
 not prove the prediction. And it needs neither side's claim about παρθένος.
 
 Nor does it weigh Matthew's own reading of the word, from his quotation of it of
-Mary. That is weighed in `Dispute.Matthew`, under each standard.
+Mary. That is weighed in the chapter "Matthew's reading of the word", under each
+standard.
 
 Nor is it a dispute between believers and unbelievers. Wegner and Rhodea write
 as evangelicals. Wegner holds that Isaiah 7:14 is used in Matthew "to refer to

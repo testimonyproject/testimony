@@ -3490,21 +3490,6 @@ Added for `SolaFide.James`: the critical text and the Catholic Church's
 own translation and teaching on the original text, against which the texts
 Trent cites for the increase of justification (Session VI, ch. 10) are read. -/
 
-/-- The SBL Greek New Testament, Holmes's critical text, whose apparatus compares
-it with Westcott–Hort, Tregelles, the NIV's text and the Byzantine text of
-Robinson–Pierpont. Cited for Revelation 22:11, where it marks no variation at
-δικαιοσύνην ποιησάτω. ISBN confirmed at Open Library. -/
-@[bib_entry] def sblgnt : BibEntry := .criticalEdition
-  { core :=
-      { key := "holmes-sblgnt-2010"
-      , role := .text
-      , contributors := { editors := [.person "Michael W." "Holmes"] }
-      , title := "The Greek New Testament: SBL Edition"
-      , year := some { value := 2010 }
-      , identifiers := [.isbn "9781589835351"] }
-  , publisher := "Society of Biblical Literature"
-  , siglum := some "SBLGNT" }
-
 /-- The New American Bible, Revised Edition: the translation of the United States
 Conference of Catholic Bishops. Cited for how the Catholic Church's own
 translators render Revelation 22:11 ("The righteous must still do right") and
@@ -4071,6 +4056,150 @@ it was read; its words are known here as Grudem quotes them (2016). -/
   , publisher := "Kregel Publications"
   , place := some "Grand Rapids, MI" }
 
+/-- The Watch Tower Society's brochure *Should You Believe in the Trinity? Is
+Jesus Christ the Almighty God?* (1989), 30 pages, OCLC 20957023 (Open Library
+OL58153292M, which gives no ISBN). Read in the 2006 printing on the Watchtower
+Online Library, publication code "ti". Cited for its readings of John 1:1 ("a
+god", p. 27), John 20:28 (p. 29), Colossians 1:15 (p. 14) and the holy spirit
+as "God's active force" (pp. 20–23). The pages are the 2006 printing's. -/
+@[bib_entry] def watchtowerTrinity : BibEntry := .book
+  { core :=
+      { key := "watchtower-should-you-believe-trinity-1989"
+      , role := .witness
+      , contributors := { authors := [.corporate "Watch Tower Bible and Tract Society"] }
+      , title := "Should You Believe in the Trinity?"
+      , subtitle := some "Is Jesus Christ the Almighty God?"
+      , year := some { value := 1989 }
+      , identifiers :=
+          [ .url ("https://wol.jw.org/en/wol/library/r1/lp-e/all-publications/" ++
+                  "brochures-and-booklets/trinity-ti") (some "2026-11-14") ]
+      , note := some "Consulted in the 2006 printing on the Watchtower Online Library." }
+  , publisher := "Watchtower Bible and Tract Society of New York"
+  , place := some "Brooklyn, NY" }
+
+/-- The New World Translation, the Jehovah's Witnesses' Bible, in its 2013
+revision, read on jw.org. Cited for John 1:1, "and the Word was a god", and
+Colossians 1:16, "all other things were created", with "other" unbracketed. -/
+@[bib_entry] def nwt2013 : BibEntry := .webPage
+  { core :=
+      { key := "new-world-translation-2013"
+      , role := .witness
+      , contributors := { authors := [.corporate "Watch Tower Bible and Tract Society"] }
+      , title := "New World Translation of the Holy Scriptures"
+      , subtitle := some "2013 Revision"
+      , year := some { value := 2013 }
+      , identifiers :=
+          [ .url "https://www.jw.org/en/library/bible/nwt/books/john/1/"
+                 (some "2026-11-14") ] } }
+
+/-- David K. Bernard, *The Oneness of God* (1983), the first volume of his
+Series in Pentecostal Theology. ISBN-10 0912315121, resolved at Open Library
+(OL2725313M) as 9780912315126; the Spanish translation has another. Read in the
+revised edition of 2001, whose pages the copy consulted does not show, so it is
+cited by chapter and section. Cited for "Jesus is the one God" (ch. 4), the Word
+as "the thought, plan, or mind of God" (ch. 4, "The Word"; ch. 8, "The With
+Passages"), the glory of John 17:5 "in the plan of God" (ch. 8), the one name of
+Matthew 28:19 (ch. 6) and the Holy Spirit as God (ch. 6). -/
+@[bib_entry] def bernardOnenessOfGod : BibEntry := .book
+  { core :=
+      { key := "bernard-oneness-of-god-1983"
+      , role := .witness
+      , contributors := { authors := [.person "David K." "Bernard"] }
+      , title := "The Oneness of God"
+      , year := some { value := 1983 }
+      , identifiers := [.isbn "9780912315126"]
+      , note := some "Consulted in the revised edition of 2001." }
+  , publisher := "Word Aflame Press"
+  , place := some "Hazelwood, MO" }
+
+/-- Philip B. Harner, "Qualitative Anarthrous Predicate Nouns: Mark 15:39 and
+John 1:1", *Journal of Biblical Literature* 92.1 (1973). DOI verified at
+Crossref, which gives the first page, 75, and no last page; so no range is
+given. The article was not read; his words are quoted as the New World
+Translation's reference edition (appendix 6A) quotes them. -/
+@[bib_entry] def harnerAnarthrous : BibEntry := .article
+  { core :=
+      { key := "harner-qualitative-anarthrous-1973"
+      , role := .witness
+      , contributors := { authors := [.person "Philip B." "Harner"] }
+      , title := "Qualitative Anarthrous Predicate Nouns: Mark 15:39 and John 1:1"
+      , year := some { value := 1973 }
+      , identifiers := [.doi "10.2307/3262756"] }
+  , journal := "Journal of Biblical Literature"
+  , volume := some "92"
+  , issue := some "1" }
+
+/-- *Nicene and Post-Nicene Fathers*, first series, volume 7: Augustine's
+*Tractates on the Gospel of John*, tr. John Gibb. Cited for Tractate I.11–12 on
+John 1:3: "that by which all things were made could not be made by itself".
+CCEL gives 1886 and Schaff's preface is dated 1888, so no year is given. -/
+@[bib_entry] def npnf1v7 : BibEntry := .book
+  { core :=
+      { key := "schaff-nicene-post-nicene-fathers-1-7"
+      , role := .witness
+      , contributors := { editors := [.person "Philip" "Schaff"] }
+      , title := "Nicene and Post-Nicene Fathers, First Series"
+      , subtitle := some "St. Augustin: Homilies on the Gospel of John"
+      , identifiers :=
+          [ .url "https://ccel.org/ccel/schaff/npnf107.iii.ii.html" (some "2026-11-14") ] }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "New York"
+  , volume := some "7" }
+
+/-- Anthony Buzzard, "John 1:1: Caveat Lector (Reader Beware)", *A Journal from
+the Radical Reformation* 10.1 (Fall 2001), read in the PDF on his ministry's site,
+whose running heads give pp. 4–19. Cited for a reading of John 1:1 that grants
+the Word God's own nature and denies that Jesus is that Word made flesh as a
+person who was God: "For John the word was the one God Himself, not a second
+person" (p. 19); "There was no Son of God until the Messiah was conceived in
+history" (p. 17). -/
+@[bib_entry] def buzzardCaveatLector : BibEntry := .article
+  { core :=
+      { key := "buzzard-caveat-lector-2001"
+      , role := .witness
+      , contributors := { authors := [.person "Anthony" "Buzzard"] }
+      , title := "John 1:1: Caveat Lector (Reader Beware)"
+      , year := some { value := 2001 }
+      , identifiers :=
+          [ .url "https://focusonthekingdom.org/John%201%201.pdf" (some "2026-11-14") ] }
+  , journal := "A Journal from the Radical Reformation"
+  , volume := some "10"
+  , issue := some "1"
+  , pages := some (4, 19) }
+
+/-- Joseph Smith's discourse of 16 June 1844, as Thomas Bullock reported it, in
+the Joseph Smith Papers. Cited for "these 3 constit[ute] 3 distinct personages &
+3 Gods" and, with 1 Corinthians 8:4–6, "to us there is but one God pertaining to
+us" (p. [1]). -/
+@[bib_entry] def smithDiscourse1844 : BibEntry := .webPage
+  { core :=
+      { key := "smith-discourse-16-june-1844"
+      , role := .witness
+      , contributors := { authors := [.person "Joseph" "Smith"] }
+      , title := "Discourse, 16 June 1844–A, as Reported by Thomas Bullock"
+      , year := some { value := 1844 }
+      , identifiers :=
+          [ .url ("https://www.josephsmithpapers.org/paper-summary/" ++
+                  "discourse-16-june-1844-a-as-reported-by-thomas-bullock")
+                 (some "2026-11-14") ] } }
+
+/-- Robert Roberts, *Christendom Astray*, eighteen lectures by the Christadelphian
+writer, read in the Internet Archive's scan (christendomastray1884), whose title
+page gives Birmingham and no date; so no year is given. Cited for the Spirit as
+"an agency used by the Father in the accomplishment of His designs" (p. 123),
+"personified" (p. 174), and one with the Father "in the way that light is one
+with the body of the sun" (p. 122). -/
+@[bib_entry] def robertsChristendomAstray : BibEntry := .book
+  { core :=
+      { key := "roberts-christendom-astray"
+      , role := .witness
+      , contributors := { authors := [.person "Robert" "Roberts"] }
+      , title := "Christendom Astray"
+      , subtitle := some "Popular Theology (Both in Faith and Practice) Shewn to Be Unscriptural"
+      , identifiers :=
+          [ .url "https://archive.org/details/christendomastray1884" (some "2026-11-14") ] }
+  , publisher := "R. Roberts"
+  , place := some "Birmingham" }
 /-- Garrigou-Lagrange's commentary on Aquinas's treatise on grace (*Summa*
 I-II qq. 109–114), the Thomist school's case for grace "efficacious of itself,
 intrinsically". Read in the EWTN library's reproduction, which has no page
@@ -4143,8 +4272,9 @@ New Advent; cited whole. -/
 Translation Society. Cited for his reading of Hebrews 6:4–6 (pp. 137–138): "God
 indeed favours none but the elect alone with the Spirit of regeneration", yet he
 grants "the reprobate also some taste of his grace", a knowledge "which afterwards
-vanishes away". The 1853 printing scanned at the Internet Archive; it carries no
-ISBN. -/
+vanishes away". Cited too, by verse, for Hebrews 1:8: whoever reads the verse
+"cannot doubt but that the Messiah is called God". The 1853 printing scanned at
+the Internet Archive; it carries no ISBN. -/
 @[bib_entry] def calvinHebrews : BibEntry := .book
   { core :=
       { key := "calvin-hebrews-1853"
@@ -4164,8 +4294,10 @@ ISBN. -/
 Translation Society. Cited for his reading of Romans 8:29–30 (pp. 319–320): the
 called are "the elect … whom he also inwardly draws", and Christ's glory "brings
 to us such assurance respecting our own glory, that our hope may be justly
-compared to a present possession". The 1849 printing scanned at the Internet
-Archive; it carries no ISBN. -/
+compared to a present possession". Cited too, by verse, for Romans 9:5: "Christ,
+who is from the Jews according to the flesh, is God blessed for ever"; and on
+14:11, for Isaiah 45:23 fulfilled in Christ. The 1849 printing scanned at the
+Internet Archive; it carries no ISBN. -/
 @[bib_entry] def calvinRomans : BibEntry := .book
   { core :=
       { key := "calvin-romans-1849"
@@ -4317,6 +4449,116 @@ whose title page reads 1855. No ISBN. -/
   , place := some "London and Edinburgh"
   , volume := some "11" }
 
+/-- *Nicene and Post-Nicene Fathers*, second series, volume 8: Basil, *Letters
+and Select Works*, tr. Blomfield Jackson. Cited for the distinction between
+essence (οὐσία) and person (ὑπόστασις): "ousia has the same relation to
+hypostasis as the common has to the particular" (Letter 214, §4), and "we
+confess one essence or substance … but we confess a particular hypostasis"
+(Letter 236, §6). New Advent gives Buffalo, 1895. -/
+@[bib_entry] def npnf2v8 : BibEntry := .book
+  { core :=
+      { key := "schaff-nicene-post-nicene-fathers-2-8-1895"
+      , role := .witness
+      , contributors := { editors := [.person "Philip" "Schaff", .person "Henry" "Wace"] }
+      , title := "Nicene and Post-Nicene Fathers, Second Series"
+      , subtitle := some "St. Basil: Letters and Select Works"
+      , year := some { value := 1895 }
+      , note := some "Consulted in the revised text published by New Advent." }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "Buffalo, NY"
+  , volume := some "8" }
+
+/-- *Nicene and Post-Nicene Fathers*, second series, volume 14: *The Seven
+Ecumenical Councils*, ed. Henry R. Percival. Cited for the creed of Nicaea
+(325), "of one substance (ὁμοούσιον) with the Father", and its anathema on those
+who say "that there was a time when the Son of God was not … or that he is a
+creature". Schaff's *Creeds of Christendom* brackets the words "or created" in
+the Greek; this edition prints them. New Advent gives Buffalo, 1900. -/
+@[bib_entry] def npnf2v14 : BibEntry := .book
+  { core :=
+      { key := "schaff-nicene-post-nicene-fathers-2-14-1900"
+      , role := .witness
+      , contributors :=
+          { editors := [.person "Philip" "Schaff", .person "Henry" "Wace"
+                       , .person "Henry R." "Percival"] }
+      , title := "Nicene and Post-Nicene Fathers, Second Series"
+      , subtitle := some "The Seven Ecumenical Councils"
+      , year := some { value := 1900 }
+      , note := some "Consulted in the revised text published by New Advent." }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "Buffalo, NY"
+  , volume := some "14" }
+
+/-- Bruce M. Metzger, "The Jehovah's Witnesses and Jesus Christ: A Biblical and
+Theological Appraisal", *Theology Today* 10.1 (1953), pp. 65–85. DOI and pages
+verified at Crossref; read in a scan of the journal pages. Cited for John 1:1,
+"if the Jehovah's Witnesses take this translation seriously, they are
+polytheists" and "a frightful mistranslation" (p. 75), and for Colossians 1:16,
+"the word 'other' has been unwarrantably inserted four times" (p. 76). -/
+@[bib_entry] def metzgerJehovahsWitnesses : BibEntry := .article
+  { core :=
+      { key := "metzger-jehovahs-witnesses-jesus-christ-1953"
+      , role := .witness
+      , contributors := { authors := [.person "Bruce M." "Metzger"] }
+      , title := "The Jehovah's Witnesses and Jesus Christ"
+      , subtitle := some "A Biblical and Theological Appraisal"
+      , year := some { value := 1953 }
+      , identifiers := [.doi "10.1177/004057365301000110"] }
+  , journal := "Theology Today"
+  , volume := some "10"
+  , issue := some "1"
+  , pages := some (65, 85) }
+
+/-- "Questions From Readers", *The Watchtower*, 1 July 1986, p. 31, read on the
+Watchtower Online Library. Cited for the Witnesses' answer to Isaiah 43:10,
+"Before me no god was formed": "the 'gods' under consideration are the impotent
+idols of the nations", so that it is "fitting for John 1:1 to acknowledge Jesus
+as 'a god'". -/
+@[bib_entry] def watchtower1986Isaiah : BibEntry := .webPage
+  { core :=
+      { key := "watchtower-questions-from-readers-1986"
+      , role := .witness
+      , contributors := { authors := [.corporate "Watch Tower Bible and Tract Society"] }
+      , title := "Questions From Readers"
+      , subtitle := some "The Watchtower, 1 July 1986, p. 31"
+      , year := some { value := 1986 }
+      , identifiers :=
+          [ .url "https://wol.jw.org/en/wol/d/r1/lp-e/1986491" (some "2026-11-15") ] } }
+
+/-- Calvin's commentary on Philippians, read in the Christian Classics Ethereal
+Library's text, cited by verse. On 2:9–10: "that everything may be accomplished
+in him that God, by the prophet Isaiah, exclusively claims to himself". The
+translator and year are not verified, so neither is given. -/
+@[bib_entry] def calvinPhilippians : BibEntry := .book
+  { core :=
+      { key := "calvin-commentaries-philippians"
+      , role := .witness
+      , contributors := { authors := [.person "John" "Calvin"] }
+      , title := "Commentaries on the Epistles of Paul to the Philippians, Colossians, " ++
+          "and Thessalonians"
+      , identifiers :=
+          [ .url "https://www.ccel.org/ccel/calvin/calcom42.html" (some "2026-11-15") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh" }
+
+/-- Granville Sharp, *Remarks on the Uses of the Definitive Article in the Greek
+Text of the New Testament*, read in the third edition of 1803 in the Internet
+Archive's scan (remarksonusesofd00sharrich), its pages taken from the scan's page
+headers. Cited for his first rule (p. 3) and its application to Titus 2:13:
+"Christ is not only entitled God, but even the 'great God'" (pp. 23–24). -/
+@[bib_entry] def sharpRemarks : BibEntry := .book
+  { core :=
+      { key := "sharp-remarks-definitive-article-1803"
+      , role := .witness
+      , contributors := { authors := [.person "Granville" "Sharp"] }
+      , title := "Remarks on the Uses of the Definitive Article in the Greek Text " ++
+          "of the New Testament"
+      , year := some { value := 1803 }
+      , identifiers :=
+          [ .url "https://archive.org/details/remarksonusesofd00sharrich" (some "2026-11-15") ]
+      , note := some "Third edition." }
+  , publisher := "Vernor and Hood"
+  , place := some "London" }
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'

@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **350 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **374 headline results**, listed below in source order. 10 of them are marked ⚗: results this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -405,6 +405,30 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `eternal_order_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.eternal` | **The eternal order is not forced**: Giles's position can be held with LST's, and it rules the eternal order out. |
 | `equal_authority_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position can be defended**: held with LST's, it answers Grudem and Ware's position, which is the only one that attacks it. |
 | `equal_authority_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position is not forced** either. |
+| `lstDeity_establishes` | `Establishes lstDeityCase` | **Grant the Nicene readings of John 1:1 and 1:3, of Acts 5:3–4, and of the texts that name three, and LST's confession follows**: the Father, the Son and the Spirit are God, three … |
+| `witnesses_establish` | `Establishes witnessesCase` | **Grant "the Word was God" (John 1:1) read as "a god" and Colossians 1:15 as the first thing made, and the Son is a creature, not God.** |
+| `oneness_establishes` | `Establishes onenessCase` | **Grant the Oneness readings of John 1:1, 17:5 and Matthew 28:19, and the Father, the Son and the Spirit are one person.** |
+| `deity_forces_nothing` | `Framework.grounded deityDispute.defeats = ∅` | **Nothing is forced.** Every position ties with another, and since every one rests on a reading rated `disputed`, no rating breaks a tie. |
+| `lst_deity_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.lst` | **LST's position can be defended**, with each of its lines: there is a largest group of positions that can be defended together, one no other party can join, and it holds all four. |
+| `lst_deity_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.lst` | **LST's position is not forced.** The Oneness position and LST's first two lines can be defended as a group, and no such group can also hold LST's. |
+| `word_deity_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.word` | **That the Word is God can be defended**, with LST's position. |
+| `word_deity_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.word` | **That the Word is God is not forced.** The Witnesses' position can be defended on its own, and it denies that the Word is God. |
+| `witnesses_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.witnesses` | **The Witnesses' position can be defended**, on its own. |
+| `witnesses_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.witnesses` | **The Witnesses' position is not forced.** LST's position, with its three lines, can be defended as a group, and no such group can also hold the Witnesses'. |
+| `oneness_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.oneness` | **The Oneness position can be defended**, with LST's first two lines. |
+| `oneness_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.oneness` | **The Oneness position is not forced.** The same group of LST and its lines leaves it out. |
+| `nicenCase_establishes` ⚗ | `Establishes nicenCase` | **The supplemented case still delivers LST's confession, and holds together.** The confession follows from LST's three lines, as before. |
+| `witnessesAnswering_establishes` | `Establishes witnessesAnswering` | **The Witnesses, answering, still deliver their conclusion.** |
+| `onenessAnswering_establishes` | `Establishes onenessAnswering` | **The Oneness position, answering, still delivers its conclusion.** |
+| `three_claims_hold_on_one_essence` ⚗ | `Satisfiable (threeClaims ++ [p Claim.isGodAsOneEssence, essenceExcludesIdentity])` | **The three claims contradict one another only with the identity step added.** Written as three separate claims (the Father is God, the Son is God, the Son is another than the … |
+| `three_claims_fail_on_identity` ⚗ | `¬Satisfiable (threeClaims ++ [p Claim.isGodAsIdentity, bothGodSoOne])` | **With Bernard's step from identity, they cannot all be held.** Read "is God" as Bernard does, as naming the one God himself, take his step that two who are each the one God are … |
+| `son_is_god_burden` ⚗ | `OpponentsBurden sonIsGodCase sonIsGodRoutes [] [] [[0, 1, 2, 3, 4, 5]]` | **The opponent's burden against "the Son is God".** The case runs by six routes: John 1:1 and 1:3 read with Harner and Augustine, Thomas's words, Hebrews 1:8, Titus 2:13, Romans … |
+| `supplemented_forces_nothing` ⚗ | `Framework.grounded caseDispute.defeats = ∅` | **Supplemented, the weighing still forces nothing.** Every party ties with another, and every one rests on a reading rated `disputed`, so no rating breaks a tie. |
+| `nicene_case_defensible` ⚗ | `Framework.CredulouslyAccepted caseDispute.defeats CaseParty.nicene` | **The supplemented Nicene case can be defended**, with LST's case and the six routes: the three can be defended together against both rivals. |
+| `nicene_case_not_forced` ⚗ | `¬Framework.SkepticallyAccepted caseDispute.defeats CaseParty.nicene` | **The supplemented Nicene case is not forced.** The Oneness position and the six routes to "the Son is God" can be defended together, and because Oneness and the Nicene case … |
+| `son_is_god_defensible_with_oneness` ⚗ | `Framework.CredulouslyAccepted caseDispute.defeats CaseParty.sonIsGod` | **That the Son is God, by six routes, can be defended with Oneness too.** The six routes can be defended together with the Oneness position, which also holds that the Son is God. |
+| `son_is_god_not_forced` ⚗ | `¬Framework.SkepticallyAccepted caseDispute.defeats CaseParty.sonIsGod` | **That the Son is God is not forced.** The Witnesses' position, answering, can be defended on its own, and it denies that the Son is God. |
+| `witnesses_answering_defensible` | `Framework.CredulouslyAccepted caseDispute.defeats CaseParty.witnesses` | **The Witnesses' position, answering, can still be defended**, on its own. |
 
 <!-- END GENERATED: lake exe statusgen -->
 
@@ -1001,10 +1025,13 @@ defended synthesis. Then the "through the Son" of the Greek fathers as a third
 position on the procession, and an article check of LST's own sentences.
 
 **Corpus grounding** ([#4]). Importers so `Passage` values resolve against real
-text data (BHSA, OSHB, STEPBible). At that point linguistic premises can cite
-actual morphological annotation rather than a commentary's report of it — which
-matters most for exactly the lexical premises that keep turning out to be
-load-bearing.
+text data. The Greek New Testament has begun: John, Colossians, Titus and Hebrews
+are imported from MACULA Greek's annotation of the SBLGNT, so a claim about what
+the Greek contains is checked against the data ([The Greek text as
+data](./corpus.md), [#247]). The Hebrew Bible (BHSA, OSHB) is still to come.
+Linguistic premises can then cite actual morphological annotation rather than a
+commentary's report of it, which matters most for exactly the lexical premises
+that keep turning out to be load-bearing.
 
 ## Systematic theology
 
@@ -1128,6 +1155,7 @@ the rest worth reading.
 [#3]: https://github.com/testimonyproject/testimony/issues/3
 [#24]: https://github.com/testimonyproject/testimony/issues/24
 [#4]: https://github.com/testimonyproject/testimony/issues/4
+[#247]: https://github.com/testimonyproject/testimony/issues/247
 [#7]: https://github.com/testimonyproject/testimony/issues/7
 [#8]: https://github.com/testimonyproject/testimony/issues/8
 [#9]: https://github.com/testimonyproject/testimony/issues/9

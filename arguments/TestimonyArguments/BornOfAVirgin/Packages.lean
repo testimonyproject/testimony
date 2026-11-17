@@ -2,7 +2,28 @@ import TestimonyArguments.BornOfAVirgin.Sources
 import TestimonyArguments.BornOfAVirgin.Lines
 
 /-!
-# TestimonyArguments.BornOfAVirgin.Packages — the positions, and the variants
+# TestimonyArguments.BornOfAVirgin.Packages — the positions, written out
+
+Besides the scriptural case, built from the four strands, these positions are
+written out:
+
+- **Rome's**, which adds papal teaching on Mary's virginity to the four strands;
+- **the critical denial**, which grants the texts and denies every inference
+  drawn from them;
+- **the objection from the ancient versions**, the Targum's "young woman" and
+  the Three's νεᾶνις, with the referential reply set against it;
+- **Wegner's objection**, at full strength, and in variants that take one of
+  its grounds away to ask what supplies it;
+- and the positions in the disputes over the sign, the Septuagint's word and
+  "her seed", which the later chapters weigh.
+
+Beside them are variants of the scriptural case. Each asks whether the case
+depends on one premise: with it taken out, either the conclusion still follows,
+or the checking names a way of taking the texts on which it does not.
+-/
+
+/-!
+#### How the variants are written
 
 A handful of these packages are positions someone holds; the rest exist to be
 *refuted*, because "this premise is load-bearing" is proved by removing it and
@@ -241,7 +262,7 @@ def semanticReachingForCriterion : ArgumentPackage Claim :=
     conclusion := p .jesusSatisfiesCriterion
     conclusionLabel := fulfillmentLabel jesus bornOfAVirgin }
 
-/-! ### Wegner's objection, and the circle in it
+/-! #### Wegner's objection, and the circle in it
 
 Four variants of one line, each a named difference. `wegnerLine` grants
 everything Wegner needs; the rest take one ground away and put in its place the
@@ -330,7 +351,7 @@ def wegnerUnderUsageParity : ArgumentPackage Claim :=
       caseOf [wegnerUnderParity] []
         (usageParityBlocksReferentInference :: wegnerClosingSteps) }
 
-/-! ### The fathers' sign argument, and the reply to it -/
+/-! #### The fathers' sign argument, and the reply to it -/
 
 /-- The fathers' sign argument as a position of its own: its conclusion is that
 the pregnancy of Isaiah 7:14 is not an ordinary one, and nothing about the
@@ -379,7 +400,7 @@ def signArgumentUnderReply : ArgumentPackage Claim :=
     name := "The fathers' sign argument, with the near-term reply in play"
     premises := caseOf [signUnderReply] [] [ordinarySignsAnswerTheDemand] }
 
-/-! ### The Septuagint, and what its word meant -/
+/-! #### The Septuagint, and what its word meant -/
 
 /-- The Septuagint as a witness, as a position of its own: its conclusion is
 what its translator read, and nothing yet about Isaiah's word. -/
@@ -550,7 +571,7 @@ def septuagintWithTheFuture : Line Claim :=
   septuagintLine.onGrounds
     (septuagintLine.grounds ++ [p .lxxPutsTheConceptionInTheFuture])
 
-/-! ### Genesis 3:15, and what "her seed" says of a father -/
+/-! #### Genesis 3:15, and what "her seed" says of a father -/
 
 /-- The protoevangelium strand as a position of its own: Genesis 3:15 read as
 promise, the seed named as the woman's, and the hinge that this marks a birth
