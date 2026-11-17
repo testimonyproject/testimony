@@ -22,7 +22,8 @@ the classical form: *ego vero Evangelio non crederem, nisi me catholicae
 Ecclesiae commoveret auctoritas*. He would not believe the gospel, he says,
 unless the authority of the Catholic Church moved him to. The chapter
 "How the canon is recognised" takes a reply that denies that identifying the
-canon needs an infallible authority, from the tests Scripture itself sets.
+canon needs an infallible authority outside Scripture, from the tests Scripture
+itself sets.
 
 **The regress of interpretive authority.** Cross and Judisch argue that the
 individual keeps the final authority to interpret, exercised indirectly by
@@ -306,8 +307,8 @@ def selfRefutationStep : Formula Claim :=
   ➝ notP .scriptureIsSoleInfallibleRule
 
 /-- If the canon is known only through the Church's reception, and identifying
-the canon requires an infallible authority, then an infallible authority
-outside scripture is needed to identify scripture. -/
+the canon requires an infallible authority outside scripture, then scripture
+is not the sole infallible rule. -/
 @[solaScripturaDefs]
 def canonObjectionStep : Formula Claim :=
   ⋀ [ p .canonKnownThroughChurchReception

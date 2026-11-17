@@ -83,8 +83,8 @@ inductive Claim
   | churchMindIsInfallibleInterpreter
   /-- The canon is known through the Church's reception of it. -/
   | canonKnownThroughChurchReception
-  /-- Identifying the canon requires an infallible authority. The hinge of the
-  canon objection. -/
+  /-- Identifying the canon requires an infallible authority outside Scripture.
+  The hinge of the canon objection. -/
   | identifyingCanonRequiresInfallibleAuthority
   /-- A rival's own foundational authority is self-authenticating too, so the
   circularity charge does not discriminate between the positions. Kruger's

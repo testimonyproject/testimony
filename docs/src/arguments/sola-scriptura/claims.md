@@ -55,7 +55,7 @@ description is a caricature.
 | <a id="claim-14"></a>\\(P_{14}\\) | The magisterium is an infallible interpreter of scripture | theological | Roman Catholic, well supported | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001) |
 | <a id="claim-15"></a>\\(P_{15}\\) | The mind of the Church, in the consensus of the Fathers and in received conciliar decisions, infallibly interprets scripture | theological | Eastern Orthodox, well supported | [Florovsky 1972](../../bibliography.md#florovsky-bible-church-tradition-1972); [Ware 1993](../../bibliography.md#ware-orthodox-church-1993) |
 | <a id="claim-16"></a>\\(P_{16}\\) | The canon is known through the Church's reception of it | historical | Roman Catholic, consensus | [Schaff 1887](../../bibliography.md#npnf1-04-1887), §Augustine, Contra epistolam Manichaei 5.6; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions |
-| <a id="claim-17"></a>\\(P_{17}\\) | Identifying the canon requires an infallible authority | theological | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions |
+| <a id="claim-17"></a>\\(P_{17}\\) | Identifying the canon requires an infallible authority outside Scripture | theological | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Reid 1908](../../bibliography.md#reid-canon-new-testament-1908), §The criterion of inspiration |
 | <a id="claim-18"></a>\\(P_{18}\\) | A rival's own foundational authority is self-authenticating too, so the circularity charge does not discriminate | interpretive | Reformed Protestant, disputed | [Kruger 2012](../../bibliography.md#kruger-canon-revisited-2012), §ch. 2 |
 | <a id="claim-19"></a>\\(P_{19}\\) | Deuteronomy 13:1–3 — a prophet whose sign comes to pass, but who says, Let us go after other gods, is not to be heard ※ | textual | Christian, hist.-gramm., consensus | Deut 13:1-3 |
 | <a id="claim-20"></a>\\(P_{20}\\) | Deuteronomy 18:20–22 — a word spoken in the LORD's name that does not come to pass is a word the LORD has not spoken ※ | textual | Christian, hist.-gramm., consensus | Deut 18:20-22 |
@@ -155,22 +155,27 @@ def mark7PrincipleInference : Source :=
 **`canonObjectionInference`**
 
 The rating of the canon objection's step, from the Church's reception of the
-canon and the need for an infallible authority to identify it, to the denial
-that Scripture is the sole infallible rule: `disputed`. Kruger grants both
-grounds and denies the conclusion. The Church did receive the books, and he
-counts its corporate reception among the marks of a canonical book; and the
-canon is identified by an infallible authority, Christ speaking in the books
-themselves by his Spirit. That authority is not outside Scripture, so the sole
-rule stands. Calvin gives the same answer when he rests the certainty of
-Scripture on "the secret testimony of the Spirit" (*Institutes* I.vii.4).
+canon and the need for an infallible authority outside Scripture to identify
+it, to the denial that Scripture is the sole infallible rule: `wellSupported`.
+No reader was found who grants both grounds and denies the conclusion: if an
+infallible authority outside Scripture is needed to say which books are
+Scripture, Scripture is not the only infallible rule. Reid grants the grounds
+and the conclusion. The step is rated `wellSupported` rather than `consensus`
+because "infallible" may be read more loosely than Rome reads it. Calvin and
+Kruger answer the objection by denying its second ground, not this step.
 
 ```lean
 def canonObjectionInference : Source :=
-  { primary := Reference.work krugerCanonRevisited,
+  {
+    primary :=
+      Reference.work reidCanonNewTestament
+        (Bib.Locus.sectionRef "The criterion of inspiration"),
     supporting :=
-      [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "I.vii.4")],
-    tradition := Tradition.reformedProtestant,
-    confidence := Confidence.disputed }
+      [Reference.work tannerDecrees
+          (Bib.Locus.sectionRef
+            "Trent, Session IV (1546), Decree on Sacred Books and Traditions")],
+    tradition := Tradition.romanCatholic,
+    confidence := Confidence.wellSupported }
 ```
 
 <a id="canonTestsInference"></a>

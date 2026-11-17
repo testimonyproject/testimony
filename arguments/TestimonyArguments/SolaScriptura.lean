@@ -70,7 +70,7 @@ than by its critic, it reaches the conclusion too (`tradition0_establishes`).
   its own tests for a word that claims to come from God (Deuteronomy 13 and
   18), and the early Church set apart books it read and did not receive, the
   Shepherd and the Didache, by reasons it stated. That reply denies the
-  objection's need for an infallible authority. Weighed against the objection,
+  objection's need for an infallible authority outside Scripture. Weighed against the objection,
   each defeats the other, and the dispute forces neither
   ("How the canon is recognised").
 - **What does Mark 7 settle?** Jesus' rebuke of the elders' tradition delivers a

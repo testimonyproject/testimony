@@ -49,19 +49,21 @@ def mark7PrincipleInference : Source :=
   , confidence := .wellSupported }
 
 /-- The rating of the canon objection's step, from the Church's reception of the
-canon and the need for an infallible authority to identify it, to the denial
-that Scripture is the sole infallible rule: `disputed`. Kruger grants both
-grounds and denies the conclusion. The Church did receive the books, and he
-counts its corporate reception among the marks of a canonical book; and the
-canon is identified by an infallible authority, Christ speaking in the books
-themselves by his Spirit. That authority is not outside Scripture, so the sole
-rule stands. Calvin gives the same answer when he rests the certainty of
-Scripture on "the secret testimony of the Spirit" (*Institutes* I.vii.4). -/
+canon and the need for an infallible authority outside Scripture to identify
+it, to the denial that Scripture is the sole infallible rule: `wellSupported`.
+No reader was found who grants both grounds and denies the conclusion: if an
+infallible authority outside Scripture is needed to say which books are
+Scripture, Scripture is not the only infallible rule. Reid grants the grounds
+and the conclusion. The step is rated `wellSupported` rather than `consensus`
+because "infallible" may be read more loosely than Rome reads it. Calvin and
+Kruger answer the objection by denying its second ground, not this step. -/
 def canonObjectionInference : Source :=
-  { primary := .work krugerCanonRevisited .whole
-  , supporting := [.work calvinInstitutes (.sectionRef "I.vii.4")]
-  , tradition := .reformedProtestant
-  , confidence := .disputed }
+  { primary := .work reidCanonNewTestament (.sectionRef "The criterion of inspiration")
+  , supporting :=
+      [ .work tannerDecrees
+          (.sectionRef "Trent, Session IV (1546), Decree on Sacred Books and Traditions") ]
+  , tradition := .romanCatholic
+  , confidence := .wellSupported }
 
 /-- The rating of the step from Scripture's tests, and the Church's use of
 reasons, to the claim that identifying the canon needs no infallible
@@ -489,11 +491,17 @@ def cite : Claim → AtomMeta
         , tradition := .romanCatholic
         , confidence := .consensus } }
   | .identifyingCanonRequiresInfallibleAuthority =>
-    { label := "Identifying the canon requires an infallible authority"
+    { label := "Identifying the canon requires an infallible authority outside Scripture"
     , kind := .theological
+      -- Held by Trent and, explicitly, by Reid ("through the constituted organ
+      -- and custodian of Its revelations, the Church"); denied by Calvin, for
+      -- whom the Church receiving Scripture "does not make that authentic which
+      -- was otherwise doubtful" (Institutes I.vii.2), and by Kruger.
     , source :=
         { primary := .work tannerDecrees
             (.sectionRef "Trent, Session IV (1546), Decree on Sacred Books and Traditions")
+        , supporting :=
+            [ .work reidCanonNewTestament (.sectionRef "The criterion of inspiration") ]
         , tradition := .romanCatholic
         , confidence := .disputed } }
   | .rivalAuthorityIsAlsoSelfAuthenticating =>

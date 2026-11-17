@@ -419,7 +419,8 @@ def means : Claim → Statement
   | .canonKnownThroughChurchReception =>
     .holds (rl .instrumentOf (cn .receptionOfTheCanon) (cn .identifyingTheCanon))
   | .identifyingCanonRequiresInfallibleAuthority =>
-    .holds (rl .necessaryFor (cn .infallibleAuthority) (cn .identifyingTheCanon))
+    .holds (rl .necessaryFor
+      (pt "an infallible authority outside Scripture" .agent) (cn .identifyingTheCanon))
   | .deut13_1_3ProphetOfOtherGods =>
     .says deut13_1_3 <| rl .isA
       (pt "a prophet whose sign comes to pass, who says, Let us go after other gods" .agent)

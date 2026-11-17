@@ -41,16 +41,16 @@ Sola scriptura
 /--
 info: the charges, against every argument's lines:
 Sola scriptura
-  lines: 27, read: 21
+  lines: 28, read: 22
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaScriptura
 
-/-- info: every package has a model with its postulates: 31, and 0 undecided -/
+/-- info: every package has a model with its postulates: 32, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaScriptura
 
-/-- info: every non-entailment survives its postulates: 35, and 0 undecided -/
+/-- info: every non-entailment survives its postulates: 37, and 0 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments.SolaScriptura
 
@@ -60,6 +60,7 @@ Sola scriptura
 
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:
+canonDispute.finite: 7 I, 2 RA, 2 CA, 0 PA, 11 edges
 mark7Dispute.finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
 and 2 hearings, drawn with the disputes they restrict
 -/

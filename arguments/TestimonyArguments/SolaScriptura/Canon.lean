@@ -5,17 +5,21 @@ import TestimonyArguments.SolaScriptura.Results
 /-!
 # TestimonyArguments.SolaScriptura.Canon — how the canon is recognised
 
-The canon objection asks who told us which books are Scripture. Augustine's
-answer is the one Rome has given since: he would not believe the gospel, he
-says, unless the authority of the Catholic Church moved him to. If the Church's
-authority is what identifies Scripture, and that identification must be
-infallible, then Scripture is not the only infallible rule. The chapter
-"Three objections, and the answers to them" gives Kruger's reply, which grants
-the Church's reception and answers that every final authority vouches for
-itself.
-That reply defends the Protestant position and gains it nothing. The reply in
-this chapter goes further. It denies that identifying the canon needs an
-infallible authority at all.
+The canon objection asks who told us which books are Scripture. Augustine wrote
+against the Manichaeans that he would not believe the gospel unless the
+authority of the Catholic Church moved him to (*Against the Epistle of
+Manichaeus* 5.6), and Rome has cited him since. Calvin read the same sentence
+as Augustine describing how an unbeliever is first brought to the gospel, not
+where the believer's certainty rests (*Institutes* I.vii.3). If the Church's
+authority is what identifies Scripture, and that identification needs an
+infallible authority outside Scripture, then Scripture is not the only
+infallible rule. The chapter
+"Three objections, and the answers to them" gives Kruger's parity reply, which
+grants the Church's reception and answers that every final authority vouches
+for itself. That reply stops the objection from proving its point, but proves
+nothing for the Protestant side either. The reply in this chapter goes further,
+and denies that identifying the canon needs an infallible authority outside
+Scripture at all.
 
 ## Tests Scripture sets
 
@@ -25,34 +29,41 @@ said: "If there arise among you a prophet, or a dreamer of dreams, and giveth
 thee a sign or a wonder, And the sign or the wonder come to pass, whereof he
 spake unto thee, saying, Let us go after other gods, which thou hast not known,
 and let us serve them; Thou shalt not hearken unto the words of that prophet"
-(Deuteronomy 13:1–3, KJV). The second is whether the word comes true: "And if
-thou say in thine heart, How shall we know the word which the LORD hath not
-spoken? When a prophet speaketh in the name of the LORD, if the thing follow
-not, nor come to pass, that is the thing which the LORD hath not spoken"
-(18:21–22). Neither test sends the hearer to an office that cannot err. Each
-gives the hearer something to check.
+(Deuteronomy 13:1–3, KJV). The second is whether the word comes true. "But the
+prophet, which shall presume to speak a word in my name, which I have not
+commanded him to speak, or that shall speak in the name of other gods, even
+that prophet shall die. And if thou say in thine heart, How shall we know the
+word which the LORD hath not spoken? When a prophet speaketh in the name of the
+LORD, if the thing follow not, nor come to pass, that is the thing which the
+LORD hath not spoken" (18:20–22). Both tests give the hearer something to check
+for himself, what the prophet says and whether it comes true, and neither sends
+him to an office that cannot err.
 
 ## Books the Church read and did not receive
 
 The early Church drew a line between books it read and books it received as
 Scripture, and it said why. The Muratorian fragment, an early list of the New
 Testament books whose date is disputed (the late second century or the fourth),
-says of the Shepherd of Hermas that he wrote it "very recently in our
-times in the city of Rome ... And therefore it also ought to be read; but it
-cannot be made public in the Church to the people, nor placed among the
-prophets, as their number is complete, nor among the apostles". Athanasius, in
-his Festal Letter of 367, lists the books of both Testaments and calls them
-"fountains of salvation ... Let no man add to these". He then names "other books
-besides these not indeed included in the Canon, but appointed by the Fathers to
-be read by those who newly join us", among them "that which is called the
-Teaching of the Apostles" (the Didache) "and the Shepherd". The reasons are ones
-a reader can weigh: when a book was written, whether it came from the apostles'
-time, what had been handed down.
+says that Hermas wrote the Shepherd "very recently in our times in the city of
+Rome ... And therefore it also ought to be read; but it cannot be made public in
+the Church to the people, nor placed among the prophets, as their number is
+complete, nor among the apostles". Athanasius, in his Festal Letter of 367,
+lists the books of both Testaments and calls them "fountains of salvation ...
+Let no man add to these". He then names "other books besides these not indeed
+included in the Canon, but appointed by the Fathers to be read by those who
+newly join us": the Wisdom of Solomon, Sirach, Esther, Judith and Tobit, "and
+that which is called the Teaching of the Apostles" (the Didache) "and the
+Shepherd". The line he drew is not exactly the one either Trent or the
+Reformers drew, since Trent receives Wisdom, Sirach, Judith and Tobit and the
+Reformers receive Esther. The reasons these witnesses give are ones a reader
+can weigh: when a book was written, whether it came from the apostles' time,
+what had been handed down. The last of these is a reason from the Church's
+reception, which is the ground Rome stands on.
 
 So the reply runs: Scripture itself gives tests for a word that claims to come
 from God, and the Church set books apart by reasons it stated; so identifying
 the canon is a matter of recognising what God gave, by tests, and needs no
-infallible authority to do it.
+infallible authority outside Scripture to do it.
 
 ## Rome's answer
 
@@ -62,52 +73,68 @@ not because she subsequently approved them by her authority after they had been
 composed by unaided human skill, nor simply because they contain revelation
 without error, but because, being written under the inspiration of the holy
 Spirit, they have God as their author" (*Dei Filius*, ch. 2). What divides them
-is whether the recognition must be infallible.
+is whether the recognition must come from an infallible authority outside the
+books.
 
-George Reid, writing in the *Catholic Encyclopedia* in 1908, grants the tests
-and the history and denies that they reach far enough. He calls apostolic
-origin "a positive and partial touchstone of inspiration", and tells how the
-Shepherd and the Didache were set apart under Athanasius. Then he answers the
-reply directly. Inspiration "is not self-evident", and so "Its sole absolute
-criterion, therefore, is the Holy inspiring Spirit, witnessing decisively to
-Itself, not in the subjective experience of individual souls, as Calvin
-maintained, neither in the doctrinal and spiritual tenor of Holy Writ itself,
-according to Luther, but through the constituted organ and custodian of Its
-revelations, the Church. All other evidences fall short of the certainty and
-finality necessary to compel the absolute assent of faith." Augustine's own
-rule for the canon is reception, not agreement: prefer the books "received by
-all the Catholic churches" (*On Christian Doctrine* II.8.12). Because Reid
-grants the reply's grounds and denies its conclusion, the step from one to the
-other is rated `disputed`.
+George Reid, writing in the *Catholic Encyclopedia* in 1908, grants that
+apostolic origin is a real test, tells how the Shepherd and the Didache were
+set apart under Athanasius, and as a Catholic does not dispute what
+Deuteronomy says. He denies that such tests reach far enough. He calls
+apostolic origin "a positive and partial touchstone of inspiration", and then
+answers the reply directly. Inspiration "is not self-evident", and so "Its sole
+absolute criterion, therefore, is the Holy inspiring Spirit, witnessing
+decisively to Itself, not in the subjective experience of individual souls, as
+Calvin maintained, neither in the doctrinal and spiritual tenor of Holy Writ
+itself, according to Luther, but through the constituted organ and custodian of
+Its revelations, the Church. All other evidences fall short of the certainty and
+finality necessary to compel the absolute assent of faith." Augustine's rule,
+which Reid follows, is reception rather than agreement with earlier Scripture:
+prefer the books "received by all the Catholic churches" (*On Christian
+Doctrine* II.8.12). Because Reid grants the reply's grounds and denies its
+conclusion, the step from one to the other is rated `disputed`.
 
-Two Protestant scholars press on the reply from the other side, without denying
-what it concludes. Michael Kruger criticises the appeal to criteria of
-canonicity, while granting that it has "rightly focused on apostolicity as a key
-component of canonicity". Orthodoxy alone cannot pick out the canon, because the
-Shepherd was orthodox too, and apostolic origin is the Muratorian fragment's
-reason for setting it apart. Lee Martin McDonald finds that the Fathers
-"employed several criteria, often unequally". And not everyone drew the line
-in the same place: Irenaeus quotes the Shepherd as "the Scripture". Moses' tests
-rule a word out. They do not, by themselves, rule a book in.
+## Two Protestant cautions
+
+Michael Kruger agrees with the reply's conclusion and not with its route. His
+own answer is that the canon authenticates itself: Christ speaks in the books by
+his Spirit, as Calvin rests the certainty of Scripture on "the secret testimony
+of the Spirit" (*Institutes* I.vii.4). Kruger faults the appeal to tests for
+which books belong, while granting that it has "rightly focused on apostolicity
+as a key component of canonicity", that is, on whether a book comes from an
+apostle or his circle (*Canon Revisited*, pp. 67–87). Sound doctrine alone
+cannot pick out the canon, because the Shepherd taught sound doctrine too, and
+it is apostolic time that the Muratorian fragment gives as its reason for
+setting the Shepherd apart.
+
+Lee Martin McDonald doubts that tests settled the list at all. The Fathers, he
+writes, "employed several criteria, often unequally", and the care with which
+they applied them "is, in several instances, highly questionable". Not everyone
+drew the line in the same place: Irenaeus quotes the Shepherd as "the
+Scripture". Moses' tests can show that a word is not from God. By themselves
+they cannot show that a book belongs in the canon.
 
 ## What the checks show
 
-Granted its grounds, the reply delivers what it claims: identifying the canon
-does not require an infallible authority (`canon_tests_deny_the_ground`). It
-does not, on its own, deliver sola scriptura: with the tests granted, Scripture
-may be the sole infallible rule or not, and the reply does not choose
+Granted its three grounds and its step from them, the reply reaches what it
+claims: identifying the canon does not need an infallible authority outside
+Scripture (`canon_tests_deny_the_ground`). The step is the part in dispute. Nor
+does the reply, on its own, deliver sola scriptura: with the tests granted,
+Scripture may be the sole infallible rule or not, and the reply does not choose
 (`canon_tests_leave_the_sole_rule_open`).
 
-Weighed against the objection, the reply and the objection each defeat the
-other. Each contradicts something the other rests on, and each rests at its
-weakest on a link rated `disputed`. The objection rests on the claim that
-identifying the canon needs an infallible authority, cited to Trent, and on its
-own step, which Kruger denies; the reply rests on its step, which Reid denies.
-No rating breaks the tie, so the dispute forces neither
-(`canon_dispute_forces_nothing`), and each can be defended
-(`canon_tests_defensible`, `canon_objection_defensible`). The reply answers the
-objection; it does not defeat it outright. What would move the verdict is a
-ground for one side's weakest link that does better than `disputed`.
+Weighed against each other, each defeats the other. The reply denies a claim
+the objection rests on, and the objection, by holding that claim, denies what
+the reply concludes. Each rests at its weakest on a link rated `disputed`, its
+lowest-rated premise or step. For the objection that is the claim that
+identifying the canon needs an infallible authority outside Scripture, held by
+Trent and Reid and denied by Calvin and Kruger. For the reply it is its step,
+which Reid denies. No rating breaks the tie, so the dispute forces neither: no
+fair weighing of the two must accept one and reject the other
+(`canon_dispute_forces_nothing`). Each can be held, because each answers its
+one attacker (`canon_tests_defensible`, `canon_objection_defensible`). The
+reply answers the objection but does not overthrow it, and the objection does
+not overthrow the reply. The verdict would move only with a new, cited reason
+to rate one of those two links above `disputed`.
 -/
 
 namespace TestimonyArguments.SolaScriptura
@@ -118,15 +145,17 @@ open Testimony Testimony.Logic Testimony.Logic.Framework
 
 /-! #### How the reply is built
 
-The reply is a line of its own, with its own step, because it *denies* the
-objection's ground rather than refusing it: it delivers the negation of the
-claim that identifying the canon needs an infallible authority. A denial is an
-attack, so the reply and the objection can be weighed in a dispute. -/
+Kruger's parity reply only declines to grant that identifying the canon needs
+an infallible authority outside Scripture. This reply asserts the opposite, so
+it is a line of its own with its own step, delivering the negation of that
+claim. Asserting the opposite is an attack, so the reply and the objection can
+be weighed against each other in a dispute (the section "Refusing a ground, and
+denying it" in "Three objections, and the answers to them"). -/
 
 /-- If Scripture tests a word that claims to come from God, by what it says
 and by whether it comes to pass, and the early Church set apart books it read
 for reasons it stated, then identifying the canon does not require an
-infallible authority. -/
+infallible authority outside Scripture. -/
 @[solaScripturaDefs]
 def canonTestsStep : Formula Claim :=
   ⋀ [ p .deut13_1_3ProphetOfOtherGods
@@ -149,31 +178,34 @@ def canonTestsLine : Line Claim :=
 @[solaScripturaDefs]
 def canonTestsReply : ArgumentPackage Claim :=
   canonTestsLine.asPackage cite
-    "identifying the canon does not require an infallible authority"
+    "identifying the canon does not require an infallible authority outside Scripture"
 
 /-! #### What it shows -/
 
 /-- **The reply denies the canon objection's ground.** Granted Moses' two tests
-(Deuteronomy 13:1–3 and 18:20–22) and the early Church's setting apart of
-books it read but did not receive, identifying the canon does not require an
-infallible authority.
+(Deuteronomy 13:1–3 and 18:20–22), the early Church's setting apart of books
+it read but did not receive, and the step from these to the conclusion,
+identifying the canon does not require an infallible authority outside
+Scripture.
 
-What this does not claim: that the grounds are enough. The step from them is
-rated `disputed`, because Reid grants them and denies the conclusion. -/
+What this does not claim: that the three grounds are enough without the step.
+The step is rated `disputed`, because Reid grants the grounds and denies the
+conclusion. -/
 @[headline]
 theorem canon_tests_deny_the_ground : Establishes canonTestsReply := by
   establish [solaScripturaDefs]
 
 #print axioms canon_tests_deny_the_ground
 
-/-- The reply's premises have a model: Kruger's reading, on which no infallible
-authority is needed to identify the canon and every other claim holds. -/
+/-- The reply's premises have a model: the reading on which every claim holds
+except that identifying the canon needs an infallible authority outside
+Scripture (`krugerParityReading`, the reading Kruger's own view gives). -/
 theorem canonTestsReply_is_satisfiable : Satisfiable canonTestsReply.premises := by
   satisfied_by krugerParityReading [solaScripturaDefs]
 
 /-- The reading on which the tests are granted, no infallible authority is
-needed to identify the canon, and Scripture is still not the sole infallible
-rule. -/
+needed outside Scripture to identify the canon, and Scripture is still not the
+sole infallible rule. -/
 def testsWithoutSoleRuleReading : Valuation Claim := fun a =>
   match a with
   | .identifyingCanonRequiresInfallibleAuthority => False
@@ -186,7 +218,8 @@ a reading that grants the tests and still denies the sole rule has it not. Both
 satisfy every premise.
 
 So the reply clears a ground the objection needed, and establishes nothing more
-by itself. The case for sola scriptura is made elsewhere in the argument. -/
+by itself. The Protestant position's own lines carry the case for sola
+scriptura; they are set out in "Three objections, and the answers to them". -/
 @[headline]
 theorem canon_tests_leave_the_sole_rule_open :
     Independent canonTestsLine.premises (p .scriptureIsSoleInfallibleRule) := by
@@ -211,24 +244,24 @@ def canonPartyNode : CanonParty → ArgumentPackage Claim
   | .tests => canonTestsReply
 
 /-- The dispute over the canon: the objection, and the reply from Scripture's
-tests. Every party's premises have a model, every party establishes its
-conclusion, and every party's inferences are rated. -/
+tests. Each side's premises can all be true together, each side's conclusion
+follows from its premises, and every step is rated. -/
 declare_dispute canonDispute := canonPartyNode using solaScripturaDefs
   /-- **Who defeats whom**, all four pairs. The objection and the reply defeat
   each other, and nothing else defeats anything. The reply denies the
-  objection's claim that identifying the canon needs an infallible authority,
-  and the objection, holding that claim, denies what the reply concludes. Both
-  rest at their weakest on a link rated `disputed`, so neither attack is
-  outweighed.
+  objection's claim that identifying the canon needs an infallible authority
+  outside Scripture, and the objection, holding that claim, denies what the
+  reply concludes. Both rest at their weakest on a link rated `disputed`, so
+  neither attack is outweighed.
 
-  Every cell is computed from the parties' premises by `Horn.defeats?` and
-  checked by the kernel. -/
+  Every cell is computed from the two sides' premises and checked by Lean's
+  kernel (`Horn.defeats?`). -/
   defeats [(.objection, .tests), (.tests, .objection)]
-  /-- **Nothing supports anything**: neither party's conclusion is a claim the
-  other rests on. Computed by `supports?` and checked by the kernel. -/
+  /-- Neither side lends the other a premise (`supports?`, checked by the
+  kernel). -/
   supports []
-  /-- **Neither case is part of the other**, and each is part of itself.
-  Computed by `partOf?` and checked by the kernel. -/
+  /-- Neither side's case contains the other's (`partOf?`, checked by the
+  kernel). -/
   partOf []
   /-- The dispute over the canon drawn: the objection and the reply, each
   defeating the other. -/
@@ -251,23 +284,25 @@ declare_verdict canonSettlesNothing for canonDispute :
 
 #print axioms canon_dispute_forces_nothing
 
-/-- Why the reply can be defended: it answers the objection, its only
-attacker, itself. -/
+/-- Why the reply can be defended: it answers its only attacker, the objection,
+without help from any other party. -/
 declare_verdict canonTestsStandAlone for canonDispute :
     .credulous .tests [.tests]
-  /-- **The reply from Scripture's tests can be defended.** A defensible
-  position holds it: the one party that defeats it, the objection, it defeats
-  back. So the canon objection does not refute sola scriptura on this ground. -/
+  /-- **The reply from Scripture's tests can be defended.** Someone can hold
+  it, because the one party that defeats it, the objection, it defeats back. So,
+  on the ratings given, the canon objection does not force the conclusion that
+  Scripture is not the sole rule. By the same verdict the reply does not force
+  the objection out (`canon_objection_defensible`). -/
   proves @[headline] canon_tests_defensible
 
 #print axioms canon_tests_defensible
 
-/-- Why the objection can be defended: it answers the reply, its only attacker,
-itself. -/
+/-- Why the objection can be defended: it answers its only attacker, the reply,
+without help from any other party. -/
 declare_verdict canonObjectionStandsAlone for canonDispute :
     .credulous .objection [.objection]
-  /-- **The canon objection can be defended too.** A defensible position holds
-  it, because it defeats the reply back. Read with the verdict before it: each
+  /-- **The canon objection can be defended too.** Someone can hold it, because
+  it defeats the reply back. Read with the verdict before it: each
   side has an answer to the other, and the dispute does not choose. -/
   proves @[headline] canon_objection_defensible
 

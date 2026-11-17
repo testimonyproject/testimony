@@ -23,7 +23,8 @@ the classical form: *ego vero Evangelio non crederem, nisi me catholicae
 Ecclesiae commoveret auctoritas*. He would not believe the gospel, he says,
 unless the authority of the Catholic Church moved him to. The chapter
 [How the canon is recognised](canon.md) takes a reply that denies that identifying the
-canon needs an infallible authority, from the tests Scripture itself sets.
+canon needs an infallible authority outside Scripture, from the tests Scripture
+itself sets.
 
 **The regress of interpretive authority.** Cross and Judisch argue that the
 individual keeps the final authority to interpret, exercised indirectly by
@@ -414,8 +415,8 @@ teach sola scriptura, then sola scriptura does not bind.
 **`canonObjectionStep`**
 
 If the canon is known only through the Church's reception, and identifying
-the canon requires an infallible authority, then an infallible authority
-outside scripture is needed to identify scripture.
+the canon requires an infallible authority outside scripture, then scripture
+is not the sole infallible rule.
 
 <div class="testimony-derivation">
 
@@ -738,7 +739,7 @@ weighed in the ground's own rating.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-16}{P_{16}}\\) — The canon is known through the Church's reception of it
-- (2) \\(\href{claims.html#claim-17}{P_{17}}\\) — Identifying the canon requires an infallible authority
+- (2) \\(\href{claims.html#claim-17}{P_{17}}\\) — Identifying the canon requires an infallible authority outside Scripture
 - (3) \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-17}{P_{17}}) \rightarrow \lnot \href{claims.html#claim-9}{P_{9}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-9}{P_{9}}\\) — *at issue, the denial of:* Scripture is the sole infallible rule of faith
 
@@ -1145,7 +1146,7 @@ The canon objection, likewise.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-16}{P_{16}}\\) — The canon is known through the Church's reception of it
-- (2) \\(\href{claims.html#claim-17}{P_{17}}\\) — Identifying the canon requires an infallible authority
+- (2) \\(\href{claims.html#claim-17}{P_{17}}\\) — Identifying the canon requires an infallible authority outside Scripture
 - (3) \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-17}{P_{17}}) \rightarrow \lnot \href{claims.html#claim-9}{P_{9}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-9}{P_{9}}\\) — *at issue, the denial of:* Scripture is the sole infallible rule of faith
 
@@ -2026,7 +2027,7 @@ deny, and each denial is an entailment.
 
 **Kruger refuses the canon objection's ground; he does not deny it.** On
 the reading that grants his grounds and still denies the sole rule, identifying
-the canon does require an infallible authority.
+the canon does require an infallible authority outside Scripture.
 
 ```lean
 theorem kruger_refuses_rather_than_denies : ¬Entails canonUnderParity.premises
