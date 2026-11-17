@@ -71,7 +71,10 @@ not list facts; it makes an argument, and an argument has joints.
 ## How a chapter moves
 
 A chapter (a module docstring, or a section introduction) answers one reader's
-question, and is shaped like a short essay:
+question, and is shaped like a short essay. It builds the case up, in the
+literate programming style the `literate-style` skill sets out: each claim is
+introduced in words where the case first needs it, and the conclusion is
+reached, not announced and then taken apart.
 
 1. **The question, with its text.** Open with the verse, the decree or the
    moment, quoted, and the question it raises for someone holding an English

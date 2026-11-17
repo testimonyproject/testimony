@@ -541,6 +541,30 @@ def rated (r : Page.Rated) : String :=
   String.join (r.ratings.map fun (s, c, why) =>
     "| " ++ s ++ " | **" ++ confidence c ++ "** | " ++ escape why ++ " |\n")
 
+/-- A step, built up from its claims, as print sets it (`Latex.step`): each claim
+it needs in words, with its rating and source; then what they give, after ∴;
+then the formula. Any other shape, or a page without a legend, is one row. -/
+def step [DecidableEq α] (order : List α) (cite : Option (α → AtomMeta))
+    (φ : Formula α) : String :=
+  match cite, Latex.stepClaims φ with
+  | some c, some (needs, gives) =>
+    let ground (i : Nat) (a : α) (denied : Bool) : String :=
+      let m := c a
+      "- " ++ rowLabel i ++ " " ++ inlineMath (formula order (Latex.literal a denied)) ++ " " ++
+        (if denied then "*" ++ Latex.Lead.held.denial ++ ":* " else "") ++ escape m.label ++
+        " — *" ++ confidence m.source.confidence ++ "*: " ++ source m.source ++ "\n"
+    Latex.stepOpening ++ "\n\n" ++
+    derivationRows (needs.zipIdx.map (fun ((a, d), i) => ground i a d) ++
+      gives.map fun (a, d) =>
+        "- " ++ inlineMath "\\therefore" ++ " " ++
+          inlineMath (formula order (Latex.literal a d)) ++ " " ++
+          (if d then "*" ++ Latex.Lead.held.denial ++ ":* " else "") ++ escape (c a).label ++
+          "\n") ++
+    "\n" ++ Latex.stepSymbols ++ " " ++ inlineMath (formula order φ) ++ ".\n"
+  | _, _ =>
+    derivationRows [derivationRow order "" φ
+      (cite.bind fun c => Latex.loneGlossWith (inWords order c) φ)]
+
 /-- Render one item against the page's atom ordering, and the legend's citations
 where the page has a legend. A lone formula, or a list of them, is set as rows of
 a derivation, as in print, so a step says what it delivers there too. -/
@@ -561,9 +585,7 @@ def item [DecidableEq α] (order : List α) (cite : Option (α → AtomMeta)) :
       declLabel d (" — " ++ escape l.name) ++ "\n" ++ doc ++ "\n\n" ++
       derivation order cite l.premises l.delivers
   | .formula d doc φ =>
-      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++
-      derivationRows [derivationRow order "" φ
-        (cite.bind fun c => Latex.loneGlossWith (inWords order c) φ)]
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ step order cite φ
   | .formulas d doc φs =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++
       derivationRows (φs.zipIdx.map fun (φ, i) => derivationRow order (rowLabel i) φ
@@ -633,6 +655,17 @@ private def testCite (k : Nat) : AtomMeta :=
     (.imp (.atom 0) (.and (.atom 1) (.imp (.atom 2) .falsum))) ==
   some ("*would give:* \\\\(\\href{#claim-2}{P_{2}}\\\\) claim 1; " ++
     "\\\\(\\href{#claim-3}{P_{3}}\\\\) *denied:* claim 2")
+
+-- A step is built up from its claims, as print builds it.
+#guard step [0, 1, 2] (some testCite) (.imp (.and (.atom 0) (.atom 1)) (.atom 2)) ==
+  "If each of these holds,\n\n" ++
+  "<div class=\"testimony-derivation\">\n\n" ++
+  "- (1) \\\\(\\href{#claim-1}{P_{1}}\\\\) claim 0 — *disputed*: *proposed:* a test\n" ++
+  "- (2) \\\\(\\href{#claim-2}{P_{2}}\\\\) claim 1 — *disputed*: *proposed:* a test\n" ++
+  "- \\\\(\\therefore\\\\) \\\\(\\href{#claim-3}{P_{3}}\\\\) claim 2\n" ++
+  "\n</div>\n\n" ++
+  "In symbols, the step is \\\\((\\href{#claim-1}{P_{1}} \\land \\href{#claim-2}{P_{2}}) " ++
+    "\\rightarrow \\href{#claim-3}{P_{3}}\\\\).\n"
 
 -- Without a legend, nothing is glossed.
 #guard derivation [0] none [] (.atom 0) ==
