@@ -19,6 +19,9 @@
 \newcommand{\gloss}[1]{\enspace---\enspace{\small\itshape #1}}
 \setlength{\emergencystretch}{3em}
 \frenchspacing
+\RequirePackage{geometry}
+\edef\testimony@geometry{width=\the\textwidth,top=22mm,bottom=24mm,footskip=11mm}
+\expandafter\geometry\expandafter{\testimony@geometry}
 \setmainfont{FreeSerif}[Extension=.otf,UprightFont=*,BoldFont=*Bold,
   ItalicFont=*Italic,BoldItalicFont=*BoldItalic,Ligatures=TeX]
 \setmonofont{DejaVuSansMono}[Extension=.ttf,UprightFont=*,BoldFont=*-Bold,

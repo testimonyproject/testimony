@@ -1048,9 +1048,10 @@ author line and its text.
 
 It is built on KOMA-Script's `scrartcl`, the class `preamble` names, rather
 than on LaTeX's plain `article` with the margins and spacing set by hand. KOMA
-sets the text block from the paper and the type size (`DIV`), sets headings in
-the sans-serif face, and keeps a line of text within the length a reader's eye
-can follow. The sans face is FreeSans, so a heading that quotes Greek or Hebrew
+sets the width of the text block from the paper and the type size (`DIV`), so a
+line stays within the length a reader's eye can follow, and sets headings in
+the sans-serif face. Its foot margin, twice the head's, is the one thing
+overridden: it left a wide band of white under every page number. The sans face is FreeSans, so a heading that quotes Greek or Hebrew
 still has the glyphs (`fonts`).
 
 The rest is this library's own: a variable linked to its row in the legend
@@ -1101,6 +1102,14 @@ def style : String :=
   -- sentence; in text full of "ch. 16", "ad loc. Rom" and "p. 80" that reads
   -- as stray double spaces, and justification stretches them further.
   "\\frenchspacing\n" ++
+  -- The line length is KOMA's (`DIV=13`, set by `preamble`); the height is not.
+  -- KOMA gives the foot margin twice the head's, which on A4 left some 45mm
+  -- of white under the page number. Here the page keeps KOMA's width and runs
+  -- the text down to 24mm from the foot, with the number 11mm below it.
+  "\\RequirePackage{geometry}\n" ++
+  "\\edef\\testimony@geometry{width=\\the\\textwidth,top=22mm,bottom=24mm," ++
+  "footskip=11mm}\n" ++
+  "\\expandafter\\geometry\\expandafter{\\testimony@geometry}\n" ++
   fonts ++
   "\\setsansfont{FreeSans}[Extension=.otf,UprightFont=*,BoldFont=*Bold,\n" ++
   "  ItalicFont=*Oblique,BoldItalicFont=*BoldOblique]\n" ++
@@ -1120,9 +1129,11 @@ package's own. `author`, where given, is set under the title, as LaTeX; it is
 how a document carries its credit (`credits`). -/
 def preamble (title : String) (tool : String := "argtex") (author : String := "") :
     String :=
-  -- `DIV=11` at 11pt is KOMA's own recommendation for A4 and letter alike;
-  -- `parskip=false` keeps indented paragraphs, as the prose is written for.
-  "\\documentclass[11pt,DIV=11,parskip=false]{scrartcl}\n" ++
+  -- `DIV=13` divides the page into thirteen strips and gives the margins three,
+  -- a wider text block than `DIV=11` and so fewer pages; `parskip=false` keeps
+  -- indented paragraphs, as the prose is written for. The style file sets the
+  -- page's height (`style`).
+  "\\documentclass[11pt,DIV=13,parskip=false]{scrartcl}\n" ++
   "\\usepackage{testimony}\n" ++
   "\\title{" ++ escape title ++ "}\n" ++
   (if author.isEmpty then "" else "\\author{" ++ author ++ "}\n") ++
