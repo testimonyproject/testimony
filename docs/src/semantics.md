@@ -352,7 +352,7 @@ the article stands in 2:14, which words recur through 2:14–26 — rather than 
 
 ## The checks an article audit needs
 
-Each common charge of fallacy is a question the library can make precise. Five are built; the
+Each common charge of fallacy is a question the library can make precise. Six are built; the
 rest reuse machinery that exists, or that the open issues propose.
 
 | Charge | What is checked | What does it |
@@ -363,7 +363,7 @@ rest reuse machinery that exists, or that the open issues propose.
 | Non sequitur | does the conclusion follow from what the move states? | `refute_with` — built |
 | Indefensible claim | can the move's position survive the dispute? | a hearing — built |
 | False dilemma | does a move pick one reading where others are fair? | `Dilemma` |
-| Straw man | does an attribution match what its subject holds? | meanings of the position |
+| Straw man | does an attribution match what its subject holds? | `Move.strawMen` — built |
 | Misquotation | does a quotation say what the move says it says? | `says`, then the corpus |
 | Cherry-picking | texts on the same words and relation the move ignores | a query over meanings |
 | Double standard | does a party rest a claim on what its own rule refuses? | `ArgumentPackage.heldTo` — claims built ([epistemology](./epistemology.md)) |
@@ -448,8 +448,10 @@ Two of these are worth a word, because Howell's article already supplies them.
   "earn" means by our own efforts, Trent denies it, and the Catholic says so; if it means works
   done in grace meriting an increase of justification, Trent holds it
   (`worksMeritIncreaseOfJustification`). The grammar tells these apart — `works` and
-  `worksOfFaith` are different concepts — so an attribution check can report which reading of
-  the attribution is fair, rather than calling it a straw man or not.
+  `worksOfFaith` are different concepts — so the straw-man check (`Move.strawMen`) can report
+  each reading of the attribution as fair or unfair against Trent's position, rather than
+  calling the whole remark a straw man or not. The article's attribution is not yet written as a
+  move; when it is, each reading will be one.
 - **An implicature is not an assertion.** The Catholic says Luther "added the word alone—but
   alone is not in the original Greek text". Both claims are true of the texts, and the move is
   modelled as asserting exactly them. What it may be taken to imply — that the reading was new

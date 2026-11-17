@@ -158,7 +158,7 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2548 definitions, 241 entries
+info: every entry is a tagged definition, and every key names one: 2577 definitions, 241 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
