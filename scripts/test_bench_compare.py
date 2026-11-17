@@ -109,5 +109,32 @@ class Compare(unittest.TestCase):
         self.assertEqual(plan["confirm"], [])
 
 
+class Acceptances(unittest.TestCase):
+    """Acceptances are read from a file or a directory of files, and only the
+    entries the change adds count."""
+
+    ENTRY = ('[[accept]]\nbenchmark = "{name}"\nmetric = "time"\nup_to = 0.3\n'
+             'reason = "a check the engine did not make before"\n')
+
+    def test_a_directory_is_read_file_by_file(self) -> None:
+        with tempfile.TemporaryDirectory() as d:
+            head, base = Path(d, "head"), Path(d, "base")
+            head.mkdir()
+            base.mkdir()
+            (head / "old.toml").write_text(self.ENTRY.format(name="a"))
+            (base / "old.toml").write_text(self.ENTRY.format(name="a"))
+            (head / "new.toml").write_text(self.ENTRY.format(name="b"))
+            (head / "README.md").write_text("not read")
+            live = bench_compare.acceptances([str(head)], [str(base)])
+            self.assertEqual(list(live), [("b", "time")])
+
+    def test_a_legacy_file_and_a_missing_path_are_read(self) -> None:
+        with tempfile.TemporaryDirectory() as d:
+            legacy = Path(d, "accepted.toml")
+            legacy.write_text(self.ENTRY.format(name="c"))
+            live = bench_compare.acceptances([str(Path(d, "absent")), str(legacy)], None)
+            self.assertEqual(list(live), [("c", "time")])
+
+
 if __name__ == "__main__":
     unittest.main()
