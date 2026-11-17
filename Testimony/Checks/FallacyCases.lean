@@ -234,10 +234,11 @@ end Testimony.Checks.FallacyCases
 
 /-! ### A case the build must refuse
 
-An argument of its own, with a claim type, meanings, and two lines that commit
+An argument of its own, with a claim type, meanings, and three lines that commit
 what `#check_fallacies` fails the build for: one reads "justify" two ways and
-needs it one, one argues from silence alone. The check is run over it, and the
-failure it reports is pinned. If the check stopped refusing either line, this
+needs it one, one argues from silence alone, and one answers a view of Trent's
+that the case's own record of Trent contradicts. The check is run over it, and the
+failure it reports is pinned. If the check stopped refusing any of them, this
 would fail. -/
 
 namespace Testimony.Checks.FallacyCases.Refused
@@ -261,12 +262,19 @@ inductive Claim
   | aloneNotInRomans
   /-- Paul did not teach that faith is the only means of justification. -/
   | paulDidNotTeach
+  /-- Trent held that a person's own works are not enough for justification. -/
+  | trentDeniesOwnWorks
+  /-- Trent held that a person's own works are enough for justification. -/
+  | trentSaysWorksSuffice
+  /-- Works are not enough for justification. -/
+  | worksDoNotSuffice
 deriving DecidableEq, Repr
 
 /-- Every claim. -/
 def all : List Claim :=
   [.romansSays, .jamesSays, .verdictInRomans, .showingInJames, .inconsistent,
-    .aloneNotInRomans, .paulDidNotTeach]
+    .aloneNotInRomans, .paulDidNotTeach, .trentDeniesOwnWorks, .trentSaysWorksSuffice,
+    .worksDoNotSuffice]
 
 /-- What each claim means. -/
 def means : Claim → Statement
@@ -279,6 +287,10 @@ def means : Claim → Statement
   | .aloneNotInRomans => .denied (.occurs .monos rom3_28)
   | .paulDidNotTeach =>
     .denied (.heldBy .paul (rl .soleInstrumentOf (cn .faith) (cn .justification)))
+  | .trentDeniesOwnWorks =>
+    .heldBy .trent (.not (rl .sufficientFor (cn .works) (cn .justification)))
+  | .trentSaysWorksSuffice => .heldBy .trent (rl .sufficientFor (cn .works) (cn .justification))
+  | .worksDoNotSuffice => .holds (.not (rl .sufficientFor (cn .works) (cn .justification)))
 
 /-- The case's meanings. -/
 instance meanings : HasMeanings Claim :=
@@ -300,15 +312,27 @@ def fromSilence : Line Claim :=
   , step := p .aloneNotInRomans ➝ p .paulDidNotTeach
   , delivers := p .paulDidNotTeach }
 
+/-- **Answers a straw man.** Its ground makes Trent say that works are enough,
+which the case's own record of Trent denies, and it argues that they are not. -/
+def strawMan : Line Claim :=
+  { name := "Trent made to say it"
+  , grounds := [p .trentSaysWorksSuffice]
+  , step := p .trentSaysWorksSuffice ➝ p .worksDoNotSuffice
+  , delivers := p .worksDoNotSuffice }
+
 /--
-error: lines that equivocate or argue from silence alone, in:
+error: lines that equivocate, argue from silence alone or answer a straw man, in:
 Testimony.Checks.FallacyCases.Refused.Claim
 A case the build must refuse
-  lines: 2, read: 2
+  lines: 3, read: 3
   read a word in two senses and need it the same:
     contradiction
   argue from silence alone:
     fromSilence
+  answer a view the argument's record says its holder does not hold:
+    strawMan
+  attribute a view, against the argument's record:
+    strawMan: trent, contradicted by trentDeniesOwnWorks
   need a word to keep its sense, unstated:
     contradiction: pistis
 -/

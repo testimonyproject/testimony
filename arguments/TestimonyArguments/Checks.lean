@@ -101,7 +101,8 @@ The Triune God
   joins: 0, with no definition: 0
 The canonical witness
   joins: 7, with no definition: 7
-  not a ground: held by 3, used of a text or voice by 0; derives nothing
+  not a ground: held by 3, used of a text or voice by 6; derives nothing
+  the same sense, both ways: stated or denied by 1; derives nothing
 -/
 #guard_msgs in
 #check_ontology under TestimonyArguments
@@ -114,6 +115,9 @@ Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
   lines: 41, read: 0
 Sola fide
   lines: 49, read: 31
+  attribute a view, against the argument's record:
+    sandersLine: secondTempleJudaism, unrecorded
+    trentWordLine: augustine, unrecorded; latinWest, unrecorded
   need a word to keep its sense, unstated:
     catholicJamesWordLine: erga, dikaioo
     catholicJamesWorksLine: erga, dikaioo
@@ -134,7 +138,12 @@ Sola scriptura
 The Triune God
   lines: 34, read: 0
 The canonical witness
-  lines: 8, read: 0
+  lines: 8, read: 8
+  need a word to keep its sense, unstated:
+    hebrewsLine: pistis
+    johannineLine: pisteuo
+    paulineFaithLine: dikaioo
+    paulineLine: pistis, sozo, erga
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments
@@ -152,13 +161,13 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2570 definitions, 264 entries
+info: every entry is a tagged definition, and every key names one: 2583 definitions, 264 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 2540 definitions, 264 entries
+info: every entry is a tagged definition, and every key names one: 2564 definitions, 264 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments

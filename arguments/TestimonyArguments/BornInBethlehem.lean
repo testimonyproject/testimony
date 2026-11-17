@@ -6,26 +6,48 @@ import Testimony.Scripture
 import TestimonyArguments.Works
 
 /-!
-# TestimonyArguments.BornInBethlehem — Phase 1 vertical slice
+# TestimonyArguments.BornInBethlehem — Born in Bethlehem: Micah 5:2
 
-Matthew 2:5–6 quotes Micah 5:2 as grounds that the Messiah is born in
-Bethlehem. Both the Christian predictive reading and a critical reading are
-encoded, and the argument is carried through to a `SatisfactionWitness` — the
-first end-to-end connection from cited premises to a claim that a person meets
-a messianic criterion.
+When the magi came asking where the king of the Jews was to be born, Herod put
+the question to the chief priests and scribes, and Matthew gives their answer:
 
-`jesusBornInBethlehem` is cited to scripture alone. That is visible in the
-generated manifest via `scriptureOnlyAtoms`, and it should be: the historicity
-of the Bethlehem birth is disputed in critical scholarship, and an argument
-that assumes it on the authority of the texts whose reading is in question is
-assuming part of what it sets out to show.
+> "In Bethlehem of Judea, for so it is written by the prophet: 'And you, O
+> Bethlehem, in the land of Judah, are by no means least among the rulers of
+> Judah; for from you shall come a ruler who will shepherd my people Israel.'"
+> (Matthew 2:5–6)
 
-The argument is short enough to stay in one file. It runs on a **single line of
-reason**, which is exactly why it is the weakest of the fulfilment arguments
-and why `critical_not_establishes` costs the rival so little: deny the one
-interpretive premise and nothing is left standing. Compare `BornOfAVirgin`,
-which runs on four.
--/
+The prophet is Micah, who prophesied in the eighth century before Christ:
+
+> "But you, O Bethlehem Ephrathah, who are too little to be among the clans of
+> Judah, from you shall come forth for me one who is to be ruler in Israel, whose
+> coming forth is from of old, from ancient days." (Micah 5:2)
+
+Matthew's form of the verse is not Micah's word for word, but that Matthew is
+quoting Micah no one disputes, and it is recorded as a quotation. What is
+disputed is what Micah meant. On the Christian reading, which Keil and
+Delitzsch give in their commentary, the oracle looks forward: it names the
+birthplace of the Messiah. R. T. France reads Matthew as claiming that
+prediction fulfilled. On the critical reading, for which Raymond Brown's *The
+Birth of the Messiah* is cited, the oracle is about a ruler of Micah's own day,
+and no birthplace for a later Messiah follows from it.
+
+Both readings are written out and checked. On the Christian premises the
+conclusion follows, and it is carried all the way to a claim about a person:
+that Jesus meets the criterion "born in Bethlehem" (`jesus_satisfies_bethlehem`).
+On the critical premises it does not follow (`critical_not_establishes`).
+
+Two things limit what that shows. The first is that the argument runs on a
+single line of reason, from Micah's oracle through Matthew's reading of it. So
+it is the weakest of the library's fulfilment arguments: deny the one reading of
+Micah and nothing is left standing, which is why the critical reading costs its
+holders so little. The argument "Born of a virgin", by contrast, runs on four
+strands. The second is that the claim that Jesus was born in Bethlehem is cited
+to the birth narratives of Matthew and Luke alone. The historicity of the
+Bethlehem birth is disputed in critical scholarship, so the claim is rated
+`disputed`, and the manifest lists it among the claims resting on Scripture
+alone (`scriptureOnlyAtoms`). An argument that took it on the authority of the
+texts whose reading is in question would be assuming part of what it sets out to
+show, and the page says so rather than hiding it. -/
 
 namespace TestimonyArguments.BornInBethlehem
 
@@ -131,7 +153,9 @@ def cite : Claim → AtomMeta
 
 /-! ### The line of reason
 
-One strand, and the argument's whole weight is on it. -/
+One strand carries the argument's whole weight. If Micah 5:2 foretells the
+Messiah's birthplace, and Matthew quotes it meaning that, then the Messiah must
+be born in Bethlehem. If he must, and Jesus was, Jesus meets the criterion. -/
 
 /-- From the predictive reading and Matthew's intent, the criterion follows. -/
 @[bornInBethlehemDefs]
@@ -154,8 +178,9 @@ def predictiveLine : Line Claim :=
   , step := toCriterion
   , delivers := p .messiahBornInBethlehem }
 
-/-- The critical line: the quotation is granted and the prediction denied, so
-the same step delivers nothing. -/
+/-- **The critical line.** Matthew's quotation is granted, Micah's oracle is read
+as one about a ruler of his own day, and the prediction is denied. The step is
+the same, but its first ground is missing, so it delivers nothing. -/
 @[bornInBethlehemDefs]
 def criticalLine : Line Claim :=
   { predictiveLine with
@@ -166,7 +191,8 @@ def criticalLine : Line Claim :=
 
 /-! ### Packages -/
 
-/-- The Christian predictive argument. -/
+/-- **The Christian reading**: the predictive line, with the claim that Jesus was
+born in Bethlehem. -/
 @[bornInBethlehemDefs]
 def christian : ArgumentPackage Claim :=
   { name := "Christian predictive reading of Micah 5:2"
@@ -175,7 +201,7 @@ def christian : ArgumentPackage Claim :=
   , conclusion := p .jesusSatisfiesCriterion
   , conclusionLabel := fulfillmentLabel jesus bornInBethlehem }
 
-/-- The critical reading: the quotation is granted, the prediction is not. -/
+/-- **The critical reading**: the quotation is granted, the prediction is not. -/
 @[bornInBethlehemDefs]
 def critical : ArgumentPackage Claim :=
   { christian with
@@ -184,16 +210,20 @@ def critical : ArgumentPackage Claim :=
 
 /-! ### Results -/
 
-/-- Given the Christian premises, the conclusion follows. -/
+/-- On the Christian premises, Jesus meets the Bethlehem criterion: if Micah
+foretells the birthplace, Matthew claims the fulfilment, and Jesus was born
+there, the conclusion follows. It does not show that any of the three is true;
+the prediction and the birth are both disputed. -/
 @[headline]
 theorem christian_establishes : Establishes christian := by
   establish [bornInBethlehemDefs]
 
 #print axioms christian_establishes
 
-/-- The critical reading, written down: Micah's oracle concerns a contemporary
-Judaean ruler, so no messianic birthplace criterion arises and nothing about
-Jesus follows from it. -/
+/-- The critical reading, written down: Micah's oracle concerns a ruler of
+Micah's own day in Judah, so no birthplace for the Messiah is foretold, and
+nothing about Jesus follows from it. Every critical premise holds on this
+reading and the conclusion fails. -/
 def criticalReading : Valuation Claim := fun a =>
   match a with
   | .micahPredictsBethlehem => False
@@ -201,16 +231,21 @@ def criticalReading : Valuation Claim := fun a =>
   | .jesusSatisfiesCriterion => False
   | _ => True
 
-/-- The critical reading does not establish the conclusion. -/
+/-- On the critical premises the conclusion does not follow: there is a way of
+taking the texts, the critical reading above, on which every one of them holds
+and Jesus does not meet the criterion. It does not show that the critical
+reading is right, only that it can be held consistently. -/
 @[headline]
 theorem critical_not_establishes : ¬ Establishes critical := by
   refute_with criticalReading [bornInBethlehemDefs]
 
 #print axioms critical_not_establishes
 
-/-- End to end: under the Christian package, Jesus satisfies the Bethlehem
+/-- End to end: on the Christian premises, Jesus satisfies the Bethlehem
 criterion. This is the first result in the library that runs from cited
-premises through a machine-checked entailment to a claim about a person. -/
+premises, through an entailment the machine checks, to a claim about a person.
+It is conditional like every other result here: it holds for a reader who grants
+the Christian premises, and says nothing to one who does not. -/
 @[headline]
 theorem jesus_satisfies_bethlehem : Satisfies jesus bornInBethlehem :=
   ⟨{ α := Claim
@@ -220,7 +255,7 @@ theorem jesus_satisfies_bethlehem : Satisfies jesus bornInBethlehem :=
 
 #print axioms jesus_satisfies_bethlehem
 
-/-! ### Satisfiability
+/-! #### Satisfiability
 
 `Entails` is vacuously true over a premise set with no model, so a package built
 from contradictory premises would establish its conclusion with every gate
