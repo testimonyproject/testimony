@@ -2,15 +2,17 @@ import TestimonyArguments.SolaScriptura.Atoms
 import TestimonyArguments.Works
 
 /-!
-# TestimonyArguments.SolaScriptura.Sources — citation and classification for every atom
+# TestimonyArguments.SolaScriptura.Sources — a source for every claim
 
-`cite` is total, so an uncited atom does not compile.
+Every claim in the argument is given a source here: a passage of Scripture, or a
+work and the place in it, with a rating that says how well supported it is among
+the sources cited.
 
-Where the positions disagree about an atom they are given the source that
-actually holds the claim: the Orthodox premise cites Florovsky and Ware rather
-than a Protestant account of Orthodoxy, and Tradition 0 cites Geisler rather
-than Mathison's description of it — Geisler's principal complaint being that
-the description is a caricature.
+Where the positions disagree about a claim, each is given the source that
+actually holds it. The Orthodox premise cites Florovsky and Ware rather than a
+Protestant account of Orthodoxy, and Tradition 0 cites Geisler rather than
+Mathison's description of it, since Geisler's principal complaint is that the
+description is a caricature.
 -/
 
 namespace TestimonyArguments.SolaScriptura
@@ -26,7 +28,7 @@ private def heldBy (entry : BibEntry) (loc : String) (tradition : Tradition)
   , tradition := tradition
   , confidence := confidence }
 
-/-! ### Ratings for inference steps
+/-! #### Ratings for inference steps
 
 A step's rating is its own, cited to whoever grants its grounds and denies its
 conclusion — or, where no one was found who does, to whoever grants both. -/

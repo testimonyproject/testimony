@@ -28,7 +28,7 @@ Compile with a Unicode engine — the claims contain Greek and Hebrew, and the
 rendered statements contain `¬`, `→` and `⊢`:
 
 ```sh
-lake exe argtex
+lake exe bibgen && lake exe argtex
 cd .. && python3 scripts/credits.py docs/latex docs/latex/arguments
 python3 scripts/edition.py docs/latex docs/latex/arguments
 cd docs/latex && tectonic arguments.tex
@@ -87,7 +87,7 @@ def standaloneNote : String :=
 /-- How the book is made again: `argtex`, in `arguments/`, writes it. -/
 def bookMade : Logic.Latex.Reproduction :=
   { package := "arguments", tool := "argtex", dir := "docs/latex",
-    file := "arguments.tex" }
+    file := "arguments.tex", before := ["bibgen"] }
 
 /-- The whole document: every catalogued argument, set as `latexDocument` sets
 any package's. -/

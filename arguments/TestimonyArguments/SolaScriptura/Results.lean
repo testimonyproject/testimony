@@ -2,12 +2,18 @@ import TestimonyArguments.SolaScriptura.Packages
 import Testimony.Logic.Tactic
 
 /-!
-# TestimonyArguments.SolaScriptura.Results — what does and does not follow
+# TestimonyArguments.SolaScriptura.Results — what follows, and what does not
 
-The results this module exists for are the two on the hinge. The seed asserted
-in prose that the dispute reduces to `solaScripturaIsTaughtByScripture`; here
-that claim is split into the two roles the premise actually plays, because they
-come apart.
+Each result takes one position, objection or reply and asks whether its
+conclusion follows from its premises. Where it does, the result says so. Where
+it does not, the result names a consistent way of taking the texts on which
+every premise holds and the conclusion fails. Where a reply leaves a question
+open, the result says that neither the question nor its denial follows.
+
+The results to read first are the two on whether Scripture must teach the
+principle, because they split the premise the first version of this argument
+said everything turned on (`hinge_not_load_bearing_for_conclusion`,
+`classical_answer_blocks_self_refutation`).
 -/
 
 namespace TestimonyArguments.SolaScriptura
@@ -16,7 +22,7 @@ open Testimony
 
 open Testimony Testimony.Logic
 
-/-! ### The positions -/
+/-! #### The positions -/
 
 /-- Given the Protestant premises, on any of its three routes, the conclusion
 follows. -/
@@ -76,16 +82,16 @@ def orthodoxReading : Valuation Claim := fun a =>
   | .scriptureIsSoleInfallibleRule => False
   | _ => True
 
-/-- Orthodoxy also entails the negation, and on its own premise. The seed
-encoding grounded a single "Catholic/Orthodox" line on magisterial
-infallibility, which attributes to Orthodoxy a premise it does not hold. -/
+/-- Orthodoxy also entails the negation, and on its own premise. Its line is
+kept apart from Rome's, because grounding the two on magisterial infallibility
+would attribute to Orthodoxy a premise it does not hold. -/
 @[headline]
 theorem orthodox_not_establishes : ¬ Establishes orthodox := by
   refute_with orthodoxReading [solaScripturaDefs]
 
 #print axioms orthodox_not_establishes
 
-/-! ### The three objections, each valid on its own grounds -/
+/-! #### The three objections, each valid on its own grounds -/
 
 /-- The self-refutation objection is valid: granted that only scriptural
 doctrine binds and that scripture does not teach sola scriptura, the position
@@ -116,7 +122,7 @@ theorem interpretiveRegress_is_valid : Establishes interpretiveRegress := by
 
 #print axioms interpretiveRegress_is_valid
 
-/-! ### The hinge, in its two roles
+/-! #### The hinge, in its two roles
 
 `solaScripturaIsTaughtByScripture` does two jobs, and they come apart. It is
 not load-bearing for reaching the conclusion, because the eliminative line
@@ -150,12 +156,11 @@ theorem hinge_is_load_bearing_within_classical_strand :
 
 #print axioms hinge_is_load_bearing_within_classical_strand
 
-/-! ### The two answers to self-refutation
+/-! #### The two answers to self-refutation
 
-The objection's step is a conjunction, so there are two ways to deny it. The
-seed encoded only the first. Neither answer is redundant with the other: each
-removes a different ground, and the objection succeeds only if both are
-refused. -/
+The objection's step is a conjunction, so there are two ways to deny it.
+Neither answer is redundant with the other: each removes a different ground,
+and the objection succeeds only if both are refused. -/
 
 /-- The reading on which scripture does teach the principle. -/
 def scriptureTeachesItReading : Valuation Claim := fun _ => True
@@ -178,36 +183,31 @@ def finalArbiterReading : Valuation Claim := fun a =>
   | .solaScripturaIsTaughtByScripture => False
   | _ => True
 
-/-- **And the final-arbiter answer blocks it too, without the hinge.** This is
-the answer the seed did not encode. It concedes that scripture does not teach
-the principle in the sense the objection requires, and denies instead that the
-bindingness rule governs a claim of this kind.
+/-- **And the final-arbiter answer blocks it too, without the hinge.** It
+concedes that scripture does not teach the principle in the sense the objection
+requires, and denies instead that the bindingness rule governs a claim of this
+kind.
 
 So the objection is defeated on either route, and succeeds only against a
-position that refuses both — which is what "the dispute reduces to the hinge"
-was gesturing at, and is narrower than that phrase suggests. -/
+position that refuses both. The dispute does not reduce to the hinge alone. -/
 @[headline]
 theorem scoping_blocks_self_refutation : ¬ Establishes selfRefutationUnderScope := by
   refute_with finalArbiterReading [solaScripturaDefs]
 
 #print axioms scoping_blocks_self_refutation
 
-/-! ### The parity replies, and what they are worth
+/-! #### The parity replies, and what they are worth
 
 Kruger on the canon and Mathison on interpretive authority make the same move:
 concede the circularity, deny that it discriminates between the positions.
 
-Each used to get two results — one that it blocks the objection, one that it
-establishes nothing — and that is one result too many. A premise set that
-entails neither a proposition nor its negation leaves that proposition
-*independent* of it, and blocking and establishing-nothing are the two halves
-of that single fact. Foundation names the notion for provability;
-`Testimony.Logic.Independent` is its semantic counterpart, and `leaves_open`
-proves it from the two readings the premises admit.
-
-The gain is not brevity. Stated as a pair, nothing checks that the two halves
-are about the same proposition — and in the Geisler case below they were
-not. -/
+Each gets one result. A premise set that entails neither a proposition nor
+its negation leaves that proposition *independent* of it, and blocking the
+objection and establishing nothing are the two halves of that single fact.
+Foundation names the notion for provability; `Testimony.Logic.Independent` is
+its semantic counterpart, and `leaves_open` proves it from the two readings the
+premises admit. Stated once, the two halves are checked to be about the same
+proposition. -/
 
 /-- The reading on which the parity point is granted and the sole rule still
 does not follow: the canon came through the Church, the rival's authority is
@@ -276,7 +276,7 @@ theorem parity_leaves_the_distinction_open :
 
 #print axioms parity_leaves_the_distinction_open
 
-/-! ### Geisler's circle -/
+/-! #### Geisler's circle -/
 
 /-- The reading on which neither the consensus nor the clarity it is said to
 rest on obtains. -/
@@ -334,7 +334,7 @@ theorem circle_leaves_the_perspicuity_open :
 
 #print axioms circle_leaves_the_perspicuity_open
 
-/-! ### Geisler's charge, and the three replies
+/-! #### Geisler's charge, and the three replies
 
 The cycle results above are a formal fact about a cycle of implications. These
 are about the charge as an argument: whether it goes through, and what answers
@@ -467,7 +467,7 @@ theorem circle_parity_concedes_the_charge :
 
 #print axioms circle_parity_concedes_the_charge
 
-/-! ### Refusing a ground, and denying it
+/-! #### Refusing a ground, and denying it
 
 Every reply above is written the same way, as the objection's own line with a
 ground replaced. That shape covers two different moves. A reply can **deny** the
@@ -538,7 +538,7 @@ theorem barrett_denies_the_ground :
     Entails defeatUnderParity.premises (∼(notP .everyUltimateAuthorityIsCircular)) := by
   establish [solaScripturaDefs]
 
-/-! ### Satisfiability
+/-! #### Satisfiability
 
 `Entails` quantifies over the valuations satisfying the premises, so a premise
 set with no model entails everything — including the negation of what its own

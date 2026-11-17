@@ -46,8 +46,8 @@ infallible.
 
 Mark 7 is not the only text for the principle. Jesus' sayings in John 10:35 and
 Matthew 5:18, and Paul's in Galatians 1:8–9 and Colossians 2:8, 20–22, deliver
-it too, and without that premise they leave the sole rule just as open
-(`JesusAndPaul.lean`).
+it too, and without that premise they leave the sole rule just as open (the
+chapter "The same principle, beyond Mark 7").
 
 ## What Rome's "tradition" means
 

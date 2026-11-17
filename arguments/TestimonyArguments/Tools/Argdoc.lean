@@ -22,6 +22,7 @@ open Testimony.Doc TestimonyArguments.Doc
 def site : Site :=
   { tool := "argdoc", sourceRoot := "arguments/"
   , pagesDir := "../docs/src/arguments", summaryPath := "../docs/src/SUMMARY.md"
+  , summaryTemplate := some "../docs/templates/SUMMARY.md"
   , pdf := "../pdf/arguments.pdf", argumentPdfDir := "../pdf/arguments" }
 
 /-- Entry point. -/

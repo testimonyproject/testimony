@@ -1,11 +1,17 @@
 import TestimonyArguments.SolaScriptura.Lines
 
 /-!
-# TestimonyArguments.SolaScriptura.Packages — the positions, and the variants results refute
+# TestimonyArguments.SolaScriptura.Packages — the positions, written out
 
-Four positions on tradition, three objections, two parity replies, and the
-variants each result needs. The rivals were written before anything was proved
-about the position argued for.
+Besides the Protestant position, Tradition I, these are written out: Tradition
+0, as Geisler holds it; Trent, as Tradition II; Tradition III, resting on
+Vatican I; the Orthodox position, as Florovsky and Ware state it; the three
+objections, each as an argument of its own; and the replies to them. The rivals
+were written before anything was proved about the position argued for.
+-/
+
+/-!
+#### How the variants are written
 
 Several packages are built to be *refuted*. A reply is shown to block an
 objection by writing the objection's line on the reply's grounds and exhibiting
@@ -26,7 +32,7 @@ open Testimony Testimony.Logic
 /-- The label every package concluding the sole rule shares. -/
 private def soleRuleLabel : String := "scripture is the sole infallible rule of faith"
 
-/-! ### The positions -/
+/-! #### The positions -/
 
 /-- **The Protestant position**: three routes to the conclusion, on the
 final-arbiter reading — the classical, the eliminative, and Mark 7's, whose
@@ -90,7 +96,7 @@ def orthodox : ArgumentPackage Claim :=
   { orthodoxLine.asPackage cite soleRuleLabel with
     conclusion := p .scriptureIsSoleInfallibleRule }
 
-/-! ### The objections -/
+/-! #### The objections -/
 
 /-- The self-refutation objection, as a package concluding the negation. -/
 @[solaScripturaDefs]
@@ -109,7 +115,7 @@ def interpretiveRegress : ArgumentPackage Claim :=
   interpretiveRegressLine.asPackage cite
     "sola scriptura does not differ in principle from solo scriptura"
 
-/-! ### The two answers to self-refutation -/
+/-! #### The two answers to self-refutation -/
 
 /-- The objection with the classical answer in place of the ground it needed. -/
 @[solaScripturaDefs]
@@ -126,18 +132,16 @@ def selfRefutationUnderScope : ArgumentPackage Claim :=
     name := "Self-refutation objection, answered by scoping the bindingness rule"
     premises := selfRefutationUnderFinalArbiter.premises }
 
-/-! ### The parity replies
+/-! #### The parity replies
 
 No package here. What a parity reply does is stated as `Independent` over the
 reply's own line — see `Results` — and independence is a claim about a premise
-set and a proposition, not about a package's conclusion. Four packages used to
-stand here, two per reply, because `Establishes` is package-shaped and the
-reply had to be asked its question twice: once for the block and once for the
-conclusion. One statement replaces each pair, and the scaffolding goes with
-them.
+set and a proposition, not about a package's conclusion, so one statement asks
+the reply both questions: whether it blocks the objection and whether it
+establishes the conclusion.
 -/
 
-/-! ### The hinge, in its two roles -/
+/-! #### The hinge, in its two roles -/
 
 /-- The Protestant position with the classical line stripped of the hinge. The
 eliminative and Mark 7 routes are untouched. -/
@@ -161,7 +165,7 @@ def classicalStrandWithoutHinge : ArgumentPackage Claim :=
     [ p .timothy3_16GodBreathed, p .timothy3_17ThoroughlyEquips
     , p .scriptureIsSufficient, p .scriptureIsPerspicuous ]).asPackage cite soleRuleLabel
 
-/-! ### Geisler's charge, and the three replies -/
+/-! #### Geisler's charge, and the three replies -/
 
 /-- Geisler's charge, stated as its holder states it. -/
 @[solaScripturaDefs]
@@ -189,10 +193,10 @@ def geislerCircleUnderScripturalBounding : ArgumentPackage Claim :=
 
 /-- Barrett's parity grounds, asked about the charge itself.
 
-Not "asked to clear the charge", which is what this package used to ask. The
-reply concedes the circle — `traditionIReasoningIsCircular` is one of its
-grounds — so the interesting question is not whether it fails to deliver the
-denial but that it delivers the charge. Asked the weaker question the answer is
+The question is not whether the reply clears the charge. The reply concedes
+the circle — `traditionIReasoningIsCircular` is one of its grounds — so what
+matters is not that it fails to deliver the denial but that it delivers the
+charge. Asked the weaker question the answer is
 "no"; asked this one it is "yes, by its own premises". -/
 @[solaScripturaDefs]
 def circleParityConcedingTheCharge : ArgumentPackage Claim :=
@@ -202,7 +206,7 @@ def circleParityConcedingTheCharge : ArgumentPackage Claim :=
     conclusion := p .traditionIReasoningIsCircular
     conclusionLabel := "Tradition I's reasoning is circular" }
 
-/-! ### Geisler's circle -/
+/-! #### Geisler's circle -/
 
 /-- Both legs of the circle Geisler alleges in Tradition I, asked for the
 consensus. -/
@@ -214,10 +218,8 @@ def traditionICircle : ArgumentPackage Claim :=
   , conclusion := p .creedalConsensusIsHermeneuticallyNecessary
   , conclusionLabel := "the creedal consensus is hermeneutically necessary" }
 
--- A second package asking the circle for its other end used to stand here. It
--- is gone for the reason the parity scaffolding went: `Independent` takes a
--- premise list and a proposition, so both ends of the circle are asked of one
--- package, and a variant whose only difference was its conclusion was a way of
--- putting a question that the question can now be put without.
+-- Both ends of the circle are asked of this one package: `Independent` takes a
+-- premise list and a proposition, so no variant differing only in its
+-- conclusion is needed.
 
 end TestimonyArguments.SolaScriptura

@@ -59,6 +59,7 @@ def checkPostulates (roots : List Name) : CommandElabM Unit := do
     throwError m!"packages emptied by their meanings:\n{MessageData.joinSep problems.toList "\n"}"
   if checked == 0 then
     throwError "#check_postulates found no package to check"
+  for r in roots do recordChecked `postulates r
   logInfo m!"every package has a model with its postulates: {checked}, and {undecided} undecided"
 
 /-- `#check_postulates under N` checks every package declared under the
@@ -156,6 +157,7 @@ def checkRefutationsPostulates (roots : List Name) : CommandElabM Unit := do
   unless problems.isEmpty do
     throwError m!"non-entailments undone by their meanings:\n{
       MessageData.joinSep problems.toList "\n"}"
+  for r in roots do recordChecked `refutationsPostulates r
   logInfo m!"every non-entailment survives its postulates: {checked}, and {undecided} undecided"
 
 /-- `#check_refutations_postulates under N` checks every non-entailment declared

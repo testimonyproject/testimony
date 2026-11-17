@@ -1,4 +1,5 @@
 import Testimony.Logic.Aif
+import Testimony.Checks.Coverage
 import Testimony.Checks.Fixture
 
 /-!
@@ -26,6 +27,12 @@ def aifLine (g : Testimony.Logic.Aif.Graph) : String × Bool :=
   (toString (g.count .i) ++ " I, " ++ toString (g.count .ra) ++ " RA, " ++
     toString (g.count .ca) ++ " CA, " ++ toString (g.count .pa) ++ " PA, " ++
     toString g.edges.length ++ " edges", g.wellFormed)
+
+/-- Whether a constant's type is a dispute's `Finite` defeat table, which the
+check draws, rather than a hearing's. -/
+def isDisputeTable (ty : Expr) : Bool :=
+  ty.isAppOfArity ``Testimony.Logic.Solver.Finite 2 &&
+    ty.appArg!.isAppOf ``Testimony.Logic.Dispute.defeats
 
 /-- Draw every listed dispute under `root` as an AIF graph and check it; see
 the module docstring. -/
@@ -57,6 +64,7 @@ def checkAif (root : Name) : CommandElabM Unit := do
       (broken.toList.map toMessageData) "\n"}"
   if lines.isEmpty then
     throwError "#check_aif found no dispute to draw"
+  recordChecked `aif root
   logInfo m!"every dispute, as an AIF graph meeting Definition 1.1:\n{
     String.intercalate "\n" (lines.qsort (· < ·)).toList}\nand {hearings} hearings, drawn with \
     the disputes they restrict"

@@ -967,9 +967,9 @@ def repository : String := "https://github.com/testimonyproject/testimony"
 the commit its last section tells a reader to check out, as macros a document
 reads from `edition.def` beside it.
 
-None of them is known when the `.tex` is generated: it is generated before it
-is committed, and a pull request is typeset from GitHub's merge of it, whose
-commit does not exist until then. So the file is written when the document is
+None of them belongs in the generator: the same source must make the same
+`.tex` on every machine, and a pull request is typeset from GitHub's merge of
+it, whose commit does not exist until then. So the file is written when the document is
 typeset, by `scripts/edition.py`, from the commit being typeset, as
 `credits.def` is by `scripts/credits.py`. Without it the document says it is an
 unrecorded copy, and dates itself the day it was typeset. -/
@@ -995,6 +995,9 @@ structure Reproduction where
   /-- Whether the document names the people behind it, so that the steps
   include working out who they are (`credits`). -/
   credits : Bool := false
+  /-- The programs to run in the package before `tool`: what writes the files
+  the document needs beside it, such as the bibliography (`bibgen`). -/
+  before : List String := []
 deriving Inhabited, Repr
 
 /-- **How this edition was made**, the document's last section: what made it,
@@ -1049,7 +1052,7 @@ def reproduction (r : Reproduction) : String :=
   "it would stop here with an error:\n" ++
   cmd ["cd " ++ r.package, "lake build"] ++
   "\\item Write the document from the source:\n" ++
-  cmd ["lake exe " ++ r.tool, "cd .."] ++
+  cmd ((r.before ++ [r.tool]).map ("lake exe " ++ ·) ++ ["cd .."]) ++
   "\\item Record the edition" ++
   (if r.credits then ", and work out from the repository's history who wrote " ++
     "each argument" else "") ++ ":\n" ++

@@ -23,11 +23,11 @@ name: PDF
 # a LaTeX error is caught before it reaches main. docs.yml calls it to put the
 # PDFs beside the site, and release.yml to attach them to a tagged release.
 #
-# The arguments' and the examples' .tex files are generated but committed, and
-# ci.yml fails a change that leaves them stale, so they are typeset as
-# committed. Their bibliographies are not committed beside them: the arguments'
-# is the committed references.bib at the root, copied beside each; the examples' is
-# written by `lake exe exampletex`, which is why this job builds that package.
+# The arguments' and the examples' .tex files, and references.bib, are generated
+# from the Lean source here (scripts/generate-docs.sh), not committed, so this job
+# builds the arguments and the examples. The arguments' bibliography is the
+# generated references.bib, copied beside each document; the examples' is
+# written beside theirs by `lake exe exampletex`.
 #
 # On a pull request it runs only when the change touches a build input, as
 # ci.yml's build does (scripts/ci_changes.py), and the image is rebuilt only
@@ -106,6 +106,10 @@ jobs:
       - name: Fetch Mathlib oleans
         run: lake exe cache get
 
+      # The documents are generated from the Lean source, not committed.
+      - name: Generate documentation
+        run: scripts/generate-docs.sh
+
       # The checkout belongs to the runner, not to the container's user, and
       # git refuses to read a repository someone else owns until told it is
       # safe.
@@ -118,14 +122,11 @@ jobs:
           cp references.bib docs/latex/arguments/
           scripts/typeset.sh docs/latex/arguments.tex docs/latex/arguments/*.tex
 
-      # `exampletex` writes the documents and the bibliography beside them;
-      # `--check` first, so a stale committed document fails here as in ci.yml
-      # rather than being typeset as regenerated.
+      # `exampletex`, in the generation step, wrote the documents and the
+      # bibliography beside them.
       - name: Examples
         working-directory: examples
         run: |
-          lake exe exampletex --check
-          lake exe exampletex
           python3 ../scripts/edition.py docs/latex
           ../scripts/typeset.sh docs/latex/*.tex
 
@@ -140,4 +141,18 @@ jobs:
         with:
           name: pdfs
           path: pdf/
+          if-no-files-found: error
+
+      # The site's generated pages, for the deploy in docs.yml to build the book
+      # from.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: generated
+          path: |
+            references.bib
+            docs/src/bibliography.md
+            docs/src/arguments/
+            docs/src/SUMMARY.md
+            docs/src/roadmap.md
+            docs/src/maturity.md
           if-no-files-found: error

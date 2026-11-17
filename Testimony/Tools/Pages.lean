@@ -609,7 +609,7 @@ def writeOrCheck (tool : String) (files : List (System.FilePath × String)) (che
       IO.println s!"{tool}: generated files are up to date"
       return 0
     for path in stale do
-      IO.eprintln s!"{tool}: {path} is stale — run `lake exe {tool}` and commit the result"
+      IO.eprintln s!"{tool}: {path} is stale — run `lake exe {tool}`"
     return 1
   for (path, contents) in files do
     if let some dir := path.parent then IO.FS.createDirAll dir
