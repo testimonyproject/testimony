@@ -92,6 +92,9 @@ def standalone (a : Argument) : String :=
 -- its directory (`.github/workflows/release.yml`), so none may be the book's.
 #guard (arguments.map (·.slug)).eraseDups.length == arguments.length
 #guard arguments.all (·.slug != "arguments")
+-- Each document is also set on US Letter as `<slug>-letter.pdf`
+-- (`scripts/typeset.sh --paper letter`), so no slug may take that form.
+#guard arguments.all (!·.slug.endsWith "-letter")
 
 /-- Every file `argtex` writes: the book, then each argument alone, and the house
 style beside each, which every one of them loads (`Logic.Latex.style`). -/

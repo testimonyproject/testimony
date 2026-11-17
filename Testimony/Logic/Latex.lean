@@ -1134,7 +1134,12 @@ def preamble (title : String) (tool : String := "argtex") (author : String := ""
   -- a wider text block than `DIV=11` and so fewer pages; `parskip=false` keeps
   -- indented paragraphs, as the prose is written for. The style file sets the
   -- page's height (`style`).
-  "\\documentclass[11pt,DIV=13,parskip=false]{scrartcl}\n" ++
+  --
+  -- The paper is A4 unless `\testimonypaper` names another before the document
+  -- is read: `scripts/typeset.sh --paper letter` typesets a US Letter edition
+  -- through a one-line wrapper that defines it, so one `.tex` makes both.
+  "\\providecommand{\\testimonypaper}{a4}\n" ++
+  "\\documentclass[11pt,paper=\\testimonypaper,DIV=13,parskip=false]{scrartcl}\n" ++
   "\\usepackage{testimony}\n" ++
   "\\title{" ++ escape title ++ "}\n" ++
   (if author.isEmpty then "" else "\\author{" ++ author ++ "}\n") ++

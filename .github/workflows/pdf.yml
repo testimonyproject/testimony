@@ -3,7 +3,8 @@ name: PDF
 # Typesets the print editions: the arguments together (docs/latex/arguments.tex),
 # each argument on its own (docs/latex/arguments/<slug>.tex), and the examples
 # package's documents (examples/docs/latex/*.tex), and uploads the PDFs as the
-# `pdfs` artifact: arguments.pdf, arguments/<slug>.pdf and the examples'.
+# `pdfs` artifact: arguments.pdf, arguments/<slug>.pdf and the examples', each
+# also on US Letter as <name>-letter.pdf.
 #
 # Each argument's document names the people behind it. That credit is worked
 # out here, from git history, by scripts/credits.py, and is not in the
@@ -109,7 +110,9 @@ jobs:
           python3 scripts/credits.py docs/latex docs/latex/arguments
           cp references.bib docs/latex/
           cp references.bib docs/latex/arguments/
+          # Each document twice: on A4, and on US Letter as <name>-letter.pdf.
           scripts/typeset.sh docs/latex/arguments.tex docs/latex/arguments/*.tex
+          scripts/typeset.sh --paper letter docs/latex/arguments.tex docs/latex/arguments/*.tex
 
       # `exampletex` writes the documents and the bibliography beside them;
       # `--check` first, so a stale committed document fails here as in ci.yml
@@ -120,11 +123,12 @@ jobs:
           lake exe exampletex --check
           lake exe exampletex
           ../scripts/typeset.sh docs/latex/*.tex
+          ../scripts/typeset.sh --paper letter docs/latex/*.tex
 
       - name: Collect
         run: |
           mkdir -p pdf/arguments
-          cp docs/latex/arguments.pdf pdf/
+          cp docs/latex/arguments.pdf docs/latex/arguments-letter.pdf pdf/
           cp docs/latex/arguments/*.pdf pdf/arguments/
           cp examples/docs/latex/*.pdf pdf/
 

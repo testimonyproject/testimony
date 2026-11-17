@@ -7,7 +7,7 @@
 
 Claims are numbered once for the whole argument, so P₁ means the same claim in every chapter; the numbered list is in [Appendix: the claims and their sources](born-of-a-virgin/claims.md). [Reading the logic](../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
 
-This argument is also set for print, the claims linked and the derivations in words as here, in [a PDF of its own](../pdf/arguments/born-of-a-virgin.pdf). [One PDF](../pdf/arguments.pdf) holds every argument together, and each tagged [release](https://github.com/testimonyproject/testimony/releases) of the project carries a copy.
+This argument is also set for print, the claims linked and the derivations in words as here, in [a PDF of its own](../pdf/arguments/born-of-a-virgin.pdf) (A4, or [US Letter](../pdf/arguments/born-of-a-virgin-letter.pdf)). [One PDF](../pdf/arguments.pdf) (A4, or [US Letter](../pdf/arguments-letter.pdf)) holds every argument together, and each tagged [release](https://github.com/testimonyproject/testimony/releases) of the project carries a copy.
 
 This argument is set in 9 chapters:
 

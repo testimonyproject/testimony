@@ -7,7 +7,7 @@
 
 Atoms are numbered propositional variables, numbered once for the whole page, so the same variable means the same claim in every position below. [Reading the logic](../reading-the-logic.md) is the short version of what the notation means. A result marked ⚗ is one this library constructs rather than reports.
 
-This argument is also set for print, the claims linked and the derivations in words as here, in [a PDF of its own](../pdf/arguments/born-in-bethlehem.pdf). [One PDF](../pdf/arguments.pdf) holds every argument together, and each tagged [release](https://github.com/testimonyproject/testimony/releases) of the project carries a copy.
+This argument is also set for print, the claims linked and the derivations in words as here, in [a PDF of its own](../pdf/arguments/born-in-bethlehem.pdf) (A4, or [US Letter](../pdf/arguments/born-in-bethlehem-letter.pdf)). [One PDF](../pdf/arguments.pdf) (A4, or [US Letter](../pdf/arguments-letter.pdf)) holds every argument together, and each tagged [release](https://github.com/testimonyproject/testimony/releases) of the project carries a copy.
 
 ## TestimonyArguments.BornInBethlehem — Born in Bethlehem: Micah 5:2
 
