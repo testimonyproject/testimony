@@ -80,7 +80,7 @@ Sola fide
 info: every dispute, as an AIF graph meeting Definition 1.1:
 jamesDispute.finite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
 jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
-solaFideDispute.finite: 67 I, 30 RA, 32 CA, 1 PA, 160 edges
+solaFideDispute.finite: 67 I, 30 RA, 33 CA, 0 PA, 160 edges
 and 3 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in

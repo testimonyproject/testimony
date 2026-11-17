@@ -341,13 +341,14 @@ example (j : JamesParty) :
 example : (Testimony.Semantics.HasMeanings.exclusions (α := Claim)).length = 6 := by
   decide +kernel
 
-#bench "verdict: sola fide, only Paul's word unanswered" in
+#bench "verdict: sola fide, nothing forced" in
 example : Verdict solaFideDispute where
   finite := solaFideDispute.finite
-  claim := .groundedExactly [[.lexical, .romansOnTheWord]]
+  claim := .nothingGrounded
     [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent), (.trent, .pauline)
     , (.apocalyptic, .pauline), (.sanders, .critics), (.critics, .sanders)
     , (.jervell, .apostolic), (.gospel, .trent), (.trentOnPaulsWord, .lexical)
+    , (.lexical, .trentOnPaulsWord), (.romansOnTheWord, .trentOnPaulsWord)
     , (.johannine, .trent), (.aquinas, .luther), (.luther, .aquinas)
     , (.chrysostom, .pauline), (.sanctification, .trent) ]
   checked := by decide +kernel
@@ -430,12 +431,13 @@ example : ∀ x y, bothDispute.defeats x y ↔ bothDefeats x y := by
 #bench "verdict, composed: sola fide and Mark 7 as one" in
 example : Verdict bothDispute where
   finite := Dispute.sumFinite SolaFide.solaFideDispute.finite SolaScriptura.mark7Dispute.finite
-  claim := .groundedExactly [[.inl .lexical, .inl .romansOnTheWord, .inr .principle]]
+  claim := .groundedExactly [[.inr .principle]]
     [ (.inl .pauline, .inl .trent), (.inl .dominical, .inl .trent)
     , (.inl .apostolic, .inl .trent), (.inl .trent, .inl .pauline)
     , (.inl .apocalyptic, .inl .pauline), (.inl .sanders, .inl .critics)
     , (.inl .critics, .inl .sanders), (.inl .jervell, .inl .apostolic)
     , (.inl .gospel, .inl .trent), (.inl .trentOnPaulsWord, .inl .lexical)
+    , (.inl .lexical, .inl .trentOnPaulsWord), (.inl .romansOnTheWord, .inl .trentOnPaulsWord)
     , (.inl .johannine, .inl .trent), (.inl .aquinas, .inl .luther)
     , (.inl .luther, .inl .aquinas), (.inl .chrysostom, .inl .pauline)
     , (.inl .sanctification, .inl .trent)

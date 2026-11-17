@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **374 headline results**, listed below in source order. 10 of them are marked ⚗: results this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **376 headline results**, listed below in source order. 10 of them are marked ⚗: results this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -143,8 +143,10 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `chrysostom_cannot_be_held_with_johns_case` | `¬Satisfiable johnWithChrysostom` | **Chrysostom's conclusion and John's strand cannot both be held.** John's strand concludes that justification is by faith alone, and so that faith suffices. |
 | `trent_objection_rests_on_its_definition` | `¬Establishes tridentineCaseOnTheReformedDistinction` | **Trent's objection depends on its definition of justification.** Keep all of Trent's case except the definition, put the Reformed distinction in its place, and "salvation is not … |
 | `chrysostom_grants_the_pauline_texts` | `Grants chrysostomOnJohn (⋀[p Claim.romans3_28, p Claim.galatians2_16, p Claim.romans4_4_5, p Claim.ephesians2_8_9, p Claim.titus3_5])` | **Chrysostom contradicts no text of Paul's.** His position can be held together with every verse the Reformed strands read from Paul: Romans 3:28, Galatians 2:16, Romans 4:4–5, … |
-| `only_pauls_word_prevails` | `Framework.grounded solaFideDispute.defeats = {Party.lexical, Party.romansOnTheWord}` | **Only the meaning of Paul's word prevails outright.** What the debate forces, before any choice between rivals, is exactly this: Paul's "justify" (δικαιόω) does not mean the … |
-| `trent_on_pauls_word_indefensible` | `∀ (S : Set Party), Framework.Admissible solaFideDispute.defeats S → Party.trentOnPaulsWord ∉ S` | **Trent, taken as a claim about Paul's word, cannot be defended.** No consistent set of positions that answers its attackers can include it. |
+| `sola_fide_dispute_forces_nothing` | `Framework.grounded solaFideDispute.defeats = ∅` | **Nothing prevails outright.** Heard together, the debate forces no position, not even the meaning of Paul's word. |
+| `pauls_word_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.lexical` | **The argument from Paul's word can be defended.** A consistent set of positions holds it with Romans 4, read for the word, and answers every attack. |
+| `pauls_word_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.lexical` | **Nor is the argument from Paul's word forced.** A consistent set of positions that answers every attack holds Trent, taken as a claim about Paul's word, and cannot hold the … |
+| `trent_on_pauls_word_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.trentOnPaulsWord` | **Trent, taken as a claim about Paul's word, can be defended.** A consistent set of positions includes it, with Trent as Trent states it, Sanders and Jervell, and answers every … |
 | `trent_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.trent` | **Trent can be defended.** A consistent set of positions includes it, with Sanders and Jervell, and answers every attack. |
 | `trent_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.trent` | **Nor is Trent forced.** A consistent set of positions that answers every attack holds Paul's case with Luke's and Peter's, and none of them can be held with Trent. |
 | `apocalyptic_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.apocalyptic` | **The apocalyptic reading can be defended.** A consistent set of positions includes it and answers every attack, and that set holds Luke's case and Peter's too. |
@@ -153,7 +155,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `dominical_case_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.dominical` | **Luke's case is not forced.** A consistent set of positions that answers every attack holds Trent, and cannot hold Luke's case with it. |
 | `gospel_defensible` | `Framework.CredulouslyAccepted solaFideDispute.defeats Party.gospel` | **Paul's gospel can be defended**, together with Paul's, Luke's and Peter's cases and with the argument from Paul's word. |
 | `gospel_not_forced` | `¬Framework.SkepticallyAccepted solaFideDispute.defeats Party.gospel` | **Nor is it forced.** Trent as Trent states it can still be defended, and Paul's gospel cannot be held with it. |
-| `reformation_dispute_forces_only_pauls_word` | `Framework.grounded reformationAlone.defeats = Solver.toSet (Witness.listSub (fun x => x ∉ [Party.apocalyptic, Party.sanders, Party.critics, Party.jervell]) [Party.lexical, Party.romansOnTheWord])` | **What the Reformation debate forces: the meaning of Paul's word, and nothing else.** Heard as Rome and the Reformers alone, the forced positions are exactly the two arguments … |
+| `reformation_dispute_forces_nothing` | `Framework.grounded reformationAlone.defeats = ∅` | **The Reformation debate, heard alone, forces nothing.** Heard as Rome and the Reformers alone, every position is in a tie the debate cannot settle, the meaning of Paul's word … |
 | `trent_defensible_with_pauls_word` | `Framework.CredulouslyAccepted reformationAlone.defeats ⟨Party.trent, trentStandsWithPaulsWord._proof_2⟩` | **Trent, as Trent states it, can be defended in the Reformation debate, together with the arguments about Paul's word.** A consistent set of positions that answers every attack … |
 | `sola_fide_not_forced_in_the_reformation_dispute` | `¬Framework.SkepticallyAccepted reformationAlone.defeats ⟨Party.pauline, reformationAnsweredByTrent._proof_2⟩` | **Nor is sola fide forced there.** Rome and the Reformers, heard alone, tie. |
 | `without_trent_pauls_gospel_and_word_prevail` | `Framework.grounded withoutTrent.defeats = Solver.toSet (Witness.listSub (fun x => x ∉ [Party.trent, Party.trentOnPaulsWord]) [Party.gospel, Party.lexical, Party.romansOnTheWord])` | **Without Trent, two things are forced.** That justification is not the renewal of the inward person, from Paul's gospel. |
@@ -568,34 +570,36 @@ leaves Trent's step from the verse standing, and even then the step is
 disputed. Acts giving the Spirit before the water and after it is common ground
 (`trent_grants_god_is_not_bound`), not a Reformed win.
 
-**As a dispute, only Paul's word prevails; sola fide and Trent each stand, and
-neither is forced.** Weighed as a dispute — the four strands argued
-separately, Trent, the apocalyptic reading, Sanders, the critics, Jervell,
-Aquinas on John 6:29 and Luther's answer to him,
-Paul's gospel in Galatians, Paul's word, and Trent read as a claim about that
-word — one thing prevails outright: Paul's word, that δικαιόω does not denote
-the renewal of the inward man (`only_pauls_word_prevails`). It prevails by two
-routes: lexically, from the forensic sense, Paul's own words for renewal and the
-rule of least meaning (Joos; Silva; Barr); and exegetically, from Romans 4:3–8,
-where Paul glosses the righteousness counted to the ungodly as sin not counted.
-Every link of each is rated `wellSupported` or better, so Trent read as a claim
-about the word cannot be defended (`trent_on_pauls_word_indefensible`) — nor can
-the Latin gloss it rests on, "being justified" as "being made righteous".
-Every other party's weakest link is `disputed`, and every attack between Trent
-and a Reformed party runs both ways, including a claim a party derives on the
-way to its conclusion. So Luke's case, Paul's gospel and Trent — as Trent states
-it, tied to neither reading — are each defensible and none forced (`dominical_case_defensible`,
+**As a dispute, nothing prevails; sola fide and Trent each stand, and neither is
+forced.** Weighed as a dispute — the four strands argued separately, Trent, the
+apocalyptic reading, Sanders, the critics, Jervell, Aquinas on John 6:29 and
+Luther's answer to him, Paul's gospel in Galatians, Paul's word, and Trent read
+as a claim about that word — nothing prevails outright
+(`sola_fide_dispute_forces_nothing`). Paul's word, that δικαιόω does not denote
+the renewal of the inward man, is argued by two routes: lexically, from the
+forensic sense, Paul's own words for renewal and the rule of least meaning
+(Joos; Silva; Barr); and exegetically, from Romans 4:3–8, where Paul glosses the
+righteousness counted to the ungodly as sin not counted. Both routes take one
+step rated `disputed`, from the forensic sense to "and nothing more", because
+Trent keeps the verdict (the justified "are not only reputed, but are truly
+called, and are, just") and denies that the word means no more. So Trent read as
+a claim about the word ties with them, and can be defended
+(`trent_on_pauls_word_defensible`, `pauls_word_not_forced`). Every party's
+weakest link is `disputed`, and every attack between Trent and a Reformed party
+runs both ways, including a claim a party derives on the way to its conclusion.
+So Luke's case, Paul's gospel and Trent — as Trent states it, tied to neither
+reading — are each defensible and none forced (`dominical_case_defensible`,
 `dominical_case_not_forced`, `gospel_defensible`, `gospel_not_forced`,
 `trent_defensible`, `trent_not_forced`). The dilemma `whatTrentsDefinitionClaims`
 says why: read as a claim about Paul's word, Trent's definition cannot be held
-with the lexical and exegetical cases; read as a claim about what God does in
-justifying, nothing about the word reaches it, and it parts from Paul at the
-step from Galatians, that a verdict on a finished work excludes the renewal
-wrought in us (`whereTrentPartsFromPaul`), and at the step from Romans 4 —
-each rated `disputed`, because Augustine and Trent grant the texts and read them
-the other way. Two hearings answer narrower questions. Heard as Rome and the
-Reformers alone, only Paul's word is forced
-(`reformation_dispute_forces_only_pauls_word`). Heard without Trent, Luke's case,
+with the lexical and exegetical cases, and ties with them at that step; read as
+a claim about what God does in justifying, nothing about the word reaches it,
+and it parts from Paul at the step from Galatians, that a verdict on a finished
+work excludes the renewal wrought in us (`whereTrentPartsFromPaul`), and at the
+step from Romans 4 — each rated `disputed`, because Augustine and Trent grant
+the texts and read them the other way. Two hearings answer narrower questions.
+Heard as Rome and the Reformers alone, nothing is forced
+(`reformation_dispute_forces_nothing`). Heard without Trent, Luke's case,
 Paul's gospel and Paul's word are forced, but sola fide is still not — from Paul,
 because of Campbell's reading of πίστις Χριστοῦ, or from Peter, because of
 Jervell's reading of the yoke (`sola_fide_from_paul_not_forced_without_trent`,

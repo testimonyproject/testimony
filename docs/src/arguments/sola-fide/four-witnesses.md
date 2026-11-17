@@ -848,18 +848,18 @@ is a courtroom word; Paul has other words for renewal; and a word contributes
 the least meaning its context requires. The method is Silva's, applied as Moo
 applies it to Romans.
 
-Cited at `wellSupported`. Trent keeps the first starting point, the verdict, for
-the justified "are not only reputed, but are truly called, and are, just"
-(Session VI, ch. 7), and denies that the word means no more; Augustine himself
-gives the forensic sense beside "made righteous", "deemed, or reckoned as just"
-(*On the Spirit and the Letter* 26.45). So a cited reader grants the starting
-points and denies the conclusion, and the checks count Trent's reading a
-credible critique of this step under every standard
-(`trent_dissents_from_the_definition_steps`). By the library's rule that makes
-the step `disputed`, and the disputes weigh it at `wellSupported`: this is the
-one place they rest on a rating the rule does not license. Whether the step can
-rise above `disputed` turns on Romans 6:7 and 1 Corinthians 6:11, which readers
-take both ways.
+Rated `disputed`. Trent keeps the first starting point, the verdict, for the
+justified "are not only reputed, but are truly called, and are, just" (Session
+VI, ch. 7), and denies that the word means no more; Augustine himself gives the
+forensic sense beside "made righteous", "deemed, or reckoned as just" (*On the
+Spirit and the Letter* 26.45). So a cited reader grants the starting points and
+denies the conclusion, and the checks count Trent's reading a credible critique
+of this step under every standard (`trent_dissents_from_the_definition_steps`).
+By the library's rule that makes the step `disputed`. The texts that prove the
+verdict sense (Proverbs 17:15, Isaiah 5:23, Deuteronomy 25:1, Luke 10:29)
+support the first starting point, which Trent already grants, not the "and
+nothing more". Whether the step can rise above `disputed` turns on Romans 6:7
+and 1 Corinthians 6:11, which readers take both ways.
 
 Those who deny the first starting point itself, VanLandingham among them, are
 weighed in that premise's rating. Those who hold that God's verdict renews,
@@ -873,7 +873,7 @@ def leastMeaningSource : Source :=
       [Reference.work mooRomans (Bib.Locus.sectionRef "p. 80"),
         Reference.work barrSemantics],
     tradition := Tradition.christianHistoricalGrammatical,
-    confidence := Confidence.wellSupported }
+    confidence := Confidence.disputed }
 ```
 
 <a id="lexicalLine"></a>

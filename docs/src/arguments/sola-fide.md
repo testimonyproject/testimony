@@ -183,15 +183,16 @@ apocalyptic reading; Sanders and his critics; Jervell; Aquinas on John, and
 Luther's answer; Chrysostom on John 3:36, and the Reformed answer; Paul's gospel
 in Galatians; and three positions on what Paul's word "justify" means.
 
-One thing prevails outright: Paul's verb "justify" (δικαιόω) does not mean the
-renewal of the inward man (`only_pauls_word_prevails`). It is argued two ways,
-from the word's usage and from Romans 4, and those are the only positions whose
-every step is rated above `disputed`. Trent's definition, taken as a claim about
-what Paul's word means, cannot be defended against them
-(`trent_on_pauls_word_indefensible`).
+Nothing prevails outright (`sola_fide_dispute_forces_nothing`). Not even the
+meaning of Paul's verb "justify" (δικαιόω) is forced. It is argued two ways,
+from the word's usage and from Romans 4, and both take one step rated
+`disputed`: from the courtroom sense of the verb to "and it means nothing more".
+Trent grants the courtroom sense and denies the "nothing more". So Trent's
+definition, taken as a claim about what Paul's word means, ties with them
+(`trent_on_pauls_word_defensible`).
 
-Everything else ties. Every other position rests on something rated `disputed`,
-and every attack between Trent and a Reformed strand runs in both directions.
+Everything ties. Every position rests on something rated `disputed`, and every
+attack between Trent and a Reformed strand runs in both directions.
 Luke's case, Paul's gospel and Trent can each be defended, and none is forced.
 John's case ties with Trent, the apocalyptic reading, Aquinas and Chrysostom, as
 the other strands tie with their rivals.
@@ -205,15 +206,15 @@ Each later chapter takes one question a reader brings to this debate.
   every text, and the verdict sense of the verb ("Where Trent parts from
   Paul").
 - **Is Trent's definition about Paul's word, or about what God does?** Taken as
-  a claim about the word, it cannot be held with the evidence for the word's
-  meaning. Taken as a claim about what God does, nothing about the word reaches
-  it, and it meets Paul at steps rated `disputed`: Augustine accepts Romans 4
-  and reads it as God making the ungodly godly ("What Trent means by
-  justification").
+  a claim about the word, it cannot be held with the arguments about the word,
+  and ties with them at the step from the courtroom sense to "nothing more".
+  Taken as a claim about what God does, nothing about the word reaches it, and
+  it meets Paul at steps rated `disputed`: Augustine accepts Romans 4 and reads
+  it as God making the ungodly godly ([What Trent means by justification](sola-fide/trents-definition.md)).
 - **What did the Reformation itself decide? And without Trent, would Scripture
-  establish sola fide?** Heard as Rome and the Reformers alone, only the meaning
-  of Paul's word is forced. Heard without Trent, two things are forced: Paul's
-  gospel, and the meaning of Paul's word. *Faith alone* still is not, and
+  establish sola fide?** Heard as Rome and the Reformers alone, nothing is
+  forced, not even the meaning of Paul's word. Heard without Trent, two things
+  are forced: Paul's gospel, and the meaning of Paul's word. *Faith alone* still is not, and
   neither is Luke's "faith suffices". Campbell, Sanders and Dunn, Jervell, and
   Aquinas each still stand against one strand, and Chrysostom against all four
   ([Weighing the positions](sola-fide/weighing.md)).

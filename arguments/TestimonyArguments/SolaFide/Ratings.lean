@@ -778,9 +778,8 @@ So the step about Paul's word is disputed under all three standards, by Trent's
 reading of the word.
 
 What it does not claim: that Trent's reading is right. `disputed` means there
-is an argued objection, not that the objection wins. Nor does it move the
-dispute's verdicts on Paul's word. The dispute weighs this step at its cited
-rating, which this check does not change. -/
+is an argued objection, not that the objection wins. The step's cited rating
+agrees with this check: it is `disputed`, and the dispute weighs it so. -/
 @[headline]
 theorem trent_dissents_from_the_definition_steps :
     trentWordOnLexicalAssessment.findings.kind = .argued ∧
