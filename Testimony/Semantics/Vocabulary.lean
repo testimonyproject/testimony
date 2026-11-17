@@ -119,6 +119,30 @@ inductive Lexeme
   | ulemta
   /-- Syriac ܒܬܘܠܬܐ, a virgin: the Peshitta's word at Isaiah 7:14. -/
   | btulta
+  /-- ζάω, to live: "the righteous shall live by faith" (Habakkuk 2:4, as
+  Galatians 3:11 and Hebrews 10:38 quote it). -/
+  | zao
+  /-- εὐαρεστέω, to please: "without faith it is impossible to please him"
+  (Hebrews 11:6). -/
+  | euaresteo
+  /-- περιποίησις ψυχῆς, the preserving of the soul: what Hebrews 10:39 says
+  belongs to those "of faith". -/
+  | peripoiesisPsyches
+  /-- "Whoever hears my word and believes" (ὁ τὸν λόγον μου ἀκούων καὶ πιστεύων):
+  the phrase, as John 5:24 has it, hearing and believing together. -/
+  | hearingAndBelieving
+  /-- "Faith by itself" (ἡ πίστις … καθ' ἑαυτήν): the phrase, as James 2:17 has it,
+  of faith "if it does not have works". -/
+  | faithByItself
+  /-- νεκρός, dead: what James 2:17 and 2:26 call faith without works. -/
+  | nekros
+  /-- "Faith was completed" (ἡ πίστις ἐτελειώθη): the phrase, as James 2:22 has it,
+  of Abraham's faith and his works. -/
+  | faithCompleted
+  /-- ἔλεος, mercy: "according to his own mercy he saved us" (Titus 3:5). -/
+  | eleos
+  /-- ὄνομα, name: "through his name" (Acts 10:43). -/
+  | onoma
   /-- γραφή, scripture: "all scripture" (πᾶσα γραφή) at 2 Timothy 3:16. -/
   | graphe
   /-- θεόπνευστος, God-breathed, breathed out by God (2 Timothy 3:16). -/
@@ -303,6 +327,11 @@ inductive Concept
   /-- The will's disposing and preparing itself for justification, as Trent's
   sixth session describes it (canon 4). -/
   | preparationForJustification
+  /-- Not being condemned: what John 3:18 says of whoever believes ("is not
+  condemned"), and John 5:24 calls not coming into judgement. -/
+  | noCondemnation
+  /-- A verdict: a judge's declaration, acquitting or condemning. -/
+  | verdict
   /-- Election: being among those God has chosen to save. A role a person holds
   by God's choice, not a quality in them; the dispute over perseverance is over
   who holds it. -/

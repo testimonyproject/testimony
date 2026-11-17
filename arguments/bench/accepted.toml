@@ -247,6 +247,12 @@ up_to = 0.15
 reason = "Sola scriptura's analysed claims grow from 34 to 54, so the ontology check closes and compares twenty more meanings under every definition, and once more with each definition taken out. CI measured +9.1%; no join was added."
 
 [[accept]]
+benchmark = "checks: ontology"
+metric = "time"
+up_to = 0.10
+reason = "The canonical witness's meanings grow from 5 to 27 of its 29 claims, so the ontology check closes and compares 22 more meanings under every definition, and once more with each definition taken out. CI measured +6.9%; nothing else moved, and no join was added."
+
+[[accept]]
 benchmark = "checks: postulates, every package"
 metric = "time"
 up_to = 0.20

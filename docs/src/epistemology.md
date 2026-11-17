@@ -186,6 +186,25 @@ One limit remains. The library's evidence rule admits the same grounds for claim
 Westminster's, so the check could not have told the two apart: what sets Westminster's rule
 apart is how a Scripture-only step is answered, and steps are not yet checked.
 
+## The canonical witness
+
+The canonical witness asks what follows from the texts Rome and the Reformers both receive, and
+it has no dispute, so its parties are its positions (`professesCanonicalWitness`). The Reformed
+case, with James and without, and Paul's claim about faith on its own profess Westminster's
+rule: their readings are cited to Reformed exegetes, and their conclusion is Westminster's "by
+faith alone", "by a faith that is never alone". Trent's reading of James 2:24, and its reading of
+James against the sufficiency of faith, profess Trent's. The ten positions the library builds by
+striking readings out of the canonical case are held to none, because no one argues them; they
+are there to show which readings the case rests on.
+
+Every position keeps its rule, and every other rule too (`canonical_witness_own_rules`). The
+check could not have parted them here. Every text is cited to Scripture alone, and Trent asserts
+nothing else. The case with James asserts three readings as claims, that James 2:14–26 is aimed
+at a faith without works, that "justified" in 2:21–24 means shown to be righteous, and that
+justification and sanctification are distinct, and each is cited to the verses it reads as well
+as to Moo, Calvin or the Larger Catechism. The two sides part in their steps, each corpus's
+reading and Trent's reading of James 2:24, and in what Trent denies; the check reaches neither.
+
 ## What this does not do
 
 Which rule is right is the question of the dispute over Scripture alone (*sola scriptura*), and

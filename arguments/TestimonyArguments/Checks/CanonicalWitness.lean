@@ -31,7 +31,8 @@ def unfoldSet : List (Name × Name) :=
 info: the shared ontology, in every argument:
 The canonical witness
   joins: 7, with no definition: 7
-  not a ground: held by 3, used of a text or voice by 0; derives nothing
+  not a ground: held by 3, used of a text or voice by 6; derives nothing
+  the same sense, both ways: stated or denied by 1; derives nothing
 -/
 #guard_msgs in
 #check_ontology under TestimonyArguments.CanonicalWitness
@@ -39,7 +40,12 @@ The canonical witness
 /--
 info: the charges, against every argument's lines:
 The canonical witness
-  lines: 8, read: 0
+  lines: 8, read: 8
+  need a word to keep its sense, unstated:
+    hebrewsLine: pistis
+    johannineLine: pisteuo
+    paulineFaithLine: dikaioo
+    paulineLine: pistis, sozo, erga
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.CanonicalWitness
