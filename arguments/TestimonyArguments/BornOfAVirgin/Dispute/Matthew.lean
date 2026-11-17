@@ -5,13 +5,13 @@ import Testimony.Logic.Credibility
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Matthew — Scripture's own reading of the Greek word
 
-`Dispute.Septuagint` weighs what the Septuagint's παρθένος meant by what scholars
-say of the Greek. This module asks the question a reader of the Bible asks
-first: **what does Scripture itself make of the word?** Matthew quotes the
-Septuagint's Isaiah 7:14 word for word, ἡ παρθένος, of Mary, who conceived
-"before they came together" (1:18) and whom Joseph "knew not until she had borne
-a son" (1:25). If Scripture is its own interpreter, the word in the text Matthew
-quotes has the sense he gives it: "virgin".
+The chapter "What the Septuagint's word meant" weighs what the Septuagint's
+παρθένος meant by what scholars say of the Greek. A reader of the Bible asks
+another question first: **what does Scripture itself make of the word?** Matthew
+quotes the Septuagint's Isaiah 7:14 word for word, ἡ παρθένος, of Mary, who
+conceived "before they came together" (1:18) and whom Joseph "knew not until she
+had borne a son" (1:25). If Scripture is its own interpreter, the word in the
+text Matthew quotes has the sense he gives it: "virgin".
 
 Two positions meet:
 
@@ -20,7 +20,7 @@ Two positions meet:
   Its principle is Westminster's: "The infallible rule of interpretation of
   Scripture is the Scripture itself" (I.ix). Irenaeus, on the apostles'
   agreement with the Seventy (*Against Heresies* III.21.3).
-- **Wegner on παρθένος**, as in `Dispute.Septuagint`. He grants both of
+- **Wegner on παρθένος**, as in the chapter before. He grants both of
   Matthew's grounds — by the New Testament the word was "a suitable term to
   describe Mary" — and holds that it had changed in meaning since the translator
   wrote it (483).
@@ -58,9 +58,9 @@ standard, and the library computes under each (`Testimony.Logic.Credibility`).
 
 So the verdict turns on the standard, and the page says which. A reader who
 holds that Scripture interprets Scripture has here a checked result: on that
-standard, a scholar's reading of other Greek does not overturn the sense the
-New Testament gives the Septuagint's word. A reader who does not hold it has the
-standoff, and `Dispute.Septuagint` for the evidence.
+standard, a scholar's reading of other Greek does not overturn the sense the New
+Testament gives the Septuagint's word. A reader who does not hold it has the
+tie, and the chapter "What the Septuagint's word meant" for the evidence.
 
 ## What this does not show
 

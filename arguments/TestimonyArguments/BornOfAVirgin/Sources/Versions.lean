@@ -6,8 +6,7 @@ import TestimonyArguments.BornOfAVirgin.Atoms
 Three citations that say more than a label can: what the oldest Hebrew copy of
 Isaiah reads at 7:14, what the Syriac Peshitta reads and what can be said of who
 wrote it, and the reply to the lexical objection that leaves the word's sense
-aside, with the fathers who made it. Cited here and dispatched from `cite` by
-name, for the reason `Sources.Wegner` gives.
+aside, with the fathers who made it.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin
