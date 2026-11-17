@@ -65,7 +65,7 @@ linters hold those.
 
 - Anything in a generated file, except that it was edited by hand or is out of
   date with its source.
-- Changes to pinned counts in `arguments/TestimonyArguments/Checks.lean` that
+- Changes to pinned counts in `arguments/TestimonyArguments/Checks/` that
   follow from an added package, party or definition in the same pull request.
 - Benchmark timings, unless the pull request claims a speed-up or adds an
   entry under `arguments/bench/accepted/`; then check that the reason given
