@@ -117,6 +117,8 @@ def category : Concept → Option Category
   | .preparationForJustification => some .process
   | .noCondemnation => some .state
   | .verdict => some .event
+  | .election => some .role
+  | .perseverance => some .process
   | .essentialDoctrine => some .informationObject
   | .understandingScripture => some .process
   | .historicalGrammaticalMethod => some .informationObject

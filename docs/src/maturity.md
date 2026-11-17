@@ -55,7 +55,7 @@ and CI fails when it is out of date. Work on the gaps is tracked in
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**: 215 of 400 claims have analysed meanings, and the fallacy checks read 60 of 152 lines of reason.
+**8 arguments**: 222 of 426 claims have analysed meanings, and the fallacy checks read 60 of 167 lines of reason.
 
 | Argument | Stage | Claims with meanings | Lines read for fallacies | What the fallacy checks found | Joins found | Definitions in use |
 |---|---|---|---|---|---|---|
@@ -64,7 +64,7 @@ and CI fails when it is out of date. Work on the gaps is tracked in
 | [Sola fide](./arguments/sola-fide.md) | lines being checked | 97 of 128 | 31 of 49 | 12 need a word kept in one sense, unstated | 5, 1 through a definition | 4 |
 | [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md) | lines being checked | 27 of 29 | 8 of 8 | 4 need a word kept in one sense, unstated | 7, none of them through a definition | 2 |
 | [Sola scriptura](./arguments/sola-scriptura.md) | lines being checked | 54 of 64 | 21 of 27 | nothing | 3, none of them through a definition | 3 |
-| [Sola gratia — Ephesians 2:8–9 and Romans 9:16](./arguments/sola-gratia.md) | meanings begun | 8 of 31 | 0 of 12 | — | 1, none of them through a definition | 3 |
+| [Sola gratia — Ephesians 2:8–9 and Romans 9:16](./arguments/sola-gratia.md) | meanings begun | 15 of 57 | 0 of 27 | — | 1, none of them through a definition | 3 |
 | [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md) | meanings begun | 4 of 15 | 0 of 0 | no lines of reason to read | 2, none of them through a definition | 0 |
 | [The Triune God — what Scripture settles, and what it leaves open](./arguments/trinity.md) | not yet read | 0 of 31 | 0 of 13 | — | none | 0 |
 <!-- END GENERATED: lake exe statusgen -->
