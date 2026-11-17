@@ -5,15 +5,14 @@ import Testimony.Logic.Dilemma
 /-!
 # TestimonyArguments.BornOfAVirgin.Results.Genesis — what "her seed" says of a father
 
-A reader's question, in a reader's words: *Genesis 3:15 promises that "her seed"
-will strike the serpent's head — the woman's seed, not the man's. Doesn't that
-already point to a virgin conception? And doesn't the Greek, which calls the
-seed "he", make it plainer?*
+*Genesis 3:15 promises that "her seed" will strike the serpent's head — the
+woman's seed, not the man's. Doesn't that already point to a virgin conception?
+And doesn't the Greek, which calls the seed "he", make it plainer?*
 
 The short answer: it may, but the text does not settle it. Whether naming the
 seed as the woman's *says* there will be no human father is a live dispute among
 readers most of whom hold the virgin birth, and the library finds it a tie
-(`nothing_prevails_over_her_seed`, in `Dispute.Genesis`). That the wording
+(`nothing_prevails_over_her_seed`, below). That the wording
 *fits* the virgin birth, once it has happened, Luther's side and Leupold and
 Keil all grant. The Greek may show
 that its translator expected one person; it does not show how that person would
@@ -22,7 +21,7 @@ be born.
 The protoevangelium strand of this argument holds, as a premise, that the seed
 being named as the woman's marks a birth with no human father
 (`seedOfTheWomanImpliesNoHumanFather`). "Marks" is vague on purpose, as its
-holders leave it: Miravalle's own word is "hint". This module asks what it can
+holders leave it: Miravalle's own word is "hint". This chapter asks what it can
 mean, and what each meaning can bear.
 
 **Read as what the wording itself signifies**, it is Luther's argument: the seed
@@ -57,13 +56,13 @@ is one question. Whether the promise is fulfilled in Jesus is another, and it
 does not need the first. Every term of the verse is met as the New Testament
 names it: the woman's seed, the Son "made of a woman" (Galatians 4:4); the
 serpent, "that old serpent, called the Devil" (Revelation 12:9); its head
-crushed, when the Son destroys the devil "through death" (Hebrews 2:14); his heel
-struck, in his death and rising. That fulfilment confirms that the verse was a
-promise, and it does so for a reader who denies the virginal conception too.
-With the virginal conception, it says one thing more: the seed in whom the
-promise is fulfilled was of the woman alone. `Dispute.Protoevangelium` weighs
-the fulfilment against Westermann's denial that the verse is a promise at
-all.
+crushed, when the Son destroys the devil "through death" (Hebrews 2:14); his
+heel struck, in his death and rising. That fulfilment confirms that the verse
+was a promise, and it does so for a reader who denies the virginal conception
+too. With the virginal conception, it says one thing more: the seed in whom the
+promise is fulfilled was of the woman alone. The chapter
+"Is Genesis 3:15 a promise, fulfilled in Jesus?" weighs the fulfilment against
+Westermann's denial that the verse is a promise at all.
 
 **The Greek's "he".** The Septuagint calls the woman's seed "he", αὐτός, though
 σπέρμα is neuter, and Collins finds it "beyond question that the translator of
@@ -89,7 +88,7 @@ head", reads it of "He who should be born of a woman, [namely] from the Virgin"
 (*Against Heresies* V.21.1); but he does not argue from the pronoun to the
 conception, and no reader found does.
 
-`Dispute.Genesis` weighs Luther's case against Leupold's and Lewis's.
+The dispute below weighs Luther's case against Leupold's and Lewis's.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin
@@ -98,7 +97,7 @@ open Testimony
 
 open Testimony Testimony.Bib Testimony.Logic
 
-/-! ### Two readings of the woman's seed
+/-! #### Two readings of the woman's seed
 
 Each reading below is a model: one way every claim of the argument could be true
 at once, named for what it says of the wording of Genesis 3:15. Some pairs of

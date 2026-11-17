@@ -2,15 +2,61 @@ import TestimonyArguments.BornOfAVirgin.Packages
 import Testimony.Logic.Tactic
 
 /-!
-# TestimonyArguments.BornOfAVirgin.Results.Wegner — Wegner's objection, and the sign
+# TestimonyArguments.BornOfAVirgin.Results.Wegner — was the woman already pregnant?
 
-What follows from Wegner's grammatical objection and from the replies to it:
-that it is valid, where its weight rests, the circle in it, Postell's usage
-parity, and the fathers' sign argument together with the near-term reply to
-that. `Dispute.Wegner` then asks who prevails when these meet.
+Paul Wegner does not merely say that עַלְמָה means "young woman". He makes an
+argument from Isaiah's grammar. The word translated "shall conceive", הָרָה, is
+an adjective, "pregnant", and it stands as the predicate of the clause: it says
+what the woman *is*. So the clause reads "the עַלְמָה *is* pregnant", already,
+when the sign is given. A pregnant woman is not a virgin, and since this is the
+one clear case in Isaiah, it settles what the word means there. The argument is
+encoded at full strength first, with every premise it needs granted, and it is
+valid (`wegner_establishes`), because a rival worth answering has to be stated
+at its strongest.
 
-Every result is tagged `@[headline]` and followed by `#print axioms`, as in
-`Results.lean`, and every countermodel is a named reading.
+## Where its weight rests
+
+The grammar is not the weak point, and the encoding grants it throughout.
+Rydelnik, cited here through Postell, who reports him, reads the same predicate
+adjective and draws the opposite conclusion: the virgin *is* pregnant, and the
+sign is therefore as deep as Sheol. What the grammar does not supply is that
+the pregnancy is an *ordinary* one, and that is the premise that rules out a
+virgin. Take it away and the objection stops (`wegner_needs_ordinary_pregnancy`).
+
+Wegner's own case supplies it from the near-term reading of the sign: a sign
+for Ahaz's day, which foretells no virgin birth, was an ordinary pregnancy
+(`readingSuppliesOrdinaryPregnancy`). The conclusion about the word is then
+turned back against the predictive reading, as the critical case turns it. So
+the two legs close into a circle. The pregnancy is ordinary because Isaiah
+foretells no virgin birth, and Isaiah foretells none because the word does not
+mean a virgin. Postell names it: "because Wegner rejects the messianic
+interpretation on grammatical-historical grounds, he assumes that עַלְמָה cannot
+mean 'virgin' in Isaiah 7:14" (468 n. 22).
+
+Keep every datum no one disputes, and *neither* end of the circle is settled.
+Wegner's conclusion about the word is not established, and it is not refuted
+either (`circle_leaves_the_lexical_conclusion_open`,
+`circle_leaves_the_denial_open`). A circle of claims can be held all true or
+all false with nothing to choose between them, so nothing enters the loop and
+nothing comes out of it, in either direction. That is a demonstration, not a
+complaint, and it is conditional in the usual way. A defender of Wegner should
+deny that the ordinary pregnancy comes from the near-term reading this way, and
+argue that the near-term reading stands on the historical evidence alone.
+
+Postell's second reply is independent of the first and survives that defence.
+The other clear עַלְמָה passages Wegner himself lists are cases of virgins, so a
+single referent cannot be what settles the word's sense: the same principle
+would settle it the other way (`usage_parity_blocks_wegner`). That premise is
+rated `plausible`, not `wellSupported`, because Postell's "in fact virgins" is
+stronger than Wegner's own discussion of Song of Songs 6:8.
+-/
+
+/-!
+#### How the results are checked
+
+Every result is tagged `@[headline]` and followed by `#print axioms`, as in the
+chapter "Four strands, and what each depends on", and every countermodel is a
+named reading.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin
@@ -19,7 +65,7 @@ open Testimony
 
 open Testimony Testimony.Bib Testimony.Logic
 
-/-! ### Wegner's objection, and the circle in it -/
+/-! #### Wegner's objection, and the circle in it -/
 
 /-- **Wegner's objection is valid on its own terms.** Grant the
 predicate-adjective parse, grant that the pregnancy it reports is an ordinary
@@ -155,15 +201,24 @@ theorem usage_parity_blocks_wegner : ¬ Establishes wegnerUnderUsageParity := by
 
 /-! ### The fathers' sign argument
 
-Justin, Irenaeus and Origen answer the near-term reading with one argument. The
-oracle promised a *sign*, one offered "in the depth or in the height" (7:11),
-and an ordinary conception happens to every woman who is not barren. So the
-pregnancy of 7:14 is not an ordinary one, and that is the ground of Wegner's
-objection that the grammar does not supply.
+The oldest reply goes to the ordinary pregnancy itself. Justin, Irenaeus and
+Origen answer the near-term reading with one argument. The oracle promised a
+*sign*, one offered "in the depth or in the height" (7:11), and an ordinary
+conception happens to every woman who is not barren, so it would be no sign.
+Rydelnik makes the same move today (`signLine`). It denies the one ground of
+Wegner's objection that the grammar does not supply. What that buys is
+measured exactly: with the fathers' grounds in place of the ordinary
+pregnancy, Wegner's conclusion about the word is left open by what remains
+(`sign_leaves_the_lexical_conclusion_open`). The objection is blocked, and
+nothing is shown about the word.
 
-The near-term reply is that a sign need not be a miracle. Isaiah's own children
-are "signs and portents" (8:18), and this sign is dated by a child's infancy
-(7:16), so its point may be its timing. -/
+The rival is written first, and Wegner holds it himself: a sign need not be a
+miracle. Isaiah's own children are "signs and portents" (8:18), and this sign
+is dated by a child's infancy (7:16), so its point may be its timing. Rhodea
+argues the same. The reply blocks the fathers in turn, without supplying
+Wegner's ordinary pregnancy (`reply_leaves_the_pregnancy_open`).
+
+The chapter goes on to weigh the three: Wegner, the fathers and the reply. -/
 
 /-- The fathers' sign, with the word left to the lexicon: the pregnancy of 7:14
 is no ordinary one, and עַלְמָה still does not denote a virgin. It is the
@@ -236,7 +291,7 @@ theorem reply_leaves_the_pregnancy_open :
 
 #print axioms reply_leaves_the_pregnancy_open
 
-/-! ### Satisfiability
+/-! #### Satisfiability
 
 As in `Results.lean`: only a package with a positive `Establishes` result needs
 a model named, and the sign argument and the reply are given theirs in

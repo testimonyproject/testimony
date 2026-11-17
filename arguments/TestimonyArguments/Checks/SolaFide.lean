@@ -44,6 +44,9 @@ Sola fide
 info: the charges, against every argument's lines:
 Sola fide
   lines: 49, read: 31
+  attribute a view, against the argument's record:
+    sandersLine: secondTempleJudaism, unrecorded
+    trentWordLine: augustine, unrecorded; latinWest, unrecorded
   need a word to keep its sense, unstated:
     catholicJamesWordLine: erga, dikaioo
     catholicJamesWorksLine: erga, dikaioo
