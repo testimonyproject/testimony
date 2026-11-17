@@ -5,7 +5,21 @@ import TestimonyArguments.BornOfAVirgin.Sources.Versions
 import TestimonyArguments.BornOfAVirgin.Sources.Wegner
 
 /-!
-# TestimonyArguments.BornOfAVirgin.Sources — a citation for every atom
+# TestimonyArguments.BornOfAVirgin.Sources — a source for every claim
+
+Every claim in the argument is given a source here: a passage of Scripture, or a
+work and the place in it, with a rating that says how well supported it is
+among the sources cited. Where a premise is rated `disputed` though the
+tradition holding it is confident, or a scholar is deliberately *not* cited for
+a claim, the note beside the citation says why.
+
+The citations of the five disputes the later chapters weigh are grouped below
+by dispute: the woman's seed, the near-term sign, the Septuagint's word, the
+Hebrew and Syriac texts with the referential reply, and Wegner's objection.
+-/
+
+/-!
+#### How the citations are arranged
 
 `cite` is total, so an atom without a citation does not compile. This is the
 file that makes that obligation concrete: every atom, each with a prose
@@ -19,15 +33,13 @@ objection, `Sources.Septuagint` for the dispute over the Septuagint's word,
 `Sources.Versions` for the Hebrew text, the Syriac, and the referential reply, and
 `Sources.Genesis` for the dispute over the woman's seed.
 `cite` reaches each of those citations by name from one of its cases, so it is
-still one total function, and a new atom still cannot be left out of it.
+still one total function, and a new atom still cannot be left out of it. Each
+is reached from exactly one of its cases, so what moves is only where a
+citation is written, which keeps `Sources.lean` short enough to read.
 
 Several `Source` values recur across it and are defined in `Atoms`. Where an atom
 cites one of them with something further, it says `{ ... with supporting := }`,
 so what a reader sees is the part that differs.
-
-Inline comments carry the qualifications that do not fit a `confidence` field —
-why a premise is marked `disputed` when the tradition holding it is confident,
-which scholar is *not* being cited for a claim and why.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin

@@ -3,18 +3,14 @@ import TestimonyArguments.BornOfAVirgin.Atoms
 /-!
 # TestimonyArguments.BornOfAVirgin.Sources.Septuagint — the citations of the Septuagint dispute
 
-The atoms of the dispute over what the Septuagint's παρθένος shows, cited here
-and dispatched from `cite` by name: when and by whom the Greek Isaiah was made,
-what its word for the woman of 7:14 meant, the evidence each side reads, and
-what the translator can be taken to have meant.
-
-They sit apart for the reason `Sources.Wegner` does: `cite` stays one total
-function, and each value below is reached from exactly one of its cases.
+The claims of the dispute over what the Septuagint's παρθένος shows: when and by
+whom the Greek Isaiah was made, what its word for the woman of 7:14 meant, the
+evidence each side reads, and what the translator can be taken to have meant.
 
 Rico and Gentry are cited from their book; Bratcher, Walton, Wegner, Rhodea and
 Postell from their articles; Davidson from his dictionary article; Meade from
 his comment on his own blog post. Three readings are known to the library only
-through the scholar who reports them, and each comment says so: Delling's and
+through the scholar who reports them, and each note says so: Delling's and
 Tsevat's, through Rhodea, and Gray's, through Bratcher.
 -/
 

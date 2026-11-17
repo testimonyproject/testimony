@@ -2,15 +2,142 @@ import TestimonyArguments.BornOfAVirgin.Atoms
 import Testimony.Logic.Line
 
 /-!
-# TestimonyArguments.BornOfAVirgin.Lines — the steps, and the lines of reason
+# TestimonyArguments.BornOfAVirgin.Lines — four strands, and what each depends on
 
-Every inference this argument makes, and the four strands they compose into.
+The first chapter named four strands and a reply. Each strand begins from its
+own text and needs one disputed reading of it to reach the conclusion that the
+Messiah would be born of a virgin. This chapter takes them in turn, then the
+reply, then what the strands show together.
 
-Inference steps carry no `confidence` field of their own — a step is a claim
-that *these premises license that conclusion*, which is a different kind of
-claim from an atom, and the library does not pretend to grade it. Where a step
-is contestable even though the atoms it joins are well supported, the docstring
-says so; `berryBlocksExclusion` is the clearest case.
+### Isaiah 7:14
+
+The first strand is the one Matthew draws:
+
+> "Behold, the virgin shall conceive and bear a son, and shall call his name
+> Immanuel." (Isaiah 7:14)
+
+It reads the verse as foretelling a virgin birth, and it needs the word for the
+woman, עַלְמָה (*almah*), to mean a virgin (`almahMeansVirgin`). That is where
+the whole quarrel over the word is joined. Matthew's quotation and his intent
+that the birth fulfil the verse are grounds of the strand too, and so is the
+Septuagint's rendering, παρθένος.
+
+The ancient translations are encoded in full, including the half that tells
+against this reading. The Aramaic paraphrase of the prophets, Targum Jonathan,
+renders עוּלֵימְתָא, "young woman", and does not read 7:14 of the Messiah,
+though it reads 9:5–6 and 11:1 so. The later Greek translators Aquila,
+Symmachus and Theodotion, "the Three", render νεᾶνις, "young woman".
+On the other side, the pre-Christian Septuagint renders παρθένος, "virgin" on
+Rico and Gentry's reading of its Greek, though not on Wegner's (the chapter
+"What the Septuagint's word meant"), and the Syriac Peshitta renders ܒܬܘܠܬܐ,
+"virgin", its only ܒܬܘܠܬܐ for עַלְמָה. So the Aramaic evidence is itself split:
+the Targum against the Peshitta, whose translator may have been a Jewish
+Christian who knew the Greek (van der Kooij), and whose 7:14 may follow the
+Septuagint (Chen).
+
+The text itself is not in doubt. The great Isaiah scroll from Qumran, 1QIsaᵃ,
+copied before Christ, reads עַלְמָה as the Masoretic Text does. The verse has
+other variants, but none at the word, so no variant rescues either side: the
+dispute is over the word's sense. The usual Christian reply, that the Three
+revised their Greek against Christian use, is one party's ground and not the
+library's: Rico and Gentry's case from usage leans on it, and Davidson and
+Meade read the revision the other way. Whether Theodotion's version is itself
+pre-Christian, which would give the revision a reason with no polemic in it,
+the library has not yet found a source to cite, and it is left out of the
+reckoning.
+
+### Genesis 3:15
+
+The second strand goes back to the garden, where God says to the serpent:
+
+> "And I will put enmity between thee and the woman, and between thy seed and
+> her seed; it shall bruise thy head, and thou shalt bruise his heel."
+> (Genesis 3:15, KJV)
+
+The strand reads the verse as the first promise of a redeemer, the
+*protoevangelium* ("first gospel"), and takes its wording, "her seed" (זֶרַע
+הָאִשָּׁה), to mark a birth with no human father, because Hebrew ordinarily
+reckons seed through the man. That last step is contestable, and it is rated
+`disputed`. Luther and Henry take it. Some who grant the promise deny it, the
+Lutheran commentators Leupold and Keil among them. Leupold allows that the
+wording refers to the virgin birth "Not primarily, but at least incidentally",
+and holds that "the expression used does not specifically prophesy the virgin
+birth, but it coincides and agrees with it under divine providence". And Genesis
+itself speaks of a woman's seed in ordinary births, of Hagar's (16:10) and of
+Rebekah's (24:60). The chapters "Does Genesis 3:15 rule out a human father?" and
+"Is Genesis 3:15 a promise, fulfilled in Jesus?" weigh the strand.
+
+### Micah 5:2–3
+
+The third strand reads the prophecy of the ruler from Bethlehem. Israel will be
+given up "until the time when she who is in labour has given birth" (Micah
+5:3), and the strand takes that as naming a mother and no father for the coming
+ruler. The objection is immediate, and it is encoded as the rival: this is an
+argument from silence, and an oracle about a woman in labour has no occasion to
+mention a father.
+
+### Isaiah 2–12
+
+The fourth strand declines the fight over the word altogether. Seth Postell
+reads Isaiah 7 inside Isaiah 2–12, a unit framed by visions of the last days at
+2:1–4 and 11:1–12:6. On the principle that an oracle's meaning in a finished
+book is set by its place in the book, and not by the events it first spoke to,
+which he argues from the making of canonical Jeremiah, 7:14 looks ahead to a
+future and miraculous birth. The strand turns on that principle
+(`compositionGovernsMeaning`), and a reader who holds that an oracle's
+historical setting fixes its sense rejects it outright.
+
+## The reply: a virgin is an *almah*
+
+The referential reply answers the dispute over the word without entering it.
+*Almah* need not *mean* "virgin" for Mary to *be* an *almah*. Genesis shows the
+two words can name one woman: Rebekah is an עַלְמָה at 24:43, and at 24:16 a
+virgin (בְּתוּלָה) "whom no man had known". Mary was a betrothed young woman of
+marriageable age who conceived as a virgin, so she answers Isaiah's description
+on anyone's dictionary, and Matthew's claim never required the sense the
+objection demands (`semantic_establishes`).
+
+The reply has a price. It is purely defensive: it takes away the objection and
+delivers nothing in its place, so the conclusion still has to come from one of
+the four strands (`compatibility_does_not_establish_criterion`). What it buys is
+that *losing* the dispute over the word no longer costs Matthew his fulfilment.
+
+It also changes what the translations show. Grant every one of them, add the
+referential premises, and the objection from the versions no longer reaches its
+conclusion (`compatibility_defeats_lexical_objection`). Once virginity is
+compatible with the word, four translators making four different choices about
+how much of the woman to make explicit tell us nothing about the word's sense.
+
+## What the strands show together
+
+No single disputed reading carries the argument. Strip the reading of *almah*
+and the other three strands still deliver the conclusion
+(`almah_not_load_bearing`). Strip all four disputed readings and it fails
+(`hinges_jointly_load_bearing`). Genesis's strand delivers it only on Luther's
+reading of "her seed", which nothing here forces (the chapter
+"Does Genesis 3:15 rule out a human father?"). Within the Isaianic strand taken
+by itself, the reading of the word still carries everything, as it did before
+the other strands were encoded (`almah_is_load_bearing_alone`).
+
+None of this shows that the strands are secure. Each rests on a reading someone
+competent denies. It shows that an opponent has to answer all four, and that
+winning the argument over *almah* does not by itself defeat the conclusion.
+
+What the strands share is the conception itself and its attestation. Matthew's
+and Luke's birth narratives agree on the virgin conception while differing in
+nearly every other detail, and that agreement is encoded as a premise of
+independent attestation (`independentAttestation`). Whether the two traditions
+are independent is itself debated, so it is rated `plausible`, not
+`wellSupported`.
+
+Luke is a second witness to the conception, not to the prophecy. His account
+runs parallel to Matthew's and independent of it, but it never quotes Isaiah
+7:14. Luke 1:31 is close to the Septuagint's wording, and whether that is an
+allusion is disputed. The library records it as one, attributed
+(`lukeAllusionEdge`), and records the rival reading beside it, on which the
+wording is the stock form of a birth announcement, the form Isaiah 7:14 itself
+uses (`annunciationFormEdge`). Luke adds to the attestation of the conception;
+he adds nothing to the rating of the predictive reading.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin
@@ -19,7 +146,7 @@ open Testimony
 
 open Testimony Testimony.Bib Testimony.Logic
 
-/-! ### Inference steps
+/-! #### Inference steps
 
 One per strand, each delivering the same criterion, plus the steps that close
 the argument and the steps the rivals need. Keeping them separate is what makes
@@ -398,7 +525,7 @@ pronoun; so its translator read the seed as one person. -/
 def heReadsOneDescendant : Formula Claim :=
   p .lxxCallsTheSeedHe ➝ p .lxxReadsOneDescendant
 
-/-! ### The lines of reason
+/-! #### The lines of reason
 
 Four strands converge on the criterion, and each is a `Line`: its own grounds,
 its own licensing step, and what it delivers. The packages are assembled from
@@ -1427,7 +1554,7 @@ def dinahLine : Line Claim :=
       , tradition := .christianHistoricalGrammatical
       , confidence := .plausible } }
 
-/-! ### Miller on the laws -/
+/-! #### Miller on the laws -/
 
 /-- The citation for Miller's steps, from a use of the word to its sense in the
 Septuagint's Greek. `disputed`: Rico and Gentry (18, 21) and Bratcher (113)
@@ -1503,7 +1630,7 @@ def criticalExclusionLine : Line Claim :=
     -- the grounds, where it is rated.
   , inference := some (brownOnBirth .consensus) }
 
-/-! ### The two defeaters, as arguments in their own right
+/-! #### The two defeaters, as arguments in their own right
 
 `criticalDenialUnderBerry` and `criticalDenialUnderParity` ask what the critical
 line is left with once a reply is in play. The lines below ask something else:
@@ -1579,7 +1706,7 @@ def micahLine : Line Claim :=
     -- the same answer would meet `postellLine`.
   , inference := some (postellOnIsaiah (.page 481) .plausible) }
 
-/-! ### What the strands share -/
+/-! #### What the strands share -/
 
 /-- The premises no single strand owns: Mary's conception, and the agreement of
 the two birth narratives about it. Every scriptural package needs them and
