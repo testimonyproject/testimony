@@ -114,6 +114,9 @@ Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
   lines: 41, read: 0
 Sola fide
   lines: 49, read: 31
+  attribute a view, against the argument's record:
+    sandersLine: secondTempleJudaism, unrecorded
+    trentWordLine: augustine, unrecorded; latinWest, unrecorded
   need a word to keep its sense, unstated:
     catholicJamesWordLine: erga, dikaioo
     catholicJamesWorksLine: erga, dikaioo
@@ -128,22 +131,22 @@ Sola fide
     renewalWordLine: dikaioo
     romansFourExegesisLine: logizomai, erga
 Sola gratia — Ephesians 2:8–9 and Romans 9:16
-  lines: 12, read: 0
+  lines: 27, read: 0
 Sola scriptura
   lines: 27, read: 21
 The Triune God
-  lines: 13, read: 0
+  lines: 34, read: 0
 The canonical witness
   lines: 8, read: 0
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments
 
-/-- info: every package has a model with its postulates: 237, and 0 undecided -/
+/-- info: every package has a model with its postulates: 259, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments
 
-/-- info: every non-entailment survives its postulates: 123, and 4 undecided -/
+/-- info: every non-entailment survives its postulates: 127, and 4 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments
 
@@ -152,13 +155,13 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2566 definitions, 241 entries
+info: every entry is a tagged definition, and every key names one: 2572 definitions, 264 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 2211 definitions, 241 entries
+info: every entry is a tagged definition, and every key names one: 2540 definitions, 264 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments
@@ -175,9 +178,12 @@ BornOfAVirgin.wegnerDispute.finite: 13 I, 5 RA, 4 CA, 0 PA, 22 edges
 SolaFide.jamesDispute.finite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
 SolaFide.jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
 SolaFide.solaFideDispute.finite: 67 I, 30 RA, 32 CA, 1 PA, 160 edges
+SolaGratia.perseveranceDispute.finite: 35 I, 15 RA, 24 CA, 0 PA, 85 edges
 SolaGratia.solaGratiaDispute.finite: 42 I, 14 RA, 47 CA, 0 PA, 131 edges
 SolaScriptura.mark7Dispute.finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
 SpiritBaptism.spiritBaptismDispute.finite: 15 I, 7 RA, 6 CA, 0 PA, 32 edges
+Trinity.caseDispute.finite: 56 I, 24 RA, 27 CA, 0 PA, 138 edges
+Trinity.deityDispute.finite: 31 I, 9 RA, 14 CA, 0 PA, 70 edges
 Trinity.orderDispute.finite: 20 I, 8 RA, 8 CA, 0 PA, 43 edges
 Trinity.processionDispute.finite: 16 I, 6 RA, 2 CA, 0 PA, 26 edges
 and 10 hearings, drawn with the disputes they restrict

@@ -3,18 +3,74 @@ import TestimonyArguments.Meanings.BornOfAVirgin
 import TestimonyArguments.BornOfAVirgin.Results
 
 /-!
-# TestimonyArguments.BornOfAVirgin.Dispute — who prevails over Isaiah 7:14
+# TestimonyArguments.BornOfAVirgin.Dispute — was Isaiah's sign only for Ahaz?
 
-The results in `Results.lean` ask what each package entails. This module asks
-what happens when the packages meet: the scriptural reading, the critical
-denial of the predictive reading, and four replies to that denial — Berry's
-objection, Postell's two counterexamples (Isaiah 9 and 11, and Micah 5), and
-Motyer's reply, with Compton's — taken together as one dispute.
+Isaiah 7 opens in a crisis. The kings of Syria and of Israel have marched on
+Jerusalem, and Isaiah goes out to meet King Ahaz with a promise that the
+invasion will fail. He invites Ahaz to ask a sign, "either in the depth, or in
+the height above" (7:11, KJV). Ahaz refuses, and Isaiah answers that the Lord
+will give one anyway: the woman shall conceive and bear a son, and
 
-Who defeats whom is not stipulated. Each defeat below is a theorem about the
-packages' premises, and so is each absence of one (see `Testimony.Logic.Dispute`
-for how an attack is derived from entailment and filtered by cited confidence).
-The defeats are these:
+> "before the boy knows how to refuse the evil and choose the good, the land
+> whose two kings you dread will be deserted." (Isaiah 7:16)
+
+A sign dated by a child's infancy, and given to a king facing an invasion,
+looks like a sign for that king's own day. That is the critical case, and
+Raymond Brown is cited for it. It has two grounds: that 7:14 is a sign to Ahaz,
+fulfilled in Isaiah's own generation (`isaiahIsNearTermSignToAhaz`), and that a
+sign given for Ahaz's generation is not also a prediction of a virgin birth
+(`nearTermExcludesMessianicSense`). Grant both and the predictive reading fails
+(`criticalDenial_establishes`). The step from the grounds to that conclusion is
+rated `consensus`, because anyone who grants both grounds grants it. The
+contest is over the grounds.
+
+## Four replies
+
+Berry answers that how the sign was fulfilled in Ahaz's day is itself an
+open question. Its near-term child has been taken for Isaiah's son, for
+Hezekiah and for a son of Ahaz, with no settled answer, and Compton, surveying
+the candidates, finds that none fits. Grant Berry that much and the critic's
+exclusion no longer follows (`berry_blocks_critical_denial`). It does no more
+than that: it does not establish the predictive reading, and it does not touch
+the dispute over the word. Berry also supplies a defensive premise about the
+word, that the range of עַלְמָה does not exclude "virgin", and on its own that
+is worth nothing (`admissibility_is_not_enough`). *May mean* is not *does
+mean*, and the Isaianic strand lives in that gap.
+
+Postell answers with a counterexample. Isaiah 9:5–6 (9:6–7 in English
+Bibles: "For to us a child is born") and 11:1–10 ("There shall come forth a
+shoot from the stump of Jesse") are read as messianic without reservation, and
+they stand on the same Assyrian timeline as 7:14: the invasion of 8:7–8, the
+oppressor's rod of 10:5. So a near-term setting cannot be what rules out a
+messianic sense, or it would rule out chapters 9 and 11 too
+(`parity_blocks_critical_denial`). The Targum is cited *for* this premise. It
+reads 9:5–6 and 11:1 of the Messiah while declining to read 7:14 so, which makes
+it a hostile witness, and so a strong one.
+
+Postell's second counterexample is Micah 5, whose ruler is set against the
+Assyrian invasion and was read of the Messiah. Brown himself grants that
+reading.
+
+Motyer, with Compton, goes for the critic's other ground. The sign of 7:14
+is addressed to the house of David, in plural pronouns, and only 7:15–16, with a
+singular "you", to Ahaz; and the near-term timetable passes to Isaiah's son
+Maher-shalal-hash-baz (8:3–4), not to Immanuel. So 7:14 is not a near-term
+sign to Ahaz at all.
+
+That gives the critic's exclusion three independent answers and its near-term
+ground a fourth. Berry's is evidential: we do not know how the sign was
+fulfilled in Ahaz's day. Postell's are structural: the near-term setting was
+never the right kind of reason. Motyer's is a reading of the chapter's own
+address.
+
+## Who defeats whom
+
+When the positions are weighed together, one position **defeats** another when
+it contradicts it and rests on grounds rated at least as well. Who defeats whom
+is not stipulated. Each defeat below is a theorem about the packages' premises,
+and so is each absence of one (see `Testimony.Logic.Dispute` for how an attack
+is derived from entailment and filtered by cited confidence). The defeats are
+these:
 
 - **The critical denial defeats the scriptural reading.** It entails the
   negation of the scriptural premise that Isaiah 7:14 predicts a virgin birth,
@@ -37,13 +93,14 @@ The defeats are these:
 ## What follows
 
 Faced with the scriptural reading alone, **nothing prevails**: the two defeat
-each other, and the grounded extension is empty. Add the replies and **the
-scriptural reading prevails**. Nothing defeats Postell's counterexamples; they
-defeat the critic, which is the only party that defeats the scriptural reading,
-Berry or Motyer; and so all five stand. The critical denial belongs to no
-admissible set at all, because nothing answers Postell. Take away either
-counterexample and the scriptural reading still prevails; take away both and
-nothing does.
+each other, so neither must be accepted however the tie is broken
+(`nothing_prevails_unanswered`). Add the replies and **the scriptural reading
+prevails** (`scriptural_reading_prevails_once_replies_are_heard`). Nothing
+defeats Postell's counterexamples; they defeat the critic, which is the only
+party that defeats the scriptural reading, Berry or Motyer; and so all five
+stand. The critical denial cannot be defended at all, because nothing answers
+Postell (`critical_denial_indefensible`). Take away either counterexample and
+the scriptural reading still prevails; take away both and nothing does.
 
 This is the result entailment could not state. Adding premises never removes a
 conclusion; adding arguments can change what a dispute forces, and here it
@@ -90,7 +147,7 @@ Micah 5 or Isaiah 9 is a *sign* to Ahaz — would be the source to find.
 ## What the church fathers add, and what they cannot
 
 The predictive reading is not a modern apologetic. Justin, Irenaeus, Origen and
-Jerome all argue it, and `Sources.lean` cites them for it: for the prediction
+Jerome all argue it, and they are cited for it: for the prediction
 itself, and for עַלְמָה as a virgin. Every father the library has read on
 the verse — Tertullian, Eusebius, Cyril of Jerusalem, Chrysostom, Cyril of
 Alexandria and Theodoret besides — argues that an ordinary conception would have
@@ -112,7 +169,8 @@ them.
 
 The sign argument is encoded as an argument in its own right, `signLine`. It
 answers Wegner's objection rather than the critical denial, so it is weighed in
-`Dispute.Wegner`, where it ties with Wegner (`nothing_prevails_over_wegner`).
+the chapter "Was the woman already pregnant?", where it ties with Wegner
+(`nothing_prevails_over_wegner`).
 -/
 
 namespace TestimonyArguments.BornOfAVirgin
@@ -121,7 +179,7 @@ open Testimony
 
 open Testimony Testimony.Logic Testimony.Logic.Framework
 
-/-! ### The replies as positions
+/-! #### The replies as positions
 
 Each reply is an argument in its own right, so it must hold together and
 deliver its conclusion before it can take part in a dispute. -/
@@ -242,7 +300,7 @@ theorem motyerReply_establishes : Establishes motyerReply := by
 theorem motyerReply_is_satisfiable : Satisfiable motyerReply.premises := by
   satisfied_by motyerReading [bornOfAVirginDefs]
 
-/-! ### Strength: the weakest link of each position
+/-! #### Strength: the weakest link of each position
 
 Premises and inferences alike: a position is no stronger than the least
 supported thing it assumes, and an inference is something it assumes. -/
@@ -270,7 +328,7 @@ theorem micahParity_strength : micahParity.strength = 1 := by decide
 inference is `disputed`, and he is no stronger than it. -/
 theorem motyerReply_strength : motyerReply.strength = 0 := by decide
 
-/-! ### The defeats
+/-! #### The defeats
 
 Each is an attack the ratings do not block, decided from the two packages'
 premises by `Horn.defeats?` and checked by the kernel. -/
@@ -357,7 +415,7 @@ who identify the two children. -/
 theorem critical_defeats_motyer : Defeats criticalDenial motyerReply :=
   Horn.defeats_of_certified criticalDenial_strength motyerReply_strength (by horn_certify)
 
-/-! ### What does not defeat -/
+/-! #### What does not defeat -/
 
 /-- **The critical denial does not defeat Postell.** It rebuts him, but it is
 the weaker of the two: its premises are `disputed`, and his inference is
@@ -376,7 +434,7 @@ of a near-term Davidic king rather than messianically
 theorem critical_does_not_defeat_micah : ¬ Defeats criticalDenial micahParity :=
   Horn.not_defeats_of_certified criticalDenial_strength micahParity_strength (by horn_certify)
 
-/-! ### Why these are not counters
+/-! #### Why these are not counters
 
 The two absences above are computed; the readings below say why. -/
 
@@ -530,7 +588,7 @@ theorem critical_denial_not_credulously_accepted :
     ¬ CredulouslyAccepted isaiahDispute.defeats .critical :=
   fun ⟨S, hS, hc⟩ => critical_denial_indefensible S hS.1 hc
 
-/-! ### Hearings
+/-! #### Hearings
 
 The same dispute with some parties not heard. Each hearing is a restriction of
 `isaiahDispute`, so its defeats are the ones already proved. In each of these,

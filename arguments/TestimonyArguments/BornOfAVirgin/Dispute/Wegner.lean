@@ -28,9 +28,10 @@ As in `Dispute.lean`, who defeats whom is proved, not stipulated:
 
 ## What follows
 
-**Nothing prevails.** Every party is defeated by someone, so the grounded
-extension is empty (`nothing_prevails_over_wegner`). It can be resolved two
-ways, and each is proved to be a preferred extension: the fathers alone
+**Nothing prevails.** Every party is defeated by someone, so no party must be
+accepted however the disagreements are settled (`nothing_prevails_over_wegner`).
+The tie can be broken two ways, and each is proved to be a position that
+defends itself against every attack on it: the fathers alone
 (`sign_is_one_resolution`), or Wegner with the near-term reply
 (`wegner_is_the_other_resolution`). Each side is defensible and neither is
 forced. Hear only Wegner and the fathers and it is the same
@@ -60,8 +61,8 @@ against the only party that defeats him.
 So the question this dispute cannot settle is the one the sources divide on:
 whether the sign of 7:14 must be the kind of sign offered at 7:11. Neither the
 age of the fathers' argument nor its modern restatement changes that rating,
-for the reason `Dispute.lean` gives: an older witness does not make a contested
-claim uncontested.
+for the reason the chapter "Was Isaiah's sign only for Ahaz?" gives: an older
+witness does not make a contested claim uncontested.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin

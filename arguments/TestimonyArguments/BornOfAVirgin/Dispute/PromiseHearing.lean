@@ -5,10 +5,10 @@ import Testimony.Logic.Credibility
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.PromiseHearing — the promise, heard under each standard
 
-`Dispute.Protoevangelium` weighs the fulfilment of Genesis 3:15 against
-Westermann's denial that the verse is any promise, and as the evidence weighs it
-nothing prevails. This module asks the question that verdict leaves open: **should
-Westermann's dissent be heard against a step whose grounds are all Scripture?**
+The dispute above weighs the fulfilment of Genesis 3:15 against Westermann's
+denial that the verse is any promise, and as the evidence weighs it nothing
+prevails. That verdict leaves a question open: **should Westermann's dissent be
+heard against a step whose grounds are all Scripture?**
 
 The fulfilment's step rests on five texts, each a claim about what Scripture
 says: Genesis 3:15 itself, Galatians 4:4, Revelation 12:9, Hebrews 2:14 with 1
@@ -46,7 +46,7 @@ another text, read the other way, would be heard.
 
 Nor does the verdict say what Genesis 3:15 meant to its first readers. The
 readers before Christ do not read it as a promise of one victor
-(`Dispute.Protoevangelium`). It says what the verse is, read with the rest of
+(see the dispute above). It says what the verse is, read with the rest of
 Scripture, for a reader who holds that Scripture interprets Scripture.
 -/
 

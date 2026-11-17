@@ -4,9 +4,10 @@
 # Appendix: the claims and their sources
 
 
-Sixteen claims, in four groups: the texts every party reads, the readings of
-them that are in dispute, the claims Trent and the Remonstrants add, and the
-three parts of the conclusion.
+The claims, in groups: the texts every party reads; the readings of them that
+are in dispute; the claims each rival position adds; the three parts of the
+conclusion; and, last, the claims of the chapter on the perseverance of the
+saints.
 
 The conclusion has three parts so that a rival can hold one part and deny
 another, and both rivals do. Everyone in this dispute says that salvation is by
@@ -75,7 +76,7 @@ either.
 | <a id="claim-17"></a>\\(P_{17}\\) | God moves the will intending that it attain grace | theological | Roman Catholic, well supported | [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Pohle 1911](../../bibliography.md#pohle-molinism-1911) |
 | <a id="claim-18"></a>\\(P_{18}\\) | Under operating grace the will is not merely passive: it freely consents | theological | Roman Catholic, well supported | [Garrigou-Lagrange 1952](../../bibliography.md#garrigou-lagrange-grace-1952), §ch. IV; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45 |
 | <a id="claim-19"></a>\\(P_{19}\\) | Grace truly sufficient, giving the power to do good, is resisted | theological | Roman Catholic, disputed | [Garrigou-Lagrange 1952](../../bibliography.md#garrigou-lagrange-grace-1952), §ch. VI |
-| <a id="claim-20"></a>\\(P_{20}\\) | Justifying grace, once given, can be lost | theological | Roman Catholic, disputed | [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.24 a.11; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23 |
+| <a id="claim-20"></a>\\(P_{20}\\) | Justifying grace, once given, can be lost | theological | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 15; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 42; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47 |
 | <a id="claim-21"></a>\\(P_{21}\\) | Zechariah 1:3 ("return to me, and I will return to you") with Lamentations 5:21 ("restore us to yourself, O Lord") | textual | Christian, hist.-gramm., consensus | Zech 1:3; Lam 5:21; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 5; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 33 |
 | <a id="claim-22"></a>\\(P_{22}\\) | In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith | linguistic | Christian, hist.-gramm., well supported | [Hoehner 2002](../../bibliography.md#hoehner-ephesians-2002), p. 343; [Robertson 1931](../../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8 |
 | <a id="claim-23"></a>\\(P_{23}\\) | Romans 9:16 is about God's mercy in saving, not only in choosing a people for history | interpretive | Christian, hist.-gramm., well supported | [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565; [Abasciano 2006](../../bibliography.md#abasciano-corporate-election-romans-9-2006), p. 351 |
@@ -87,6 +88,32 @@ either.
 | <a id="claim-29"></a>\\(P_{29}\\) | Salvation is by grace and not earned: grace goes before every saving act | theological | Christian, hist.-gramm., consensus | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), chs. 5, 8; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 32; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), arts. 3–4; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 10 |
 | <a id="claim-30"></a>\\(P_{30}\\) | The grace that saves brings about the consent it seeks | theological | Reformed Protestant, disputed | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12 |
 | <a id="claim-31"></a>\\(P_{31}\\) | In being made alive the will is passive, and contributes nothing to it | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §X.2; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 12 |
+| <a id="claim-32"></a>\\(P_{32}\\) | John 10:27–29 — they will never perish, and no one will snatch them out of my hand ※ | textual | Christian, hist.-gramm., consensus | John 10:27-29 |
+| <a id="claim-33"></a>\\(P_{33}\\) | Philippians 1:6 — he who began a good work in you will bring it to completion ※ | textual | Christian, hist.-gramm., consensus | Phil 1:6 |
+| <a id="claim-34"></a>\\(P_{34}\\) | Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away ※ | textual | Christian, hist.-gramm., consensus | Heb 6:4-6 |
+| <a id="claim-35"></a>\\(P_{35}\\) | 1 John 2:19 — they went out from us, but they were not of us ※ | textual | Christian, hist.-gramm., consensus | 1 John 2:19 |
+| <a id="claim-36"></a>\\(P_{36}\\) | No power from outside can snatch true believers out of Christ's hand | theological | Christian, hist.-gramm., consensus | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 548; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445 |
+| <a id="claim-37"></a>\\(P_{37}\\) | To some whom God has regenerated, and given faith, hope and love, he does not give perseverance | theological | Christian, hist.-gramm., disputed | [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 478; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 18 |
+| <a id="claim-38"></a>\\(P_{38}\\) | God's promise to keep those he has begun to save holds unless they fall away by their own fault | theological | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40 |
+| <a id="claim-39"></a>\\(P_{39}\\) | Those who are Christ's sheep do hear and follow, because God keeps them in faith | theological | Reformed Protestant, disputed | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 593; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416 |
+| <a id="claim-40"></a>\\(P_{40}\\) | Hebrews 6:4–6 describes true believers who actually fall away | interpretive | Arminian, disputed | [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 449 |
+| <a id="claim-41"></a>\\(P_{41}\\) | Those God has chosen to save cannot finally fall away from grace | theological | Reformed Protestant, well supported | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVII.1; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 636; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 593 |
+| <a id="claim-42"></a>\\(P_{42}\\) | Everyone who is truly justified is among the elect | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §X.4; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138 |
+| <a id="claim-43"></a>\\(P_{43}\\) | One who is truly justified can fall away from grace finally, and perish | theological | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 439 |
+| <a id="claim-44"></a>\\(P_{44}\\) | Romans 8:29–30 — those whom he justified he also glorified ※ | textual | Christian, hist.-gramm., consensus | Rom 8:29-30 |
+| <a id="claim-45"></a>\\(P_{45}\\) | Hebrews 10:26–29 — the one who has profaned the blood of the covenant by which he was sanctified ※ | textual | Christian, hist.-gramm., consensus | Heb 10:26-29 |
+| <a id="claim-46"></a>\\(P_{46}\\) | 2 Peter 2:20–22 — having escaped the defilements of the world, they are again entangled in them ※ | textual | Christian, hist.-gramm., consensus | 2 Pet 2:20-22 |
+| <a id="claim-47"></a>\\(P_{47}\\) | Psalm 51:11 — take not your Holy Spirit from me ※ | textual | Christian, hist.-gramm., consensus | Ps 51:11 |
+| <a id="claim-48"></a>\\(P_{48}\\) | Romans 8:16 — the Spirit himself bears witness with our spirit ※ | textual | Christian, hist.-gramm., consensus | Rom 8:16 |
+| <a id="claim-49"></a>\\(P_{49}\\) | 1 Corinthians 10:12 — let anyone who thinks that he stands take heed lest he fall ※ | textual | Christian, hist.-gramm., consensus | 1 Cor 10:12 |
+| <a id="claim-50"></a>\\(P_{50}\\) | Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away | interpretive | Arminian, disputed | [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 448–449; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 585 |
+| <a id="claim-51"></a>\\(P_{51}\\) | 2 Peter 2:20–22 describes true believers who fall back into the world | interpretive | Arminian, disputed | [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625 |
+| <a id="claim-52"></a>\\(P_{52}\\) | In his sin David lost the Holy Spirit and his faith | interpretive | Christian, hist.-gramm., disputed | [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Smalcald Articles III.iii.43 |
+| <a id="claim-53"></a>\\(P_{53}\\) | A believer can know, without a special revelation, that he will persevere | theological | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 16; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 46; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 12; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), pp. 39–40 |
+| <a id="claim-54"></a>\\(P_{54}\\) | Romans 8:29–30 is a chain from which no one drops: every one justified is glorified | interpretive | Reformed Protestant, disputed | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413 |
+| <a id="claim-55"></a>\\(P_{55}\\) | 1 John 2:19, read of every apostate: all who fall away were never true believers | interpretive | Reformed Protestant, disputed | [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480 |
+| <a id="claim-56"></a>\\(P_{56}\\) | Considered in himself, apart from God's decree, the one who perseveres could have fallen | theological | Christian, hist.-gramm., consensus | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 594; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I q.23 a.6 ad 2; [Boethius 1897](../../bibliography.md#boethius-consolation-james-1897), pp. 263–264 |
+| <a id="claim-57"></a>\\(P_{57}\\) | God knows all things as present to his eternity, which imposes no necessity on them | theological | Christian, hist.-gramm., well supported | [Boethius 1897](../../bibliography.md#boethius-consolation-james-1897), pp. 257–262; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I q.14 a.13; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 58, §5 |
 
 </div>
 
@@ -480,6 +507,383 @@ def asDispositionSource : Source :=
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 ```
 
+#### Ratings for the steps on perseverance
+
+<a id="john10Inference"></a>
+**`john10Inference`**
+
+**The rating of the step from John 10:27–29 to "the elect persevere":
+`disputed`.** Calvin reads it so: "the salvation of all the elect is not less
+certain than the power of God is invincible" (*John*, vol. 1, p. 416), and the
+Formula of Concord cites the verse for God's purpose, "from which no one can
+pluck us" (Solid Declaration XI.45). Wesley grants the text and denies that it
+promises anyone perseverance without condition: "In the preceding text, the
+condition is only implied. In this it is plainly expressed. They are *my sheep*,
+that *hear my voice*, that *follow me* in all holiness. And 'if ye do these
+things, ye shall never fall'" (*Serious Thoughts upon the Perseverance of the
+Saints*, §18), quoting 2 Peter 1:10.
+
+```lean
+def john10Inference : Source :=
+  { primary := Reference.work wesleyWorks9 (Bib.Locus.pages 444 445),
+    supporting :=
+      [Reference.work calvinJohn (Bib.Locus.pages 415 416),
+        concord✝ "Solid Declaration XI.45"],
+    tradition := Tradition.arminian, confidence := Confidence.disputed }
+```
+
+<a id="bridgeInference"></a>
+**`bridgeInference`**
+
+The rating of the step from 1 John 2:19, read of every apostate, to
+"everyone truly justified is among the elect": `wellSupported`. Owen draws it:
+"If all they who fall away totally … were never true believers … then those who
+are true believers cannot fall away; but the first is true, therefore the
+latter" (*Works*, vol. 11, p. 595). No reader was found who grants the reading
+and denies the conclusion. The dissent is from the reading: Augustine holds that
+those who left "were in goodness", "in the faith of children", and not elect
+(*On Rebuke and Grace*, ch. 20); Trent condemns the conclusion outright,
+anathema to anyone who says "that he that falls and sins was never truly
+justified" (Session VI, canon 23).
+
+```lean
+def bridgeInference : Source :=
+  { primary := Reference.work owenPerseverance (Bib.Locus.page 595),
+    supporting :=
+      [Reference.work calvinCatholicEpistles (Bib.Locus.pages 191 192),
+        Reference.work calvinHebrews (Bib.Locus.pages 137 138),
+        trent✝ "canon 23",
+        waterworth✝ 47],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="joinInference"></a>
+**`joinInference`**
+
+The rating of the step from "the elect persevere" and "the truly justified
+are elect" to "no one truly justified can finally fall away": `consensus`. It
+follows from what the words mean, and no reader was found who grants both
+grounds and denies the conclusion. The readers who deny the conclusion, Augustine
+among them, deny the second ground.
+
+```lean
+def joinInference : Source :=
+  {
+    primary :=
+      Reference.work westminsterConfession (Bib.Locus.sectionRef "XVII.1"),
+    supporting := [Reference.work schaffCreeds3 (Bib.Locus.page 636)],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.consensus }
+```
+
+<a id="philippiansInference"></a>
+**`philippiansInference`**
+
+**The rating of the step from Philippians 1:6 to "no one truly justified can
+finally fall away": `disputed`.** Trent quotes the verse and, in the same
+sentence, denies that it settles the matter: "For God, unless men be themselves
+wanting to His grace, as he has begun the good work, so will he perfect it"
+(Session VI, ch. 13). The Formula of Concord cites it while explaining why some
+fall away: it "is not as though God were unwilling to grant grace for
+perseverance to those in whom He has begun the good work" (Solid Declaration
+XI.42).
+
+```lean
+def philippiansInference : Source :=
+  { primary := trent✝ "ch. 13",
+    supporting :=
+      [waterworth✝ 40,
+        concord✝ "Solid Declaration XI.42"],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="conditionalInference"></a>
+**`conditionalInference`**
+
+The rating of the step from a promise that holds "unless men be themselves
+wanting to His grace" to "the justified can finally fall away": `wellSupported`.
+Read as a condition that can fail, the step only says what the condition means,
+and Trent draws it in canon 23. Read as a condition God himself keeps in those
+he has begun to save, the ground is a different claim, and the step does not
+apply to it; the dilemma over the promise sets the two readings out.
+
+```lean
+def conditionalInference : Source :=
+  { primary := trent✝ "canon 23",
+    supporting :=
+      [waterworth✝ 47,
+        Reference.work wesleyWorks9 (Bib.Locus.page 439)],
+    tradition := Tradition.romanCatholic,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="hebrewsInference"></a>
+**`hebrewsInference`**
+
+The rating of the step from Hebrews 6:4–6, read as describing true believers
+who fall away, to "the justified can finally fall away": `wellSupported`. Wesley
+draws it: "those who are holy or righteous in the judgment of God himself … may
+nevertheless so fall from God, as to perish everlastingly" (*Serious Thoughts*,
+§30). No reader was found who grants the reading and denies the conclusion. The
+dissent is from the reading: Calvin holds that those described had only "some
+taste of his grace", a knowledge "which afterwards vanishes away".
+
+```lean
+def hebrewsInference : Source :=
+  { primary := Reference.work wesleyWorks9 (Bib.Locus.page 449),
+    tradition := Tradition.arminian, confidence := Confidence.wellSupported }
+```
+
+<a id="augustineInference"></a>
+**`augustineInference`**
+
+The rating of the step from "some regenerate are not given perseverance" to
+"the justified can finally fall away": `wellSupported`. Augustine draws it, and
+Aquinas: "anyone may lose his crown by mortal sin" (I q.23 a.6 ad 1). No reader
+was found who grants the ground and denies the conclusion; Calvin denies the
+ground.
+
+```lean
+def augustineInference : Source :=
+  { primary := Reference.work npnfAugustineAntiPelagian (Bib.Locus.page 478),
+    supporting :=
+      [Reference.work aquinasSumma (Bib.Locus.sectionRef "I q.23 a.6 ad 1")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="remonstranceInference"></a>
+**`remonstranceInference`**
+
+The rating of the step from John 10:28 to "no power from outside snatches
+believers out of Christ's hand": `consensus`. The Remonstrants draw it (fifth
+article), and every party here grants it.
+
+```lean
+def remonstranceInference : Source :=
+  { primary := Reference.work schaffCreeds3 (Bib.Locus.pages 548 549),
+    supporting :=
+      [Reference.work arminiusWorks1 (Bib.Locus.page 603),
+        concord✝ "Solid Declaration XI.45",
+        Reference.work wesleyWorks9 (Bib.Locus.pages 444 445)],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.consensus }
+```
+
+<a id="asConditionGodKeepsSource"></a>
+**`asConditionGodKeepsSource`**
+
+The promise read as a condition God himself keeps: Dort's "God is faithful,
+who having conferred grace, mercifully confirms and powerfully preserves them
+therein, even to the end" (V, article 3).
+
+```lean
+def asConditionGodKeepsSource : Source :=
+  { primary := dort✝ 593,
+    supporting := [Reference.work calvinJohn (Bib.Locus.pages 415 416)],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="asConditionThatCanFailSource"></a>
+**`asConditionThatCanFailSource`**
+
+The promise read as a condition that can fail: Wesley's "a Saint may fall
+away; … one who is holy or righteous in the judgment of God himself, may
+nevertheless so fall from God, as to perish everlastingly" (*Serious Thoughts*,
+§5).
+
+```lean
+def asConditionThatCanFailSource : Source :=
+  { primary := Reference.work wesleyWorks9 (Bib.Locus.page 439),
+    supporting := [Reference.work wesleyWorks9 (Bib.Locus.pages 444 445)],
+    tradition := Tradition.arminian, confidence := Confidence.disputed }
+```
+
+#### Ratings for the further texts on perseverance
+
+<a id="romans8Inference"></a>
+**`romans8Inference`**
+
+The rating of the step from Romans 8:29–30, read as a chain from which no
+one drops, to "no one truly justified can finally fall away": `wellSupported`.
+Dort draws it: God decreed to give the elect "true faith, justification, and
+sanctification; and having powerfully preserved them … finally to glorify them"
+(I, article 7), and its Rejection of Errors condemns those who teach election to
+justifying faith without election to salvation, "dissolving this golden chain of
+salvation" (I.2, in Latin). No reader was found who grants the reading and
+denies the conclusion. The dissent is from the reading: Wesley answers that the
+verse "proves no more than that all who are glorified, are pardoned and
+sanctified first" (*Predestination Calmly Considered*, §76), and that Paul "does
+not affirm … that precisely the same number of men are called, justified, and
+glorified" (*Notes*, on Romans 8:30). Augustine reads the chain of those
+"called according to His purpose", and holds that others truly justified fall
+away (*On Rebuke and Grace*, chs. 14, 23).
+
+```lean
+def romans8Inference : Source :=
+  { primary := Reference.work schaffCreeds3 (Bib.Locus.pages 582 583),
+    supporting :=
+      [Reference.work schaffCreeds3 (Bib.Locus.page 557),
+        Reference.work wesleyWorks9 (Bib.Locus.page 413),
+        Reference.work wesleyNotes (Bib.Locus.page 384),
+        Reference.work npnfAugustineAntiPelagian (Bib.Locus.pages 480 481),
+        Reference.work calvinRomans (Bib.Locus.pages 319 320)],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="timelessInference"></a>
+**`timelessInference`**
+
+The rating of the step from God's knowing all things as present to "the one
+who perseveres could, considered in himself, have fallen away": `wellSupported`.
+Boethius draws it: things foreseen, "viewed, however, in themselves, … desist not
+from the absolute freedom naturally theirs" (*Consolation* V, prose 6, pp.
+263–264); and Aquinas: "it is possible for one who is predestinated considered in
+himself to die in mortal sin; yet it is not possible, supposed … that he is
+predestinated" (I q.23 a.6, ad 2). No reader was found who grants the premise
+and denies the conclusion.
+
+```lean
+def timelessInference : Source :=
+  { primary := Reference.work boethiusConsolation (Bib.Locus.pages 263 264),
+    supporting :=
+      [Reference.work aquinasSumma (Bib.Locus.sectionRef "I q.23 a.6 ad 2"),
+        Reference.work aquinasSumma (Bib.Locus.sectionRef "I q.14 a.13")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="hebrews10Inference"></a>
+**`hebrews10Inference`**
+
+The rating of the step from Hebrews 10:29, read as describing one truly
+sanctified who falls away, to "the justified can finally fall away":
+`wellSupported`. Wesley draws it: "It is undeniably plain, 1. That the person
+mentioned here, was once sanctified by the blood of the covenant" (*Serious
+Thoughts*, §27). No reader was found who grants the reading and denies the
+conclusion; the dissent, Owen's, is from the reading.
+
+```lean
+def hebrews10Inference : Source :=
+  { primary := Reference.work wesleyWorks9 (Bib.Locus.pages 448 449),
+    supporting :=
+      [Reference.work wesleyWorks9 (Bib.Locus.pages 414 415),
+        Reference.work wesleyNotes (Bib.Locus.page 585)],
+    tradition := Tradition.arminian, confidence := Confidence.wellSupported }
+```
+
+<a id="secondPeterInference"></a>
+**`secondPeterInference`**
+
+The rating of the step from 2 Peter 2:20–22, read as describing true
+believers who fall back, to "the justified can finally fall away":
+`wellSupported`. Wesley draws it: those who "so effectually know Christ, as by
+that knowledge to have escaped the pollutions of the world, may yet fall back
+into those pollutions, and perish everlastingly" (*Serious Thoughts*, §21). No
+reader was found who grants the reading and denies the conclusion; the dissent,
+Calvin's, is from the reading.
+
+```lean
+def secondPeterInference : Source :=
+  { primary := Reference.work wesleyWorks9 (Bib.Locus.pages 445 446),
+    supporting := [Reference.work wesleyNotes (Bib.Locus.page 625)],
+    tradition := Tradition.arminian, confidence := Confidence.wellSupported }
+```
+
+<a id="davidInference"></a>
+**`davidInference`**
+
+The rating of the step from David's losing the Spirit to "justifying grace
+can be lost": `wellSupported`. The Smalcald Articles draw it, and Trent's
+fifteenth chapter holds the conclusion: grace "is lost … by any other mortal sin
+whatever". No reader was found who grants that David lost the Spirit and denies
+that grace can be lost; Calvin denies the ground.
+
+```lean
+def davidInference : Source :=
+  {
+    primary :=
+      concord✝ "Smalcald Articles III.iii.43",
+    supporting :=
+      [trent✝ "ch. 15",
+        waterworth✝ 42],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="psalmInference"></a>
+**`psalmInference`**
+
+The rating of the step from Psalm 51:11, read as Calvin reads it, to
+"justifying grace is never lost": `wellSupported`. Calvin draws it: "it is their
+duty to hold fast the truth that grace is the incorruptible seed of God, which
+never can perish in any heart where it has been deposited" (*Psalms*, vol. 2,
+p. 300), and Dort says God does not suffer his own "to lose the grace of adoption
+and forfeit the state of justification" (V, article 6). No reader was found who
+grants that David kept the Spirit and denies the conclusion.
+
+```lean
+def psalmInference : Source :=
+  { primary := Reference.work calvinPsalms2 (Bib.Locus.pages 299 300),
+    supporting := [dort✝ 593],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="assuranceInference"></a>
+**`assuranceInference`**
+
+The rating of the step from Romans 8:16 to "a believer can know, without a
+special revelation, that he will persevere": `wellSupported`. Dort draws it: the
+assurance "springs from faith in God's promises … from the testimony of the Holy
+Spirit, witnessing with our spirit, that we are children and heirs of God" (V,
+article 10), and Westminster cites the verse for assurance (XVIII.2). No reader
+was found who grants the verse and denies the conclusion. Wesley grants the verse
+to every believer and allows "the full assurance of hope", "Divine evidence
+(wrought in the soul by the same immediate inspiration of the Holy Ghost) of
+persevering grace, and of eternal glory", which "you cannot expect, if you abate
+your diligence" (*Notes*, on Hebrews 6:11). He says the same of the assurance of
+faith, so the "immediate inspiration" is the ordinary witness of the Spirit, and
+that is not a denial. Trent denies the conclusion from another text, 1
+Corinthians 10:12.
+
+```lean
+def assuranceInference : Source :=
+  { primary := dort✝ 594,
+    supporting :=
+      [Reference.work westminsterConfession (Bib.Locus.sectionRef "XVIII.2"),
+        Reference.work wesleyNotes
+          (Bib.Locus.adLoc
+            { book := Book.hebrews, chapter := 6, verse := 11 })],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="cautionInference"></a>
+**`cautionInference`**
+
+**The rating of the step from 1 Corinthians 10:12 to "no believer can know,
+without a special revelation, that he will persevere": `disputed`.** Trent draws
+it, quoting the verse in its chapter on perseverance: "let those who think
+themselves to stand, take heed lest they fall" (Session VI, ch. 13). Calvin
+grants the verse and denies the conclusion: "let us observe that there are two
+kinds of assurance", and Paul "does not, however, exhort them to be always
+anxiously in doubt as to the will of God, or to tremble from uncertainty as to
+their salvation" (*1 Corinthians*, vol. 1, pp. 329–330).
+
+```lean
+def cautionInference : Source :=
+  { primary := Reference.work calvinFirstCorinthians (Bib.Locus.pages 329 330),
+    supporting :=
+      [trent✝ "ch. 13",
+        Reference.work waterworthTrent (Bib.Locus.pages 40 41)],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
 #### The citations
 
 <a id="baseCite"></a>
@@ -505,32 +909,18 @@ Reformed answer: what Stephen's hearers resisted was the outward call of the
 preached word, not the grace that saves.
 
 ```lean
-def reformedCite : Claim → AtomMeta :=
-  fun x =>
-    match x with
-    | Claim.acts7_51ResistsSavingGrace =>
-      {
-        label :=
-          "What Stephen's hearers resisted in Acts 7:51 was the grace that saves",
-        kind := PremiseKind.interpretive,
-        source :=
-          {
-            primary :=
-              Reference.work schaffCreeds3
-                (Bib.Locus.sectionRef "Canons of Dort, III/IV, art. 9"),
-            tradition := Tradition.reformedProtestant,
-            confidence := Confidence.disputed } }
-    | a => baseCite a
+def reformedCite : Claim → AtomMeta
 ```
 
 <a id="tridentineCite"></a>
 **`tridentineCite`**
 
-Trent's citations: the texts and canon 4, as `baseCite` has them.
+Trent's citations: the texts and canon 4, as `baseCite` has them; on
+perseverance, its fifteenth chapter, that grace "is lost … by any other mortal sin
+whatever", and its sixteenth canon, against certainty of persevering.
 
 ```lean
-def tridentineCite : Claim → AtomMeta :=
-  baseCite
+def tridentineCite : Claim → AtomMeta
 ```
 
 <a id="remonstrantCite"></a>
@@ -570,6 +960,19 @@ The Wesleyan citations: Wesley for what Wesley holds.
 
 ```lean
 def wesleyanCite : Claim → AtomMeta
+```
+
+<a id="augustinianCite"></a>
+**`augustinianCite`**
+
+The citations of Augustine and Aquinas: that the elect persevere, from
+Augustine's "they who are not to persevere … are not elected" (*On Rebuke and
+Grace*, ch. 16) and from Aquinas, for whom predestination "most certainly and
+infallibly takes effect" (*Summa* I q.23 a.6). That the justified can fall
+finally, from Aquinas: "anyone may lose his crown by mortal sin" (ad 1).
+
+```lean
+def augustinianCite : Claim → AtomMeta
 ```
 
 

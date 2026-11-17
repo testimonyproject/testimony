@@ -303,6 +303,13 @@ inductive Concept
   /-- The will's disposing and preparing itself for justification, as Trent's
   sixth session describes it (canon 4). -/
   | preparationForJustification
+  /-- Election: being among those God has chosen to save. A role a person holds
+  by God's choice, not a quality in them; the dispute over perseverance is over
+  who holds it. -/
+  | election
+  /-- Perseverance: continuing in grace to the end of life. A process, which
+  either lasts to the end or does not. -/
+  | perseverance
   /-- What must be known, believed and observed for salvation (Westminster
   Confession I.6–7): essential doctrine, in Geisler's word. -/
   | essentialDoctrine

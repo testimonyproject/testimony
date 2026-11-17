@@ -3,11 +3,10 @@ import TestimonyArguments.BornOfAVirgin.Atoms
 /-!
 # TestimonyArguments.BornOfAVirgin.Sources.Genesis — the citations of the dispute over "her seed"
 
-The atoms of the dispute over what the wording of Genesis 3:15 says about a
+The claims of the dispute over what the wording of Genesis 3:15 says about a
 father: whether "her seed" signifies a birth without one, or fits such a birth
 once it has happened, what else might explain the wording, and what the Greek's
-"he" adds. Cited here and dispatched from `cite` by name, for the reason
-`Sources.Wegner` gives.
+"he" adds.
 
 Luther, Leupold, Keil and Calvin are cited from their commentaries, Lewis and
 Collins from their articles, Henry by passage, and Akin from the publisher's

@@ -13,6 +13,13 @@ checking them for consistency. The standard the prose is held to is
 Argument pages are generated from Lean docstrings, so every finding on one must
 point to the docstring to change, not to the generated page.
 
+A page written for contributors rather than for readers of an argument
+(`docs/src/getting-started.md`, `docs/src/hello-world.md`,
+`docs/src/contributing.md`) is read by the same first reader, who now also has
+never programmed. For those pages, add to the first reading any instruction
+they could not carry out without help, and any piece of code shown without a
+sentence saying what it does.
+
 Read the section you are given twice.
 
 **First, as a Bible-study leader.** You know the passages and have heard of the
