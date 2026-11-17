@@ -1,5 +1,6 @@
 import Testimony.Bib.Attr
 import Testimony.Bib.Registry
+import Testimony.Checks.Coverage
 import Testimony.Checks.Fixture
 
 /-!
@@ -74,6 +75,7 @@ def checkCitations (roots : List Name) : CommandElabM Unit := do
     throwError m!"citations that a key does not name:\n{MessageData.joinSep problems.toList "\n"}"
   if scanned == 0 then
     throwError "#check_citations found no definition to check"
+  for r in roots do recordChecked `citations r
   logInfo m!"every entry is a tagged definition, and every key names one: \
     {scanned} definitions, {tagged} entries"
 

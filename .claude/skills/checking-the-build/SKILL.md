@@ -38,7 +38,8 @@ separate Lake packages, and each is held to the gates in its own directory.
 ### Tier 1 — `lake build`
 
 Catches type errors, and missing docstrings via `linter.missingDocs`. It also
-runs `#check_refutations` (in `arguments/`, `TestimonyArguments/Checks.lean`):
+runs `#check_refutations` (in `arguments/`, one module per argument under
+`TestimonyArguments/Checks/`):
 `establish` must fail, as not Horn, on every package an argument refutes. It reports how many it
 checked, and the count is pinned with `#guard_msgs`, so adding a refutation
 means updating the number — the error shows the new one.

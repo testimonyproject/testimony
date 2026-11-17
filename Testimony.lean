@@ -48,6 +48,8 @@ import Testimony.Semantics.Discourse
 import Testimony.Semantics.Fallacy
 import Testimony.Ontology
 import Testimony.Checks.Fixture
+import Testimony.Checks.Coverage
+import Testimony.Checks.Covered
 import Testimony.Checks.Aif
 import Testimony.Checks.Meanings
 import Testimony.Checks.Fallacies

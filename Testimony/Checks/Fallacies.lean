@@ -117,6 +117,7 @@ def checkFallacies (root : Name) : CommandElabM Unit := do
   unless failing.isEmpty do
     throwError m!"lines that equivocate or argue from silence alone, in:\n{MessageData.joinSep
       (failing.toList.map toMessageData) "\n"}\n{String.intercalate "\n" sorted.toList}"
+  recordChecked `fallacies root
   logInfo m!"the charges, against every argument's lines:\n{String.intercalate "\n" sorted.toList}"
 
 /-- `#check_fallacies under N` reports on the lines of every argument whose

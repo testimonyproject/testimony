@@ -1,27 +1,23 @@
-import TestimonyArguments.BornInBethlehem
-import TestimonyArguments.BornOfAVirgin
-import TestimonyArguments.CanonicalWitness
-import TestimonyArguments.SolaFide
-import TestimonyArguments.SolaGratia
-import TestimonyArguments.SolaScriptura
-import TestimonyArguments.SpiritBaptism
-import TestimonyArguments.Trinity
+import TestimonyArguments.Checks.Articles
+import TestimonyArguments.Checks.BornInBethlehem
+import TestimonyArguments.Checks.BornOfAVirgin
+import TestimonyArguments.Checks.CanonicalWitness
+import TestimonyArguments.Checks.SolaFide
+import TestimonyArguments.Checks.SolaGratia
+import TestimonyArguments.Checks.SolaScriptura
+import TestimonyArguments.Checks.SpiritBaptism
+import TestimonyArguments.Checks.Trinity
 import TestimonyArguments.Meanings
 import TestimonyArguments.Articles.Howell2003
-import Testimony.Checks.Aif
 import Testimony.Checks.Citations
-import Testimony.Checks.Ontology
-import Testimony.Checks.Fallacies
-import Testimony.Checks.Postulates
-import Testimony.Checks.Refutations
+import Testimony.Checks.Covered
 
 /-!
 # TestimonyArguments.Checks — the library's checks, over every argument
 
 The checks the library defines (`Testimony.Checks`), run over this package as
-part of its build. Each finds what it checks for itself, so an argument added
-tomorrow is checked tomorrow, and each report is pinned, so a change in any of
-them is a change a reviewer sees:
+part of its build. Each report is pinned, so a change in any of them is a
+change a reviewer sees:
 
 - **meanings**: every argument's claims have meanings, and its postulates come
   from its pinned joins and nowhere else;
@@ -40,149 +36,33 @@ them is a change a reviewer sees:
   its entry;
 - **AIF**: every dispute is a graph meeting the Argument Interchange Format's
   Definition 1.1.
+
+Each argument's checks run in a module of their own, `Checks.<Argument>`, under
+its namespace, and their reports are pinned there. Pinned here, every argument's
+counts shared one block, so two pull requests on two different arguments
+conflicted over it. What the one run over the whole package guaranteed, that an
+argument added tomorrow is checked tomorrow, is kept by `#check_coverage`
+below: the build fails if anything a check examines lies under no namespace the
+check was run under. A new argument adds its `Checks.<Argument>` module and
+imports it here.
+
+The citations check reads every entry in the environment, so it runs here,
+once, over everything. Its report counts every definition in the package, which
+every pull request changes, so only its failures are pinned: it fails the build
+on an entry built outside a `@[bib_entry]` definition, on two entries sharing a
+key, and on finding nothing to check.
 -/
 
 namespace TestimonyArguments
 
-open Lean in
-/-- Each argument's namespace, and the unfold set its proofs name
-(`TestimonyArguments.Attr`). A refutation outside every namespace listed here
-fails the check, so a new argument cannot be left out of it. -/
-def unfoldSets : List (Name × Name) :=
-  [ (`TestimonyArguments.BornInBethlehem, `bornInBethlehemDefs)
-  , (`TestimonyArguments.BornOfAVirgin, `bornOfAVirginDefs)
-  , (`TestimonyArguments.CanonicalWitness, `canonicalWitnessDefs)
-  , (`TestimonyArguments.SolaFide, `solaFideDefs)
-  , (`TestimonyArguments.SolaGratia, `solaGratiaDefs)
-  , (`TestimonyArguments.SolaScriptura, `solaScripturaDefs)
-  , (`TestimonyArguments.SpiritBaptism, `spiritBaptismDefs)
-  , (`TestimonyArguments.Trinity, `trinityDefs) ]
-
-/-- info: every argument has meanings and pinned joins: 8 claim types -/
-#guard_msgs in
-#check_meanings under TestimonyArguments
-
-/--
-info: the shared ontology, in every argument:
-Born in Bethlehem — Micah 5:2
-  joins: 0, with no definition: 0
-Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
-  joins: 16, with no definition: 7
-  a sense in a usage: stated at a passage of a voice's text by 3; derives:
-    parthenosMeantYoungWoman excludes lawsUseParthenosAsVirgin
-    parthenosMeantYoungWoman excludes dinahIsTheLawsParthenos
-    parthenosMeantYoungWoman excludes lxxIsaiahUsesParthenosAsVirgin
-    lawsUseParthenosAsVirgin excludes parthenosDoesNotItselfConnoteVirginity
-    dinahIsTheLawsParthenos excludes parthenosDoesNotItselfConnoteVirginity
-    lxxIsaiahUsesParthenosAsVirgin excludes parthenosDoesNotItselfConnoteVirginity
-    lawsUseParthenosAsVirgin entails parthenosMeansVirgin
-    dinahIsTheLawsParthenos entails parthenosMeansVirgin
-    lxxIsaiahUsesParthenosAsVirgin entails parthenosMeansVirgin
-Sola fide
-  joins: 5, with no definition: 4
-  not a ground: held by 4, used of a text or voice by 13; derives nothing
-  the only means: held by 3, used of a text or voice by 9; derives:
-    justificationByFaithAlone excludes baptismIsInstrumentalCause
-  the whole ground: held by 3, used of a text or voice by 6; derives nothing
-  the same sense, both ways: stated or denied by 3; derives nothing
-Sola gratia — Ephesians 2:8–9 and Romans 9:16
-  joins: 1, with no definition: 1
-  not a ground: held by 2, used of a text or voice by 0; derives nothing
-  the only means: held by 1, used of a text or voice by 0; derives nothing
-  the whole ground: held by 2, used of a text or voice by 0; derives nothing
-Sola scriptura
-  joins: 3, with no definition: 3
-  not a ground: held by 2, used of a text or voice by 1; derives nothing
-  the only means: held by 2, used of a text or voice by 1; derives nothing
-  the whole ground: held by 2, used of a text or voice by 1; derives nothing
-Spirit baptism
-  joins: 2, with no definition: 2
-The Triune God
-  joins: 0, with no definition: 0
-The canonical witness
-  joins: 7, with no definition: 7
-  not a ground: held by 3, used of a text or voice by 0; derives nothing
--/
-#guard_msgs in
-#check_ontology under TestimonyArguments
-
-/--
-info: the charges, against every argument's lines:
-Born in Bethlehem — Micah 5:2
-  lines: 2, read: 0
-Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
-  lines: 41, read: 0
-Sola fide
-  lines: 49, read: 31
-  need a word to keep its sense, unstated:
-    catholicJamesWordLine: erga, dikaioo
-    catholicJamesWorksLine: erga, dikaioo
-    fruitLine: pistis, erga
-    jamesLexicalLine: dikaioo
-    johannineLine: pisteuo
-    johannineWithoutTrust: pisteuo
-    lexicalLine: dikaioo
-    paulineLine: dikaioo, ergaNomou
-    paulineWithoutPistisChristou: dikaioo, ergaNomou
-    paulineWithoutWorksOfLaw: dikaioo, ergaNomou
-    renewalWordLine: dikaioo
-    romansFourExegesisLine: logizomai, erga
-Sola gratia — Ephesians 2:8–9 and Romans 9:16
-  lines: 12, read: 0
-Sola scriptura
-  lines: 27, read: 21
-The Triune God
-  lines: 13, read: 0
-The canonical witness
-  lines: 8, read: 0
--/
-#guard_msgs in
-#check_fallacies under TestimonyArguments
-
-/-- info: every package has a model with its postulates: 237, and 0 undecided -/
-#guard_msgs in
-#check_postulates under TestimonyArguments
-
-/-- info: every non-entailment survives its postulates: 123, and 4 undecided -/
-#guard_msgs in
-#check_refutations_postulates under TestimonyArguments
-
-/-- info: establish fails, as not Horn, on all 40 refuted packages -/
-#guard_msgs in
-#check_refutations under TestimonyArguments using unfoldSets
-
-/--
-info: every entry is a tagged definition, and every key names one: 2566 definitions, 241 entries
--/
-#guard_msgs in
+#guard_msgs (drop info) in
 #check_citations under Testimony
 
-/--
-info: every entry is a tagged definition, and every key names one: 2211 definitions, 241 entries
--/
-#guard_msgs in
+#guard_msgs (drop info) in
 #check_citations under TestimonyArguments
 
-/--
-info: every dispute, as an AIF graph meeting Definition 1.1:
-Articles.Howell2003.hearingFinite: 74 I, 32 RA, 35 CA, 2 PA, 176 edges
-BornOfAVirgin.genesisDispute.finite: 8 I, 3 RA, 2 CA, 0 PA, 15 edges
-BornOfAVirgin.isaiahDispute.finite: 30 I, 10 RA, 6 CA, 1 PA, 48 edges
-BornOfAVirgin.matthewDispute.finite: 7 I, 2 RA, 2 CA, 0 PA, 11 edges
-BornOfAVirgin.promiseDispute.finite: 17 I, 5 RA, 5 CA, 0 PA, 30 edges
-BornOfAVirgin.septuagintDispute.finite: 19 I, 7 RA, 13 CA, 3 PA, 55 edges
-BornOfAVirgin.wegnerDispute.finite: 13 I, 5 RA, 4 CA, 0 PA, 22 edges
-SolaFide.jamesDispute.finite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
-SolaFide.jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
-SolaFide.solaFideDispute.finite: 67 I, 30 RA, 32 CA, 1 PA, 160 edges
-SolaGratia.solaGratiaDispute.finite: 42 I, 14 RA, 47 CA, 0 PA, 131 edges
-SolaScriptura.mark7Dispute.finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
-SpiritBaptism.spiritBaptismDispute.finite: 15 I, 7 RA, 6 CA, 0 PA, 32 edges
-Trinity.orderDispute.finite: 20 I, 8 RA, 8 CA, 0 PA, 43 edges
-Trinity.processionDispute.finite: 16 I, 6 RA, 2 CA, 0 PA, 26 edges
-and 10 hearings, drawn with the disputes they restrict
--/
+/-- info: every check reaches everything under TestimonyArguments -/
 #guard_msgs in
-#check_aif under TestimonyArguments
+#check_coverage under TestimonyArguments
 
 end TestimonyArguments
