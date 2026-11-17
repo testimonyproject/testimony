@@ -708,6 +708,49 @@ def step [DecidableEq α] (n : Numbering α) (φ : Formula α) : String :=
     "\\noindent " ++ stepSymbols ++ " \\(" ++ linked n φ ++ "\\).\n"
   | _, _ => rows (row n "\\item[]" φ (loneGloss n φ))
 
+/-- **A source in words.** Who holds a claim or a step, where, and how firmly,
+as a sentence: the rating and the tradition, then every reference, the primary
+first. It is the legend's "held" and "source" columns, said for one source on
+its own, so a rating that stands under a step's docstring reads as the legend
+does and not as the Lean that records it. -/
+def sourceWords (s : Source) : String :=
+  "\\par\\smallskip\\noindent Rated \\emph{" ++ confidence s.confidence ++ "}, held in the " ++
+    escape (tradition s.tradition) ++ " tradition: " ++ source s ++ ".\n"
+
+/-- **A claim's citation in words**: the claim, what kind of claim it is, and
+its source as `sourceWords` gives it. -/
+def claimWords' (m : AtomMeta) : String :=
+  "\\par\\smallskip\\noindent The claim: \\emph{" ++ escape m.label ++ "} (" ++ kind m.kind ++
+    ")." ++ sourceWords m.source
+
+/-- **A reading in words.** A reading written as a valuation says, of every
+claim, whether it is true; set as Lean it is a `match` over the claims'
+names. In words it is the claims it takes as false, each with its words and
+its link to the legend, and the rest taken as true; or, where it takes fewer
+as true, those, and the rest as false. A claim the page never mentions is left
+out, since nothing on the page turns on it. -/
+def readingWords [DecidableEq α] (n : Numbering α) (truth : List (α × Bool)) : String :=
+  match n.cite with
+  | none => ""
+  | some cite =>
+    let onPage := truth.filter fun (a, _) => n.order.contains a
+    let falses := onPage.filter (!·.2)
+    let trues := onPage.filter (·.2)
+    let (listed, lead, rest) :=
+      if falses.length ≤ trues.length then
+        (falses, "On this reading these claims are false:",
+          if falses.isEmpty then "Every claim on this page is true on this reading."
+          else "Every other claim on this page is true.")
+      else
+        (trues, "On this reading only these claims are true:",
+          "Every other claim on this page is false.")
+    if listed.isEmpty then "\\par\\smallskip\\noindent " ++ rest ++ "\n"
+    else
+      "\\par\\smallskip\\noindent " ++ lead ++ "\n" ++
+      rows (String.join (listed.map fun (a, _) =>
+        "  \\item[] " ++ claimWords n cite a false ++ "\n")) ++
+      "\\noindent " ++ rest ++ "\n"
+
 /-- Which of a package's premises are grounded in scripture alone, as a note
 under its derivation; nothing, in a document none of whose claims cites
 scripture. -/
@@ -984,6 +1027,9 @@ def item [DecidableEq α] (n : Numbering α) : Page.Item α → String
       declLabel d "" ++ prose doc ++
       rows (String.join (φs.zipIdx.map fun (φ, i) =>
         row n (numbered i φs.length) φ (gloss n none φ)))
+  | .source d doc s => declLabel d "" ++ prose doc ++ sourceWords s
+  | .claim d doc m => declLabel d "" ++ prose doc ++ claimWords' m
+  | .reading d doc truth => declLabel d "" ++ prose doc ++ readingWords n truth
   | .other d doc src => declLabel d "" ++ prose doc ++ verbatim src
   | .result d doc stmt proposed =>
       declLabel d (if proposed then " \\textsuperscript{(proposed)}" else "") ++
@@ -1301,6 +1347,22 @@ private def testNumbering : Numbering Nat :=
   "  \\item[] \\((\\pvar{A}{1} \\lor \\pvar{A}{2}) \\rightarrow \\pvar{A}{3}\\)" ++
     "\\gloss{\\emph{would give:} claim 2}\n" ++
   "\\end{derivation}\n"
+
+-- A reading says, in words, the claims it takes as false, or, where fewer, the
+-- claims it takes as true; a claim the page does not mention is left out.
+#guard readingWords testNumbering [(0, true), (1, false), (2, true), (7, false)] ==
+  "\\par\\smallskip\\noindent On this reading these claims are false:\n" ++
+  "\\begin{derivation}\n  \\item[] \\(\\pvar{A}{2}\\)\\enspace claim 1\n\\end{derivation}\n" ++
+  "\\noindent Every other claim on this page is true.\n"
+#guard readingWords testNumbering [(0, false), (1, false), (2, true)] ==
+  "\\par\\smallskip\\noindent On this reading only these claims are true:\n" ++
+  "\\begin{derivation}\n  \\item[] \\(\\pvar{A}{3}\\)\\enspace claim 2\n\\end{derivation}\n" ++
+  "\\noindent Every other claim on this page is false.\n"
+
+-- A source says its rating, its tradition and its references.
+#guard sourceWords (testCite 0).source ==
+  "\\par\\smallskip\\noindent Rated \\emph{disputed}, held in the adversarial trial " ++
+  "tradition: \\emph{proposed:} a test.\n"
 
 -- What is not a list of claims has no words: a disjunction, a denied conjunction.
 #guard gloss testNumbering none (.or (.atom 0) (.atom 1)) == none
