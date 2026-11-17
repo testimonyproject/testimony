@@ -8,8 +8,8 @@ where each definition is written: `@[solaFideDefs] def reformed ...`, then
 `establish [solaFideDefs]`. Why a set and not a list is said in
 `Testimony.Attr`, which declares the library's own. Lean will not let a module
 use a simp set it declares itself, so the arguments' sets live here, in a module
-every argument imports. Adding an argument means adding its set below, and to
-`TestimonyArguments.Checks.unfoldSets`.
+every argument imports. Adding an argument means adding its set below, and
+naming it in the argument's own checks, `TestimonyArguments.Checks.<Argument>`.
 -/
 
 /-- The definitions the sola fide proofs unfold. -/

@@ -1,3 +1,4 @@
+import Testimony.Checks.Coverage
 import Testimony.Checks.Fixture
 
 /-!
@@ -83,6 +84,7 @@ def checkRefutations (root : Name) (sets : List (Name × Name)) : CommandElabM U
     throwError m!"refutations not confirmed:\n{MessageData.joinSep problems.toList "\n"}"
   if checked == 0 then
     throwError "#check_refutations found no refutation to check"
+  recordChecked `refutations root
   logInfo m!"establish fails, as not Horn, on all {checked} refuted packages"
 
 /-- `#check_refutations under N using S` checks every refutation declared under the

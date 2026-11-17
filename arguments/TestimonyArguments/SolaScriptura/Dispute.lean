@@ -4,12 +4,13 @@ import TestimonyArguments.SolaScriptura.Mark7
 /-!
 # TestimonyArguments.SolaScriptura.Dispute — what Mark 7 decides between Rome and the Reformers
 
-`Mark7.lean` asks what each position entails. This module asks what happens when
-they meet. Five parties: Mark 7's principle; Mark 7's case for sola scriptura;
-Trent, as it states its position; and Trent with its tradition read each of the
-two ways the dilemma `whatTrentsTraditionIs` names. Who defeats whom is not
-stipulated — each defeat, and each absence of one, is computed from the parties'
-premises and checked by the kernel (see `Testimony.Logic.Dispute`).
+The chapter "What Jesus' rebuke of tradition settles" asks what each position
+entails. Here the positions meet. Five parties: Mark 7's principle; Mark 7's
+case for sola scriptura; Trent, as it states its position; and Trent with its
+tradition read each of the two ways the dilemma `whatTrentsTraditionIs` names.
+Who defeats whom is not stipulated — each defeat, and each absence of one, is
+computed from the parties' premises and checked by the kernel (see
+`Testimony.Logic.Dispute`).
 
 ## How to read the verdicts
 
@@ -71,6 +72,17 @@ not decide the Reformation's question. What would decide it is argued, not
 weighed: whether any unwritten tradition can be shown to be apostolic, and, even
 granting that none can, whether the principle then makes Scripture the *sole*
 infallible rule. Both are rated `disputed`.
+
+## Why the coordinate-source claim is disputed
+
+The claim that tradition is a source of revelation coordinate with Scripture
+(`traditionIsCoordinateSourceOfRevelation`) decides who prevails in the Mark 7
+dispute, so its rating matters. It is rated `disputed`, because readers who
+grant Trent's Session IV deny that it says this. Geiselmann argues that the
+council did not canonise two coordinate sources, since it replaced its draft's
+"partly … partly" with "and"; Congar judges that Trent left the question open.
+For the same reason the Tridentine party is named "Trent (Tradition II)" rather
+than by the reading in dispute.
 -/
 
 namespace TestimonyArguments.SolaScriptura

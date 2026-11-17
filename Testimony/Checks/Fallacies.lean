@@ -143,6 +143,7 @@ def checkFallacies (root : Name) : CommandElabM Unit := do
     let head := "lines that equivocate, argue from silence alone or answer a straw man, in:"
     throwError m!"{head}\n{MessageData.joinSep
       (failing.toList.map toMessageData) "\n"}\n{String.intercalate "\n" sorted.toList}"
+  recordChecked `fallacies root
   logInfo m!"the charges, against every argument's lines:\n{String.intercalate "\n" sorted.toList}"
 
 /-- `#check_fallacies under N` reports on the lines of every argument whose

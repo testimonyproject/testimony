@@ -104,6 +104,35 @@ def canonicalWitnessChapters : List Chapter :=
                  , `TestimonyArguments.CanonicalWitness.Sources ]
     , legend := true } ]
 
+/-- Sola scriptura, set as chapters: the claim and the positions on tradition;
+the three objections and the answers to them; Mark 7, and the same principle
+from Jesus and Paul; Mark 7 weighed between Rome and the Reformers; the council
+at Jerusalem and Moses' seat, each read both ways; and the claims, as an
+appendix. -/
+def solaScripturaChapters : List Chapter :=
+  [ { slug := "sola-scriptura"
+    , title := "Sola scriptura: the claim, and the positions on tradition"
+    , modules := [`TestimonyArguments.SolaScriptura] }
+  , { slug := "objections", title := "Three objections, and the answers to them"
+    , modules := [ `TestimonyArguments.SolaScriptura.Lines
+                 , `TestimonyArguments.SolaScriptura.Packages
+                 , `TestimonyArguments.SolaScriptura.Results ] }
+  , { slug := "mark-7", title := "What Jesus' rebuke of tradition settles"
+    , modules := [`TestimonyArguments.SolaScriptura.Mark7] }
+  , { slug := "jesus-and-paul", title := "The same principle, beyond Mark 7"
+    , modules := [`TestimonyArguments.SolaScriptura.JesusAndPaul] }
+  , { slug := "weighing", title := "Weighing Mark 7 between Rome and the Reformers"
+    , modules := [ `TestimonyArguments.SolaScriptura.Dispute
+                 , `TestimonyArguments.SolaScriptura.Hearings ] }
+  , { slug := "acts-15", title := "The council at Jerusalem, read both ways"
+    , modules := [`TestimonyArguments.SolaScriptura.Acts15] }
+  , { slug := "moses-seat", title := "Moses' seat, read both ways"
+    , modules := [`TestimonyArguments.SolaScriptura.MosesSeat] }
+  , { slug := "claims", title := "Appendix: the claims and their sources"
+    , modules := [ `TestimonyArguments.SolaScriptura.Atoms
+                 , `TestimonyArguments.SolaScriptura.Sources ]
+    , legend := true } ]
+
 /-- Sola gratia, set as chapters: what it claims and why it must be stated
 sharply; the two Reformed routes and what each depends on; freedom to refuse,
 with the Lutherans, Wesley and the third way; the positions weighed; and the
@@ -188,7 +217,8 @@ def arguments : List Argument :=
     , chapters := canonicalWitnessChapters }
   , { ns := `TestimonyArguments.SolaScriptura
     , slug := "sola-scriptura"
-    , title := "Sola scriptura" }
+    , title := "Sola scriptura"
+    , chapters := solaScripturaChapters }
   , { ns := `TestimonyArguments.SolaGratia
     , slug := "sola-gratia"
     , title := "Sola gratia — Ephesians 2:8–9 and Romans 9:16"
