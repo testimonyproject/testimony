@@ -3,6 +3,12 @@
 Two kinds of expertise make this project work, and **you only need one of
 them**.
 
+If you have never programmed, start with
+[Contributing with Claude Code](./getting-started.md). It shows how to bring an
+argument of your own, in plain English, and have Claude Code write the Lean and
+run the checks for you. This page has the ground rules every contribution
+keeps, and the detail of the workflow for those who write the code themselves.
+
 The project is two things, and a contribution serves one or both. It is a guide
 for people reading an English Bible, in language precise enough that a
 theologian can work with it. And it is a code library for encoding arguments and
