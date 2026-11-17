@@ -21,12 +21,47 @@
 \geometry{margin=1in}
 \setlength{\emergencystretch}{3em}
 \frenchspacing
-\IfFontExistsTF{Times New Roman}
-  {\setmainfont{Times New Roman}[Ligatures=TeX]}
-  {\IfFontExistsTF{FreeSerif}{\setmainfont{FreeSerif}[Ligatures=TeX]}{}}
-\IfFontExistsTF{DejaVu Sans Mono}
-  {\setmonofont{DejaVu Sans Mono}[Scale=MatchLowercase]}
-  {\IfFontExistsTF{FreeMono}{\setmonofont{FreeMono}[Scale=MatchLowercase]}{}}
+\setmainfont{FreeSerif}[Extension=.otf,UprightFont=*,BoldFont=*Bold,
+  ItalicFont=*Italic,BoldItalicFont=*BoldItalic,Ligatures=TeX]
+\setmonofont{DejaVuSansMono}[Extension=.ttf,UprightFont=*,BoldFont=*-Bold,
+  ItalicFont=*-Oblique,BoldItalicFont=*-BoldOblique,Scale=MatchLowercase]
+\newfontfamily\hebrewfont{FreeSerif}[Extension=.otf,UprightFont=*,BoldFont=*Bold,
+  ItalicFont=*,BoldItalicFont=*Bold,Script=Hebrew]
+\newfontfamily\syriacfont{FreeSans}[Extension=.otf,UprightFont=*,BoldFont=*Bold,
+  ItalicFont=*,BoldItalicFont=*Bold,Script=Syriac]
+\newfontfamily\symbolfont{FreeSerif}[Extension=.otf,UprightFont=*,BoldFont=*Bold,
+  ItalicFont=*,BoldItalicFont=*Bold]
+\XeTeXinterchartokenstate=1
+\newcommand{\fontrange}[3]{\count255=#2\relax
+  \loop\XeTeXcharclass\count255=#1\relax\ifnum\count255<#3\relax
+  \advance\count255 by 1\repeat}
+\newXeTeXintercharclass\hebrewclass
+\fontrange\hebrewclass{"0590}{"05FF}
+\newXeTeXintercharclass\syriacclass
+\fontrange\syriacclass{"0700}{"074F}
+\newXeTeXintercharclass\symbolclass
+\fontrange\symbolclass{"1D2C}{"1D6A}
+\fontrange\symbolclass{"22C0}{"22C3}
+\XeTeXinterchartoks 0 \hebrewclass {\begingroup\hebrewfont}
+\XeTeXinterchartoks 4095 \hebrewclass {\begingroup\hebrewfont}
+\XeTeXinterchartoks \hebrewclass 0 {\endgroup}
+\XeTeXinterchartoks \hebrewclass 4095 {\endgroup}
+\XeTeXinterchartoks \hebrewclass \syriacclass {\endgroup\begingroup\syriacfont}
+\XeTeXinterchartoks \hebrewclass \symbolclass {\endgroup\begingroup\symbolfont}
+\XeTeXinterchartoks 0 \syriacclass {\begingroup\syriacfont}
+\XeTeXinterchartoks 4095 \syriacclass {\begingroup\syriacfont}
+\XeTeXinterchartoks \syriacclass 0 {\endgroup}
+\XeTeXinterchartoks \syriacclass 4095 {\endgroup}
+\XeTeXinterchartoks \syriacclass \hebrewclass {\endgroup\begingroup\hebrewfont}
+\XeTeXinterchartoks \syriacclass \symbolclass {\endgroup\begingroup\symbolfont}
+\XeTeXinterchartoks 0 \symbolclass {\begingroup\symbolfont}
+\XeTeXinterchartoks 4095 \symbolclass {\begingroup\symbolfont}
+\XeTeXinterchartoks \symbolclass 0 {\endgroup}
+\XeTeXinterchartoks \symbolclass 4095 {\endgroup}
+\XeTeXinterchartoks \symbolclass \hebrewclass {\endgroup\begingroup\hebrewfont}
+\XeTeXinterchartoks \symbolclass \syriacclass {\endgroup\begingroup\syriacfont}
+\usepackage{newunicodechar}
+\newunicodechar{🡒}{→}
 \title{Testimony: arguments in propositional form}
 \author{\credit{all}}
 \date{\editiondate\\[2pt]{\small Version \editionversion\ifeditionpreview\\\editionremark\fi}}
@@ -35845,5 +35880,5 @@ cd docs/latex
 tectonic arguments.tex
 \end{alltt}
 \end{enumerate}
-That makes \texttt{arguments.pdf}. Its words, numbers and references are this edition's. Where its lines break can differ, because the pages are set in fonts your computer has, and yours may not be the ones this edition was set in.
+That makes \texttt{arguments.pdf}. Its words, numbers and references are this edition's, and so should its pages be: the fonts it is set in come with Tectonic, not from your computer.
 \end{document}

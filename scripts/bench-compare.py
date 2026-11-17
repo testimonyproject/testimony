@@ -60,11 +60,12 @@ judged the first time. Simulated over Gaussian samples, the two together cut a
 run's chance of a false alarm about tenfold, and catch nearly every slowdown
 the first reading alone caught.
 
---accept FILE reads regressions accepted on purpose, from a TOML file of
-[[accept]] entries, each with benchmark, metric ("time" or "memory"), up_to
-(the largest accepted change, as a fraction) and reason. A regression within its
+--accept PATH reads regressions accepted on purpose, from a TOML file of
+[[accept]] entries, or from every `*.toml` in a directory, each entry with
+benchmark, metric ("time" or "memory"), up_to (the largest accepted change, as
+a fraction) and reason. It may be given more than once. A regression within its
 entry's bound is reported as accepted and does not count; a larger one still
-does. With --accept-base FILE, the same file as the base had it, only the
+does. With --accept-base PATH, the same paths as the base had them, only the
 entries the change adds count: one already in the base accepted a regression
 that is now in the base, and accepts nothing more.
 """
@@ -74,6 +75,7 @@ import json
 import statistics
 import sys
 import tomllib
+from pathlib import Path
 
 from scipy.stats import mannwhitneyu
 
@@ -123,30 +125,32 @@ def normalized(runs, name, path):
     return {k: [t / unit for t in v] for k, v in runs.items() if k != name}
 
 
-def entries(path):
-    """The [[accept]] entries of an accepted.toml, checked; none if no file."""
-    if not path:
-        return []
-    try:
-        with open(path, "rb") as f:
-            found = tomllib.load(f).get("accept", [])
-    except FileNotFoundError:
-        return []
-    for e in found:
+def entries(paths):
+    """The [[accept]] entries of each path, checked: a TOML file, or a directory
+    whose `*.toml` files are read in name order. A path that does not exist has
+    none."""
+    found = []
+    for path in paths or []:
+        p = Path(path)
+        files = sorted(p.glob("*.toml")) if p.is_dir() else [p] if p.is_file() else []
+        for f in files:
+            with open(f, "rb") as fh:
+                found += [(f, e) for e in tomllib.load(fh).get("accept", [])]
+    for f, e in found:
         missing = [k for k in ("benchmark", "metric", "up_to", "reason")
                    if not str(e.get(k, "")).strip()]
         if missing:
-            sys.exit(f"bench-compare: an entry of {path} has no {', '.join(missing)}: {e}")
+            sys.exit(f"bench-compare: an entry of {f} has no {', '.join(missing)}: {e}")
         if e["metric"] not in ("time", "memory"):
             sys.exit(f"bench-compare: metric must be time or memory: {e}")
-    return found
+    return [e for _, e in found]
 
 
-def acceptances(path, base_path):
+def acceptances(paths, base_paths):
     """The regressions this change accepts, keyed by (benchmark, metric): the
-    entries of `path` that are not already in `base_path`."""
-    old = entries(base_path)
-    return {(e["benchmark"], e["metric"]): e for e in entries(path) if e not in old}
+    entries under `paths` that are not already under `base_paths`."""
+    old = entries(base_paths)
+    return {(e["benchmark"], e["metric"]): e for e in entries(paths) if e not in old}
 
 
 def cv(xs):
@@ -165,10 +169,11 @@ def main(argv):
     parser.add_argument("--normalize", metavar="NAME")
     parser.add_argument("--mem-threshold", type=float, default=0.10)
     parser.add_argument("--mem-floor", type=float, default=32.0)
-    parser.add_argument("--accept", metavar="TOML",
-                        help="regressions accepted on purpose, with reasons")
-    parser.add_argument("--accept-base", metavar="TOML",
-                        help="the same file as the base had it; only entries added count")
+    parser.add_argument("--accept", metavar="PATH", action="append",
+                        help="regressions accepted on purpose, with reasons: a TOML "
+                        "file or a directory of them; may be repeated")
+    parser.add_argument("--accept-base", metavar="PATH", action="append",
+                        help="the same, as the base had them; only entries added count")
     parser.add_argument("--drift", metavar="NAME",
                         help="a benchmark no change can move; a difference in it is drift")
     parser.add_argument("--gate", action="store_true",
@@ -262,7 +267,7 @@ def main(argv):
               "sides: the machine drifted during the run, and every verdict here is suspect")
 
     # Regressions the change accepts on purpose, up to a stated bound, with its
-    # reason: the entries it adds to accepted.toml.
+    # reason: the entries it adds under arguments/bench/accepted/.
     live = acceptances(args.accept, args.accept_base)
     unaccepted = []
     for name, metric, change in regressed:
