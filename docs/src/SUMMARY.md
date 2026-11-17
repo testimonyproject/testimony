@@ -56,6 +56,7 @@
   - [Freedom to refuse, and the ability God gives](./arguments/sola-gratia/freedom-to-refuse.md)
   - [Aquinas and the Catholic schools](./arguments/sola-gratia/aquinas.md)
   - [Weighing the positions](./arguments/sola-gratia/weighing.md)
+  - [The perseverance of the saints](./arguments/sola-gratia/perseverance.md)
   - [Appendix: the claims and their sources](./arguments/sola-gratia/claims.md)
 - [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)
   - [Each view from its own texts, and what Acts can carry](./arguments/spirit-baptism/the-views.md)
