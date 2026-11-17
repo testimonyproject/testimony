@@ -142,6 +142,190 @@ inductive Claim
   authority and submission between the Father and the Son, as the persons are,
   not only in the work of salvation. -/
   | eternalAuthorityAndSubmission
+  /-- There is one God: "Hear, O Israel: The LORD our God, the LORD is one"
+  (Deuteronomy 6:4); "there is no God but one" (1 Corinthians 8:4). -/
+  | oneGod
+  /-- John 1:1: "In the beginning was the Word, and the Word was with God". -/
+  | wordWithGod
+  /-- John 1:1: "and the Word was God" (καὶ θεὸς ἦν ὁ λόγος). The Greek word for
+  God, θεός, stands first and has no article. The New World Translation renders
+  it "and the Word was a god". -/
+  | wordWasGod
+  /-- John 1:3: "All things were made through him, and without him was not any
+  thing made that was made." -/
+  | allThingsThroughTheWord
+  /-- John 20:28: "Thomas answered him, 'My Lord and my God!'" -/
+  | thomasMyLordAndMyGod
+  /-- Acts 5:3–4: "Ananias, why has Satan filled your heart to lie to the Holy
+  Spirit …? You have not lied to man but to God." -/
+  | lyingToTheSpirit
+  /-- The Spirit speaks of himself as "I" and can be grieved: "the Holy Spirit
+  said, 'Set apart for me Barnabas and Saul for the work to which I have called
+  them'" (Acts 13:2); "do not grieve the Holy Spirit of God" (Ephesians 4:30). -/
+  | spiritSpeaksAsHimself
+  /-- John 17:5: "Father, glorify me in your own presence with the glory that I
+  had with you before the world existed." -/
+  | gloryBeforeTheWorld
+  /-- Matthew 28:19: "baptizing them in the name of the Father and of the Son and
+  of the Holy Spirit". -/
+  | oneNameOfThree
+  /-- Colossians 1:15: the Son "is the image of the invisible God, the firstborn
+  of all creation." -/
+  | firstbornOfAllCreation
+  /-- **The Nicene reading of "the Word was God" (John 1:1).** "Nicene", here and
+  below, is named for the creed of Nicaea (325), which confessed the Son of one
+  being with the Father. God (θεός), without "the", says what the Word is: he has
+  the nature of the one God. Harner: "the logos [the Word] has the nature of theos
+  [God]" (as the New World Translation's reference edition quotes him). -/
+  | wordIsGodByNature
+  /-- **The Nicene reading of John 1:3.** Everything that was made was made through
+  the Word, so the Word himself is not among the things made. Augustine: "that by
+  which all things were made could not be made by itself". -/
+  | wordIsUnmade
+  /-- **The Nicene reading of Acts 5:3–4.** Peter names the Spirit that Ananias
+  lied to as God: to lie to the Holy Spirit is to lie, "not to man but to God".
+  Calvin: "the divinity of the Holy Ghost is manifestly proved by this form of
+  speech". -/
+  | spiritLiedToIsGod
+  /-- **The Nicene reading of the Spirit's speech.** The Spirit who says "set apart
+  for me" and can be grieved is a person, not a power or a force. -/
+  | spiritIsAPerson
+  /-- **The Nicene reading of John 1:1 and 17:5.** "With God" and "the glory that
+  I had with you" speak of one person beside another before the world was made,
+  not of a thought or a plan in God's mind. -/
+  | wordIsAnotherWithGod
+  /-- **The Nicene reading of Matthew 28:19.** Three are named, the Father, the
+  Son and the Holy Spirit, and the one "name" is theirs together. -/
+  | threeNamedInOneName
+  /-- **The Witnesses' reading of "the Word was God" (John 1:1).** God (θεός),
+  without "the", means "a god": the Word is "'divine,' 'godlike,' 'a god,' but not
+  Almighty God" (*Should You Believe in the Trinity?*). -/
+  | wordIsAGod
+  /-- **The Witnesses' reading of Colossians 1:15.** "Firstborn of all creation"
+  means that the Son is the first thing God created, through whom he made all
+  other things: "Jesus was created by God as the beginning of God's invisible
+  creations". The New World Translation renders Colossians 1:16 "all other
+  things were created". -/
+  | firstbornIsFirstCreated
+  /-- **The Witnesses' reading of the Spirit.** The holy spirit is God's active
+  force, not a person; where Scripture has it speak or be grieved, it is
+  personified: "nor does personifying the holy spirit make it a spirit
+  person". -/
+  | spiritIsGodsForce
+  /-- **The Oneness reading of John 1:1.** The Word is God's own thought and
+  self-expression, "with God" as a man's word is with him, and not a second
+  person beside him. Bernard: "the Word was the thought, plan, or mind of
+  God". -/
+  | wordIsGodsThought
+  /-- **The Oneness reading of John 17:5.** The glory the Son "had with" the
+  Father before the world was his in God's plan and foreknowledge, not the glory
+  of a second person then present. -/
+  | gloryInGodsPlan
+  /-- **The Oneness reading of Matthew 28:19.** "The name" is singular, and it is
+  the name of Jesus, in which the apostles then baptized (Acts 2:38). Father, Son
+  and Holy Spirit are titles of the one God, not names of three persons. -/
+  | oneNameIsJesus
+  /-- **What LST, and the Oneness believers with it, conclude of the Word.** The
+  Word who became flesh in Jesus (John 1:14) is God: of the nature of the one
+  God, and not created. -/
+  | wordIsGod
+  /-- **What LST, and the Oneness believers with it, conclude of the Spirit.** The
+  Holy Spirit is God. -/
+  | spiritIsGod
+  /-- **What LST concludes of the persons.** The Father, the Son and the Holy
+  Spirit are three persons, none of them the other. -/
+  | threePersons
+  /-- **The Witnesses' conclusion.** The Son is a creature, the first and greatest
+  of God's works, and so is not God. -/
+  | sonIsACreature
+  /-- **LST's confession.** "The Father is God, the Son is God, and the Holy
+  Spirit is God; they are personally distinct without being separate gods." -/
+  | triuneGod
+  /-- 1 Corinthians 8:6: "for us there is one God, the Father, from whom are all
+  things and for whom we exist, and one Lord, Jesus Christ". -/
+  | fatherIsGod
+  /-- John 8:17–18: "In your Law it is written that the testimony of two people is
+  true. I am the one who bears witness about myself, and the Father who sent me
+  bears witness about me." -/
+  | twoWitnesses
+  /-- The Father speaks from heaven to the Son on earth: "This is my beloved Son,
+  with whom I am well pleased; listen to him" (Matthew 17:5); "'Father, glorify
+  your name.' Then a voice came from heaven: 'I have glorified it, and I will
+  glorify it again'" (John 12:28). -/
+  | voiceFromHeaven
+  /-- John 10:34–35: "Jesus answered them, 'Is it not written in your Law, "I said,
+  you are gods"? If he called them gods to whom the word of God came — and
+  Scripture cannot be broken'" (quoting Psalm 82:6). -/
+  | othersCalledGods
+  /-- **Tertullian's reading of John 8:17–18.** The two witnesses the law requires
+  are two, the Son and the Father: "if He were one — being at once both the Son
+  and the Father — He certainly would not have quoted the sanction of the law,
+  which requires not the testimony of one, but of two" (*Against Praxeas* 22). -/
+  | twoWitnessesAreTwoPersons
+  /-- **Tertullian's reading of the voice from heaven.** The Son asks on earth and
+  the Father answers from heaven: "how many Persons do you discover, obstinate
+  Praxeas? Are there not as many as there are voices?" (*Against Praxeas* 23). -/
+  | voicesAreTwoPersons
+  /-- **Bernard's reading of John 8:17–18.** The two witnesses are the Father, who
+  is the divine Spirit, and the man Jesus, two natures of one person: "These two
+  witnesses were the Father (the divine Spirit) and the man Jesus … No distinction
+  of persons in the Godhead was necessary." -/
+  | twoWitnessesAreSpiritAndMan
+  /-- **Bernard's reading of the voice from heaven.** The voice "does not indicate
+  a distinct person in the Godhead but only another manifestation of the
+  omnipresent Spirit of God." -/
+  | voiceIsAManifestation
+  /-- **Metzger's reading of "a god".** A Word who is "a god" beside the one God
+  would be a second god, which the one God of Scripture excludes: "if the
+  Jehovah's Witnesses take this translation seriously, they are polytheists"
+  (1953, p. 75). -/
+  | aSecondGodIsPolytheism
+  /-- **The Witnesses' reading of the other "gods".** Scripture rightly calls
+  others "gods", the judges of Psalm 82 among them, so the Word can be "a god"
+  without being a second God Almighty: "Since these are referred to as 'gods,'
+  mighty ones, surely Jesus can be and is 'a god'" (*Should You Believe in the
+  Trinity?*, p. 28). -/
+  | othersRightlyCalledGods
+  /-- **Athanasius's reading of Colossians 1:15.** "Firstborn of all creation"
+  does not make the Son one of the creatures, because all things were created in
+  him: "if all the creatures were created in Him, He is other than the creatures,
+  and is not a creature, but the Creator of the creatures" (*Against the Arians*
+  II.62). -/
+  | firstbornIsOverCreation
+  /-- **The reading of "is God" as one essence.** To say that the Father is God
+  and the Son is God is to say that each has the one divine essence (οὐσία), not
+  that each is the same person (ὑπόστασις). Basil: "ousia has the same relation to
+  hypostasis as the common has to the particular" (Letter 214); Nicaea: the Son
+  "of one substance with the Father". -/
+  | isGodAsOneEssence
+  /-- **The reading of "is God" as identity.** To say that someone is God, in the
+  full sense, is to say that he is the one God himself, the same one. So the Son,
+  if God, is not a second person beside the Father (Bernard: "identity with the
+  Father"); and one who is "with" God is not God
+  (the Witnesses' brochure: "Someone who is 'with' another person cannot be the
+  same as that other person"). -/
+  | isGodAsIdentity
+  /-- Hebrews 1:8: "But of the Son he says, 'Your throne, O God, is forever and
+  ever'". The New World Translation renders it "God is your throne forever and
+  ever". -/
+  | throneOGod
+  /-- Titus 2:13: "waiting for our blessed hope, the appearing of the glory of our
+  great God and Savior Jesus Christ". The New World Translation renders it "the
+  great God and of our Savior, Jesus Christ". -/
+  | greatGodAndSavior
+  /-- Romans 9:5: "from their race, according to the flesh, is the Christ, who is
+  God over all, blessed forever. Amen." The New World Translation renders it "the
+  Christ descended according to the flesh. God, who is over all, be praised
+  forever." -/
+  | godOverAll
+  /-- Philippians 2:10–11: "so that at the name of Jesus every knee should bow …
+  and every tongue confess that Jesus Christ is Lord", which is what Isaiah
+  45:23 says of the LORD: "To me every knee shall bow, every tongue shall swear
+  allegiance." -/
+  | everyKneeToJesus
+  /-- **What the Nicene case concludes of the Son.** The Son is a person other than
+  the Father, not the Father himself under another name. -/
+  | sonIsAnotherThanTheFather
 deriving DecidableEq, Repr
 
 end TestimonyArguments.Trinity
