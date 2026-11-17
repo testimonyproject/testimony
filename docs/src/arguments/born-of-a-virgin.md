@@ -34,9 +34,10 @@ The prophet is Isaiah, speaking to King Ahaz of Judah:
 > "Therefore the Lord himself will give you a sign. Behold, the virgin shall
 > conceive and bear a son, and shall call his name Immanuel." (Isaiah 7:14)
 
-Unlike Micah 5:2, which every party reads of the Messiah's birthplace (see the
-argument "Born in Bethlehem"), this text is fought over, and the fight is about
-a word. Isaiah's Hebrew calls the woman an עַלְמָה (*almah*). Both sides grant
+Micah 5:2, which Matthew reads of the Messiah's birthplace, is disputed too, but
+there the dispute is only over whether the oracle looks forward at all (see the
+argument "Born in Bethlehem"). Isaiah 7:14 is fought over more fiercely, and
+the fight is about a word. Isaiah's Hebrew calls the woman an עַלְמָה (*almah*). Both sides grant
 that the word names a young woman of marriageable age; they part over whether
 it names a virgin. The Greek translation made by Jews before Christ, the
 Septuagint, which Matthew quotes, renders it παρθένος, read as "virgin",
