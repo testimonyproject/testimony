@@ -352,7 +352,7 @@ the article stands in 2:14, which words recur through 2:14–26 — rather than 
 
 ## The checks an article audit needs
 
-Each common charge of fallacy is a question the library can make precise. Five are built; the
+Each common charge of fallacy is a question the library can make precise. Six are built; the
 rest reuse machinery that exists, or that the open issues propose.
 
 | Charge | What is checked | What does it |
@@ -363,7 +363,7 @@ rest reuse machinery that exists, or that the open issues propose.
 | Non sequitur | does the conclusion follow from what the move states? | `refute_with` — built |
 | Indefensible claim | can the move's position survive the dispute? | a hearing — built |
 | False dilemma | does a move pick one reading where others are fair? | `Dilemma` |
-| Straw man | does an attribution match what its subject holds? | meanings of the position |
+| Straw man | does an attribution match what its subject holds? | `Move.strawMen` — built |
 | Misquotation | does a quotation say what the move says it says? | `says`, then the corpus |
 | Cherry-picking | texts on the same words and relation the move ignores | a query over meanings |
 | Double standard | does a party rest a claim on what its own rule refuses? | `ArgumentPackage.heldTo` — claims built ([epistemology](./epistemology.md)) |
@@ -408,21 +408,23 @@ Catholic's remark that "alone" is not in Paul's Greek is an assertion, true of t
 what it may be heard to imply is not charged.
 
 **The library's own lines, checked the same way.** Every line of reason is one step, and read
-through its argument's meanings a step is a move. `Testimony.Checks.Fallacies` runs the three
-checks over every line the library has, and the build fails if one equivocates on its own terms
-or argues from silence alone. Fifty-two lines can be read today, thirty-one of sola fide's and
-twenty-one of sola scriptura's; the rest wait on their meanings. None equivocates, and none argues
-from silence. One line carried what it delivered in a premise when the check was first run: the sola
-fide line on Paul's word (`lexicalLine`), whose premise that Paul's "justify" is a courtroom
-word also said, in its own words, that "it does not mean to make a person good", which was the
-line's conclusion. That premise was the one Trent's reading of Paul's word denies, so as an
-answer to Trent the line assumed its point. The premise now states the courtroom sense alone,
-which is what its lexical sources support, and the line's other grounds carry the rest. What
-that changed is reported where it is weighed: the step about Paul's word, which had stood at
-`wellSupported` because the premise assumed its point, is now disputed by Trent's reading
-under every standard (`trent_dissents_from_the_definition_steps`). No verdict of the sola fide
-dispute moved, since the dispute weighs the step at its cited rating. Twelve lines are
-conditional on a word keeping its sense, unstated, and the report lists the words.
+through its argument's meanings a step is a move. `Testimony.Checks.Fallacies` runs the move checks
+over every line the library has, and the build fails if one equivocates on its own terms, argues
+from silence alone, or answers a straw man. Fifty-two lines can be read today, thirty-one of sola
+fide's and twenty-one of sola scriptura's; the rest wait on their meanings. None equivocates, and
+none argues from silence. One line carried what it delivered in a premise when the check was first
+run: the sola fide line on Paul's word (`lexicalLine`), whose premise that Paul's "justify" is a
+courtroom word also said, in its own words, that "it does not mean to make a person good", which was
+the line's conclusion. That premise was the one Trent's reading of Paul's word denies, so as an
+answer to Trent the line assumed its point. The premise now states the courtroom sense alone, which
+is what its lexical sources support, and the line's other grounds carry the rest. What that changed
+is reported where it is weighed: the step about Paul's word, which had stood at `wellSupported`
+because the premise assumed its point, is now disputed by Trent's reading under every standard
+(`trent_dissents_from_the_definition_steps`). No verdict of the sola fide dispute moved, since the
+dispute weighs the step at its cited rating. Twelve lines are conditional on a word keeping its
+sense, unstated, and the report lists the words. Two sola fide lines attribute a view, to Sanders'
+Second Temple Judaism and to Augustine, and the straw-man check finds both unrecorded: the argument
+cites nothing else about what either voice held.
 
 **What the checks are held to.** A check that calls every survey of a word an equivocation,
 or every argument from silence a fallacy, is a debater's reflex written down.
@@ -446,8 +448,10 @@ Two of these are worth a word, because Howell's article already supplies them.
   "earn" means by our own efforts, Trent denies it, and the Catholic says so; if it means works
   done in grace meriting an increase of justification, Trent holds it
   (`worksMeritIncreaseOfJustification`). The grammar tells these apart — `works` and
-  `worksOfFaith` are different concepts — so an attribution check can report which reading of
-  the attribution is fair, rather than calling it a straw man or not.
+  `worksOfFaith` are different concepts — so the straw-man check (`Move.strawMen`) can report
+  each reading of the attribution as fair or unfair against Trent's position, rather than
+  calling the whole remark a straw man or not. The article's attribution is not yet written as a
+  move; when it is, each reading will be one.
 - **An implicature is not an assertion.** The Catholic says Luther "added the word alone—but
   alone is not in the original Greek text". Both claims are true of the texts, and the move is
   modelled as asserting exactly them. What it may be taken to imply — that the reading was new

@@ -3,7 +3,7 @@ import Testimony.Logic.Line
 import Testimony.Logic.Tactic
 
 /-!
-# Testimony.Semantics.Fallacy — three charges, checked move by move
+# Testimony.Semantics.Fallacy — the charges, checked move by move
 
 **A draft.** In a debate the charge comes quickly: "that's an equivocation",
 "you're begging the question", "that's an argument from silence". Each names a
@@ -75,12 +75,29 @@ check reports, for each silence a move argues from, whether it states the
 expectation (`Silence`). An expectation stated is then a premise like any other,
 which the library's claims may deny (`Move.against`).
 
+## Straw man
+
+A straw man answers a view its holder does not hold: "Trent teaches that a
+person's own works are enough to justify him, and Romans 3:28 says otherwise."
+Trent's first canon on justification condemns exactly that view. So the check
+compares what a move says someone held (`Statement.attributions`) with the
+library's record of what that voice holds: the claims of an argument it cites as
+the voice's position, read for what their words mean. An attribution the record
+bears out is **fair**; one it contradicts is **unfair**; one it both bears out
+and contradicts is **disputed**, because what the voice held is itself argued;
+and one it says nothing about is **unrecorded** (`Attribution`). A move answers a
+straw man when an attribution is unfair and the move argues against what it
+attributes (`Move.strawMen`). An unfair attribution the move leans on instead,
+citing a voice for what the voice denied, is reported as a misattribution
+(`Move.misattributions`).
+
 ## What none of this decides
 
 None of the checks says whether a premise is true. A move that equivocates
 on its own terms may have a sound argument nearby that does not; a premise that
-carries the conclusion may be true; an expectation may be well grounded. The
-checks report where the move's weight falls. What holds the weight up is weighed
+carries the conclusion may be true; an expectation may be well grounded; and
+an attribution the record contradicts may show the record wrong, not the move.
+The checks report where the move's weight falls. What holds the weight up is weighed
 where the library weighs everything else, in its disputes.
 -/
 
@@ -370,6 +387,151 @@ def begsAgainst (m : Move) : List (Statement × List α) :=
     | cs => some (s, cs)
 
 end Move
+
+/-! ### Straw man
+
+A straw man answers a view its holder does not hold. The move says that someone
+held a thing, argues against the thing, and the thing is not what they hold. So
+the check needs a record of what each voice holds, and the record is the
+library's own: the claims of an argument that it cites as that voice's position,
+given to the check voice by voice. What a voice's position asserts is what the
+voice holds, so a claim that Trent's position asserts and a claim that Trent held
+something are read alike (`Statement.asHeldBy`). -/
+
+namespace Statement
+
+/-- **What a statement attributes to a voice**: that the voice held a content,
+or read a word in a sense, taken apart at "and". A denial attributes nothing: it
+says what a voice did not hold. -/
+def attributions : Statement → List Statement
+  | s@(.heldBy ..) | s@(.glosses ..) => [s]
+  | .also s t => s.attributions ++ t.attributions
+  | _ => []
+
+/-- The voice an attribution is to. -/
+def voice? : Statement → Option Voice
+  | .heldBy v _ | .glosses v _ _ => some v
+  | _ => none
+
+/-- **A statement about a voice, read as that voice's view**: where it says the
+voice held a content, the content itself, held. Anything else is left as it is,
+so a claim the voice's position asserts stays what it asserts. -/
+def asHeldBy (v : Voice) : Statement → Statement
+  | .heldBy v' c => if v' = v then .holds c else .heldBy v' c
+  | .also s t => .also (s.asHeldBy v) (t.asHeldBy v)
+  | s => s
+
+/-- **Whether a record bears out an attribution**: read as the voice's view, it
+entails what the attribution says the voice held; or it entails the attribution
+as it stands. -/
+def bearsOut (r a : Statement) : Bool :=
+  r.entails a ||
+    match a with
+    | .heldBy v c => (r.asHeldBy v).entails (.holds c)
+    | _ => false
+
+/-- **Whether a record contradicts an attribution**: it says the voice did not
+hold what the attribution says it held, or, read as the voice's view, it cannot
+be held with what the attribution says the voice held. -/
+def contradicts (r a : Statement) : Bool :=
+  r.excludes a ||
+    match a with
+    | .heldBy v c => (r.asHeldBy v).excludes (.holds c)
+    | _ => false
+
+end Statement
+
+/-- **How an attribution stands to the record of its voice.** -/
+inductive Attribution (α : Type)
+  /-- Claims recorded as the voice's position bear it out, and none contradicts
+  it. -/
+  | fair (recordedBy : List α)
+  /-- Claims recorded as the voice's position contradict it, and none bears it
+  out. -/
+  | unfair (contradictedBy : List α)
+  /-- The record says both: some of its claims bear the attribution out and some
+  contradict it. What the voice held is itself in dispute, and the move rests on
+  one side of it. -/
+  | disputed (recordedBy contradictedBy : List α)
+  /-- The record says nothing either way. The attribution is the move's to
+  support, and the check cannot weigh it. -/
+  | unrecorded
+deriving DecidableEq, Repr
+
+namespace Move
+
+variable {α : Type} [HasMeanings α]
+
+/-- **What a move attributes to someone**: every attribution among its premises,
+or, for a move that only attributes, what it attributes. An attribution in the
+conclusion is what the move argues for, not what it rests on, and is left out. -/
+def attributions (m : Move) : List Statement :=
+  (match m.act with
+    | .argues ps _ => ps.flatMap Statement.attributions
+    | .attributes v (.holds c) => [.heldBy v c]
+    | .attributes _ s => s.attributions
+    | .asserts s => s.attributions
+    | .quotes _ _ => []).eraseDups
+
+/-- **How one attribution stands to the record**, where `record v` is the claims
+of an argument cited as the position of the voice `v`. -/
+def attribution (record : Voice → List α) (a : Statement) : Attribution α :=
+  match a.voice? with
+  | none => .unrecorded
+  | some v =>
+    let rs := record v
+    let fair := rs.filter fun r => (HasMeanings.means r).bearsOut a
+    let unfair := rs.filter fun r => (HasMeanings.means r).contradicts a
+    match fair, unfair with
+    | [], [] => .unrecorded
+    | f, [] => .fair f
+    | [], u => .unfair u
+    | f, u => .disputed f u
+
+/-- **The attribution check**: every attribution the move makes, and how it
+stands to the record. -/
+def attributed (record : Voice → List α) (m : Move) : List (Statement × Attribution α) :=
+  m.attributions.map fun a => (a, attribution record a)
+
+/-- Whether the move argues against what an attribution says its voice held: its
+conclusion cannot be held with it. -/
+def answers (m : Move) (a : Statement) : Bool :=
+  match m.conclusion?, a with
+  | some c, .heldBy _ x => c.excludes (.holds x)
+  | _, _ => false
+
+/-- **The attributions the record contradicts**, with the claims that contradict
+each, whether or not the move argues against them. -/
+def misattributions (record : Voice → List α) (m : Move) : List (Statement × List α) :=
+  (m.attributed record).filterMap fun
+    | (a, .unfair u) => some (a, u)
+    | _ => none
+
+/-- **Where the move answers a straw man**: an attribution the record contradicts,
+and the move argues against what it attributes. One the record only disputes is
+left out, because what the voice held is then the question, not the move's
+fault. -/
+def strawMen (record : Voice → List α) (m : Move) : List (Statement × List α) :=
+  (m.misattributions record).filter fun (a, _) => m.answers a
+
+end Move
+
+/-- **Whether a statement is about a voice**: it says, or denies, what the voice
+held or how it read a word. -/
+def Statement.about (v : Voice) : Statement → Bool
+  | .heldBy v' _ | .glosses v' _ _ => decide (v' = v)
+  | .denied s => s.about v
+  | .also s t => s.about v || t.about v
+  | _ => false
+
+/-- **An argument's own record of a voice**: the claims of the argument that say,
+or deny, what the voice held or how it read a word. A line that attributes a view
+is checked against these when the library's own lines are checked
+(`Testimony.Checks.Fallacies`). A claim that a position asserts in its own voice,
+such as Trent's definition of justification, is not on it: a claim does not
+record whose position it is. -/
+def recordOf (α : Type) [HasMeanings α] (v : Voice) : List α :=
+  (HasMeanings.all : List α).filter fun a => (HasMeanings.means a).about v
 
 /-! ### A line of reason, as a move
 

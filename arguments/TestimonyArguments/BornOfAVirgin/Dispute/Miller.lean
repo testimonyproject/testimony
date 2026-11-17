@@ -7,10 +7,10 @@ import Testimony.Logic.Certificate
 
 The laws' step (`lawsLine`) is rated `disputed` on one reader, Robert J. Miller.
 He grants what the laws of Leviticus 21 and Deuteronomy 22 require, and denies
-that the word in them means "virgin": "As in other Greek literature, parthenos in
-the Septuagint did not by itself connote what we mean by virginity", so that the
-virginity "has to be inferred from the context" (*Born Divine*). This module asks
-the question a reader asks of any such dissent: **does it still stand once the
+that the word in them means "virgin": "As in other Greek literature, parthenos
+in the Septuagint did not by itself connote what we mean by virginity", so that
+the virginity "has to be inferred from the context" (*Born Divine*). The
+question to ask of any such dissent is this: **does it still stand once the
 texts it cites are read?**
 
 ## His evidence, read
@@ -60,13 +60,13 @@ texts refute stops counting, and a dissent that needed it stops counting with it
 
 ## Weighed in the dispute, and overruled
 
-A credible dissent can still lose when it is weighed. In `Dispute.Septuagint`
+A credible dissent can still lose when it is weighed. In the dispute above,
 Miller's case from Genesis 34:3 is a party, beside Wegner's, and the solver
 computes that nothing can defend it (`miller_indefensible`). The status reading
 concludes that the word names Dinah in the sense "virgin", which Miller's
 premise and his thesis deny; he attacks it back, and fails, because his step,
-rated `disputed`, is weaker than the status reading's, rated `plausible`. Nothing
-answers the status reading, so nothing defends Miller.
+rated `disputed`, is weaker than the status reading's, rated `plausible`.
+Nothing answers the status reading, so nothing defends Miller.
 
 A dissent overruled so stops counting against the step
 (`Testimony.Logic.Credibility`, `Overruled`), on one condition, which keeps the

@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **331 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **374 headline results**, listed below in source order. 10 of them are marked ⚗: results this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -327,6 +327,25 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `dort_stands_with_the_thomists` | `solaGratiaDispute.StandTogether [Party.reformed, Party.thomist]` | **Dort and the Thomists stand together**: one reading satisfies every premise and every conclusion of both, so neither defeats the other. |
 | `thomist_defensible` | `Framework.CredulouslyAccepted solaGratiaDispute.defeats Party.thomist` | **The Thomists can be defended, with Dort**: some maximal defensible position holds both, with what every party holds. |
 | `thomist_not_forced` | `¬Framework.SkepticallyAccepted solaGratiaDispute.defeats Party.thomist` | Nor are the Thomists forced. |
+| `perseveranceReformed_establishes` | `Establishes perseveranceReformed` | **The Reformed premises establish the perseverance of the saints**: the elect persevere, and no one truly justified can finally fall away. |
+| `john_strand_establishes` | `Establishes johnStrand` | **The John strand reaches the conclusion alone.** John 10:27–29 for the elect, 1 John 2:19 for the truly justified being elect, and the two joined. |
+| `philippians_strand_establishes` | `Establishes philippiansStrand` | **The Philippians strand reaches the conclusion alone**, without 1 John 2:19: Philippians 1:6 for the truly justified, and John 10:27–29 for the elect. |
+| `remonstrance_leaves_perseverance_open` | `Independent remonstrance.premises (p Claim.justifiedCanFinallyFallAway)` | **The Remonstrants' premises leave perseverance open.** Their fifth article grants from John 10:28 that no one plucks believers out of Christ's hand, and leaves whether they can … |
+| `from_eternity_holds_with_westminster` | `Satisfiable (perseveranceReformed.premises ++ fromEternity.premises)` | **The view from eternity can be added to Westminster's position without contradiction.** One reading satisfies every premise of both. |
+| `from_eternity_holds_with_wesley` | `Satisfiable (wesleyOnPerseverance.premises ++ fromEternity.premises)` | **The view from eternity can be added to Wesley's position without contradiction**, with its claim that the elect persevere, which Wesley's position is not encoded as holding. |
+| `from_eternity_leaves_perseverance_open` | `Independent fromEternity.premises (p Claim.justifiedCanFinallyFallAway)` | **The view from eternity, by itself, leaves perseverance open.** Granted that God knows all things as present, that the elect persevere, and that each could, considered in … |
+| `from_eternity_with_owens_reading_settles_it` | `Entails fromEternityWithOwensReading.premises (notP Claim.justifiedCanFinallyFallAway)` | **With Owen's reading of 1 John 2:19, the view from eternity denies that the truly justified can finally fall away.** Add to the view the reading that all who fall away were never … |
+| `only_the_remonstrance_prevails` | `Framework.grounded perseveranceDispute.defeats = Solver.toSet [PerseveranceParty.remonstrance]` | **Only what the Remonstrants concluded from John 10:28 prevails: no power from outside snatches believers out of Christ's hand.** Every other party is in a tie with another, and … |
+| `perseverance_defensible` | `Framework.CredulouslyAccepted perseveranceDispute.defeats PerseveranceParty.reformed` | **Westminster can be defended**: on at least one way of settling the ties, it is accepted, with the Remonstrance, because it defeats each of the four that attack it. |
+| `perseverance_not_forced` | `¬Framework.SkepticallyAccepted perseveranceDispute.defeats PerseveranceParty.reformed` | **Nor must Westminster be accepted.** On another way of settling the ties, Augustine and Aquinas, Trent, the Lutherans and Wesley are accepted together, and Westminster cannot be … |
+| `augustinian_defensible` | `Framework.CredulouslyAccepted perseveranceDispute.defeats PerseveranceParty.augustinian` | **Augustine and Aquinas can be defended**: accepted together with Trent, the Lutherans and Wesley, who agree that one truly justified can finally fall away, and each of whom … |
+| `augustinian_not_forced` | `¬Framework.SkepticallyAccepted perseveranceDispute.defeats PerseveranceParty.augustinian` | Nor must Augustine and Aquinas be accepted: the way of settling the ties that accepts Westminster cannot accept them. |
+| `trent_on_perseverance_defensible` | `Framework.CredulouslyAccepted perseveranceDispute.defeats PerseveranceParty.trent` | **Trent can be defended** on perseverance, in the same company. |
+| `trent_on_perseverance_not_forced` | `¬Framework.SkepticallyAccepted perseveranceDispute.defeats PerseveranceParty.trent` | Nor must Trent be accepted, for the same reason. |
+| `lutheran_on_perseverance_defensible` | `Framework.CredulouslyAccepted perseveranceDispute.defeats PerseveranceParty.lutheran` | **The Lutherans can be defended** on perseverance, in the same company. |
+| `lutheran_on_perseverance_not_forced` | `¬Framework.SkepticallyAccepted perseveranceDispute.defeats PerseveranceParty.lutheran` | Nor must the Lutherans be accepted, for the same reason. |
+| `wesley_on_perseverance_defensible` | `Framework.CredulouslyAccepted perseveranceDispute.defeats PerseveranceParty.wesleyan` | **Wesley can be defended** on perseverance, in the same company. |
+| `wesley_on_perseverance_not_forced` | `¬Framework.SkepticallyAccepted perseveranceDispute.defeats PerseveranceParty.wesleyan` | Nor must Wesley be accepted, for the same reason. |
 
 ### [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)
 
@@ -386,6 +405,30 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `eternal_order_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.eternal` | **The eternal order is not forced**: Giles's position can be held with LST's, and it rules the eternal order out. |
 | `equal_authority_defensible` | `Framework.CredulouslyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position can be defended**: held with LST's, it answers Grudem and Ware's position, which is the only one that attacks it. |
 | `equal_authority_not_forced` | `¬Framework.SkepticallyAccepted orderDispute.defeats OrderParty.equal` | **Giles's position is not forced** either. |
+| `lstDeity_establishes` | `Establishes lstDeityCase` | **Grant the Nicene readings of John 1:1 and 1:3, of Acts 5:3–4, and of the texts that name three, and LST's confession follows**: the Father, the Son and the Spirit are God, three … |
+| `witnesses_establish` | `Establishes witnessesCase` | **Grant "the Word was God" (John 1:1) read as "a god" and Colossians 1:15 as the first thing made, and the Son is a creature, not God.** |
+| `oneness_establishes` | `Establishes onenessCase` | **Grant the Oneness readings of John 1:1, 17:5 and Matthew 28:19, and the Father, the Son and the Spirit are one person.** |
+| `deity_forces_nothing` | `Framework.grounded deityDispute.defeats = ∅` | **Nothing is forced.** Every position ties with another, and since every one rests on a reading rated `disputed`, no rating breaks a tie. |
+| `lst_deity_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.lst` | **LST's position can be defended**, with each of its lines: there is a largest group of positions that can be defended together, one no other party can join, and it holds all four. |
+| `lst_deity_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.lst` | **LST's position is not forced.** The Oneness position and LST's first two lines can be defended as a group, and no such group can also hold LST's. |
+| `word_deity_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.word` | **That the Word is God can be defended**, with LST's position. |
+| `word_deity_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.word` | **That the Word is God is not forced.** The Witnesses' position can be defended on its own, and it denies that the Word is God. |
+| `witnesses_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.witnesses` | **The Witnesses' position can be defended**, on its own. |
+| `witnesses_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.witnesses` | **The Witnesses' position is not forced.** LST's position, with its three lines, can be defended as a group, and no such group can also hold the Witnesses'. |
+| `oneness_defensible` | `Framework.CredulouslyAccepted deityDispute.defeats DeityParty.oneness` | **The Oneness position can be defended**, with LST's first two lines. |
+| `oneness_not_forced` | `¬Framework.SkepticallyAccepted deityDispute.defeats DeityParty.oneness` | **The Oneness position is not forced.** The same group of LST and its lines leaves it out. |
+| `nicenCase_establishes` ⚗ | `Establishes nicenCase` | **The supplemented case still delivers LST's confession, and holds together.** The confession follows from LST's three lines, as before. |
+| `witnessesAnswering_establishes` | `Establishes witnessesAnswering` | **The Witnesses, answering, still deliver their conclusion.** |
+| `onenessAnswering_establishes` | `Establishes onenessAnswering` | **The Oneness position, answering, still delivers its conclusion.** |
+| `three_claims_hold_on_one_essence` ⚗ | `Satisfiable (threeClaims ++ [p Claim.isGodAsOneEssence, essenceExcludesIdentity])` | **The three claims contradict one another only with the identity step added.** Written as three separate claims (the Father is God, the Son is God, the Son is another than the … |
+| `three_claims_fail_on_identity` ⚗ | `¬Satisfiable (threeClaims ++ [p Claim.isGodAsIdentity, bothGodSoOne])` | **With Bernard's step from identity, they cannot all be held.** Read "is God" as Bernard does, as naming the one God himself, take his step that two who are each the one God are … |
+| `son_is_god_burden` ⚗ | `OpponentsBurden sonIsGodCase sonIsGodRoutes [] [] [[0, 1, 2, 3, 4, 5]]` | **The opponent's burden against "the Son is God".** The case runs by six routes: John 1:1 and 1:3 read with Harner and Augustine, Thomas's words, Hebrews 1:8, Titus 2:13, Romans … |
+| `supplemented_forces_nothing` ⚗ | `Framework.grounded caseDispute.defeats = ∅` | **Supplemented, the weighing still forces nothing.** Every party ties with another, and every one rests on a reading rated `disputed`, so no rating breaks a tie. |
+| `nicene_case_defensible` ⚗ | `Framework.CredulouslyAccepted caseDispute.defeats CaseParty.nicene` | **The supplemented Nicene case can be defended**, with LST's case and the six routes: the three can be defended together against both rivals. |
+| `nicene_case_not_forced` ⚗ | `¬Framework.SkepticallyAccepted caseDispute.defeats CaseParty.nicene` | **The supplemented Nicene case is not forced.** The Oneness position and the six routes to "the Son is God" can be defended together, and because Oneness and the Nicene case … |
+| `son_is_god_defensible_with_oneness` ⚗ | `Framework.CredulouslyAccepted caseDispute.defeats CaseParty.sonIsGod` | **That the Son is God, by six routes, can be defended with Oneness too.** The six routes can be defended together with the Oneness position, which also holds that the Son is God. |
+| `son_is_god_not_forced` ⚗ | `¬Framework.SkepticallyAccepted caseDispute.defeats CaseParty.sonIsGod` | **That the Son is God is not forced.** The Witnesses' position, answering, can be defended on its own, and it denies that the Son is God. |
+| `witnesses_answering_defensible` | `Framework.CredulouslyAccepted caseDispute.defeats CaseParty.witnesses` | **The Witnesses' position, answering, can still be defended**, on its own. |
 
 <!-- END GENERATED: lake exe statusgen -->
 
@@ -969,8 +1012,10 @@ tradition, three objections that do not reduce to one another, the two answers
 to the self-refutation objection, and a dispute over what Jesus' rebuke of
 tradition in Mark 7 decides. *Sola gratia* is encoded with Trent and the
 Remonstrants as its rivals, and the Lutherans, Wesley and a third way between
-them, and the Thomists, weighed as one dispute ([#24]); what it lacks is John
-6:44 as a third strand and the perseverance of the saints.
+them, and the Thomists, weighed as one dispute ([#24]); the perseverance of the
+saints is weighed beside it, Westminster against Augustine and Aquinas, Trent,
+the Lutherans and Wesley. What it lacks is John 6:44 as a third strand, and
+1 John 3:9 on perseverance.
 
 **The rest of the Triune God** ([#216]). The procession and the order texts are
 encoded; LST §3's other graded claims are not. They are that each person is God
@@ -980,10 +1025,13 @@ defended synthesis. Then the "through the Son" of the Greek fathers as a third
 position on the procession, and an article check of LST's own sentences.
 
 **Corpus grounding** ([#4]). Importers so `Passage` values resolve against real
-text data (BHSA, OSHB, STEPBible). At that point linguistic premises can cite
-actual morphological annotation rather than a commentary's report of it — which
-matters most for exactly the lexical premises that keep turning out to be
-load-bearing.
+text data. The Greek New Testament has begun: John, Colossians, Titus and Hebrews
+are imported from MACULA Greek's annotation of the SBLGNT, so a claim about what
+the Greek contains is checked against the data ([The Greek text as
+data](./corpus.md), [#247]). The Hebrew Bible (BHSA, OSHB) is still to come.
+Linguistic premises can then cite actual morphological annotation rather than a
+commentary's report of it, which matters most for exactly the lexical premises
+that keep turning out to be load-bearing.
 
 ## Systematic theology
 
@@ -1107,6 +1155,7 @@ the rest worth reading.
 [#3]: https://github.com/testimonyproject/testimony/issues/3
 [#24]: https://github.com/testimonyproject/testimony/issues/24
 [#4]: https://github.com/testimonyproject/testimony/issues/4
+[#247]: https://github.com/testimonyproject/testimony/issues/247
 [#7]: https://github.com/testimonyproject/testimony/issues/7
 [#8]: https://github.com/testimonyproject/testimony/issues/8
 [#9]: https://github.com/testimonyproject/testimony/issues/9

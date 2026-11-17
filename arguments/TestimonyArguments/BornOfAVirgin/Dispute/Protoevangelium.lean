@@ -4,12 +4,12 @@ import TestimonyArguments.BornOfAVirgin.Dispute.Genesis
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Protoevangelium — the promise, and its fulfilment
 
-`Dispute.Genesis` asks what the wording of Genesis 3:15 says of a father. This
-module asks the question a reader of the whole Bible asks next. In the garden God
-tells the serpent that the woman's seed will crush its head, and that it will
-strike his heel. The Gospel tells of one born of a woman, struck in his death,
-who destroyed the devil through it. **Is the promise fulfilled in him, and does
-the fulfilment confirm that it was a promise?**
+The chapter "Does Genesis 3:15 rule out a human father?" asks what the wording
+of Genesis 3:15 says of a father. A reader of the whole Bible asks the next
+question. In the garden God tells the serpent that the woman's seed will crush
+its head, and that it will strike his heel. The Gospel tells of one born of a
+woman, struck in his death, who destroyed the devil through it. **Is the promise
+fulfilled in him, and does the fulfilment confirm that it was a promise?**
 
 ## The terms of the promise, and where Scripture says they are met
 
@@ -45,6 +45,11 @@ sides).
   on the serpent is a promise of victory over that power (Collins, Woudstra,
   Keil).
 
+The readers before Christ do not read the verse so. Jubilees, Philo and
+Josephus read the serpent as an animal or an emblem, and none of them reads the
+verse as a promise. The scene's reading is an exegesis of the section, from its
+own words.
+
 ## What the confirmation shows, and what it does not
 
 The fulfilment confirms the promise; it does not prove it from Genesis alone.
@@ -59,7 +64,8 @@ Joined with the virginal conception, the fulfilment says one thing more: the
 seed in whom the promise is fulfilled was of the woman alone
 (`seed_of_the_woman_alone`). That reads the birth back into the promise. It does
 not show that the wording foretold it, which is Luther's claim and is weighed in
-`Dispute.Genesis` (`the_fulfilment_does_not_reach_the_wording`).
+the chapter "Does Genesis 3:15 rule out a human father?"
+(`the_fulfilment_does_not_reach_the_wording`).
 
 ## How the ratings stand, and what the solver computes
 
@@ -92,8 +98,7 @@ forced.
 
 That is the verdict as the evidence weighs it. Whether Westermann's dissent
 should be heard against a step whose grounds are all Scripture is a question of
-standard, not of evidence; `Dispute.PromiseHearing` hears the dispute under each
-standard, and reports each.
+standard, not of evidence, and the dispute is heard under each standard below.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin

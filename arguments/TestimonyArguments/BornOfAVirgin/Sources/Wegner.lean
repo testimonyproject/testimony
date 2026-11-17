@@ -3,15 +3,9 @@ import TestimonyArguments.BornOfAVirgin.Atoms
 /-!
 # TestimonyArguments.BornOfAVirgin.Sources.Wegner — the citations of the sign dispute
 
-The atoms of the dispute over Wegner's objection, cited here and dispatched from
-`cite` by name. They are the parse of הָרָה, the pregnancy it reports, what that
-pregnancy is taken to show, and the fathers' sign argument against it with the
-near-term reply to that.
-
-They sit apart because `cite` is one total function over every atom. It keeps
-that guarantee: each value below is reached from exactly one of its cases, so an
-atom still cannot go uncited. What moves is only where the citation is written,
-which keeps `Sources.lean` short enough to read.
+The claims of the dispute over Wegner's objection: the parse of הָרָה, the
+pregnancy it reports, what that pregnancy is taken to show, and the fathers'
+sign argument against it with the near-term reply to that.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin

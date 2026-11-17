@@ -17,7 +17,11 @@ Matthew and in Deuteronomy, as if a survey of a word needed its places alike.
 The check now tells a word used from a word talked about, and the survey stays
 here so that it cannot slip back.
 
-The last section is a case the build itself must refuse: an argument of its own
+The straw-man cases come after it, with a small record of what each voice
+holds, because that check compares what a move attributes with the record and
+needs one to compare with.
+
+The case the build itself must refuse: an argument of its own
 whose lines equivocate and argue from silence alone, run through
 `#check_fallacies`, with the failure pinned by `#guard_msgs`.
 
@@ -230,10 +234,11 @@ end Testimony.Checks.FallacyCases
 
 /-! ### A case the build must refuse
 
-An argument of its own, with a claim type, meanings, and two lines that commit
+An argument of its own, with a claim type, meanings, and three lines that commit
 what `#check_fallacies` fails the build for: one reads "justify" two ways and
-needs it one, one argues from silence alone. The check is run over it, and the
-failure it reports is pinned. If the check stopped refusing either line, this
+needs it one, one argues from silence alone, and one answers a view of Trent's
+that the case's own record of Trent contradicts. The check is run over it, and the
+failure it reports is pinned. If the check stopped refusing any of them, this
 would fail. -/
 
 namespace Testimony.Checks.FallacyCases.Refused
@@ -257,12 +262,19 @@ inductive Claim
   | aloneNotInRomans
   /-- Paul did not teach that faith is the only means of justification. -/
   | paulDidNotTeach
+  /-- Trent held that a person's own works are not enough for justification. -/
+  | trentDeniesOwnWorks
+  /-- Trent held that a person's own works are enough for justification. -/
+  | trentSaysWorksSuffice
+  /-- Works are not enough for justification. -/
+  | worksDoNotSuffice
 deriving DecidableEq, Repr
 
 /-- Every claim. -/
 def all : List Claim :=
   [.romansSays, .jamesSays, .verdictInRomans, .showingInJames, .inconsistent,
-    .aloneNotInRomans, .paulDidNotTeach]
+    .aloneNotInRomans, .paulDidNotTeach, .trentDeniesOwnWorks, .trentSaysWorksSuffice,
+    .worksDoNotSuffice]
 
 /-- What each claim means. -/
 def means : Claim → Statement
@@ -275,6 +287,10 @@ def means : Claim → Statement
   | .aloneNotInRomans => .denied (.occurs .monos rom3_28)
   | .paulDidNotTeach =>
     .denied (.heldBy .paul (rl .soleInstrumentOf (cn .faith) (cn .justification)))
+  | .trentDeniesOwnWorks =>
+    .heldBy .trent (.not (rl .sufficientFor (cn .works) (cn .justification)))
+  | .trentSaysWorksSuffice => .heldBy .trent (rl .sufficientFor (cn .works) (cn .justification))
+  | .worksDoNotSuffice => .holds (.not (rl .sufficientFor (cn .works) (cn .justification)))
 
 /-- The case's meanings. -/
 instance meanings : HasMeanings Claim :=
@@ -296,15 +312,27 @@ def fromSilence : Line Claim :=
   , step := p .aloneNotInRomans ➝ p .paulDidNotTeach
   , delivers := p .paulDidNotTeach }
 
+/-- **Answers a straw man.** Its ground makes Trent say that works are enough,
+which the case's own record of Trent denies, and it argues that they are not. -/
+def strawMan : Line Claim :=
+  { name := "Trent made to say it"
+  , grounds := [p .trentSaysWorksSuffice]
+  , step := p .trentSaysWorksSuffice ➝ p .worksDoNotSuffice
+  , delivers := p .worksDoNotSuffice }
+
 /--
-error: lines that equivocate or argue from silence alone, in:
+error: lines that equivocate, argue from silence alone or answer a straw man, in:
 Testimony.Checks.FallacyCases.Refused.Claim
 A case the build must refuse
-  lines: 2, read: 2
+  lines: 3, read: 3
   read a word in two senses and need it the same:
     contradiction
   argue from silence alone:
     fromSilence
+  answer a view the argument's record says its holder does not hold:
+    strawMan
+  attribute a view, against the argument's record:
+    strawMan: trent, contradicted by trentDeniesOwnWorks
   need a word to keep its sense, unstated:
     contradiction: pistis
 -/
@@ -312,3 +340,129 @@ A case the build must refuse
 #check_fallacies under Testimony.Checks.FallacyCases.Refused
 
 end Testimony.Checks.FallacyCases.Refused
+
+/-! ### Straw man
+
+The straw-man check needs a record of what each voice holds, so its cases come
+with one: five claims, each a voice's position as the library would cite it. Two
+are Trent's, one is Augustine's, and two are rival accounts of Second Temple
+Judaism, so that the record itself disagrees about what one voice held. -/
+
+namespace Testimony.Checks.FallacyCases.StrawMan
+
+open Testimony Testimony.Semantics Testimony.Semantics.Notation
+open Testimony.Checks.FallacyCases (argues rom3_28)
+
+/-- The record's claims. -/
+inductive Record
+  /-- Trent held that a person's own works are not enough for justification:
+  its first canon on justification condemns whoever says a person may be
+  justified by their own works without the grace of God through Jesus Christ. -/
+  | trentOnOwnWorks
+  /-- Works done in grace merit an increase of justification: what Trent's
+  position asserts (Session VI, chapter 16). -/
+  | trentOnMerit
+  /-- Augustine read "justify" as to make righteous. -/
+  | augustineOnJustify
+  /-- Sanders: Second Temple Judaism did not hold that works earn salvation. -/
+  | sandersOnJudaism
+  /-- The older picture of rabbinic religion that Sanders argued against, which
+  he traced to Ferdinand Weber: works earn salvation. -/
+  | olderPicture
+deriving DecidableEq, Repr
+
+/-- Every claim of the record. -/
+def all : List Record :=
+  [.trentOnOwnWorks, .trentOnMerit, .augustineOnJustify, .sandersOnJudaism, .olderPicture]
+
+/-- Works are enough for justification. -/
+abbrev worksSuffice : Content := rl .sufficientFor (cn .works) (cn .justification)
+
+/-- Works done in grace merit an increase of justification. -/
+abbrev meritInGrace : Content := rl .merits (cn .worksOfFaith) (cn .increaseOfJustification)
+
+/-- Works earn salvation. -/
+abbrev worksEarn : Content := rl .merits (cn .works) (cn .salvation)
+
+/-- What each claim of the record means. -/
+def means : Record → Statement
+  | .trentOnOwnWorks => .heldBy .trent (.not worksSuffice)
+  | .trentOnMerit => .holds meritInGrace
+  | .augustineOnJustify => .glosses .augustine .dikaioo .makeRighteous
+  | .sandersOnJudaism => .denied (.heldBy .secondTempleJudaism worksEarn)
+  | .olderPicture => .heldBy .secondTempleJudaism worksEarn
+
+/-- The record's meanings. -/
+instance meanings : HasMeanings Record :=
+  { argument := "A record for the straw-man cases", all, means
+  , complete := by intro a; cases a <;> decide }
+
+/-- **The record, voice by voice**: the claims cited as each voice's position. -/
+def record : Voice → List Record
+  | .trent => [.trentOnOwnWorks, .trentOnMerit]
+  | .augustine => [.augustineOnJustify]
+  | .secondTempleJudaism => [.sandersOnJudaism, .olderPicture]
+  | _ => []
+
+/-- **Caught: Trent made to say what it condemns.** Trent held that a person's
+own works are enough to justify; Romans 3:28 says a person is justified apart
+from works of the law; so works are not enough. Trent's first canon condemns the
+view the move answers. -/
+def ownWorks : Move :=
+  argues
+    [ .heldBy .trent worksSuffice
+    , .says rom3_28 (rl .excludedFrom (wd .ergaNomou rom3_28) (wd .dikaioo rom3_28)) ]
+    (.holds (.not worksSuffice))
+
+/-- **Passed over: Trent taken at its word.** Trent held that works done in grace
+merit an increase of justification; so, the move concludes, they do not. Whether
+the move's grounds are enough is another question; the view it answers is
+Trent's. -/
+def meritAnswered : Move := argues [.heldBy .trent meritInGrace] (.holds (.not meritInGrace))
+
+/-- **Reported, not charged: Trent cited for what it condemns.** The same false
+attribution, leaned on instead of answered: Trent held that works are enough, so
+they are. It misattributes, and it answers no one. -/
+def citedForItsDenial : Move := argues [.heldBy .trent worksSuffice] (.holds worksSuffice)
+
+/-- **Passed over: what the record disputes.** Second Temple Judaism held that
+works earn salvation, and they do not. Sanders denies the attribution, and the
+older picture he argued against makes it; the move rests on one side of a
+dispute over what Judaism held, and that dispute, not the move, is where it is
+weighed. -/
+def legalism : Move :=
+  argues [.heldBy .secondTempleJudaism worksEarn] (.holds (.not worksEarn))
+
+/-- **Passed over: what the record does not say.** The same attribution to
+Aquinas, of whom the record cites nothing. -/
+def unrecorded : Move := argues [.heldBy .aquinas worksSuffice] (.holds (.not worksSuffice))
+
+/-- **Passed over: a reading attributed, and borne out.** A move that only
+attributes: Augustine read "justify" as to make righteous. -/
+def augustineRead : Move :=
+  { speaker := "a test case", words := ""
+  , act := .attributes .augustine (.glosses .augustine .dikaioo .makeRighteous) }
+
+/-- **The straw-man check, caught and passed over.** The move that makes Trent
+say what its first canon condemns, and answers that, is caught. Taken at its
+word, Trent is answered fairly. Cited for what it condemns, it is misattributed
+but not answered, so the move is reported and not charged with a straw man. An
+attribution the record disputes is reported as disputed and not charged; one it
+says nothing of is unrecorded; and Augustine's reading of "justify" is borne out
+by the record. -/
+theorem strawman_cases :
+    ownWorks.strawMen record = [(.heldBy .trent worksSuffice, [.trentOnOwnWorks])] ∧
+      meritAnswered.attributed record = [(.heldBy .trent meritInGrace, .fair [.trentOnMerit])] ∧
+      meritAnswered.strawMen record = [] ∧
+      citedForItsDenial.misattributions record =
+        [(.heldBy .trent worksSuffice, [.trentOnOwnWorks])] ∧
+      citedForItsDenial.strawMen record = [] ∧
+      legalism.attributed record =
+        [(.heldBy .secondTempleJudaism worksEarn, .disputed [.olderPicture] [.sandersOnJudaism])] ∧
+      legalism.strawMen record = [] ∧
+      unrecorded.attributed record = [(.heldBy .aquinas worksSuffice, .unrecorded)] ∧
+      augustineRead.attributed record =
+        [(.glosses .augustine .dikaioo .makeRighteous, .fair [.augustineOnJustify])] := by
+  decide
+
+end Testimony.Checks.FallacyCases.StrawMan

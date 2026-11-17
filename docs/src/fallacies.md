@@ -7,8 +7,8 @@ is justified by works and not by faith alone", against Romans 3:28. A Protestant
 James means something else by "justify", and the Catholic calls the reply special pleading.
 Each has named a fallacy without showing that the other committed it.
 
-The library checks three of these charges one step of an argument at a time. Below is the list
-of what it can and cannot yet check, then each of the three, worked through on the cases the
+The library checks four of these charges one step of an argument at a time. Below is the list
+of what it can and cannot yet check, then each of the four, worked through on the cases the
 build itself checks. The design behind them is in
 [Meanings and articles](./semantics.md#the-checks-an-article-audit-needs).
 
@@ -28,7 +28,7 @@ how they are spelled.
 | Non sequitur | does the conclusion follow from what is stated? | `refute_with` | built |
 | Indefensible claim | can a position survive the dispute it is heard in? | a hearing | built |
 | False dilemma | does a move pick one reading where others are fair? | would use `Dilemma` | not yet |
-| Straw man | does an attribution match what its subject holds? | meanings | not yet |
+| Straw man | does a move answer a view its subject does not hold? | `Move.strawMen` | built |
 | Misquotation | does a quotation say what the move says it says? | `says`, then a corpus | not yet |
 | Cherry-picking | which texts on the same words does the move ignore? | a query over meanings | not yet |
 | Double standard | does a party rest a claim on what its own rule refuses? | `ArgumentPackage.heldTo` | claims built |
@@ -41,8 +41,8 @@ true and the conclusion as false, which proves the conclusion does not follow
 premises, which reports whether a position can be held against the others.
 
 None of the move checks returns a bare "fallacy". Each says which premise, stated or not, the
-move's weight falls on, and the begging check also names which of the library's claims deny
-that premise. A charge becomes a finding a reader can check.
+move's weight falls on, and the begging and straw-man checks also name which of the library's
+claims tell against that premise. A charge becomes a finding a reader can check.
 
 Every case below is in `Testimony/Checks/FallacyCases.lean`, and Lean's checker proves each one
 every time the library is built. For each charge the module pins a classic case the check must
@@ -255,11 +255,68 @@ something, and its conclusion must be a denial. An argument from silence about s
 ("the early writers never mention it"), or one that draws a positive conclusion, is not seen
 until it is written in that form.
 
+## Straw man
+
+A straw man answers a view its holder does not hold. The classic case in this debate runs:
+Trent teaches that a person's own works are enough to justify him, but Romans 3:28 says a
+person is justified "apart from works of the law", so Trent is wrong. Trent's first canon on
+justification condemns the very view the argument answers: it anathematises whoever says that a
+person can be justified before God by their own works, without the grace of God through Jesus
+Christ.
+
+To check that, the library needs a record of what Trent holds, and it uses its own: the claims
+of an argument that it cites as a voice's position, given to the check voice by voice. What a
+position asserts is what its holder holds, so a claim Trent's position asserts and a claim that
+"Trent held" something are read alike. Each attribution a move makes, that someone held a
+content (`.heldBy`) or read a word in a sense (`.glosses`), is then one of four things:
+
+- **fair** — a claim of the record bears it out, and none contradicts it;
+- **unfair** — a claim of the record contradicts it, and none bears it out;
+- **disputed** — the record does both, because what the voice held is itself argued;
+- **unrecorded** — the record says nothing either way, and the attribution is the move's to
+  support.
+
+A move answers a straw man when an attribution is unfair and its conclusion cannot be held with
+what it attributes (`Move.strawMen`). The check reports the attribution and the claims that
+contradict it.
+
+**Caught.** The case above, with Trent's canon in the record as "Trent held that works are not
+enough for justification" (`ownWorks`). The move's attribution is unfair, and its conclusion
+denies what it attributes.
+
+**Passed over.** A move that takes Trent at its word is not a straw man, whatever else is wrong
+with it. Trent holds that works done in grace merit an increase of justification (Session VI,
+chapter 16); a move that says so and denies it (`meritAnswered`) makes a fair attribution. The
+grammar keeps works in general (`works`) apart from works done in grace (`worksOfFaith`), and
+that is why the two cases come apart.
+
+**Reported, not charged.** A move that cites Trent for what Trent condemns, and leans on it
+rather than answering it (`citedForItsDenial`), misattributes without answering anyone. The
+check lists it among `Move.misattributions` and does not call it a straw man.
+
+**Disputed, and not charged.** What a voice held can itself be the question. E. P. Sanders
+argued that the picture of the Judaism of Paul's day as a religion of earning salvation by
+works, which he traced to Ferdinand Weber, misreads its sources. A move that credits that
+Judaism with the view and denies it (`legalism`) rests on one side of that argument, so the
+check reports the attribution as disputed, names the claims on each side, and leaves the
+weighing to the dispute over what Judaism held.
+
+`strawman_cases` pins these cases, with one attribution the record says nothing of and one
+reading of a word, Augustine's "justify" as to make righteous, that it bears out.
+
+The check is only as good as its record. An attribution the record contradicts may show the
+record wrong, so the report names the claims it relied on, and those claims carry their own
+citations. Two things are not seen yet. A misread *word* is reported as an attribution but is
+never charged as a straw man, because the check does not yet tell when a conclusion answers what
+a reader took a word to mean. And when the library checks its own lines (below), the record is
+thin: an argument's only claims about what a voice held are the few written as attributions, so
+most of what the library knows of Trent, written as Trent's doctrine, is not yet on it.
+
 ## Checking your own lines
 
 A **package** is a set of arguments built on the library, as the worked arguments are. Read
 through its argument's meanings, every line of reason in a package is a move.
-`#check_fallacies under N` runs the three checks over every line under the namespace `N`, and
+`#check_fallacies under N` runs the move checks over every line under the namespace `N`, and
 reports, for each argument:
 
 - how many of its lines it could read;
@@ -267,10 +324,20 @@ reports, for each argument:
 - the lines whose premise carries what they deliver, and who denies that premise;
 - the lines that argue from silence alone;
 - the lines that rest on one another in a circle;
+- the lines that answer a view the argument's own record says its holder does not hold;
+- the lines that attribute a view, and how each attribution stands to the record;
 - the lines that are conditional on a word keeping its sense, with the words.
 
-It fails the build on two of these, a line that reads a word two ways or one that argues from
-silence alone: the library may not do what it checks articles for. A carried premise is reported
+For a line, the record of a voice is the argument's other claims that say, or deny, what the
+voice held or how it read a word. The line's own claims are left out of it, because a ground
+that says "Sanders' Judaism held this" cannot be what bears itself out. Today the report lists
+two sola fide lines that attribute a view, Sanders' account of Second Temple Judaism
+(`sandersLine`) and Augustine's reading of "justify" (`trentWordLine`), and finds both
+*unrecorded*: the argument cites nothing else about what either voice held.
+
+It fails the build on three of these, a line that reads a word two ways, one that argues from
+silence alone, or one that answers a straw man: the library may not do what it checks articles
+for. A carried premise is reported
 but does not fail the build, because whether it begs the question depends on whom the line is
 addressed to. A circle of lines is reported and does not fail the build either. A line does not
 record which position holds it, and a circle is a fault only in one position's reasoning; an
@@ -288,19 +355,24 @@ To test that a check fails where it should, give it a case of its own and pin th
 end of `FallacyCases` does this with a small argument, `Refused`, which is the debate this page
 opened with. Its line "Paul against James" sets Romans 3:28 against James 2:24 while reading
 "justify" as a verdict in the one and a showing in the other; its line "Not in the verse" argues
-from the missing word alone. `#check_fallacies` is run over it inside `#guard_msgs`, with the
-error it must report written out:
+from the missing word alone; and its line "Trent made to say it" answers a view of Trent's that
+the case's own record of Trent contradicts. `#check_fallacies` is run over it inside
+`#guard_msgs`, with the error it must report written out:
 
 ```lean
 /--
-error: lines that equivocate or argue from silence alone, in:
+error: lines that equivocate, argue from silence alone or answer a straw man, in:
 Testimony.Checks.FallacyCases.Refused.Claim
 A case the build must refuse
-  lines: 2, read: 2
+  lines: 3, read: 3
   read a word in two senses and need it the same:
     contradiction
   argue from silence alone:
     fromSilence
+  answer a view the argument's record says its holder does not hold:
+    strawMan
+  attribute a view, against the argument's record:
+    strawMan: trent, contradicted by trentDeniesOwnWorks
   need a word to keep its sense, unstated:
     contradiction: pistis
 -/
@@ -308,7 +380,7 @@ A case the build must refuse
 #check_fallacies under Testimony.Checks.FallacyCases.Refused
 ```
 
-If the check ever stopped refusing either line, the message would change, and the build would
+If the check ever stopped refusing any of the three, the message would change, and the build would
 fail. This does not settle whether the Protestant reply in the opening debate is right. It shows
 what the reply commits its maker to: once "justify" is read as a verdict in Paul and a showing in
 James, the two verses can no longer be set against each other, by either side.

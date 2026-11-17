@@ -4,14 +4,25 @@ import Testimony.Scripture
 import TestimonyArguments.Works
 
 /-!
-# TestimonyArguments.BornOfAVirgin.Atoms — the atomic claims, and what cites them
+# TestimonyArguments.BornOfAVirgin.Atoms — the claims
+
+Every claim the chapters use is listed here once, with the number every formula
+calls it by: the texts of Isaiah, Genesis, Micah, Matthew and Luke; the
+disputed readings of them; what the ancient translations render; what each
+rival position holds; and the conclusion, that the Messiah would be born of a
+virgin and that Jesus answers that description. The table gives each claim's
+kind, who holds it and how firmly, and the sources that carry it. Behind the
+table, each claim's own description, and the reasoning for each source and
+rating, are kept for a reader who wants to check one.
+-/
+
+/-!
+#### What the atoms are
 
 The atoms this argument is built from, the `Source` shapes that recur across
 them, the typed intertextual edges between the passages, and the criterion the
 argument is about. Everything here is *what the argument is about*; nothing
 here asserts anything.
-
-See `TestimonyArguments.BornOfAVirgin` for the dispute this encodes.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin
@@ -305,7 +316,7 @@ inductive Claim
   | jesusSatisfiesCriterion
 deriving DecidableEq, Repr
 
-/-! ### Recurring sources
+/-! #### Recurring sources
 
 Five works carry this argument, and each carries several atoms at the same
 pinpoint with the same confidence. Written out at every atom, the citation was
