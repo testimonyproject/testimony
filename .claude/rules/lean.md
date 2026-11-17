@@ -23,8 +23,9 @@ paths:
   shared premise list joins its argument's set where it is written:
   `@[solaFideDefs] def ...`. An untagged one stays folded, and `establish`
   reports "not Horn". A new argument adds its set to
-  `arguments/TestimonyArguments/Attr.lean` and to `unfoldSets` in
-  `arguments/TestimonyArguments/Checks.lean`, and its title to the catalogue in
+  `arguments/TestimonyArguments/Attr.lean`, a module of its checks,
+  `arguments/TestimonyArguments/Checks/<Argument>.lean`, imported by `Checks.lean`
+  (`#check_coverage` fails the build until it is), and its title to the catalogue in
   `arguments/TestimonyArguments/Tools/Catalogue.lean`.
 - **The recipe's semantics are qualified inside the tactic.** This used to be a
   documentation rule: `Formula` is also an abbrev in

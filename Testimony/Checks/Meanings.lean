@@ -1,3 +1,4 @@
+import Testimony.Checks.Coverage
 import Testimony.Checks.Fixture
 
 /-!
@@ -65,6 +66,7 @@ def checkMeanings (root : Name) : CommandElabM Unit := do
       (foreign.toList.map toMessageData) "\n"}\nremove the hand-written HasPostulates instance"
   if found == 0 then
     throwError "#check_meanings found no argument to check"
+  recordChecked `meanings root
   logInfo m!"every argument has meanings and pinned joins: {found} claim types"
 
 /-- `#check_meanings under N` checks every argument whose claim type is declared

@@ -1023,16 +1023,75 @@ def sectionHeading (title : String) : String :=
   "\\clearpage\n\\section*{" ++ escape title ++ "}\n" ++
   "\\addcontentsline{toc}{section}{" ++ escape title ++ "}\n\n"
 
-/-- Preamble for a standalone document. Needs XeLaTeX or LuaLaTeX: the claims
-contain Greek and Hebrew, and the rendered Lean contains `¬`, `→` and `⊢`.
+/-- The fonts, and which font sets each script the documents quote.
 
-The fonts are chosen rather than demanded. `\setmainfont{Times New Roman}` was
-a hard requirement, and on a machine without it — which is most machines that
-are not someone's laptop — `tectonic arguments.tex` failed at line 4 with a
-fontspec error, so the PDF half of the toolchain only ever worked for whoever
-had already made it work. Each family now falls back, and the monospace one
-matters as much as the body one: the default `\ttfamily` has no glyph for the
-logical symbols the rendered statements are full of.
+Every font is named by its file, and every file is one the TeX distribution
+ships: GNU FreeFont and DejaVu, which Tectonic's bundle and TeX Live both carry.
+The fonts used to be looked up by name among the machine's own, Times New Roman
+first, and the CI image that typesets the published PDFs has no fonts of its own.
+So the documents fell back to Latin Modern, which has no Greek, no Hebrew and
+none of the logical symbols, and XeTeX left a blank where each should be: the
+published `sola-fide.pdf` read 'Paul's verb "justify" ( ) does not mean…'.
+Named by file, a font is the same on every machine, and a PDF typeset on a
+laptop is the PDF CI publishes.
+
+FreeSerif sets the prose, Greek with every accent and breathing included.
+DejaVu Sans Mono sets code. A few ranges no single font covers are passed to
+another by XeTeX's character classes, which wrap each run of such characters in
+a group set in the font that has them, so the rest of the line is untouched:
+
+- Hebrew, in FreeSerif, so a word quoted inside code is set too, and a run of
+  Hebrew is shaped right to left as one group, its punctuation left outside it;
+- Syriac, in FreeSans, which alone of these has it;
+- the modifier letters of a manuscript siglum (1QIsaᵃ) and the n-ary logical
+  operators (`⋀`), which the italic and the monospace fonts lack.
+
+Foundation's implication arrow `🡒` (U+1F852) is in no font the distribution
+carries, so it is set as `→`, the glyph `Notation` already reads it as. -/
+def fonts : String :=
+  "\\setmainfont{FreeSerif}[Extension=.otf,UprightFont=*,BoldFont=*Bold,\n" ++
+  "  ItalicFont=*Italic,BoldItalicFont=*BoldItalic,Ligatures=TeX]\n" ++
+  "\\setmonofont{DejaVuSansMono}[Extension=.ttf,UprightFont=*,BoldFont=*-Bold,\n" ++
+  "  ItalicFont=*-Oblique,BoldItalicFont=*-BoldOblique,Scale=MatchLowercase]\n" ++
+  -- One family per fallback, upright in italic too: none of them has an italic of
+  -- these scripts, and a missing shape is a blank again.
+  String.join (fallbacks.map fun (name, font, script, _) =>
+    "\\newfontfamily\\" ++ name ++ "font{" ++ font ++ "}[Extension=.otf,UprightFont=*," ++
+    "BoldFont=*Bold,\n  ItalicFont=*,BoldItalicFont=*Bold" ++
+    (if script.isEmpty then "" else ",Script=" ++ script) ++ "]\n") ++
+  "\\XeTeXinterchartokenstate=1\n" ++
+  "\\newcommand{\\fontrange}[3]{\\count255=#2\\relax\n" ++
+  "  \\loop\\XeTeXcharclass\\count255=#1\\relax\\ifnum\\count255<#3\\relax\n" ++
+  "  \\advance\\count255 by 1\\repeat}\n" ++
+  String.join (fallbacks.map fun (name, _, _, ranges) =>
+    "\\newXeTeXintercharclass\\" ++ name ++ "class\n" ++
+    String.join (ranges.map fun (lo, hi) =>
+      "\\fontrange\\" ++ name ++ "class{\"" ++ lo ++ "}{\"" ++ hi ++ "}\n")) ++
+  -- Into a run from ordinary text (class 0) or a boundary (4095), out of it to
+  -- either, and from one run straight into another.
+  String.join (fallbacks.map fun (name, _, _, _) =>
+    let cls := "\\" ++ name ++ "class"
+    let enter := "{\\begingroup\\" ++ name ++ "font}"
+    "\\XeTeXinterchartoks 0 " ++ cls ++ " " ++ enter ++ "\n" ++
+    "\\XeTeXinterchartoks 4095 " ++ cls ++ " " ++ enter ++ "\n" ++
+    "\\XeTeXinterchartoks " ++ cls ++ " 0 {\\endgroup}\n" ++
+    "\\XeTeXinterchartoks " ++ cls ++ " 4095 {\\endgroup}\n" ++
+    String.join ((fallbacks.filter (·.1 != name)).map fun (other, _, _, _) =>
+      "\\XeTeXinterchartoks " ++ cls ++ " \\" ++ other ++ "class " ++
+      "{\\endgroup\\begingroup\\" ++ other ++ "font}\n")) ++
+  "\\usepackage{newunicodechar}\n" ++
+  "\\newunicodechar{🡒}{→}\n"
+where
+  /-- Each fallback: its name, its font's file, the OpenType script it is
+  shaped as, and the ranges of code points it sets, in hexadecimal. -/
+  fallbacks : List (String × String × String × List (String × String)) :=
+    [("hebrew", "FreeSerif", "Hebrew", [("0590", "05FF")]),
+     ("syriac", "FreeSans", "Syriac", [("0700", "074F")]),
+     ("symbol", "FreeSerif", "", [("1D2C", "1D6A"), ("22C0", "22C3")])]
+
+/-- Preamble for a standalone document. Needs XeLaTeX: the claims contain Greek,
+Hebrew and Syriac, the rendered Lean contains `¬`, `→` and `⊢`, and `fonts`
+sets them with XeTeX's character classes.
 
 `tool` is the generator the date line names: the library's `argtex`, or a
 package's own. `author`, where given, is set under the title, as LaTeX; it is
@@ -1085,12 +1144,7 @@ def preamble (title : String) (tool : String := "argtex") (author extra : String
   -- sentence; in text full of "ch. 16", "ad loc. Rom" and "p. 80" that reads
   -- as stray double spaces, and justification stretches them further.
   "\\frenchspacing\n" ++
-  "\\IfFontExistsTF{Times New Roman}\n" ++
-  "  {\\setmainfont{Times New Roman}[Ligatures=TeX]}\n" ++
-  "  {\\IfFontExistsTF{FreeSerif}{\\setmainfont{FreeSerif}[Ligatures=TeX]}{}}\n" ++
-  "\\IfFontExistsTF{DejaVu Sans Mono}\n" ++
-  "  {\\setmonofont{DejaVu Sans Mono}[Scale=MatchLowercase]}\n" ++
-  "  {\\IfFontExistsTF{FreeMono}{\\setmonofont{FreeMono}[Scale=MatchLowercase]}{}}\n" ++
+  fonts ++
   "\\title{" ++ escape title ++ "}\n" ++
   (if author.isEmpty then "" else "\\author{" ++ author ++ "}\n") ++
   "\\date{Generated by \\texttt{lake exe " ++ tool ++ "}}\n" ++
