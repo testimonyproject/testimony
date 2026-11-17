@@ -43,9 +43,11 @@
 # flagged benchmark when one is. Its samples are base-pooled.json and
 # head-pooled.json.
 #
-# Regressions the change accepts on purpose are those it adds
-# to arguments/bench/accepted.toml: an entry already in the base accepts
-# nothing. See .claude/skills/optimising-the-engine.
+# Regressions the change accepts on purpose are those it adds under
+# arguments/bench/accepted/, one file per change, so that two pull requests
+# accepting regressions never edit the same file: an entry already in the base
+# accepts nothing. The single file arguments/bench/accepted.toml that came
+# before is still read, on either side, for a branch cut before the directory. See .claude/skills/optimising-the-engine.
 
 set -euo pipefail
 
@@ -156,11 +158,11 @@ done
 merge "$out/base.json" "$base_commit" "${base_rounds[@]}"
 merge "$out/head.json" "$head_commit" "${head_rounds[@]}"
 
-git -C "$base" show "HEAD:arguments/bench/accepted.toml" >"$out/base-accepted.toml" 2>/dev/null \
-  || : >"$out/base-accepted.toml"
 compare() {
   "$head/scripts/bench-compare.py" "$@" \
-    --accept "$head/arguments/bench/accepted.toml" --accept-base "$out/base-accepted.toml" \
+    --accept "$head/arguments/bench/accepted" --accept "$head/arguments/bench/accepted.toml" \
+    --accept-base "$base/arguments/bench/accepted" \
+    --accept-base "$base/arguments/bench/accepted.toml" \
     --drift "calibration: kernel list reduction" $gate
 }
 log "comparing; the samples are in $out"
