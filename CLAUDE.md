@@ -221,6 +221,8 @@ name as `/<skill>`.
   readers: the rules, the checklist, and how to review a generated page
 - `prose-voice` — drafting prose with a voice: how a paragraph and a chapter
   move, people and history put back in, every fact kept
+- `literate-style` — the order an argument is told in: built up from its
+  claims, Knuth's literate programming style, not a top-down outline
 - `removing-ai-tells` — the editing pass for habits that make prose sound
   generated, with `scripts/prose_tells.py` to count them
 - `encoding-an-argument` — going from a commentary to a package

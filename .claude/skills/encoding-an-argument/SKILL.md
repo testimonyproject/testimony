@@ -125,6 +125,11 @@ def reformed : ArgumentPackage Claim :=
 A single line that concludes exactly what it delivers can skip `caseOf`:
 `someLine.asPackage cite "the label"`.
 
+Write a step's docstring as the build-up a reader follows: each claim it needs,
+in words with its text, in the order the step lists them, and then what they
+give. The generated page sets the step the same way below the docstring. The
+`literate-style` skill has the order to follow and an example.
+
 ## 3b — the packages, rivals first
 
 Write the rival before proving anything. It is far too easy to build a
@@ -297,7 +302,8 @@ module docstring — `BornInBethlehem` does, for `jesusBornInBethlehem`.
 ## 7 — the module docstring
 
 State the dispute in prose before any code: what the argument claims, where it
-is contested, and what the strongest objection is. `BornOfAVirgin.lean` is the
+is contested, and what the strongest objection is. Then let the files build the
+case up from its claims, as `literate-style` describes. `BornOfAVirgin.lean` is the
 model. A reader should be able to understand the disagreement without reading
 the Lean.
 
