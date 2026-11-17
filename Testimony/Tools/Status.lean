@@ -173,25 +173,29 @@ def beginMarker : String := "<!-- BEGIN GENERATED: lake exe statusgen -->"
 def endMarker : String := "<!-- END GENERATED: lake exe statusgen -->"
 
 /-- **Write the status table into its page, or check it**: with `--check`, fail
-if the committed block is stale; otherwise splice the table in. Returns the exit
-code. -/
+if the page is stale; otherwise splice the table in. Returns the exit code.
+
+The block is spliced into `template`, the page as written by hand with its
+block empty, and the result written to `page`; the generated page is not
+committed, so two pull requests never conflict over it. By default the template
+is the page itself, and the block is spliced in place. -/
 def run (page : System.FilePath) (sections : List Argument) (headlines : List Headline)
-    (args : List String) : IO UInt32 := do
-  unless ← page.pathExists do
-    IO.eprintln s!"statusgen: {page} does not exist"
+    (args : List String) (template : System.FilePath := page) : IO UInt32 := do
+  unless ← template.pathExists do
+    IO.eprintln s!"statusgen: {template} does not exist"
     return 1
-  let doc ← IO.FS.readFile page
+  let doc ← IO.FS.readFile template
+  let current ← if ← page.pathExists then IO.FS.readFile page else pure ""
   match splice beginMarker endMarker doc (statusMarkdown sections headlines) with
   | .error e =>
     IO.eprintln s!"statusgen: {page}: {e}"
     return 1
   | .ok updated =>
     if args.contains "--check" then
-      if doc == updated then
+      if current == updated then
         IO.println s!"statusgen: {headlines.length} headline results; {page} is up to date"
         return 0
       IO.eprintln s!"statusgen: {page} is stale — run `lake exe statusgen`"
-      IO.eprintln "statusgen: and commit the result"
       return 1
     IO.FS.writeFile page updated
     IO.println s!"statusgen: wrote {page} ({headlines.length} headline results)"

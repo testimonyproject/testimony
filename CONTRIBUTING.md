@@ -20,8 +20,8 @@ Before writing Lean, read the [style guide](docs/src/style-guide.md) and
    field `none`.
 4. **No collapsing relation types.**
 5. **Documentation moves with the argument.** A change under `arguments/TestimonyArguments/` carries
-   the documentation it implies: regenerate the roadmap's status table with `lake exe statusgen` and
-   the argument pages with `lake exe argdoc`, both run in `arguments/`, and update any page whose
+   the documentation it implies: regenerate the pages with `scripts/generate-docs.sh` and read them
+   (they are not committed; CI builds them for the site and the preview), and update any page whose
    prose describes the result you changed. Rule L9 fails the build if a page names a result that no
    longer exists — but only judgement catches a paragraph that still *describes* it wrongly.
 6. **Respectful discourse.** Debate the encoding, not the person.
@@ -50,10 +50,8 @@ python3 scripts/testimony_lint.py    # tier 4, over every package
 
 cd arguments                         # the arguments: tiers 1-3 again
 lake build && lake lint && lake exe axiom-audit
-lake exe bibgen --check              # generated files current
-lake exe argtex --check
-lake exe statusgen --check
-lake exe argdoc --check
+cd ..
+scripts/generate-docs.sh             # the generated pages and documents, not committed
 ```
 
 All of these run in CI. `lake build` passing on its own is not enough — see
