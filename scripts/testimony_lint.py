@@ -54,14 +54,22 @@ CITE_KEY_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 ARGUMENT_PACKAGE_RE = re.compile(r"\bdef\s+(\w+)\s*:\s*ArgumentPackage\b")
 
 # L9. Pages that carry results in prose, plus the two rule files. The
-# generated bibliography is excluded: bibgen owns it, and `--check` guards it.
+# generated pages are excluded: they are not committed, and so exist only where
+# `scripts/generate-docs.sh` has been run. Three of them are written from a
+# hand-written template in docs/templates/, which is read in their place.
 DOC_PATHS = (
     "README.md",
     "CLAUDE.md",
     "CONTRIBUTING.md",
     "docs/src/*.md",
+    "docs/templates/*.md",
 )
-GENERATED_DOCS = frozenset({"docs/src/bibliography.md"})
+GENERATED_DOCS = frozenset({
+    "docs/src/bibliography.md",
+    "docs/src/roadmap.md",
+    "docs/src/maturity.md",
+    "docs/src/SUMMARY.md",
+})
 # `argdoc` writes a page per argument here, from the module and declaration
 # docstrings. Whole directories rather than named files, because the set of
 # arguments changes and a rule that had to be told about each new one would

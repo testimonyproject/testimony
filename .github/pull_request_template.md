@@ -16,7 +16,7 @@
 - [ ] `lake build`, `lake lint`, `lake exe axiom-audit` (library)
 - [ ] `python3 scripts/testimony_lint.py`
 - [ ] the same three in `arguments/`, and `scripts/kernel-replay.sh`
-- [ ] `bibgen`, `statusgen`, `argdoc`, `argtex`, each with `--check`
+- [ ] `scripts/generate-docs.sh` (the generated files are not committed)
 - [ ] read the generated page, not only the docstring
       (`docs/src/writing-for-readers.md`)
 

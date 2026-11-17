@@ -45,7 +45,8 @@ end TestimonyArguments.Status
 /-- Entry point: the roadmap's status table, then the maturity page. -/
 def main (args : List String) : IO UInt32 := do
   let status ← run "../docs/src/roadmap.md" TestimonyArguments.Status.sections
-    TestimonyArguments.Status.headlines args
+    TestimonyArguments.Status.headlines args "../docs/templates/roadmap.md"
   let maturity ← Testimony.Maturity.run "../docs/src/maturity.md"
     TestimonyArguments.Status.sections TestimonyArguments.Status.maturity args
+    "../docs/templates/maturity.md"
   return max status maturity

@@ -179,13 +179,6 @@ jobs:
           lake exe axiom-audit
           ../scripts/kernel-replay.sh TestimonyArguments bibgen argtex statusgen argdoc
 
-      - name: Generated files are current
-        working-directory: arguments
-        run: |
-          lake exe bibgen --check
-          lake exe argtex --check
-          lake exe statusgen --check
-          lake exe argdoc --check
 
       # The examples: a package built on the library, held to the library's
       # gates. It requires the library by path and shares its .lake/packages, so
@@ -198,7 +191,31 @@ jobs:
           lake lint
           lake exe axiom-audit
           ../scripts/kernel-replay.sh TestimonyExamples exampletex
-          lake exe exampletex --check
+
+      # The site's pages, the bibliography and the LaTeX documents, generated
+      # from the Lean source. They are not committed, so that no two pull
+      # requests conflict over them; this step is where a generator that breaks
+      # fails the build. What it writes is the pull request's preview: the
+      # `generated` artifact holds the pages and documents, and `docs` below
+      # builds the book from them, as the `book` artifact.
+      - name: Generate documentation
+        run: scripts/generate-docs.sh
+
+      - name: Upload generated documentation
+        uses: actions/upload-artifact@v4
+        with:
+          name: generated
+          path: |
+            references.bib
+            docs/src/bibliography.md
+            docs/src/arguments/
+            docs/src/SUMMARY.md
+            docs/src/roadmap.md
+            docs/src/maturity.md
+            docs/latex/arguments.tex
+            docs/latex/arguments/*.tex
+            examples/docs/latex/*.tex
+          if-no-files-found: error
 
   # Engine benchmarks, an ablation A/B: the engine with this change and without
   # it (HEAD^1, the base it merges into), built side by side on one runner and
@@ -304,12 +321,35 @@ jobs:
           test "$CHANGES" = success
           test "$BENCH" = success || { test "$LEAN" = false && test "$BENCH" = skipped; }
 
+  # The book, from the pages `build` generated when it ran; otherwise, for a
+  # change to hand-written pages alone, from the templates with their generated
+  # blocks empty, which checks every hand-written page without a Lean build.
+  # Either way the book is uploaded, as the pull request's preview of the site.
   docs:
-    needs: [changes, image]
-    if: ${{ !cancelled() && !failure() && needs.changes.outputs.docs == 'true' }}
+    needs: [changes, image, build]
+    if: >-
+      ${{ !cancelled() && !failure()
+      && (needs.changes.outputs.docs == 'true' || needs.changes.outputs.lean == 'true') }}
     runs-on: ubuntu-latest
     container: ${{ needs.image.outputs.image || 'ghcr.io/testimonyproject/testimony/devcontainer:latest' }}
     steps:
       - uses: actions/checkout@v4
+
+      - name: Download generated documentation
+        if: needs.build.result == 'success'
+        uses: actions/download-artifact@v4
+        with:
+          name: generated
+
+      - name: Templated pages only
+        if: needs.build.result != 'success'
+        run: scripts/generate-docs.sh --stub
+
       - name: Build book
         run: mdbook build docs
+
+      - name: Upload book
+        uses: actions/upload-artifact@v4
+        with:
+          name: book
+          path: docs/book/

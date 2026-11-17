@@ -55,7 +55,7 @@ lake build                                         # tier 1, and the checks in C
 lake lint                                          # tier 2
 lake exe axiom-audit                               # tier 3
 ../scripts/kernel-replay.sh TestimonyExamples exampletex
-lake exe exampletex --check                        # the documents are current
+lake exe exampletex                                # the documents (not committed)
 ```
 
 Tier 4, the domain linter, runs from the repository root, where it reads the
