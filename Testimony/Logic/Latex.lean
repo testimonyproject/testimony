@@ -1051,8 +1051,9 @@ than on LaTeX's plain `article` with the margins and spacing set by hand. KOMA
 sets the width of the text block from the paper and the type size (`DIV`), so a
 line stays within the length a reader's eye can follow, and sets headings in
 the sans-serif face. Its foot margin, twice the head's, is the one thing
-overridden: it left a wide band of white under every page number. The sans face is FreeSans, so a heading that quotes Greek or Hebrew
-still has the glyphs (`fonts`).
+overridden: it left a wide band of white under every page number. The sans
+face is FreeSans, so a heading that quotes Greek or Hebrew still has the glyphs
+(`fonts`).
 
 The rest is this library's own: a variable linked to its row in the legend
 (`\pvar`), a derivation's rows (`derivation`), the gloss after a formula
