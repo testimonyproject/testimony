@@ -82,9 +82,9 @@ def orthodoxReading : Valuation Claim := fun a =>
   | .scriptureIsSoleInfallibleRule => False
   | _ => True
 
-/-- Orthodoxy also entails the negation, and on its own premise. The seed
-encoding grounded a single "Catholic/Orthodox" line on magisterial
-infallibility, which attributes to Orthodoxy a premise it does not hold. -/
+/-- Orthodoxy also entails the negation, and on its own premise. Its line is
+kept apart from Rome's, because grounding the two on magisterial infallibility
+would attribute to Orthodoxy a premise it does not hold. -/
 @[headline]
 theorem orthodox_not_establishes : ¬ Establishes orthodox := by
   refute_with orthodoxReading [solaScripturaDefs]
@@ -158,10 +158,9 @@ theorem hinge_is_load_bearing_within_classical_strand :
 
 /-! #### The two answers to self-refutation
 
-The objection's step is a conjunction, so there are two ways to deny it. The
-seed encoded only the first. Neither answer is redundant with the other: each
-removes a different ground, and the objection succeeds only if both are
-refused. -/
+The objection's step is a conjunction, so there are two ways to deny it.
+Neither answer is redundant with the other: each removes a different ground,
+and the objection succeeds only if both are refused. -/
 
 /-- The reading on which scripture does teach the principle. -/
 def scriptureTeachesItReading : Valuation Claim := fun _ => True
@@ -184,14 +183,13 @@ def finalArbiterReading : Valuation Claim := fun a =>
   | .solaScripturaIsTaughtByScripture => False
   | _ => True
 
-/-- **And the final-arbiter answer blocks it too, without the hinge.** This is
-the answer the seed did not encode. It concedes that scripture does not teach
-the principle in the sense the objection requires, and denies instead that the
-bindingness rule governs a claim of this kind.
+/-- **And the final-arbiter answer blocks it too, without the hinge.** It
+concedes that scripture does not teach the principle in the sense the objection
+requires, and denies instead that the bindingness rule governs a claim of this
+kind.
 
 So the objection is defeated on either route, and succeeds only against a
-position that refuses both — which is what "the dispute reduces to the hinge"
-was gesturing at, and is narrower than that phrase suggests. -/
+position that refuses both. The dispute does not reduce to the hinge alone. -/
 @[headline]
 theorem scoping_blocks_self_refutation : ¬ Establishes selfRefutationUnderScope := by
   refute_with finalArbiterReading [solaScripturaDefs]
@@ -203,17 +201,13 @@ theorem scoping_blocks_self_refutation : ¬ Establishes selfRefutationUnderScope
 Kruger on the canon and Mathison on interpretive authority make the same move:
 concede the circularity, deny that it discriminates between the positions.
 
-Each used to get two results — one that it blocks the objection, one that it
-establishes nothing — and that is one result too many. A premise set that
-entails neither a proposition nor its negation leaves that proposition
-*independent* of it, and blocking and establishing-nothing are the two halves
-of that single fact. Foundation names the notion for provability;
-`Testimony.Logic.Independent` is its semantic counterpart, and `leaves_open`
-proves it from the two readings the premises admit.
-
-The gain is not brevity. Stated as a pair, nothing checks that the two halves
-are about the same proposition — and in the Geisler case below they were
-not. -/
+Each gets one result. A premise set that entails neither a proposition nor
+its negation leaves that proposition *independent* of it, and blocking the
+objection and establishing nothing are the two halves of that single fact.
+Foundation names the notion for provability; `Testimony.Logic.Independent` is
+its semantic counterpart, and `leaves_open` proves it from the two readings the
+premises admit. Stated once, the two halves are checked to be about the same
+proposition. -/
 
 /-- The reading on which the parity point is granted and the sole rule still
 does not follow: the canon came through the Church, the rival's authority is

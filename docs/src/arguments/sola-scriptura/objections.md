@@ -67,18 +67,12 @@ because two readings satisfy those grounds and disagree about it
 (`parity_leaves_the_canon_open`, `parity_leaves_the_distinction_open`). The
 replies block the objection, and establish nothing.
 
-Each of these used to be stated as a *pair* of results, one that the reply
-blocks the objection and another that it establishes nothing, and the pair hid
-a mistake. Over Barrett's parity reply to Geisler the two halves asked about
-different questions while being presented as two sides of one. The claim that
-was meant is that the defeat is left open (`parity_leaves_the_defeat_open`).
-The second half, restated, is that Barrett's reply does not merely fail to clear
-the charge of circularity but grants it as one of its own grounds
-(`circle_parity_concedes_the_charge`).
-
-The argument "Born of a virgin" records the same lesson for a different reply
-(`compatibility_does_not_establish_criterion`), and not as an independence
-claim, because its two results range over different premise sets.
+Blocking an objection and establishing nothing are one fact here, stated once
+for each reply, so the two halves cannot drift apart into different questions.
+Barrett's parity reply to Geisler gets the same treatment: the defeat Geisler
+claims is left open (`parity_leaves_the_defeat_open`). The reply also does more
+than fail to clear the charge of circularity. It grants the charge as one of
+its own grounds (`circle_parity_concedes_the_charge`).
 
 ## The circle inside Protestantism
 
@@ -951,8 +945,8 @@ it is peculiar to this position.
 
 What the Protestant packages rest on beyond any single line: the prooftext
 that belongs to no strand, the shared datum of 2 Thessalonians 2:15, and the
-commitments of the final-arbiter reading. Mark 7 used to sit here too, a
-premise no step read; it is a line of its own now (`mark7Line`).
+commitments of the final-arbiter reading. Mark 7 is not among them: it is a
+line of its own (`mark7Line`).
 
 <div class="testimony-derivation">
 
@@ -1213,11 +1207,9 @@ No premise here rests on scripture alone.
 
 No package here. What a parity reply does is stated as `Independent` over the
 reply's own line — see `Results` — and independence is a claim about a premise
-set and a proposition, not about a package's conclusion. Four packages used to
-stand here, two per reply, because `Establishes` is package-shaped and the
-reply had to be asked its question twice: once for the block and once for the
-conclusion. One statement replaces each pair, and the scaffolding goes with
-them.
+set and a proposition, not about a package's conclusion, so one statement asks
+the reply both questions: whether it blocks the objection and whether it
+establishes the conclusion.
 
 ##### The hinge, in its two roles
 
@@ -1361,10 +1353,10 @@ No premise here rests on scripture alone.
 
 Barrett's parity grounds, asked about the charge itself.
 
-Not "asked to clear the charge", which is what this package used to ask. The
-reply concedes the circle — `traditionIReasoningIsCircular` is one of its
-grounds — so the interesting question is not whether it fails to deliver the
-denial but that it delivers the charge. Asked the weaker question the answer is
+The question is not whether the reply clears the charge. The reply concedes
+the circle — `traditionIReasoningIsCircular` is one of its grounds — so what
+matters is not that it fails to deliver the denial but that it delivers the
+charge. Asked the weaker question the answer is
 "no"; asked this one it is "yes, by its own premises".
 
 <div class="testimony-derivation">
@@ -1492,9 +1484,9 @@ def orthodoxReading : Valuation Claim :=
 <a id="orthodox_not_establishes"></a>
 **`orthodox_not_establishes`**
 
-Orthodoxy also entails the negation, and on its own premise. The seed
-encoding grounded a single "Catholic/Orthodox" line on magisterial
-infallibility, which attributes to Orthodoxy a premise it does not hold.
+Orthodoxy also entails the negation, and on its own premise. Its line is
+kept apart from Rome's, because grounding the two on magisterial infallibility
+would attribute to Orthodoxy a premise it does not hold.
 
 ```lean
 theorem orthodox_not_establishes : ¬Establishes orthodox
@@ -1591,10 +1583,9 @@ theorem hinge_is_load_bearing_within_classical_strand : ¬Establishes
 
 ##### The two answers to self-refutation
 
-The objection's step is a conjunction, so there are two ways to deny it. The
-seed encoded only the first. Neither answer is redundant with the other: each
-removes a different ground, and the objection succeeds only if both are
-refused.
+The objection's step is a conjunction, so there are two ways to deny it.
+Neither answer is redundant with the other: each removes a different ground,
+and the objection succeeds only if both are refused.
 
 <a id="scriptureTeachesItReading"></a>
 **`scriptureTeachesItReading`**
@@ -1637,14 +1628,13 @@ def finalArbiterReading : Valuation Claim :=
 <a id="scoping_blocks_self_refutation"></a>
 **`scoping_blocks_self_refutation`**
 
-**And the final-arbiter answer blocks it too, without the hinge.** This is
-the answer the seed did not encode. It concedes that scripture does not teach
-the principle in the sense the objection requires, and denies instead that the
-bindingness rule governs a claim of this kind.
+**And the final-arbiter answer blocks it too, without the hinge.** It
+concedes that scripture does not teach the principle in the sense the objection
+requires, and denies instead that the bindingness rule governs a claim of this
+kind.
 
 So the objection is defeated on either route, and succeeds only against a
-position that refuses both — which is what "the dispute reduces to the hinge"
-was gesturing at, and is narrower than that phrase suggests.
+position that refuses both. The dispute does not reduce to the hinge alone.
 
 ```lean
 theorem scoping_blocks_self_refutation : ¬Establishes selfRefutationUnderScope
@@ -1656,17 +1646,13 @@ theorem scoping_blocks_self_refutation : ¬Establishes selfRefutationUnderScope
 Kruger on the canon and Mathison on interpretive authority make the same move:
 concede the circularity, deny that it discriminates between the positions.
 
-Each used to get two results — one that it blocks the objection, one that it
-establishes nothing — and that is one result too many. A premise set that
-entails neither a proposition nor its negation leaves that proposition
-*independent* of it, and blocking and establishing-nothing are the two halves
-of that single fact. Foundation names the notion for provability;
-`Testimony.Logic.Independent` is its semantic counterpart, and `leaves_open`
-proves it from the two readings the premises admit.
-
-The gain is not brevity. Stated as a pair, nothing checks that the two halves
-are about the same proposition — and in the Geisler case below they were
-not.
+Each gets one result. A premise set that entails neither a proposition nor
+its negation leaves that proposition *independent* of it, and blocking the
+objection and establishing nothing are the two halves of that single fact.
+Foundation names the notion for provability; `Testimony.Logic.Independent` is
+its semantic counterpart, and `leaves_open` proves it from the two readings the
+premises admit. Stated once, the two halves are checked to be about the same
+proposition.
 
 <a id="parityEstablishesNothingReading"></a>
 **`parityEstablishesNothingReading`**

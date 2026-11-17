@@ -66,18 +66,12 @@ because two readings satisfy those grounds and disagree about it
 (`parity_leaves_the_canon_open`, `parity_leaves_the_distinction_open`). The
 replies block the objection, and establish nothing.
 
-Each of these used to be stated as a *pair* of results, one that the reply
-blocks the objection and another that it establishes nothing, and the pair hid
-a mistake. Over Barrett's parity reply to Geisler the two halves asked about
-different questions while being presented as two sides of one. The claim that
-was meant is that the defeat is left open (`parity_leaves_the_defeat_open`).
-The second half, restated, is that Barrett's reply does not merely fail to clear
-the charge of circularity but grants it as one of its own grounds
-(`circle_parity_concedes_the_charge`).
-
-The argument "Born of a virgin" records the same lesson for a different reply
-(`compatibility_does_not_establish_criterion`), and not as an independence
-claim, because its two results range over different premise sets.
+Blocking an objection and establishing nothing are one fact here, stated once
+for each reply, so the two halves cannot drift apart into different questions.
+Barrett's parity reply to Geisler gets the same treatment: the defeat Geisler
+claims is left open (`parity_leaves_the_defeat_open`). The reply also does more
+than fail to clear the charge of circularity. It grants the charge as one of
+its own grounds (`circle_parity_concedes_the_charge`).
 
 ## The circle inside Protestantism
 
@@ -671,8 +665,8 @@ def defeatUnderParity : Line Claim :=
 
 /-- What the Protestant packages rest on beyond any single line: the prooftext
 that belongs to no strand, the shared datum of 2 Thessalonians 2:15, and the
-commitments of the final-arbiter reading. Mark 7 used to sit here too, a
-premise no step read; it is a line of its own now (`mark7Line`). -/
+commitments of the final-arbiter reading. Mark 7 is not among them: it is a
+line of its own (`mark7Line`). -/
 @[solaScripturaDefs]
 def sharedGrounds : List (Formula Claim) :=
   [ p .acts17BereansTested

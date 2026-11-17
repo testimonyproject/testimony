@@ -73,16 +73,16 @@ weighed: whether any unwritten tradition can be shown to be apostolic, and, even
 granting that none can, whether the principle then makes Scripture the *sole*
 infallible rule. Both are rated `disputed`.
 
-## Weighing it moved a rating
+## Why the coordinate-source claim is disputed
 
 The claim that tradition is a source of revelation coordinate with Scripture
-(`traditionIsCoordinateSourceOfRevelation`) was rated `wellSupported`, which
-made no difference while no dispute read it. In the Mark 7 dispute it would have
-decided who prevails, so it was audited. Geiselmann grants Trent's Session IV
-and denies that it canonised two coordinate sources, since the council replaced
-its draft's "partly … partly" with "and"; Congar judges that Trent left the
-question open. The claim is `disputed` now, and the Tridentine party is named
-"Trent (Tradition II)" rather than by the reading in dispute.
+(`traditionIsCoordinateSourceOfRevelation`) decides who prevails in the Mark 7
+dispute, so its rating matters. It is rated `disputed`, because readers who
+grant Trent's Session IV deny that it says this. Geiselmann argues that the
+council did not canonise two coordinate sources, since it replaced its draft's
+"partly … partly" with "and"; Congar judges that Trent left the question open.
+For the same reason the Tridentine party is named "Trent (Tradition II)" rather
+than by the reading in dispute.
 
 ## Mark 7, heard against each reading of Trent
 

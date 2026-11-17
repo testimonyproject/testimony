@@ -136,11 +136,9 @@ def selfRefutationUnderScope : ArgumentPackage Claim :=
 
 No package here. What a parity reply does is stated as `Independent` over the
 reply's own line — see `Results` — and independence is a claim about a premise
-set and a proposition, not about a package's conclusion. Four packages used to
-stand here, two per reply, because `Establishes` is package-shaped and the
-reply had to be asked its question twice: once for the block and once for the
-conclusion. One statement replaces each pair, and the scaffolding goes with
-them.
+set and a proposition, not about a package's conclusion, so one statement asks
+the reply both questions: whether it blocks the objection and whether it
+establishes the conclusion.
 -/
 
 /-! #### The hinge, in its two roles -/
@@ -195,10 +193,10 @@ def geislerCircleUnderScripturalBounding : ArgumentPackage Claim :=
 
 /-- Barrett's parity grounds, asked about the charge itself.
 
-Not "asked to clear the charge", which is what this package used to ask. The
-reply concedes the circle — `traditionIReasoningIsCircular` is one of its
-grounds — so the interesting question is not whether it fails to deliver the
-denial but that it delivers the charge. Asked the weaker question the answer is
+The question is not whether the reply clears the charge. The reply concedes
+the circle — `traditionIReasoningIsCircular` is one of its grounds — so what
+matters is not that it fails to deliver the denial but that it delivers the
+charge. Asked the weaker question the answer is
 "no"; asked this one it is "yes, by its own premises". -/
 @[solaScripturaDefs]
 def circleParityConcedingTheCharge : ArgumentPackage Claim :=
@@ -220,10 +218,8 @@ def traditionICircle : ArgumentPackage Claim :=
   , conclusion := p .creedalConsensusIsHermeneuticallyNecessary
   , conclusionLabel := "the creedal consensus is hermeneutically necessary" }
 
--- A second package asking the circle for its other end used to stand here. It
--- is gone for the reason the parity scaffolding went: `Independent` takes a
--- premise list and a proposition, so both ends of the circle are asked of one
--- package, and a variant whose only difference was its conclusion was a way of
--- putting a question that the question can now be put without.
+-- Both ends of the circle are asked of this one package: `Independent` takes a
+-- premise list and a proposition, so no variant differing only in its
+-- conclusion is needed.
 
 end TestimonyArguments.SolaScriptura
