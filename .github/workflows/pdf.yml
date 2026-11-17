@@ -109,10 +109,7 @@ jobs:
           python3 scripts/credits.py docs/latex docs/latex/arguments
           cp references.bib docs/latex/
           cp references.bib docs/latex/arguments/
-          cd docs/latex
-          tectonic arguments.tex
-          cd arguments
-          for f in *.tex; do tectonic "$f"; done
+          scripts/typeset.sh docs/latex/arguments.tex docs/latex/arguments/*.tex
 
       # `exampletex` writes the documents and the bibliography beside them;
       # `--check` first, so a stale committed document fails here as in ci.yml
@@ -122,8 +119,7 @@ jobs:
         run: |
           lake exe exampletex --check
           lake exe exampletex
-          cd docs/latex
-          for f in *.tex; do tectonic "$f"; done
+          ../scripts/typeset.sh docs/latex/*.tex
 
       - name: Collect
         run: |
