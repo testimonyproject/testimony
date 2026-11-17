@@ -38,6 +38,15 @@ premise of R that fails.* It says nothing about whether the crux is true. That i
 what the crux's citation and rating are for, and the rendering ends by listing
 them — the readings the verdict rests on.
 
+A crux that is a claim carries its own citation. A crux that is a step is rated
+by one of P's inferences, and P may carry several, one for each of its steps.
+Which one is the crux's is named, not guessed: `Because.ratedByLine` takes it
+from the line whose step the crux is, checking that it is, and
+`Because.ratedBy` names it for a step that closes P's case, checking that it is
+one of P's. Until one is named, the page says the step is not rated on its own,
+because showing every rating P carries would lend the crux ratings that belong
+to other steps.
+
 ## How it is proved
 
 Every satisfiability claim is decided by the engine (`Testimony.Logic.Horn`) and
@@ -103,6 +112,13 @@ structure Because (P R : ArgumentPackage α) where
   crux_needed : Satisfiable (core ++ granted)
   /-- What the crux does for `P`, proved. -/
   role_holds : role.Holds (before ++ after) P.conclusion
+  /-- The citation that rates the crux itself, when the crux is a step: one of
+  `P`'s inferences, named as this step's own. `none` until one is named, and
+  then the page says the step is not rated on its own, rather than lending it
+  the ratings of `P`'s other steps. -/
+  rating : Option Source := none
+  /-- The rating named is one of `P`'s inferences. -/
+  rating_mem : ∀ s ∈ rating, s ∈ P.inferences := by simp
 
 namespace Because
 
@@ -145,11 +161,27 @@ theorem undermines [HasPostulates α] (b : Because P R) {φ : Formula α} (hcore
     · rw [h1]; exact hw φ (by simp)
     · rw [h2]; exact hw b.crux (by simp [b.crux_mem])⟩)
 
+/-- **Name the crux's own rating**: `s`, one of `P`'s inferences, is the
+citation that rates the crux. Use it when the crux is a step that closes `P`'s
+case rather than a line's step, so that no line carries its rating. -/
+def ratedBy (b : Because P R) (s : Source) (h : s ∈ P.inferences) : Because P R :=
+  { b with rating := some s
+           rating_mem := fun t ht => by
+             rw [Option.mem_def, Option.some.injEq] at ht
+             exact ht ▸ h }
+
+/-- **Take the crux's rating from its line.** The crux is `l`'s step, checked
+by `step`, so the inference `l` pairs with that step is the crux's rating, and
+it must be one of `P`'s. -/
+def ratedByLine (b : Because P R) (l : Line α) (_step : l.step = b.crux)
+    (h : ∀ s ∈ l.inference, s ∈ P.inferences) : Because P R :=
+  { b with rating := l.inference, rating_mem := h }
+
 /-- What a page renders: the explanation's data, without its proofs. -/
 def view (b : Because P R) : Page.Explanation α :=
   { holder := P.name, rival := R.name, cite := P.cite, crux := b.crux
   , granted := b.granted, core := b.core, derives := b.role == .derives
-  , inferences := P.inferences }
+  , rating := b.rating, inferences := P.inferences }
 
 end Because
 
@@ -203,24 +235,39 @@ def Because.check (P R : ArgumentPackage α) (crux : Formula α)
   satisfiable? R.premises == some true &&
   roleCheck role (before ++ after) P.conclusion
 
+/-- What `Because.check` decides, taken apart. -/
+theorem Because.check_spec {P R : ArgumentPackage α} {crux : Formula α}
+    {before after granted core : List (Formula α)} {role : CruxRole}
+    (h : Because.check P R crux before after granted core role = true) :
+    satisfiable? (core ++ granted ++ [crux]) = some false ∧
+    minimalCheck core granted crux = true ∧
+    satisfiable? (core ++ granted) = some true ∧
+    satisfiable? R.premises = some true ∧
+    roleCheck role (before ++ after) P.conclusion = true := by
+  simp only [Because.check, Bool.and_eq_true, beq_iff_eq] at h
+  obtain ⟨⟨⟨⟨hbreak, hmin⟩, hneed⟩, hrival⟩, hrole⟩ := h
+  exact ⟨hbreak, hmin, hneed, hrival, hrole⟩
+
 /-- **Build a `Because`** from the engine's check and the facts it cannot
 decide: that `P` holds, that its premises have a model, where the crux sits, and
-that the granted grounds and the core are the two positions' own. -/
+that the granted grounds and the core are the two positions' own.
+
+The data fields are the arguments themselves, outside any proof, so that a
+later check can see, by unfolding, which premise the crux is
+(`Because.ratedByLine`). -/
 def Because.ofChecks {P R : ArgumentPackage α} (crux : Formula α)
     (before after granted core : List (Formula α)) (role : CruxRole)
     (holds : Establishes P) (consistent : Satisfiable P.premises)
     (split : P.premises = before ++ crux :: after)
     (granted_mem : ∀ φ ∈ granted, φ ∈ P.premises) (core_mem : ∀ φ ∈ core, φ ∈ R.premises)
-    (h : Because.check P R crux before after granted core role = true) : Because P R := by
-  simp only [Because.check, Bool.and_eq_true, beq_iff_eq] at h
-  obtain ⟨⟨⟨⟨hbreak, hmin⟩, hneed⟩, hrival⟩, hrole⟩ := h
-  exact { crux, before, after, granted, core, role, holds, consistent, split, granted_mem,
-          core_mem
-          rival_consistent := satisfiable_of_check hrival
-          breaks := not_satisfiable_of_check hbreak
-          core_minimal := core_minimal_of_check hmin
-          crux_needed := satisfiable_of_check hneed
-          role_holds := role_holds_of_check hrole }
+    (h : Because.check P R crux before after granted core role = true) : Because P R :=
+  { crux, before, after, granted, core, role, holds, consistent, split, granted_mem,
+    core_mem
+    rival_consistent := satisfiable_of_check (Because.check_spec h).2.2.2.1
+    breaks := not_satisfiable_of_check (Because.check_spec h).1
+    core_minimal := core_minimal_of_check (Because.check_spec h).2.1
+    crux_needed := satisfiable_of_check (Because.check_spec h).2.2.1
+    role_holds := role_holds_of_check (Because.check_spec h).2.2.2.2 }
 
 end Checks
 

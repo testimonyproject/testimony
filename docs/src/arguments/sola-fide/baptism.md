@@ -560,7 +560,7 @@ so as a desire for the sacrament, which then gives a fuller grace.
 - **What this rests on:**
   - \\(\href{claims.html#claim-70}{P_{70}}\\) Justification cannot be effected without the laver of regeneration, or the desire thereof — *consensus*: [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 32; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §III q.68 a.2
   - \\(\href{claims.html#claim-71}{P_{71}}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1258; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
-  - the step itself — *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XXVIII.5; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; *disputed*: [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+  - the step itself — *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XXVIII.5; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2
 
 <a id="whatTrentsInstrumentalCauseClaims"></a>
 **`whatTrentsInstrumentalCauseClaims`**
@@ -625,7 +625,7 @@ Against *What justifies where only the desire is present*, it cannot be held. Wh
 - **What this rests on:**
   - \\(\href{claims.html#claim-70}{P_{70}}\\) Justification cannot be effected without the laver of regeneration, or the desire thereof — *consensus*: [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 32; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §III q.68 a.2
   - \\(\href{claims.html#claim-71}{P_{71}}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1258; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
-  - the step itself — *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XXVIII.5; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; *disputed*: [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+  - the step itself — *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XXVIII.5; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2
 
 ### John 3:5
 

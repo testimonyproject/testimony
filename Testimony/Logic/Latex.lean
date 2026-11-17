@@ -684,9 +684,14 @@ def explanation [DecidableEq α] (n : Numbering α) (e : Page.Explanation α) : 
     String.join (e.restsOn.map claim) ++
     (if Page.Explanation.isLiteral e.crux then "" else
       "\\item the step itself --- " ++
-      (if e.inferences.isEmpty then "\\emph{unrated}" else
-        String.intercalate "; " (e.inferences.map fun s =>
-          "\\emph{" ++ confidence s.confidence ++ "}: " ++ source s)) ++ "\n") ++
+      (match e.rating with
+       | some s => "\\emph{" ++ confidence s.confidence ++ "}: " ++ source s
+       | none =>
+         if e.inferences.isEmpty then "\\emph{unrated}" else
+           "\\emph{not rated on its own}. These ratings are for the steps of \\emph{" ++
+           escape e.holder ++ "} together, not for this one: " ++
+           String.intercalate "; " (e.inferences.map fun s =>
+             "\\emph{" ++ confidence s.confidence ++ "}: " ++ source s)) ++ "\n") ++
   "\\end{itemize}\n\\end{itemize}\n"
 
 /-- Every reading of a rival's claim, answered: each horn with what the claim

@@ -936,6 +936,7 @@ def whereAugustinePartsFromPhilippians : Because philippiansStrand augustinian :
     (by simp [philippiansStrand, caseOf, solaGratiaDefs])
     (by simp [augustinian, caseOf, solaGratiaDefs])
     (by decide +kernel)
+  |>.ratedByLine philippiansLine rfl (by simp [philippiansStrand, solaGratiaDefs])
 
 /-- **Where Wesley parts from the Romans route: over what Romans 8:30 says.**
 Dort reads the verse as a chain from which no one drops, so that every one
@@ -1108,6 +1109,7 @@ def whereTheyPartOverAssurance : Because trentOnPerseverance perseveranceReforme
     (by simp [trentOnPerseverance, caseOf, solaGratiaDefs])
     (by simp [perseveranceReformed, caseOf, solaGratiaDefs])
     (by decide +kernel)
+  |>.ratedByLine cautionLine rfl (by simp [trentOnPerseverance, solaGratiaDefs])
 
 /-! ### What the condition means -/
 
@@ -1183,6 +1185,7 @@ def whereWesleysConditionFalls : Because johnStrand wesleyAsCanFail :=
     (by simp [johnStrand, caseOf, solaGratiaDefs])
     (by simp [solaGratiaDefs, caseOf])
     (by decide +kernel)
+  |>.ratedByLine john10Line rfl (by simp [johnStrand, solaGratiaDefs])
 
 /-- **What the condition means, read both ways.** The claim is the one Trent,
 the Lutherans and Wesley share: God's promise to keep those he has begun to save
