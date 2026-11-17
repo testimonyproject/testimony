@@ -350,12 +350,14 @@ cited by topic and question. -/
   , place := some "Phillipsburg, N.J."
   , volume := some "2" }
 
-/-- Calvin's commentary on the Catholic Epistles, in John Owen's translation, read
-in the Christian Classics Ethereal Library's text, which has no page numbers; it
-is cited by verse. On James 2:23: "The imputation of righteousness which Moses
-mentions, preceded more than thirty years the work by which they would have
-Abraham to have been justified." The year of the translation is not verified,
-so none is given. -/
+/-- Calvin's commentary on the Catholic Epistles, in John Owen's translation for
+the Calvin Translation Society (Edinburgh, 1855; the title page of the scan at the
+Internet Archive reads M.DCCC.LV). Cited by verse from the Christian Classics
+Ethereal Library's text, which has no page numbers, and by page from the scan.
+On James 2:23: "The imputation of righteousness which Moses mentions, preceded
+more than thirty years the work by which they would have Abraham to have been
+justified." On 2 Peter 2:21 (p. 411): "The faithful also do indeed sin; but as
+they allow not dominion to sin, they do not fall away from the grace of God". -/
 @[bib_entry] def calvinCatholicEpistles : BibEntry := .book
   { core :=
       { key := "calvin-commentaries-catholic-epistles"
@@ -364,8 +366,11 @@ so none is given. -/
           { authors := [.person "John" "Calvin"]
           , translators := [.person "John" "Owen"] }
       , title := "Commentaries on the Catholic Epistles"
+      , year := some { value := 1855 }
       , identifiers :=
-          [ .url "https://www.ccel.org/ccel/calvin/calcom45.html" (some "2026-11-11") ] }
+          [ .url "https://www.ccel.org/ccel/calvin/calcom45.html" (some "2026-11-11")
+          , .url "https://archive.org/details/commentariesonca00calvuoft"
+                 (some "2026-11-15") ] }
   , publisher := "Calvin Translation Society"
   , place := some "Edinburgh" }
 
@@ -4133,6 +4138,184 @@ New Advent; cited whole. -/
       , .person "Thomas J." "Shahan", .person "John J." "Wynne" ]
   , publisher := "Robert Appleton Company"
   , place := some "New York" }
+
+/-- Calvin's commentary on Hebrews, in John Owen's translation for the Calvin
+Translation Society. Cited for his reading of Hebrews 6:4–6 (pp. 137–138): "God
+indeed favours none but the elect alone with the Spirit of regeneration", yet he
+grants "the reprobate also some taste of his grace", a knowledge "which afterwards
+vanishes away". The 1853 printing scanned at the Internet Archive; it carries no
+ISBN. -/
+@[bib_entry] def calvinHebrews : BibEntry := .book
+  { core :=
+      { key := "calvin-hebrews-1853"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "John" "Owen"] }
+      , title := "Commentaries on the Epistle of Paul the Apostle to the Hebrews"
+      , year := some { value := 1853 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentariesowentran00calv"
+                 (some "2026-11-15") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh" }
+
+/-- Calvin's commentary on Romans, in John Owen's translation for the Calvin
+Translation Society. Cited for his reading of Romans 8:29–30 (pp. 319–320): the
+called are "the elect … whom he also inwardly draws", and Christ's glory "brings
+to us such assurance respecting our own glory, that our hope may be justly
+compared to a present possession". The 1849 printing scanned at the Internet
+Archive; it carries no ISBN. -/
+@[bib_entry] def calvinRomans : BibEntry := .book
+  { core :=
+      { key := "calvin-romans-1849"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "John" "Owen"] }
+      , title := "Commentaries on the Epistle of Paul the Apostle to the Romans"
+      , year := some { value := 1849 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentariesonth00calvuoft"
+                 (some "2026-11-15") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh" }
+
+/-- Calvin's commentary on the Psalms, volume 2. Cited for Psalm 51:11 (pp.
+299–300): the words "imply that the Spirit had not altogether been taken away
+from him", and grace is "the incorruptible seed of God, which never can perish
+in any heart where it has been deposited". The title page names James Anderson
+as translator; a prefatory note gives the volume's two parts to James M'Lean and
+George M'Crie, with Anderson as editor. The 1846 printing scanned at the
+Internet Archive; it carries no ISBN. -/
+@[bib_entry] def calvinPsalms2 : BibEntry := .book
+  { core :=
+      { key := "calvin-psalms-2-1846"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "James" "Anderson"] }
+      , title := "Commentary on the Book of Psalms"
+      , year := some { value := 1846 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentaryonbook02calvuoft"
+                 (some "2026-11-15") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "2" }
+
+/-- Wesley's *Explanatory Notes upon the New Testament*, its preface dated 1754,
+in the twelfth edition printed in New York by Carlton & Porter, which carries no
+date. Cited for Romans 8:30 (p. 384), "Provided they continued in his goodness";
+Hebrews 10:29 (p. 585), "Therefore Christ died for him also, and he was, at
+least, justified once"; and 2 Peter 2:20 (p. 625). Scanned at the Internet
+Archive; no ISBN. -/
+@[bib_entry] def wesleyNotes : BibEntry := .book
+  { core :=
+      { key := "wesley-explanatory-notes-nt"
+      , role := .witness
+      , contributors := { authors := [.person "John" "Wesley"] }
+      , title := "Explanatory Notes upon the New Testament"
+      , identifiers :=
+          [ .url "https://archive.org/details/explanatorynotes00unknuoft"
+                 (some "2026-11-15") ]
+      , note := some "Twelfth edition; the title page prints no date." }
+  , publisher := "Carlton & Porter"
+  , place := some "New York"
+  , edition := some "12th edition" }
+
+/-- John Owen's exposition of Hebrews, in volume 23 of his *Works* as Goold
+edited them (the exposition's chapters 8–10). Cited for Hebrews 10:29 (pp.
+545–546): "It is not real or internal sanctification that is here intended, but
+it is a separation and dedication unto God"; and "It is Christ himself that is
+spoken of, who was sanctified and dedicated unto God to be an eternal high
+priest". The 1855 printing scanned at the Internet Archive, whose record dates
+it 1850; the title page reads M.DCCC.LV. No ISBN. -/
+@[bib_entry] def owenHebrews : BibEntry := .book
+  { core :=
+      { key := "owen-works-23-1855"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Owen"]
+          , editors := [.person "William H." "Goold"] }
+      , title := "The Works of John Owen"
+      , subtitle := some "An Exposition of the Epistle to the Hebrews"
+      , year := some { value := 1855 }
+      , identifiers :=
+          [ .url "https://archive.org/details/worksofjohnowend0023owen"
+                 (some "2026-11-15") ] }
+  , publisher := "Johnstone and Hunter"
+  , place := some "London and Edinburgh"
+  , volume := some "23" }
+
+/-- Calvin's commentary on 1 Corinthians, volume 1, in John Pringle's
+translation. Cited for 1 Corinthians 10:12 (pp. 329–330): "let us observe that
+there are two kinds of assurance", and Paul "does not, however, exhort them to
+be always anxiously in doubt as to the will of God, or to tremble from
+uncertainty as to their salvation". The 1848 printing scanned at the Internet
+Archive; no ISBN. -/
+@[bib_entry] def calvinFirstCorinthians : BibEntry := .book
+  { core :=
+      { key := "calvin-corinthians-1-1848"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "John" "Pringle"] }
+      , title := "Commentary on the Epistles of Paul the Apostle to the Corinthians"
+      , year := some { value := 1848 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentaryonepis01calvuoft"
+                 (some "2026-11-15") ] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "1" }
+
+/-- Boethius, *The Consolation of Philosophy*, in H. R. James's translation of
+1897 (Open Library OL7158707M; no ISBN). Cited for Book V, prose 6, on God's
+eternity and his knowledge of things as present: "Now, eternity is the
+possession of endless life whole and perfect at a single moment" (p. 257); "there
+are two necessities—one simple, as that men are necessarily mortal; the other
+conditioned, as that, if you know that someone is walking, he must necessarily
+be walking" (p. 263); and things foreseen, "viewed, however, in themselves, …
+desist not from the absolute freedom naturally theirs" (pp. 263–264). -/
+@[bib_entry] def boethiusConsolation : BibEntry := .book
+  { core :=
+      { key := "boethius-consolation-james-1897"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "Anicius Manlius Severinus" "Boethius"]
+          , translators := [.person "H. R." "James"] }
+      , title := "The Consolation of Philosophy of Boethius"
+      , year := some { value := 1897 }
+      , identifiers :=
+          [ .url "https://archive.org/details/consolationofphi00boetiala"
+                 (some "2026-11-17") ] }
+  , publisher := "Elliot Stock"
+  , place := some "London" }
+
+/-- John Owen, *The Doctrine of the Saints' Perseverance Explained and
+Confirmed*, in volume 11 of his *Works* as Goold edited them. Cited for 1 John
+2:19 (pp. 594–595): the apostates "manifested themselves never to have been true
+believers", and "If all they who fall away totally … were never true believers …
+then those who are true believers cannot fall away; but the first is true,
+therefore the latter." The year is not given: the scan's title page could not be
+read, and the Internet Archive's date of 1850 is the one it also gives volume 23,
+whose title page reads 1855. No ISBN. -/
+@[bib_entry] def owenPerseverance : BibEntry := .book
+  { core :=
+      { key := "owen-works-11-perseverance"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Owen"]
+          , editors := [.person "William H." "Goold"] }
+      , title := "The Works of John Owen"
+      , subtitle := some "The Doctrine of the Saints' Perseverance Explained and Confirmed"
+      , identifiers :=
+          [ .url "https://archive.org/details/worksofjohnowend0011owen"
+                 (some "2026-11-17") ] }
+  , publisher := "Johnstone and Hunter"
+  , place := some "London and Edinburgh"
+  , volume := some "11" }
 
 derive_bib_registry registry
 
