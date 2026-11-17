@@ -81,8 +81,11 @@ underlying API was removed.
 - **Probabilistic and evidential reasoning.** Cumulative-case arguments update
   on evidence; that is a different formal apparatus and will live in a separate
   namespace, never conflated with deduction.
-- **Corpus grounding.** `Passage` values are references, not text. They do not
-  yet resolve against real manuscript data.
+- **Corpus grounding.** The Greek New Testament is now data for the books
+  imported so far (John, Colossians, Titus and Hebrews), from MACULA Greek's
+  annotation of the SBLGNT ([The Greek text as data](./corpus.md)). The Hebrew
+  Bible is not yet, and a `Passage` in a book not imported is a reference, not
+  text.
 - **Modal logic.** Needed for divine-attribute arguments. *Not* part of
   Foundation, contrary to what this page said until recently: it is a sibling
   package in the same family, depending on Foundation and sharing its

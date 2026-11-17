@@ -3490,21 +3490,6 @@ Added for `SolaFide.James`: the critical text and the Catholic Church's
 own translation and teaching on the original text, against which the texts
 Trent cites for the increase of justification (Session VI, ch. 10) are read. -/
 
-/-- The SBL Greek New Testament, Holmes's critical text, whose apparatus compares
-it with Westcott–Hort, Tregelles, the NIV's text and the Byzantine text of
-Robinson–Pierpont. Cited for Revelation 22:11, where it marks no variation at
-δικαιοσύνην ποιησάτω. ISBN confirmed at Open Library. -/
-@[bib_entry] def sblgnt : BibEntry := .criticalEdition
-  { core :=
-      { key := "holmes-sblgnt-2010"
-      , role := .text
-      , contributors := { editors := [.person "Michael W." "Holmes"] }
-      , title := "The Greek New Testament: SBL Edition"
-      , year := some { value := 2010 }
-      , identifiers := [.isbn "9781589835351"] }
-  , publisher := "Society of Biblical Literature"
-  , siglum := some "SBLGNT" }
-
 /-- The New American Bible, Revised Edition: the translation of the United States
 Conference of Catholic Bishops. Cited for how the Catholic Church's own
 translators render Revelation 22:11 ("The righteous must still do right") and
