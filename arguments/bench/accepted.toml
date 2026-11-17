@@ -251,3 +251,9 @@ benchmark = "checks: postulates, every package"
 metric = "time"
 up_to = 0.20
 reason = "The check builds a model with its postulates for every package. The perseverance of the saints (#238) adds ten, the positions of Westminster, Augustine and Aquinas, Trent, the Lutherans, Wesley and the Remonstrance, the two strands and Wesley's two readings (230 to 240), and twelve claims to the sola gratia argument every one of its packages is checked over: the same work over more packages, measured on CI at +6.0%."
+
+[[accept]]
+benchmark = "checks: postulates, every package"
+metric = "time"
+up_to = 0.15
+reason = "The check builds a model with its postulates for every package. The deity question of LST §3 (#230) adds ten, LST, the Witnesses and Oneness, each line on its own, and the supplemented Nicene case with each rival answering (237 to 247): the same work over more packages, measured on CI at +6.3%."
