@@ -48,7 +48,13 @@ it a hostile witness, and so a strong one.
 
 Postell's second counterexample is Micah 5, whose ruler is set against the
 Assyrian invasion and was read of the Messiah. Brown himself grants that
-reading.
+reading. So do the medieval Jewish commentators, and that is where the
+counterexample meets its answer. Rashi reads the ruler of Micah 5:1 as "the
+Messiah, son of David", and 5:4 of the time "should Assyria come … into our
+land as he comes now". Yet he reads Isaiah 7:14 of the prophet's own wife: "this
+year … the fourth year of Ahaz". Ibn Ezra says why a later referent is ruled
+out: "the sign was given to Ahaz", and the child it names was born long after.
+Micah 5 is a promise; 7:14 is a sign dated to Ahaz's crisis.
 
 Motyer, with Compton, goes for the critic's other ground. The sign of 7:14
 is addressed to the house of David, in plural pronouns, and only 7:15–16, with a
@@ -83,11 +89,11 @@ these:
   sense, cited `disputed`.
 - **Motyer defeats it too**, by contradicting its other premise: that 7:14 is
   a near-term sign to Ahaz at all, also cited `disputed`.
-- **The critical denial defeats Berry and Motyer back, but neither
-  counterexample.** It rebuts all four. Berry's and Motyer's inferences are
-  contested — a cited source grants each one's grounds and denies its
-  conclusion — so they are no stronger than the critic. Postell's inference is
-  not, and both counterexamples outrank it.
+- **The critical denial defeats Berry, Motyer and the Micah counterexample
+  back, but not Postell's Isaiah argument.** It rebuts all four. Berry's,
+  Motyer's and the Micah inference are contested — a cited source grants each
+  one's grounds and denies its conclusion — so they are no stronger than the
+  critic. The Isaiah inference is not, and it outranks the critic.
 
 ## What follows
 
@@ -95,11 +101,11 @@ Faced with the scriptural reading alone, **nothing prevails**: the two defeat
 each other, so neither must be accepted however the tie is broken
 (`nothing_prevails_unanswered`). Add the replies and **the scriptural reading
 prevails** (`scriptural_reading_prevails_once_replies_are_heard`). Nothing
-defeats Postell's counterexamples; they defeat the critic, which is the only
-party that defeats the scriptural reading, Berry or Motyer; and so all five
-stand. The critical denial cannot be defended at all, because nothing answers
-Postell (`critical_denial_indefensible`). Take away either counterexample and
-the scriptural reading still prevails; take away both and nothing does.
+defeats Postell's Isaiah argument; it defeats the critic, which is the only
+party that defeats the scriptural reading, Berry, Motyer or the Micah
+counterexample; and so all five stand. The critical denial cannot be defended at
+all, because nothing answers Postell (`critical_denial_indefensible`). Take away
+the Isaiah argument and nothing prevails (`nothing_prevails_without_postell`).
 
 This is the result entailment could not state. Adding premises never removes a
 conclusion; adding arguments can change what a dispute forces, and here it
@@ -127,21 +133,25 @@ proves that the whole weight of his reply falls on that step. So each ties with
 the critic, and heard alone Motyer settles nothing
 (`nothing_prevails_on_motyer_alone`).
 
-Postell's inference is `plausible`. It is a counterexample to the exclusion —
-an oracle on the Assyrian timeline, read messianically — and he gives two:
-Isaiah 9 and 11, and Micah 5, whose messianic reading Brown himself grants. No
-source cited here grants either set of grounds and keeps the exclusion.
+Postell's inference from Isaiah 9 and 11 is `plausible`. It is a counterexample
+to the exclusion — an oracle on the Assyrian timeline, read messianically — and
+no reader found grants both its grounds and keeps the exclusion. Rashi, Radak and
+Ibn Ezra all keep 7:14 near-term, but all three read Isaiah 9:5–6 of Hezekiah,
+so they deny a ground of the step, not the step. That ground is rated on its
+own.
 
-**The verdict rests on that inference.** Without Postell's Isaiah argument the
-scriptural reading still prevails, on the Micah counterexample
-(`scriptural_reading_prevails_without_postell`), so an attack on the grounds of
-either — dating Isaiah 11 later, say — leaves it standing. Without both, every
-party is defeated by someone and nothing prevails
-(`nothing_prevails_without_the_counterexamples`). The two share one inference,
-so they share one weakness: rated `disputed`, it would tie both with the critic
-as Berry's and Motyer's do. A critic who granted that such an oracle is read
-messianically and still held the exclusion — most likely by denying that
-Micah 5 or Isaiah 9 is a *sign* to Ahaz — would be the source to find.
+The same inference from Micah 5 is `disputed`. Rashi grants both its grounds and
+keeps 7:14 a sign for Ahaz's day, and Ibn Ezra states the exclusion as his
+reason. So the Micah counterexample ties with the critic, as Berry and Motyer do.
+
+**The verdict rests on that one inference.** Without Postell's Isaiah argument
+nothing prevails (`nothing_prevails_without_postell`), and without both
+counterexamples nothing prevails either
+(`nothing_prevails_without_the_counterexamples`). An answer to the Isaiah step
+would be a reader who reads Isaiah 9 and 11 of the Messiah, sets them in
+Isaiah's Assyrian crisis, and still keeps the exclusion for the sign of 7:14.
+Grogan's commentary in the *Expositor's Bible Commentary*, whom Postell names as
+the critic he answers, is the likeliest; it has not been read.
 
 ## What the church fathers add, and what they cannot
 
@@ -435,10 +445,11 @@ theorem postellParity_strength : postellParity.strength = 1
 **`micahParity_strength`**
 
 The Micah counterexample's grounds are cited `consensus` and
-`wellSupported`, and its inference `plausible`.
+`wellSupported`, but its inference is `disputed`: Rashi grants both grounds and
+keeps 7:14 a sign for Ahaz's day. So it is no stronger than that step.
 
 ```lean
-theorem micahParity_strength : micahParity.strength = 1
+theorem micahParity_strength : micahParity.strength = 0
 -- axioms: propext
 ```
 
@@ -597,6 +608,21 @@ theorem critical_defeats_motyer : Defeats criticalDenial motyerReply
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
+<a id="critical_defeats_micah"></a>
+**`critical_defeats_micah`**
+
+**The critical denial defeats the Micah counterexample back.** It holds the
+exclusion the counterexample denies, so it rebuts it, and the counterexample is
+no stronger than its step. Rashi reads Micah's ruler as "the Messiah, son of
+David", facing Assyria, and still reads 7:14 of the prophet's wife in "the
+fourth year of Ahaz"; Ibn Ezra gives the reason, "the sign was given to Ahaz".
+Micah 5 is not a sign dated to Ahaz's crisis, and 7:14 is.
+
+```lean
+theorem critical_defeats_micah : Defeats criticalDenial micahParity
+-- axioms: propext, Classical.choice, Quot.sound
+```
+
 #### What does not defeat
 
 <a id="critical_does_not_defeat_postell"></a>
@@ -615,23 +641,10 @@ theorem critical_does_not_defeat_postell : ¬Defeats criticalDenial
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
-<a id="critical_does_not_defeat_micah"></a>
-**`critical_does_not_defeat_micah`**
-
-**The critical denial does not defeat the Micah counterexample**, for the
-reason it does not defeat Postell: it is weaker, and it contradicts none of the
-counterexample's premises. The critic can grant its step by reading Micah 5:2
-of a near-term Davidic king rather than messianically
-(`critic_grants_the_micah_step_by_a_royal_reading`).
-
-```lean
-theorem critical_does_not_defeat_micah : ¬Defeats criticalDenial micahParity
--- axioms: propext, Classical.choice, Quot.sound
-```
-
 #### Why these are not counters
 
-The two absences above are computed; the readings below say why.
+The absence above is computed; the readings below say why the critic can grant
+each counterexample's step without giving up the exclusion.
 
 <a id="laterOraclesReading"></a>
 **`laterOraclesReading`**
@@ -742,8 +755,8 @@ def isaiahDispute : Dispute Claim Party :=
 
 **Who defeats whom**, all thirty-six pairs: the critic and the scriptural
 reading defeat each other; each reply defeats the critic; the critic defeats
-Berry and Motyer back, but neither of Postell's counterexamples; nothing
-else.
+Berry, Motyer and the Micah counterexample back, but not Postell's Isaiah
+argument; nothing else.
 
 Every cell is computed from the parties' premises by `Horn.defeats?` and
 checked by the kernel; the table is what the computation is checked
@@ -755,7 +768,7 @@ theorem isaiahDispute_defeats : ∀ (i j : Party), isaiahDispute.defeats i j ↔
     Party.critical), (Party.berry, Party.critical), (Party.postell,
     Party.critical), (Party.motyer, Party.critical), (Party.micah,
     Party.critical), (Party.critical, Party.berry), (Party.critical,
-    Party.motyer)]
+    Party.motyer), (Party.critical, Party.micah)]
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -803,6 +816,7 @@ The dispute drawn: who defeats whom.
 <path d="M317,118 Q275,73 216,59" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M330,140 Q312,199 330,257" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M317,133 Q192,184 86,266" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
+<path d="M315,125 Q202,107 88,125" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M330,260 Q348,202 330,143" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M208,337 Q280,248 321,141" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
 <path d="M83,268 Q208,216 314,134" style="stroke:#b3261e;fill:none;stroke-width:1.6" marker-end="url(#tm-defeat)"/>
@@ -839,6 +853,7 @@ Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is par
 | 2 *Critical denial of the predictive reading of Isaiah 7:14* | 1 *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3* | defeats |
 | 2 *Critical denial of the predictive reading of Isaiah 7:14* | 3 *Berry's objection to the near-term exclusion* | defeats |
 | 2 *Critical denial of the predictive reading of Isaiah 7:14* | 5 *Motyer's reply to the near-term reading* | defeats |
+| 2 *Critical denial of the predictive reading of Isaiah 7:14* | 6 *Postell's Micah counterexample to the near-term exclusion* | defeats |
 | 3 *Berry's objection to the near-term exclusion* | 2 *Critical denial of the predictive reading of Isaiah 7:14* | defeats |
 | 4 *Postell's parity argument against the near-term exclusion* | 2 *Critical denial of the predictive reading of Isaiah 7:14* | defeats |
 | 5 *Motyer's reply to the near-term reading* | 2 *Critical denial of the predictive reading of Isaiah 7:14* | defeats |
@@ -864,24 +879,24 @@ theorem replies_stand_with_the_scriptural_reading :
 **`repliesHeardInStages`**
 
 How the scriptural reading prevails, in stages: nothing attacks Postell's
-two counterexamples, so they come first; they answer the critic, the only party
-that attacks the scriptural reading, Berry and Motyer, so those three come next.
-And the critic does not join them: the scriptural reading attacks it, and nothing
-among the five answers the scriptural reading.
+Isaiah argument, so it comes first; it answers the critic, the only party that
+attacks the scriptural reading, Berry, Motyer and the Micah counterexample, so
+those four come next. And the critic does not join them: the scriptural reading
+attacks it, and nothing among the five answers the scriptural reading.
 
-**What the dispute forces is exactly *Postell's parity argument against the near-term exclusion*, *Postell's Micah counterexample to the near-term exclusion*, *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, *Berry's objection to the near-term exclusion*, *Motyer's reply to the near-term reading*.**
+**What the dispute forces is exactly *Postell's parity argument against the near-term exclusion*, *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, *Berry's objection to the near-term exclusion*, *Motyer's reply to the near-term reading*, *Postell's Micah counterexample to the near-term exclusion*.**
 
-- Stage 1: *Postell's parity argument against the near-term exclusion*, *Postell's Micah counterexample to the near-term exclusion*.
+- Stage 1: *Postell's parity argument against the near-term exclusion*.
   - *Postell's parity argument against the near-term exclusion* is defeated by nothing.
-  - *Postell's Micah counterexample to the near-term exclusion* is defeated by nothing.
-- Stage 2: *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, *Berry's objection to the near-term exclusion*, *Motyer's reply to the near-term reading*.
+- Stage 2: *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, *Berry's objection to the near-term exclusion*, *Motyer's reply to the near-term reading*, *Postell's Micah counterexample to the near-term exclusion*.
   - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, and *Postell's parity argument against the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
   - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Berry's objection to the near-term exclusion*, and *Postell's parity argument against the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
   - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Motyer's reply to the near-term reading*, and *Postell's parity argument against the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
+  - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Postell's Micah counterexample to the near-term exclusion*, and *Postell's parity argument against the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
 - Nothing else is forced:
   - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3* defeats *Critical denial of the predictive reading of Isaiah 7:14*, and nothing forced defeats *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*.
 
-**What this rests on.** The reasons state 5 defeats and 27 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 6 defeats and 26 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
   - Isaiah 7:14 is a Messianic prediction of a virgin birth — [Motyer 1993](../../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Motyer 1970](../../bibliography.md#motyer-context-content-1970), p. 123; [Compton 2007](../../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [Justin Martyr](../../bibliography.md#justin-dialogue-with-trypho-160), §66; [Irenaeus](../../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Origen](../../bibliography.md#origen-against-celsus-248), §I.35
@@ -889,7 +904,7 @@ among the five answers the scriptural reading.
   - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../../bibliography.md#lewis-womans-seed-1991), p. 318
   - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [Luther 1904](../../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
   - Micah's mention of a mother and no father indicates a birth with no human father — [Miravalle 2020](../../bibliography.md#miravalle-introduction-mary-2020)
-  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 476–479
   - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [Brown 1972](../../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
   - an inference step — [Motyer 1993](../../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
@@ -898,7 +913,7 @@ among the five answers the scriptural reading.
   - an inference step — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - an inference step — [France 2007](../../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
 - *Postell's parity argument against the near-term exclusion*, weakest at *plausible*:
-  - an inference step — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489
+  - an inference step — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 479–481
 - *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
   - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../../bibliography.md#brown-birth-messiah-1993)
   - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [Brown 1993](../../bibliography.md#brown-birth-messiah-1993)
@@ -906,17 +921,22 @@ among the five answers the scriptural reading.
   - an inference step — [Berry 2003](../../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Compton 2007](../../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 - *Motyer's reply to the near-term reading*, weakest at *disputed*:
   - an inference step — [Motyer 1970](../../bibliography.md#motyer-context-content-1970), p. 124; [Compton 2007](../../bibliography.md#compton-immanuel-prophecy-2007), p. 5
-- *Postell's Micah counterexample to the near-term exclusion*, weakest at *plausible*:
-  - an inference step — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), p. 481
+- *Postell's Micah counterexample to the near-term exclusion*, weakest at *disputed*:
+  - an inference step — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), p. 481; [Rashi (Shlomo Yitzchaki)](../../bibliography.md#rashi-commentary-prophets-1100), ad loc. Mic 5:1; [Rashi (Shlomo Yitzchaki)](../../bibliography.md#rashi-commentary-prophets-1100), ad loc. Mic 5:4; [Rashi (Shlomo Yitzchaki)](../../bibliography.md#rashi-commentary-prophets-1100), ad loc. Isa 7:14; [Abraham Ibn Ezra](../../bibliography.md#ibn-ezra-commentary-isaiah-1145), ad loc. Isa 7:14
 
 <a id="scriptural_reading_prevails_once_replies_are_heard"></a>
 **`scriptural_reading_prevails_once_replies_are_heard`**
 
-**Heard out, the scriptural reading prevails.** Nothing defeats either of
-Postell's counterexamples, so both are in the grounded extension from the first
-step. They defeat the critic — the only party that defeats the scriptural
-reading, Berry or Motyer — so at the second step all three join them; and
-nothing defends the critic.
+**Heard out, the scriptural reading prevails.** Nothing defeats Postell's
+Isaiah argument, so it is in the grounded extension from the first step. It
+defeats the critic — the only party that defeats the scriptural reading, Berry,
+Motyer or the Micah counterexample — so at the second step all four join it;
+and nothing defends the critic.
+
+It rests on one rating: Postell's step from Isaiah 9 and 11, `plausible`
+because no reader found grants both its grounds and keeps the exclusion. The
+readers who keep 7:14 near-term, Rashi, Radak and Ibn Ezra among them, read
+9:5–6 of Hezekiah, and so deny a ground, not the step.
 
 ```lean
 theorem scriptural_reading_prevails_once_replies_are_heard :
@@ -938,7 +958,7 @@ answers Postell.
 **What this rests on.** The reasons state 1 defeat and 6 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Postell's parity argument against the near-term exclusion*, weakest at *plausible*:
-  - an inference step — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 487–489
+  - an inference step — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 479–481
 - *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
   - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../../bibliography.md#brown-birth-messiah-1993)
   - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [Brown 1993](../../bibliography.md#brown-birth-messiah-1993)
@@ -948,7 +968,7 @@ answers Postell.
   - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../../bibliography.md#lewis-womans-seed-1991), p. 318
   - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [Luther 1904](../../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
   - Micah's mention of a mother and no father indicates a birth with no human father — [Miravalle 2020](../../bibliography.md#miravalle-introduction-mary-2020)
-  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 476–479
   - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [Brown 1972](../../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
   - an inference step — [Motyer 1993](../../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
@@ -960,8 +980,8 @@ answers Postell.
   - an inference step — [Berry 2003](../../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Compton 2007](../../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 - *Motyer's reply to the near-term reading*, weakest at *disputed*:
   - an inference step — [Motyer 1970](../../bibliography.md#motyer-context-content-1970), p. 124; [Compton 2007](../../bibliography.md#compton-immanuel-prophecy-2007), p. 5
-- *Postell's Micah counterexample to the near-term exclusion*, weakest at *plausible*:
-  - an inference step — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), p. 481
+- *Postell's Micah counterexample to the near-term exclusion*, weakest at *disputed*:
+  - an inference step — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), p. 481; [Rashi (Shlomo Yitzchaki)](../../bibliography.md#rashi-commentary-prophets-1100), ad loc. Mic 5:1; [Rashi (Shlomo Yitzchaki)](../../bibliography.md#rashi-commentary-prophets-1100), ad loc. Mic 5:4; [Rashi (Shlomo Yitzchaki)](../../bibliography.md#rashi-commentary-prophets-1100), ad loc. Isa 7:14; [Abraham Ibn Ezra](../../bibliography.md#ibn-ezra-commentary-isaiah-1145), ad loc. Isa 7:14
 
 <a id="critical_denial_indefensible"></a>
 **`critical_denial_indefensible`**
@@ -1035,7 +1055,7 @@ Why nothing prevails unanswered: the two defeat each other.
   - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../../bibliography.md#lewis-womans-seed-1991), p. 318
   - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [Luther 1904](../../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
   - Micah's mention of a mother and no father indicates a birth with no human father — [Miravalle 2020](../../bibliography.md#miravalle-introduction-mary-2020)
-  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 476–479
   - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [Brown 1972](../../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
   - an inference step — [Motyer 1993](../../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
@@ -1093,7 +1113,7 @@ Why Motyer alone does not settle it: a defeater for each of the three.
   - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../../bibliography.md#lewis-womans-seed-1991), p. 318
   - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [Luther 1904](../../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
   - Micah's mention of a mother and no father indicates a birth with no human father — [Miravalle 2020](../../bibliography.md#miravalle-introduction-mary-2020)
-  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 476–479
   - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [Brown 1972](../../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
   - an inference step — [Motyer 1993](../../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
@@ -1129,30 +1149,33 @@ def withoutPostell : Dispute Claim { i // i ∉ [Party.postell] } :=
     x ∉ [Party.postell]
 ```
 
-<a id="micahCarriesTheVerdict"></a>
-**`micahCarriesTheVerdict`**
+<a id="micahTiesWithTheCritic"></a>
+**`micahTiesWithTheCritic`**
 
-How the scriptural reading prevails without Postell's Isaiah argument, in
-stages: the Micah counterexample first, then the three it defends.
+Why nothing prevails without Postell's Isaiah argument: the critic defeats
+every reply it faces, the Micah counterexample among them, and each defeats it
+back.
 
-**Grounded: *Postell's Micah counterexample to the near-term exclusion*, *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, *Berry's objection to the near-term exclusion*, *Motyer's reply to the near-term reading*.**
+**Nothing prevails outright: every party is defeated by another.**
 
-- Stage 1: *Postell's Micah counterexample to the near-term exclusion*.
-  - *Postell's Micah counterexample to the near-term exclusion* is defeated by nothing.
-- Stage 2: *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, *Berry's objection to the near-term exclusion*, *Motyer's reply to the near-term reading*.
-  - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, and *Postell's Micah counterexample to the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
-  - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Berry's objection to the near-term exclusion*, and *Postell's Micah counterexample to the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
-  - *Critical denial of the predictive reading of Isaiah 7:14* defeats *Motyer's reply to the near-term reading*, and *Postell's Micah counterexample to the near-term exclusion* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
+- *Critical denial of the predictive reading of Isaiah 7:14* defeats *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*.
+- *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3* defeats *Critical denial of the predictive reading of Isaiah 7:14*.
+- *Critical denial of the predictive reading of Isaiah 7:14* defeats *Berry's objection to the near-term exclusion*.
+- *Critical denial of the predictive reading of Isaiah 7:14* defeats *Motyer's reply to the near-term reading*.
+- *Critical denial of the predictive reading of Isaiah 7:14* defeats *Postell's Micah counterexample to the near-term exclusion*.
 
-**What this rests on.** The reasons state 4 defeats and 17 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
+**What this rests on.** The reasons state 5 defeats and 0 absences of defeat, each a cell of the defeat table, [`isaiahDispute_defeats`](#isaiahDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
+- *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
+  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../../bibliography.md#brown-birth-messiah-1993)
+  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [Brown 1993](../../bibliography.md#brown-birth-messiah-1993)
 - *Scriptural reading of Isaiah 7:14, Genesis 3:15 and Micah 5:2–3*, weakest at *disputed*:
   - Isaiah 7:14 is a Messianic prediction of a virgin birth — [Motyer 1993](../../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Motyer 1970](../../bibliography.md#motyer-context-content-1970), p. 123; [Compton 2007](../../bibliography.md#compton-immanuel-prophecy-2007), pp. 12–14; [Justin Martyr](../../bibliography.md#justin-dialogue-with-trypho-160), §66; [Irenaeus](../../bibliography.md#irenaeus-against-heresies-180), §III.21.6; [Origen](../../bibliography.md#origen-against-celsus-248), §I.35
   - עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman — [Motyer 1993](../../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14; [Elliger and Rudolph 1997](../../bibliography.md#bhs-1997), app. Isa 7:14; [Berry 2003](../../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Motyer 1970](../../bibliography.md#motyer-context-content-1970), p. 125; [Compton 2007](../../bibliography.md#compton-immanuel-prophecy-2007), pp. 7–8; [Jerome](../../bibliography.md#jerome-against-jovinianus-393), §I.32
   - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../../bibliography.md#lewis-womans-seed-1991), p. 318
   - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [Luther 1904](../../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
   - Micah's mention of a mother and no father indicates a birth with no human father — [Miravalle 2020](../../bibliography.md#miravalle-introduction-mary-2020)
-  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 476–479
   - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [Brown 1972](../../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
   - an inference step — [Motyer 1993](../../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14
@@ -1160,27 +1183,32 @@ stages: the Micah counterexample first, then the three it defends.
   - an inference step — [Miravalle 2020](../../bibliography.md#miravalle-introduction-mary-2020)
   - an inference step — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - an inference step — [France 2007](../../bibliography.md#france-matthew-2007), ad loc. Matt 1:23
-- *Postell's Micah counterexample to the near-term exclusion*, weakest at *plausible*:
-  - an inference step — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), p. 481
-- *Critical denial of the predictive reading of Isaiah 7:14*, weakest at *disputed*:
-  - Isaiah 7:14 is a near-term sign to Ahaz, fulfilled in Isaiah's generation — [Brown 1993](../../bibliography.md#brown-birth-messiah-1993)
-  - A sign given for Ahaz's generation is not also a prediction of a virgin birth — [Brown 1993](../../bibliography.md#brown-birth-messiah-1993)
 - *Berry's objection to the near-term exclusion*, weakest at *disputed*:
   - an inference step — [Berry 2003](../../bibliography.md#berry-virgin-birth-2003), pp. 1653–1654; [Compton 2007](../../bibliography.md#compton-immanuel-prophecy-2007), p. 5
 - *Motyer's reply to the near-term reading*, weakest at *disputed*:
   - an inference step — [Motyer 1970](../../bibliography.md#motyer-context-content-1970), p. 124; [Compton 2007](../../bibliography.md#compton-immanuel-prophecy-2007), p. 5
+- *Postell's Micah counterexample to the near-term exclusion*, weakest at *disputed*:
+  - an inference step — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), p. 481; [Rashi (Shlomo Yitzchaki)](../../bibliography.md#rashi-commentary-prophets-1100), ad loc. Mic 5:1; [Rashi (Shlomo Yitzchaki)](../../bibliography.md#rashi-commentary-prophets-1100), ad loc. Mic 5:4; [Rashi (Shlomo Yitzchaki)](../../bibliography.md#rashi-commentary-prophets-1100), ad loc. Isa 7:14; [Abraham Ibn Ezra](../../bibliography.md#ibn-ezra-commentary-isaiah-1145), ad loc. Isa 7:14
 
-<a id="scriptural_reading_prevails_without_postell"></a>
-**`scriptural_reading_prevails_without_postell`**
+<a id="nothing_prevails_without_postell"></a>
+**`nothing_prevails_without_postell`**
 
-**Without Postell's Isaiah argument, the scriptural reading still
-prevails.** His Micah counterexample is defeated by nothing, and it defends the
-scriptural reading against the critic, as the Isaiah argument did. An attack on
-the grounds of either counterexample leaves the verdict standing.
+**Without Postell's Isaiah argument, nothing prevails.** The Micah
+counterexample ties with the critic, as Berry and Motyer do. Rashi grants both
+its grounds — the ruler of Micah 5:1 is "the Messiah, son of David", and 5:4
+speaks of the time "should Assyria come … into our land" — and still reads
+Isaiah 7:14 of the prophet's wife, in "the fourth year of Ahaz". Ibn Ezra gives
+the reason: "the sign was given to Ahaz". So the step from Micah 5 is
+`disputed`, and the counterexample is no stronger than the critic.
+
+It does not show that Micah 5 is not messianic: Rashi reads it so. What it
+shows is that a messianic oracle facing Assyria does not, by itself, answer a
+critic who holds that a sign dated to Ahaz's crisis is not also a prediction.
+The full dispute's verdict now rests on Postell's Isaiah argument alone.
 
 ```lean
-theorem scriptural_reading_prevails_without_postell : ⟨Party.scriptural, ⋯⟩ ∈
-    Framework.grounded withoutPostell.defeats
+theorem nothing_prevails_without_postell : Framework.grounded
+    withoutPostell.defeats = ∅
 -- axioms: propext, Classical.choice, Quot.sound
 ```
 
@@ -1219,7 +1247,7 @@ reply it faces, and the replies defeat it.
   - Genesis 3:15 is the protoevangelium, the first promise of a redeemer — [Leupold 1942](../../bibliography.md#leupold-exposition-genesis-1942), p. 167; [Keil and Delitzsch 1866](../../bibliography.md#keil-delitzsch-pentateuch-1866), p. 102; [Miravalle 2014](../../bibliography.md#miravalle-meet-your-mother-2014); [Lewis 1991](../../bibliography.md#lewis-womans-seed-1991), p. 318
   - The matrilineal wording of Genesis 3:15 marks a birth with no human father — [Luther 1904](../../bibliography.md#luther-on-the-creation-1904), pp. 298–299; [Miravalle 2014](../../bibliography.md#miravalle-meet-your-mother-2014); [Henry 1706](../../bibliography.md#henry-commentary-whole-bible), ad loc. Gen 3:15
   - Micah's mention of a mother and no father indicates a birth with no human father — [Miravalle 2020](../../bibliography.md#miravalle-introduction-mary-2020)
-  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 483–486
+  - An oracle's meaning in the finished book is set by its literary placement — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 476–479
   - Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth — [Postell 2025](../../bibliography.md#postell-isaiah-messianic-2025), pp. 490–493
   - Mary conceived Jesus while a virgin — Matt 1:18-25; Luke 1:26-38; [Brown 1972](../../bibliography.md#brown-problem-virginal-conception-1972), pp. 30–33
   - an inference step — [Motyer 1993](../../bibliography.md#motyer-isaiah-1993), ad loc. Isa 7:14

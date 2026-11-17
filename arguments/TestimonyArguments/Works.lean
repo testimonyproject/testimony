@@ -1248,6 +1248,61 @@ registers no DOIs; the identifier is the society's own open PDF. -/
   , issue := some "3"
   , pages := some (465, 493) }
 
+/-- The Judaica Press English translation of Rashi, by A. J. Rosenberg, as
+Sefaria publishes it (CC-BY), with the Hebrew beside it. The edition through
+which Rashi on Isaiah and on Micah is read. -/
+@[bib_entry] def rosenbergJudaicaPressRashi : BibEntry := .webPage
+  { core :=
+      { key := "rosenberg-judaica-press-rashi"
+      , contributors := { translators := [.person "A. J." "Rosenberg"] }
+      , title := "The Judaica Press Complete Tanach with Rashi"
+      , identifiers :=
+          [ .url "https://www.sefaria.org/Rashi_on_Micah.5" (some "2026-11-17") ]
+      , note := some ("English translation of Rashi's commentary, read on Sefaria; " ++
+          "Rashi on Isaiah at https://www.sefaria.org/Rashi_on_Isaiah.7") }
+  , site := some "Sefaria" }
+
+/-- Rashi's commentary on the Prophets. Cited on Isaiah 7:14, which he reads of
+the prophet's wife, "this year … the fourth year of Ahaz", and on Micah 5:1 and
+5:4, which he reads of "the Messiah, son of David" and of the time "should
+Assyria come … into our land as he comes now". He grants both grounds of the
+Micah counterexample and still keeps 7:14 a sign fulfilled in Ahaz's day. -/
+@[bib_entry] def rashiOnTheProphets : BibEntry := .ancientWork
+  { core :=
+      { key := "rashi-commentary-prophets-1100"
+      , role := .witness
+      , contributors := { authors := [.single "Rashi (Shlomo Yitzchaki)"] }
+      , title := "Commentary on the Prophets" }
+  , composed := some { value := 1100, approximate := true }
+  , editionUsed := some "rosenberg-judaica-press-rashi" }
+
+/-- Friedländer's edition and translation of Ibn Ezra on Isaiah, volume 1, the
+translation. Read on Sefaria (public domain). Published for the Society of
+Hebrew Literature by Trübner, London, 1873 (Open Library lists the printing; no
+ISBN). -/
+@[bib_entry] def friedlanderIbnEzraIsaiah : BibEntry := .book
+  { core :=
+      { key := "friedlander-ibn-ezra-isaiah-1873"
+      , contributors := { editors := [.person "M." "Friedländer"] }
+      , title := "The Commentary of Ibn Ezra on Isaiah"
+      , year := some { value := 1873 }
+      , identifiers :=
+          [ .url "https://www.sefaria.org/Ibn_Ezra_on_Isaiah.7.14" (some "2026-11-17") ] }
+  , publisher := "Trübner, for the Society of Hebrew Literature"
+  , place := some "London" }
+
+/-- Abraham Ibn Ezra's commentary on Isaiah. Cited on 7:14, where he states the
+near-term exclusion as his reason for denying a later referent: "the sign was
+given to Ahaz, and [the one Christians name] was born many years afterwards". -/
+@[bib_entry] def ibnEzraOnIsaiah : BibEntry := .ancientWork
+  { core :=
+      { key := "ibn-ezra-commentary-isaiah-1145"
+      , role := .witness
+      , contributors := { authors := [.single "Abraham Ibn Ezra"] }
+      , title := "Commentary on Isaiah" }
+  , composed := some { value := 1145, approximate := true }
+  , editionUsed := some "friedlander-ibn-ezra-isaiah-1873" }
+
 /-- Motyer's article on the setting of Isaiah 7:14: the most direct answer in
 the library to the near-term reading. The sign is a confirmation that follows
 events rather than a persuader for Ahaz (120); Maher-shalal-hash-baz, not

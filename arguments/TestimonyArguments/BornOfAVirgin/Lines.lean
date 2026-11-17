@@ -1665,12 +1665,15 @@ def postellLine : Line Claim :=
       [ p .isaiah9And11AreMessianic, p .isaiah9And11ShareTheAssyrianTimeline ]
   , step := parityDefeatsNearTermExclusion
   , delivers := notP .nearTermExcludesMessianicSense
-    -- `plausible`: a counterexample to the exclusion, and no source cited
-    -- here grants both grounds and keeps the exclusion. A critic's answer
-    -- would deny a ground — that 9 and 11 are messianic in Isaiah's own
-    -- sense — and the grounds are rated separately. Not `wellSupported`: the
-    -- argument is recent and unanswered, which is not the same as established.
-  , inference := some (postellOnIsaiah (.pages 487 489) .plausible) }
+    -- `plausible`: a counterexample to the exclusion, and no source found
+    -- grants both grounds and keeps the exclusion. Searched (issue #75):
+    -- Rashi, Radak and Ibn Ezra on Isaiah 7:14, 9:5–6 and 11:1; the Targum;
+    -- Walton, JETS 30 (1987). Each reader who keeps 7:14 near-term reads 9:5–6
+    -- of Hezekiah, so denies a ground, not the step; the grounds are rated
+    -- separately. Not read: Grogan (EBC), Roberts (Hermeneia), Blenkinsopp
+    -- (AB), Wildberger, Sweeney, Childs. Not `wellSupported`: the argument is
+    -- recent and unanswered, which is not the same as established.
+  , inference := some (postellOnIsaiah (.pages 479 481) .plausible) }
 
 /-- **Motyer's reply**, as an argument, with Compton: the sign is given to the
 house of David and the near-term timetable passes to Isaiah's son, so Isaiah
@@ -1700,11 +1703,21 @@ def micahLine : Line Claim :=
   , grounds := [ p .micahRulerFacesAssyria, p .micahRulerReadMessianically ]
   , step := micahParityDefeatsNearTermExclusion
   , delivers := notP .nearTermExcludesMessianicSense
-    -- `plausible`, as for the Isaiah counterexample and for the same reason:
-    -- no source cited grants both grounds and keeps the exclusion. A critic's
-    -- likeliest answer is a disanalogy — Micah 5 is not a sign to Ahaz — and
-    -- the same answer would meet `postellLine`.
-  , inference := some (postellOnIsaiah (.page 481) .plausible) }
+    -- `disputed`: Rashi grants both grounds — the ruler of 5:1 is "the
+    -- Messiah, son of David", and 5:4 speaks of the time "should Assyria come
+    -- … into our land as he comes now" — and still reads 7:14 of the
+    -- prophet's wife, "this year … the fourth year of Ahaz". Ibn Ezra states
+    -- the exclusion as his reason at 7:14: "the sign was given to Ahaz".
+    -- That is the disanalogy: Micah 5 is not a sign dated to Ahaz's crisis.
+  , inference := some
+      { primary := .work postellIsaiahMessianic (.page 481)
+      , supporting :=
+          [ .work rashiOnTheProphets (.adLoc ⟨.micah, 5, 1⟩)
+          , .work rashiOnTheProphets (.adLoc ⟨.micah, 5, 4⟩)
+          , .work rashiOnTheProphets (.adLoc ⟨.isaiah, 7, 14⟩)
+          , .work ibnEzraOnIsaiah (.adLoc ⟨.isaiah, 7, 14⟩) ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
 
 /-! #### What the strands share -/
 

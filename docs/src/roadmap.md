@@ -62,11 +62,11 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `the_greek_he_leaves_the_father_open` | `Independent greekHeWithThePromise.premises (p Claim.wordingSignifiesAFatherlessBirth)` | **The Greek's "he" leaves the father open.** Keep the Greek's masculine "he" and the reading of one person drawn from it, and every ground of Luther's case — the seed named as the … |
 | `motyer_rests_on_his_inference` | `¬Entails motyerLine.grounds (notP Claim.isaiahIsNearTermSignToAhaz)` | **Motyer's reply rests on his inference, not on his observations.** On the reading that identifies the two children, the sign is given to the house of David, 8:4 repeats the … |
 | `christian_defeats_critical` | `Defeats christian criticalDenial` | **The scriptural reading answers the critic.** Its rebuttal is a defeat: the weakest link on each side is `disputed`, so neither outranks the other, and each defeats the other. |
-| `scriptural_reading_prevails_once_replies_are_heard` | `Framework.grounded isaiahDispute.defeats = {Party.scriptural, Party.berry, Party.postell, Party.motyer, Party.micah}` | **Heard out, the scriptural reading prevails.** Nothing defeats either of Postell's counterexamples, so both are in the grounded extension from the first step. |
+| `scriptural_reading_prevails_once_replies_are_heard` | `Framework.grounded isaiahDispute.defeats = {Party.scriptural, Party.berry, Party.postell, Party.motyer, Party.micah}` | **Heard out, the scriptural reading prevails.** Nothing defeats Postell's Isaiah argument, so it is in the grounded extension from the first step. |
 | `critical_denial_indefensible` | `∀ (S : Set Party), Framework.Admissible isaiahDispute.defeats S → Party.critical ∉ S` | **The critical denial cannot be defended.** No admissible set contains it: Postell defeats it, and nothing defeats Postell. |
 | `nothing_prevails_unanswered` | `Framework.grounded unanswered.defeats = ∅` | **Unanswered, nothing prevails.** The scriptural reading and the critical denial defeat each other, so neither is forced, and the grounded extension is empty. |
 | `nothing_prevails_on_motyer_alone` | `Framework.grounded motyerAlone.defeats = ∅` | **Motyer alone does not settle it.** He and the critic defeat each other, as the scriptural reading and the critic do, so nothing is forced. |
-| `scriptural_reading_prevails_without_postell` | `⟨Party.scriptural, ⋯⟩ ∈ Framework.grounded withoutPostell.defeats` | **Without Postell's Isaiah argument, the scriptural reading still prevails.** His Micah counterexample is defeated by nothing, and it defends the scriptural reading against the … |
+| `nothing_prevails_without_postell` | `Framework.grounded withoutPostell.defeats = ∅` | **Without Postell's Isaiah argument, nothing prevails.** The Micah counterexample ties with the critic, as Berry and Motyer do. |
 | `nothing_prevails_without_the_counterexamples` | `Framework.grounded withoutParity.defeats = ∅` | **Without the counterexamples, nothing prevails.** Berry and Motyer each tie with the critic, as the scriptural reading does, so every party is defeated by someone. |
 | `reply_rests_on_its_inference` | `¬Entails ordinarySignLine.grounds (notP Claim.signMustBeExtraordinary)` | **The reply rests on its inference, not on its observations.** On Rydelnik's reading Isaiah's children are signs, 7:16 dates the deliverance by a child's infancy, and the sign of … |
 | `nothing_prevails_over_wegner` | `Framework.grounded wegnerDispute.defeats = ∅` | **Nothing prevails.** Every party is defeated by someone — Wegner and the reply by the fathers, the fathers by both — so nothing is forced, and the grounded extension is empty. |
@@ -800,10 +800,14 @@ who prevailed. Rated, Berry's and Motyer's steps are `disputed` and tie with the
 critic (`nothing_prevails_on_motyer_alone`). The verdict rests on Postell's
 inference — an oracle on the Assyrian timeline, read messianically, refutes the
 exclusion — rated `plausible` because no source cited grants its grounds and
-keeps the exclusion. He gives it two instances, Isaiah 9 and 11 and Micah 5:
-either suffices (`scriptural_reading_prevails_without_postell`), and without
-both nothing prevails (`nothing_prevails_without_the_counterexamples`). That
-makes the ratings premises of the result, and says which one to contest.
+keeps the exclusion. He gives it two instances, Isaiah 9 and 11 and Micah 5. The
+Micah instance is `disputed`: Rashi grants that Micah's ruler is the Messiah,
+facing Assyria, and still reads 7:14 of a child of Ahaz's day, and Ibn Ezra gives
+the reason, "the sign was given to Ahaz". So without the Isaiah instance nothing
+prevails (`nothing_prevails_without_postell`), and the verdict rests on that one
+step, still `plausible` because every reader found who keeps 7:14 near-term
+reads Isaiah 9 of Hezekiah, denying a ground rather than the step. That makes
+the ratings premises of the result, and says which one to contest.
 
 **A premise can be load-bearing in one role and not another.** The sola
 scriptura seed asserted in prose that the whole dispute reduces to whether
