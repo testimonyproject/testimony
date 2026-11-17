@@ -1023,6 +1023,112 @@ def sectionHeading (title : String) : String :=
   "\\clearpage\n\\section*{" ++ escape title ++ "}\n" ++
   "\\addcontentsline{toc}{section}{" ++ escape title ++ "}\n\n"
 
+/-- The repository every edition is made from, which the last section tells a
+reader to clone. -/
+def repository : String := "https://github.com/testimonyproject/testimony"
+
+/-- **Which edition a document is.** The date and version under its title, and
+the commit its last section tells a reader to check out, as macros a document
+reads from `edition.def` beside it.
+
+None of them belongs in the generator: the same source must make the same
+`.tex` on every machine, and a pull request is typeset from GitHub's merge of
+it, whose commit does not exist until then. So the file is written when the document is
+typeset, by `scripts/edition.py`, from the commit being typeset, as
+`credits.def` is by `scripts/credits.py`. Without it the document says it is an
+unrecorded copy, and dates itself the day it was typeset. -/
+def edition : String :=
+  "\\newif\\ifeditionrecorded\n\\newif\\ifeditionpreview\n" ++
+  "\\newcommand{\\editiondate}{\\today}\n" ++
+  "\\newcommand{\\editionversion}{unrecorded}\n" ++
+  "\\newcommand{\\editioncommit}{COMMIT}\n" ++
+  "\\newcommand{\\editionremark}{}\n" ++
+  "\\InputIfFileExists{edition.def}{}{}\n"
+
+/-- What a reader needs to make one document again: the package it belongs to,
+the program in that package that writes it, and where it is written. -/
+structure Reproduction where
+  /-- The package's directory in the repository: `arguments`, or `examples`. -/
+  package : String
+  /-- The program that writes the document: `argtex`, or `exampletex`. -/
+  tool : String
+  /-- The directory the document is written to, from the repository's root. -/
+  dir : String
+  /-- The document's file name, `sola-fide.tex`. -/
+  file : String
+  /-- Whether the document names the people behind it, so that the steps
+  include working out who they are (`credits`). -/
+  credits : Bool := false
+  /-- The programs to run in the package before `tool`: what writes the files
+  the document needs beside it, such as the bibliography (`bibgen`). -/
+  before : List String := []
+deriving Inhabited, Repr
+
+/-- **How this edition was made**, the document's last section: what made it,
+for a reader who has never heard of Lean, and every step to make it again from
+the commit the edition names (`edition`).
+
+The title matter says only when and which: a reader who wants to cite the
+document needs those, and a reader who wants to check it needs the rest, which
+is too long for a title page. The steps are the ones `.github/workflows/pdf.yml`
+takes, written out for one computer. -/
+def reproduction (r : Reproduction) : String :=
+  let cmd (lines : List String) : String :=
+    "\\begin{alltt}\\small\n" ++ "\n".intercalate lines ++ "\n\\end{alltt}\n"
+  let defs := if r.credits then "docs/latex docs/latex/arguments" else r.dir
+  let pdf := (r.file.dropEnd 4).toString ++ ".pdf"
+  "\n\\clearpage\n\\section*{How this edition was made}\n" ++
+  "\\addcontentsline{toc}{section}{How this edition was made}\n" ++
+  "This document was printed by a program, not set by hand. Its text comes from " ++
+  "the source files of the Testimony library, where each argument is written out " ++
+  "twice: in prose, for a reader, and in Lean, a language for stating proofs that " ++
+  "a computer can check. The prose is printed in the order it is written, and " ++
+  "under each part come the premises, lines of reasoning and results it " ++
+  "introduces, as the source states them. Before anything is printed, the " ++
+  "computer checks every one of those results: where this document says a " ++
+  "conclusion follows from its premises, that it does, and where it says a " ++
+  "conclusion does not follow, that the counterexample it gives really is one. " ++
+  "It does not check that any premise is true.\n\n" ++
+  "\\ifeditionrecorded This edition, version \\editionversion, was made from " ++
+  "the library as it stood on \\editiondate, at the commit named in step 3 " ++
+  "below. A commit is one saved state of every file in the " ++
+  "repository; that string of letters and digits names it, and what it names " ++
+  "never changes. So anyone can make this edition again.\n" ++
+  "\\else This copy was typeset without a record of the commit it was made from, " ++
+  "so the steps below write \\texttt{COMMIT} where an edition names its own. A " ++
+  "commit is one saved state of every file in the repository, named by a string " ++
+  "of letters and digits that never changes what it names.\n\\fi\n\n" ++
+  "You need a computer running Linux or macOS (on Windows, the Windows Subsystem " ++
+  "for Linux), with git, Python~3, an internet connection, and about 10\\,GB of " ++
+  "free disk space.\n" ++
+  "\\begin{enumerate}\n" ++
+  "\\item Install elan, which installs the version of Lean the library asks for:\n" ++
+  cmd ["curl https://elan.lean-lang.org/elan-init.sh -sSf | sh"] ++
+  "\\item Install Tectonic, which sets the pages, following " ++
+  "\\url{https://tectonic-typesetting.github.io/book/latest/installation/}.\n" ++
+  "\\item Fetch the library, and turn it back to this edition's commit:\n" ++
+  cmd ["git clone " ++ repository ++ ".git", "cd testimony",
+    "git checkout \\editioncommit"] ++
+  "\\item Download the mathematics library Lean builds on, already compiled, so " ++
+  "it need not be compiled on your computer:\n" ++
+  cmd ["lake exe cache get"] ++
+  "\\item Check every argument. This is the longest step, and if any proof failed " ++
+  "it would stop here with an error:\n" ++
+  cmd ["cd " ++ r.package, "lake build"] ++
+  "\\item Write the document from the source:\n" ++
+  cmd ((r.before ++ [r.tool]).map ("lake exe " ++ ·) ++ ["cd .."]) ++
+  "\\item Record the edition" ++
+  (if r.credits then ", and work out from the repository's history who wrote " ++
+    "each argument" else "") ++ ":\n" ++
+  cmd ((if r.credits then ["python3 scripts/credits.py " ++ defs] else []) ++
+    ["python3 scripts/edition.py " ++ defs]) ++
+  "\\item Set the pages:\n" ++
+  cmd ["cd " ++ r.dir, "tectonic " ++ r.file] ++
+  "\\end{enumerate}\n" ++
+  "That makes \\texttt{" ++ escape pdf ++ "}. Its words, numbers and references " ++
+  "are this edition's, and so should its pages be: the fonts it is set in come " ++
+  "with Tectonic, not from your computer.\n"
+
 /-- The fonts, and which font sets each script the documents quote.
 
 Every font is named by its file, and every file is one the TeX distribution
@@ -1093,14 +1199,15 @@ where
 Hebrew and Syriac, the rendered Lean contains `¬`, `→` and `⊢`, and `fonts`
 sets them with XeTeX's character classes.
 
-`tool` is the generator the date line names: the library's `argtex`, or a
-package's own. `author`, where given, is set under the title, as LaTeX; it is
-how a document carries its credit (`credits`). `extra` is set last, before the
-document begins: the definitions the author line needs. -/
-def preamble (title : String) (tool : String := "argtex") (author extra : String := "") :
-    String :=
+`author`, where given, is set under the title, as LaTeX; it is how a document
+carries its credit (`credits`). Under it come the edition's date and version
+(`edition`), which say to a reader which copy they hold without naming the
+program that made it; how it was made is the last section's business
+(`reproduction`). `extra` is set last, before the document begins: the
+definitions the author line needs. -/
+def preamble (title : String) (author extra : String := "") : String :=
   "\\documentclass[11pt]{article}\n" ++
-  "\\usepackage{amsmath,amssymb,array,booktabs,longtable,geometry,fontspec,xcolor}\n" ++
+  "\\usepackage{amsmath,amssymb,array,booktabs,longtable,geometry,fontspec,xcolor,alltt}\n" ++
   "\\usepackage{tikz}\\usetikzlibrary{arrows.meta}\n" ++
   "\\usepackage[hidelinks]{hyperref}\n" ++
   -- A variable links to its row in the legend, and is coloured so a reader can
@@ -1147,8 +1254,9 @@ def preamble (title : String) (tool : String := "argtex") (author extra : String
   fonts ++
   "\\title{" ++ escape title ++ "}\n" ++
   (if author.isEmpty then "" else "\\author{" ++ author ++ "}\n") ++
-  "\\date{Generated by \\texttt{lake exe " ++ tool ++ "}}\n" ++
-  extra ++ "\\begin{document}\n\\maketitle\n"
+  "\\date{\\editiondate\\\\[2pt]{\\small Version \\editionversion" ++
+  "\\ifeditionpreview\\\\\\editionremark\\fi}}\n" ++
+  edition ++ extra ++ "\\begin{document}\n\\maketitle\n"
 
 /-- **Credit, worked out when the document is typeset.** `\credit{key}`
 expands to what `credits.def`, beside the document, defines for `key`, and to
@@ -1169,9 +1277,11 @@ def credits : String :=
 /-- The table of contents, which the starred sections opt into by hand. -/
 def contents : String := "\\tableofcontents\n"
 
-/-- Closing matter, including the bibliography built from `references.bib`. -/
-def postamble : String :=
-  "\n\\bibliographystyle{plain}\n\\bibliography{references}\n\\end{document}\n"
+/-- Closing matter: the bibliography built from `references.bib`, then
+`closing`, the sections that come after it (`reproduction`). -/
+def postamble (closing : String := "") : String :=
+  "\n\\bibliographystyle{plain}\n\\bibliography{references}\n" ++ closing ++
+  "\\end{document}\n"
 
 
 /-! ### Golden tests

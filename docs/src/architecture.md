@@ -157,6 +157,21 @@ as an author. Where it took part, the credit says so on a line of its own,
 history cut short would drop credit for the older work without saying so, so the
 `PDF` workflow checks out the whole history.
 
+Under the title, each document gives the date and version of its edition: the
+release's tag where there is one, and otherwise the short hash of the commit it
+was made from, dated by that commit, so one commit always makes the same
+edition. Its last section, "How this edition was made", says in plain words
+what made it and lists every step to make it again, ending in the commit to
+check out. These come from `scripts/edition.py`, which writes an `edition.def`
+beside each document when it is typeset, for the reason the credits do: the
+commit is not known when the `.tex` is generated. A pull request's PDF is
+typeset from GitHub's trial merge, so it says it is a preview of that pull
+request. A copy typeset without the file says it is unrecorded.
+
+An argument's catalogue entry can carry an abstract, a paragraph for a reader
+with little time, set under the title of its own document and under its heading
+in the book.
+
 ### An argument set as chapters
 
 A long argument reads better as a book than as one page. Its catalogue entry

@@ -10,3 +10,4 @@ docs/latex/*.xdv
 docs/latex/*.toc
 docs/latex/*.out
 docs/latex/references.bib
+docs/latex/edition.def
