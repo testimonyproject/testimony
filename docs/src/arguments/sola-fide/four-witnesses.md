@@ -231,11 +231,20 @@ and Paul says that adding a work to their faith severs them from Christ (5:4).
 Only the reading of "works of the law" as works in general lets circumcision
 stand for every work, and not for one mark of being a Jew.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-8}{P_{8}} \land \href{claims.html#claim-7}{P_{7}} \land \href{claims.html#claim-6}{P_{6}}) \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* Justification is by faith alone
+- (1) \\(\href{claims.html#claim-2}{P_{2}}\\) Romans 3:28 teaches justification by faith apart from works of the law — *well supported*: Rom 3:28; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.19; [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:28
+- (2) \\(\href{claims.html#claim-3}{P_{3}}\\) Galatians 2:16 teaches that no one is justified by works of the law — *well supported*: Gal 2:16; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.19; [Martyn 1997](../../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16
+- (3) \\(\href{claims.html#claim-8}{P_{8}}\\) Galatians opposes requiring circumcision, besides faith, for justification — *well supported*: Gal 2:3-5; Gal 5:2-4; [Martyn 1997](../../bibliography.md#martyn-galatians-1997), ad loc. Gal 5:2; [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 5:2; Acts 15:1; Acts 15:5; Acts 15:19; [Bruce 1988](../../bibliography.md#bruce-acts-1988), ad loc. Acts 15:1
+- (4) \\(\href{claims.html#claim-7}{P_{7}}\\) In Galatians 2:16 ‘faith of Christ’ (πίστις Χριστοῦ) means our faith in Christ — *disputed*: [Dunn 1991](../../bibliography.md#dunn-once-more-pistis-christou-1991); [Matlock 2000](../../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
+- (5) \\(\href{claims.html#claim-6}{P_{6}}\\) Paul's ‘works of the law’ means human works in general, not boundary markers — *disputed*: [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.19; [Westerholm 2003](../../bibliography.md#westerholm-perspectives-2003); [Das 2001](../../bibliography.md#das-paul-law-covenant-2001); [Gathercole 2002](../../bibliography.md#gathercole-where-boasting-2002); [Carson et al. 2001](../../bibliography.md#carson-variegated-nomism-1-2001); [Piper 2007](../../bibliography.md#piper-future-justification-2007); Rom 9:11-12; Rom 11:6; Gal 3:10; Gal 5:3; Jas 2:10
+- \\(\therefore\\) \\(\href{claims.html#claim-25}{P_{25}}\\) Justification is by faith alone
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-8}{P_{8}} \land \href{claims.html#claim-7}{P_{7}} \land \href{claims.html#claim-6}{P_{6}}) \rightarrow \href{claims.html#claim-25}{P_{25}}\\).
 
 <a id="dominicalToSufficiency"></a>
 **`dominicalToSufficiency`**
@@ -250,11 +259,18 @@ The strand says that her faith saved her, and no more. It does not say that
 nothing else could have. It owes nothing to Paul or to the dispute over "works
 of the law".
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-18}{P_{18}} \land \href{claims.html#claim-19}{P_{19}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* Faith is sufficient: whoever believes is saved
+- (1) \\(\href{claims.html#claim-17}{P_{17}}\\) Luke 7:50 — Jesus says ‘your faith has saved you’ after declaring sins forgiven — *consensus*: Luke 7:50; [Marshall 1978](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50
+- (2) \\(\href{claims.html#claim-18}{P_{18}}\\) ‘Saved’ (σῴζω) at Luke 7:50 means saved from sin, not healed — *well supported*: [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; [Padilla 2021](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–55; Luke 7:47-50; [Marshall 1978](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:50
+- (3) \\(\href{claims.html#claim-19}{P_{19}}\\) Luke 7:47 — her love is the evidence of her forgiveness, not its ground — *disputed*: [Marshall 1978](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [Padilla 2021](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
+- \\(\therefore\\) \\(\href{claims.html#claim-26}{P_{26}}\\) Faith is sufficient: whoever believes is saved
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-18}{P_{18}} \land \href{claims.html#claim-19}{P_{19}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\).
 
 <a id="apostolicToSufficiency"></a>
 **`apostolicToSufficiency`**
@@ -269,11 +285,17 @@ through grace, and that the yoke should not be laid on them. If the yoke is the
 whole law as a condition of salvation, then the gentiles are saved without it,
 by faith. That is the reading the strand needs.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-9}{P_{9}} \land \href{claims.html#claim-10}{P_{10}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* Faith is sufficient: whoever believes is saved
+- (1) \\(\href{claims.html#claim-9}{P_{9}}\\) Acts 15:9–11 — Peter: hearts cleansed by faith; saved through grace — *well supported*: Acts 15:9-11; [Bruce 1988](../../bibliography.md#bruce-acts-1988), ad loc. Acts 15:9
+- (2) \\(\href{claims.html#claim-10}{P_{10}}\\) The yoke refused at Acts 15:10 is the whole law as a condition of salvation — *disputed*: [Bruce 1988](../../bibliography.md#bruce-acts-1988), ad loc. Acts 15:10; Acts 15:10; Gal 5:1; Jas 2:10; [Das 2001](../../bibliography.md#das-paul-law-covenant-2001)
+- \\(\therefore\\) \\(\href{claims.html#claim-26}{P_{26}}\\) Faith is sufficient: whoever believes is saved
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-9}{P_{9}} \land \href{claims.html#claim-10}{P_{10}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\).
 
 <a id="johannineToFaithAlone"></a>
 **`johannineToFaithAlone`**
@@ -288,11 +310,18 @@ The step needs one more premise, and it is the disputed one: that this
 believing is trust, which brings nothing of its own to God. Independent of
 Paul, of Luke 7:50 and of Acts 15.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-36}{P_{36}} \land \href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-25}{P_{25}}\\) — *would give:* Justification is by faith alone
+- (1) \\(\href{claims.html#claim-36}{P_{36}}\\) John 6:28–29 — the work God requires is that you believe in him whom he sent — *consensus*: John 6:28-29; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; [Thomas Aquinas 2012](../../bibliography.md#aquinas-commentary-john-2012), §cap. 6, lect. 3, n. 901
+- (2) \\(\href{claims.html#claim-37}{P_{37}}\\) John 3:16–18, 3:36, 5:24, 20:31 — eternal life through believing in the Son — *consensus*: John 3:16-18; John 3:36; John 5:24; John 20:31
+- (3) \\(\href{claims.html#claim-40}{P_{40}}\\) The believing of John 6:29 is trust, which brings nothing and receives Christ — *disputed*: [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
+- \\(\therefore\\) \\(\href{claims.html#claim-25}{P_{25}}\\) Justification is by faith alone
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-36}{P_{36}} \land \href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-25}{P_{25}}\\).
 
 <a id="jamesHarmonisation"></a>
 **`jamesHarmonisation`**
@@ -302,11 +331,17 @@ faith alone". If James is attacking a barren faith, and if works are the fruit
 of saving faith and not its ground, then the verse does not contradict Paul. The
 agreement is derived from those two premises, not assumed.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-20}{P_{20}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \href{claims.html#claim-22}{P_{22}}\\) — *would give:* James 2:24 is compatible with Paul, using ‘justify’ in a different sense
+- (1) \\(\href{claims.html#claim-20}{P_{20}}\\) James 2:14–26 targets a barren faith — mere assent — not Paul's doctrine — *well supported*: [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:14; [Johnson 1995](../../bibliography.md#johnson-james-1995), ad loc. Jas 2:24; Jas 2:19
+- (2) \\(\href{claims.html#claim-21}{P_{21}}\\) Good works are the fruit and evidence of saving faith, not its ground — *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
+- \\(\therefore\\) \\(\href{claims.html#claim-22}{P_{22}}\\) James 2:24 is compatible with Paul, using ‘justify’ in a different sense
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-20}{P_{20}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \href{claims.html#claim-22}{P_{22}}\\).
 
 <a id="solaFide"></a>
 **`solaFide`**
@@ -342,11 +377,18 @@ the gift of God" (Ephesians 2:8), a gift and not wages (Romans 4:4–5),
 "according to his own mercy" (Titus 3:5). This part needs neither a strand nor
 the answer to James.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-5}{P_{5}}) \rightarrow \href{claims.html#claim-27}{P_{27}}\\) — *would give:* Salvation is by grace, a gift and not wages owed
+- (1) \\(\href{claims.html#claim-1}{P_{1}}\\) Ephesians 2:8–9 teaches salvation by grace through faith, not of works — *well supported*: Eph 2:8-9; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.7; [Lincoln 1990](../../bibliography.md#lincoln-ephesians-1990), ad loc. Eph 2:9
+- (2) \\(\href{claims.html#claim-4}{P_{4}}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.18
+- (3) \\(\href{claims.html#claim-5}{P_{5}}\\) Titus 3:5 teaches that God saved us not by works done in righteousness — *well supported*: Titus 3:5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xiv.5
+- \\(\therefore\\) \\(\href{claims.html#claim-27}{P_{27}}\\) Salvation is by grace, a gift and not wages owed
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-5}{P_{5}}) \rightarrow \href{claims.html#claim-27}{P_{27}}\\).
 
 <a id="toNotByWorks"></a>
 **`toNotByWorks`**
@@ -355,11 +397,20 @@ the answer to James.
 many words. It needs two more things: an answer to James 2:24, and that
 Scripture does not contradict itself. It needs no strand.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Salvation is not by works: no work is its ground
+- (1) \\(\href{claims.html#claim-1}{P_{1}}\\) Ephesians 2:8–9 teaches salvation by grace through faith, not of works — *well supported*: Eph 2:8-9; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.7; [Lincoln 1990](../../bibliography.md#lincoln-ephesians-1990), ad loc. Eph 2:9
+- (2) \\(\href{claims.html#claim-4}{P_{4}}\\) Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes — *well supported*: Rom 4:4-5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.18
+- (3) \\(\href{claims.html#claim-5}{P_{5}}\\) Titus 3:5 teaches that God saved us not by works done in righteousness — *well supported*: Titus 3:5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xiv.5
+- (4) \\(\href{claims.html#claim-22}{P_{22}}\\) James 2:24 is compatible with Paul, using ‘justify’ in a different sense — *disputed*: Jas 2:24; [Moo 2000](../../bibliography.md#moo-james-2000), ad loc. Jas 2:24; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvii.11
+- (5) \\(\href{claims.html#claim-24}{P_{24}}\\) Scripture does not contradict itself — *well supported*: [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §I.vii; 2 Pet 3:15-16; [Schreiner 2003](../../bibliography.md#schreiner-peter-jude-2003), ad loc. 2 Pet 3:16
+- \\(\therefore\\) \\(\href{claims.html#claim-28}{P_{28}}\\) Salvation is not by works: no work is its ground
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\).
 
 <a id="faithAloneSuffices"></a>
 **`faithAloneSuffices`**
@@ -369,11 +420,16 @@ the condition, faith is enough. This is how Paul's strand and John's, which
 argue the stronger claim, reach the part of the conclusion that Luke's and
 Peter's reach directly.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-25}{P_{25}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* Faith is sufficient: whoever believes is saved
+- (1) \\(\href{claims.html#claim-25}{P_{25}}\\) Justification is by faith alone — *well supported*: [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.1; [Schreiner 2015](../../bibliography.md#schreiner-faith-alone-2015); [Mannermaa 2005](../../bibliography.md#mannermaa-christ-present-faith-2005); [Roberts et al. 1885](../../bibliography.md#roberts-ante-nicene-fathers-1-1885), §1 Clement 32.4; [of Poitiers 2013](../../bibliography.md#hilary-commentary-matthew-2013), §8.6; [of Caesarea 1999](../../bibliography.md#basil-ascetical-works-1999), §Homily 20, Of Humility
+- \\(\therefore\\) \\(\href{claims.html#claim-26}{P_{26}}\\) Faith is sufficient: whoever believes is saved
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-25}{P_{25}} \rightarrow \href{claims.html#claim-26}{P_{26}}\\).
 
 <a id="toThroughFaith"></a>
 **`toThroughFaith`**
@@ -383,11 +439,17 @@ Peter's reach directly.
 part of the conclusion the four strands are needed for, and it needs only what
 each of them says.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-26}{P_{26}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is received through faith
+- (1) \\(\href{claims.html#claim-26}{P_{26}}\\) Faith is sufficient: whoever believes is saved — *disputed*: Luke 7:50; Acts 15:9-11; [Schreiner 2015](../../bibliography.md#schreiner-faith-alone-2015)
+- (2) \\(\href{claims.html#claim-1}{P_{1}}\\) Ephesians 2:8–9 teaches salvation by grace through faith, not of works — *well supported*: Eph 2:8-9; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.7; [Lincoln 1990](../../bibliography.md#lincoln-ephesians-1990), ad loc. Eph 2:9
+- \\(\therefore\\) \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is received through faith
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-26}{P_{26}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-29}{P_{29}}\\).
 
 <a id="paulineLine"></a>
 **`paulineLine`** — Pauline strand (ἔργα νόμου, πίστις Χριστοῦ)
@@ -507,11 +569,17 @@ justification by faith alone, in the sense the Reformed and the New Perspective
 share, is denied. Grace and "not by works" are not denied: the reading rejects
 the condition, not the gift.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\lnot \href{claims.html#claim-7}{P_{7}} \land \href{claims.html#claim-16}{P_{16}}) \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\) — *would deny:* Justification is by faith alone
+- (1) \\(\lnot \href{claims.html#claim-7}{P_{7}}\\) *denied:* In Galatians 2:16 ‘faith of Christ’ (πίστις Χριστοῦ) means our faith in Christ — *disputed*: [Dunn 1991](../../bibliography.md#dunn-once-more-pistis-christou-1991); [Matlock 2000](../../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
+- (2) \\(\href{claims.html#claim-16}{P_{16}}\\) ‘The righteousness of God’ (δικαιοσύνη θεοῦ) names God's act of rescue in Christ — *disputed*: [Campbell 2009](../../bibliography.md#campbell-deliverance-god-2009); [Martyn 1997](../../bibliography.md#martyn-galatians-1997); Rom 3:21-26
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-25}{P_{25}}\\) *denied:* Justification is by faith alone
 
 </div>
+
+In symbols, the step is \\((\lnot \href{claims.html#claim-7}{P_{7}} \land \href{claims.html#claim-16}{P_{16}}) \rightarrow \lnot \href{claims.html#claim-25}{P_{25}}\\).
 
 <a id="deliveranceIsGrace"></a>
 **`deliveranceIsGrace`**
@@ -521,11 +589,17 @@ of rescue, it is a gift that depends on nothing a person does: by grace, and not
 by works. This is Campbell's inference, and his reason for calling the reading
 more gracious than the one it replaces.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-16}{P_{16}} \rightarrow \href{claims.html#claim-27}{P_{27}} \land \href{claims.html#claim-28}{P_{28}}\\) — *would give:* \\(\href{claims.html#claim-27}{P_{27}}\\) Salvation is by grace, a gift and not wages owed; \\(\href{claims.html#claim-28}{P_{28}}\\) Salvation is not by works: no work is its ground
+- (1) \\(\href{claims.html#claim-16}{P_{16}}\\) ‘The righteousness of God’ (δικαιοσύνη θεοῦ) names God's act of rescue in Christ — *disputed*: [Campbell 2009](../../bibliography.md#campbell-deliverance-god-2009); [Martyn 1997](../../bibliography.md#martyn-galatians-1997); Rom 3:21-26
+- \\(\therefore\\) \\(\href{claims.html#claim-27}{P_{27}}\\) Salvation is by grace, a gift and not wages owed
+- \\(\therefore\\) \\(\href{claims.html#claim-28}{P_{28}}\\) Salvation is not by works: no work is its ground
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-16}{P_{16}} \rightarrow \href{claims.html#claim-27}{P_{27}} \land \href{claims.html#claim-28}{P_{28}}\\).
 
 <a id="apocalypticLine"></a>
 **`apocalypticLine`** — Apocalyptic reading (δικαιοσύνη θεοῦ as deliverance)
@@ -832,11 +906,18 @@ since Paul's verb "justify" (δικαιόω) is a courtroom word whose opposite 
 "condemn" (Romans 8:33–34), and if its ground is Christ's finished work alone,
 then the renewal of the inward person is no part of it.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-58}{P_{58}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-48}{P_{48}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\) — *would deny:* Justification is not remission of sins only, but renewal of the inward man
+- (1) \\(\href{claims.html#claim-58}{P_{58}}\\) Christ's death for our sins is the whole ground of justification; to add to it is another gospel — *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; Gal 2:21; [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 2:21; [Roberts et al. 1885](../../bibliography.md#roberts-ante-nicene-fathers-1-1885), §Epistle to Diognetus 9
+- (2) \\(\href{claims.html#claim-49}{P_{49}}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Irons 2015](../../bibliography.md#irons-righteousness-of-god-2015); [Wright 2009](../../bibliography.md#wright-justification-2009); [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+- (3) \\(\href{claims.html#claim-48}{P_{48}}\\) Romans 8:33–34: it is God who justifies — who is to condemn? — *consensus*: Rom 8:33-34
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-33}{P_{33}}\\) *denied:* Justification is not remission of sins only, but renewal of the inward man
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-58}{P_{58}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-48}{P_{48}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\).
 
 #### What Paul's word means
 
@@ -995,11 +1076,17 @@ The second step puts the first to work, and it goes two ways.
 From Paul's explanation, by the rule of least meaning: the verb he explains in
 that way does not also mean renewal.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\) — *would deny:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
+- (1) \\(\href{claims.html#claim-57}{P_{57}}\\) In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted — *well supported*: [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
+- (2) \\(\href{claims.html#claim-51}{P_{51}}\\) A word contributes the least meaning its context requires; one occurrence does not carry the whole concept — *well supported*: [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Joos 1972](../../bibliography.md#joos-semantic-axiom-1972); [Barr 2004](../../bibliography.md#barr-semantics-2004)
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-52}{P_{52}}\\) *denied:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\).
 
 <a id="countedExcludesRenewal"></a>
 **`countedExcludesRenewal`**
@@ -1007,11 +1094,17 @@ that way does not also mean renewal.
 From Paul's explanation, with the courtroom sense of the verb: renewal is no
 part of justification. This is the step Augustine denies.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-49}{P_{49}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\) — *would deny:* Justification is not remission of sins only, but renewal of the inward man
+- (1) \\(\href{claims.html#claim-57}{P_{57}}\\) In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted — *well supported*: [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:6; Rom 4:6-8
+- (2) \\(\href{claims.html#claim-49}{P_{49}}\\) In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous — *well supported*: [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. δικαιόω; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Irons 2015](../../bibliography.md#irons-righteousness-of-god-2015); [Wright 2009](../../bibliography.md#wright-justification-2009); [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), ad loc. Rom 3:24
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-33}{P_{33}}\\) *denied:* Justification is not remission of sins only, but renewal of the inward man
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-49}{P_{49}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\).
 
 #### Packages
 

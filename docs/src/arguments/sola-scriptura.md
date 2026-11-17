@@ -711,11 +711,20 @@ reply refuses put back as what the reply offers instead.
 Sufficiency and perspicuity, with the prooftexts and the claim that
 scripture teaches the principle, yield the sole infallible rule.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Scripture is the sole infallible rule of faith
+- (1) \\(\href{#claim-1}{P_{1}}\\) 2 Timothy 3:16 — all scripture is God-breathed and profitable — *well supported*: 2 Tim 3:16; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii.1
+- (2) \\(\href{#claim-2}{P_{2}}\\) 2 Timothy 3:17 — that the man of God may be complete, equipped for every good work — *well supported*: 2 Tim 3:17; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii.1
+- (3) \\(\href{#claim-7}{P_{7}}\\) Scripture is a sufficient rule of faith — *disputed*: [Grudem 1994](../bibliography.md#grudem-systematic-theology-1994), §ch. 8; [Webster 2003](../bibliography.md#webster-holy-scripture-2003); [Bavinck 2003](../bibliography.md#bavinck-prolegomena-2003); [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+- (4) \\(\href{#claim-8}{P_{8}}\\) Scripture is clear on what is necessary for salvation — *disputed*: [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii.5
+- (5) \\(\href{#claim-10}{P_{10}}\\) Scripture itself teaches that scripture is the sole infallible rule — *disputed*: [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii.4
+- \\(\therefore\\) \\(\href{#claim-9}{P_{9}}\\) Scripture is the sole infallible rule of faith
 
 </div>
+
+In symbols, the step is \\((\href{#claim-1}{P_{1}} \land \href{#claim-2}{P_{2}} \land \href{#claim-7}{P_{7}} \land \href{#claim-8}{P_{8}} \land \href{#claim-10}{P_{10}}) \rightarrow \href{#claim-9}{P_{9}}\\).
 
 <a id="eliminativeToSoleRule"></a>
 **`eliminativeToSoleRule`**
@@ -724,11 +733,17 @@ The eliminative route: scripture is infallible, nothing else is, so
 scripture is the *sole* infallible rule. It never asserts that scripture
 teaches the principle.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Scripture is the sole infallible rule of faith
+- (1) \\(\href{#claim-6}{P_{6}}\\) Scripture is infallible — *consensus*: [Grudem 1994](../bibliography.md#grudem-systematic-theology-1994), §ch. 5; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii
+- (2) \\(\href{#claim-12}{P_{12}}\\) No candidate rule of faith other than scripture is infallible — *disputed*: [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001)
+- \\(\therefore\\) \\(\href{#claim-9}{P_{9}}\\) Scripture is the sole infallible rule of faith
 
 </div>
+
+In symbols, the step is \\((\href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\).
 
 <a id="mark7ToPrinciple"></a>
 **`mark7ToPrinciple`**
@@ -739,11 +754,16 @@ no reader was found who grants the text and denies the principle, and Rome
 grants it in so many words (*Dei Verbum* 10). Not `consensus`, because the step
 generalises from one pericope.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (1) \\(\href{#claim-3}{P_{3}}\\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command — *consensus*: Mark 7:1-13; Matt 15:1-9; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.10
+- \\(\therefore\\) \\(\href{#claim-37}{P_{37}}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
 
 </div>
+
+In symbols, the step is \\(\href{#claim-3}{P_{3}} \rightarrow \href{#claim-37}{P_{37}}\\).
 
 <a id="jesusAndPaulToPrinciple"></a>
 **`jesusAndPaulToPrinciple`**
@@ -758,11 +778,19 @@ they say what Mark 7 says: God's word judges human tradition. Rated
 `wellSupported`: Aquinas grants Galatians 1:8 and the principle with it, and
 denies only that every addition is "another gospel" (`jesusAndPaulPrincipleInference`).
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (1) \\(\href{#claim-40}{P_{40}}\\) John 10:35 — the scripture cannot be broken — *consensus*: John 10:35; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), p. 19
+- (2) \\(\href{#claim-41}{P_{41}}\\) Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled — *consensus*: Matt 5:18; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), pp. 15, 19
+- (3) \\(\href{#claim-42}{P_{42}}\\) Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed — *consensus*: Gal 1:8-9; [Calvin 1854](../bibliography.md#calvin-commentary-galatians-1854), ad loc. Gal 1:9; [Thomas Aquinas 1966](../bibliography.md#aquinas-commentary-galatians-1966), §c. 1, lect. 2
+- (4) \\(\href{#claim-43}{P_{43}}\\) Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men — *consensus*: Col 2:8; Col 2:20-22; [Lightfoot](../bibliography.md#lightfoot-colossians-philemon), p. 204
+- \\(\therefore\\) \\(\href{#claim-37}{P_{37}}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
 
 </div>
+
+In symbols, the step is \\((\href{#claim-40}{P_{40}} \land \href{#claim-41}{P_{41}} \land \href{#claim-42}{P_{42}} \land \href{#claim-43}{P_{43}}) \rightarrow \href{#claim-37}{P_{37}}\\).
 
 <a id="acts15ToCouncilUnderScripture"></a>
 **`acts15ToCouncilUnderScripture`**
@@ -778,11 +806,19 @@ may err. The last premise is carried in by `apostlesOfficeEndedLine`. Rated
 `disputed`: Wilhelm grants the texts and holds that general councils define with
 the Spirit's authority (`acts15ReformedInference`).
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}} \land \href{#claim-59}{P_{59}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (1) \\(\href{#claim-44}{P_{44}}\\) Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved — *consensus*: Acts 15:1
+- (2) \\(\href{#claim-45}{P_{45}}\\) Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved — *consensus*: Acts 15:10-11
+- (3) \\(\href{#claim-46}{P_{46}}\\) Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12) — *consensus*: Acts 15:15-17; [Calvin 1844](../bibliography.md#calvin-commentary-acts-volume2-1844), ad loc. Acts 15:15
+- (4) \\(\href{#claim-59}{P_{59}}\\) The apostles' own office ended with them; those after them succeed to their ministry, not to their office — *disputed*: [Calvin 1846](../bibliography.md#calvin-institutes-beveridge-3-1846), §IV.iii.4–5; [Second Vatican Council 1964](../bibliography.md#vatican-ii-lumen-gentium-1964), §20
+- \\(\therefore\\) \\(\lnot \href{#claim-50}{P_{50}}\\) *denied:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
 
 </div>
+
+In symbols, the step is \\((\href{#claim-44}{P_{44}} \land \href{#claim-45}{P_{45}} \land \href{#claim-46}{P_{46}} \land \href{#claim-59}{P_{59}}) \rightarrow \lnot \href{#claim-50}{P_{50}}\\).
 
 <a id="acts15ToCouncilWithTheSpirit"></a>
 **`acts15ToCouncilWithTheSpirit`**
@@ -797,11 +833,19 @@ Rated `disputed`: the Westminster Confession cites the same texts for the
 authority of councils and denies that councils since the apostles cannot err
 (`acts15RomanInference`).
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}} \land \href{#claim-60}{P_{60}} \land \lnot \href{#claim-59}{P_{59}}) \rightarrow \href{#claim-50}{P_{50}}\\) — *would give:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (1) \\(\href{#claim-48}{P_{48}}\\) Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things — *consensus*: Acts 15:28
+- (2) \\(\href{#claim-49}{P_{49}}\\) Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem — *consensus*: Acts 16:4
+- (3) \\(\href{#claim-60}{P_{60}}\\) Acts 15:6, 22–23; 16:4 — the apostles and elders came together — *consensus*: Acts 15:6; Acts 15:22-23; Acts 16:4
+- (4) \\(\lnot \href{#claim-59}{P_{59}}\\) *denied:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office — *disputed*: [Calvin 1846](../bibliography.md#calvin-institutes-beveridge-3-1846), §IV.iii.4–5; [Second Vatican Council 1964](../bibliography.md#vatican-ii-lumen-gentium-1964), §20
+- \\(\therefore\\) \\(\href{#claim-50}{P_{50}}\\) A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
 
 </div>
+
+In symbols, the step is \\((\href{#claim-48}{P_{48}} \land \href{#claim-49}{P_{49}} \land \href{#claim-60}{P_{60}} \land \lnot \href{#claim-59}{P_{59}}) \rightarrow \href{#claim-50}{P_{50}}\\).
 
 <a id="apostlesToTheirOfficeEnded"></a>
 **`apostlesToTheirOfficeEnded`**
@@ -816,11 +860,19 @@ Colossians 1:1). So the apostles' own office ended with them. Rated `disputed`:
 *Lumen Gentium* 20 grants the texts and holds that the apostles' office is
 permanent in the order of bishops (`apostlesOfficeEndedInference`).
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-54}{P_{54}} \land \href{#claim-55}{P_{55}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \href{#claim-59}{P_{59}}\\) — *would give:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (1) \\(\href{#claim-54}{P_{54}}\\) Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection — *consensus*: Acts 1:21-22; [Calvin 1844](../bibliography.md#calvin-commentary-acts-1844), p. 66
+- (2) \\(\href{#claim-55}{P_{55}}\\) 1 Corinthians 15:8 — and last of all he was seen of me also — *consensus*: 1 Cor 15:8
+- (3) \\(\href{#claim-56}{P_{56}}\\) 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures — *consensus*: 2 Pet 3:15-16
+- (4) \\(\href{#claim-57}{P_{57}}\\) 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother — *consensus*: 2 Cor 1:1; Col 1:1
+- \\(\therefore\\) \\(\href{#claim-59}{P_{59}}\\) The apostles' own office ended with them; those after them succeed to their ministry, not to their office
 
 </div>
+
+In symbols, the step is \\((\href{#claim-54}{P_{54}} \land \href{#claim-55}{P_{55}} \land \href{#claim-56}{P_{56}} \land \href{#claim-57}{P_{57}}) \rightarrow \href{#claim-59}{P_{59}}\\).
 
 <a id="successionToTheOfficeContinuing"></a>
 **`successionToTheOfficeContinuing`**
@@ -834,11 +886,18 @@ Rated `disputed`: Calvin grants the texts and holds that the apostolic office
 was not "instituted in the Church to be perpetual"
 (`apostolicSuccessionInference`).
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-61}{P_{61}} \land \href{#claim-62}{P_{62}} \land \href{#claim-63}{P_{63}}) \rightarrow \lnot \href{#claim-59}{P_{59}}\\) — *would deny:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (1) \\(\href{#claim-61}{P_{61}}\\) Acts 1:20 — his bishoprick let another take — *consensus*: Acts 1:20; [Calvin 1844](../bibliography.md#calvin-commentary-acts-1844), p. 65
+- (2) \\(\href{#claim-62}{P_{62}}\\) 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also — *consensus*: 2 Tim 2:2
+- (3) \\(\href{#claim-63}{P_{63}}\\) 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them — *consensus*: [Clement of Rome](../bibliography.md#clement-first-corinthians-96), §42, 44; [Second Vatican Council 1964](../bibliography.md#vatican-ii-lumen-gentium-1964), §20
+- \\(\therefore\\) \\(\lnot \href{#claim-59}{P_{59}}\\) *denied:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
 
 </div>
+
+In symbols, the step is \\((\href{#claim-61}{P_{61}} \land \href{#claim-62}{P_{62}} \land \href{#claim-63}{P_{63}}) \rightarrow \lnot \href{#claim-59}{P_{59}}\\).
 
 <a id="mosesSeatToTheWordTaught"></a>
 **`mosesSeatToTheWordTaught`**
@@ -853,11 +912,18 @@ not for the seat alone. Rated `disputed`: Cornelius a Lapide grants the texts
 and holds that the scribes were to be obeyed in all "not contrary to Moses and
 the Law" (`mosesSeatReformedInference`).
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-3}{P_{3}}) \rightarrow \lnot \href{#claim-53}{P_{53}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- (1) \\(\href{#claim-51}{P_{51}}\\) Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works — *consensus*: Matt 23:2-3; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), p. 15
+- (2) \\(\href{#claim-52}{P_{52}}\\) Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing — *consensus*: Matt 23:16-22
+- (3) \\(\href{#claim-3}{P_{3}}\\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command — *consensus*: Mark 7:1-13; Matt 15:1-9; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.10
+- \\(\therefore\\) \\(\lnot \href{#claim-53}{P_{53}}\\) *denied:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 
 </div>
+
+In symbols, the step is \\((\href{#claim-51}{P_{51}} \land \href{#claim-52}{P_{52}} \land \href{#claim-3}{P_{3}}) \rightarrow \lnot \href{#claim-53}{P_{53}}\\).
 
 <a id="mosesSeatToTheOffice"></a>
 **`mosesSeatToTheOffice`**
@@ -871,11 +937,16 @@ hold, in what is not contrary to God's law, even when they live ill. Rated
 "only so far as they adhere to the pure and simple exposition of the Law"
 (`mosesSeatRomanInference`).
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{#claim-51}{P_{51}} \rightarrow \href{#claim-53}{P_{53}}\\) — *would give:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- (1) \\(\href{#claim-51}{P_{51}}\\) Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works — *consensus*: Matt 23:2-3; [Wenham 1953](../bibliography.md#wenham-our-lords-view-1953), p. 15
+- \\(\therefore\\) \\(\href{#claim-53}{P_{53}}\\) Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 
 </div>
+
+In symbols, the step is \\(\href{#claim-51}{P_{51}} \rightarrow \href{#claim-53}{P_{53}}\\).
 
 <a id="principleExcludesMensCommandments"></a>
 **`principleExcludesMensCommandments`**
@@ -883,11 +954,16 @@ hold, in what is not contrary to God's law, even when they live ill. Rated
 What the principle says of a commandment of men: it may not be bound on the
 Church as God's word. This is Isaiah 29:13 as Mark 7:7 quotes it.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{#claim-37}{P_{37}} \rightarrow \lnot \href{#claim-38}{P_{38}}\\) — *would deny:* A commandment of men may rightly be bound on the Church as God's word
+- (1) \\(\href{#claim-37}{P_{37}}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
+- \\(\therefore\\) \\(\lnot \href{#claim-38}{P_{38}}\\) *denied:* A commandment of men may rightly be bound on the Church as God's word
 
 </div>
+
+In symbols, the step is \\(\href{#claim-37}{P_{37}} \rightarrow \lnot \href{#claim-38}{P_{38}}\\).
 
 <a id="principleToSoleRule"></a>
 **`principleToSoleRule`**
@@ -901,11 +977,17 @@ interpreter; Florovsky holds that tradition adds nothing to
 Scripture and keeps the mind of the Church as its interpreter. Neither adds a
 word to Scripture; both deny it is the *sole* infallible rule.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Scripture is the sole infallible rule of faith
+- (1) \\(\href{#claim-37}{P_{37}}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972)
+- (2) \\(\href{#claim-39}{P_{39}}\\) No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — *disputed*: [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6
+- \\(\therefore\\) \\(\href{#claim-9}{P_{9}}\\) Scripture is the sole infallible rule of faith
 
 </div>
+
+In symbols, the step is \\((\href{#claim-37}{P_{37}} \land \href{#claim-39}{P_{39}}) \rightarrow \href{#claim-9}{P_{9}}\\).
 
 <a id="tradition0ToSoleRule"></a>
 **`tradition0ToSoleRule`**
@@ -913,11 +995,19 @@ word to Scripture; both deny it is the *sole* infallible rule.
 Geisler's route: the historical-grammatical method suffices, so creeds may
 inform without binding, and no second infallible rule is needed.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-26}{P_{26}} \land \href{#claim-25}{P_{25}} \land \href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\) — *would give:* Scripture is the sole infallible rule of faith
+- (1) \\(\href{#claim-26}{P_{26}}\\) The historical-grammatical method alone suffices to obtain the meaning of scripture on essential doctrine — *disputed*: [Geisler 2005](../bibliography.md#geisler-review-mathison-2005), §120–121
+- (2) \\(\href{#claim-25}{P_{25}}\\) Creeds are informative without being normative — *disputed*: [Geisler 2005](../bibliography.md#geisler-review-mathison-2005), §120
+- (3) \\(\href{#claim-6}{P_{6}}\\) Scripture is infallible — *consensus*: [Grudem 1994](../bibliography.md#grudem-systematic-theology-1994), §ch. 5; [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii
+- (4) \\(\href{#claim-12}{P_{12}}\\) No candidate rule of faith other than scripture is infallible — *disputed*: [Westminster Assembly 1647](../bibliography.md#westminster-confession-1647), §I.6; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001)
+- \\(\therefore\\) \\(\href{#claim-9}{P_{9}}\\) Scripture is the sole infallible rule of faith
 
 </div>
+
+In symbols, the step is \\((\href{#claim-26}{P_{26}} \land \href{#claim-25}{P_{25}} \land \href{#claim-6}{P_{6}} \land \href{#claim-12}{P_{12}}) \rightarrow \href{#claim-9}{P_{9}}\\).
 
 #### Steps denying it
 
@@ -927,11 +1017,17 @@ inform without binding, and no second infallible rule is needed.
 **Tradition II.** Binding unwritten tradition as a coordinate source denies
 that scripture is the sole rule.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-5}{P_{5}} \land \href{#claim-13}{P_{13}}) \rightarrow \lnot \href{#claim-9}{P_{9}}\\) — *would deny:* Scripture is the sole infallible rule of faith
+- (1) \\(\href{#claim-5}{P_{5}}\\) 2 Thessalonians 2:15 — hold to the traditions taught by word or letter — *consensus*: 2 Thess 2:15
+- (2) \\(\href{#claim-13}{P_{13}}\\) Tradition is a coordinate source of revelation alongside scripture — *disputed*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Geiselmann 1966](../bibliography.md#geiselmann-meaning-of-tradition-1966); [Congar 1966](../bibliography.md#congar-tradition-and-traditions-1966)
+- \\(\therefore\\) \\(\lnot \href{#claim-9}{P_{9}}\\) *denied:* Scripture is the sole infallible rule of faith
 
 </div>
+
+In symbols, the step is \\((\href{#claim-5}{P_{5}} \land \href{#claim-13}{P_{13}}) \rightarrow \lnot \href{#claim-9}{P_{9}}\\).
 
 <a id="magisterialDeniesSoleRule"></a>
 **`magisterialDeniesSoleRule`**
@@ -939,11 +1035,16 @@ that scripture is the sole rule.
 **Tradition III.** An infallible magisterium is a second infallible rule,
 whatever is said about sources.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{#claim-14}{P_{14}} \rightarrow \lnot \href{#claim-9}{P_{9}}\\) — *would deny:* Scripture is the sole infallible rule of faith
+- (1) \\(\href{#claim-14}{P_{14}}\\) The magisterium is an infallible interpreter of scripture — *well supported*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Vatican I (1870), Pastor Aeternus, ch. 4; [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001)
+- \\(\therefore\\) \\(\lnot \href{#claim-9}{P_{9}}\\) *denied:* Scripture is the sole infallible rule of faith
 
 </div>
+
+In symbols, the step is \\(\href{#claim-14}{P_{14}} \rightarrow \lnot \href{#claim-9}{P_{9}}\\).
 
 <a id="orthodoxDeniesSoleRule"></a>
 **`orthodoxDeniesSoleRule`**
@@ -951,11 +1052,16 @@ whatever is said about sources.
 **Orthodoxy.** The mind of the Church interpreting infallibly is likewise a
 second infallible rule — and it is not the magisterial premise.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{#claim-15}{P_{15}} \rightarrow \lnot \href{#claim-9}{P_{9}}\\) — *would deny:* Scripture is the sole infallible rule of faith
+- (1) \\(\href{#claim-15}{P_{15}}\\) The mind of the Church, in the consensus of the Fathers and in received conciliar decisions, infallibly interprets scripture — *well supported*: [Florovsky 1972](../bibliography.md#florovsky-bible-church-tradition-1972); [Ware 1993](../bibliography.md#ware-orthodox-church-1993)
+- \\(\therefore\\) \\(\lnot \href{#claim-9}{P_{9}}\\) *denied:* Scripture is the sole infallible rule of faith
 
 </div>
+
+In symbols, the step is \\(\href{#claim-15}{P_{15}} \rightarrow \lnot \href{#claim-9}{P_{9}}\\).
 
 #### The three objections
 
@@ -965,11 +1071,17 @@ second infallible rule — and it is not the magisterial premise.
 If a doctrine binds only when scripture teaches it, and scripture does not
 teach sola scriptura, then sola scriptura does not bind.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-11}{P_{11}} \land \lnot \href{#claim-10}{P_{10}}) \rightarrow \lnot \href{#claim-9}{P_{9}}\\) — *would deny:* Scripture is the sole infallible rule of faith
+- (1) \\(\href{#claim-11}{P_{11}}\\) A doctrine is binding only if scripture teaches it — *disputed*: [Calvin 1960](../bibliography.md#calvin-institutes-1960), §IV.x.8
+- (2) \\(\lnot \href{#claim-10}{P_{10}}\\) *denied:* Scripture itself teaches that scripture is the sole infallible rule — *disputed*: [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii.4
+- \\(\therefore\\) \\(\lnot \href{#claim-9}{P_{9}}\\) *denied:* Scripture is the sole infallible rule of faith
 
 </div>
+
+In symbols, the step is \\((\href{#claim-11}{P_{11}} \land \lnot \href{#claim-10}{P_{10}}) \rightarrow \lnot \href{#claim-9}{P_{9}}\\).
 
 <a id="canonObjectionStep"></a>
 **`canonObjectionStep`**
@@ -978,11 +1090,17 @@ If the canon is known only through the Church's reception, and identifying
 the canon requires an infallible authority, then an infallible authority
 outside scripture is needed to identify scripture.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-16}{P_{16}} \land \href{#claim-17}{P_{17}}) \rightarrow \lnot \href{#claim-9}{P_{9}}\\) — *would deny:* Scripture is the sole infallible rule of faith
+- (1) \\(\href{#claim-16}{P_{16}}\\) The canon is known through the Church's reception of it — *consensus*: [Schaff 1887](../bibliography.md#npnf1-04-1887), §Augustine, Contra epistolam Manichaei 5.6; [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions
+- (2) \\(\href{#claim-17}{P_{17}}\\) Identifying the canon requires an infallible authority — *disputed*: [Tanner 1990](../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions
+- \\(\therefore\\) \\(\lnot \href{#claim-9}{P_{9}}\\) *denied:* Scripture is the sole infallible rule of faith
 
 </div>
+
+In symbols, the step is \\((\href{#claim-16}{P_{16}} \land \href{#claim-17}{P_{17}}) \rightarrow \lnot \href{#claim-9}{P_{9}}\\).
 
 <a id="interpretiveRegressStep"></a>
 **`interpretiveRegressStep`**
@@ -992,11 +1110,17 @@ authority, exercised indirectly by choosing the body to submit to, then
 Tradition I's ministerial authority is not a principled difference from
 Tradition 0.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-19}{P_{19}} \land \href{#claim-21}{P_{21}}) \rightarrow \lnot \href{#claim-20}{P_{20}}\\) — *would deny:* Sola scriptura differs in principle from solo scriptura
+- (1) \\(\href{#claim-19}{P_{19}}\\) Tradition carries real but fallible — ministerial — authority — *disputed*: [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001); [Oberman 1986](../bibliography.md#oberman-dawn-1986)
+- (2) \\(\href{#claim-21}{P_{21}}\\) The individual retains ultimate interpretive authority, exercised indirectly by choosing which body to submit to — *disputed*: [Cross and Judisch 2009](../bibliography.md#cross-judisch-interpretive-authority-2009), §§ III
+- \\(\therefore\\) \\(\lnot \href{#claim-20}{P_{20}}\\) *denied:* Sola scriptura differs in principle from solo scriptura
 
 </div>
+
+In symbols, the step is \\((\href{#claim-19}{P_{19}} \land \href{#claim-21}{P_{21}}) \rightarrow \lnot \href{#claim-20}{P_{20}}\\).
 
 #### Geisler's circle
 
@@ -1009,11 +1133,16 @@ said to require the consensus of the Church.
 
 Leg one: the creedal consensus rests on scripture's clarity.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{#claim-8}{P_{8}} \rightarrow \href{#claim-27}{P_{27}}\\) — *would give:* The creedal consensus is hermeneutically necessary for understanding scripture
+- (1) \\(\href{#claim-8}{P_{8}}\\) Scripture is clear on what is necessary for salvation — *disputed*: [Calvin 1960](../bibliography.md#calvin-institutes-1960), §I.vii.5
+- \\(\therefore\\) \\(\href{#claim-27}{P_{27}}\\) The creedal consensus is hermeneutically necessary for understanding scripture
 
 </div>
+
+In symbols, the step is \\(\href{#claim-8}{P_{8}} \rightarrow \href{#claim-27}{P_{27}}\\).
 
 <a id="perspicuityRestsOnConsensus"></a>
 **`perspicuityRestsOnConsensus`**
@@ -1021,11 +1150,16 @@ Leg one: the creedal consensus rests on scripture's clarity.
 Leg two: scripture's clear sense is not obtainable without that
 consensus.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{#claim-27}{P_{27}} \rightarrow \href{#claim-8}{P_{8}}\\) — *would give:* Scripture is clear on what is necessary for salvation
+- (1) \\(\href{#claim-27}{P_{27}}\\) The creedal consensus is hermeneutically necessary for understanding scripture — *disputed*: [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001), §275
+- \\(\therefore\\) \\(\href{#claim-8}{P_{8}}\\) Scripture is clear on what is necessary for salvation
 
 </div>
+
+In symbols, the step is \\(\href{#claim-27}{P_{27}} \rightarrow \href{#claim-8}{P_{8}}\\).
 
 #### The lines
 
@@ -1404,11 +1538,17 @@ denies that circularity is a defect peculiar to Tradition I, which is why
 
 Both legs together make the reasoning circular.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-29}{P_{29}} \land \href{#claim-30}{P_{30}}) \rightarrow \href{#claim-31}{P_{31}}\\) — *would give:* Tradition I's reasoning is circular
+- (1) \\(\href{#claim-29}{P_{29}}\\) The creedal consensus rests on the clarity of scripture — *disputed*: [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001), §279–280
+- (2) \\(\href{#claim-30}{P_{30}}\\) Scripture's clear sense is not obtainable without the creedal consensus — *disputed*: [Mathison 2001](../bibliography.md#mathison-shape-sola-scriptura-2001), §275
+- \\(\therefore\\) \\(\href{#claim-31}{P_{31}}\\) Tradition I's reasoning is circular
 
 </div>
+
+In symbols, the step is \\((\href{#claim-29}{P_{29}} \land \href{#claim-30}{P_{30}}) \rightarrow \href{#claim-31}{P_{31}}\\).
 
 <a id="circularityDefeats"></a>
 **`circularityDefeats`**
@@ -1417,11 +1557,17 @@ Circularity defeats the position **if** it is not a feature of every appeal
 to an ultimate authority. Geisler's charge needs the second conjunct, and it is
 what Barrett denies.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-31}{P_{31}} \land \lnot \href{#claim-33}{P_{33}}) \rightarrow \href{#claim-32}{P_{32}}\\) — *would give:* The circularity defeats Tradition I
+- (1) \\(\href{#claim-31}{P_{31}}\\) Tradition I's reasoning is circular — *disputed*: [Geisler 2005](../bibliography.md#geisler-review-mathison-2005), §122–123
+- (2) \\(\lnot \href{#claim-33}{P_{33}}\\) *denied:* Any appeal to an ultimate authority is circular, there being no higher authority to appeal to — *disputed*: [Barrett 2016](../bibliography.md#barrett-gods-word-alone-2016), §ch. 11
+- \\(\therefore\\) \\(\href{#claim-32}{P_{32}}\\) The circularity defeats Tradition I
 
 </div>
+
+In symbols, the step is \\((\href{#claim-31}{P_{31}} \land \lnot \href{#claim-33}{P_{33}}) \rightarrow \href{#claim-32}{P_{32}}\\).
 
 <a id="geislerCircleLine"></a>
 **`geislerCircleLine`** — Geisler's circularity charge against Tradition I

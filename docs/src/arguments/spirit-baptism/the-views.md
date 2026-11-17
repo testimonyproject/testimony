@@ -76,11 +76,17 @@ From 1 Corinthians 12:13, read as Christ baptizing in the Spirit, to Spirit
 baptism at conversion. Rated `disputed`, conservatively: the Assemblies of God
 deny its conclusion by denying a ground, the conversion reading.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-5}{P_{5}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* Every believer is baptized in the Spirit at conversion
+- (1) \\(\href{claims.html#claim-1}{P_{1}}\\) 1 Corinthians 12:13 — in one Spirit we were all baptized into one body — *consensus*: 1 Cor 12:13
+- (2) \\(\href{claims.html#claim-5}{P_{5}}\\) 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion — *disputed*: [Dunn 1970](../../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../../bibliography.md#stott-baptism-fullness-1975)
+- \\(\therefore\\) \\(\href{claims.html#claim-13}{P_{13}}\\) Every believer is baptized in the Spirit at conversion
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-5}{P_{5}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\).
 
 <a id="conversionExcludesASecond"></a>
 **`conversionExcludesASecond`**
@@ -91,11 +97,16 @@ the Spirit comes at conversion and holds that Luke's is a second gift, to be
 sought. Whether he denies this step or uses the word in two senses is not yet
 encoded.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-14}{P_{14}}\\) — *would deny:* A baptism in the Spirit distinct from and after conversion is to be sought
+- (1) \\(\href{claims.html#claim-13}{P_{13}}\\) Every believer is baptized in the Spirit at conversion — *disputed*: [Dunn 1970](../../bibliography.md#dunn-baptism-holy-spirit-1970); [Stott 1975](../../bibliography.md#stott-baptism-fullness-1975)
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-14}{P_{14}}\\) *denied:* A baptism in the Spirit distinct from and after conversion is to be sought
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-14}{P_{14}}\\).
 
 <a id="conversionCase"></a>
 **`conversionCase`** — At conversion (Dunn, Stott)
@@ -125,11 +136,17 @@ reading: if the Spirit is the instrument baptizing into the body, the verse is
 not Christ baptizing in the Spirit. Rated `disputed`, conservatively: Dunn and
 Stott deny its conclusion by denying a ground, the instrumental reading.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-6}{P_{6}}) \rightarrow \lnot \href{claims.html#claim-5}{P_{5}}\\) — *would deny:* 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion
+- (1) \\(\href{claims.html#claim-1}{P_{1}}\\) 1 Corinthians 12:13 — in one Spirit we were all baptized into one body — *consensus*: 1 Cor 12:13
+- (2) \\(\href{claims.html#claim-6}{P_{6}}\\) 1 Corinthians 12:13 is baptism by the Spirit into the body, not Christ baptizing in the Spirit — *disputed*: [General Presbytery of the Assemblies of God 2010](../../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-5}{P_{5}}\\) *denied:* 1 Corinthians 12:13 is the baptism in the Spirit Christ gives, received by every believer at conversion
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-6}{P_{6}}) \rightarrow \lnot \href{claims.html#claim-5}{P_{5}}\\).
 
 <a id="actsToSecond"></a>
 **`actsToSecond`**
@@ -138,11 +155,18 @@ From the Acts narratives, read as a pattern of empowerment, to a second Spirit
 baptism to be sought. Rated `wellSupported`: its rejecters deny a ground, not
 the step.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-7}{P_{7}} \land \href{claims.html#claim-8}{P_{8}}) \rightarrow \href{claims.html#claim-14}{P_{14}}\\) — *would give:* A baptism in the Spirit distinct from and after conversion is to be sought
+- (1) \\(\href{claims.html#claim-2}{P_{2}}\\) Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — *disputed*: [General Presbytery of the Assemblies of God 2010](../../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
+- (2) \\(\href{claims.html#claim-7}{P_{7}}\\) In Luke-Acts, baptism in the Spirit is prophetic empowerment, distinct from the gift Paul ties to conversion — *disputed*: [Menzies 2017](../../bibliography.md#menzies-lukes-understanding-2017); [Menzies 1994](../../bibliography.md#menzies-empowered-witness-1994); [Stronstad 1984](../../bibliography.md#stronstad-charismatic-theology-1984)
+- (3) \\(\href{claims.html#claim-8}{P_{8}}\\) Luke's narratives of receiving the Spirit are a pattern for believers today — *disputed*: [Stronstad 1984](../../bibliography.md#stronstad-charismatic-theology-1984); [General Presbytery of the Assemblies of God 2010](../../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010)
+- \\(\therefore\\) \\(\href{claims.html#claim-14}{P_{14}}\\) A baptism in the Spirit distinct from and after conversion is to be sought
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-7}{P_{7}} \land \href{claims.html#claim-8}{P_{8}}) \rightarrow \href{claims.html#claim-14}{P_{14}}\\).
 
 <a id="pentecostalCase"></a>
 **`pentecostalCase`** — After conversion (Assemblies of God; Menzies, Stronstad)
@@ -174,11 +198,16 @@ The holiness step: the second work of grace is the baptism with the Spirit,
 to be sought after conversion. Rated `disputed`: Wesley grants the second work
 and denies that it is "receiving the Holy Ghost".
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-10}{P_{10}} \rightarrow \href{claims.html#claim-14}{P_{14}}\\) — *would give:* A baptism in the Spirit distinct from and after conversion is to be sought
+- (1) \\(\href{claims.html#claim-10}{P_{10}}\\) Entire sanctification is a second work of grace after justification — *disputed*: [Church of the Nazarene 2023](../../bibliography.md#church-of-the-nazarene-manual-2023), §Articles of Faith, X, ¶10; [Wesley 1931](../../bibliography.md#wesley-letters-1931), §to Joseph Benson, 28 December 1770; [Bassett et al. 2010](../../bibliography.md#bassett-white-paper-article-x-2010)
+- \\(\therefore\\) \\(\href{claims.html#claim-14}{P_{14}}\\) A baptism in the Spirit distinct from and after conversion is to be sought
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-10}{P_{10}} \rightarrow \href{claims.html#claim-14}{P_{14}}\\).
 
 <a id="holinessCase"></a>
 **`holinessCase`** — A second work of grace (the holiness tradition)
@@ -209,11 +238,18 @@ sought. Rated `disputed`, conservatively: Westminster, which holds that the grac
 of baptism is not tied to the moment of the rite, denies a ground, not the
 step.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-11}{P_{11}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-15}{P_{15}}\\) — *would give:* The Spirit is given in baptism and confirmation, not in a second baptism beyond the sacraments
+- (1) \\(\href{claims.html#claim-4}{P_{4}}\\) Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit — *consensus*: Acts 2:38
+- (2) \\(\href{claims.html#claim-11}{P_{11}}\\) The Spirit is given in water baptism: new birth in the Holy Spirit — *disputed*: [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1262; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1265; [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Small Catechism, Baptism, third part
+- (3) \\(\href{claims.html#claim-12}{P_{12}}\\) Confirmation gives the full outpouring of the Spirit, as at Pentecost and in Samaria — *disputed*: [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1302; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1288
+- \\(\therefore\\) \\(\href{claims.html#claim-15}{P_{15}}\\) The Spirit is given in baptism and confirmation, not in a second baptism beyond the sacraments
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-11}{P_{11}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-15}{P_{15}}\\).
 
 <a id="sacramentsExcludeASeeking"></a>
 **`sacramentsExcludeASeeking`**
@@ -222,11 +258,16 @@ If the Spirit is given in the sacraments, there is no second Spirit baptism to
 seek beyond them. Rated `disputed`, conservatively: the Catholic charismatic
 renewal is its natural contester, not yet cited.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-15}{P_{15}} \rightarrow \lnot \href{claims.html#claim-14}{P_{14}}\\) — *would deny:* A baptism in the Spirit distinct from and after conversion is to be sought
+- (1) \\(\href{claims.html#claim-15}{P_{15}}\\) The Spirit is given in baptism and confirmation, not in a second baptism beyond the sacraments — *disputed*: [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1302
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-14}{P_{14}}\\) *denied:* A baptism in the Spirit distinct from and after conversion is to be sought
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-15}{P_{15}} \rightarrow \lnot \href{claims.html#claim-14}{P_{14}}\\).
 
 <a id="sacramentalCase"></a>
 **`sacramentalCase`** — In baptism and confirmation (Catholic)
@@ -261,11 +302,17 @@ Acts gives no one order: the Spirit falls as Cornelius's household hears
 hands (8:17; 19:6). So no episode is the pattern. Rated `disputed`: the
 Assemblies of God grant Acts 10 and read it as evidence for subsequence.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-4}{P_{4}}) \rightarrow \lnot \href{claims.html#claim-8}{P_{8}}\\) — *would deny:* Luke's narratives of receiving the Spirit are a pattern for believers today
+- (1) \\(\href{claims.html#claim-3}{P_{3}}\\) Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism — *consensus*: Acts 10:44-48
+- (2) \\(\href{claims.html#claim-4}{P_{4}}\\) Acts 2:38 — repent and be baptized, and you will receive the gift of the Spirit — *consensus*: Acts 2:38
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-8}{P_{8}}\\) *denied:* Luke's narratives of receiving the Spirit are a pattern for believers today
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-4}{P_{4}}) \rightarrow \lnot \href{claims.html#claim-8}{P_{8}}\\).
 
 <a id="varietyCase"></a>
 **`varietyCase`** — Acts gives the Spirit in more than one order
@@ -291,11 +338,17 @@ If the Samaritan and Ephesian episodes are unrepeatable transitions, they set
 no norm: no second Spirit baptism is to be sought on their strength. Stott's
 step, rated `disputed` conservatively.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-9}{P_{9}}) \rightarrow \lnot \href{claims.html#claim-14}{P_{14}}\\) — *would deny:* A baptism in the Spirit distinct from and after conversion is to be sought
+- (1) \\(\href{claims.html#claim-2}{P_{2}}\\) Acts 8:14–17 and 19:1–7 — believers, already baptized, receive the Spirit afterwards (so the Assemblies of God; Dunn denies they were yet believers) — *disputed*: [General Presbytery of the Assemblies of God 2010](../../bibliography.md#assemblies-of-god-baptism-holy-spirit-2010); Acts 8:14-17; Acts 19:1-7
+- (2) \\(\href{claims.html#claim-9}{P_{9}}\\) The episodes of Acts 8, 10 and 19 are unrepeatable steps in the gospel's spread, not a pattern — *disputed*: [Stott 1975](../../bibliography.md#stott-baptism-fullness-1975)
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-14}{P_{14}}\\) *denied:* A baptism in the Spirit distinct from and after conversion is to be sought
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-9}{P_{9}}) \rightarrow \lnot \href{claims.html#claim-14}{P_{14}}\\).
 
 <a id="transitionCase"></a>
 **`transitionCase`** — Acts 8 and 19 as transitions (Stott)

@@ -177,11 +177,18 @@ justified him was not his works but his trust in God's mercy: faith sufficed.
 Rated `disputed`: Trent accepts the text and the absence of works, and denies
 that the plea was enough alone (Session VI, ch. 6 and canon 9).
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-60}{P_{60}} \land \href{claims.html#claim-61}{P_{61}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* Faith is sufficient: whoever believes is saved
+- (1) \\(\href{claims.html#claim-59}{P_{59}}\\) Luke 18:9–14 — the tax collector pleads for mercy and goes home justified, rather than the Pharisee who listed his works — *consensus*: Luke 18:9-14; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 201–207
+- (2) \\(\href{claims.html#claim-60}{P_{60}}\\) ‘Justified’ at Luke 18:14 is God's verdict: accepted as righteous before God — *well supported*: [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; Luke 18:14
+- (3) \\(\href{claims.html#claim-61}{P_{61}}\\) The tax collector brings no works that merit, only a humble and contrite plea for mercy — *consensus*: Luke 18:9-14; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 206–207; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 36
+- \\(\therefore\\) \\(\href{claims.html#claim-26}{P_{26}}\\) Faith is sufficient: whoever believes is saved
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-60}{P_{60}} \land \href{claims.html#claim-61}{P_{61}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\).
 
 <a id="luke18Line"></a>
 **`luke18Line`** — Luke 18:9–14 (the tax collector justified)
@@ -228,11 +235,17 @@ of entering the kingdom in its own right, then salvation is not apart from
 works. Rated `disputed`: Calvin accepts the text and denies that the doing is
 more than the fruit of faith.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-63}{P_{63}}) \rightarrow \lnot \href{claims.html#claim-28}{P_{28}}\\) — *would deny:* Salvation is not by works: no work is its ground
+- (1) \\(\href{claims.html#claim-62}{P_{62}}\\) Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, not profession or mighty works — *well supported*: Matt 7:21-23; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826
+- (2) \\(\href{claims.html#claim-63}{P_{63}}\\) In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith — *disputed*: [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1821
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-28}{P_{28}}\\) *denied:* Salvation is not by works: no work is its ground
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-63}{P_{63}}) \rightarrow \lnot \href{claims.html#claim-28}{P_{28}}\\).
 
 <a id="matthew7ToFruit"></a>
 **`matthew7ToFruit`**
@@ -242,11 +255,17 @@ believing, and those rejected were never known, then the doing is the fruit of
 faith and not a condition of entry in its own right. Rated `disputed`: the
 *Catechism* accepts the text and reads it the other way.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-64}{P_{64}}) \rightarrow \lnot \href{claims.html#claim-63}{P_{63}}\\) — *would deny:* In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith
+- (1) \\(\href{claims.html#claim-62}{P_{62}}\\) Matthew 7:21–23 — the criterion at the judgment is doing the Father's will, not profession or mighty works — *well supported*: Matt 7:21-23; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2826
+- (2) \\(\href{claims.html#claim-64}{P_{64}}\\) In Matthew 7:21–23, doing the Father's will includes believing in Christ, and "I never knew you" means no union with him by faith — *disputed*: [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-1845), pp. 367–368
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-63}{P_{63}}\\) *denied:* In Matthew 7:21–23, doing the Father's will is a condition of entering the kingdom in its own right, not only the fruit of faith
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-64}{P_{64}}) \rightarrow \lnot \href{claims.html#claim-63}{P_{63}}\\).
 
 <a id="matthew7ObedienceLine"></a>
 **`matthew7ObedienceLine`** — Matthew 7:21–23, read as obedience a condition of entry
@@ -319,11 +338,17 @@ The Catholic step from Matthew 19:17. If keeping the commandments is the way to
 life, then salvation is not apart from works. Rated `disputed`: Calvin accepts
 the text and denies that it is the way for any sinner.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-66}{P_{66}}) \rightarrow \lnot \href{claims.html#claim-28}{P_{28}}\\) — *would deny:* Salvation is not by works: no work is its ground
+- (1) \\(\href{claims.html#claim-65}{P_{65}}\\) Matthew 19:17 — "If you would enter life, keep the commandments" — *consensus*: Matt 19:16-22; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 35
+- (2) \\(\href{claims.html#claim-66}{P_{66}}\\) In Matthew 19:17, keeping the commandments is the way to life, made possible by grace — *disputed*: [II 1993](../../bibliography.md#john-paul-ii-veritatis-splendor-1993), §12; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §2052–2053; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 35
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-28}{P_{28}}\\) *denied:* Salvation is not by works: no work is its ground
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-66}{P_{66}}) \rightarrow \lnot \href{claims.html#claim-28}{P_{28}}\\).
 
 <a id="matthew19ToLegalReply"></a>
 **`matthew19ToLegalReply`**
@@ -333,11 +358,17 @@ to show the young man what he has not kept, then the commandments are not
 offered as the way to life. Rated `disputed`: *Veritatis Splendor* accepts the
 text and reads it as the way.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-67}{P_{67}}) \rightarrow \lnot \href{claims.html#claim-66}{P_{66}}\\) — *would deny:* In Matthew 19:17, keeping the commandments is the way to life, made possible by grace
+- (1) \\(\href{claims.html#claim-65}{P_{65}}\\) Matthew 19:17 — "If you would enter life, keep the commandments" — *consensus*: Matt 19:16-22; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 35
+- (2) \\(\href{claims.html#claim-67}{P_{67}}\\) In Matthew 19:17, Christ answers on the law's own terms, so that the young man may see he has not kept it and turn to faith — *disputed*: [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), pp. 393–394
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-66}{P_{66}}\\) *denied:* In Matthew 19:17, keeping the commandments is the way to life, made possible by grace
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-67}{P_{67}}) \rightarrow \lnot \href{claims.html#claim-66}{P_{66}}\\).
 
 <a id="matthew19WayLine"></a>
 **`matthew19WayLine`** — Matthew 19:17, read as the commandments the way to life

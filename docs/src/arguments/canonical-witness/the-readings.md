@@ -304,11 +304,18 @@ who went home justified.
 
 The three parts, together, are *faith alone*.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Justification is by faith alone
+- (1) \\(\href{claims.html#claim-21}{P_{21}}\\) Faith is necessary: no one is saved without it — *consensus*: Heb 11:6; John 3:16-18; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8
+- (2) \\(\href{claims.html#claim-22}{P_{22}}\\) Faith is sufficient: whoever believes is saved — *disputed*: Rom 4:4-5; John 5:24; [Schreiner 2015](../../bibliography.md#schreiner-faith-alone-2015)
+- (3) \\(\href{claims.html#claim-23}{P_{23}}\\) Works are not the ground of justification — *disputed*: Rom 3:28; Eph 2:8-9; [Schreiner 2015](../../bibliography.md#schreiner-faith-alone-2015)
+- \\(\therefore\\) \\(\href{claims.html#claim-24}{P_{24}}\\) Justification is by faith alone
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-24}{P_{24}}\\).
 
 <a id="jamesLine"></a>
 **`jamesLine`** — James 2
@@ -337,11 +344,17 @@ righteousness. So works are the fruit of saving faith, not its ground.
 
 Faith alone, with its fruit, is faith that is never alone.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\) — *would give:* Justification is by faith alone, by a faith that is never alone
+- (1) \\(\href{claims.html#claim-24}{P_{24}}\\) Justification is by faith alone — *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.19; [of Poitiers 2013](../../bibliography.md#hilary-commentary-matthew-2013), §8.6; [of Caesarea 1999](../../bibliography.md#basil-ascetical-works-1999), §Homily 20, Of Humility
+- (2) \\(\href{claims.html#claim-25}{P_{25}}\\) Good works are the fruit and evidence of a true and lively faith — *well supported*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVI.2
+- \\(\therefore\\) \\(\href{claims.html#claim-26}{P_{26}}\\) Justification is by faith alone, by a faith that is never alone
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-25}{P_{25}}) \rightarrow \href{claims.html#claim-26}{P_{26}}\\).
 
 <a id="trentOnJames"></a>
 **`trentOnJames`**
@@ -350,11 +363,17 @@ Faith alone, with its fruit, is faith that is never alone.
 justification already received, by works done in grace; so works are part of
 its ground, and faith alone is denied.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-19}{P_{19}} \land \lnot \href{claims.html#claim-28}{P_{28}}) \rightarrow \lnot \href{claims.html#claim-23}{P_{23}}\\) — *would deny:* Works are not the ground of justification
+- (1) \\(\href{claims.html#claim-19}{P_{19}}\\) James 2:24: a person is justified by works and not by faith alone — *consensus*: Jas 2:24
+- (2) \\(\lnot \href{claims.html#claim-28}{P_{28}}\\) *denied:* ‘Justified’ in James 2:21–24 means shown to be righteous (denied by Trent, which reads 2:24 as an increase of justification by works done in grace) — *disputed*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 10; Jas 2:24
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-23}{P_{23}}\\) *denied:* Works are not the ground of justification
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-19}{P_{19}} \land \lnot \href{claims.html#claim-28}{P_{28}}) \rightarrow \lnot \href{claims.html#claim-23}{P_{23}}\\).
 
 <a id="jamesAgainstSufficiency"></a>
 **`jamesAgainstSufficiency`**
@@ -366,22 +385,33 @@ The rival to the reading on which James and Paul cohere: there, the faith that
 cannot save is the faith 2:14–17 describes, faith without works
 (`james2TargetsDeadFaith`).
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-19}{P_{19}}) \rightarrow \lnot \href{claims.html#claim-22}{P_{22}}\\) — *would deny:* Faith is sufficient: whoever believes is saved
+- (1) \\(\href{claims.html#claim-16}{P_{16}}\\) James 2:14–17: faith by itself, if it does not have works, is dead — *consensus*: Jas 2:14-17
+- (2) \\(\href{claims.html#claim-19}{P_{19}}\\) James 2:24: a person is justified by works and not by faith alone — *consensus*: Jas 2:24
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-22}{P_{22}}\\) *denied:* Faith is sufficient: whoever believes is saved
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-19}{P_{19}}) \rightarrow \lnot \href{claims.html#claim-22}{P_{22}}\\).
 
 <a id="notAloneIfWorksGround"></a>
 **`notAloneIfWorksGround`**
 
 And what follows from that: not faith alone.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\lnot \href{claims.html#claim-23}{P_{23}} \rightarrow \lnot \href{claims.html#claim-24}{P_{24}}\\) — *would deny:* Justification is by faith alone
+- (1) \\(\lnot \href{claims.html#claim-23}{P_{23}}\\) *denied:* Works are not the ground of justification — *disputed*: Rom 3:28; Eph 2:8-9; [Schreiner 2015](../../bibliography.md#schreiner-faith-alone-2015)
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-24}{P_{24}}\\) *denied:* Justification is by faith alone
 
 </div>
+
+In symbols, the step is \\(\lnot \href{claims.html#claim-23}{P_{23}} \rightarrow \lnot \href{claims.html#claim-24}{P_{24}}\\).
 
 <a id="corpora"></a>
 **`corpora`**

@@ -103,11 +103,16 @@ Remonstrants' the second.
 Romans 11:6: if salvation is by grace it is not by works, so it is by grace
 and not earned.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\) — *would give:* Salvation is by grace and not earned: grace goes before every saving act
+- (1) \\(\href{claims.html#claim-4}{P_{4}}\\) Romans 11:6 — if it is by grace, it is no longer on the basis of works — *consensus*: Rom 11:6
+- \\(\therefore\\) \\(\href{claims.html#claim-29}{P_{29}}\\) Salvation is by grace and not earned: grace goes before every saving act
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-4}{P_{4}} \rightarrow \href{claims.html#claim-29}{P_{29}}\\).
 
 <a id="ephesiansStep"></a>
 **`ephesiansStep`**
@@ -118,11 +123,17 @@ by grace through faith: so faith, part of that whole, is God's gift. Rated
 "conditioned on faith on our part", and Calvin, on the next verse, writes "not
 that faith is the gift of God, but that salvation is given to us by God".
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-22}{P_{22}}) \rightarrow \href{claims.html#claim-24}{P_{24}}\\) — *would give:* Faith itself is God's gift
+- (1) \\(\href{claims.html#claim-2}{P_{2}}\\) Ephesians 2:8–9 — by grace you have been saved through faith, and this is not your own doing; it is the gift of God — *consensus*: Eph 2:8-9
+- (2) \\(\href{claims.html#claim-22}{P_{22}}\\) In Ephesians 2:8, "this" (τοῦτο) points to the whole of being saved by grace through faith — *well supported*: [Hoehner 2002](../../bibliography.md#hoehner-ephesians-2002), p. 343; [Robertson 1931](../../bibliography.md#robertson-word-pictures-4-1931), ad loc. Eph 2:8
+- \\(\therefore\\) \\(\href{claims.html#claim-24}{P_{24}}\\) Faith itself is God's gift
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-22}{P_{22}}) \rightarrow \href{claims.html#claim-24}{P_{24}}\\).
 
 <a id="giftStep"></a>
 **`giftStep`**
@@ -135,11 +146,17 @@ faith: God's gift "not on account of its being offered by God to man, to be
 accepted or rejected at his pleasure, but because it is in reality conferred"
 (III/IV, article 14).
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (1) \\(\href{claims.html#claim-24}{P_{24}}\\) Faith itself is God's gift — *well supported*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, art. 14; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 681
+- (2) \\(\href{claims.html#claim-1}{P_{1}}\\) Ephesians 2:1–5 — dead in trespasses, God made us alive together with Christ — *consensus*: Eph 2:1-5
+- \\(\therefore\\) \\(\href{claims.html#claim-28}{P_{28}}\\) Conversion is God's work alone: God regenerates, and the will does nothing to it
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-24}{P_{24}} \land \href{claims.html#claim-1}{P_{1}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\).
 
 <a id="romansStep"></a>
 **`romansStep`**
@@ -150,11 +167,17 @@ not on human will or exertion", conversion is God's work alone. Rated
 willing and running as seeking salvation by the works of the law, so that the
 mercy goes to believers and can be refused.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (1) \\(\href{claims.html#claim-3}{P_{3}}\\) Romans 9:16 — it depends not on human will or exertion, but on God, who has mercy — *consensus*: Rom 9:16
+- (2) \\(\href{claims.html#claim-23}{P_{23}}\\) Romans 9:16 is about God's mercy in saving, not only in choosing a people for history — *well supported*: [Arminius 1853](../../bibliography.md#arminius-works-3-1853), pp. 527–565; [Abasciano 2006](../../bibliography.md#abasciano-corporate-election-romans-9-2006), p. 351
+- \\(\therefore\\) \\(\href{claims.html#claim-28}{P_{28}}\\) Conversion is God's work alone: God regenerates, and the will does nothing to it
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-28}{P_{28}}\\).
 
 <a id="passiveStep"></a>
 **`passiveStep`**
@@ -170,11 +193,16 @@ follows grace "in the genus or order of formal, efficient, and final cause". The
 dilemma over the Thomists' claim sets the two senses apart
 (`whatNotMerelyPassiveMeans`).
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* In being made alive the will is passive, and contributes nothing to it
+- (1) \\(\href{claims.html#claim-28}{P_{28}}\\) Conversion is God's work alone: God regenerates, and the will does nothing to it — *disputed*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, arts. 10–12
+- \\(\therefore\\) \\(\href{claims.html#claim-31}{P_{31}}\\) In being made alive the will is passive, and contributes nothing to it
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-31}{P_{31}}\\).
 
 <a id="operatingGraceStep"></a>
 **`operatingGraceStep`**
@@ -182,11 +210,16 @@ dilemma over the Thomists' claim sets the two senses apart
 **Aquinas on operating grace.** In converting grace God is the sole mover of
 the will, so God alone is the one who regenerates.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-16}{P_{16}} \rightarrow \href{claims.html#claim-28}{P_{28}}\\) — *would give:* Conversion is God's work alone: God regenerates, and the will does nothing to it
+- (1) \\(\href{claims.html#claim-16}{P_{16}}\\) In converting grace God is the sole mover: the mind is moved and does not move — *disputed*: [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.111 a.2; [Garrigou-Lagrange 1952](../../bibliography.md#garrigou-lagrange-grace-1952), §ch. IV
+- \\(\therefore\\) \\(\href{claims.html#claim-28}{P_{28}}\\) Conversion is God's work alone: God regenerates, and the will does nothing to it
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-16}{P_{16}} \rightarrow \href{claims.html#claim-28}{P_{28}}\\).
 
 <a id="efficacyStep"></a>
 **`efficacyStep`**
@@ -196,11 +229,16 @@ attain grace, the grace brings about what it is given for. Rated `disputed`: the
 Molinists grant the intention and the infallible result, and ascribe it to the
 consent God foreknows, not to the grace.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-17}{P_{17}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The grace that saves brings about the consent it seeks
+- (1) \\(\href{claims.html#claim-17}{P_{17}}\\) God moves the will intending that it attain grace — *well supported*: [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I-II q.112 a.3; [Pohle 1911](../../bibliography.md#pohle-molinism-1911)
+- \\(\therefore\\) \\(\href{claims.html#claim-30}{P_{30}}\\) The grace that saves brings about the consent it seeks
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-17}{P_{17}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\).
 
 <a id="effectualStep"></a>
 **`effectualStep`**
@@ -210,11 +248,16 @@ saves cannot be finally refused.** Rated `disputed`: the Formula of Concord hold
 conversion to be the Spirit's work alone, with the will "purely passive", and
 holds grace resistible all the same.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The grace that saves brings about the consent it seeks
+- (1) \\(\href{claims.html#claim-28}{P_{28}}\\) Conversion is God's work alone: God regenerates, and the will does nothing to it — *disputed*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Canons of Dort, III/IV, arts. 10–12
+- \\(\therefore\\) \\(\href{claims.html#claim-30}{P_{30}}\\) The grace that saves brings about the consent it seeks
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-28}{P_{28}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\).
 
 <a id="textsOfResistanceStep"></a>
 **`textsOfResistanceStep`**
@@ -224,11 +267,18 @@ Acts 7:51 says so of Stephen's hearers, and Paul's commands not to grieve the
 Spirit (Ephesians 4:30) or quench him (1 Thessalonians 5:19) presuppose it of
 believers.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\) — *would give:* The Holy Spirit's work is resisted, by unbelievers and by believers
+- (1) \\(\href{claims.html#claim-5}{P_{5}}\\) Acts 7:51 — you always resist the Holy Spirit — *consensus*: Acts 7:51
+- (2) \\(\href{claims.html#claim-6}{P_{6}}\\) Ephesians 4:30 — do not grieve the Holy Spirit of God, by whom you were sealed — *consensus*: Eph 4:30
+- (3) \\(\href{claims.html#claim-7}{P_{7}}\\) 1 Thessalonians 5:19 — do not quench the Spirit — *consensus*: 1 Thess 5:19
+- \\(\therefore\\) \\(\href{claims.html#claim-10}{P_{10}}\\) The Holy Spirit's work is resisted, by unbelievers and by believers
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-10}{P_{10}}\\).
 
 <a id="resistanceStep"></a>
 **`resistanceStep`**
@@ -237,11 +287,17 @@ believers.
 resisted is the grace that saves, that grace can be finally refused. The
 Remonstrants' fourth article, made explicit.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-25}{P_{25}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
+- (1) \\(\href{claims.html#claim-10}{P_{10}}\\) The Holy Spirit's work is resisted, by unbelievers and by believers — *consensus*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 593; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60
+- (2) \\(\href{claims.html#claim-25}{P_{25}}\\) What Stephen's hearers resisted in Acts 7:51 was the grace that saves — *disputed*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), §Five Arminian Articles (1610), art. 4
+- \\(\therefore\\) \\(\href{claims.html#claim-13}{P_{13}}\\) The grace that saves can be finally refused
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-25}{P_{25}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\).
 
 <a id="griefStep"></a>
 **`griefStep`**
@@ -251,11 +307,17 @@ and those who obstinately resist him can grieve and lose him, the grace that
 saves can be finally refused. The Formula of Concord's reading of
 Ephesians 4:30.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-11}{P_{11}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
+- (1) \\(\href{claims.html#claim-10}{P_{10}}\\) The Holy Spirit's work is resisted, by unbelievers and by believers — *consensus*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 593; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.60
+- (2) \\(\href{claims.html#claim-11}{P_{11}}\\) Those who obstinately resist the Spirit can grieve and lose him — *disputed*: [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration II.83; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
+- \\(\therefore\\) \\(\href{claims.html#claim-13}{P_{13}}\\) The grace that saves can be finally refused
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-11}{P_{11}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\).
 
 <a id="blasphemyStep"></a>
 **`blasphemyStep`**
@@ -264,11 +326,17 @@ Ephesians 4:30.
 Spirit is never forgiven (Matthew 12:31–32), and it is the final refusal of the
 grace offered, then that grace can be finally refused.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-8}{P_{8}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\) — *would give:* The grace that saves can be finally refused
+- (1) \\(\href{claims.html#claim-8}{P_{8}}\\) Matthew 12:31–32 — the blasphemy against the Spirit will not be forgiven — *consensus*: Matt 12:31-32
+- (2) \\(\href{claims.html#claim-12}{P_{12}}\\) The blasphemy against the Spirit is impenitence to the end: grace refused till death — *disputed*: [Schaff 1888](../../bibliography.md#npnf1-06-1888), p. 325; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §II-II q.14 a.1; [Calvin 1845](../../bibliography.md#calvin-harmony-evangelists-2-1845), p. 74
+- \\(\therefore\\) \\(\href{claims.html#claim-13}{P_{13}}\\) The grace that saves can be finally refused
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-8}{P_{8}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-13}{P_{13}}\\).
 
 <a id="cooperationStep"></a>
 **`cooperationStep`**
@@ -278,11 +346,17 @@ assenting, as "Return to me" calls on it to; so it is not passive. Rated
 `disputed`: Aquinas grants that grace cooperates with a will that moves and
 holds that in grace's first effect the mind "is moved and does not move".
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-26}{P_{26}}) \rightarrow \lnot \href{claims.html#claim-31}{P_{31}}\\) — *would deny:* In being made alive the will is passive, and contributes nothing to it
+- (1) \\(\href{claims.html#claim-21}{P_{21}}\\) Zechariah 1:3 ("return to me, and I will return to you") with Lamentations 5:21 ("restore us to yourself, O Lord") — *consensus*: Zech 1:3; Lam 5:21; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 5; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 33
+- (2) \\(\href{claims.html#claim-26}{P_{26}}\\) The free will, moved by God, cooperates by assenting to God's call — *disputed*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-31}{P_{31}}\\) *denied:* In being made alive the will is passive, and contributes nothing to it
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-26}{P_{26}}) \rightarrow \lnot \href{claims.html#claim-31}{P_{31}}\\).
 
 <a id="dissentStep"></a>
 **`dissentStep`**
@@ -292,11 +366,16 @@ if it wishes; so grace is not effectual of itself. Rated `disputed`: Aquinas
 grants that a will God moves could, taken simply, fail to be moved, and still
 holds that the man God moves to grace attains it infallibly.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) — *would deny:* The grace that saves brings about the consent it seeks
+- (1) \\(\href{claims.html#claim-27}{P_{27}}\\) The free will, moved by God, can refuse its assent if it wishes — *disputed*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 4; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 45
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-30}{P_{30}}\\) *denied:* The grace that saves brings about the consent it seeks
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\).
 
 #### The lines
 

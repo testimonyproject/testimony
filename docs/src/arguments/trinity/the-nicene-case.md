@@ -158,11 +158,17 @@ side reads "God" in two senses where its step needs one.
 From the two witnesses, read as two persons, to the Son's being another than
 the Father.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-60}{P_{60}} \land \href{claims.html#claim-63}{P_{63}}) \rightarrow \href{claims.html#claim-76}{P_{76}}\\) — *would give:* The Son is a person other than the Father, not the Father himself
+- (1) \\(\href{claims.html#claim-60}{P_{60}}\\) John 8:17–18 — "the testimony of two people is true … and the Father" — *consensus*: John 8:17; John 8:18
+- (2) \\(\href{claims.html#claim-63}{P_{63}}\\) The two witnesses of John 8:17–18 are two persons, the Son and the Father — *disputed*: [Roberts et al. 1885](../../bibliography.md#roberts-ante-nicene-fathers-3-1885), §Against Praxeas 22
+- \\(\therefore\\) \\(\href{claims.html#claim-76}{P_{76}}\\) The Son is a person other than the Father, not the Father himself
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-60}{P_{60}} \land \href{claims.html#claim-63}{P_{63}}) \rightarrow \href{claims.html#claim-76}{P_{76}}\\).
 
 <a id="twoWitnessesLine"></a>
 **`twoWitnessesLine`** — Two witnesses, the Son and the Father (Tertullian)
@@ -184,11 +190,17 @@ the Son names himself and the Father.
 
 From the voice from heaven, read as a second person, to the same.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-61}{P_{61}} \land \href{claims.html#claim-64}{P_{64}}) \rightarrow \href{claims.html#claim-76}{P_{76}}\\) — *would give:* The Son is a person other than the Father, not the Father himself
+- (1) \\(\href{claims.html#claim-61}{P_{61}}\\) Matthew 17:5; John 12:28 — the Father answers the Son from heaven — *consensus*: Matt 17:5; John 12:28
+- (2) \\(\href{claims.html#claim-64}{P_{64}}\\) The Son asking on earth and the Father answering from heaven are two persons — *disputed*: [Roberts et al. 1885](../../bibliography.md#roberts-ante-nicene-fathers-3-1885), §Against Praxeas 23
+- \\(\therefore\\) \\(\href{claims.html#claim-76}{P_{76}}\\) The Son is a person other than the Father, not the Father himself
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-61}{P_{61}} \land \href{claims.html#claim-64}{P_{64}}) \rightarrow \href{claims.html#claim-76}{P_{76}}\\).
 
 <a id="voicesLine"></a>
 **`voicesLine`** — The Son on earth, the Father in heaven (Tertullian)
@@ -213,11 +225,18 @@ the Father answers from heaven.
 From the one God, and "a god" read as a second god, to the Word's not being
 "a god".
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-67}{P_{67}}) \rightarrow \lnot \href{claims.html#claim-48}{P_{48}}\\) — *would deny:* In "the Word was God" (John 1:1) God, without "the", means "a god"
+- (1) \\(\href{claims.html#claim-32}{P_{32}}\\) Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one" — *consensus*: Deut 6:4; 1 Cor 8:4
+- (2) \\(\href{claims.html#claim-34}{P_{34}}\\) John 1:1 — "and the Word was God": God (θεός), without "the" — *consensus*: John 1:1
+- (3) \\(\href{claims.html#claim-67}{P_{67}}\\) A Word who is "a god" beside the one God would be a second god — *disputed*: [Metzger 1953](../../bibliography.md#metzger-jehovahs-witnesses-jesus-christ-1953), p. 75
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-48}{P_{48}}\\) *denied:* In "the Word was God" (John 1:1) God, without "the", means "a god"
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-67}{P_{67}}) \rightarrow \lnot \href{claims.html#claim-48}{P_{48}}\\).
 
 <a id="noSecondGodLine"></a>
 **`noSecondGodLine`** — One God, so not "a god" beside him (Metzger)
@@ -240,11 +259,17 @@ would be a second god, and John does not teach two.
 
 From "firstborn", read as over creation, to the Son's not being a creature.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-69}{P_{69}}) \rightarrow \lnot \href{claims.html#claim-57}{P_{57}}\\) — *would deny:* The Son is a creature, the first of God's works, and not God
+- (1) \\(\href{claims.html#claim-41}{P_{41}}\\) Colossians 1:15 — "the firstborn of all creation" — *consensus*: Col 1:15
+- (2) \\(\href{claims.html#claim-69}{P_{69}}\\) "Firstborn of all creation" sets the Son over creation, not among it — *disputed*: [Schaff and Wace 1892](../../bibliography.md#schaff-nicene-post-nicene-fathers-2-4-1892), §Against the Arians II.62–63
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-57}{P_{57}}\\) *denied:* The Son is a creature, the first of God's works, and not God
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-69}{P_{69}}) \rightarrow \lnot \href{claims.html#claim-57}{P_{57}}\\).
 
 <a id="firstbornLine"></a>
 **`firstbornLine`** — Firstborn over creation, not in it (Athanasius)
@@ -268,11 +293,16 @@ Son, so he is over creation, not one of the things created.
 
 From "is God" read as one essence, to its not meaning identity.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-70}{P_{70}} \rightarrow \lnot \href{claims.html#claim-71}{P_{71}}\\) — *would deny:* "Is God" says someone is the one God himself, the same one
+- (1) \\(\href{claims.html#claim-70}{P_{70}}\\) "Is God" says each has the one divine essence, not that each is the same person — *disputed*: [Schaff and Wace 1895](../../bibliography.md#schaff-nicene-post-nicene-fathers-2-8-1895), §Letter 214, §4; [Schaff and Wace 1895](../../bibliography.md#schaff-nicene-post-nicene-fathers-2-8-1895), §Letter 236, §6; [Schaff et al. 1900](../../bibliography.md#schaff-nicene-post-nicene-fathers-2-14-1900), §The Creed of Nicaea; [Roberts et al. 1885](../../bibliography.md#roberts-ante-nicene-fathers-3-1885), §Against Praxeas 25
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-71}{P_{71}}\\) *denied:* "Is God" says someone is the one God himself, the same one
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-70}{P_{70}} \rightarrow \lnot \href{claims.html#claim-71}{P_{71}}\\).
 
 <a id="oneEssenceLine"></a>
 **`oneEssenceLine`** — One essence, three persons (Basil; Nicaea)
@@ -476,11 +506,17 @@ Grounded in scripture alone: Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is
 The Witnesses' step: Scripture rightly calls others "gods", so "a god" is not
 a second God.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-68}{P_{68}}) \rightarrow \lnot \href{claims.html#claim-67}{P_{67}}\\) — *would deny:* A Word who is "a god" beside the one God would be a second god
+- (1) \\(\href{claims.html#claim-62}{P_{62}}\\) John 10:34–35; Psalm 82:6 — "I said, you are gods" — *consensus*: John 10:34; Ps 82:6
+- (2) \\(\href{claims.html#claim-68}{P_{68}}\\) Scripture rightly calls others "gods", so the Word can be "a god" — *disputed*: [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 28; [Watch Tower Bible and Tract Society 1986](../../bibliography.md#watchtower-questions-from-readers-1986), p. 31
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-67}{P_{67}}\\) *denied:* A Word who is "a god" beside the one God would be a second god
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-68}{P_{68}}) \rightarrow \lnot \href{claims.html#claim-67}{P_{67}}\\).
 
 <a id="otherGodsLine"></a>
 **`otherGodsLine`** — "You are gods": a god, not a second God (the Witnesses)
@@ -503,11 +539,18 @@ a second God.
 The Witnesses' step from identity: one who is with God, as another, is not
 God.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-71}{P_{71}} \land \href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-46}{P_{46}}) \rightarrow \lnot \href{claims.html#claim-54}{P_{54}}\\) — *would deny:* The Word who became flesh in Jesus is God, of God's nature and not created
+- (1) \\(\href{claims.html#claim-71}{P_{71}}\\) "Is God" says someone is the one God himself, the same one — *disputed*: [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, Are Jesus and the Father One in Purpose Only?; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
+- (2) \\(\href{claims.html#claim-59}{P_{59}}\\) 1 Corinthians 8:6 — "for us there is one God, the Father" — *consensus*: 1 Cor 8:6
+- (3) \\(\href{claims.html#claim-46}{P_{46}}\\) "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — *disputed*: [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-54}{P_{54}}\\) *denied:* The Word who became flesh in Jesus is God, of God's nature and not created
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-71}{P_{71}} \land \href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-46}{P_{46}}) \rightarrow \lnot \href{claims.html#claim-54}{P_{54}}\\).
 
 <a id="withGodLine"></a>
 **`withGodLine`** — With God, so not God (the Witnesses)
@@ -566,11 +609,17 @@ Grounded in scripture alone: John 1:1 — "and the Word was God": God (θεός)
 Bernard's step: the two witnesses are the Spirit and the man, so not two
 persons.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-60}{P_{60}} \land \href{claims.html#claim-65}{P_{65}}) \rightarrow \lnot \href{claims.html#claim-63}{P_{63}}\\) — *would deny:* The two witnesses of John 8:17–18 are two persons, the Son and the Father
+- (1) \\(\href{claims.html#claim-60}{P_{60}}\\) John 8:17–18 — "the testimony of two people is true … and the Father" — *consensus*: John 8:17; John 8:18
+- (2) \\(\href{claims.html#claim-65}{P_{65}}\\) The two witnesses are the divine Spirit and the man Jesus, of one person — *disputed*: [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, Two Witnesses
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-63}{P_{63}}\\) *denied:* The two witnesses of John 8:17–18 are two persons, the Son and the Father
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-60}{P_{60}} \land \href{claims.html#claim-65}{P_{65}}) \rightarrow \lnot \href{claims.html#claim-63}{P_{63}}\\).
 
 <a id="spiritAndManLine"></a>
 **`spiritAndManLine`** — The Spirit and the man, one person (Bernard)
@@ -591,11 +640,17 @@ persons.
 
 Bernard's step: the voice is a manifestation, so not a second person.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-61}{P_{61}} \land \href{claims.html#claim-66}{P_{66}}) \rightarrow \lnot \href{claims.html#claim-64}{P_{64}}\\) — *would deny:* The Son asking on earth and the Father answering from heaven are two persons
+- (1) \\(\href{claims.html#claim-61}{P_{61}}\\) Matthew 17:5; John 12:28 — the Father answers the Son from heaven — *consensus*: Matt 17:5; John 12:28
+- (2) \\(\href{claims.html#claim-66}{P_{66}}\\) The voice from heaven is a manifestation of the one Spirit, not a person — *disputed*: [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, The Voice from Heaven
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-64}{P_{64}}\\) *denied:* The Son asking on earth and the Father answering from heaven are two persons
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-61}{P_{61}} \land \href{claims.html#claim-66}{P_{66}}) \rightarrow \lnot \href{claims.html#claim-64}{P_{64}}\\).
 
 <a id="manifestationLine"></a>
 **`manifestationLine`** — The voice, a manifestation of the one Spirit (Bernard)
@@ -617,11 +672,18 @@ Bernard's step: the voice is a manifestation, so not a second person.
 Bernard's step from identity: the Father is God and the Son is God, and "God"
 names the one God himself, so the Son is not a second person beside the Father.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-71}{P_{71}} \land \href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-54}{P_{54}}) \rightarrow \lnot \href{claims.html#claim-76}{P_{76}}\\) — *would deny:* The Son is a person other than the Father, not the Father himself
+- (1) \\(\href{claims.html#claim-71}{P_{71}}\\) "Is God" says someone is the one God himself, the same one — *disputed*: [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, Are Jesus and the Father One in Purpose Only?; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
+- (2) \\(\href{claims.html#claim-59}{P_{59}}\\) 1 Corinthians 8:6 — "for us there is one God, the Father" — *consensus*: 1 Cor 8:6
+- (3) \\(\href{claims.html#claim-54}{P_{54}}\\) The Word who became flesh in Jesus is God, of God's nature and not created — *disputed*: [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-76}{P_{76}}\\) *denied:* The Son is a person other than the Father, not the Father himself
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-71}{P_{71}} \land \href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-54}{P_{54}}) \rightarrow \lnot \href{claims.html#claim-76}{P_{76}}\\).
 
 <a id="identityLine"></a>
 **`identityLine`** — Both God, so one person (Bernard)

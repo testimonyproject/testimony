@@ -104,11 +104,20 @@ From the texts to a real order: the Son is sent and does the sender's will,
 the Father is greater, the risen Son calls him his God, the head of Christ is
 God, and at the end the Son is subject.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-18}{P_{18}} \land \href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-20}{P_{20}}) \rightarrow \href{claims.html#claim-22}{P_{22}}\\) — *would give:* There is a real order of Father and Son in the work of salvation
+- (1) \\(\href{claims.html#claim-16}{P_{16}}\\) John 5:19, 30 — the Son does nothing of his own accord, but the sender's will — *consensus*: John 5:19; John 5:30
+- (2) \\(\href{claims.html#claim-17}{P_{17}}\\) John 14:28 — "the Father is greater than I" — *consensus*: John 14:28
+- (3) \\(\href{claims.html#claim-18}{P_{18}}\\) John 20:17 — the risen Jesus: "my God and your God" — *consensus*: John 20:17
+- (4) \\(\href{claims.html#claim-19}{P_{19}}\\) 1 Corinthians 11:3 — "the head of Christ is God" — *consensus*: 1 Cor 11:3
+- (5) \\(\href{claims.html#claim-20}{P_{20}}\\) 1 Corinthians 15:28 — "the Son himself will also be subjected to him" — *consensus*: 1 Cor 15:28
+- \\(\therefore\\) \\(\href{claims.html#claim-22}{P_{22}}\\) There is a real order of Father and Son in the work of salvation
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-16}{P_{16}} \land \href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-18}{P_{18}} \land \href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-20}{P_{20}}) \rightarrow \href{claims.html#claim-22}{P_{22}}\\).
 
 <a id="orderLine"></a>
 **`orderLine`** — The order texts: the Son sent, obedient, and subject at the end
@@ -155,11 +164,17 @@ Grounded in scripture alone: John 5:19, 30 — the Son does nothing of his own a
 
 The Arian step: "greater" means lesser divinity.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The Son is less than the Father in his divinity
+- (1) \\(\href{claims.html#claim-17}{P_{17}}\\) John 14:28 — "the Father is greater than I" — *consensus*: John 14:28
+- (2) \\(\href{claims.html#claim-23}{P_{23}}\\) In John 14:28 "greater" means the Son is less in his divinity — *disputed*: [Schaff and Wace 1892](../../bibliography.md#schaff-nicene-post-nicene-fathers-2-4-1892), §De Synodis 28; [Schaff 1887](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-3-1887), §On the Trinity I.7.14; [Calvin 1847](../../bibliography.md#calvin-commentary-john-2-1847), p. 102
+- \\(\therefore\\) \\(\href{claims.html#claim-30}{P_{30}}\\) The Son is less than the Father in his divinity
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-23}{P_{23}}) \rightarrow \href{claims.html#claim-30}{P_{30}}\\).
 
 <a id="arianLine"></a>
 **`arianLine`** — "The Father is greater": a lesser divinity (the Arians)
@@ -202,11 +217,18 @@ Grounded in scripture alone: John 5:19, 30 — the Son does nothing of his own a
 
 Augustine's step: less in the form of a servant, equal in the form of God.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) — *would deny:* The Son is less than the Father in his divinity
+- (1) \\(\href{claims.html#claim-17}{P_{17}}\\) John 14:28 — "the Father is greater than I" — *consensus*: John 14:28
+- (2) \\(\href{claims.html#claim-21}{P_{21}}\\) Philippians 2:6 — "though he was in the form of God" — *consensus*: Phil 2:6
+- (3) \\(\href{claims.html#claim-24}{P_{24}}\\) In John 14:28 the Son is less in the form of a servant, not in the form of God — *disputed*: [Schaff 1887](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-3-1887), §On the Trinity I.7.14
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-30}{P_{30}}\\) *denied:* The Son is less than the Father in his divinity
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-21}{P_{21}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\).
 
 <a id="augustineLine"></a>
 **`augustineLine`** — Less in the form of a servant, equal in the form of God (Augustine)
@@ -250,11 +272,17 @@ Grounded in scripture alone: John 5:19, 30 — the Son does nothing of his own a
 Athanasius's step: "greater" as the one the Son is from, so "proper to His
 essence".
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-25}{P_{25}}) \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) — *would deny:* The Son is less than the Father in his divinity
+- (1) \\(\href{claims.html#claim-17}{P_{17}}\\) John 14:28 — "the Father is greater than I" — *consensus*: John 14:28
+- (2) \\(\href{claims.html#claim-25}{P_{25}}\\) The Father is "greater" as the one the Son is begotten from — *disputed*: [Schaff and Wace 1892](../../bibliography.md#schaff-nicene-post-nicene-fathers-2-4-1892), §Against the Arians I.13.58
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-30}{P_{30}}\\) *denied:* The Son is less than the Father in his divinity
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-25}{P_{25}}) \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\).
 
 <a id="athanasiusLine"></a>
 **`athanasiusLine`** — Greater as the one he is from (Athanasius)
@@ -296,11 +324,17 @@ Grounded in scripture alone: John 5:19, 30 — the Son does nothing of his own a
 Calvin's step: the verse compares the Mediator's state with his glory, so it
 does not say the Son is less in divinity.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-26}{P_{26}}) \rightarrow \lnot \href{claims.html#claim-23}{P_{23}}\\) — *would deny:* In John 14:28 "greater" means the Son is less in his divinity
+- (1) \\(\href{claims.html#claim-17}{P_{17}}\\) John 14:28 — "the Father is greater than I" — *consensus*: John 14:28
+- (2) \\(\href{claims.html#claim-26}{P_{26}}\\) In John 14:28 Christ compares his humbled state as Mediator with his glory — *disputed*: [Calvin 1847](../../bibliography.md#calvin-commentary-john-2-1847), pp. 102–103
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-23}{P_{23}}\\) *denied:* In John 14:28 "greater" means the Son is less in his divinity
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-17}{P_{17}} \land \href{claims.html#claim-26}{P_{26}}) \rightarrow \lnot \href{claims.html#claim-23}{P_{23}}\\).
 
 <a id="mediatorsStateAnswersTheFathers"></a>
 **`mediatorsStateAnswersTheFathers`**
@@ -308,11 +342,16 @@ does not say the Son is less in divinity.
 Calvin against the Fathers' reply: the verse does not speak of the Son's
 human nature either.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-26}{P_{26}} \rightarrow \lnot \href{claims.html#claim-24}{P_{24}}\\) — *would deny:* In John 14:28 the Son is less in the form of a servant, not in the form of God
+- (1) \\(\href{claims.html#claim-26}{P_{26}}\\) In John 14:28 Christ compares his humbled state as Mediator with his glory — *disputed*: [Calvin 1847](../../bibliography.md#calvin-commentary-john-2-1847), pp. 102–103
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-24}{P_{24}}\\) *denied:* In John 14:28 the Son is less in the form of a servant, not in the form of God
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-26}{P_{26}} \rightarrow \lnot \href{claims.html#claim-24}{P_{24}}\\).
 
 <a id="calvinLine"></a>
 **`calvinLine`** — The Mediator's humbled state (Calvin)
@@ -358,11 +397,17 @@ Grounded in scripture alone: John 5:19, 30 — the Son does nothing of his own a
 From the order, read as eternal, to an eternal relationship of authority and
 submission.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-27}{P_{27}}) \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* There is an eternal relationship of authority and submission of Father and Son
+- (1) \\(\href{claims.html#claim-22}{P_{22}}\\) There is a real order of Father and Son in the work of salvation — *well supported*: [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+- (2) \\(\href{claims.html#claim-27}{P_{27}}\\) The sending and obeying are the outworking of an eternal authority and submission — *disputed*: [Grudem 2015](../../bibliography.md#grudem-doctrinal-deviations-2015), p. 40; [Grudem 2016](../../bibliography.md#grudem-ets-trinity-2016); [Ware 2005](../../bibliography.md#ware-father-son-holy-spirit-2005)
+- \\(\therefore\\) \\(\href{claims.html#claim-31}{P_{31}}\\) There is an eternal relationship of authority and submission of Father and Son
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-27}{P_{27}}) \rightarrow \href{claims.html#claim-31}{P_{31}}\\).
 
 <a id="eternalOrderLine"></a>
 **`eternalOrderLine`** — The order is eternal (Grudem, Ware)
@@ -404,11 +449,17 @@ Grounded in scripture alone: John 5:19, 30 — the Son does nothing of his own a
 From the Son's equality in power, and eternal subordination's denial of it, to
 no eternal subordination in authority.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-28}{P_{28}} \land \href{claims.html#claim-29}{P_{29}}) \rightarrow \lnot \href{claims.html#claim-31}{P_{31}}\\) — *would deny:* There is an eternal relationship of authority and submission of Father and Son
+- (1) \\(\href{claims.html#claim-28}{P_{28}}\\) The Son is equal to the Father in power: "of one substance, power, and eternity" — *well supported*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §II.3
+- (2) \\(\href{claims.html#claim-29}{P_{29}}\\) Eternal subordination in authority would deny the Son's equality in power — *disputed*: [Giles 2008](../../bibliography.md#giles-ets-trinity-2008), p. 323; [Giles 2006](../../bibliography.md#giles-jesus-and-the-father-2006)
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-31}{P_{31}}\\) *denied:* There is an eternal relationship of authority and submission of Father and Son
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-28}{P_{28}} \land \href{claims.html#claim-29}{P_{29}}) \rightarrow \lnot \href{claims.html#claim-31}{P_{31}}\\).
 
 <a id="equalPowerLine"></a>
 **`equalPowerLine`** — Equal in power, so not eternally subordinate (Giles)

@@ -135,11 +135,21 @@ carry, and no more.
 From John 1:1 and 1:3, as Harner and Augustine read them, with John 20:28, to
 the Word's being God.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-36}{P_{36}} \land \href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \href{claims.html#claim-54}{P_{54}}\\) — *would give:* The Word who became flesh in Jesus is God, of God's nature and not created
+- (1) \\(\href{claims.html#claim-32}{P_{32}}\\) Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one" — *consensus*: Deut 6:4; 1 Cor 8:4
+- (2) \\(\href{claims.html#claim-34}{P_{34}}\\) John 1:1 — "and the Word was God": God (θεός), without "the" — *consensus*: John 1:1
+- (3) \\(\href{claims.html#claim-35}{P_{35}}\\) John 1:3 — "all things were made through him" — *consensus*: John 1:3
+- (4) \\(\href{claims.html#claim-36}{P_{36}}\\) John 20:28 — "Thomas answered him, 'My Lord and my God!'" — *consensus*: John 20:28
+- (5) \\(\href{claims.html#claim-42}{P_{42}}\\) In "the Word was God" (John 1:1) the Word has the nature of the one God — *disputed*: [Harner 1973](../../bibliography.md#harner-qualitative-anarthrous-1973); [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+- (6) \\(\href{claims.html#claim-43}{P_{43}}\\) By John 1:3 the Word is not among the things made — *disputed*: [Schaff](../../bibliography.md#schaff-nicene-post-nicene-fathers-1-7), §Tractates on John I.11
+- \\(\therefore\\) \\(\href{claims.html#claim-54}{P_{54}}\\) The Word who became flesh in Jesus is God, of God's nature and not created
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-36}{P_{36}} \land \href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \href{claims.html#claim-54}{P_{54}}\\).
 
 <a id="wordLine"></a>
 **`wordLine`** — "The Word was God": of God's nature, and not made
@@ -166,11 +176,17 @@ not being made, with Thomas's confession.
 From Acts 5:3–4, read as Peter naming the Spirit God, to the Spirit's being
 God.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-44}{P_{44}}) \rightarrow \href{claims.html#claim-55}{P_{55}}\\) — *would give:* The Holy Spirit is God
+- (1) \\(\href{claims.html#claim-37}{P_{37}}\\) Acts 5:3–4 — "lie to the Holy Spirit … not to man but to God" — *consensus*: Acts 5:3; Acts 5:4
+- (2) \\(\href{claims.html#claim-44}{P_{44}}\\) In Acts 5:3–4 Peter names the Holy Spirit God — *disputed*: [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 198
+- \\(\therefore\\) \\(\href{claims.html#claim-55}{P_{55}}\\) The Holy Spirit is God
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-44}{P_{44}}) \rightarrow \href{claims.html#claim-55}{P_{55}}\\).
 
 <a id="spiritLine"></a>
 **`spiritLine`** — "Not to man but to God": the Spirit is God
@@ -193,11 +209,22 @@ but to God".
 From the Word with God, the glory before the world, the Spirit who speaks,
 and the three names, to three persons.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-33}{P_{33}} \land \href{claims.html#claim-39}{P_{39}} \land \href{claims.html#claim-38}{P_{38}} \land \href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-47}{P_{47}}) \rightarrow \href{claims.html#claim-56}{P_{56}}\\) — *would give:* The Father, the Son and the Holy Spirit are three persons
+- (1) \\(\href{claims.html#claim-33}{P_{33}}\\) John 1:1 — "the Word was with God" — *consensus*: John 1:1
+- (2) \\(\href{claims.html#claim-39}{P_{39}}\\) John 17:5 — "the glory that I had with you before the world existed" — *consensus*: John 17:5
+- (3) \\(\href{claims.html#claim-38}{P_{38}}\\) Acts 13:2; Ephesians 4:30 — the Spirit says "set apart for me", and is grieved — *consensus*: Acts 13:2; Eph 4:30
+- (4) \\(\href{claims.html#claim-40}{P_{40}}\\) Matthew 28:19 — "in the name of the Father and of the Son and of the Holy Spirit" — *consensus*: Matt 28:19
+- (5) \\(\href{claims.html#claim-46}{P_{46}}\\) "With God" (John 1:1; 17:5) is one person beside another, not a thought or plan — *disputed*: [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27
+- (6) \\(\href{claims.html#claim-45}{P_{45}}\\) The Spirit who speaks and is grieved is a person, not a force — *disputed*: [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+- (7) \\(\href{claims.html#claim-47}{P_{47}}\\) In Matthew 28:19 three are named, and the one name is theirs together — *disputed*: [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+- \\(\therefore\\) \\(\href{claims.html#claim-56}{P_{56}}\\) The Father, the Son and the Holy Spirit are three persons
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-33}{P_{33}} \land \href{claims.html#claim-39}{P_{39}} \land \href{claims.html#claim-38}{P_{38}} \land \href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-47}{P_{47}}) \rightarrow \href{claims.html#claim-56}{P_{56}}\\).
 
 <a id="personsLine"></a>
 **`personsLine`** — "With God", and three named: three persons
@@ -225,11 +252,19 @@ world; the Spirit speaks as "I"; and the three are named in one name.
 LST's confession drawn together: one God, the Word God, the Spirit God, and
 three persons.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-58}{P_{58}}\\) — *would give:* The Father, the Son and the Spirit are God: three persons, one God
+- (1) \\(\href{claims.html#claim-32}{P_{32}}\\) Deuteronomy 6:4; 1 Corinthians 8:4 — "the LORD is one"; "no God but one" — *consensus*: Deut 6:4; 1 Cor 8:4
+- (2) \\(\href{claims.html#claim-54}{P_{54}}\\) The Word who became flesh in Jesus is God, of God's nature and not created — *disputed*: [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4, Conclusion
+- (3) \\(\href{claims.html#claim-55}{P_{55}}\\) The Holy Spirit is God — *disputed*: [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 6, The Holy Ghost
+- (4) \\(\href{claims.html#claim-56}{P_{56}}\\) The Father, the Son and the Holy Spirit are three persons — *disputed*: [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §II.3
+- \\(\therefore\\) \\(\href{claims.html#claim-58}{P_{58}}\\) The Father, the Son and the Spirit are God: three persons, one God
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-58}{P_{58}}\\).
 
 <a id="lstDeityCase"></a>
 **`lstDeityCase`** — One God, three persons (LST)
@@ -331,11 +366,19 @@ Grounded in scripture alone: John 1:1 — "the Word was with God", John 17:5 —
 The Witnesses' step: "a god", and "firstborn" as first created, make the Son
 a creature.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-48}{P_{48}} \land \href{claims.html#claim-49}{P_{49}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\) — *would give:* The Son is a creature, the first of God's works, and not God
+- (1) \\(\href{claims.html#claim-34}{P_{34}}\\) John 1:1 — "and the Word was God": God (θεός), without "the" — *consensus*: John 1:1
+- (2) \\(\href{claims.html#claim-41}{P_{41}}\\) Colossians 1:15 — "the firstborn of all creation" — *consensus*: Col 1:15
+- (3) \\(\href{claims.html#claim-48}{P_{48}}\\) In "the Word was God" (John 1:1) God, without "the", means "a god" — *disputed*: [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 27; [Watch Tower Bible and Tract Society 2013](../../bibliography.md#new-world-translation-2013)
+- (4) \\(\href{claims.html#claim-49}{P_{49}}\\) "Firstborn of all creation" means the first thing God created — *disputed*: [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 14
+- \\(\therefore\\) \\(\href{claims.html#claim-57}{P_{57}}\\) The Son is a creature, the first of God's works, and not God
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-48}{P_{48}} \land \href{claims.html#claim-49}{P_{49}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\).
 
 <a id="creatureLine"></a>
 **`creatureLine`** — "A god", the firstborn of creation (Jehovah's Witnesses)
@@ -359,22 +402,33 @@ a creature.
 
 A creature is not God.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-57}{P_{57}} \rightarrow \lnot \href{claims.html#claim-54}{P_{54}}\\) — *would deny:* The Word who became flesh in Jesus is God, of God's nature and not created
+- (1) \\(\href{claims.html#claim-57}{P_{57}}\\) The Son is a creature, the first of God's works, and not God — *disputed*: [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), p. 14
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-54}{P_{54}}\\) *denied:* The Word who became flesh in Jesus is God, of God's nature and not created
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-57}{P_{57}} \rightarrow \lnot \href{claims.html#claim-54}{P_{54}}\\).
 
 <a id="forceIsNoPerson"></a>
 **`forceIsNoPerson`**
 
 The Witnesses' step: a force is not a person.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-38}{P_{38}} \land \href{claims.html#claim-50}{P_{50}}) \rightarrow \lnot \href{claims.html#claim-45}{P_{45}}\\) — *would deny:* The Spirit who speaks and is grieved is a person, not a force
+- (1) \\(\href{claims.html#claim-38}{P_{38}}\\) Acts 13:2; Ephesians 4:30 — the Spirit says "set apart for me", and is grieved — *consensus*: Acts 13:2; Eph 4:30
+- (2) \\(\href{claims.html#claim-50}{P_{50}}\\) The holy spirit is God's active force, personified, not a person — *disputed*: [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), pp. 20–23
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-45}{P_{45}}\\) *denied:* The Spirit who speaks and is grieved is a person, not a force
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-38}{P_{38}} \land \href{claims.html#claim-50}{P_{50}}) \rightarrow \lnot \href{claims.html#claim-45}{P_{45}}\\).
 
 <a id="forceLine"></a>
 **`forceLine`** — God's active force, personified (Jehovah's Witnesses)
@@ -396,11 +450,16 @@ God's force, personified, so it is not a person.
 
 God's force is not God himself.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-50}{P_{50}} \rightarrow \lnot \href{claims.html#claim-55}{P_{55}}\\) — *would deny:* The Holy Spirit is God
+- (1) \\(\href{claims.html#claim-50}{P_{50}}\\) The holy spirit is God's active force, personified, not a person — *disputed*: [Watch Tower Bible and Tract Society 1989](../../bibliography.md#watchtower-should-you-believe-trinity-1989), pp. 20–23
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-55}{P_{55}}\\) *denied:* The Holy Spirit is God
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-50}{P_{50}} \rightarrow \lnot \href{claims.html#claim-55}{P_{55}}\\).
 
 <a id="witnessesShared"></a>
 **`witnessesShared`**
@@ -455,11 +514,21 @@ Grounded in scripture alone: John 1:1 — "and the Word was God": God (θεός)
 The Oneness step: the Word God's thought, the glory in his plan, and the one
 name Jesus, so not three persons.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-33}{P_{33}} \land \href{claims.html#claim-39}{P_{39}} \land \href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-51}{P_{51}} \land \href{claims.html#claim-52}{P_{52}} \land \href{claims.html#claim-53}{P_{53}}) \rightarrow \lnot \href{claims.html#claim-56}{P_{56}}\\) — *would deny:* The Father, the Son and the Holy Spirit are three persons
+- (1) \\(\href{claims.html#claim-33}{P_{33}}\\) John 1:1 — "the Word was with God" — *consensus*: John 1:1
+- (2) \\(\href{claims.html#claim-39}{P_{39}}\\) John 17:5 — "the glory that I had with you before the world existed" — *consensus*: John 17:5
+- (3) \\(\href{claims.html#claim-40}{P_{40}}\\) Matthew 28:19 — "in the name of the Father and of the Son and of the Holy Spirit" — *consensus*: Matt 28:19
+- (4) \\(\href{claims.html#claim-51}{P_{51}}\\) The Word of John 1:1 is God's thought and self-expression, not a second person — *disputed*: [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 4 and 8, on John 1:1
+- (5) \\(\href{claims.html#claim-52}{P_{52}}\\) The glory of John 17:5 was the Son's in God's plan before the world — *disputed*: [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 8, The Preexistence of Jesus
+- (6) \\(\href{claims.html#claim-53}{P_{53}}\\) The one "name" of Matthew 28:19 is Jesus; Father, Son and Spirit are titles — *disputed*: [Bernard 1983](../../bibliography.md#bernard-oneness-of-god-1983), §ch. 6, Matthew 28:19
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-56}{P_{56}}\\) *denied:* The Father, the Son and the Holy Spirit are three persons
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-33}{P_{33}} \land \href{claims.html#claim-39}{P_{39}} \land \href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-51}{P_{51}} \land \href{claims.html#claim-52}{P_{52}} \land \href{claims.html#claim-53}{P_{53}}) \rightarrow \lnot \href{claims.html#claim-56}{P_{56}}\\).
 
 <a id="onenessLine"></a>
 **`onenessLine`** — God's Word, God's plan, and the one name (Oneness)

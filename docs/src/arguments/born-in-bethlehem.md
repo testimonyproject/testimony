@@ -133,22 +133,34 @@ be born in Bethlehem. If he must, and Jesus was, Jesus meets the criterion.
 
 From the predictive reading and Matthew's intent, the criterion follows.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-1}{P_{1}} \land \href{#claim-3}{P_{3}}) \rightarrow \href{#claim-6}{P_{6}}\\) — *would give:* The Messiah must be born in Bethlehem
+- (1) \\(\href{#claim-1}{P_{1}}\\) Micah 5:2 is a forward-looking Messianic prediction — *well supported*: [Keil and Delitzsch 1949](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:2
+- (2) \\(\href{#claim-3}{P_{3}}\\) Matthew's quotation intends predictive fulfilment — *well supported*: [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 2:6
+- \\(\therefore\\) \\(\href{#claim-6}{P_{6}}\\) The Messiah must be born in Bethlehem
 
 </div>
+
+In symbols, the step is \\((\href{#claim-1}{P_{1}} \land \href{#claim-3}{P_{3}}) \rightarrow \href{#claim-6}{P_{6}}\\).
 
 <a id="toFulfilment"></a>
 **`toFulfilment`**
 
 From the criterion and the historical claim, the fulfilment follows.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{#claim-6}{P_{6}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-7}{P_{7}}\\) — *would give:* Jesus of Nazareth satisfies the Bethlehem criterion
+- (1) \\(\href{#claim-6}{P_{6}}\\) The Messiah must be born in Bethlehem — *well supported*: [Keil and Delitzsch 1949](../bibliography.md#keil-delitzsch-minor-prophets-1949), ad loc. Mic 5:2; [France 2007](../bibliography.md#france-matthew-2007), ad loc. Matt 2:6
+- (2) \\(\href{#claim-4}{P_{4}}\\) Jesus of Nazareth was born in Bethlehem — *disputed*: Matt 2:1; Luke 2:4-7
+- \\(\therefore\\) \\(\href{#claim-7}{P_{7}}\\) Jesus of Nazareth satisfies the Bethlehem criterion
 
 </div>
+
+In symbols, the step is \\((\href{#claim-6}{P_{6}} \land \href{#claim-4}{P_{4}}) \rightarrow \href{#claim-7}{P_{7}}\\).
 
 <a id="predictiveLine"></a>
 **`predictiveLine`** — Predictive reading of Micah 5:2

@@ -221,11 +221,17 @@ No premise here rests on scripture alone.
 From the thief to "the washing is not necessary": he was promised paradise
 unbaptised, and his case bears on salvation under the Gospel.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-72}{P_{72}} \land \href{claims.html#claim-73}{P_{73}}) \rightarrow \lnot \href{claims.html#claim-69}{P_{69}}\\) — *would deny:* The washing itself is necessary for salvation, though desire may justify
+- (1) \\(\href{claims.html#claim-72}{P_{72}}\\) Luke 23:43 — the thief, unbaptised, is promised paradise — *consensus*: Luke 23:43; [Schaff 1887](../../bibliography.md#npnf1-04-1887), §On Baptism IV.23.31
+- (2) \\(\href{claims.html#claim-73}{P_{73}}\\) The thief's case bears on salvation under the Gospel — *well supported*: [Schaff 1887](../../bibliography.md#npnf1-04-1887), §On Baptism IV.22.30–23.31; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §III q.66 a.11
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-69}{P_{69}}\\) *denied:* The washing itself is necessary for salvation, though desire may justify
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-72}{P_{72}} \land \href{claims.html#claim-73}{P_{73}}) \rightarrow \lnot \href{claims.html#claim-69}{P_{69}}\\).
 
 <a id="thiefCase"></a>
 **`thiefCase`** — The thief on the cross (Luke 23:43), read with Augustine
@@ -249,11 +255,16 @@ No premise here rests on scripture alone.
 
 From what the desire brings to "the washing is not necessary".
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-71}{P_{71}} \rightarrow \lnot \href{claims.html#claim-69}{P_{69}}\\) — *would deny:* The washing itself is necessary for salvation, though desire may justify
+- (1) \\(\href{claims.html#claim-71}{P_{71}}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1258; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-69}{P_{69}}\\) *denied:* The washing itself is necessary for salvation, though desire may justify
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-71}{P_{71}} \rightarrow \lnot \href{claims.html#claim-69}{P_{69}}\\).
 
 <a id="desireCase"></a>
 **`desireCase`** — The desire for baptism (Catechism 1258–1259)
@@ -280,11 +291,17 @@ sacrament, then the sacrament is not the instrument of justification. Held by
 Westminster (XXVIII.5; XI.2). Rated `disputed`, because Aquinas accepts the
 starting points and denies the conclusion.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-70}{P_{70}} \land \href{claims.html#claim-71}{P_{71}}) \rightarrow \lnot \href{claims.html#claim-68}{P_{68}}\\) — *would deny:* Water baptism is the instrumental cause of justification
+- (1) \\(\href{claims.html#claim-70}{P_{70}}\\) Justification cannot be effected without the laver of regeneration, or the desire thereof — *consensus*: [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 32; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §III q.68 a.2
+- (2) \\(\href{claims.html#claim-71}{P_{71}}\\) The desire for baptism brings about its fruits without being a sacrament — *consensus*: [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §1258; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §III q.69 a.4 ad 2
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-68}{P_{68}}\\) *denied:* Water baptism is the instrumental cause of justification
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-70}{P_{70}} \land \href{claims.html#claim-71}{P_{71}}) \rightarrow \lnot \href{claims.html#claim-68}{P_{68}}\\).
 
 <a id="reformedOnTheDesire"></a>
 **`reformedOnTheDesire`** — What justifies where only the desire is present
@@ -635,11 +652,16 @@ Against *What justifies where only the desire is present*, it cannot be held. Wh
 Trent's step from John 3:5: the verse requires water baptism. Rated `disputed`:
 Calvin accepts the verse and denies the step.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-77}{P_{77}} \rightarrow \href{claims.html#claim-78}{P_{78}}\\) — *would give:* John 3:5 requires water baptism for entry into the kingdom
+- (1) \\(\href{claims.html#claim-77}{P_{77}}\\) John 3:5 — unless one is born of water and the Spirit, he cannot enter the kingdom — *consensus*: John 3:5; [Oliver 2022](../../bibliography.md#oliver-water-john-2022)
+- \\(\therefore\\) \\(\href{claims.html#claim-78}{P_{78}}\\) John 3:5 requires water baptism for entry into the kingdom
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-77}{P_{77}} \rightarrow \href{claims.html#claim-78}{P_{78}}\\).
 
 <a id="trentOnJohnThreeFive"></a>
 **`trentOnJohnThreeFive`** — Trent on John 3:5: born of water, so water baptism required
@@ -770,11 +792,16 @@ def waterAsTheSpirit : Reading Claim :=
 
 If the water is natural birth, the verse does not require water baptism.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-80}{P_{80}} \rightarrow \lnot \href{claims.html#claim-78}{P_{78}}\\) — *would deny:* John 3:5 requires water baptism for entry into the kingdom
+- (1) \\(\href{claims.html#claim-80}{P_{80}}\\) The water of John 3:5 is natural birth — *disputed*: [Oliver 2022](../../bibliography.md#oliver-water-john-2022)
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-78}{P_{78}}\\) *denied:* John 3:5 requires water baptism for entry into the kingdom
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-80}{P_{80}} \rightarrow \lnot \href{claims.html#claim-78}{P_{78}}\\).
 
 <a id="ezekielToNoWater"></a>
 **`ezekielToNoWater`**
@@ -782,11 +809,16 @@ If the water is natural birth, the verse does not require water baptism.
 If the water is Ezekiel's cleansing and not baptism, the verse does not
 require water baptism.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-81}{P_{81}} \rightarrow \lnot \href{claims.html#claim-78}{P_{78}}\\) — *would deny:* John 3:5 requires water baptism for entry into the kingdom
+- (1) \\(\href{claims.html#claim-81}{P_{81}}\\) The water of John 3:5 is the cleansing promised in Ezekiel 36:25–27, not baptism — *disputed*: [Carson 2019](../../bibliography.md#carson-born-of-water-2019); [Oliver 2022](../../bibliography.md#oliver-water-john-2022)
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-78}{P_{78}}\\) *denied:* John 3:5 requires water baptism for entry into the kingdom
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-81}{P_{81}} \rightarrow \lnot \href{claims.html#claim-78}{P_{78}}\\).
 
 <a id="spiritToNoWater"></a>
 **`spiritToNoWater`**
@@ -794,22 +826,33 @@ require water baptism.
 If the water is the Spirit's own cleansing, the verse does not require water
 baptism.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-82}{P_{82}} \rightarrow \lnot \href{claims.html#claim-78}{P_{78}}\\) — *would deny:* John 3:5 requires water baptism for entry into the kingdom
+- (1) \\(\href{claims.html#claim-82}{P_{82}}\\) The water of John 3:5 is the Spirit's own cleansing: water and Spirit are one — *disputed*: [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 110–111; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-78}{P_{78}}\\) *denied:* John 3:5 requires water baptism for entry into the kingdom
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-82}{P_{82}} \rightarrow \lnot \href{claims.html#claim-78}{P_{78}}\\).
 
 <a id="spiritToNotBaptism"></a>
 **`spiritToNotBaptism`**
 
 And if the water is the Spirit's own cleansing, it is not baptismal water.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-77}{P_{77}} \land \href{claims.html#claim-82}{P_{82}}) \rightarrow \lnot \href{claims.html#claim-79}{P_{79}}\\) — *would deny:* The water of John 3:5 is baptismal water
+- (1) \\(\href{claims.html#claim-77}{P_{77}}\\) John 3:5 — unless one is born of water and the Spirit, he cannot enter the kingdom — *consensus*: John 3:5; [Oliver 2022](../../bibliography.md#oliver-water-john-2022)
+- (2) \\(\href{claims.html#claim-82}{P_{82}}\\) The water of John 3:5 is the Spirit's own cleansing: water and Spirit are one — *disputed*: [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 110–111; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.xvi.25
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-79}{P_{79}}\\) *denied:* The water of John 3:5 is baptismal water
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-77}{P_{77}} \land \href{claims.html#claim-82}{P_{82}}) \rightarrow \lnot \href{claims.html#claim-79}{P_{79}}\\).
 
 <a id="birthOnJohnThreeFive"></a>
 **`birthOnJohnThreeFive`** — John 3:5, the water as natural birth (Oliver)
@@ -1287,11 +1330,17 @@ From Samaria and Caesarea: the Spirit comes after the water and before it, so
 God is not bound to water baptism. Rated `consensus`: Calvin and the Catechism
 both accept that much, though Calvin's own sentence goes further.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-74}{P_{74}} \land \href{claims.html#claim-75}{P_{75}}) \rightarrow \href{claims.html#claim-76}{P_{76}}\\) — *would give:* God is not bound to water baptism: he gives the Spirit before it and after it
+- (1) \\(\href{claims.html#claim-74}{P_{74}}\\) Acts 8:14–17 — the Samaritans, baptized, receive the Spirit afterwards — *consensus*: Acts 8:14-17; [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), pp. 338–339
+- (2) \\(\href{claims.html#claim-75}{P_{75}}\\) Acts 10:44–48 — the Spirit falls on Cornelius's household before baptism — *consensus*: Acts 10:44-48; [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), pp. 453–454
+- \\(\therefore\\) \\(\href{claims.html#claim-76}{P_{76}}\\) God is not bound to water baptism: he gives the Spirit before it and after it
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-74}{P_{74}} \land \href{claims.html#claim-75}{P_{75}}) \rightarrow \href{claims.html#claim-76}{P_{76}}\\).
 
 <a id="actsCase"></a>
 **`actsCase`** — Acts 8 and 10: the Spirit after the water, and before it

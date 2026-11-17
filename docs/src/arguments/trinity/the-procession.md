@@ -130,11 +130,19 @@ The texts LST cites.
 From the texts to a real relation between the Spirit and the Son: he is
 sent by the Son, named for him, and poured out by him.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-4}{P_{4}}) \rightarrow \href{claims.html#claim-6}{P_{6}}\\) — *would give:* The Spirit is related to the Son as well as to the Father
+- (1) \\(\href{claims.html#claim-1}{P_{1}}\\) John 15:26 — the Spirit of truth, who proceeds from the Father — *consensus*: John 15:26
+- (2) \\(\href{claims.html#claim-2}{P_{2}}\\) John 15:26; 16:7 — the Son sends the Spirit, from the Father — *consensus*: John 15:26; John 16:7
+- (3) \\(\href{claims.html#claim-3}{P_{3}}\\) Galatians 4:6; Romans 8:9 — the Spirit of his Son, the Spirit of Christ — *consensus*: Gal 4:6; Rom 8:9
+- (4) \\(\href{claims.html#claim-4}{P_{4}}\\) Acts 2:33 — the exalted Son receives the promised Spirit and pours him out — *consensus*: Acts 2:33
+- \\(\therefore\\) \\(\href{claims.html#claim-6}{P_{6}}\\) The Spirit is related to the Son as well as to the Father
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-4}{P_{4}}) \rightarrow \href{claims.html#claim-6}{P_{6}}\\).
 
 <a id="relationLine"></a>
 **`relationLine`** — The texts: the Spirit sent by the Son and named for him
@@ -201,11 +209,17 @@ Grounded in scripture alone: John 15:26 — the Spirit of truth, who proceeds fr
 From John 16:14: the Spirit takes what is the Son's, and what he takes is
 his being.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-15}{P_{15}}\\) — *would give:* The Spirit proceeds eternally from the Father and the Son
+- (1) \\(\href{claims.html#claim-5}{P_{5}}\\) John 16:14 — the Spirit will take what is the Son's and declare it — *consensus*: John 16:14
+- (2) \\(\href{claims.html#claim-7}{P_{7}}\\) In John 16:14 what the Spirit takes from the Son is his being, not only his word — *disputed*: [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I, q. 36, a. 2
+- \\(\therefore\\) \\(\href{claims.html#claim-15}{P_{15}}\\) The Spirit proceeds eternally from the Father and the Son
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-7}{P_{7}}) \rightarrow \href{claims.html#claim-15}{P_{15}}\\).
 
 <a id="receivingLine"></a>
 **`receivingLine`** — From "he will take what is mine" (Aquinas)
@@ -228,11 +242,18 @@ From mission to origin: the Son sends the Spirit, the Spirit is named for
 him, and the sending rests on an eternal relation of the Spirit to the Son,
 which in God, Aquinas holds, can only be a relation of origin.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-8}{P_{8}}) \rightarrow \href{claims.html#claim-15}{P_{15}}\\) — *would give:* The Spirit proceeds eternally from the Father and the Son
+- (1) \\(\href{claims.html#claim-2}{P_{2}}\\) John 15:26; 16:7 — the Son sends the Spirit, from the Father — *consensus*: John 15:26; John 16:7
+- (2) \\(\href{claims.html#claim-3}{P_{3}}\\) Galatians 4:6; Romans 8:9 — the Spirit of his Son, the Spirit of Christ — *consensus*: Gal 4:6; Rom 8:9
+- (3) \\(\href{claims.html#claim-8}{P_{8}}\\) The Son's sending of the Spirit rests on an eternal relation of Spirit to Son — *disputed*: [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I, q. 36, a. 2; [Vischer 1981](../../bibliography.md#vischer-spirit-of-god-1981), p. 165
+- \\(\therefore\\) \\(\href{claims.html#claim-15}{P_{15}}\\) The Spirit proceeds eternally from the Father and the Son
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-3}{P_{3}} \land \href{claims.html#claim-8}{P_{8}}) \rightarrow \href{claims.html#claim-15}{P_{15}}\\).
 
 <a id="missionLine"></a>
 **`missionLine`** — From mission to origin (Aquinas)
@@ -254,11 +275,18 @@ From opposed relations: the Son and the Spirit are distinct, only an opposed
 relation of origin distinguishes divine persons, and the Son is not from the
 Spirit.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-9}{P_{9}} \land \href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-11}{P_{11}}) \rightarrow \href{claims.html#claim-15}{P_{15}}\\) — *would give:* The Spirit proceeds eternally from the Father and the Son
+- (1) \\(\href{claims.html#claim-9}{P_{9}}\\) John 14:16 — the Son and the Spirit are two persons: "another Helper" — *well supported*: John 14:16; [Kibbey 2026](../../bibliography.md#kibbey-living-systematic-theology-2026), §3, The Triune God
+- (2) \\(\href{claims.html#claim-10}{P_{10}}\\) The divine persons are distinguished only by opposed relations of origin — *disputed*: [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I, q. 36, a. 2
+- (3) \\(\href{claims.html#claim-11}{P_{11}}\\) The Son is not from the Spirit: "which no one says" — *well supported*: [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I, q. 36, a. 2
+- \\(\therefore\\) \\(\href{claims.html#claim-15}{P_{15}}\\) The Spirit proceeds eternally from the Father and the Son
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-9}{P_{9}} \land \href{claims.html#claim-10}{P_{10}} \land \href{claims.html#claim-11}{P_{11}}) \rightarrow \href{claims.html#claim-15}{P_{15}}\\).
 
 <a id="oppositionLine"></a>
 **`oppositionLine`** — From the distinction of Son and Spirit (Aquinas)
@@ -315,11 +343,18 @@ From the words of John 15:26: Jesus says the Spirit proceeds from the
 Father, the verse speaks of eternal origin, and it names the whole of the
 Spirit's source.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-12}{P_{12}} \land \href{claims.html#claim-13}{P_{13}}) \rightarrow \lnot \href{claims.html#claim-15}{P_{15}}\\) — *would deny:* The Spirit proceeds eternally from the Father and the Son
+- (1) \\(\href{claims.html#claim-1}{P_{1}}\\) John 15:26 — the Spirit of truth, who proceeds from the Father — *consensus*: John 15:26
+- (2) \\(\href{claims.html#claim-12}{P_{12}}\\) John 15:26 "proceeds" speaks of the Spirit's eternal origin, not only of mission — *disputed*: [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I, q. 36, a. 2; [Photius 1987](../../bibliography.md#photius-mystagogy-1987)
+- (3) \\(\href{claims.html#claim-13}{P_{13}}\\) In John 15:26 Jesus names the Spirit's source, the Father, and no other — *disputed*: [Photius 1987](../../bibliography.md#photius-mystagogy-1987); [Ware 1993](../../bibliography.md#ware-orthodox-church-1993)
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-15}{P_{15}}\\) *denied:* The Spirit proceeds eternally from the Father and the Son
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-12}{P_{12}} \land \href{claims.html#claim-13}{P_{13}}) \rightarrow \lnot \href{claims.html#claim-15}{P_{15}}\\).
 
 <a id="wordsLine"></a>
 **`wordsLine`** — From the Lord's words, "from the Father" (Photius)
@@ -341,11 +376,16 @@ Spirit's source.
 From the monarchy: the Father is the one cause of Son and Spirit, so the
 Spirit is not from the Son as well.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \lnot \href{claims.html#claim-15}{P_{15}}\\) — *would deny:* The Spirit proceeds eternally from the Father and the Son
+- (1) \\(\href{claims.html#claim-14}{P_{14}}\\) The Father is the one cause of the Son and of the Spirit — *disputed*: [Photius 1987](../../bibliography.md#photius-mystagogy-1987); [Ware 1993](../../bibliography.md#ware-orthodox-church-1993)
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-15}{P_{15}}\\) *denied:* The Spirit proceeds eternally from the Father and the Son
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \lnot \href{claims.html#claim-15}{P_{15}}\\).
 
 <a id="monarchyLine"></a>
 **`monarchyLine`** — From the monarchy of the Father (Photius, Ware)

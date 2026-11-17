@@ -406,11 +406,16 @@ John 10:27–29: those the Father gave to Christ "will never perish". So the
 elect persevere. Rated `disputed`: Wesley grants the text and reads its promise
 as conditional, quoting 2 Peter 1:10.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\) — *would give:* Those God has chosen to save cannot finally fall away from grace
+- (1) \\(\href{claims.html#claim-32}{P_{32}}\\) John 10:27–29 — they will never perish, and no one will snatch them out of my hand — *consensus*: John 10:27-29
+- \\(\therefore\\) \\(\href{claims.html#claim-41}{P_{41}}\\) Those God has chosen to save cannot finally fall away from grace
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\).
 
 <a id="bridgeStep"></a>
 **`bridgeStep`**
@@ -420,11 +425,17 @@ read with Owen of every apostate, that all who fall away were never true
 believers: so everyone truly justified is among the elect. Rated
 `wellSupported`; the dissent is from the reading, which Augustine denies.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-55}{P_{55}}) \rightarrow \href{claims.html#claim-42}{P_{42}}\\) — *would give:* Everyone who is truly justified is among the elect
+- (1) \\(\href{claims.html#claim-35}{P_{35}}\\) 1 John 2:19 — they went out from us, but they were not of us — *consensus*: 1 John 2:19
+- (2) \\(\href{claims.html#claim-55}{P_{55}}\\) 1 John 2:19, read of every apostate: all who fall away were never true believers — *disputed*: [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
+- \\(\therefore\\) \\(\href{claims.html#claim-42}{P_{42}}\\) Everyone who is truly justified is among the elect
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-55}{P_{55}}) \rightarrow \href{claims.html#claim-42}{P_{42}}\\).
 
 <a id="joinStep"></a>
 **`joinStep`**
@@ -433,11 +444,17 @@ If the elect persevere and the truly justified are elect, no one truly
 justified can finally fall away. Rated `consensus`: it follows from what the
 words mean.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
+- (1) \\(\href{claims.html#claim-41}{P_{41}}\\) Those God has chosen to save cannot finally fall away from grace — *well supported*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVII.1; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 636; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 593
+- (2) \\(\href{claims.html#claim-42}{P_{42}}\\) Everyone who is truly justified is among the elect — *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §X.4; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-43}{P_{43}}\\) *denied:* One who is truly justified can fall away from grace finally, and perish
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\).
 
 <a id="philippiansStep"></a>
 **`philippiansStep`**
@@ -446,11 +463,16 @@ Philippians 1:6: he who began a good work will bring it to completion. So no
 one truly justified can finally fall away. Rated `disputed`: Trent quotes the
 verse with "unless men be themselves wanting to His grace".
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
+- (1) \\(\href{claims.html#claim-33}{P_{33}}\\) Philippians 1:6 — he who began a good work in you will bring it to completion — *consensus*: Phil 1:6
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-43}{P_{43}}\\) *denied:* One who is truly justified can fall away from grace finally, and perish
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\).
 
 <a id="conditionalStep"></a>
 **`conditionalStep`**
@@ -458,11 +480,16 @@ verse with "unless men be themselves wanting to His grace".
 If God's promise holds unless men are wanting to his grace, one truly
 justified can finally fall away. Rated `wellSupported`.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-38}{P_{38}} \rightarrow \href{claims.html#claim-43}{P_{43}}\\) — *would give:* One who is truly justified can fall away from grace finally, and perish
+- (1) \\(\href{claims.html#claim-38}{P_{38}}\\) God's promise to keep those he has begun to save holds unless they fall away by their own fault — *disputed*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40
+- \\(\therefore\\) \\(\href{claims.html#claim-43}{P_{43}}\\) One who is truly justified can fall away from grace finally, and perish
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-38}{P_{38}} \rightarrow \href{claims.html#claim-43}{P_{43}}\\).
 
 <a id="hebrewsStep"></a>
 **`hebrewsStep`**
@@ -471,11 +498,17 @@ Hebrews 6:4–6, read as describing true believers who fall away: so one truly
 justified can finally fall away. Rated `wellSupported`; the dissent is from the
 reading.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\) — *would give:* One who is truly justified can fall away from grace finally, and perish
+- (1) \\(\href{claims.html#claim-34}{P_{34}}\\) Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away — *consensus*: Heb 6:4-6
+- (2) \\(\href{claims.html#claim-40}{P_{40}}\\) Hebrews 6:4–6 describes true believers who actually fall away — *disputed*: [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 449
+- \\(\therefore\\) \\(\href{claims.html#claim-43}{P_{43}}\\) One who is truly justified can fall away from grace finally, and perish
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\).
 
 <a id="augustineStep"></a>
 **`augustineStep`**
@@ -483,11 +516,16 @@ reading.
 If some whom God has regenerated are not given perseverance, one truly
 justified can finally fall away. Rated `wellSupported`.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-37}{P_{37}} \rightarrow \href{claims.html#claim-43}{P_{43}}\\) — *would give:* One who is truly justified can fall away from grace finally, and perish
+- (1) \\(\href{claims.html#claim-37}{P_{37}}\\) To some whom God has regenerated, and given faith, hope and love, he does not give perseverance — *disputed*: [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 478; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 18
+- \\(\therefore\\) \\(\href{claims.html#claim-43}{P_{43}}\\) One who is truly justified can fall away from grace finally, and perish
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-37}{P_{37}} \rightarrow \href{claims.html#claim-43}{P_{43}}\\).
 
 <a id="remonstranceStep"></a>
 **`remonstranceStep`**
@@ -495,11 +533,16 @@ justified can finally fall away. Rated `wellSupported`.
 John 10:28: no one will snatch them out of Christ's hand. So no power from
 outside snatches believers out of it. Rated `consensus`.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-36}{P_{36}}\\) — *would give:* No power from outside can snatch true believers out of Christ's hand
+- (1) \\(\href{claims.html#claim-32}{P_{32}}\\) John 10:27–29 — they will never perish, and no one will snatch them out of my hand — *consensus*: John 10:27-29
+- \\(\therefore\\) \\(\href{claims.html#claim-36}{P_{36}}\\) No power from outside can snatch true believers out of Christ's hand
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-36}{P_{36}}\\).
 
 <a id="romans8Step"></a>
 **`romans8Step`**
@@ -508,11 +551,17 @@ Romans 8:30, "those whom he justified he also glorified", read with Dort as a
 chain from which no one drops: so no one truly justified can finally fall away.
 Rated `wellSupported`; the dissent is from the reading, which Wesley denies.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-54}{P_{54}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
+- (1) \\(\href{claims.html#claim-44}{P_{44}}\\) Romans 8:29–30 — those whom he justified he also glorified — *consensus*: Rom 8:29-30
+- (2) \\(\href{claims.html#claim-54}{P_{54}}\\) Romans 8:29–30 is a chain from which no one drops: every one justified is glorified — *disputed*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-43}{P_{43}}\\) *denied:* One who is truly justified can fall away from grace finally, and perish
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-54}{P_{54}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\).
 
 <a id="timelessStep"></a>
 **`timelessStep`**
@@ -521,11 +570,16 @@ God knows all things as present to his eternity, and his knowing imposes no
 necessity: so the one who perseveres could, considered in himself, have fallen
 away. Rated `wellSupported`.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-57}{P_{57}} \rightarrow \href{claims.html#claim-56}{P_{56}}\\) — *would give:* Considered in himself, apart from God's decree, the one who perseveres could have fallen
+- (1) \\(\href{claims.html#claim-57}{P_{57}}\\) God knows all things as present to his eternity, which imposes no necessity on them — *well supported*: [Boethius 1897](../../bibliography.md#boethius-consolation-james-1897), pp. 257–262; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I q.14 a.13; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 58, §5
+- \\(\therefore\\) \\(\href{claims.html#claim-56}{P_{56}}\\) Considered in himself, apart from God's decree, the one who perseveres could have fallen
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-57}{P_{57}} \rightarrow \href{claims.html#claim-56}{P_{56}}\\).
 
 <a id="hebrews10Step"></a>
 **`hebrews10Step`**
@@ -534,11 +588,17 @@ Hebrews 10:29, read as describing one truly sanctified by Christ's blood who
 falls away: so one truly justified can finally fall away. Rated
 `wellSupported`; the dissent is from the reading.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-50}{P_{50}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\) — *would give:* One who is truly justified can fall away from grace finally, and perish
+- (1) \\(\href{claims.html#claim-45}{P_{45}}\\) Hebrews 10:26–29 — the one who has profaned the blood of the covenant by which he was sanctified — *consensus*: Heb 10:26-29
+- (2) \\(\href{claims.html#claim-50}{P_{50}}\\) Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away — *disputed*: [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 448–449; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 585
+- \\(\therefore\\) \\(\href{claims.html#claim-43}{P_{43}}\\) One who is truly justified can fall away from grace finally, and perish
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-50}{P_{50}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\).
 
 <a id="secondPeterStep"></a>
 **`secondPeterStep`**
@@ -547,11 +607,17 @@ falls away: so one truly justified can finally fall away. Rated
 world: so one truly justified can finally fall away. Rated `wellSupported`; the
 dissent is from the reading.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\) — *would give:* One who is truly justified can fall away from grace finally, and perish
+- (1) \\(\href{claims.html#claim-46}{P_{46}}\\) 2 Peter 2:20–22 — having escaped the defilements of the world, they are again entangled in them — *consensus*: 2 Pet 2:20-22
+- (2) \\(\href{claims.html#claim-51}{P_{51}}\\) 2 Peter 2:20–22 describes true believers who fall back into the world — *disputed*: [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625
+- \\(\therefore\\) \\(\href{claims.html#claim-43}{P_{43}}\\) One who is truly justified can fall away from grace finally, and perish
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\).
 
 <a id="davidStep"></a>
 **`davidStep`**
@@ -559,11 +625,16 @@ dissent is from the reading.
 If David lost the Spirit in his sin, justifying grace can be lost. Rated
 `wellSupported`; Calvin denies the ground.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-52}{P_{52}} \rightarrow \href{claims.html#claim-20}{P_{20}}\\) — *would give:* Justifying grace, once given, can be lost
+- (1) \\(\href{claims.html#claim-52}{P_{52}}\\) In his sin David lost the Holy Spirit and his faith — *disputed*: [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Smalcald Articles III.iii.43
+- \\(\therefore\\) \\(\href{claims.html#claim-20}{P_{20}}\\) Justifying grace, once given, can be lost
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-52}{P_{52}} \rightarrow \href{claims.html#claim-20}{P_{20}}\\).
 
 <a id="psalmStep"></a>
 **`psalmStep`**
@@ -572,11 +643,17 @@ Psalm 51:11, read as Calvin reads it, that David prayed as one who had not
 lost the Spirit: so justifying grace, once given, is never lost. Rated
 `wellSupported`.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-47}{P_{47}} \land \lnot \href{claims.html#claim-52}{P_{52}}) \rightarrow \lnot \href{claims.html#claim-20}{P_{20}}\\) — *would deny:* Justifying grace, once given, can be lost
+- (1) \\(\href{claims.html#claim-47}{P_{47}}\\) Psalm 51:11 — take not your Holy Spirit from me — *consensus*: Ps 51:11
+- (2) \\(\lnot \href{claims.html#claim-52}{P_{52}}\\) *denied:* In his sin David lost the Holy Spirit and his faith — *disputed*: [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Smalcald Articles III.iii.43
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-20}{P_{20}}\\) *denied:* Justifying grace, once given, can be lost
 
 </div>
+
+In symbols, the step is \\((\href{claims.html#claim-47}{P_{47}} \land \lnot \href{claims.html#claim-52}{P_{52}}) \rightarrow \lnot \href{claims.html#claim-20}{P_{20}}\\).
 
 <a id="assuranceStep"></a>
 **`assuranceStep`**
@@ -585,11 +662,16 @@ Romans 8:16: the Spirit "bears witness with our spirit that we are children of
 God". So a believer can know, without a special revelation, that he will
 persevere. Rated `wellSupported`.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-48}{P_{48}} \rightarrow \href{claims.html#claim-53}{P_{53}}\\) — *would give:* A believer can know, without a special revelation, that he will persevere
+- (1) \\(\href{claims.html#claim-48}{P_{48}}\\) Romans 8:16 — the Spirit himself bears witness with our spirit — *consensus*: Rom 8:16
+- \\(\therefore\\) \\(\href{claims.html#claim-53}{P_{53}}\\) A believer can know, without a special revelation, that he will persevere
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-48}{P_{48}} \rightarrow \href{claims.html#claim-53}{P_{53}}\\).
 
 <a id="cautionStep"></a>
 **`cautionStep`**
@@ -599,11 +681,16 @@ fall". So no believer can know, without a special revelation, that he will
 persevere. Rated `disputed`: Calvin grants the verse and denies that it means
 doubt.
 
+If each of these holds,
+
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-49}{P_{49}} \rightarrow \lnot \href{claims.html#claim-53}{P_{53}}\\) — *would deny:* A believer can know, without a special revelation, that he will persevere
+- (1) \\(\href{claims.html#claim-49}{P_{49}}\\) 1 Corinthians 10:12 — let anyone who thinks that he stands take heed lest he fall — *consensus*: 1 Cor 10:12
+- \\(\therefore\\) \\(\lnot \href{claims.html#claim-53}{P_{53}}\\) *denied:* A believer can know, without a special revelation, that he will persevere
 
 </div>
+
+In symbols, the step is \\(\href{claims.html#claim-49}{P_{49}} \rightarrow \lnot \href{claims.html#claim-53}{P_{53}}\\).
 
 ### The lines
 

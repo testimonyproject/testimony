@@ -27,9 +27,16 @@ variable in a formula is a link to its row in the legend, and a derivation puts
 its claims in words on three kinds of row: a premise that is a claim, which the
 position holds; a step, by what it *would give*, whether or not the position
 holds what the step needs; and the turnstile row, by the conclusion *at issue*,
-whether or not the premises reach it. A claim met only inside a step is left to
-its link. The words are the legend's label, run on after the formula and
-wrapping beneath it.
+whether or not the premises reach it. Inside a derivation, a claim met only
+inside a step is left to its link. The words are the legend's label, run on
+after the formula and wrapping beneath it.
+
+A step that stands alone, as a line of reason does under its docstring, has no
+rows above it to have said its claims, so it is built up from them instead
+(`step`): each claim it needs, in words, with its rating and source; then what
+they give, after the "therefore" sign (∴); then the formula. The reader meets
+the claims in the order the step uses them, and the formula comes last, as a
+summary.
 
 The marks are there because the words are read as sentences. Unmarked, a step's
 words in a rival's package read as the rival conceding them, and the turnstile's
@@ -604,6 +611,26 @@ def gloss [DecidableEq α] (n : Numbering α) (concl : Option (Formula α)) (φ 
 def loneGloss [DecidableEq α] (n : Numbering α) (φ : Formula α) : Option String :=
   n.cite.bind fun cite => loneGlossWith (inWords n cite) φ
 
+/-- A step whose grounds and whose result are each a list of claims
+(`literals`): the claims it needs, then the claims it gives. `none` for any
+other shape, which is set as a single formula. A denial is no step: it gives
+nothing to build up to. -/
+def stepClaims : Formula α → Option (List (α × Bool) × List (α × Bool))
+  | .imp _ .falsum => none
+  | .imp p q => do pure ((← literals p), (← literals q))
+  | _ => none
+
+/-- A claim as a formula: the atom, or its denial. -/
+def literal (a : α) (denied : Bool) : Formula α :=
+  if denied then .imp (.atom a) .falsum else .atom a
+
+/-- The sentence a step built up from its claims opens with, in print and on the
+site alike. -/
+def stepOpening : String := "If each of these holds,"
+
+/-- The words that close a step built up from its claims, before its formula. -/
+def stepSymbols : String := "In symbols, the step is"
+
 /-- One row of a derivation: how it starts (an `\item` with its label, or the
 preamble's `\breakrow` where a page may break before it), its formula, and the
 formula's words after a dash, through the preamble's `\gloss`. -/
@@ -642,6 +669,44 @@ def derivation [DecidableEq α] (n : Numbering α) (prems : List (Formula α))
     String.join (prems.zipIdx.map fun (φ, i) =>
       row n (numbered i (prems.length + 1)) φ (gloss n (some concl) φ)) ++
     row n "\\item[\\(\\vdash\\)]" concl (n.cite.bind fun cite => inWords n cite .atIssue concl)
+
+/-- A claim set as a step sets it: its variable, linked, then its words, a denied
+claim marked so. -/
+def claimWords [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) (a : α)
+    (denied : Bool) : String :=
+  "\\(" ++ linked n (literal a denied) ++ "\\)\\enspace " ++
+    (if denied then "\\emph{" ++ Lead.held.denial ++ ":} " else "") ++ escape (cite a).label
+
+/-- One claim a step needs, in its own words, with how firmly it is held and who
+holds it: so a reader meets the claim where the step uses it, and need not turn
+to the legend. -/
+def groundRow [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) (start : String)
+    (a : α) (denied : Bool) : String :=
+  "  " ++ start ++ " " ++ claimWords n cite a denied ++
+    "\\gloss{" ++ confidence (cite a).source.confidence ++ ": " ++ source (cite a).source ++
+    "}\n"
+
+/-- **A step, built up from its claims.** A step written as a formula,
+`(P₂ ∧ P₃ ∧ P₈) → P₂₅`, names its claims by number and leaves the reader to look
+each one up. Set this way, the step is read in the order a reader follows it:
+each claim it needs, in words, with its rating and its source; then what those
+claims together give, after the "therefore" sign (∴); and only then the
+formula, which says the same in symbols. The formula is kept, and every
+variable in it still links to the legend, so nothing a logician reads is lost.
+
+A step that is not a list of claims leading to a list of claims, or a page with
+no legend to take the words from, is set as one row, as before. -/
+def step [DecidableEq α] (n : Numbering α) (φ : Formula α) : String :=
+  match n.cite, stepClaims φ with
+  | some cite, some (needs, gives) =>
+    let count := needs.length + gives.length
+    "\\par\\smallskip\\noindent " ++ stepOpening ++ "\n" ++
+    rows (String.join (needs.zipIdx.map fun ((a, d), i) =>
+        groundRow n cite (numbered i count) a d) ++
+      String.join (gives.map fun (a, d) =>
+        "  \\item[\\(\\therefore\\)] " ++ claimWords n cite a d ++ "\n")) ++
+    "\\noindent " ++ stepSymbols ++ " \\(" ++ linked n φ ++ "\\).\n"
+  | _, _ => rows (row n "\\item[]" φ (loneGloss n φ))
 
 /-- Which of a package's premises are grounded in scripture alone, as a note
 under its derivation; nothing, in a document none of whose claims cites
@@ -914,8 +979,7 @@ def item [DecidableEq α] (n : Numbering α) : Page.Item α → String
   | .line d doc l =>
       declLabel d (" --- " ++ escape l.name) ++ prose doc ++
       derivation n l.premises l.delivers
-  | .formula d doc φ =>
-      declLabel d "" ++ prose doc ++ rows (row n "\\item[]" φ (loneGloss n φ))
+  | .formula d doc φ => declLabel d "" ++ prose doc ++ step n φ
   | .formulas d doc φs =>
       declLabel d "" ++ prose doc ++
       rows (String.join (φs.zipIdx.map fun (φ, i) =>
@@ -1162,6 +1226,27 @@ private def testNumbering : Numbering Nat :=
 #guard loneGloss testNumbering (.imp (.atom 0) (.atom 1)) == some "\\emph{would give:} claim 1"
 #guard loneGloss testNumbering (.and (.atom 0) (.atom 1)) == none
 #guard loneGloss testNumbering (.imp (.atom 0) .falsum) == none
+
+-- A step is built up from its claims: each it needs in words, with its rating and
+-- source, a denied one marked; then what it would give; then the formula.
+#guard step testNumbering (.imp (.and (.atom 0) (.imp (.atom 1) .falsum)) (.atom 2)) ==
+  "\\par\\smallskip\\noindent If each of these holds,\n" ++
+  "\\begin{derivation}\n" ++
+  "  \\item[(1)] \\(\\pvar{A}{1}\\)\\enspace claim 0" ++
+    "\\gloss{disputed: \\emph{proposed:} a test}\n" ++
+  "  \\item[(2)] \\(\\lnot \\pvar{A}{2}\\)\\enspace \\emph{denied:} claim 1" ++
+    "\\gloss{disputed: \\emph{proposed:} a test}\n" ++
+  "  \\item[\\(\\therefore\\)] \\(\\pvar{A}{3}\\)\\enspace claim 2\n" ++
+  "\\end{derivation}\n" ++
+  "\\noindent In symbols, the step is " ++
+    "\\((\\pvar{A}{1} \\land \\lnot \\pvar{A}{2}) \\rightarrow \\pvar{A}{3}\\).\n"
+
+-- A step that is not a list of claims leading to claims is one row, as before.
+#guard step testNumbering (.imp (.or (.atom 0) (.atom 1)) (.atom 2)) ==
+  "\\begin{derivation}\n" ++
+  "  \\item[] \\((\\pvar{A}{1} \\lor \\pvar{A}{2}) \\rightarrow \\pvar{A}{3}\\)" ++
+    "\\gloss{\\emph{would give:} claim 2}\n" ++
+  "\\end{derivation}\n"
 
 -- What is not a list of claims has no words: a disjunction, a denied conjunction.
 #guard gloss testNumbering none (.or (.atom 0) (.atom 1)) == none
