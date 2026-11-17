@@ -5,6 +5,8 @@ import TestimonyArguments.SolaScriptura.Packages
 import TestimonyArguments.SolaScriptura.Results
 import TestimonyArguments.SolaScriptura.Mark7
 import TestimonyArguments.SolaScriptura.JesusAndPaul
+import TestimonyArguments.SolaScriptura.Acts15
+import TestimonyArguments.SolaScriptura.MosesSeat
 import TestimonyArguments.SolaScriptura.Dispute
 import TestimonyArguments.SolaScriptura.Hearings
 
@@ -159,6 +161,44 @@ council replaced its draft's "partly … partly" with "and"; Congar judges that
 Trent left the question open. The claim is `disputed` now, and the Tridentine
 party is named "Trent (Tradition II)" rather than by the reading in dispute.
 
+## What the council at Jerusalem settles
+
+Acts 15 is read by both sides. The Reformers read it as a council that let the
+gospel judge even the oldest tradition, the custom of Moses, and that judged by
+Scripture: "to this agree the words of the prophets; as it is written" (15:15).
+Rome reads it as a council binding with the Spirit's authority: "it seemed good
+to the Holy Ghost, and to us" (15:28), its decrees "delivered" to the churches
+"for to keep" (16:4). Between the two lies the apostles' office. Calvin holds
+that it ended with them, from the eyewitness the apostle in Judas's place had to
+be (Acts 1:21–22) and Paul's being the last to see the risen Christ (1 Corinthians
+15:8); *Lumen Gentium* 20 holds that it continues in the bishops, from "his
+bishoprick let another take" (Acts 1:20), 2 Timothy 2:2 and 1 Clement 44. The texts
+alone leave that open too (`apostolic_texts_leave_the_office_open`). Each side
+grants every text the other reads, and each step from the texts to councils
+after the apostles is `disputed`. So the two readings
+cannot be held together, and the texts alone leave the question open
+(`acts15_readings_cannot_be_held_together`, `acts15_texts_leave_the_council_open`).
+Nor does Rome's reading touch the premise about unwritten tradition: what the
+council handed on was a letter, and the letter is in Scripture
+(`romes_reading_of_acts15_leaves_unwritten_tradition_open`).
+
+## What Moses' seat settles
+
+Jesus also says "The scribes and the Pharisees sit in Moses' seat: All therefore
+whatsoever they bid you observe, that observe and do; but do not ye after their
+works" (Matthew 23:2–3). Calvin reads it as binding the hearers to the law taught
+from that seat, and no further, because in the same discourse Jesus condemns the
+scribes' teaching on oaths (23:16–22), as he condemns the elders' tradition in
+Mark 7. Cornelius a Lapide reads it as an authority of teaching that passes to
+those who succeed to the seat, as the chair of Peter does, to be heeded in
+whatever is not contrary to God's law. Each grants the other's texts, and each
+step is `disputed`. So the two readings cannot be held together, and Mark 7 with
+Matthew 23 leaves the teaching office open
+(`moses_seat_readings_cannot_be_held_together`,
+`mark7_and_moses_seat_leave_the_office_open`). Rome's reading claims authority,
+not infallibility, so it can be held with Mark 7's case for sola scriptura
+(`romes_reading_of_moses_seat_can_be_held_with_mark7s_case`).
+
 ## A limitation worth stating
 
 The final-arbiter reading turns on a distinction between **doctrine**, which
@@ -179,6 +219,8 @@ given the distinction, not that the distinction can be drawn.
 | `Results.lean` | every `@[headline]` result on the positions and objections |
 | `Mark7.lean` | Mark 7 and the tradition Trent receives: the packages, the dilemma |
 | `JesusAndPaul.lean` | the same principle from Jesus' sayings and Paul's letters |
+| `Acts15.lean` | the council at Jerusalem, read by the Reformers and by Rome |
+| `MosesSeat.lean` | Moses' seat (Matthew 23:2–3), read by the Reformers and by Rome |
 | `Dispute.lean` | the dispute over Mark 7, weighed, and its verdicts |
 | `Hearings.lean` | the same dispute heard against each reading of Trent |
 -/
