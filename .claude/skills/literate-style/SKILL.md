@@ -1,12 +1,12 @@
 ---
 name: literate-style
-description: Use when writing or restructuring an argument's prose so that it builds the case up from its claims, in the literate programming style Dean asks for — module docstrings, the docstrings of atoms, lines of reason and packages, and the order of declarations in an argument's files — or when someone says a page reads top-down, as an outline, or in the order of the Lean rather than the order a reader follows. Pair with prose-voice for the sound and writing-for-readers for the rules.
+description: Use when writing or restructuring an argument's prose so that it builds the case up from its claims, in literate programming style — module docstrings, the docstrings of atoms, lines of reason and packages, and the order of declarations in an argument's files — or when someone says a page reads top-down, as an outline, or in the order of the Lean rather than the order a reader follows. Pair with prose-voice for the sound and writing-for-readers for the rules.
 ---
 
 # Literate style: building the case up
 
-When Dean asks for an argument "in literate programming style", the request is
-for the pedagogical style Donald Knuth uses to present a program as a narrative. Knuth
+An argument "in literate programming style" means one told in the pedagogical
+style Donald Knuth uses to present a program as a narrative. Knuth
 put the idea in one sentence: "The main idea is to treat a program as a piece of
 literature, addressed to human beings rather than to a computer."
 ([Literate Programming][lp], Knuth's own page for the book: CSLI Lecture Notes
