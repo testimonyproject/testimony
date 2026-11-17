@@ -3,19 +3,30 @@ import Testimony.Logic.Line
 import Testimony.Scripture
 
 /-!
-# TestimonyArguments.SolaScriptura.Atoms — the atomic claims
+# TestimonyArguments.SolaScriptura.Atoms — the claims
+
+Every claim the chapters use is listed here once, with the number every formula
+calls it by: the texts each side reads, the four positions on tradition and the
+Orthodox one, the three objections and the replies to them, and the readings of
+Mark 7, Acts 15 and Moses' seat. The table gives each claim's kind, who holds it
+and how firmly, and the sources that carry it.
+
+Two claims are worth flagging. Every party grants that Scripture is infallible
+(`scriptureIsInfallible`), and the first version of this argument never said
+so, though it concluded that Scripture is the sole *infallible* rule; the
+eliminative line needs it stated. And Paul's charge to "hold the traditions
+which ye have been taught, whether by word, or our epistle" (2 Thessalonians
+2:15) is a text both sides must account for, not a Roman premise
+(`thessalonians2_15TraditionBinding`). The first version filed it as the
+Catholic counter-text, which left the Protestant position with no answer to it.
+-/
+
+/-!
+#### How the atoms are grouped
 
 Four positions, three objections and two parity replies, so the atom list is
 longer than most. It is grouped by what each atom belongs to rather than by
 kind, because the groups are what the lines are built from.
-
-Two atoms are worth flagging. `scriptureIsInfallible` is granted by every party
-to the dispute and was absent from the seed encoding, which concluded that
-scripture is the sole *infallible* rule without ever saying that scripture is
-infallible; the eliminative line needs it stated. And
-`thessalonians2_15TraditionBinding` is a datum both sides must accommodate
-rather than a Roman premise — the seed filed it as the Catholic counter-text,
-which left the Protestant package with no answer to it.
 -/
 
 namespace TestimonyArguments.SolaScriptura

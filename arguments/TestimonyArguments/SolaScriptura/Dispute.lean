@@ -4,12 +4,13 @@ import TestimonyArguments.SolaScriptura.Mark7
 /-!
 # TestimonyArguments.SolaScriptura.Dispute — what Mark 7 decides between Rome and the Reformers
 
-`Mark7.lean` asks what each position entails. This module asks what happens when
-they meet. Five parties: Mark 7's principle; Mark 7's case for sola scriptura;
-Trent, as it states its position; and Trent with its tradition read each of the
-two ways the dilemma `whatTrentsTraditionIs` names. Who defeats whom is not
-stipulated — each defeat, and each absence of one, is computed from the parties'
-premises and checked by the kernel (see `Testimony.Logic.Dispute`).
+The chapter "What Jesus' rebuke of tradition settles" asks what each position
+entails. Here the positions meet. Five parties: Mark 7's principle; Mark 7's
+case for sola scriptura; Trent, as it states its position; and Trent with its
+tradition read each of the two ways the dilemma `whatTrentsTraditionIs` names.
+Who defeats whom is not stipulated — each defeat, and each absence of one, is
+computed from the parties' premises and checked by the kernel (see
+`Testimony.Logic.Dispute`).
 
 ## How to read the verdicts
 
@@ -71,6 +72,17 @@ not decide the Reformation's question. What would decide it is argued, not
 weighed: whether any unwritten tradition can be shown to be apostolic, and, even
 granting that none can, whether the principle then makes Scripture the *sole*
 infallible rule. Both are rated `disputed`.
+
+## Weighing it moved a rating
+
+The claim that tradition is a source of revelation coordinate with Scripture
+(`traditionIsCoordinateSourceOfRevelation`) was rated `wellSupported`, which
+made no difference while no dispute read it. In the Mark 7 dispute it would have
+decided who prevails, so it was audited. Geiselmann grants Trent's Session IV
+and denies that it canonised two coordinate sources, since the council replaced
+its draft's "partly … partly" with "and"; Congar judges that Trent left the
+question open. The claim is `disputed` now, and the Tridentine party is named
+"Trent (Tradition II)" rather than by the reading in dispute.
 -/
 
 namespace TestimonyArguments.SolaScriptura

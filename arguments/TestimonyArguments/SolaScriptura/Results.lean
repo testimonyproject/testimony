@@ -2,12 +2,18 @@ import TestimonyArguments.SolaScriptura.Packages
 import Testimony.Logic.Tactic
 
 /-!
-# TestimonyArguments.SolaScriptura.Results — what does and does not follow
+# TestimonyArguments.SolaScriptura.Results — what follows, and what does not
 
-The results this module exists for are the two on the hinge. The seed asserted
-in prose that the dispute reduces to `solaScripturaIsTaughtByScripture`; here
-that claim is split into the two roles the premise actually plays, because they
-come apart.
+Each result takes one position, objection or reply and asks whether its
+conclusion follows from its premises. Where it does, the result says so. Where
+it does not, the result names a consistent way of taking the texts on which
+every premise holds and the conclusion fails. Where a reply leaves a question
+open, the result says that neither the question nor its denial follows.
+
+The results to read first are the two on whether Scripture must teach the
+principle, because they split the premise the first version of this argument
+said everything turned on (`hinge_not_load_bearing_for_conclusion`,
+`classical_answer_blocks_self_refutation`).
 -/
 
 namespace TestimonyArguments.SolaScriptura
@@ -16,7 +22,7 @@ open Testimony
 
 open Testimony Testimony.Logic
 
-/-! ### The positions -/
+/-! #### The positions -/
 
 /-- Given the Protestant premises, on any of its three routes, the conclusion
 follows. -/
@@ -85,7 +91,7 @@ theorem orthodox_not_establishes : ¬ Establishes orthodox := by
 
 #print axioms orthodox_not_establishes
 
-/-! ### The three objections, each valid on its own grounds -/
+/-! #### The three objections, each valid on its own grounds -/
 
 /-- The self-refutation objection is valid: granted that only scriptural
 doctrine binds and that scripture does not teach sola scriptura, the position
@@ -116,7 +122,7 @@ theorem interpretiveRegress_is_valid : Establishes interpretiveRegress := by
 
 #print axioms interpretiveRegress_is_valid
 
-/-! ### The hinge, in its two roles
+/-! #### The hinge, in its two roles
 
 `solaScripturaIsTaughtByScripture` does two jobs, and they come apart. It is
 not load-bearing for reaching the conclusion, because the eliminative line
@@ -150,7 +156,7 @@ theorem hinge_is_load_bearing_within_classical_strand :
 
 #print axioms hinge_is_load_bearing_within_classical_strand
 
-/-! ### The two answers to self-refutation
+/-! #### The two answers to self-refutation
 
 The objection's step is a conjunction, so there are two ways to deny it. The
 seed encoded only the first. Neither answer is redundant with the other: each
@@ -192,7 +198,7 @@ theorem scoping_blocks_self_refutation : ¬ Establishes selfRefutationUnderScope
 
 #print axioms scoping_blocks_self_refutation
 
-/-! ### The parity replies, and what they are worth
+/-! #### The parity replies, and what they are worth
 
 Kruger on the canon and Mathison on interpretive authority make the same move:
 concede the circularity, deny that it discriminates between the positions.
@@ -276,7 +282,7 @@ theorem parity_leaves_the_distinction_open :
 
 #print axioms parity_leaves_the_distinction_open
 
-/-! ### Geisler's circle -/
+/-! #### Geisler's circle -/
 
 /-- The reading on which neither the consensus nor the clarity it is said to
 rest on obtains. -/
@@ -334,7 +340,7 @@ theorem circle_leaves_the_perspicuity_open :
 
 #print axioms circle_leaves_the_perspicuity_open
 
-/-! ### Geisler's charge, and the three replies
+/-! #### Geisler's charge, and the three replies
 
 The cycle results above are a formal fact about a cycle of implications. These
 are about the charge as an argument: whether it goes through, and what answers
@@ -467,7 +473,7 @@ theorem circle_parity_concedes_the_charge :
 
 #print axioms circle_parity_concedes_the_charge
 
-/-! ### Refusing a ground, and denying it
+/-! #### Refusing a ground, and denying it
 
 Every reply above is written the same way, as the objection's own line with a
 ground replaced. That shape covers two different moves. A reply can **deny** the
@@ -538,7 +544,7 @@ theorem barrett_denies_the_ground :
     Entails defeatUnderParity.premises (∼(notP .everyUltimateAuthorityIsCircular)) := by
   establish [solaScripturaDefs]
 
-/-! ### Satisfiability
+/-! #### Satisfiability
 
 `Entails` quantifies over the valuations satisfying the premises, so a premise
 set with no model entails everything — including the negation of what its own

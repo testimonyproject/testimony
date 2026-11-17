@@ -1,7 +1,109 @@
 import TestimonyArguments.SolaScriptura.Sources
 
 /-!
-# TestimonyArguments.SolaScriptura.Lines — the inference steps and the lines of reason
+# TestimonyArguments.SolaScriptura.Lines — three objections, and the answers to them
+
+Three routes are encoded to the conclusion that Scripture is the sole
+infallible rule. The classical line reads Scripture as "given by inspiration of
+God" and able to make the believer "throughly furnished" (2 Timothy 3:16–17),
+sufficient and clear, and holds that Scripture teaches the principle itself.
+The eliminative line holds that Scripture is infallible and that no other rule
+is. Mark 7's
+line is taken in its own chapter. Against them stand three objections, and they
+come from different directions, so that answering one does not answer another.
+
+**Self-refutation.** If a doctrine binds only when Scripture teaches it, and
+Scripture does not teach sola scriptura, the position fails by its own
+standard.
+
+**The canon.** If the canon is known through the Church's reception of it, an
+authority outside Scripture is needed to identify Scripture. Augustine gives
+the classical form: *ego vero Evangelio non crederem, nisi me catholicae
+Ecclesiae commoveret auctoritas*. He would not believe the gospel, he says,
+unless the authority of the Catholic Church moved him to.
+
+**The regress of interpretive authority.** Cross and Judisch argue that the
+individual keeps the final authority to interpret, exercised indirectly by
+choosing which body to submit to. So Tradition I, which gives tradition a real
+but subordinate authority, is not distinct in principle from Tradition 0: "when
+I submit (so long as I agree), the one to whom I submit is me."
+
+These objections tell against the position this argument sets out, and they
+are encoded with the same care, because the project's rules require every
+rival to be.
+
+## Does Scripture have to teach the principle?
+
+The first version of this argument said that the whole dispute reduces to one
+premise, that Scripture teaches sola scriptura
+(`solaScripturaIsTaughtByScripture`). That premise does two jobs, and the jobs
+come apart. It is not needed to reach the conclusion, because the eliminative
+line delivers the sole rule without it (`hinge_not_load_bearing_for_conclusion`).
+It is needed within the classical line taken alone.
+
+Against self-refutation it is one of *two* answers. The objection joins two
+grounds, so either may be denied. The classical answer denies that Scripture
+fails to teach the principle (`classical_answer_blocks_self_refutation`). The
+other denies that the rule about what binds governs a claim about where binding
+doctrine comes from (`scoping_blocks_self_refutation`). That is the
+final-arbiter reading, on which Scripture is not the only arbiter but the last
+one. The objection succeeds only against a position that refuses both.
+
+A second route to the conclusion does not help here, and this is where the
+argument parts from sola fide. There, a second strand defeated an attack on a
+premise. These objections are not attacks on a premise: each delivers the
+denial of the conclusion by itself, so another route to the conclusion does
+nothing against them. What answers an objection is denying one of *its*
+grounds.
+
+## Parity: "your side has the same problem"
+
+Kruger on the canon and Mathison on interpretive authority make the same move.
+They concede the circle, and deny that it tells against one side more than the
+other. What the move achieves is that the disputed question comes out
+*independent* of the reply's grounds: neither it nor its denial follows,
+because two readings satisfy those grounds and disagree about it
+(`parity_leaves_the_canon_open`, `parity_leaves_the_distinction_open`). The
+replies block the objection, and establish nothing.
+
+Each of these used to be stated as a *pair* of results, one that the reply
+blocks the objection and another that it establishes nothing, and the pair hid
+a mistake. Over Barrett's parity reply to Geisler the two halves asked about
+different questions while being presented as two sides of one. The claim that
+was meant is that the defeat is left open (`parity_leaves_the_defeat_open`).
+The second half, restated, is that Barrett's reply does not merely fail to clear
+the charge of circularity but grants it as one of its own grounds
+(`circle_parity_concedes_the_charge`).
+
+The argument "Born of a virgin" records the same lesson for a different reply
+(`compatibility_does_not_establish_criterion`), and not as an independence
+claim, because its two results range over different premise sets.
+
+## The circle inside Protestantism
+
+Geisler, who holds Tradition 0, charges Tradition I with a circle. The creedal
+consensus is said to rest on Scripture's clarity, while Scripture's clear sense
+is said to be unobtainable without that consensus. With both legs in place,
+neither end is settled either way (`circle_leaves_the_consensus_open`,
+`circle_leaves_the_perspicuity_open`). A circle of claims can be held all true
+or all false with nothing to choose between them. That charge is made from
+inside the Reformation, against the position this argument encodes as the
+Protestant one. It is conditional like every result here: deny either leg and
+the circle is not there.
+
+## A limitation worth stating
+
+The final-arbiter reading turns on a distinction between **doctrine**, which
+needs Scripture to settle it, and **practice** neither commanded nor forbidden,
+which does not. That is a distinction of scope, and the logic used here cannot
+express one: it works with whole claims, and cannot say "for every doctrine".
+So the distinction is carried by how the claims are drawn and by this
+paragraph, not by the logic. What the encoding shows is what follows given the
+distinction, not that the distinction can be drawn.
+-/
+
+/-!
+#### How the lines are built
 
 Three routes reach the conclusion — the classical line, the eliminative line,
 and Mark 7's, which takes two lines, and whose principle a further line draws
@@ -10,21 +112,11 @@ objections attack it from different directions. Two more lines read the council
 at Jerusalem (Acts 15), one as the Reformers read it and one as Rome does, and
 they deliver opposite answers about the authority of councils. Each rests on a
 line about the apostles' office: that it ended with them, or that it continues
-in their successors. Two more read
-Moses' seat (Matthew 23:2–3) the same two ways, and deliver opposite answers
-about the teaching office. The objections do not reduce to one
-another: self-refutation says the doctrine fails its own standard, the canon
-objection says an authority outside scripture is needed to identify scripture,
-and the interpretive-authority regress says the authority claimed is the
-claimant in disguise.
+in their successors. Two more read Moses' seat (Matthew 23:2–3) the same two
+ways, and deliver opposite answers about the teaching office.
 
-**Redundancy does not defend the hinge here.** In `SolaFide`, adding a second
-strand defeated an attack on a premise. These objections are not premise
-attacks: each independently delivers the negation of the conclusion, so a
-further route to the conclusion does nothing against them. What answers an
-objection is denying one of *its* grounds, which is why every reply below is
-written with `Line.onGrounds` — the objection's own line, with the ground the
-reply refuses put back as what the reply offers instead.
+Every reply below is written with `Line.onGrounds`: the objection's own line,
+with the ground the reply refuses put back as what the reply offers instead.
 -/
 
 namespace TestimonyArguments.SolaScriptura
@@ -33,7 +125,7 @@ open Testimony
 
 open Testimony Testimony.Logic
 
-/-! ### Steps reaching the conclusion -/
+/-! #### Steps reaching the conclusion -/
 
 /-- Sufficiency and perspicuity, with the prooftexts and the claim that
 scripture teaches the principle, yield the sole infallible rule. -/
@@ -187,7 +279,7 @@ def tradition0ToSoleRule : Formula Claim :=
   ⋀ [ p .historicalGrammaticalMethodSuffices, p .creedsAreInformativeNotNormative
     , p .scriptureIsInfallible, p .noOtherRuleIsInfallible ] ➝ p .scriptureIsSoleInfallibleRule
 
-/-! ### Steps denying it -/
+/-! #### Steps denying it -/
 
 /-- **Tradition II.** Binding unwritten tradition as a coordinate source denies
 that scripture is the sole rule. -/
@@ -208,7 +300,7 @@ second infallible rule — and it is not the magisterial premise. -/
 def orthodoxDeniesSoleRule : Formula Claim :=
   p .churchMindIsInfallibleInterpreter ➝ notP .scriptureIsSoleInfallibleRule
 
-/-! ### The three objections -/
+/-! #### The three objections -/
 
 /-- If a doctrine binds only when scripture teaches it, and scripture does not
 teach sola scriptura, then sola scriptura does not bind. -/
@@ -235,7 +327,7 @@ def interpretiveRegressStep : Formula Claim :=
     , p .individualRetainsUltimateInterpretiveAuthority ]
   ➝ notP .traditionIDiffersInPrincipleFromTradition0
 
-/-! ### Geisler's circle
+/-! #### Geisler's circle
 
 Two legs, each supplying the other's ground. The consensus of the Church is
 said to rest on the clarity of scripture, while the clear sense of scripture is
@@ -252,7 +344,7 @@ consensus. -/
 def perspicuityRestsOnConsensus : Formula Claim :=
   p .creedalConsensusIsHermeneuticallyNecessary ➝ p .scriptureIsPerspicuous
 
-/-! ### The lines -/
+/-! #### The lines -/
 
 /-- **The classical Protestant line**, running through the claim that scripture
 teaches the principle. -/
@@ -463,7 +555,7 @@ def interpretiveRegressLine : Line Claim :=
   , step := interpretiveRegressStep
   , delivers := notP .traditionIDiffersInPrincipleFromTradition0 }
 
-/-! ### The replies, as substituted grounds
+/-! #### The replies, as substituted grounds
 
 Each reply is the objection's own line with the ground it refuses replaced by
 what the reply offers instead. Adding a premise could never block a valid
@@ -500,7 +592,7 @@ def regressUnderParity : Line Claim :=
   interpretiveRegressLine.onGrounds
     [p .traditionHasMinisterialAuthority, p .choosingAnAuthorityIsItselfPrivateJudgment]
 
-/-! ### Geisler's charge as an argument, and the replies to it
+/-! #### Geisler's charge as an argument, and the replies to it
 
 The cycle results above are a formal fact: a cycle of implications grounds
 neither end. The line below is the *dialectical* fact — Geisler charging
@@ -575,7 +667,7 @@ def defeatUnderParity : Line Claim :=
     [ p .traditionIReasoningIsCircular
     , p .everyUltimateAuthorityIsCircular ]
 
-/-! ### Shared grounds and closing steps -/
+/-! #### Shared grounds and closing steps -/
 
 /-- What the Protestant packages rest on beyond any single line: the prooftext
 that belongs to no strand, the shared datum of 2 Thessalonians 2:15, and the
