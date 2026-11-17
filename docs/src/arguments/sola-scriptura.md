@@ -9,10 +9,11 @@ Claims are numbered once for the whole argument, so P₁ means the same claim in
 
 This argument is also set for print, the claims linked and the derivations in words as here, in [a PDF of its own](../pdf/arguments/sola-scriptura.pdf). [One PDF](../pdf/arguments.pdf) holds every argument together, and each tagged [release](https://github.com/testimonyproject/testimony/releases) of the project carries a copy.
 
-This argument is set in 8 chapters:
+This argument is set in 9 chapters:
 
 - [Sola scriptura: the claim, and the positions on tradition](sola-scriptura.md)
 - [Three objections, and the answers to them](sola-scriptura/objections.md)
+- [How the canon is recognised](sola-scriptura/canon.md)
 - [What Jesus' rebuke of tradition settles](sola-scriptura/mark-7.md)
 - [The same principle, beyond Mark 7](sola-scriptura/jesus-and-paul.md)
 - [Weighing Mark 7 between Rome and the Reformers](sola-scriptura/weighing.md)
@@ -73,6 +74,13 @@ than by its critic, it reaches the conclusion too (`tradition0_establishes`).
   denying one of its own grounds, and the replies from parity leave the
   question open rather than settle it
   ([Three objections, and the answers to them](sola-scriptura/objections.md)).
+- **Does the Church have to identify the canon infallibly?** Scripture sets
+  its own tests for a word that claims to come from God (Deuteronomy 13 and
+  18), and the early Church set apart books it read and did not receive, the
+  Shepherd and the Didache, by reasons it stated. That reply denies the
+  objection's need for an infallible authority. Weighed against the objection,
+  each defeats the other, and the dispute forces neither
+  ([How the canon is recognised](sola-scriptura/canon.md)).
 - **What does Mark 7 settle?** Jesus' rebuke of the elders' tradition delivers a
   principle Rome also holds. To reach sola scriptura it needs one more premise,
   that no unwritten tradition can now be shown to be apostolic, and Rome denies
@@ -111,6 +119,7 @@ listed in the appendix, "The claims and their sources".
 | `Lines.lean` | the inference steps, the lines, and the replies as substituted grounds |
 | `Packages.lean` | the positions, the objections, and the variants the results refute |
 | `Results.lean` | every `@[headline]` result on the positions and objections |
+| `Canon.lean` | the reply from Scripture's tests to the canon objection, weighed against it |
 | `Mark7.lean` | Mark 7 and the tradition Trent receives: the packages, the dilemma |
 | `JesusAndPaul.lean` | the same principle from Jesus' sayings and Paul's letters |
 | `Acts15.lean` | the council at Jerusalem, read by the Reformers and by Rome |

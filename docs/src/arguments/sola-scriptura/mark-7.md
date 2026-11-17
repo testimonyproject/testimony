@@ -116,9 +116,9 @@ Scripture's place among the rules of faith.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (2) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-37}{P_{37}}\\)
-- (3) \\(\href{claims.html#claim-37}{P_{37}} \rightarrow \lnot \href{claims.html#claim-38}{P_{38}}\\) — *would deny:* A commandment of men may rightly be bound on the Church as God's word
-- \\(\vdash\\) \\(\href{claims.html#claim-37}{P_{37}}\\) — *at issue:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (2) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-40}{P_{40}}\\)
+- (3) \\(\href{claims.html#claim-40}{P_{40}} \rightarrow \lnot \href{claims.html#claim-41}{P_{41}}\\) — *would deny:* A commandment of men may rightly be bound on the Church as God's word
+- \\(\vdash\\) \\(\href{claims.html#claim-40}{P_{40}}\\) — *at issue:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
 
 </div>
 
@@ -133,9 +133,9 @@ unwritten tradition can now be shown to be apostolic.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (2) \\(\href{claims.html#claim-39}{P_{39}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
-- (3) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (4) \\((\href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-39}{P_{39}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
+- (2) \\(\href{claims.html#claim-42}{P_{42}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
+- (3) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-40}{P_{40}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (4) \\((\href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -152,8 +152,8 @@ rule.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (2) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (3) \\((\href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-39}{P_{39}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
+- (2) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-40}{P_{40}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (3) \\((\href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -269,7 +269,7 @@ Trent, with its tradition read as commandments of men.
 - (1) \\(\href{claims.html#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
 - (2) \\(\href{claims.html#claim-13}{P_{13}}\\) — Tradition is a coordinate source of revelation alongside scripture
 - (3) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-13}{P_{13}}) \rightarrow \lnot \href{claims.html#claim-9}{P_{9}}\\)
-- (4) \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \href{claims.html#claim-38}{P_{38}}\\) — *would give:* A commandment of men may rightly be bound on the Church as God's word
+- (4) \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\) — *would give:* A commandment of men may rightly be bound on the Church as God's word
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-9}{P_{9}}\\) — *at issue, the denial of:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -286,7 +286,7 @@ Trent, with its tradition read as the apostolic word handed on unwritten.
 - (1) \\(\href{claims.html#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
 - (2) \\(\href{claims.html#claim-13}{P_{13}}\\) — Tradition is a coordinate source of revelation alongside scripture
 - (3) \\((\href{claims.html#claim-5}{P_{5}} \land \href{claims.html#claim-13}{P_{13}}) \rightarrow \lnot \href{claims.html#claim-9}{P_{9}}\\)
-- (4) \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-39}{P_{39}}\\) — *would deny:* No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
+- (4) \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-42}{P_{42}}\\) — *would deny:* No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-9}{P_{9}}\\) — *at issue, the denial of:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -519,13 +519,13 @@ of its case for the principle, which follows without it.
 
 **Why *Mark 7: God's word judges human tradition* stands against *Trent (Tradition II), read as commandments of men*.**
 
-- **The crux:** \\(\href{claims.html#claim-37}{P_{37}} \rightarrow \lnot \href{claims.html#claim-38}{P_{38}}\\), a premise of *Mark 7: God's word judges human tradition*.
+- **The crux:** \\(\href{claims.html#claim-40}{P_{40}} \rightarrow \lnot \href{claims.html#claim-41}{P_{41}}\\), a premise of *Mark 7: God's word judges human tradition*.
 - **What it does:** its conclusion follows without it — the crux is its answer to *Trent (Tradition II), read as commandments of men*.
-- **Granted:** \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-37}{P_{37}}\\), which the break also needs.
-- **Where the rival breaks:** \\(\href{claims.html#claim-13}{P_{13}}\\), \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \href{claims.html#claim-38}{P_{38}}\\) cannot be held together with \\(\href{claims.html#claim-37}{P_{37}} \rightarrow \lnot \href{claims.html#claim-38}{P_{38}}\\) and \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-37}{P_{37}}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-40}{P_{40}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-13}{P_{13}}\\), \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\) cannot be held together with \\(\href{claims.html#claim-40}{P_{40}} \rightarrow \lnot \href{claims.html#claim-41}{P_{41}}\\) and \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-40}{P_{40}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
   - \\(\href{claims.html#claim-3}{P_{3}}\\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command — *consensus*: Mark 7:1-13; Matt 15:1-9; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.10
-  - \\(\href{claims.html#claim-37}{P_{37}}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../../bibliography.md#florovsky-bible-church-tradition-1972)
+  - \\(\href{claims.html#claim-40}{P_{40}}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../../bibliography.md#florovsky-bible-church-tradition-1972)
   - the step itself — *well supported*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.23; [Wenham 1953](../../bibliography.md#wenham-our-lords-view-1953), pp. 15–16
 
 <a id="whereTheApostolicWordReadingFalls"></a>
@@ -540,11 +540,11 @@ alone settle the question.
 
 **Why *Sola scriptura from Mark 7* stands against *Trent (Tradition II), read as the apostolic word handed on unwritten*.**
 
-- **The crux:** \\(\href{claims.html#claim-39}{P_{39}}\\), a premise of *Sola scriptura from Mark 7*.
+- **The crux:** \\(\href{claims.html#claim-42}{P_{42}}\\), a premise of *Sola scriptura from Mark 7*.
 - **What it does:** its conclusion does not follow without it.
-- **Where the rival breaks:** \\(\href{claims.html#claim-13}{P_{13}}\\), \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-39}{P_{39}}\\) cannot be held together with \\(\href{claims.html#claim-39}{P_{39}}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(\href{claims.html#claim-13}{P_{13}}\\), \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-42}{P_{42}}\\) cannot be held together with \\(\href{claims.html#claim-42}{P_{42}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(\href{claims.html#claim-39}{P_{39}}\\) No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — *disputed*: [Whitaker 1849](../../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §I.6
+  - \\(\href{claims.html#claim-42}{P_{42}}\\) No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — *disputed*: [Whitaker 1849](../../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §I.6
 
 ### The dilemma
 
@@ -570,22 +570,22 @@ costs.
 
 **Every reading of \\(\href{claims.html#claim-13}{P_{13}}\\), answered.** *Trent (Tradition II)* holds \\(\href{claims.html#claim-13}{P_{13}}\\). It is read 2 ways here, and each reading is checked; none can be left out.
 
-**1. Read as commandments of men.** The claim commits *Trent (Tradition II)* to \\(\href{claims.html#claim-38}{P_{38}}\\) — so read by [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.23 (*disputed*).
+**1. Read as commandments of men.** The claim commits *Trent (Tradition II)* to \\(\href{claims.html#claim-41}{P_{41}}\\) — so read by [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.23 (*disputed*).
 
 Against *Mark 7: God's word judges human tradition*, it cannot be held. Where it breaks:
 
 **Why *Mark 7: God's word judges human tradition* stands against *Trent (Tradition II), read as commandments of men*.**
 
-- **The crux:** \\(\href{claims.html#claim-37}{P_{37}} \rightarrow \lnot \href{claims.html#claim-38}{P_{38}}\\), a premise of *Mark 7: God's word judges human tradition*.
+- **The crux:** \\(\href{claims.html#claim-40}{P_{40}} \rightarrow \lnot \href{claims.html#claim-41}{P_{41}}\\), a premise of *Mark 7: God's word judges human tradition*.
 - **What it does:** its conclusion follows without it — the crux is its answer to *Trent (Tradition II), read as commandments of men*.
-- **Granted:** \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-37}{P_{37}}\\), which the break also needs.
-- **Where the rival breaks:** \\(\href{claims.html#claim-13}{P_{13}}\\), \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \href{claims.html#claim-38}{P_{38}}\\) cannot be held together with \\(\href{claims.html#claim-37}{P_{37}} \rightarrow \lnot \href{claims.html#claim-38}{P_{38}}\\) and \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-37}{P_{37}}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-40}{P_{40}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-13}{P_{13}}\\), \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\) cannot be held together with \\(\href{claims.html#claim-40}{P_{40}} \rightarrow \lnot \href{claims.html#claim-41}{P_{41}}\\) and \\(\href{claims.html#claim-3}{P_{3}}\\), \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-40}{P_{40}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
   - \\(\href{claims.html#claim-3}{P_{3}}\\) Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command — *consensus*: Mark 7:1-13; Matt 15:1-9; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.10
-  - \\(\href{claims.html#claim-37}{P_{37}}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../../bibliography.md#florovsky-bible-church-tradition-1972)
+  - \\(\href{claims.html#claim-40}{P_{40}}\\) God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void — *consensus*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../../bibliography.md#florovsky-bible-church-tradition-1972)
   - the step itself — *well supported*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.23; [Wenham 1953](../../bibliography.md#wenham-our-lords-view-1953), pp. 15–16
 
-**2. Read as the apostolic word handed on unwritten.** The claim commits *Trent (Tradition II)* to \\(\lnot \href{claims.html#claim-39}{P_{39}}\\) — so read by [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 18; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 9; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §83 (*consensus*).
+**2. Read as the apostolic word handed on unwritten.** The claim commits *Trent (Tradition II)* to \\(\lnot \href{claims.html#claim-42}{P_{42}}\\) — so read by [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 18; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 9; [Catholic Church 2000](../../bibliography.md#catholic-church-catechism-2000), §83 (*consensus*).
 
 Against *Mark 7: God's word judges human tradition*, it is not reached: *Mark 7: God's word judges human tradition* holds, and can be held together with it.
 
@@ -593,11 +593,11 @@ Against *Sola scriptura from Mark 7*, it cannot be held. Where it breaks:
 
 **Why *Sola scriptura from Mark 7* stands against *Trent (Tradition II), read as the apostolic word handed on unwritten*.**
 
-- **The crux:** \\(\href{claims.html#claim-39}{P_{39}}\\), a premise of *Sola scriptura from Mark 7*.
+- **The crux:** \\(\href{claims.html#claim-42}{P_{42}}\\), a premise of *Sola scriptura from Mark 7*.
 - **What it does:** its conclusion does not follow without it.
-- **Where the rival breaks:** \\(\href{claims.html#claim-13}{P_{13}}\\), \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-39}{P_{39}}\\) cannot be held together with \\(\href{claims.html#claim-39}{P_{39}}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(\href{claims.html#claim-13}{P_{13}}\\), \\(\href{claims.html#claim-13}{P_{13}} \rightarrow \lnot \href{claims.html#claim-42}{P_{42}}\\) cannot be held together with \\(\href{claims.html#claim-42}{P_{42}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(\href{claims.html#claim-39}{P_{39}}\\) No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — *disputed*: [Whitaker 1849](../../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §I.6
+  - \\(\href{claims.html#claim-42}{P_{42}}\\) No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God — *disputed*: [Whitaker 1849](../../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §I.6
 
 
 </details>

@@ -133,7 +133,7 @@ Sola fide
 Sola gratia — Ephesians 2:8–9 and Romans 9:16
   lines: 27, read: 0
 Sola scriptura
-  lines: 27, read: 21
+  lines: 28, read: 22
 The Triune God
   lines: 34, read: 0
 The canonical witness
@@ -142,11 +142,11 @@ The canonical witness
 #guard_msgs in
 #check_fallacies under TestimonyArguments
 
-/-- info: every package has a model with its postulates: 259, and 0 undecided -/
+/-- info: every package has a model with its postulates: 260, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments
 
-/-- info: every non-entailment survives its postulates: 127, and 4 undecided -/
+/-- info: every non-entailment survives its postulates: 129, and 4 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments
 
@@ -155,13 +155,13 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2572 definitions, 264 entries
+info: every entry is a tagged definition, and every key names one: 2572 definitions, 267 entries
 -/
 #guard_msgs in
 #check_citations under Testimony
 
 /--
-info: every entry is a tagged definition, and every key names one: 2540 definitions, 264 entries
+info: every entry is a tagged definition, and every key names one: 2576 definitions, 267 entries
 -/
 #guard_msgs in
 #check_citations under TestimonyArguments
@@ -180,6 +180,7 @@ SolaFide.jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
 SolaFide.solaFideDispute.finite: 67 I, 30 RA, 32 CA, 1 PA, 160 edges
 SolaGratia.perseveranceDispute.finite: 35 I, 15 RA, 24 CA, 0 PA, 85 edges
 SolaGratia.solaGratiaDispute.finite: 42 I, 14 RA, 47 CA, 0 PA, 131 edges
+SolaScriptura.canonDispute.finite: 7 I, 2 RA, 2 CA, 0 PA, 11 edges
 SolaScriptura.mark7Dispute.finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
 SpiritBaptism.spiritBaptismDispute.finite: 15 I, 7 RA, 6 CA, 0 PA, 32 edges
 Trinity.caseDispute.finite: 56 I, 24 RA, 27 CA, 0 PA, 138 edges

@@ -20,7 +20,9 @@ standard.
 authority outside Scripture is needed to identify Scripture. Augustine gives
 the classical form: *ego vero Evangelio non crederem, nisi me catholicae
 Ecclesiae commoveret auctoritas*. He would not believe the gospel, he says,
-unless the authority of the Catholic Church moved him to.
+unless the authority of the Catholic Church moved him to. The chapter
+"How the canon is recognised" takes a reply that denies that identifying the
+canon needs an infallible authority, from the tests Scripture itself sets.
 
 **The regress of interpretive authority.** Cross and Judisch argue that the
 individual keeps the final authority to interpret, exercised indirectly by
@@ -537,7 +539,8 @@ def canonObjectionLine : Line Claim :=
       [ p .canonKnownThroughChurchReception
       , p .identifyingCanonRequiresInfallibleAuthority ]
   , step := canonObjectionStep
-  , delivers := notP .scriptureIsSoleInfallibleRule }
+  , delivers := notP .scriptureIsSoleInfallibleRule
+  , inference := some canonObjectionInference }
 
 /-- **The interpretive-authority regress.** -/
 @[solaScripturaDefs]

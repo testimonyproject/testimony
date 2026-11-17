@@ -126,12 +126,12 @@ about Scripture's place among the rules of faith.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-40}{P_{40}}\\) — John 10:35 — the scripture cannot be broken
-- (2) \\(\href{claims.html#claim-41}{P_{41}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
-- (3) \\(\href{claims.html#claim-42}{P_{42}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
-- (4) \\(\href{claims.html#claim-43}{P_{43}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
-- (5) \\((\href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \href{claims.html#claim-37}{P_{37}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-37}{P_{37}}\\) — *at issue:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (1) \\(\href{claims.html#claim-43}{P_{43}}\\) — John 10:35 — the scripture cannot be broken
+- (2) \\(\href{claims.html#claim-44}{P_{44}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
+- (3) \\(\href{claims.html#claim-45}{P_{45}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
+- (4) \\(\href{claims.html#claim-46}{P_{46}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
+- (5) \\((\href{claims.html#claim-43}{P_{43}} \land \href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}}) \rightarrow \href{claims.html#claim-40}{P_{40}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-40}{P_{40}}\\) — *at issue:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
 
 </div>
 
@@ -147,13 +147,13 @@ no unwritten tradition can now be shown to be apostolic.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (2) \\(\href{claims.html#claim-40}{P_{40}}\\) — John 10:35 — the scripture cannot be broken
-- (3) \\(\href{claims.html#claim-41}{P_{41}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
-- (4) \\(\href{claims.html#claim-42}{P_{42}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
-- (5) \\(\href{claims.html#claim-43}{P_{43}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
-- (6) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (7) \\((\href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \href{claims.html#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (8) \\((\href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-39}{P_{39}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\) — *would give:* Scripture is the sole infallible rule of faith
+- (2) \\(\href{claims.html#claim-43}{P_{43}}\\) — John 10:35 — the scripture cannot be broken
+- (3) \\(\href{claims.html#claim-44}{P_{44}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
+- (4) \\(\href{claims.html#claim-45}{P_{45}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
+- (5) \\(\href{claims.html#claim-46}{P_{46}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
+- (6) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-40}{P_{40}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (7) \\((\href{claims.html#claim-43}{P_{43}} \land \href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}}) \rightarrow \href{claims.html#claim-40}{P_{40}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (8) \\((\href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\) — *would give:* Scripture is the sole infallible rule of faith
 
 </div>
 

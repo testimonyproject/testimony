@@ -21,7 +21,9 @@ standard.
 authority outside Scripture is needed to identify Scripture. Augustine gives
 the classical form: *ego vero Evangelio non crederem, nisi me catholicae
 Ecclesiae commoveret auctoritas*. He would not believe the gospel, he says,
-unless the authority of the Catholic Church moved him to.
+unless the authority of the Catholic Church moved him to. The chapter
+[How the canon is recognised](canon.md) takes a reply that denies that identifying the
+canon needs an infallible authority, from the tests Scripture itself sets.
 
 **The regress of interpretive authority.** Cross and Judisch argue that the
 individual keeps the final authority to interpret, exercised indirectly by
@@ -178,7 +180,7 @@ generalises from one pericope.
 
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-40}{P_{40}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
 
 </div>
 
@@ -197,7 +199,7 @@ denies only that every addition is "another gospel" (`jesusAndPaulPrincipleInfer
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \href{claims.html#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- \\((\href{claims.html#claim-43}{P_{43}} \land \href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}}) \rightarrow \href{claims.html#claim-40}{P_{40}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
 
 </div>
 
@@ -217,7 +219,7 @@ the Spirit's authority (`acts15ReformedInference`).
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-59}{P_{59}}) \rightarrow \lnot \href{claims.html#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- \\((\href{claims.html#claim-47}{P_{47}} \land \href{claims.html#claim-48}{P_{48}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-62}{P_{62}}) \rightarrow \lnot \href{claims.html#claim-53}{P_{53}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
 
 </div>
 
@@ -236,7 +238,7 @@ authority of councils and denies that councils since the apostles cannot err
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-48}{P_{48}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-60}{P_{60}} \land \lnot \href{claims.html#claim-59}{P_{59}}) \rightarrow \href{claims.html#claim-50}{P_{50}}\\) — *would give:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- \\((\href{claims.html#claim-51}{P_{51}} \land \href{claims.html#claim-52}{P_{52}} \land \href{claims.html#claim-63}{P_{63}} \land \lnot \href{claims.html#claim-62}{P_{62}}) \rightarrow \href{claims.html#claim-53}{P_{53}}\\) — *would give:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
 
 </div>
 
@@ -255,7 +257,7 @@ permanent in the order of bishops (`apostlesOfficeEndedInference`).
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}} \land \href{claims.html#claim-57}{P_{57}}) \rightarrow \href{claims.html#claim-59}{P_{59}}\\) — *would give:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-58}{P_{58}} \land \href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-60}{P_{60}}) \rightarrow \href{claims.html#claim-62}{P_{62}}\\) — *would give:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
 
 </div>
 
@@ -273,7 +275,7 @@ was not "instituted in the Church to be perpetual"
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-61}{P_{61}} \land \href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-63}{P_{63}}) \rightarrow \lnot \href{claims.html#claim-59}{P_{59}}\\) — *would deny:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- \\((\href{claims.html#claim-64}{P_{64}} \land \href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-66}{P_{66}}) \rightarrow \lnot \href{claims.html#claim-62}{P_{62}}\\) — *would deny:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
 
 </div>
 
@@ -292,7 +294,7 @@ the Law" (`mosesSeatReformedInference`).
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-51}{P_{51}} \land \href{claims.html#claim-52}{P_{52}} \land \href{claims.html#claim-3}{P_{3}}) \rightarrow \lnot \href{claims.html#claim-53}{P_{53}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- \\((\href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-3}{P_{3}}) \rightarrow \lnot \href{claims.html#claim-56}{P_{56}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 
 </div>
 
@@ -310,7 +312,7 @@ hold, in what is not contrary to God's law, even when they live ill. Rated
 
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-51}{P_{51}} \rightarrow \href{claims.html#claim-53}{P_{53}}\\) — *would give:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- \\(\href{claims.html#claim-54}{P_{54}} \rightarrow \href{claims.html#claim-56}{P_{56}}\\) — *would give:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 
 </div>
 
@@ -322,7 +324,7 @@ Church as God's word. This is Isaiah 29:13 as Mark 7:7 quotes it.
 
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-37}{P_{37}} \rightarrow \lnot \href{claims.html#claim-38}{P_{38}}\\) — *would deny:* A commandment of men may rightly be bound on the Church as God's word
+- \\(\href{claims.html#claim-40}{P_{40}} \rightarrow \lnot \href{claims.html#claim-41}{P_{41}}\\) — *would deny:* A commandment of men may rightly be bound on the Church as God's word
 
 </div>
 
@@ -340,7 +342,7 @@ word to Scripture; both deny it is the *sole* infallible rule.
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-39}{P_{39}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\) — *would give:* Scripture is the sole infallible rule of faith
+- \\((\href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\) — *would give:* Scripture is the sole infallible rule of faith
 
 </div>
 
@@ -352,7 +354,7 @@ inform without binding, and no second infallible rule is needed.
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-26}{P_{26}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\) — *would give:* Scripture is the sole infallible rule of faith
+- \\((\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-28}{P_{28}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\) — *would give:* Scripture is the sole infallible rule of faith
 
 </div>
 
@@ -431,7 +433,7 @@ Tradition 0.
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \lnot \href{claims.html#claim-20}{P_{20}}\\) — *would deny:* Sola scriptura differs in principle from solo scriptura
+- \\((\href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \lnot \href{claims.html#claim-23}{P_{23}}\\) — *would deny:* Sola scriptura differs in principle from solo scriptura
 
 </div>
 
@@ -448,7 +450,7 @@ Leg one: the creedal consensus rests on scripture's clarity.
 
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-8}{P_{8}} \rightarrow \href{claims.html#claim-27}{P_{27}}\\) — *would give:* The creedal consensus is hermeneutically necessary for understanding scripture
+- \\(\href{claims.html#claim-8}{P_{8}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\) — *would give:* The creedal consensus is hermeneutically necessary for understanding scripture
 
 </div>
 
@@ -460,7 +462,7 @@ consensus.
 
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \href{claims.html#claim-8}{P_{8}}\\) — *would give:* Scripture is clear on what is necessary for salvation
+- \\(\href{claims.html#claim-30}{P_{30}} \rightarrow \href{claims.html#claim-8}{P_{8}}\\) — *would give:* Scripture is clear on what is necessary for salvation
 
 </div>
 
@@ -507,8 +509,8 @@ and the principle it enacts. It delivers the principle, and no more.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (2) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-37}{P_{37}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-37}{P_{37}}\\) — *at issue:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (2) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-40}{P_{40}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-40}{P_{40}}\\) — *at issue:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
 
 </div>
 
@@ -522,8 +524,8 @@ Rome denies.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-39}{P_{39}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
-- (2) \\((\href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-39}{P_{39}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
+- (1) \\(\href{claims.html#claim-42}{P_{42}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
+- (2) \\((\href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -538,12 +540,12 @@ rest on one passage.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-40}{P_{40}}\\) — John 10:35 — the scripture cannot be broken
-- (2) \\(\href{claims.html#claim-41}{P_{41}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
-- (3) \\(\href{claims.html#claim-42}{P_{42}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
-- (4) \\(\href{claims.html#claim-43}{P_{43}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
-- (5) \\((\href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \href{claims.html#claim-37}{P_{37}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-37}{P_{37}}\\) — *at issue:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (1) \\(\href{claims.html#claim-43}{P_{43}}\\) — John 10:35 — the scripture cannot be broken
+- (2) \\(\href{claims.html#claim-44}{P_{44}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
+- (3) \\(\href{claims.html#claim-45}{P_{45}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
+- (4) \\(\href{claims.html#claim-46}{P_{46}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
+- (5) \\((\href{claims.html#claim-43}{P_{43}} \land \href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}}) \rightarrow \href{claims.html#claim-40}{P_{40}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-40}{P_{40}}\\) — *at issue:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
 
 </div>
 
@@ -558,11 +560,11 @@ authority: it binds as far as it agrees with Scripture.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
-- (2) \\(\href{claims.html#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
-- (3) \\(\href{claims.html#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
-- (4) \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-59}{P_{59}}) \rightarrow \lnot \href{claims.html#claim-50}{P_{50}}\\)
-- \\(\vdash\\) \\(\lnot \href{claims.html#claim-50}{P_{50}}\\) — *at issue, the denial of:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (1) \\(\href{claims.html#claim-47}{P_{47}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
+- (2) \\(\href{claims.html#claim-48}{P_{48}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
+- (3) \\(\href{claims.html#claim-49}{P_{49}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
+- (4) \\((\href{claims.html#claim-47}{P_{47}} \land \href{claims.html#claim-48}{P_{48}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-62}{P_{62}}) \rightarrow \lnot \href{claims.html#claim-53}{P_{53}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-53}{P_{53}}\\) — *at issue, the denial of:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
 
 </div>
 
@@ -577,11 +579,11 @@ binds with the Spirit's authority.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-48}{P_{48}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
-- (2) \\(\href{claims.html#claim-49}{P_{49}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
-- (3) \\(\href{claims.html#claim-60}{P_{60}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
-- (4) \\((\href{claims.html#claim-48}{P_{48}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-60}{P_{60}} \land \lnot \href{claims.html#claim-59}{P_{59}}) \rightarrow \href{claims.html#claim-50}{P_{50}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-50}{P_{50}}\\) — *at issue:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (1) \\(\href{claims.html#claim-51}{P_{51}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
+- (2) \\(\href{claims.html#claim-52}{P_{52}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
+- (3) \\(\href{claims.html#claim-63}{P_{63}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
+- (4) \\((\href{claims.html#claim-51}{P_{51}} \land \href{claims.html#claim-52}{P_{52}} \land \href{claims.html#claim-63}{P_{63}} \land \lnot \href{claims.html#claim-62}{P_{62}}) \rightarrow \href{claims.html#claim-53}{P_{53}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-53}{P_{53}}\\) — *at issue:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
 
 </div>
 
@@ -594,12 +596,12 @@ apostles' own office ended with them.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-54}{P_{54}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
-- (2) \\(\href{claims.html#claim-55}{P_{55}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
-- (3) \\(\href{claims.html#claim-56}{P_{56}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
-- (4) \\(\href{claims.html#claim-57}{P_{57}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
-- (5) \\((\href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}} \land \href{claims.html#claim-57}{P_{57}}) \rightarrow \href{claims.html#claim-59}{P_{59}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-59}{P_{59}}\\) — *at issue:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (1) \\(\href{claims.html#claim-57}{P_{57}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
+- (2) \\(\href{claims.html#claim-58}{P_{58}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
+- (3) \\(\href{claims.html#claim-59}{P_{59}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
+- (4) \\(\href{claims.html#claim-60}{P_{60}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
+- (5) \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-58}{P_{58}} \land \href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-60}{P_{60}}) \rightarrow \href{claims.html#claim-62}{P_{62}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-62}{P_{62}}\\) — *at issue:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
 
 </div>
 
@@ -612,11 +614,11 @@ with them.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-61}{P_{61}}\\) — Acts 1:20 — his bishoprick let another take
-- (2) \\(\href{claims.html#claim-62}{P_{62}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
-- (3) \\(\href{claims.html#claim-63}{P_{63}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
-- (4) \\((\href{claims.html#claim-61}{P_{61}} \land \href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-63}{P_{63}}) \rightarrow \lnot \href{claims.html#claim-59}{P_{59}}\\)
-- \\(\vdash\\) \\(\lnot \href{claims.html#claim-59}{P_{59}}\\) — *at issue, the denial of:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (1) \\(\href{claims.html#claim-64}{P_{64}}\\) — Acts 1:20 — his bishoprick let another take
+- (2) \\(\href{claims.html#claim-65}{P_{65}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
+- (3) \\(\href{claims.html#claim-66}{P_{66}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
+- (4) \\((\href{claims.html#claim-64}{P_{64}} \land \href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-66}{P_{66}}) \rightarrow \lnot \href{claims.html#claim-62}{P_{62}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-62}{P_{62}}\\) — *at issue, the denial of:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
 
 </div>
 
@@ -630,11 +632,11 @@ word.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
-- (2) \\(\href{claims.html#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
+- (1) \\(\href{claims.html#claim-54}{P_{54}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (2) \\(\href{claims.html#claim-55}{P_{55}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
 - (3) \\(\href{claims.html#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (4) \\((\href{claims.html#claim-51}{P_{51}} \land \href{claims.html#claim-52}{P_{52}} \land \href{claims.html#claim-3}{P_{3}}) \rightarrow \lnot \href{claims.html#claim-53}{P_{53}}\\)
-- \\(\vdash\\) \\(\lnot \href{claims.html#claim-53}{P_{53}}\\) — *at issue, the denial of:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- (4) \\((\href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-3}{P_{3}}) \rightarrow \lnot \href{claims.html#claim-56}{P_{56}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-56}{P_{56}}\\) — *at issue, the denial of:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 
 </div>
 
@@ -647,9 +649,9 @@ seat they hold, in whatever is not contrary to God's law.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
-- (2) \\(\href{claims.html#claim-51}{P_{51}} \rightarrow \href{claims.html#claim-53}{P_{53}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-53}{P_{53}}\\) — *at issue:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- (1) \\(\href{claims.html#claim-54}{P_{54}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (2) \\(\href{claims.html#claim-54}{P_{54}} \rightarrow \href{claims.html#claim-56}{P_{56}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-56}{P_{56}}\\) — *at issue:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 
 </div>
 
@@ -661,11 +663,11 @@ it.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-26}{P_{26}}\\) — The historical-grammatical method alone suffices to obtain the meaning of scripture on essential doctrine
-- (2) \\(\href{claims.html#claim-25}{P_{25}}\\) — Creeds are informative without being normative
+- (1) \\(\href{claims.html#claim-29}{P_{29}}\\) — The historical-grammatical method alone suffices to obtain the meaning of scripture on essential doctrine
+- (2) \\(\href{claims.html#claim-28}{P_{28}}\\) — Creeds are informative without being normative
 - (3) \\(\href{claims.html#claim-6}{P_{6}}\\) — Scripture is infallible
 - (4) \\(\href{claims.html#claim-12}{P_{12}}\\) — No candidate rule of faith other than scripture is infallible
-- (5) \\((\href{claims.html#claim-26}{P_{26}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
+- (5) \\((\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-28}{P_{28}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -749,10 +751,10 @@ weighed in the ground's own rating.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
-- (2) \\(\href{claims.html#claim-21}{P_{21}}\\) — The individual retains ultimate interpretive authority, exercised indirectly by choosing which body to submit to
-- (3) \\((\href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \lnot \href{claims.html#claim-20}{P_{20}}\\)
-- \\(\vdash\\) \\(\lnot \href{claims.html#claim-20}{P_{20}}\\) — *at issue, the denial of:* Sola scriptura differs in principle from solo scriptura
+- (1) \\(\href{claims.html#claim-22}{P_{22}}\\) — Tradition carries real but fallible — ministerial — authority
+- (2) \\(\href{claims.html#claim-24}{P_{24}}\\) — The individual retains ultimate interpretive authority, exercised indirectly by choosing which body to submit to
+- (3) \\((\href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \lnot \href{claims.html#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-23}{P_{23}}\\) — *at issue, the denial of:* Sola scriptura differs in principle from solo scriptura
 
 </div>
 
@@ -785,7 +787,7 @@ not a claim about where binding doctrine comes from.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
+- (1) \\(\href{claims.html#claim-26}{P_{26}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
 - (2) \\(\lnot \href{claims.html#claim-10}{P_{10}}\\) — *denied:* Scripture itself teaches that scripture is the sole infallible rule
 - (3) \\((\href{claims.html#claim-11}{P_{11}} \land \lnot \href{claims.html#claim-10}{P_{10}}) \rightarrow \lnot \href{claims.html#claim-9}{P_{9}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-9}{P_{9}}\\) — *at issue, the denial of:* Scripture is the sole infallible rule of faith
@@ -817,10 +819,10 @@ judgement, so private judgement does not separate the positions.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
-- (2) \\(\href{claims.html#claim-22}{P_{22}}\\) — Choosing which authority to submit to is itself private judgement, whichever authority is chosen
-- (3) \\((\href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \lnot \href{claims.html#claim-20}{P_{20}}\\)
-- \\(\vdash\\) \\(\lnot \href{claims.html#claim-20}{P_{20}}\\) — *at issue, the denial of:* Sola scriptura differs in principle from solo scriptura
+- (1) \\(\href{claims.html#claim-22}{P_{22}}\\) — Tradition carries real but fallible — ministerial — authority
+- (2) \\(\href{claims.html#claim-25}{P_{25}}\\) — Choosing which authority to submit to is itself private judgement, whichever authority is chosen
+- (3) \\((\href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \lnot \href{claims.html#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-23}{P_{23}}\\) — *at issue, the denial of:* Sola scriptura differs in principle from solo scriptura
 
 </div>
 
@@ -843,7 +845,7 @@ Both legs together make the reasoning circular.
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}}) \rightarrow \href{claims.html#claim-31}{P_{31}}\\) — *would give:* Tradition I's reasoning is circular
+- \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-33}{P_{33}}) \rightarrow \href{claims.html#claim-34}{P_{34}}\\) — *would give:* Tradition I's reasoning is circular
 
 </div>
 
@@ -856,7 +858,7 @@ what Barrett denies.
 
 <div class="testimony-derivation">
 
-- \\((\href{claims.html#claim-31}{P_{31}} \land \lnot \href{claims.html#claim-33}{P_{33}}) \rightarrow \href{claims.html#claim-32}{P_{32}}\\) — *would give:* The circularity defeats Tradition I
+- \\((\href{claims.html#claim-34}{P_{34}} \land \lnot \href{claims.html#claim-36}{P_{36}}) \rightarrow \href{claims.html#claim-35}{P_{35}}\\) — *would give:* The circularity defeats Tradition I
 
 </div>
 
@@ -867,10 +869,10 @@ what Barrett denies.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-29}{P_{29}}\\) — The creedal consensus rests on the clarity of scripture
-- (2) \\(\href{claims.html#claim-30}{P_{30}}\\) — Scripture's clear sense is not obtainable without the creedal consensus
-- (3) \\((\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}}) \rightarrow \href{claims.html#claim-31}{P_{31}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-31}{P_{31}}\\) — *at issue:* Tradition I's reasoning is circular
+- (1) \\(\href{claims.html#claim-32}{P_{32}}\\) — The creedal consensus rests on the clarity of scripture
+- (2) \\(\href{claims.html#claim-33}{P_{33}}\\) — Scripture's clear sense is not obtainable without the creedal consensus
+- (3) \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-33}{P_{33}}) \rightarrow \href{claims.html#claim-34}{P_{34}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-34}{P_{34}}\\) — *at issue:* Tradition I's reasoning is circular
 
 </div>
 
@@ -881,10 +883,10 @@ The charge pressed home: the circularity defeats the position.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-31}{P_{31}}\\) — Tradition I's reasoning is circular
-- (2) \\(\lnot \href{claims.html#claim-33}{P_{33}}\\) — *denied:* Any appeal to an ultimate authority is circular, there being no higher authority to appeal to
-- (3) \\((\href{claims.html#claim-31}{P_{31}} \land \lnot \href{claims.html#claim-33}{P_{33}}) \rightarrow \href{claims.html#claim-32}{P_{32}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-32}{P_{32}}\\) — *at issue:* The circularity defeats Tradition I
+- (1) \\(\href{claims.html#claim-34}{P_{34}}\\) — Tradition I's reasoning is circular
+- (2) \\(\lnot \href{claims.html#claim-36}{P_{36}}\\) — *denied:* Any appeal to an ultimate authority is circular, there being no higher authority to appeal to
+- (3) \\((\href{claims.html#claim-34}{P_{34}} \land \lnot \href{claims.html#claim-36}{P_{36}}) \rightarrow \href{claims.html#claim-35}{P_{35}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-35}{P_{35}}\\) — *at issue:* The circularity defeats Tradition I
 
 </div>
 
@@ -897,10 +899,10 @@ precondition of it.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-29}{P_{29}}\\) — The creedal consensus rests on the clarity of scripture
-- (2) \\(\href{claims.html#claim-34}{P_{34}}\\) — The creedal consensus is established by and accountable to scripture — a product of reading it, not a precondition of it
-- (3) \\((\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}}) \rightarrow \href{claims.html#claim-31}{P_{31}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-31}{P_{31}}\\) — *at issue:* Tradition I's reasoning is circular
+- (1) \\(\href{claims.html#claim-32}{P_{32}}\\) — The creedal consensus rests on the clarity of scripture
+- (2) \\(\href{claims.html#claim-37}{P_{37}}\\) — The creedal consensus is established by and accountable to scripture — a product of reading it, not a precondition of it
+- (3) \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-33}{P_{33}}) \rightarrow \href{claims.html#claim-34}{P_{34}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-34}{P_{34}}\\) — *at issue:* Tradition I's reasoning is circular
 
 </div>
 
@@ -915,11 +917,11 @@ necessary for salvation.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-29}{P_{29}}\\) — The creedal consensus rests on the clarity of scripture
-- (2) \\(\href{claims.html#claim-35}{P_{35}}\\) — Scripture itself bounds the interpretive office: elders are commended to the word, required to hold to it, and forbidden to domineer
-- (3) \\(\href{claims.html#claim-36}{P_{36}}\\) — Perspicuity is claimed only for what is necessary for salvation, not for all of scripture alike
-- (4) \\((\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}}) \rightarrow \href{claims.html#claim-31}{P_{31}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-31}{P_{31}}\\) — *at issue:* Tradition I's reasoning is circular
+- (1) \\(\href{claims.html#claim-32}{P_{32}}\\) — The creedal consensus rests on the clarity of scripture
+- (2) \\(\href{claims.html#claim-38}{P_{38}}\\) — Scripture itself bounds the interpretive office: elders are commended to the word, required to hold to it, and forbidden to domineer
+- (3) \\(\href{claims.html#claim-39}{P_{39}}\\) — Perspicuity is claimed only for what is necessary for salvation, not for all of scripture alike
+- (4) \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-33}{P_{33}}) \rightarrow \href{claims.html#claim-34}{P_{34}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-34}{P_{34}}\\) — *at issue:* Tradition I's reasoning is circular
 
 </div>
 
@@ -931,10 +933,10 @@ it is peculiar to this position.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-31}{P_{31}}\\) — Tradition I's reasoning is circular
-- (2) \\(\href{claims.html#claim-33}{P_{33}}\\) — Any appeal to an ultimate authority is circular, there being no higher authority to appeal to
-- (3) \\((\href{claims.html#claim-31}{P_{31}} \land \lnot \href{claims.html#claim-33}{P_{33}}) \rightarrow \href{claims.html#claim-32}{P_{32}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-32}{P_{32}}\\) — *at issue:* The circularity defeats Tradition I
+- (1) \\(\href{claims.html#claim-34}{P_{34}}\\) — Tradition I's reasoning is circular
+- (2) \\(\href{claims.html#claim-36}{P_{36}}\\) — Any appeal to an ultimate authority is circular, there being no higher authority to appeal to
+- (3) \\((\href{claims.html#claim-34}{P_{34}} \land \lnot \href{claims.html#claim-36}{P_{36}}) \rightarrow \href{claims.html#claim-35}{P_{35}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-35}{P_{35}}\\) — *at issue:* The circularity defeats Tradition I
 
 </div>
 
@@ -952,10 +954,10 @@ line of its own (`mark7Line`).
 
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
 - (2) \\(\href{claims.html#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
-- (3) \\(\href{claims.html#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
-- (4) \\(\href{claims.html#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
-- (5) \\(\href{claims.html#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
-- (6) \\(\href{claims.html#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
+- (3) \\(\href{claims.html#claim-31}{P_{31}}\\) — Doctrine develops without new revelation: the deposit is closed
+- (4) \\(\href{claims.html#claim-22}{P_{22}}\\) — Tradition carries real but fallible — ministerial — authority
+- (5) \\(\href{claims.html#claim-27}{P_{27}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
+- (6) \\(\href{claims.html#claim-26}{P_{26}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
 
 </div>
 
@@ -996,35 +998,35 @@ far as it teaches God's word.
 - (6) \\(\href{claims.html#claim-6}{P_{6}}\\) — Scripture is infallible
 - (7) \\(\href{claims.html#claim-12}{P_{12}}\\) — No candidate rule of faith other than scripture is infallible
 - (8) \\(\href{claims.html#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (9) \\(\href{claims.html#claim-40}{P_{40}}\\) — John 10:35 — the scripture cannot be broken
-- (10) \\(\href{claims.html#claim-41}{P_{41}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
-- (11) \\(\href{claims.html#claim-42}{P_{42}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
-- (12) \\(\href{claims.html#claim-43}{P_{43}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
-- (13) \\(\href{claims.html#claim-39}{P_{39}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
-- (14) \\(\href{claims.html#claim-54}{P_{54}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
-- (15) \\(\href{claims.html#claim-55}{P_{55}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
-- (16) \\(\href{claims.html#claim-56}{P_{56}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
-- (17) \\(\href{claims.html#claim-57}{P_{57}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
-- (18) \\(\href{claims.html#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
-- (19) \\(\href{claims.html#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
-- (20) \\(\href{claims.html#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
-- (21) \\(\href{claims.html#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
-- (22) \\(\href{claims.html#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
+- (9) \\(\href{claims.html#claim-43}{P_{43}}\\) — John 10:35 — the scripture cannot be broken
+- (10) \\(\href{claims.html#claim-44}{P_{44}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
+- (11) \\(\href{claims.html#claim-45}{P_{45}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
+- (12) \\(\href{claims.html#claim-46}{P_{46}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
+- (13) \\(\href{claims.html#claim-42}{P_{42}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
+- (14) \\(\href{claims.html#claim-57}{P_{57}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
+- (15) \\(\href{claims.html#claim-58}{P_{58}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
+- (16) \\(\href{claims.html#claim-59}{P_{59}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
+- (17) \\(\href{claims.html#claim-60}{P_{60}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
+- (18) \\(\href{claims.html#claim-47}{P_{47}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
+- (19) \\(\href{claims.html#claim-48}{P_{48}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
+- (20) \\(\href{claims.html#claim-49}{P_{49}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
+- (21) \\(\href{claims.html#claim-54}{P_{54}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (22) \\(\href{claims.html#claim-55}{P_{55}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
 - (23) \\(\href{claims.html#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
 - (24) \\(\href{claims.html#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
 - (25) \\(\href{claims.html#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
-- (26) \\(\href{claims.html#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
-- (27) \\(\href{claims.html#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
-- (28) \\(\href{claims.html#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
-- (29) \\(\href{claims.html#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
+- (26) \\(\href{claims.html#claim-31}{P_{31}}\\) — Doctrine develops without new revelation: the deposit is closed
+- (27) \\(\href{claims.html#claim-22}{P_{22}}\\) — Tradition carries real but fallible — ministerial — authority
+- (28) \\(\href{claims.html#claim-27}{P_{27}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
+- (29) \\(\href{claims.html#claim-26}{P_{26}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
 - (30) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-7}{P_{7}} \land \href{claims.html#claim-8}{P_{8}} \land \href{claims.html#claim-10}{P_{10}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
 - (31) \\((\href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
-- (32) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (33) \\((\href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \href{claims.html#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (34) \\((\href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-39}{P_{39}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
-- (35) \\((\href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}} \land \href{claims.html#claim-57}{P_{57}}) \rightarrow \href{claims.html#claim-59}{P_{59}}\\) — *would give:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
-- (36) \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-59}{P_{59}}) \rightarrow \lnot \href{claims.html#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
-- (37) \\((\href{claims.html#claim-51}{P_{51}} \land \href{claims.html#claim-52}{P_{52}} \land \href{claims.html#claim-3}{P_{3}}) \rightarrow \lnot \href{claims.html#claim-53}{P_{53}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- (32) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-40}{P_{40}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (33) \\((\href{claims.html#claim-43}{P_{43}} \land \href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}}) \rightarrow \href{claims.html#claim-40}{P_{40}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (34) \\((\href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
+- (35) \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-58}{P_{58}} \land \href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-60}{P_{60}}) \rightarrow \href{claims.html#claim-62}{P_{62}}\\) — *would give:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (36) \\((\href{claims.html#claim-47}{P_{47}} \land \href{claims.html#claim-48}{P_{48}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-62}{P_{62}}) \rightarrow \lnot \href{claims.html#claim-53}{P_{53}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (37) \\((\href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-3}{P_{3}}) \rightarrow \lnot \href{claims.html#claim-56}{P_{56}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 - \\(\vdash\\) \\(\href{claims.html#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -1040,11 +1042,11 @@ was supposed to do.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-26}{P_{26}}\\) — The historical-grammatical method alone suffices to obtain the meaning of scripture on essential doctrine
-- (2) \\(\href{claims.html#claim-25}{P_{25}}\\) — Creeds are informative without being normative
+- (1) \\(\href{claims.html#claim-29}{P_{29}}\\) — The historical-grammatical method alone suffices to obtain the meaning of scripture on essential doctrine
+- (2) \\(\href{claims.html#claim-28}{P_{28}}\\) — Creeds are informative without being normative
 - (3) \\(\href{claims.html#claim-6}{P_{6}}\\) — Scripture is infallible
 - (4) \\(\href{claims.html#claim-12}{P_{12}}\\) — No candidate rule of faith other than scripture is infallible
-- (5) \\((\href{claims.html#claim-26}{P_{26}} \land \href{claims.html#claim-25}{P_{25}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
+- (5) \\((\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-28}{P_{28}} \land \href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -1084,17 +1086,17 @@ office are heeded for the seat they hold.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-14}{P_{14}}\\) — The magisterium is an infallible interpreter of scripture
-- (2) \\(\href{claims.html#claim-61}{P_{61}}\\) — Acts 1:20 — his bishoprick let another take
-- (3) \\(\href{claims.html#claim-62}{P_{62}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
-- (4) \\(\href{claims.html#claim-63}{P_{63}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
-- (5) \\(\href{claims.html#claim-48}{P_{48}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
-- (6) \\(\href{claims.html#claim-49}{P_{49}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
-- (7) \\(\href{claims.html#claim-60}{P_{60}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
-- (8) \\(\href{claims.html#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (2) \\(\href{claims.html#claim-64}{P_{64}}\\) — Acts 1:20 — his bishoprick let another take
+- (3) \\(\href{claims.html#claim-65}{P_{65}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
+- (4) \\(\href{claims.html#claim-66}{P_{66}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
+- (5) \\(\href{claims.html#claim-51}{P_{51}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
+- (6) \\(\href{claims.html#claim-52}{P_{52}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
+- (7) \\(\href{claims.html#claim-63}{P_{63}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
+- (8) \\(\href{claims.html#claim-54}{P_{54}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
 - (9) \\(\href{claims.html#claim-14}{P_{14}} \rightarrow \lnot \href{claims.html#claim-9}{P_{9}}\\) — *would deny:* Scripture is the sole infallible rule of faith
-- (10) \\((\href{claims.html#claim-61}{P_{61}} \land \href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-63}{P_{63}}) \rightarrow \lnot \href{claims.html#claim-59}{P_{59}}\\) — *would deny:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
-- (11) \\((\href{claims.html#claim-48}{P_{48}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-60}{P_{60}} \land \lnot \href{claims.html#claim-59}{P_{59}}) \rightarrow \href{claims.html#claim-50}{P_{50}}\\) — *would give:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
-- (12) \\(\href{claims.html#claim-51}{P_{51}} \rightarrow \href{claims.html#claim-53}{P_{53}}\\) — *would give:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- (10) \\((\href{claims.html#claim-64}{P_{64}} \land \href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-66}{P_{66}}) \rightarrow \lnot \href{claims.html#claim-62}{P_{62}}\\) — *would deny:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (11) \\((\href{claims.html#claim-51}{P_{51}} \land \href{claims.html#claim-52}{P_{52}} \land \href{claims.html#claim-63}{P_{63}} \land \lnot \href{claims.html#claim-62}{P_{62}}) \rightarrow \href{claims.html#claim-53}{P_{53}}\\) — *would give:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (12) \\(\href{claims.html#claim-54}{P_{54}} \rightarrow \href{claims.html#claim-56}{P_{56}}\\) — *would give:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 - \\(\vdash\\) \\(\href{claims.html#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -1159,10 +1161,10 @@ principled distinct from Tradition 0.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
-- (2) \\(\href{claims.html#claim-21}{P_{21}}\\) — The individual retains ultimate interpretive authority, exercised indirectly by choosing which body to submit to
-- (3) \\((\href{claims.html#claim-19}{P_{19}} \land \href{claims.html#claim-21}{P_{21}}) \rightarrow \lnot \href{claims.html#claim-20}{P_{20}}\\)
-- \\(\vdash\\) \\(\lnot \href{claims.html#claim-20}{P_{20}}\\) — *at issue, the denial of:* Sola scriptura differs in principle from solo scriptura
+- (1) \\(\href{claims.html#claim-22}{P_{22}}\\) — Tradition carries real but fallible — ministerial — authority
+- (2) \\(\href{claims.html#claim-24}{P_{24}}\\) — The individual retains ultimate interpretive authority, exercised indirectly by choosing which body to submit to
+- (3) \\((\href{claims.html#claim-22}{P_{22}} \land \href{claims.html#claim-24}{P_{24}}) \rightarrow \lnot \href{claims.html#claim-23}{P_{23}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-23}{P_{23}}\\) — *at issue, the denial of:* Sola scriptura differs in principle from solo scriptura
 
 </div>
 
@@ -1194,7 +1196,7 @@ needed.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
+- (1) \\(\href{claims.html#claim-26}{P_{26}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
 - (2) \\(\lnot \href{claims.html#claim-10}{P_{10}}\\) — *denied:* Scripture itself teaches that scripture is the sole infallible rule
 - (3) \\((\href{claims.html#claim-11}{P_{11}} \land \lnot \href{claims.html#claim-10}{P_{10}}) \rightarrow \lnot \href{claims.html#claim-9}{P_{9}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-9}{P_{9}}\\) — *at issue, the denial of:* Scripture is the sole infallible rule of faith
@@ -1228,35 +1230,35 @@ eliminative and Mark 7 routes are untouched.
 - (5) \\(\href{claims.html#claim-6}{P_{6}}\\) — Scripture is infallible
 - (6) \\(\href{claims.html#claim-12}{P_{12}}\\) — No candidate rule of faith other than scripture is infallible
 - (7) \\(\href{claims.html#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (8) \\(\href{claims.html#claim-40}{P_{40}}\\) — John 10:35 — the scripture cannot be broken
-- (9) \\(\href{claims.html#claim-41}{P_{41}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
-- (10) \\(\href{claims.html#claim-42}{P_{42}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
-- (11) \\(\href{claims.html#claim-43}{P_{43}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
-- (12) \\(\href{claims.html#claim-39}{P_{39}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
-- (13) \\(\href{claims.html#claim-54}{P_{54}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
-- (14) \\(\href{claims.html#claim-55}{P_{55}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
-- (15) \\(\href{claims.html#claim-56}{P_{56}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
-- (16) \\(\href{claims.html#claim-57}{P_{57}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
-- (17) \\(\href{claims.html#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
-- (18) \\(\href{claims.html#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
-- (19) \\(\href{claims.html#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
-- (20) \\(\href{claims.html#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
-- (21) \\(\href{claims.html#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
+- (8) \\(\href{claims.html#claim-43}{P_{43}}\\) — John 10:35 — the scripture cannot be broken
+- (9) \\(\href{claims.html#claim-44}{P_{44}}\\) — Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled
+- (10) \\(\href{claims.html#claim-45}{P_{45}}\\) — Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed
+- (11) \\(\href{claims.html#claim-46}{P_{46}}\\) — Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men
+- (12) \\(\href{claims.html#claim-42}{P_{42}}\\) — No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God
+- (13) \\(\href{claims.html#claim-57}{P_{57}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
+- (14) \\(\href{claims.html#claim-58}{P_{58}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
+- (15) \\(\href{claims.html#claim-59}{P_{59}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
+- (16) \\(\href{claims.html#claim-60}{P_{60}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
+- (17) \\(\href{claims.html#claim-47}{P_{47}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
+- (18) \\(\href{claims.html#claim-48}{P_{48}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
+- (19) \\(\href{claims.html#claim-49}{P_{49}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
+- (20) \\(\href{claims.html#claim-54}{P_{54}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (21) \\(\href{claims.html#claim-55}{P_{55}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
 - (22) \\(\href{claims.html#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
 - (23) \\(\href{claims.html#claim-4}{P_{4}}\\) — Acts 17:11 — the Bereans tested apostolic preaching against scripture
 - (24) \\(\href{claims.html#claim-5}{P_{5}}\\) — 2 Thessalonians 2:15 — hold to the traditions taught by word or letter
-- (25) \\(\href{claims.html#claim-28}{P_{28}}\\) — Doctrine develops without new revelation: the deposit is closed
-- (26) \\(\href{claims.html#claim-19}{P_{19}}\\) — Tradition carries real but fallible — ministerial — authority
-- (27) \\(\href{claims.html#claim-24}{P_{24}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
-- (28) \\(\href{claims.html#claim-23}{P_{23}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
+- (25) \\(\href{claims.html#claim-31}{P_{31}}\\) — Doctrine develops without new revelation: the deposit is closed
+- (26) \\(\href{claims.html#claim-22}{P_{22}}\\) — Tradition carries real but fallible — ministerial — authority
+- (27) \\(\href{claims.html#claim-27}{P_{27}}\\) — A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant
+- (28) \\(\href{claims.html#claim-26}{P_{26}}\\) — The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from
 - (29) \\((\href{claims.html#claim-1}{P_{1}} \land \href{claims.html#claim-2}{P_{2}} \land \href{claims.html#claim-7}{P_{7}} \land \href{claims.html#claim-8}{P_{8}} \land \href{claims.html#claim-10}{P_{10}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
 - (30) \\((\href{claims.html#claim-6}{P_{6}} \land \href{claims.html#claim-12}{P_{12}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
-- (31) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (32) \\((\href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}} \land \href{claims.html#claim-43}{P_{43}}) \rightarrow \href{claims.html#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (33) \\((\href{claims.html#claim-37}{P_{37}} \land \href{claims.html#claim-39}{P_{39}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
-- (34) \\((\href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}} \land \href{claims.html#claim-57}{P_{57}}) \rightarrow \href{claims.html#claim-59}{P_{59}}\\) — *would give:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
-- (35) \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-59}{P_{59}}) \rightarrow \lnot \href{claims.html#claim-50}{P_{50}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
-- (36) \\((\href{claims.html#claim-51}{P_{51}} \land \href{claims.html#claim-52}{P_{52}} \land \href{claims.html#claim-3}{P_{3}}) \rightarrow \lnot \href{claims.html#claim-53}{P_{53}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- (31) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-40}{P_{40}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (32) \\((\href{claims.html#claim-43}{P_{43}} \land \href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}}) \rightarrow \href{claims.html#claim-40}{P_{40}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (33) \\((\href{claims.html#claim-40}{P_{40}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \href{claims.html#claim-9}{P_{9}}\\)
+- (34) \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-58}{P_{58}} \land \href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-60}{P_{60}}) \rightarrow \href{claims.html#claim-62}{P_{62}}\\) — *would give:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (35) \\((\href{claims.html#claim-47}{P_{47}} \land \href{claims.html#claim-48}{P_{48}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-62}{P_{62}}) \rightarrow \lnot \href{claims.html#claim-53}{P_{53}}\\) — *would deny:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (36) \\((\href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-3}{P_{3}}) \rightarrow \lnot \href{claims.html#claim-56}{P_{56}}\\) — *would deny:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 - \\(\vdash\\) \\(\href{claims.html#claim-9}{P_{9}}\\) — *at issue:* Scripture is the sole infallible rule of faith
 
 </div>
@@ -1290,10 +1292,10 @@ Geisler's charge, stated as its holder states it.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-29}{P_{29}}\\) — The creedal consensus rests on the clarity of scripture
-- (2) \\(\href{claims.html#claim-30}{P_{30}}\\) — Scripture's clear sense is not obtainable without the creedal consensus
-- (3) \\((\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}}) \rightarrow \href{claims.html#claim-31}{P_{31}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-31}{P_{31}}\\) — *at issue:* Tradition I's reasoning is circular
+- (1) \\(\href{claims.html#claim-32}{P_{32}}\\) — The creedal consensus rests on the clarity of scripture
+- (2) \\(\href{claims.html#claim-33}{P_{33}}\\) — Scripture's clear sense is not obtainable without the creedal consensus
+- (3) \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-33}{P_{33}}) \rightarrow \href{claims.html#claim-34}{P_{34}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-34}{P_{34}}\\) — *at issue:* Tradition I's reasoning is circular
 
 </div>
 
@@ -1306,10 +1308,10 @@ The charge pressed home to a defeat.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-31}{P_{31}}\\) — Tradition I's reasoning is circular
-- (2) \\(\lnot \href{claims.html#claim-33}{P_{33}}\\) — *denied:* Any appeal to an ultimate authority is circular, there being no higher authority to appeal to
-- (3) \\((\href{claims.html#claim-31}{P_{31}} \land \lnot \href{claims.html#claim-33}{P_{33}}) \rightarrow \href{claims.html#claim-32}{P_{32}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-32}{P_{32}}\\) — *at issue:* The circularity defeats Tradition I
+- (1) \\(\href{claims.html#claim-34}{P_{34}}\\) — Tradition I's reasoning is circular
+- (2) \\(\lnot \href{claims.html#claim-36}{P_{36}}\\) — *denied:* Any appeal to an ultimate authority is circular, there being no higher authority to appeal to
+- (3) \\((\href{claims.html#claim-34}{P_{34}} \land \lnot \href{claims.html#claim-36}{P_{36}}) \rightarrow \href{claims.html#claim-35}{P_{35}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-35}{P_{35}}\\) — *at issue:* The circularity defeats Tradition I
 
 </div>
 
@@ -1322,10 +1324,10 @@ The charge with Allen and Swain's accountability reply in play.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-29}{P_{29}}\\) — The creedal consensus rests on the clarity of scripture
-- (2) \\(\href{claims.html#claim-34}{P_{34}}\\) — The creedal consensus is established by and accountable to scripture — a product of reading it, not a precondition of it
-- (3) \\((\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}}) \rightarrow \href{claims.html#claim-31}{P_{31}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-31}{P_{31}}\\) — *at issue:* Tradition I's reasoning is circular
+- (1) \\(\href{claims.html#claim-32}{P_{32}}\\) — The creedal consensus rests on the clarity of scripture
+- (2) \\(\href{claims.html#claim-37}{P_{37}}\\) — The creedal consensus is established by and accountable to scripture — a product of reading it, not a precondition of it
+- (3) \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-33}{P_{33}}) \rightarrow \href{claims.html#claim-34}{P_{34}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-34}{P_{34}}\\) — *at issue:* Tradition I's reasoning is circular
 
 </div>
 
@@ -1338,11 +1340,11 @@ The charge with the proposed scriptural-bounding reply in play.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-29}{P_{29}}\\) — The creedal consensus rests on the clarity of scripture
-- (2) \\(\href{claims.html#claim-35}{P_{35}}\\) — Scripture itself bounds the interpretive office: elders are commended to the word, required to hold to it, and forbidden to domineer
-- (3) \\(\href{claims.html#claim-36}{P_{36}}\\) — Perspicuity is claimed only for what is necessary for salvation, not for all of scripture alike
-- (4) \\((\href{claims.html#claim-29}{P_{29}} \land \href{claims.html#claim-30}{P_{30}}) \rightarrow \href{claims.html#claim-31}{P_{31}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-31}{P_{31}}\\) — *at issue:* Tradition I's reasoning is circular
+- (1) \\(\href{claims.html#claim-32}{P_{32}}\\) — The creedal consensus rests on the clarity of scripture
+- (2) \\(\href{claims.html#claim-38}{P_{38}}\\) — Scripture itself bounds the interpretive office: elders are commended to the word, required to hold to it, and forbidden to domineer
+- (3) \\(\href{claims.html#claim-39}{P_{39}}\\) — Perspicuity is claimed only for what is necessary for salvation, not for all of scripture alike
+- (4) \\((\href{claims.html#claim-32}{P_{32}} \land \href{claims.html#claim-33}{P_{33}}) \rightarrow \href{claims.html#claim-34}{P_{34}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-34}{P_{34}}\\) — *at issue:* Tradition I's reasoning is circular
 
 </div>
 
@@ -1361,10 +1363,10 @@ charge. Asked the weaker question the answer is
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-31}{P_{31}}\\) — Tradition I's reasoning is circular
-- (2) \\(\href{claims.html#claim-33}{P_{33}}\\) — Any appeal to an ultimate authority is circular, there being no higher authority to appeal to
-- (3) \\((\href{claims.html#claim-31}{P_{31}} \land \lnot \href{claims.html#claim-33}{P_{33}}) \rightarrow \href{claims.html#claim-32}{P_{32}}\\) — *would give:* The circularity defeats Tradition I
-- \\(\vdash\\) \\(\href{claims.html#claim-31}{P_{31}}\\) — *at issue:* Tradition I's reasoning is circular
+- (1) \\(\href{claims.html#claim-34}{P_{34}}\\) — Tradition I's reasoning is circular
+- (2) \\(\href{claims.html#claim-36}{P_{36}}\\) — Any appeal to an ultimate authority is circular, there being no higher authority to appeal to
+- (3) \\((\href{claims.html#claim-34}{P_{34}} \land \lnot \href{claims.html#claim-36}{P_{36}}) \rightarrow \href{claims.html#claim-35}{P_{35}}\\) — *would give:* The circularity defeats Tradition I
+- \\(\vdash\\) \\(\href{claims.html#claim-34}{P_{34}}\\) — *at issue:* Tradition I's reasoning is circular
 
 </div>
 
@@ -1380,9 +1382,9 @@ consensus.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-8}{P_{8}} \rightarrow \href{claims.html#claim-27}{P_{27}}\\)
-- (2) \\(\href{claims.html#claim-27}{P_{27}} \rightarrow \href{claims.html#claim-8}{P_{8}}\\) — *would give:* Scripture is clear on what is necessary for salvation
-- \\(\vdash\\) \\(\href{claims.html#claim-27}{P_{27}}\\) — *at issue:* The creedal consensus is hermeneutically necessary for understanding scripture
+- (1) \\(\href{claims.html#claim-8}{P_{8}} \rightarrow \href{claims.html#claim-30}{P_{30}}\\)
+- (2) \\(\href{claims.html#claim-30}{P_{30}} \rightarrow \href{claims.html#claim-8}{P_{8}}\\) — *would give:* Scripture is clear on what is necessary for salvation
+- \\(\vdash\\) \\(\href{claims.html#claim-30}{P_{30}}\\) — *at issue:* The creedal consensus is hermeneutically necessary for understanding scripture
 
 </div>
 

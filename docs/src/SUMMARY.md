@@ -61,6 +61,7 @@
   - [Appendix: the claims and their sources](./arguments/canonical-witness/claims.md)
 - [Sola scriptura](./arguments/sola-scriptura.md)
   - [Three objections, and the answers to them](./arguments/sola-scriptura/objections.md)
+  - [How the canon is recognised](./arguments/sola-scriptura/canon.md)
   - [What Jesus' rebuke of tradition settles](./arguments/sola-scriptura/mark-7.md)
   - [The same principle, beyond Mark 7](./arguments/sola-scriptura/jesus-and-paul.md)
   - [Weighing Mark 7 between Rome and the Reformers](./arguments/sola-scriptura/weighing.md)

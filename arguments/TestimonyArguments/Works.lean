@@ -1434,7 +1434,10 @@ reissued the volume in 1992. -/
 
 /-- Kruger on the canon's self-authentication. Cited for the parity reply to the
 canon objection: that Rome's own model is self-authenticating too, so the
-circularity charge does not discriminate between the positions. -/
+circularity charge does not discriminate between the positions. Cited also for
+the chapter "Tracing the Origins: Canon as Historically-Determined" (pp. 67–87),
+which criticises the criteria-of-canonicity model while granting that it "has
+rightly focused on apostolicity as a key component of canonicity" (p. 87). -/
 @[bib_entry] def krugerCanonRevisited : BibEntry := .book
   { core :=
       { key := "kruger-canon-revisited-2012"
@@ -1447,10 +1450,57 @@ circularity charge does not discriminate between the positions. -/
   , publisher := "Crossway"
   , place := some "Wheaton, IL" }
 
+/-- McDonald on the criteria by which the canon was recognised: "It is generally
+recognized that the church fathers employed several criteria, often unequally"
+(p. 127). He asks of the Didache, 1 Clement and the Shepherd, beside 2 Peter, 2
+and 3 John and Jude, "are they not just as useful and just as orthodox" (p.
+129), and concludes that "the care with which the ancient criteria were applied
+by the Church is, in several instances, highly questionable" (p. 129). Read in
+the open copy at gospelstudies.org.uk, whose page markers give the pages; DOI
+from Crossref. -/
+@[bib_entry] def mcdonaldIntegrityCanon : BibEntry := .article
+  { core :=
+      { key := "mcdonald-integrity-biblical-canon-1996"
+      , contributors := { authors := [.person "Lee Martin" "McDonald"] }
+      , title := "The Integrity of the Biblical Canon in Light of Its Historical Development"
+      , year := some { value := 1996 }
+      , identifiers := [.doi "10.2307/26422144"] }
+  , journal := "Bulletin for Biblical Research"
+  , volume := some "6"
+  , pages := some (95, 132) }
+
+/-- Reid's article on the canon of the New Testament in the *Catholic
+Encyclopedia*, volume 3 (1908). He grants that apostolicity is "a positive and
+partial touchstone of inspiration", and narrates how under Athanasius the
+Shepherd and the Didache were set apart. In the section "The criterion of
+inspiration" he denies that any such test suffices: inspiration "is not
+self-evident", and "Its sole absolute criterion, therefore, is the Holy inspiring
+Spirit, witnessing decisively to Itself ... through the constituted organ and
+custodian of Its revelations, the Church. All other evidences fall short of the
+certainty and finality necessary to compel the absolute assent of faith."
+Published with the *nihil obstat* and *imprimatur*. Read at New Advent; cited
+by section. -/
+@[bib_entry] def reidCanonNewTestament : BibEntry := .inCollection
+  { core :=
+      { key := "reid-canon-new-testament-1908"
+      , role := .witness
+      , contributors := { authors := [.person "George" "Reid"] }
+      , title := "Canon of the New Testament"
+      , year := some { value := 1908 }
+      , identifiers :=
+          [ .url "https://www.newadvent.org/cathen/03274a.htm" (some "2026-11-17") ]
+      , note := some "Volume 3." }
+  , containerTitle := "The Catholic Encyclopedia"
+  , containerEditors :=
+      [ .person "Charles G." "Herbermann", .person "Edward A." "Pace", .person "Condé B." "Pallen"
+      , .person "Thomas J." "Shahan", .person "John J." "Wynne" ]
+  , publisher := "Robert Appleton Company"
+  , place := some "New York" }
+
 /-- Florovsky on Scripture, Church and Tradition. The source for the Orthodox
 premise that authority rests in the mind of the Church rather than in an
 infallible interpretive organ — the premise that separates the Orthodox package
-from the Roman one, which the seed encoding conflated. -/
+from the Roman one. -/
 @[bib_entry] def florovskyBibleChurchTradition : BibEntry := .book
   { core :=
       { key := "florovsky-bible-church-tradition-1972"
@@ -3011,6 +3061,27 @@ rendered unverified rather than given the ISBN of a later reprint. -/
   , place := some "Buffalo, NY"
   , volume := some "4" }
 
+/-- *The Ante-Nicene Fathers*, volume 5: the edition through which the
+Muratorian fragment is cited, among the "Fragments of Caius" in S. D. F.
+Salmond's translation (pp. 603–604). Of the Shepherd it says that Hermas wrote it
+"very recently in our times in the city of Rome ... And therefore it also ought
+to be read; but it cannot be made public in the Church to the people, nor
+placed among the prophets, as their number is complete, nor among the apostles"
+(p. 604). Imprint as New Advent gives it. -/
+@[bib_entry] def anf5 : BibEntry := .book
+  { core :=
+      { key := "roberts-ante-nicene-fathers-5-1886"
+      , role := .witness
+      , contributors :=
+          { editors := [.person "Alexander" "Roberts", .person "James" "Donaldson"
+                       , .person "A. Cleveland" "Coxe"] }
+      , title := "The Ante-Nicene Fathers"
+      , year := some { value := 1886 }
+      , note := some "Consulted in the CCEL text, whose page markers give the pages." }
+  , publisher := "Christian Literature Publishing Company"
+  , place := some "Buffalo, NY"
+  , volume := some "5" }
+
 /-- Basil of Caesarea, *Ascetical Works*, tr. M. Monica Wagner: Fathers of the
 Church volume 9, which carries Homily 20, "Of Humility" (p. 475). Verified at
 Open Library, ISBN 9780813209661 (Catholic University of America Press,
@@ -3916,7 +3987,13 @@ beginning, but that God is without beginning". New Advent gives Buffalo,
 works, with the *Discourses against the Arians*, tr. J. H. Newman and A.
 Robertson. Cited for Discourse I.58, on John 14:28: "greater," not indeed in
 greatness, nor in time, but because of His generation from the Father Himself".
-Title page read in the Internet Archive's scan (selectlibraryofn04schauoft),
+Cited also for Festal Letter 39 (367), in Payne Smith's revision of the Oxford
+translation, §§6–7, p. 552: the books of the canon "are fountains of
+salvation ... Let no man add to these", and "there are other books besides these
+not indeed included in the Canon, but appointed by the Fathers to be read by
+those who newly join us", among them "that which is called the Teaching of the
+Apostles, and the Shepherd". Title page read in the Internet Archive's scan
+(selectlibraryofn04schauoft),
 which gives New York, 1892. -/
 @[bib_entry] def npnf2v4 : BibEntry := .book
   { core :=

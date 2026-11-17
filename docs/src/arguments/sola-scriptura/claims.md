@@ -57,51 +57,54 @@ description is a caricature.
 | <a id="claim-16"></a>\\(P_{16}\\) | The canon is known through the Church's reception of it | historical | Roman Catholic, consensus | [Schaff 1887](../../bibliography.md#npnf1-04-1887), §Augustine, Contra epistolam Manichaei 5.6; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions |
 | <a id="claim-17"></a>\\(P_{17}\\) | Identifying the canon requires an infallible authority | theological | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session IV (1546), Decree on Sacred Books and Traditions |
 | <a id="claim-18"></a>\\(P_{18}\\) | A rival's own foundational authority is self-authenticating too, so the circularity charge does not discriminate | interpretive | Reformed Protestant, disputed | [Kruger 2012](../../bibliography.md#kruger-canon-revisited-2012), §ch. 2 |
-| <a id="claim-19"></a>\\(P_{19}\\) | Tradition carries real but fallible — ministerial — authority | theological | Reformed Protestant, disputed | [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001); [Oberman 1986](../../bibliography.md#oberman-dawn-1986) |
-| <a id="claim-20"></a>\\(P_{20}\\) | Sola scriptura differs in principle from solo scriptura | theological | Reformed Protestant, disputed | [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001), §ch. 9 |
-| <a id="claim-21"></a>\\(P_{21}\\) | The individual retains ultimate interpretive authority, exercised indirectly by choosing which body to submit to | theological | Roman Catholic, disputed | [Cross and Judisch 2009](../../bibliography.md#cross-judisch-interpretive-authority-2009), §§ III |
-| <a id="claim-22"></a>\\(P_{22}\\) | Choosing which authority to submit to is itself private judgement, whichever authority is chosen | interpretive | Reformed Protestant, disputed | [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001), §ch. 9 |
-| <a id="claim-23"></a>\\(P_{23}\\) | The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §I.6; [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001) |
-| <a id="claim-24"></a>\\(P_{24}\\) | A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant | theological | Reformed Protestant, well supported | [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Formula of Concord, Solid Declaration X; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §I.6 |
-| <a id="claim-25"></a>\\(P_{25}\\) | Creeds are informative without being normative | theological | Christian, hist.-gramm., disputed | [Geisler 2005](../../bibliography.md#geisler-review-mathison-2005), §120 |
-| <a id="claim-26"></a>\\(P_{26}\\) | The historical-grammatical method alone suffices to obtain the meaning of scripture on essential doctrine | interpretive | Christian, hist.-gramm., disputed | [Geisler 2005](../../bibliography.md#geisler-review-mathison-2005), §120–121 |
-| <a id="claim-27"></a>\\(P_{27}\\) | The creedal consensus is hermeneutically necessary for understanding scripture | interpretive | Reformed Protestant, disputed | [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001), §275 |
-| <a id="claim-28"></a>\\(P_{28}\\) | Doctrine develops without new revelation: the deposit is closed | theological | Christian, hist.-gramm., well supported | [Newman 1845](../../bibliography.md#newman-development-1845); [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001) |
-| <a id="claim-29"></a>\\(P_{29}\\) | The creedal consensus rests on the clarity of scripture | interpretive | Reformed Protestant, disputed | [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001), §279–280 |
-| <a id="claim-30"></a>\\(P_{30}\\) | Scripture's clear sense is not obtainable without the creedal consensus | interpretive | Reformed Protestant, disputed | [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001), §275 |
-| <a id="claim-31"></a>\\(P_{31}\\) | Tradition I's reasoning is circular | interpretive | Christian, hist.-gramm., disputed | [Geisler 2005](../../bibliography.md#geisler-review-mathison-2005), §122–123 |
-| <a id="claim-32"></a>\\(P_{32}\\) | The circularity defeats Tradition I | theological | Christian, hist.-gramm., disputed | [Geisler 2005](../../bibliography.md#geisler-review-mathison-2005), §123 |
-| <a id="claim-33"></a>\\(P_{33}\\) | Any appeal to an ultimate authority is circular, there being no higher authority to appeal to | theological | Reformed Protestant, disputed | [Barrett 2016](../../bibliography.md#barrett-gods-word-alone-2016), §ch. 11 |
-| <a id="claim-34"></a>\\(P_{34}\\) | The creedal consensus is established by and accountable to scripture — a product of reading it, not a precondition of it | theological | Reformed Protestant, disputed | [Allen and Swain 2015](../../bibliography.md#allen-swain-reformed-catholicity-2015), §ch. 3 |
-| <a id="claim-35"></a>\\(P_{35}\\) | Scripture itself bounds the interpretive office: elders are commended to the word, required to hold to it, and forbidden to domineer | textual | Christian, hist.-gramm., plausible | *proposed:* Advanced here, not found in the literature as a reply to the circularity charge. The texts are cited; the use is assembled. Note it claims only that scripture \*bounds\* the office, not that it \*confers\* it — conferral invites the recognition/conferral distinction Mathison himself presses against Rome.; Acts 20:32; Titus 1:9; 1 Pet 5:2-3 |
-| <a id="claim-36"></a>\\(P_{36}\\) | Perspicuity is claimed only for what is necessary for salvation, not for all of scripture alike | theological | Reformed Protestant, well supported | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §I.7 |
-| <a id="claim-37"></a>\\(P_{37}\\) | God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void | theological | Christian, hist.-gramm., consensus | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../../bibliography.md#florovsky-bible-church-tradition-1972) |
-| <a id="claim-38"></a>\\(P_{38}\\) | A commandment of men may rightly be bound on the Church as God's word | interpretive | Reformed Protestant, disputed | Mark 7:7; Isa 29:13; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.23 |
-| <a id="claim-39"></a>\\(P_{39}\\) | No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God | theological | Reformed Protestant, disputed | [Whitaker 1849](../../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §I.6 |
-| <a id="claim-40"></a>\\(P_{40}\\) | John 10:35 — the scripture cannot be broken | textual | Christian, hist.-gramm., consensus | John 10:35; [Wenham 1953](../../bibliography.md#wenham-our-lords-view-1953), p. 19 |
-| <a id="claim-41"></a>\\(P_{41}\\) | Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled | textual | Christian, hist.-gramm., consensus | Matt 5:18; [Wenham 1953](../../bibliography.md#wenham-our-lords-view-1953), pp. 15, 19 |
-| <a id="claim-42"></a>\\(P_{42}\\) | Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed | textual | Christian, hist.-gramm., consensus | Gal 1:8-9; [Calvin 1854](../../bibliography.md#calvin-commentary-galatians-1854), ad loc. Gal 1:9; [Thomas Aquinas 1966](../../bibliography.md#aquinas-commentary-galatians-1966), §c. 1, lect. 2 |
-| <a id="claim-43"></a>\\(P_{43}\\) | Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men | textual | Christian, hist.-gramm., consensus | Col 2:8; Col 2:20-22; [Lightfoot](../../bibliography.md#lightfoot-colossians-philemon), p. 204 |
-| <a id="claim-44"></a>\\(P_{44}\\) | Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved ※ | textual | Christian, hist.-gramm., consensus | Acts 15:1 |
-| <a id="claim-45"></a>\\(P_{45}\\) | Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved ※ | textual | Christian, hist.-gramm., consensus | Acts 15:10-11 |
-| <a id="claim-46"></a>\\(P_{46}\\) | Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12) | textual | Christian, hist.-gramm., consensus | Acts 15:15-17; [Calvin 1844](../../bibliography.md#calvin-commentary-acts-volume2-1844), ad loc. Acts 15:15 |
-| <a id="claim-47"></a>\\(P_{47}\\) | Acts 15:23–29 — they wrote letters by them: the decree went out in writing ※ | textual | Christian, hist.-gramm., consensus | Acts 15:23-29 |
-| <a id="claim-48"></a>\\(P_{48}\\) | Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things ※ | textual | Christian, hist.-gramm., consensus | Acts 15:28 |
-| <a id="claim-49"></a>\\(P_{49}\\) | Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem ※ | textual | Christian, hist.-gramm., consensus | Acts 16:4 |
-| <a id="claim-50"></a>\\(P_{50}\\) | A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err | theological | Roman Catholic, disputed | [Wilhelm 1908](../../bibliography.md#wilhelm-general-councils-1908), §Infallibility of general councils; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XXXI.4; [Calvin 1844](../../bibliography.md#calvin-commentary-acts-volume2-1844), ad loc. Acts 15:28 |
-| <a id="claim-51"></a>\\(P_{51}\\) | Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works | textual | Christian, hist.-gramm., consensus | Matt 23:2-3; [Wenham 1953](../../bibliography.md#wenham-our-lords-view-1953), p. 15 |
-| <a id="claim-52"></a>\\(P_{52}\\) | Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing ※ | textual | Christian, hist.-gramm., consensus | Matt 23:16-22 |
-| <a id="claim-53"></a>\\(P_{53}\\) | Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill | theological | Roman Catholic, disputed | [à Lapide 1908](../../bibliography.md#a-lapide-great-commentary-3-1908), pp. 32–33; [Calvin 1846](../../bibliography.md#calvin-harmony-evangelists-3-1846), pp. 74–75 |
-| <a id="claim-54"></a>\\(P_{54}\\) | Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection | textual | Christian, hist.-gramm., consensus | Acts 1:21-22; [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 66 |
-| <a id="claim-55"></a>\\(P_{55}\\) | 1 Corinthians 15:8 — and last of all he was seen of me also ※ | textual | Christian, hist.-gramm., consensus | 1 Cor 15:8 |
-| <a id="claim-56"></a>\\(P_{56}\\) | 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures ※ | textual | Christian, hist.-gramm., consensus | 2 Pet 3:15-16 |
-| <a id="claim-57"></a>\\(P_{57}\\) | 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother ※ | textual | Christian, hist.-gramm., consensus | 2 Cor 1:1; Col 1:1 |
-| <a id="claim-58"></a>\\(P_{58}\\) | 1 Thessalonians 2:6 (with 1:1) — from Paul, Silvanus and Timotheus: we might have been burdensome, as the apostles of Christ | textual | Christian, hist.-gramm., consensus | 1 Thess 1:1; 1 Thess 2:6; [Coppieters 1907](../../bibliography.md#coppieters-apostles-1907), §Various meanings; [Calvin 1851](../../bibliography.md#calvin-philippians-colossians-thessalonians-1851), ad loc. 1 Thess 2:6 |
-| <a id="claim-59"></a>\\(P_{59}\\) | The apostles' own office ended with them; those after them succeed to their ministry, not to their office | theological | Reformed Protestant, disputed | [Calvin 1846](../../bibliography.md#calvin-institutes-beveridge-3-1846), §IV.iii.4–5; [Second Vatican Council 1964](../../bibliography.md#vatican-ii-lumen-gentium-1964), §20 |
-| <a id="claim-60"></a>\\(P_{60}\\) | Acts 15:6, 22–23; 16:4 — the apostles and elders came together ※ | textual | Christian, hist.-gramm., consensus | Acts 15:6; Acts 15:22-23; Acts 16:4 |
-| <a id="claim-61"></a>\\(P_{61}\\) | Acts 1:20 — his bishoprick let another take | textual | Christian, hist.-gramm., consensus | Acts 1:20; [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 65 |
-| <a id="claim-62"></a>\\(P_{62}\\) | 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also ※ | textual | Christian, hist.-gramm., consensus | 2 Tim 2:2 |
-| <a id="claim-63"></a>\\(P_{63}\\) | 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them | historical | Christian, hist.-gramm., consensus | [Clement of Rome](../../bibliography.md#clement-first-corinthians-96), §42, 44; [Second Vatican Council 1964](../../bibliography.md#vatican-ii-lumen-gentium-1964), §20 |
+| <a id="claim-19"></a>\\(P_{19}\\) | Deuteronomy 13:1–3 — a prophet whose sign comes to pass, but who says, Let us go after other gods, is not to be heard ※ | textual | Christian, hist.-gramm., consensus | Deut 13:1-3 |
+| <a id="claim-20"></a>\\(P_{20}\\) | Deuteronomy 18:20–22 — a word spoken in the LORD's name that does not come to pass is a word the LORD has not spoken ※ | textual | Christian, hist.-gramm., consensus | Deut 18:20-22 |
+| <a id="claim-21"></a>\\(P_{21}\\) | The early Church set apart books it read but did not receive into the canon, the Shepherd and the Didache among them, and said why | historical | Christian, hist.-gramm., consensus | [Roberts et al. 1886](../../bibliography.md#roberts-ante-nicene-fathers-5-1886), pp. 603–604; [Schaff and Wace 1892](../../bibliography.md#schaff-nicene-post-nicene-fathers-2-4-1892), §Athanasius, Festal Letter 39, §§6–7, p. 552; [McDonald 1996](../../bibliography.md#mcdonald-integrity-biblical-canon-1996), pp. 127–129 |
+| <a id="claim-22"></a>\\(P_{22}\\) | Tradition carries real but fallible — ministerial — authority | theological | Reformed Protestant, disputed | [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001); [Oberman 1986](../../bibliography.md#oberman-dawn-1986) |
+| <a id="claim-23"></a>\\(P_{23}\\) | Sola scriptura differs in principle from solo scriptura | theological | Reformed Protestant, disputed | [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001), §ch. 9 |
+| <a id="claim-24"></a>\\(P_{24}\\) | The individual retains ultimate interpretive authority, exercised indirectly by choosing which body to submit to | theological | Roman Catholic, disputed | [Cross and Judisch 2009](../../bibliography.md#cross-judisch-interpretive-authority-2009), §§ III |
+| <a id="claim-25"></a>\\(P_{25}\\) | Choosing which authority to submit to is itself private judgement, whichever authority is chosen | interpretive | Reformed Protestant, disputed | [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001), §ch. 9 |
+| <a id="claim-26"></a>\\(P_{26}\\) | The bindingness rule governs first-order doctrine, not a claim about where binding doctrine comes from | theological | Reformed Protestant, disputed | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §I.6; [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001) |
+| <a id="claim-27"></a>\\(P_{27}\\) | A practice neither commanded nor forbidden in scripture is permitted without scriptural warrant | theological | Reformed Protestant, well supported | [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Formula of Concord, Solid Declaration X; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §I.6 |
+| <a id="claim-28"></a>\\(P_{28}\\) | Creeds are informative without being normative | theological | Christian, hist.-gramm., disputed | [Geisler 2005](../../bibliography.md#geisler-review-mathison-2005), §120 |
+| <a id="claim-29"></a>\\(P_{29}\\) | The historical-grammatical method alone suffices to obtain the meaning of scripture on essential doctrine | interpretive | Christian, hist.-gramm., disputed | [Geisler 2005](../../bibliography.md#geisler-review-mathison-2005), §120–121 |
+| <a id="claim-30"></a>\\(P_{30}\\) | The creedal consensus is hermeneutically necessary for understanding scripture | interpretive | Reformed Protestant, disputed | [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001), §275 |
+| <a id="claim-31"></a>\\(P_{31}\\) | Doctrine develops without new revelation: the deposit is closed | theological | Christian, hist.-gramm., well supported | [Newman 1845](../../bibliography.md#newman-development-1845); [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001) |
+| <a id="claim-32"></a>\\(P_{32}\\) | The creedal consensus rests on the clarity of scripture | interpretive | Reformed Protestant, disputed | [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001), §279–280 |
+| <a id="claim-33"></a>\\(P_{33}\\) | Scripture's clear sense is not obtainable without the creedal consensus | interpretive | Reformed Protestant, disputed | [Mathison 2001](../../bibliography.md#mathison-shape-sola-scriptura-2001), §275 |
+| <a id="claim-34"></a>\\(P_{34}\\) | Tradition I's reasoning is circular | interpretive | Christian, hist.-gramm., disputed | [Geisler 2005](../../bibliography.md#geisler-review-mathison-2005), §122–123 |
+| <a id="claim-35"></a>\\(P_{35}\\) | The circularity defeats Tradition I | theological | Christian, hist.-gramm., disputed | [Geisler 2005](../../bibliography.md#geisler-review-mathison-2005), §123 |
+| <a id="claim-36"></a>\\(P_{36}\\) | Any appeal to an ultimate authority is circular, there being no higher authority to appeal to | theological | Reformed Protestant, disputed | [Barrett 2016](../../bibliography.md#barrett-gods-word-alone-2016), §ch. 11 |
+| <a id="claim-37"></a>\\(P_{37}\\) | The creedal consensus is established by and accountable to scripture — a product of reading it, not a precondition of it | theological | Reformed Protestant, disputed | [Allen and Swain 2015](../../bibliography.md#allen-swain-reformed-catholicity-2015), §ch. 3 |
+| <a id="claim-38"></a>\\(P_{38}\\) | Scripture itself bounds the interpretive office: elders are commended to the word, required to hold to it, and forbidden to domineer | textual | Christian, hist.-gramm., plausible | *proposed:* Advanced here, not found in the literature as a reply to the circularity charge. The texts are cited; the use is assembled. Note it claims only that scripture \*bounds\* the office, not that it \*confers\* it — conferral invites the recognition/conferral distinction Mathison himself presses against Rome.; Acts 20:32; Titus 1:9; 1 Pet 5:2-3 |
+| <a id="claim-39"></a>\\(P_{39}\\) | Perspicuity is claimed only for what is necessary for salvation, not for all of scripture alike | theological | Reformed Protestant, well supported | [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §I.7 |
+| <a id="claim-40"></a>\\(P_{40}\\) | God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void | theological | Christian, hist.-gramm., consensus | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Vatican II (1965), Dei Verbum 10; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.23; [Florovsky 1972](../../bibliography.md#florovsky-bible-church-tradition-1972) |
+| <a id="claim-41"></a>\\(P_{41}\\) | A commandment of men may rightly be bound on the Church as God's word | interpretive | Reformed Protestant, disputed | Mark 7:7; Isa 29:13; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §IV.x.23 |
+| <a id="claim-42"></a>\\(P_{42}\\) | No unwritten tradition can now be shown to be apostolic, so none can bind the conscience as the word of God | theological | Reformed Protestant, disputed | [Whitaker 1849](../../bibliography.md#whitaker-disputation-1849), pp. 503–511; [Whitaker 1849](../../bibliography.md#whitaker-disputation-1849), p. 594; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §I.6 |
+| <a id="claim-43"></a>\\(P_{43}\\) | John 10:35 — the scripture cannot be broken | textual | Christian, hist.-gramm., consensus | John 10:35; [Wenham 1953](../../bibliography.md#wenham-our-lords-view-1953), p. 19 |
+| <a id="claim-44"></a>\\(P_{44}\\) | Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, till all be fulfilled | textual | Christian, hist.-gramm., consensus | Matt 5:18; [Wenham 1953](../../bibliography.md#wenham-our-lords-view-1953), pp. 15, 19 |
+| <a id="claim-45"></a>\\(P_{45}\\) | Galatians 1:8–9 — though we, or an angel from heaven, preach any other gospel than that which we have preached, let him be accursed | textual | Christian, hist.-gramm., consensus | Gal 1:8-9; [Calvin 1854](../../bibliography.md#calvin-commentary-galatians-1854), ad loc. Gal 1:9; [Thomas Aquinas 1966](../../bibliography.md#aquinas-commentary-galatians-1966), §c. 1, lect. 2 |
+| <a id="claim-46"></a>\\(P_{46}\\) | Colossians 2:8, 20–22 — after the tradition of men, and not after Christ; after the commandments and doctrines of men | textual | Christian, hist.-gramm., consensus | Col 2:8; Col 2:20-22; [Lightfoot](../../bibliography.md#lightfoot-colossians-philemon), p. 204 |
+| <a id="claim-47"></a>\\(P_{47}\\) | Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved ※ | textual | Christian, hist.-gramm., consensus | Acts 15:1 |
+| <a id="claim-48"></a>\\(P_{48}\\) | Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved ※ | textual | Christian, hist.-gramm., consensus | Acts 15:10-11 |
+| <a id="claim-49"></a>\\(P_{49}\\) | Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12) | textual | Christian, hist.-gramm., consensus | Acts 15:15-17; [Calvin 1844](../../bibliography.md#calvin-commentary-acts-volume2-1844), ad loc. Acts 15:15 |
+| <a id="claim-50"></a>\\(P_{50}\\) | Acts 15:23–29 — they wrote letters by them: the decree went out in writing ※ | textual | Christian, hist.-gramm., consensus | Acts 15:23-29 |
+| <a id="claim-51"></a>\\(P_{51}\\) | Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things ※ | textual | Christian, hist.-gramm., consensus | Acts 15:28 |
+| <a id="claim-52"></a>\\(P_{52}\\) | Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem ※ | textual | Christian, hist.-gramm., consensus | Acts 16:4 |
+| <a id="claim-53"></a>\\(P_{53}\\) | A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err | theological | Roman Catholic, disputed | [Wilhelm 1908](../../bibliography.md#wilhelm-general-councils-1908), §Infallibility of general councils; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XXXI.4; [Calvin 1844](../../bibliography.md#calvin-commentary-acts-volume2-1844), ad loc. Acts 15:28 |
+| <a id="claim-54"></a>\\(P_{54}\\) | Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works | textual | Christian, hist.-gramm., consensus | Matt 23:2-3; [Wenham 1953](../../bibliography.md#wenham-our-lords-view-1953), p. 15 |
+| <a id="claim-55"></a>\\(P_{55}\\) | Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing ※ | textual | Christian, hist.-gramm., consensus | Matt 23:16-22 |
+| <a id="claim-56"></a>\\(P_{56}\\) | Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill | theological | Roman Catholic, disputed | [à Lapide 1908](../../bibliography.md#a-lapide-great-commentary-3-1908), pp. 32–33; [Calvin 1846](../../bibliography.md#calvin-harmony-evangelists-3-1846), pp. 74–75 |
+| <a id="claim-57"></a>\\(P_{57}\\) | Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection | textual | Christian, hist.-gramm., consensus | Acts 1:21-22; [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 66 |
+| <a id="claim-58"></a>\\(P_{58}\\) | 1 Corinthians 15:8 — and last of all he was seen of me also ※ | textual | Christian, hist.-gramm., consensus | 1 Cor 15:8 |
+| <a id="claim-59"></a>\\(P_{59}\\) | 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures ※ | textual | Christian, hist.-gramm., consensus | 2 Pet 3:15-16 |
+| <a id="claim-60"></a>\\(P_{60}\\) | 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother ※ | textual | Christian, hist.-gramm., consensus | 2 Cor 1:1; Col 1:1 |
+| <a id="claim-61"></a>\\(P_{61}\\) | 1 Thessalonians 2:6 (with 1:1) — from Paul, Silvanus and Timotheus: we might have been burdensome, as the apostles of Christ | textual | Christian, hist.-gramm., consensus | 1 Thess 1:1; 1 Thess 2:6; [Coppieters 1907](../../bibliography.md#coppieters-apostles-1907), §Various meanings; [Calvin 1851](../../bibliography.md#calvin-philippians-colossians-thessalonians-1851), ad loc. 1 Thess 2:6 |
+| <a id="claim-62"></a>\\(P_{62}\\) | The apostles' own office ended with them; those after them succeed to their ministry, not to their office | theological | Reformed Protestant, disputed | [Calvin 1846](../../bibliography.md#calvin-institutes-beveridge-3-1846), §IV.iii.4–5; [Second Vatican Council 1964](../../bibliography.md#vatican-ii-lumen-gentium-1964), §20 |
+| <a id="claim-63"></a>\\(P_{63}\\) | Acts 15:6, 22–23; 16:4 — the apostles and elders came together ※ | textual | Christian, hist.-gramm., consensus | Acts 15:6; Acts 15:22-23; Acts 16:4 |
+| <a id="claim-64"></a>\\(P_{64}\\) | Acts 1:20 — his bishoprick let another take | textual | Christian, hist.-gramm., consensus | Acts 1:20; [Calvin 1844](../../bibliography.md#calvin-commentary-acts-1844), p. 65 |
+| <a id="claim-65"></a>\\(P_{65}\\) | 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also ※ | textual | Christian, hist.-gramm., consensus | 2 Tim 2:2 |
+| <a id="claim-66"></a>\\(P_{66}\\) | 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them | historical | Christian, hist.-gramm., consensus | [Clement of Rome](../../bibliography.md#clement-first-corinthians-96), §42, 44; [Second Vatican Council 1964](../../bibliography.md#vatican-ii-lumen-gentium-1964), §20 |
 
 </div>
 
@@ -146,6 +149,63 @@ def mark7PrincipleInference : Source :=
         Reference.work wenhamOurLordsView (Bib.Locus.pages 15 16)],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.wellSupported }
+```
+
+<a id="canonObjectionInference"></a>
+**`canonObjectionInference`**
+
+The rating of the canon objection's step, from the Church's reception of the
+canon and the need for an infallible authority to identify it, to the denial
+that Scripture is the sole infallible rule: `disputed`. Kruger grants both
+grounds and denies the conclusion. The Church did receive the books, and he
+counts its corporate reception among the marks of a canonical book; and the
+canon is identified by an infallible authority, Christ speaking in the books
+themselves by his Spirit. That authority is not outside Scripture, so the sole
+rule stands. Calvin gives the same answer when he rests the certainty of
+Scripture on "the secret testimony of the Spirit" (*Institutes* I.vii.4).
+
+```lean
+def canonObjectionInference : Source :=
+  { primary := Reference.work krugerCanonRevisited,
+    supporting :=
+      [Reference.work Bib.calvinInstitutes (Bib.Locus.sectionRef "I.vii.4")],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="canonTestsInference"></a>
+**`canonTestsInference`**
+
+The rating of the step from Scripture's tests, and the Church's use of
+reasons, to the claim that identifying the canon needs no infallible
+authority: `disputed`. George Reid, writing in the *Catholic Encyclopedia*
+(1908), is the reader who grants the grounds and denies the conclusion. He
+grants that apostolicity is "a positive and partial touchstone", and narrates
+how the Shepherd and the Didache were set apart; and he names the test from
+Scripture's own content and denies that it suffices. Inspiration "is not
+self-evident", so its "sole absolute criterion" is the Spirit witnessing "not
+... in the doctrinal and spiritual tenor of Holy Writ itself, according to
+Luther, but through the constituted organ and custodian of Its revelations, the
+Church". Augustine stands behind him: the canonical books are those "received by
+all the Catholic churches" (*On Christian Doctrine* II.8.12), a test of
+reception, not of agreement.
+
+Two Protestant readers press on the step from the other side without denying
+its conclusion. Kruger criticises the criteria-of-canonicity model and grants
+that it "has rightly focused on apostolicity as a key component of canonicity"
+(pp. 67–87, at p. 87). McDonald finds the ancient criteria applied "often
+unequally" (p. 127).
+
+```lean
+def canonTestsInference : Source :=
+  {
+    primary :=
+      Reference.work reidCanonNewTestament
+        (Bib.Locus.sectionRef "The criterion of inspiration"),
+    supporting :=
+      [Reference.work krugerCanonRevisited (Bib.Locus.pages 67 87),
+        Reference.work mcdonaldIntegrityCanon (Bib.Locus.pages 127 129)],
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
 ```
 
 <a id="principleToSoleRuleInference"></a>

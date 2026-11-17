@@ -90,6 +90,25 @@ inductive Claim
   circularity charge does not discriminate between the positions. Kruger's
   parity reply. -/
   | rivalAuthorityIsAlsoSelfAuthenticating
+  /-- Deuteronomy 13:1–3 — "If there arise among you a prophet, or a dreamer of
+  dreams, and giveth thee a sign or a wonder, And the sign or the wonder come to
+  pass, whereof he spake unto thee, saying, Let us go after other gods, which
+  thou hast not known, and let us serve them; Thou shalt not hearken unto the
+  words of that prophet". A sign that comes true does not make him a prophet:
+  what he says is weighed against the God Israel already knows. -/
+  | deut13_1_3ProphetOfOtherGods
+  /-- Deuteronomy 18:20–22 — "And if thou say in thine heart, How shall we know
+  the word which the LORD hath not spoken? When a prophet speaketh in the name
+  of the LORD, if the thing follow not, nor come to pass, that is the thing
+  which the LORD hath not spoken". -/
+  | deut18_20_22WordNotFulfilled
+  /-- The early Church set apart books it read but did not receive into the
+  canon, and gave its reasons. The Muratorian fragment says the Shepherd of
+  Hermas may be read but not placed "among the prophets, as their number is
+  complete, nor among the apostles"; Athanasius, in his Festal Letter of 367,
+  sets the Shepherd and the Didache among books "appointed by the Fathers to be
+  read by those who newly join us", and not in the canon. -/
+  | booksReadButNotReceived
   /-- Tradition carries real but fallible — ministerial, not magisterial —
   authority. **Tradition I.** -/
   | traditionHasMinisterialAuthority

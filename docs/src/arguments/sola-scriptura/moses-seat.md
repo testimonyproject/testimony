@@ -107,11 +107,11 @@ alone.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
-- (2) \\(\href{claims.html#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
+- (1) \\(\href{claims.html#claim-54}{P_{54}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (2) \\(\href{claims.html#claim-55}{P_{55}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
 - (3) \\(\href{claims.html#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (4) \\((\href{claims.html#claim-51}{P_{51}} \land \href{claims.html#claim-52}{P_{52}} \land \href{claims.html#claim-3}{P_{3}}) \rightarrow \lnot \href{claims.html#claim-53}{P_{53}}\\)
-- \\(\vdash\\) \\(\lnot \href{claims.html#claim-53}{P_{53}}\\) — *at issue, the denial of:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- (4) \\((\href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-3}{P_{3}}) \rightarrow \lnot \href{claims.html#claim-56}{P_{56}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-56}{P_{56}}\\) — *at issue, the denial of:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 
 </div>
 
@@ -126,9 +126,9 @@ whatever is not contrary to God's law.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
-- (2) \\(\href{claims.html#claim-51}{P_{51}} \rightarrow \href{claims.html#claim-53}{P_{53}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-53}{P_{53}}\\) — *at issue:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
+- (1) \\(\href{claims.html#claim-54}{P_{54}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (2) \\(\href{claims.html#claim-54}{P_{54}} \rightarrow \href{claims.html#claim-56}{P_{56}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-56}{P_{56}}\\) — *at issue:* Those who hold the Church's teaching office are to be heeded for the seat they hold, in whatever is not contrary to God's law, even when they live ill
 
 </div>
 
@@ -143,10 +143,10 @@ Moses' seat reads: Matthew 23:2–3 and 23:16–22. No step from Matthew 23.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-3}{P_{3}}\\) — Mark 7:1–13 (Matthew 15:1–9) — Jesus rebukes the elders' tradition, Corban above all, for voiding God's command
-- (2) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-37}{P_{37}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
-- (3) \\(\href{claims.html#claim-37}{P_{37}} \rightarrow \lnot \href{claims.html#claim-38}{P_{38}}\\) — *would deny:* A commandment of men may rightly be bound on the Church as God's word
-- (4) \\(\href{claims.html#claim-51}{P_{51}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
-- (5) \\(\href{claims.html#claim-52}{P_{52}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
+- (2) \\(\href{claims.html#claim-3}{P_{3}} \rightarrow \href{claims.html#claim-40}{P_{40}}\\) — *would give:* God's word judges human tradition: no commandment of men may be taught as God's word, and a tradition that voids God's command is void
+- (3) \\(\href{claims.html#claim-40}{P_{40}} \rightarrow \lnot \href{claims.html#claim-41}{P_{41}}\\) — *would deny:* A commandment of men may rightly be bound on the Church as God's word
+- (4) \\(\href{claims.html#claim-54}{P_{54}}\\) — Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all whatsoever they bid you observe, that observe and do; but do not ye after their works
+- (5) \\(\href{claims.html#claim-55}{P_{55}}\\) — Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever shall swear by the temple, it is nothing
 
 </div>
 

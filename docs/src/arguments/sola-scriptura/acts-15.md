@@ -203,16 +203,16 @@ apostles binds as far as it agrees with Scripture, and may err.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-54}{P_{54}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
-- (2) \\(\href{claims.html#claim-55}{P_{55}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
-- (3) \\(\href{claims.html#claim-56}{P_{56}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
-- (4) \\(\href{claims.html#claim-57}{P_{57}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
-- (5) \\(\href{claims.html#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
-- (6) \\(\href{claims.html#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
-- (7) \\(\href{claims.html#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
-- (8) \\((\href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}} \land \href{claims.html#claim-57}{P_{57}}) \rightarrow \href{claims.html#claim-59}{P_{59}}\\) — *would give:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
-- (9) \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-59}{P_{59}}) \rightarrow \lnot \href{claims.html#claim-50}{P_{50}}\\)
-- \\(\vdash\\) \\(\lnot \href{claims.html#claim-50}{P_{50}}\\) — *at issue, the denial of:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (1) \\(\href{claims.html#claim-57}{P_{57}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
+- (2) \\(\href{claims.html#claim-58}{P_{58}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
+- (3) \\(\href{claims.html#claim-59}{P_{59}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
+- (4) \\(\href{claims.html#claim-60}{P_{60}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
+- (5) \\(\href{claims.html#claim-47}{P_{47}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
+- (6) \\(\href{claims.html#claim-48}{P_{48}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
+- (7) \\(\href{claims.html#claim-49}{P_{49}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
+- (8) \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-58}{P_{58}} \land \href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-60}{P_{60}}) \rightarrow \href{claims.html#claim-62}{P_{62}}\\) — *would give:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (9) \\((\href{claims.html#claim-47}{P_{47}} \land \href{claims.html#claim-48}{P_{48}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-62}{P_{62}}) \rightarrow \lnot \href{claims.html#claim-53}{P_{53}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-53}{P_{53}}\\) — *at issue, the denial of:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
 
 </div>
 
@@ -229,15 +229,15 @@ authority.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-61}{P_{61}}\\) — Acts 1:20 — his bishoprick let another take
-- (2) \\(\href{claims.html#claim-62}{P_{62}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
-- (3) \\(\href{claims.html#claim-63}{P_{63}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
-- (4) \\(\href{claims.html#claim-48}{P_{48}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
-- (5) \\(\href{claims.html#claim-49}{P_{49}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
-- (6) \\(\href{claims.html#claim-60}{P_{60}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
-- (7) \\((\href{claims.html#claim-61}{P_{61}} \land \href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-63}{P_{63}}) \rightarrow \lnot \href{claims.html#claim-59}{P_{59}}\\) — *would deny:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
-- (8) \\((\href{claims.html#claim-48}{P_{48}} \land \href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-60}{P_{60}} \land \lnot \href{claims.html#claim-59}{P_{59}}) \rightarrow \href{claims.html#claim-50}{P_{50}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-50}{P_{50}}\\) — *at issue:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
+- (1) \\(\href{claims.html#claim-64}{P_{64}}\\) — Acts 1:20 — his bishoprick let another take
+- (2) \\(\href{claims.html#claim-65}{P_{65}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
+- (3) \\(\href{claims.html#claim-66}{P_{66}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
+- (4) \\(\href{claims.html#claim-51}{P_{51}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
+- (5) \\(\href{claims.html#claim-52}{P_{52}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
+- (6) \\(\href{claims.html#claim-63}{P_{63}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
+- (7) \\((\href{claims.html#claim-64}{P_{64}} \land \href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-66}{P_{66}}) \rightarrow \lnot \href{claims.html#claim-62}{P_{62}}\\) — *would deny:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (8) \\((\href{claims.html#claim-51}{P_{51}} \land \href{claims.html#claim-52}{P_{52}} \land \href{claims.html#claim-63}{P_{63}} \land \lnot \href{claims.html#claim-62}{P_{62}}) \rightarrow \href{claims.html#claim-53}{P_{53}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-53}{P_{53}}\\) — *at issue:* A general council after the apostles binds with the Holy Spirit's authority, as the council at Jerusalem did, and cannot err
 
 </div>
 
@@ -251,13 +251,13 @@ out in: 15:1, 6, 10–11, 15–17, 22–29 and 28, and 16:4. No step.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-44}{P_{44}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
-- (2) \\(\href{claims.html#claim-45}{P_{45}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
-- (3) \\(\href{claims.html#claim-46}{P_{46}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
-- (4) \\(\href{claims.html#claim-48}{P_{48}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
-- (5) \\(\href{claims.html#claim-49}{P_{49}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
-- (6) \\(\href{claims.html#claim-60}{P_{60}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
-- (7) \\(\href{claims.html#claim-47}{P_{47}}\\) — Acts 15:23–29 — they wrote letters by them: the decree went out in writing
+- (1) \\(\href{claims.html#claim-47}{P_{47}}\\) — Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot be saved
+- (2) \\(\href{claims.html#claim-48}{P_{48}}\\) — Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; through the grace of the Lord Jesus Christ we shall be saved
+- (3) \\(\href{claims.html#claim-49}{P_{49}}\\) — Acts 15:15–17 — to this agree the words of the prophets; as it is written (Amos 9:11–12)
+- (4) \\(\href{claims.html#claim-51}{P_{51}}\\) — Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you no greater burden than these necessary things
+- (5) \\(\href{claims.html#claim-52}{P_{52}}\\) — Acts 16:4 — they delivered them the decrees for to keep, that were ordained of the apostles and elders which were at Jerusalem
+- (6) \\(\href{claims.html#claim-63}{P_{63}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
+- (7) \\(\href{claims.html#claim-50}{P_{50}}\\) — Acts 15:23–29 — they wrote letters by them: the decree went out in writing
 
 </div>
 
@@ -269,12 +269,12 @@ out in: 15:1, 6, 10–11, 15–17, 22–29 and 28, and 16:4. No step.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-54}{P_{54}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
-- (2) \\(\href{claims.html#claim-55}{P_{55}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
-- (3) \\(\href{claims.html#claim-56}{P_{56}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
-- (4) \\(\href{claims.html#claim-57}{P_{57}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
-- (5) \\((\href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}} \land \href{claims.html#claim-57}{P_{57}}) \rightarrow \href{claims.html#claim-59}{P_{59}}\\)
-- \\(\vdash\\) \\(\href{claims.html#claim-59}{P_{59}}\\) — *at issue:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (1) \\(\href{claims.html#claim-57}{P_{57}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
+- (2) \\(\href{claims.html#claim-58}{P_{58}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
+- (3) \\(\href{claims.html#claim-59}{P_{59}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
+- (4) \\(\href{claims.html#claim-60}{P_{60}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
+- (5) \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-58}{P_{58}} \land \href{claims.html#claim-59}{P_{59}} \land \href{claims.html#claim-60}{P_{60}}) \rightarrow \href{claims.html#claim-62}{P_{62}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-62}{P_{62}}\\) — *at issue:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
 
 </div>
 
@@ -288,11 +288,11 @@ and 44, and the step from them that *Lumen Gentium* 20 takes.
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-61}{P_{61}}\\) — Acts 1:20 — his bishoprick let another take
-- (2) \\(\href{claims.html#claim-62}{P_{62}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
-- (3) \\(\href{claims.html#claim-63}{P_{63}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
-- (4) \\((\href{claims.html#claim-61}{P_{61}} \land \href{claims.html#claim-62}{P_{62}} \land \href{claims.html#claim-63}{P_{63}}) \rightarrow \lnot \href{claims.html#claim-59}{P_{59}}\\)
-- \\(\vdash\\) \\(\lnot \href{claims.html#claim-59}{P_{59}}\\) — *at issue, the denial of:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
+- (1) \\(\href{claims.html#claim-64}{P_{64}}\\) — Acts 1:20 — his bishoprick let another take
+- (2) \\(\href{claims.html#claim-65}{P_{65}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
+- (3) \\(\href{claims.html#claim-66}{P_{66}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
+- (4) \\((\href{claims.html#claim-64}{P_{64}} \land \href{claims.html#claim-65}{P_{65}} \land \href{claims.html#claim-66}{P_{66}}) \rightarrow \lnot \href{claims.html#claim-62}{P_{62}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-62}{P_{62}}\\) — *at issue, the denial of:* The apostles' own office ended with them; those after them succeed to their ministry, not to their office
 
 </div>
 
@@ -306,15 +306,15 @@ Every text on the apostles' office either side reads, with 1 Thessalonians
 
 <div class="testimony-derivation">
 
-- (1) \\(\href{claims.html#claim-54}{P_{54}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
-- (2) \\(\href{claims.html#claim-55}{P_{55}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
-- (3) \\(\href{claims.html#claim-56}{P_{56}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
-- (4) \\(\href{claims.html#claim-57}{P_{57}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
-- (5) \\(\href{claims.html#claim-61}{P_{61}}\\) — Acts 1:20 — his bishoprick let another take
-- (6) \\(\href{claims.html#claim-62}{P_{62}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
-- (7) \\(\href{claims.html#claim-63}{P_{63}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
-- (8) \\(\href{claims.html#claim-58}{P_{58}}\\) — 1 Thessalonians 2:6 (with 1:1) — from Paul, Silvanus and Timotheus: we might have been burdensome, as the apostles of Christ
-- (9) \\(\href{claims.html#claim-60}{P_{60}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
+- (1) \\(\href{claims.html#claim-57}{P_{57}}\\) — Acts 1:21–22 — of these men which have companied with us all the time ... must one be ordained to be a witness with us of his resurrection
+- (2) \\(\href{claims.html#claim-58}{P_{58}}\\) — 1 Corinthians 15:8 — and last of all he was seen of me also
+- (3) \\(\href{claims.html#claim-59}{P_{59}}\\) — 2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do also the other scriptures
+- (4) \\(\href{claims.html#claim-60}{P_{60}}\\) — 2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and Timothy our brother
+- (5) \\(\href{claims.html#claim-64}{P_{64}}\\) — Acts 1:20 — his bishoprick let another take
+- (6) \\(\href{claims.html#claim-65}{P_{65}}\\) — 2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach others also
+- (7) \\(\href{claims.html#claim-66}{P_{66}}\\) — 1 Clement 42, 44 — the apostles appointed bishops and deacons, and gave instructions that other approved men should succeed them
+- (8) \\(\href{claims.html#claim-61}{P_{61}}\\) — 1 Thessalonians 2:6 (with 1:1) — from Paul, Silvanus and Timotheus: we might have been burdensome, as the apostles of Christ
+- (9) \\(\href{claims.html#claim-63}{P_{63}}\\) — Acts 15:6, 22–23; 16:4 — the apostles and elders came together
 
 </div>
 

@@ -48,6 +48,48 @@ def mark7PrincipleInference : Source :=
   , tradition := .christianHistoricalGrammatical
   , confidence := .wellSupported }
 
+/-- The rating of the canon objection's step, from the Church's reception of the
+canon and the need for an infallible authority to identify it, to the denial
+that Scripture is the sole infallible rule: `disputed`. Kruger grants both
+grounds and denies the conclusion. The Church did receive the books, and he
+counts its corporate reception among the marks of a canonical book; and the
+canon is identified by an infallible authority, Christ speaking in the books
+themselves by his Spirit. That authority is not outside Scripture, so the sole
+rule stands. Calvin gives the same answer when he rests the certainty of
+Scripture on "the secret testimony of the Spirit" (*Institutes* I.vii.4). -/
+def canonObjectionInference : Source :=
+  { primary := .work krugerCanonRevisited .whole
+  , supporting := [.work calvinInstitutes (.sectionRef "I.vii.4")]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- The rating of the step from Scripture's tests, and the Church's use of
+reasons, to the claim that identifying the canon needs no infallible
+authority: `disputed`. George Reid, writing in the *Catholic Encyclopedia*
+(1908), is the reader who grants the grounds and denies the conclusion. He
+grants that apostolicity is "a positive and partial touchstone", and narrates
+how the Shepherd and the Didache were set apart; and he names the test from
+Scripture's own content and denies that it suffices. Inspiration "is not
+self-evident", so its "sole absolute criterion" is the Spirit witnessing "not
+... in the doctrinal and spiritual tenor of Holy Writ itself, according to
+Luther, but through the constituted organ and custodian of Its revelations, the
+Church". Augustine stands behind him: the canonical books are those "received by
+all the Catholic churches" (*On Christian Doctrine* II.8.12), a test of
+reception, not of agreement.
+
+Two Protestant readers press on the step from the other side without denying
+its conclusion. Kruger criticises the criteria-of-canonicity model and grants
+that it "has rightly focused on apostolicity as a key component of canonicity"
+(pp. 67–87, at p. 87). McDonald finds the ancient criteria applied "often
+unequally" (p. 127). -/
+def canonTestsInference : Source :=
+  { primary := .work reidCanonNewTestament (.sectionRef "The criterion of inspiration")
+  , supporting :=
+      [ .work krugerCanonRevisited (.pages 67 87)
+      , .work mcdonaldIntegrityCanon (.pages 127 129) ]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
 /-- The rating of the step from Mark 7's principle to the sole rule: `disputed`.
 Grant that God's word judges human tradition and that no unwritten tradition can
 be shown to be apostolic, and a reader may still deny that Scripture is the
@@ -460,6 +502,40 @@ def cite : Claim → AtomMeta
         "circularity charge does not discriminate"
     , kind := .interpretive
     , source := heldBy krugerCanonRevisited "ch. 2" .reformedProtestant }
+  | .deut13_1_3ProphetOfOtherGods =>
+    { label :=
+        "Deuteronomy 13:1–3 — a prophet whose sign comes to pass, but who says, Let us " ++
+        "go after other gods, is not to be heard"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.deuteronomy, 13, 1, 13, 3⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .deut18_20_22WordNotFulfilled =>
+    { label :=
+        "Deuteronomy 18:20–22 — a word spoken in the LORD's name that does not come " ++
+        "to pass is a word the LORD has not spoken"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.deuteronomy, 18, 20, 18, 22⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .booksReadButNotReceived =>
+    { label :=
+        "The early Church set apart books it read but did not receive into the canon, " ++
+        "the Shepherd and the Didache among them, and said why"
+    , kind := .historical
+      -- What the documents say. Not every early writer agreed: Irenaeus quotes
+      -- the Shepherd as "the Scripture" (Against Heresies IV.20.2). The claim is
+      -- that these witnesses drew the line and gave their reasons, not that
+      -- everyone drew it in the same place.
+    , source :=
+        { primary := .work anf5 (.pages 603 604)
+        , supporting :=
+            [ .work npnf2v4 (.sectionRef "Athanasius, Festal Letter 39, §§6–7, p. 552")
+            , .work mcdonaldIntegrityCanon (.pages 127 129) ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
   | .traditionHasMinisterialAuthority =>
     { label := "Tradition carries real but fallible — ministerial — authority"
     , kind := .theological
