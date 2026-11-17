@@ -10,6 +10,7 @@
 
 # How
 
+- [Contributing with Claude Code](./getting-started.md)
 - [Hello world: your first argument](./hello-world.md)
 - [Reading the logic](./reading-the-logic.md)
 - [Architecture](./architecture.md)
