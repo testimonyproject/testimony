@@ -79,6 +79,7 @@ def checkOntology (root : Name) : CommandElabM Unit := do
   if reports.isEmpty then
     throwError "#check_ontology found no argument to report on"
   let sorted := reports.qsort (· < ·)
+  recordChecked `ontology root
   logInfo m!"the shared ontology, in every argument:\n{String.intercalate "\n" sorted.toList}"
 
 /-- `#check_ontology under N` reports on every argument whose claim type is
