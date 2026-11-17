@@ -20,9 +20,9 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 | Result | Statement | What it claims |
 |---|---|---|
-| `christian_establishes` | `Establishes christian` | Given the Christian premises, the conclusion follows. |
-| `critical_not_establishes` | `¬Establishes critical` | The critical reading does not establish the conclusion. |
-| `jesus_satisfies_bethlehem` | `Satisfies jesus bornInBethlehem` | End to end: under the Christian package, Jesus satisfies the Bethlehem criterion. |
+| `christian_establishes` | `Establishes christian` | On the Christian premises, Jesus meets the Bethlehem criterion: if Micah foretells the birthplace, Matthew claims the fulfilment, and Jesus was born there, the conclusion follows. |
+| `critical_not_establishes` | `¬Establishes critical` | On the critical premises the conclusion does not follow: there is a way of taking the texts, the critical reading above, on which every one of them holds and Jesus does not meet … |
+| `jesus_satisfies_bethlehem` | `Satisfies jesus bornInBethlehem` | End to end: on the Christian premises, Jesus satisfies the Bethlehem criterion. |
 
 ### [Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3](./arguments/born-of-a-virgin.md)
 
