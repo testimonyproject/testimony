@@ -114,6 +114,9 @@ Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
   lines: 41, read: 0
 Sola fide
   lines: 49, read: 31
+  attribute a view, against the argument's record:
+    sandersLine: secondTempleJudaism, unrecorded
+    trentWordLine: augustine, unrecorded; latinWest, unrecorded
   need a word to keep its sense, unstated:
     catholicJamesWordLine: erga, dikaioo
     catholicJamesWorksLine: erga, dikaioo
@@ -152,7 +155,7 @@ The canonical witness
 #check_refutations under TestimonyArguments using unfoldSets
 
 /--
-info: every entry is a tagged definition, and every key names one: 2570 definitions, 264 entries
+info: every entry is a tagged definition, and every key names one: 2572 definitions, 264 entries
 -/
 #guard_msgs in
 #check_citations under Testimony

@@ -408,21 +408,23 @@ Catholic's remark that "alone" is not in Paul's Greek is an assertion, true of t
 what it may be heard to imply is not charged.
 
 **The library's own lines, checked the same way.** Every line of reason is one step, and read
-through its argument's meanings a step is a move. `Testimony.Checks.Fallacies` runs the three
-checks over every line the library has, and the build fails if one equivocates on its own terms
-or argues from silence alone. Fifty-two lines can be read today, thirty-one of sola fide's and
-twenty-one of sola scriptura's; the rest wait on their meanings. None equivocates, and none argues
-from silence. One line carried what it delivered in a premise when the check was first run: the sola
-fide line on Paul's word (`lexicalLine`), whose premise that Paul's "justify" is a courtroom
-word also said, in its own words, that "it does not mean to make a person good", which was the
-line's conclusion. That premise was the one Trent's reading of Paul's word denies, so as an
-answer to Trent the line assumed its point. The premise now states the courtroom sense alone,
-which is what its lexical sources support, and the line's other grounds carry the rest. What
-that changed is reported where it is weighed: the step about Paul's word, which had stood at
-`wellSupported` because the premise assumed its point, is now disputed by Trent's reading
-under every standard (`trent_dissents_from_the_definition_steps`). No verdict of the sola fide
-dispute moved, since the dispute weighs the step at its cited rating. Twelve lines are
-conditional on a word keeping its sense, unstated, and the report lists the words.
+through its argument's meanings a step is a move. `Testimony.Checks.Fallacies` runs the move checks
+over every line the library has, and the build fails if one equivocates on its own terms, argues
+from silence alone, or answers a straw man. Fifty-two lines can be read today, thirty-one of sola
+fide's and twenty-one of sola scriptura's; the rest wait on their meanings. None equivocates, and
+none argues from silence. One line carried what it delivered in a premise when the check was first
+run: the sola fide line on Paul's word (`lexicalLine`), whose premise that Paul's "justify" is a
+courtroom word also said, in its own words, that "it does not mean to make a person good", which was
+the line's conclusion. That premise was the one Trent's reading of Paul's word denies, so as an
+answer to Trent the line assumed its point. The premise now states the courtroom sense alone, which
+is what its lexical sources support, and the line's other grounds carry the rest. What that changed
+is reported where it is weighed: the step about Paul's word, which had stood at `wellSupported`
+because the premise assumed its point, is now disputed by Trent's reading under every standard
+(`trent_dissents_from_the_definition_steps`). No verdict of the sola fide dispute moved, since the
+dispute weighs the step at its cited rating. Twelve lines are conditional on a word keeping its
+sense, unstated, and the report lists the words. Two sola fide lines attribute a view, to Sanders'
+Second Temple Judaism and to Augustine, and the straw-man check finds both unrecorded: the argument
+cites nothing else about what either voice held.
 
 **What the checks are held to.** A check that calls every survey of a word an equivocation,
 or every argument from silence a fallacy, is a debater's reflex written down.
