@@ -1,0 +1,4936 @@
+ref	role	class	text	lemma	morph
+HEB 1:1!1		adv	Πολυμερῶς	πολυμερῶς	ADV
+HEB 1:1!2		conj	καὶ	καί	CONJ
+HEB 1:1!3		adv	πολυτρόπως	πολυτρόπως	ADV
+HEB 1:1!4	adv	adv	πάλαι	πάλαι	ADV
+HEB 1:1!5		det	ὁ	ὁ	T-NSM
+HEB 1:1!6		noun	θεὸς	θεός	N-NSM
+HEB 1:1!7	v	verb	λαλήσας	λαλέω	V-AAP-NSM
+HEB 1:1!8		det	τοῖς	ὁ	T-DPM
+HEB 1:1!9		noun	πατράσιν	πατήρ	N-DPM
+HEB 1:1!10		prep	ἐν	ἐν	PREP
+HEB 1:1!11		det	τοῖς	ὁ	T-DPM
+HEB 1:1!12		noun	προφήταις	προφήτης	N-DPM
+HEB 1:2!1		prep	ἐπ	ἐπί	PREP
+HEB 1:2!2		adj	ἐσχάτου	ἔσχατος	A-GSM-S
+HEB 1:2!3		det	τῶν	ὁ	T-GPF
+HEB 1:2!4		noun	ἡμερῶν	ἡμέρα	N-GPF
+HEB 1:2!5		pron	τούτων	οὗτος	D-GPF
+HEB 1:2!6	v	verb	ἐλάλησεν	λαλέω	V-AAI-3S
+HEB 1:2!7	io	pron	ἡμῖν	ἐγώ	P-1DP
+HEB 1:2!8		prep	ἐν	ἐν	PREP
+HEB 1:2!9		noun	υἱῷ	υἱός	N-DSM
+HEB 1:2!10	o	pron	ὃν	ὅς	R-ASM
+HEB 1:2!11	v	verb	ἔθηκεν	τίθημι	V-AAI-3S
+HEB 1:2!12		noun	κληρονόμον	κληρονόμος	N-ASM
+HEB 1:2!13		adj	πάντων	πᾶς	A-GPN
+HEB 1:2!14		prep	δι	διά	PREP
+HEB 1:2!15		pron	οὗ	ὅς	R-GSM
+HEB 1:2!16	adv	adv	καὶ	καί	CONJ
+HEB 1:2!17	v	verb	ἐποίησεν	ποιέω	V-AAI-3S
+HEB 1:2!18		det	τοὺς	ὁ	T-APM
+HEB 1:2!19		noun	αἰῶνας	αἰών	N-APM
+HEB 1:3!1	s	pron	ὃς	ὅς	R-NSM
+HEB 1:3!2	vc	verb	ὢν	εἰμί	V-PAP-NSM
+HEB 1:3!3		noun	ἀπαύγασμα	ἀπαύγασμα	N-NSN
+HEB 1:3!4		det	τῆς	ὁ	T-GSF
+HEB 1:3!5		noun	δόξης	δόξα	N-GSF
+HEB 1:3!6		conj	καὶ	καί	CONJ
+HEB 1:3!7		noun	χαρακτὴρ	χαρακτήρ	N-NSM
+HEB 1:3!8		det	τῆς	ὁ	T-GSF
+HEB 1:3!9		noun	ὑποστάσεως	ὑπόστασις	N-GSF
+HEB 1:3!10		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 1:3!11	v	verb	φέρων	φέρω	V-PAP-NSM
+HEB 1:3!12		conj	τε	τέ	PRT
+HEB 1:3!13		det	τὰ	ὁ	T-APN
+HEB 1:3!14		adj	πάντα	πᾶς	A-APN
+HEB 1:3!15		det	τῷ	ὁ	T-DSN
+HEB 1:3!16		noun	ῥήματι	ῥῆμα	N-DSN
+HEB 1:3!17		det	τῆς	ὁ	T-GSF
+HEB 1:3!18		noun	δυνάμεως	δύναμις	N-GSF
+HEB 1:3!19		prep	δι	διά	PREP
+HEB 1:3!20		pron	αὑτοῦ	ἑαυτοῦ	P-GSM
+HEB 1:3!21		noun	καθαρισμὸν	καθαρισμός	N-ASM
+HEB 1:3!22		det	τῶν	ὁ	T-GPF
+HEB 1:3!23		noun	ἁμαρτιῶν	ἁμαρτία	N-GPF
+HEB 1:3!24	v	verb	ποιησάμενος	ποιέω	V-AMP-NSM
+HEB 1:3!25	v	verb	ἐκάθισεν	καθίζω	V-AAI-3S
+HEB 1:3!26		prep	ἐν	ἐν	PREP
+HEB 1:3!27		adj	δεξιᾷ	δεξιός	A-DSF
+HEB 1:3!28		det	τῆς	ὁ	T-GSF
+HEB 1:3!29		noun	μεγαλωσύνης	μεγαλωσύνη	N-GSF
+HEB 1:3!30		prep	ἐν	ἐν	PREP
+HEB 1:3!31		adj	ὑψηλοῖς	ὑψηλός	A-DPN
+HEB 1:4!1	adv	pron	τοσούτῳ	τοσοῦτος	D-DSM
+HEB 1:4!2	p	adj	κρείττων	κρείττων	A-NSM-C
+HEB 1:4!3	vc	verb	γενόμενος	γίνομαι	V-2ADP-NSM
+HEB 1:4!4		det	τῶν	ὁ	T-GPM
+HEB 1:4!5		noun	ἀγγέλων	ἄγγελος	N-GPM
+HEB 1:4!6	adv	pron	ὅσῳ	ὅσος	K-DSN
+HEB 1:4!7		adj	διαφορώτερον	διάφορος	A-ASN-C
+HEB 1:4!8		prep	παρ	παρά	PREP
+HEB 1:4!9		pron	αὐτοὺς	ἑαυτοῦ	P-APM
+HEB 1:4!10	v	verb	κεκληρονόμηκεν	κληρονομέω	V-RAI-3S
+HEB 1:4!11		noun	ὄνομα	ὄνομα	N-ASN
+HEB 1:5!1		pron	Τίνι	τίς	I-DSM
+HEB 1:5!2		conj	γὰρ	γάρ	CONJ
+HEB 1:5!3	v	verb	εἶπέν	λέγω	V-2AAI-3S
+HEB 1:5!4	adv	adv	ποτε	ποτέ	PRT
+HEB 1:5!5		det	τῶν	ὁ	T-GPM
+HEB 1:5!6		noun	ἀγγέλων	ἄγγελος	N-GPM
+HEB 1:5!7		noun	Υἱός	υἱός	N-NSM
+HEB 1:5!8		pron	μου	ἐγώ	P-1GS
+HEB 1:5!9	vc	verb	εἶ	εἰμί	V-PAI-2S
+HEB 1:5!10	s	pron	σύ	σύ	P-2NS
+HEB 1:5!11	s	pron	ἐγὼ	ἐγώ	P-1NS
+HEB 1:5!12	adv	adv	σήμερον	σήμερον	ADV
+HEB 1:5!13	v	verb	γεγέννηκά	γεννάω	V-RAI-1S
+HEB 1:5!14	o	pron	σε	σύ	P-2AS
+HEB 1:5!15		conj	καὶ	καί	CONJ
+HEB 1:5!16	adv	adv	πάλιν	πάλιν	ADV
+HEB 1:5!17	s	pron	Ἐγὼ	ἐγώ	P-1NS
+HEB 1:5!18	vc	verb	ἔσομαι	εἰμί	V-FDI-1S
+HEB 1:5!19	adv	pron	αὐτῷ	αὐτός	P-DSM
+HEB 1:5!20		prep	εἰς	εἰς	PREP
+HEB 1:5!21		noun	πατέρα	πατήρ	N-ASM
+HEB 1:5!22		conj	καὶ	καί	CONJ
+HEB 1:5!23	s	pron	αὐτὸς	αὐτός	P-NSM
+HEB 1:5!24	vc	verb	ἔσται	εἰμί	V-FDI-3S
+HEB 1:5!25	adv	pron	μοι	ἐγώ	P-1DS
+HEB 1:5!26		prep	εἰς	εἰς	PREP
+HEB 1:5!27		noun	υἱόν	υἱός	N-ASM
+HEB 1:6!1		conj	ὅταν	ὅταν	CONJ
+HEB 1:6!2		conj	δὲ	δέ	CONJ
+HEB 1:6!3	adv	adv	πάλιν	πάλιν	ADV
+HEB 1:6!4	v	verb	εἰσαγάγῃ	εἰσάγω	V-2AAS-3S
+HEB 1:6!5		det	τὸν	ὁ	T-ASM
+HEB 1:6!6		adj	πρωτότοκον	πρωτότοκος	A-ASM-S
+HEB 1:6!7		prep	εἰς	εἰς	PREP
+HEB 1:6!8		det	τὴν	ὁ	T-ASF
+HEB 1:6!9		noun	οἰκουμένην	οἰκουμένη	N-ASF
+HEB 1:6!10	v	verb	λέγει	λέγω	V-PAI-3S
+HEB 1:6!11		conj	Καὶ	καί	CONJ
+HEB 1:6!12	v	verb	προσκυνησάτωσαν	προσκυνέω	V-AAM-3P
+HEB 1:6!13	o	pron	αὐτῷ	αὐτός	P-DSM
+HEB 1:6!14		adj	πάντες	πᾶς	A-NPM
+HEB 1:6!15		noun	ἄγγελοι	ἄγγελος	N-NPM
+HEB 1:6!16		noun	θεοῦ	θεός	N-GSM
+HEB 1:7!1		conj	καὶ	καί	CONJ
+HEB 1:7!2		prep	πρὸς	πρός	PREP
+HEB 1:7!3		conj	μὲν	μέν	PRT
+HEB 1:7!4		det	τοὺς	ὁ	T-APM
+HEB 1:7!5		noun	ἀγγέλους	ἄγγελος	N-APM
+HEB 1:7!6	v	verb	λέγει	λέγω	V-PAI-3S
+HEB 1:7!7		det	Ὁ	ὁ	T-NSM
+HEB 1:7!8	v	verb	ποιῶν	ποιέω	V-PAP-NSM
+HEB 1:7!9		det	τοὺς	ὁ	T-APM
+HEB 1:7!10		noun	ἀγγέλους	ἄγγελος	N-APM
+HEB 1:7!11		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 1:7!12	o2	noun	πνεύματα	πνεῦμα	N-APN
+HEB 1:7!13		conj	καὶ	καί	CONJ
+HEB 1:7!14		det	τοὺς	ὁ	T-APM
+HEB 1:7!15		noun	λειτουργοὺς	λειτουργός	N-APM
+HEB 1:7!16		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 1:7!17		noun	πυρὸς	πῦρ	N-GSN
+HEB 1:7!18		noun	φλόγα	φλόξ	N-ASF
+HEB 1:8!1		prep	πρὸς	πρός	PREP
+HEB 1:8!2		conj	δὲ	δέ	CONJ
+HEB 1:8!3		det	τὸν	ὁ	T-ASM
+HEB 1:8!4		noun	υἱόν	υἱός	N-ASM
+HEB 1:8!5		det	Ὁ	ὁ	T-NSM
+HEB 1:8!6		noun	θρόνος	θρόνος	N-NSM
+HEB 1:8!7		pron	σου	σύ	P-2GS
+HEB 1:8!8		det	ὁ	ὁ	T-NSM
+HEB 1:8!9		noun	θεὸς	θεός	N-NSM
+HEB 1:8!10		prep	εἰς	εἰς	PREP
+HEB 1:8!11		det	τὸν	ὁ	T-ASM
+HEB 1:8!12		noun	αἰῶνα	αἰών	N-ASM
+HEB 1:8!13		det	τοῦ	ὁ	T-GSM
+HEB 1:8!14		noun	αἰῶνος	αἰών	N-GSM
+HEB 1:8!15		conj	καὶ	καί	CONJ
+HEB 1:8!16		det	ἡ	ὁ	T-NSF
+HEB 1:8!17		noun	ῥάβδος	ῥάβδος	N-NSF
+HEB 1:8!18		det	τῆς	ὁ	T-GSF
+HEB 1:8!19		noun	εὐθύτητος	εὐθύτης	N-GSF
+HEB 1:8!20		noun	ῥάβδος	ῥάβδος	N-NSF
+HEB 1:8!21		det	τῆς	ὁ	T-GSF
+HEB 1:8!22		noun	βασιλείας	βασιλεία	N-GSF
+HEB 1:8!23		pron	σου	σύ	P-GS-
+HEB 1:9!1	v	verb	ἠγάπησας	ἀγαπάω	V-AAI-2S
+HEB 1:9!2	o	noun	δικαιοσύνην	δικαιοσύνη	N-ASF
+HEB 1:9!3		conj	καὶ	καί	CONJ
+HEB 1:9!4	v	verb	ἐμίσησας	μισέω	V-AAI-2S
+HEB 1:9!5	o	noun	ἀνομίαν	ἀνομία	N-ASF
+HEB 1:9!6		prep	διὰ	διά	PREP
+HEB 1:9!7		pron	τοῦτο	οὗτος	D-ASN
+HEB 1:9!8	v	verb	ἔχρισέν	χρίω	V-AAI-3S
+HEB 1:9!9	o	pron	σε	σύ	P-2AS
+HEB 1:9!10		det	ὁ	ὁ	T-NSM
+HEB 1:9!11		noun	θεός	θεός	N-NSM
+HEB 1:9!12		det	ὁ	ὁ	T-NSM
+HEB 1:9!13		noun	θεός	θεός	N-NSM
+HEB 1:9!14		pron	σου	σύ	P-2GS
+HEB 1:9!15		noun	ἔλαιον	ἔλαιον	N-ASN
+HEB 1:9!16		noun	ἀγαλλιάσεως	ἀγαλλίασις	N-GSF
+HEB 1:9!17		prep	παρὰ	παρά	PREP
+HEB 1:9!18		det	τοὺς	ὁ	T-APM
+HEB 1:9!19		adj	μετόχους	μέτοχος	A-APM
+HEB 1:9!20		pron	σου	σύ	P-2GS
+HEB 1:10!1		conj	καί	καί	CONJ
+HEB 1:10!2	s	pron	Σὺ	σύ	P-2NS
+HEB 1:10!3		prep	κατ	κατά	PREP
+HEB 1:10!4		noun	ἀρχάς	ἀρχή	N-APF
+HEB 1:10!5	aux	noun	κύριε	κύριος	N-VSM
+HEB 1:10!6		det	τὴν	ὁ	T-ASF
+HEB 1:10!7		noun	γῆν	γῆ	N-ASF
+HEB 1:10!8	v	verb	ἐθεμελίωσας	θεμελιόω	V-AAI-2S
+HEB 1:10!9		conj	καὶ	καί	CONJ
+HEB 1:10!10		noun	ἔργα	ἔργον	N-NPN
+HEB 1:10!11		det	τῶν	ὁ	T-GPF
+HEB 1:10!12		noun	χειρῶν	χείρ	N-GPF
+HEB 1:10!13		pron	σού	σύ	P-2GS
+HEB 1:10!14	vc	verb	εἰσιν	εἰμί	V-PAI-3P
+HEB 1:10!15		det	οἱ	ὁ	T-NPM
+HEB 1:10!16		noun	οὐρανοί	οὐρανός	N-NPM
+HEB 1:11!1	s	pron	αὐτοὶ	αὐτός	P-NPM
+HEB 1:11!2	v	verb	ἀπολοῦνται	ἀπόλλυμι	V-FMI-3P
+HEB 1:11!3	s	pron	σὺ	σύ	P-2NS
+HEB 1:11!4		conj	δὲ	δέ	CONJ
+HEB 1:11!5	v	verb	διαμένεις	διαμένω	V-PAI-2S
+HEB 1:11!6		conj	καὶ	καί	CONJ
+HEB 1:11!7	s	adj	πάντες	πᾶς	A-NPM
+HEB 1:11!8		conj	ὡς	ὡς	ADV
+HEB 1:11!9	s	noun	ἱμάτιον	ἱμάτιον	N-NSN
+HEB 1:11!10	v	verb	παλαιωθήσονται	παλαιόω	V-FPI-3P
+HEB 1:12!1		conj	καὶ	καί	CONJ
+HEB 1:12!2		conj	ὡσεὶ	ὡσεί	ADV
+HEB 1:12!3	o	noun	περιβόλαιον	περιβόλαιον	N-ASN
+HEB 1:12!4	v	verb	ἑλίξεις	ἑλίσσω	V-FAI-2S
+HEB 1:12!5	o	pron	αὐτούς	ἑαυτοῦ	P-APM
+HEB 1:12!6		conj	ὡς	ὡς	ADV
+HEB 1:12!7	s	noun	ἱμάτιον	ἱμάτιον	N-ASN
+HEB 1:12!8	adv	adv	καὶ	καί	CONJ
+HEB 1:12!9	v	verb	ἀλλαγήσονται	ἀλλάσσω	V-2FPI-3P
+HEB 1:12!10	s	pron	σὺ	σύ	P-2NS
+HEB 1:12!11		conj	δὲ	δέ	CONJ
+HEB 1:12!12		det	ὁ	ὁ	T-NSM
+HEB 1:12!13		adj	αὐτὸς	αὐτός	P-NSM
+HEB 1:12!14	vc	verb	εἶ	εἰμί	V-PAI-2S
+HEB 1:12!15		conj	καὶ	καί	CONJ
+HEB 1:12!16		det	τὰ	ὁ	T-NPN
+HEB 1:12!17		noun	ἔτη	ἔτος	N-NPN
+HEB 1:12!18		pron	σου	σύ	P-2GS
+HEB 1:12!19	adv	adv	οὐκ	οὐ	PRT-N
+HEB 1:12!20	v	verb	ἐκλείψουσιν	ἐκλείπω	V-FAI-3P
+HEB 1:13!1		prep	πρὸς	πρός	PREP
+HEB 1:13!2		pron	τίνα	τίς	I-ASM
+HEB 1:13!3		conj	δὲ	δέ	CONJ
+HEB 1:13!4		det	τῶν	ὁ	T-GPM
+HEB 1:13!5		noun	ἀγγέλων	ἄγγελος	N-GPM
+HEB 1:13!6	v	verb	εἴρηκέν	λέγω	V-RAI-3S-ATT
+HEB 1:13!7	adv	adv	ποτε	ποτέ	PRT
+HEB 1:13!8	v	verb	Κάθου	κάθημαι	V-PNM-2S
+HEB 1:13!9		prep	ἐκ	ἐκ	PREP
+HEB 1:13!10		adj	δεξιῶν	δεξιός	A-GPN
+HEB 1:13!11		pron	μου	ἐγώ	P-1GS
+HEB 1:13!12		conj	ἕως	ἕως	ADV
+HEB 1:13!13		ptcl	ἂν	ἄν	PRT
+HEB 1:13!14	v	verb	θῶ	τίθημι	V-2AAS-1S
+HEB 1:13!15		det	τοὺς	ὁ	T-APM
+HEB 1:13!16		adj	ἐχθρούς	ἐχθρός	A-APM
+HEB 1:13!17		pron	σου	σύ	P-2GS
+HEB 1:13!18		noun	ὑποπόδιον	ὑποπόδιον	N-ASN
+HEB 1:13!19		det	τῶν	ὁ	T-GPM
+HEB 1:13!20		noun	ποδῶν	πούς	N-GPM
+HEB 1:13!21		pron	σου	σύ	P-2GS
+HEB 1:14!1		ptcl	οὐχὶ	οὐχί	PRT-I
+HEB 1:14!2	s	adj	πάντες	πᾶς	A-NPM
+HEB 1:14!3	vc	verb	εἰσὶν	εἰμί	V-PAI-3P
+HEB 1:14!4		adj	λειτουργικὰ	λειτουργικός	A-NPN
+HEB 1:14!5		noun	πνεύματα	πνεῦμα	N-NPN
+HEB 1:14!6		prep	εἰς	εἰς	PREP
+HEB 1:14!7		noun	διακονίαν	διακονία	N-ASF
+HEB 1:14!8	v	verb	ἀποστελλόμενα	ἀποστέλλω	V-PPP-NPN
+HEB 1:14!9		prep	διὰ	διά	PREP
+HEB 1:14!10		det	τοὺς	ὁ	T-APM
+HEB 1:14!11	v	verb	μέλλοντας	μέλλω	V-PAP-APM
+HEB 1:14!12	v	verb	κληρονομεῖν	κληρονομέω	V-PAN
+HEB 1:14!13	o	noun	σωτηρίαν	σωτηρία	N-ASF
+HEB 2:1!1		prep	Διὰ	διά	PREP
+HEB 2:1!2		pron	τοῦτο	οὗτος	D-ASN
+HEB 2:1!3	v	verb	δεῖ	δέω	V-PAI-3S
+HEB 2:1!4	adv	adv	περισσοτέρως	περισσοτέρως	ADV-C
+HEB 2:1!5	v	verb	προσέχειν	προσέχω	V-PAN
+HEB 2:1!6	s	pron	ἡμᾶς	ἐγώ	P-1AP
+HEB 2:1!7		det	τοῖς	ὁ	T-DPN
+HEB 2:1!8	v	verb	ἀκουσθεῖσιν	ἀκούω	V-APP-DPN
+HEB 2:1!9		conj	μήποτε	μήποτε	CONJ
+HEB 2:1!10	v	verb	παραρυῶμεν	παραρρέω	V-2APS-1P
+HEB 2:2!1		conj	εἰ	εἰ	COND
+HEB 2:2!2		conj	γὰρ	γάρ	CONJ
+HEB 2:2!3		det	ὁ	ὁ	T-NSM
+HEB 2:2!4		prep	δι	διά	PREP
+HEB 2:2!5		noun	ἀγγέλων	ἄγγελος	N-GPM
+HEB 2:2!6	v	verb	λαληθεὶς	λαλέω	V-APP-NSM
+HEB 2:2!7		noun	λόγος	λόγος	N-NSM
+HEB 2:2!8	vc	verb	ἐγένετο	γίνομαι	V-2ADI-3S
+HEB 2:2!9	p	adj	βέβαιος	βέβαιος	A-NSM
+HEB 2:2!10		conj	καὶ	καί	CONJ
+HEB 2:2!11		adj	πᾶσα	πᾶς	A-NSF
+HEB 2:2!12		noun	παράβασις	παράβασις	N-NSF
+HEB 2:2!13		conj	καὶ	καί	CONJ
+HEB 2:2!14		noun	παρακοὴ	παρακοή	N-NSF
+HEB 2:2!15	v	verb	ἔλαβεν	λαμβάνω	V-2AAI-3S
+HEB 2:2!16		adj	ἔνδικον	ἔνδικος	A-ASF
+HEB 2:2!17		noun	μισθαποδοσίαν	μισθαποδοσία	N-ASF
+HEB 2:3!1	adv	adv	πῶς	πῶς	ADV-I
+HEB 2:3!2	s	pron	ἡμεῖς	ἐγώ	P-1NP
+HEB 2:3!3	v	verb	ἐκφευξόμεθα	ἐκφεύγω	V-FDI-1P
+HEB 2:3!4		pron	τηλικαύτης	τηλικοῦτος	D-GSF
+HEB 2:3!5	v	verb	ἀμελήσαντες	ἀμελέω	V-AAP-NPM
+HEB 2:3!6		noun	σωτηρίας	σωτηρία	N-GSF
+HEB 2:3!7	s	pron	ἥτις	ὅστις	R-NSF
+HEB 2:3!8	adv	noun	ἀρχὴν	ἀρχή	N-ASF
+HEB 2:3!9	v	verb	λαβοῦσα	λαμβάνω	V-2AAP-NSF
+HEB 2:3!10	v	verb	λαλεῖσθαι	λαλέω	V-PPN
+HEB 2:3!11		prep	διὰ	διά	PREP
+HEB 2:3!12		det	τοῦ	ὁ	T-GSM
+HEB 2:3!13		noun	κυρίου	κύριος	N-GSM
+HEB 2:3!14		prep	ὑπὸ	ὑπό	PREP
+HEB 2:3!15		det	τῶν	ὁ	T-GPM
+HEB 2:3!16	v	verb	ἀκουσάντων	ἀκούω	V-AAP-GPM
+HEB 2:3!17		prep	εἰς	εἰς	PREP
+HEB 2:3!18		pron	ἡμᾶς	ἐγώ	P-1AP
+HEB 2:3!19	v	verb	ἐβεβαιώθη	βεβαιόω	V-API-3S
+HEB 2:4!1	v	verb	συνεπιμαρτυροῦντος	συνεπιμαρτυρέω	V-PAP-GSM
+HEB 2:4!2		det	τοῦ	ὁ	T-GSM
+HEB 2:4!3		noun	θεοῦ	θεός	N-GSM
+HEB 2:4!4		noun	σημείοις	σημεῖον	N-DPN
+HEB 2:4!5		conj	τε	τέ	PRT
+HEB 2:4!6		conj	καὶ	καί	CONJ
+HEB 2:4!7		noun	τέρασιν	τέρας	N-DPN
+HEB 2:4!8		conj	καὶ	καί	CONJ
+HEB 2:4!9		adj	ποικίλαις	ποικίλος	A-DPF
+HEB 2:4!10		noun	δυνάμεσιν	δύναμις	N-DPF
+HEB 2:4!11		conj	καὶ	καί	CONJ
+HEB 2:4!12		noun	πνεύματος	πνεῦμα	N-GSN
+HEB 2:4!13		adj	ἁγίου	ἅγιος	A-GSN
+HEB 2:4!14		noun	μερισμοῖς	μερισμός	N-DPM
+HEB 2:4!15		prep	κατὰ	κατά	PREP
+HEB 2:4!16		det	τὴν	ὁ	T-ASF
+HEB 2:4!17		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 2:4!18		noun	θέλησιν	θέλησις	N-ASF
+HEB 2:5!1	adv	adv	Οὐ	οὐ	PRT-N
+HEB 2:5!2		conj	γὰρ	γάρ	CONJ
+HEB 2:5!3	io	noun	ἀγγέλοις	ἄγγελος	N-DPM
+HEB 2:5!4	v	verb	ὑπέταξεν	ὑποτάσσω	V-AAI-3S
+HEB 2:5!5		det	τὴν	ὁ	T-ASF
+HEB 2:5!6		noun	οἰκουμένην	οἰκουμένη	N-ASF
+HEB 2:5!7		det	τὴν	ὁ	T-ASF
+HEB 2:5!8	v	verb	μέλλουσαν	μέλλω	V-PAP-ASF
+HEB 2:5!9		prep	περὶ	περί	PREP
+HEB 2:5!10		pron	ἧς	ὅς	R-GSF
+HEB 2:5!11	v	verb	λαλοῦμεν	λαλέω	V-PAI-1P
+HEB 2:6!1	v	verb	διεμαρτύρατο	διαμαρτύρομαι	V-ADI-3S
+HEB 2:6!2		conj	δέ	δέ	CONJ
+HEB 2:6!3	adv	adv	πού	πού	ADV
+HEB 2:6!4	s	pron	τις	τις	X-NSM
+HEB 2:6!5	v	verb	λέγων	λέγω	V-PAP-NSM
+HEB 2:6!6	p	pron	Τί	τίς	I-NSN
+HEB 2:6!7	vc	verb	ἐστιν	εἰμί	V-PAI-3S
+HEB 2:6!8	s	noun	ἄνθρωπος	ἄνθρωπος	N-NSM
+HEB 2:6!9		conj	ὅτι	ὅτι	CONJ
+HEB 2:6!10	v	verb	μιμνῄσκῃ	μιμνῄσκομαι	V-PNI-2S
+HEB 2:6!11	o	pron	αὐτοῦ	αὐτός	P-GSM
+HEB 2:6!12		conj	ἢ	ἤ	PRT
+HEB 2:6!13		noun	υἱὸς	υἱός	N-NSM
+HEB 2:6!14		noun	ἀνθρώπου	ἄνθρωπος	N-GSM
+HEB 2:6!15		conj	ὅτι	ὅτι	CONJ
+HEB 2:6!16	v	verb	ἐπισκέπτῃ	ἐπισκέπτομαι	V-PNI-2S
+HEB 2:6!17	o	pron	αὐτόν	αὐτός	P-ASM
+HEB 2:7!1	v	verb	ἠλάττωσας	ἐλαττόω	V-AAI-2S
+HEB 2:7!2	o	pron	αὐτὸν	αὐτός	P-ASM
+HEB 2:7!3		adv	βραχύ	βραχύ	A-ASN
+HEB 2:7!4		pron	τι	τις	X-ASN
+HEB 2:7!5		prep	παρ	παρά	PREP
+HEB 2:7!6		noun	ἀγγέλους	ἄγγελος	N-APM
+HEB 2:7!7		noun	δόξῃ	δόξα	N-DSF
+HEB 2:7!8		conj	καὶ	καί	CONJ
+HEB 2:7!9		noun	τιμῇ	τιμή	N-DSF
+HEB 2:7!10	v	verb	ἐστεφάνωσας	στεφανόω	V-AAI-2S
+HEB 2:7!11	o	pron	αὐτόν	αὐτός	P-ASM
+HEB 2:8!1	o	adj	πάντα	πᾶς	A-APN
+HEB 2:8!2	v	verb	ὑπέταξας	ὑποτάσσω	V-AAI-2S
+HEB 2:8!3		prep	ὑποκάτω	ὑποκάτω	ADV
+HEB 2:8!4		det	τῶν	ὁ	T-GPM
+HEB 2:8!5		noun	ποδῶν	πούς	N-GPM
+HEB 2:8!6		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 2:8!7		prep	ἐν	ἐν	PREP
+HEB 2:8!8		det	τῷ	ὁ	T-DSN
+HEB 2:8!9		conj	γὰρ	γάρ	CONJ
+HEB 2:8!10	v	verb	ὑποτάξαι	ὑποτάσσω	V-AAN
+HEB 2:8!11		det	τὰ	ὁ	T-APN
+HEB 2:8!12		adj	πάντα	πᾶς	A-APN
+HEB 2:8!13	o	adj	οὐδὲν	οὐδείς	A-ASN-N
+HEB 2:8!14	v	verb	ἀφῆκεν	ἀφίημι	V-AAI-3S
+HEB 2:8!15		pron	αὐτῷ	αὐτός	P-DSM
+HEB 2:8!16		adj	ἀνυπότακτον	ἀνυπότακτος	A-ASN
+HEB 2:8!17	adv	adv	νῦν	νῦν	ADV
+HEB 2:8!18		conj	δὲ	δέ	CONJ
+HEB 2:8!19	adv	adv	οὔπω	οὔπω	ADV-N
+HEB 2:8!20	v	verb	ὁρῶμεν	ὁράω	V-PAI-1P
+HEB 2:8!21	io	pron	αὐτῷ	αὐτός	P-DSM
+HEB 2:8!22		det	τὰ	ὁ	T-APN
+HEB 2:8!23		adj	πάντα	πᾶς	A-APN
+HEB 2:8!24	v	verb	ὑποτεταγμένα	ὑποτάσσω	V-RPP-APN
+HEB 2:9!1		det	τὸν	ὁ	T-ASM
+HEB 2:9!2		conj	δὲ	δέ	CONJ
+HEB 2:9!3		adv	βραχύ	βραχύ	A-ASN
+HEB 2:9!4		pron	τι	τις	X-ASN
+HEB 2:9!5		prep	παρ	παρά	PREP
+HEB 2:9!6		noun	ἀγγέλους	ἄγγελος	N-APM
+HEB 2:9!7	v	verb	ἠλαττωμένον	ἐλαττόω	V-RPP-ASM
+HEB 2:9!8	v	verb	βλέπομεν	βλέπω	V-PAI-1P
+HEB 2:9!9		noun	Ἰησοῦν	Ἰησοῦς	N-ASM
+HEB 2:9!10		prep	διὰ	διά	PREP
+HEB 2:9!11		det	τὸ	ὁ	T-ASN
+HEB 2:9!12		noun	πάθημα	πάθημα	N-ASN
+HEB 2:9!13		det	τοῦ	ὁ	T-GSM
+HEB 2:9!14		noun	θανάτου	θάνατος	N-GSM
+HEB 2:9!15		noun	δόξῃ	δόξα	N-DSF
+HEB 2:9!16		conj	καὶ	καί	CONJ
+HEB 2:9!17		noun	τιμῇ	τιμή	N-DSF
+HEB 2:9!18	v	verb	ἐστεφανωμένον	στεφανόω	V-RPP-ASM
+HEB 2:9!19		conj	ὅπως	ὅπως	ADV
+HEB 2:9!20		prep	χωρὶς	χωρίς	PREP
+HEB 2:9!21		noun	θεοῦ	θεός	N-GSM
+HEB 2:9!22		prep	ὑπὲρ	ὑπέρ	PREP
+HEB 2:9!23		adj	παντὸς	πᾶς	A-GSM
+HEB 2:9!24	v	verb	γεύσηται	γεύομαι	V-ADS-3S
+HEB 2:9!25	o	noun	θανάτου	θάνατος	N-GSM
+HEB 2:10!1	v	verb	Ἔπρεπεν	πρέπω	V-IAI-3S
+HEB 2:10!2		conj	γὰρ	γάρ	CONJ
+HEB 2:10!3		pron	αὐτῷ	αὐτός	P-DSM
+HEB 2:10!4		prep	δι	διά	PREP
+HEB 2:10!5		pron	ὃν	ὅς	R-ASM
+HEB 2:10!6		det	τὰ	ὁ	T-NPN
+HEB 2:10!7		adj	πάντα	πᾶς	A-NPN
+HEB 2:10!8		conj	καὶ	καί	CONJ
+HEB 2:10!9		prep	δι	διά	PREP
+HEB 2:10!10		pron	οὗ	ὅς	R-GSM
+HEB 2:10!11		det	τὰ	ὁ	T-NPN
+HEB 2:10!12		adj	πάντα	πᾶς	A-NPN
+HEB 2:10!13		adj	πολλοὺς	πολύς	A-APM
+HEB 2:10!14		noun	υἱοὺς	υἱός	N-APM
+HEB 2:10!15		prep	εἰς	εἰς	PREP
+HEB 2:10!16		noun	δόξαν	δόξα	N-ASF
+HEB 2:10!17	v	verb	ἀγαγόντα	ἄγω	V-2AAP-ASM
+HEB 2:10!18		det	τὸν	ὁ	T-ASM
+HEB 2:10!19		noun	ἀρχηγὸν	ἀρχηγός	N-ASM
+HEB 2:10!20		det	τῆς	ὁ	T-GSF
+HEB 2:10!21		noun	σωτηρίας	σωτηρία	N-GSF
+HEB 2:10!22		pron	αὐτῶν	αὐτός	P-GPM
+HEB 2:10!23		prep	διὰ	διά	PREP
+HEB 2:10!24		noun	παθημάτων	πάθημα	N-GPN
+HEB 2:10!25	v	verb	τελειῶσαι	τελειόω	V-AAN
+HEB 2:11!1		det	ὅ	ὁ	T-NSM
+HEB 2:11!2		conj	τε	τέ	PRT
+HEB 2:11!3		conj	γὰρ	γάρ	CONJ
+HEB 2:11!4	v	verb	ἁγιάζων	ἁγιάζω	V-PAP-NSM
+HEB 2:11!5		conj	καὶ	καί	CONJ
+HEB 2:11!6		det	οἱ	ὁ	T-NPM
+HEB 2:11!7	v	verb	ἁγιαζόμενοι	ἁγιάζω	V-PPP-NPM
+HEB 2:11!8		prep	ἐξ	ἐκ	PREP
+HEB 2:11!9		adj	ἑνὸς	εἷς	A-GSM
+HEB 2:11!10	p	adj	πάντες	πᾶς	A-NPM
+HEB 2:11!11		prep	δι	διά	PREP
+HEB 2:11!12		pron	ἣν	ὅς	R-ASF
+HEB 2:11!13		noun	αἰτίαν	αἰτία	N-ASF
+HEB 2:11!14	adv	adv	οὐκ	οὐ	PRT-N
+HEB 2:11!15	v	verb	ἐπαισχύνεται	ἐπαισχύνομαι	V-PNI-3S
+HEB 2:11!16	o2	noun	ἀδελφοὺς	ἀδελφός	N-APM
+HEB 2:11!17	o	pron	αὐτοὺς	ἑαυτοῦ	P-APM
+HEB 2:11!18	v	verb	καλεῖν	καλέω	V-PAN
+HEB 2:12!1	v	verb	λέγων	λέγω	V-PAP-NSM
+HEB 2:12!2	v	verb	Ἀπαγγελῶ	ἀπαγγέλλω	V-FAI-1S
+HEB 2:12!3		det	τὸ	ὁ	T-ASN
+HEB 2:12!4		noun	ὄνομά	ὄνομα	N-ASN
+HEB 2:12!5		pron	σου	σύ	P-2GS
+HEB 2:12!6		det	τοῖς	ὁ	T-DPM
+HEB 2:12!7		noun	ἀδελφοῖς	ἀδελφός	N-DPM
+HEB 2:12!8		pron	μου	ἐγώ	P-1GS
+HEB 2:12!9		prep	ἐν	ἐν	PREP
+HEB 2:12!10		adj	μέσῳ	μέσος	A-DSN
+HEB 2:12!11		noun	ἐκκλησίας	ἐκκλησία	N-GSF
+HEB 2:12!12	v	verb	ὑμνήσω	ὑμνέω	V-FAI-1S
+HEB 2:12!13	o	pron	σε	σύ	P-2AS
+HEB 2:13!1		conj	καὶ	καί	CONJ
+HEB 2:13!2	adv	adv	πάλιν	πάλιν	ADV
+HEB 2:13!3	s	pron	Ἐγὼ	ἐγώ	P-1NS
+HEB 2:13!4		verb	ἔσομαι	εἰμί	V-FDI-1S
+HEB 2:13!5		verb	πεποιθὼς	πείθω	V-2RAP-NSM
+HEB 2:13!6		prep	ἐπ	ἐπί	PREP
+HEB 2:13!7		pron	αὐτῷ	αὐτός	P-DSM
+HEB 2:13!8		conj	καὶ	καί	CONJ
+HEB 2:13!9	adv	adv	πάλιν	πάλιν	ADV
+HEB 2:13!10	aux	ptcl	Ἰδοὺ	ἰδού	V-2AMM-2S
+HEB 2:13!11		pron	ἐγὼ	ἐγώ	P-1NS
+HEB 2:13!12		conj	καὶ	καί	CONJ
+HEB 2:13!13		det	τὰ	ὁ	T-NPN
+HEB 2:13!14		noun	παιδία	παιδίον	N-NPN
+HEB 2:13!15	o	pron	ἅ	ὅς	R-APN
+HEB 2:13!16	io	pron	μοι	ἐγώ	P-1DS
+HEB 2:13!17	v	verb	ἔδωκεν	δίδωμι	V-AAI-3S
+HEB 2:13!18		det	ὁ	ὁ	T-NSM
+HEB 2:13!19		noun	θεός	θεός	N-NSM
+HEB 2:14!1		conj	Ἐπεὶ	ἐπεί	CONJ
+HEB 2:14!2		conj	οὖν	οὖν	CONJ
+HEB 2:14!3		det	τὰ	ὁ	T-NPN
+HEB 2:14!4		noun	παιδία	παιδίον	N-NPN
+HEB 2:14!5	v	verb	κεκοινώνηκεν	κοινωνέω	V-RAI-3S
+HEB 2:14!6		noun	αἵματος	αἷμα	N-GSN
+HEB 2:14!7		conj	καὶ	καί	CONJ
+HEB 2:14!8		noun	σαρκός	σάρξ	N-GSF
+HEB 2:14!9		adv	καὶ	καί	CONJ
+HEB 2:14!10		pron	αὐτὸς	αὐτός	P-NSM
+HEB 2:14!11	adv	adv	παραπλησίως	παραπλησίως	ADV
+HEB 2:14!12	v	verb	μετέσχεν	μετέχω	V-2AAI-3S
+HEB 2:14!13		det	τῶν	ὁ	T-GPN
+HEB 2:14!14		adj	αὐτῶν	αὐτός	P-GPN
+HEB 2:14!15		conj	ἵνα	ἵνα	CONJ
+HEB 2:14!16		prep	διὰ	διά	PREP
+HEB 2:14!17		det	τοῦ	ὁ	T-GSM
+HEB 2:14!18		noun	θανάτου	θάνατος	N-GSM
+HEB 2:14!19	v	verb	καταργήσῃ	καταργέω	V-AAS-3S
+HEB 2:14!20		det	τὸν	ὁ	T-ASM
+HEB 2:14!21		det	τὸ	ὁ	T-ASN
+HEB 2:14!22		noun	κράτος	κράτος	N-ASN
+HEB 2:14!23	v	verb	ἔχοντα	ἔχω	V-PAP-ASM
+HEB 2:14!24		det	τοῦ	ὁ	T-GSM
+HEB 2:14!25		noun	θανάτου	θάνατος	N-GSM
+HEB 2:14!26	s	pron	τοῦτ	οὗτος	D-NSN
+HEB 2:14!27	vc	verb	ἔστι	εἰμί	V-PAI-3S
+HEB 2:14!28		det	τὸν	ὁ	T-ASM
+HEB 2:14!29		adj	διάβολον	διάβολος	A-ASM
+HEB 2:15!1		conj	καὶ	καί	CONJ
+HEB 2:15!2	v	verb	ἀπαλλάξῃ	ἀπαλλάσσω	V-AAS-3S
+HEB 2:15!3		pron	τούτους	οὗτος	D-APM
+HEB 2:15!4	s	pron	ὅσοι	ὅσος	K-NPM
+HEB 2:15!5		noun	φόβῳ	φόβος	N-DSM
+HEB 2:15!6		noun	θανάτου	θάνατος	N-GSM
+HEB 2:15!7		prep	διὰ	διά	PREP
+HEB 2:15!8		adj	παντὸς	πᾶς	A-GSN
+HEB 2:15!9		det	τοῦ	ὁ	T-GSN
+HEB 2:15!10	v	verb	ζῆν	ζάω	V-PAN
+HEB 2:15!11		adj	ἔνοχοι	ἔνοχος	A-NPM
+HEB 2:15!12	vc	verb	ἦσαν	εἰμί	V-IAI-3P
+HEB 2:15!13		noun	δουλείας	δουλεία	N-GSF
+HEB 2:16!1		adv	οὐ	οὐ	PRT-N
+HEB 2:16!2		conj	γὰρ	γάρ	CONJ
+HEB 2:16!3		ptcl	δήπου	δήπου	ADV
+HEB 2:16!4	o	noun	ἀγγέλων	ἄγγελος	N-GPM
+HEB 2:16!5	v	verb	ἐπιλαμβάνεται	ἐπιλαμβάνομαι	V-PNI-3S
+HEB 2:16!6		conj	ἀλλὰ	ἀλλά	CONJ
+HEB 2:16!7		noun	σπέρματος	σπέρμα	N-GSN
+HEB 2:16!8		noun	Ἀβραὰμ	Ἀβραάμ	N-PRI
+HEB 2:16!9	v	verb	ἐπιλαμβάνεται	ἐπιλαμβάνομαι	V-PNI-3S
+HEB 2:17!1		conj	ὅθεν	ὅθεν	ADV
+HEB 2:17!2	v	verb	ὤφειλεν	ὀφείλω	V-IAI-3S
+HEB 2:17!3		prep	κατὰ	κατά	PREP
+HEB 2:17!4		adj	πάντα	πᾶς	A-APN
+HEB 2:17!5		det	τοῖς	ὁ	T-DPM
+HEB 2:17!6		noun	ἀδελφοῖς	ἀδελφός	N-DPM
+HEB 2:17!7	v	verb	ὁμοιωθῆναι	ὁμοιόω	V-APN
+HEB 2:17!8		conj	ἵνα	ἵνα	CONJ
+HEB 2:17!9		adj	ἐλεήμων	ἐλεήμων	A-NSM
+HEB 2:17!10	vc	verb	γένηται	γίνομαι	V-2ADS-3S
+HEB 2:17!11		conj	καὶ	καί	CONJ
+HEB 2:17!12		adj	πιστὸς	πιστός	A-NSM
+HEB 2:17!13		noun	ἀρχιερεὺς	ἀρχιερεύς	N-NSM
+HEB 2:17!14		det	τὰ	ὁ	T-APN
+HEB 2:17!15		prep	πρὸς	πρός	PREP
+HEB 2:17!16		det	τὸν	ὁ	T-ASM
+HEB 2:17!17		noun	θεόν	θεός	N-ASM
+HEB 2:17!18		prep	εἰς	εἰς	PREP
+HEB 2:17!19		det	τὸ	ὁ	T-ASN
+HEB 2:17!20	v	verb	ἱλάσκεσθαι	ἱλάσκομαι	V-PPN
+HEB 2:17!21		det	τὰς	ὁ	T-APF
+HEB 2:17!22		noun	ἁμαρτίας	ἁμαρτία	N-APF
+HEB 2:17!23		det	τοῦ	ὁ	T-GSM
+HEB 2:17!24		noun	λαοῦ	λαός	N-GSM
+HEB 2:18!1		prep	ἐν	ἐν	PREP
+HEB 2:18!2	o	pron	ᾧ	ὅς	R-DSN
+HEB 2:18!3		conj	γὰρ	γάρ	CONJ
+HEB 2:18!4	v	verb	πέπονθεν	πάσχω	V-2RAI-3S
+HEB 2:18!5	s	pron	αὐτὸς	αὐτός	P-NSM
+HEB 2:18!6	v	verb	πειρασθείς	πειράζω	V-APP-NSM
+HEB 2:18!7	v	verb	δύναται	δύναμαι	V-PNI-3S
+HEB 2:18!8		det	τοῖς	ὁ	T-DPM
+HEB 2:18!9	v	verb	πειραζομένοις	πειράζω	V-PPP-DPM
+HEB 2:18!10	v	verb	βοηθῆσαι	βοηθέω	V-AAN
+HEB 3:1!1		conj	Ὅθεν	ὅθεν	ADV
+HEB 3:1!2		noun	ἀδελφοὶ	ἀδελφός	N-VPM
+HEB 3:1!3		adj	ἅγιοι	ἅγιος	A-VPM
+HEB 3:1!4		noun	κλήσεως	κλῆσις	N-GSF
+HEB 3:1!5		adj	ἐπουρανίου	ἐπουράνιος	A-GSF
+HEB 3:1!6		adj	μέτοχοι	μέτοχος	A-NPM
+HEB 3:1!7	v	verb	κατανοήσατε	κατανοέω	V-AAM-2P
+HEB 3:1!8		det	τὸν	ὁ	T-ASM
+HEB 3:1!9		noun	ἀπόστολον	ἀπόστολος	N-ASM
+HEB 3:1!10		conj	καὶ	καί	CONJ
+HEB 3:1!11		noun	ἀρχιερέα	ἀρχιερεύς	N-ASM
+HEB 3:1!12		det	τῆς	ὁ	T-GSF
+HEB 3:1!13		noun	ὁμολογίας	ὁμολογία	N-GSF
+HEB 3:1!14		pron	ἡμῶν	ἐγώ	P-1GP
+HEB 3:1!15		noun	Ἰησοῦν	Ἰησοῦς	N-ASM
+HEB 3:2!1	p	adj	πιστὸν	πιστός	A-ASM
+HEB 3:2!2	vc	verb	ὄντα	εἰμί	V-PAP-ASM
+HEB 3:2!3		det	τῷ	ὁ	T-DSM
+HEB 3:2!4	v	verb	ποιήσαντι	ποιέω	V-AAP-DSM
+HEB 3:2!5	o	pron	αὐτὸν	αὐτός	P-ASM
+HEB 3:2!6		conj	ὡς	ὡς	ADV
+HEB 3:2!7		adv	καὶ	καί	CONJ
+HEB 3:2!8		noun	Μωϋσῆς	Μωϋσῆς	N-NSM
+HEB 3:2!9		prep	ἐν	ἐν	PREP
+HEB 3:2!10		det	τῷ	ὁ	T-DSM
+HEB 3:2!11		noun	οἴκῳ	οἶκος	N-DSM
+HEB 3:2!12		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 3:3!1		adj	πλείονος	πολύς	A-GSF-C
+HEB 3:3!2		conj	γὰρ	γάρ	CONJ
+HEB 3:3!3	s	pron	οὗτος	οὗτος	D-NSM
+HEB 3:3!4		noun	δόξης	δόξα	N-GSF
+HEB 3:3!5		prep	παρὰ	παρά	PREP
+HEB 3:3!6		noun	Μωϋσῆν	Μωϋσῆς	N-ASM
+HEB 3:3!7	v	verb	ἠξίωται	ἀξιόω	V-RPI-3S
+HEB 3:3!8		prep	καθ	κατά	PREP
+HEB 3:3!9		pron	ὅσον	ὅσος	K-ASN
+HEB 3:3!10		adj	πλείονα	πολύς	A-ASF-C
+HEB 3:3!11		noun	τιμὴν	τιμή	N-ASF
+HEB 3:3!12	v	verb	ἔχει	ἔχω	V-PAI-3S
+HEB 3:3!13		det	τοῦ	ὁ	T-GSM
+HEB 3:3!14		noun	οἴκου	οἶκος	N-GSM
+HEB 3:3!15		det	ὁ	ὁ	T-NSM
+HEB 3:3!16	v	verb	κατασκευάσας	κατασκευάζω	V-AAP-NSM
+HEB 3:3!17	o	pron	αὐτόν	αὐτός	P-ASM
+HEB 3:4!1		adj	πᾶς	πᾶς	A-NSM
+HEB 3:4!2		conj	γὰρ	γάρ	CONJ
+HEB 3:4!3		noun	οἶκος	οἶκος	N-NSM
+HEB 3:4!4	v	verb	κατασκευάζεται	κατασκευάζω	V-PPI-3S
+HEB 3:4!5		prep	ὑπό	ὑπό	PREP
+HEB 3:4!6		pron	τινος	τις	X-GSM
+HEB 3:4!7		det	ὁ	ὁ	T-NSM
+HEB 3:4!8		conj	δὲ	δέ	CONJ
+HEB 3:4!9	o	adj	πάντα	πᾶς	A-APN
+HEB 3:4!10	v	verb	κατασκευάσας	κατασκευάζω	V-AAP-NSM
+HEB 3:4!11	p	noun	θεός	θεός	N-NSM
+HEB 3:5!1		conj	καὶ	καί	CONJ
+HEB 3:5!2	s	noun	Μωϋσῆς	Μωϋσῆς	N-NSM
+HEB 3:5!3		conj	μὲν	μέν	PRT
+HEB 3:5!4	p	adj	πιστὸς	πιστός	A-NSM
+HEB 3:5!5		prep	ἐν	ἐν	PREP
+HEB 3:5!6		adj	ὅλῳ	ὅλος	A-DSM
+HEB 3:5!7		det	τῷ	ὁ	T-DSM
+HEB 3:5!8		noun	οἴκῳ	οἶκος	N-DSM
+HEB 3:5!9		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 3:5!10		conj	ὡς	ὡς	ADV
+HEB 3:5!11		noun	θεράπων	θεράπων	N-NSM
+HEB 3:5!12		prep	εἰς	εἰς	PREP
+HEB 3:5!13		noun	μαρτύριον	μαρτύριον	N-ASN
+HEB 3:5!14		det	τῶν	ὁ	T-GPN
+HEB 3:5!15	v	verb	λαληθησομένων	λαλέω	V-FPP-GPN
+HEB 3:6!1	s	noun	Χριστὸς	Χριστός	N-NSM
+HEB 3:6!2		conj	δὲ	δέ	CONJ
+HEB 3:6!3		conj	ὡς	ὡς	ADV
+HEB 3:6!4		noun	υἱὸς	υἱός	N-NSM
+HEB 3:6!5		prep	ἐπὶ	ἐπί	PREP
+HEB 3:6!6		det	τὸν	ὁ	T-ASM
+HEB 3:6!7		noun	οἶκον	οἶκος	N-ASM
+HEB 3:6!8		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 3:6!9		pron	ὅς	ὅς	R-NSM
+HEB 3:6!10		noun	οἶκός	οἶκος	N-NSM
+HEB 3:6!11	vc	verb	ἐσμεν	εἰμί	V-PAI-1P
+HEB 3:6!12	s	pron	ἡμεῖς	ἐγώ	P-1NP
+HEB 3:6!13		conj	ἐὰν	ἐάν	COND
+HEB 3:6!14		det	τὴν	ὁ	T-ASF
+HEB 3:6!15		noun	παρρησίαν	παρρησία	N-ASF
+HEB 3:6!16		conj	καὶ	καί	CONJ
+HEB 3:6!17		det	τὸ	ὁ	T-ASN
+HEB 3:6!18		noun	καύχημα	καύχημα	N-ASN
+HEB 3:6!19		det	τῆς	ὁ	T-GSF
+HEB 3:6!20		noun	ἐλπίδος	ἐλπίς	N-GSF
+HEB 3:6!21	v	verb	κατάσχωμεν	κατέχω	V-2AAS-1P
+HEB 3:7!1		conj	Διό	διό	CONJ
+HEB 3:7!2		conj	καθὼς	καθώς	ADV
+HEB 3:7!3	v	verb	λέγει	λέγω	V-PAI-3S
+HEB 3:7!4		det	τὸ	ὁ	T-NSN
+HEB 3:7!5		noun	πνεῦμα	πνεῦμα	N-NSN
+HEB 3:7!6		det	τὸ	ὁ	T-NSN
+HEB 3:7!7		adj	ἅγιον	ἅγιος	A-NSN
+HEB 3:7!8	adv	adv	Σήμερον	σήμερον	ADV
+HEB 3:7!9		conj	ἐὰν	ἐάν	COND
+HEB 3:7!10		det	τῆς	ὁ	T-GSF
+HEB 3:7!11		noun	φωνῆς	φωνή	N-GSF
+HEB 3:7!12		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 3:7!13	v	verb	ἀκούσητε	ἀκούω	V-AAS-2P
+HEB 3:8!1	adv	adv	μὴ	μή	PRT-N
+HEB 3:8!2	v	verb	σκληρύνητε	σκληρύνω	V-PAS-2P
+HEB 3:8!3		det	τὰς	ὁ	T-APF
+HEB 3:8!4		noun	καρδίας	καρδία	N-APF
+HEB 3:8!5		pron	ὑμῶν	σύ	P-2GP
+HEB 3:8!6		conj	ὡς	ὡς	ADV
+HEB 3:8!7		prep	ἐν	ἐν	PREP
+HEB 3:8!8		det	τῷ	ὁ	T-DSM
+HEB 3:8!9		noun	παραπικρασμῷ	παραπικρασμός	N-DSM
+HEB 3:8!10		prep	κατὰ	κατά	PREP
+HEB 3:8!11		det	τὴν	ὁ	T-ASF
+HEB 3:8!12		noun	ἡμέραν	ἡμέρα	N-ASF
+HEB 3:8!13		det	τοῦ	ὁ	T-GSM
+HEB 3:8!14		noun	πειρασμοῦ	πειρασμός	N-GSM
+HEB 3:8!15		prep	ἐν	ἐν	PREP
+HEB 3:8!16		det	τῇ	ὁ	T-DSF
+HEB 3:8!17		adj	ἐρήμῳ	ἔρημος	A-DSF
+HEB 3:9!1	adv	adv	οὗ	οὗ	ADV
+HEB 3:9!2	v	verb	ἐπείρασαν	πειράζω	V-AAI-3P
+HEB 3:9!3		det	οἱ	ὁ	T-NPM
+HEB 3:9!4		noun	πατέρες	πατήρ	N-NPM
+HEB 3:9!5		pron	ὑμῶν	σύ	P-2GP
+HEB 3:9!6		prep	ἐν	ἐν	PREP
+HEB 3:9!7		noun	δοκιμασίᾳ	δοκιμασία	N-DSF
+HEB 3:9!8		conj	καὶ	καί	CONJ
+HEB 3:9!9	v	verb	εἶδον	ὁράω	V-2AAI-3P
+HEB 3:9!10		det	τὰ	ὁ	T-APN
+HEB 3:9!11		noun	ἔργα	ἔργον	N-APN
+HEB 3:9!12		pron	μου	ἐγώ	P-1GS
+HEB 3:10!1		num	τεσσεράκοντα	τεσσεράκοντα	A-NUI
+HEB 3:10!2		noun	ἔτη	ἔτος	N-APN
+HEB 3:10!3		conj	διὸ	διό	CONJ
+HEB 3:10!4	v	verb	προσώχθισα	προσοχθίζω	V-AAI-1S
+HEB 3:10!5		det	τῇ	ὁ	T-DSF
+HEB 3:10!6		noun	γενεᾷ	γενεά	N-DSF
+HEB 3:10!7		pron	ταύτῃ	οὗτος	D-DSF
+HEB 3:10!8		conj	καὶ	καί	CONJ
+HEB 3:10!9	v	verb	εἶπον	λέγω	V-2AAI-1S
+HEB 3:10!10	adv	adv	Ἀεὶ	ἀεί	ADV
+HEB 3:10!11	v	verb	πλανῶνται	πλανάω	V-PPI-3P
+HEB 3:10!12		det	τῇ	ὁ	T-DSF
+HEB 3:10!13		noun	καρδίᾳ	καρδία	N-DSF
+HEB 3:10!14	s	pron	αὐτοὶ	αὐτός	P-NPM
+HEB 3:10!15		conj	δὲ	δέ	CONJ
+HEB 3:10!16	adv	adv	οὐκ	οὐ	PRT-N
+HEB 3:10!17	v	verb	ἔγνωσαν	γινώσκω	V-2AAI-3P
+HEB 3:10!18		det	τὰς	ὁ	T-APF
+HEB 3:10!19		noun	ὁδούς	ὁδός	N-APF
+HEB 3:10!20		pron	μου	ἐγώ	P-1GS
+HEB 3:11!1		conj	ὡς	ὡς	ADV
+HEB 3:11!2	v	verb	ὤμοσα	ὀμνύω	V-AAI-1S
+HEB 3:11!3		prep	ἐν	ἐν	PREP
+HEB 3:11!4		det	τῇ	ὁ	T-DSF
+HEB 3:11!5		noun	ὀργῇ	ὀργή	N-DSF
+HEB 3:11!6		pron	μου	ἐγώ	P-1GS
+HEB 3:11!7		conj	Εἰ	εἰ	COND
+HEB 3:11!8	v	verb	εἰσελεύσονται	εἰσέρχομαι	V-FDI-3P
+HEB 3:11!9		prep	εἰς	εἰς	PREP
+HEB 3:11!10		det	τὴν	ὁ	T-ASF
+HEB 3:11!11		noun	κατάπαυσίν	κατάπαυσις	N-ASF
+HEB 3:11!12		pron	μου	ἐγώ	P-1GS
+HEB 3:12!1	v	verb	βλέπετε	βλέπω	V-PAM-2P
+HEB 3:12!2	aux	noun	ἀδελφοί	ἀδελφός	N-VPM
+HEB 3:12!3		conj	μήποτε	μήποτε	CONJ
+HEB 3:12!4	vc	verb	ἔσται	εἰμί	V-FDI-3S
+HEB 3:12!5		prep	ἔν	ἐν	PREP
+HEB 3:12!6		pron	τινι	τις	X-DSM
+HEB 3:12!7		pron	ὑμῶν	σύ	P-2GP
+HEB 3:12!8		noun	καρδία	καρδία	N-NSF
+HEB 3:12!9		adj	πονηρὰ	πονηρός	A-NSF
+HEB 3:12!10		noun	ἀπιστίας	ἀπιστία	N-GSF
+HEB 3:12!11		prep	ἐν	ἐν	PREP
+HEB 3:12!12		det	τῷ	ὁ	T-DSN
+HEB 3:12!13	v	verb	ἀποστῆναι	ἀφίσταμαι	V-2AAN
+HEB 3:12!14		prep	ἀπὸ	ἀπό	PREP
+HEB 3:12!15		noun	θεοῦ	θεός	N-GSM
+HEB 3:12!16	v	verb	ζῶντος	ζάω	V-PAP-GSM
+HEB 3:13!1		conj	ἀλλὰ	ἀλλά	CONJ
+HEB 3:13!2	v	verb	παρακαλεῖτε	παρακαλέω	V-PAM-2P
+HEB 3:13!3	o	pron	ἑαυτοὺς	ἑαυτοῦ	F-2APM
+HEB 3:13!4		prep	καθ	κατά	PREP
+HEB 3:13!5		adj	ἑκάστην	ἕκαστος	A-ASF
+HEB 3:13!6		noun	ἡμέραν	ἡμέρα	N-ASF
+HEB 3:13!7		prep	ἄχρις	ἄχρις	ADV
+HEB 3:13!8	adv	pron	οὗ	ὅς	R-GSM
+HEB 3:13!9		det	τὸ	ὁ	T-ASN
+HEB 3:13!10		adv	Σήμερον	σήμερον	ADV
+HEB 3:13!11	vc	verb	καλεῖται	καλέω	V-PPI-3S
+HEB 3:13!12		conj	ἵνα	ἵνα	CONJ
+HEB 3:13!13	adv	adv	μὴ	μή	PRT-N
+HEB 3:13!14	v	verb	σκληρυνθῇ	σκληρύνω	V-APS-3S
+HEB 3:13!15		pron	τις	τις	X-NSM
+HEB 3:13!16		prep	ἐξ	ἐκ	PREP
+HEB 3:13!17		pron	ὑμῶν	σύ	P-2GP
+HEB 3:13!18		noun	ἀπάτῃ	ἀπάτη	N-DSF
+HEB 3:13!19		det	τῆς	ὁ	T-GSF
+HEB 3:13!20		noun	ἁμαρτίας	ἁμαρτία	N-GSF
+HEB 3:14!1		adj	μέτοχοι	μέτοχος	A-NPM
+HEB 3:14!2		conj	γὰρ	γάρ	CONJ
+HEB 3:14!3		det	τοῦ	ὁ	T-GSM
+HEB 3:14!4		noun	Χριστοῦ	Χριστός	N-GSM
+HEB 3:14!5	vc	verb	γεγόναμεν	γίνομαι	V-2RAI-1P
+HEB 3:14!6		conj	ἐάνπερ	ἐάνπερ	COND
+HEB 3:14!7		det	τὴν	ὁ	T-ASF
+HEB 3:14!8		noun	ἀρχὴν	ἀρχή	N-ASF
+HEB 3:14!9		det	τῆς	ὁ	T-GSF
+HEB 3:14!10		noun	ὑποστάσεως	ὑπόστασις	N-GSF
+HEB 3:14!11		prep	μέχρι	μέχρι(ς)	ADV
+HEB 3:14!12		noun	τέλους	τέλος	N-GSN
+HEB 3:14!13	adv	adj	βεβαίαν	βέβαιος	A-ASF
+HEB 3:14!14	v	verb	κατάσχωμεν	κατέχω	V-2AAS-1P
+HEB 3:15!1		prep	ἐν	ἐν	PREP
+HEB 3:15!2		det	τῷ	ὁ	T-DSN
+HEB 3:15!3	v	verb	λέγεσθαι	λέγω	V-PPN
+HEB 3:15!4	adv	adv	Σήμερον	σήμερον	ADV
+HEB 3:15!5		conj	ἐὰν	ἐάν	COND
+HEB 3:15!6		det	τῆς	ὁ	T-GSF
+HEB 3:15!7		noun	φωνῆς	φωνή	N-GSF
+HEB 3:15!8		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 3:15!9	v	verb	ἀκούσητε	ἀκούω	V-AAS-2P
+HEB 3:15!10	adv	adv	Μὴ	μή	PRT-N
+HEB 3:15!11	v	verb	σκληρύνητε	σκληρύνω	V-PAS-2P
+HEB 3:15!12		det	τὰς	ὁ	T-APF
+HEB 3:15!13		noun	καρδίας	καρδία	N-APF
+HEB 3:15!14		pron	ὑμῶν	σύ	P-2GP
+HEB 3:15!15		conj	ὡς	ὡς	ADV
+HEB 3:15!16		prep	ἐν	ἐν	PREP
+HEB 3:15!17		det	τῷ	ὁ	T-DSM
+HEB 3:15!18		noun	παραπικρασμῷ	παραπικρασμός	N-DSM
+HEB 3:16!1	s	pron	τίνες	τίς	I-NPM
+HEB 3:16!2		conj	γὰρ	γάρ	CONJ
+HEB 3:16!3	v	verb	ἀκούσαντες	ἀκούω	V-AAP-NPM
+HEB 3:16!4	v	verb	παρεπίκραναν	παραπικραίνω	V-AAI-3P
+HEB 3:16!5		conj	ἀλλ	ἀλλά	CONJ
+HEB 3:16!6		ptcl	οὐ	οὐ	PRT-N
+HEB 3:16!7		adj	πάντες	πᾶς	A-NPM
+HEB 3:16!8		det	οἱ	ὁ	T-NPM
+HEB 3:16!9	v	verb	ἐξελθόντες	ἐξέρχομαι	V-2AAP-NPM
+HEB 3:16!10		prep	ἐξ	ἐκ	PREP
+HEB 3:16!11		noun	Αἰγύπτου	Αἴγυπτος	N-GSF
+HEB 3:16!12		prep	διὰ	διά	PREP
+HEB 3:16!13		noun	Μωϋσέως	Μωϋσῆς	N-GSM
+HEB 3:17!1	o	pron	τίσιν	τίς	I-DPM
+HEB 3:17!2		conj	δὲ	δέ	CONJ
+HEB 3:17!3	v	verb	προσώχθισεν	προσοχθίζω	V-AAI-3S
+HEB 3:17!4		num	τεσσεράκοντα	τεσσεράκοντα	A-NUI
+HEB 3:17!5		noun	ἔτη	ἔτος	N-APN
+HEB 3:17!6		ptcl	οὐχὶ	οὐχί	PRT-I
+HEB 3:17!7		det	τοῖς	ὁ	T-DPM
+HEB 3:17!8	v	verb	ἁμαρτήσασιν	ἁμαρτάνω	V-AAP-DPM
+HEB 3:17!9		pron	ὧν	ὅς	R-GPM
+HEB 3:17!10		det	τὰ	ὁ	T-NPN
+HEB 3:17!11		noun	κῶλα	κῶλον	N-NPN
+HEB 3:17!12	v	verb	ἔπεσεν	πίπτω	V-2AAI-3S
+HEB 3:17!13		prep	ἐν	ἐν	PREP
+HEB 3:17!14		det	τῇ	ὁ	T-DSF
+HEB 3:17!15		adj	ἐρήμῳ	ἔρημος	A-DSF
+HEB 3:18!1	io	pron	τίσιν	τίς	I-DPM
+HEB 3:18!2		conj	δὲ	δέ	CONJ
+HEB 3:18!3	v	verb	ὤμοσεν	ὀμνύω	V-AAI-3S
+HEB 3:18!4	adv	adv	μὴ	μή	PRT-N
+HEB 3:18!5	v	verb	εἰσελεύσεσθαι	εἰσέρχομαι	V-FDN
+HEB 3:18!6		prep	εἰς	εἰς	PREP
+HEB 3:18!7		det	τὴν	ὁ	T-ASF
+HEB 3:18!8		noun	κατάπαυσιν	κατάπαυσις	N-ASF
+HEB 3:18!9		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 3:18!10		conj	εἰ	εἰ	COND
+HEB 3:18!11	adv	adv	μὴ	μή	PRT-N
+HEB 3:18!12		det	τοῖς	ὁ	T-DPM
+HEB 3:18!13	v	verb	ἀπειθήσασιν	ἀπειθέω	V-AAP-DPM
+HEB 3:19!1		conj	καὶ	καί	CONJ
+HEB 3:19!2	v	verb	βλέπομεν	βλέπω	V-PAI-1P
+HEB 3:19!3		conj	ὅτι	ὅτι	CONJ
+HEB 3:19!4	adv	adv	οὐκ	οὐ	PRT-N
+HEB 3:19!5	v	verb	ἠδυνήθησαν	δύναμαι	V-AOI-3P-ATT
+HEB 3:19!6	v	verb	εἰσελθεῖν	εἰσέρχομαι	V-2AAN
+HEB 3:19!7		prep	δι	διά	PREP
+HEB 3:19!8		noun	ἀπιστίαν	ἀπιστία	N-ASF
+HEB 4:1!1	v	verb	Φοβηθῶμεν	φοβέομαι	V-AOS-1P
+HEB 4:1!2		conj	οὖν	οὖν	CONJ
+HEB 4:1!3		conj	μήποτε	μήποτε	CONJ
+HEB 4:1!4	v	verb	καταλειπομένης	καταλείπω	V-PPP-GSF
+HEB 4:1!5	s	noun	ἐπαγγελίας	ἐπαγγελία	N-GSF
+HEB 4:1!6	v	verb	εἰσελθεῖν	εἰσέρχομαι	V-2AAN
+HEB 4:1!7		prep	εἰς	εἰς	PREP
+HEB 4:1!8		det	τὴν	ὁ	T-ASF
+HEB 4:1!9		noun	κατάπαυσιν	κατάπαυσις	N-ASF
+HEB 4:1!10		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 4:1!11	v	verb	δοκῇ	δοκέω	V-PAS-3S
+HEB 4:1!12		pron	τις	τις	X-NSM
+HEB 4:1!13		prep	ἐξ	ἐκ	PREP
+HEB 4:1!14		pron	ὑμῶν	σύ	P-2GP
+HEB 4:1!15	v	verb	ὑστερηκέναι	ὑστερέω	V-RAN
+HEB 4:2!1	adv	adv	καὶ	καί	CONJ
+HEB 4:2!2		conj	γάρ	γάρ	CONJ
+HEB 4:2!3		verb	ἐσμεν	εἰμί	V-PAI-1P
+HEB 4:2!4		verb	εὐηγγελισμένοι	εὐαγγελίζω	V-RPP-NPM
+HEB 4:2!5		conj	καθάπερ	καθάπερ	ADV
+HEB 4:2!6	s	pron	κἀκεῖνοι	κἀκεῖνος	D-NPM-K
+HEB 4:2!7		conj	ἀλλ	ἀλλά	CONJ
+HEB 4:2!8	adv	adv	οὐκ	οὐ	PRT-N
+HEB 4:2!9	v	verb	ὠφέλησεν	ὠφελέω	V-AAI-3S
+HEB 4:2!10		det	ὁ	ὁ	T-NSM
+HEB 4:2!11		noun	λόγος	λόγος	N-NSM
+HEB 4:2!12		det	τῆς	ὁ	T-GSF
+HEB 4:2!13		noun	ἀκοῆς	ἀκοή	N-GSF
+HEB 4:2!14	o	pron	ἐκείνους	ἐκεῖνος	D-APM
+HEB 4:2!15	adv	adv	μὴ	μή	PRT-N
+HEB 4:2!16	v	verb	συγκεκερασμένους	συγκεράννυμι	V-RPP-APM
+HEB 4:2!17		det	τῇ	ὁ	T-DSF
+HEB 4:2!18		noun	πίστει	πίστις	N-DSF
+HEB 4:2!19		det	τοῖς	ὁ	T-DPM
+HEB 4:2!20	v	verb	ἀκούσασιν	ἀκούω	V-AAP-DPM
+HEB 4:3!1	v	verb	εἰσερχόμεθα	εἰσέρχομαι	V-PNI-1P
+HEB 4:3!2		conj	γὰρ	γάρ	CONJ
+HEB 4:3!3		prep	εἰς	εἰς	PREP
+HEB 4:3!4		noun	κατάπαυσιν	κατάπαυσις	N-ASF
+HEB 4:3!5		det	οἱ	ὁ	T-NPM
+HEB 4:3!6	v	verb	πιστεύσαντες	πιστεύω	V-AAP-NPM
+HEB 4:3!7		conj	καθὼς	καθώς	ADV
+HEB 4:3!8	v	verb	εἴρηκεν	λέγω	V-RAI-3S-ATT
+HEB 4:3!9		conj	Ὡς	ὡς	ADV
+HEB 4:3!10	v	verb	ὤμοσα	ὀμνύω	V-AAI-1S
+HEB 4:3!11		prep	ἐν	ἐν	PREP
+HEB 4:3!12		det	τῇ	ὁ	T-DSF
+HEB 4:3!13		noun	ὀργῇ	ὀργή	N-DSF
+HEB 4:3!14		pron	μου	ἐγώ	P-1GS
+HEB 4:3!15		conj	Εἰ	εἰ	COND
+HEB 4:3!16	v	verb	εἰσελεύσονται	εἰσέρχομαι	V-FDI-3P
+HEB 4:3!17		prep	εἰς	εἰς	PREP
+HEB 4:3!18		det	τὴν	ὁ	T-ASF
+HEB 4:3!19		noun	κατάπαυσίν	κατάπαυσις	N-ASF
+HEB 4:3!20		pron	μου	ἐγώ	P-1GS
+HEB 4:3!21		conj	καίτοι	καίτοι	CONJ
+HEB 4:3!22		det	τῶν	ὁ	T-GPN
+HEB 4:3!23		noun	ἔργων	ἔργον	N-GPN
+HEB 4:3!24		prep	ἀπὸ	ἀπό	PREP
+HEB 4:3!25		noun	καταβολῆς	καταβολή	N-GSF
+HEB 4:3!26		noun	κόσμου	κόσμος	N-GSM
+HEB 4:3!27	v	verb	γενηθέντων	γίνομαι	V-AOP-GPN
+HEB 4:4!1	v	verb	εἴρηκεν	λέγω	V-RAI-3S-ATT
+HEB 4:4!2		conj	γάρ	γάρ	CONJ
+HEB 4:4!3	adv	adv	που	ποῦ	ADV
+HEB 4:4!4		prep	περὶ	περί	PREP
+HEB 4:4!5		det	τῆς	ὁ	T-GSF
+HEB 4:4!6		adj	ἑβδόμης	ἕβδομος	A-GSF
+HEB 4:4!7	adv	adv	οὕτως	οὕτω(ς)	ADV
+HEB 4:4!8		conj	Καὶ	καί	CONJ
+HEB 4:4!9	v	verb	κατέπαυσεν	καταπαύω	V-AAI-3S
+HEB 4:4!10		det	ὁ	ὁ	T-NSM
+HEB 4:4!11		noun	θεὸς	θεός	N-NSM
+HEB 4:4!12		prep	ἐν	ἐν	PREP
+HEB 4:4!13		det	τῇ	ὁ	T-DSF
+HEB 4:4!14		noun	ἡμέρᾳ	ἡμέρα	N-DSF
+HEB 4:4!15		det	τῇ	ὁ	T-DSF
+HEB 4:4!16		adj	ἑβδόμῃ	ἕβδομος	A-DSF
+HEB 4:4!17		prep	ἀπὸ	ἀπό	PREP
+HEB 4:4!18		adj	πάντων	πᾶς	A-GPN
+HEB 4:4!19		det	τῶν	ὁ	T-GPN
+HEB 4:4!20		noun	ἔργων	ἔργον	N-GPN
+HEB 4:4!21		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 4:5!1		conj	καὶ	καί	CONJ
+HEB 4:5!2		prep	ἐν	ἐν	PREP
+HEB 4:5!3		pron	τούτῳ	οὗτος	D-DSM
+HEB 4:5!4	adv	adv	πάλιν	πάλιν	ADV
+HEB 4:5!5		conj	Εἰ	εἰ	COND
+HEB 4:5!6	v	verb	εἰσελεύσονται	εἰσέρχομαι	V-FDI-3P
+HEB 4:5!7		prep	εἰς	εἰς	PREP
+HEB 4:5!8		det	τὴν	ὁ	T-ASF
+HEB 4:5!9		noun	κατάπαυσίν	κατάπαυσις	N-ASF
+HEB 4:5!10		pron	μου	ἐγώ	P-1GS
+HEB 4:6!1		conj	ἐπεὶ	ἐπεί	CONJ
+HEB 4:6!2		conj	οὖν	οὖν	CONJ
+HEB 4:6!3	v	verb	ἀπολείπεται	ἀπολείπω	V-PPI-3S
+HEB 4:6!4	s	pron	τινὰς	τις	X-APM
+HEB 4:6!5	v	verb	εἰσελθεῖν	εἰσέρχομαι	V-2AAN
+HEB 4:6!6		prep	εἰς	εἰς	PREP
+HEB 4:6!7		pron	αὐτήν	ἑαυτοῦ	P-ASF
+HEB 4:6!8		conj	καὶ	καί	CONJ
+HEB 4:6!9		det	οἱ	ὁ	T-NPM
+HEB 4:6!10	adv	adj	πρότερον	πρότερος	ADV-C
+HEB 4:6!11	v	verb	εὐαγγελισθέντες	εὐαγγελίζω	V-APP-NPM
+HEB 4:6!12	adv	adv	οὐκ	οὐ	PRT-N
+HEB 4:6!13	v	verb	εἰσῆλθον	εἰσέρχομαι	V-2AAI-3P
+HEB 4:6!14		prep	δι	διά	PREP
+HEB 4:6!15		noun	ἀπείθειαν	ἀπείθεια	N-ASF
+HEB 4:7!1	adv	adv	πάλιν	πάλιν	ADV
+HEB 4:7!2		pron	τινὰ	τις	X-ASF
+HEB 4:7!3	v	verb	ὁρίζει	ὁρίζω	V-PAI-3S
+HEB 4:7!4		noun	ἡμέραν	ἡμέρα	N-ASF
+HEB 4:7!5		adv	Σήμερον	σήμερον	ADV
+HEB 4:7!6		prep	ἐν	ἐν	PREP
+HEB 4:7!7		noun	Δαυὶδ	Δαυίδ	N-PRI
+HEB 4:7!8	v	verb	λέγων	λέγω	V-PAP-NSM
+HEB 4:7!9		prep	μετὰ	μετά	PREP
+HEB 4:7!10		pron	τοσοῦτον	τοσοῦτος	D-ASM
+HEB 4:7!11		noun	χρόνον	χρόνος	N-ASM
+HEB 4:7!12		conj	καθὼς	καθώς	ADV
+HEB 4:7!13	v	verb	προείρηται	προλέγω	V-RPI-3S
+HEB 4:7!14	adv	adv	Σήμερον	σήμερον	ADV
+HEB 4:7!15		conj	ἐὰν	ἐάν	COND
+HEB 4:7!16		det	τῆς	ὁ	T-GSF
+HEB 4:7!17		noun	φωνῆς	φωνή	N-GSF
+HEB 4:7!18		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 4:7!19	v	verb	ἀκούσητε	ἀκούω	V-AAS-2P
+HEB 4:7!20	adv	adv	μὴ	μή	PRT-N
+HEB 4:7!21	v	verb	σκληρύνητε	σκληρύνω	V-PAS-2P
+HEB 4:7!22		det	τὰς	ὁ	T-APF
+HEB 4:7!23		noun	καρδίας	καρδία	N-APF
+HEB 4:7!24		pron	ὑμῶν	σύ	P-2GP
+HEB 4:8!1		conj	εἰ	εἰ	COND
+HEB 4:8!2		conj	γὰρ	γάρ	CONJ
+HEB 4:8!3	o	pron	αὐτοὺς	ἑαυτοῦ	P-APM
+HEB 4:8!4	s	noun	Ἰησοῦς	Ἰησοῦς	N-NSM
+HEB 4:8!5	v	verb	κατέπαυσεν	καταπαύω	V-AAI-3S
+HEB 4:8!6	adv	adv	οὐκ	οὐ	PRT-N
+HEB 4:8!7		ptcl	ἂν	ἄν	PRT
+HEB 4:8!8		prep	περὶ	περί	PREP
+HEB 4:8!9		adj	ἄλλης	ἄλλος	A-GSF
+HEB 4:8!10	v	verb	ἐλάλει	λαλέω	V-IAI-3S
+HEB 4:8!11		prep	μετὰ	μετά	PREP
+HEB 4:8!12		pron	ταῦτα	οὗτος	D-APN
+HEB 4:8!13		noun	ἡμέρας	ἡμέρα	N-GSF
+HEB 4:9!1		conj	ἄρα	ἄρα	PRT
+HEB 4:9!2	v	verb	ἀπολείπεται	ἀπολείπω	V-PPI-3S
+HEB 4:9!3	s	noun	σαββατισμὸς	σαββατισμός	N-NSM
+HEB 4:9!4		det	τῷ	ὁ	T-DSM
+HEB 4:9!5		noun	λαῷ	λαός	N-DSM
+HEB 4:9!6		det	τοῦ	ὁ	T-GSM
+HEB 4:9!7		noun	θεοῦ	θεός	N-GSM
+HEB 4:10!1		det	ὁ	ὁ	T-NSM
+HEB 4:10!2		conj	γὰρ	γάρ	CONJ
+HEB 4:10!3	v	verb	εἰσελθὼν	εἰσέρχομαι	V-2AAP-NSM
+HEB 4:10!4		prep	εἰς	εἰς	PREP
+HEB 4:10!5		det	τὴν	ὁ	T-ASF
+HEB 4:10!6		noun	κατάπαυσιν	κατάπαυσις	N-ASF
+HEB 4:10!7		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 4:10!8		adv	καὶ	καί	CONJ
+HEB 4:10!9		pron	αὐτὸς	αὐτός	P-NSM
+HEB 4:10!10	v	verb	κατέπαυσεν	καταπαύω	V-AAI-3S
+HEB 4:10!11		prep	ἀπὸ	ἀπό	PREP
+HEB 4:10!12		det	τῶν	ὁ	T-GPN
+HEB 4:10!13		noun	ἔργων	ἔργον	N-GPN
+HEB 4:10!14		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 4:10!15		conj	ὥσπερ	ὥσπερ	ADV
+HEB 4:10!16		prep	ἀπὸ	ἀπό	PREP
+HEB 4:10!17		det	τῶν	ὁ	T-GPN
+HEB 4:10!18		adj	ἰδίων	ἴδιος	A-GPN
+HEB 4:10!19		det	ὁ	ὁ	T-NSM
+HEB 4:10!20		noun	θεός	θεός	N-NSM
+HEB 4:11!1	v	verb	σπουδάσωμεν	σπουδάζω	V-AAS-1P
+HEB 4:11!2		conj	οὖν	οὖν	CONJ
+HEB 4:11!3	v	verb	εἰσελθεῖν	εἰσέρχομαι	V-2AAN
+HEB 4:11!4		prep	εἰς	εἰς	PREP
+HEB 4:11!5		pron	ἐκείνην	ἐκεῖνος	D-ASF
+HEB 4:11!6		det	τὴν	ὁ	T-ASF
+HEB 4:11!7		noun	κατάπαυσιν	κατάπαυσις	N-ASF
+HEB 4:11!8		conj	ἵνα	ἵνα	CONJ
+HEB 4:11!9	adv	adv	μὴ	μή	PRT-N
+HEB 4:11!10		prep	ἐν	ἐν	PREP
+HEB 4:11!11		det	τῷ	ὁ	T-DSN
+HEB 4:11!12		adj	αὐτῷ	αὐτός	P-DSN
+HEB 4:11!13	s	pron	τις	τις	X-NSM
+HEB 4:11!14		noun	ὑποδείγματι	ὑπόδειγμα	N-DSN
+HEB 4:11!15	v	verb	πέσῃ	πίπτω	V-2AAS-3S
+HEB 4:11!16		det	τῆς	ὁ	T-GSF
+HEB 4:11!17		noun	ἀπειθείας	ἀπείθεια	N-GSF
+HEB 4:12!1	v	verb	Ζῶν	ζάω	V-PAP-NSM
+HEB 4:12!2		conj	γὰρ	γάρ	CONJ
+HEB 4:12!3		det	ὁ	ὁ	T-NSM
+HEB 4:12!4		noun	λόγος	λόγος	N-NSM
+HEB 4:12!5		det	τοῦ	ὁ	T-GSM
+HEB 4:12!6		noun	θεοῦ	θεός	N-GSM
+HEB 4:12!7		conj	καὶ	καί	CONJ
+HEB 4:12!8		adj	ἐνεργὴς	ἐνεργής	A-NSM
+HEB 4:12!9		conj	καὶ	καί	CONJ
+HEB 4:12!10		adj	τομώτερος	τομώτερος	A-NSM-C
+HEB 4:12!11		prep	ὑπὲρ	ὑπέρ	PREP
+HEB 4:12!12		adj	πᾶσαν	πᾶς	A-ASF
+HEB 4:12!13		noun	μάχαιραν	μάχαιρα	N-ASF
+HEB 4:12!14		adj	δίστομον	δίστομος	A-ASF
+HEB 4:12!15		adv	καὶ	καί	CONJ
+HEB 4:12!16	v	verb	διϊκνούμενος	διϊκνέομαι	V-PNP-NSM
+HEB 4:12!17		prep	ἄχρι	ἄχρι	ADV
+HEB 4:12!18		noun	μερισμοῦ	μερισμός	N-GSM
+HEB 4:12!19		noun	ψυχῆς	ψυχή	N-GSF
+HEB 4:12!20		conj	καὶ	καί	CONJ
+HEB 4:12!21		noun	πνεύματος	πνεῦμα	N-GSN
+HEB 4:12!22		noun	ἁρμῶν	ἁρμός	N-GPM
+HEB 4:12!23		conj	τε	τέ	PRT
+HEB 4:12!24		conj	καὶ	καί	CONJ
+HEB 4:12!25		noun	μυελῶν	μυελός	N-GPM
+HEB 4:12!26		conj	καὶ	καί	CONJ
+HEB 4:12!27		adj	κριτικὸς	κριτικός	A-NSM
+HEB 4:12!28		noun	ἐνθυμήσεων	ἐνθύμησις	N-GPF
+HEB 4:12!29		conj	καὶ	καί	CONJ
+HEB 4:12!30		noun	ἐννοιῶν	ἔννοια	N-GPF
+HEB 4:12!31		noun	καρδίας	καρδία	N-GSF
+HEB 4:13!1		conj	καὶ	καί	CONJ
+HEB 4:13!2	adv	adv	οὐκ	οὐ	PRT-N
+HEB 4:13!3	vc	verb	ἔστιν	εἰμί	V-PAI-3S
+HEB 4:13!4	s	noun	κτίσις	κτίσις	N-NSF
+HEB 4:13!5	p	adj	ἀφανὴς	ἀφανής	A-NSF
+HEB 4:13!6		prep	ἐνώπιον	ἐνώπιον	PREP
+HEB 4:13!7		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 4:13!8	s	adj	πάντα	πᾶς	A-NPN
+HEB 4:13!9		conj	δὲ	δέ	CONJ
+HEB 4:13!10		adj	γυμνὰ	γυμνός	A-NPN
+HEB 4:13!11		conj	καὶ	καί	CONJ
+HEB 4:13!12	v	verb	τετραχηλισμένα	τραχηλίζομαι	V-RPP-NPN
+HEB 4:13!13		det	τοῖς	ὁ	T-DPM
+HEB 4:13!14		noun	ὀφθαλμοῖς	ὀφθαλμός	N-DPM
+HEB 4:13!15		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 4:13!16		prep	πρὸς	πρός	PREP
+HEB 4:13!17		pron	ὃν	ὅς	R-ASM
+HEB 4:13!18	adv	pron	ἡμῖν	ἐγώ	P-1DP
+HEB 4:13!19		det	ὁ	ὁ	T-NSM
+HEB 4:13!20		noun	λόγος	λόγος	N-NSM
+HEB 4:14!1	v	verb	Ἔχοντες	ἔχω	V-PAP-NPM
+HEB 4:14!2		conj	οὖν	οὖν	CONJ
+HEB 4:14!3		noun	ἀρχιερέα	ἀρχιερεύς	N-ASM
+HEB 4:14!4		adj	μέγαν	μέγας	A-ASM
+HEB 4:14!5	v	verb	διεληλυθότα	διέρχομαι	V-2RAP-ASM
+HEB 4:14!6		det	τοὺς	ὁ	T-APM
+HEB 4:14!7		noun	οὐρανούς	οὐρανός	N-APM
+HEB 4:14!8		noun	Ἰησοῦν	Ἰησοῦς	N-ASM
+HEB 4:14!9		det	τὸν	ὁ	T-ASM
+HEB 4:14!10		noun	υἱὸν	υἱός	N-ASM
+HEB 4:14!11		det	τοῦ	ὁ	T-GSM
+HEB 4:14!12		noun	θεοῦ	θεός	N-GSM
+HEB 4:14!13	v	verb	κρατῶμεν	κρατέω	V-PAS-1P
+HEB 4:14!14		det	τῆς	ὁ	T-GSF
+HEB 4:14!15		noun	ὁμολογίας	ὁμολογία	N-GSF
+HEB 4:15!1		adv	οὐ	οὐ	PRT-N
+HEB 4:15!2		conj	γὰρ	γάρ	CONJ
+HEB 4:15!3	v	verb	ἔχομεν	ἔχω	V-PAI-1P
+HEB 4:15!4		noun	ἀρχιερέα	ἀρχιερεύς	N-ASM
+HEB 4:15!5	adv	adv	μὴ	μή	PRT-N
+HEB 4:15!6	v	verb	δυνάμενον	δύναμαι	V-PNP-ASM
+HEB 4:15!7	v	verb	συμπαθῆσαι	συμπαθέω	V-AAN
+HEB 4:15!8		det	ταῖς	ὁ	T-DPF
+HEB 4:15!9		noun	ἀσθενείαις	ἀσθένεια	N-DPF
+HEB 4:15!10		pron	ἡμῶν	ἐγώ	P-1GP
+HEB 4:15!11	v	verb	πεπειρασμένον	πειράζω	V-RPP-ASM
+HEB 4:15!12		conj	δὲ	δέ	CONJ
+HEB 4:15!13		prep	κατὰ	κατά	PREP
+HEB 4:15!14		adj	πάντα	πᾶς	A-APN
+HEB 4:15!15		prep	καθ	κατά	PREP
+HEB 4:15!16		noun	ὁμοιότητα	ὁμοιότης	N-ASF
+HEB 4:15!17		prep	χωρὶς	χωρίς	ADV
+HEB 4:15!18		noun	ἁμαρτίας	ἁμαρτία	N-GSF
+HEB 4:16!1	v	verb	προσερχώμεθα	προσέρχομαι	V-PNS-1P
+HEB 4:16!2		conj	οὖν	οὖν	CONJ
+HEB 4:16!3		prep	μετὰ	μετά	PREP
+HEB 4:16!4		noun	παρρησίας	παρρησία	N-GSF
+HEB 4:16!5		det	τῷ	ὁ	T-DSM
+HEB 4:16!6		noun	θρόνῳ	θρόνος	N-DSM
+HEB 4:16!7		det	τῆς	ὁ	T-GSF
+HEB 4:16!8		noun	χάριτος	χάρις	N-GSF
+HEB 4:16!9		conj	ἵνα	ἵνα	CONJ
+HEB 4:16!10	v	verb	λάβωμεν	λαμβάνω	V-2AAS-1P
+HEB 4:16!11	o	noun	ἔλεος	ἔλεος	N-ASN
+HEB 4:16!12		conj	καὶ	καί	CONJ
+HEB 4:16!13	o	noun	χάριν	χάρις	N-ASF
+HEB 4:16!14	v	verb	εὕρωμεν	εὑρίσκω	V-2AAS-1P
+HEB 4:16!15		prep	εἰς	εἰς	PREP
+HEB 4:16!16		adj	εὔκαιρον	εὔκαιρος	A-ASF
+HEB 4:16!17		noun	βοήθειαν	βοήθεια	N-ASF
+HEB 5:1!1		adj	Πᾶς	πᾶς	A-NSM
+HEB 5:1!2		conj	γὰρ	γάρ	CONJ
+HEB 5:1!3		noun	ἀρχιερεὺς	ἀρχιερεύς	N-NSM
+HEB 5:1!4		prep	ἐξ	ἐκ	PREP
+HEB 5:1!5		noun	ἀνθρώπων	ἄνθρωπος	N-GPM
+HEB 5:1!6	v	verb	λαμβανόμενος	λαμβάνω	V-PPP-NSM
+HEB 5:1!7		prep	ὑπὲρ	ὑπέρ	PREP
+HEB 5:1!8		noun	ἀνθρώπων	ἄνθρωπος	N-GPM
+HEB 5:1!9	v	verb	καθίσταται	καθίστημι	V-PPI-3S
+HEB 5:1!10		det	τὰ	ὁ	T-APN
+HEB 5:1!11		prep	πρὸς	πρός	PREP
+HEB 5:1!12		det	τὸν	ὁ	T-ASM
+HEB 5:1!13		noun	θεόν	θεός	N-ASM
+HEB 5:1!14		conj	ἵνα	ἵνα	CONJ
+HEB 5:1!15	v	verb	προσφέρῃ	προσφέρω	V-PAS-3S
+HEB 5:1!16		noun	δῶρά	δῶρον	N-APN
+HEB 5:1!17		conj	τε	τέ	PRT
+HEB 5:1!18		conj	καὶ	καί	CONJ
+HEB 5:1!19		noun	θυσίας	θυσία	N-APF
+HEB 5:1!20		prep	ὑπὲρ	ὑπέρ	PREP
+HEB 5:1!21		noun	ἁμαρτιῶν	ἁμαρτία	N-GPF
+HEB 5:2!1	v	verb	μετριοπαθεῖν	μετριοπαθέω	V-PAN
+HEB 5:2!2	v	verb	δυνάμενος	δύναμαι	V-PNP-NSM
+HEB 5:2!3		det	τοῖς	ὁ	T-DPM
+HEB 5:2!4		verb	ἀγνοοῦσι	ἀγνοέω	V-PAP-DPM
+HEB 5:2!5		conj	καὶ	καί	CONJ
+HEB 5:2!6		verb	πλανωμένοις	πλανάω	V-PPP-DPM
+HEB 5:2!7		conj	ἐπεὶ	ἐπεί	CONJ
+HEB 5:2!8		adv	καὶ	καί	CONJ
+HEB 5:2!9		pron	αὐτὸς	αὐτός	P-NSM
+HEB 5:2!10	v	verb	περίκειται	περίκειμαι	V-PNI-3S
+HEB 5:2!11	o	noun	ἀσθένειαν	ἀσθένεια	N-ASF
+HEB 5:3!1		conj	καὶ	καί	CONJ
+HEB 5:3!2		prep	δι	διά	PREP
+HEB 5:3!3		pron	αὐτὴν	ἑαυτοῦ	P-ASF
+HEB 5:3!4	v	verb	ὀφείλει	ὀφείλω	V-PAI-3S
+HEB 5:3!5		conj	καθὼς	καθώς	ADV
+HEB 5:3!6		prep	περὶ	περί	PREP
+HEB 5:3!7		det	τοῦ	ὁ	T-GSM
+HEB 5:3!8		noun	λαοῦ	λαός	N-GSM
+HEB 5:3!9	adv	adv	οὕτως	οὕτω(ς)	ADV
+HEB 5:3!10		adv	καὶ	καί	CONJ
+HEB 5:3!11		prep	περὶ	περί	PREP
+HEB 5:3!12		pron	αὑτοῦ	ἑαυτοῦ	F-3GSM
+HEB 5:3!13	v	verb	προσφέρειν	προσφέρω	V-PAN
+HEB 5:3!14		prep	περὶ	περί	PREP
+HEB 5:3!15		noun	ἁμαρτιῶν	ἁμαρτία	N-GPF
+HEB 5:4!1		conj	καὶ	καί	CONJ
+HEB 5:4!2		adv	οὐχ	οὐ	PRT-N
+HEB 5:4!3	adv	pron	ἑαυτῷ	ἑαυτοῦ	F-3DSM
+HEB 5:4!4	s	pron	τις	τις	X-NSM
+HEB 5:4!5	v	verb	λαμβάνει	λαμβάνω	V-PAI-3S
+HEB 5:4!6		det	τὴν	ὁ	T-ASF
+HEB 5:4!7		noun	τιμήν	τιμή	N-ASF
+HEB 5:4!8		conj	ἀλλὰ	ἀλλά	CONJ
+HEB 5:4!9	v	verb	καλούμενος	καλέω	V-PPP-NSM
+HEB 5:4!10		prep	ὑπὸ	ὑπό	PREP
+HEB 5:4!11		det	τοῦ	ὁ	T-GSM
+HEB 5:4!12		noun	θεοῦ	θεός	N-GSM
+HEB 5:4!13		conj	καθώσπερ	καθώσπερ	ADV
+HEB 5:4!14		adv	καὶ	καί	CONJ
+HEB 5:4!15		noun	Ἀαρών	Ἀαρών	N-PRI
+HEB 5:5!1	adv	adv	Οὕτως	οὕτω(ς)	ADV
+HEB 5:5!2		adv	καὶ	καί	CONJ
+HEB 5:5!3		det	ὁ	ὁ	T-NSM
+HEB 5:5!4		noun	Χριστὸς	Χριστός	N-NSM
+HEB 5:5!5	adv	adv	οὐχ	οὐ	PRT-N
+HEB 5:5!6	o	pron	ἑαυτὸν	ἑαυτοῦ	F-3ASM
+HEB 5:5!7	v	verb	ἐδόξασεν	δοξάζω	V-AAI-3S
+HEB 5:5!8	vc	verb	γενηθῆναι	γίνομαι	V-AON
+HEB 5:5!9	p	noun	ἀρχιερέα	ἀρχιερεύς	N-ASM
+HEB 5:5!10		conj	ἀλλ	ἀλλά	CONJ
+HEB 5:5!11		det	ὁ	ὁ	T-NSM
+HEB 5:5!12	v	verb	λαλήσας	λαλέω	V-AAP-NSM
+HEB 5:5!13		prep	πρὸς	πρός	PREP
+HEB 5:5!14		pron	αὐτόν	αὐτός	P-ASM
+HEB 5:5!15		noun	Υἱός	υἱός	N-NSM
+HEB 5:5!16		pron	μου	ἐγώ	P-1GS
+HEB 5:5!17	vc	verb	εἶ	εἰμί	V-PAI-2S
+HEB 5:5!18	s	pron	σύ	σύ	P-2NS
+HEB 5:5!19	s	pron	ἐγὼ	ἐγώ	P-1NS
+HEB 5:5!20	adv	adv	σήμερον	σήμερον	ADV
+HEB 5:5!21	v	verb	γεγέννηκά	γεννάω	V-RAI-1S
+HEB 5:5!22	o	pron	σε	σύ	P-2AS
+HEB 5:6!1		conj	καθὼς	καθώς	ADV
+HEB 5:6!2		adv	καὶ	καί	CONJ
+HEB 5:6!3		prep	ἐν	ἐν	PREP
+HEB 5:6!4		adj	ἑτέρῳ	ἕτερος	A-DSM
+HEB 5:6!5	v	verb	λέγει	λέγω	V-PAI-3S
+HEB 5:6!6	s	pron	Σὺ	σύ	P-2NS
+HEB 5:6!7	p	noun	ἱερεὺς	ἱερεύς	N-NSM
+HEB 5:6!8		prep	εἰς	εἰς	PREP
+HEB 5:6!9		det	τὸν	ὁ	T-ASM
+HEB 5:6!10		noun	αἰῶνα	αἰών	N-ASM
+HEB 5:6!11		prep	κατὰ	κατά	PREP
+HEB 5:6!12		det	τὴν	ὁ	T-ASF
+HEB 5:6!13		noun	τάξιν	τάξις	N-ASF
+HEB 5:6!14		noun	Μελχισέδεκ	Μελχισέδεκ	N-PRI
+HEB 5:7!1	s	pron	ὃς	ὅς	R-NSM
+HEB 5:7!2		prep	ἐν	ἐν	PREP
+HEB 5:7!3		det	ταῖς	ὁ	T-DPF
+HEB 5:7!4		noun	ἡμέραις	ἡμέρα	N-DPF
+HEB 5:7!5		det	τῆς	ὁ	T-GSF
+HEB 5:7!6		noun	σαρκὸς	σάρξ	N-GSF
+HEB 5:7!7		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 5:7!8		noun	δεήσεις	δέησις	N-APF
+HEB 5:7!9		conj	τε	τέ	PRT
+HEB 5:7!10		conj	καὶ	καί	CONJ
+HEB 5:7!11		noun	ἱκετηρίας	ἱκετηρία	N-APF
+HEB 5:7!12		prep	πρὸς	πρός	PREP
+HEB 5:7!13		det	τὸν	ὁ	T-ASM
+HEB 5:7!14	v	verb	δυνάμενον	δύναμαι	V-PNP-ASM
+HEB 5:7!15	v	verb	σῴζειν	σῴζω	V-PAN
+HEB 5:7!16	o	pron	αὐτὸν	αὐτός	P-ASM
+HEB 5:7!17		prep	ἐκ	ἐκ	PREP
+HEB 5:7!18		noun	θανάτου	θάνατος	N-GSM
+HEB 5:7!19		prep	μετὰ	μετά	PREP
+HEB 5:7!20		noun	κραυγῆς	κραυγή	N-GSF
+HEB 5:7!21		adj	ἰσχυρᾶς	ἰσχυρός	A-GSF
+HEB 5:7!22		conj	καὶ	καί	CONJ
+HEB 5:7!23		noun	δακρύων	δάκρυον	N-GPN
+HEB 5:7!24	v	verb	προσενέγκας	προσφέρω	V-AAP-NSM
+HEB 5:7!25		conj	καὶ	καί	CONJ
+HEB 5:7!26	v	verb	εἰσακουσθεὶς	εἰσακούω	V-APP-NSM
+HEB 5:7!27		prep	ἀπὸ	ἀπό	PREP
+HEB 5:7!28		det	τῆς	ὁ	T-GSF
+HEB 5:7!29		noun	εὐλαβείας	εὐλάβεια	N-GSF
+HEB 5:8!1		conj	καίπερ	καίπερ	CONJ
+HEB 5:8!2	vc	verb	ὢν	εἰμί	V-PAP-NSM
+HEB 5:8!3	p	noun	υἱός	υἱός	N-NSM
+HEB 5:8!4	v	verb	ἔμαθεν	μανθάνω	V-2AAI-3S
+HEB 5:8!5		prep	ἀφ	ἀπό	PREP
+HEB 5:8!6	o	pron	ὧν	ὅς	R-GPN
+HEB 5:8!7	v	verb	ἔπαθεν	πάσχω	V-2AAI-3S
+HEB 5:8!8		det	τὴν	ὁ	T-ASF
+HEB 5:8!9		noun	ὑπακοήν	ὑπακοή	N-ASF
+HEB 5:9!1		conj	καὶ	καί	CONJ
+HEB 5:9!2	v	verb	τελειωθεὶς	τελειόω	V-APP-NSM
+HEB 5:9!3	vc	verb	ἐγένετο	γίνομαι	V-2ADI-3S
+HEB 5:9!4		adj	πᾶσιν	πᾶς	A-DPM
+HEB 5:9!5		det	τοῖς	ὁ	T-DPM
+HEB 5:9!6	v	verb	ὑπακούουσιν	ὑπακούω	V-PAP-DPM
+HEB 5:9!7	o	pron	αὐτῷ	αὐτός	P-DSM
+HEB 5:9!8		adj	αἴτιος	αἴτιος	A-NSM
+HEB 5:9!9		noun	σωτηρίας	σωτηρία	N-GSF
+HEB 5:9!10		adj	αἰωνίου	αἰώνιος	A-GSF
+HEB 5:10!1	v	verb	προσαγορευθεὶς	προσαγορεύω	V-APP-NSM
+HEB 5:10!2		prep	ὑπὸ	ὑπό	PREP
+HEB 5:10!3		det	τοῦ	ὁ	T-GSM
+HEB 5:10!4		noun	θεοῦ	θεός	N-GSM
+HEB 5:10!5		noun	ἀρχιερεὺς	ἀρχιερεύς	N-NSM
+HEB 5:10!6		prep	κατὰ	κατά	PREP
+HEB 5:10!7		det	τὴν	ὁ	T-ASF
+HEB 5:10!8		noun	τάξιν	τάξις	N-ASF
+HEB 5:10!9		noun	Μελχισέδεκ	Μελχισέδεκ	N-PRI
+HEB 5:11!1		prep	Περὶ	περί	PREP
+HEB 5:11!2		pron	οὗ	ὅς	R-GSM
+HEB 5:11!3	p	adj	πολὺς	πολύς	A-NSM
+HEB 5:11!4	adv	pron	ἡμῖν	ἐγώ	P-1DP
+HEB 5:11!5		det	ὁ	ὁ	T-NSM
+HEB 5:11!6		noun	λόγος	λόγος	N-NSM
+HEB 5:11!7		conj	καὶ	καί	CONJ
+HEB 5:11!8	p	adj	δυσερμήνευτος	δυσερμήνευτος	A-NSM
+HEB 5:11!9	v	verb	λέγειν	λέγω	V-PAN
+HEB 5:11!10		conj	ἐπεὶ	ἐπεί	CONJ
+HEB 5:11!11	p	adj	νωθροὶ	νωθρός	A-NPM
+HEB 5:11!12	vc	verb	γεγόνατε	γίνομαι	V-2RAI-2P
+HEB 5:11!13		det	ταῖς	ὁ	T-DPF
+HEB 5:11!14		noun	ἀκοαῖς	ἀκοή	N-DPF
+HEB 5:12!1	adv	adv	καὶ	καί	CONJ
+HEB 5:12!2		conj	γὰρ	γάρ	CONJ
+HEB 5:12!3	v	verb	ὀφείλοντες	ὀφείλω	V-PAP-NPM
+HEB 5:12!4	vc	verb	εἶναι	εἰμί	V-PAN
+HEB 5:12!5	p	noun	διδάσκαλοι	διδάσκαλος	N-NPM
+HEB 5:12!6		prep	διὰ	διά	PREP
+HEB 5:12!7		det	τὸν	ὁ	T-ASM
+HEB 5:12!8		noun	χρόνον	χρόνος	N-ASM
+HEB 5:12!9	adv	adv	πάλιν	πάλιν	ADV
+HEB 5:12!10		noun	χρείαν	χρεία	N-ASF
+HEB 5:12!11	v	verb	ἔχετε	ἔχω	V-PAI-2P
+HEB 5:12!12		det	τοῦ	ὁ	T-GSN
+HEB 5:12!13	v	verb	διδάσκειν	διδάσκω	V-PAN
+HEB 5:12!14	o	pron	ὑμᾶς	σύ	P-2AP
+HEB 5:12!15	s	pron	τινὰ	τις	X-ASM
+HEB 5:12!16		det	τὰ	ὁ	T-APN
+HEB 5:12!17		noun	στοιχεῖα	στοιχεῖον	N-APN
+HEB 5:12!18		det	τῆς	ὁ	T-GSF
+HEB 5:12!19		noun	ἀρχῆς	ἀρχή	N-GSF
+HEB 5:12!20		det	τῶν	ὁ	T-GPN
+HEB 5:12!21		noun	λογίων	λόγιον	N-GPN
+HEB 5:12!22		det	τοῦ	ὁ	T-GSM
+HEB 5:12!23		noun	θεοῦ	θεός	N-GSM
+HEB 5:12!24		conj	καὶ	καί	CONJ
+HEB 5:12!25	vc	verb	γεγόνατε	γίνομαι	V-2RAI-2P
+HEB 5:12!26		noun	χρείαν	χρεία	N-ASF
+HEB 5:12!27	v	verb	ἔχοντες	ἔχω	V-PAP-NPM
+HEB 5:12!28		noun	γάλακτος	γάλα	N-GSN
+HEB 5:12!29		adv	οὐ	οὐ	PRT-N
+HEB 5:12!30		adj	στερεᾶς	στερεός	A-GSF
+HEB 5:12!31		noun	τροφῆς	τροφή	N-GSF
+HEB 5:13!1		adj	πᾶς	πᾶς	A-NSM
+HEB 5:13!2		conj	γὰρ	γάρ	CONJ
+HEB 5:13!3		det	ὁ	ὁ	T-NSM
+HEB 5:13!4	v	verb	μετέχων	μετέχω	V-PAP-NSM
+HEB 5:13!5	o	noun	γάλακτος	γάλα	N-GSN
+HEB 5:13!6		adj	ἄπειρος	ἄπειρος	A-NSM
+HEB 5:13!7		noun	λόγου	λόγος	N-GSM
+HEB 5:13!8		noun	δικαιοσύνης	δικαιοσύνη	N-GSF
+HEB 5:13!9	p	adj	νήπιος	νήπιος	A-NSM
+HEB 5:13!10		conj	γάρ	γάρ	CONJ
+HEB 5:13!11	vc	verb	ἐστιν	εἰμί	V-PAI-3S
+HEB 5:14!1		adj	τελείων	τέλειος	A-GPM
+HEB 5:14!2		conj	δέ	δέ	CONJ
+HEB 5:14!3	vc	verb	ἐστιν	εἰμί	V-PAI-3S
+HEB 5:14!4		det	ἡ	ὁ	T-NSF
+HEB 5:14!5		adj	στερεὰ	στερεός	A-NSF
+HEB 5:14!6		noun	τροφή	τροφή	N-NSF
+HEB 5:14!7		det	τῶν	ὁ	T-GPM
+HEB 5:14!8		prep	διὰ	διά	PREP
+HEB 5:14!9		det	τὴν	ὁ	T-ASF
+HEB 5:14!10		noun	ἕξιν	ἕξις	N-ASF
+HEB 5:14!11		det	τὰ	ὁ	T-APN
+HEB 5:14!12		noun	αἰσθητήρια	αἰσθητήριον	N-APN
+HEB 5:14!13	v	verb	γεγυμνασμένα	γυμνάζω	V-RPP-APN
+HEB 5:14!14	v	verb	ἐχόντων	ἔχω	V-PAP-GPM
+HEB 5:14!15		prep	πρὸς	πρός	PREP
+HEB 5:14!16		noun	διάκρισιν	διάκρισις	N-ASF
+HEB 5:14!17		adj	καλοῦ	καλός	A-GSN
+HEB 5:14!18		conj	τε	τέ	PRT
+HEB 5:14!19		conj	καὶ	καί	CONJ
+HEB 5:14!20		adj	κακοῦ	κακός	A-GSN
+HEB 6:1!1		conj	Διὸ	διό	CONJ
+HEB 6:1!2	v	verb	ἀφέντες	ἀφίημι	V-2AAP-NPM
+HEB 6:1!3		det	τὸν	ὁ	T-ASM
+HEB 6:1!4		det	τῆς	ὁ	T-GSF
+HEB 6:1!5		noun	ἀρχῆς	ἀρχή	N-GSF
+HEB 6:1!6		det	τοῦ	ὁ	T-GSM
+HEB 6:1!7		noun	Χριστοῦ	Χριστός	N-GSM
+HEB 6:1!8		noun	λόγον	λόγος	N-ASM
+HEB 6:1!9		prep	ἐπὶ	ἐπί	PREP
+HEB 6:1!10		det	τὴν	ὁ	T-ASF
+HEB 6:1!11		noun	τελειότητα	τελειότης	N-ASF
+HEB 6:1!12	v	verb	φερώμεθα	φέρω	V-PPS-1P
+HEB 6:1!13	adv	adv	μὴ	μή	PRT-N
+HEB 6:1!14	adv	adv	πάλιν	πάλιν	ADV
+HEB 6:1!15		noun	θεμέλιον	θεμέλιος	N-ASM
+HEB 6:1!16	v	verb	καταβαλλόμενοι	καταβάλλω	V-PMP-NPM
+HEB 6:1!17		noun	μετανοίας	μετάνοια	N-GSF
+HEB 6:1!18		prep	ἀπὸ	ἀπό	PREP
+HEB 6:1!19		adj	νεκρῶν	νεκρός	A-GPN
+HEB 6:1!20		noun	ἔργων	ἔργον	N-GPN
+HEB 6:1!21		conj	καὶ	καί	CONJ
+HEB 6:1!22		noun	πίστεως	πίστις	N-GSF
+HEB 6:1!23		prep	ἐπὶ	ἐπί	PREP
+HEB 6:1!24		noun	θεόν	θεός	N-ASM
+HEB 6:2!1		noun	βαπτισμῶν	βαπτισμός	N-GPM
+HEB 6:2!2		noun	διδαχὴν	διδαχή	N-ASF
+HEB 6:2!3		noun	ἐπιθέσεώς	ἐπίθεσις	N-GSF
+HEB 6:2!4		conj	τε	τέ	PRT
+HEB 6:2!5		noun	χειρῶν	χείρ	N-GPF
+HEB 6:2!6		noun	ἀναστάσεώς	ἀνάστασις	N-GSF
+HEB 6:2!7		conj	τε	τέ	CONJ
+HEB 6:2!8		adj	νεκρῶν	νεκρός	A-GPM
+HEB 6:2!9		conj	καὶ	καί	CONJ
+HEB 6:2!10		noun	κρίματος	κρίμα	N-GSN
+HEB 6:2!11		adj	αἰωνίου	αἰώνιος	A-GSN
+HEB 6:3!1		conj	καὶ	καί	CONJ
+HEB 6:3!2	o	pron	τοῦτο	οὗτος	D-ASN
+HEB 6:3!3	v	verb	ποιήσομεν	ποιέω	V-FAI-1P
+HEB 6:3!4		conj	ἐάνπερ	ἐάνπερ	COND
+HEB 6:3!5	v	verb	ἐπιτρέπῃ	ἐπιτρέπω	V-PAS-3S
+HEB 6:3!6		det	ὁ	ὁ	T-NSM
+HEB 6:3!7		noun	θεός	θεός	N-NSM
+HEB 6:4!1	p	adj	Ἀδύνατον	ἀδύνατος	A-NSN
+HEB 6:4!2		conj	γὰρ	γάρ	CONJ
+HEB 6:4!3		det	τοὺς	ὁ	T-APM
+HEB 6:4!4	adv	adv	ἅπαξ	ἅπαξ	ADV
+HEB 6:4!5	v	verb	φωτισθέντας	φωτίζω	V-APP-APM
+HEB 6:4!6	v	verb	γευσαμένους	γεύομαι	V-ADP-APM
+HEB 6:4!7		conj	τε	τέ	PRT
+HEB 6:4!8		det	τῆς	ὁ	T-GSF
+HEB 6:4!9		noun	δωρεᾶς	δωρεά	N-GSF
+HEB 6:4!10		det	τῆς	ὁ	T-GSF
+HEB 6:4!11		adj	ἐπουρανίου	ἐπουράνιος	A-GSF
+HEB 6:4!12		conj	καὶ	καί	CONJ
+HEB 6:4!13		adj	μετόχους	μέτοχος	A-APM
+HEB 6:4!14	v	verb	γενηθέντας	γίνομαι	V-AOP-APM
+HEB 6:4!15		noun	πνεύματος	πνεῦμα	N-GSN
+HEB 6:4!16		adj	ἁγίου	ἅγιος	A-GSN
+HEB 6:5!1		conj	καὶ	καί	CONJ
+HEB 6:5!2		adj	καλὸν	καλός	A-ASN
+HEB 6:5!3	v	verb	γευσαμένους	γεύομαι	V-ADP-APM
+HEB 6:5!4		noun	θεοῦ	θεός	N-GSM
+HEB 6:5!5		noun	ῥῆμα	ῥῆμα	N-ASN
+HEB 6:5!6		noun	δυνάμεις	δύναμις	N-APF
+HEB 6:5!7		conj	τε	τέ	PRT
+HEB 6:5!8	v	verb	μέλλοντος	μέλλω	V-PAP-GSM
+HEB 6:5!9		noun	αἰῶνος	αἰών	N-GSM
+HEB 6:6!1		conj	καὶ	καί	CONJ
+HEB 6:6!2	v	verb	παραπεσόντας	παραπίπτω	V-2AAP-APM
+HEB 6:6!3	adv	adv	πάλιν	πάλιν	ADV
+HEB 6:6!4	v	verb	ἀνακαινίζειν	ἀνακαινίζω	V-PAN
+HEB 6:6!5		prep	εἰς	εἰς	PREP
+HEB 6:6!6		noun	μετάνοιαν	μετάνοια	N-ASF
+HEB 6:6!7	v	verb	ἀνασταυροῦντας	ἀνασταυρόω	V-PAP-APM
+HEB 6:6!8	adv	pron	ἑαυτοῖς	ἑαυτοῦ	F-3DPM
+HEB 6:6!9		det	τὸν	ὁ	T-ASM
+HEB 6:6!10		noun	υἱὸν	υἱός	N-ASM
+HEB 6:6!11		det	τοῦ	ὁ	T-GSM
+HEB 6:6!12		noun	θεοῦ	θεός	N-GSM
+HEB 6:6!13		conj	καὶ	καί	CONJ
+HEB 6:6!14	v	verb	παραδειγματίζοντας	παραδειγματίζω	V-PAP-APM
+HEB 6:7!1		noun	γῆ	γῆ	N-NSF
+HEB 6:7!2		conj	γὰρ	γάρ	CONJ
+HEB 6:7!3		det	ἡ	ὁ	T-NSF
+HEB 6:7!4	v	verb	πιοῦσα	πίνω	V-2AAP-NSF
+HEB 6:7!5		det	τὸν	ὁ	T-ASM
+HEB 6:7!6		prep	ἐπ	ἐπί	PREP
+HEB 6:7!7		pron	αὐτῆς	αὐτός	P-GSF
+HEB 6:7!8	v	verb	ἐρχόμενον	ἔρχομαι	V-PNP-ASM
+HEB 6:7!9	adv	adv	πολλάκις	πολλάκις	ADV
+HEB 6:7!10		noun	ὑετόν	ὑετός	N-ASM
+HEB 6:7!11		conj	καὶ	καί	CONJ
+HEB 6:7!12	v	verb	τίκτουσα	τίκτω	V-PAP-NSF
+HEB 6:7!13		noun	βοτάνην	βοτάνη	N-ASF
+HEB 6:7!14		adj	εὔθετον	εὔθετος	A-ASF
+HEB 6:7!15		pron	ἐκείνοις	ἐκεῖνος	D-DPM
+HEB 6:7!16		prep	δι	διά	PREP
+HEB 6:7!17		pron	οὓς	ὅς	R-APM
+HEB 6:7!18	adv	adv	καὶ	καί	CONJ
+HEB 6:7!19	v	verb	γεωργεῖται	γεωργέω	V-PPI-3S
+HEB 6:7!20	v	verb	μεταλαμβάνει	μεταλαμβάνω	V-PAI-3S
+HEB 6:7!21	o	noun	εὐλογίας	εὐλογία	N-GSF
+HEB 6:7!22		prep	ἀπὸ	ἀπό	PREP
+HEB 6:7!23		det	τοῦ	ὁ	T-GSM
+HEB 6:7!24		noun	θεοῦ	θεός	N-GSM
+HEB 6:8!1	v	verb	ἐκφέρουσα	ἐκφέρω	V-PAP-NSF
+HEB 6:8!2		conj	δὲ	δέ	CONJ
+HEB 6:8!3		noun	ἀκάνθας	ἄκανθα	N-APF
+HEB 6:8!4		conj	καὶ	καί	CONJ
+HEB 6:8!5		noun	τριβόλους	τρίβολος	N-APM
+HEB 6:8!6	p	adj	ἀδόκιμος	ἀδόκιμος	A-NSF
+HEB 6:8!7		conj	καὶ	καί	CONJ
+HEB 6:8!8		noun	κατάρας	κατάρα	N-GSF
+HEB 6:8!9		prep	ἐγγύς	ἐγγύς	ADV
+HEB 6:8!10		pron	ἧς	ὅς	R-GSF
+HEB 6:8!11		det	τὸ	ὁ	T-NSN
+HEB 6:8!12		noun	τέλος	τέλος	N-NSN
+HEB 6:8!13		prep	εἰς	εἰς	PREP
+HEB 6:8!14		noun	καῦσιν	καῦσις	N-ASF
+HEB 6:9!1	v	verb	Πεπείσμεθα	πείθω	V-RPI-1P
+HEB 6:9!2		conj	δὲ	δέ	CONJ
+HEB 6:9!3		prep	περὶ	περί	PREP
+HEB 6:9!4		pron	ὑμῶν	σύ	P-2GP
+HEB 6:9!5	aux	adj	ἀγαπητοί	ἀγαπητός	A-VPM
+HEB 6:9!6		det	τὰ	ὁ	T-APN
+HEB 6:9!7		adj	κρείσσονα	κρείττων	A-APN-C
+HEB 6:9!8		conj	καὶ	καί	CONJ
+HEB 6:9!9	v	verb	ἐχόμενα	ἔχω	V-PPP-APN
+HEB 6:9!10	adv	noun	σωτηρίας	σωτηρία	N-GSF
+HEB 6:9!11		conj	εἰ	εἰ	COND
+HEB 6:9!12	adv	adv	καὶ	καί	CONJ
+HEB 6:9!13	adv	adv	οὕτως	οὕτω(ς)	ADV
+HEB 6:9!14	v	verb	λαλοῦμεν	λαλέω	V-PAI-1P
+HEB 6:10!1	adv	adv	οὐ	οὐ	PRT-N
+HEB 6:10!2		conj	γὰρ	γάρ	CONJ
+HEB 6:10!3	p	adj	ἄδικος	ἄδικος	A-NSM
+HEB 6:10!4		det	ὁ	ὁ	T-NSM
+HEB 6:10!5		noun	θεὸς	θεός	N-NSM
+HEB 6:10!6	v	verb	ἐπιλαθέσθαι	ἐπιλανθάνομαι	V-2ADN
+HEB 6:10!7		det	τοῦ	ὁ	T-GSN
+HEB 6:10!8		noun	ἔργου	ἔργον	N-GSN
+HEB 6:10!9		pron	ὑμῶν	σύ	P-2GP
+HEB 6:10!10		conj	καὶ	καί	CONJ
+HEB 6:10!11		det	τῆς	ὁ	T-GSF
+HEB 6:10!12		noun	ἀγάπης	ἀγάπη	N-GSF
+HEB 6:10!13	o	pron	ἧς	ὅς	R-GSF
+HEB 6:10!14	v	verb	ἐνεδείξασθε	ἐνδείκνυμι	V-AMI-2P
+HEB 6:10!15		prep	εἰς	εἰς	PREP
+HEB 6:10!16		det	τὸ	ὁ	T-ASN
+HEB 6:10!17		noun	ὄνομα	ὄνομα	N-ASN
+HEB 6:10!18		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 6:10!19		verb	διακονήσαντες	διακονέω	V-AAP-NPM
+HEB 6:10!20		det	τοῖς	ὁ	T-DPM
+HEB 6:10!21		adj	ἁγίοις	ἅγιος	A-DPM
+HEB 6:10!22		conj	καὶ	καί	CONJ
+HEB 6:10!23		verb	διακονοῦντες	διακονέω	V-PAP-NPM
+HEB 6:11!1	v	verb	ἐπιθυμοῦμεν	ἐπιθυμέω	V-PAI-1P
+HEB 6:11!2		conj	δὲ	δέ	CONJ
+HEB 6:11!3		adj	ἕκαστον	ἕκαστος	A-ASM
+HEB 6:11!4		pron	ὑμῶν	σύ	P-2GP
+HEB 6:11!5		det	τὴν	ὁ	T-ASF
+HEB 6:11!6		adj	αὐτὴν	αὐτός	P-ASF
+HEB 6:11!7	v	verb	ἐνδείκνυσθαι	ἐνδείκνυμι	V-PMN
+HEB 6:11!8		noun	σπουδὴν	σπουδή	N-ASF
+HEB 6:11!9		prep	πρὸς	πρός	PREP
+HEB 6:11!10		det	τὴν	ὁ	T-ASF
+HEB 6:11!11		noun	πληροφορίαν	πληροφορία	N-ASF
+HEB 6:11!12		det	τῆς	ὁ	T-GSF
+HEB 6:11!13		noun	ἐλπίδος	ἐλπίς	N-GSF
+HEB 6:11!14		prep	ἄχρι	ἄχρι	ADV
+HEB 6:11!15		noun	τέλους	τέλος	N-GSN
+HEB 6:12!1		conj	ἵνα	ἵνα	CONJ
+HEB 6:12!2	adv	adv	μὴ	μή	PRT-N
+HEB 6:12!3	p	adj	νωθροὶ	νωθρός	A-NPM
+HEB 6:12!4	vc	verb	γένησθε	γίνομαι	V-2ADS-2P
+HEB 6:12!5		noun	μιμηταὶ	μιμητής	N-NPM
+HEB 6:12!6		conj	δὲ	δέ	CONJ
+HEB 6:12!7		det	τῶν	ὁ	T-GPM
+HEB 6:12!8		prep	διὰ	διά	PREP
+HEB 6:12!9		noun	πίστεως	πίστις	N-GSF
+HEB 6:12!10		conj	καὶ	καί	CONJ
+HEB 6:12!11		noun	μακροθυμίας	μακροθυμία	N-GSF
+HEB 6:12!12	v	verb	κληρονομούντων	κληρονομέω	V-PAP-GPM
+HEB 6:12!13		det	τὰς	ὁ	T-APF
+HEB 6:12!14		noun	ἐπαγγελίας	ἐπαγγελία	N-APF
+HEB 6:13!1		det	Τῷ	ὁ	T-DSM
+HEB 6:13!2		conj	γὰρ	γάρ	CONJ
+HEB 6:13!3		noun	Ἀβραὰμ	Ἀβραάμ	N-PRI
+HEB 6:13!4	v	verb	ἐπαγγειλάμενος	ἐπαγγέλλομαι	V-ADP-NSM
+HEB 6:13!5		det	ὁ	ὁ	T-NSM
+HEB 6:13!6		noun	θεός	θεός	N-NSM
+HEB 6:13!7		conj	ἐπεὶ	ἐπεί	CONJ
+HEB 6:13!8		prep	κατ	κατά	PREP
+HEB 6:13!9		adj	οὐδενὸς	οὐδείς	A-GSM-N
+HEB 6:13!10	v	verb	εἶχεν	ἔχω	V-IAI-3S
+HEB 6:13!11		adj	μείζονος	μέγας	A-GSM-C
+HEB 6:13!12	v	verb	ὀμόσαι	ὀμνύω	V-AAN
+HEB 6:13!13	v	verb	ὤμοσεν	ὀμνύω	V-AAI-3S
+HEB 6:13!14		prep	καθ	κατά	PREP
+HEB 6:13!15		pron	ἑαυτοῦ	ἑαυτοῦ	F-3GSM
+HEB 6:14!1	v	verb	λέγων	λέγω	V-PAP-NSM
+HEB 6:14!2		conj	Εἰ	εἰ	COND
+HEB 6:14!3		ptcl	μὴν	μήν	PRT
+HEB 6:14!4	v	verb	εὐλογῶν	εὐλογέω	V-PAP-NSM
+HEB 6:14!5	v	verb	εὐλογήσω	εὐλογέω	V-FAI-1S
+HEB 6:14!6	o	pron	σε	σύ	P-2AS
+HEB 6:14!7		conj	καὶ	καί	CONJ
+HEB 6:14!8	v	verb	πληθύνων	πληθύνω	V-PAP-NSM
+HEB 6:14!9	v	verb	πληθυνῶ	πληθύνω	V-FAI-1S
+HEB 6:14!10	o	pron	σε	σύ	P-2AS
+HEB 6:15!1		conj	καὶ	καί	CONJ
+HEB 6:15!2	adv	adv	οὕτως	οὕτω(ς)	ADV
+HEB 6:15!3	v	verb	μακροθυμήσας	μακροθυμέω	V-AAP-NSM
+HEB 6:15!4	v	verb	ἐπέτυχεν	ἐπιτυγχάνω	V-2AAI-3S
+HEB 6:15!5		det	τῆς	ὁ	T-GSF
+HEB 6:15!6		noun	ἐπαγγελίας	ἐπαγγελία	N-GSF
+HEB 6:16!1	s	noun	ἄνθρωποι	ἄνθρωπος	N-NPM
+HEB 6:16!2		conj	γὰρ	γάρ	CONJ
+HEB 6:16!3		prep	κατὰ	κατά	PREP
+HEB 6:16!4		det	τοῦ	ὁ	T-GSM
+HEB 6:16!5		adj	μείζονος	μέγας	A-GSM-C
+HEB 6:16!6	v	verb	ὀμνύουσιν	ὀμνύω	V-PAI-3P
+HEB 6:16!7		conj	καὶ	καί	CONJ
+HEB 6:16!8		adj	πάσης	πᾶς	A-GSF
+HEB 6:16!9	adv	pron	αὐτοῖς	αὐτός	P-DPM
+HEB 6:16!10		noun	ἀντιλογίας	ἀντιλογία	N-GSF
+HEB 6:16!11		noun	πέρας	πέρας	N-NSN
+HEB 6:16!12		prep	εἰς	εἰς	PREP
+HEB 6:16!13		noun	βεβαίωσιν	βεβαίωσις	N-ASF
+HEB 6:16!14		det	ὁ	ὁ	T-NSM
+HEB 6:16!15		noun	ὅρκος	ὅρκος	N-NSM
+HEB 6:17!1		prep	ἐν	ἐν	PREP
+HEB 6:17!2		pron	ᾧ	ὅς	R-DSM
+HEB 6:17!3	adv	adj	περισσότερον	περισσότερος	A-ASN-C
+HEB 6:17!4	v	verb	βουλόμενος	βούλομαι	V-PNP-NSM
+HEB 6:17!5		det	ὁ	ὁ	T-NSM
+HEB 6:17!6		noun	θεὸς	θεός	N-NSM
+HEB 6:17!7	v	verb	ἐπιδεῖξαι	ἐπιδείκνυμι	V-AAN
+HEB 6:17!8		det	τοῖς	ὁ	T-DPM
+HEB 6:17!9		noun	κληρονόμοις	κληρονόμος	N-DPM
+HEB 6:17!10		det	τῆς	ὁ	T-GSF
+HEB 6:17!11		noun	ἐπαγγελίας	ἐπαγγελία	N-GSF
+HEB 6:17!12		det	τὸ	ὁ	T-ASN
+HEB 6:17!13		adj	ἀμετάθετον	ἀμετάθετος	A-ASN
+HEB 6:17!14		det	τῆς	ὁ	T-GSF
+HEB 6:17!15		noun	βουλῆς	βουλή	N-GSF
+HEB 6:17!16		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 6:17!17	v	verb	ἐμεσίτευσεν	μεσιτεύω	V-AAI-3S
+HEB 6:17!18	adv	noun	ὅρκῳ	ὅρκος	N-DSM
+HEB 6:18!1		conj	ἵνα	ἵνα	CONJ
+HEB 6:18!2		prep	διὰ	διά	PREP
+HEB 6:18!3		num	δύο	δύο	A-NUI
+HEB 6:18!4		noun	πραγμάτων	πρᾶγμα	N-GPN
+HEB 6:18!5		adj	ἀμεταθέτων	ἀμετάθετος	A-GPN
+HEB 6:18!6		prep	ἐν	ἐν	PREP
+HEB 6:18!7		pron	οἷς	ὅς	R-DPN
+HEB 6:18!8	p	adj	ἀδύνατον	ἀδύνατος	A-NSN
+HEB 6:18!9	v	verb	ψεύσασθαι	ψεύδομαι	V-ADN
+HEB 6:18!10	s	noun	θεόν	θεός	N-ASM
+HEB 6:18!11		adj	ἰσχυρὰν	ἰσχυρός	A-ASF
+HEB 6:18!12		noun	παράκλησιν	παράκλησις	N-ASF
+HEB 6:18!13	v	verb	ἔχωμεν	ἔχω	V-PAS-1P
+HEB 6:18!14		det	οἱ	ὁ	T-NPM
+HEB 6:18!15	v	verb	καταφυγόντες	καταφεύγω	V-2AAP-NPM
+HEB 6:18!16	v	verb	κρατῆσαι	κρατέω	V-AAN
+HEB 6:18!17		det	τῆς	ὁ	T-GSF
+HEB 6:18!18	v	verb	προκειμένης	πρόκειμαι	V-PNP-GSF
+HEB 6:18!19		noun	ἐλπίδος	ἐλπίς	N-GSF
+HEB 6:19!1	o	pron	ἣν	ὅς	R-ASF
+HEB 6:19!2		conj	ὡς	ὡς	ADV
+HEB 6:19!3		noun	ἄγκυραν	ἄγκυρα	N-ASF
+HEB 6:19!4	v	verb	ἔχομεν	ἔχω	V-PAI-1P
+HEB 6:19!5		det	τῆς	ὁ	T-GSF
+HEB 6:19!6		noun	ψυχῆς	ψυχή	N-GSF
+HEB 6:19!7		adj	ἀσφαλῆ	ἀσφαλής	A-ASF
+HEB 6:19!8		conj	τε	τέ	PRT
+HEB 6:19!9		conj	καὶ	καί	CONJ
+HEB 6:19!10		adj	βεβαίαν	βέβαιος	A-ASF
+HEB 6:19!11		conj	καὶ	καί	CONJ
+HEB 6:19!12	v	verb	εἰσερχομένην	εἰσέρχομαι	V-PNP-ASF
+HEB 6:19!13		prep	εἰς	εἰς	PREP
+HEB 6:19!14		det	τὸ	ὁ	T-ASN
+HEB 6:19!15		adj	ἐσώτερον	ἐσώτερος	A-ASN-C
+HEB 6:19!16		det	τοῦ	ὁ	T-GSN
+HEB 6:19!17		noun	καταπετάσματος	καταπέτασμα	N-GSN
+HEB 6:20!1	adv	adv	ὅπου	ὅπου	ADV
+HEB 6:20!2		adj	πρόδρομος	πρόδρομος	A-NSM
+HEB 6:20!3		prep	ὑπὲρ	ὑπέρ	PREP
+HEB 6:20!4		pron	ἡμῶν	ἐγώ	P-1GP
+HEB 6:20!5	v	verb	εἰσῆλθεν	εἰσέρχομαι	V-2AAI-3S
+HEB 6:20!6		noun	Ἰησοῦς	Ἰησοῦς	N-NSM
+HEB 6:20!7		prep	κατὰ	κατά	PREP
+HEB 6:20!8		det	τὴν	ὁ	T-ASF
+HEB 6:20!9		noun	τάξιν	τάξις	N-ASF
+HEB 6:20!10		noun	Μελχισέδεκ	Μελχισέδεκ	N-PRI
+HEB 6:20!11	p	noun	ἀρχιερεὺς	ἀρχιερεύς	N-NSM
+HEB 6:20!12	vc	verb	γενόμενος	γίνομαι	V-2ADP-NSM
+HEB 6:20!13		prep	εἰς	εἰς	PREP
+HEB 6:20!14		det	τὸν	ὁ	T-ASM
+HEB 6:20!15		noun	αἰῶνα	αἰών	N-ASM
+HEB 7:1!1		pron	Οὗτος	οὗτος	D-NSM
+HEB 7:1!2		conj	γὰρ	γάρ	CONJ
+HEB 7:1!3		det	ὁ	ὁ	T-NSM
+HEB 7:1!4		noun	Μελχισέδεκ	Μελχισέδεκ	N-PRI
+HEB 7:1!5		noun	βασιλεὺς	βασιλεύς	N-NSM
+HEB 7:1!6		noun	Σαλήμ	Σαλήμ	N-PRI
+HEB 7:1!7		noun	ἱερεὺς	ἱερεύς	N-NSM
+HEB 7:1!8		det	τοῦ	ὁ	T-GSM
+HEB 7:1!9		noun	θεοῦ	θεός	N-GSM
+HEB 7:1!10		det	τοῦ	ὁ	T-GSM
+HEB 7:1!11		adj	ὑψίστου	ὕψιστος	A-GSM-S
+HEB 7:1!12		det	ὁ	ὁ	T-NSM
+HEB 7:1!13	v	verb	συναντήσας	συναντάω	V-AAP-NSM
+HEB 7:1!14	o	noun	Ἀβραὰμ	Ἀβραάμ	N-PRI
+HEB 7:1!15	v	verb	ὑποστρέφοντι	ὑποστρέφω	V-PAP-DSM
+HEB 7:1!16		prep	ἀπὸ	ἀπό	PREP
+HEB 7:1!17		det	τῆς	ὁ	T-GSF
+HEB 7:1!18		noun	κοπῆς	κοπή	N-GSF
+HEB 7:1!19		det	τῶν	ὁ	T-GPM
+HEB 7:1!20		noun	βασιλέων	βασιλεύς	N-GPM
+HEB 7:1!21		conj	καὶ	καί	CONJ
+HEB 7:1!22	v	verb	εὐλογήσας	εὐλογέω	V-AAP-NSM
+HEB 7:1!23	o	pron	αὐτόν	αὐτός	P-ASM
+HEB 7:2!1	io	pron	ᾧ	ὅς	R-DSM
+HEB 7:2!2		adv	καὶ	καί	CONJ
+HEB 7:2!3		adj	δεκάτην	δεκάτη	A-ASF
+HEB 7:2!4		prep	ἀπὸ	ἀπό	PREP
+HEB 7:2!5		adj	πάντων	πᾶς	A-GPN
+HEB 7:2!6	v	verb	ἐμέρισεν	μερίζω	V-AAI-3S
+HEB 7:2!7	s	noun	Ἀβραάμ	Ἀβραάμ	N-PRI
+HEB 7:2!8	adv	adj	πρῶτον	πρῶτος	ADV-S
+HEB 7:2!9		conj	μὲν	μέν	PRT
+HEB 7:2!10	vc	verb	ἑρμηνευόμενος	ἑρμηνεύω	V-PPP-NSM
+HEB 7:2!11		noun	βασιλεὺς	βασιλεύς	N-NSM
+HEB 7:2!12		noun	δικαιοσύνης	δικαιοσύνη	N-GSF
+HEB 7:2!13	adv	adv	ἔπειτα	ἔπειτα	ADV
+HEB 7:2!14		conj	δὲ	δέ	CONJ
+HEB 7:2!15		adv	καὶ	καί	CONJ
+HEB 7:2!16		noun	βασιλεὺς	βασιλεύς	N-NSM
+HEB 7:2!17		noun	Σαλήμ	Σαλήμ	N-PRI
+HEB 7:2!18	s	pron	ὅ	ὅς	R-NSN
+HEB 7:2!19	vc	verb	ἐστιν	εἰμί	V-PAI-3S
+HEB 7:2!20		noun	βασιλεὺς	βασιλεύς	N-NSM
+HEB 7:2!21		noun	εἰρήνης	εἰρήνη	N-GSF
+HEB 7:3!1		adj	ἀπάτωρ	ἀπάτωρ	A-NSM
+HEB 7:3!2		adj	ἀμήτωρ	ἀμήτωρ	A-NSM
+HEB 7:3!3		adj	ἀγενεαλόγητος	ἀγενεαλόγητος	A-NSM
+HEB 7:3!4		conj	μήτε	μήτε	CONJ-N
+HEB 7:3!5		noun	ἀρχὴν	ἀρχή	N-ASF
+HEB 7:3!6		noun	ἡμερῶν	ἡμέρα	N-GPF
+HEB 7:3!7		conj	μήτε	μήτε	CONJ-N
+HEB 7:3!8		noun	ζωῆς	ζωή	N-GSF
+HEB 7:3!9		noun	τέλος	τέλος	N-ASN
+HEB 7:3!10	v	verb	ἔχων	ἔχω	V-PAP-NSM
+HEB 7:3!11	v	verb	ἀφωμοιωμένος	ἀφομοιόω	V-RPP-NSM
+HEB 7:3!12		conj	δὲ	δέ	CONJ
+HEB 7:3!13		det	τῷ	ὁ	T-DSM
+HEB 7:3!14		noun	υἱῷ	υἱός	N-DSM
+HEB 7:3!15		det	τοῦ	ὁ	T-GSM
+HEB 7:3!16		noun	θεοῦ	θεός	N-GSM
+HEB 7:3!17	vc	verb	μένει	μένω	V-PAI-3S
+HEB 7:3!18	p	noun	ἱερεὺς	ἱερεύς	N-NSM
+HEB 7:3!19		prep	εἰς	εἰς	PREP
+HEB 7:3!20		det	τὸ	ὁ	T-ASN
+HEB 7:3!21		adj	διηνεκές	διηνεκής	A-ASN
+HEB 7:4!1	v	verb	Θεωρεῖτε	θεωρέω	V-PAM-2P
+HEB 7:4!2		conj	δὲ	δέ	CONJ
+HEB 7:4!3	p	pron	πηλίκος	πηλίκος	A-NSM
+HEB 7:4!4		pron	οὗτος	οὗτος	D-NSM
+HEB 7:4!5	io	pron	ᾧ	ὅς	R-DSM
+HEB 7:4!6	o	adj	δεκάτην	δεκάτη	A-ASF
+HEB 7:4!7		noun	Ἀβραὰμ	Ἀβραάμ	N-PRI
+HEB 7:4!8	v	verb	ἔδωκεν	δίδωμι	V-AAI-3S
+HEB 7:4!9		prep	ἐκ	ἐκ	PREP
+HEB 7:4!10		det	τῶν	ὁ	T-GPN
+HEB 7:4!11		noun	ἀκροθινίων	ἀκροθίνιον	N-GPN
+HEB 7:4!12		det	ὁ	ὁ	T-NSM
+HEB 7:4!13		noun	πατριάρχης	πατριάρχης	N-NSM
+HEB 7:5!1		conj	καὶ	καί	CONJ
+HEB 7:5!2		det	οἱ	ὁ	T-NPM
+HEB 7:5!3		conj	μὲν	μέν	PRT
+HEB 7:5!4		prep	ἐκ	ἐκ	PREP
+HEB 7:5!5		det	τῶν	ὁ	T-GPM
+HEB 7:5!6		noun	υἱῶν	υἱός	N-GPM
+HEB 7:5!7		noun	Λευὶ	Λευί	N-PRI
+HEB 7:5!8		det	τὴν	ὁ	T-ASF
+HEB 7:5!9		noun	ἱερατείαν	ἱερατεία	N-ASF
+HEB 7:5!10	v	verb	λαμβάνοντες	λαμβάνω	V-PAP-NPM
+HEB 7:5!11	o	noun	ἐντολὴν	ἐντολή	N-ASF
+HEB 7:5!12	v	verb	ἔχουσιν	ἔχω	V-PAI-3P
+HEB 7:5!13	v	verb	ἀποδεκατοῦν	ἀποδεκατόω	V-PAN
+HEB 7:5!14		det	τὸν	ὁ	T-ASM
+HEB 7:5!15		noun	λαὸν	λαός	N-ASM
+HEB 7:5!16		prep	κατὰ	κατά	PREP
+HEB 7:5!17		det	τὸν	ὁ	T-ASM
+HEB 7:5!18		noun	νόμον	νόμος	N-ASM
+HEB 7:5!19	s	pron	τοῦτ	οὗτος	D-NSN
+HEB 7:5!20	vc	verb	ἔστιν	εἰμί	V-PAI-3S
+HEB 7:5!21		det	τοὺς	ὁ	T-APM
+HEB 7:5!22		noun	ἀδελφοὺς	ἀδελφός	N-APM
+HEB 7:5!23		pron	αὐτῶν	αὐτός	P-GPM
+HEB 7:5!24		conj	καίπερ	καίπερ	CONJ
+HEB 7:5!25	v	verb	ἐξεληλυθότας	ἐξέρχομαι	V-2RAP-APM
+HEB 7:5!26		prep	ἐκ	ἐκ	PREP
+HEB 7:5!27		det	τῆς	ὁ	T-GSF
+HEB 7:5!28		noun	ὀσφύος	ὀσφῦς	N-GSF
+HEB 7:5!29		noun	Ἀβραάμ	Ἀβραάμ	N-PRI
+HEB 7:6!1		det	ὁ	ὁ	T-NSM
+HEB 7:6!2		conj	δὲ	δέ	CONJ
+HEB 7:6!3	adv	adv	μὴ	μή	PRT-N
+HEB 7:6!4	v	verb	γενεαλογούμενος	γενεαλογέομαι	V-PPP-NSM
+HEB 7:6!5		prep	ἐξ	ἐκ	PREP
+HEB 7:6!6		pron	αὐτῶν	αὐτός	P-GPM
+HEB 7:6!7	v	verb	δεδεκάτωκεν	δεκατόω	V-RAI-3S
+HEB 7:6!8	o	noun	Ἀβραάμ	Ἀβραάμ	N-PRI
+HEB 7:6!9		conj	καὶ	καί	CONJ
+HEB 7:6!10		det	τὸν	ὁ	T-ASM
+HEB 7:6!11	v	verb	ἔχοντα	ἔχω	V-PAP-ASM
+HEB 7:6!12		det	τὰς	ὁ	T-APF
+HEB 7:6!13		noun	ἐπαγγελίας	ἐπαγγελία	N-APF
+HEB 7:6!14	v	verb	εὐλόγηκεν	εὐλογέω	V-RAI-3S
+HEB 7:7!1		prep	χωρὶς	χωρίς	ADV
+HEB 7:7!2		conj	δὲ	δέ	CONJ
+HEB 7:7!3		adj	πάσης	πᾶς	A-GSF
+HEB 7:7!4		noun	ἀντιλογίας	ἀντιλογία	N-GSF
+HEB 7:7!5		det	τὸ	ὁ	T-NSN
+HEB 7:7!6		adj	ἔλαττον	ἐλάσσων	A-NSN
+HEB 7:7!7		prep	ὑπὸ	ὑπό	PREP
+HEB 7:7!8		det	τοῦ	ὁ	T-GSM
+HEB 7:7!9		adj	κρείττονος	κρείττων	A-GSM-C
+HEB 7:7!10	v	verb	εὐλογεῖται	εὐλογέω	V-PPI-3S
+HEB 7:8!1		conj	καὶ	καί	CONJ
+HEB 7:8!2	adv	adv	ὧδε	ὧδε	ADV
+HEB 7:8!3		conj	μὲν	μέν	PRT
+HEB 7:8!4	o	adj	δεκάτας	δεκάτη	A-APF
+HEB 7:8!5	v	verb	ἀποθνῄσκοντες	ἀποθνῄσκω	V-PAP-NPM
+HEB 7:8!6		noun	ἄνθρωποι	ἄνθρωπος	N-NPM
+HEB 7:8!7	v	verb	λαμβάνουσιν	λαμβάνω	V-PAI-3P
+HEB 7:8!8	adv	adv	ἐκεῖ	ἐκεῖ	ADV
+HEB 7:8!9		conj	δὲ	δέ	CONJ
+HEB 7:8!10	v	verb	μαρτυρούμενος	μαρτυρέω	V-PPP-NSM
+HEB 7:8!11		conj	ὅτι	ὅτι	CONJ
+HEB 7:8!12	v	verb	ζῇ	ζάω	V-PAI-3S
+HEB 7:9!1		conj	καὶ	καί	CONJ
+HEB 7:9!2		conj	ὡς	ὡς	ADV
+HEB 7:9!3	o	noun	ἔπος	ἔπος	N-ASN
+HEB 7:9!4	v	verb	εἰπεῖν	λέγω	V-2AAN
+HEB 7:9!5		prep	δι	διά	PREP
+HEB 7:9!6		noun	Ἀβραὰμ	Ἀβραάμ	N-PRI
+HEB 7:9!7		adv	καὶ	καί	CONJ
+HEB 7:9!8		noun	Λευὶ	Λευί	N-NSM
+HEB 7:9!9		det	ὁ	ὁ	T-NSM
+HEB 7:9!10	o	adj	δεκάτας	δεκάτη	A-APF
+HEB 7:9!11	v	verb	λαμβάνων	λαμβάνω	V-PAP-NSM
+HEB 7:9!12	v	verb	δεδεκάτωται	δεκατόω	V-RPI-3S
+HEB 7:10!1	adv	adv	ἔτι	ἔτι	ADV
+HEB 7:10!2		conj	γὰρ	γάρ	CONJ
+HEB 7:10!3		prep	ἐν	ἐν	PREP
+HEB 7:10!4		det	τῇ	ὁ	T-DSF
+HEB 7:10!5		noun	ὀσφύϊ	ὀσφῦς	N-DSF
+HEB 7:10!6		det	τοῦ	ὁ	T-GSM
+HEB 7:10!7		noun	πατρὸς	πατήρ	N-GSM
+HEB 7:10!8	vc	verb	ἦν	εἰμί	V-IAI-3S
+HEB 7:10!9		conj	ὅτε	ὅτε	ADV
+HEB 7:10!10	v	verb	συνήντησεν	συναντάω	V-AAI-3S
+HEB 7:10!11	o	pron	αὐτῷ	αὐτός	P-DSM
+HEB 7:10!12	s	noun	Μελχισέδεκ	Μελχισέδεκ	N-PRI
+HEB 7:11!1		conj	Εἰ	εἰ	COND
+HEB 7:11!2		conj	μὲν	μέν	PRT
+HEB 7:11!3		conj	οὖν	οὖν	CONJ
+HEB 7:11!4	s	noun	τελείωσις	τελείωσις	N-NSF
+HEB 7:11!5		prep	διὰ	διά	PREP
+HEB 7:11!6		det	τῆς	ὁ	T-GSF
+HEB 7:11!7		adj	Λευιτικῆς	Λευιτικός	A-GSF
+HEB 7:11!8		noun	ἱερωσύνης	ἱερωσύνη	N-GSF
+HEB 7:11!9	v	verb	ἦν	εἰμί	V-IAI-3S
+HEB 7:11!10		det	ὁ	ὁ	T-NSM
+HEB 7:11!11		noun	λαὸς	λαός	N-NSM
+HEB 7:11!12		conj	γὰρ	γάρ	CONJ
+HEB 7:11!13		prep	ἐπ	ἐπί	PREP
+HEB 7:11!14		pron	αὐτῆς	αὐτός	P-GSF
+HEB 7:11!15	v	verb	νενομοθέτηται	νομοθετέομαι	V-RPI-3S
+HEB 7:11!16	p	pron	τίς	τίς	I-NSF
+HEB 7:11!17	adv	adv	ἔτι	ἔτι	ADV
+HEB 7:11!18	s	noun	χρεία	χρεία	N-NSF
+HEB 7:11!19		prep	κατὰ	κατά	PREP
+HEB 7:11!20		det	τὴν	ὁ	T-ASF
+HEB 7:11!21		noun	τάξιν	τάξις	N-ASF
+HEB 7:11!22		noun	Μελχισέδεκ	Μελχισέδεκ	N-PRI
+HEB 7:11!23		adj	ἕτερον	ἕτερος	A-ASM
+HEB 7:11!24	v	verb	ἀνίστασθαι	ἀνίστημι	V-PMN
+HEB 7:11!25		noun	ἱερέα	ἱερεύς	N-ASM
+HEB 7:11!26		conj	καὶ	καί	CONJ
+HEB 7:11!27	adv	adv	οὐ	οὐ	PRT-N
+HEB 7:11!28		prep	κατὰ	κατά	PREP
+HEB 7:11!29		det	τὴν	ὁ	T-ASF
+HEB 7:11!30		noun	τάξιν	τάξις	N-ASF
+HEB 7:11!31		noun	Ἀαρὼν	Ἀαρών	N-PRI
+HEB 7:11!32	v	verb	λέγεσθαι	λέγω	V-PPN
+HEB 7:12!1	v	verb	μετατιθεμένης	μετατίθημι	V-PPP-GSF
+HEB 7:12!2		conj	γὰρ	γάρ	CONJ
+HEB 7:12!3		det	τῆς	ὁ	T-GSF
+HEB 7:12!4		noun	ἱερωσύνης	ἱερωσύνη	N-GSF
+HEB 7:12!5		prep	ἐξ	ἐκ	PREP
+HEB 7:12!6		noun	ἀνάγκης	ἀνάγκη	N-GSF
+HEB 7:12!7		adv	καὶ	καί	CONJ
+HEB 7:12!8		noun	νόμου	νόμος	N-GSM
+HEB 7:12!9		noun	μετάθεσις	μετάθεσις	N-NSF
+HEB 7:12!10	v	verb	γίνεται	γίνομαι	V-PNI-3S
+HEB 7:13!1		prep	ἐφ	ἐπί	PREP
+HEB 7:13!2		pron	ὃν	ὅς	R-ASM
+HEB 7:13!3		conj	γὰρ	γάρ	CONJ
+HEB 7:13!4	v	verb	λέγεται	λέγω	V-PPI-3S
+HEB 7:13!5	s	pron	ταῦτα	οὗτος	D-NPN
+HEB 7:13!6		noun	φυλῆς	φυλή	N-GSF
+HEB 7:13!7		adj	ἑτέρας	ἕτερος	A-GSF
+HEB 7:13!8	v	verb	μετέσχηκεν	μετέχω	V-RAI-3S
+HEB 7:13!9		prep	ἀφ	ἀπό	PREP
+HEB 7:13!10		pron	ἧς	ὅς	R-GSF
+HEB 7:13!11	s	adj	οὐδεὶς	οὐδείς	A-NSM-N
+HEB 7:13!12	v	verb	προσέσχηκεν	προσέχω	V-RAI-3S
+HEB 7:13!13		det	τῷ	ὁ	T-DSN
+HEB 7:13!14		noun	θυσιαστηρίῳ	θυσιαστήριον	N-DSN
+HEB 7:14!1	p	adj	πρόδηλον	πρόδηλος	A-NSN
+HEB 7:14!2		conj	γὰρ	γάρ	CONJ
+HEB 7:14!3		conj	ὅτι	ὅτι	CONJ
+HEB 7:14!4		prep	ἐξ	ἐκ	PREP
+HEB 7:14!5		noun	Ἰούδα	Ἰούδας	N-GSM
+HEB 7:14!6	v	verb	ἀνατέταλκεν	ἀνατέλλω	V-RAI-3S
+HEB 7:14!7		det	ὁ	ὁ	T-NSM
+HEB 7:14!8		noun	κύριος	κύριος	N-NSM
+HEB 7:14!9		pron	ἡμῶν	ἐγώ	P-1GP
+HEB 7:14!10		prep	εἰς	εἰς	PREP
+HEB 7:14!11		pron	ἣν	ὅς	R-ASF
+HEB 7:14!12		noun	φυλὴν	φυλή	N-ASF
+HEB 7:14!13		prep	περὶ	περί	PREP
+HEB 7:14!14		noun	ἱερέων	ἱερεύς	N-GPM
+HEB 7:14!15	o	adj	οὐδὲν	οὐδείς	A-ASN-N
+HEB 7:14!16	s	noun	Μωϋσῆς	Μωϋσῆς	N-NSM
+HEB 7:14!17	v	verb	ἐλάλησεν	λαλέω	V-AAI-3S
+HEB 7:15!1		conj	Καὶ	καί	CONJ
+HEB 7:15!2	adv	adj	περισσότερον	περισσότερος	A-NSN-C
+HEB 7:15!3		adv	ἔτι	ἔτι	ADV
+HEB 7:15!4		adj	κατάδηλόν	κατάδηλος	A-NSN
+HEB 7:15!5	vc	verb	ἐστιν	εἰμί	V-PAI-3S
+HEB 7:15!6		conj	εἰ	εἰ	COND
+HEB 7:15!7		prep	κατὰ	κατά	PREP
+HEB 7:15!8		det	τὴν	ὁ	T-ASF
+HEB 7:15!9		noun	ὁμοιότητα	ὁμοιότης	N-ASF
+HEB 7:15!10		noun	Μελχισέδεκ	Μελχισέδεκ	N-PRI
+HEB 7:15!11	v	verb	ἀνίσταται	ἀνίστημι	V-PMI-3S
+HEB 7:15!12		noun	ἱερεὺς	ἱερεύς	N-NSM
+HEB 7:15!13		adj	ἕτερος	ἕτερος	A-NSM
+HEB 7:16!1	s	pron	ὃς	ὅς	R-NSM
+HEB 7:16!2		adv	οὐ	οὐ	PRT-N
+HEB 7:16!3		prep	κατὰ	κατά	PREP
+HEB 7:16!4		noun	νόμον	νόμος	N-ASM
+HEB 7:16!5		noun	ἐντολῆς	ἐντολή	N-GSF
+HEB 7:16!6		adj	σαρκίνης	σάρκινος	A-GSF
+HEB 7:16!7	v	verb	γέγονεν	γίνομαι	V-2RAI-3S
+HEB 7:16!8		conj	ἀλλὰ	ἀλλά	CONJ
+HEB 7:16!9		prep	κατὰ	κατά	PREP
+HEB 7:16!10		noun	δύναμιν	δύναμις	N-ASF
+HEB 7:16!11		noun	ζωῆς	ζωή	N-GSF
+HEB 7:16!12		adj	ἀκαταλύτου	ἀκατάλυτος	A-GSF
+HEB 7:17!1	v	verb	μαρτυρεῖται	μαρτυρέω	V-PPI-3S
+HEB 7:17!2		conj	γὰρ	γάρ	CONJ
+HEB 7:17!3		conj	ὅτι	ὅτι	CONJ
+HEB 7:17!4	s	pron	Σὺ	σύ	P-2NS
+HEB 7:17!5	p	noun	ἱερεὺς	ἱερεύς	N-NSM
+HEB 7:17!6		prep	εἰς	εἰς	PREP
+HEB 7:17!7		det	τὸν	ὁ	T-ASM
+HEB 7:17!8		noun	αἰῶνα	αἰών	N-ASM
+HEB 7:17!9		prep	κατὰ	κατά	PREP
+HEB 7:17!10		det	τὴν	ὁ	T-ASF
+HEB 7:17!11		noun	τάξιν	τάξις	N-ASF
+HEB 7:17!12		noun	Μελχισέδεκ	Μελχισέδεκ	N-PRI
+HEB 7:18!1		noun	ἀθέτησις	ἀθέτησις	N-NSF
+HEB 7:18!2		conj	μὲν	μέν	PRT
+HEB 7:18!3		conj	γὰρ	γάρ	CONJ
+HEB 7:18!4	v	verb	γίνεται	γίνομαι	V-PNI-3S
+HEB 7:18!5	v	verb	προαγούσης	προάγω	V-PAP-GSF
+HEB 7:18!6		noun	ἐντολῆς	ἐντολή	N-GSF
+HEB 7:18!7		prep	διὰ	διά	PREP
+HEB 7:18!8		det	τὸ	ὁ	T-ASN
+HEB 7:18!9		pron	αὐτῆς	αὐτός	P-GSF
+HEB 7:18!10		adj	ἀσθενὲς	ἀσθενής	A-ASN
+HEB 7:18!11		conj	καὶ	καί	CONJ
+HEB 7:18!12		adj	ἀνωφελές	ἀνωφελής	A-ASN
+HEB 7:19!1	o	adj	οὐδὲν	οὐδείς	A-ASN-N
+HEB 7:19!2		conj	γὰρ	γάρ	CONJ
+HEB 7:19!3	v	verb	ἐτελείωσεν	τελειόω	V-AAI-3S
+HEB 7:19!4		det	ὁ	ὁ	T-NSM
+HEB 7:19!5		noun	νόμος	νόμος	N-NSM
+HEB 7:19!6		noun	ἐπεισαγωγὴ	ἐπεισαγωγή	N-NSF
+HEB 7:19!7		conj	δὲ	δέ	CONJ
+HEB 7:19!8		adj	κρείττονος	κρείττων	A-GSF-C
+HEB 7:19!9		noun	ἐλπίδος	ἐλπίς	N-GSF
+HEB 7:19!10		prep	δι	διά	PREP
+HEB 7:19!11		pron	ἧς	ὅς	R-GSF
+HEB 7:19!12	v	verb	ἐγγίζομεν	ἐγγίζω	V-PAI-1P
+HEB 7:19!13		det	τῷ	ὁ	T-DSM
+HEB 7:19!14		noun	θεῷ	θεός	N-DSM
+HEB 7:20!1		conj	Καὶ	καί	CONJ
+HEB 7:20!2		prep	καθ	κατά	PREP
+HEB 7:20!3		pron	ὅσον	ὅσος	K-ASN
+HEB 7:20!4	adv	adv	οὐ	οὐ	PRT-N
+HEB 7:20!5		prep	χωρὶς	χωρίς	ADV
+HEB 7:20!6		noun	ὁρκωμοσίας	ὁρκωμοσία	N-GSF
+HEB 7:20!7	s	det	οἱ	ὁ	T-NPM
+HEB 7:20!8		conj	μὲν	μέν	PRT
+HEB 7:20!9		conj	γὰρ	γάρ	CONJ
+HEB 7:20!10		prep	χωρὶς	χωρίς	ADV
+HEB 7:20!11		noun	ὁρκωμοσίας	ὁρκωμοσία	N-GSF
+HEB 7:20!12		verb	εἰσὶν	εἰμί	V-PAI-3P
+HEB 7:20!13	p	noun	ἱερεῖς	ἱερεύς	N-NPM
+HEB 7:20!14		verb	γεγονότες	γίνομαι	V-2RAP-NPM
+HEB 7:21!1	s	det	ὁ	ὁ	T-NSM
+HEB 7:21!2		conj	δὲ	δέ	CONJ
+HEB 7:21!3		prep	μετὰ	μετά	PREP
+HEB 7:21!4		noun	ὁρκωμοσίας	ὁρκωμοσία	N-GSF
+HEB 7:21!5		prep	διὰ	διά	PREP
+HEB 7:21!6		det	τοῦ	ὁ	T-GSM
+HEB 7:21!7	v	verb	λέγοντος	λέγω	V-PAP-GSM
+HEB 7:21!8		prep	πρὸς	πρός	PREP
+HEB 7:21!9		pron	αὐτόν	αὐτός	P-ASM
+HEB 7:21!10	v	verb	Ὤμοσεν	ὀμνύω	V-AAI-3S
+HEB 7:21!11	s	noun	κύριος	κύριος	N-NSM
+HEB 7:21!12		conj	καὶ	καί	CONJ
+HEB 7:21!13	adv	adv	οὐ	οὐ	PRT-N
+HEB 7:21!14	v	verb	μεταμεληθήσεται	μεταμέλομαι	V-FOI-3S
+HEB 7:21!15	s	pron	Σὺ	σύ	P-2NS
+HEB 7:21!16	p	noun	ἱερεὺς	ἱερεύς	N-NSM
+HEB 7:21!17		prep	εἰς	εἰς	PREP
+HEB 7:21!18		det	τὸν	ὁ	T-ASM
+HEB 7:21!19		noun	αἰῶνα	αἰών	N-ASM
+HEB 7:22!1		prep	κατὰ	κατά	PREP
+HEB 7:22!2		pron	τοσοῦτο	τοσοῦτος	D-ASN
+HEB 7:22!3		adj	κρείττονος	κρείττων	A-GSF-C
+HEB 7:22!4		noun	διαθήκης	διαθήκη	N-GSF
+HEB 7:22!5	vc	verb	γέγονεν	γίνομαι	V-2RAI-3S
+HEB 7:22!6		adj	ἔγγυος	ἔγγυος	A-NSM
+HEB 7:22!7	s	noun	Ἰησοῦς	Ἰησοῦς	N-NSM
+HEB 7:23!1		conj	Καὶ	καί	CONJ
+HEB 7:23!2		det	οἱ	ὁ	T-NPM
+HEB 7:23!3		conj	μὲν	μέν	PRT
+HEB 7:23!4		adj	πλείονές	πολύς	A-NPM-C
+HEB 7:23!5		verb	εἰσιν	εἰμί	V-PAI-3P
+HEB 7:23!6		verb	γεγονότες	γίνομαι	V-2RAP-NPM
+HEB 7:23!7	p	noun	ἱερεῖς	ἱερεύς	N-NPM
+HEB 7:23!8		prep	διὰ	διά	PREP
+HEB 7:23!9		det	τὸ	ὁ	T-ASN
+HEB 7:23!10	adv	noun	θανάτῳ	θάνατος	N-DSM
+HEB 7:23!11	v	verb	κωλύεσθαι	κωλύω	V-PPN
+HEB 7:23!12	v	verb	παραμένειν	παραμένω	V-PAN
+HEB 7:24!1	s	det	ὁ	ὁ	T-NSM
+HEB 7:24!2		conj	δὲ	δέ	CONJ
+HEB 7:24!3		prep	διὰ	διά	PREP
+HEB 7:24!4		det	τὸ	ὁ	T-ASN
+HEB 7:24!5	v	verb	μένειν	μένω	V-PAN
+HEB 7:24!6	s	pron	αὐτὸν	αὐτός	P-ASM
+HEB 7:24!7		prep	εἰς	εἰς	PREP
+HEB 7:24!8		det	τὸν	ὁ	T-ASM
+HEB 7:24!9		noun	αἰῶνα	αἰών	N-ASM
+HEB 7:24!10	adv	adj	ἀπαράβατον	ἀπαράβατος	A-ASF
+HEB 7:24!11	v	verb	ἔχει	ἔχω	V-PAI-3S
+HEB 7:24!12		det	τὴν	ὁ	T-ASF
+HEB 7:24!13		noun	ἱερωσύνην	ἱερωσύνη	N-ASF
+HEB 7:25!1		conj	ὅθεν	ὅθεν	ADV
+HEB 7:25!2	adv	adv	καὶ	καί	CONJ
+HEB 7:25!3	v	verb	σῴζειν	σῴζω	V-PAN
+HEB 7:25!4		prep	εἰς	εἰς	PREP
+HEB 7:25!5		det	τὸ	ὁ	T-ASN
+HEB 7:25!6		adj	παντελὲς	παντελής	A-ASN
+HEB 7:25!7	v	verb	δύναται	δύναμαι	V-PNI-3S
+HEB 7:25!8		det	τοὺς	ὁ	T-APM
+HEB 7:25!9	v	verb	προσερχομένους	προσέρχομαι	V-PNP-APM
+HEB 7:25!10		prep	δι	διά	PREP
+HEB 7:25!11		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 7:25!12		det	τῷ	ὁ	T-DSM
+HEB 7:25!13		noun	θεῷ	θεός	N-DSM
+HEB 7:25!14	adv	adv	πάντοτε	πάντοτε	ADV
+HEB 7:25!15	v	verb	ζῶν	ζάω	V-PAP-NSM
+HEB 7:25!16		prep	εἰς	εἰς	PREP
+HEB 7:25!17		det	τὸ	ὁ	T-ASN
+HEB 7:25!18	v	verb	ἐντυγχάνειν	ἐντυγχάνω	V-PAN
+HEB 7:25!19		prep	ὑπὲρ	ὑπέρ	PREP
+HEB 7:25!20		pron	αὐτῶν	αὐτός	P-GPM
+HEB 7:26!1		pron	Τοιοῦτος	τοιοῦτος	D-NSM
+HEB 7:26!2		conj	γὰρ	γάρ	CONJ
+HEB 7:26!3	adv	pron	ἡμῖν	ἐγώ	P-1DP
+HEB 7:26!4	adv	adv	καὶ	καί	CONJ
+HEB 7:26!5	v	verb	ἔπρεπεν	πρέπω	V-IAI-3S
+HEB 7:26!6		noun	ἀρχιερεύς	ἀρχιερεύς	N-NSM
+HEB 7:26!7		adj	ὅσιος	ὅσιος	A-NSM
+HEB 7:26!8		adj	ἄκακος	ἄκακος	A-NSM
+HEB 7:26!9		adj	ἀμίαντος	ἀμίαντος	A-NSM
+HEB 7:26!10	v	verb	κεχωρισμένος	χωρίζω	V-RPP-NSM
+HEB 7:26!11		prep	ἀπὸ	ἀπό	PREP
+HEB 7:26!12		det	τῶν	ὁ	T-GPM
+HEB 7:26!13		adj	ἁμαρτωλῶν	ἁμαρτωλός	A-GPM
+HEB 7:26!14		conj	καὶ	καί	CONJ
+HEB 7:26!15	p	adj	ὑψηλότερος	ὑψηλός	A-NSM-C
+HEB 7:26!16		det	τῶν	ὁ	T-GPM
+HEB 7:26!17		noun	οὐρανῶν	οὐρανός	N-GPM
+HEB 7:26!18	vc	verb	γενόμενος	γίνομαι	V-2ADP-NSM
+HEB 7:27!1	s	pron	ὃς	ὅς	R-NSM
+HEB 7:27!2	adv	adv	οὐκ	οὐ	PRT-N
+HEB 7:27!3	v	verb	ἔχει	ἔχω	V-PAI-3S
+HEB 7:27!4		prep	καθ	κατά	PREP
+HEB 7:27!5		noun	ἡμέραν	ἡμέρα	N-ASF
+HEB 7:27!6	o	noun	ἀνάγκην	ἀνάγκη	N-ASF
+HEB 7:27!7		conj	ὥσπερ	ὥσπερ	ADV
+HEB 7:27!8		det	οἱ	ὁ	T-NPM
+HEB 7:27!9		noun	ἀρχιερεῖς	ἀρχιερεύς	N-NPM
+HEB 7:27!10	adv	adj	πρότερον	πρότερος	ADV-C
+HEB 7:27!11		prep	ὑπὲρ	ὑπέρ	PREP
+HEB 7:27!12		det	τῶν	ὁ	T-GPF
+HEB 7:27!13		adj	ἰδίων	ἴδιος	A-GPF
+HEB 7:27!14		noun	ἁμαρτιῶν	ἁμαρτία	N-GPF
+HEB 7:27!15	o	noun	θυσίας	θυσία	N-APF
+HEB 7:27!16	v	verb	ἀναφέρειν	ἀναφέρω	V-PAN
+HEB 7:27!17	adv	adv	ἔπειτα	ἔπειτα	ADV
+HEB 7:27!18		det	τῶν	ὁ	T-GPF
+HEB 7:27!19		det	τοῦ	ὁ	T-GSM
+HEB 7:27!20		noun	λαοῦ	λαός	N-GSM
+HEB 7:27!21	o	pron	τοῦτο	οὗτος	D-ASN
+HEB 7:27!22		conj	γὰρ	γάρ	CONJ
+HEB 7:27!23	v	verb	ἐποίησεν	ποιέω	V-AAI-3S
+HEB 7:27!24	adv	adv	ἐφάπαξ	ἐφάπαξ	ADV
+HEB 7:27!25	o	pron	ἑαυτὸν	ἑαυτοῦ	F-3ASM
+HEB 7:27!26	v	verb	ἀνενέγκας	ἀναφέρω	V-AAP-NSM
+HEB 7:28!1		det	ὁ	ὁ	T-NSM
+HEB 7:28!2		noun	νόμος	νόμος	N-NSM
+HEB 7:28!3		conj	γὰρ	γάρ	CONJ
+HEB 7:28!4	o	noun	ἀνθρώπους	ἄνθρωπος	N-APM
+HEB 7:28!5	v	verb	καθίστησιν	καθίστημι	V-PAI-3S
+HEB 7:28!6	o2	noun	ἀρχιερεῖς	ἀρχιερεύς	N-APM
+HEB 7:28!7	v	verb	ἔχοντας	ἔχω	V-PAP-APM
+HEB 7:28!8	o	noun	ἀσθένειαν	ἀσθένεια	N-ASF
+HEB 7:28!9		det	ὁ	ὁ	T-NSM
+HEB 7:28!10		noun	λόγος	λόγος	N-NSM
+HEB 7:28!11		conj	δὲ	δέ	CONJ
+HEB 7:28!12		det	τῆς	ὁ	T-GSF
+HEB 7:28!13		noun	ὁρκωμοσίας	ὁρκωμοσία	N-GSF
+HEB 7:28!14		det	τῆς	ὁ	T-GSF
+HEB 7:28!15		prep	μετὰ	μετά	PREP
+HEB 7:28!16		det	τὸν	ὁ	T-ASM
+HEB 7:28!17		noun	νόμον	νόμος	N-ASM
+HEB 7:28!18	o	noun	υἱόν	υἱός	N-ASM
+HEB 7:28!19		prep	εἰς	εἰς	PREP
+HEB 7:28!20		det	τὸν	ὁ	T-ASM
+HEB 7:28!21		noun	αἰῶνα	αἰών	N-ASM
+HEB 7:28!22	v	verb	τετελειωμένον	τελειόω	V-RPP-ASM
+HEB 8:1!1		noun	Κεφάλαιον	κεφάλαιον	N-NSN
+HEB 8:1!2		conj	δὲ	δέ	CONJ
+HEB 8:1!3		prep	ἐπὶ	ἐπί	PREP
+HEB 8:1!4		det	τοῖς	ὁ	T-DPN
+HEB 8:1!5	v	verb	λεγομένοις	λέγω	V-PPP-DPN
+HEB 8:1!6		pron	τοιοῦτον	τοιοῦτος	D-ASM
+HEB 8:1!7	v	verb	ἔχομεν	ἔχω	V-PAI-1P
+HEB 8:1!8		noun	ἀρχιερέα	ἀρχιερεύς	N-ASM
+HEB 8:1!9	s	pron	ὃς	ὅς	R-NSM
+HEB 8:1!10	v	verb	ἐκάθισεν	καθίζω	V-AAI-3S
+HEB 8:1!11		prep	ἐν	ἐν	PREP
+HEB 8:1!12		adj	δεξιᾷ	δεξιός	A-DSF
+HEB 8:1!13		det	τοῦ	ὁ	T-GSM
+HEB 8:1!14		noun	θρόνου	θρόνος	N-GSM
+HEB 8:1!15		det	τῆς	ὁ	T-GSF
+HEB 8:1!16		noun	μεγαλωσύνης	μεγαλωσύνη	N-GSF
+HEB 8:1!17		prep	ἐν	ἐν	PREP
+HEB 8:1!18		det	τοῖς	ὁ	T-DPM
+HEB 8:1!19		noun	οὐρανοῖς	οὐρανός	N-DPM
+HEB 8:2!1		det	τῶν	ὁ	T-GPN
+HEB 8:2!2		adj	ἁγίων	ἅγιος	A-GPN
+HEB 8:2!3		noun	λειτουργὸς	λειτουργός	N-NSM
+HEB 8:2!4		conj	καὶ	καί	CONJ
+HEB 8:2!5		det	τῆς	ὁ	T-GSF
+HEB 8:2!6		noun	σκηνῆς	σκηνή	N-GSF
+HEB 8:2!7		det	τῆς	ὁ	T-GSF
+HEB 8:2!8		adj	ἀληθινῆς	ἀληθινός	A-GSF
+HEB 8:2!9	o	pron	ἣν	ὅς	R-ASF
+HEB 8:2!10	v	verb	ἔπηξεν	πήγνυμι	V-AAI-3S
+HEB 8:2!11		det	ὁ	ὁ	T-NSM
+HEB 8:2!12		noun	κύριος	κύριος	N-NSM
+HEB 8:2!13		adv	οὐκ	οὐ	PRT-N
+HEB 8:2!14		noun	ἄνθρωπος	ἄνθρωπος	N-NSM
+HEB 8:3!1		adj	πᾶς	πᾶς	A-NSM
+HEB 8:3!2		conj	γὰρ	γάρ	CONJ
+HEB 8:3!3		noun	ἀρχιερεὺς	ἀρχιερεύς	N-NSM
+HEB 8:3!4		prep	εἰς	εἰς	PREP
+HEB 8:3!5		det	τὸ	ὁ	T-ASN
+HEB 8:3!6	v	verb	προσφέρειν	προσφέρω	V-PAN
+HEB 8:3!7		noun	δῶρά	δῶρον	N-APN
+HEB 8:3!8		conj	τε	τέ	PRT
+HEB 8:3!9		conj	καὶ	καί	CONJ
+HEB 8:3!10		noun	θυσίας	θυσία	N-APF
+HEB 8:3!11	v	verb	καθίσταται	καθίστημι	V-PPI-3S
+HEB 8:3!12		conj	ὅθεν	ὅθεν	ADV
+HEB 8:3!13	p	adj	ἀναγκαῖον	ἀναγκαῖος	A-NSN
+HEB 8:3!14	v	verb	ἔχειν	ἔχω	V-PAN
+HEB 8:3!15		pron	τι	τις	X-ASN
+HEB 8:3!16		adv	καὶ	καί	CONJ
+HEB 8:3!17		pron	τοῦτον	οὗτος	D-ASM
+HEB 8:3!18	o	pron	ὃ	ὅς	R-ASN
+HEB 8:3!19	v	verb	προσενέγκῃ	προσφέρω	V-AAS-3S
+HEB 8:4!1		conj	εἰ	εἰ	COND
+HEB 8:4!2		conj	μὲν	μέν	PRT
+HEB 8:4!3		conj	οὖν	οὖν	CONJ
+HEB 8:4!4	vc	verb	ἦν	εἰμί	V-IAI-3S
+HEB 8:4!5		prep	ἐπὶ	ἐπί	PREP
+HEB 8:4!6		noun	γῆς	γῆ	N-GSF
+HEB 8:4!7	adv	adv	οὐδ	οὐδέ	CONJ-N
+HEB 8:4!8		ptcl	ἂν	ἄν	PRT
+HEB 8:4!9	vc	verb	ἦν	εἰμί	V-IAI-3S
+HEB 8:4!10	p	noun	ἱερεύς	ἱερεύς	N-NSM
+HEB 8:4!11	v	verb	ὄντων	εἰμί	V-PAP-GPM
+HEB 8:4!12		det	τῶν	ὁ	T-GPM
+HEB 8:4!13	v	verb	προσφερόντων	προσφέρω	V-PAP-GPM
+HEB 8:4!14		prep	κατὰ	κατά	PREP
+HEB 8:4!15		noun	νόμον	νόμος	N-ASM
+HEB 8:4!16		det	τὰ	ὁ	T-APN
+HEB 8:4!17		noun	δῶρα	δῶρον	N-APN
+HEB 8:5!1	s	pron	οἵτινες	ὅστις	R-NPM
+HEB 8:5!2		noun	ὑποδείγματι	ὑπόδειγμα	N-DSN
+HEB 8:5!3		conj	καὶ	καί	CONJ
+HEB 8:5!4		noun	σκιᾷ	σκιά	N-DSF
+HEB 8:5!5	v	verb	λατρεύουσιν	λατρεύω	V-PAI-3P
+HEB 8:5!6		det	τῶν	ὁ	T-GPN
+HEB 8:5!7		adj	ἐπουρανίων	ἐπουράνιος	A-GPN
+HEB 8:5!8		conj	καθὼς	καθώς	ADV
+HEB 8:5!9	v	verb	κεχρημάτισται	χρηματίζω	V-RPI-3S
+HEB 8:5!10	s	noun	Μωϋσῆς	Μωϋσῆς	N-NSM
+HEB 8:5!11	v	verb	μέλλων	μέλλω	V-PAP-NSM
+HEB 8:5!12	v	verb	ἐπιτελεῖν	ἐπιτελέω	V-PAN
+HEB 8:5!13		det	τὴν	ὁ	T-ASF
+HEB 8:5!14		noun	σκηνήν	σκηνή	N-ASF
+HEB 8:5!15	v	verb	Ὅρα	ὁράω	V-PAM-2S
+HEB 8:5!16		conj	γάρ	γάρ	CONJ
+HEB 8:5!17	v	verb	φησίν	φημί	V-PAI-3S
+HEB 8:5!18	v	verb	ποιήσεις	ποιέω	V-FAI-2S
+HEB 8:5!19	o	adj	πάντα	πᾶς	A-APN
+HEB 8:5!20		prep	κατὰ	κατά	PREP
+HEB 8:5!21		det	τὸν	ὁ	T-ASM
+HEB 8:5!22		noun	τύπον	τύπος	N-ASM
+HEB 8:5!23		det	τὸν	ὁ	T-ASM
+HEB 8:5!24	v	verb	δειχθέντα	δείκνυμι	V-APP-ASM
+HEB 8:5!25	io	pron	σοι	σύ	P-2DS
+HEB 8:5!26		prep	ἐν	ἐν	PREP
+HEB 8:5!27		det	τῷ	ὁ	T-DSN
+HEB 8:5!28		noun	ὄρει	ὄρος	N-DSN
+HEB 8:6!1	adv	adv	νυνὶ	νυνί	ADV
+HEB 8:6!2		conj	δὲ	δέ	CONJ
+HEB 8:6!3		adj	διαφορωτέρας	διάφορος	A-GSF-C
+HEB 8:6!4	v	verb	τέτυχεν	τυγχάνω	V-2RAI-3S
+HEB 8:6!5		noun	λειτουργίας	λειτουργία	N-GSF
+HEB 8:6!6	adv	pron	ὅσῳ	ὅσος	K-DSN
+HEB 8:6!7	adv	adv	καὶ	καί	CONJ
+HEB 8:6!8		adj	κρείττονός	κρείττων	A-GSF-C
+HEB 8:6!9	vc	verb	ἐστιν	εἰμί	V-PAI-3S
+HEB 8:6!10		noun	διαθήκης	διαθήκη	N-GSF
+HEB 8:6!11		noun	μεσίτης	μεσίτης	N-NSM
+HEB 8:6!12	s	pron	ἥτις	ὅστις	R-NSF
+HEB 8:6!13		prep	ἐπὶ	ἐπί	PREP
+HEB 8:6!14		adj	κρείττοσιν	κρείττων	A-DPF-C
+HEB 8:6!15		noun	ἐπαγγελίαις	ἐπαγγελία	N-DPF
+HEB 8:6!16	v	verb	νενομοθέτηται	νομοθετέομαι	V-RPI-3S
+HEB 8:7!1		conj	Εἰ	εἰ	COND
+HEB 8:7!2		conj	γὰρ	γάρ	CONJ
+HEB 8:7!3		det	ἡ	ὁ	T-NSF
+HEB 8:7!4		adj	πρώτη	πρῶτος	A-NSF-S
+HEB 8:7!5		pron	ἐκείνη	ἐκεῖνος	D-NSF
+HEB 8:7!6	vc	verb	ἦν	εἰμί	V-IAI-3S
+HEB 8:7!7	p	adj	ἄμεμπτος	ἄμεμπτος	A-NSF
+HEB 8:7!8	adv	adv	οὐκ	οὐ	PRT-N
+HEB 8:7!9		ptcl	ἂν	ἄν	PRT
+HEB 8:7!10		adj	δευτέρας	δεύτερος	A-GSF
+HEB 8:7!11	v	verb	ἐζητεῖτο	ζητέω	V-IPI-3S
+HEB 8:7!12		noun	τόπος	τόπος	N-NSM
+HEB 8:8!1	v	verb	μεμφόμενος	μέμφομαι	V-PNP-NSM
+HEB 8:8!2		conj	γὰρ	γάρ	CONJ
+HEB 8:8!3	o	pron	αὐτοὺς	ἑαυτοῦ	P-APM
+HEB 8:8!4	v	verb	λέγει	λέγω	V-PAI-3S
+HEB 8:8!5	aux	ptcl	Ἰδοὺ	ἰδού	V-2AMM-2S
+HEB 8:8!6	s	noun	ἡμέραι	ἡμέρα	N-NPF
+HEB 8:8!7	v	verb	ἔρχονται	ἔρχομαι	V-PNI-3P
+HEB 8:8!8	v	verb	λέγει	λέγω	V-PAI-3S
+HEB 8:8!9	s	noun	κύριος	κύριος	N-NSM
+HEB 8:8!10		conj	καὶ	καί	CONJ
+HEB 8:8!11	v	verb	συντελέσω	συντελέω	V-FAI-1S
+HEB 8:8!12		prep	ἐπὶ	ἐπί	PREP
+HEB 8:8!13		det	τὸν	ὁ	T-ASM
+HEB 8:8!14		noun	οἶκον	οἶκος	N-ASM
+HEB 8:8!15		noun	Ἰσραὴλ	Ἰσραήλ	N-PRI
+HEB 8:8!16		conj	καὶ	καί	CONJ
+HEB 8:8!17		prep	ἐπὶ	ἐπί	PREP
+HEB 8:8!18		det	τὸν	ὁ	T-ASM
+HEB 8:8!19		noun	οἶκον	οἶκος	N-ASM
+HEB 8:8!20		noun	Ἰούδα	Ἰούδας	N-GSM
+HEB 8:8!21		noun	διαθήκην	διαθήκη	N-ASF
+HEB 8:8!22		adj	καινήν	καινός	A-ASF
+HEB 8:9!1	adv	adv	οὐ	οὐ	PRT-N
+HEB 8:9!2		prep	κατὰ	κατά	PREP
+HEB 8:9!3		det	τὴν	ὁ	T-ASF
+HEB 8:9!4		noun	διαθήκην	διαθήκη	N-ASF
+HEB 8:9!5	o	pron	ἣν	ὅς	R-ASF
+HEB 8:9!6	v	verb	ἐποίησα	ποιέω	V-AAI-1S
+HEB 8:9!7		det	τοῖς	ὁ	T-DPM
+HEB 8:9!8		noun	πατράσιν	πατήρ	N-DPM
+HEB 8:9!9		pron	αὐτῶν	αὐτός	P-GPM
+HEB 8:9!10		prep	ἐν	ἐν	PREP
+HEB 8:9!11		noun	ἡμέρᾳ	ἡμέρα	N-DSF
+HEB 8:9!12	v	verb	ἐπιλαβομένου	ἐπιλαμβάνομαι	V-2ADP-GSM
+HEB 8:9!13	s	pron	μου	ἐγώ	P-1GS
+HEB 8:9!14		det	τῆς	ὁ	T-GSF
+HEB 8:9!15		noun	χειρὸς	χείρ	N-GSF
+HEB 8:9!16		pron	αὐτῶν	αὐτός	P-GPM
+HEB 8:9!17	v	verb	ἐξαγαγεῖν	ἐξάγω	V-2AAN
+HEB 8:9!18	o	pron	αὐτοὺς	ἑαυτοῦ	P-APM
+HEB 8:9!19		prep	ἐκ	ἐκ	PREP
+HEB 8:9!20		noun	γῆς	γῆ	N-GSF
+HEB 8:9!21		noun	Αἰγύπτου	Αἴγυπτος	N-GSF
+HEB 8:9!22		conj	ὅτι	ὅτι	CONJ
+HEB 8:9!23	s	pron	αὐτοὶ	αὐτός	P-NPM
+HEB 8:9!24	adv	adv	οὐκ	οὐ	PRT-N
+HEB 8:9!25	v	verb	ἐνέμειναν	ἐμμένω	V-AAI-3P
+HEB 8:9!26		prep	ἐν	ἐν	PREP
+HEB 8:9!27		det	τῇ	ὁ	T-DSF
+HEB 8:9!28		noun	διαθήκῃ	διαθήκη	N-DSF
+HEB 8:9!29		pron	μου	ἐγώ	P-1GS
+HEB 8:9!30	s	pron	κἀγὼ	κἀγώ	P-1NS-K
+HEB 8:9!31	v	verb	ἠμέλησα	ἀμελέω	V-AAI-1S
+HEB 8:9!32	o	pron	αὐτῶν	αὐτός	P-GPM
+HEB 8:9!33	v	verb	λέγει	λέγω	V-PAI-3S
+HEB 8:9!34	s	noun	κύριος	κύριος	N-NSM
+HEB 8:10!1		conj	ὅτι	ὅτι	CONJ
+HEB 8:10!2	p	pron	αὕτη	οὗτος	D-NSF
+HEB 8:10!3		det	ἡ	ὁ	T-NSF
+HEB 8:10!4		noun	διαθήκη	διαθήκη	N-NSF
+HEB 8:10!5	o	pron	ἣν	ὅς	R-ASF
+HEB 8:10!6	v	verb	διαθήσομαι	διατίθεμαι	V-FDI-1S
+HEB 8:10!7		det	τῷ	ὁ	T-DSM
+HEB 8:10!8		noun	οἴκῳ	οἶκος	N-DSM
+HEB 8:10!9		noun	Ἰσραὴλ	Ἰσραήλ	N-PRI
+HEB 8:10!10		prep	μετὰ	μετά	PREP
+HEB 8:10!11		det	τὰς	ὁ	T-APF
+HEB 8:10!12		noun	ἡμέρας	ἡμέρα	N-APF
+HEB 8:10!13		pron	ἐκείνας	ἐκεῖνος	D-APF
+HEB 8:10!14	v	verb	λέγει	λέγω	V-PAI-3S
+HEB 8:10!15	s	noun	κύριος	κύριος	N-NSM
+HEB 8:10!16	v	verb	διδοὺς	δίδωμι	V-PAP-NSM
+HEB 8:10!17		noun	νόμους	νόμος	N-APM
+HEB 8:10!18		pron	μου	ἐγώ	P-1GS
+HEB 8:10!19		prep	εἰς	εἰς	PREP
+HEB 8:10!20		det	τὴν	ὁ	T-ASF
+HEB 8:10!21		noun	διάνοιαν	διάνοια	N-ASF
+HEB 8:10!22		pron	αὐτῶν	αὐτός	P-GPM
+HEB 8:10!23		conj	καὶ	καί	CONJ
+HEB 8:10!24		prep	ἐπὶ	ἐπί	PREP
+HEB 8:10!25		noun	καρδίας	καρδία	N-APF
+HEB 8:10!26		pron	αὐτῶν	αὐτός	P-GPM
+HEB 8:10!27	v	verb	ἐπιγράψω	ἐπιγράφω	V-FAI-1S
+HEB 8:10!28	o	pron	αὐτούς	ἑαυτοῦ	P-APM
+HEB 8:10!29		conj	καὶ	καί	CONJ
+HEB 8:10!30	vc	verb	ἔσομαι	εἰμί	V-FDI-1S
+HEB 8:10!31	adv	pron	αὐτοῖς	αὐτός	P-DPM
+HEB 8:10!32		prep	εἰς	εἰς	PREP
+HEB 8:10!33		noun	θεόν	θεός	N-ASM
+HEB 8:10!34		conj	καὶ	καί	CONJ
+HEB 8:10!35	s	pron	αὐτοὶ	αὐτός	P-NPM
+HEB 8:10!36	vc	verb	ἔσονταί	εἰμί	V-FDI-3P
+HEB 8:10!37	adv	pron	μοι	ἐγώ	P-1DS
+HEB 8:10!38		prep	εἰς	εἰς	PREP
+HEB 8:10!39		noun	λαόν	λαός	N-ASM
+HEB 8:11!1		conj	καὶ	καί	CONJ
+HEB 8:11!2		adv	οὐ	οὐ	PRT-N
+HEB 8:11!3		adv	μὴ	μή	PRT-N
+HEB 8:11!4	v	verb	διδάξωσιν	διδάσκω	V-AAS-3P
+HEB 8:11!5	adv	adj	ἕκαστος	ἕκαστος	A-NSM
+HEB 8:11!6		det	τὸν	ὁ	T-ASM
+HEB 8:11!7		noun	πολίτην	πολίτης	N-ASM
+HEB 8:11!8		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 8:11!9		conj	καὶ	καί	CONJ
+HEB 8:11!10	adv	adj	ἕκαστος	ἕκαστος	A-NSM
+HEB 8:11!11		det	τὸν	ὁ	T-ASM
+HEB 8:11!12		noun	ἀδελφὸν	ἀδελφός	N-ASM
+HEB 8:11!13		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 8:11!14	v	verb	λέγων	λέγω	V-PAP-NSM
+HEB 8:11!15	v	verb	Γνῶθι	γινώσκω	V-2AAM-2S
+HEB 8:11!16		det	τὸν	ὁ	T-ASM
+HEB 8:11!17		noun	κύριον	κύριος	N-ASM
+HEB 8:11!18		conj	ὅτι	ὅτι	CONJ
+HEB 8:11!19	s	adj	πάντες	πᾶς	A-NPM
+HEB 8:11!20	v	verb	εἰδήσουσίν	οἶδα	V-FAI-3P
+HEB 8:11!21	o	pron	με	ἐγώ	P-1AS
+HEB 8:11!22		prep	ἀπὸ	ἀπό	PREP
+HEB 8:11!23		adj	μικροῦ	μικρός	A-GSM
+HEB 8:11!24		prep	ἕως	ἕως	ADV
+HEB 8:11!25		adj	μεγάλου	μέγας	A-GSM
+HEB 8:11!26		pron	αὐτῶν	αὐτός	P-GPM
+HEB 8:12!1		conj	ὅτι	ὅτι	CONJ
+HEB 8:12!2	p	adj	ἵλεως	ἵλεως	A-NSM-ATT
+HEB 8:12!3	vc	verb	ἔσομαι	εἰμί	V-FDI-1S
+HEB 8:12!4		det	ταῖς	ὁ	T-DPF
+HEB 8:12!5		noun	ἀδικίαις	ἀδικία	N-DPF
+HEB 8:12!6		pron	αὐτῶν	αὐτός	P-GPM
+HEB 8:12!7		conj	καὶ	καί	CONJ
+HEB 8:12!8		det	τῶν	ὁ	T-GPF
+HEB 8:12!9		noun	ἁμαρτιῶν	ἁμαρτία	N-GPF
+HEB 8:12!10		pron	αὐτῶν	αὐτός	P-GPM
+HEB 8:12!11		adv	οὐ	οὐ	PRT-N
+HEB 8:12!12		adv	μὴ	μή	PRT-N
+HEB 8:12!13	v	verb	μνησθῶ	μιμνῄσκομαι	V-APS-1S
+HEB 8:12!14	adv	adv	ἔτι	ἔτι	ADV
+HEB 8:13!1		prep	ἐν	ἐν	PREP
+HEB 8:13!2		det	τῷ	ὁ	T-DSN
+HEB 8:13!3	v	verb	λέγειν	λέγω	V-PAN
+HEB 8:13!4	o	adj	Καινὴν	καινός	A-ASF
+HEB 8:13!5	v	verb	πεπαλαίωκεν	παλαιόω	V-RAI-3S
+HEB 8:13!6		det	τὴν	ὁ	T-ASF
+HEB 8:13!7		adj	πρώτην	πρῶτος	A-ASF-S
+HEB 8:13!8		det	τὸ	ὁ	T-NSN
+HEB 8:13!9		conj	δὲ	δέ	CONJ
+HEB 8:13!10	v	verb	παλαιούμενον	παλαιόω	V-PPP-NSN
+HEB 8:13!11		conj	καὶ	καί	CONJ
+HEB 8:13!12	v	verb	γηράσκον	γηράσκω	V-PAP-NSN
+HEB 8:13!13		prep	ἐγγὺς	ἐγγύς	ADV
+HEB 8:13!14		noun	ἀφανισμοῦ	ἀφανισμός	N-GSM
+HEB 9:1!1	v	verb	Εἶχε	ἔχω	V-IAI-3S
+HEB 9:1!2		conj	μὲν	μέν	PRT
+HEB 9:1!3		conj	οὖν	οὖν	CONJ
+HEB 9:1!4		det	ἡ	ὁ	T-NSF
+HEB 9:1!5		adj	πρώτη	πρῶτος	A-NSF-S
+HEB 9:1!6		noun	δικαιώματα	δικαίωμα	N-APN
+HEB 9:1!7		noun	λατρείας	λατρεία	N-GSF
+HEB 9:1!8		det	τό	ὁ	T-ASN
+HEB 9:1!9		conj	τε	τέ	PRT
+HEB 9:1!10		adj	ἅγιον	ἅγιος	A-ASN
+HEB 9:1!11		adj	κοσμικόν	κοσμικός	A-ASN
+HEB 9:2!1		noun	σκηνὴ	σκηνή	N-NSF
+HEB 9:2!2		conj	γὰρ	γάρ	CONJ
+HEB 9:2!3	v	verb	κατεσκευάσθη	κατασκευάζω	V-API-3S
+HEB 9:2!4		det	ἡ	ὁ	T-NSF
+HEB 9:2!5		adj	πρώτη	πρῶτος	A-NSF-S
+HEB 9:2!6		prep	ἐν	ἐν	PREP
+HEB 9:2!7		pron	ᾗ	ὅς	R-DSF
+HEB 9:2!8		det	ἥ	ὁ	T-NSF
+HEB 9:2!9		conj	τε	τέ	PRT
+HEB 9:2!10		noun	λυχνία	λυχνία	N-NSF
+HEB 9:2!11		conj	καὶ	καί	CONJ
+HEB 9:2!12		det	ἡ	ὁ	T-NSF
+HEB 9:2!13		noun	τράπεζα	τράπεζα	N-NSF
+HEB 9:2!14		conj	καὶ	καί	CONJ
+HEB 9:2!15		det	ἡ	ὁ	T-NSF
+HEB 9:2!16		noun	πρόθεσις	πρόθεσις	N-NSF
+HEB 9:2!17		det	τῶν	ὁ	T-GPM
+HEB 9:2!18		noun	ἄρτων	ἄρτος	N-GPM
+HEB 9:2!19	s	pron	ἥτις	ὅστις	R-NSF
+HEB 9:2!20	vc	verb	λέγεται	λέγω	V-PPI-3S
+HEB 9:2!21	p	adj	Ἅγια	ἅγιος	A-NPN
+HEB 9:3!1		prep	μετὰ	μετά	PREP
+HEB 9:3!2		conj	δὲ	δέ	CONJ
+HEB 9:3!3		det	τὸ	ὁ	T-ASN
+HEB 9:3!4		adj	δεύτερον	δεύτερος	A-ASN
+HEB 9:3!5		noun	καταπέτασμα	καταπέτασμα	N-ASN
+HEB 9:3!6		noun	σκηνὴ	σκηνή	N-NSF
+HEB 9:3!7		det	ἡ	ὁ	T-NSF
+HEB 9:3!8	vc	verb	λεγομένη	λέγω	V-PPP-NSF
+HEB 9:3!9		adj	Ἅγια	ἅγιος	A-NPN
+HEB 9:3!10		adj	Ἁγίων	ἅγιος	A-GPN
+HEB 9:4!1		adj	χρυσοῦν	χρυσοῦς	A-ASN
+HEB 9:4!2	v	verb	ἔχουσα	ἔχω	V-PAP-NSF
+HEB 9:4!3		noun	θυμιατήριον	θυμιατήριον	N-ASN
+HEB 9:4!4		conj	καὶ	καί	CONJ
+HEB 9:4!5		det	τὴν	ὁ	T-ASF
+HEB 9:4!6		noun	κιβωτὸν	κιβωτός	N-ASF
+HEB 9:4!7		det	τῆς	ὁ	T-GSF
+HEB 9:4!8		noun	διαθήκης	διαθήκη	N-GSF
+HEB 9:4!9	v	verb	περικεκαλυμμένην	περικαλύπτω	V-RPP-ASF
+HEB 9:4!10	adv	adv	πάντοθεν	πάντοθεν	ADV
+HEB 9:4!11	adv	noun	χρυσίῳ	χρυσίον	N-DSN
+HEB 9:4!12		prep	ἐν	ἐν	PREP
+HEB 9:4!13		pron	ᾗ	ὅς	R-DSF
+HEB 9:4!14		noun	στάμνος	στάμνος	N-NSF
+HEB 9:4!15		adj	χρυσῆ	χρυσοῦς	A-NSF
+HEB 9:4!16	v	verb	ἔχουσα	ἔχω	V-PAP-NSF
+HEB 9:4!17		det	τὸ	ὁ	T-ASN
+HEB 9:4!18		noun	μάννα	μάννα	HEB
+HEB 9:4!19		conj	καὶ	καί	CONJ
+HEB 9:4!20		det	ἡ	ὁ	T-NSF
+HEB 9:4!21		noun	ῥάβδος	ῥάβδος	N-NSF
+HEB 9:4!22		noun	Ἀαρὼν	Ἀαρών	N-PRI
+HEB 9:4!23		det	ἡ	ὁ	T-NSF
+HEB 9:4!24	v	verb	βλαστήσασα	βλαστάνω	V-AAP-NSF
+HEB 9:4!25		conj	καὶ	καί	CONJ
+HEB 9:4!26		det	αἱ	ὁ	T-NPF
+HEB 9:4!27		noun	πλάκες	πλάξ	N-NPF
+HEB 9:4!28		det	τῆς	ὁ	T-GSF
+HEB 9:4!29		noun	διαθήκης	διαθήκη	N-GSF
+HEB 9:5!1		prep	ὑπεράνω	ὑπεράνω	ADV
+HEB 9:5!2		conj	δὲ	δέ	CONJ
+HEB 9:5!3		pron	αὐτῆς	αὐτός	P-GSF
+HEB 9:5!4		noun	Χερουβὶν	Χερούβ	N-PRI
+HEB 9:5!5		noun	δόξης	δόξα	N-GSF
+HEB 9:5!6	v	verb	κατασκιάζοντα	κατασκιάζω	V-PAP-NPN
+HEB 9:5!7		det	τὸ	ὁ	T-ASN
+HEB 9:5!8		adj	ἱλαστήριον	ἱλαστήριον	N-ASN
+HEB 9:5!9		prep	περὶ	περί	PREP
+HEB 9:5!10		pron	ὧν	ὅς	R-GPN
+HEB 9:5!11	adv	adv	οὐκ	οὐ	PRT-N
+HEB 9:5!12	vc	verb	ἔστιν	εἰμί	V-PAI-3S
+HEB 9:5!13	p	adv	νῦν	νῦν	ADV
+HEB 9:5!14	v	verb	λέγειν	λέγω	V-PAN
+HEB 9:5!15		prep	κατὰ	κατά	PREP
+HEB 9:5!16		noun	μέρος	μέρος	N-ASN
+HEB 9:6!1	s	pron	Τούτων	οὗτος	D-GPM
+HEB 9:6!2		conj	δὲ	δέ	CONJ
+HEB 9:6!3	adv	adv	οὕτως	οὕτω(ς)	ADV
+HEB 9:6!4	v	verb	κατεσκευασμένων	κατασκευάζω	V-RPP-GPM
+HEB 9:6!5		prep	εἰς	εἰς	PREP
+HEB 9:6!6		conj	μὲν	μέν	PRT
+HEB 9:6!7		det	τὴν	ὁ	T-ASF
+HEB 9:6!8		adj	πρώτην	πρῶτος	A-ASF-S
+HEB 9:6!9		noun	σκηνὴν	σκηνή	N-ASF
+HEB 9:6!10		prep	διὰ	διά	PREP
+HEB 9:6!11		adj	παντὸς	πᾶς	A-GSN
+HEB 9:6!12	v	verb	εἰσίασιν	εἴσειμι	V-PAI-3P
+HEB 9:6!13		det	οἱ	ὁ	T-NPM
+HEB 9:6!14		noun	ἱερεῖς	ἱερεύς	N-NPM
+HEB 9:6!15		det	τὰς	ὁ	T-APF
+HEB 9:6!16		noun	λατρείας	λατρεία	N-APF
+HEB 9:6!17	v	verb	ἐπιτελοῦντες	ἐπιτελέω	V-PAP-NPM
+HEB 9:7!1		prep	εἰς	εἰς	PREP
+HEB 9:7!2		conj	δὲ	δέ	CONJ
+HEB 9:7!3		det	τὴν	ὁ	T-ASF
+HEB 9:7!4		adj	δευτέραν	δεύτερος	A-ASF
+HEB 9:7!5		adv	ἅπαξ	ἅπαξ	ADV
+HEB 9:7!6		det	τοῦ	ὁ	T-GSM
+HEB 9:7!7		noun	ἐνιαυτοῦ	ἐνιαυτός	N-GSM
+HEB 9:7!8	adv	adj	μόνος	μόνος	A-NSM
+HEB 9:7!9		det	ὁ	ὁ	T-NSM
+HEB 9:7!10		noun	ἀρχιερεύς	ἀρχιερεύς	N-NSM
+HEB 9:7!11		adv	οὐ	οὐ	PRT-N
+HEB 9:7!12		prep	χωρὶς	χωρίς	ADV
+HEB 9:7!13		noun	αἵματος	αἷμα	N-GSN
+HEB 9:7!14	o	pron	ὃ	ὅς	R-ASN
+HEB 9:7!15	v	verb	προσφέρει	προσφέρω	V-PAI-3S
+HEB 9:7!16		prep	ὑπὲρ	ὑπέρ	PREP
+HEB 9:7!17		pron	ἑαυτοῦ	ἑαυτοῦ	F-3GSM
+HEB 9:7!18		conj	καὶ	καί	CONJ
+HEB 9:7!19		det	τῶν	ὁ	T-GPN
+HEB 9:7!20		det	τοῦ	ὁ	T-GSM
+HEB 9:7!21		noun	λαοῦ	λαός	N-GSM
+HEB 9:7!22		noun	ἀγνοημάτων	ἀγνόημα	N-GPN
+HEB 9:8!1	o	pron	τοῦτο	οὗτος	D-ASN
+HEB 9:8!2	v	verb	δηλοῦντος	δηλόω	V-PAP-GSN
+HEB 9:8!3		det	τοῦ	ὁ	T-GSN
+HEB 9:8!4		noun	πνεύματος	πνεῦμα	N-GSN
+HEB 9:8!5		det	τοῦ	ὁ	T-GSN
+HEB 9:8!6		adj	ἁγίου	ἅγιος	A-GSN
+HEB 9:8!7	adv	adv	μήπω	μήπω	ADV-N
+HEB 9:8!8	v	verb	πεφανερῶσθαι	φανερόω	V-RPN
+HEB 9:8!9		det	τὴν	ὁ	T-ASF
+HEB 9:8!10		det	τῶν	ὁ	T-GPN
+HEB 9:8!11		adj	ἁγίων	ἅγιος	A-GPN
+HEB 9:8!12		noun	ὁδὸν	ὁδός	N-ASF
+HEB 9:8!13	adv	adv	ἔτι	ἔτι	ADV
+HEB 9:8!14		det	τῆς	ὁ	T-GSF
+HEB 9:8!15		adj	πρώτης	πρῶτος	A-GSF-S
+HEB 9:8!16		noun	σκηνῆς	σκηνή	N-GSF
+HEB 9:8!17	v	verb	ἐχούσης	ἔχω	V-PAP-GSF
+HEB 9:8!18	o	noun	στάσιν	στάσις	N-ASF
+HEB 9:9!1	s	pron	ἥτις	ὅστις	R-NSF
+HEB 9:9!2	p	noun	παραβολὴ	παραβολή	N-NSF
+HEB 9:9!3		prep	εἰς	εἰς	PREP
+HEB 9:9!4		det	τὸν	ὁ	T-ASM
+HEB 9:9!5		noun	καιρὸν	καιρός	N-ASM
+HEB 9:9!6		det	τὸν	ὁ	T-ASM
+HEB 9:9!7	v	verb	ἐνεστηκότα	ἐνίστημι	V-RAP-ASM
+HEB 9:9!8		prep	καθ	κατά	PREP
+HEB 9:9!9		pron	ἣν	ὅς	R-ASF
+HEB 9:9!10		noun	δῶρά	δῶρον	N-NPN
+HEB 9:9!11		conj	τε	τέ	PRT
+HEB 9:9!12		conj	καὶ	καί	CONJ
+HEB 9:9!13		noun	θυσίαι	θυσία	N-NPF
+HEB 9:9!14	v	verb	προσφέρονται	προσφέρω	V-PPI-3P
+HEB 9:9!15	adv	adv	μὴ	μή	PRT-N
+HEB 9:9!16	v	verb	δυνάμεναι	δύναμαι	V-PNP-NPF
+HEB 9:9!17		prep	κατὰ	κατά	PREP
+HEB 9:9!18		noun	συνείδησιν	συνείδησις	N-ASF
+HEB 9:9!19	v	verb	τελειῶσαι	τελειόω	V-AAN
+HEB 9:9!20		det	τὸν	ὁ	T-ASM
+HEB 9:9!21	v	verb	λατρεύοντα	λατρεύω	V-PAP-ASM
+HEB 9:10!1	adv	adj	μόνον	μόνος	ADV
+HEB 9:10!2		prep	ἐπὶ	ἐπί	PREP
+HEB 9:10!3		noun	βρώμασιν	βρῶμα	N-DPN
+HEB 9:10!4		conj	καὶ	καί	CONJ
+HEB 9:10!5		noun	πόμασιν	πόμα	N-DPN
+HEB 9:10!6		conj	καὶ	καί	CONJ
+HEB 9:10!7		adj	διαφόροις	διάφορος	A-DPM
+HEB 9:10!8		noun	βαπτισμοῖς	βαπτισμός	N-DPM
+HEB 9:10!9		noun	δικαιώματα	δικαίωμα	N-NPN
+HEB 9:10!10		noun	σαρκὸς	σάρξ	N-GSF
+HEB 9:10!11		prep	μέχρι	μέχρι(ς)	ADV
+HEB 9:10!12		noun	καιροῦ	καιρός	N-GSM
+HEB 9:10!13		noun	διορθώσεως	διόρθωσις	N-GSF
+HEB 9:10!14	v	verb	ἐπικείμενα	ἐπίκειμαι	V-PNP-NPN
+HEB 9:11!1		noun	Χριστὸς	Χριστός	N-NSM
+HEB 9:11!2		conj	δὲ	δέ	CONJ
+HEB 9:11!3	v	verb	παραγενόμενος	παραγίνομαι	V-2ADP-NSM
+HEB 9:11!4		noun	ἀρχιερεὺς	ἀρχιερεύς	N-NSM
+HEB 9:11!5		det	τῶν	ὁ	T-GPN
+HEB 9:11!6	v	verb	γενομένων	γίνομαι	V-2ADP-GPN
+HEB 9:11!7		adj	ἀγαθῶν	ἀγαθός	A-GPN
+HEB 9:11!8		prep	διὰ	διά	PREP
+HEB 9:11!9		det	τῆς	ὁ	T-GSF
+HEB 9:11!10		adj	μείζονος	μέγας	A-GSF-C
+HEB 9:11!11		conj	καὶ	καί	CONJ
+HEB 9:11!12		adj	τελειοτέρας	τέλειος	A-GSF-C
+HEB 9:11!13		noun	σκηνῆς	σκηνή	N-GSF
+HEB 9:11!14		adv	οὐ	οὐ	PRT-N
+HEB 9:11!15		adj	χειροποιήτου	χειροποίητος	A-GSF
+HEB 9:11!16	s	pron	τοῦτ	οὗτος	D-NSN
+HEB 9:11!17	vc	verb	ἔστιν	εἰμί	V-PAI-3S
+HEB 9:11!18	adv	adv	οὐ	οὐ	PRT-N
+HEB 9:11!19		pron	ταύτης	οὗτος	D-GSF
+HEB 9:11!20		det	τῆς	ὁ	T-GSF
+HEB 9:11!21		noun	κτίσεως	κτίσις	N-GSF
+HEB 9:12!1		conj	οὐδὲ	οὐδέ	CONJ-N
+HEB 9:12!2		prep	δι	διά	PREP
+HEB 9:12!3		noun	αἵματος	αἷμα	N-GSN
+HEB 9:12!4		noun	τράγων	τράγος	N-GPM
+HEB 9:12!5		conj	καὶ	καί	CONJ
+HEB 9:12!6		noun	μόσχων	μόσχος	N-GPM
+HEB 9:12!7		prep	διὰ	διά	PREP
+HEB 9:12!8		conj	δὲ	δέ	CONJ
+HEB 9:12!9		det	τοῦ	ὁ	T-GSN
+HEB 9:12!10		adj	ἰδίου	ἴδιος	A-GSN
+HEB 9:12!11		noun	αἵματος	αἷμα	N-GSN
+HEB 9:12!12	v	verb	εἰσῆλθεν	εἰσέρχομαι	V-2AAI-3S
+HEB 9:12!13	adv	adv	ἐφάπαξ	ἐφάπαξ	ADV
+HEB 9:12!14		prep	εἰς	εἰς	PREP
+HEB 9:12!15		det	τὰ	ὁ	T-APN
+HEB 9:12!16		adj	ἅγια	ἅγιος	A-APN
+HEB 9:12!17		adj	αἰωνίαν	αἰώνιος	A-ASF
+HEB 9:12!18		noun	λύτρωσιν	λύτρωσις	N-ASF
+HEB 9:12!19	v	verb	εὑράμενος	εὑρίσκω	V-2AMP-NSM
+HEB 9:13!1		conj	εἰ	εἰ	COND
+HEB 9:13!2		conj	γὰρ	γάρ	CONJ
+HEB 9:13!3		det	τὸ	ὁ	T-NSN
+HEB 9:13!4		noun	αἷμα	αἷμα	N-NSN
+HEB 9:13!5		noun	τράγων	τράγος	N-GPM
+HEB 9:13!6		conj	καὶ	καί	CONJ
+HEB 9:13!7		noun	ταύρων	ταῦρος	N-GPM
+HEB 9:13!8		conj	καὶ	καί	CONJ
+HEB 9:13!9		noun	σποδὸς	σποδός	N-NSF
+HEB 9:13!10		noun	δαμάλεως	δάμαλις	N-GSF
+HEB 9:13!11	v	verb	ῥαντίζουσα	ῥαντίζω	V-PAP-NSF
+HEB 9:13!12		det	τοὺς	ὁ	T-APM
+HEB 9:13!13	v	verb	κεκοινωμένους	κοινόω	V-RPP-APM
+HEB 9:13!14	v	verb	ἁγιάζει	ἁγιάζω	V-PAI-3S
+HEB 9:13!15		prep	πρὸς	πρός	PREP
+HEB 9:13!16		det	τὴν	ὁ	T-ASF
+HEB 9:13!17		det	τῆς	ὁ	T-GSF
+HEB 9:13!18		noun	σαρκὸς	σάρξ	N-GSF
+HEB 9:13!19		noun	καθαρότητα	καθαρότης	N-ASF
+HEB 9:14!1		pron	πόσῳ	πόσος	Q-DSN
+HEB 9:14!2		adv	μᾶλλον	μᾶλλον	ADV
+HEB 9:14!3		det	τὸ	ὁ	T-NSN
+HEB 9:14!4		noun	αἷμα	αἷμα	N-NSN
+HEB 9:14!5		det	τοῦ	ὁ	T-GSM
+HEB 9:14!6		noun	Χριστοῦ	Χριστός	N-GSM
+HEB 9:14!7	s	pron	ὃς	ὅς	R-NSM
+HEB 9:14!8		prep	διὰ	διά	PREP
+HEB 9:14!9		noun	πνεύματος	πνεῦμα	N-GSN
+HEB 9:14!10		adj	αἰωνίου	αἰώνιος	A-GSN
+HEB 9:14!11	o	pron	ἑαυτὸν	ἑαυτοῦ	F-3ASM
+HEB 9:14!12	v	verb	προσήνεγκεν	προσφέρω	V-AAI-3S
+HEB 9:14!13	o2	adj	ἄμωμον	ἄμωμος	A-ASM
+HEB 9:14!14		det	τῷ	ὁ	T-DSM
+HEB 9:14!15		noun	θεῷ	θεός	N-DSM
+HEB 9:14!16	v	verb	καθαριεῖ	καθαρίζω	V-FAI-3S-ATT
+HEB 9:14!17		det	τὴν	ὁ	T-ASF
+HEB 9:14!18		noun	συνείδησιν	συνείδησις	N-ASF
+HEB 9:14!19		pron	ἡμῶν	ἐγώ	P-1GP
+HEB 9:14!20		prep	ἀπὸ	ἀπό	PREP
+HEB 9:14!21		adj	νεκρῶν	νεκρός	A-GPN
+HEB 9:14!22		noun	ἔργων	ἔργον	N-GPN
+HEB 9:14!23		prep	εἰς	εἰς	PREP
+HEB 9:14!24		det	τὸ	ὁ	T-ASN
+HEB 9:14!25	v	verb	λατρεύειν	λατρεύω	V-PAN
+HEB 9:14!26		noun	θεῷ	θεός	N-DSM
+HEB 9:14!27	v	verb	ζῶντι	ζάω	V-PAP-DSM
+HEB 9:15!1		conj	Καὶ	καί	CONJ
+HEB 9:15!2		prep	διὰ	διά	PREP
+HEB 9:15!3		pron	τοῦτο	οὗτος	D-ASN
+HEB 9:15!4		noun	διαθήκης	διαθήκη	N-GSF
+HEB 9:15!5		adj	καινῆς	καινός	A-GSF
+HEB 9:15!6		noun	μεσίτης	μεσίτης	N-NSM
+HEB 9:15!7	vc	verb	ἐστίν	εἰμί	V-PAI-3S
+HEB 9:15!8		conj	ὅπως	ὅπως	ADV
+HEB 9:15!9	s	noun	θανάτου	θάνατος	N-GSM
+HEB 9:15!10	v	verb	γενομένου	γίνομαι	V-2ADP-GSM
+HEB 9:15!11		prep	εἰς	εἰς	PREP
+HEB 9:15!12		noun	ἀπολύτρωσιν	ἀπολύτρωσις	N-ASF
+HEB 9:15!13		det	τῶν	ὁ	T-GPF
+HEB 9:15!14		prep	ἐπὶ	ἐπί	PREP
+HEB 9:15!15		det	τῇ	ὁ	T-DSF
+HEB 9:15!16		adj	πρώτῃ	πρῶτος	A-DSF-S
+HEB 9:15!17		noun	διαθήκῃ	διαθήκη	N-DSF
+HEB 9:15!18		noun	παραβάσεων	παράβασις	N-GPF
+HEB 9:15!19		det	τὴν	ὁ	T-ASF
+HEB 9:15!20		noun	ἐπαγγελίαν	ἐπαγγελία	N-ASF
+HEB 9:15!21	v	verb	λάβωσιν	λαμβάνω	V-2AAS-3P
+HEB 9:15!22		det	οἱ	ὁ	T-NPM
+HEB 9:15!23	v	verb	κεκλημένοι	καλέω	V-RPP-NPM
+HEB 9:15!24		det	τῆς	ὁ	T-GSF
+HEB 9:15!25		adj	αἰωνίου	αἰώνιος	A-GSF
+HEB 9:15!26		noun	κληρονομίας	κληρονομία	N-GSF
+HEB 9:16!1	p	conj	ὅπου	ὅπου	ADV
+HEB 9:16!2		conj	γὰρ	γάρ	CONJ
+HEB 9:16!3	s	noun	διαθήκη	διαθήκη	N-NSF
+HEB 9:16!4		noun	θάνατον	θάνατος	N-ASM
+HEB 9:16!5	p	noun	ἀνάγκη	ἀνάγκη	N-NSF
+HEB 9:16!6	v	verb	φέρεσθαι	φέρω	V-PPN
+HEB 9:16!7		det	τοῦ	ὁ	T-GSM
+HEB 9:16!8	v	verb	διαθεμένου	διατίθεμαι	V-2AMP-GSM
+HEB 9:17!1	s	noun	διαθήκη	διαθήκη	N-NSF
+HEB 9:17!2		conj	γὰρ	γάρ	CONJ
+HEB 9:17!3		prep	ἐπὶ	ἐπί	PREP
+HEB 9:17!4		adj	νεκροῖς	νεκρός	A-DPM
+HEB 9:17!5	p	adj	βεβαία	βέβαιος	A-NSF
+HEB 9:17!6		conj	ἐπεὶ	ἐπεί	CONJ
+HEB 9:17!7		adv	μήποτε	μήποτε	ADV
+HEB 9:17!8	v	verb	ἰσχύει	ἰσχύω	V-PAI-3S
+HEB 9:17!9		conj	ὅτε	ὅτε	ADV
+HEB 9:17!10	v	verb	ζῇ	ζάω	V-PAI-3S
+HEB 9:17!11		det	ὁ	ὁ	T-NSM
+HEB 9:17!12	v	verb	διαθέμενος	διατίθεμαι	V-2AMP-NSM
+HEB 9:18!1		conj	ὅθεν	ὅθεν	ADV
+HEB 9:18!2	adv	adv	οὐδὲ	οὐδέ	CONJ-N
+HEB 9:18!3		det	ἡ	ὁ	T-NSF
+HEB 9:18!4		adj	πρώτη	πρῶτος	A-NSF-S
+HEB 9:18!5		prep	χωρὶς	χωρίς	ADV
+HEB 9:18!6		noun	αἵματος	αἷμα	N-GSN
+HEB 9:18!7	v	verb	ἐγκεκαίνισται	ἐγκαινίζω	V-RPI-3S
+HEB 9:19!1	v	verb	λαληθείσης	λαλέω	V-APP-GSF
+HEB 9:19!2		conj	γὰρ	γάρ	CONJ
+HEB 9:19!3		adj	πάσης	πᾶς	A-GSF
+HEB 9:19!4		noun	ἐντολῆς	ἐντολή	N-GSF
+HEB 9:19!5		prep	κατὰ	κατά	PREP
+HEB 9:19!6		det	τὸν	ὁ	T-ASM
+HEB 9:19!7		noun	νόμον	νόμος	N-ASM
+HEB 9:19!8		prep	ὑπὸ	ὑπό	PREP
+HEB 9:19!9		noun	Μωϋσέως	Μωϋσῆς	N-GSM
+HEB 9:19!10		adj	παντὶ	πᾶς	A-DSM
+HEB 9:19!11		det	τῷ	ὁ	T-DSM
+HEB 9:19!12		noun	λαῷ	λαός	N-DSM
+HEB 9:19!13	v	verb	λαβὼν	λαμβάνω	V-2AAP-NSM
+HEB 9:19!14		det	τὸ	ὁ	T-ASN
+HEB 9:19!15		noun	αἷμα	αἷμα	N-ASN
+HEB 9:19!16		det	τῶν	ὁ	T-GPM
+HEB 9:19!17		noun	μόσχων	μόσχος	N-GPM
+HEB 9:19!18		prep	μετὰ	μετά	PREP
+HEB 9:19!19		noun	ὕδατος	ὕδωρ	N-GSN
+HEB 9:19!20		conj	καὶ	καί	CONJ
+HEB 9:19!21		noun	ἐρίου	ἔριον	N-GSN
+HEB 9:19!22		adj	κοκκίνου	κόκκινος	A-GSN
+HEB 9:19!23		conj	καὶ	καί	CONJ
+HEB 9:19!24		noun	ὑσσώπου	ὕσσωπος	N-GSM
+HEB 9:19!25		pron	αὐτό	αὐτός	P-ASN
+HEB 9:19!26		conj	τε	τέ	PRT
+HEB 9:19!27		det	τὸ	ὁ	T-ASN
+HEB 9:19!28		noun	βιβλίον	βιβλίον	N-ASN
+HEB 9:19!29		conj	καὶ	καί	CONJ
+HEB 9:19!30		adj	πάντα	πᾶς	A-ASM
+HEB 9:19!31		det	τὸν	ὁ	T-ASM
+HEB 9:19!32		noun	λαὸν	λαός	N-ASM
+HEB 9:19!33	v	verb	ἐράντισεν	ῥαντίζω	V-AAI-3S
+HEB 9:20!1	v	verb	λέγων	λέγω	V-PAP-NSM
+HEB 9:20!2	s	pron	Τοῦτο	οὗτος	D-NSN
+HEB 9:20!3		det	τὸ	ὁ	T-NSN
+HEB 9:20!4		noun	αἷμα	αἷμα	N-NSN
+HEB 9:20!5		det	τῆς	ὁ	T-GSF
+HEB 9:20!6		noun	διαθήκης	διαθήκη	N-GSF
+HEB 9:20!7	o	pron	ἧς	ὅς	R-GSF
+HEB 9:20!8	v	verb	ἐνετείλατο	ἐντέλλομαι	V-ADI-3S
+HEB 9:20!9		prep	πρὸς	πρός	PREP
+HEB 9:20!10		pron	ὑμᾶς	σύ	P-2AP
+HEB 9:20!11		det	ὁ	ὁ	T-NSM
+HEB 9:20!12		noun	θεός	θεός	N-NSM
+HEB 9:21!1		conj	καὶ	καί	CONJ
+HEB 9:21!2		det	τὴν	ὁ	T-ASF
+HEB 9:21!3		noun	σκηνὴν	σκηνή	N-ASF
+HEB 9:21!4		conj	δὲ	δέ	CONJ
+HEB 9:21!5		conj	καὶ	καί	CONJ
+HEB 9:21!6		adj	πάντα	πᾶς	A-APN
+HEB 9:21!7		det	τὰ	ὁ	T-APN
+HEB 9:21!8		noun	σκεύη	σκεῦος	N-APN
+HEB 9:21!9		det	τῆς	ὁ	T-GSF
+HEB 9:21!10		noun	λειτουργίας	λειτουργία	N-GSF
+HEB 9:21!11		det	τῷ	ὁ	T-DSN
+HEB 9:21!12		noun	αἵματι	αἷμα	N-DSN
+HEB 9:21!13	adv	adv	ὁμοίως	ὁμοίως	ADV
+HEB 9:21!14	v	verb	ἐράντισεν	ῥαντίζω	V-AAI-3S
+HEB 9:22!1		conj	καὶ	καί	CONJ
+HEB 9:22!2	adv	adv	σχεδὸν	σχεδόν	ADV
+HEB 9:22!3		prep	ἐν	ἐν	PREP
+HEB 9:22!4		noun	αἵματι	αἷμα	N-DSN
+HEB 9:22!5	s	adj	πάντα	πᾶς	A-NPN
+HEB 9:22!6	v	verb	καθαρίζεται	καθαρίζω	V-PPI-3S
+HEB 9:22!7		prep	κατὰ	κατά	PREP
+HEB 9:22!8		det	τὸν	ὁ	T-ASM
+HEB 9:22!9		noun	νόμον	νόμος	N-ASM
+HEB 9:22!10		conj	καὶ	καί	CONJ
+HEB 9:22!11		prep	χωρὶς	χωρίς	ADV
+HEB 9:22!12		noun	αἱματεκχυσίας	αἱματεκχυσία	N-GSF
+HEB 9:22!13	adv	adv	οὐ	οὐ	PRT-N
+HEB 9:22!14	v	verb	γίνεται	γίνομαι	V-PNI-3S
+HEB 9:22!15	s	noun	ἄφεσις	ἄφεσις	N-NSF
+HEB 9:23!1	p	noun	Ἀνάγκη	ἀνάγκη	N-NSF
+HEB 9:23!2		conj	οὖν	οὖν	CONJ
+HEB 9:23!3		det	τὰ	ὁ	T-APN
+HEB 9:23!4		conj	μὲν	μέν	PRT
+HEB 9:23!5		noun	ὑποδείγματα	ὑπόδειγμα	N-APN
+HEB 9:23!6		det	τῶν	ὁ	T-GPN
+HEB 9:23!7		prep	ἐν	ἐν	PREP
+HEB 9:23!8		det	τοῖς	ὁ	T-DPM
+HEB 9:23!9		noun	οὐρανοῖς	οὐρανός	N-DPM
+HEB 9:23!10	adv	pron	τούτοις	οὗτος	D-DPN
+HEB 9:23!11	v	verb	καθαρίζεσθαι	καθαρίζω	V-PPN
+HEB 9:23!12		pron	αὐτὰ	αὐτός	P-APN
+HEB 9:23!13		conj	δὲ	δέ	CONJ
+HEB 9:23!14		det	τὰ	ὁ	T-APN
+HEB 9:23!15		adj	ἐπουράνια	ἐπουράνιος	A-APN
+HEB 9:23!16		adj	κρείττοσι	κρείττων	A-DPF-C
+HEB 9:23!17		noun	θυσίαις	θυσία	N-DPF
+HEB 9:23!18		prep	παρὰ	παρά	PREP
+HEB 9:23!19		pron	ταύτας	οὗτος	D-APF
+HEB 9:24!1		adv	οὐ	οὐ	PRT-N
+HEB 9:24!2		conj	γὰρ	γάρ	CONJ
+HEB 9:24!3		prep	εἰς	εἰς	PREP
+HEB 9:24!4		adj	χειροποίητα	χειροποίητος	A-APN
+HEB 9:24!5	v	verb	εἰσῆλθεν	εἰσέρχομαι	V-2AAI-3S
+HEB 9:24!6		adj	ἅγια	ἅγιος	A-APN
+HEB 9:24!7	s	noun	Χριστός	Χριστός	N-NSM
+HEB 9:24!8		adj	ἀντίτυπα	ἀντίτυπος	A-APN
+HEB 9:24!9		det	τῶν	ὁ	T-GPN
+HEB 9:24!10		adj	ἀληθινῶν	ἀληθινός	A-GPN
+HEB 9:24!11		conj	ἀλλ	ἀλλά	CONJ
+HEB 9:24!12		prep	εἰς	εἰς	PREP
+HEB 9:24!13		pron	αὐτὸν	αὐτός	P-ASM
+HEB 9:24!14		det	τὸν	ὁ	T-ASM
+HEB 9:24!15		noun	οὐρανόν	οὐρανός	N-ASM
+HEB 9:24!16	adv	adv	νῦν	νῦν	ADV
+HEB 9:24!17	v	verb	ἐμφανισθῆναι	ἐμφανίζω	V-APN
+HEB 9:24!18		det	τῷ	ὁ	T-DSN
+HEB 9:24!19		noun	προσώπῳ	πρόσωπον	N-DSN
+HEB 9:24!20		det	τοῦ	ὁ	T-GSM
+HEB 9:24!21		noun	θεοῦ	θεός	N-GSM
+HEB 9:24!22		prep	ὑπὲρ	ὑπέρ	PREP
+HEB 9:24!23		pron	ἡμῶν	ἐγώ	P-1GP
+HEB 9:25!1	adv	conj	οὐδ	οὐδέ	CONJ-N
+HEB 9:25!2		conj	ἵνα	ἵνα	CONJ
+HEB 9:25!3	adv	adv	πολλάκις	πολλάκις	ADV
+HEB 9:25!4	v	verb	προσφέρῃ	προσφέρω	V-PAS-3S
+HEB 9:25!5	o	pron	ἑαυτόν	ἑαυτοῦ	F-3ASM
+HEB 9:25!6		conj	ὥσπερ	ὥσπερ	ADV
+HEB 9:25!7		det	ὁ	ὁ	T-NSM
+HEB 9:25!8		noun	ἀρχιερεὺς	ἀρχιερεύς	N-NSM
+HEB 9:25!9	v	verb	εἰσέρχεται	εἰσέρχομαι	V-PNI-3S
+HEB 9:25!10		prep	εἰς	εἰς	PREP
+HEB 9:25!11		det	τὰ	ὁ	T-APN
+HEB 9:25!12		adj	ἅγια	ἅγιος	A-APN
+HEB 9:25!13		prep	κατ	κατά	PREP
+HEB 9:25!14		noun	ἐνιαυτὸν	ἐνιαυτός	N-ASM
+HEB 9:25!15		prep	ἐν	ἐν	PREP
+HEB 9:25!16		noun	αἵματι	αἷμα	N-DSN
+HEB 9:25!17		adj	ἀλλοτρίῳ	ἀλλότριος	A-DSN
+HEB 9:26!1		conj	ἐπεὶ	ἐπεί	CONJ
+HEB 9:26!2	v	verb	ἔδει	δεῖ	V-IAI-3S
+HEB 9:26!3	s	pron	αὐτὸν	αὐτός	P-ASM
+HEB 9:26!4	adv	adv	πολλάκις	πολλάκις	ADV
+HEB 9:26!5	v	verb	παθεῖν	πάσχω	V-2AAN
+HEB 9:26!6		prep	ἀπὸ	ἀπό	PREP
+HEB 9:26!7		noun	καταβολῆς	καταβολή	N-GSF
+HEB 9:26!8		noun	κόσμου	κόσμος	N-GSM
+HEB 9:26!9	adv	adv	νυνὶ	νυνί	ADV
+HEB 9:26!10		conj	δὲ	δέ	CONJ
+HEB 9:26!11	adv	adv	ἅπαξ	ἅπαξ	ADV
+HEB 9:26!12		prep	ἐπὶ	ἐπί	PREP
+HEB 9:26!13		noun	συντελείᾳ	συντέλεια	N-DSF
+HEB 9:26!14		det	τῶν	ὁ	T-GPM
+HEB 9:26!15		noun	αἰώνων	αἰών	N-GPM
+HEB 9:26!16		prep	εἰς	εἰς	PREP
+HEB 9:26!17		noun	ἀθέτησιν	ἀθέτησις	N-ASF
+HEB 9:26!18		noun	ἁμαρτίας	ἁμαρτία	N-GSF
+HEB 9:26!19		prep	διὰ	διά	PREP
+HEB 9:26!20		det	τῆς	ὁ	T-GSF
+HEB 9:26!21		noun	θυσίας	θυσία	N-GSF
+HEB 9:26!22		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 9:26!23	v	verb	πεφανέρωται	φανερόω	V-RPI-3S
+HEB 9:27!1		conj	καὶ	καί	CONJ
+HEB 9:27!2		prep	καθ	κατά	PREP
+HEB 9:27!3		pron	ὅσον	ὅσος	K-ASN
+HEB 9:27!4	v	verb	ἀπόκειται	ἀπόκειμαι	V-PNI-3S
+HEB 9:27!5		det	τοῖς	ὁ	T-DPM
+HEB 9:27!6		noun	ἀνθρώποις	ἄνθρωπος	N-DPM
+HEB 9:27!7	adv	adv	ἅπαξ	ἅπαξ	ADV
+HEB 9:27!8	v	verb	ἀποθανεῖν	ἀποθνῄσκω	V-2AAN
+HEB 9:27!9		prep	μετὰ	μετά	PREP
+HEB 9:27!10		conj	δὲ	δέ	CONJ
+HEB 9:27!11		pron	τοῦτο	οὗτος	D-ASN
+HEB 9:27!12	s	noun	κρίσις	κρίσις	N-NSF
+HEB 9:28!1	adv	adv	οὕτως	οὕτω(ς)	ADV
+HEB 9:28!2		adv	καὶ	καί	CONJ
+HEB 9:28!3		det	ὁ	ὁ	T-NSM
+HEB 9:28!4		noun	Χριστός	Χριστός	N-NSM
+HEB 9:28!5	adv	adv	ἅπαξ	ἅπαξ	ADV
+HEB 9:28!6	v	verb	προσενεχθεὶς	προσφέρω	V-APP-NSM
+HEB 9:28!7		prep	εἰς	εἰς	PREP
+HEB 9:28!8		det	τὸ	ὁ	T-ASN
+HEB 9:28!9		adj	πολλῶν	πολύς	A-GPM
+HEB 9:28!10	v	verb	ἀνενεγκεῖν	ἀναφέρω	V-2AAN
+HEB 9:28!11		noun	ἁμαρτίας	ἁμαρτία	N-APF
+HEB 9:28!12		prep	ἐκ	ἐκ	PREP
+HEB 9:28!13		adj	δευτέρου	δεύτερος	A-GSN
+HEB 9:28!14		prep	χωρὶς	χωρίς	ADV
+HEB 9:28!15		noun	ἁμαρτίας	ἁμαρτία	N-GSF
+HEB 9:28!16	v	verb	ὀφθήσεται	ὁράω	V-FPI-3S
+HEB 9:28!17		det	τοῖς	ὁ	T-DPM
+HEB 9:28!18	o	pron	αὐτὸν	αὐτός	P-ASM
+HEB 9:28!19	v	verb	ἀπεκδεχομένοις	ἀπεκδέχομαι	V-PNP-DPM
+HEB 9:28!20		prep	εἰς	εἰς	PREP
+HEB 9:28!21		noun	σωτηρίαν	σωτηρία	N-ASF
+HEB 10:1!1		noun	Σκιὰν	σκιά	N-ASF
+HEB 10:1!2		conj	γὰρ	γάρ	CONJ
+HEB 10:1!3	v	verb	ἔχων	ἔχω	V-PAP-NSM
+HEB 10:1!4		det	ὁ	ὁ	T-NSM
+HEB 10:1!5		noun	νόμος	νόμος	N-NSM
+HEB 10:1!6		det	τῶν	ὁ	T-GPN
+HEB 10:1!7	v	verb	μελλόντων	μέλλω	V-PAP-GPN
+HEB 10:1!8		adj	ἀγαθῶν	ἀγαθός	A-GPN
+HEB 10:1!9		adv	οὐκ	οὐ	PRT-N
+HEB 10:1!10		pron	αὐτὴν	ἑαυτοῦ	P-ASF
+HEB 10:1!11		det	τὴν	ὁ	T-ASF
+HEB 10:1!12		noun	εἰκόνα	εἰκών	N-ASF
+HEB 10:1!13		det	τῶν	ὁ	T-GPN
+HEB 10:1!14		noun	πραγμάτων	πρᾶγμα	N-GPN
+HEB 10:1!15		prep	κατ	κατά	PREP
+HEB 10:1!16		noun	ἐνιαυτὸν	ἐνιαυτός	N-ASM
+HEB 10:1!17		det	ταῖς	ὁ	T-DPF
+HEB 10:1!18		adj	αὐταῖς	αὐτός	P-DPF
+HEB 10:1!19		noun	θυσίαις	θυσία	N-DPF
+HEB 10:1!20	o	pron	ἃς	ὅς	R-APF
+HEB 10:1!21	v	verb	προσφέρουσιν	προσφέρω	V-PAI-3P
+HEB 10:1!22		prep	εἰς	εἰς	PREP
+HEB 10:1!23		det	τὸ	ὁ	T-ASN
+HEB 10:1!24		adj	διηνεκὲς	διηνεκής	A-ASN
+HEB 10:1!25	adv	adv	οὐδέποτε	οὐδέποτε	ADV-N
+HEB 10:1!26	v	verb	δύναται	δύναμαι	V-PNI-3S
+HEB 10:1!27		det	τοὺς	ὁ	T-APM
+HEB 10:1!28	v	verb	προσερχομένους	προσέρχομαι	V-PNP-APM
+HEB 10:1!29	v	verb	τελειῶσαι	τελειόω	V-AAN
+HEB 10:2!1		conj	ἐπεὶ	ἐπεί	CONJ
+HEB 10:2!2		ptcl	οὐκ	οὐ	PRT-N
+HEB 10:2!3		ptcl	ἂν	ἄν	PRT
+HEB 10:2!4	v	verb	ἐπαύσαντο	παύω	V-AMI-3P
+HEB 10:2!5	v	verb	προσφερόμεναι	προσφέρω	V-PPP-NPF
+HEB 10:2!6		prep	διὰ	διά	PREP
+HEB 10:2!7		det	τὸ	ὁ	T-ASN
+HEB 10:2!8	adv	adj	μηδεμίαν	μηδείς	A-ASF-N
+HEB 10:2!9	v	verb	ἔχειν	ἔχω	V-PAN
+HEB 10:2!10	adv	adv	ἔτι	ἔτι	ADV
+HEB 10:2!11		noun	συνείδησιν	συνείδησις	N-ASF
+HEB 10:2!12		noun	ἁμαρτιῶν	ἁμαρτία	N-GPF
+HEB 10:2!13		det	τοὺς	ὁ	T-APM
+HEB 10:2!14	v	verb	λατρεύοντας	λατρεύω	V-PAP-APM
+HEB 10:2!15	adv	adv	ἅπαξ	ἅπαξ	ADV
+HEB 10:2!16	v	verb	κεκαθαρισμένους	καθαρίζω	V-RPP-APM
+HEB 10:3!1		conj	ἀλλ	ἀλλά	CONJ
+HEB 10:3!2		prep	ἐν	ἐν	PREP
+HEB 10:3!3		pron	αὐταῖς	αὐτός	P-DPF
+HEB 10:3!4		noun	ἀνάμνησις	ἀνάμνησις	N-NSF
+HEB 10:3!5		noun	ἁμαρτιῶν	ἁμαρτία	N-GPF
+HEB 10:3!6		prep	κατ	κατά	PREP
+HEB 10:3!7		noun	ἐνιαυτόν	ἐνιαυτός	N-ASM
+HEB 10:4!1	p	adj	ἀδύνατον	ἀδύνατος	A-NSN
+HEB 10:4!2		conj	γὰρ	γάρ	CONJ
+HEB 10:4!3		noun	αἷμα	αἷμα	N-NSN
+HEB 10:4!4		noun	ταύρων	ταῦρος	N-GPM
+HEB 10:4!5		conj	καὶ	καί	CONJ
+HEB 10:4!6		noun	τράγων	τράγος	N-GPM
+HEB 10:4!7	v	verb	ἀφαιρεῖν	ἀφαιρέω	V-PAN
+HEB 10:4!8	o	noun	ἁμαρτίας	ἁμαρτία	N-APF
+HEB 10:5!1		conj	διὸ	διό	CONJ
+HEB 10:5!2	v	verb	εἰσερχόμενος	εἰσέρχομαι	V-PNP-NSM
+HEB 10:5!3		prep	εἰς	εἰς	PREP
+HEB 10:5!4		det	τὸν	ὁ	T-ASM
+HEB 10:5!5		noun	κόσμον	κόσμος	N-ASM
+HEB 10:5!6	v	verb	λέγει	λέγω	V-PAI-3S
+HEB 10:5!7		noun	Θυσίαν	θυσία	N-ASF
+HEB 10:5!8		conj	καὶ	καί	CONJ
+HEB 10:5!9		noun	προσφορὰν	προσφορά	N-ASF
+HEB 10:5!10	adv	adv	οὐκ	οὐ	PRT-N
+HEB 10:5!11	v	verb	ἠθέλησας	θέλω	V-AAI-2S
+HEB 10:5!12	o	noun	σῶμα	σῶμα	N-ASN
+HEB 10:5!13		conj	δὲ	δέ	CONJ
+HEB 10:5!14	v	verb	κατηρτίσω	καταρτίζω	V-AMI-2S
+HEB 10:5!15	io	pron	μοι	ἐγώ	P-1DS
+HEB 10:6!1		noun	ὁλοκαυτώματα	ὁλοκαύτωμα	N-APN
+HEB 10:6!2		conj	καὶ	καί	CONJ
+HEB 10:6!3		prep	περὶ	περί	PREP
+HEB 10:6!4		noun	ἁμαρτίας	ἁμαρτία	N-GSF
+HEB 10:6!5	adv	adv	οὐκ	οὐ	PRT-N
+HEB 10:6!6	v	verb	εὐδόκησας	εὐδοκέω	V-AAI-2S
+HEB 10:7!1	adv	adv	τότε	τότε	ADV
+HEB 10:7!2	v	verb	εἶπον	λέγω	V-2AAI-1S
+HEB 10:7!3	aux	ptcl	Ἰδοὺ	ἰδού	V-2AMM-2S
+HEB 10:7!4	v	verb	ἥκω	ἥκω	V-PAI-1S
+HEB 10:7!5		prep	ἐν	ἐν	PREP
+HEB 10:7!6		noun	κεφαλίδι	κεφαλίς	N-DSF
+HEB 10:7!7		noun	βιβλίου	βιβλίον	N-GSN
+HEB 10:7!8	v	verb	γέγραπται	γράφω	V-RPI-3S
+HEB 10:7!9		prep	περὶ	περί	PREP
+HEB 10:7!10		pron	ἐμοῦ	ἐγώ	P-1GS
+HEB 10:7!11		det	τοῦ	ὁ	T-GSN
+HEB 10:7!12	v	verb	ποιῆσαι	ποιέω	V-AAN
+HEB 10:7!13		det	ὁ	ὁ	T-NSM
+HEB 10:7!14		noun	θεός	θεός	N-NSM
+HEB 10:7!15		det	τὸ	ὁ	T-ASN
+HEB 10:7!16		noun	θέλημά	θέλημα	N-ASN
+HEB 10:7!17		pron	σου	σύ	P-2GS
+HEB 10:8!1	adv	adj	ἀνώτερον	ἀνώτερος	A-ASN-C
+HEB 10:8!2	v	verb	λέγων	λέγω	V-PAP-NSM
+HEB 10:8!3		conj	ὅτι	ὅτι	CONJ
+HEB 10:8!4		noun	Θυσίας	θυσία	N-APF
+HEB 10:8!5		conj	καὶ	καί	CONJ
+HEB 10:8!6		noun	προσφορὰς	προσφορά	N-APF
+HEB 10:8!7		conj	καὶ	καί	CONJ
+HEB 10:8!8		noun	ὁλοκαυτώματα	ὁλοκαύτωμα	N-APN
+HEB 10:8!9		conj	καὶ	καί	CONJ
+HEB 10:8!10		prep	περὶ	περί	PREP
+HEB 10:8!11		noun	ἁμαρτίας	ἁμαρτία	N-GSF
+HEB 10:8!12		adv	οὐκ	οὐ	PRT-N
+HEB 10:8!13		verb	ἠθέλησας	θέλω	V-AAI-2S
+HEB 10:8!14		conj	οὐδὲ	οὐδέ	CONJ-N
+HEB 10:8!15		verb	εὐδόκησας	εὐδοκέω	V-AAI-2S
+HEB 10:8!16	s	pron	αἵτινες	ὅστις	R-NPF
+HEB 10:8!17		prep	κατὰ	κατά	PREP
+HEB 10:8!18		noun	νόμον	νόμος	N-ASM
+HEB 10:8!19	v	verb	προσφέρονται	προσφέρω	V-PPI-3P
+HEB 10:9!1	adv	adv	τότε	τότε	ADV
+HEB 10:9!2	v	verb	εἴρηκεν	λέγω	V-RAI-3S-ATT
+HEB 10:9!3	aux	ptcl	Ἰδοὺ	ἰδού	V-2AMM-2S
+HEB 10:9!4	v	verb	ἥκω	ἥκω	V-PAI-1S
+HEB 10:9!5		det	τοῦ	ὁ	T-GSN
+HEB 10:9!6	v	verb	ποιῆσαι	ποιέω	V-AAN
+HEB 10:9!7		det	τὸ	ὁ	T-ASN
+HEB 10:9!8		noun	θέλημά	θέλημα	N-ASN
+HEB 10:9!9		pron	σου	σύ	P-2GS
+HEB 10:9!10	v	verb	ἀναιρεῖ	ἀναιρέω	V-PAI-3S
+HEB 10:9!11		det	τὸ	ὁ	T-ASN
+HEB 10:9!12		adj	πρῶτον	πρῶτος	A-ASN-S
+HEB 10:9!13		conj	ἵνα	ἵνα	CONJ
+HEB 10:9!14		det	τὸ	ὁ	T-ASN
+HEB 10:9!15		adj	δεύτερον	δεύτερος	A-ASN
+HEB 10:9!16	v	verb	στήσῃ	ἵστημι	V-AAS-3S
+HEB 10:10!1		prep	ἐν	ἐν	PREP
+HEB 10:10!2		pron	ᾧ	ὅς	R-DSN
+HEB 10:10!3		noun	θελήματι	θέλημα	N-DSN
+HEB 10:10!4		verb	ἡγιασμένοι	ἁγιάζω	V-RPP-NPM
+HEB 10:10!5		verb	ἐσμὲν	εἰμί	V-PAI-1P
+HEB 10:10!6		prep	διὰ	διά	PREP
+HEB 10:10!7		det	τῆς	ὁ	T-GSF
+HEB 10:10!8		noun	προσφορᾶς	προσφορά	N-GSF
+HEB 10:10!9		det	τοῦ	ὁ	T-GSN
+HEB 10:10!10		noun	σώματος	σῶμα	N-GSN
+HEB 10:10!11		noun	Ἰησοῦ	Ἰησοῦς	N-GSM
+HEB 10:10!12		noun	Χριστοῦ	Χριστός	N-GSM
+HEB 10:10!13	adv	adv	ἐφάπαξ	ἐφάπαξ	ADV
+HEB 10:11!1		conj	Καὶ	καί	CONJ
+HEB 10:11!2		adj	πᾶς	πᾶς	A-NSM
+HEB 10:11!3		conj	μὲν	μέν	PRT
+HEB 10:11!4		noun	ἱερεὺς	ἱερεύς	N-NSM
+HEB 10:11!5	v	verb	ἕστηκεν	ἵστημι	V-RAI-3S
+HEB 10:11!6		prep	καθ	κατά	PREP
+HEB 10:11!7		noun	ἡμέραν	ἡμέρα	N-ASF
+HEB 10:11!8	v	verb	λειτουργῶν	λειτουργέω	V-PAP-NSM
+HEB 10:11!9		conj	καὶ	καί	CONJ
+HEB 10:11!10		det	τὰς	ὁ	T-APF
+HEB 10:11!11		adj	αὐτὰς	αὐτός	P-APF
+HEB 10:11!12	adv	adv	πολλάκις	πολλάκις	ADV
+HEB 10:11!13	v	verb	προσφέρων	προσφέρω	V-PAP-NSM
+HEB 10:11!14		noun	θυσίας	θυσία	N-APF
+HEB 10:11!15	s	pron	αἵτινες	ὅστις	R-NPF
+HEB 10:11!16	adv	adv	οὐδέποτε	οὐδέποτε	ADV-N
+HEB 10:11!17	v	verb	δύνανται	δύναμαι	V-PNI-3P
+HEB 10:11!18	v	verb	περιελεῖν	περιαιρέω	V-2AAN
+HEB 10:11!19	o	noun	ἁμαρτίας	ἁμαρτία	N-APF
+HEB 10:12!1	s	pron	οὗτος	οὗτος	D-NSM
+HEB 10:12!2		conj	δὲ	δέ	CONJ
+HEB 10:12!3		adj	μίαν	εἷς	A-ASF
+HEB 10:12!4		prep	ὑπὲρ	ὑπέρ	PREP
+HEB 10:12!5		noun	ἁμαρτιῶν	ἁμαρτία	N-GPF
+HEB 10:12!6	v	verb	προσενέγκας	προσφέρω	V-AAP-NSM
+HEB 10:12!7		noun	θυσίαν	θυσία	N-ASF
+HEB 10:12!8		prep	εἰς	εἰς	PREP
+HEB 10:12!9		det	τὸ	ὁ	T-ASN
+HEB 10:12!10		adj	διηνεκὲς	διηνεκής	A-ASN
+HEB 10:12!11	v	verb	ἐκάθισεν	καθίζω	V-AAI-3S
+HEB 10:12!12		prep	ἐν	ἐν	PREP
+HEB 10:12!13		adj	δεξιᾷ	δεξιός	A-DSF
+HEB 10:12!14		det	τοῦ	ὁ	T-GSM
+HEB 10:12!15		noun	θεοῦ	θεός	N-GSM
+HEB 10:13!1		det	τὸ	ὁ	T-ASN
+HEB 10:13!2		adj	λοιπὸν	λοιπός	A-ASN
+HEB 10:13!3	v	verb	ἐκδεχόμενος	ἐκδέχομαι	V-PNP-NSM
+HEB 10:13!4		conj	ἕως	ἕως	ADV
+HEB 10:13!5	v	verb	τεθῶσιν	τίθημι	V-APS-3P
+HEB 10:13!6		det	οἱ	ὁ	T-NPM
+HEB 10:13!7		adj	ἐχθροὶ	ἐχθρός	A-NPM
+HEB 10:13!8		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 10:13!9		noun	ὑποπόδιον	ὑποπόδιον	N-ASN
+HEB 10:13!10		det	τῶν	ὁ	T-GPM
+HEB 10:13!11		noun	ποδῶν	πούς	N-GPM
+HEB 10:13!12		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 10:14!1		adj	μιᾷ	εἷς	A-DSF
+HEB 10:14!2		conj	γὰρ	γάρ	CONJ
+HEB 10:14!3		noun	προσφορᾷ	προσφορά	N-DSF
+HEB 10:14!4	v	verb	τετελείωκεν	τελειόω	V-RAI-3S
+HEB 10:14!5		prep	εἰς	εἰς	PREP
+HEB 10:14!6		det	τὸ	ὁ	T-ASN
+HEB 10:14!7		adj	διηνεκὲς	διηνεκής	A-ASN
+HEB 10:14!8		det	τοὺς	ὁ	T-APM
+HEB 10:14!9	v	verb	ἁγιαζομένους	ἁγιάζω	V-PPP-APM
+HEB 10:15!1	v	verb	μαρτυρεῖ	μαρτυρέω	V-PAI-3S
+HEB 10:15!2		conj	δὲ	δέ	CONJ
+HEB 10:15!3	io	pron	ἡμῖν	ἐγώ	P-1DP
+HEB 10:15!4		adv	καὶ	καί	CONJ
+HEB 10:15!5		det	τὸ	ὁ	T-NSN
+HEB 10:15!6		noun	πνεῦμα	πνεῦμα	N-NSN
+HEB 10:15!7		det	τὸ	ὁ	T-NSN
+HEB 10:15!8		adj	ἅγιον	ἅγιος	A-NSN
+HEB 10:15!9		prep	μετὰ	μετά	PREP
+HEB 10:15!10		conj	γὰρ	γάρ	CONJ
+HEB 10:15!11		det	τὸ	ὁ	T-ASN
+HEB 10:15!12	v	verb	εἰρηκέναι	λέγω	V-RAN
+HEB 10:16!1	p	pron	Αὕτη	οὗτος	D-NSF
+HEB 10:16!2		det	ἡ	ὁ	T-NSF
+HEB 10:16!3		noun	διαθήκη	διαθήκη	N-NSF
+HEB 10:16!4	o	pron	ἣν	ὅς	R-ASF
+HEB 10:16!5	v	verb	διαθήσομαι	διατίθεμαι	V-FDI-1S
+HEB 10:16!6		prep	πρὸς	πρός	PREP
+HEB 10:16!7		pron	αὐτοὺς	ἑαυτοῦ	P-APM
+HEB 10:16!8		prep	μετὰ	μετά	PREP
+HEB 10:16!9		det	τὰς	ὁ	T-APF
+HEB 10:16!10		noun	ἡμέρας	ἡμέρα	N-APF
+HEB 10:16!11		pron	ἐκείνας	ἐκεῖνος	D-APF
+HEB 10:16!12	v	verb	λέγει	λέγω	V-PAI-3S
+HEB 10:16!13	s	noun	κύριος	κύριος	N-NSM
+HEB 10:16!14	v	verb	διδοὺς	δίδωμι	V-PAP-NSM
+HEB 10:16!15		noun	νόμους	νόμος	N-APM
+HEB 10:16!16		pron	μου	ἐγώ	P-1GS
+HEB 10:16!17		prep	ἐπὶ	ἐπί	PREP
+HEB 10:16!18		noun	καρδίας	καρδία	N-APF
+HEB 10:16!19		pron	αὐτῶν	αὐτός	P-GPM
+HEB 10:16!20		adv	καὶ	καί	CONJ
+HEB 10:16!21		prep	ἐπὶ	ἐπί	PREP
+HEB 10:16!22		det	τὴν	ὁ	T-ASF
+HEB 10:16!23		noun	διάνοιαν	διάνοια	N-ASF
+HEB 10:16!24		pron	αὐτῶν	αὐτός	P-GPM
+HEB 10:16!25	v	verb	ἐπιγράψω	ἐπιγράφω	V-FAI-1S
+HEB 10:16!26	o	pron	αὐτούς	ἑαυτοῦ	P-APM
+HEB 10:17!1		conj	καὶ	καί	CONJ
+HEB 10:17!2		det	τῶν	ὁ	T-GPF
+HEB 10:17!3		noun	ἁμαρτιῶν	ἁμαρτία	N-GPF
+HEB 10:17!4		pron	αὐτῶν	αὐτός	P-GPM
+HEB 10:17!5		conj	καὶ	καί	CONJ
+HEB 10:17!6		det	τῶν	ὁ	T-GPF
+HEB 10:17!7		noun	ἀνομιῶν	ἀνομία	N-GPF
+HEB 10:17!8		pron	αὐτῶν	αὐτός	P-GPM
+HEB 10:17!9		adv	οὐ	οὐ	PRT-N
+HEB 10:17!10		adv	μὴ	μή	PRT-N
+HEB 10:17!11	v	verb	μνησθήσομαι	μιμνῄσκομαι	V-FPI-1S
+HEB 10:17!12	adv	adv	ἔτι	ἔτι	ADV
+HEB 10:18!1	p	conj	ὅπου	ὅπου	ADV
+HEB 10:18!2		conj	δὲ	δέ	CONJ
+HEB 10:18!3		noun	ἄφεσις	ἄφεσις	N-NSF
+HEB 10:18!4		pron	τούτων	οὗτος	D-GPF
+HEB 10:18!5	adv	adv	οὐκέτι	οὐκέτι	ADV-N
+HEB 10:18!6		noun	προσφορὰ	προσφορά	N-NSF
+HEB 10:18!7		prep	περὶ	περί	PREP
+HEB 10:18!8		noun	ἁμαρτίας	ἁμαρτία	N-GSF
+HEB 10:19!1	v	verb	Ἔχοντες	ἔχω	V-PAP-NPM
+HEB 10:19!2		conj	οὖν	οὖν	CONJ
+HEB 10:19!3	aux	noun	ἀδελφοί	ἀδελφός	N-VPM
+HEB 10:19!4		noun	παρρησίαν	παρρησία	N-ASF
+HEB 10:19!5		prep	εἰς	εἰς	PREP
+HEB 10:19!6		det	τὴν	ὁ	T-ASF
+HEB 10:19!7		noun	εἴσοδον	εἴσοδος	N-ASF
+HEB 10:19!8		det	τῶν	ὁ	T-GPN
+HEB 10:19!9		adj	ἁγίων	ἅγιος	A-GPN
+HEB 10:19!10		prep	ἐν	ἐν	PREP
+HEB 10:19!11		det	τῷ	ὁ	T-DSN
+HEB 10:19!12		noun	αἵματι	αἷμα	N-DSN
+HEB 10:19!13		noun	Ἰησοῦ	Ἰησοῦς	N-GSM
+HEB 10:20!1	o	pron	ἣν	ὅς	R-ASF
+HEB 10:20!2	v	verb	ἐνεκαίνισεν	ἐγκαινίζω	V-AAI-3S
+HEB 10:20!3	adv	pron	ἡμῖν	ἐγώ	P-1DP
+HEB 10:20!4		noun	ὁδὸν	ὁδός	N-ASF
+HEB 10:20!5		adj	πρόσφατον	πρόσφατος	A-ASF
+HEB 10:20!6		conj	καὶ	καί	CONJ
+HEB 10:20!7	v	verb	ζῶσαν	ζάω	V-PAP-ASF
+HEB 10:20!8		prep	διὰ	διά	PREP
+HEB 10:20!9		det	τοῦ	ὁ	T-GSN
+HEB 10:20!10		noun	καταπετάσματος	καταπέτασμα	N-GSN
+HEB 10:20!11	s	pron	τοῦτ	οὗτος	D-NSN
+HEB 10:20!12	vc	verb	ἔστιν	εἰμί	V-PAI-3S
+HEB 10:20!13		det	τῆς	ὁ	T-GSF
+HEB 10:20!14		noun	σαρκὸς	σάρξ	N-GSF
+HEB 10:20!15		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 10:21!1		conj	καὶ	καί	CONJ
+HEB 10:21!2		noun	ἱερέα	ἱερεύς	N-ASM
+HEB 10:21!3		adj	μέγαν	μέγας	A-ASM
+HEB 10:21!4		prep	ἐπὶ	ἐπί	PREP
+HEB 10:21!5		det	τὸν	ὁ	T-ASM
+HEB 10:21!6		noun	οἶκον	οἶκος	N-ASM
+HEB 10:21!7		det	τοῦ	ὁ	T-GSM
+HEB 10:21!8		noun	θεοῦ	θεός	N-GSM
+HEB 10:22!1	v	verb	προσερχώμεθα	προσέρχομαι	V-PNS-1P
+HEB 10:22!2		prep	μετὰ	μετά	PREP
+HEB 10:22!3		adj	ἀληθινῆς	ἀληθινός	A-GSF
+HEB 10:22!4		noun	καρδίας	καρδία	N-GSF
+HEB 10:22!5		prep	ἐν	ἐν	PREP
+HEB 10:22!6		noun	πληροφορίᾳ	πληροφορία	N-DSF
+HEB 10:22!7		noun	πίστεως	πίστις	N-GSF
+HEB 10:22!8	v	verb	ῥεραντισμένοι	ῥαντίζω	V-RPP-NPM
+HEB 10:22!9		det	τὰς	ὁ	T-APF
+HEB 10:22!10		noun	καρδίας	καρδία	N-APF
+HEB 10:22!11		prep	ἀπὸ	ἀπό	PREP
+HEB 10:22!12		noun	συνειδήσεως	συνείδησις	N-GSF
+HEB 10:22!13		adj	πονηρᾶς	πονηρός	A-GSF
+HEB 10:22!14		conj	καὶ	καί	CONJ
+HEB 10:22!15	v	verb	λελουσμένοι	λούω	V-RPP-NPM
+HEB 10:22!16		det	τὸ	ὁ	T-ASN
+HEB 10:22!17		noun	σῶμα	σῶμα	N-ASN
+HEB 10:22!18		noun	ὕδατι	ὕδωρ	N-DSN
+HEB 10:22!19		adj	καθαρῷ	καθαρός	A-DSN
+HEB 10:23!1	v	verb	κατέχωμεν	κατέχω	V-PAS-1P
+HEB 10:23!2		det	τὴν	ὁ	T-ASF
+HEB 10:23!3		noun	ὁμολογίαν	ὁμολογία	N-ASF
+HEB 10:23!4		det	τῆς	ὁ	T-GSF
+HEB 10:23!5		noun	ἐλπίδος	ἐλπίς	N-GSF
+HEB 10:23!6	adv	adj	ἀκλινῆ	ἀκλινής	A-ASF
+HEB 10:23!7	p	adj	πιστὸς	πιστός	A-NSM
+HEB 10:23!8		conj	γὰρ	γάρ	CONJ
+HEB 10:23!9		det	ὁ	ὁ	T-NSM
+HEB 10:23!10	v	verb	ἐπαγγειλάμενος	ἐπαγγέλλομαι	V-ADP-NSM
+HEB 10:24!1		conj	καὶ	καί	CONJ
+HEB 10:24!2	v	verb	κατανοῶμεν	κατανοέω	V-PAS-1P
+HEB 10:24!3	o	pron	ἀλλήλους	ἀλλήλων	C-APM
+HEB 10:24!4		prep	εἰς	εἰς	PREP
+HEB 10:24!5		noun	παροξυσμὸν	παροξυσμός	N-ASM
+HEB 10:24!6		noun	ἀγάπης	ἀγάπη	N-GSF
+HEB 10:24!7		conj	καὶ	καί	CONJ
+HEB 10:24!8		adj	καλῶν	καλός	A-GPN
+HEB 10:24!9		noun	ἔργων	ἔργον	N-GPN
+HEB 10:25!1		adv	μὴ	μή	PRT-N
+HEB 10:25!2	v	verb	ἐγκαταλείποντες	ἐγκαταλείπω	V-PAP-NPM
+HEB 10:25!3		det	τὴν	ὁ	T-ASF
+HEB 10:25!4		noun	ἐπισυναγωγὴν	ἐπισυναγωγή	N-ASF
+HEB 10:25!5		pron	ἑαυτῶν	ἑαυτοῦ	F-1GPM
+HEB 10:25!6		conj	καθὼς	καθώς	ADV
+HEB 10:25!7	p	noun	ἔθος	ἔθος	N-NSN
+HEB 10:25!8	adv	pron	τισίν	τις	X-DPM
+HEB 10:25!9		conj	ἀλλὰ	ἀλλά	CONJ
+HEB 10:25!10	v	verb	παρακαλοῦντες	παρακαλέω	V-PAP-NPM
+HEB 10:25!11		adv	καὶ	καί	CONJ
+HEB 10:25!12		pron	τοσούτῳ	τοσοῦτος	D-DSN
+HEB 10:25!13	adv	adv	μᾶλλον	μᾶλλον	ADV
+HEB 10:25!14	adv	pron	ὅσῳ	ὅσος	K-DSN
+HEB 10:25!15	v	verb	βλέπετε	βλέπω	V-PAI-2P
+HEB 10:25!16	v	verb	ἐγγίζουσαν	ἐγγίζω	V-PAP-ASF
+HEB 10:25!17		det	τὴν	ὁ	T-ASF
+HEB 10:25!18		noun	ἡμέραν	ἡμέρα	N-ASF
+HEB 10:26!1	adv	adv	Ἑκουσίως	ἑκουσίως	ADV
+HEB 10:26!2		conj	γὰρ	γάρ	CONJ
+HEB 10:26!3	v	verb	ἁμαρτανόντων	ἁμαρτάνω	V-PAP-GPM
+HEB 10:26!4	s	pron	ἡμῶν	ἐγώ	P-1GP
+HEB 10:26!5		prep	μετὰ	μετά	PREP
+HEB 10:26!6		det	τὸ	ὁ	T-ASN
+HEB 10:26!7	v	verb	λαβεῖν	λαμβάνω	V-2AAN
+HEB 10:26!8		det	τὴν	ὁ	T-ASF
+HEB 10:26!9		noun	ἐπίγνωσιν	ἐπίγνωσις	N-ASF
+HEB 10:26!10		det	τῆς	ὁ	T-GSF
+HEB 10:26!11		noun	ἀληθείας	ἀλήθεια	N-GSF
+HEB 10:26!12	adv	adv	οὐκέτι	οὐκέτι	ADV-N
+HEB 10:26!13		prep	περὶ	περί	PREP
+HEB 10:26!14		noun	ἁμαρτιῶν	ἁμαρτία	N-GPF
+HEB 10:26!15	v	verb	ἀπολείπεται	ἀπολείπω	V-PPI-3S
+HEB 10:26!16	s	noun	θυσία	θυσία	N-NSF
+HEB 10:27!1		adj	φοβερὰ	φοβερός	A-NSF
+HEB 10:27!2		conj	δέ	δέ	CONJ
+HEB 10:27!3		pron	τις	τις	X-NSF
+HEB 10:27!4		noun	ἐκδοχὴ	ἐκδοχή	N-NSF
+HEB 10:27!5		noun	κρίσεως	κρίσις	N-GSF
+HEB 10:27!6		conj	καὶ	καί	CONJ
+HEB 10:27!7		noun	πυρὸς	πῦρ	N-GSN
+HEB 10:27!8		noun	ζῆλος	ζῆλος	N-NSN
+HEB 10:27!9	v	verb	ἐσθίειν	ἐσθίω	V-PAN
+HEB 10:27!10	v	verb	μέλλοντος	μέλλω	V-PAP-GSN
+HEB 10:27!11		det	τοὺς	ὁ	T-APM
+HEB 10:27!12		adj	ὑπεναντίους	ὑπεναντίος	A-APM
+HEB 10:28!1	v	verb	ἀθετήσας	ἀθετέω	V-AAP-NSM
+HEB 10:28!2	s	pron	τις	τις	X-NSM
+HEB 10:28!3		noun	νόμον	νόμος	N-ASM
+HEB 10:28!4		noun	Μωϋσέως	Μωϋσῆς	N-GSM
+HEB 10:28!5		prep	χωρὶς	χωρίς	ADV
+HEB 10:28!6		noun	οἰκτιρμῶν	οἰκτιρμός	N-GPM
+HEB 10:28!7		prep	ἐπὶ	ἐπί	PREP
+HEB 10:28!8		adj	δυσὶν	δύο	A-DPM
+HEB 10:28!9		conj	ἢ	ἤ	PRT
+HEB 10:28!10		adj	τρισὶν	τρεῖς	A-DPM
+HEB 10:28!11		noun	μάρτυσιν	μάρτυς	N-DPM
+HEB 10:28!12	v	verb	ἀποθνῄσκει	ἀποθνῄσκω	V-PAI-3S
+HEB 10:29!1	adv	pron	πόσῳ	πόσος	Q-DSN
+HEB 10:29!2	v	verb	δοκεῖτε	δοκέω	V-PAI-2P
+HEB 10:29!3		adj	χείρονος	χείρων	A-GSF
+HEB 10:29!4	v	verb	ἀξιωθήσεται	ἀξιόω	V-FPI-3S
+HEB 10:29!5		noun	τιμωρίας	τιμωρία	N-GSF
+HEB 10:29!6		det	ὁ	ὁ	T-NSM
+HEB 10:29!7		det	τὸν	ὁ	T-ASM
+HEB 10:29!8		noun	υἱὸν	υἱός	N-ASM
+HEB 10:29!9		det	τοῦ	ὁ	T-GSM
+HEB 10:29!10		noun	θεοῦ	θεός	N-GSM
+HEB 10:29!11	v	verb	καταπατήσας	καταπατέω	V-AAP-NSM
+HEB 10:29!12		conj	καὶ	καί	CONJ
+HEB 10:29!13		det	τὸ	ὁ	T-ASN
+HEB 10:29!14		noun	αἷμα	αἷμα	N-ASN
+HEB 10:29!15		det	τῆς	ὁ	T-GSF
+HEB 10:29!16		noun	διαθήκης	διαθήκη	N-GSF
+HEB 10:29!17	o2	adj	κοινὸν	κοινός	A-ASN
+HEB 10:29!18	v	verb	ἡγησάμενος	ἡγέομαι	V-ADP-NSM
+HEB 10:29!19		prep	ἐν	ἐν	PREP
+HEB 10:29!20		pron	ᾧ	ὅς	R-DSN
+HEB 10:29!21	v	verb	ἡγιάσθη	ἁγιάζω	V-API-3S
+HEB 10:29!22		conj	καὶ	καί	CONJ
+HEB 10:29!23		det	τὸ	ὁ	T-ASN
+HEB 10:29!24		noun	πνεῦμα	πνεῦμα	N-ASN
+HEB 10:29!25		det	τῆς	ὁ	T-GSF
+HEB 10:29!26		noun	χάριτος	χάρις	N-GSF
+HEB 10:29!27	v	verb	ἐνυβρίσας	ἐνυβρίζω	V-AAP-NSM
+HEB 10:30!1	v	verb	οἴδαμεν	οἶδα	V-RAI-1P
+HEB 10:30!2		conj	γὰρ	γάρ	CONJ
+HEB 10:30!3		det	τὸν	ὁ	T-ASM
+HEB 10:30!4	v	verb	εἰπόντα	λέγω	V-2AAP-ASM
+HEB 10:30!5	adv	pron	Ἐμοὶ	ἐγώ	P-1DS
+HEB 10:30!6	s	noun	ἐκδίκησις	ἐκδίκησις	N-NSF
+HEB 10:30!7	s	pron	ἐγὼ	ἐγώ	P-1NS
+HEB 10:30!8	v	verb	ἀνταποδώσω	ἀνταποδίδωμι	V-FAI-1S
+HEB 10:30!9		conj	καὶ	καί	CONJ
+HEB 10:30!10	adv	adv	πάλιν	πάλιν	ADV
+HEB 10:30!11	v	verb	Κρινεῖ	κρίνω	V-FAI-3S
+HEB 10:30!12	s	noun	κύριος	κύριος	N-NSM
+HEB 10:30!13		det	τὸν	ὁ	T-ASM
+HEB 10:30!14		noun	λαὸν	λαός	N-ASM
+HEB 10:30!15		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 10:31!1	p	adj	φοβερὸν	φοβερός	A-NSN
+HEB 10:31!2		det	τὸ	ὁ	T-NSN
+HEB 10:31!3	v	verb	ἐμπεσεῖν	ἐμπίπτω	V-2AAN
+HEB 10:31!4		prep	εἰς	εἰς	PREP
+HEB 10:31!5		noun	χεῖρας	χείρ	N-APF
+HEB 10:31!6		noun	θεοῦ	θεός	N-GSM
+HEB 10:31!7	v	verb	ζῶντος	ζάω	V-PAP-GSM
+HEB 10:32!1	v	verb	Ἀναμιμνῄσκεσθε	ἀναμιμνῄσκω	V-PMM-2P
+HEB 10:32!2		conj	δὲ	δέ	CONJ
+HEB 10:32!3		det	τὰς	ὁ	T-APF
+HEB 10:32!4		adj	πρότερον	πρότερος	ADV-C
+HEB 10:32!5		noun	ἡμέρας	ἡμέρα	N-APF
+HEB 10:32!6		prep	ἐν	ἐν	PREP
+HEB 10:32!7		pron	αἷς	ὅς	R-DPF
+HEB 10:32!8	v	verb	φωτισθέντες	φωτίζω	V-APP-NPM
+HEB 10:32!9		adj	πολλὴν	πολύς	A-ASF
+HEB 10:32!10		noun	ἄθλησιν	ἄθλησις	N-ASF
+HEB 10:32!11	v	verb	ὑπεμείνατε	ὑπομένω	V-AAI-2P
+HEB 10:32!12		noun	παθημάτων	πάθημα	N-GPN
+HEB 10:33!1	adv	pron	τοῦτο	οὗτος	D-ASN
+HEB 10:33!2		conj	μὲν	μέν	PRT
+HEB 10:33!3		noun	ὀνειδισμοῖς	ὀνειδισμός	N-DPM
+HEB 10:33!4		conj	τε	τέ	PRT
+HEB 10:33!5		conj	καὶ	καί	CONJ
+HEB 10:33!6		noun	θλίψεσιν	θλῖψις	N-DPF
+HEB 10:33!7	v	verb	θεατριζόμενοι	θεατρίζω	V-PPP-NPM
+HEB 10:33!8	adv	pron	τοῦτο	οὗτος	D-ASN
+HEB 10:33!9		conj	δὲ	δέ	CONJ
+HEB 10:33!10		noun	κοινωνοὶ	κοινωνός	N-NPM
+HEB 10:33!11		det	τῶν	ὁ	T-GPM
+HEB 10:33!12	adv	adv	οὕτως	οὕτω(ς)	ADV
+HEB 10:33!13	v	verb	ἀναστρεφομένων	ἀναστρέφω	V-PPP-GPM
+HEB 10:33!14	vc	verb	γενηθέντες	γίνομαι	V-AOP-NPM
+HEB 10:34!1		adv	καὶ	καί	CONJ
+HEB 10:34!2		conj	γὰρ	γάρ	CONJ
+HEB 10:34!3		det	τοῖς	ὁ	T-DPM
+HEB 10:34!4		noun	δεσμίοις	δέσμιος	N-DPM
+HEB 10:34!5	v	verb	συνεπαθήσατε	συμπαθέω	V-AAI-2P
+HEB 10:34!6		conj	καὶ	καί	CONJ
+HEB 10:34!7		det	τὴν	ὁ	T-ASF
+HEB 10:34!8		noun	ἁρπαγὴν	ἁρπαγή	N-ASF
+HEB 10:34!9		det	τῶν	ὁ	T-GPN
+HEB 10:34!10	v	verb	ὑπαρχόντων	ὑπάρχω	V-PAP-GPN
+HEB 10:34!11		pron	ὑμῶν	σύ	P-2GP
+HEB 10:34!12		prep	μετὰ	μετά	PREP
+HEB 10:34!13		noun	χαρᾶς	χαρά	N-GSF
+HEB 10:34!14	v	verb	προσεδέξασθε	προσδέχομαι	V-ADI-2P
+HEB 10:34!15	v	verb	γινώσκοντες	γινώσκω	V-PAP-NPM
+HEB 10:34!16	v	verb	ἔχειν	ἔχω	V-PAN
+HEB 10:34!17	s	pron	ἑαυτοὺς	ἑαυτοῦ	F-2APM
+HEB 10:34!18		adj	κρείττονα	κρείττων	A-ASF-C
+HEB 10:34!19		noun	ὕπαρξιν	ὕπαρξις	N-ASF
+HEB 10:34!20		conj	καὶ	καί	CONJ
+HEB 10:34!21	v	verb	μένουσαν	μένω	V-PAP-ASF
+HEB 10:35!1	adv	adv	μὴ	μή	PRT-N
+HEB 10:35!2	v	verb	ἀποβάλητε	ἀποβάλλω	V-2AAS-2P
+HEB 10:35!3		conj	οὖν	οὖν	CONJ
+HEB 10:35!4		det	τὴν	ὁ	T-ASF
+HEB 10:35!5		noun	παρρησίαν	παρρησία	N-ASF
+HEB 10:35!6		pron	ὑμῶν	σύ	P-2GP
+HEB 10:35!7	s	pron	ἥτις	ὅστις	R-NSF
+HEB 10:35!8	v	verb	ἔχει	ἔχω	V-PAI-3S
+HEB 10:35!9		adj	μεγάλην	μέγας	A-ASF
+HEB 10:35!10		noun	μισθαποδοσίαν	μισθαποδοσία	N-ASF
+HEB 10:36!1		noun	ὑπομονῆς	ὑπομονή	N-GSF
+HEB 10:36!2		conj	γὰρ	γάρ	CONJ
+HEB 10:36!3	v	verb	ἔχετε	ἔχω	V-PAI-2P
+HEB 10:36!4		noun	χρείαν	χρεία	N-ASF
+HEB 10:36!5		conj	ἵνα	ἵνα	CONJ
+HEB 10:36!6		det	τὸ	ὁ	T-ASN
+HEB 10:36!7		noun	θέλημα	θέλημα	N-ASN
+HEB 10:36!8		det	τοῦ	ὁ	T-GSM
+HEB 10:36!9		noun	θεοῦ	θεός	N-GSM
+HEB 10:36!10	v	verb	ποιήσαντες	ποιέω	V-AAP-NPM
+HEB 10:36!11	v	verb	κομίσησθε	κομίζω	V-AMS-2P
+HEB 10:36!12		det	τὴν	ὁ	T-ASF
+HEB 10:36!13		noun	ἐπαγγελίαν	ἐπαγγελία	N-ASF
+HEB 10:37!1	adv	adv	ἔτι	ἔτι	ADV
+HEB 10:37!2		conj	γὰρ	γάρ	CONJ
+HEB 10:37!3		adj	μικρὸν	μικρός	A-ASN
+HEB 10:37!4		pron	ὅσον	ὅσος	K-ASN
+HEB 10:37!5		pron	ὅσον	ὅσος	K-ASN
+HEB 10:37!6		det	ὁ	ὁ	T-NSM
+HEB 10:37!7	v	verb	ἐρχόμενος	ἔρχομαι	V-PNP-NSM
+HEB 10:37!8	v	verb	ἥξει	ἥκω	V-FAI-3S
+HEB 10:37!9		conj	καὶ	καί	CONJ
+HEB 10:37!10	adv	adv	οὐ	οὐ	PRT-N
+HEB 10:37!11	v	verb	χρονίσει	χρονίζω	V-FAI-3S
+HEB 10:38!1		det	ὁ	ὁ	T-NSM
+HEB 10:38!2		conj	δὲ	δέ	CONJ
+HEB 10:38!3		adj	δίκαιός	δίκαιος	A-NSM
+HEB 10:38!4		pron	μου	ἐγώ	P-1GS
+HEB 10:38!5		prep	ἐκ	ἐκ	PREP
+HEB 10:38!6		noun	πίστεως	πίστις	N-GSF
+HEB 10:38!7	v	verb	ζήσεται	ζάω	V-FDI-3S
+HEB 10:38!8		conj	καὶ	καί	CONJ
+HEB 10:38!9		conj	ἐὰν	ἐάν	COND
+HEB 10:38!10	v	verb	ὑποστείληται	ὑποστέλλω	V-AMS-3S
+HEB 10:38!11	adv	adv	οὐκ	οὐ	PRT-N
+HEB 10:38!12	v	verb	εὐδοκεῖ	εὐδοκέω	V-PAI-3S
+HEB 10:38!13		det	ἡ	ὁ	T-NSF
+HEB 10:38!14		noun	ψυχή	ψυχή	N-NSF
+HEB 10:38!15		pron	μου	ἐγώ	P-1GS
+HEB 10:38!16		prep	ἐν	ἐν	PREP
+HEB 10:38!17		pron	αὐτῷ	αὐτός	P-DSM
+HEB 10:39!1	s	pron	ἡμεῖς	ἐγώ	P-1NP
+HEB 10:39!2		conj	δὲ	δέ	CONJ
+HEB 10:39!3		adv	οὐκ	οὐ	PRT-N
+HEB 10:39!4	vc	verb	ἐσμὲν	εἰμί	V-PAI-1P
+HEB 10:39!5		noun	ὑποστολῆς	ὑποστολή	N-GSF
+HEB 10:39!6		prep	εἰς	εἰς	PREP
+HEB 10:39!7		noun	ἀπώλειαν	ἀπώλεια	N-ASF
+HEB 10:39!8		conj	ἀλλὰ	ἀλλά	CONJ
+HEB 10:39!9		noun	πίστεως	πίστις	N-GSF
+HEB 10:39!10		prep	εἰς	εἰς	PREP
+HEB 10:39!11		noun	περιποίησιν	περιποίησις	N-ASF
+HEB 10:39!12		noun	ψυχῆς	ψυχή	N-GSF
+HEB 11:1!1	vc	verb	Ἔστιν	εἰμί	V-PAI-3S
+HEB 11:1!2		conj	δὲ	δέ	CONJ
+HEB 11:1!3	s	noun	πίστις	πίστις	N-NSF
+HEB 11:1!4	v	verb	ἐλπιζομένων	ἐλπίζω	V-PPP-GPN
+HEB 11:1!5		noun	ὑπόστασις	ὑπόστασις	N-NSF
+HEB 11:1!6		noun	πραγμάτων	πρᾶγμα	N-GPN
+HEB 11:1!7		noun	ἔλεγχος	ἔλεγχος	N-NSM
+HEB 11:1!8	adv	adv	οὐ	οὐ	PRT-N
+HEB 11:1!9	v	verb	βλεπομένων	βλέπω	V-PPP-GPN
+HEB 11:2!1		prep	ἐν	ἐν	PREP
+HEB 11:2!2		pron	ταύτῃ	οὗτος	D-DSF
+HEB 11:2!3		conj	γὰρ	γάρ	CONJ
+HEB 11:2!4	v	verb	ἐμαρτυρήθησαν	μαρτυρέω	V-API-3P
+HEB 11:2!5		det	οἱ	ὁ	T-NPM
+HEB 11:2!6		adj	πρεσβύτεροι	πρεσβύτερος	A-NPM-C
+HEB 11:3!1	adv	noun	πίστει	πίστις	N-DSF
+HEB 11:3!2	v	verb	νοοῦμεν	νοέω	V-PAI-1P
+HEB 11:3!3	v	verb	κατηρτίσθαι	καταρτίζω	V-RPN
+HEB 11:3!4		det	τοὺς	ὁ	T-APM
+HEB 11:3!5		noun	αἰῶνας	αἰών	N-APM
+HEB 11:3!6		noun	ῥήματι	ῥῆμα	N-DSN
+HEB 11:3!7		noun	θεοῦ	θεός	N-GSM
+HEB 11:3!8		prep	εἰς	εἰς	PREP
+HEB 11:3!9		det	τὸ	ὁ	T-ASN
+HEB 11:3!10	adv	adv	μὴ	μή	PRT-N
+HEB 11:3!11		prep	ἐκ	ἐκ	PREP
+HEB 11:3!12	v	verb	φαινομένων	φαίνω	V-PEP-GPN
+HEB 11:3!13		det	τὸ	ὁ	T-ASN
+HEB 11:3!14	v	verb	βλεπόμενον	βλέπω	V-PPP-ASN
+HEB 11:3!15	v	verb	γεγονέναι	γίνομαι	V-2RAN
+HEB 11:4!1	adv	noun	Πίστει	πίστις	N-DSF
+HEB 11:4!2		adj	πλείονα	πολύς	A-ASF-C
+HEB 11:4!3		noun	θυσίαν	θυσία	N-ASF
+HEB 11:4!4	s	noun	Ἅβελ	Ἅβελ	N-PRI
+HEB 11:4!5		prep	παρὰ	παρά	PREP
+HEB 11:4!6		noun	Κάϊν	Κάϊν	N-PRI
+HEB 11:4!7	v	verb	προσήνεγκεν	προσφέρω	V-AAI-3S
+HEB 11:4!8		det	τῷ	ὁ	T-DSM
+HEB 11:4!9		noun	θεῷ	θεός	N-DSM
+HEB 11:4!10		prep	δι	διά	PREP
+HEB 11:4!11		pron	ἧς	ὅς	R-GSF
+HEB 11:4!12	v	verb	ἐμαρτυρήθη	μαρτυρέω	V-API-3S
+HEB 11:4!13	vc	verb	εἶναι	εἰμί	V-PAN
+HEB 11:4!14	p	adj	δίκαιος	δίκαιος	A-NSM
+HEB 11:4!15	v	verb	μαρτυροῦντος	μαρτυρέω	V-PAP-GSM
+HEB 11:4!16		prep	ἐπὶ	ἐπί	PREP
+HEB 11:4!17		det	τοῖς	ὁ	T-DPN
+HEB 11:4!18		noun	δώροις	δῶρον	N-DPN
+HEB 11:4!19		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 11:4!20		det	τοῦ	ὁ	T-GSM
+HEB 11:4!21		noun	θεοῦ	θεός	N-GSM
+HEB 11:4!22		conj	καὶ	καί	CONJ
+HEB 11:4!23		prep	δι	διά	PREP
+HEB 11:4!24		pron	αὐτῆς	αὐτός	P-GSF
+HEB 11:4!25	v	verb	ἀποθανὼν	ἀποθνῄσκω	V-2AAP-NSM
+HEB 11:4!26	adv	adv	ἔτι	ἔτι	ADV
+HEB 11:4!27	v	verb	λαλεῖ	λαλέω	V-PAI-3S
+HEB 11:5!1	adv	noun	Πίστει	πίστις	N-DSF
+HEB 11:5!2	s	noun	Ἑνὼχ	Ἑνώχ	N-PRI
+HEB 11:5!3	v	verb	μετετέθη	μετατίθημι	V-API-3S
+HEB 11:5!4		det	τοῦ	ὁ	T-GSN
+HEB 11:5!5	adv	adv	μὴ	μή	PRT-N
+HEB 11:5!6	v	verb	ἰδεῖν	ὁράω	V-2AAN
+HEB 11:5!7	o	noun	θάνατον	θάνατος	N-ASM
+HEB 11:5!8		conj	καὶ	καί	CONJ
+HEB 11:5!9	adv	adv	οὐχ	οὐ	PRT-N
+HEB 11:5!10	v	verb	ηὑρίσκετο	εὑρίσκω	V-IPI-3S
+HEB 11:5!11		conj	διότι	διότι	CONJ
+HEB 11:5!12	v	verb	μετέθηκεν	μετατίθημι	V-AAI-3S
+HEB 11:5!13	o	pron	αὐτὸν	αὐτός	P-ASM
+HEB 11:5!14		det	ὁ	ὁ	T-NSM
+HEB 11:5!15		noun	θεός	θεός	N-NSM
+HEB 11:5!16		prep	πρὸ	πρό	PREP
+HEB 11:5!17		conj	γὰρ	γάρ	CONJ
+HEB 11:5!18		det	τῆς	ὁ	T-GSF
+HEB 11:5!19		noun	μεταθέσεως	μετάθεσις	N-GSF
+HEB 11:5!20	v	verb	μεμαρτύρηται	μαρτυρέω	V-RPI-3S
+HEB 11:5!21	v	verb	εὐαρεστηκέναι	εὐαρεστέω	V-RAN
+HEB 11:5!22		det	τῷ	ὁ	T-DSM
+HEB 11:5!23		noun	θεῷ	θεός	N-DSM
+HEB 11:6!1		prep	χωρὶς	χωρίς	ADV
+HEB 11:6!2		conj	δὲ	δέ	CONJ
+HEB 11:6!3		noun	πίστεως	πίστις	N-GSF
+HEB 11:6!4	p	adj	ἀδύνατον	ἀδύνατος	A-NSN
+HEB 11:6!5	v	verb	εὐαρεστῆσαι	εὐαρεστέω	V-AAN
+HEB 11:6!6	v	verb	πιστεῦσαι	πιστεύω	V-AAN
+HEB 11:6!7		conj	γὰρ	γάρ	CONJ
+HEB 11:6!8	v	verb	δεῖ	δέω	V-PAI-3S
+HEB 11:6!9		det	τὸν	ὁ	T-ASM
+HEB 11:6!10	v	verb	προσερχόμενον	προσέρχομαι	V-PNP-ASM
+HEB 11:6!11		det	τῷ	ὁ	T-DSM
+HEB 11:6!12		noun	θεῷ	θεός	N-DSM
+HEB 11:6!13		conj	ὅτι	ὅτι	CONJ
+HEB 11:6!14	v	verb	ἔστιν	εἰμί	V-PAI-3S
+HEB 11:6!15		conj	καὶ	καί	CONJ
+HEB 11:6!16		det	τοῖς	ὁ	T-DPM
+HEB 11:6!17	v	verb	ἐκζητοῦσιν	ἐκζητέω	V-PAP-DPM
+HEB 11:6!18	o	pron	αὐτὸν	αὐτός	P-ASM
+HEB 11:6!19	p	noun	μισθαποδότης	μισθαποδότης	N-NSM
+HEB 11:6!20	vc	verb	γίνεται	γίνομαι	V-PNI-3S
+HEB 11:7!1	adv	noun	πίστει	πίστις	N-DSF
+HEB 11:7!2	v	verb	χρηματισθεὶς	χρηματίζω	V-APP-NSM
+HEB 11:7!3	s	noun	Νῶε	Νῶε	N-PRI
+HEB 11:7!4		prep	περὶ	περί	PREP
+HEB 11:7!5		det	τῶν	ὁ	T-GPN
+HEB 11:7!6	adv	adv	μηδέπω	μηδέπω	ADV-N
+HEB 11:7!7	v	verb	βλεπομένων	βλέπω	V-PPP-GPN
+HEB 11:7!8	v	verb	εὐλαβηθεὶς	εὐλαβέομαι	V-AOP-NSM
+HEB 11:7!9	v	verb	κατεσκεύασεν	κατασκευάζω	V-AAI-3S
+HEB 11:7!10	o	noun	κιβωτὸν	κιβωτός	N-ASF
+HEB 11:7!11		prep	εἰς	εἰς	PREP
+HEB 11:7!12		noun	σωτηρίαν	σωτηρία	N-ASF
+HEB 11:7!13		det	τοῦ	ὁ	T-GSM
+HEB 11:7!14		noun	οἴκου	οἶκος	N-GSM
+HEB 11:7!15		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 11:7!16		prep	δι	διά	PREP
+HEB 11:7!17		pron	ἧς	ὅς	R-GSF
+HEB 11:7!18	v	verb	κατέκρινεν	κατακρίνω	V-AAI-3S
+HEB 11:7!19		det	τὸν	ὁ	T-ASM
+HEB 11:7!20		noun	κόσμον	κόσμος	N-ASM
+HEB 11:7!21		conj	καὶ	καί	CONJ
+HEB 11:7!22		det	τῆς	ὁ	T-GSF
+HEB 11:7!23		prep	κατὰ	κατά	PREP
+HEB 11:7!24		noun	πίστιν	πίστις	N-ASF
+HEB 11:7!25		noun	δικαιοσύνης	δικαιοσύνη	N-GSF
+HEB 11:7!26	vc	verb	ἐγένετο	γίνομαι	V-2ADI-3S
+HEB 11:7!27		noun	κληρονόμος	κληρονόμος	N-NSM
+HEB 11:8!1	adv	noun	Πίστει	πίστις	N-DSF
+HEB 11:8!2	v	verb	καλούμενος	καλέω	V-PPP-NSM
+HEB 11:8!3	s	noun	Ἀβραὰμ	Ἀβραάμ	N-PRI
+HEB 11:8!4	v	verb	ὑπήκουσεν	ὑπακούω	V-AAI-3S
+HEB 11:8!5	v	verb	ἐξελθεῖν	ἐξέρχομαι	V-2AAN
+HEB 11:8!6		prep	εἰς	εἰς	PREP
+HEB 11:8!7		noun	τόπον	τόπος	N-ASM
+HEB 11:8!8	o	pron	ὃν	ὅς	R-ASM
+HEB 11:8!9	v	verb	ἤμελλεν	μέλλω	V-IAI-3S-ATT
+HEB 11:8!10	v	verb	λαμβάνειν	λαμβάνω	V-PAN
+HEB 11:8!11		prep	εἰς	εἰς	PREP
+HEB 11:8!12		noun	κληρονομίαν	κληρονομία	N-ASF
+HEB 11:8!13		conj	καὶ	καί	CONJ
+HEB 11:8!14	v	verb	ἐξῆλθεν	ἐξέρχομαι	V-2AAI-3S
+HEB 11:8!15	adv	adv	μὴ	μή	PRT-N
+HEB 11:8!16	v	verb	ἐπιστάμενος	ἐπίσταμαι	V-PNP-NSM
+HEB 11:8!17	adv	adv	ποῦ	ποῦ	ADV-I
+HEB 11:8!18	v	verb	ἔρχεται	ἔρχομαι	V-PNI-3S
+HEB 11:9!1	adv	noun	πίστει	πίστις	N-DSF
+HEB 11:9!2	v	verb	παρῴκησεν	παροικέω	V-AAI-3S
+HEB 11:9!3		prep	εἰς	εἰς	PREP
+HEB 11:9!4		noun	γῆν	γῆ	N-ASF
+HEB 11:9!5		det	τῆς	ὁ	T-GSF
+HEB 11:9!6		noun	ἐπαγγελίας	ἐπαγγελία	N-GSF
+HEB 11:9!7		conj	ὡς	ὡς	ADV
+HEB 11:9!8		adj	ἀλλοτρίαν	ἀλλότριος	A-ASF
+HEB 11:9!9		prep	ἐν	ἐν	PREP
+HEB 11:9!10		noun	σκηναῖς	σκηνή	N-DPF
+HEB 11:9!11	v	verb	κατοικήσας	κατοικέω	V-AAP-NSM
+HEB 11:9!12		prep	μετὰ	μετά	PREP
+HEB 11:9!13		noun	Ἰσαὰκ	Ἰσαάκ	N-PRI
+HEB 11:9!14		conj	καὶ	καί	CONJ
+HEB 11:9!15		noun	Ἰακὼβ	Ἰακώβ	N-PRI
+HEB 11:9!16		det	τῶν	ὁ	T-GPM
+HEB 11:9!17		adj	συγκληρονόμων	συγκληρονόμος	A-GPM
+HEB 11:9!18		det	τῆς	ὁ	T-GSF
+HEB 11:9!19		noun	ἐπαγγελίας	ἐπαγγελία	N-GSF
+HEB 11:9!20		det	τῆς	ὁ	T-GSF
+HEB 11:9!21		adj	αὐτῆς	αὐτός	P-GSF
+HEB 11:10!1	v	verb	ἐξεδέχετο	ἐκδέχομαι	V-INI-3S
+HEB 11:10!2		conj	γὰρ	γάρ	CONJ
+HEB 11:10!3		det	τὴν	ὁ	T-ASF
+HEB 11:10!4		det	τοὺς	ὁ	T-APM
+HEB 11:10!5		noun	θεμελίους	θεμέλιος	N-APM
+HEB 11:10!6	v	verb	ἔχουσαν	ἔχω	V-PAP-ASF
+HEB 11:10!7		noun	πόλιν	πόλις	N-ASF
+HEB 11:10!8		pron	ἧς	ὅς	R-GSF
+HEB 11:10!9		noun	τεχνίτης	τεχνίτης	N-NSM
+HEB 11:10!10		conj	καὶ	καί	CONJ
+HEB 11:10!11		noun	δημιουργὸς	δημιουργός	N-NSM
+HEB 11:10!12		det	ὁ	ὁ	T-NSM
+HEB 11:10!13		noun	θεός	θεός	N-NSM
+HEB 11:11!1	adv	noun	πίστει	πίστις	N-DSF
+HEB 11:11!2		adv	καὶ	καί	CONJ
+HEB 11:11!3		pron	αὐτῇ	αὐτός	P-DSF
+HEB 11:11!4		noun	Σάρρᾳ	Σάρρα	N-DSF
+HEB 11:11!5	o	noun	δύναμιν	δύναμις	N-ASF
+HEB 11:11!6		prep	εἰς	εἰς	PREP
+HEB 11:11!7		noun	καταβολὴν	καταβολή	N-ASF
+HEB 11:11!8		noun	σπέρματος	σπέρμα	N-GSN
+HEB 11:11!9	v	verb	ἔλαβεν	λαμβάνω	V-2AAI-3S
+HEB 11:11!10		adv	καὶ	καί	CONJ
+HEB 11:11!11		prep	παρὰ	παρά	PREP
+HEB 11:11!12		noun	καιρὸν	καιρός	N-ASM
+HEB 11:11!13		noun	ἡλικίας	ἡλικία	N-GSF
+HEB 11:11!14		conj	ἐπεὶ	ἐπεί	CONJ
+HEB 11:11!15	o2	adj	πιστὸν	πιστός	A-ASM
+HEB 11:11!16	v	verb	ἡγήσατο	ἡγέομαι	V-ADI-3S
+HEB 11:11!17		det	τὸν	ὁ	T-ASM
+HEB 11:11!18	v	verb	ἐπαγγειλάμενον	ἐπαγγέλλομαι	V-ADP-ASM
+HEB 11:12!1		conj	διὸ	διό	CONJ
+HEB 11:12!2		adv	καὶ	καί	CONJ
+HEB 11:12!3		prep	ἀφ	ἀπό	PREP
+HEB 11:12!4		adj	ἑνὸς	εἷς	A-GSM
+HEB 11:12!5	v	verb	ἐγεννήθησαν	γεννάω	V-API-3P
+HEB 11:12!6		conj	καὶ	καί	CONJ
+HEB 11:12!7		pron	ταῦτα	οὗτος	D-NPN
+HEB 11:12!8	v	verb	νενεκρωμένου	νεκρόω	V-RPP-GSM
+HEB 11:12!9		conj	καθὼς	καθώς	ADV
+HEB 11:12!10		det	τὰ	ὁ	T-NPN
+HEB 11:12!11		noun	ἄστρα	ἄστρον	N-NPN
+HEB 11:12!12		det	τοῦ	ὁ	T-GSM
+HEB 11:12!13		noun	οὐρανοῦ	οὐρανός	N-GSM
+HEB 11:12!14		det	τῷ	ὁ	T-DSN
+HEB 11:12!15		noun	πλήθει	πλῆθος	N-DSN
+HEB 11:12!16		conj	καὶ	καί	CONJ
+HEB 11:12!17		conj	ὡς	ὡς	ADV
+HEB 11:12!18		det	ἡ	ὁ	T-NSF
+HEB 11:12!19		noun	ἄμμος	ἄμμος	N-NSF
+HEB 11:12!20		det	ἡ	ὁ	T-NSF
+HEB 11:12!21		prep	παρὰ	παρά	PREP
+HEB 11:12!22		det	τὸ	ὁ	T-ASN
+HEB 11:12!23		noun	χεῖλος	χεῖλος	N-ASN
+HEB 11:12!24		det	τῆς	ὁ	T-GSF
+HEB 11:12!25		noun	θαλάσσης	θάλασσα	N-GSF
+HEB 11:12!26		det	ἡ	ὁ	T-NSF
+HEB 11:12!27		adj	ἀναρίθμητος	ἀναρίθμητος	A-NSF
+HEB 11:13!1		prep	Κατὰ	κατά	PREP
+HEB 11:13!2		noun	πίστιν	πίστις	N-ASF
+HEB 11:13!3	v	verb	ἀπέθανον	ἀποθνῄσκω	V-2AAI-3P
+HEB 11:13!4		pron	οὗτοι	οὗτος	D-NPM
+HEB 11:13!5		adj	πάντες	πᾶς	A-NPM
+HEB 11:13!6		adv	μὴ	μή	PRT-N
+HEB 11:13!7	v	verb	λαβόντες	λαμβάνω	V-AAP-NPM
+HEB 11:13!8		det	τὰς	ὁ	T-APF
+HEB 11:13!9		noun	ἐπαγγελίας	ἐπαγγελία	N-APF
+HEB 11:13!10		conj	ἀλλὰ	ἀλλά	CONJ
+HEB 11:13!11	adv	adv	πόρρωθεν	πόρρωθεν	ADV
+HEB 11:13!12	o	pron	αὐτὰς	ἑαυτοῦ	P-APF
+HEB 11:13!13		verb	ἰδόντες	ὁράω	V-2AAP-NPM
+HEB 11:13!14		conj	καὶ	καί	CONJ
+HEB 11:13!15		verb	ἀσπασάμενοι	ἀσπάζομαι	V-ADP-NPM
+HEB 11:13!16		conj	καὶ	καί	CONJ
+HEB 11:13!17	v	verb	ὁμολογήσαντες	ὁμολογέω	V-AAP-NPM
+HEB 11:13!18		conj	ὅτι	ὅτι	CONJ
+HEB 11:13!19		adj	ξένοι	ξένος	A-NPM
+HEB 11:13!20		conj	καὶ	καί	CONJ
+HEB 11:13!21		adj	παρεπίδημοί	παρεπίδημος	A-NPM
+HEB 11:13!22	vc	verb	εἰσιν	εἰμί	V-PAI-3P
+HEB 11:13!23		prep	ἐπὶ	ἐπί	PREP
+HEB 11:13!24		det	τῆς	ὁ	T-GSF
+HEB 11:13!25		noun	γῆς	γῆ	N-GSF
+HEB 11:14!1		det	οἱ	ὁ	T-NPM
+HEB 11:14!2		conj	γὰρ	γάρ	CONJ
+HEB 11:14!3	o	pron	τοιαῦτα	τοιοῦτος	D-APN
+HEB 11:14!4	v	verb	λέγοντες	λέγω	V-PAP-NPM
+HEB 11:14!5	v	verb	ἐμφανίζουσιν	ἐμφανίζω	V-PAI-3P
+HEB 11:14!6		conj	ὅτι	ὅτι	CONJ
+HEB 11:14!7	o	noun	πατρίδα	πατρίς	N-ASF
+HEB 11:14!8	v	verb	ἐπιζητοῦσιν	ἐπιζητέω	V-PAI-3P
+HEB 11:15!1		conj	καὶ	καί	CONJ
+HEB 11:15!2		conj	εἰ	εἰ	COND
+HEB 11:15!3		conj	μὲν	μέν	PRT
+HEB 11:15!4		pron	ἐκείνης	ἐκεῖνος	D-GSF
+HEB 11:15!5	v	verb	μνημονεύουσιν	μνημονεύω	V-PAI-3P
+HEB 11:15!6		prep	ἀφ	ἀπό	PREP
+HEB 11:15!7		pron	ἧς	ὅς	R-GSF
+HEB 11:15!8	v	verb	ἐξέβησαν	ἐκβαίνω	V-2AAI-3P
+HEB 11:15!9	v	verb	εἶχον	ἔχω	V-IAI-3P
+HEB 11:15!10		ptcl	ἂν	ἄν	PRT
+HEB 11:15!11	o	noun	καιρὸν	καιρός	N-ASM
+HEB 11:15!12	v	verb	ἀνακάμψαι	ἀνακάμπτω	V-AAN
+HEB 11:16!1	adv	adv	νῦν	νῦν	ADV
+HEB 11:16!2		conj	δὲ	δέ	CONJ
+HEB 11:16!3		adj	κρείττονος	κρείττων	A-GSF-C
+HEB 11:16!4	v	verb	ὀρέγονται	ὀρέγομαι	V-PMI-3P
+HEB 11:16!5	s	pron	τοῦτ	οὗτος	D-NSN
+HEB 11:16!6	vc	verb	ἔστιν	εἰμί	V-PAI-3S
+HEB 11:16!7	p	adj	ἐπουρανίου	ἐπουράνιος	A-GSF
+HEB 11:16!8		conj	διὸ	διό	CONJ
+HEB 11:16!9	adv	adv	οὐκ	οὐ	PRT-N
+HEB 11:16!10	v	verb	ἐπαισχύνεται	ἐπαισχύνομαι	V-PNI-3S
+HEB 11:16!11	o	pron	αὐτοὺς	ἑαυτοῦ	P-APM
+HEB 11:16!12		det	ὁ	ὁ	T-NSM
+HEB 11:16!13		noun	θεὸς	θεός	N-NSM
+HEB 11:16!14		noun	θεὸς	θεός	N-NSM
+HEB 11:16!15	vc	verb	ἐπικαλεῖσθαι	ἐπικαλέω	V-PPN
+HEB 11:16!16		pron	αὐτῶν	αὐτός	P-GPM
+HEB 11:16!17	v	verb	ἡτοίμασεν	ἑτοιμάζω	V-AAI-3S
+HEB 11:16!18		conj	γὰρ	γάρ	CONJ
+HEB 11:16!19	io	pron	αὐτοῖς	αὐτός	P-DPM
+HEB 11:16!20	o	noun	πόλιν	πόλις	N-ASF
+HEB 11:17!1	adv	noun	Πίστει	πίστις	N-DSF
+HEB 11:17!2	v	verb	προσενήνοχεν	προσφέρω	V-2RAI-3S-ATT
+HEB 11:17!3	s	noun	Ἀβραὰμ	Ἀβραάμ	N-PRI
+HEB 11:17!4		det	τὸν	ὁ	T-ASM
+HEB 11:17!5		noun	Ἰσαὰκ	Ἰσαάκ	N-PRI
+HEB 11:17!6	v	verb	πειραζόμενος	πειράζω	V-PPP-NSM
+HEB 11:17!7		conj	καὶ	καί	CONJ
+HEB 11:17!8		det	τὸν	ὁ	T-ASM
+HEB 11:17!9		adj	μονογενῆ	μονογενής	A-ASM
+HEB 11:17!10	v	verb	προσέφερεν	προσφέρω	V-IAI-3S
+HEB 11:17!11		det	ὁ	ὁ	T-NSM
+HEB 11:17!12		det	τὰς	ὁ	T-APF
+HEB 11:17!13		noun	ἐπαγγελίας	ἐπαγγελία	N-APF
+HEB 11:17!14	v	verb	ἀναδεξάμενος	ἀναδέχομαι	V-ADP-NSM
+HEB 11:18!1		prep	πρὸς	πρός	PREP
+HEB 11:18!2		pron	ὃν	ὅς	R-ASM
+HEB 11:18!3	v	verb	ἐλαλήθη	λαλέω	V-API-3S
+HEB 11:18!4		conj	ὅτι	ὅτι	CONJ
+HEB 11:18!5		prep	Ἐν	ἐν	PREP
+HEB 11:18!6		noun	Ἰσαὰκ	Ἰσαάκ	N-PRI
+HEB 11:18!7	v	verb	κληθήσεταί	καλέω	V-FPI-3S
+HEB 11:18!8	io	pron	σοι	σύ	P-2DS
+HEB 11:18!9	s	noun	σπέρμα	σπέρμα	N-NSN
+HEB 11:19!1	v	verb	λογισάμενος	λογίζομαι	V-ADP-NSM
+HEB 11:19!2		conj	ὅτι	ὅτι	CONJ
+HEB 11:19!3		adv	καὶ	καί	CONJ
+HEB 11:19!4		prep	ἐκ	ἐκ	PREP
+HEB 11:19!5		adj	νεκρῶν	νεκρός	A-GPM
+HEB 11:19!6	v	verb	ἐγείρειν	ἐγείρω	V-PAN
+HEB 11:19!7	p	adj	δυνατὸς	δυνατός	A-NSM
+HEB 11:19!8		det	ὁ	ὁ	T-NSM
+HEB 11:19!9		noun	θεός	θεός	N-NSM
+HEB 11:19!10		adv	ὅθεν	ὅθεν	ADV
+HEB 11:19!11	o	pron	αὐτὸν	αὐτός	P-ASM
+HEB 11:19!12		adv	καὶ	καί	CONJ
+HEB 11:19!13		prep	ἐν	ἐν	PREP
+HEB 11:19!14		noun	παραβολῇ	παραβολή	N-DSF
+HEB 11:19!15	v	verb	ἐκομίσατο	κομίζω	V-AMI-3S
+HEB 11:20!1	adv	noun	Πίστει	πίστις	N-DSF
+HEB 11:20!2		adv	καὶ	καί	CONJ
+HEB 11:20!3		prep	περὶ	περί	PREP
+HEB 11:20!4	v	verb	μελλόντων	μέλλω	V-PAP-GPN
+HEB 11:20!5	v	verb	εὐλόγησεν	εὐλογέω	V-AAI-3S
+HEB 11:20!6	s	noun	Ἰσαὰκ	Ἰσαάκ	N-PRI
+HEB 11:20!7		det	τὸν	ὁ	T-ASM
+HEB 11:20!8		noun	Ἰακὼβ	Ἰακώβ	N-PRI
+HEB 11:20!9		conj	καὶ	καί	CONJ
+HEB 11:20!10		det	τὸν	ὁ	T-ASM
+HEB 11:20!11		noun	Ἠσαῦ	Ἠσαῦ	N-PRI
+HEB 11:21!1	adv	noun	πίστει	πίστις	N-DSF
+HEB 11:21!2	s	noun	Ἰακὼβ	Ἰακώβ	N-PRI
+HEB 11:21!3	v	verb	ἀποθνῄσκων	ἀποθνῄσκω	V-PAP-NSM
+HEB 11:21!4		adj	ἕκαστον	ἕκαστος	A-ASM
+HEB 11:21!5		det	τῶν	ὁ	T-GPM
+HEB 11:21!6		noun	υἱῶν	υἱός	N-GPM
+HEB 11:21!7		noun	Ἰωσὴφ	Ἰωσήφ	N-PRI
+HEB 11:21!8	v	verb	εὐλόγησεν	εὐλογέω	V-AAI-3S
+HEB 11:21!9		conj	καὶ	καί	CONJ
+HEB 11:21!10	v	verb	προσεκύνησεν	προσκυνέω	V-AAI-3S
+HEB 11:21!11		prep	ἐπὶ	ἐπί	PREP
+HEB 11:21!12		det	τὸ	ὁ	T-ASN
+HEB 11:21!13		noun	ἄκρον	ἄκρον	N-ASN
+HEB 11:21!14		det	τῆς	ὁ	T-GSF
+HEB 11:21!15		noun	ῥάβδου	ῥάβδος	N-GSF
+HEB 11:21!16		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 11:22!1	adv	noun	πίστει	πίστις	N-DSF
+HEB 11:22!2	s	noun	Ἰωσὴφ	Ἰωσήφ	N-PRI
+HEB 11:22!3	v	verb	τελευτῶν	τελευτάω	V-PAP-NSM
+HEB 11:22!4		prep	περὶ	περί	PREP
+HEB 11:22!5		det	τῆς	ὁ	T-GSF
+HEB 11:22!6		noun	ἐξόδου	ἔξοδος	N-GSF
+HEB 11:22!7		det	τῶν	ὁ	T-GPM
+HEB 11:22!8		noun	υἱῶν	υἱός	N-GPM
+HEB 11:22!9		noun	Ἰσραὴλ	Ἰσραήλ	N-PRI
+HEB 11:22!10	v	verb	ἐμνημόνευσεν	μνημονεύω	V-AAI-3S
+HEB 11:22!11		conj	καὶ	καί	CONJ
+HEB 11:22!12		prep	περὶ	περί	PREP
+HEB 11:22!13		det	τῶν	ὁ	T-GPN
+HEB 11:22!14		noun	ὀστέων	ὀστέον	N-GPN
+HEB 11:22!15		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 11:22!16	v	verb	ἐνετείλατο	ἐντέλλομαι	V-ADI-3S
+HEB 11:23!1	adv	noun	Πίστει	πίστις	N-DSF
+HEB 11:23!2	s	noun	Μωϋσῆς	Μωϋσῆς	N-NSM
+HEB 11:23!3	v	verb	γεννηθεὶς	γεννάω	V-APP-NSM
+HEB 11:23!4	v	verb	ἐκρύβη	κρύπτω	V-2API-3S
+HEB 11:23!5	adv	adj	τρίμηνον	τρίμηνον	A-ASN
+HEB 11:23!6		prep	ὑπὸ	ὑπό	PREP
+HEB 11:23!7		det	τῶν	ὁ	T-GPM
+HEB 11:23!8		noun	πατέρων	πατήρ	N-GPM
+HEB 11:23!9		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 11:23!10		conj	διότι	διότι	CONJ
+HEB 11:23!11	v	verb	εἶδον	ὁράω	V-2AAI-3P
+HEB 11:23!12	p	adj	ἀστεῖον	ἀστεῖος	A-ASN
+HEB 11:23!13		det	τὸ	ὁ	T-ASN
+HEB 11:23!14		noun	παιδίον	παιδίον	N-ASN
+HEB 11:23!15		conj	καὶ	καί	CONJ
+HEB 11:23!16	adv	adv	οὐκ	οὐ	PRT-N
+HEB 11:23!17	v	verb	ἐφοβήθησαν	φοβέομαι	V-AOI-3P
+HEB 11:23!18		det	τὸ	ὁ	T-ASN
+HEB 11:23!19		noun	διάταγμα	διάταγμα	N-ASN
+HEB 11:23!20		det	τοῦ	ὁ	T-GSM
+HEB 11:23!21		noun	βασιλέως	βασιλεύς	N-GSM
+HEB 11:24!1	adv	noun	πίστει	πίστις	N-DSF
+HEB 11:24!2	s	noun	Μωϋσῆς	Μωϋσῆς	N-NSM
+HEB 11:24!3	p	adj	μέγας	μέγας	A-NSM
+HEB 11:24!4	vc	verb	γενόμενος	γίνομαι	V-2ADP-NSM
+HEB 11:24!5	v	verb	ἠρνήσατο	ἀρνέομαι	V-ADI-3S
+HEB 11:24!6	vc	verb	λέγεσθαι	λέγω	V-PPN
+HEB 11:24!7		noun	υἱὸς	υἱός	N-NSM
+HEB 11:24!8		noun	θυγατρὸς	θυγάτηρ	N-GSF
+HEB 11:24!9		noun	Φαραώ	Φαραώ	N-PRI
+HEB 11:25!1	adv	adv	μᾶλλον	μᾶλλον	ADV
+HEB 11:25!2	v	verb	ἑλόμενος	αἱρέομαι	V-2AMP-NSM
+HEB 11:25!3	v	verb	συγκακουχεῖσθαι	συγκακουχέομαι	V-PNN
+HEB 11:25!4		det	τῷ	ὁ	T-DSM
+HEB 11:25!5		noun	λαῷ	λαός	N-DSM
+HEB 11:25!6		det	τοῦ	ὁ	T-GSM
+HEB 11:25!7		noun	θεοῦ	θεός	N-GSM
+HEB 11:25!8		conj	ἢ	ἤ	PRT
+HEB 11:25!9	adv	adj	πρόσκαιρον	πρόσκαιρος	A-ASF
+HEB 11:25!10	v	verb	ἔχειν	ἔχω	V-PAN
+HEB 11:25!11		noun	ἁμαρτίας	ἁμαρτία	N-GSF
+HEB 11:25!12		noun	ἀπόλαυσιν	ἀπόλαυσις	N-ASF
+HEB 11:26!1		adj	μείζονα	μέγας	A-ASM-C
+HEB 11:26!2		noun	πλοῦτον	πλοῦτος	N-ASM
+HEB 11:26!3	v	verb	ἡγησάμενος	ἡγέομαι	V-ADP-NSM
+HEB 11:26!4		det	τῶν	ὁ	T-GPM
+HEB 11:26!5		noun	Αἰγύπτου	Αἴγυπτος	N-GSF
+HEB 11:26!6		noun	θησαυρῶν	θησαυρός	N-GPM
+HEB 11:26!7		det	τὸν	ὁ	T-ASM
+HEB 11:26!8		noun	ὀνειδισμὸν	ὀνειδισμός	N-ASM
+HEB 11:26!9		det	τοῦ	ὁ	T-GSM
+HEB 11:26!10		noun	Χριστοῦ	Χριστός	N-GSM
+HEB 11:26!11	v	verb	ἀπέβλεπεν	ἀποβλέπω	V-IAI-3S
+HEB 11:26!12		conj	γὰρ	γάρ	CONJ
+HEB 11:26!13		prep	εἰς	εἰς	PREP
+HEB 11:26!14		det	τὴν	ὁ	T-ASF
+HEB 11:26!15		noun	μισθαποδοσίαν	μισθαποδοσία	N-ASF
+HEB 11:27!1	adv	noun	πίστει	πίστις	N-DSF
+HEB 11:27!2	v	verb	κατέλιπεν	καταλείπω	V-2AAI-3S
+HEB 11:27!3	o	noun	Αἴγυπτον	Αἴγυπτος	N-ASF
+HEB 11:27!4	adv	adv	μὴ	μή	PRT-N
+HEB 11:27!5	v	verb	φοβηθεὶς	φοβέομαι	V-AOP-NSM
+HEB 11:27!6		det	τὸν	ὁ	T-ASM
+HEB 11:27!7		noun	θυμὸν	θυμός	N-ASM
+HEB 11:27!8		det	τοῦ	ὁ	T-GSM
+HEB 11:27!9		noun	βασιλέως	βασιλεύς	N-GSM
+HEB 11:27!10		det	τὸν	ὁ	T-ASM
+HEB 11:27!11		conj	γὰρ	γάρ	CONJ
+HEB 11:27!12		adj	ἀόρατον	ἀόρατος	A-ASM
+HEB 11:27!13		conj	ὡς	ὡς	ADV
+HEB 11:27!14	v	verb	ὁρῶν	ὁράω	V-PAP-NSM
+HEB 11:27!15	v	verb	ἐκαρτέρησεν	καρτερέω	V-AAI-3S
+HEB 11:28!1	adv	noun	πίστει	πίστις	N-DSF
+HEB 11:28!2	v	verb	πεποίηκεν	ποιέω	V-RAI-3S
+HEB 11:28!3		det	τὸ	ὁ	T-ASN
+HEB 11:28!4		noun	πάσχα	πάσχα	ARAM
+HEB 11:28!5		conj	καὶ	καί	CONJ
+HEB 11:28!6		det	τὴν	ὁ	T-ASF
+HEB 11:28!7		noun	πρόσχυσιν	πρόσχυσις	N-ASF
+HEB 11:28!8		det	τοῦ	ὁ	T-GSN
+HEB 11:28!9		noun	αἵματος	αἷμα	N-GSN
+HEB 11:28!10		conj	ἵνα	ἵνα	CONJ
+HEB 11:28!11	adv	adv	μὴ	μή	PRT-N
+HEB 11:28!12		det	ὁ	ὁ	T-NSM
+HEB 11:28!13	v	verb	ὀλοθρεύων	ὀλοθρεύω	V-PAP-NSM
+HEB 11:28!14		det	τὰ	ὁ	T-APN
+HEB 11:28!15		adj	πρωτότοκα	πρωτότοκος	A-APN-S
+HEB 11:28!16	v	verb	θίγῃ	θιγγάνω	V-2AAS-3S
+HEB 11:28!17	o	pron	αὐτῶν	αὐτός	P-GPM
+HEB 11:29!1	adv	noun	Πίστει	πίστις	N-DSF
+HEB 11:29!2	v	verb	διέβησαν	διαβαίνω	V-2AAI-3P
+HEB 11:29!3		det	τὴν	ὁ	T-ASF
+HEB 11:29!4		adj	Ἐρυθρὰν	ἐρυθρός	A-ASF
+HEB 11:29!5		noun	Θάλασσαν	θάλασσα	N-ASF
+HEB 11:29!6		conj	ὡς	ὡς	ADV
+HEB 11:29!7		prep	διὰ	διά	PREP
+HEB 11:29!8		adj	ξηρᾶς	ξηρός	A-GSF
+HEB 11:29!9		noun	γῆς	γῆ	N-GSF
+HEB 11:29!10		pron	ἧς	ὅς	R-GSF
+HEB 11:29!11		noun	πεῖραν	πεῖρα	N-ASF
+HEB 11:29!12	v	verb	λαβόντες	λαμβάνω	V-2AAP-NPM
+HEB 11:29!13		det	οἱ	ὁ	T-NPM
+HEB 11:29!14		adj	Αἰγύπτιοι	Αἰγύπτιος	A-NPM
+HEB 11:29!15	v	verb	κατεπόθησαν	καταπίνω	V-API-3P
+HEB 11:30!1	adv	noun	πίστει	πίστις	N-DSF
+HEB 11:30!2		det	τὰ	ὁ	T-NPN
+HEB 11:30!3		noun	τείχη	τεῖχος	N-NPN
+HEB 11:30!4		noun	Ἰεριχὼ	Ἰεριχώ	N-PRI
+HEB 11:30!5	v	verb	ἔπεσαν	πίπτω	V-2AAI-3P
+HEB 11:30!6	v	verb	κυκλωθέντα	κυκλόω	V-APP-NPN
+HEB 11:30!7		prep	ἐπὶ	ἐπί	PREP
+HEB 11:30!8		num	ἑπτὰ	ἑπτά	A-NUI
+HEB 11:30!9		noun	ἡμέρας	ἡμέρα	N-APF
+HEB 11:31!1	adv	noun	πίστει	πίστις	N-DSF
+HEB 11:31!2		noun	Ῥαὰβ	Ῥαάβ	N-PRI
+HEB 11:31!3		det	ἡ	ὁ	T-NSF
+HEB 11:31!4		noun	πόρνη	πόρνη	N-NSF
+HEB 11:31!5	adv	adv	οὐ	οὐ	PRT-N
+HEB 11:31!6	v	verb	συναπώλετο	συναπόλλυμαι	V-2AMI-3S
+HEB 11:31!7		det	τοῖς	ὁ	T-DPM
+HEB 11:31!8	v	verb	ἀπειθήσασιν	ἀπειθέω	V-AAP-DPM
+HEB 11:31!9	v	verb	δεξαμένη	δέχομαι	V-ADP-NSF
+HEB 11:31!10		det	τοὺς	ὁ	T-APM
+HEB 11:31!11		noun	κατασκόπους	κατάσκοπος	N-APM
+HEB 11:31!12		prep	μετ	μετά	PREP
+HEB 11:31!13		noun	εἰρήνης	εἰρήνη	N-GSF
+HEB 11:32!1		conj	Καὶ	καί	CONJ
+HEB 11:32!2	o	pron	τί	τίς	I-ASN
+HEB 11:32!3	adv	adv	ἔτι	ἔτι	ADV
+HEB 11:32!4	v	verb	λέγω	λέγω	V-PAS-1S
+HEB 11:32!5	v	verb	ἐπιλείψει	ἐπιλείπω	V-FAI-3S
+HEB 11:32!6	s	pron	με	ἐγώ	P-1AS
+HEB 11:32!7		conj	γὰρ	γάρ	CONJ
+HEB 11:32!8	v	verb	διηγούμενον	διηγέομαι	V-PNP-ASM
+HEB 11:32!9		det	ὁ	ὁ	T-NSM
+HEB 11:32!10		noun	χρόνος	χρόνος	N-NSM
+HEB 11:32!11		prep	περὶ	περί	PREP
+HEB 11:32!12		noun	Γεδεών	Γεδεών	N-PRI
+HEB 11:32!13		noun	Βαράκ	Βαράκ	N-PRI
+HEB 11:32!14		noun	Σαμψών	Σαμψών	N-PRI
+HEB 11:32!15		noun	Ἰεφθάε	Ἰεφθάε	N-PRI
+HEB 11:32!16		noun	Δαυίδ	Δαυίδ	N-PRI
+HEB 11:32!17		conj	τε	τέ	PRT
+HEB 11:32!18		conj	καὶ	καί	CONJ
+HEB 11:32!19		noun	Σαμουὴλ	Σαμουήλ	N-PRI
+HEB 11:32!20		conj	καὶ	καί	CONJ
+HEB 11:32!21		det	τῶν	ὁ	T-GPM
+HEB 11:32!22		noun	προφητῶν	προφήτης	N-GPM
+HEB 11:33!1	s	pron	οἳ	ὅς	R-NPM
+HEB 11:33!2		prep	διὰ	διά	PREP
+HEB 11:33!3		noun	πίστεως	πίστις	N-GSF
+HEB 11:33!4	v	verb	κατηγωνίσαντο	καταγωνίζομαι	V-ADI-3P
+HEB 11:33!5	o	noun	βασιλείας	βασιλεία	N-APF
+HEB 11:33!6	v	verb	εἰργάσαντο	ἐργάζομαι	V-ADI-3P
+HEB 11:33!7	o	noun	δικαιοσύνην	δικαιοσύνη	N-ASF
+HEB 11:33!8	v	verb	ἐπέτυχον	ἐπιτυγχάνω	V-2AAI-3P
+HEB 11:33!9	o	noun	ἐπαγγελιῶν	ἐπαγγελία	N-GPF
+HEB 11:33!10	v	verb	ἔφραξαν	φράσσω	V-AAI-3P
+HEB 11:33!11		noun	στόματα	στόμα	N-APN
+HEB 11:33!12		noun	λεόντων	λέων	N-GPM
+HEB 11:34!1	v	verb	ἔσβεσαν	σβέννυμι	V-AAI-3P
+HEB 11:34!2		noun	δύναμιν	δύναμις	N-ASF
+HEB 11:34!3		noun	πυρός	πῦρ	N-GSN
+HEB 11:34!4	v	verb	ἔφυγον	φεύγω	V-2AAI-3P
+HEB 11:34!5		noun	στόματα	στόμα	N-APN
+HEB 11:34!6		noun	μαχαίρης	μάχαιρα	N-GSF
+HEB 11:34!7	v	verb	ἐδυναμώθησαν	δυναμόω	V-API-3P
+HEB 11:34!8		prep	ἀπὸ	ἀπό	PREP
+HEB 11:34!9		noun	ἀσθενείας	ἀσθένεια	N-GSF
+HEB 11:34!10	vc	verb	ἐγενήθησαν	γίνομαι	V-AOI-3P
+HEB 11:34!11	p	adj	ἰσχυροὶ	ἰσχυρός	A-NPM
+HEB 11:34!12		prep	ἐν	ἐν	PREP
+HEB 11:34!13		noun	πολέμῳ	πόλεμος	N-DSM
+HEB 11:34!14		noun	παρεμβολὰς	παρεμβολή	N-APF
+HEB 11:34!15	v	verb	ἔκλιναν	κλίνω	V-AAI-3P
+HEB 11:34!16		adj	ἀλλοτρίων	ἀλλότριος	A-GPM
+HEB 11:35!1	v	verb	ἔλαβον	λαμβάνω	V-2AAI-3P
+HEB 11:35!2	s	noun	γυναῖκες	γυνή	N-NPF
+HEB 11:35!3		prep	ἐξ	ἐκ	PREP
+HEB 11:35!4		noun	ἀναστάσεως	ἀνάστασις	N-GSF
+HEB 11:35!5		det	τοὺς	ὁ	T-APM
+HEB 11:35!6		adj	νεκροὺς	νεκρός	A-APM
+HEB 11:35!7		pron	αὐτῶν	αὐτός	P-GPF
+HEB 11:35!8	s	adj	ἄλλοι	ἄλλος	A-NPM
+HEB 11:35!9		conj	δὲ	δέ	CONJ
+HEB 11:35!10	v	verb	ἐτυμπανίσθησαν	τυμπανίζω	V-API-3P
+HEB 11:35!11	adv	adv	οὐ	οὐ	PRT-N
+HEB 11:35!12	v	verb	προσδεξάμενοι	προσδέχομαι	V-ADP-NPM
+HEB 11:35!13		det	τὴν	ὁ	T-ASF
+HEB 11:35!14		noun	ἀπολύτρωσιν	ἀπολύτρωσις	N-ASF
+HEB 11:35!15		conj	ἵνα	ἵνα	CONJ
+HEB 11:35!16		adj	κρείττονος	κρείττων	A-GSF-C
+HEB 11:35!17		noun	ἀναστάσεως	ἀνάστασις	N-GSF
+HEB 11:35!18	v	verb	τύχωσιν	τυγχάνω	V-2AAS-3P
+HEB 11:36!1	s	adj	ἕτεροι	ἕτερος	A-NPM
+HEB 11:36!2		conj	δὲ	δέ	CONJ
+HEB 11:36!3		noun	ἐμπαιγμῶν	ἐμπαιγμός	N-GPM
+HEB 11:36!4		conj	καὶ	καί	CONJ
+HEB 11:36!5		noun	μαστίγων	μάστιξ	N-GPF
+HEB 11:36!6		noun	πεῖραν	πεῖρα	N-ASF
+HEB 11:36!7	v	verb	ἔλαβον	λαμβάνω	V-2AAI-3P
+HEB 11:36!8		adv	ἔτι	ἔτι	ADV
+HEB 11:36!9		conj	δὲ	δέ	CONJ
+HEB 11:36!10		noun	δεσμῶν	δεσμός	N-GPM
+HEB 11:36!11		conj	καὶ	καί	CONJ
+HEB 11:36!12		noun	φυλακῆς	φυλακή	N-GSF
+HEB 11:37!1	v	verb	ἐλιθάσθησαν	λιθάζω	V-API-3P
+HEB 11:37!2	v	verb	ἐπρίσθησαν	πρίζω	V-API-3P
+HEB 11:37!3		prep	ἐν	ἐν	PREP
+HEB 11:37!4		noun	φόνῳ	φόνος	N-DSM
+HEB 11:37!5		noun	μαχαίρης	μάχαιρα	N-GSF
+HEB 11:37!6	v	verb	ἀπέθανον	ἀποθνῄσκω	V-2AAI-3P
+HEB 11:37!7	v	verb	περιῆλθον	περιέρχομαι	V-2AAI-3P
+HEB 11:37!8		prep	ἐν	ἐν	PREP
+HEB 11:37!9		noun	μηλωταῖς	μηλωτή	N-DPF
+HEB 11:37!10		prep	ἐν	ἐν	PREP
+HEB 11:37!11		adj	αἰγείοις	αἴγειος	A-DPN
+HEB 11:37!12		noun	δέρμασιν	δέρμα	N-DPN
+HEB 11:37!13	v	verb	ὑστερούμενοι	ὑστερέω	V-PPP-NPM
+HEB 11:37!14	v	verb	θλιβόμενοι	θλίβω	V-PPP-NPM
+HEB 11:37!15	v	verb	κακουχούμενοι	κακουχέομαι	V-PPP-NPM
+HEB 11:38!1	adv	pron	ὧν	ὅς	R-GPM
+HEB 11:38!2	adv	adv	οὐκ	οὐ	PRT-N
+HEB 11:38!3	vc	verb	ἦν	εἰμί	V-IAI-3S
+HEB 11:38!4	p	adj	ἄξιος	ἄξιος	A-NSM
+HEB 11:38!5		det	ὁ	ὁ	T-NSM
+HEB 11:38!6		noun	κόσμος	κόσμος	N-NSM
+HEB 11:38!7		prep	ἐπὶ	ἐπί	PREP
+HEB 11:38!8		noun	ἐρημίαις	ἐρημία	N-DPF
+HEB 11:38!9	v	verb	πλανώμενοι	πλανάω	V-PPP-NPM
+HEB 11:38!10		conj	καὶ	καί	CONJ
+HEB 11:38!11		noun	ὄρεσι	ὄρος	N-DPN
+HEB 11:38!12		conj	καὶ	καί	CONJ
+HEB 11:38!13		noun	σπηλαίοις	σπήλαιον	N-DPN
+HEB 11:38!14		conj	καὶ	καί	CONJ
+HEB 11:38!15		det	ταῖς	ὁ	T-DPF
+HEB 11:38!16		noun	ὀπαῖς	ὀπή	N-DPF
+HEB 11:38!17		det	τῆς	ὁ	T-GSF
+HEB 11:38!18		noun	γῆς	γῆ	N-GSF
+HEB 11:39!1		conj	καὶ	καί	CONJ
+HEB 11:39!2	s	adj	πάντες	πᾶς	A-NPM
+HEB 11:39!3	v	verb	μαρτυρηθέντες	μαρτυρέω	V-APP-NPM
+HEB 11:39!4		prep	διὰ	διά	PREP
+HEB 11:39!5		det	τῆς	ὁ	T-GSF
+HEB 11:39!6		noun	πίστεως	πίστις	N-GSF
+HEB 11:39!7	adv	adv	οὐκ	οὐ	PRT-N
+HEB 11:39!8	v	verb	ἐκομίσαντο	κομίζω	V-AMI-3P
+HEB 11:39!9		det	τὴν	ὁ	T-ASF
+HEB 11:39!10		noun	ἐπαγγελίαν	ἐπαγγελία	N-ASF
+HEB 11:40!1		det	τοῦ	ὁ	T-GSM
+HEB 11:40!2		noun	θεοῦ	θεός	N-GSM
+HEB 11:40!3		prep	περὶ	περί	PREP
+HEB 11:40!4		pron	ἡμῶν	ἐγώ	P-1GP
+HEB 11:40!5		adj	κρεῖττόν	κρείττων	A-ASN-C
+HEB 11:40!6		pron	τι	τις	X-ASN
+HEB 11:40!7	v	verb	προβλεψαμένου	προβλέπομαι	V-AMP-GSM
+HEB 11:40!8		conj	ἵνα	ἵνα	CONJ
+HEB 11:40!9	adv	adv	μὴ	μή	PRT-N
+HEB 11:40!10		prep	χωρὶς	χωρίς	ADV
+HEB 11:40!11		pron	ἡμῶν	ἐγώ	P-1GP
+HEB 11:40!12	v	verb	τελειωθῶσιν	τελειόω	V-APS-3P
+HEB 12:1!1		conj	Τοιγαροῦν	τοιγαροῦν	PRT
+HEB 12:1!2		adv	καὶ	καί	CONJ
+HEB 12:1!3		pron	ἡμεῖς	ἐγώ	P-1NP
+HEB 12:1!4		pron	τοσοῦτον	τοσοῦτος	D-ASN
+HEB 12:1!5	v	verb	ἔχοντες	ἔχω	V-PAP-NPM
+HEB 12:1!6	v	verb	περικείμενον	περίκειμαι	V-PNP-ASN
+HEB 12:1!7	adv	pron	ἡμῖν	ἐγώ	P-1DP
+HEB 12:1!8		noun	νέφος	νέφος	N-ASN
+HEB 12:1!9		noun	μαρτύρων	μάρτυς	N-GPM
+HEB 12:1!10		noun	ὄγκον	ὄγκος	N-ASM
+HEB 12:1!11	v	verb	ἀποθέμενοι	ἀποτίθημι	V-2AMP-NPM
+HEB 12:1!12		adj	πάντα	πᾶς	A-ASM
+HEB 12:1!13		conj	καὶ	καί	CONJ
+HEB 12:1!14		det	τὴν	ὁ	T-ASF
+HEB 12:1!15		adj	εὐπερίστατον	εὐπερίστατος	A-ASF
+HEB 12:1!16		noun	ἁμαρτίαν	ἁμαρτία	N-ASF
+HEB 12:1!17		prep	δι	διά	PREP
+HEB 12:1!18		noun	ὑπομονῆς	ὑπομονή	N-GSF
+HEB 12:1!19	v	verb	τρέχωμεν	τρέχω	V-PAS-1P
+HEB 12:1!20		det	τὸν	ὁ	T-ASM
+HEB 12:1!21	v	verb	προκείμενον	πρόκειμαι	V-PNP-ASM
+HEB 12:1!22	adv	pron	ἡμῖν	ἐγώ	P-1DP
+HEB 12:1!23		noun	ἀγῶνα	ἀγών	N-ASM
+HEB 12:2!1	v	verb	ἀφορῶντες	ἀφοράω	V-PAP-NPM
+HEB 12:2!2		prep	εἰς	εἰς	PREP
+HEB 12:2!3		det	τὸν	ὁ	T-ASM
+HEB 12:2!4		det	τῆς	ὁ	T-GSF
+HEB 12:2!5		noun	πίστεως	πίστις	N-GSF
+HEB 12:2!6		noun	ἀρχηγὸν	ἀρχηγός	N-ASM
+HEB 12:2!7		conj	καὶ	καί	CONJ
+HEB 12:2!8		noun	τελειωτὴν	τελειωτής	N-ASM
+HEB 12:2!9		noun	Ἰησοῦν	Ἰησοῦς	N-ASM
+HEB 12:2!10	s	pron	ὃς	ὅς	R-NSM
+HEB 12:2!11		prep	ἀντὶ	ἀντί	PREP
+HEB 12:2!12		det	τῆς	ὁ	T-GSF
+HEB 12:2!13	v	verb	προκειμένης	πρόκειμαι	V-PNP-GSF
+HEB 12:2!14	adv	pron	αὐτῷ	αὐτός	P-DSM
+HEB 12:2!15		noun	χαρᾶς	χαρά	N-GSF
+HEB 12:2!16	v	verb	ὑπέμεινεν	ὑπομένω	V-AAI-3S
+HEB 12:2!17	o	noun	σταυρὸν	σταυρός	N-ASM
+HEB 12:2!18	o	noun	αἰσχύνης	αἰσχύνη	N-GSF
+HEB 12:2!19	v	verb	καταφρονήσας	καταφρονέω	V-AAP-NSM
+HEB 12:2!20		prep	ἐν	ἐν	PREP
+HEB 12:2!21		adj	δεξιᾷ	δεξιός	A-DSF
+HEB 12:2!22		conj	τε	τέ	PRT
+HEB 12:2!23		det	τοῦ	ὁ	T-GSM
+HEB 12:2!24		noun	θρόνου	θρόνος	N-GSM
+HEB 12:2!25		det	τοῦ	ὁ	T-GSM
+HEB 12:2!26		noun	θεοῦ	θεός	N-GSM
+HEB 12:2!27	v	verb	κεκάθικεν	καθίζω	V-RAI-3S
+HEB 12:3!1	v	verb	Ἀναλογίσασθε	ἀναλογίζομαι	V-ADM-2P
+HEB 12:3!2		conj	γὰρ	γάρ	CONJ
+HEB 12:3!3		det	τὸν	ὁ	T-ASM
+HEB 12:3!4		pron	τοιαύτην	τοιοῦτος	D-ASF
+HEB 12:3!5	v	verb	ὑπομεμενηκότα	ὑπομένω	V-RAP-ASM
+HEB 12:3!6		prep	ὑπὸ	ὑπό	PREP
+HEB 12:3!7		det	τῶν	ὁ	T-GPM
+HEB 12:3!8		adj	ἁμαρτωλῶν	ἁμαρτωλός	A-GPM
+HEB 12:3!9		prep	εἰς	εἰς	PREP
+HEB 12:3!10		pron	ἑαυτοὺς	ἑαυτοῦ	P-APM
+HEB 12:3!11		noun	ἀντιλογίαν	ἀντιλογία	N-ASF
+HEB 12:3!12		conj	ἵνα	ἵνα	CONJ
+HEB 12:3!13	adv	adv	μὴ	μή	PRT-N
+HEB 12:3!14	v	verb	κάμητε	κάμνω	V-2AAS-2P
+HEB 12:3!15		det	ταῖς	ὁ	T-DPF
+HEB 12:3!16		noun	ψυχαῖς	ψυχή	N-DPF
+HEB 12:3!17		pron	ὑμῶν	σύ	P-2GP
+HEB 12:3!18	v	verb	ἐκλυόμενοι	ἐκλύομαι	V-PPP-NPM
+HEB 12:4!1	adv	adv	οὔπω	οὔπω	ADV-N
+HEB 12:4!2		prep	μέχρις	μέχρι(ς)	ADV
+HEB 12:4!3		noun	αἵματος	αἷμα	N-GSN
+HEB 12:4!4	v	verb	ἀντικατέστητε	ἀντικαθίστημι	V-2AAI-2P
+HEB 12:4!5		prep	πρὸς	πρός	PREP
+HEB 12:4!6		det	τὴν	ὁ	T-ASF
+HEB 12:4!7		noun	ἁμαρτίαν	ἁμαρτία	N-ASF
+HEB 12:4!8	v	verb	ἀνταγωνιζόμενοι	ἀνταγωνίζομαι	V-PNP-NPM
+HEB 12:5!1		conj	καὶ	καί	CONJ
+HEB 12:5!2	v	verb	ἐκλέλησθε	ἐκλανθάνω	V-RPI-2P
+HEB 12:5!3		det	τῆς	ὁ	T-GSF
+HEB 12:5!4		noun	παρακλήσεως	παράκλησις	N-GSF
+HEB 12:5!5	s	pron	ἥτις	ὅστις	R-NSF
+HEB 12:5!6	io	pron	ὑμῖν	σύ	P-2DP
+HEB 12:5!7		conj	ὡς	ὡς	ADV
+HEB 12:5!8	io	noun	υἱοῖς	υἱός	N-DPM
+HEB 12:5!9	v	verb	διαλέγεται	διαλέγομαι	V-PNI-3S
+HEB 12:5!10		noun	Υἱέ	υἱός	N-VSM
+HEB 12:5!11		pron	μου	ἐγώ	P-1GS
+HEB 12:5!12	adv	adv	μὴ	μή	PRT-N
+HEB 12:5!13	v	verb	ὀλιγώρει	ὀλιγωρέω	V-PAM-2S
+HEB 12:5!14		noun	παιδείας	παιδεία	N-GSF
+HEB 12:5!15		noun	κυρίου	κύριος	N-GSM
+HEB 12:5!16		conj	μηδὲ	μηδέ	CONJ-N
+HEB 12:5!17	v	verb	ἐκλύου	ἐκλύομαι	V-PPM-2S
+HEB 12:5!18		prep	ὑπ	ὑπό	PREP
+HEB 12:5!19		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 12:5!20	v	verb	ἐλεγχόμενος	ἐλέγχω	V-PPP-NSM
+HEB 12:6!1	o	pron	ὃν	ὅς	R-ASM
+HEB 12:6!2		conj	γὰρ	γάρ	CONJ
+HEB 12:6!3	v	verb	ἀγαπᾷ	ἀγαπάω	V-PAI-3S
+HEB 12:6!4	s	noun	κύριος	κύριος	N-NSM
+HEB 12:6!5	v	verb	παιδεύει	παιδεύω	V-PAI-3S
+HEB 12:6!6	v	verb	μαστιγοῖ	μαστιγόω	V-PAI-3S
+HEB 12:6!7		conj	δὲ	δέ	CONJ
+HEB 12:6!8		adj	πάντα	πᾶς	A-ASM
+HEB 12:6!9		noun	υἱὸν	υἱός	N-ASM
+HEB 12:6!10	o	pron	ὃν	ὅς	R-ASM
+HEB 12:6!11	v	verb	παραδέχεται	παραδέχομαι	V-PNI-3S
+HEB 12:7!1		prep	εἰς	εἰς	PREP
+HEB 12:7!2		noun	παιδείαν	παιδεία	N-ASF
+HEB 12:7!3	v	verb	ὑπομένετε	ὑπομένω	V-PAI-2P
+HEB 12:7!4		conj	ὡς	ὡς	ADV
+HEB 12:7!5	io	noun	υἱοῖς	υἱός	N-DPM
+HEB 12:7!6	io	pron	ὑμῖν	σύ	P-2DP
+HEB 12:7!7	v	verb	προσφέρεται	προσφέρω	V-PPI-3S
+HEB 12:7!8		det	ὁ	ὁ	T-NSM
+HEB 12:7!9		noun	θεός	θεός	N-NSM
+HEB 12:7!10	p	pron	τίς	τίς	I-NSM
+HEB 12:7!11		conj	γὰρ	γάρ	CONJ
+HEB 12:7!12		noun	υἱὸς	υἱός	N-NSM
+HEB 12:7!13	o	pron	ὃν	ὅς	R-ASM
+HEB 12:7!14	adv	adv	οὐ	οὐ	PRT-N
+HEB 12:7!15	v	verb	παιδεύει	παιδεύω	V-PAI-3S
+HEB 12:7!16	s	noun	πατήρ	πατήρ	N-NSM
+HEB 12:8!1		conj	εἰ	εἰ	COND
+HEB 12:8!2		conj	δὲ	δέ	CONJ
+HEB 12:8!3		prep	χωρίς	χωρίς	ADV
+HEB 12:8!4	vc	verb	ἐστε	εἰμί	V-PAI-2P
+HEB 12:8!5		noun	παιδείας	παιδεία	N-GSF
+HEB 12:8!6		pron	ἧς	ὅς	R-GSF
+HEB 12:8!7		adj	μέτοχοι	μέτοχος	A-NPM
+HEB 12:8!8	vc	verb	γεγόνασι	γίνομαι	V-2RAI-3P
+HEB 12:8!9	s	adj	πάντες	πᾶς	A-NPM
+HEB 12:8!10		conj	ἄρα	ἄρα	PRT
+HEB 12:8!11		adj	νόθοι	νόθος	A-NPM
+HEB 12:8!12		conj	καὶ	καί	CONJ
+HEB 12:8!13		adv	οὐχ	οὐ	PRT-N
+HEB 12:8!14		noun	υἱοί	υἱός	N-NPM
+HEB 12:8!15	vc	verb	ἐστε	εἰμί	V-PAI-2P
+HEB 12:9!1	adv	adv	εἶτα	εἶτα	ADV
+HEB 12:9!2		det	τοὺς	ὁ	T-APM
+HEB 12:9!3		conj	μὲν	μέν	PRT
+HEB 12:9!4		det	τῆς	ὁ	T-GSF
+HEB 12:9!5		noun	σαρκὸς	σάρξ	N-GSF
+HEB 12:9!6		pron	ἡμῶν	ἐγώ	P-1GP
+HEB 12:9!7		noun	πατέρας	πατήρ	N-APM
+HEB 12:9!8	v	verb	εἴχομεν	ἔχω	V-IAI-1P
+HEB 12:9!9	o2	noun	παιδευτὰς	παιδευτής	N-APM
+HEB 12:9!10		conj	καὶ	καί	CONJ
+HEB 12:9!11	v	verb	ἐνετρεπόμεθα	ἐντρέπω	V-IPI-1P
+HEB 12:9!12	adv	adv	οὐ	οὐ	PRT-N
+HEB 12:9!13		adj	πολὺ	πολύς	A-ASN
+HEB 12:9!14		adv	μᾶλλον	μᾶλλον	ADV
+HEB 12:9!15	v	verb	ὑποταγησόμεθα	ὑποτάσσω	V-2FPI-1P
+HEB 12:9!16		det	τῷ	ὁ	T-DSM
+HEB 12:9!17		noun	πατρὶ	πατήρ	N-DSM
+HEB 12:9!18		det	τῶν	ὁ	T-GPN
+HEB 12:9!19		noun	πνευμάτων	πνεῦμα	N-GPN
+HEB 12:9!20		conj	καὶ	καί	CONJ
+HEB 12:9!21	v	verb	ζήσομεν	ζάω	V-FAI-1P
+HEB 12:10!1	s	det	οἱ	ὁ	T-NPM
+HEB 12:10!2		conj	μὲν	μέν	PRT
+HEB 12:10!3		conj	γὰρ	γάρ	CONJ
+HEB 12:10!4		prep	πρὸς	πρός	PREP
+HEB 12:10!5		adj	ὀλίγας	ὀλίγος	A-APF
+HEB 12:10!6		noun	ἡμέρας	ἡμέρα	N-APF
+HEB 12:10!7		prep	κατὰ	κατά	PREP
+HEB 12:10!8		det	τὸ	ὁ	T-ASN
+HEB 12:10!9	v	verb	δοκοῦν	δοκέω	V-PAP-ASN
+HEB 12:10!10	adv	pron	αὐτοῖς	αὐτός	P-DPM
+HEB 12:10!11	v	verb	ἐπαίδευον	παιδεύω	V-IAI-3P
+HEB 12:10!12	s	det	ὁ	ὁ	T-NSM
+HEB 12:10!13		conj	δὲ	δέ	CONJ
+HEB 12:10!14		prep	ἐπὶ	ἐπί	PREP
+HEB 12:10!15		det	τὸ	ὁ	T-ASN
+HEB 12:10!16	v	verb	συμφέρον	συμφέρω	V-PAP-ASN
+HEB 12:10!17		prep	εἰς	εἰς	PREP
+HEB 12:10!18		det	τὸ	ὁ	T-ASN
+HEB 12:10!19	v	verb	μεταλαβεῖν	μεταλαμβάνω	V-2AAN
+HEB 12:10!20		det	τῆς	ὁ	T-GSF
+HEB 12:10!21		noun	ἁγιότητος	ἁγιότης	N-GSF
+HEB 12:10!22		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 12:11!1		adj	πᾶσα	πᾶς	A-NSF
+HEB 12:11!2		conj	δὲ	δέ	CONJ
+HEB 12:11!3		noun	παιδεία	παιδεία	N-NSF
+HEB 12:11!4		prep	πρὸς	πρός	PREP
+HEB 12:11!5		conj	μὲν	μέν	PRT
+HEB 12:11!6		det	τὸ	ὁ	T-ASN
+HEB 12:11!7	v	verb	παρὸν	πάρειμι	V-PAP-ASN
+HEB 12:11!8		adv	οὐ	οὐ	PRT-N
+HEB 12:11!9	v	verb	δοκεῖ	δοκέω	V-PAI-3S
+HEB 12:11!10	p	noun	χαρᾶς	χαρά	N-GSF
+HEB 12:11!11	vc	verb	εἶναι	εἰμί	V-PAN
+HEB 12:11!12		conj	ἀλλὰ	ἀλλά	CONJ
+HEB 12:11!13	p	noun	λύπης	λύπη	N-GSF
+HEB 12:11!14	adv	adj	ὕστερον	ὕστερον	ADV
+HEB 12:11!15		conj	δὲ	δέ	CONJ
+HEB 12:11!16		noun	καρπὸν	καρπός	N-ASM
+HEB 12:11!17		adj	εἰρηνικὸν	εἰρηνικός	A-ASM
+HEB 12:11!18		det	τοῖς	ὁ	T-DPM
+HEB 12:11!19		prep	δι	διά	PREP
+HEB 12:11!20		pron	αὐτῆς	αὐτός	P-GSF
+HEB 12:11!21	v	verb	γεγυμνασμένοις	γυμνάζω	V-RPP-DPM
+HEB 12:11!22	v	verb	ἀποδίδωσιν	ἀποδίδωμι	V-PAI-3S
+HEB 12:11!23		noun	δικαιοσύνης	δικαιοσύνη	N-GSF
+HEB 12:12!1		conj	Διὸ	διό	CONJ
+HEB 12:12!2		det	τὰς	ὁ	T-APF
+HEB 12:12!3	v	verb	παρειμένας	παρίημι	V-RPP-APF
+HEB 12:12!4		noun	χεῖρας	χείρ	N-APF
+HEB 12:12!5		conj	καὶ	καί	CONJ
+HEB 12:12!6		det	τὰ	ὁ	T-APN
+HEB 12:12!7	v	verb	παραλελυμένα	παραλύομαι	V-RPP-APN
+HEB 12:12!8		noun	γόνατα	γόνυ	N-APN
+HEB 12:12!9	v	verb	ἀνορθώσατε	ἀνορθόω	V-AAM-2P
+HEB 12:13!1		conj	καὶ	καί	CONJ
+HEB 12:13!2		noun	τροχιὰς	τροχιά	N-APF
+HEB 12:13!3		adj	ὀρθὰς	ὀρθός	A-APF
+HEB 12:13!4	v	verb	ποιεῖτε	ποιέω	V-PAM-2P
+HEB 12:13!5		det	τοῖς	ὁ	T-DPM
+HEB 12:13!6		noun	ποσὶν	πούς	N-DPM
+HEB 12:13!7		pron	ὑμῶν	σύ	P-2GP
+HEB 12:13!8		conj	ἵνα	ἵνα	CONJ
+HEB 12:13!9	adv	adv	μὴ	μή	PRT-N
+HEB 12:13!10		det	τὸ	ὁ	T-NSN
+HEB 12:13!11		adj	χωλὸν	χωλός	A-NSN
+HEB 12:13!12	v	verb	ἐκτραπῇ	ἐκτρέπομαι	V-2APS-3S
+HEB 12:13!13	v	verb	ἰαθῇ	ἰάομαι	V-APS-3S
+HEB 12:13!14		conj	δὲ	δέ	CONJ
+HEB 12:13!15	adv	adv	μᾶλλον	μᾶλλον	ADV
+HEB 12:14!1		noun	Εἰρήνην	εἰρήνη	N-ASF
+HEB 12:14!2	v	verb	διώκετε	διώκω	V-PAM-2P
+HEB 12:14!3		prep	μετὰ	μετά	PREP
+HEB 12:14!4		adj	πάντων	πᾶς	A-GPM
+HEB 12:14!5		conj	καὶ	καί	CONJ
+HEB 12:14!6		det	τὸν	ὁ	T-ASM
+HEB 12:14!7		noun	ἁγιασμόν	ἁγιασμός	N-ASM
+HEB 12:14!8		pron	οὗ	ὅς	R-GSM
+HEB 12:14!9		prep	χωρὶς	χωρίς	ADV
+HEB 12:14!10	s	adj	οὐδεὶς	οὐδείς	A-NSM-N
+HEB 12:14!11	v	verb	ὄψεται	ὁράω	V-FDI-3S
+HEB 12:14!12		det	τὸν	ὁ	T-ASM
+HEB 12:14!13		noun	κύριον	κύριος	N-ASM
+HEB 12:15!1	v	verb	ἐπισκοποῦντες	ἐπισκοπέω	V-PAP-NPM
+HEB 12:15!2		conj	μή	μή	PRT-N
+HEB 12:15!3	s	pron	τις	τις	X-NSM
+HEB 12:15!4	v	verb	ὑστερῶν	ὑστερέω	V-PAP-NSM
+HEB 12:15!5		prep	ἀπὸ	ἀπό	PREP
+HEB 12:15!6		det	τῆς	ὁ	T-GSF
+HEB 12:15!7		noun	χάριτος	χάρις	N-GSF
+HEB 12:15!8		det	τοῦ	ὁ	T-GSM
+HEB 12:15!9		noun	θεοῦ	θεός	N-GSM
+HEB 12:15!10		conj	μή	μή	PRT-N
+HEB 12:15!11		pron	τις	τις	X-NSF
+HEB 12:15!12		noun	ῥίζα	ῥίζα	N-NSF
+HEB 12:15!13		noun	πικρίας	πικρία	N-GSF
+HEB 12:15!14	adv	adv	ἄνω	ἄνω	ADV
+HEB 12:15!15	v	verb	φύουσα	φύω	V-PAP-NSF
+HEB 12:15!16	v	verb	ἐνοχλῇ	ἐνοχλέω	V-PAS-3S
+HEB 12:15!17		conj	καὶ	καί	CONJ
+HEB 12:15!18		prep	δι	διά	PREP
+HEB 12:15!19		pron	αὐτῆς	αὐτός	P-GSF
+HEB 12:15!20	v	verb	μιανθῶσιν	μιαίνω	V-APS-3P
+HEB 12:15!21	s	adj	πολλοί	πολύς	A-NPM
+HEB 12:16!1		conj	μή	μή	PRT-N
+HEB 12:16!2	s	pron	τις	τις	X-NSM
+HEB 12:16!3		noun	πόρνος	πόρνος	N-NSM
+HEB 12:16!4		conj	ἢ	ἤ	PRT
+HEB 12:16!5		adj	βέβηλος	βέβηλος	A-NSM
+HEB 12:16!6		conj	ὡς	ὡς	ADV
+HEB 12:16!7		noun	Ἠσαῦ	Ἠσαῦ	N-PRI
+HEB 12:16!8	s	pron	ὃς	ὅς	R-NSM
+HEB 12:16!9		prep	ἀντὶ	ἀντί	PREP
+HEB 12:16!10		noun	βρώσεως	βρῶσις	N-GSF
+HEB 12:16!11		adj	μιᾶς	εἷς	A-GSF
+HEB 12:16!12	v	verb	ἀπέδετο	ἀποδίδωμι	V-2AMI-3S
+HEB 12:16!13		det	τὰ	ὁ	T-APN
+HEB 12:16!14		noun	πρωτοτόκια	πρωτοτόκια	N-APN-S
+HEB 12:16!15		pron	ἑαυτοῦ	ἑαυτοῦ	F-3GSM
+HEB 12:17!1	v	verb	ἴστε	οἶδα	V-RAI-2P
+HEB 12:17!2		conj	γὰρ	γάρ	CONJ
+HEB 12:17!3		conj	ὅτι	ὅτι	CONJ
+HEB 12:17!4	adv	adv	καὶ	καί	CONJ
+HEB 12:17!5	adv	adv	μετέπειτα	μετέπειτα	ADV
+HEB 12:17!6	v	verb	θέλων	θέλω	V-PAP-NSM
+HEB 12:17!7	v	verb	κληρονομῆσαι	κληρονομέω	V-AAN
+HEB 12:17!8		det	τὴν	ὁ	T-ASF
+HEB 12:17!9		noun	εὐλογίαν	εὐλογία	N-ASF
+HEB 12:17!10	v	verb	ἀπεδοκιμάσθη	ἀποδοκιμάζω	V-API-3S
+HEB 12:17!11		noun	μετανοίας	μετάνοια	N-GSF
+HEB 12:17!12		conj	γὰρ	γάρ	CONJ
+HEB 12:17!13		noun	τόπον	τόπος	N-ASM
+HEB 12:17!14	adv	adv	οὐχ	οὐ	PRT-N
+HEB 12:17!15	v	verb	εὗρεν	εὑρίσκω	V-2AAI-3S
+HEB 12:17!16		conj	καίπερ	καίπερ	CONJ
+HEB 12:17!17		prep	μετὰ	μετά	PREP
+HEB 12:17!18		noun	δακρύων	δάκρυον	N-GPN
+HEB 12:17!19	v	verb	ἐκζητήσας	ἐκζητέω	V-AAP-NSM
+HEB 12:17!20	o	pron	αὐτήν	ἑαυτοῦ	P-ASF
+HEB 12:18!1	adv	adv	Οὐ	οὐ	PRT-N
+HEB 12:18!2		conj	γὰρ	γάρ	CONJ
+HEB 12:18!3	v	verb	προσεληλύθατε	προσέρχομαι	V-2RAI-2P
+HEB 12:18!4	v	verb	ψηλαφωμένῳ	ψηλαφάω	V-PPP-DSN
+HEB 12:18!5		conj	καὶ	καί	CONJ
+HEB 12:18!6	v	verb	κεκαυμένῳ	καίω	V-RPP-DSN
+HEB 12:18!7		noun	πυρὶ	πῦρ	N-DSN
+HEB 12:18!8		conj	καὶ	καί	CONJ
+HEB 12:18!9		noun	γνόφῳ	γνόφος	N-DSM
+HEB 12:18!10		conj	καὶ	καί	CONJ
+HEB 12:18!11		noun	ζόφῳ	ζόφος	N-DSM
+HEB 12:18!12		conj	καὶ	καί	CONJ
+HEB 12:18!13		noun	θυέλλῃ	θύελλα	N-DSF
+HEB 12:19!1		conj	καὶ	καί	CONJ
+HEB 12:19!2		noun	σάλπιγγος	σάλπιγξ	N-GSF
+HEB 12:19!3		noun	ἤχῳ	ἦχος	N-DSM
+HEB 12:19!4		conj	καὶ	καί	CONJ
+HEB 12:19!5		noun	φωνῇ	φωνή	N-DSF
+HEB 12:19!6		noun	ῥημάτων	ῥῆμα	N-GPN
+HEB 12:19!7	adv	pron	ἧς	ὅς	R-GSF
+HEB 12:19!8		det	οἱ	ὁ	T-NPM
+HEB 12:19!9	v	verb	ἀκούσαντες	ἀκούω	V-AAP-NPM
+HEB 12:19!10	v	verb	παρῃτήσαντο	παραιτέομαι	V-ADI-3P
+HEB 12:19!11	adv	adv	μὴ	μή	PRT-N
+HEB 12:19!12	v	verb	προστεθῆναι	προστίθημι	V-APN
+HEB 12:19!13	io	pron	αὐτοῖς	αὐτός	P-DPM
+HEB 12:19!14	s	noun	λόγον	λόγος	N-ASM
+HEB 12:20!1	adv	adv	οὐκ	οὐ	PRT-N
+HEB 12:20!2	v	verb	ἔφερον	φέρω	V-IAI-3P
+HEB 12:20!3		conj	γὰρ	γάρ	CONJ
+HEB 12:20!4		det	τὸ	ὁ	T-ASN
+HEB 12:20!5	v	verb	διαστελλόμενον	διαστέλλομαι	V-PPP-ASN
+HEB 12:20!6		adv	Κἂν	κἄν	COND-K
+HEB 12:20!7	s	noun	θηρίον	θηρίον	N-NSN
+HEB 12:20!8	v	verb	θίγῃ	θιγγάνω	V-2AAS-3S
+HEB 12:20!9		det	τοῦ	ὁ	T-GSN
+HEB 12:20!10		noun	ὄρους	ὄρος	N-GSN
+HEB 12:20!11	v	verb	λιθοβοληθήσεται	λιθοβολέω	V-FPI-3S
+HEB 12:21!1		conj	καί	καί	CONJ
+HEB 12:21!2	adv	adv	οὕτω	οὕτω(ς)	ADV
+HEB 12:21!3	p	adj	φοβερὸν	φοβερός	A-NSN
+HEB 12:21!4	vc	verb	ἦν	εἰμί	V-IAI-3S
+HEB 12:21!5		det	τὸ	ὁ	T-NSN
+HEB 12:21!6	v	verb	φανταζόμενον	φαντάζομαι	V-PPP-NSN
+HEB 12:21!7	s	noun	Μωϋσῆς	Μωϋσῆς	N-NSM
+HEB 12:21!8	v	verb	εἶπεν	λέγω	V-2AAI-3S
+HEB 12:21!9		adj	Ἔκφοβός	ἔκφοβος	A-NSM
+HEB 12:21!10	vc	verb	εἰμι	εἰμί	V-PAI-1S
+HEB 12:21!11		conj	καὶ	καί	CONJ
+HEB 12:21!12		adj	ἔντρομος	ἔντρομος	A-NSM
+HEB 12:22!1		conj	ἀλλὰ	ἀλλά	CONJ
+HEB 12:22!2	v	verb	προσεληλύθατε	προσέρχομαι	V-2RAI-2P
+HEB 12:22!3		noun	Σιὼν	Σιών	N-PRI
+HEB 12:22!4		noun	ὄρει	ὄρος	N-DSN
+HEB 12:22!5		conj	καὶ	καί	CONJ
+HEB 12:22!6		noun	πόλει	πόλις	N-DSF
+HEB 12:22!7		noun	θεοῦ	θεός	N-GSM
+HEB 12:22!8	v	verb	ζῶντος	ζάω	V-PAP-GSM
+HEB 12:22!9		noun	Ἰερουσαλὴμ	Ἰερουσαλήμ	N-PRI
+HEB 12:22!10		adj	ἐπουρανίῳ	ἐπουράνιος	A-DSF
+HEB 12:22!11		conj	καὶ	καί	CONJ
+HEB 12:22!12		noun	μυριάσιν	μυριάς	N-DPF
+HEB 12:22!13		noun	ἀγγέλων	ἄγγελος	N-GPM
+HEB 12:22!14		noun	πανηγύρει	πανήγυρις	N-DSF
+HEB 12:23!1		conj	καὶ	καί	CONJ
+HEB 12:23!2		noun	ἐκκλησίᾳ	ἐκκλησία	N-DSF
+HEB 12:23!3		adj	πρωτοτόκων	πρωτότοκος	A-GPM-S
+HEB 12:23!4	v	verb	ἀπογεγραμμένων	ἀπογράφω	V-RPP-GPM
+HEB 12:23!5		prep	ἐν	ἐν	PREP
+HEB 12:23!6		noun	οὐρανοῖς	οὐρανός	N-DPM
+HEB 12:23!7		conj	καὶ	καί	CONJ
+HEB 12:23!8		noun	κριτῇ	κριτής	N-DSM
+HEB 12:23!9		noun	θεῷ	θεός	N-DSM
+HEB 12:23!10		adj	πάντων	πᾶς	A-GPM
+HEB 12:23!11		conj	καὶ	καί	CONJ
+HEB 12:23!12		noun	πνεύμασι	πνεῦμα	N-DPN
+HEB 12:23!13		adj	δικαίων	δίκαιος	A-GPM
+HEB 12:23!14	v	verb	τετελειωμένων	τελειόω	V-RPP-GPM
+HEB 12:24!1		conj	καὶ	καί	CONJ
+HEB 12:24!2		noun	διαθήκης	διαθήκη	N-GSF
+HEB 12:24!3		adj	νέας	νέος	A-GSF
+HEB 12:24!4		noun	μεσίτῃ	μεσίτης	N-DSM
+HEB 12:24!5		noun	Ἰησοῦ	Ἰησοῦς	N-DSM
+HEB 12:24!6		conj	καὶ	καί	CONJ
+HEB 12:24!7		noun	αἵματι	αἷμα	N-DSN
+HEB 12:24!8		noun	ῥαντισμοῦ	ῥαντισμός	N-GSM
+HEB 12:24!9	o	adj	κρεῖττον	κρείττων	A-ASN-C
+HEB 12:24!10	v	verb	λαλοῦντι	λαλέω	V-PAP-DSM
+HEB 12:24!11		prep	παρὰ	παρά	PREP
+HEB 12:24!12		det	τὸν	ὁ	T-ASM
+HEB 12:24!13		noun	Ἅβελ	Ἅβελ	N-PRI
+HEB 12:25!1	v	verb	Βλέπετε	βλέπω	V-PAM-2P
+HEB 12:25!2		conj	μὴ	μή	PRT-N
+HEB 12:25!3	v	verb	παραιτήσησθε	παραιτέομαι	V-ADS-2P
+HEB 12:25!4		det	τὸν	ὁ	T-ASM
+HEB 12:25!5	v	verb	λαλοῦντα	λαλέω	V-PAP-ASM
+HEB 12:25!6		conj	εἰ	εἰ	COND
+HEB 12:25!7		conj	γὰρ	γάρ	CONJ
+HEB 12:25!8		pron	ἐκεῖνοι	ἐκεῖνος	D-NPM
+HEB 12:25!9	adv	adv	οὐκ	οὐ	PRT-N
+HEB 12:25!10	v	verb	ἐξέφυγον	ἐκφεύγω	V-2AAI-3P
+HEB 12:25!11		prep	ἐπὶ	ἐπί	PREP
+HEB 12:25!12		noun	γῆς	γῆ	N-GSF
+HEB 12:25!13	v	verb	παραιτησάμενοι	παραιτέομαι	V-ADP-NPM
+HEB 12:25!14		det	τὸν	ὁ	T-ASM
+HEB 12:25!15	v	verb	χρηματίζοντα	χρηματίζω	V-PAP-ASM
+HEB 12:25!16		adj	πολὺ	πολύς	A-ASN
+HEB 12:25!17		adv	μᾶλλον	μᾶλλον	ADV
+HEB 12:25!18		pron	ἡμεῖς	ἐγώ	P-1NP
+HEB 12:25!19		det	οἱ	ὁ	T-NPM
+HEB 12:25!20		det	τὸν	ὁ	T-ASM
+HEB 12:25!21		prep	ἀπ	ἀπό	PREP
+HEB 12:25!22		noun	οὐρανῶν	οὐρανός	N-GPM
+HEB 12:25!23	v	verb	ἀποστρεφόμενοι	ἀποστρέφω	V-PMP-NPM
+HEB 12:26!1		pron	οὗ	ὅς	R-GSM
+HEB 12:26!2		det	ἡ	ὁ	T-NSF
+HEB 12:26!3		noun	φωνὴ	φωνή	N-NSF
+HEB 12:26!4		det	τὴν	ὁ	T-ASF
+HEB 12:26!5		noun	γῆν	γῆ	N-ASF
+HEB 12:26!6	v	verb	ἐσάλευσεν	σαλεύω	V-AAI-3S
+HEB 12:26!7	adv	adv	τότε	τότε	ADV
+HEB 12:26!8	adv	adv	νῦν	νῦν	ADV
+HEB 12:26!9		conj	δὲ	δέ	CONJ
+HEB 12:26!10	v	verb	ἐπήγγελται	ἐπαγγέλλομαι	V-RNI-3S
+HEB 12:26!11	v	verb	λέγων	λέγω	V-PAP-NSM
+HEB 12:26!12		adv	Ἔτι	ἔτι	ADV
+HEB 12:26!13		adv	ἅπαξ	ἅπαξ	ADV
+HEB 12:26!14	s	pron	ἐγὼ	ἐγώ	P-1NS
+HEB 12:26!15	v	verb	σείσω	σείω	V-FAI-1S
+HEB 12:26!16		adv	οὐ	οὐ	PRT-N
+HEB 12:26!17		adj	μόνον	μόνος	ADV
+HEB 12:26!18		det	τὴν	ὁ	T-ASF
+HEB 12:26!19		noun	γῆν	γῆ	N-ASF
+HEB 12:26!20		conj	ἀλλὰ	ἀλλά	CONJ
+HEB 12:26!21		adv	καὶ	καί	CONJ
+HEB 12:26!22		det	τὸν	ὁ	T-ASM
+HEB 12:26!23		noun	οὐρανόν	οὐρανός	N-ASM
+HEB 12:27!1		det	τὸ	ὁ	T-NSN
+HEB 12:27!2		conj	δὲ	δέ	CONJ
+HEB 12:27!3		adv	Ἔτι	ἔτι	ADV
+HEB 12:27!4		adv	ἅπαξ	ἅπαξ	ADV
+HEB 12:27!5	v	verb	δηλοῖ	δηλόω	V-PAI-3S
+HEB 12:27!6		det	τῶν	ὁ	T-GPN
+HEB 12:27!7	v	verb	σαλευομένων	σαλεύω	V-PPP-GPN
+HEB 12:27!8		noun	μετάθεσιν	μετάθεσις	N-ASF
+HEB 12:27!9		conj	ὡς	ὡς	ADV
+HEB 12:27!10	v	verb	πεποιημένων	ποιέω	V-RPP-GPM
+HEB 12:27!11		conj	ἵνα	ἵνα	CONJ
+HEB 12:27!12	v	verb	μείνῃ	μένω	V-AAS-3S
+HEB 12:27!13		det	τὰ	ὁ	T-NPN
+HEB 12:27!14	adv	adv	μὴ	μή	PRT-N
+HEB 12:27!15	v	verb	σαλευόμενα	σαλεύω	V-PPP-NPN
+HEB 12:28!1		conj	διὸ	διό	CONJ
+HEB 12:28!2		noun	βασιλείαν	βασιλεία	N-ASF
+HEB 12:28!3		adj	ἀσάλευτον	ἀσάλευτος	A-ASF
+HEB 12:28!4	v	verb	παραλαμβάνοντες	παραλαμβάνω	V-PAP-NPM
+HEB 12:28!5	v	verb	ἔχωμεν	ἔχω	V-PAS-1P
+HEB 12:28!6		noun	χάριν	χάρις	N-ASF
+HEB 12:28!7		prep	δι	διά	PREP
+HEB 12:28!8		pron	ἧς	ὅς	R-GSF
+HEB 12:28!9	v	verb	λατρεύωμεν	λατρεύω	V-PAS-1P
+HEB 12:28!10	adv	adv	εὐαρέστως	εὐαρέστως	ADV
+HEB 12:28!11		det	τῷ	ὁ	T-DSM
+HEB 12:28!12		noun	θεῷ	θεός	N-DSM
+HEB 12:28!13		prep	μετὰ	μετά	PREP
+HEB 12:28!14		noun	εὐλαβείας	εὐλάβεια	N-GSF
+HEB 12:28!15		conj	καὶ	καί	CONJ
+HEB 12:28!16		noun	δέους	δέος	N-GSN
+HEB 12:29!1		adv	καὶ	καί	CONJ
+HEB 12:29!2		conj	γὰρ	γάρ	CONJ
+HEB 12:29!3		det	ὁ	ὁ	T-NSM
+HEB 12:29!4		noun	θεὸς	θεός	N-NSM
+HEB 12:29!5		pron	ἡμῶν	ἐγώ	P-1GP
+HEB 12:29!6		noun	πῦρ	πῦρ	N-NSN
+HEB 12:29!7	v	verb	καταναλίσκον	καταναλίσκω	V-PAP-NSN
+HEB 13:1!1		det	Ἡ	ὁ	T-NSF
+HEB 13:1!2		noun	φιλαδελφία	φιλαδελφία	N-NSF
+HEB 13:1!3	v	verb	μενέτω	μένω	V-PAM-3S
+HEB 13:2!1		det	τῆς	ὁ	T-GSF
+HEB 13:2!2		noun	φιλοξενίας	φιλοξενία	N-GSF
+HEB 13:2!3	adv	adv	μὴ	μή	PRT-N
+HEB 13:2!4	v	verb	ἐπιλανθάνεσθε	ἐπιλανθάνομαι	V-PNM-2P
+HEB 13:2!5		prep	διὰ	διά	PREP
+HEB 13:2!6		pron	ταύτης	οὗτος	D-GSF
+HEB 13:2!7		conj	γὰρ	γάρ	CONJ
+HEB 13:2!8	v	verb	ἔλαθόν	λανθάνω	V-2AAI-3P
+HEB 13:2!9	s	pron	τινες	τις	X-NPM
+HEB 13:2!10	v	verb	ξενίσαντες	ξενίζω	V-AAP-NPM
+HEB 13:2!11	o	noun	ἀγγέλους	ἄγγελος	N-APM
+HEB 13:3!1	v	verb	μιμνῄσκεσθε	μιμνῄσκομαι	V-PNM-2P
+HEB 13:3!2		det	τῶν	ὁ	T-GPM
+HEB 13:3!3		noun	δεσμίων	δέσμιος	N-GPM
+HEB 13:3!4		conj	ὡς	ὡς	ADV
+HEB 13:3!5	v	verb	συνδεδεμένοι	συνδέομαι	V-RPP-NPM
+HEB 13:3!6		det	τῶν	ὁ	T-GPM
+HEB 13:3!7	v	verb	κακουχουμένων	κακουχέομαι	V-PPP-GPM
+HEB 13:3!8		conj	ὡς	ὡς	ADV
+HEB 13:3!9		adv	καὶ	καί	CONJ
+HEB 13:3!10		pron	αὐτοὶ	αὐτός	P-NPM
+HEB 13:3!11	vc	verb	ὄντες	εἰμί	V-PAP-NPM
+HEB 13:3!12		prep	ἐν	ἐν	PREP
+HEB 13:3!13		noun	σώματι	σῶμα	N-DSN
+HEB 13:4!1	p	adj	τίμιος	τίμιος	A-NSM
+HEB 13:4!2		det	ὁ	ὁ	T-NSM
+HEB 13:4!3		noun	γάμος	γάμος	N-NSM
+HEB 13:4!4		prep	ἐν	ἐν	PREP
+HEB 13:4!5		adj	πᾶσιν	πᾶς	A-DPN
+HEB 13:4!6		conj	καὶ	καί	CONJ
+HEB 13:4!7		det	ἡ	ὁ	T-NSF
+HEB 13:4!8		noun	κοίτη	κοίτη	N-NSF
+HEB 13:4!9	p	adj	ἀμίαντος	ἀμίαντος	A-NSF
+HEB 13:4!10		noun	πόρνους	πόρνος	N-APM
+HEB 13:4!11		conj	γὰρ	γάρ	CONJ
+HEB 13:4!12		conj	καὶ	καί	CONJ
+HEB 13:4!13		noun	μοιχοὺς	μοιχός	N-APM
+HEB 13:4!14	v	verb	κρινεῖ	κρίνω	V-FAI-3S
+HEB 13:4!15		det	ὁ	ὁ	T-NSM
+HEB 13:4!16		noun	θεός	θεός	N-NSM
+HEB 13:5!1	p	adj	ἀφιλάργυρος	ἀφιλάργυρος	A-NSM
+HEB 13:5!2		det	ὁ	ὁ	T-NSM
+HEB 13:5!3		noun	τρόπος	τρόπος	N-NSM
+HEB 13:5!4	v	verb	ἀρκούμενοι	ἀρκέω	V-PPP-NPM
+HEB 13:5!5		det	τοῖς	ὁ	T-DPN
+HEB 13:5!6	v	verb	παροῦσιν	πάρειμι	V-PAP-DPN
+HEB 13:5!7	s	pron	αὐτὸς	αὐτός	P-NSM
+HEB 13:5!8		conj	γὰρ	γάρ	CONJ
+HEB 13:5!9	v	verb	εἴρηκεν	λέγω	V-RAI-3S-ATT
+HEB 13:5!10		adv	Οὐ	οὐ	PRT-N
+HEB 13:5!11		adv	μή	μή	PRT-N
+HEB 13:5!12	o	pron	σε	σύ	P-2AS
+HEB 13:5!13	v	verb	ἀνῶ	ἀνίημι	V-2AAS-1S
+HEB 13:5!14		conj	οὐδ	οὐδέ	CONJ-N
+HEB 13:5!15		adv	οὐ	οὐ	PRT-N
+HEB 13:5!16		adv	μή	μή	PRT-N
+HEB 13:5!17	o	pron	σε	σύ	P-2AS
+HEB 13:5!18	v	verb	ἐγκαταλίπω	ἐγκαταλείπω	V-2AAS-1S
+HEB 13:6!1		conj	ὥστε	ὥστε	CONJ
+HEB 13:6!2	v	verb	θαρροῦντας	θαρρέω	V-PAP-APM
+HEB 13:6!3	s	pron	ἡμᾶς	ἐγώ	P-1AP
+HEB 13:6!4	v	verb	λέγειν	λέγω	V-PAN
+HEB 13:6!5	s	noun	Κύριος	κύριος	N-NSM
+HEB 13:6!6	adv	pron	ἐμοὶ	ἐγώ	P-1DS
+HEB 13:6!7	p	adj	βοηθός	βοηθός	N-NSM
+HEB 13:6!8	adv	adv	οὐ	οὐ	PRT-N
+HEB 13:6!9	v	verb	φοβηθήσομαι	φοβέομαι	V-FOI-1S
+HEB 13:6!10	o	pron	τί	τίς	I-ASN
+HEB 13:6!11	v	verb	ποιήσει	ποιέω	V-FAI-3S
+HEB 13:6!12	io	pron	μοι	ἐγώ	P-1DS
+HEB 13:6!13	s	noun	ἄνθρωπος	ἄνθρωπος	N-NSM
+HEB 13:7!1	v	verb	Μνημονεύετε	μνημονεύω	V-PAM-2P
+HEB 13:7!2		det	τῶν	ὁ	T-GPM
+HEB 13:7!3	v	verb	ἡγουμένων	ἡγέομαι	V-PNP-GPM
+HEB 13:7!4		pron	ὑμῶν	σύ	P-2GP
+HEB 13:7!5	s	pron	οἵτινες	ὅστις	R-NPM
+HEB 13:7!6	v	verb	ἐλάλησαν	λαλέω	V-AAI-3P
+HEB 13:7!7	io	pron	ὑμῖν	σύ	P-2DP
+HEB 13:7!8		det	τὸν	ὁ	T-ASM
+HEB 13:7!9		noun	λόγον	λόγος	N-ASM
+HEB 13:7!10		det	τοῦ	ὁ	T-GSM
+HEB 13:7!11		noun	θεοῦ	θεός	N-GSM
+HEB 13:7!12		pron	ὧν	ὅς	R-GPM
+HEB 13:7!13	v	verb	ἀναθεωροῦντες	ἀναθεωρέω	V-PAP-NPM
+HEB 13:7!14		det	τὴν	ὁ	T-ASF
+HEB 13:7!15		noun	ἔκβασιν	ἔκβασις	N-ASF
+HEB 13:7!16		det	τῆς	ὁ	T-GSF
+HEB 13:7!17		noun	ἀναστροφῆς	ἀναστροφή	N-GSF
+HEB 13:7!18	v	verb	μιμεῖσθε	μιμέομαι	V-PNM-2P
+HEB 13:7!19		det	τὴν	ὁ	T-ASF
+HEB 13:7!20		noun	πίστιν	πίστις	N-ASF
+HEB 13:8!1		noun	Ἰησοῦς	Ἰησοῦς	N-NSM
+HEB 13:8!2		noun	Χριστὸς	Χριστός	N-NSM
+HEB 13:8!3		adv	ἐχθὲς	ἐχθές	ADV
+HEB 13:8!4		conj	καὶ	καί	CONJ
+HEB 13:8!5		adv	σήμερον	σήμερον	ADV
+HEB 13:8!6		det	ὁ	ὁ	T-NSM
+HEB 13:8!7		adj	αὐτός	αὐτός	P-NSM
+HEB 13:8!8		conj	καὶ	καί	CONJ
+HEB 13:8!9		prep	εἰς	εἰς	PREP
+HEB 13:8!10		det	τοὺς	ὁ	T-APM
+HEB 13:8!11		noun	αἰῶνας	αἰών	N-APM
+HEB 13:9!1		noun	διδαχαῖς	διδαχή	N-DPF
+HEB 13:9!2		adj	ποικίλαις	ποικίλος	A-DPF
+HEB 13:9!3		conj	καὶ	καί	CONJ
+HEB 13:9!4		adj	ξέναις	ξένος	A-DPF
+HEB 13:9!5	adv	adv	μὴ	μή	PRT-N
+HEB 13:9!6	v	verb	παραφέρεσθε	παραφέρω	V-PPM-2P
+HEB 13:9!7	p	adj	καλὸν	καλός	A-NSN
+HEB 13:9!8		conj	γὰρ	γάρ	CONJ
+HEB 13:9!9	adv	noun	χάριτι	χάρις	N-DSF
+HEB 13:9!10	v	verb	βεβαιοῦσθαι	βεβαιόω	V-PPN
+HEB 13:9!11		det	τὴν	ὁ	T-ASF
+HEB 13:9!12		noun	καρδίαν	καρδία	N-ASF
+HEB 13:9!13		adv	οὐ	οὐ	PRT-N
+HEB 13:9!14		noun	βρώμασιν	βρῶμα	N-DPN
+HEB 13:9!15		prep	ἐν	ἐν	PREP
+HEB 13:9!16		pron	οἷς	ὅς	R-DPN
+HEB 13:9!17	adv	adv	οὐκ	οὐ	PRT-N
+HEB 13:9!18	v	verb	ὠφελήθησαν	ὠφελέω	V-API-3P
+HEB 13:9!19		det	οἱ	ὁ	T-NPM
+HEB 13:9!20	v	verb	περιπατοῦντες	περιπατέω	V-PAP-NPM
+HEB 13:10!1	v	verb	ἔχομεν	ἔχω	V-PAI-1P
+HEB 13:10!2		noun	θυσιαστήριον	θυσιαστήριον	N-ASN
+HEB 13:10!3		prep	ἐξ	ἐκ	PREP
+HEB 13:10!4		pron	οὗ	ὅς	R-GSM
+HEB 13:10!5	v	verb	φαγεῖν	ἐσθίω	V-2AAN
+HEB 13:10!6	adv	adv	οὐκ	οὐ	PRT-N
+HEB 13:10!7	v	verb	ἔχουσιν	ἔχω	V-PAI-3P
+HEB 13:10!8	o	noun	ἐξουσίαν	ἐξουσία	N-ASF
+HEB 13:10!9		det	οἱ	ὁ	T-NPM
+HEB 13:10!10		det	τῇ	ὁ	T-DSF
+HEB 13:10!11		noun	σκηνῇ	σκηνή	N-DSF
+HEB 13:10!12	v	verb	λατρεύοντες	λατρεύω	V-PAP-NPM
+HEB 13:11!1		pron	ὧν	ὅς	R-GPN
+HEB 13:11!2		conj	γὰρ	γάρ	CONJ
+HEB 13:11!3	v	verb	εἰσφέρεται	εἰσφέρω	V-PPI-3S
+HEB 13:11!4		noun	ζῴων	ζῷον	N-GPN
+HEB 13:11!5		det	τὸ	ὁ	T-NSN
+HEB 13:11!6		noun	αἷμα	αἷμα	N-NSN
+HEB 13:11!7		prep	περὶ	περί	PREP
+HEB 13:11!8		noun	ἁμαρτίας	ἁμαρτία	N-GSF
+HEB 13:11!9		prep	εἰς	εἰς	PREP
+HEB 13:11!10		det	τὰ	ὁ	T-APN
+HEB 13:11!11		adj	ἅγια	ἅγιος	A-APN
+HEB 13:11!12		prep	διὰ	διά	PREP
+HEB 13:11!13		det	τοῦ	ὁ	T-GSM
+HEB 13:11!14		noun	ἀρχιερέως	ἀρχιερεύς	N-GSM
+HEB 13:11!15		pron	τούτων	οὗτος	D-GPN
+HEB 13:11!16		det	τὰ	ὁ	T-NPN
+HEB 13:11!17		noun	σώματα	σῶμα	N-NPN
+HEB 13:11!18	v	verb	κατακαίεται	κατακαίω	V-PPI-3S
+HEB 13:11!19		prep	ἔξω	ἔξω	ADV
+HEB 13:11!20		det	τῆς	ὁ	T-GSF
+HEB 13:11!21		noun	παρεμβολῆς	παρεμβολή	N-GSF
+HEB 13:12!1		conj	διὸ	διό	CONJ
+HEB 13:12!2		adv	καὶ	καί	CONJ
+HEB 13:12!3		noun	Ἰησοῦς	Ἰησοῦς	N-NSM
+HEB 13:12!4		conj	ἵνα	ἵνα	CONJ
+HEB 13:12!5	v	verb	ἁγιάσῃ	ἁγιάζω	V-AAS-3S
+HEB 13:12!6		prep	διὰ	διά	PREP
+HEB 13:12!7		det	τοῦ	ὁ	T-GSN
+HEB 13:12!8		adj	ἰδίου	ἴδιος	A-GSN
+HEB 13:12!9		noun	αἵματος	αἷμα	N-GSN
+HEB 13:12!10		det	τὸν	ὁ	T-ASM
+HEB 13:12!11		noun	λαόν	λαός	N-ASM
+HEB 13:12!12		prep	ἔξω	ἔξω	ADV
+HEB 13:12!13		det	τῆς	ὁ	T-GSF
+HEB 13:12!14		noun	πύλης	πύλη	N-GSF
+HEB 13:12!15	v	verb	ἔπαθεν	πάσχω	V-2AAI-3S
+HEB 13:13!1		conj	τοίνυν	τοίνυν	PRT
+HEB 13:13!2	v	verb	ἐξερχώμεθα	ἐξέρχομαι	V-PNS-1P
+HEB 13:13!3		prep	πρὸς	πρός	PREP
+HEB 13:13!4		pron	αὐτὸν	αὐτός	P-ASM
+HEB 13:13!5		prep	ἔξω	ἔξω	ADV
+HEB 13:13!6		det	τῆς	ὁ	T-GSF
+HEB 13:13!7		noun	παρεμβολῆς	παρεμβολή	N-GSF
+HEB 13:13!8		det	τὸν	ὁ	T-ASM
+HEB 13:13!9		noun	ὀνειδισμὸν	ὀνειδισμός	N-ASM
+HEB 13:13!10		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 13:13!11	v	verb	φέροντες	φέρω	V-PAP-NPM
+HEB 13:14!1		adv	οὐ	οὐ	PRT-N
+HEB 13:14!2		conj	γὰρ	γάρ	CONJ
+HEB 13:14!3	v	verb	ἔχομεν	ἔχω	V-PAI-1P
+HEB 13:14!4	adv	adv	ὧδε	ὧδε	ADV
+HEB 13:14!5	v	verb	μένουσαν	μένω	V-PAP-ASF
+HEB 13:14!6		noun	πόλιν	πόλις	N-ASF
+HEB 13:14!7		conj	ἀλλὰ	ἀλλά	CONJ
+HEB 13:14!8		det	τὴν	ὁ	T-ASF
+HEB 13:14!9	v	verb	μέλλουσαν	μέλλω	V-PAP-ASF
+HEB 13:14!10	v	verb	ἐπιζητοῦμεν	ἐπιζητέω	V-PAI-1P
+HEB 13:15!1		prep	δι	διά	PREP
+HEB 13:15!2		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 13:15!3		conj	οὖν	οὖν	CONJ
+HEB 13:15!4	v	verb	ἀναφέρωμεν	ἀναφέρω	V-PAS-1P
+HEB 13:15!5		noun	θυσίαν	θυσία	N-ASF
+HEB 13:15!6		noun	αἰνέσεως	αἴνεσις	N-GSF
+HEB 13:15!7		prep	διὰ	διά	PREP
+HEB 13:15!8		adj	παντὸς	πᾶς	A-GSN
+HEB 13:15!9		det	τῷ	ὁ	T-DSM
+HEB 13:15!10		noun	θεῷ	θεός	N-DSM
+HEB 13:15!11	s	pron	τοῦτ	οὗτος	D-NSN
+HEB 13:15!12	vc	verb	ἔστιν	εἰμί	V-PAI-3S
+HEB 13:15!13		noun	καρπὸν	καρπός	N-ASM
+HEB 13:15!14		noun	χειλέων	χεῖλος	N-GPN
+HEB 13:15!15	v	verb	ὁμολογούντων	ὁμολογέω	V-PAP-GPN
+HEB 13:15!16		det	τῷ	ὁ	T-DSN
+HEB 13:15!17		noun	ὀνόματι	ὄνομα	N-DSN
+HEB 13:15!18		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 13:16!1		det	τῆς	ὁ	T-GSF
+HEB 13:16!2		conj	δὲ	δέ	CONJ
+HEB 13:16!3		noun	εὐποιΐας	εὐποιΐα	N-GSF
+HEB 13:16!4		conj	καὶ	καί	CONJ
+HEB 13:16!5		noun	κοινωνίας	κοινωνία	N-GSF
+HEB 13:16!6	adv	adv	μὴ	μή	PRT-N
+HEB 13:16!7	v	verb	ἐπιλανθάνεσθε	ἐπιλανθάνομαι	V-PNM-2P
+HEB 13:16!8		pron	τοιαύταις	τοιοῦτος	D-DPF
+HEB 13:16!9		conj	γὰρ	γάρ	CONJ
+HEB 13:16!10		noun	θυσίαις	θυσία	N-DPF
+HEB 13:16!11	v	verb	εὐαρεστεῖται	εὐαρεστέω	V-PPI-3S
+HEB 13:16!12		det	ὁ	ὁ	T-NSM
+HEB 13:16!13		noun	θεός	θεός	N-NSM
+HEB 13:17!1	v	verb	Πείθεσθε	πείθω	V-PMM-2P
+HEB 13:17!2		det	τοῖς	ὁ	T-DPM
+HEB 13:17!3	v	verb	ἡγουμένοις	ἡγέομαι	V-PNP-DPM
+HEB 13:17!4		pron	ὑμῶν	σύ	P-2GP
+HEB 13:17!5		conj	καὶ	καί	CONJ
+HEB 13:17!6	v	verb	ὑπείκετε	ὑπείκω	V-PAM-2P
+HEB 13:17!7	s	pron	αὐτοὶ	αὐτός	P-NPM
+HEB 13:17!8		conj	γὰρ	γάρ	CONJ
+HEB 13:17!9	v	verb	ἀγρυπνοῦσιν	ἀγρυπνέω	V-PAI-3P
+HEB 13:17!10		prep	ὑπὲρ	ὑπέρ	PREP
+HEB 13:17!11		det	τῶν	ὁ	T-GPF
+HEB 13:17!12		noun	ψυχῶν	ψυχή	N-GPF
+HEB 13:17!13		pron	ὑμῶν	σύ	P-2GP
+HEB 13:17!14		conj	ὡς	ὡς	ADV
+HEB 13:17!15	o	noun	λόγον	λόγος	N-ASM
+HEB 13:17!16	v	verb	ἀποδώσοντες	ἀποδίδωμι	V-FAP-NPM
+HEB 13:17!17		conj	ἵνα	ἵνα	CONJ
+HEB 13:17!18		prep	μετὰ	μετά	PREP
+HEB 13:17!19		noun	χαρᾶς	χαρά	N-GSF
+HEB 13:17!20	o	pron	τοῦτο	οὗτος	D-ASN
+HEB 13:17!21	v	verb	ποιῶσιν	ποιέω	V-PAS-3P
+HEB 13:17!22		conj	καὶ	καί	CONJ
+HEB 13:17!23	adv	adv	μὴ	μή	PRT-N
+HEB 13:17!24	v	verb	στενάζοντες	στενάζω	V-PAP-NPM
+HEB 13:17!25	p	adj	ἀλυσιτελὲς	ἀλυσιτελής	A-NSN
+HEB 13:17!26		conj	γὰρ	γάρ	CONJ
+HEB 13:17!27	adv	pron	ὑμῖν	σύ	P-2DP
+HEB 13:17!28	s	pron	τοῦτο	οὗτος	D-NSN
+HEB 13:18!1	v	verb	Προσεύχεσθε	προσεύχομαι	V-PNM-2P
+HEB 13:18!2		prep	περὶ	περί	PREP
+HEB 13:18!3		pron	ἡμῶν	ἐγώ	P-1GP
+HEB 13:18!4	v	verb	πειθόμεθα	πείθω	V-PPI-1P
+HEB 13:18!5		conj	γὰρ	γάρ	CONJ
+HEB 13:18!6		conj	ὅτι	ὅτι	CONJ
+HEB 13:18!7		adj	καλὴν	καλός	A-ASF
+HEB 13:18!8		noun	συνείδησιν	συνείδησις	N-ASF
+HEB 13:18!9	v	verb	ἔχομεν	ἔχω	V-PAI-1P
+HEB 13:18!10		prep	ἐν	ἐν	PREP
+HEB 13:18!11		adj	πᾶσιν	πᾶς	A-DPN
+HEB 13:18!12	adv	adv	καλῶς	καλῶς	ADV
+HEB 13:18!13	v	verb	θέλοντες	θέλω	V-PAP-NPM
+HEB 13:18!14	v	verb	ἀναστρέφεσθαι	ἀναστρέφω	V-PPN
+HEB 13:19!1	adv	adv	περισσοτέρως	περισσοτέρως	ADV-C
+HEB 13:19!2		conj	δὲ	δέ	CONJ
+HEB 13:19!3	v	verb	παρακαλῶ	παρακαλέω	V-PAI-1S
+HEB 13:19!4	o	pron	τοῦτο	οὗτος	D-ASN
+HEB 13:19!5	v	verb	ποιῆσαι	ποιέω	V-AAN
+HEB 13:19!6		conj	ἵνα	ἵνα	CONJ
+HEB 13:19!7	adv	adj	τάχιον	τάχιον	ADV-C
+HEB 13:19!8	v	verb	ἀποκατασταθῶ	ἀποκαθίστημι	V-APS-1S
+HEB 13:19!9	io	pron	ὑμῖν	σύ	P-2DP
+HEB 13:20!1		det	Ὁ	ὁ	T-NSM
+HEB 13:20!2		conj	δὲ	δέ	CONJ
+HEB 13:20!3		noun	θεὸς	θεός	N-NSM
+HEB 13:20!4		det	τῆς	ὁ	T-GSF
+HEB 13:20!5		noun	εἰρήνης	εἰρήνη	N-GSF
+HEB 13:20!6		det	ὁ	ὁ	T-NSM
+HEB 13:20!7	v	verb	ἀναγαγὼν	ἀνάγω	V-2AAP-NSM
+HEB 13:20!8		prep	ἐκ	ἐκ	PREP
+HEB 13:20!9		adj	νεκρῶν	νεκρός	A-GPM
+HEB 13:20!10		det	τὸν	ὁ	T-ASM
+HEB 13:20!11		noun	ποιμένα	ποιμήν	N-ASM
+HEB 13:20!12		det	τῶν	ὁ	T-GPN
+HEB 13:20!13		noun	προβάτων	πρόβατον	N-GPN
+HEB 13:20!14		det	τὸν	ὁ	T-ASM
+HEB 13:20!15		adj	μέγαν	μέγας	A-ASM
+HEB 13:20!16		prep	ἐν	ἐν	PREP
+HEB 13:20!17		noun	αἵματι	αἷμα	N-DSN
+HEB 13:20!18		noun	διαθήκης	διαθήκη	N-GSF
+HEB 13:20!19		adj	αἰωνίου	αἰώνιος	A-GSF
+HEB 13:20!20		det	τὸν	ὁ	T-ASM
+HEB 13:20!21		noun	κύριον	κύριος	N-ASM
+HEB 13:20!22		pron	ἡμῶν	ἐγώ	P-1GP
+HEB 13:20!23		noun	Ἰησοῦν	Ἰησοῦς	N-ASM
+HEB 13:21!1	v	verb	καταρτίσαι	καταρτίζω	V-AAO-3S
+HEB 13:21!2	o	pron	ὑμᾶς	σύ	P-2AP
+HEB 13:21!3		prep	ἐν	ἐν	PREP
+HEB 13:21!4		adj	παντὶ	πᾶς	A-DSN
+HEB 13:21!5		adj	ἀγαθῷ	ἀγαθός	A-DSN
+HEB 13:21!6		prep	εἰς	εἰς	PREP
+HEB 13:21!7		det	τὸ	ὁ	T-ASN
+HEB 13:21!8	v	verb	ποιῆσαι	ποιέω	V-AAN
+HEB 13:21!9		det	τὸ	ὁ	T-ASN
+HEB 13:21!10		noun	θέλημα	θέλημα	N-ASN
+HEB 13:21!11		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 13:21!12	v	verb	ποιῶν	ποιέω	V-PAP-NSM
+HEB 13:21!13		prep	ἐν	ἐν	PREP
+HEB 13:21!14		pron	ἡμῖν	ἐγώ	P-1DP
+HEB 13:21!15		det	τὸ	ὁ	T-ASN
+HEB 13:21!16		adj	εὐάρεστον	εὐάρεστος	A-ASN
+HEB 13:21!17		prep	ἐνώπιον	ἐνώπιον	PREP
+HEB 13:21!18		pron	αὐτοῦ	αὐτός	P-GSM
+HEB 13:21!19		prep	διὰ	διά	PREP
+HEB 13:21!20		noun	Ἰησοῦ	Ἰησοῦς	N-GSM
+HEB 13:21!21		noun	Χριστοῦ	Χριστός	N-GSM
+HEB 13:21!22	io	pron	ᾧ	ὅς	R-DSM
+HEB 13:21!23		det	ἡ	ὁ	T-NSF
+HEB 13:21!24		noun	δόξα	δόξα	N-NSF
+HEB 13:21!25		prep	εἰς	εἰς	PREP
+HEB 13:21!26		det	τοὺς	ὁ	T-APM
+HEB 13:21!27		noun	αἰῶνας	αἰών	N-APM
+HEB 13:21!28	aux	ptcl	ἀμήν	ἀμήν	HEB
+HEB 13:22!1	v	verb	Παρακαλῶ	παρακαλέω	V-PAI-1S
+HEB 13:22!2		conj	δὲ	δέ	CONJ
+HEB 13:22!3	o	pron	ὑμᾶς	σύ	P-2AP
+HEB 13:22!4	aux	noun	ἀδελφοί	ἀδελφός	N-VPM
+HEB 13:22!5	v	verb	ἀνέχεσθε	ἀνέχομαι	V-PNM-2P
+HEB 13:22!6		det	τοῦ	ὁ	T-GSM
+HEB 13:22!7		noun	λόγου	λόγος	N-GSM
+HEB 13:22!8		det	τῆς	ὁ	T-GSF
+HEB 13:22!9		noun	παρακλήσεως	παράκλησις	N-GSF
+HEB 13:22!10		adv	καὶ	καί	CONJ
+HEB 13:22!11		conj	γὰρ	γάρ	CONJ
+HEB 13:22!12		prep	διὰ	διά	PREP
+HEB 13:22!13		adj	βραχέων	βραχύς	A-GPN
+HEB 13:22!14	v	verb	ἐπέστειλα	ἐπιστέλλω	V-AAI-1S
+HEB 13:22!15	io	pron	ὑμῖν	σύ	P-2DP
+HEB 13:23!1	v	verb	γινώσκετε	γινώσκω	V-PAI-2P
+HEB 13:23!2		det	τὸν	ὁ	T-ASM
+HEB 13:23!3		noun	ἀδελφὸν	ἀδελφός	N-ASM
+HEB 13:23!4		pron	ἡμῶν	ἐγώ	P-1GP
+HEB 13:23!5		noun	Τιμόθεον	Τιμόθεος	N-ASM
+HEB 13:23!6	v	verb	ἀπολελυμένον	ἀπολύω	V-RPP-ASM
+HEB 13:23!7		prep	μεθ	μετά	PREP
+HEB 13:23!8		pron	οὗ	ὅς	R-GSM
+HEB 13:23!9		conj	ἐὰν	ἐάν	COND
+HEB 13:23!10	adv	adj	τάχιον	τάχιον	ADV-C
+HEB 13:23!11	v	verb	ἔρχηται	ἔρχομαι	V-PNS-3S
+HEB 13:23!12	v	verb	ὄψομαι	ὁράω	V-FDI-1S
+HEB 13:23!13	o	pron	ὑμᾶς	σύ	P-2AP
+HEB 13:24!1	v	verb	ἀσπάσασθε	ἀσπάζομαι	V-ADM-2P
+HEB 13:24!2		adj	πάντας	πᾶς	A-APM
+HEB 13:24!3		det	τοὺς	ὁ	T-APM
+HEB 13:24!4	v	verb	ἡγουμένους	ἡγέομαι	V-PNP-APM
+HEB 13:24!5		pron	ὑμῶν	σύ	P-2GP
+HEB 13:24!6		conj	καὶ	καί	CONJ
+HEB 13:24!7		adj	πάντας	πᾶς	A-APM
+HEB 13:24!8		det	τοὺς	ὁ	T-APM
+HEB 13:24!9		adj	ἁγίους	ἅγιος	A-APM
+HEB 13:24!10	v	verb	ἀσπάζονται	ἀσπάζομαι	V-PNI-3P
+HEB 13:24!11	o	pron	ὑμᾶς	σύ	P-2AP
+HEB 13:24!12		det	οἱ	ὁ	T-NPM
+HEB 13:24!13		prep	ἀπὸ	ἀπό	PREP
+HEB 13:24!14		det	τῆς	ὁ	T-GSF
+HEB 13:24!15		noun	Ἰταλίας	Ἰταλία	N-GSF
+HEB 13:25!1		det	ἡ	ὁ	T-NSF
+HEB 13:25!2		noun	χάρις	χάρις	N-NSF
+HEB 13:25!3		prep	μετὰ	μετά	PREP
+HEB 13:25!4		adj	πάντων	πᾶς	A-GPM
+HEB 13:25!5		pron	ὑμῶν	σύ	P-2GP

@@ -20,6 +20,7 @@
 - [Style guide](./style-guide.md)
 - [Meanings and articles (draft)](./semantics.md)
 - [Checking an argument for fallacies](./fallacies.md)
+- [The Greek text as data](./corpus.md)
 - [Computed ratings (design)](./computed-ratings.md)
 - [How each side says we know (draft)](./epistemology.md)
 - [Performance: the engine, measured](./performance.md)
