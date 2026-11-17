@@ -185,7 +185,8 @@ every shard did; it is the check to require.
   verdicts are suspect; re-run the job once before acting on them.
 - **Accepting a regression on purpose.** A robustness fix, or a check the
   engine did not make before, may be worth being slower or heavier. Say so in
-  `arguments/bench/accepted.toml`, in the same PR: the benchmark, the metric
+  a file of its own under `arguments/bench/accepted/`, in the same PR (see the
+  README there): the benchmark, the metric
   (`time` or `memory`), `up_to` (the largest accepted change, as a fraction, a
   little above what the gate measured) and the `reason`, in words a reviewer
   can weigh. The gate then reports it as accepted and passes; a larger

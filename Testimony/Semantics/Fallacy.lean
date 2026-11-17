@@ -516,6 +516,23 @@ def strawMen (record : Voice → List α) (m : Move) : List (Statement × List �
 
 end Move
 
+/-- **Whether a statement is about a voice**: it says, or denies, what the voice
+held or how it read a word. -/
+def Statement.about (v : Voice) : Statement → Bool
+  | .heldBy v' _ | .glosses v' _ _ => decide (v' = v)
+  | .denied s => s.about v
+  | .also s t => s.about v || t.about v
+  | _ => false
+
+/-- **An argument's own record of a voice**: the claims of the argument that say,
+or deny, what the voice held or how it read a word. A line that attributes a view
+is checked against these when the library's own lines are checked
+(`Testimony.Checks.Fallacies`). A claim that a position asserts in its own voice,
+such as Trent's definition of justification, is not on it: a claim does not
+record whose position it is. -/
+def recordOf (α : Type) [HasMeanings α] (v : Voice) : List α :=
+  (HasMeanings.all : List α).filter fun a => (HasMeanings.means a).about v
+
 /-! ### A line of reason, as a move
 
 The library's own arguments are made of lines of reason

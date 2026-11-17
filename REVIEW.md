@@ -65,10 +65,10 @@ linters hold those.
 
 - Anything in a generated file, except that it was edited by hand or is out of
   date with its source.
-- Changes to pinned counts in `arguments/TestimonyArguments/Checks.lean` that
+- Changes to pinned counts in `arguments/TestimonyArguments/Checks/` that
   follow from an added package, party or definition in the same pull request.
 - Benchmark timings, unless the pull request claims a speed-up or adds an
-  entry to `arguments/bench/accepted.toml`; then check that the reason given
+  entry under `arguments/bench/accepted/`; then check that the reason given
   is true of the change.
 - Theological disagreement with a premise. Every premise here is some cited
   reader's. The question for review is whether it is that reader's, fairly

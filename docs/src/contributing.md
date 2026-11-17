@@ -172,6 +172,28 @@ second time.
 See the [style guide](./style-guide.md) for conventions, and
 [Encoding arguments](./logic.md) for how to write a new one.
 
+## Landing a pull request: the merge queue
+
+`main` moves quickly, because several pull requests are open at once, and a
+full build takes tens of minutes. Branch protection used to require a pull
+request to be up to date with `main` before it merged, so each merge sent every
+other open pull request back to be rebased and built again. The merge queue
+removes that step. A reviewed pull request is added to the queue ("Merge when
+ready" on its page). GitHub merges it onto `main`, together with the pull
+requests queued ahead of it, and runs CI on that combination. If the build
+passes, the group lands. If it fails, or if the pull request no longer merges
+cleanly, the pull request is taken out of the queue and its author is told.
+
+So you rebase only for a real conflict, or when the queue rejects the group.
+Leave the rest to the queue. CI runs on the merge-group event as well as on
+pull requests, so that the required `build` check reports in the queue. The
+engine benchmarks run on the pull request alone: each was measured against its
+base already, and running them again would hold the queue up.
+
+The queue merges with a merge commit, as `main` has always been merged, because
+`scripts/credits.py` credits a commit that names no person to whoever merged
+it, and finds that person from the merge commit.
+
 ## How you are credited
 
 Each argument's PDF names the people who worked on it, read from git history

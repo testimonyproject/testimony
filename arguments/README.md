@@ -63,10 +63,12 @@ and regenerate.
 | `TestimonyArguments/Articles/` | published articles examined against the arguments |
 | `TestimonyArguments/Works.lean` | the works the arguments cite beyond the library's |
 | `TestimonyArguments/Attr.lean` | each argument's unfold set |
-| `TestimonyArguments/Checks.lean` | the library's checks, over every argument, pinned |
+| `TestimonyArguments/Checks/` | the library's checks, one module per argument, each report pinned beside it |
+| `TestimonyArguments/Checks.lean` | the citations check, and `#check_coverage`: every check reaches every argument |
 | `TestimonyArguments/Tools/` | the catalogue of arguments, the harvest, and the four generators |
 
-A new argument adds its unfold set to `Attr.lean`, its namespace to `unfoldSets`
-in `Checks.lean`, and its title to the catalogue in `Tools/Catalogue.lean`. The
+A new argument adds its unfold set to `Attr.lean`, a module of its checks to
+`Checks/` (copy another's, and paste in the reports the build prints), imported
+by `Checks.lean`, and its title to the catalogue in `Tools/Catalogue.lean`. The
 library's guide, [Encoding arguments](../docs/src/logic.md), says how to write
 one.

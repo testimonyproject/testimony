@@ -5,9 +5,9 @@ import Testimony.Semantics.Fallacy
 /-!
 # Testimony.Checks.Fallacies — the library's own reasoning, charged as an article's is
 
-An article's moves are checked for equivocation, for begging the question and
-for arguing from silence (`Testimony.Semantics.Fallacy`). The library holds its
-own arguments to the same checks. Every line of reason is one step from its
+An article's moves are checked for equivocation, for begging the question, for
+arguing from silence and for answering a straw man (`Testimony.Semantics.Fallacy`).
+The library holds its own arguments to the same checks. Every line of reason is one step from its
 grounds to what it delivers, and read through its argument's meanings the step
 is a move: its antecedent's parts the premises, its consequent the conclusion
 (`Testimony.Logic.Line.asMove?`). This check finds every line of every argument
@@ -22,12 +22,18 @@ types, and reports, for each argument:
   carry it;
 - the lines that rest on one another in a circle: each, through the others,
   resting on what it delivers itself (`Testimony.Semantics.circular`);
+- the lines that answer a view its holder does not hold, by the argument's own
+  record of that voice (`Testimony.Semantics.Move.strawMen`), and every line that
+  attributes a view, with how the attribution stands to the record. A line's
+  record of a voice is the argument's other claims about what the voice held or
+  how it read a word (`Testimony.Semantics.recordOf`), without the line's own
+  claims, which cannot bear themselves out;
 - and the lines that need a word to keep its sense and do not say so, with the
   words. These are conditions, not faults.
 
-The report is pinned. It fails the build if a line equivocates on its own terms
-or argues from silence alone: the library may not do what it checks articles
-for. A line that carries its conclusion in a premise is reported and does not
+The report is pinned. It fails the build if a line equivocates on its own terms,
+argues from silence alone, or answers a straw man: the library may not do what it
+checks articles for. A line that carries its conclusion in a premise is reported and does not
 fail the build, because a premise that restates what no one denies begs no
 question; the report says whom it is addressed to.
 
@@ -46,7 +52,7 @@ open Lean Elab Command Meta Testimony.Semantics Testimony.Logic
 
 /-- **The charges against one argument's lines**: the report's lines, and how
 many lines commit a charge that fails the build. -/
-def fallacyReport (α : Type) [HasMeanings α] [Repr α]
+def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
     (lines : List (String × Line α)) : String × Nat :=
   let moves := lines.filterMap fun (n, l) =>
     (l.asMove? (α := α)).bind fun m => if m.statements.all Statement.analysed then some (n, m)
@@ -60,6 +66,23 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α]
       some (n ++ (if deniers.isEmpty then ": denied by no claim of the argument"
         else ": its premise denied by " ++ ", ".intercalate (deniers.map atomName)))
   let onCircle := (circular (moves.map (·.2))).filterMap fun i => (moves[i]?).map (·.1)
+  let ownClaims (n : String) : List α :=
+    ((lines.find? (·.1 == n)).map fun (_, l) => atomsOf l.step).getD []
+  let recordFor (n : String) (v : Voice) : List α :=
+    (recordOf α v).filter fun a => !(ownClaims n).contains a
+  let names (cs : List α) := ", ".intercalate (cs.map atomName)
+  let standing : Attribution α → String
+    | .fair cs => "borne out by " ++ names cs
+    | .unfair cs => "contradicted by " ++ names cs
+    | .disputed f u => "disputed: borne out by " ++ names f ++ ", contradicted by " ++ names u
+    | .unrecorded => "unrecorded"
+  let attributing := moves.filterMap fun (n, m) =>
+    match m.attributed (recordFor n) with
+    | [] => none
+    | as => some (n ++ ": " ++ "; ".intercalate (as.map fun (a, st) =>
+        ((a.voice?.map atomName).getD "?") ++ ", " ++ standing st))
+  let strawMen := moves.filterMap fun (n, m) =>
+    if (m.strawMen (recordFor n)).isEmpty then none else some n
   let conditional := moves.filterMap fun (n, m) =>
     if m.conditionalOn.isEmpty then none else
       some (n ++ ": " ++ ", ".intercalate (m.conditionalOn.map fun w => atomName w))
@@ -72,8 +95,10 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α]
     part "carry what they deliver in a premise" carrying ++
     part "argue from silence alone" silent ++
     part "rest on one another in a circle" onCircle ++
+    part "answer a view the argument's record says its holder does not hold" strawMen ++
+    part "attribute a view, against the argument's record" attributing ++
     part "need a word to keep its sense, unstated" conditional
-  (String.intercalate "\n" (head ++ body), equivocating.length + silent.length)
+  (String.intercalate "\n" (head ++ body), equivocating.length + silent.length + strawMen.length)
 
 /-- Whether a constant's type is `Line C`, and `C` its argument's claim type. -/
 def lineClaimType? (ty : Expr) : Option Name :=
@@ -103,7 +128,7 @@ def checkFallacies (root : Name) : CommandElabM Unit := do
         let pairs ← sorted.toList.mapM fun n =>
           mkAppM ``Prod.mk #[toExpr n.getString!, mkConst n]
         let lst ← mkListLit pairTy pairs
-        let e ← mkAppOptM ``fallacyReport #[some (mkConst c), none, none, some lst]
+        let e ← mkAppOptM ``fallacyReport #[some (mkConst c), none, none, none, some lst]
         some <$> unsafe evalExpr (String × Nat) (toTypeExpr (String × Nat)) e
       catch _ => pure none
     match r? with
@@ -115,8 +140,10 @@ def checkFallacies (root : Name) : CommandElabM Unit := do
     throwError "#check_fallacies found no line to check"
   let sorted := reports.qsort (· < ·)
   unless failing.isEmpty do
-    throwError m!"lines that equivocate or argue from silence alone, in:\n{MessageData.joinSep
+    let head := "lines that equivocate, argue from silence alone or answer a straw man, in:"
+    throwError m!"{head}\n{MessageData.joinSep
       (failing.toList.map toMessageData) "\n"}\n{String.intercalate "\n" sorted.toList}"
+  recordChecked `fallacies root
   logInfo m!"the charges, against every argument's lines:\n{String.intercalate "\n" sorted.toList}"
 
 /-- `#check_fallacies under N` reports on the lines of every argument whose

@@ -53,7 +53,7 @@ class Classify(unittest.TestCase):
             "Testimony/Logic/Horn.lean",
             "Testimony.lean",
             "arguments/TestimonyArguments/SolaFide.lean",
-            "arguments/bench/accepted.toml",
+            "arguments/bench/accepted/sola-fide-johns-case.toml",
             "examples/TestimonyExamples/Grits.lean",
             "lakefile.toml",
             "lake-manifest.json",

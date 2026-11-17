@@ -4,6 +4,14 @@ on:
   push:
     branches: [main]
   pull_request:
+  # The merge queue: before a pull request lands, GitHub merges it onto main
+  # together with the pull requests queued ahead of it, and runs this workflow
+  # on the result. The `build` check that branch protection requires must
+  # report here too, or the queue waits for it forever. Because the queue tests
+  # what main will become, a pull request no longer has to be rebased onto main
+  # to be merged: only a real conflict, or a failing build of the group, takes
+  # it out of the queue.
+  merge_group:
   # On demand, against any ref: the four gates without opening a pull request,
   # which is what asking whether a stale branch still stands requires. Nothing
   # is published and nothing is measured: the image is pushed only on a push to
@@ -23,8 +31,9 @@ jobs:
   # runs, and the book is built whenever docs/ changed. A skipped job counts as
   # passed for branch protection, so a required check is never left waiting.
   # A push is diffed against the commit it replaced, a pull request against the
-  # base it merges into; a dispatched run, or a diff git cannot compute, runs
-  # everything.
+  # base it merges into, a merge group against the main it was cut from (which
+  # covers every pull request in the group); a dispatched run, or a diff git
+  # cannot compute, runs everything.
   changes:
     runs-on: ubuntu-latest
     outputs:
@@ -42,10 +51,14 @@ jobs:
         env:
           EVENT: ${{ github.event_name }}
           BEFORE: ${{ github.event.before }}
+          GROUP_BASE: ${{ github.event.merge_group.base_sha }}
         run: |
           case "$EVENT" in
             pull_request)
               python3 scripts/ci_changes.py --base HEAD^1 --head HEAD ;;
+            merge_group)
+              git fetch --depth=1 origin "$GROUP_BASE" || true
+              python3 scripts/ci_changes.py --base "$GROUP_BASE" --head HEAD ;;
             push)
               git fetch --depth=1 origin "$BEFORE" || true
               python3 scripts/ci_changes.py --base "$BEFORE" --head HEAD ;;
@@ -212,7 +225,7 @@ jobs:
   # in a few more rounds of that benchmark alone, and a shard fails only if it
   # holds with both readings pooled (p < 0.01); or it fails on a rise in peak
   # memory. Either way, not if the change accepts it with a reason in
-  # arguments/bench/accepted.toml (.claude/skills/optimising-the-engine).
+  # arguments/bench/accepted/ (.claude/skills/optimising-the-engine).
   #
   # The benchmarks are split into shards, each a job on a runner of its own,
   # beside `build` rather than after it: of N shards, shard K takes every N-th
@@ -222,7 +235,10 @@ jobs:
   # shards is the length of `shard`'s list; nothing else names it.
   #
   # Only when the change touches a build input: a change no build reads cannot
-  # move the engine.
+  # move the engine. Only on a pull request, not in the merge queue: each pull
+  # request was measured against its base already, and a group would hold the
+  # queue for the length of three more A/B runs. `benchmarks`, below, is skipped
+  # there too, and a skipped check counts as passed.
   bench:
     needs: [changes, image]
     if: >-

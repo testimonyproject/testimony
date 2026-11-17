@@ -113,18 +113,14 @@ jobs:
           python3 scripts/credits.py docs/latex docs/latex/arguments
           cp references.bib docs/latex/
           cp references.bib docs/latex/arguments/
-          cd docs/latex
-          tectonic arguments.tex
-          cd arguments
-          for f in *.tex; do tectonic "$f"; done
+          scripts/typeset.sh docs/latex/arguments.tex docs/latex/arguments/*.tex
 
       # `exampletex`, in the generation step, wrote the documents and the
       # bibliography beside them.
       - name: Examples
         working-directory: examples
         run: |
-          cd docs/latex
-          for f in *.tex; do tectonic "$f"; done
+          ../scripts/typeset.sh docs/latex/*.tex
 
       - name: Collect
         run: |
