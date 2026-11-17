@@ -155,3 +155,11 @@ extend `Testimony/Bib/Render.lean` and add a golden test for it.
 | `ancientWork` | `@misc`, `crossref` to `editionUsed` |
 | `dataset` | `@misc` with `version` |
 | `webPage` | `@online` |
+
+An ancient work's `crossref` asks BibTeX to fill in the edition it was read in,
+and BibTeX does so only when the edition comes later in the file than the work.
+So `references.bib` is not in registry order: `bibgen` sets each work before the
+edition it cites (`Testimony.Bib.crossrefOrder`), and leaves every other entry
+where the registry put it. Without that, Origen's *Against Celsus*, registered
+after the Ante-Nicene Fathers volume it was read in, printed with no edition, and
+BibTeX reported the volume missing although it was there.
