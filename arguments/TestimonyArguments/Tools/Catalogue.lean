@@ -80,6 +80,8 @@ def solaGratiaChapters : List Chapter :=
     , modules := [`TestimonyArguments.SolaGratia.Thomist] }
   , { slug := "weighing", title := "Weighing the positions"
     , modules := [`TestimonyArguments.SolaGratia.Dispute] }
+  , { slug := "perseverance", title := "The perseverance of the saints"
+    , modules := [`TestimonyArguments.SolaGratia.Perseverance] }
   , { slug := "claims", title := "Appendix: the claims and their sources"
     , modules := [`TestimonyArguments.SolaGratia.Atoms, `TestimonyArguments.SolaGratia.Sources]
     , legend := true } ]

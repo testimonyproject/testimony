@@ -41,16 +41,16 @@ Sola gratia — Ephesians 2:8–9 and Romans 9:16
 /--
 info: the charges, against every argument's lines:
 Sola gratia — Ephesians 2:8–9 and Romans 9:16
-  lines: 12, read: 0
+  lines: 27, read: 0
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaGratia
 
-/-- info: every package has a model with its postulates: 24, and 0 undecided -/
+/-- info: every package has a model with its postulates: 36, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaGratia
 
-/-- info: every non-entailment survives its postulates: 8, and 0 undecided -/
+/-- info: every non-entailment survives its postulates: 12, and 0 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments.SolaGratia
 
@@ -60,6 +60,7 @@ Sola gratia — Ephesians 2:8–9 and Romans 9:16
 
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:
+perseveranceDispute.finite: 35 I, 15 RA, 24 CA, 0 PA, 85 edges
 solaGratiaDispute.finite: 42 I, 14 RA, 47 CA, 0 PA, 131 edges
 and 0 hearings, drawn with the disputes they restrict
 -/

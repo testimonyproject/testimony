@@ -911,7 +911,7 @@ theorem kuruvilla_does_not_reach_the_counting : ∀ (s : Standard),
 grant, Kuruvilla on the Aqedah, Hahn on its oath, and 1 Maccabees, the strongest
 known, which alone denies the step.
 
-**The rating, computed.** *Abraham, counted righteous before the covenant's sign (Genesis 15; Romans 4)* is cited at *well supported* (Rom 4:3-12; [Calvin 1847](../../bibliography.md#calvin-commentary-genesis-1847), ad loc. Gen 22:15; [Calvin](../../bibliography.md#calvin-commentaries-catholic-epistles), ad loc. Jas 2:23; [Niehaus 2013](../../bibliography.md#niehaus-gods-covenant-abraham-2013), pp. 260–263; [Robertson 1980](../../bibliography.md#robertson-christ-covenants-1980); [Kline 2006](../../bibliography.md#kline-kingdom-prologue-2006)). Dissents encoded: *Weinfeld, The Covenant of Grant*, *1 Maccabees 2:52*, *Kuruvilla, The Aqedah*, *Hahn, Covenant, Oath, and the Aqedah*. The strongest known: *1 Maccabees 2:52*.
+**The rating, computed.** *Abraham, counted righteous before the covenant's sign (Genesis 15; Romans 4)* is cited at *well supported* (Rom 4:3-12; [Calvin 1847](../../bibliography.md#calvin-commentary-genesis-1847), ad loc. Gen 22:15; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), ad loc. Jas 2:23; [Niehaus 2013](../../bibliography.md#niehaus-gods-covenant-abraham-2013), pp. 260–263; [Robertson 1980](../../bibliography.md#robertson-christ-covenants-1980); [Kline 2006](../../bibliography.md#kline-kingdom-prologue-2006)). Dissents encoded: *Weinfeld, The Covenant of Grant*, *1 Maccabees 2:52*, *Kuruvilla, The Aqedah*, *Hahn, Covenant, Oath, and the Aqedah*. The strongest known: *1 Maccabees 2:52*.
 
 | Standard | Rating | Why |
 |---|---|---|

@@ -6,6 +6,7 @@ import TestimonyArguments.SolaGratia.Results
 import TestimonyArguments.SolaGratia.ThirdWay
 import TestimonyArguments.SolaGratia.Thomist
 import TestimonyArguments.SolaGratia.Dispute
+import TestimonyArguments.SolaGratia.Perseverance
 
 /-!
 # TestimonyArguments.SolaGratia — salvation by grace alone
@@ -196,6 +197,38 @@ choice: salvation is by grace (`only_grace_prevails`). Every other position,
 Dort's included, can be defended and is not forced, and the third way can be
 defended with Dort or with Wesley.
 
+## The perseverance of the saints
+
+If the grace that saves brings about the consent it seeks, can the one it saves
+lose it? Westminster says that the "effectually called", those called in a way
+that brings them to faith, "can neither totally nor finally fall away from the
+state of grace" (XVII.1). Augustine, Aquinas and the Formula of Concord agree
+that those God has predestined to life will persevere to the end. They part from
+Westminster over who those people are. Westminster holds that everyone God
+brings to true faith is among them. Augustine and Aquinas hold that God gives
+some people true faith, hope and love without predestining them to persevere,
+so that in the end they fall away. The Lutherans hold that some in whom God has
+begun the good work turn away by their own fault. The question is who is
+predestined to persevere, not whether God chose them because he foresaw their
+faith, which the chapter does not weigh.
+
+So the chapter on perseverance writes the Reformed conclusion as two claims and
+the claim that joins them, and finds that Augustine parts from Westminster over
+1 John 2:19 ("they went out from us, but they were not of us"): whether those who
+left never had true faith, as Calvin and Owen read it, or had it and were not
+elect, as Augustine does. It also weighs Romans 8:29–30; the texts Wesley reads
+of believers who fell (Hebrews 6 and 10, 2 Peter 2); falling for a time, read
+from David's prayer in Psalm 51:11; whether a believer can know that he will
+persevere; and the view from eternity, Boethius's and Aquinas's, that God sees
+all of time at once. That view, as encoded, says nothing on whether the truly
+justified can finally fall away, so it can be added to Westminster's position or
+Wesley's without contradiction; with Owen's reading of 1 John 2:19 it denies
+that they can. Weighed as a dispute of its own, Westminster is in a tie with
+Augustine and Aquinas, Trent, the Lutherans and Wesley, and only what the
+Remonstrants of 1610 granted is settled: no power from outside snatches believers
+out of Christ's hand (`only_the_remonstrance_prevails`). Westminster and each of
+the four can be defended, and none must be accepted.
+
 ## What is not encoded
 
 The Remonstrants' denial of the will's passivity, and Wesley's view of it, are
@@ -203,11 +236,8 @@ not encoded: each position here concludes only what its cited sources say. Nor
 is the cooperation of the renewed will, which Dort, the Formula of Concord and
 Trent all grant in some sense, and which a dilemma over "cooperate" would split.
 
-The perseverance of the saints, which Dort holds and the Thomists and Trent
-deny, is not weighed: the Thomists' claim that justifying grace can be lost is
-encoded, and no Reformed claim against it. Nor is Molina's own *Concordia*,
-which no public English text could be checked against; the Molinist readings
-are cited from Pohle's report of them.
+Molina's own *Concordia* is not encoded, because no public English text could be
+checked against it; the Molinist readings are cited from Pohle's report of them.
 
 John 6:44 ("No one can come to me unless the Father who sent me draws him") is
 the third text most often cited for the Reformed view, and is not encoded
@@ -226,4 +256,5 @@ which is a dispute of its own.
 | `ThirdWay.lean` | freedom to refuse, the Lutherans, Wesley, and the third way's dilemma |
 | `Thomist.lean` | Aquinas and the Catholic schools, and what "not merely passive" means |
 | `Dispute.lean` | the positions weighed, and the verdicts |
+| `Perseverance.lean` | the perseverance of the saints, weighed as a dispute of its own |
 -/

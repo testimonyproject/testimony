@@ -62,7 +62,7 @@ this life) can be lost, and Trent condemns anyone who says otherwise (canon 23).
 The grace resisted in the first is not the grace that converts, and the grace
 lost in the second is grace once given. So they are encoded as claims of their
 own. Dort parts from the Thomists on the second, the perseverance of the saints,
-which this argument does not weigh.
+which the chapter on perseverance weighs, with Aquinas beside Augustine.
 
 ## The word "passive"
 

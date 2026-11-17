@@ -33,6 +33,22 @@ worth building only if the generated page answers it in words they can follow.
   because we judge him mistaken. Show where his reading breaks, or that it does
   not; a rating moves only with a new, cited argument.
 
+## Who you may be working with
+
+Many contributors do not write Lean, and some have never programmed. They
+bring an argument, a correction or a question in plain English, and the
+session does the rest. If the person has not said, ask once whether they write
+Lean; if they do not, load the `working-with-a-contributor` skill and follow
+it. In short: talk about claims, not code; read the claims back as numbered
+sentences with sources and ratings, and wait for a yes before writing any Lean,
+because a wrong claim is the one failure no gate catches; then do the
+mechanics yourself and report the verdict in plain words.
+`docs/src/getting-started.md` is the guide they may have read, and its
+promises are yours to keep. `docs/src/hello-world.md`, with its code in
+`examples/HelloWorld.lean`, is the smallest complete argument, explained
+symbol by symbol: point a newcomer to it, and copy its shape for a first
+encoding.
+
 ## Writing prose
 
 `docs/src/writing-for-readers.md` is the standard, and it applies to every
@@ -65,6 +81,7 @@ on it; the grits case is `TestimonyExamples`, in `examples/`. Each requires the
 library by path and shares its `.lake/packages`.
 
 Full docs: `docs/src/`. Read `docs/src/style-guide.md` before writing Lean.
+`docs/src/getting-started.md` is the contributor's guide, for people and agents.
 
 ## Hard rules
 
@@ -192,7 +209,7 @@ back to `sorryAx` — that produces a *successful build*.
 | `Testimony/Checks/` | The checks a package runs over its arguments: `Refutations` (`establish` fails on every refuted package), `Ontology` (what each definition does in every argument, pinned), `Meanings`, `Postulates`, `Citations` (every bibliography entry is a tagged definition, and a key names one), `Aif`, `Fallacies` (the three charges against every line of reason), each `under N`; `Coverage` and `Covered`, which record where each check ran and fail the build if one misses anything under a package (`#check_coverage`); `Maturity`, what those checks reach in each argument, counted for the maturity page (`derive_maturity_table`); `FallacyCases`, what the fallacy checks must catch and must pass over, and a case the build must refuse; and `Fixture`, the library's own small case, which they run over in its build |
 | `scripts/` | Domain linter and its tests; `kernel-replay.sh [root targets…]`; `prose_tells.py`, an advisory count of generated-sounding habits in prose |
 | `arguments/` | `TestimonyArguments`: the worked arguments, a Lake package built on the library. Over ~500 lines an argument becomes a directory (`Atoms`, `Sources`, `Lines`, `Packages`, `Results`, the root module reduced to imports and the module docstring). Beside them: `Works` (what they cite beyond the library's works), `Attr` (their unfold sets), `Meanings` (one module per argument: what each claim means, and its pinned joins), `Articles` (published articles examined), `Epistemologies` (the rules each side professes, cited, and which parties keep them), `Checks` (the library's checks over them, one module per argument, each report pinned there, and `#check_coverage` over the whole package), `Tools` (the catalogue and the generators `bibgen`, `argtex`, `statusgen`, `argdoc`, each with `--check`, writing into the repository's `docs/`) |
-| `examples/` | `TestimonyExamples`: a separate Lake package that requires the library by path, the first user of it outside its tree. Its cases (`Grits`), works, checks and LaTeX documents (`lake exe exampletex`) are its own, and nothing of it is in the library's index. Build it after the library, from `examples/` |
+| `examples/` | `TestimonyExamples`: a separate Lake package that requires the library by path, the first user of it outside its tree. Its cases (`Grits`), the tutorial (`HelloWorld`, its own library, outside the pinned checks), works, checks and LaTeX documents (`lake exe exampletex`) are its own, and nothing of it is in the library's index. Build it after the library, from `examples/` |
 
 ## Skills
 
@@ -206,6 +223,9 @@ name as `/<skill>`.
 - `removing-ai-tells` — the editing pass for habits that make prose sound
   generated, with `scripts/prose_tells.py` to count them
 - `encoding-an-argument` — going from a commentary to a package
+- `working-with-a-contributor` — the person does not write Lean: taking their
+  argument from notes to a draft pull request, what to show them, the one
+  confirmation that blocks, and how to report a verdict in their words
 - `supplementing-an-argument` — strengthening an existing argument for a reader:
   finding the crux, researching a better-than-disputed premise, auditing its
   rating, and reporting what the solver then computes
@@ -217,7 +237,7 @@ name as `/<skill>`.
 
 ## Agents
 
-In `.claude/agents/`, for the research the supplementing workflow needs. Each
+In `.claude/agents/`, for the research the supplementing and contributor workflows need. Each
 returns findings, never edits; what enters the library is decided and encoded
 by the main session.
 
@@ -225,6 +245,9 @@ by the main session.
   catalogues and texts
 - `rating-auditor` — looks for a cited reader who grants a step's grounds and
   denies its conclusion, and says what that makes its rating
+- `argument-intake` — turns a contributor's plain-English notes into the
+  conclusion, passages, claims, steps and rival the encoding needs, and lists
+  what is missing, before any Lean is written
 - `reader-review` — reads a generated page as a lay reader and as a theologian
   would, and flags what either could not follow or would dispute
 
