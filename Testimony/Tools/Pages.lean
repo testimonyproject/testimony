@@ -527,7 +527,7 @@ def latexDocument (title note : String) (sections : List (Argument × Body))
     | [(a, _)] => a.ns.toString
     | _ => "all"
   (if credits then
-    Logic.Latex.preamble title tool ("\\credit{" ++ key ++ "}") Logic.Latex.credits
+    Logic.Latex.preamble title tool ("\\credit{" ++ key ++ "}")
    else Logic.Latex.preamble title tool) ++
   note ++ Logic.Latex.contents ++
   String.join (sections.map fun (a, b) =>

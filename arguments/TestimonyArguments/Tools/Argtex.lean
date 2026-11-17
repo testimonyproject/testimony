@@ -93,15 +93,18 @@ def standalone (a : Argument) : String :=
 #guard (arguments.map (·.slug)).eraseDups.length == arguments.length
 #guard arguments.all (·.slug != "arguments")
 
-/-- Every file `argtex` writes: the book, then each argument alone. -/
+/-- Every file `argtex` writes: the book, then each argument alone, and the house
+style beside each, which every one of them loads (`Logic.Latex.style`). -/
 def files : List (System.FilePath × String) :=
   (texPath, document) ::
-    arguments.map fun a => (standaloneDir / (a.slug ++ ".tex"), standalone a)
+    arguments.map (fun a => (standaloneDir / (a.slug ++ ".tex"), standalone a)) ++
+    [((texPath.parent.getD ".") / Logic.Latex.styleFile, Logic.Latex.style),
+     (standaloneDir / Logic.Latex.styleFile, Logic.Latex.style)]
 
 /-- Entry point. -/
 def main (args : List String) : IO UInt32 := do
   let mut clean := true
-  for (path, tex) in files do
+  for (path, tex) in files.filter (·.1.extension == some "tex") do
     clean := (← reportStrayQuotes "argtex" path tex) && clean
   unless clean do return 1
   let check := args.contains "--check"

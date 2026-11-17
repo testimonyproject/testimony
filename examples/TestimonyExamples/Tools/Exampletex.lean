@@ -68,10 +68,13 @@ end TestimonyExamples.Doc
 open TestimonyExamples.Doc in
 /-- Entry point. -/
 def main (args : List String) : IO UInt32 := do
-  let files := examples.map fun e =>
+  let docs := examples.map fun e =>
     ((("docs/latex" : System.FilePath) / (e.file ++ ".tex")), document e)
+  -- The house style every document loads, beside them.
+  let files := docs ++
+    [(("docs/latex" : System.FilePath) / Logic.Latex.styleFile, Logic.Latex.style)]
   let mut clean := true
-  for (path, tex) in files do
+  for (path, tex) in docs do
     clean := (← reportStrayQuotes "exampletex" path tex) && clean
   unless clean do return 1
   let code ← writeOrCheck "exampletex" files (args.contains "--check")
