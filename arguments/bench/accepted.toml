@@ -256,4 +256,4 @@ reason = "The check builds a model with its postulates for every package. The pe
 benchmark = "checks: postulates, every package"
 metric = "time"
 up_to = 0.15
-reason = "The check builds a model with its postulates for every package. The deity question of LST §3 (#230) adds ten, LST, the Witnesses and Oneness, each line on its own, and the supplemented Nicene case with each rival answering (237 to 247): the same work over more packages, measured on CI at +6.3%."
+reason = "The check builds a model with its postulates for every package. The deity question of LST §3 (#230) adds ten, LST, the Witnesses and Oneness, each line on its own, and the supplemented Nicene case with each rival answering (249 to 259): the same work over more packages, measured on CI at +6.3%."
