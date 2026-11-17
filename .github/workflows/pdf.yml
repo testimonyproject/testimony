@@ -13,6 +13,12 @@ name: PDF
 # request's, so its PDFs already credit the pull request's own commits to its
 # author, as the real merge will if the author merges it.
 #
+# Each document also gives its date and version under its title, and ends with
+# how to make it again from its commit. scripts/edition.py works those out here,
+# for the same reason: the commit being typeset is not known when the .tex is
+# generated. On a pull request it is GitHub's trial merge, and the document
+# says it is a preview of that pull request.
+#
 # On a pull request this is the check that the print edition still typesets, so
 # a LaTeX error is caught before it reaches main. docs.yml calls it to put the
 # PDFs beside the site, and release.yml to attach them to a tagged release.
@@ -107,6 +113,7 @@ jobs:
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           python3 scripts/credits.py docs/latex docs/latex/arguments
+          python3 scripts/edition.py docs/latex docs/latex/arguments
           cp references.bib docs/latex/
           cp references.bib docs/latex/arguments/
           cd docs/latex
@@ -122,6 +129,7 @@ jobs:
         run: |
           lake exe exampletex --check
           lake exe exampletex
+          python3 ../scripts/edition.py docs/latex
           cd docs/latex
           for f in *.tex; do tectonic "$f"; done
 

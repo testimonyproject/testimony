@@ -191,6 +191,12 @@ cd arguments && tectonic sola-fide.tex        # one argument on its own
 A Unicode engine is required: the claims contain Greek and Hebrew. Citations
 render as live `\cite` commands against the generated `references.bib`.
 
+Under its title a document gives a date and a version, and it ends with "How
+this edition was made": the steps to make it again from the commit it names.
+Both come from an `edition.def` beside the document, which
+`python3 scripts/edition.py docs/latex docs/latex/arguments`, run at the root,
+writes from git. Without it the document says it is an unrecorded copy.
+
 Atoms are numbered rather than named, which is the usual convention and the
 point of rendering at all. It separates an argument's *shape* from its content.
 So that the reader need not turn back to the legend at every row, each variable
