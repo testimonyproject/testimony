@@ -115,6 +115,8 @@ def category : Concept → Option Category
   | .abilityToBelieve => some .quality
   | .regeneration => some .event
   | .preparationForJustification => some .process
+  | .election => some .role
+  | .perseverance => some .process
   | .essentialDoctrine => some .informationObject
   | .understandingScripture => some .process
   | .historicalGrammaticalMethod => some .informationObject

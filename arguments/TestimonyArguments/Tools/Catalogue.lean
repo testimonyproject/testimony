@@ -120,6 +120,8 @@ def solaGratiaChapters : List Chapter :=
     , modules := [`TestimonyArguments.SolaGratia.Thomist] }
   , { slug := "weighing", title := "Weighing the positions"
     , modules := [`TestimonyArguments.SolaGratia.Dispute] }
+  , { slug := "perseverance", title := "The perseverance of the saints"
+    , modules := [`TestimonyArguments.SolaGratia.Perseverance] }
   , { slug := "claims", title := "Appendix: the claims and their sources"
     , modules := [`TestimonyArguments.SolaGratia.Atoms, `TestimonyArguments.SolaGratia.Sources]
     , legend := true } ]
@@ -145,6 +147,12 @@ positions weighed; and the claims, as an appendix. -/
 def trinityChapters : List Chapter :=
   [ { slug := "trinity", title := "The Triune God: what Scripture settles, and what it leaves open"
     , modules := [`TestimonyArguments.Trinity] }
+  , { slug := "the-deity", title := "Are the Son and the Spirit God, and three persons?"
+    , modules := [`TestimonyArguments.Trinity.Deity] }
+  , { slug := "weighing-the-deity", title := "Weighing the positions on the deity and the persons"
+    , modules := [`TestimonyArguments.Trinity.DeityDispute] }
+  , { slug := "the-nicene-case", title := "The Nicene case, supplemented"
+    , modules := [`TestimonyArguments.Trinity.DeityCase] }
   , { slug := "the-order", title := "Is the Son less than the Father?"
     , modules := [`TestimonyArguments.Trinity.Order] }
   , { slug := "weighing-the-order", title := "Weighing the readings of the order texts"

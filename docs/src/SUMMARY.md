@@ -6,9 +6,12 @@
 
 - [Rationale](./rationale.md)
 - [Scope and limits](./scope-and-limits.md)
+- [Who wrote what](./authorship.md)
 
 # How
 
+- [Contributing with Claude Code](./getting-started.md)
+- [Hello world: your first argument](./hello-world.md)
 - [Reading the logic](./reading-the-logic.md)
 - [Architecture](./architecture.md)
 - [Encoding arguments](./logic.md)
@@ -17,6 +20,7 @@
 - [Style guide](./style-guide.md)
 - [Meanings and articles (draft)](./semantics.md)
 - [Checking an argument for fallacies](./fallacies.md)
+- [The Greek text as data](./corpus.md)
 - [Computed ratings (design)](./computed-ratings.md)
 - [How each side says we know (draft)](./epistemology.md)
 - [Performance: the engine, measured](./performance.md)
@@ -61,12 +65,16 @@
   - [Freedom to refuse, and the ability God gives](./arguments/sola-gratia/freedom-to-refuse.md)
   - [Aquinas and the Catholic schools](./arguments/sola-gratia/aquinas.md)
   - [Weighing the positions](./arguments/sola-gratia/weighing.md)
+  - [The perseverance of the saints](./arguments/sola-gratia/perseverance.md)
   - [Appendix: the claims and their sources](./arguments/sola-gratia/claims.md)
 - [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md)
   - [Each view from its own texts, and what Acts can carry](./arguments/spirit-baptism/the-views.md)
   - [Weighing the four views](./arguments/spirit-baptism/weighing.md)
   - [Appendix: the claims and their sources](./arguments/spirit-baptism/claims.md)
 - [The Triune God — what Scripture settles, and what it leaves open](./arguments/trinity.md)
+  - [Are the Son and the Spirit God, and three persons?](./arguments/trinity/the-deity.md)
+  - [Weighing the positions on the deity and the persons](./arguments/trinity/weighing-the-deity.md)
+  - [The Nicene case, supplemented](./arguments/trinity/the-nicene-case.md)
   - [Is the Son less than the Father?](./arguments/trinity/the-order.md)
   - [Weighing the readings of the order texts](./arguments/trinity/weighing-the-order.md)
   - [Does the Spirit proceed from the Son?](./arguments/trinity/the-procession.md)

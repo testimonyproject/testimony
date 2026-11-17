@@ -25,7 +25,9 @@ Testimony is two things.
 If you came to read, start with an argument: [Sola fide](./arguments/sola-fide.md)
 is the fullest. If you came to write code, start with
 [Encoding arguments](./logic.md). [Reading the logic](./reading-the-logic.md)
-explains the notation for anyone who has not met it.
+explains the notation for anyone who has not met it. If you have an argument
+of your own and have never programmed, start with
+[Contributing with Claude Code](./getting-started.md).
 
 ## What this project is, and is not
 
