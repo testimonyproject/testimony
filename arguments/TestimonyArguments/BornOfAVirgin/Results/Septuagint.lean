@@ -4,15 +4,16 @@ import Testimony.Logic.Tactic
 /-!
 # TestimonyArguments.BornOfAVirgin.Results.Septuagint — what the Septuagint shows
 
-A reader's question, in a reader's words: *the Jews who translated Isaiah into
-Greek, before Christ, wrote παρθένος — "virgin". Doesn't that settle it?*
+The Jews who translated Isaiah into Greek, before Christ, wrote παρθένος, read
+as "virgin". That translation, the Septuagint, is the one Matthew quotes.
+Doesn't it settle the question?
 
 The argument is old. Irenaeus makes it against Theodotion and Aquila: the verse
 "was interpreted into Greek by the Jews themselves, much before the period of
 our Lord's advent, that there might remain no suspicion that perchance the Jews,
 complying with our humour, did put this interpretation upon these words"
-(*Against Heresies* III.21.1). This module encodes it at full strength and asks
-three things of it, one result each.
+(*Against Heresies* III.21.1). It is encoded here at full strength, and three
+things are asked of it, one result each.
 
 **What it rests on.** Take away the claim that παρθένος, in the translator's
 Greek, means a virgin, and the Septuagint no longer shows that its translator
@@ -20,19 +21,19 @@ read the woman as one (`parthenos_is_load_bearing`). Everything turns on that
 word, and whether it means "virgin" there is exactly what the sources dispute.
 Rico and Gentry hold that it does "whenever it appears in Semitic Koine Greek",
 and Bratcher agrees. Wegner, Rhodea and Meade hold that in the translator's day
-it still meant a young woman, as it does of Dinah after Shechem has lain with her
-(Genesis 34:3), and Walton that the translator's choice of it "is not
+it still meant a young woman, as it does of Dinah after Shechem has lain with
+her (Genesis 34:3), and Walton that the translator's choice of it "is not
 necessarily betraying an interpretation as virgin". Wegner and Walton grant that
 by the New Testament the word meant "virgin"; Meade and Davidson put that sense
 down to Christian use. The dispute is over the translator's day, two or three
 centuries before Matthew. The Greek Pentateuch's laws use the word where
 virginity is the point, and its law of the seduced παρθένος reads Genesis 34:3
 itself otherwise: the woman a man has lain with is still the law's παρθένος, and
-owed "the bride-price of virgins" (Exodus 22:15–16). `Dispute.Septuagint` weighs
-all five, and the Septuagint's witness prevails, with Rico and Gentry, the laws
-and that reading of Genesis 34:3; Wegner cannot be defended
-(`septuagint_prevails_over_wegner`). The verdict turns on one rating, the
-status reading's step, `plausible` on the readers found.
+owed "the bride-price of virgins" (Exodus 22:15–16). This chapter weighs all
+five, below, and the Septuagint's witness prevails, with Rico and Gentry, the
+laws and that reading of Genesis 34:3; Wegner cannot be defended
+(`septuagint_prevails_over_wegner`). The verdict turns on one rating, the status
+reading's step, `plausible` on the readers found.
 
 **What it would show, if the word means "virgin".** How one early reader read
 Isaiah: a Jewish translator, before Christ, read the woman of 7:14 as a virgin, so
@@ -56,8 +57,8 @@ reads the Greek of 7:14 so: "a young woman, at that time virgin, would in the
 normal way marry and bear a child" (115), "the most reasonable explanation"
 (116). So the Septuagint, granted every word, does not by itself say that the
 conception was without a man. Justin and
-Irenaeus read it so, from the promise of a sign (`signLine`, weighed in
-`Dispute.Wegner`); the word alone does not.
+Irenaeus read it so, from the promise of a sign (`signLine`, weighed in the chapter
+"Was the woman already pregnant?"); the word alone does not.
 -/
 
 namespace TestimonyArguments.BornOfAVirgin
@@ -66,7 +67,7 @@ open Testimony
 
 open Testimony Testimony.Bib Testimony.Logic
 
-/-! ### The Septuagint as a witness
+/-! #### The Septuagint as a witness
 
 Each reading below is a model: a way every claim of the argument could stand at
 once, named for what it says of the Septuagint and of the woman of 7:14. It

@@ -48,6 +48,46 @@ def solaFideChapters : List Chapter :=
     , modules := [`TestimonyArguments.SolaFide.Atoms, `TestimonyArguments.SolaFide.Sources]
     , legend := true } ]
 
+/-- Born of a virgin, set as chapters: Matthew's claim and the four strands;
+what each strand depends on; whether Isaiah's sign was only for Ahaz; Wegner's
+grammar; the Septuagint's word, and Matthew's reading of it; "her seed" in
+Genesis 3:15, and the verse as a promise fulfilled; and the claims, as an
+appendix. -/
+def bornOfAVirginChapters : List Chapter :=
+  [ { slug := "born-of-a-virgin"
+    , title := "Born of a virgin: Matthew's claim, and the texts it rests on"
+    , modules := [`TestimonyArguments.BornOfAVirgin] }
+  , { slug := "the-strands", title := "Four strands, and what each depends on"
+    , modules := [ `TestimonyArguments.BornOfAVirgin.Lines
+                 , `TestimonyArguments.BornOfAVirgin.Packages
+                 , `TestimonyArguments.BornOfAVirgin.Results ] }
+  , { slug := "ahaz", title := "Was Isaiah's sign only for Ahaz?"
+    , modules := [`TestimonyArguments.BornOfAVirgin.Dispute] }
+  , { slug := "wegner", title := "Was the woman already pregnant?"
+    , modules := [ `TestimonyArguments.BornOfAVirgin.Results.Wegner
+                 , `TestimonyArguments.BornOfAVirgin.Dispute.Wegner ] }
+  , { slug := "septuagint", title := "What the Septuagint's word meant"
+    , modules := [ `TestimonyArguments.BornOfAVirgin.Results.Septuagint
+                 , `TestimonyArguments.BornOfAVirgin.Dispute.Septuagint
+                 , `TestimonyArguments.BornOfAVirgin.Dispute.Miller ] }
+  , { slug := "matthew", title := "Matthew's reading of the word"
+    , modules := [`TestimonyArguments.BornOfAVirgin.Dispute.Matthew] }
+  , { slug := "her-seed", title := "Does Genesis 3:15 rule out a human father?"
+    , modules := [ `TestimonyArguments.BornOfAVirgin.Results.Genesis
+                 , `TestimonyArguments.BornOfAVirgin.Dispute.Genesis ] }
+  , { slug := "the-promise", title := "Is Genesis 3:15 a promise, fulfilled in Jesus?"
+    , modules := [ `TestimonyArguments.BornOfAVirgin.Dispute.Protoevangelium
+                 , `TestimonyArguments.BornOfAVirgin.Dispute.PromiseHearing ] }
+  , { slug := "claims", title := "Appendix: the claims and their sources"
+    , modules := [ `TestimonyArguments.BornOfAVirgin.Atoms
+                 , `TestimonyArguments.BornOfAVirgin.Sources
+                 , `TestimonyArguments.BornOfAVirgin.Sources.Genesis
+                 , `TestimonyArguments.BornOfAVirgin.Sources.NearTerm
+                 , `TestimonyArguments.BornOfAVirgin.Sources.Septuagint
+                 , `TestimonyArguments.BornOfAVirgin.Sources.Versions
+                 , `TestimonyArguments.BornOfAVirgin.Sources.Wegner ]
+    , legend := true } ]
+
 /-- The canonical witness, set as chapters: the question and its method; what
 each corpus says; what follows, what an opponent must reject, and James; and the
 claims, as an appendix. -/
@@ -136,7 +176,8 @@ def arguments : List Argument :=
     , title := "Born in Bethlehem — Micah 5:2" }
   , { ns := `TestimonyArguments.BornOfAVirgin
     , slug := "born-of-a-virgin"
-    , title := "Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3" }
+    , title := "Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3"
+    , chapters := bornOfAVirginChapters }
   , { ns := `TestimonyArguments.SolaFide
     , slug := "sola-fide"
     , title := "Sola fide"
