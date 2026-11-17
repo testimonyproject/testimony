@@ -250,6 +250,27 @@ inductive Claim
   to the end. Dort (V, articles 9–10) and Westminster (XVIII) hold it; Trent's
   canon 16 condemns it. -/
   | believersCanBeSureOfPersevering
+  /-- Romans 8:29–30, read as a chain from which no link drops anyone: every one
+  justified is also glorified. Dort draws the verse so (I, article 7; Rejection
+  of Errors I.2, "this golden chain of salvation"); Wesley denies it: Paul "does
+  not affirm … that precisely the same number of men are called, justified, and
+  glorified". -/
+  | romans8ChainIsUnbroken
+  /-- 1 John 2:19, read of every apostate: all who fall away were never true
+  believers. Owen's reading; Augustine's is that those who left "were in
+  goodness" and were not elect. -/
+  | apostatesNeverHadTrueFaith
+  /-- Considered in himself, apart from God's decree, the one who perseveres
+  could have fallen away: nothing in him makes his perseverance necessary. What
+  Aquinas grants, "considered in himself" (I q.23 a.6, ad 2), and Dort, "with
+  respect to themselves" (V, article 8), where Dort says more: they would fall.
+  Not the claim that one truly justified can finally fall away, which is about
+  the believer as he is, under all that God does or does not give. -/
+  | canFallInThemselves
+  /-- God knows all things, the future included, as present to his eternity, and
+  his knowing them imposes no necessity on them. Boethius (*Consolation* V,
+  prose 6) and Aquinas (I q.14 a.13). -/
+  | godKnowsAllAsPresent
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaGratia

@@ -4,7 +4,7 @@ import TestimonyArguments.SolaGratia.Sources
 /-!
 # TestimonyArguments.Meanings.SolaGratia — what each sola gratia claim says
 
-**Partly analysed.** Eight claims have meanings: the ones the dispute turns on,
+**Partly analysed.** Fifteen claims have meanings: the ones the dispute turns on,
 each written in the vocabulary's terms so that the logic holds what they say
 about each other. The rest are registered with their citations' labels and
 marked unanalysed, so the argument is counted from the start (`coverage_now`).
@@ -40,6 +40,34 @@ Three pairs are left apart, on purpose, and the vocabulary says why.
   brings about the act is what the dilemma over the third way asks
   (`whatTheAbilityIs`). Joining the ability to either answer would settle that
   dilemma before it is heard.
+
+## The perseverance of the saints
+
+Seven of the claims of the chapter on perseverance have meanings, in two
+concepts the vocabulary adds for it: *election*, being among those God has
+chosen to save, a role a person holds by God's choice; and *perseverance*,
+continuing in grace to the end, a process. None of them is joined to another,
+and each pair is left apart for a reason the meanings show.
+
+- **That the elect persevere, that the truly justified are elect, and that the
+  truly justified can finally fall away.** The first says election suffices for
+  perseverance, the second that justification suffices for election, the third
+  that justification does not suffice for perseverance. No two of them clash:
+  only all three together do. So the step that joins the first two is a rated
+  step (`joinStep`), and Augustine can hold the first and third by denying the
+  second.
+- **That one truly justified can finally fall away, and that the one who
+  perseveres could, considered in himself, have fallen.** The first says that
+  justification does not suffice for perseverance; the second, that the
+  believer's own will does not. Dort grants the second ("with respect to
+  themselves … possible", V, article 8) and denies the first. The meanings keep
+  them apart, which is why the view from eternity can be held with Westminster
+  and with Wesley alike.
+- **The readings of Romans 8:30 and 1 John 2:19.** Each is a claim about what a
+  passage teaches, and a reading is never the same claim as a doctrine held
+  outright, so neither is joined to the claim that the truly justified can fall
+  away. The Reformed steps from the readings are rated steps
+  (`romans8Step`, `bridgeStep`).
 -/
 
 namespace TestimonyArguments.Meanings.SolaGratia
@@ -68,7 +96,8 @@ def all : List Claim :=
   , .secondPeter2_20to22, .psalm51_11, .romans8_16
   , .firstCorinthians10_12, .hebrews10DescribesTheSanctifiedWhoFall
   , .secondPeter2DescribesBelieversWhoFall, .davidLostTheSpirit
-  , .believersCanBeSureOfPersevering ]
+  , .believersCanBeSureOfPersevering, .romans8ChainIsUnbroken
+  , .apostatesNeverHadTrueFaith, .canFallInThemselves, .godKnowsAllAsPresent ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -77,7 +106,7 @@ theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
 -/
 abbrev graceEffectsBelieving : Content := rl .effects (cn .grace) (cn .actOfBelieving)
 
-/-- **What each sola gratia atom asserts.** Eight are analysed; the rest keep
+/-- **What each sola gratia atom asserts.** Fifteen are analysed; the rest keep
 their citations' labels, marked unanalysed. -/
 def means : Claim → Statement
   | .graceIsEffectualOfItself => .holds graceEffectsBelieving
@@ -89,6 +118,18 @@ def means : Claim → Statement
   | .abilityToBelieveIsGiven => .holds (rl .groundOf (cn .grace) (cn .abilityToBelieve))
   | .faithAloneReceivesGrace => .holds (rl .soleInstrumentOf (cn .faith) (cn .grace))
   | .salvationIsByGrace => .holds (rl .groundOf (cn .grace) (cn .salvation))
+  | .electPersevere => .holds (rl .sufficientFor (cn .election) (cn .perseverance))
+  | .justifiedAreElect => .holds (rl .sufficientFor (cn .justification) (cn .election))
+  | .justifiedCanFinallyFallAway =>
+    .holds (.not (rl .sufficientFor (cn .justification) (cn .perseverance)))
+  | .canFallInThemselves => .holds (.not (rl .sufficientFor (cn .will) (cn .perseverance)))
+  | .godKeepsHisSheepInFaith => .holds (rl .agentOf (cn .god) (cn .perseverance))
+  | .romans8ChainIsUnbroken =>
+    .teaches (.range ⟨.romans, 8, 29, 8, 30⟩)
+      (rl .sufficientFor (cn .justification) (cn .eternalLife))
+  | .apostatesNeverHadTrueFaith =>
+    .teaches (.verse ⟨.firstJohn, 2, 19⟩)
+      (rl .sufficientFor (cn .justification) (cn .perseverance))
   | a => .opaque (baseCite a).label
 
 /-- What each atom of the argument says. -/
@@ -96,8 +137,8 @@ instance meanings : HasMeanings Claim :=
   { argument := "Sola gratia — Ephesians 2:8–9 and Romans 9:16", all
   , complete := all_complete, means }
 
-/-- **Eight of the 31 atoms are analysed**: the ones the dispute turns on. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (8, 53) := by decide
+/-- **Fifteen of the 57 atoms are analysed**: the ones the disputes turn on. -/
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (15, 57) := by decide
 
 /-- **The sola gratia joins**: each pair of claims whose meanings exclude or
 entail one another, listed, and proved to be exactly what the meanings contain.

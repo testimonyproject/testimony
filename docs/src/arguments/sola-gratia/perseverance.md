@@ -58,11 +58,22 @@ not less certain than the power of God is invincible". Wesley grants the text an
 reads its promise as conditional, quoting 2 Peter 1:10: "They are *my sheep*,
 that *hear my voice*, that *follow me* in all holiness. And 'if ye do these
 things, ye shall never fall'". So the step is rated *disputed*, which means that
-a reader the library cites grants its grounds and denies its conclusion. From 1
-John 2:19, the Reformed conclude that the truly justified are elect. Augustine
-grants the verse and still denies the step: those who left "were not of the
-number of children, even when they were in the faith of children" (ch. 20). They
-were not elect, and their faith was real. That step is rated *disputed* too.
+a reader the library cites grants its grounds and denies its conclusion, and here
+gives his reason, the condition he reads in the promise.
+
+From 1 John 2:19, "They went out from us, but they were not of us", the Reformed
+conclude that the truly justified are elect. They get there through a reading of
+the verse. Calvin: "He plainly declares that those who fell away had never been
+members of the Church", having had "only a light and a transient taste" of the
+knowledge of Christ. John Owen, the Puritan, makes it a rule for every apostate:
+"If all they who fall away totally … were never true believers … then those who
+are true believers cannot fall away; but the first is true, therefore the
+latter." Here too the reading is the doctrine found in the verse, so the step
+from it to "the truly justified are elect" is rated *well supported* and the
+whole weight falls on the reading. Augustine reads the same verse and holds that
+those who left "were in goodness", "in the faith of children", and still were not
+elect (ch. 20). So the reading is rated *disputed*, and the question it turns on
+is whether one who leaves the faith never had it, or had it and gave it up.
 
 **Philippians 1.** "He who began a good work in you will bring it to completion
 at the day of Jesus Christ" (Philippians 1:6). Trent's chapter on perseverance
@@ -74,19 +85,27 @@ finally fall away" is rated *disputed*.
 
 **Romans 8.** "And those whom he predestined he also called, and those whom he
 called he also justified, and those whom he justified he also glorified"
-(Romans 8:29–30). Read as a chain no link of which drops anyone, it says that
-everyone justified is glorified. Wesley grants the verse and reads the chain
-backwards, so that everyone glorified was first justified, not forwards. To an
-opponent who argued from it he answered: "This proves no more than that all who
-are glorified, are pardoned and sanctified first" (*Predestination Calmly
-Considered*, §76). In his notes on the verse: "He does not deny that a believer
-may fall away and be cut off between his special calling and his glorification".
-Augustine reads the chain as being about those "called according to His
-purpose", the elect, and still holds that others who are truly justified fall
-away. So both grant the verse and deny the step, and it is rated *disputed*.
-Calvin also reads the chain of "the elect … whom he also inwardly draws". He
-accepts the conclusion, but because he also holds that everyone truly justified
-is elect, which the step as written here does not carry.
+(Romans 8:29–30). Dort reads it as a chain from which no link drops anyone, so
+that every one justified is glorified: God decreed to give the elect "true faith,
+justification, and sanctification; and having powerfully preserved them … finally
+to glorify them" (I, article 7). Augustine could say as much of the elect. What
+is Dort's own is that the chain holds every one justified: its Rejection of
+Errors condemns those who teach that God chooses some to justifying faith whom he
+does not choose to salvation, "dissolving this golden chain of salvation" (I.2,
+in Latin, *auream hanc salutis catenam dissolvens*; the translation is this
+page's). Dort's reading is the doctrine itself found in the verse, so everything
+turns on whether the verse says it, and the step from it is rated *well
+supported*: no cited reader grants the reading and denies what follows. Wesley's
+quarrel is with the reading, and he gives his reason. He takes the verse as the
+order in which God brings to glory those who are glorified, not as a promise of
+glory to every one justified: "This proves no more than that all who are
+glorified, are pardoned and sanctified first" (*Predestination Calmly
+Considered*, §76), and Paul "does not affirm … that precisely the same number of
+men are called, justified, and glorified" (*Notes*, on the verse). So the reading
+is rated *disputed*, and it is where Wesley parts from the Romans route
+(`whereWesleyPartsOverRomans8`). Augustine reads the chain as being about those
+"called according to His purpose", the elect, and still holds that others who
+are truly justified fall away.
 
 The John route reaches the conclusion without Philippians or Romans, and the
 Philippians route reaches it without 1 John 2:19, though it still needs John 10
@@ -100,9 +119,9 @@ Four positions hold that one truly justified can finally fall away.
 
 - **Augustine and Aquinas**, on Augustine's ground that some regenerate are not
   given perseverance. They hold that the elect persevere as firmly as
-  Westminster does. Augustine's claim, his grant that the elect persevere, and
-  the Reformed step from 1 John 2:19 cannot all be held together, and the step
-  is where they part (`whereAugustinePartsFromJohnsStrand`).
+  Westminster does. They part from it over 1 John 2:19: whether those who left
+  never had true faith, or had it and were not elect
+  (`whereAugustinePartsFromJohnsStrand`).
 - **Trent**, from the condition in its chapter 13. Its canon 23 condemns anyone
   who says "that a man once justified can sin no more, nor lose grace, and that
   therefore he that falls and sins was never truly justified". The canon is
@@ -182,6 +201,56 @@ are passages of Scripture which seem to me to wear this aspect" (*Declaration of
 Sentiments*). What the article concludes from John 10:28 leaves the question
 open (`remonstrance_leaves_perseverance_open`).
 
+## The view from eternity
+
+Boethius, in the sixth century, asked whether God's foreknowledge leaves us free.
+He answered that God does not foresee the future as we guess at it, but sees all
+of time at once: "Now, eternity is the possession of endless life whole and
+perfect at a single moment" (*Consolation of Philosophy* V, prose 6). Knowing a
+thing does not make it happen: "there are two necessities—one simple, as that
+men are necessarily mortal; the other conditioned, as that, if you know that
+someone is walking, he must necessarily be walking". Things God foresees,
+"viewed, however, in themselves, … desist not from the absolute freedom
+naturally theirs". Aquinas carried the answer from foreknowledge to
+predestination: "all things that are in time are present to God from eternity"
+(*Summa* I q.14 a.13), and "it is possible for one who is predestinated
+considered in himself to die in mortal sin; yet it is not possible, supposed …
+that he is predestinated" (I q.23 a.6, ad 2).
+
+So "could he have fallen?" can be asked of the believer considered in himself,
+apart from God's decree, and of the believer as he is, under it. Considered in
+himself, nothing in the one who perseveres makes his perseverance necessary.
+Dort grants that and says more: falling, "with respect to themselves is not only
+possible, but would undoubtedly happen; but with respect to God, it is utterly
+impossible, since his counsel can not be changed" (V, article 8). Aquinas means
+less than Dort's "would", only that it is possible. The claim encoded here is the
+one both grant: considered in himself, the believer could fall. The other
+question is whether one who is truly justified can at the last fall away and be
+lost: by his own fault, as Trent, the Lutherans and Wesley hold, or because God
+does not give him the gift of perseverance, as Augustine holds. That is the claim
+Westminster denies.
+
+The view from eternity, as encoded here, holds that God knows all things as
+present, that the elect persevere, and that each of them could, considered in
+himself, have fallen. It says nothing on whether the truly justified can finally
+fall away. So it can be added to Westminster's position without contradiction
+(`from_eternity_holds_with_westminster`), and to Wesley's, together with the
+claim that the elect persevere, which Wesley's position is not encoded as holding
+(`from_eternity_holds_with_wesley`). Granted the view alone, it neither follows
+nor fails that the truly justified can finally fall away
+(`from_eternity_leaves_perseverance_open`). Add Owen's reading of 1 John 2:19,
+that all who fall away were never true believers, and it follows that none can
+(`from_eternity_with_owens_reading_settles_it`). So what decides the question is
+not God's knowledge of time but who the elect are, and that is the question of
+1 John 2:19.
+
+Wesley holds, with Boethius, that all time is present to God and that his knowing
+compels nothing: "Men are as free in believing or not believing as if he did not
+know it at all" (Sermon 58, §5). He parts from Aquinas over what that knowledge
+does. For Wesley God knows what we do because we do it, and chooses those he
+foresees believing; for Aquinas, predestination is not grounded in anything God
+foresees in us. This chapter does not weigh that question.
+
 ## Falling for a time
 
 Westminster says that believers "may … fall into grievous sins; and for a time
@@ -229,12 +298,28 @@ revelation" (canon 16). In its chapter on perseverance (ch. 13) it quotes Paul:
 "let those who think themselves to stand, take heed lest they fall" (1
 Corinthians 10:12).
 
-Calvin, on that verse, says "there are two kinds of assurance". One "rests on the
-promises of God", and "is inseparable from faith"; the other "arises from
-negligence, when men … give themselves no concern, as if they were beyond the
-reach of danger". Paul warns against the second and leaves the first standing. So
-Trent's case for doubt rests on its step from the verse, and Calvin, granting the
-verse, denies it; the step is rated *disputed* (`whereTheyPartOverAssurance`).
+Calvin answers the verse with "two kinds of assurance". One "rests on the
+promises of God, because a pious conscience feels assured that God will never be
+wanting to it", and yet, "keeping in mind its own infirmity, casts itself upon
+God, and with carefulness and anxiety commits itself to him". That assurance, he
+says, "is inseparable from faith". The other "arises from negligence, when men …
+give themselves no concern, as if they were beyond the reach of danger", and it
+is that one Paul warns against. So for Calvin assurance rests on God's promise,
+and the care Paul asks for belongs to that same faith, which, "keeping in mind
+its own infirmity, casts itself upon God".
+
+Trent, too, commends "a most firm hope in God's help" (ch. 13), and parts from
+Calvin over whether anyone can know he is among those who will persevere:
+"except by special revelation, it cannot be known whom God hath chosen unto
+Himself" (ch. 12). For Calvin, those who have "the living root
+of faith" also "carry a testimony of their own adoption firmly fixed in their
+hearts" (*Catholic Epistles*, on 1 John 2:19). So the question between them is
+whether the promise, received by faith, lets a believer know his own
+perseverance. It is tied to the question of 1 John 2:19, though the encoding does
+not join the two: if some who had true faith fall away, faith alone cannot tell
+a believer that he will not.
+Trent's step from 1 Corinthians 10:12 is rated *disputed*, because Calvin grants
+the verse and denies that it asks for doubt (`whereTheyPartOverAssurance`).
 
 The Reformed step from Romans 8:16 is rated *well supported*. Wesley grants the
 verse to every believer, and he allows an assurance of perseverance too: "The
@@ -242,15 +327,18 @@ full assurance of faith relates to present pardon; the full assurance of hope,
 to future glory", the latter being "Divine evidence (wrought in the soul by the
 same immediate inspiration of the Holy Ghost) of persevering grace, and of
 eternal glory", which "you cannot expect, if you abate your diligence" (*Notes*,
-on Hebrews 6:11). Since he says the same of the assurance of faith, his
-"immediate inspiration" is the ordinary witness of the Spirit, not a special
-revelation, and he does not deny the step.
+on Hebrews 6:11). This page reads his "immediate inspiration" as the ordinary
+witness of the Spirit, since he says the same of the assurance of faith, and so
+counts him as granting the step. He holds that this assurance is given to some,
+and lost with diligence.
 
 ## Weighed together
 
-Weighed as one dispute, Westminster stands off against each of the four
-positions that hold the justified can fall away: each defeats the other, so
-between them it is a tie. With the Lutherans and Trent the tie is also over
+Weighed as one dispute, Westminster is in a tie with each of the four positions
+that hold the justified can fall away. One position defeats another when it
+contradicts something the other holds and its weakest premise or step is rated
+no lower than the other's; here each defeats the other, so between them it is a
+tie. With the Lutherans and Trent the tie is also over
 falling for a time, and with Trent over knowing that one will persevere. The
 four do not attack one another. However the ties are settled, the one thing that
 must be accepted is what the Remonstrants concluded from John 10:28: no power
@@ -282,7 +370,9 @@ part over whether God keeps them, and that is what the claims here are about.
 
 Six parties are heard: the Remonstrance, with what it concludes from John 10:28;
 Westminster and Dort; Augustine and Aquinas; Trent; the Lutherans; and Wesley.
-One position defeats another when it contradicts something the other holds and
+The view from eternity is not among them: as encoded, it says nothing on whether
+the truly justified can finally fall away, so it attacks none of them and none
+attacks it. One position defeats another when it contradicts something the other holds and
 its weakest premise or step is rated no lower than the other's. Who defeats whom
 is computed from their premises and checked by the kernel.
 
@@ -325,15 +415,14 @@ as conditional, quoting 2 Peter 1:10.
 <a id="bridgeStep"></a>
 **`bridgeStep`**
 
-1 John 2:19: "if they had been of us, they would have continued with us". So
-everyone truly justified is among the elect, and those who left were never truly
-justified.
-Rated `disputed`: Augustine grants the verse and holds that those who left had
-true faith and were not elect.
+1 John 2:19, "if they had been of us, they would have continued with us",
+read with Owen of every apostate, that all who fall away were never true
+believers: so everyone truly justified is among the elect. Rated
+`wellSupported`; the dissent is from the reading, which Augustine denies.
 
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-35}{P_{35}} \rightarrow \href{claims.html#claim-42}{P_{42}}\\) — *would give:* Everyone who is truly justified is among the elect
+- \\((\href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-55}{P_{55}}) \rightarrow \href{claims.html#claim-42}{P_{42}}\\) — *would give:* Everyone who is truly justified is among the elect
 
 </div>
 
@@ -415,14 +504,26 @@ outside snatches believers out of it. Rated `consensus`.
 <a id="romans8Step"></a>
 **`romans8Step`**
 
-Romans 8:30: "those whom he justified he also glorified". So no one truly
-justified can finally fall away. Rated `disputed`: Wesley grants the text and
-answers that "This proves no more than that all who are glorified, are pardoned
-and sanctified first".
+Romans 8:30, "those whom he justified he also glorified", read with Dort as a
+chain from which no one drops: so no one truly justified can finally fall away.
+Rated `wellSupported`; the dissent is from the reading, which Wesley denies.
 
 <div class="testimony-derivation">
 
-- \\(\href{claims.html#claim-44}{P_{44}} \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
+- \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-54}{P_{54}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
+
+</div>
+
+<a id="timelessStep"></a>
+**`timelessStep`**
+
+God knows all things as present to his eternity, and his knowing imposes no
+necessity: so the one who perseveres could, considered in himself, have fallen
+away. Rated `wellSupported`.
+
+<div class="testimony-derivation">
+
+- \\(\href{claims.html#claim-57}{P_{57}} \rightarrow \href{claims.html#claim-56}{P_{56}}\\) — *would give:* Considered in himself, apart from God's decree, the one who perseveres could have fallen
 
 </div>
 
@@ -522,12 +623,13 @@ doubt.
 <a id="bridgeLine"></a>
 **`bridgeLine`** — 1 John 2:19 ("they went out from us, but they were not of us")
 
-**1 John 2:19**: the truly justified are elect.
+**1 John 2:19**, read of every apostate: the truly justified are elect.
 
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-35}{P_{35}}\\) — 1 John 2:19 — they went out from us, but they were not of us
-- (2) \\(\href{claims.html#claim-35}{P_{35}} \rightarrow \href{claims.html#claim-42}{P_{42}}\\)
+- (2) \\(\href{claims.html#claim-55}{P_{55}}\\) — 1 John 2:19, read of every apostate: all who fall away were never true believers
+- (3) \\((\href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-55}{P_{55}}) \rightarrow \href{claims.html#claim-42}{P_{42}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-42}{P_{42}}\\) — *at issue:* Everyone who is truly justified is among the elect
 
 </div>
@@ -602,12 +704,14 @@ hand.
 <a id="romans8Line"></a>
 **`romans8Line`** — Romans 8:29–30 ("those whom he justified he also glorified")
 
-**Romans 8:29–30**: no one truly justified can finally fall away.
+**Romans 8:29–30**, read as an unbroken chain: no one truly justified can
+finally fall away.
 
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-44}{P_{44}}\\) — Romans 8:29–30 — those whom he justified he also glorified
-- (2) \\(\href{claims.html#claim-44}{P_{44}} \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\)
+- (2) \\(\href{claims.html#claim-54}{P_{54}}\\) — Romans 8:29–30 is a chain from which no one drops: every one justified is glorified
+- (3) \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-54}{P_{54}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-43}{P_{43}}\\) — *at issue, the denial of:* One who is truly justified can fall away from grace finally, and perish
 
 </div>
@@ -693,6 +797,21 @@ hand.
 
 </div>
 
+<a id="timelessLine"></a>
+**`timelessLine`** — God knows all things as present, and imposes no necessity (Boethius)
+
+**The view from eternity** (Boethius; Aquinas): God knows all things as
+present, so the one who perseveres could, considered in himself, have fallen
+away.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-57}{P_{57}}\\) — God knows all things as present to his eternity, which imposes no necessity on them
+- (2) \\(\href{claims.html#claim-57}{P_{57}} \rightarrow \href{claims.html#claim-56}{P_{56}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-56}{P_{56}}\\) — *at issue:* Considered in himself, apart from God's decree, the one who perseveres could have fallen
+
+</div>
+
 ### The positions
 
 <a id="remonstrance"></a>
@@ -721,15 +840,17 @@ Grounded in scripture alone: John 10:27–29 — they will never perish, and no 
 
 **Augustine and Aquinas.** The elect persevere; and, on Augustine's ground, to
 some whom God has regenerated he does not give perseverance, so one truly
-justified can finally fall away. They read 1 John 2:19 as Augustine does, of those who were in the
-faith and were not elect.
+justified can finally fall away. They read 1 John 2:19 as Augustine does, of
+those who were in the faith and were not elect, and deny that every apostate
+never had true faith.
 
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-37}{P_{37}}\\) — To some whom God has regenerated, and given faith, hope and love, he does not give perseverance
 - (2) \\(\href{claims.html#claim-41}{P_{41}}\\) — Those God has chosen to save cannot finally fall away from grace
 - (3) \\(\href{claims.html#claim-35}{P_{35}}\\) — 1 John 2:19 — they went out from us, but they were not of us
-- (4) \\(\href{claims.html#claim-37}{P_{37}} \rightarrow \href{claims.html#claim-43}{P_{43}}\\) — *would give:* One who is truly justified can fall away from grace finally, and perish
+- (4) \\(\lnot \href{claims.html#claim-55}{P_{55}}\\) — *denied:* 1 John 2:19, read of every apostate: all who fall away were never true believers
+- (5) \\(\href{claims.html#claim-37}{P_{37}} \rightarrow \href{claims.html#claim-43}{P_{43}}\\) — *would give:* One who is truly justified can fall away from grace finally, and perish
 - \\(\vdash\\) \\(\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-43}{P_{43}}\\) — *at issue:* \\(\href{claims.html#claim-41}{P_{41}}\\) Those God has chosen to save cannot finally fall away from grace; \\(\href{claims.html#claim-43}{P_{43}}\\) One who is truly justified can fall away from grace finally, and perish
 
 </div>
@@ -803,14 +924,16 @@ comes from the three texts.
 - (6) \\(\href{claims.html#claim-51}{P_{51}}\\) — 2 Peter 2:20–22 describes true believers who fall back into the world
 - (7) \\(\href{claims.html#claim-32}{P_{32}}\\) — John 10:27–29 — they will never perish, and no one will snatch them out of my hand
 - (8) \\(\href{claims.html#claim-38}{P_{38}}\\) — God's promise to keep those he has begun to save holds unless they fall away by their own fault
-- (9) \\((\href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
-- (10) \\((\href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-50}{P_{50}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
-- (11) \\((\href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
+- (9) \\(\href{claims.html#claim-44}{P_{44}}\\) — Romans 8:29–30 — those whom he justified he also glorified
+- (10) \\(\lnot \href{claims.html#claim-54}{P_{54}}\\) — *denied:* Romans 8:29–30 is a chain from which no one drops: every one justified is glorified
+- (11) \\((\href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
+- (12) \\((\href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-50}{P_{50}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
+- (13) \\((\href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-43}{P_{43}}\\) — *at issue:* One who is truly justified can fall away from grace finally, and perish
 
 </div>
 
-Grounded in scripture alone: Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away, Hebrews 10:26–29 — the one who has profaned the blood of the covenant by which he was sanctified, 2 Peter 2:20–22 — having escaped the defilements of the world, they are again entangled in them, John 10:27–29 — they will never perish, and no one will snatch them out of my hand.
+Grounded in scripture alone: Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away, Hebrews 10:26–29 — the one who has profaned the blood of the covenant by which he was sanctified, 2 Peter 2:20–22 — having escaped the defilements of the world, they are again entangled in them, John 10:27–29 — they will never perish, and no one will snatch them out of my hand, Romans 8:29–30 — those whom he justified he also glorified.
 
 ### The position argued for
 
@@ -847,24 +970,26 @@ Calvin, against losing grace for a time; and Romans 8:16, for assurance.
 
 - (1) \\(\href{claims.html#claim-32}{P_{32}}\\) — John 10:27–29 — they will never perish, and no one will snatch them out of my hand
 - (2) \\(\href{claims.html#claim-35}{P_{35}}\\) — 1 John 2:19 — they went out from us, but they were not of us
-- (3) \\(\href{claims.html#claim-33}{P_{33}}\\) — Philippians 1:6 — he who began a good work in you will bring it to completion
-- (4) \\(\href{claims.html#claim-44}{P_{44}}\\) — Romans 8:29–30 — those whom he justified he also glorified
-- (5) \\(\href{claims.html#claim-47}{P_{47}}\\) — Psalm 51:11 — take not your Holy Spirit from me
-- (6) \\(\lnot \href{claims.html#claim-52}{P_{52}}\\) — *denied:* In his sin David lost the Holy Spirit and his faith
-- (7) \\(\href{claims.html#claim-48}{P_{48}}\\) — Romans 8:16 — the Spirit himself bears witness with our spirit
-- (8) \\(\href{claims.html#claim-34}{P_{34}}\\) — Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away
-- (9) \\(\lnot \href{claims.html#claim-40}{P_{40}}\\) — *denied:* Hebrews 6:4–6 describes true believers who actually fall away
-- (10) \\(\href{claims.html#claim-45}{P_{45}}\\) — Hebrews 10:26–29 — the one who has profaned the blood of the covenant by which he was sanctified
-- (11) \\(\lnot \href{claims.html#claim-50}{P_{50}}\\) — *denied:* Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away
-- (12) \\(\href{claims.html#claim-46}{P_{46}}\\) — 2 Peter 2:20–22 — having escaped the defilements of the world, they are again entangled in them
-- (13) \\(\lnot \href{claims.html#claim-51}{P_{51}}\\) — *denied:* 2 Peter 2:20–22 describes true believers who fall back into the world
-- (14) \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\) — *would give:* Those God has chosen to save cannot finally fall away from grace
-- (15) \\(\href{claims.html#claim-35}{P_{35}} \rightarrow \href{claims.html#claim-42}{P_{42}}\\) — *would give:* Everyone who is truly justified is among the elect
-- (16) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
-- (17) \\(\href{claims.html#claim-44}{P_{44}} \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
-- (18) \\((\href{claims.html#claim-47}{P_{47}} \land \lnot \href{claims.html#claim-52}{P_{52}}) \rightarrow \lnot \href{claims.html#claim-20}{P_{20}}\\) — *would deny:* Justifying grace, once given, can be lost
-- (19) \\(\href{claims.html#claim-48}{P_{48}} \rightarrow \href{claims.html#claim-53}{P_{53}}\\) — *would give:* A believer can know, without a special revelation, that he will persevere
-- (20) \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
+- (3) \\(\href{claims.html#claim-55}{P_{55}}\\) — 1 John 2:19, read of every apostate: all who fall away were never true believers
+- (4) \\(\href{claims.html#claim-33}{P_{33}}\\) — Philippians 1:6 — he who began a good work in you will bring it to completion
+- (5) \\(\href{claims.html#claim-44}{P_{44}}\\) — Romans 8:29–30 — those whom he justified he also glorified
+- (6) \\(\href{claims.html#claim-54}{P_{54}}\\) — Romans 8:29–30 is a chain from which no one drops: every one justified is glorified
+- (7) \\(\href{claims.html#claim-47}{P_{47}}\\) — Psalm 51:11 — take not your Holy Spirit from me
+- (8) \\(\lnot \href{claims.html#claim-52}{P_{52}}\\) — *denied:* In his sin David lost the Holy Spirit and his faith
+- (9) \\(\href{claims.html#claim-48}{P_{48}}\\) — Romans 8:16 — the Spirit himself bears witness with our spirit
+- (10) \\(\href{claims.html#claim-34}{P_{34}}\\) — Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away
+- (11) \\(\lnot \href{claims.html#claim-40}{P_{40}}\\) — *denied:* Hebrews 6:4–6 describes true believers who actually fall away
+- (12) \\(\href{claims.html#claim-45}{P_{45}}\\) — Hebrews 10:26–29 — the one who has profaned the blood of the covenant by which he was sanctified
+- (13) \\(\lnot \href{claims.html#claim-50}{P_{50}}\\) — *denied:* Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away
+- (14) \\(\href{claims.html#claim-46}{P_{46}}\\) — 2 Peter 2:20–22 — having escaped the defilements of the world, they are again entangled in them
+- (15) \\(\lnot \href{claims.html#claim-51}{P_{51}}\\) — *denied:* 2 Peter 2:20–22 describes true believers who fall back into the world
+- (16) \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\) — *would give:* Those God has chosen to save cannot finally fall away from grace
+- (17) \\((\href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-55}{P_{55}}) \rightarrow \href{claims.html#claim-42}{P_{42}}\\) — *would give:* Everyone who is truly justified is among the elect
+- (18) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
+- (19) \\((\href{claims.html#claim-44}{P_{44}} \land \href{claims.html#claim-54}{P_{54}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
+- (20) \\((\href{claims.html#claim-47}{P_{47}} \land \lnot \href{claims.html#claim-52}{P_{52}}) \rightarrow \lnot \href{claims.html#claim-20}{P_{20}}\\) — *would deny:* Justifying grace, once given, can be lost
+- (21) \\(\href{claims.html#claim-48}{P_{48}} \rightarrow \href{claims.html#claim-53}{P_{53}}\\) — *would give:* A believer can know, without a special revelation, that he will persevere
+- (22) \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
 - \\(\vdash\\) \\(\href{claims.html#claim-41}{P_{41}} \land \lnot \href{claims.html#claim-43}{P_{43}}\\) — *at issue:* \\(\href{claims.html#claim-41}{P_{41}}\\) Those God has chosen to save cannot finally fall away from grace; \\(\href{claims.html#claim-43}{P_{43}}\\) *denied:* One who is truly justified can fall away from grace finally, and perish
 
 </div>
@@ -880,15 +1005,16 @@ The John strand alone: John 10:27–29 and 1 John 2:19, joined.
 
 - (1) \\(\href{claims.html#claim-32}{P_{32}}\\) — John 10:27–29 — they will never perish, and no one will snatch them out of my hand
 - (2) \\(\href{claims.html#claim-35}{P_{35}}\\) — 1 John 2:19 — they went out from us, but they were not of us
-- (3) \\(\href{claims.html#claim-34}{P_{34}}\\) — Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away
-- (4) \\(\lnot \href{claims.html#claim-40}{P_{40}}\\) — *denied:* Hebrews 6:4–6 describes true believers who actually fall away
-- (5) \\(\href{claims.html#claim-45}{P_{45}}\\) — Hebrews 10:26–29 — the one who has profaned the blood of the covenant by which he was sanctified
-- (6) \\(\lnot \href{claims.html#claim-50}{P_{50}}\\) — *denied:* Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away
-- (7) \\(\href{claims.html#claim-46}{P_{46}}\\) — 2 Peter 2:20–22 — having escaped the defilements of the world, they are again entangled in them
-- (8) \\(\lnot \href{claims.html#claim-51}{P_{51}}\\) — *denied:* 2 Peter 2:20–22 describes true believers who fall back into the world
-- (9) \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\) — *would give:* Those God has chosen to save cannot finally fall away from grace
-- (10) \\(\href{claims.html#claim-35}{P_{35}} \rightarrow \href{claims.html#claim-42}{P_{42}}\\) — *would give:* Everyone who is truly justified is among the elect
-- (11) \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
+- (3) \\(\href{claims.html#claim-55}{P_{55}}\\) — 1 John 2:19, read of every apostate: all who fall away were never true believers
+- (4) \\(\href{claims.html#claim-34}{P_{34}}\\) — Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away
+- (5) \\(\lnot \href{claims.html#claim-40}{P_{40}}\\) — *denied:* Hebrews 6:4–6 describes true believers who actually fall away
+- (6) \\(\href{claims.html#claim-45}{P_{45}}\\) — Hebrews 10:26–29 — the one who has profaned the blood of the covenant by which he was sanctified
+- (7) \\(\lnot \href{claims.html#claim-50}{P_{50}}\\) — *denied:* Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away
+- (8) \\(\href{claims.html#claim-46}{P_{46}}\\) — 2 Peter 2:20–22 — having escaped the defilements of the world, they are again entangled in them
+- (9) \\(\lnot \href{claims.html#claim-51}{P_{51}}\\) — *denied:* 2 Peter 2:20–22 describes true believers who fall back into the world
+- (10) \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\) — *would give:* Those God has chosen to save cannot finally fall away from grace
+- (11) \\((\href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-55}{P_{55}}) \rightarrow \href{claims.html#claim-42}{P_{42}}\\) — *would give:* Everyone who is truly justified is among the elect
+- (12) \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
 - \\(\vdash\\) \\(\href{claims.html#claim-41}{P_{41}} \land \lnot \href{claims.html#claim-43}{P_{43}}\\) — *at issue:* \\(\href{claims.html#claim-41}{P_{41}}\\) Those God has chosen to save cannot finally fall away from grace; \\(\href{claims.html#claim-43}{P_{43}}\\) *denied:* One who is truly justified can fall away from grace finally, and perish
 
 </div>
@@ -957,6 +1083,8 @@ def fallingAwayReading : Valuation Claim :=
     match a with
     | Claim.justifiedAreElect => False
     | Claim.believersCanBeSureOfPersevering => False
+    | Claim.apostatesNeverHadTrueFaith => False
+    | Claim.romans8ChainIsUnbroken => False
     | x => True
 ```
 
@@ -967,8 +1095,9 @@ def fallingAwayReading : Valuation Claim :=
 
 **The Reformed premises establish the perseverance of the saints**: the
 elect persevere, and no one truly justified can finally fall away. That the
-second follows rests on readings and steps rated `disputed`: the steps from
-John 10 and 1 John 2, from Philippians 1:6, or from Romans 8:29–30.
+second follows rests on readings and steps rated `disputed`: the step from John
+10 with the reading of 1 John 2:19, the step from Philippians 1:6, or the reading
+of Romans 8:29–30.
 
 ```lean
 theorem perseveranceReformed_establishes : Establishes perseveranceReformed
@@ -1156,26 +1285,21 @@ theorem wesleyOnPerseverance_is_satisfiable : Satisfiable
 <a id="whereAugustinePartsFromJohnsStrand"></a>
 **`whereAugustinePartsFromJohnsStrand`**
 
-**Where Augustine parts from the John strand: at 1 John 2:19.** Augustine
-grants that the elect persevere, and the Reformed step from 1 John 2:19 joins
-the elect to every one truly justified. Augustine's claim that some regenerate
-are not given perseverance, his grant that the elect persevere, and that step
-cannot all be held together, and the crux is the step. It is rated `disputed`, and the reader
-who disputes it is Augustine himself: those who left "were not of the number of
-children, even when they were in the faith of children".
+**Where Augustine parts from the John route: over what 1 John 2:19 says of
+those who left.** Both read "they went out from us, but they were not of us".
+The Reformed, with Owen and Calvin, read it of every apostate: those who fall
+away "never … have been true believers". Augustine reads it otherwise: those who
+left "were in goodness", "in the faith of children", and were not elect. So the
+question is whether one who leaves the faith never had it or had it and gave it
+up, and the crux is the Reformed reading, rated `disputed`.
 
 **Why *Reformed, the John strand alone* stands against *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*.**
 
-- **The crux:** \\(\href{claims.html#claim-35}{P_{35}} \rightarrow \href{claims.html#claim-42}{P_{42}}\\), a premise of *Reformed, the John strand alone*.
+- **The crux:** \\(\href{claims.html#claim-55}{P_{55}}\\), a premise of *Reformed, the John strand alone*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(\href{claims.html#claim-35}{P_{35}}\\), \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\), which the break also needs.
-- **Where the rival breaks:** \\(\href{claims.html#claim-37}{P_{37}}\\), \\(\href{claims.html#claim-37}{P_{37}} \rightarrow \href{claims.html#claim-43}{P_{43}}\\), \\(\href{claims.html#claim-41}{P_{41}}\\) cannot be held together with \\(\href{claims.html#claim-35}{P_{35}} \rightarrow \href{claims.html#claim-42}{P_{42}}\\) and \\(\href{claims.html#claim-35}{P_{35}}\\), \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\); each is needed for the break, and without the crux they stand.
+- **Where the rival breaks:** \\(\lnot \href{claims.html#claim-55}{P_{55}}\\) cannot be held together with \\(\href{claims.html#claim-55}{P_{55}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
-  - \\(\href{claims.html#claim-35}{P_{35}}\\) 1 John 2:19 — they went out from us, but they were not of us — *consensus*: 1 John 2:19
-  - \\(\href{claims.html#claim-41}{P_{41}}\\) Those God has chosen to save cannot finally fall away from grace — *well supported*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVII.1; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 636; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 593
-  - \\(\href{claims.html#claim-42}{P_{42}}\\) Everyone who is truly justified is among the elect — *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §X.4; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
-  - \\(\href{claims.html#claim-43}{P_{43}}\\) One who is truly justified can fall away from grace finally, and perish — *disputed*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 439
-  - the step itself — *disputed*: [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; *disputed*: [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47; *consensus*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVII.1; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 636
+  - \\(\href{claims.html#claim-55}{P_{55}}\\) 1 John 2:19, read of every apostate: all who fall away were never true believers — *disputed*: [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
 
 <a id="whereAugustinePartsFromPhilippians"></a>
 **`whereAugustinePartsFromPhilippians`**
@@ -1195,6 +1319,172 @@ explaining why some fall away.
 - **What this rests on:**
   - \\(\href{claims.html#claim-33}{P_{33}}\\) Philippians 1:6 — he who began a good work in you will bring it to completion — *consensus*: Phil 1:6
   - the step itself — *disputed*: [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; *disputed*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
+
+<a id="whereWesleyPartsOverRomans8"></a>
+**`whereWesleyPartsOverRomans8`**
+
+**Where Wesley parts from the Romans route: over what Romans 8:30 says.**
+Dort reads the verse as a chain from which no one drops, so that every one
+justified is glorified. Wesley reads it backwards, so that every one glorified
+was first justified: Paul "does not affirm … that precisely the same number of
+men are called, justified, and glorified". The crux is Dort's reading, rated
+`disputed`; it is not needed for Westminster's conclusion, which other routes
+reach, so it is Westminster's answer to Wesley on this text.
+
+**Why *Reformed (Westminster XVII; Dort, Fifth Head)* stands against *Wesley (Serious Thoughts upon the Perseverance of the Saints)*.**
+
+- **The crux:** \\(\href{claims.html#claim-54}{P_{54}}\\), a premise of *Reformed (Westminster XVII; Dort, Fifth Head)*.
+- **What it does:** its conclusion follows without it — the crux is its answer to *Wesley (Serious Thoughts upon the Perseverance of the Saints)*.
+- **Where the rival breaks:** \\(\lnot \href{claims.html#claim-54}{P_{54}}\\) cannot be held together with \\(\href{claims.html#claim-54}{P_{54}}\\); each is needed for the break, and without the crux they stand.
+- **What this rests on:**
+  - \\(\href{claims.html#claim-54}{P_{54}}\\) Romans 8:29–30 is a chain from which no one drops: every one justified is glorified — *disputed*: [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
+
+### The view from eternity
+
+<a id="fromEternity"></a>
+**`fromEternity`** — The view from eternity (Boethius; Aquinas)
+
+**The view from eternity**, from Boethius (*Consolation* V, prose 6) and
+Aquinas (*Summa* I q.14 a.13; I q.23 a.6). God knows all things, the future
+included, as present to his eternity, and his knowing them imposes no necessity
+on them. So the one who perseveres is predestined, and still, considered in
+himself, could have fallen away.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-57}{P_{57}}\\) — God knows all things as present to his eternity, which imposes no necessity on them
+- (2) \\(\href{claims.html#claim-41}{P_{41}}\\) — Those God has chosen to save cannot finally fall away from grace
+- (3) \\(\href{claims.html#claim-57}{P_{57}} \rightarrow \href{claims.html#claim-56}{P_{56}}\\) — *would give:* Considered in himself, apart from God's decree, the one who perseveres could have fallen
+- \\(\vdash\\) \\(\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-56}{P_{56}}\\) — *at issue:* \\(\href{claims.html#claim-41}{P_{41}}\\) Those God has chosen to save cannot finally fall away from grace; \\(\href{claims.html#claim-56}{P_{56}}\\) Considered in himself, apart from God's decree, the one who perseveres could have fallen
+
+</div>
+
+No premise here rests on scripture alone.
+
+<a id="fromEternity_establishes"></a>
+**`fromEternity_establishes`**
+
+The view from eternity delivers its conclusion.
+
+```lean
+theorem fromEternity_establishes : Establishes fromEternity
+-- axioms: propext, Quot.sound
+```
+
+<a id="fromEternity_is_satisfiable"></a>
+**`fromEternity_is_satisfiable`**
+
+The view from eternity can be held without contradiction.
+
+```lean
+theorem fromEternity_is_satisfiable : Satisfiable fromEternity.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="from_eternity_holds_with_westminster"></a>
+**`from_eternity_holds_with_westminster`**
+
+**The view from eternity can be added to Westminster's position without
+contradiction.** One reading satisfies every premise of both. Dort itself grants
+that the believers' falling, "with respect to themselves is not only possible,
+but would undoubtedly happen; but with respect to God, it is utterly impossible"
+(V, article 8).
+
+What this does not claim: that Westminster holds the view from eternity, or that
+the view supports Westminster. As encoded, the view says nothing on whether the
+truly justified can finally fall away, so it can be added to either side.
+
+```lean
+theorem from_eternity_holds_with_westminster : Satisfiable
+    (perseveranceReformed.premises ++ fromEternity.premises)
+-- axioms: propext, Quot.sound
+```
+
+<a id="from_eternity_holds_with_wesley"></a>
+**`from_eternity_holds_with_wesley`**
+
+**The view from eternity can be added to Wesley's position without
+contradiction**, with its claim that the elect persevere, which Wesley's position
+is not encoded as holding. One reading satisfies every premise of both. Wesley
+holds, with Boethius, that all time is present to God and that his knowing
+compels nothing: "Men are as free in believing or not believing as if he did not
+know it at all" (Sermon 58, §5).
+
+What this does not claim: that Wesley holds the view as Aquinas does. For Wesley
+God knows what we do because we do it; for Aquinas predestination is not
+grounded in anything God foresees.
+
+```lean
+theorem from_eternity_holds_with_wesley : Satisfiable
+    (wesleyOnPerseverance.premises ++ fromEternity.premises)
+-- axioms: propext, Quot.sound
+```
+
+<a id="from_eternity_leaves_perseverance_open"></a>
+**`from_eternity_leaves_perseverance_open`**
+
+**The view from eternity, by itself, leaves perseverance open.** Granted that
+God knows all things as present, that the elect persevere, and that each could,
+considered in himself, have fallen, it neither follows nor fails that one truly
+justified can finally fall away. This holds because the view, as encoded, says
+nothing about final falling; the next result shows what does decide it.
+
+```lean
+theorem from_eternity_leaves_perseverance_open : Independent
+    fromEternity.premises (p Claim.justifiedCanFinallyFallAway)
+-- axioms: propext, Quot.sound
+```
+
+<a id="fromEternityWithOwensReading"></a>
+**`fromEternityWithOwensReading`** — The view from eternity, with Owen's reading of 1 John 2:19
+
+The view from eternity with Owen's reading of 1 John 2:19, that all who fall
+away were never true believers, and the step from it to the claim that the truly
+justified are elect. The one difference from `fromEternity` is that line, with
+the step that joins it to the elect's perseverance.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-57}{P_{57}}\\) — God knows all things as present to his eternity, which imposes no necessity on them
+- (2) \\(\href{claims.html#claim-35}{P_{35}}\\) — 1 John 2:19 — they went out from us, but they were not of us
+- (3) \\(\href{claims.html#claim-55}{P_{55}}\\) — 1 John 2:19, read of every apostate: all who fall away were never true believers
+- (4) \\(\href{claims.html#claim-41}{P_{41}}\\) — Those God has chosen to save cannot finally fall away from grace
+- (5) \\(\href{claims.html#claim-57}{P_{57}} \rightarrow \href{claims.html#claim-56}{P_{56}}\\) — *would give:* Considered in himself, apart from God's decree, the one who perseveres could have fallen
+- (6) \\((\href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-55}{P_{55}}) \rightarrow \href{claims.html#claim-42}{P_{42}}\\) — *would give:* Everyone who is truly justified is among the elect
+- (7) \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\) — *would deny:* One who is truly justified can fall away from grace finally, and perish
+- \\(\vdash\\) \\(\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-56}{P_{56}}\\) — *at issue:* \\(\href{claims.html#claim-41}{P_{41}}\\) Those God has chosen to save cannot finally fall away from grace; \\(\href{claims.html#claim-56}{P_{56}}\\) Considered in himself, apart from God's decree, the one who perseveres could have fallen
+
+</div>
+
+Grounded in scripture alone: 1 John 2:19 — they went out from us, but they were not of us.
+
+<a id="fromEternityWithOwensReading_is_satisfiable"></a>
+**`fromEternityWithOwensReading_is_satisfiable`**
+
+The view from eternity with Owen's reading can be held without contradiction.
+
+```lean
+theorem fromEternityWithOwensReading_is_satisfiable : Satisfiable
+    fromEternityWithOwensReading.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="from_eternity_with_owens_reading_settles_it"></a>
+**`from_eternity_with_owens_reading_settles_it`**
+
+**With Owen's reading of 1 John 2:19, the view from eternity denies that the
+truly justified can finally fall away.** Add to the view the reading that all who
+fall away were never true believers, and the step from it to "the truly justified
+are elect", and the elect's perseverance does the rest. So what decides the
+question is not God's knowledge of time but who the elect are: the reading of
+1 John 2:19, which Augustine denies and which is rated `disputed`.
+
+```lean
+theorem from_eternity_with_owens_reading_settles_it : Entails
+    fromEternityWithOwensReading.premises (notP
+    Claim.justifiedCanFinallyFallAway)
+-- axioms: propext, Quot.sound
+```
 
 ### Falling for a time, and knowing that one will persevere
 
@@ -1288,15 +1578,17 @@ Wesley, with the condition read in Dort's sense.
 - (6) \\(\href{claims.html#claim-51}{P_{51}}\\) — 2 Peter 2:20–22 describes true believers who fall back into the world
 - (7) \\(\href{claims.html#claim-32}{P_{32}}\\) — John 10:27–29 — they will never perish, and no one will snatch them out of my hand
 - (8) \\(\href{claims.html#claim-38}{P_{38}}\\) — God's promise to keep those he has begun to save holds unless they fall away by their own fault
-- (9) \\((\href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
-- (10) \\((\href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-50}{P_{50}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
-- (11) \\((\href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
-- (12) \\(\href{claims.html#claim-38}{P_{38}} \rightarrow \href{claims.html#claim-39}{P_{39}}\\) — *would give:* Those who are Christ's sheep do hear and follow, because God keeps them in faith
+- (9) \\(\href{claims.html#claim-44}{P_{44}}\\) — Romans 8:29–30 — those whom he justified he also glorified
+- (10) \\(\lnot \href{claims.html#claim-54}{P_{54}}\\) — *denied:* Romans 8:29–30 is a chain from which no one drops: every one justified is glorified
+- (11) \\((\href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
+- (12) \\((\href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-50}{P_{50}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
+- (13) \\((\href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
+- (14) \\(\href{claims.html#claim-38}{P_{38}} \rightarrow \href{claims.html#claim-39}{P_{39}}\\) — *would give:* Those who are Christ's sheep do hear and follow, because God keeps them in faith
 - \\(\vdash\\) \\(\href{claims.html#claim-43}{P_{43}}\\) — *at issue:* One who is truly justified can fall away from grace finally, and perish
 
 </div>
 
-Grounded in scripture alone: Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away, Hebrews 10:26–29 — the one who has profaned the blood of the covenant by which he was sanctified, 2 Peter 2:20–22 — having escaped the defilements of the world, they are again entangled in them, John 10:27–29 — they will never perish, and no one will snatch them out of my hand.
+Grounded in scripture alone: Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away, Hebrews 10:26–29 — the one who has profaned the blood of the covenant by which he was sanctified, 2 Peter 2:20–22 — having escaped the defilements of the world, they are again entangled in them, John 10:27–29 — they will never perish, and no one will snatch them out of my hand, Romans 8:29–30 — those whom he justified he also glorified.
 
 <a id="wesleyAsCanFail"></a>
 **`wesleyAsCanFail`** — Wesley (Serious Thoughts upon the Perseverance of the Saints), read as a condition that can fail, Wesley's sense
@@ -1313,15 +1605,17 @@ Wesley, with the condition read in his own sense.
 - (6) \\(\href{claims.html#claim-51}{P_{51}}\\) — 2 Peter 2:20–22 describes true believers who fall back into the world
 - (7) \\(\href{claims.html#claim-32}{P_{32}}\\) — John 10:27–29 — they will never perish, and no one will snatch them out of my hand
 - (8) \\(\href{claims.html#claim-38}{P_{38}}\\) — God's promise to keep those he has begun to save holds unless they fall away by their own fault
-- (9) \\((\href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
-- (10) \\((\href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-50}{P_{50}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
-- (11) \\((\href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
-- (12) \\(\href{claims.html#claim-38}{P_{38}} \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
+- (9) \\(\href{claims.html#claim-44}{P_{44}}\\) — Romans 8:29–30 — those whom he justified he also glorified
+- (10) \\(\lnot \href{claims.html#claim-54}{P_{54}}\\) — *denied:* Romans 8:29–30 is a chain from which no one drops: every one justified is glorified
+- (11) \\((\href{claims.html#claim-34}{P_{34}} \land \href{claims.html#claim-40}{P_{40}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
+- (12) \\((\href{claims.html#claim-45}{P_{45}} \land \href{claims.html#claim-50}{P_{50}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
+- (13) \\((\href{claims.html#claim-46}{P_{46}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
+- (14) \\(\href{claims.html#claim-38}{P_{38}} \rightarrow \href{claims.html#claim-43}{P_{43}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-43}{P_{43}}\\) — *at issue:* One who is truly justified can fall away from grace finally, and perish
 
 </div>
 
-Grounded in scripture alone: Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away, Hebrews 10:26–29 — the one who has profaned the blood of the covenant by which he was sanctified, 2 Peter 2:20–22 — having escaped the defilements of the world, they are again entangled in them, John 10:27–29 — they will never perish, and no one will snatch them out of my hand.
+Grounded in scripture alone: Hebrews 6:4–6 — it is impossible to restore again to repentance those once enlightened who have fallen away, Hebrews 10:26–29 — the one who has profaned the blood of the covenant by which he was sanctified, 2 Peter 2:20–22 — having escaped the defilements of the world, they are again entangled in them, John 10:27–29 — they will never perish, and no one will snatch them out of my hand, Romans 8:29–30 — those whom he justified he also glorified.
 
 <a id="wesleyAsGodKeeps_is_satisfiable"></a>
 **`wesleyAsGodKeeps_is_satisfiable`**
@@ -1374,15 +1668,16 @@ step from John 10:27–29, the one Wesley himself disputes (§18).
 
 - **The crux:** \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\), a premise of *Reformed, the John strand alone*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(\href{claims.html#claim-32}{P_{32}}\\), \\(\href{claims.html#claim-35}{P_{35}}\\), \\(\href{claims.html#claim-35}{P_{35}} \rightarrow \href{claims.html#claim-42}{P_{42}}\\), \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\), which the break also needs.
-- **Where the rival breaks:** \\(\href{claims.html#claim-38}{P_{38}}\\), \\(\href{claims.html#claim-38}{P_{38}} \rightarrow \href{claims.html#claim-43}{P_{43}}\\) cannot be held together with \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\) and \\(\href{claims.html#claim-32}{P_{32}}\\), \\(\href{claims.html#claim-35}{P_{35}}\\), \\(\href{claims.html#claim-35}{P_{35}} \rightarrow \href{claims.html#claim-42}{P_{42}}\\), \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-32}{P_{32}}\\), \\(\href{claims.html#claim-35}{P_{35}}\\), \\(\href{claims.html#claim-55}{P_{55}}\\), \\((\href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-55}{P_{55}}) \rightarrow \href{claims.html#claim-42}{P_{42}}\\), \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-38}{P_{38}}\\), \\(\href{claims.html#claim-38}{P_{38}} \rightarrow \href{claims.html#claim-43}{P_{43}}\\) cannot be held together with \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\) and \\(\href{claims.html#claim-32}{P_{32}}\\), \\(\href{claims.html#claim-35}{P_{35}}\\), \\(\href{claims.html#claim-55}{P_{55}}\\), \\((\href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-55}{P_{55}}) \rightarrow \href{claims.html#claim-42}{P_{42}}\\), \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
   - \\(\href{claims.html#claim-32}{P_{32}}\\) John 10:27–29 — they will never perish, and no one will snatch them out of my hand — *consensus*: John 10:27-29
   - \\(\href{claims.html#claim-35}{P_{35}}\\) 1 John 2:19 — they went out from us, but they were not of us — *consensus*: 1 John 2:19
+  - \\(\href{claims.html#claim-55}{P_{55}}\\) 1 John 2:19, read of every apostate: all who fall away were never true believers — *disputed*: [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
   - \\(\href{claims.html#claim-42}{P_{42}}\\) Everyone who is truly justified is among the elect — *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §X.4; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
   - \\(\href{claims.html#claim-41}{P_{41}}\\) Those God has chosen to save cannot finally fall away from grace — *well supported*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVII.1; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 636; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 593
   - \\(\href{claims.html#claim-43}{P_{43}}\\) One who is truly justified can fall away from grace finally, and perish — *disputed*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 439
-  - the step itself — *disputed*: [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; *disputed*: [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47; *consensus*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVII.1; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 636
+  - the step itself — *disputed*: [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; *well supported*: [Owen](../../bibliography.md#owen-works-11-perseverance), p. 595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47; *consensus*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVII.1; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 636
 
 <a id="whatTheConditionMeans"></a>
 **`whatTheConditionMeans`**
@@ -1430,15 +1725,16 @@ Against *Reformed, the John strand alone*, it cannot be held. Where it breaks:
 
 - **The crux:** \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\), a premise of *Reformed, the John strand alone*.
 - **What it does:** its conclusion does not follow without it.
-- **Granted:** \\(\href{claims.html#claim-32}{P_{32}}\\), \\(\href{claims.html#claim-35}{P_{35}}\\), \\(\href{claims.html#claim-35}{P_{35}} \rightarrow \href{claims.html#claim-42}{P_{42}}\\), \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\), which the break also needs.
-- **Where the rival breaks:** \\(\href{claims.html#claim-38}{P_{38}}\\), \\(\href{claims.html#claim-38}{P_{38}} \rightarrow \href{claims.html#claim-43}{P_{43}}\\) cannot be held together with \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\) and \\(\href{claims.html#claim-32}{P_{32}}\\), \\(\href{claims.html#claim-35}{P_{35}}\\), \\(\href{claims.html#claim-35}{P_{35}} \rightarrow \href{claims.html#claim-42}{P_{42}}\\), \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\); each is needed for the break, and without the crux they stand.
+- **Granted:** \\(\href{claims.html#claim-32}{P_{32}}\\), \\(\href{claims.html#claim-35}{P_{35}}\\), \\(\href{claims.html#claim-55}{P_{55}}\\), \\((\href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-55}{P_{55}}) \rightarrow \href{claims.html#claim-42}{P_{42}}\\), \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\), which the break also needs.
+- **Where the rival breaks:** \\(\href{claims.html#claim-38}{P_{38}}\\), \\(\href{claims.html#claim-38}{P_{38}} \rightarrow \href{claims.html#claim-43}{P_{43}}\\) cannot be held together with \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \href{claims.html#claim-41}{P_{41}}\\) and \\(\href{claims.html#claim-32}{P_{32}}\\), \\(\href{claims.html#claim-35}{P_{35}}\\), \\(\href{claims.html#claim-55}{P_{55}}\\), \\((\href{claims.html#claim-35}{P_{35}} \land \href{claims.html#claim-55}{P_{55}}) \rightarrow \href{claims.html#claim-42}{P_{42}}\\), \\((\href{claims.html#claim-41}{P_{41}} \land \href{claims.html#claim-42}{P_{42}}) \rightarrow \lnot \href{claims.html#claim-43}{P_{43}}\\); each is needed for the break, and without the crux they stand.
 - **What this rests on:**
   - \\(\href{claims.html#claim-32}{P_{32}}\\) John 10:27–29 — they will never perish, and no one will snatch them out of my hand — *consensus*: John 10:27-29
   - \\(\href{claims.html#claim-35}{P_{35}}\\) 1 John 2:19 — they went out from us, but they were not of us — *consensus*: 1 John 2:19
+  - \\(\href{claims.html#claim-55}{P_{55}}\\) 1 John 2:19, read of every apostate: all who fall away were never true believers — *disputed*: [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
   - \\(\href{claims.html#claim-42}{P_{42}}\\) Everyone who is truly justified is among the elect — *disputed*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §X.4; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
   - \\(\href{claims.html#claim-41}{P_{41}}\\) Those God has chosen to save cannot finally fall away from grace — *well supported*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVII.1; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 636; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 593
   - \\(\href{claims.html#claim-43}{P_{43}}\\) One who is truly justified can fall away from grace finally, and perish — *disputed*: [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 439
-  - the step itself — *disputed*: [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; *disputed*: [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47; *consensus*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVII.1; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 636
+  - the step itself — *disputed*: [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; *well supported*: [Owen](../../bibliography.md#owen-works-11-perseverance), p. 595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47; *consensus*: [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XVII.1; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 636
 
 <a id="perseveranceNode"></a>
 **`perseveranceNode`**
@@ -1514,7 +1810,7 @@ answer.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, and nothing forced defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, and nothing forced defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereTheyPartOverDavid) *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, and nothing forced defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
-  - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and nothing forced defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
+  - *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereWesleyPartsOverRomans8) *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and nothing forced defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
 
 **What this rests on.** The reasons state 5 defeats and 8 absences of defeat, each a cell of the defeat table, [`perseveranceDispute_defeats`](#perseveranceDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
@@ -1522,16 +1818,17 @@ answer.
   - John 10:27–29 — they will never perish, and no one will snatch them out of my hand — John 10:27-29
   - an inference step — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 548–549; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 603; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
 - *Reformed (Westminster XVII; Dort, Fifth Head)*, weakest at *disputed*:
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers — [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
   - In his sin David lost the Holy Spirit and his faith (encoded as a denial, so it ranks disputed) — [Calvin 1846](../../bibliography.md#calvin-psalms-2-1846), pp. 299–300
   - Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) — [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away (encoded as a denial, so it ranks disputed) — [Owen 1855](../../bibliography.md#owen-works-23-1855), pp. 545–546
   - 2 Peter 2:20–22 describes true believers who fall back into the world (encoded as a denial, so it ranks disputed) — [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 410–412
   - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45
-  - an inference step — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
-  - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 480–481; [Calvin 1849](../../bibliography.md#calvin-romans-1849), pp. 319–320
 - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, weakest at *disputed*:
   - To some whom God has regenerated, and given faith, hope and love, he does not give perseverance — [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 478; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 18
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers (encoded as a denial, so it ranks disputed) — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
 - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, weakest at *disputed*:
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40
   - Justifying grace, once given, can be lost — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 15; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 42; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
@@ -1544,8 +1841,11 @@ answer.
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 448–449; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 585
   - 2 Peter 2:20–22 describes true believers who fall back into the world — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified (encoded as a denial, so it ranks disputed) — [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
 
 Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, at the level of the claims: [`whereTheyPartOverDavid`](#whereTheyPartOverDavid).
+
+Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, at the level of the claims: [`whereWesleyPartsOverRomans8`](#whereWesleyPartsOverRomans8).
 
 <a id="only_the_remonstrance_prevails"></a>
 **`only_the_remonstrance_prevails`**
@@ -1579,7 +1879,7 @@ attacker itself.
   - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*.
   - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)* [defeats](#whereTheyPartOverAssurance) *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*.
   - *Lutheran (the Formula of Concord, XI; the Smalcald Articles)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereTheyPartOverDavid) *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*.
-  - *Wesley (Serious Thoughts upon the Perseverance of the Saints)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*.
+  - *Wesley (Serious Thoughts upon the Perseverance of the Saints)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereWesleyPartsOverRomans8) *Wesley (Serious Thoughts upon the Perseverance of the Saints)*.
 
 **What this rests on.** The reasons state 8 defeats and 8 absences of defeat, each a cell of the defeat table, [`perseveranceDispute_defeats`](#perseveranceDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
@@ -1587,16 +1887,17 @@ attacker itself.
   - John 10:27–29 — they will never perish, and no one will snatch them out of my hand — John 10:27-29
   - an inference step — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 548–549; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 603; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
 - *Reformed (Westminster XVII; Dort, Fifth Head)*, weakest at *disputed*:
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers — [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
   - In his sin David lost the Holy Spirit and his faith (encoded as a denial, so it ranks disputed) — [Calvin 1846](../../bibliography.md#calvin-psalms-2-1846), pp. 299–300
   - Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) — [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away (encoded as a denial, so it ranks disputed) — [Owen 1855](../../bibliography.md#owen-works-23-1855), pp. 545–546
   - 2 Peter 2:20–22 describes true believers who fall back into the world (encoded as a denial, so it ranks disputed) — [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 410–412
   - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45
-  - an inference step — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
-  - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 480–481; [Calvin 1849](../../bibliography.md#calvin-romans-1849), pp. 319–320
 - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, weakest at *disputed*:
   - To some whom God has regenerated, and given faith, hope and love, he does not give perseverance — [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 478; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 18
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers (encoded as a denial, so it ranks disputed) — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
 - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, weakest at *disputed*:
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40
   - Justifying grace, once given, can be lost — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 15; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 42; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
@@ -1609,10 +1910,13 @@ attacker itself.
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 448–449; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 585
   - 2 Peter 2:20–22 describes true believers who fall back into the world — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified (encoded as a denial, so it ranks disputed) — [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
 
 Why *Trent (Session VI, chapters 13 and 15, canons 16 and 23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, at the level of the claims: [`whereTheyPartOverAssurance`](#whereTheyPartOverAssurance).
 
 Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, at the level of the claims: [`whereTheyPartOverDavid`](#whereTheyPartOverDavid).
+
+Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, at the level of the claims: [`whereWesleyPartsOverRomans8`](#whereWesleyPartsOverRomans8).
 
 <a id="perseverance_defensible"></a>
 **`perseverance_defensible`**
@@ -1640,21 +1944,22 @@ and Aquinas, and they defeat Westminster.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereTheyPartOverDavid) *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
-  - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
+  - *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereWesleyPartsOverRomans8) *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
 
 **What this rests on.** The reasons state 5 defeats and 26 absences of defeat, each a cell of the defeat table, [`perseveranceDispute_defeats`](#perseveranceDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, weakest at *disputed*:
   - To some whom God has regenerated, and given faith, hope and love, he does not give perseverance — [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 478; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 18
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers (encoded as a denial, so it ranks disputed) — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
 - *Reformed (Westminster XVII; Dort, Fifth Head)*, weakest at *disputed*:
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers — [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
   - In his sin David lost the Holy Spirit and his faith (encoded as a denial, so it ranks disputed) — [Calvin 1846](../../bibliography.md#calvin-psalms-2-1846), pp. 299–300
   - Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) — [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away (encoded as a denial, so it ranks disputed) — [Owen 1855](../../bibliography.md#owen-works-23-1855), pp. 545–546
   - 2 Peter 2:20–22 describes true believers who fall back into the world (encoded as a denial, so it ranks disputed) — [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 410–412
   - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45
-  - an inference step — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
-  - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 480–481; [Calvin 1849](../../bibliography.md#calvin-romans-1849), pp. 319–320
 - *Remonstrance (article 5, 1610)*, weakest at *consensus*:
   - John 10:27–29 — they will never perish, and no one will snatch them out of my hand — John 10:27-29
   - an inference step — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 548–549; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 603; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
@@ -1670,8 +1975,11 @@ and Aquinas, and they defeat Westminster.
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 448–449; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 585
   - 2 Peter 2:20–22 describes true believers who fall back into the world — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified (encoded as a denial, so it ranks disputed) — [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
 
 Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, at the level of the claims: [`whereTheyPartOverDavid`](#whereTheyPartOverDavid).
+
+Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, at the level of the claims: [`whereWesleyPartsOverRomans8`](#whereWesleyPartsOverRomans8).
 
 <a id="perseverance_not_forced"></a>
 **`perseverance_not_forced`**
@@ -1699,7 +2007,7 @@ Wesley, each of whom defeats Westminster.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereTheyPartOverDavid) *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
-  - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
+  - *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereWesleyPartsOverRomans8) *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
 
 **What this rests on.** The reasons state 5 defeats and 26 absences of defeat, each a cell of the defeat table, [`perseveranceDispute_defeats`](#perseveranceDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
@@ -1708,6 +2016,7 @@ Wesley, each of whom defeats Westminster.
   - an inference step — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 548–549; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 603; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
 - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, weakest at *disputed*:
   - To some whom God has regenerated, and given faith, hope and love, he does not give perseverance — [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 478; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 18
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers (encoded as a denial, so it ranks disputed) — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
 - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, weakest at *disputed*:
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40
   - Justifying grace, once given, can be lost — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 15; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 42; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
@@ -1720,17 +2029,20 @@ Wesley, each of whom defeats Westminster.
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 448–449; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 585
   - 2 Peter 2:20–22 describes true believers who fall back into the world — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified (encoded as a denial, so it ranks disputed) — [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
 - *Reformed (Westminster XVII; Dort, Fifth Head)*, weakest at *disputed*:
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers — [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
   - In his sin David lost the Holy Spirit and his faith (encoded as a denial, so it ranks disputed) — [Calvin 1846](../../bibliography.md#calvin-psalms-2-1846), pp. 299–300
   - Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) — [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away (encoded as a denial, so it ranks disputed) — [Owen 1855](../../bibliography.md#owen-works-23-1855), pp. 545–546
   - 2 Peter 2:20–22 describes true believers who fall back into the world (encoded as a denial, so it ranks disputed) — [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 410–412
   - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45
-  - an inference step — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
-  - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 480–481; [Calvin 1849](../../bibliography.md#calvin-romans-1849), pp. 319–320
 
 Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, at the level of the claims: [`whereTheyPartOverDavid`](#whereTheyPartOverDavid).
+
+Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, at the level of the claims: [`whereWesleyPartsOverRomans8`](#whereWesleyPartsOverRomans8).
 
 <a id="augustinian_defensible"></a>
 **`augustinian_defensible`**
@@ -1757,21 +2069,22 @@ Why Augustine and Aquinas are not forced: Westminster defeats them.
   - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*.
   - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)* [defeats](#whereTheyPartOverAssurance) *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*.
   - *Lutheran (the Formula of Concord, XI; the Smalcald Articles)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereTheyPartOverDavid) *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*.
-  - *Wesley (Serious Thoughts upon the Perseverance of the Saints)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*.
+  - *Wesley (Serious Thoughts upon the Perseverance of the Saints)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereWesleyPartsOverRomans8) *Wesley (Serious Thoughts upon the Perseverance of the Saints)*.
 
 **What this rests on.** The reasons state 8 defeats and 8 absences of defeat, each a cell of the defeat table, [`perseveranceDispute_defeats`](#perseveranceDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Reformed (Westminster XVII; Dort, Fifth Head)*, weakest at *disputed*:
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers — [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
   - In his sin David lost the Holy Spirit and his faith (encoded as a denial, so it ranks disputed) — [Calvin 1846](../../bibliography.md#calvin-psalms-2-1846), pp. 299–300
   - Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) — [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away (encoded as a denial, so it ranks disputed) — [Owen 1855](../../bibliography.md#owen-works-23-1855), pp. 545–546
   - 2 Peter 2:20–22 describes true believers who fall back into the world (encoded as a denial, so it ranks disputed) — [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 410–412
   - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45
-  - an inference step — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
-  - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 480–481; [Calvin 1849](../../bibliography.md#calvin-romans-1849), pp. 319–320
 - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, weakest at *disputed*:
   - To some whom God has regenerated, and given faith, hope and love, he does not give perseverance — [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 478; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 18
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers (encoded as a denial, so it ranks disputed) — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
 - *Remonstrance (article 5, 1610)*, weakest at *consensus*:
   - John 10:27–29 — they will never perish, and no one will snatch them out of my hand — John 10:27-29
   - an inference step — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 548–549; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 603; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
@@ -1787,10 +2100,13 @@ Why Augustine and Aquinas are not forced: Westminster defeats them.
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 448–449; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 585
   - 2 Peter 2:20–22 describes true believers who fall back into the world — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified (encoded as a denial, so it ranks disputed) — [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
 
 Why *Trent (Session VI, chapters 13 and 15, canons 16 and 23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, at the level of the claims: [`whereTheyPartOverAssurance`](#whereTheyPartOverAssurance).
 
 Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, at the level of the claims: [`whereTheyPartOverDavid`](#whereTheyPartOverDavid).
+
+Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, at the level of the claims: [`whereWesleyPartsOverRomans8`](#whereWesleyPartsOverRomans8).
 
 <a id="augustinian_not_forced"></a>
 **`augustinian_not_forced`**
@@ -1816,7 +2132,7 @@ Why Trent can be defended on perseverance.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereTheyPartOverDavid) *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
-  - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
+  - *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereWesleyPartsOverRomans8) *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
 
 **What this rests on.** The reasons state 5 defeats and 26 absences of defeat, each a cell of the defeat table, [`perseveranceDispute_defeats`](#perseveranceDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
@@ -1825,6 +2141,7 @@ Why Trent can be defended on perseverance.
   - an inference step — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 548–549; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 603; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
 - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, weakest at *disputed*:
   - To some whom God has regenerated, and given faith, hope and love, he does not give perseverance — [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 478; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 18
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers (encoded as a denial, so it ranks disputed) — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
 - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, weakest at *disputed*:
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40
   - Justifying grace, once given, can be lost — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 15; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 42; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
@@ -1837,17 +2154,20 @@ Why Trent can be defended on perseverance.
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 448–449; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 585
   - 2 Peter 2:20–22 describes true believers who fall back into the world — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified (encoded as a denial, so it ranks disputed) — [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
 - *Reformed (Westminster XVII; Dort, Fifth Head)*, weakest at *disputed*:
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers — [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
   - In his sin David lost the Holy Spirit and his faith (encoded as a denial, so it ranks disputed) — [Calvin 1846](../../bibliography.md#calvin-psalms-2-1846), pp. 299–300
   - Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) — [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away (encoded as a denial, so it ranks disputed) — [Owen 1855](../../bibliography.md#owen-works-23-1855), pp. 545–546
   - 2 Peter 2:20–22 describes true believers who fall back into the world (encoded as a denial, so it ranks disputed) — [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 410–412
   - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45
-  - an inference step — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
-  - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 480–481; [Calvin 1849](../../bibliography.md#calvin-romans-1849), pp. 319–320
 
 Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, at the level of the claims: [`whereTheyPartOverDavid`](#whereTheyPartOverDavid).
+
+Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, at the level of the claims: [`whereWesleyPartsOverRomans8`](#whereWesleyPartsOverRomans8).
 
 <a id="trent_on_perseverance_defensible"></a>
 **`trent_on_perseverance_defensible`**
@@ -1872,19 +2192,19 @@ Why Trent is not forced on perseverance: Westminster defeats it.
   - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*.
   - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)* [defeats](#whereTheyPartOverAssurance) *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*.
   - *Lutheran (the Formula of Concord, XI; the Smalcald Articles)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereTheyPartOverDavid) *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*.
-  - *Wesley (Serious Thoughts upon the Perseverance of the Saints)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*.
+  - *Wesley (Serious Thoughts upon the Perseverance of the Saints)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereWesleyPartsOverRomans8) *Wesley (Serious Thoughts upon the Perseverance of the Saints)*.
 
 **What this rests on.** The reasons state 8 defeats and 8 absences of defeat, each a cell of the defeat table, [`perseveranceDispute_defeats`](#perseveranceDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Reformed (Westminster XVII; Dort, Fifth Head)*, weakest at *disputed*:
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers — [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
   - In his sin David lost the Holy Spirit and his faith (encoded as a denial, so it ranks disputed) — [Calvin 1846](../../bibliography.md#calvin-psalms-2-1846), pp. 299–300
   - Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) — [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away (encoded as a denial, so it ranks disputed) — [Owen 1855](../../bibliography.md#owen-works-23-1855), pp. 545–546
   - 2 Peter 2:20–22 describes true believers who fall back into the world (encoded as a denial, so it ranks disputed) — [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 410–412
   - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45
-  - an inference step — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
-  - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 480–481; [Calvin 1849](../../bibliography.md#calvin-romans-1849), pp. 319–320
 - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, weakest at *disputed*:
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40
   - Justifying grace, once given, can be lost — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 15; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 42; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
@@ -1894,6 +2214,7 @@ Why Trent is not forced on perseverance: Westminster defeats it.
   - an inference step — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 548–549; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 603; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
 - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, weakest at *disputed*:
   - To some whom God has regenerated, and given faith, hope and love, he does not give perseverance — [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 478; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 18
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers (encoded as a denial, so it ranks disputed) — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
 - *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, weakest at *disputed*:
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
   - In his sin David lost the Holy Spirit and his faith — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Smalcald Articles III.iii.43
@@ -1902,10 +2223,13 @@ Why Trent is not forced on perseverance: Westminster defeats it.
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 448–449; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 585
   - 2 Peter 2:20–22 describes true believers who fall back into the world — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified (encoded as a denial, so it ranks disputed) — [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
 
 Why *Trent (Session VI, chapters 13 and 15, canons 16 and 23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, at the level of the claims: [`whereTheyPartOverAssurance`](#whereTheyPartOverAssurance).
 
 Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, at the level of the claims: [`whereTheyPartOverDavid`](#whereTheyPartOverDavid).
+
+Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, at the level of the claims: [`whereWesleyPartsOverRomans8`](#whereWesleyPartsOverRomans8).
 
 <a id="trent_on_perseverance_not_forced"></a>
 **`trent_on_perseverance_not_forced`**
@@ -1930,7 +2254,7 @@ Why the Lutherans can be defended on perseverance.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereTheyPartOverDavid) *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
-  - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
+  - *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereWesleyPartsOverRomans8) *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
 
 **What this rests on.** The reasons state 5 defeats and 26 absences of defeat, each a cell of the defeat table, [`perseveranceDispute_defeats`](#perseveranceDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
@@ -1939,6 +2263,7 @@ Why the Lutherans can be defended on perseverance.
   - an inference step — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 548–549; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 603; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
 - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, weakest at *disputed*:
   - To some whom God has regenerated, and given faith, hope and love, he does not give perseverance — [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 478; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 18
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers (encoded as a denial, so it ranks disputed) — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
 - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, weakest at *disputed*:
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40
   - Justifying grace, once given, can be lost — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 15; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 42; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
@@ -1951,17 +2276,20 @@ Why the Lutherans can be defended on perseverance.
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 448–449; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 585
   - 2 Peter 2:20–22 describes true believers who fall back into the world — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified (encoded as a denial, so it ranks disputed) — [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
 - *Reformed (Westminster XVII; Dort, Fifth Head)*, weakest at *disputed*:
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers — [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
   - In his sin David lost the Holy Spirit and his faith (encoded as a denial, so it ranks disputed) — [Calvin 1846](../../bibliography.md#calvin-psalms-2-1846), pp. 299–300
   - Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) — [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away (encoded as a denial, so it ranks disputed) — [Owen 1855](../../bibliography.md#owen-works-23-1855), pp. 545–546
   - 2 Peter 2:20–22 describes true believers who fall back into the world (encoded as a denial, so it ranks disputed) — [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 410–412
   - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45
-  - an inference step — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
-  - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 480–481; [Calvin 1849](../../bibliography.md#calvin-romans-1849), pp. 319–320
 
 Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, at the level of the claims: [`whereTheyPartOverDavid`](#whereTheyPartOverDavid).
+
+Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, at the level of the claims: [`whereWesleyPartsOverRomans8`](#whereWesleyPartsOverRomans8).
 
 <a id="lutheran_on_perseverance_defensible"></a>
 **`lutheran_on_perseverance_defensible`**
@@ -1986,19 +2314,19 @@ Why the Lutherans are not forced on perseverance: Westminster defeats them.
   - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*.
   - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)* [defeats](#whereTheyPartOverAssurance) *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*.
   - *Lutheran (the Formula of Concord, XI; the Smalcald Articles)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereTheyPartOverDavid) *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*.
-  - *Wesley (Serious Thoughts upon the Perseverance of the Saints)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*.
+  - *Wesley (Serious Thoughts upon the Perseverance of the Saints)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereWesleyPartsOverRomans8) *Wesley (Serious Thoughts upon the Perseverance of the Saints)*.
 
 **What this rests on.** The reasons state 8 defeats and 8 absences of defeat, each a cell of the defeat table, [`perseveranceDispute_defeats`](#perseveranceDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Reformed (Westminster XVII; Dort, Fifth Head)*, weakest at *disputed*:
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers — [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
   - In his sin David lost the Holy Spirit and his faith (encoded as a denial, so it ranks disputed) — [Calvin 1846](../../bibliography.md#calvin-psalms-2-1846), pp. 299–300
   - Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) — [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away (encoded as a denial, so it ranks disputed) — [Owen 1855](../../bibliography.md#owen-works-23-1855), pp. 545–546
   - 2 Peter 2:20–22 describes true believers who fall back into the world (encoded as a denial, so it ranks disputed) — [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 410–412
   - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45
-  - an inference step — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
-  - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 480–481; [Calvin 1849](../../bibliography.md#calvin-romans-1849), pp. 319–320
 - *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, weakest at *disputed*:
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
   - In his sin David lost the Holy Spirit and his faith — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Smalcald Articles III.iii.43
@@ -2007,6 +2335,7 @@ Why the Lutherans are not forced on perseverance: Westminster defeats them.
   - an inference step — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 548–549; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 603; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
 - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, weakest at *disputed*:
   - To some whom God has regenerated, and given faith, hope and love, he does not give perseverance — [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 478; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 18
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers (encoded as a denial, so it ranks disputed) — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
 - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, weakest at *disputed*:
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40
   - Justifying grace, once given, can be lost — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 15; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 42; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
@@ -2016,10 +2345,13 @@ Why the Lutherans are not forced on perseverance: Westminster defeats them.
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 448–449; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 585
   - 2 Peter 2:20–22 describes true believers who fall back into the world — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified (encoded as a denial, so it ranks disputed) — [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
 
 Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, at the level of the claims: [`whereTheyPartOverDavid`](#whereTheyPartOverDavid).
 
 Why *Trent (Session VI, chapters 13 and 15, canons 16 and 23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, at the level of the claims: [`whereTheyPartOverAssurance`](#whereTheyPartOverAssurance).
+
+Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, at the level of the claims: [`whereWesleyPartsOverRomans8`](#whereWesleyPartsOverRomans8).
 
 <a id="lutheran_on_perseverance_not_forced"></a>
 **`lutheran_on_perseverance_not_forced`**
@@ -2044,7 +2376,7 @@ Why Wesley can be defended on perseverance.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
   - *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereTheyPartOverDavid) *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
-  - *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
+  - *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereWesleyPartsOverRomans8) *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
 
 **What this rests on.** The reasons state 5 defeats and 26 absences of defeat, each a cell of the defeat table, [`perseveranceDispute_defeats`](#perseveranceDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
@@ -2053,6 +2385,7 @@ Why Wesley can be defended on perseverance.
   - an inference step — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 548–549; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 603; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
 - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, weakest at *disputed*:
   - To some whom God has regenerated, and given faith, hope and love, he does not give perseverance — [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 478; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 18
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers (encoded as a denial, so it ranks disputed) — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
 - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, weakest at *disputed*:
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40
   - Justifying grace, once given, can be lost — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 15; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 42; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
@@ -2065,17 +2398,20 @@ Why Wesley can be defended on perseverance.
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 448–449; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 585
   - 2 Peter 2:20–22 describes true believers who fall back into the world — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified (encoded as a denial, so it ranks disputed) — [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
 - *Reformed (Westminster XVII; Dort, Fifth Head)*, weakest at *disputed*:
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers — [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
   - In his sin David lost the Holy Spirit and his faith (encoded as a denial, so it ranks disputed) — [Calvin 1846](../../bibliography.md#calvin-psalms-2-1846), pp. 299–300
   - Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) — [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away (encoded as a denial, so it ranks disputed) — [Owen 1855](../../bibliography.md#owen-works-23-1855), pp. 545–546
   - 2 Peter 2:20–22 describes true believers who fall back into the world (encoded as a denial, so it ranks disputed) — [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 410–412
   - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45
-  - an inference step — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
-  - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 480–481; [Calvin 1849](../../bibliography.md#calvin-romans-1849), pp. 319–320
 
 Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, at the level of the claims: [`whereTheyPartOverDavid`](#whereTheyPartOverDavid).
+
+Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, at the level of the claims: [`whereWesleyPartsOverRomans8`](#whereWesleyPartsOverRomans8).
 
 <a id="wesley_on_perseverance_defensible"></a>
 **`wesley_on_perseverance_defensible`**
@@ -2095,34 +2431,36 @@ Why Wesley is not forced on perseverance: Westminster defeats him.
 
 ***Wesley (Serious Thoughts upon the Perseverance of the Saints)* is not accepted on every resolution.**
 
-- A position holding *Remonstrance (article 5, 1610)*, *Reformed (Westminster XVII; Dort, Fifth Head)* can be held, and it holds *Reformed (Westminster XVII; Dort, Fifth Head)*; *Reformed (Westminster XVII; Dort, Fifth Head)* conflicts with *Wesley (Serious Thoughts upon the Perseverance of the Saints)*: *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and *Wesley (Serious Thoughts upon the Perseverance of the Saints)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
+- A position holding *Remonstrance (article 5, 1610)*, *Reformed (Westminster XVII; Dort, Fifth Head)* can be held, and it holds *Reformed (Westminster XVII; Dort, Fifth Head)*; *Reformed (Westminster XVII; Dort, Fifth Head)* conflicts with *Wesley (Serious Thoughts upon the Perseverance of the Saints)*: *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereWesleyPartsOverRomans8) *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, and *Wesley (Serious Thoughts upon the Perseverance of the Saints)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*.
 - None of *Remonstrance (article 5, 1610)*, *Reformed (Westminster XVII; Dort, Fifth Head)* defeats another, and each attack on them is answered from among them:
   - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*.
   - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)* [defeats](#whereTheyPartOverAssurance) *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*.
   - *Lutheran (the Formula of Concord, XI; the Smalcald Articles)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereTheyPartOverDavid) *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*.
-  - *Wesley (Serious Thoughts upon the Perseverance of the Saints)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*.
+  - *Wesley (Serious Thoughts upon the Perseverance of the Saints)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, and *Reformed (Westminster XVII; Dort, Fifth Head)* [defeats](#whereWesleyPartsOverRomans8) *Wesley (Serious Thoughts upon the Perseverance of the Saints)*.
 
 **What this rests on.** The reasons state 8 defeats and 8 absences of defeat, each a cell of the defeat table, [`perseveranceDispute_defeats`](#perseveranceDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Reformed (Westminster XVII; Dort, Fifth Head)*, weakest at *disputed*:
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers — [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
   - In his sin David lost the Holy Spirit and his faith (encoded as a denial, so it ranks disputed) — [Calvin 1846](../../bibliography.md#calvin-psalms-2-1846), pp. 299–300
   - Hebrews 6:4–6 describes true believers who actually fall away (encoded as a denial, so it ranks disputed) — [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away (encoded as a denial, so it ranks disputed) — [Owen 1855](../../bibliography.md#owen-works-23-1855), pp. 545–546
   - 2 Peter 2:20–22 describes true believers who fall back into the world (encoded as a denial, so it ranks disputed) — [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 410–412
   - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445; [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), pp. 415–416; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45
-  - an inference step — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480; [Calvin 1853](../../bibliography.md#calvin-hebrews-1853), pp. 137–138; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
-  - an inference step — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 480–481; [Calvin 1849](../../bibliography.md#calvin-romans-1849), pp. 319–320
 - *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, weakest at *disputed*:
   - Hebrews 6:4–6 describes true believers who actually fall away — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 449
   - Hebrews 10:29 describes one truly sanctified by Christ's blood who falls away — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 448–449; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 585
   - 2 Peter 2:20–22 describes true believers who fall back into the world — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
+  - Romans 8:29–30 is a chain from which no one drops: every one justified is glorified (encoded as a denial, so it ranks disputed) — [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413
 - *Remonstrance (article 5, 1610)*, weakest at *consensus*:
   - John 10:27–29 — they will never perish, and no one will snatch them out of my hand — John 10:27-29
   - an inference step — [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 548–549; [Arminius 1825](../../bibliography.md#arminius-works-1-1825), p. 603; [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.45; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 444–445
 - *Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)*, weakest at *disputed*:
   - To some whom God has regenerated, and given faith, hope and love, he does not give perseverance — [Schaff 1887](../../bibliography.md#npnf1-05-1887), p. 478; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On Rebuke and Grace, ch. 18
+  - 1 John 2:19, read of every apostate: all who fall away were never true believers (encoded as a denial, so it ranks disputed) — [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480
 - *Trent (Session VI, chapters 13 and 15, canons 16 and 23)*, weakest at *disputed*:
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 13; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 40
   - Justifying grace, once given, can be lost — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 15; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 42; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 23; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 47
@@ -2130,6 +2468,8 @@ Why Wesley is not forced on perseverance: Westminster defeats him.
 - *Lutheran (the Formula of Concord, XI; the Smalcald Articles)*, weakest at *disputed*:
   - God's promise to keep those he has begun to save holds unless they fall away by their own fault — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Solid Declaration XI.42
   - In his sin David lost the Holy Spirit and his faith — [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Smalcald Articles III.iii.43
+
+Why *Reformed (Westminster XVII; Dort, Fifth Head)* defeats *Wesley (Serious Thoughts upon the Perseverance of the Saints)*, at the level of the claims: [`whereWesleyPartsOverRomans8`](#whereWesleyPartsOverRomans8).
 
 Why *Trent (Session VI, chapters 13 and 15, canons 16 and 23)* defeats *Reformed (Westminster XVII; Dort, Fifth Head)*, at the level of the claims: [`whereTheyPartOverAssurance`](#whereTheyPartOverAssurance).
 

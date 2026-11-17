@@ -57,11 +57,22 @@ not less certain than the power of God is invincible". Wesley grants the text an
 reads its promise as conditional, quoting 2 Peter 1:10: "They are *my sheep*,
 that *hear my voice*, that *follow me* in all holiness. And 'if ye do these
 things, ye shall never fall'". So the step is rated *disputed*, which means that
-a reader the library cites grants its grounds and denies its conclusion. From 1
-John 2:19, the Reformed conclude that the truly justified are elect. Augustine
-grants the verse and still denies the step: those who left "were not of the
-number of children, even when they were in the faith of children" (ch. 20). They
-were not elect, and their faith was real. That step is rated *disputed* too.
+a reader the library cites grants its grounds and denies its conclusion, and here
+gives his reason, the condition he reads in the promise.
+
+From 1 John 2:19, "They went out from us, but they were not of us", the Reformed
+conclude that the truly justified are elect. They get there through a reading of
+the verse. Calvin: "He plainly declares that those who fell away had never been
+members of the Church", having had "only a light and a transient taste" of the
+knowledge of Christ. John Owen, the Puritan, makes it a rule for every apostate:
+"If all they who fall away totally … were never true believers … then those who
+are true believers cannot fall away; but the first is true, therefore the
+latter." Here too the reading is the doctrine found in the verse, so the step
+from it to "the truly justified are elect" is rated *well supported* and the
+whole weight falls on the reading. Augustine reads the same verse and holds that
+those who left "were in goodness", "in the faith of children", and still were not
+elect (ch. 20). So the reading is rated *disputed*, and the question it turns on
+is whether one who leaves the faith never had it, or had it and gave it up.
 
 **Philippians 1.** "He who began a good work in you will bring it to completion
 at the day of Jesus Christ" (Philippians 1:6). Trent's chapter on perseverance
@@ -73,19 +84,27 @@ finally fall away" is rated *disputed*.
 
 **Romans 8.** "And those whom he predestined he also called, and those whom he
 called he also justified, and those whom he justified he also glorified"
-(Romans 8:29–30). Read as a chain no link of which drops anyone, it says that
-everyone justified is glorified. Wesley grants the verse and reads the chain
-backwards, so that everyone glorified was first justified, not forwards. To an
-opponent who argued from it he answered: "This proves no more than that all who
-are glorified, are pardoned and sanctified first" (*Predestination Calmly
-Considered*, §76). In his notes on the verse: "He does not deny that a believer
-may fall away and be cut off between his special calling and his glorification".
-Augustine reads the chain as being about those "called according to His
-purpose", the elect, and still holds that others who are truly justified fall
-away. So both grant the verse and deny the step, and it is rated *disputed*.
-Calvin also reads the chain of "the elect … whom he also inwardly draws". He
-accepts the conclusion, but because he also holds that everyone truly justified
-is elect, which the step as written here does not carry.
+(Romans 8:29–30). Dort reads it as a chain from which no link drops anyone, so
+that every one justified is glorified: God decreed to give the elect "true faith,
+justification, and sanctification; and having powerfully preserved them … finally
+to glorify them" (I, article 7). Augustine could say as much of the elect. What
+is Dort's own is that the chain holds every one justified: its Rejection of
+Errors condemns those who teach that God chooses some to justifying faith whom he
+does not choose to salvation, "dissolving this golden chain of salvation" (I.2,
+in Latin, *auream hanc salutis catenam dissolvens*; the translation is this
+page's). Dort's reading is the doctrine itself found in the verse, so everything
+turns on whether the verse says it, and the step from it is rated *well
+supported*: no cited reader grants the reading and denies what follows. Wesley's
+quarrel is with the reading, and he gives his reason. He takes the verse as the
+order in which God brings to glory those who are glorified, not as a promise of
+glory to every one justified: "This proves no more than that all who are
+glorified, are pardoned and sanctified first" (*Predestination Calmly
+Considered*, §76), and Paul "does not affirm … that precisely the same number of
+men are called, justified, and glorified" (*Notes*, on the verse). So the reading
+is rated *disputed*, and it is where Wesley parts from the Romans route
+(`whereWesleyPartsOverRomans8`). Augustine reads the chain as being about those
+"called according to His purpose", the elect, and still holds that others who
+are truly justified fall away.
 
 The John route reaches the conclusion without Philippians or Romans, and the
 Philippians route reaches it without 1 John 2:19, though it still needs John 10
@@ -99,9 +118,9 @@ Four positions hold that one truly justified can finally fall away.
 
 - **Augustine and Aquinas**, on Augustine's ground that some regenerate are not
   given perseverance. They hold that the elect persevere as firmly as
-  Westminster does. Augustine's claim, his grant that the elect persevere, and
-  the Reformed step from 1 John 2:19 cannot all be held together, and the step
-  is where they part (`whereAugustinePartsFromJohnsStrand`).
+  Westminster does. They part from it over 1 John 2:19: whether those who left
+  never had true faith, or had it and were not elect
+  (`whereAugustinePartsFromJohnsStrand`).
 - **Trent**, from the condition in its chapter 13. Its canon 23 condemns anyone
   who says "that a man once justified can sin no more, nor lose grace, and that
   therefore he that falls and sins was never truly justified". The canon is
@@ -181,6 +200,56 @@ are passages of Scripture which seem to me to wear this aspect" (*Declaration of
 Sentiments*). What the article concludes from John 10:28 leaves the question
 open (`remonstrance_leaves_perseverance_open`).
 
+## The view from eternity
+
+Boethius, in the sixth century, asked whether God's foreknowledge leaves us free.
+He answered that God does not foresee the future as we guess at it, but sees all
+of time at once: "Now, eternity is the possession of endless life whole and
+perfect at a single moment" (*Consolation of Philosophy* V, prose 6). Knowing a
+thing does not make it happen: "there are two necessities—one simple, as that
+men are necessarily mortal; the other conditioned, as that, if you know that
+someone is walking, he must necessarily be walking". Things God foresees,
+"viewed, however, in themselves, … desist not from the absolute freedom
+naturally theirs". Aquinas carried the answer from foreknowledge to
+predestination: "all things that are in time are present to God from eternity"
+(*Summa* I q.14 a.13), and "it is possible for one who is predestinated
+considered in himself to die in mortal sin; yet it is not possible, supposed …
+that he is predestinated" (I q.23 a.6, ad 2).
+
+So "could he have fallen?" can be asked of the believer considered in himself,
+apart from God's decree, and of the believer as he is, under it. Considered in
+himself, nothing in the one who perseveres makes his perseverance necessary.
+Dort grants that and says more: falling, "with respect to themselves is not only
+possible, but would undoubtedly happen; but with respect to God, it is utterly
+impossible, since his counsel can not be changed" (V, article 8). Aquinas means
+less than Dort's "would", only that it is possible. The claim encoded here is the
+one both grant: considered in himself, the believer could fall. The other
+question is whether one who is truly justified can at the last fall away and be
+lost: by his own fault, as Trent, the Lutherans and Wesley hold, or because God
+does not give him the gift of perseverance, as Augustine holds. That is the claim
+Westminster denies.
+
+The view from eternity, as encoded here, holds that God knows all things as
+present, that the elect persevere, and that each of them could, considered in
+himself, have fallen. It says nothing on whether the truly justified can finally
+fall away. So it can be added to Westminster's position without contradiction
+(`from_eternity_holds_with_westminster`), and to Wesley's, together with the
+claim that the elect persevere, which Wesley's position is not encoded as holding
+(`from_eternity_holds_with_wesley`). Granted the view alone, it neither follows
+nor fails that the truly justified can finally fall away
+(`from_eternity_leaves_perseverance_open`). Add Owen's reading of 1 John 2:19,
+that all who fall away were never true believers, and it follows that none can
+(`from_eternity_with_owens_reading_settles_it`). So what decides the question is
+not God's knowledge of time but who the elect are, and that is the question of
+1 John 2:19.
+
+Wesley holds, with Boethius, that all time is present to God and that his knowing
+compels nothing: "Men are as free in believing or not believing as if he did not
+know it at all" (Sermon 58, §5). He parts from Aquinas over what that knowledge
+does. For Wesley God knows what we do because we do it, and chooses those he
+foresees believing; for Aquinas, predestination is not grounded in anything God
+foresees in us. This chapter does not weigh that question.
+
 ## Falling for a time
 
 Westminster says that believers "may … fall into grievous sins; and for a time
@@ -228,12 +297,28 @@ revelation" (canon 16). In its chapter on perseverance (ch. 13) it quotes Paul:
 "let those who think themselves to stand, take heed lest they fall" (1
 Corinthians 10:12).
 
-Calvin, on that verse, says "there are two kinds of assurance". One "rests on the
-promises of God", and "is inseparable from faith"; the other "arises from
-negligence, when men … give themselves no concern, as if they were beyond the
-reach of danger". Paul warns against the second and leaves the first standing. So
-Trent's case for doubt rests on its step from the verse, and Calvin, granting the
-verse, denies it; the step is rated *disputed* (`whereTheyPartOverAssurance`).
+Calvin answers the verse with "two kinds of assurance". One "rests on the
+promises of God, because a pious conscience feels assured that God will never be
+wanting to it", and yet, "keeping in mind its own infirmity, casts itself upon
+God, and with carefulness and anxiety commits itself to him". That assurance, he
+says, "is inseparable from faith". The other "arises from negligence, when men …
+give themselves no concern, as if they were beyond the reach of danger", and it
+is that one Paul warns against. So for Calvin assurance rests on God's promise,
+and the care Paul asks for belongs to that same faith, which, "keeping in mind
+its own infirmity, casts itself upon God".
+
+Trent, too, commends "a most firm hope in God's help" (ch. 13), and parts from
+Calvin over whether anyone can know he is among those who will persevere:
+"except by special revelation, it cannot be known whom God hath chosen unto
+Himself" (ch. 12). For Calvin, those who have "the living root
+of faith" also "carry a testimony of their own adoption firmly fixed in their
+hearts" (*Catholic Epistles*, on 1 John 2:19). So the question between them is
+whether the promise, received by faith, lets a believer know his own
+perseverance. It is tied to the question of 1 John 2:19, though the encoding does
+not join the two: if some who had true faith fall away, faith alone cannot tell
+a believer that he will not.
+Trent's step from 1 Corinthians 10:12 is rated *disputed*, because Calvin grants
+the verse and denies that it asks for doubt (`whereTheyPartOverAssurance`).
 
 The Reformed step from Romans 8:16 is rated *well supported*. Wesley grants the
 verse to every believer, and he allows an assurance of perseverance too: "The
@@ -241,15 +326,18 @@ full assurance of faith relates to present pardon; the full assurance of hope,
 to future glory", the latter being "Divine evidence (wrought in the soul by the
 same immediate inspiration of the Holy Ghost) of persevering grace, and of
 eternal glory", which "you cannot expect, if you abate your diligence" (*Notes*,
-on Hebrews 6:11). Since he says the same of the assurance of faith, his
-"immediate inspiration" is the ordinary witness of the Spirit, not a special
-revelation, and he does not deny the step.
+on Hebrews 6:11). This page reads his "immediate inspiration" as the ordinary
+witness of the Spirit, since he says the same of the assurance of faith, and so
+counts him as granting the step. He holds that this assurance is given to some,
+and lost with diligence.
 
 ## Weighed together
 
-Weighed as one dispute, Westminster stands off against each of the four
-positions that hold the justified can fall away: each defeats the other, so
-between them it is a tie. With the Lutherans and Trent the tie is also over
+Weighed as one dispute, Westminster is in a tie with each of the four positions
+that hold the justified can fall away. One position defeats another when it
+contradicts something the other holds and its weakest premise or step is rated
+no lower than the other's; here each defeats the other, so between them it is a
+tie. With the Lutherans and Trent the tie is also over
 falling for a time, and with Trent over knowing that one will persevere. The
 four do not attack one another. However the ties are settled, the one thing that
 must be accepted is what the Remonstrants concluded from John 10:28: no power
@@ -300,14 +388,13 @@ as conditional, quoting 2 Peter 1:10. -/
 def john10Step : Formula Claim :=
   p .john10_27to29 ➝ p .electPersevere
 
-/-- 1 John 2:19: "if they had been of us, they would have continued with us". So
-everyone truly justified is among the elect, and those who left were never truly
-justified.
-Rated `disputed`: Augustine grants the verse and holds that those who left had
-true faith and were not elect. -/
+/-- 1 John 2:19, "if they had been of us, they would have continued with us",
+read with Owen of every apostate, that all who fall away were never true
+believers: so everyone truly justified is among the elect. Rated
+`wellSupported`; the dissent is from the reading, which Augustine denies. -/
 @[solaGratiaDefs]
 def bridgeStep : Formula Claim :=
-  p .firstJohn2_19 ➝ p .justifiedAreElect
+  ⋀ [p .firstJohn2_19, p .apostatesNeverHadTrueFaith] ➝ p .justifiedAreElect
 
 /-- If the elect persevere and the truly justified are elect, no one truly
 justified can finally fall away. Rated `consensus`: it follows from what the
@@ -349,13 +436,19 @@ outside snatches believers out of it. Rated `consensus`. -/
 def remonstranceStep : Formula Claim :=
   p .john10_27to29 ➝ p .noneSnatchedByForce
 
-/-- Romans 8:30: "those whom he justified he also glorified". So no one truly
-justified can finally fall away. Rated `disputed`: Wesley grants the text and
-answers that "This proves no more than that all who are glorified, are pardoned
-and sanctified first". -/
+/-- Romans 8:30, "those whom he justified he also glorified", read with Dort as a
+chain from which no one drops: so no one truly justified can finally fall away.
+Rated `wellSupported`; the dissent is from the reading, which Wesley denies. -/
 @[solaGratiaDefs]
 def romans8Step : Formula Claim :=
-  p .romans8_29to30 ➝ notP .justifiedCanFinallyFallAway
+  ⋀ [p .romans8_29to30, p .romans8ChainIsUnbroken] ➝ notP .justifiedCanFinallyFallAway
+
+/-- God knows all things as present to his eternity, and his knowing imposes no
+necessity: so the one who perseveres could, considered in himself, have fallen
+away. Rated `wellSupported`. -/
+@[solaGratiaDefs]
+def timelessStep : Formula Claim :=
+  p .godKnowsAllAsPresent ➝ p .canFallInThemselves
 
 /-- Hebrews 10:29, read as describing one truly sanctified by Christ's blood who
 falls away: so one truly justified can finally fall away. Rated
@@ -412,11 +505,11 @@ def john10Line : Line Claim :=
   , delivers := p .electPersevere
   , inference := some john10Inference }
 
-/-- **1 John 2:19**: the truly justified are elect. -/
+/-- **1 John 2:19**, read of every apostate: the truly justified are elect. -/
 @[solaGratiaDefs]
 def bridgeLine : Line Claim :=
   { name := "1 John 2:19 (\"they went out from us, but they were not of us\")"
-  , grounds := [p .firstJohn2_19]
+  , grounds := [p .firstJohn2_19, p .apostatesNeverHadTrueFaith]
   , step := bridgeStep
   , delivers := p .justifiedAreElect
   , inference := some bridgeInference }
@@ -467,11 +560,12 @@ def remonstranceLine : Line Claim :=
   , delivers := p .noneSnatchedByForce
   , inference := some remonstranceInference }
 
-/-- **Romans 8:29–30**: no one truly justified can finally fall away. -/
+/-- **Romans 8:29–30**, read as an unbroken chain: no one truly justified can
+finally fall away. -/
 @[solaGratiaDefs]
 def romans8Line : Line Claim :=
   { name := "Romans 8:29–30 (\"those whom he justified he also glorified\")"
-  , grounds := [p .romans8_29to30]
+  , grounds := [p .romans8_29to30, p .romans8ChainIsUnbroken]
   , step := romans8Step
   , delivers := notP .justifiedCanFinallyFallAway
   , inference := some romans8Inference }
@@ -530,6 +624,17 @@ def cautionLine : Line Claim :=
   , delivers := notP .believersCanBeSureOfPersevering
   , inference := some cautionInference }
 
+/-- **The view from eternity** (Boethius; Aquinas): God knows all things as
+present, so the one who perseveres could, considered in himself, have fallen
+away. -/
+@[solaGratiaDefs]
+def timelessLine : Line Claim :=
+  { name := "God knows all things as present, and imposes no necessity (Boethius)"
+  , grounds := [p .godKnowsAllAsPresent]
+  , step := timelessStep
+  , delivers := p .canFallInThemselves
+  , inference := some timelessInference }
+
 /-! ### The positions -/
 
 /-- The label every position asked for the falling away shares. -/
@@ -554,13 +659,16 @@ def remonstrance : ArgumentPackage Claim :=
 
 /-- **Augustine and Aquinas.** The elect persevere; and, on Augustine's ground, to
 some whom God has regenerated he does not give perseverance, so one truly
-justified can finally fall away. They read 1 John 2:19 as Augustine does, of those who were in the
-faith and were not elect. -/
+justified can finally fall away. They read 1 John 2:19 as Augustine does, of
+those who were in the faith and were not elect, and deny that every apostate
+never had true faith. -/
 @[solaGratiaDefs]
 def augustinian : ArgumentPackage Claim :=
   { name := "Augustine and Aquinas (On Rebuke and Grace; Summa I q.23)"
   , cite := augustinianCite
-  , premises := caseOf [augustineLine] [p .electPersevere, p .firstJohn2_19] []
+  , premises :=
+      caseOf [augustineLine]
+        [p .electPersevere, p .firstJohn2_19, notP .apostatesNeverHadTrueFaith] []
   , conclusion := ⋀ [p .electPersevere, p .justifiedCanFinallyFallAway]
   , conclusionLabel := "the elect persevere, and some truly justified who are not elect fall away"
   , inferences := [augustineInference] }
@@ -609,7 +717,8 @@ def wesleyOnPerseverance : ArgumentPackage Claim :=
   , cite := wesleyanCite
   , premises :=
       caseOf [hebrewsLine, hebrews10Line, secondPeterLine]
-        [p .john10_27to29, p .promiseIsConditional] []
+        [ p .john10_27to29, p .promiseIsConditional, p .romans8_29to30
+        , notP .romans8ChainIsUnbroken ] []
   , conclusion := p .justifiedCanFinallyFallAway
   , conclusionLabel := fallingAwayLabel
   , inferences := [hebrewsInference, hebrews10Inference, secondPeterInference] }
@@ -690,14 +799,17 @@ def fallingAwayReading : Valuation Claim := fun a =>
   match a with
   | .justifiedAreElect => False
   | .believersCanBeSureOfPersevering => False
+  | .apostatesNeverHadTrueFaith => False
+  | .romans8ChainIsUnbroken => False
   | _ => True
 
 /-! ### What follows -/
 
 /-- **The Reformed premises establish the perseverance of the saints**: the
 elect persevere, and no one truly justified can finally fall away. That the
-second follows rests on readings and steps rated `disputed`: the steps from
-John 10 and 1 John 2, from Philippians 1:6, or from Romans 8:29–30. -/
+second follows rests on readings and steps rated `disputed`: the step from John
+10 with the reading of 1 John 2:19, the step from Philippians 1:6, or the reading
+of Romans 8:29–30. -/
 @[headline]
 theorem perseveranceReformed_establishes : Establishes perseveranceReformed := by
   establish [solaGratiaDefs]
@@ -790,18 +902,19 @@ theorem wesleyOnPerseverance_is_satisfiable : Satisfiable wesleyOnPerseverance.p
 
 /-! ### Where Augustine parts from Westminster -/
 
-/-- **Where Augustine parts from the John strand: at 1 John 2:19.** Augustine
-grants that the elect persevere, and the Reformed step from 1 John 2:19 joins
-the elect to every one truly justified. Augustine's claim that some regenerate
-are not given perseverance, his grant that the elect persevere, and that step
-cannot all be held together, and the crux is the step. It is rated `disputed`, and the reader
-who disputes it is Augustine himself: those who left "were not of the number of
-children, even when they were in the faith of children". -/
+/-- **Where Augustine parts from the John route: over what 1 John 2:19 says of
+those who left.** Both read "they went out from us, but they were not of us".
+The Reformed, with Owen and Calvin, read it of every apostate: those who fall
+away "never … have been true believers". Augustine reads it otherwise: those who
+left "were in goodness", "in the faith of children", and were not elect. So the
+question is whether one who leaves the faith never had it or had it and gave it
+up, and the crux is the Reformed reading, rated `disputed`. -/
 def whereAugustinePartsFromJohnsStrand : Because johnStrand augustinian :=
-  Because.ofChecks bridgeStep
-    ([p .john10_27to29, p .firstJohn2_19] ++ perseveranceShared ++ [john10Step]) [joinStep]
-    [p .firstJohn2_19, joinStep]
-    [p .someRegenerateNotGivenPerseverance, augustineStep, p .electPersevere]
+  Because.ofChecks (p .apostatesNeverHadTrueFaith)
+    [p .john10_27to29, p .firstJohn2_19]
+    (perseveranceShared ++ [john10Step, bridgeStep, joinStep])
+    []
+    [notP .apostatesNeverHadTrueFaith]
     .derives john_strand_establishes johnStrand_is_satisfiable
     (by simp [johnStrand, caseOf, solaGratiaDefs])
     (by simp [johnStrand, caseOf, solaGratiaDefs])
@@ -824,6 +937,127 @@ def whereAugustinePartsFromPhilippians : Because philippiansStrand augustinian :
     (by simp [augustinian, caseOf, solaGratiaDefs])
     (by decide +kernel)
 
+/-- **Where Wesley parts from the Romans route: over what Romans 8:30 says.**
+Dort reads the verse as a chain from which no one drops, so that every one
+justified is glorified. Wesley reads it backwards, so that every one glorified
+was first justified: Paul "does not affirm … that precisely the same number of
+men are called, justified, and glorified". The crux is Dort's reading, rated
+`disputed`; it is not needed for Westminster's conclusion, which other routes
+reach, so it is Westminster's answer to Wesley on this text. -/
+def whereWesleyPartsOverRomans8 : Because perseveranceReformed wesleyOnPerseverance :=
+  Because.ofChecks (p .romans8ChainIsUnbroken)
+    [ p .john10_27to29, p .firstJohn2_19, p .apostatesNeverHadTrueFaith, p .philippians1_6
+    , p .romans8_29to30 ]
+    ([p .psalm51_11, notP .davidLostTheSpirit, p .romans8_16] ++ perseveranceShared ++
+      [ john10Step, bridgeStep, philippiansStep, romans8Step, psalmStep, assuranceStep
+      , joinStep ])
+    []
+    [notP .romans8ChainIsUnbroken]
+    .answers perseveranceReformed_establishes perseveranceReformed_is_satisfiable
+    (by simp [perseveranceReformed, caseOf, solaGratiaDefs])
+    (by simp)
+    (by simp [wesleyOnPerseverance, caseOf, solaGratiaDefs])
+    (by decide +kernel)
+
+/-! ### The view from eternity -/
+
+/-- **The view from eternity**, from Boethius (*Consolation* V, prose 6) and
+Aquinas (*Summa* I q.14 a.13; I q.23 a.6). God knows all things, the future
+included, as present to his eternity, and his knowing them imposes no necessity
+on them. So the one who perseveres is predestined, and still, considered in
+himself, could have fallen away. -/
+@[solaGratiaDefs]
+def fromEternity : ArgumentPackage Claim :=
+  { name := "The view from eternity (Boethius; Aquinas)"
+  , cite := augustinianCite
+  , premises := caseOf [timelessLine] [p .electPersevere] []
+  , conclusion := ⋀ [p .electPersevere, p .canFallInThemselves]
+  , conclusionLabel :=
+      "the elect persevere, and each of them could, considered in himself, have fallen away"
+  , inferences := [timelessInference] }
+
+/-- The view from eternity delivers its conclusion. -/
+theorem fromEternity_establishes : Establishes fromEternity := by
+  establish [solaGratiaDefs]
+
+/-- The view from eternity can be held without contradiction. -/
+theorem fromEternity_is_satisfiable : Satisfiable fromEternity.premises := by
+  satisfied_by perseveringReading [solaGratiaDefs]
+
+/-- **The view from eternity can be added to Westminster's position without
+contradiction.** One reading satisfies every premise of both. Dort itself grants
+that the believers' falling, "with respect to themselves is not only possible,
+but would undoubtedly happen; but with respect to God, it is utterly impossible"
+(V, article 8).
+
+What this does not claim: that Westminster holds the view from eternity, or that
+the view supports Westminster. As encoded, the view says nothing on whether the
+truly justified can finally fall away, so it can be added to either side. -/
+@[headline]
+theorem from_eternity_holds_with_westminster :
+    Satisfiable (perseveranceReformed.premises ++ fromEternity.premises) := by
+  satisfied_by perseveringReading [solaGratiaDefs]
+
+#print axioms from_eternity_holds_with_westminster
+
+/-- **The view from eternity can be added to Wesley's position without
+contradiction**, with its claim that the elect persevere, which Wesley's position
+is not encoded as holding. One reading satisfies every premise of both. Wesley
+holds, with Boethius, that all time is present to God and that his knowing
+compels nothing: "Men are as free in believing or not believing as if he did not
+know it at all" (Sermon 58, §5).
+
+What this does not claim: that Wesley holds the view as Aquinas does. For Wesley
+God knows what we do because we do it; for Aquinas predestination is not
+grounded in anything God foresees. -/
+@[headline]
+theorem from_eternity_holds_with_wesley :
+    Satisfiable (wesleyOnPerseverance.premises ++ fromEternity.premises) := by
+  satisfied_by fallingAwayReading [solaGratiaDefs]
+
+#print axioms from_eternity_holds_with_wesley
+
+/-- **The view from eternity, by itself, leaves perseverance open.** Granted that
+God knows all things as present, that the elect persevere, and that each could,
+considered in himself, have fallen, it neither follows nor fails that one truly
+justified can finally fall away. This holds because the view, as encoded, says
+nothing about final falling; the next result shows what does decide it. -/
+@[headline]
+theorem from_eternity_leaves_perseverance_open :
+    Independent fromEternity.premises (p .justifiedCanFinallyFallAway) := by
+  leaves_open perseveringReading fallingAwayReading [solaGratiaDefs]
+
+#print axioms from_eternity_leaves_perseverance_open
+
+/-- The view from eternity with Owen's reading of 1 John 2:19, that all who fall
+away were never true believers, and the step from it to the claim that the truly
+justified are elect. The one difference from `fromEternity` is that line, with
+the step that joins it to the elect's perseverance. -/
+@[solaGratiaDefs]
+def fromEternityWithOwensReading : ArgumentPackage Claim :=
+  { fromEternity with
+    name := "The view from eternity, with Owen's reading of 1 John 2:19"
+    premises := caseOf [timelessLine, bridgeLine] [p .electPersevere] [joinStep]
+    inferences := [timelessInference, bridgeInference, joinInference] }
+
+/-- The view from eternity with Owen's reading can be held without contradiction. -/
+theorem fromEternityWithOwensReading_is_satisfiable :
+    Satisfiable fromEternityWithOwensReading.premises := by
+  satisfied_by perseveringReading [solaGratiaDefs]
+
+/-- **With Owen's reading of 1 John 2:19, the view from eternity denies that the
+truly justified can finally fall away.** Add to the view the reading that all who
+fall away were never true believers, and the step from it to "the truly justified
+are elect", and the elect's perseverance does the rest. So what decides the
+question is not God's knowledge of time but who the elect are: the reading of
+1 John 2:19, which Augustine denies and which is rated `disputed`. -/
+@[headline]
+theorem from_eternity_with_owens_reading_settles_it :
+    Entails fromEternityWithOwensReading.premises (notP .justifiedCanFinallyFallAway) := by
+  establish [solaGratiaDefs]
+
+#print axioms from_eternity_with_owens_reading_settles_it
+
 /-! ### Falling for a time, and knowing that one will persevere -/
 
 /-- **Where the Smalcald Articles and Calvin part over David.** The Lutherans read
@@ -836,7 +1070,8 @@ for the conclusion; it is Westminster's answer to the Lutherans on falling for a
 time. -/
 def whereTheyPartOverDavid : Because perseveranceReformed lutheranOnPerseverance :=
   Because.ofChecks (notP .davidLostTheSpirit)
-    [p .john10_27to29, p .firstJohn2_19, p .philippians1_6, p .romans8_29to30, p .psalm51_11]
+    [ p .john10_27to29, p .firstJohn2_19, p .apostatesNeverHadTrueFaith, p .philippians1_6
+    , p .romans8_29to30, p .romans8ChainIsUnbroken, p .psalm51_11 ]
     ([p .romans8_16] ++ perseveranceShared ++
       [ john10Step, bridgeStep, philippiansStep, romans8Step, psalmStep, assuranceStep
       , joinStep ])
@@ -918,8 +1153,9 @@ that those described had only "some taste of his grace". It is Westminster's
 answer to Wesley, rated `disputed`. -/
 def whereWesleysHebrewsFalls : Because perseveranceReformed wesleyAsGodKeeps :=
   Because.ofChecks (notP .hebrews6DescribesBelieversWhoFall)
-    [ p .john10_27to29, p .firstJohn2_19, p .philippians1_6, p .romans8_29to30
-    , p .psalm51_11, notP .davidLostTheSpirit, p .romans8_16, p .hebrews6_4to6 ]
+    [ p .john10_27to29, p .firstJohn2_19, p .apostatesNeverHadTrueFaith, p .philippians1_6
+    , p .romans8_29to30, p .romans8ChainIsUnbroken, p .psalm51_11, notP .davidLostTheSpirit
+    , p .romans8_16, p .hebrews6_4to6 ]
     [ p .hebrews10_26to29, notP .hebrews10DescribesTheSanctifiedWhoFall
     , p .secondPeter2_20to22, notP .secondPeter2DescribesBelieversWhoFall
     , john10Step, bridgeStep, philippiansStep, romans8Step, psalmStep, assuranceStep
@@ -938,8 +1174,9 @@ away. The John route needs both its steps to deny that, and the crux is the
 step from John 10:27–29, the one Wesley himself disputes (§18). -/
 def whereWesleysConditionFalls : Because johnStrand wesleyAsCanFail :=
   Because.ofChecks john10Step
-    ([p .john10_27to29, p .firstJohn2_19] ++ perseveranceShared) [bridgeStep, joinStep]
-    [p .john10_27to29, p .firstJohn2_19, bridgeStep, joinStep]
+    ([p .john10_27to29, p .firstJohn2_19, p .apostatesNeverHadTrueFaith] ++ perseveranceShared)
+    [bridgeStep, joinStep]
+    [p .john10_27to29, p .firstJohn2_19, p .apostatesNeverHadTrueFaith, bridgeStep, joinStep]
     [p .promiseIsConditional, p .promiseIsConditional ➝ p .justifiedCanFinallyFallAway]
     .derives john_strand_establishes johnStrand_is_satisfiable
     (by simp [johnStrand, caseOf, solaGratiaDefs])
@@ -985,7 +1222,9 @@ def whatTheConditionMeans : Dilemma wesleyOnPerseverance where
 
 Six parties are heard: the Remonstrance, with what it concludes from John 10:28;
 Westminster and Dort; Augustine and Aquinas; Trent; the Lutherans; and Wesley.
-One position defeats another when it contradicts something the other holds and
+The view from eternity is not among them: as encoded, it says nothing on whether
+the truly justified can finally fall away, so it attacks none of them and none
+attacks it. One position defeats another when it contradicts something the other holds and
 its weakest premise or step is rated no lower than the other's. Who defeats whom
 is computed from their premises and checked by the kernel. -/
 
@@ -995,9 +1234,9 @@ inductive PerseveranceParty
   Christ's hand. Its weakest link is `consensus`. -/
   | remonstrance
   /-- Westminster and Dort: the elect persevere, and no one truly justified can
-  finally fall away. Its weakest link is `disputed`: the steps from John 10, 1
-  John 2, Philippians 1 and Romans 8, and the Reformed readings of Hebrews 6 and
-  10, 2 Peter 2 and Psalm 51. -/
+  finally fall away. Its weakest link is `disputed`: the steps from John 10 and
+  Philippians 1, and the Reformed readings of 1 John 2:19, Romans 8:30, Hebrews
+  6 and 10, 2 Peter 2 and Psalm 51. -/
   | reformed
   /-- Augustine and Aquinas: the elect persevere, and some truly justified who
   are not elect fall away. Its weakest link is `disputed`: that some regenerate

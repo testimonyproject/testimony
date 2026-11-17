@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **339 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **343 headline results**, listed below in source order. one of them is marked ⚗: a result this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -331,6 +331,10 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `john_strand_establishes` | `Establishes johnStrand` | **The John strand reaches the conclusion alone.** John 10:27–29 for the elect, 1 John 2:19 for the truly justified being elect, and the two joined. |
 | `philippians_strand_establishes` | `Establishes philippiansStrand` | **The Philippians strand reaches the conclusion alone**, without 1 John 2:19: Philippians 1:6 for the truly justified, and John 10:27–29 for the elect. |
 | `remonstrance_leaves_perseverance_open` | `Independent remonstrance.premises (p Claim.justifiedCanFinallyFallAway)` | **The Remonstrants' premises leave perseverance open.** Their fifth article grants from John 10:28 that no one plucks believers out of Christ's hand, and leaves whether they can … |
+| `from_eternity_holds_with_westminster` | `Satisfiable (perseveranceReformed.premises ++ fromEternity.premises)` | **The view from eternity can be added to Westminster's position without contradiction.** One reading satisfies every premise of both. |
+| `from_eternity_holds_with_wesley` | `Satisfiable (wesleyOnPerseverance.premises ++ fromEternity.premises)` | **The view from eternity can be added to Wesley's position without contradiction**, with its claim that the elect persevere, which Wesley's position is not encoded as holding. |
+| `from_eternity_leaves_perseverance_open` | `Independent fromEternity.premises (p Claim.justifiedCanFinallyFallAway)` | **The view from eternity, by itself, leaves perseverance open.** Granted that God knows all things as present, that the elect persevere, and that each could, considered in … |
+| `from_eternity_with_owens_reading_settles_it` | `Entails fromEternityWithOwensReading.premises (notP Claim.justifiedCanFinallyFallAway)` | **With Owen's reading of 1 John 2:19, the view from eternity denies that the truly justified can finally fall away.** Add to the view the reading that all who fall away were never … |
 | `only_the_remonstrance_prevails` | `Framework.grounded perseveranceDispute.defeats = Solver.toSet [PerseveranceParty.remonstrance]` | **Only what the Remonstrants concluded from John 10:28 prevails: no power from outside snatches believers out of Christ's hand.** Every other party is in a tie with another, and … |
 | `perseverance_defensible` | `Framework.CredulouslyAccepted perseveranceDispute.defeats PerseveranceParty.reformed` | **Westminster can be defended**: on at least one way of settling the ties, it is accepted, with the Remonstrance, because it defeats each of the four that attack it. |
 | `perseverance_not_forced` | `¬Framework.SkepticallyAccepted perseveranceDispute.defeats PerseveranceParty.reformed` | **Nor must Westminster be accepted.** On another way of settling the ties, Augustine and Aquinas, Trent, the Lutherans and Wesley are accepted together, and Westminster cannot be … |

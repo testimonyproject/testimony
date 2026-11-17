@@ -4270,6 +4270,53 @@ Archive; no ISBN. -/
   , place := some "Edinburgh"
   , volume := some "1" }
 
+/-- Boethius, *The Consolation of Philosophy*, in H. R. James's translation of
+1897 (Open Library OL7158707M; no ISBN). Cited for Book V, prose 6, on God's
+eternity and his knowledge of things as present: "Now, eternity is the
+possession of endless life whole and perfect at a single moment" (p. 257); "there
+are two necessities—one simple, as that men are necessarily mortal; the other
+conditioned, as that, if you know that someone is walking, he must necessarily
+be walking" (p. 263); and things foreseen, "viewed, however, in themselves, …
+desist not from the absolute freedom naturally theirs" (pp. 263–264). -/
+@[bib_entry] def boethiusConsolation : BibEntry := .book
+  { core :=
+      { key := "boethius-consolation-james-1897"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "Anicius Manlius Severinus" "Boethius"]
+          , translators := [.person "H. R." "James"] }
+      , title := "The Consolation of Philosophy of Boethius"
+      , year := some { value := 1897 }
+      , identifiers :=
+          [ .url "https://archive.org/details/consolationofphi00boetiala"
+                 (some "2026-11-17") ] }
+  , publisher := "Elliot Stock"
+  , place := some "London" }
+
+/-- John Owen, *The Doctrine of the Saints' Perseverance Explained and
+Confirmed*, in volume 11 of his *Works* as Goold edited them. Cited for 1 John
+2:19 (pp. 594–595): the apostates "manifested themselves never to have been true
+believers", and "If all they who fall away totally … were never true believers …
+then those who are true believers cannot fall away; but the first is true,
+therefore the latter." The year is not given: the scan's title page could not be
+read, and the Internet Archive's date of 1850 is the one it also gives volume 23,
+whose title page reads 1855. No ISBN. -/
+@[bib_entry] def owenPerseverance : BibEntry := .book
+  { core :=
+      { key := "owen-works-11-perseverance"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Owen"]
+          , editors := [.person "William H." "Goold"] }
+      , title := "The Works of John Owen"
+      , subtitle := some "The Doctrine of the Saints' Perseverance Explained and Confirmed"
+      , identifiers :=
+          [ .url "https://archive.org/details/worksofjohnowend0011owen"
+                 (some "2026-11-17") ] }
+  , publisher := "Johnstone and Hunter"
+  , place := some "London and Edinburgh"
+  , volume := some "11" }
+
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'

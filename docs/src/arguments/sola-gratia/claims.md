@@ -110,6 +110,10 @@ either.
 | <a id="claim-51"></a>\\(P_{51}\\) | 2 Peter 2:20–22 describes true believers who fall back into the world | interpretive | Arminian, disputed | [Wesley 1827](../../bibliography.md#wesley-works-9-1827), pp. 445–446; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 625 |
 | <a id="claim-52"></a>\\(P_{52}\\) | In his sin David lost the Holy Spirit and his faith | interpretive | Christian, hist.-gramm., disputed | [Concordia Triglotta 1921](../../bibliography.md#concordia-triglotta-1921), §Smalcald Articles III.iii.43 |
 | <a id="claim-53"></a>\\(P_{53}\\) | A believer can know, without a special revelation, that he will persevere | theological | Roman Catholic, disputed | [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 16; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), p. 46; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), ch. 12; [Council of Trent 1848](../../bibliography.md#waterworth-trent-1848), pp. 39–40 |
+| <a id="claim-54"></a>\\(P_{54}\\) | Romans 8:29–30 is a chain from which no one drops: every one justified is glorified | interpretive | Reformed Protestant, disputed | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), pp. 582–583; [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 557; [Wesley](../../bibliography.md#wesley-explanatory-notes-nt), p. 384; [Wesley 1827](../../bibliography.md#wesley-works-9-1827), p. 413 |
+| <a id="claim-55"></a>\\(P_{55}\\) | 1 John 2:19, read of every apostate: all who fall away were never true believers | interpretive | Reformed Protestant, disputed | [Owen](../../bibliography.md#owen-works-11-perseverance), pp. 594–595; [Calvin 1855](../../bibliography.md#calvin-commentaries-catholic-epistles), pp. 191–192; [Schaff 1887](../../bibliography.md#npnf1-05-1887), pp. 479–480 |
+| <a id="claim-56"></a>\\(P_{56}\\) | Considered in himself, apart from God's decree, the one who perseveres could have fallen | theological | Christian, hist.-gramm., consensus | [Schaff 1977](../../bibliography.md#schaff-creeds-christendom-3-1977), p. 594; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I q.23 a.6 ad 2; [Boethius 1897](../../bibliography.md#boethius-consolation-james-1897), pp. 263–264 |
+| <a id="claim-57"></a>\\(P_{57}\\) | God knows all things as present to his eternity, which imposes no necessity on them | theological | Christian, hist.-gramm., well supported | [Boethius 1897](../../bibliography.md#boethius-consolation-james-1897), pp. 257–262; [Aquinas 1920](../../bibliography.md#aquinas-summa-1920), §I q.14 a.13; [Wesley 1872](../../bibliography.md#wesley-sermons-1872), §Sermon 58, §5 |
 
 </div>
 
@@ -531,27 +535,27 @@ def john10Inference : Source :=
 <a id="bridgeInference"></a>
 **`bridgeInference`**
 
-**The rating of the step from 1 John 2:19 to "everyone truly justified is
-among the elect": `disputed`.** Augustine grants the text, and reads its "not of
-us" as not of the elect, and still denies the conclusion: those who fell away
-"were not of the number of children, even when they were in the faith of
-children" (*On Rebuke and Grace*, ch. 20). They had true faith and were not
-elect. Trent condemns the conclusion outright: anathema to anyone who says
-"that he that falls and sins was never truly justified" (Session VI, canon 23).
-Calvin draws it: "God indeed favours none but the elect alone with the Spirit of
-regeneration" (*Hebrews*, p. 138).
+The rating of the step from 1 John 2:19, read of every apostate, to
+"everyone truly justified is among the elect": `wellSupported`. Owen draws it:
+"If all they who fall away totally … were never true believers … then those who
+are true believers cannot fall away; but the first is true, therefore the
+latter" (*Works*, vol. 11, p. 595). No reader was found who grants the reading
+and denies the conclusion. The dissent is from the reading: Augustine holds that
+those who left "were in goodness", "in the faith of children", and not elect
+(*On Rebuke and Grace*, ch. 20); Trent condemns the conclusion outright,
+anathema to anyone who says "that he that falls and sins was never truly
+justified" (Session VI, canon 23).
 
 ```lean
 def bridgeInference : Source :=
-  {
-    primary :=
-      Reference.work npnfAugustineAntiPelagian (Bib.Locus.pages 479 480),
+  { primary := Reference.work owenPerseverance (Bib.Locus.page 595),
     supporting :=
-      [Reference.work calvinHebrews (Bib.Locus.pages 137 138),
+      [Reference.work calvinCatholicEpistles (Bib.Locus.pages 191 192),
+        Reference.work calvinHebrews (Bib.Locus.pages 137 138),
         trent✝ "canon 23",
         waterworth✝ 47],
-    tradition := Tradition.christianHistoricalGrammatical,
-    confidence := Confidence.disputed }
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.wellSupported }
 ```
 
 <a id="joinInference"></a>
@@ -702,27 +706,54 @@ def asConditionThatCanFailSource : Source :=
 <a id="romans8Inference"></a>
 **`romans8Inference`**
 
-**The rating of the step from Romans 8:29–30 to "no one truly justified can
-finally fall away": `disputed`.** Wesley grants the text and denies the
-conclusion. To the objection "For whom he justified, them he also glorified" he
-answers, "This proves no more than that all who are glorified, are pardoned and
-sanctified first" (*Predestination Calmly Considered*, §76), and in his notes:
-"Provided they continued in his goodness … He does not deny that a believer may
-fall away and be cut off between his special calling and his glorification".
-Augustine reads the chain of the called "according to His purpose", and holds
-that other truly justified people fall away (*On Rebuke and Grace*, chs. 14, 23).
-Calvin reads it of "the elect … whom he also inwardly draws" (*Romans*, p. 319)
-and accepts the conclusion, because he also holds that everyone truly justified
-is elect; the step as written here does not carry that claim.
+The rating of the step from Romans 8:29–30, read as a chain from which no
+one drops, to "no one truly justified can finally fall away": `wellSupported`.
+Dort draws it: God decreed to give the elect "true faith, justification, and
+sanctification; and having powerfully preserved them … finally to glorify them"
+(I, article 7), and its Rejection of Errors condemns those who teach election to
+justifying faith without election to salvation, "dissolving this golden chain of
+salvation" (I.2, in Latin). No reader was found who grants the reading and
+denies the conclusion. The dissent is from the reading: Wesley answers that the
+verse "proves no more than that all who are glorified, are pardoned and
+sanctified first" (*Predestination Calmly Considered*, §76), and that Paul "does
+not affirm … that precisely the same number of men are called, justified, and
+glorified" (*Notes*, on Romans 8:30). Augustine reads the chain of those
+"called according to His purpose", and holds that others truly justified fall
+away (*On Rebuke and Grace*, chs. 14, 23).
 
 ```lean
 def romans8Inference : Source :=
-  { primary := Reference.work wesleyWorks9 (Bib.Locus.page 413),
+  { primary := Reference.work schaffCreeds3 (Bib.Locus.pages 582 583),
     supporting :=
-      [Reference.work wesleyNotes (Bib.Locus.page 384),
+      [Reference.work schaffCreeds3 (Bib.Locus.page 557),
+        Reference.work wesleyWorks9 (Bib.Locus.page 413),
+        Reference.work wesleyNotes (Bib.Locus.page 384),
         Reference.work npnfAugustineAntiPelagian (Bib.Locus.pages 480 481),
         Reference.work calvinRomans (Bib.Locus.pages 319 320)],
-    tradition := Tradition.arminian, confidence := Confidence.disputed }
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.wellSupported }
+```
+
+<a id="timelessInference"></a>
+**`timelessInference`**
+
+The rating of the step from God's knowing all things as present to "the one
+who perseveres could, considered in himself, have fallen away": `wellSupported`.
+Boethius draws it: things foreseen, "viewed, however, in themselves, … desist not
+from the absolute freedom naturally theirs" (*Consolation* V, prose 6, pp.
+263–264); and Aquinas: "it is possible for one who is predestinated considered in
+himself to die in mortal sin; yet it is not possible, supposed … that he is
+predestinated" (I q.23 a.6, ad 2). No reader was found who grants the premise
+and denies the conclusion.
+
+```lean
+def timelessInference : Source :=
+  { primary := Reference.work boethiusConsolation (Bib.Locus.pages 263 264),
+    supporting :=
+      [Reference.work aquinasSumma (Bib.Locus.sectionRef "I q.23 a.6 ad 2"),
+        Reference.work aquinasSumma (Bib.Locus.sectionRef "I q.14 a.13")],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.wellSupported }
 ```
 
 <a id="hebrews10Inference"></a>
