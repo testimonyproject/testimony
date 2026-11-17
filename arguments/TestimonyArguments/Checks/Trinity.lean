@@ -38,12 +38,12 @@ The Triune God
 /--
 info: the charges, against every argument's lines:
 The Triune God
-  lines: 13, read: 0
+  lines: 34, read: 0
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.Trinity
 
-/-- info: every package has a model with its postulates: 18, and 0 undecided -/
+/-- info: every package has a model with its postulates: 28, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.Trinity
 
@@ -57,6 +57,8 @@ The Triune God
 
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:
+caseDispute.finite: 56 I, 24 RA, 27 CA, 0 PA, 138 edges
+deityDispute.finite: 31 I, 9 RA, 14 CA, 0 PA, 70 edges
 orderDispute.finite: 20 I, 8 RA, 8 CA, 0 PA, 43 edges
 processionDispute.finite: 16 I, 6 RA, 2 CA, 0 PA, 26 edges
 and 0 hearings, drawn with the disputes they restrict
