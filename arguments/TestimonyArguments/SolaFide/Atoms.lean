@@ -554,8 +554,20 @@ inductive Claim
   Spirit and the Letter* 26.45). A claim about what Augustine wrote. -/
   | augustineGivesBothSenses
   /-- Romans 5:19 says: "through the obedience of the one man the many will be
-  made righteous" (δίκαιοι κατασταθήσονται). -/
+  made righteous" (δίκαιοι κατασταθήσονται). The word is the adjective "righteous"
+  (δίκαιος), and "made righteous" is what it means there: the many "will really
+  be righteous", as Ziesler, who reads the verb otherwise, grants. -/
   | romans5_19ManyMadeRighteous
+  /-- The adjective "righteous" (δίκαιος) in Romans 5:19 bears on Paul's verb
+  "justify" (δικαιόω): what "made righteous" means there is what the verb means
+  in Paul. Fitzmyer's reading needs this, since 5:19 has the adjective and not
+  the verb, and it is what Ziesler denies. -/
+  | romans5_19BearsOnTheVerb
+  /-- God's verdict is effective: in declaring the sinner righteous, God makes him
+  righteous. "Not only a forensic effect, but as forensic also an 'effective'
+  meaning" (Kertelge, quoted by Fitzmyer). A claim about what God's declaration
+  does. -/
+  | godsVerdictIsEffective
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaFide

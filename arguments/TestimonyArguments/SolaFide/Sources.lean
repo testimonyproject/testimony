@@ -908,10 +908,36 @@ def baseCite : Claim → AtomMeta
   | .romans5_19ManyMadeRighteous =>
     { label := "Romans 5:19: through the obedience of the one the many will be made righteous"
     , kind := .textual
+      -- `consensus`: the text, and what its adjective means there, which both
+      -- sides grant. Ziesler, p. 199: "certainly something more than forensic",
+      -- the many "will really be righteous".
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.romans, 5, 19⟩ }]
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
+  | .romans5_19BearsOnTheVerb =>
+    { label := "Romans 5:19's ‘righteous’ (δίκαιος) bears on what Paul's verb ‘justify’ means"
+    , kind := .linguistic
+      -- `disputed`. Fitzmyer, pp. 118–19: "the effective sense seems to be
+      -- supported by 5:19". Ziesler, p. 199, grants the verse and that the many
+      -- "will really be righteous", and denies the bridge: the word there is the
+      -- adjective, not the verb.
+    , source :=
+        { primary := .work fitzmyerRomans (.pages 118 119)
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .godsVerdictIsEffective =>
+    { label := "God's verdict is effective: declaring the sinner righteous, it makes him righteous"
+    , kind := .theological
+      -- `disputed`. Fitzmyer, pp. 118–19, quoting Kertelge: declaring upright has
+      -- "not only a forensic effect, but as forensic also an 'effective'
+      -- meaning". Ziesler, p. 212, grants that the justified are also "made a new
+      -- creature", the two moments "interdependent and inseparable", and holds
+      -- that the renewal is not what the verb says (pp. 162–63).
+    , source :=
+        { primary := .work fitzmyerRomans (.pages 118 119)
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
   | .aqedahOathMeritedByObedience =>
     { label := "The oath of Genesis 22:16–18 was merited by the binding of Isaac"
     , kind := .interpretive

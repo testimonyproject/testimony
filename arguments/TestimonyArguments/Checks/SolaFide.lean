@@ -43,7 +43,7 @@ Sola fide
 /--
 info: the charges, against every argument's lines:
 Sola fide
-  lines: 51, read: 32
+  lines: 53, read: 34
   attribute a view, against the argument's record:
     sandersLine: secondTempleJudaism, unrecorded
     trentWordLine: augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
@@ -59,6 +59,12 @@ Sola fide
     paulineWithoutWorksOfLaw: dikaioo, ergaNomou
     renewalWordLine: dikaioo
     romansFourExegesisLine: erga
+  read one word by a kindred one, the bridge unstated:
+    trentWordLine: iustificare for dikaioo (translation)
+  cite a voice for one reading, leaving out another the record has:
+    trentWordLine: augustine, also verdict in augustineGivesBothSenses
+  conclude a word's sense from no use or reading of the word:
+    effectiveVerdictLine: dikaioo as makeRighteous
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaFide
