@@ -14,15 +14,21 @@ name: PDF
 # request's, so its PDFs already credit the pull request's own commits to its
 # author, as the real merge will if the author merges it.
 #
+# Each document also gives its date and version under its title, and ends with
+# how to make it again from its commit. scripts/edition.py works those out here,
+# for the same reason: the commit being typeset is not known when the .tex is
+# generated. On a pull request it is GitHub's trial merge, and the document
+# says it is a preview of that pull request.
+#
 # On a pull request this is the check that the print edition still typesets, so
 # a LaTeX error is caught before it reaches main. docs.yml calls it to put the
 # PDFs beside the site, and release.yml to attach them to a tagged release.
 #
-# The arguments' and the examples' .tex files are generated but committed, and
-# ci.yml fails a change that leaves them stale, so they are typeset as
-# committed. Their bibliographies are not committed beside them: the arguments'
-# is the committed references.bib at the root, copied beside each; the examples' is
-# written by `lake exe exampletex`, which is why this job builds that package.
+# The arguments' and the examples' .tex files, and references.bib, are generated
+# from the Lean source here (scripts/generate-docs.sh), not committed, so this job
+# builds the arguments and the examples. The arguments' bibliography is the
+# generated references.bib, copied beside each document; the examples' is
+# written beside theirs by `lake exe exampletex`.
 #
 # On a pull request it runs only when the change touches a build input, as
 # ci.yml's build does (scripts/ci_changes.py), and the image is rebuilt only
@@ -101,6 +107,10 @@ jobs:
       - name: Fetch Mathlib oleans
         run: lake exe cache get
 
+      # The documents are generated from the Lean source, not committed.
+      - name: Generate documentation
+        run: scripts/generate-docs.sh
+
       # The checkout belongs to the runner, not to the container's user, and
       # git refuses to read a repository someone else owns until told it is
       # safe.
@@ -108,20 +118,19 @@ jobs:
         run: |
           git config --global --add safe.directory "$GITHUB_WORKSPACE"
           python3 scripts/credits.py docs/latex docs/latex/arguments
+          python3 scripts/edition.py docs/latex docs/latex/arguments
           cp references.bib docs/latex/
           cp references.bib docs/latex/arguments/
           # Each document twice: on A4, and on US Letter as <name>-letter.pdf.
           scripts/typeset.sh docs/latex/arguments.tex docs/latex/arguments/*.tex
           scripts/typeset.sh --paper letter docs/latex/arguments.tex docs/latex/arguments/*.tex
 
-      # `exampletex` writes the documents and the bibliography beside them;
-      # `--check` first, so a stale committed document fails here as in ci.yml
-      # rather than being typeset as regenerated.
+      # `exampletex`, in the generation step, wrote the documents and the
+      # bibliography beside them.
       - name: Examples
         working-directory: examples
         run: |
-          lake exe exampletex --check
-          lake exe exampletex
+          python3 ../scripts/edition.py docs/latex
           ../scripts/typeset.sh docs/latex/*.tex
           ../scripts/typeset.sh --paper letter docs/latex/*.tex
 
@@ -136,4 +145,18 @@ jobs:
         with:
           name: pdfs
           path: pdf/
+          if-no-files-found: error
+
+      # The site's generated pages, for the deploy in docs.yml to build the book
+      # from.
+      - uses: actions/upload-artifact@v4
+        with:
+          name: generated
+          path: |
+            references.bib
+            docs/src/bibliography.md
+            docs/src/arguments/
+            docs/src/SUMMARY.md
+            docs/src/roadmap.md
+            docs/src/maturity.md
           if-no-files-found: error

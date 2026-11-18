@@ -15,10 +15,10 @@ Run them in this order. Each catches what the previous one cannot.
 | 3 | `lake exe axiom-audit` | `sorry`, `native_decide`, undeclared axioms |
 | 4 | `python3 scripts/testimony_lint.py` | The project-specific rules below |
 
-Plus `lake exe bibgen --check`, `lake exe argtex --check`,
-`lake exe statusgen --check` and `lake exe argdoc --check` for generated-file
-drift. The library and each package built on it are held to the tiers in their
-own directories: the arguments in `arguments/`, where those four tools are.
+Plus `scripts/generate-docs.sh`, which writes the generated pages and
+documents (not committed) and fails if a generator does. The library and each
+package built on it are held to the tiers in their own directories: the
+arguments in `arguments/`, where the generators are.
 
 **`lake build` passing is not "it builds".** Three further gates exist, and
 tier 3 in particular catches things nothing else will — a `decide` proof that
@@ -377,19 +377,18 @@ the problem.
 **What can be generated is generated.** The roadmap's status table is emitted
 from the `@[headline]` results by `lake exe statusgen`, the way `bibgen` emits
 the bibliography and `argtex` the rendered arguments. Rename a theorem, restate
-it, delete it, or add one, and the table moves on the next run;
-`lake exe statusgen --check` fails CI if the committed copy has not. The block
-between the two `<!-- ... statusgen -->` markers in `docs/src/roadmap.md` is
-generated: do not edit it by hand.
+it, delete it, or add one, and the table moves on the next run. The page is
+not committed: its hand-written prose is in `docs/templates/roadmap.md`, around
+an empty block between the two `<!-- ... statusgen -->` markers, and the
+generator writes `docs/src/roadmap.md` from it, for CI and for you.
 
 The argument pages under `docs/src/arguments/` go further: `lake exe argdoc`
 writes each one whole, from the module docstrings and the declarations of the
 argument's own files, and `lake exe argtex` sets the same material for print.
 A docstring is therefore documentation in the ordinary sense — write it for a
 reader, because a reader will meet it on the site and in the PDF — and there is
-nothing to keep in step, because there is no second copy. Do not edit those
-pages, `docs/latex/arguments.tex`, or the `<!-- ... argdoc -->` block in
-`docs/src/SUMMARY.md`, by hand.
+nothing to keep in step, because there is no second copy. None of them is
+committed; the summary's hand-written part is `docs/templates/SUMMARY.md`.
 
 **What cannot be generated is checked.** Prose about *why* an argument matters
 is not derivable from theorem statements, so it stays hand-written. Rule L9

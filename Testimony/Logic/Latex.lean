@@ -27,9 +27,16 @@ variable in a formula is a link to its row in the legend, and a derivation puts
 its claims in words on three kinds of row: a premise that is a claim, which the
 position holds; a step, by what it *would give*, whether or not the position
 holds what the step needs; and the turnstile row, by the conclusion *at issue*,
-whether or not the premises reach it. A claim met only inside a step is left to
-its link. The words are the legend's label, run on after the formula and
-wrapping beneath it.
+whether or not the premises reach it. Inside a derivation, a claim met only
+inside a step is left to its link. The words are the legend's label, run on
+after the formula and wrapping beneath it.
+
+A step that stands alone, as a line of reason does under its docstring, has no
+rows above it to have said its claims, so it is built up from them instead
+(`step`): each claim it needs, in words, with its rating and source; then what
+they give, after the "therefore" sign (∴); then the formula. The reader meets
+the claims in the order the step uses them, and the formula comes last, as a
+summary.
 
 The marks are there because the words are read as sentences. Unmarked, a step's
 words in a rival's package read as the rival conceding them, and the turnstile's
@@ -604,6 +611,26 @@ def gloss [DecidableEq α] (n : Numbering α) (concl : Option (Formula α)) (φ 
 def loneGloss [DecidableEq α] (n : Numbering α) (φ : Formula α) : Option String :=
   n.cite.bind fun cite => loneGlossWith (inWords n cite) φ
 
+/-- A step whose grounds and whose result are each a list of claims
+(`literals`): the claims it needs, then the claims it gives. `none` for any
+other shape, which is set as a single formula. A denial is no step: it gives
+nothing to build up to. -/
+def stepClaims : Formula α → Option (List (α × Bool) × List (α × Bool))
+  | .imp _ .falsum => none
+  | .imp p q => do pure ((← literals p), (← literals q))
+  | _ => none
+
+/-- A claim as a formula: the atom, or its denial. -/
+def literal (a : α) (denied : Bool) : Formula α :=
+  if denied then .imp (.atom a) .falsum else .atom a
+
+/-- The sentence a step built up from its claims opens with, in print and on the
+site alike. -/
+def stepOpening : String := "If each of these holds,"
+
+/-- The words that close a step built up from its claims, before its formula. -/
+def stepSymbols : String := "In symbols, the step is"
+
 /-- One row of a derivation: how it starts (an `\item` with its label, or the
 preamble's `\breakrow` where a page may break before it), its formula, and the
 formula's words after a dash, through the preamble's `\gloss`. -/
@@ -642,6 +669,87 @@ def derivation [DecidableEq α] (n : Numbering α) (prems : List (Formula α))
     String.join (prems.zipIdx.map fun (φ, i) =>
       row n (numbered i (prems.length + 1)) φ (gloss n (some concl) φ)) ++
     row n "\\item[\\(\\vdash\\)]" concl (n.cite.bind fun cite => inWords n cite .atIssue concl)
+
+/-- A claim set as a step sets it: its variable, linked, then its words, a denied
+claim marked so. -/
+def claimWords [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) (a : α)
+    (denied : Bool) : String :=
+  "\\(" ++ linked n (literal a denied) ++ "\\)\\enspace " ++
+    (if denied then "\\emph{" ++ Lead.held.denial ++ ":} " else "") ++ escape (cite a).label
+
+/-- One claim a step needs, in its own words, with how firmly it is held and who
+holds it: so a reader meets the claim where the step uses it, and need not turn
+to the legend. -/
+def groundRow [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) (start : String)
+    (a : α) (denied : Bool) : String :=
+  "  " ++ start ++ " " ++ claimWords n cite a denied ++
+    "\\gloss{" ++ confidence (cite a).source.confidence ++ ": " ++ source (cite a).source ++
+    "}\n"
+
+/-- **A step, built up from its claims.** A step written as a formula,
+`(P₂ ∧ P₃ ∧ P₈) → P₂₅`, names its claims by number and leaves the reader to look
+each one up. Set this way, the step is read in the order a reader follows it:
+each claim it needs, in words, with its rating and its source; then what those
+claims together give, after the "therefore" sign (∴); and only then the
+formula, which says the same in symbols. The formula is kept, and every
+variable in it still links to the legend, so nothing a logician reads is lost.
+
+A step that is not a list of claims leading to a list of claims, or a page with
+no legend to take the words from, is set as one row, as before. -/
+def step [DecidableEq α] (n : Numbering α) (φ : Formula α) : String :=
+  match n.cite, stepClaims φ with
+  | some cite, some (needs, gives) =>
+    let count := needs.length + gives.length
+    "\\par\\smallskip\\noindent " ++ stepOpening ++ "\n" ++
+    rows (String.join (needs.zipIdx.map fun ((a, d), i) =>
+        groundRow n cite (numbered i count) a d) ++
+      String.join (gives.map fun (a, d) =>
+        "  \\item[\\(\\therefore\\)] " ++ claimWords n cite a d ++ "\n")) ++
+    "\\noindent " ++ stepSymbols ++ " \\(" ++ linked n φ ++ "\\).\n"
+  | _, _ => rows (row n "\\item[]" φ (loneGloss n φ))
+
+/-- **A source in words.** Who holds a claim or a step, where, and how firmly,
+as a sentence: the rating and the tradition, then every reference, the primary
+first. It is the legend's "held" and "source" columns, said for one source on
+its own, so a rating that stands under a step's docstring reads as the legend
+does and not as the Lean that records it. -/
+def sourceWords (s : Source) : String :=
+  "\\par\\smallskip\\noindent Rated \\emph{" ++ confidence s.confidence ++ "}, held in the " ++
+    escape (tradition s.tradition) ++ " tradition: " ++ source s ++ ".\n"
+
+/-- **A claim's citation in words**: the claim, what kind of claim it is, and
+its source as `sourceWords` gives it. -/
+def claimWords' (m : AtomMeta) : String :=
+  "\\par\\smallskip\\noindent The claim: \\emph{" ++ escape m.label ++ "} (" ++ kind m.kind ++
+    ")." ++ sourceWords m.source
+
+/-- **A reading in words.** A reading written as a valuation says, of every
+claim, whether it is true; set as Lean it is a `match` over the claims'
+names. In words it is the claims it takes as false, each with its words and
+its link to the legend, and the rest taken as true; or, where it takes fewer
+as true, those, and the rest as false. A claim the page never mentions is left
+out, since nothing on the page turns on it. -/
+def readingWords [DecidableEq α] (n : Numbering α) (truth : List (α × Bool)) : String :=
+  match n.cite with
+  | none => ""
+  | some cite =>
+    let onPage := truth.filter fun (a, _) => n.order.contains a
+    let falses := onPage.filter (!·.2)
+    let trues := onPage.filter (·.2)
+    let (listed, lead, rest) :=
+      if falses.length ≤ trues.length then
+        (falses, "On this reading these claims are false:",
+          if falses.isEmpty then "Every claim on this page is true on this reading."
+          else "Every other claim on this page is true.")
+      else
+        (trues, "On this reading only these claims are true:",
+          "Every other claim on this page is false.")
+    if listed.isEmpty then "\\par\\smallskip\\noindent " ++ rest ++ "\n"
+    else
+      "\\par\\smallskip\\noindent " ++ lead ++ "\n" ++
+      rows (String.join (listed.map fun (a, _) =>
+        "  \\item[] " ++ claimWords n cite a false ++ "\n")) ++
+      "\\noindent " ++ rest ++ "\n"
 
 /-- Which of a package's premises are grounded in scripture alone, as a note
 under its derivation; nothing, in a document none of whose claims cites
@@ -914,12 +1022,14 @@ def item [DecidableEq α] (n : Numbering α) : Page.Item α → String
   | .line d doc l =>
       declLabel d (" --- " ++ escape l.name) ++ prose doc ++
       derivation n l.premises l.delivers
-  | .formula d doc φ =>
-      declLabel d "" ++ prose doc ++ rows (row n "\\item[]" φ (loneGloss n φ))
+  | .formula d doc φ => declLabel d "" ++ prose doc ++ step n φ
   | .formulas d doc φs =>
       declLabel d "" ++ prose doc ++
       rows (String.join (φs.zipIdx.map fun (φ, i) =>
         row n (numbered i φs.length) φ (gloss n none φ)))
+  | .source d doc s => declLabel d "" ++ prose doc ++ sourceWords s
+  | .claim d doc m => declLabel d "" ++ prose doc ++ claimWords' m
+  | .reading d doc truth => declLabel d "" ++ prose doc ++ readingWords n truth
   | .other d doc src => declLabel d "" ++ prose doc ++ verbatim src
   | .result d doc stmt proposed =>
       declLabel d (if proposed then " \\textsuperscript{(proposed)}" else "") ++
@@ -958,6 +1068,112 @@ by hand because a starred section does not do it for itself. -/
 def sectionHeading (title : String) : String :=
   "\\clearpage\n\\section*{" ++ escape title ++ "}\n" ++
   "\\addcontentsline{toc}{section}{" ++ escape title ++ "}\n\n"
+
+/-- The repository every edition is made from, which the last section tells a
+reader to clone. -/
+def repository : String := "https://github.com/testimonyproject/testimony"
+
+/-- **Which edition a document is.** The date and version under its title, and
+the commit its last section tells a reader to check out, as macros a document
+reads from `edition.def` beside it.
+
+None of them belongs in the generator: the same source must make the same
+`.tex` on every machine, and a pull request is typeset from GitHub's merge of
+it, whose commit does not exist until then. So the file is written when the document is
+typeset, by `scripts/edition.py`, from the commit being typeset, as
+`credits.def` is by `scripts/credits.py`. Without it the document says it is an
+unrecorded copy, and dates itself the day it was typeset. -/
+def edition : String :=
+  "\\newif\\ifeditionrecorded\n\\newif\\ifeditionpreview\n" ++
+  "\\newcommand{\\editiondate}{\\today}\n" ++
+  "\\newcommand{\\editionversion}{unrecorded}\n" ++
+  "\\newcommand{\\editioncommit}{COMMIT}\n" ++
+  "\\newcommand{\\editionremark}{}\n" ++
+  "\\InputIfFileExists{edition.def}{}{}\n"
+
+/-- What a reader needs to make one document again: the package it belongs to,
+the program in that package that writes it, and where it is written. -/
+structure Reproduction where
+  /-- The package's directory in the repository: `arguments`, or `examples`. -/
+  package : String
+  /-- The program that writes the document: `argtex`, or `exampletex`. -/
+  tool : String
+  /-- The directory the document is written to, from the repository's root. -/
+  dir : String
+  /-- The document's file name, `sola-fide.tex`. -/
+  file : String
+  /-- Whether the document names the people behind it, so that the steps
+  include working out who they are (`credits`). -/
+  credits : Bool := false
+  /-- The programs to run in the package before `tool`: what writes the files
+  the document needs beside it, such as the bibliography (`bibgen`). -/
+  before : List String := []
+deriving Inhabited, Repr
+
+/-- **How this edition was made**, the document's last section: what made it,
+for a reader who has never heard of Lean, and every step to make it again from
+the commit the edition names (`edition`).
+
+The title matter says only when and which: a reader who wants to cite the
+document needs those, and a reader who wants to check it needs the rest, which
+is too long for a title page. The steps are the ones `.github/workflows/pdf.yml`
+takes, written out for one computer. -/
+def reproduction (r : Reproduction) : String :=
+  let cmd (lines : List String) : String :=
+    "\\begin{alltt}\\small\n" ++ "\n".intercalate lines ++ "\n\\end{alltt}\n"
+  let defs := if r.credits then "docs/latex docs/latex/arguments" else r.dir
+  let pdf := (r.file.dropEnd 4).toString ++ ".pdf"
+  "\n\\clearpage\n\\section*{How this edition was made}\n" ++
+  "\\addcontentsline{toc}{section}{How this edition was made}\n" ++
+  "This document was printed by a program, not set by hand. Its text comes from " ++
+  "the source files of the Testimony library, where each argument is written out " ++
+  "twice: in prose, for a reader, and in Lean, a language for stating proofs that " ++
+  "a computer can check. The prose is printed in the order it is written, and " ++
+  "under each part come the premises, lines of reasoning and results it " ++
+  "introduces, as the source states them. Before anything is printed, the " ++
+  "computer checks every one of those results: where this document says a " ++
+  "conclusion follows from its premises, that it does, and where it says a " ++
+  "conclusion does not follow, that the counterexample it gives really is one. " ++
+  "It does not check that any premise is true.\n\n" ++
+  "\\ifeditionrecorded This edition, version \\editionversion, was made from " ++
+  "the library as it stood on \\editiondate, at the commit named in step 3 " ++
+  "below. A commit is one saved state of every file in the " ++
+  "repository; that string of letters and digits names it, and what it names " ++
+  "never changes. So anyone can make this edition again.\n" ++
+  "\\else This copy was typeset without a record of the commit it was made from, " ++
+  "so the steps below write \\texttt{COMMIT} where an edition names its own. A " ++
+  "commit is one saved state of every file in the repository, named by a string " ++
+  "of letters and digits that never changes what it names.\n\\fi\n\n" ++
+  "You need a computer running Linux or macOS (on Windows, the Windows Subsystem " ++
+  "for Linux), with git, Python~3, an internet connection, and about 10\\,GB of " ++
+  "free disk space.\n" ++
+  "\\begin{enumerate}\n" ++
+  "\\item Install elan, which installs the version of Lean the library asks for:\n" ++
+  cmd ["curl https://elan.lean-lang.org/elan-init.sh -sSf | sh"] ++
+  "\\item Install Tectonic, which sets the pages, following " ++
+  "\\url{https://tectonic-typesetting.github.io/book/latest/installation/}.\n" ++
+  "\\item Fetch the library, and turn it back to this edition's commit:\n" ++
+  cmd ["git clone " ++ repository ++ ".git", "cd testimony",
+    "git checkout \\editioncommit"] ++
+  "\\item Download the mathematics library Lean builds on, already compiled, so " ++
+  "it need not be compiled on your computer:\n" ++
+  cmd ["lake exe cache get"] ++
+  "\\item Check every argument. This is the longest step, and if any proof failed " ++
+  "it would stop here with an error:\n" ++
+  cmd ["cd " ++ r.package, "lake build"] ++
+  "\\item Write the document from the source:\n" ++
+  cmd ((r.before ++ [r.tool]).map ("lake exe " ++ ·) ++ ["cd .."]) ++
+  "\\item Record the edition" ++
+  (if r.credits then ", and work out from the repository's history who wrote " ++
+    "each argument" else "") ++ ":\n" ++
+  cmd ((if r.credits then ["python3 scripts/credits.py " ++ defs] else []) ++
+    ["python3 scripts/edition.py " ++ defs]) ++
+  "\\item Set the pages:\n" ++
+  cmd ["cd " ++ r.dir, "tectonic " ++ r.file] ++
+  "\\end{enumerate}\n" ++
+  "That makes \\texttt{" ++ escape pdf ++ "}. Its words, numbers and references " ++
+  "are this edition's, and so should its pages be: the fonts it is set in come " ++
+  "with Tectonic, not from your computer.\n"
 
 /-- The fonts, and which font sets each script the documents quote.
 
@@ -1057,11 +1273,12 @@ face is FreeSans, so a heading that quotes Greek or Hebrew still has the glyphs
 
 The rest is this library's own: a variable linked to its row in the legend
 (`\pvar`), a derivation's rows (`derivation`), the gloss after a formula
-(`\gloss`), the fonts, and the credit lines (`credits`). -/
+(`\gloss`), the fonts, the edition's date and version (`edition`), and the
+credit lines (`credits`). -/
 def style : String :=
   "\\NeedsTeXFormat{LaTeX2e}\n" ++
   "\\ProvidesPackage{testimony}[Testimony house style, written by the generators]\n" ++
-  "\\usepackage{amsmath,amssymb,array,booktabs,longtable,fontspec,xcolor}\n" ++
+  "\\usepackage{amsmath,amssymb,array,booktabs,longtable,fontspec,xcolor,alltt}\n" ++
   "\\usepackage{tikz}\\usetikzlibrary{arrows.meta}\n" ++
   "\\usepackage[hidelinks]{hyperref}\n" ++
   -- A variable links to its row in the legend, and is coloured so a reader can
@@ -1114,7 +1331,7 @@ def style : String :=
   fonts ++
   "\\setsansfont{FreeSans}[Extension=.otf,UprightFont=*,BoldFont=*Bold,\n" ++
   "  ItalicFont=*Oblique,BoldItalicFont=*BoldOblique]\n" ++
-  credits ++
+  edition ++ credits ++
   "\\endinput\n"
 
 /-- The style file's name, as a document loads it and a generator writes it. -/
@@ -1125,11 +1342,12 @@ the title matter. Needs XeLaTeX: the claims contain Greek, Hebrew and Syriac,
 the rendered Lean contains `¬`, `→` and `⊢`, and `fonts` sets them with XeTeX's
 character classes.
 
-`tool` is the generator the date line names: the library's `argtex`, or a
-package's own. `author`, where given, is set under the title, as LaTeX; it is
-how a document carries its credit (`credits`). -/
-def preamble (title : String) (tool : String := "argtex") (author : String := "") :
-    String :=
+`author`, where given, is set under the title, as LaTeX; it is how a document
+carries its credit (`credits`). Under it come the edition's date and version
+(`edition`), which say to a reader which copy they hold without naming the
+program that made it; how it was made is the last section's business
+(`reproduction`). -/
+def preamble (title : String) (author : String := "") : String :=
   -- `DIV=13` divides the page into thirteen strips and gives the margins three,
   -- a wider text block than `DIV=11` and so fewer pages; `parskip=false` keeps
   -- indented paragraphs, as the prose is written for. The style file sets the
@@ -1143,15 +1361,18 @@ def preamble (title : String) (tool : String := "argtex") (author : String := ""
   "\\usepackage{testimony}\n" ++
   "\\title{" ++ escape title ++ "}\n" ++
   (if author.isEmpty then "" else "\\author{" ++ author ++ "}\n") ++
-  "\\date{Generated by \\texttt{lake exe " ++ tool ++ "}}\n" ++
+  "\\date{\\editiondate\\\\[2pt]{\\small Version \\editionversion" ++
+  "\\ifeditionpreview\\\\\\editionremark\\fi}}\n" ++
   "\\begin{document}\n\\maketitle\n"
 
 /-- The table of contents, which the starred sections opt into by hand. -/
 def contents : String := "\\tableofcontents\n"
 
-/-- Closing matter, including the bibliography built from `references.bib`. -/
-def postamble : String :=
-  "\n\\bibliographystyle{plain}\n\\bibliography{references}\n\\end{document}\n"
+/-- Closing matter: the bibliography built from `references.bib`, then
+`closing`, the sections that come after it (`reproduction`). -/
+def postamble (closing : String := "") : String :=
+  "\n\\bibliographystyle{plain}\n\\bibliography{references}\n" ++ closing ++
+  "\\end{document}\n"
 
 
 /-! ### Golden tests
@@ -1260,6 +1481,43 @@ private def testNumbering : Numbering Nat :=
 #guard loneGloss testNumbering (.imp (.atom 0) (.atom 1)) == some "\\emph{would give:} claim 1"
 #guard loneGloss testNumbering (.and (.atom 0) (.atom 1)) == none
 #guard loneGloss testNumbering (.imp (.atom 0) .falsum) == none
+
+-- A step is built up from its claims: each it needs in words, with its rating and
+-- source, a denied one marked; then what it would give; then the formula.
+#guard step testNumbering (.imp (.and (.atom 0) (.imp (.atom 1) .falsum)) (.atom 2)) ==
+  "\\par\\smallskip\\noindent If each of these holds,\n" ++
+  "\\begin{derivation}\n" ++
+  "  \\item[(1)] \\(\\pvar{A}{1}\\)\\enspace claim 0" ++
+    "\\gloss{disputed: \\emph{proposed:} a test}\n" ++
+  "  \\item[(2)] \\(\\lnot \\pvar{A}{2}\\)\\enspace \\emph{denied:} claim 1" ++
+    "\\gloss{disputed: \\emph{proposed:} a test}\n" ++
+  "  \\item[\\(\\therefore\\)] \\(\\pvar{A}{3}\\)\\enspace claim 2\n" ++
+  "\\end{derivation}\n" ++
+  "\\noindent In symbols, the step is " ++
+    "\\((\\pvar{A}{1} \\land \\lnot \\pvar{A}{2}) \\rightarrow \\pvar{A}{3}\\).\n"
+
+-- A step that is not a list of claims leading to claims is one row, as before.
+#guard step testNumbering (.imp (.or (.atom 0) (.atom 1)) (.atom 2)) ==
+  "\\begin{derivation}\n" ++
+  "  \\item[] \\((\\pvar{A}{1} \\lor \\pvar{A}{2}) \\rightarrow \\pvar{A}{3}\\)" ++
+    "\\gloss{\\emph{would give:} claim 2}\n" ++
+  "\\end{derivation}\n"
+
+-- A reading says, in words, the claims it takes as false, or, where fewer, the
+-- claims it takes as true; a claim the page does not mention is left out.
+#guard readingWords testNumbering [(0, true), (1, false), (2, true), (7, false)] ==
+  "\\par\\smallskip\\noindent On this reading these claims are false:\n" ++
+  "\\begin{derivation}\n  \\item[] \\(\\pvar{A}{2}\\)\\enspace claim 1\n\\end{derivation}\n" ++
+  "\\noindent Every other claim on this page is true.\n"
+#guard readingWords testNumbering [(0, false), (1, false), (2, true)] ==
+  "\\par\\smallskip\\noindent On this reading only these claims are true:\n" ++
+  "\\begin{derivation}\n  \\item[] \\(\\pvar{A}{3}\\)\\enspace claim 2\n\\end{derivation}\n" ++
+  "\\noindent Every other claim on this page is false.\n"
+
+-- A source says its rating, its tradition and its references.
+#guard sourceWords (testCite 0).source ==
+  "\\par\\smallskip\\noindent Rated \\emph{disputed}, held in the adversarial trial " ++
+  "tradition: \\emph{proposed:} a test.\n"
 
 -- What is not a list of claims has no words: a disjunction, a denied conjunction.
 #guard gloss testNumbering none (.or (.atom 0) (.atom 1)) == none

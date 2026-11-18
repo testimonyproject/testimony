@@ -3,19 +3,19 @@ name: Docs
 on:
   push:
     branches: [main]
-    # What the site and the PDFs beside it are made from. The book reads only
-    # docs/; the PDFs are typeset from docs/latex/ and from the examples
-    # package, which `exampletex` builds on the library. A change to an
-    # argument reaches the site through the pages it regenerates, under docs/,
-    # so arguments/ is not listed. Nothing else on main changes what is
-    # deployed. This workflow is no pull request's check, so a filter here can
+    # What the site and the PDFs beside it are made from: the hand-written
+    # pages and templates under docs/, and the Lean source the generated pages
+    # and documents are written from (scripts/generate-docs.sh, in pdf.yml's
+    # job), the arguments and the examples among it. Nothing else on main
+    # changes what is deployed. This workflow is no pull request's check, so a filter here can
     # leave no required check waiting.
     paths:
       - docs/**
       - examples/**
       - Testimony/**
       - Testimony.lean
-      - references.bib
+      - arguments/**
+      - scripts/generate-docs.sh
       - lakefile.toml
       - lake-manifest.json
       - lean-toolchain
@@ -64,6 +64,12 @@ jobs:
     container: ${{ needs.image.outputs.image }}
     steps:
       - uses: actions/checkout@v4
+
+      # The pages the generators wrote, in pdf.yml's job: they are not
+      # committed.
+      - uses: actions/download-artifact@v4
+        with:
+          name: generated
 
       - name: Build book
         run: mdbook build docs

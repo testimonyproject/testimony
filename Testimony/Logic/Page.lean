@@ -282,8 +282,16 @@ inductive Item (α : Type)
   | formula (decl doc : String) (φ : Formula α)
   /-- A named list of formulas, usually grounds shared between lines. -/
   | formulas (decl doc : String) (φs : List (Formula α))
-  /-- A declaration shown as Lean: a countermodel, whose content is a function,
-  or anything else the renderer does not read. -/
+  /-- Who holds something, where, and how firmly: a `Source`, usually the
+  rating of an inference step. -/
+  | source (decl doc : String) (s : Source)
+  /-- One claim's citation, written out on its own: an `AtomMeta`. -/
+  | claim (decl doc : String) (m : AtomMeta)
+  /-- A reading written as a valuation, usually a countermodel: each claim on
+  the page, with whether the reading takes it as true. Read off the definition
+  when the page is harvested, one claim at a time. -/
+  | reading (decl doc : String) (truth : List (α × Bool))
+  /-- A declaration shown as Lean: anything the renderer does not read. -/
   | other (decl doc source : String)
   /-- A result, with the statement as Lean states it. -/
   | result (decl doc statement : String) (proposed : Bool)
