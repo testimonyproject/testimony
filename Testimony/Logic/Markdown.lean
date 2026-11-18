@@ -321,9 +321,14 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
     String.intercalate "\n" (e.restsOn.map (restingClaim order e.cite)) ++
     (if Page.Explanation.isLiteral e.crux then "" else
       "\n  - the step itself — " ++
-      (if e.inferences.isEmpty then "*unrated*" else
-        String.intercalate "; " (e.inferences.map fun s =>
-          "*" ++ confidence s.confidence ++ "*: " ++ source s))) ++ "\n"
+      (match e.rating with
+       | some s => "*" ++ confidence s.confidence ++ "*: " ++ source s
+       | none =>
+         if e.inferences.isEmpty then "*unrated*" else
+           "*not rated on its own*. These ratings are for the steps of *" ++
+           escape e.holder ++ "* together, not for this one: " ++
+           String.intercalate "; " (e.inferences.map fun s =>
+             "*" ++ confidence s.confidence ++ "*: " ++ source s))) ++ "\n"
 
 /-- Every reading of a rival's claim, answered: each horn with what the claim
 commits the rival to, who reads it that way, and what happens to it against

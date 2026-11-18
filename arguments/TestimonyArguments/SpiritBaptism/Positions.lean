@@ -373,5 +373,6 @@ def whereTheVarietyMeetsThePattern : Because varietyCase pentecostalOnAPattern :
     (by simp [varietyCase])
     (by simp [spiritBaptismDefs])
     (by decide +kernel)
+  |>.ratedBy agAgainstTheVariety (by simp [varietyCase, spiritBaptismDefs])
 
 end TestimonyArguments.SpiritBaptism

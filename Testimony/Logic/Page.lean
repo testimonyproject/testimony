@@ -39,8 +39,11 @@ structure Explanation (α : Type) where
   /-- Whether the holder's conclusion needs the crux, or the crux only answers
   the rival. -/
   derives : Bool
-  /-- The holder's cited inferences: what rates a crux that is a step rather
-  than a claim. -/
+  /-- The citation that rates a crux that is a step rather than a claim, when
+  one of the holder's inferences is named as the step's own. -/
+  rating : Option Source
+  /-- All the holder's cited inferences, which rate its steps together: what a
+  page can say of a step whose own rating is not named. -/
   inferences : List Source
 
 namespace Explanation

@@ -320,6 +320,7 @@ def whereTheSignifyingReadingMeetsLeupold : Because posterityCase protoevangeliu
       tauto)
     (by simp [bornOfAVirginDefs, ArgumentPackage.readAs, Line.asPackage, Line.premises])
     (by decide +kernel)
+  |>.ratedByLine posterityLine rfl (by simp [posterityCase, bornOfAVirginDefs, Line.asPackage])
 
 /-- **Why Lewis stands against the hinge, read as Luther reads it.** The crux is
 Lewis's step: Genesis speaks of Hagar's and Rebekah's seed too, so the woman's
@@ -339,6 +340,7 @@ def whereTheSignifyingReadingMeetsLewis : Because idiomCase protoevangeliumAsSig
       tauto)
     (by simp [bornOfAVirginDefs, ArgumentPackage.readAs, Line.asPackage, Line.premises])
     (by decide +kernel)
+  |>.ratedByLine idiomLine rfl (by simp [idiomCase, bornOfAVirginDefs, Line.asPackage])
 
 /-- **What the woman's seed marks, read both ways.** The claim is the
 protoevangelium strand's hinge: the seed being named as the woman's marks a
