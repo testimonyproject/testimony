@@ -31,6 +31,7 @@ how they are spelled.
 | False dilemma | does a move pick one reading where others are fair? | would use `Dilemma` | not yet |
 | Straw man | does a move answer a view its subject does not hold? | `Move.strawMen` | built |
 | Misquotation | does a quotation say what the move says it says? | `says`, then a corpus | not yet |
+| Sense from elsewhere | does the move take a word's sense from a doctrine, not the word? | `Move.sensesFromElsewhere` | built |
 | Selective citation | does the move cite a voice for one reading and omit another? | `Move.omissions` | built |
 | Cherry-picking | which texts on the same words does the move ignore? | a query over meanings | not yet |
 | Double standard | does a party rest a claim on what its own rule refuses? | `ArgumentPackage.heldTo` | claims built |
@@ -169,6 +170,17 @@ condition, as it does on an unstated sameness of sense (`Move.unbridged`).
 Latin (`latinForGreek`). **Passed over.** The same move with the bridge stated
 (`adjectiveBridged`), and a move that has the verb's own evidence beside its adjective
 (`verbItself`), which reads nothing by anything. `wordshift_cases` pins them.
+
+A move can also take a word's sense from no word at all. "God's verdict brings about the
+sinner's renewal, so the verb 'justify' means to make righteous" draws the verb's sense from a
+claim about what God does. Barr called reading a doctrine into each use of its word
+illegitimate totality transfer. A move **draws a sense from elsewhere** when its conclusion says
+a word means something at a place, and no premise gives that sense to the word, to a kindred
+word the move reads it by, or as someone's reading of it, and no premise is a text, from whose
+setting the sense could be read (`Move.sensesFromElsewhere`). It is
+reported, not charged: the word may yet have the sense, but the move has not shown it from the
+word. `elsewhere_cases` pins the doctrine case as caught, and the kindred-word, translation and
+own-evidence cases as passed over.
 
 ## Begging the question
 
@@ -371,7 +383,8 @@ reports, for each argument:
 - the lines that attribute a view, and how each attribution stands to the record;
 - the lines that are conditional on a word keeping its sense, with the words;
 - the lines that read one word by a kindred one without stating the bridge;
-- the lines that cite a voice for one reading and leave out another the record has.
+- the lines that cite a voice for one reading and leave out another the record has;
+- the lines that conclude what a word means from no use or reading of the word.
 
 For a line, the record of a voice is the argument's other claims that say, or deny, what the
 voice held or how it read a word. The line's own claims are left out of it, because a ground

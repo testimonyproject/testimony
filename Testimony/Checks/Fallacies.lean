@@ -36,7 +36,10 @@ types, and reports, for each argument:
 - and the lines that cite a voice for one reading of a word when the record has
   the same voice reading it another way as well
   (`Testimony.Semantics.Move.omissions`). Not a fault either: a reader is owed
-  the other reading, and the page should give it.
+  the other reading, and the page should give it;
+- and the lines that conclude what a word means from no use or reading of the
+  word, as from a doctrine (`Testimony.Semantics.Move.sensesFromElsewhere`).
+  Reported, not charged.
 
 The report is pinned. It fails the build if a line equivocates on its own terms,
 argues from silence alone, or answers a straw man: the library may not do what it
@@ -100,6 +103,10 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
     | os => some (n ++ ": " ++ "; ".intercalate (os.map fun (a, others) =>
         ((a.voice?.map atomName).getD "?") ++ ", also " ++ ", ".intercalate
           (others.map fun (s, cs) => atomName s ++ " in " ++ names cs)))
+  let elsewhere := moves.filterMap fun (n, m) =>
+    if m.sensesFromElsewhere.isEmpty then none else
+      some (n ++ ": " ++ ", ".intercalate (m.sensesFromElsewhere.map fun (w, _, s) =>
+        atomName w ++ " as " ++ atomName s))
   let conditional := moves.filterMap fun (n, m) =>
     if m.conditionalOn.isEmpty then none else
       some (n ++ ": " ++ ", ".intercalate (m.conditionalOn.map fun w => atomName w))
@@ -116,7 +123,8 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
     part "attribute a view, against the argument's record" attributing ++
     part "need a word to keep its sense, unstated" conditional ++
     part "read one word by a kindred one, the bridge unstated" shifting ++
-    part "cite a voice for one reading, leaving out another the record has" omitting
+    part "cite a voice for one reading, leaving out another the record has" omitting ++
+    part "conclude a word's sense from no use or reading of the word" elsewhere
   (String.intercalate "\n" (head ++ body), equivocating.length + silent.length + strawMen.length)
 
 /-- Whether a constant's type is `Line C`, and `C` its argument's claim type. -/
