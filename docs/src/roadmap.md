@@ -14,7 +14,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
 
-**8 arguments**, carrying **376 headline results**, listed below in source order. 10 of them are marked ⚗: results this library constructs rather than reports, with no source found advancing it in that form.
+**8 arguments**, carrying **379 headline results**, listed below in source order. 13 of them are marked ⚗: results this library constructs rather than reports, with no source found advancing it in that form.
 
 ### [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md)
 
@@ -215,6 +215,9 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `genesis_strikes_the_maccabees_reading` | `maccabeesAssessment.findings.struck = [Claim.countingWasForTheTesting] ∧ ∀ (s : Standard), ¬Dissent.Credible s maccabeesAssessment.dissent` | **Genesis strikes the reading 1 Maccabees needs, and then it no longer dissents.** Genesis counts Abram's believing at 15:6 and places the testing "after these things" (22:1). |
 | `kuruvilla_does_not_reach_the_counting` | `∀ (s : Standard), ¬Dissent.Credible s kuruvillaAssessment.dissent` | **Kuruvilla does not dissent from the step from Genesis 15**, under any standard. |
 | `abraham_step_ratings` | `genesisFifteenStep.ratings = [(Standard.evidence, Computed.stands Confidence.wellSupported), (Standard.tradition, Computed.stands Confidence.wellSupported), (Standard.scriptural, Computed.stands Confidence.wellSupported)]` | **The step from Genesis 15 stands at `wellSupported` under every standard.** No dissent found survives its checks. |
+| `paulsWord_burden` ⚗ | `OpponentsBurden paulsWordCase paulsWordRoads [] [] [[0, 1], [0, 2]]` | **What a reader must deny to hold that Paul's "justify" means renewal.** The case reaches its conclusion by two roads: from how the word is used, and from Romans 4, where Paul … |
+| `trentsWord_burden` ⚗ | `OpponentsBurden trentsWordCase [trentWordLine] [] [] [[0]]` | **Trent's reading of Paul's word, on Augustine's explanation alone, fails at one point.** Deny the step from Augustine's explanation, and the Latin West's, to what Paul's Greek … |
+| `trentsWordAtItsStrongest_burden` ⚗ | `OpponentsBurden trentsWordAtItsStrongest trentsWordRoads [] [] [[0, 1]]` | **What a reader must deny to hold that Paul's "justify" does not mean renewal, against Trent's reading at its strongest.** There is one way: deny both readings, the step from … |
 
 ### [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md)
 

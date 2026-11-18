@@ -46,6 +46,7 @@
   - [John: "this is the work of God, that you believe"](./arguments/sola-fide/john.md)
   - [Where Trent parts from Paul](./arguments/sola-fide/trent-and-paul.md)
   - [What Trent means by justification](./arguments/sola-fide/trents-definition.md)
+  - [What each side must deny about Paul's word](./arguments/sola-fide/what-each-side-must-deny.md)
   - [Does justification have degrees?](./arguments/sola-fide/degrees.md)
   - [James 2:24: "not by faith alone"](./arguments/sola-fide/james.md)
   - [Abraham, counted righteous](./arguments/sola-fide/abraham.md)

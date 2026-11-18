@@ -935,6 +935,16 @@ inward sense, and to supply one from the doctrine is the mistake Barr called
 "illegitimate totality transfer": reading into one use of a word everything it
 can mean elsewhere. So Paul's "justify" does not mean renewal.
 
+The second of those draws on Titus 3:5–7, "the washing of regeneration and
+renewal of the Holy Spirit … so that being justified by his grace". So the line
+also needs "justified" there to be the word in Paul's sense, and it says so: a
+line that set one text beside another without it would rest on a word keeping
+its sense unsaid. Ziesler holds that it does: outside Romans and Galatians "in
+each case the use is forensic", and Titus 3:7, "while forensic", only hints at
+renewal "in the background" (*The Meaning of Righteousness in Paul*, 162). That
+does not need Paul to have written Titus, which is `disputed`
+(`titusIsPauline`), only that the verb there keeps his sense.
+
 The line says nothing about what God does when he justifies. That is the other
 way of reading Trent's definition, and this line does not reach it
 (the chapter [What Trent means by justification](trents-definition.md)).
@@ -943,8 +953,9 @@ way of reading Trent's definition, and this line does not reach it
 
 - (1) \\(\href{claims.html#claim-49}{P_{49}}\\) — In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous
 - (2) \\(\href{claims.html#claim-50}{P_{50}}\\) — Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’
-- (3) \\(\href{claims.html#claim-51}{P_{51}}\\) — A word contributes the least meaning its context requires; one occurrence does not carry the whole concept
-- (4) \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\)
+- (3) \\(\href{claims.html#claim-124}{P_{124}}\\) — Titus 3:5–7 uses ‘justified’ (δικαιόω) in the sense of Paul's letters
+- (4) \\(\href{claims.html#claim-51}{P_{51}}\\) — A word contributes the least meaning its context requires; one occurrence does not carry the whole concept
+- (5) \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-124}{P_{124}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-52}{P_{52}}\\) — *at issue, the denial of:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
 
 </div>
@@ -956,7 +967,9 @@ way of reading Trent's definition, and this line does not reach it
 
 The reading of Romans 4:3–8. Paul uses the language of an account ("counted",
 λογίζομαι), sets it against wages, and explains what is counted by quoting a
-psalm. Cited to Moo on Romans. Rated `wellSupported`: Augustine and Trent accept
+psalm. It explains the one "count" by the other, so it needs the word to keep
+its sense from 4:4–5 to 4:6–8, and says so (`romans4CountKeepsItsSense`). Cited
+to Moo on Romans. Rated `wellSupported`: Augustine and Trent accept
 the texts and dispute what follows from them, not what Paul says the counting
 is.
 
@@ -1026,7 +1039,8 @@ The second step puts the first to work, and it goes two ways.
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes
 - (2) \\(\href{claims.html#claim-55}{P_{55}}\\) — Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted
 - (3) \\(\href{claims.html#claim-56}{P_{56}}\\) — ‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one
-- (4) \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\)
+- (4) \\(\href{claims.html#claim-125}{P_{125}}\\) — ‘Count’ (λογίζομαι) keeps its sense from Romans 4:4–5 to 4:6–8
+- (5) \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}} \land \href{claims.html#claim-125}{P_{125}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-57}{P_{57}}\\) — *at issue:* In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted
 
 </div>
@@ -2002,9 +2016,10 @@ usage.
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes
 - (2) \\(\href{claims.html#claim-55}{P_{55}}\\) — Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted
 - (3) \\(\href{claims.html#claim-56}{P_{56}}\\) — ‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one
-- (4) \\(\href{claims.html#claim-51}{P_{51}}\\) — A word contributes the least meaning its context requires; one occurrence does not carry the whole concept
-- (5) \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\) — *would give:* In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted
-- (6) \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\)
+- (4) \\(\href{claims.html#claim-125}{P_{125}}\\) — ‘Count’ (λογίζομαι) keeps its sense from Romans 4:4–5 to 4:6–8
+- (5) \\(\href{claims.html#claim-51}{P_{51}}\\) — A word contributes the least meaning its context requires; one occurrence does not carry the whole concept
+- (6) \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}} \land \href{claims.html#claim-125}{P_{125}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\) — *would give:* In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted
+- (7) \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-52}{P_{52}}\\) — *at issue, the denial of:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
 
 </div>
@@ -2023,9 +2038,10 @@ verb, justification is not the renewal of the inward person.
 - (1) \\(\href{claims.html#claim-4}{P_{4}}\\) — Romans 4:4–5 contrasts wages owed with a gift reckoned to the one who believes
 - (2) \\(\href{claims.html#claim-55}{P_{55}}\\) — Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted
 - (3) \\(\href{claims.html#claim-56}{P_{56}}\\) — ‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one
-- (4) \\(\href{claims.html#claim-49}{P_{49}}\\) — In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous
-- (5) \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\) — *would give:* In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted
-- (6) \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-49}{P_{49}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\)
+- (4) \\(\href{claims.html#claim-125}{P_{125}}\\) — ‘Count’ (λογίζομαι) keeps its sense from Romans 4:4–5 to 4:6–8
+- (5) \\(\href{claims.html#claim-49}{P_{49}}\\) — In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous
+- (6) \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}} \land \href{claims.html#claim-125}{P_{125}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\) — *would give:* In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted
+- (7) \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-49}{P_{49}}) \rightarrow \lnot \href{claims.html#claim-33}{P_{33}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-33}{P_{33}}\\) — *at issue, the denial of:* Justification is not remission of sins only, but renewal of the inward man
 
 </div>
@@ -2045,8 +2061,9 @@ requires. So Paul's "justify" does not mean the renewal of the inward person.
 
 - (1) \\(\href{claims.html#claim-49}{P_{49}}\\) — In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous
 - (2) \\(\href{claims.html#claim-50}{P_{50}}\\) — Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’
-- (3) \\(\href{claims.html#claim-51}{P_{51}}\\) — A word contributes the least meaning its context requires; one occurrence does not carry the whole concept
-- (4) \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\)
+- (3) \\(\href{claims.html#claim-124}{P_{124}}\\) — Titus 3:5–7 uses ‘justified’ (δικαιόω) in the sense of Paul's letters
+- (4) \\(\href{claims.html#claim-51}{P_{51}}\\) — A word contributes the least meaning its context requires; one occurrence does not carry the whole concept
+- (5) \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-124}{P_{124}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-52}{P_{52}}\\) — *at issue, the denial of:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
 
 </div>

@@ -170,6 +170,9 @@ positions in the debate carry.
 | <a id="claim-121"></a>\\(P_{121}\\) | The righteousness counted at Genesis 15:6 was credited for Abraham's faithfulness when tested | interpretive | Second Temple Jewish, disputed | [United States Conference of Catholic Bishops 2011](../../bibliography.md#usccb-nabre-2011), ad loc. 1 Macc 2:52 |
 | <a id="claim-122"></a>\\(P_{122}\\) | The blessing of Genesis 22:16–18 was augmented because of Abraham's obedience | interpretive | Christian, hist.-gramm., disputed | [Kuruvilla 2012](../../bibliography.md#kuruvilla-aqedah-2012), p. 507 |
 | <a id="claim-123"></a>\\(P_{123}\\) | The oath of Genesis 22:16–18 was merited by the binding of Isaac | interpretive | Roman Catholic, disputed | [Hahn 2005](../../bibliography.md#hahn-covenant-oath-aqedah-2005), p. 93 |
+| <a id="claim-124"></a>\\(P_{124}\\) | Titus 3:5–7 uses ‘justified’ (δικαιόω) in the sense of Paul's letters | linguistic | Christian, hist.-gramm., plausible | [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), p. 162; Titus 3:5-7 |
+| <a id="claim-125"></a>\\(P_{125}\\) | ‘Count’ (λογίζομαι) keeps its sense from Romans 4:4–5 to 4:6–8 | linguistic | Christian, hist.-gramm., well supported | [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:3 |
+| <a id="claim-126"></a>\\(P_{126}\\) | Romans 5:19: through the obedience of the one the many will be made righteous ※ | textual | Christian, hist.-gramm., consensus | Rom 5:19 |
 
 </div>
 

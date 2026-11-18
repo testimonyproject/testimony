@@ -539,6 +539,23 @@ inductive Claim
   /-- The covenant oath of Genesis 22:16–18, to bless the nations through
   Abraham's seed, was merited by the binding of Isaac (Hahn). -/
   | aqedahOathMeritedByObedience
+  /-- Titus 3:5–7 uses "justified" (δικαιόω) in the sense Paul's letters give it:
+  "being justified by his grace" is the verdict sense, set beside "the washing
+  of regeneration and renewal of the Holy Spirit". The line on Paul's word
+  draws on Titus 3:5–7 for Paul's usage, and so needs this. -/
+  | titus3_7UsesDikaioAsPaul
+  /-- "Count" (λογίζομαι) keeps one sense through Romans 4:3–11: the same in 4:4–5,
+  where faith is "counted as righteousness", and in 4:6–8, where the Lord "will
+  not count his sin". Paul joins Genesis 15:6 and Psalm 32:2 by the word they share, and his
+  explanation of the one by the other needs the word to keep its sense. -/
+  | romans4CountKeepsItsSense
+  /-- Augustine gives both senses of "being justified": "being made righteous",
+  and, as a second way of taking it, "deemed, or reckoned as just" (*On the
+  Spirit and the Letter* 26.45). A claim about what Augustine wrote. -/
+  | augustineGivesBothSenses
+  /-- Romans 5:19 says: "through the obedience of the one man the many will be
+  made righteous" (δίκαιοι κατασταθήσονται). -/
+  | romans5_19ManyMadeRighteous
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaFide

@@ -872,6 +872,46 @@ def baseCite : Claim → AtomMeta
         { primary := .work kuruvillaAqedah (.page 507)
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
+  | .titus3_7UsesDikaioAsPaul =>
+    { label := "Titus 3:5–7 uses ‘justified’ (δικαιόω) in the sense of Paul's letters"
+    , kind := .linguistic
+      -- `plausible`: Ziesler, p. 162, over every use of the verb outside Romans
+      -- and Galatians: "in each case the use is forensic", and Titus 3:7 and
+      -- 1 Corinthians 6:11, "while forensic, also hint at moral renewal in the
+      -- background". It does not need Paul to have written Titus
+      -- (`titusIsPauline`, `disputed`): only that the verb keeps his sense.
+    , source :=
+        { primary := .work zieslerRighteousnessInPaul (.page 162)
+        , supporting := [.scripture [{ ref := .range ⟨.titus, 3, 5, 3, 7⟩ }]]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .plausible } }
+  | .romans4CountKeepsItsSense =>
+    { label := "‘Count’ (λογίζομαι) keeps its sense from Romans 4:4–5 to 4:6–8"
+    , kind := .linguistic
+      -- `wellSupported`, on the evidence `logizomaiIsReckoning` cites: the
+      -- lexicon and Moo read the verb through Romans 4:3–11 as crediting to an
+      -- account, one sense across the passage, which is this claim.
+    , source :=
+        { primary := .work bdag (.sectionRef "s.v. λογίζομαι")
+        , supporting := [.work mooRomans (.adLoc ⟨.romans, 4, 3⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .augustineGivesBothSenses =>
+    { label := "Augustine gives both senses of ‘being justified’: made righteous, and deemed just"
+    , kind := .historical
+      -- `consensus`: what Augustine wrote, in the chapter Trent's line cites.
+    , source :=
+        { primary := .work npnfAugustineAntiPelagian
+            (.sectionRef "On the Spirit and the Letter, ch. 45 (26.45)")
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .romans5_19ManyMadeRighteous =>
+    { label := "Romans 5:19: through the obedience of the one the many will be made righteous"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.romans, 5, 19⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
   | .aqedahOathMeritedByObedience =>
     { label := "The oath of Genesis 22:16–18 was merited by the binding of Isaac"
     , kind := .interpretive

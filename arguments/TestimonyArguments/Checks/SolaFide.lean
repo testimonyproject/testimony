@@ -35,7 +35,7 @@ Sola fide
   the only means: held by 3, used of a text or voice by 9; derives:
     justificationByFaithAlone excludes baptismIsInstrumentalCause
   the whole ground: held by 3, used of a text or voice by 6; derives nothing
-  the same sense, both ways: stated or denied by 3; derives nothing
+  the same sense, both ways: stated or denied by 5; derives nothing
 -/
 #guard_msgs in
 #check_ontology under TestimonyArguments.SolaFide
@@ -43,10 +43,10 @@ Sola fide
 /--
 info: the charges, against every argument's lines:
 Sola fide
-  lines: 49, read: 31
+  lines: 51, read: 32
   attribute a view, against the argument's record:
     sandersLine: secondTempleJudaism, unrecorded
-    trentWordLine: augustine, unrecorded; latinWest, unrecorded
+    trentWordLine: augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
   need a word to keep its sense, unstated:
     catholicJamesWordLine: erga, dikaioo
     catholicJamesWorksLine: erga, dikaioo
@@ -54,17 +54,16 @@ Sola fide
     jamesLexicalLine: dikaioo
     johannineLine: pisteuo
     johannineWithoutTrust: pisteuo
-    lexicalLine: dikaioo
     paulineLine: dikaioo, ergaNomou
     paulineWithoutPistisChristou: dikaioo, ergaNomou
     paulineWithoutWorksOfLaw: dikaioo, ergaNomou
     renewalWordLine: dikaioo
-    romansFourExegesisLine: logizomai, erga
+    romansFourExegesisLine: erga
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaFide
 
-/-- info: every package has a model with its postulates: 88, and 0 undecided -/
+/-- info: every package has a model with its postulates: 91, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaFide
 
@@ -80,7 +79,7 @@ Sola fide
 info: every dispute, as an AIF graph meeting Definition 1.1:
 jamesDispute.finite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
 jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
-solaFideDispute.finite: 67 I, 30 RA, 33 CA, 0 PA, 160 edges
+solaFideDispute.finite: 69 I, 30 RA, 33 CA, 0 PA, 162 edges
 and 3 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in

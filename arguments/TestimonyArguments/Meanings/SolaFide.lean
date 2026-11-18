@@ -335,6 +335,15 @@ def means : Claim → Statement
     .opaque "The blessing of Gen 22:16–18 was augmented because of Abraham's obedience"
   | .aqedahOathMeritedByObedience =>
     .opaque "The oath of Gen 22:16–18 was merited by the binding of Isaac (Hahn)"
+  | .titus3_7UsesDikaioAsPaul => .sameSense .dikaioo (.passage titus3_5_7) (.usage .paul)
+  | .romans4CountKeepsItsSense =>
+    .also (.sameSense .logizomai (.passage rom4_4_5) (.passage rom4_6_8)) <|
+      .also (.sameSense .logizomai (.passage rom4_4_5) (.passage (rg .romans 4 3 4 11)))
+        (.sameSense .logizomai (.passage rom4_6_8) (.passage (rg .romans 4 3 4 11)))
+  | .augustineGivesBothSenses =>
+    .also (.glosses .augustine .dikaioo .makeRighteous) (.glosses .augustine .dikaioo .verdict)
+  | .romans5_19ManyMadeRighteous =>
+    .opaque "Through the obedience of the one man the many will be made righteous (Rom 5:19)"
   | .countingWasForTheTesting =>
     .opaque "What was counted at Gen 15:6 was credited for his faithfulness when tested"
   | .abrahamFoundFaithfulWhenTested =>
@@ -390,7 +399,9 @@ def all : List Claim :=
   , .gen15CovenantIsGodsOathAlone, .abrahamCountedRighteousWithoutWorks
   , .gen22_16BecauseYouObeyed, .abrahamFoundFaithfulWhenTested, .grantRewardsPastLoyalty
   , .abrahamsGrantRewardsHisObedience, .countingWasForTheTesting
-  , .aqedahBlessingAugmentedForObedience, .aqedahOathMeritedByObedience ]
+  , .aqedahBlessingAugmentedForObedience, .aqedahOathMeritedByObedience
+  , .titus3_7UsesDikaioAsPaul, .romans4CountKeepsItsSense, .augustineGivesBothSenses
+  , .romans5_19ManyMadeRighteous ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -405,21 +416,22 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **Ninety-seven of the hundred and twenty-eight are analysed.** Of the
-thirty-one that are not, fifteen are the claims of the chapters on whether
+/-- **A hundred of the hundred and thirty-two are analysed.** Of the
+thirty-two that are not, fifteen are the claims of the chapters on whether
 justification has degrees and on Abraham, whose content (a verdict's degrees, a
 covenant rite, a grant, a testing) the vocabulary cannot yet state. Of the other
-sixteen, four are Pius XII's and Trent's claims about the Vulgate and one is the
+seventeen, four are Pius XII's and Trent's claims about the Vulgate and one is the
 textual principle, whose content is a rule about texts and translations the
-vocabulary cannot yet state; the other eleven are the narrative texts of the
+vocabulary cannot yet state; the other twelve are the narrative texts of the
 thief and the tax collector, John 3:36's "whoever does not obey" and the
 Reformed reading of the obedience it requires,
 Galatians 1:6–9, Christ's command to baptise,
 Trent's "laver, or the desire thereof", Luke's law-observance, the texts that
-promise a reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each
-needs a word the vocabulary lacks — a command, a curse, a disjunction, a story's
-outcome, a reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (97, 128) := by decide +kernel
+promise a reward, 1 Peter 2:5 on sacrifices acceptable through Christ, and
+Romans 5:19's "the many will be made righteous". Each needs a word the
+vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
+reward, acceptance, an opposite, the adjective "righteous" (δίκαιος). -/
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (100, 132) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the
@@ -428,14 +440,15 @@ Matthew 3:11, three ways. Fifteen readings at six places; each pair is counted
 in both orders, so twenty-six ordered pairs. -/
 theorem contested_length : (HasMeanings.contested (α := Claim)).length = 26 := by decide
 
-/-- **Twenty-one claims turn on δικαιόω**: six Pauline texts that use it or
+/-- **Twenty-three claims turn on δικαιόω**: six Pauline texts that use it or
 name renewal beside it; the forensic reading of Paul's word, the renewal reading,
-and Augustine's gloss; the verdict and the tax collector of Luke 18; James
+Augustine's gloss, and the two senses he gives; that Titus 3:5–7 uses it in
+Paul's sense; the verdict and the tax collector of Luke 18; James
 2:21–25, James 2:24, and whether 2:24 is compatible with Paul; the word outside
 Paul, Trent's reading of James's word, and the claim that James's word is
 Paul's; and Revelation 22:11 and Sirach 18:22, each in the Latin and in the
 Greek. -/
-theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 21 := by decide
+theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 23 := by decide
 
 /-- **The sola fide joins**: each pair of claims whose meanings exclude each
 other, read for what their words mean (`Testimony.Ontology.shared`). Every

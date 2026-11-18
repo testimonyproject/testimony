@@ -9,13 +9,14 @@ Claims are numbered once for the whole argument, so P₁ means the same claim in
 
 This argument is also set for print, the claims linked and the derivations in words as here, in [a PDF of its own](../pdf/arguments/sola-fide.pdf). [One PDF](../pdf/arguments.pdf) holds every argument together, and each tagged [release](https://github.com/testimonyproject/testimony/releases) of the project carries a copy.
 
-This argument is set in 14 chapters:
+This argument is set in 15 chapters:
 
 - [What sola fide claims](sola-fide.md)
 - [Four witnesses: Paul, Luke, Acts and John](sola-fide/four-witnesses.md)
 - [John: "this is the work of God, that you believe"](sola-fide/john.md)
 - [Where Trent parts from Paul](sola-fide/trent-and-paul.md)
 - [What Trent means by justification](sola-fide/trents-definition.md)
+- [What each side must deny about Paul's word](sola-fide/what-each-side-must-deny.md)
 - [Does justification have degrees?](sola-fide/degrees.md)
 - [James 2:24: "not by faith alone"](sola-fide/james.md)
 - [Abraham, counted righteous](sola-fide/abraham.md)

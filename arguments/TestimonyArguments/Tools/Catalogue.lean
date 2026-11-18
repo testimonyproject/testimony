@@ -28,6 +28,8 @@ def solaFideChapters : List Chapter :=
     , modules := [`TestimonyArguments.SolaFide.Gospel] }
   , { slug := "trents-definition", title := "What Trent means by justification"
     , modules := [`TestimonyArguments.SolaFide.Definition] }
+  , { slug := "what-each-side-must-deny", title := "What each side must deny about Paul's word"
+    , modules := [`TestimonyArguments.SolaFide.Burdens] }
   , { slug := "degrees", title := "Does justification have degrees?"
     , modules := [`TestimonyArguments.SolaFide.Verdict] }
   , { slug := "james", title := "James 2:24: \"not by faith alone\""
