@@ -277,12 +277,12 @@ class RuleTests(unittest.TestCase):
         """The incident this rule exists for: a page citing a theorem that was
         replaced, which stayed wrong until someone happened to reread it."""
         text = "`almah_is_load_bearing` recorded that defeating the word defeats it.\n"
-        found = L.lint_doc("docs/src/roadmap.md", text, {"almah_not_load_bearing"})
+        found = L.lint_doc("docs/templates/roadmap.md", text, {"almah_not_load_bearing"})
         self.assertIn("L9", rules(found))
 
     def test_L9_documentation_naming_a_result_that_exists(self):
         text = "`almah_not_load_bearing` now holds.\n"
-        found = L.lint_doc("docs/src/roadmap.md", text, {"almah_not_load_bearing"})
+        found = L.lint_doc("docs/templates/roadmap.md", text, {"almah_not_load_bearing"})
         self.assertNotIn("L9", rules(found))
 
     def test_L9_qualified_name_of_a_removed_result(self):
@@ -427,13 +427,13 @@ class RuleTests(unittest.TestCase):
         self.assertEqual([line], L._strip_comments([line]))
 
     def test_L12_long_markdown_line(self):
-        found = L.lint_markdown("docs/src/roadmap.md", "x" * 120 + "\n")
+        found = L.lint_markdown("docs/templates/roadmap.md", "x" * 120 + "\n")
         self.assertIn("L12", rules(found))
         self.assertIn("120 columns", str(found[0]))
 
     def test_L12_short_markdown_line(self):
         text = "The prose is as much of the deliverable as the Lean.\n"
-        self.assertEqual([], L.lint_markdown("docs/src/roadmap.md", text))
+        self.assertEqual([], L.lint_markdown("docs/templates/roadmap.md", text))
 
     def test_L12_counts_characters_not_bytes(self):
         """The corpus is full of Greek, Hebrew and mathematical symbols. A byte
@@ -465,7 +465,7 @@ class RuleTests(unittest.TestCase):
             "--- | ---\n"
             "`parity_leaves_the_canon_open` | " + "prose " * 30 + "\n"
         )
-        self.assertEqual([], L.lint_markdown("docs/src/roadmap.md", text))
+        self.assertEqual([], L.lint_markdown("docs/templates/roadmap.md", text))
 
     def test_L12_prose_after_a_table_is_not_exempt(self):
         """A GFM table ends at the first blank line. Prose under one is prose."""
@@ -476,7 +476,7 @@ class RuleTests(unittest.TestCase):
             "\n"
             + "q" * 120 + "\n"
         )
-        self.assertEqual([5], [f.line for f in L.lint_markdown("docs/src/roadmap.md", text)])
+        self.assertEqual([5], [f.line for f in L.lint_markdown("docs/templates/roadmap.md", text)])
 
     def test_L12_a_thematic_break_does_not_open_a_table(self):
         """`---` with no pipe is a horizontal rule, not a delimiter row, so the
@@ -492,7 +492,7 @@ class RuleTests(unittest.TestCase):
             + "x" * 200 + "\n"
             "<!-- END GENERATED: lake exe statusgen -->\n"
         )
-        self.assertEqual([], L.lint_markdown("docs/src/roadmap.md", text))
+        self.assertEqual([], L.lint_markdown("docs/templates/roadmap.md", text))
 
     def test_L12_prose_around_a_generated_block_is_not_exempt(self):
         """The reason the rule reads markers rather than paths: `roadmap.md`
@@ -505,7 +505,7 @@ class RuleTests(unittest.TestCase):
             "<!-- END GENERATED: lake exe statusgen -->\n"
             + "z" * 120 + "\n"
         )
-        found = L.lint_markdown("docs/src/roadmap.md", text)
+        found = L.lint_markdown("docs/templates/roadmap.md", text)
         self.assertEqual([1, 5], [f.line for f in found])
 
     def test_L12_argdoc_block_is_exempt_too(self):
@@ -515,7 +515,7 @@ class RuleTests(unittest.TestCase):
             + "- [An argument](./arguments/a.md) " + "x" * 100 + "\n"
             "<!-- END GENERATED: lake exe argdoc -->\n"
         )
-        self.assertEqual([], L.lint_markdown("docs/src/SUMMARY.md", text))
+        self.assertEqual([], L.lint_markdown("docs/templates/SUMMARY.md", text))
 
     def test_L12_frontmatter_is_exempt(self):
         """A skill's `description:` is one YAML scalar the loader reads whole.
@@ -561,7 +561,7 @@ class RuleTests(unittest.TestCase):
             "[GitHub issue](https://github.com/testimonyproject/testimony/issues)"
             " and every one of them is tracked there.\n"
         )
-        self.assertIn("L12", rules(L.lint_markdown("docs/src/roadmap.md", text)))
+        self.assertIn("L12", rules(L.lint_markdown("docs/templates/roadmap.md", text)))
 
     def test_L12_a_reference_link_is_how_a_long_link_fits(self):
         """The same sentence, written the way the rule asks for."""
@@ -571,7 +571,7 @@ class RuleTests(unittest.TestCase):
             "\n"
             "[issues]: https://github.com/testimonyproject/testimony/issues\n"
         )
-        self.assertEqual([], L.lint_markdown("docs/src/roadmap.md", text))
+        self.assertEqual([], L.lint_markdown("docs/templates/roadmap.md", text))
 
     def test_L12_a_code_fence_is_not_exempt(self):
         """Deliberately not exempt: a sample too wide for 100 columns is too
@@ -644,7 +644,7 @@ class RuleTests(unittest.TestCase):
     def test_markdown_files_excludes_generated_pages(self):
         found = [str(p) for p in L.markdown_files(Path("."))]
         self.assertIn("CLAUDE.md", found)
-        self.assertIn("docs/src/roadmap.md", found)
+        self.assertIn("docs/templates/roadmap.md", found)
         self.assertIn(".claude/skills/encoding-an-argument/SKILL.md", found)
         self.assertNotIn("docs/src/bibliography.md", found)
         self.assertFalse([p for p in found if p.startswith("docs/src/arguments/")])
@@ -659,7 +659,7 @@ class RuleTests(unittest.TestCase):
         """`bibgen` owns the bibliography; L9 does not second-guess it."""
         found = [str(p) for p in L.doc_files(Path("."))]
         self.assertIn("README.md", found)
-        self.assertIn("docs/src/roadmap.md", found)
+        self.assertIn("docs/templates/roadmap.md", found)
         self.assertNotIn("docs/src/bibliography.md", found)
 
     def test_clean_file_has_no_findings(self):

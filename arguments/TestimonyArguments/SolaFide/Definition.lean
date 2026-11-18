@@ -272,6 +272,7 @@ def whereTrentsWordReadingFalls : Because lexicalCase tridentineOnPaulsWord :=
       tauto)
     (by simp [solaFideDefs, tridentinePremises, Line.premises])
     (by decide +kernel)
+  |>.ratedByLine lexicalLine rfl (by simp [lexicalCase, solaFideDefs, Line.asPackage])
 
 /-- **Why Paul's word stands against the Latin reading of it.** The same step, and a
 second contradiction in the same branch. Trent rests its reading of Paul's word
@@ -294,6 +295,7 @@ def whereTheLatinReadingFalls : Because lexicalCase tridentineOnPaulsWord :=
       tauto)
     (by simp [solaFideDefs, tridentinePremises, Line.premises])
     (by decide +kernel)
+  |>.ratedByLine lexicalLine rfl (by simp [lexicalCase, solaFideDefs, Line.asPackage])
 
 /-- **Why Paul's gospel stands against Trent taken as a claim about what God does.**
 The same step as `whereTrentPartsFromPaul`, and the same contradiction: from a
@@ -313,6 +315,7 @@ def whereTrentsGraceReadingFalls : Because galatianGospel tridentineOnWhatGodDoe
       tauto)
     (by simp [solaFideDefs, tridentinePremises, Line.premises])
     (by decide +kernel)
+  |>.ratedBy verdictNotRenewalSource (by simp [galatianGospel, solaFideDefs])
 
 /-! ### Romans 4 -/
 
@@ -385,6 +388,7 @@ def whereRomansFourMeetsTheWordReading : Because romansFourOnTheWord tridentineO
       tauto)
     (by simp [solaFideDefs, tridentinePremises, Line.premises])
     (by decide +kernel)
+  |>.ratedBy leastMeaningSource (by simp [romansFourOnTheWord, solaFideDefs])
 
 /-- **Why Romans 4 stands against Trent taken as a claim about what God does.**
 Everything turns on the step from Paul's explanation, with the courtroom sense
@@ -410,6 +414,7 @@ def whereRomansFourMeetsWhatGodDoes : Because romansFourCase tridentineOnWhatGod
       tauto)
     (by simp [solaFideDefs, tridentinePremises, Line.premises])
     (by decide +kernel)
+  |>.ratedBy romansFourReadingSource (by simp [romansFourCase, solaFideDefs])
 
 /-! ### The two put together -/
 

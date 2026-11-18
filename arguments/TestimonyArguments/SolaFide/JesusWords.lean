@@ -440,6 +440,7 @@ def whyLukeEighteenStandsAgainstTrent : Because luke18Case tridentineCase :=
     (by simp [luke18Case, luke18Line, Line.premises])
     (by simp [solaFideDefs, trentDefinitionSteps, Line.premises])
     (by decide +kernel)
+  |>.ratedByLine luke18Line rfl (by simp [luke18Case, solaFideDefs])
 
 /-! ### How strong each position is
 
