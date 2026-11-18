@@ -18,6 +18,7 @@ project this is — not a claim that the formalism proves the cross.
 | `testimony-mark-small.svg` | Simplified for ≤48px: QED square and finials dropped, heavier strokes, fills more of the tile. |
 | `testimony-mark-light.svg` | Navy on white, for slides, print, papers. |
 | `testimony-social.svg` | 2:1 banner with wordmark and proof-tree scaffolding. |
+| `testimony-short-header.svg` | 1080×236 header bar (mark, wordmark, URL) for the top band of vertical videos. Transparent outside the bar. |
 
 PNG/JPG files are **generated** — never edit them. Change the SVG, re-run:
 
@@ -43,9 +44,13 @@ native resolution (not downscaled from one master), so strokes stay crisp.
 | social-1280×640 | GitHub social preview, X header |
 | social-1600×800 | Patreon cover, high-DPI Open Graph |
 | social-2400×1200 | Retina / print banner |
+| short-header-1080×236 | Header bar on YouTube Shorts and other 1080×1920 videos (PNG only, transparent) |
 
 Prefer PNG. Use JPG only where a platform rejects PNG; all marks carry an
 opaque background, so nothing is lost to the missing alpha channel.
+The Shorts header is the exception: it is exported as PNG only, with a clear
+background, so it can sit over video. Re-export just that file with
+`python3 export.py testimony-short-header-1080x236`.
 
 ## Palette
 
