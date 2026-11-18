@@ -35,9 +35,8 @@ from fnmatch import fnmatchcase
 
 # Files no build step reads, beside the Markdown files at the root (README,
 # CLAUDE.md, REVIEW.md and the rest). `fnmatchcase`'s `*` crosses `/`, so
-# `docs/*` is the whole tree. Hand-written pages only: the generated ones are written by the
-# arguments' generators, and `--check` fails a change that leaves them stale, so
-# touching one is a reason to build.
+# `docs/*` is the whole tree, but for docs/templates/, which the generators
+# read (below).
 NOT_BUILD_INPUTS = (
     "docs/*",
     "LICENSE*",
@@ -55,17 +54,11 @@ NOT_BUILD_INPUTS = (
     ".dockerignore",
 )
 
-# Written by `lake exe bibgen`, `argtex`, `statusgen`, `argdoc` and
-# `exampletex`, and checked by their `--check`.
-GENERATED = (
-    "references.bib",
-    "docs/src/bibliography.md",
-    "docs/src/roadmap.md",
-    "docs/src/SUMMARY.md",
-    "docs/src/arguments/*",
-    "docs/latex/*",
-    "examples/docs/latex/*",
-)
+# Read by the generators (`scripts/generate-docs.sh`): the hand-written prose
+# of the pages that hold a generated block. A change to one changes what the
+# generators write, so it is checked by running them. What they write is not
+# committed, so it is never in a diff.
+GENERATOR_INPUTS = ("docs/templates/*",)
 
 # The workflows that run the build, and this script: a change to them is
 # checked by running them.
@@ -95,7 +88,7 @@ def matches(path: str, patterns: tuple[str, ...]) -> bool:
 
 def is_build_input(path: str) -> bool:
     """Whether a change to `path` needs the build."""
-    if matches(path, GENERATED) or matches(path, BUILD_WORKFLOWS):
+    if matches(path, GENERATOR_INPUTS) or matches(path, BUILD_WORKFLOWS):
         return True
     if path.endswith(".md") and "/" not in path:
         return False

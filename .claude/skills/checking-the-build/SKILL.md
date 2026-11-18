@@ -26,10 +26,8 @@ python3 scripts/testimony_lint.py    # 4, over every package
 cd arguments                         # the arguments, built on the library: 1-3 again
 lake build && lake lint && lake exe axiom-audit
 ../scripts/kernel-replay.sh TestimonyArguments bibgen argtex statusgen argdoc
-lake exe bibgen --check              # generated files
-lake exe argtex --check
-lake exe statusgen --check
-lake exe argdoc --check
+cd ..
+scripts/generate-docs.sh             # generated files, not committed
 ```
 
 The library and each package built on it (`arguments/`, `examples/`) are
@@ -106,24 +104,24 @@ python3 scripts/test_testimony_lint.py
 ### Generated files
 
 ```sh
-cd arguments
-lake exe bibgen --check
-lake exe argtex --check
-lake exe statusgen --check
-lake exe argdoc --check
+scripts/generate-docs.sh
 ```
 
-Four tools own files that live in the repository. They are the arguments
-package's, and run in `arguments/`. Each `--check` fails if what
-is committed is not what the Lean source now says; the fix is always to run the
-tool without `--check` and commit what it writes.
+Four tools of the arguments package, run in `arguments/`, and `exampletex` in
+`examples/`, write the files below; the script runs them all. Git does not hold
+what they write (`.gitignore`), so no two pull requests conflict over it, and
+there is nothing to keep in step: CI runs the script for the site, the PDFs and
+each pull request's preview, and fails if a generator does. Run it before
+reading a page your change produces, or building the book. The hand-written
+prose of the roadmap, maturity and summary pages is in `docs/templates/`; edit
+it there.
 
 | Tool | Owns |
 |---|---|
 | `bibgen` | `references.bib`, `docs/src/bibliography.md` |
 | `argtex` | `docs/latex/arguments.tex` and `docs/latex/arguments/*.tex` — the same harvest as `argdoc`, set for print, together and each argument alone |
-| `statusgen` | the marked block in `docs/src/roadmap.md` |
-| `argdoc` | `docs/src/arguments/*.md`, the marked block in `docs/src/SUMMARY.md` |
+| `statusgen` | `docs/src/roadmap.md` and `docs/src/maturity.md`, from `docs/templates/` |
+| `argdoc` | `docs/src/arguments/*.md`, and `docs/src/SUMMARY.md` from `docs/templates/` |
 
 `argdoc` and `argtex` are the two a change to an argument almost always moves:
 both render the module docstrings as well as the declarations, so editing a

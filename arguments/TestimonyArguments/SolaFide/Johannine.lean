@@ -338,6 +338,7 @@ def whyLutherAnswersAquinas : Because lutherOnGalatians thomistOnJohn :=
     (fun φ hφ => by simp [lutherOnGalatians, Line.asPackage, Line.premises, hφ])
     (by simp [solaFideDefs, caseOf, Line.onGrounds])
     (by decide +kernel)
+  |>.ratedByLine lutherLine rfl (by simp [lutherOnGalatians, solaFideDefs, Line.asPackage])
 
 /-! ### John 3:36: "whoever does not obey the Son"
 

@@ -28,10 +28,19 @@ Compile with a Unicode engine — the claims contain Greek and Hebrew, and the
 rendered statements contain `¬`, `→` and `⊢`:
 
 ```sh
-lake exe argtex
-cd ../docs/latex && tectonic arguments.tex
+lake exe bibgen && lake exe argtex
+cd .. && python3 scripts/credits.py docs/latex docs/latex/arguments
+python3 scripts/edition.py docs/latex docs/latex/arguments
+cd docs/latex && tectonic arguments.tex
 cd arguments && for f in *.tex; do tectonic "$f"; done
 ```
+
+Under its title a document gives a date and a version, the release's tag or
+the commit's short hash, and its last section says how it was made and how to
+make it again from that commit. Neither is known when the `.tex` is written,
+so both come from `edition.def`, which `scripts/edition.py` writes beside the
+document when it is typeset, as `credits.def` comes from `scripts/credits.py`.
+Without them the document still sets, as an unrecorded copy with no credits.
 
 `lake exe argtex --check` fails if any committed document is stale or missing.
 -/
@@ -45,39 +54,45 @@ def texPath : System.FilePath := "../docs/latex/arguments.tex"
 def documentTitle : String := "Testimony: arguments in propositional form"
 
 /-- What the notation means and what the document does *not* claim: the same
-for the book and for any one argument printed alone. -/
+for the book and for any one argument printed alone. Plain words, because the
+reader of a PDF may never have seen a logic text: how the document was made,
+and the words for that, wait for its last section. -/
 def notationNote : String :=
-  "Atoms are numbered propositional variables, numbered once per argument, so a " ++
-  "variable means the same claim in every position within it; the legend gives each " ++
-  "one's claim, its classification, the tradition that holds it and the source that " ++
-  "carries it.\n\n" ++
-  "\\noindent Nothing here asserts that the premises are true --- only that the " ++
-  "conclusion does or does not follow from them.\n\n"
+  "Each claim is given a numbered letter, $P_1$, $P_2$ and so on, so that the steps " ++
+  "can be written out in the notation of logic, and a letter means the same claim " ++
+  "wherever it appears in one argument. The table of numbered claims gives each in " ++
+  "words, with who holds it and where they say so, and every letter links to its " ++
+  "row.\n\n" ++
+  "\\noindent Nothing here asserts that the premises are true. It shows only " ++
+  "whether the conclusion follows from them. The last section says how this " ++
+  "edition was made, and how to make it again.\n\n"
 
 /-- The standing note under the book's title.
 
 Hand-written, and with `standaloneNote` the only hand-written prose in the
-documents: what the notation means and what a document does *not* claim are
-facts about the library rather than about any one argument, so no docstring
-carries them. -/
+documents besides the closing section: what the notation means and what a
+document does *not* claim are facts about the library rather than about any one
+argument, so no docstring carries them. -/
 def note : String :=
-  "\\noindent Each argument below is set as its Lean source sets it: the module " ++
-  "docstrings as prose, in the order they are written, and under each one the " ++
-  "package, line of reason, countermodel or result it introduces. " ++ notationNote
+  "\\noindent This book sets out every argument of the Testimony library, each " ++
+  "in its own section. " ++ notationNote
 
 /-- The standing note under the title of an argument printed on its own. It
 says where the argument comes from and where the rest of the book is. -/
 def standaloneNote : String :=
   "\\noindent This is one argument of the Testimony library, printed on its own. " ++
-  "The library prints every argument together in \\texttt{arguments.pdf}. This one " ++
-  "is set as its Lean source sets it: the module docstrings as prose, in the order they " ++
-  "are written, and under each one the package, line of reason, countermodel or " ++
-  "result it introduces. " ++ notationNote
+  "The library also prints every argument together, as one book " ++
+  "(\\texttt{arguments.pdf}). " ++ notationNote
+
+/-- How the book is made again: `argtex`, in `arguments/`, writes it. -/
+def bookMade : Logic.Latex.Reproduction :=
+  { package := "arguments", tool := "argtex", dir := "docs/latex",
+    file := "arguments.tex", before := ["bibgen"] }
 
 /-- The whole document: every catalogued argument, set as `latexDocument` sets
 any package's. -/
 def document : String :=
-  latexDocument documentTitle note (sectionsOf arguments bodies) (credits := true)
+  latexDocument documentTitle note (sectionsOf arguments bodies) bookMade (credits := true)
 
 /-- Where each argument's own document is written: `<slug>.tex` in this
 directory. -/
@@ -85,23 +100,31 @@ def standaloneDir : System.FilePath := "../docs/latex/arguments"
 
 /-- One argument printed on its own, under its catalogue title. -/
 def standalone (a : Argument) : String :=
-  latexDocument a.title standaloneNote (sectionsOf [a] bodies) (credits := true)
+  latexDocument a.title standaloneNote (sectionsOf [a] bodies)
+    { bookMade with dir := "docs/latex/arguments", file := a.slug ++ ".tex" }
+    (credits := true)
 
 -- Each argument's document is named by its slug, so two arguments with one slug
 -- would write one file and lose the other. A release attaches every PDF without
 -- its directory (`.github/workflows/release.yml`), so none may be the book's.
 #guard (arguments.map (·.slug)).eraseDups.length == arguments.length
 #guard arguments.all (·.slug != "arguments")
+-- Each document is also set on US Letter as `<slug>-letter.pdf`
+-- (`scripts/typeset.sh --paper letter`), so no slug may take that form.
+#guard arguments.all (!·.slug.endsWith "-letter")
 
-/-- Every file `argtex` writes: the book, then each argument alone. -/
+/-- Every file `argtex` writes: the book, then each argument alone, and the house
+style beside each, which every one of them loads (`Logic.Latex.style`). -/
 def files : List (System.FilePath × String) :=
   (texPath, document) ::
-    arguments.map fun a => (standaloneDir / (a.slug ++ ".tex"), standalone a)
+    arguments.map (fun a => (standaloneDir / (a.slug ++ ".tex"), standalone a)) ++
+    [((texPath.parent.getD ".") / Logic.Latex.styleFile, Logic.Latex.style),
+     (standaloneDir / Logic.Latex.styleFile, Logic.Latex.style)]
 
 /-- Entry point. -/
 def main (args : List String) : IO UInt32 := do
   let mut clean := true
-  for (path, tex) in files do
+  for (path, tex) in files.filter (·.1.extension == some "tex") do
     clean := (← reportStrayQuotes "argtex" path tex) && clean
   unless clean do return 1
   let check := args.contains "--check"
