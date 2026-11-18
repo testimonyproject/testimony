@@ -260,7 +260,7 @@ inside is read as Markdown rather than passed through as raw HTML. -/
 def legend [DecidableEq α] (cite : α → AtomMeta) (order : List α) : String :=
   let rows := order.zipIdx.map fun (a, i) =>
     let m := cite a
-    let mark := if m.source.isScriptureOnly then " ※" else ""
+    let mark := if m.readsScriptureAlone then " ※" else ""
     "| <a id=\"" ++ claimAnchor i ++ "\"></a>" ++ inlineMath (Latex.varName i) ++ " | " ++
       cell (escape m.label) ++ mark ++ " | " ++ kind m.kind ++ " | " ++
       tradition m.source.tradition ++ ", " ++ confidence m.source.confidence ++ " | " ++
@@ -268,8 +268,9 @@ def legend [DecidableEq α] (cite : α → AtomMeta) (order : List α) : String 
   "<div class=\"testimony-legend\">\n\n" ++
   "| | claim | kind | held | source |\n|---|---|---|---|---|\n" ++
   String.intercalate "\n" rows ++ "\n\n</div>\n\n" ++
-  (if order.any fun a => (cite a).source.citesScripture then
-    "※ grounded in scripture alone: the reading is assumed, not argued for.\n"
+  (if order.any fun a => (cite a).readsScriptureAlone then
+    "※ a reading cited to the text alone, with no commentator: it is assumed here, " ++
+    "not argued for.\n"
   else "")
 
 /-! ### The page -/
@@ -550,12 +551,11 @@ def item [DecidableEq α] (order : List α) (cite : Option (α → AtomMeta)) :
   | .package d doc pkg =>
       declLabel d (" — " ++ escape pkg.name) ++ "\n" ++ doc ++ "\n\n" ++
       derivation order cite pkg.premises pkg.conclusion ++
-      (if !(order.any fun a => (pkg.cite a).source.citesScripture) then ""
-       else if pkg.scriptureOnlyAtoms.isEmpty then
-         "\nNo premise here rests on scripture alone.\n"
+      (if pkg.scriptureOnlyAtoms.isEmpty then ""
        else
-         "\nGrounded in scripture alone: " ++
-         String.intercalate ", "
+         "\nRead from the text alone, with no commentator cited, and so assumed here " ++
+         "rather than argued for: " ++
+         String.intercalate "; "
            (pkg.scriptureOnlyAtoms.map fun m => escape m.label) ++ ".\n")
   | .line d doc l =>
       declLabel d (" — " ++ escape l.name) ++ "\n" ++ doc ++ "\n\n" ++

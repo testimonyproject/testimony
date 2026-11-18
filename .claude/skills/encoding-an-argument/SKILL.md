@@ -291,8 +291,9 @@ The sola fide argument uses all five: `whereTrentPartsFromPaul`,
 #eval reformed.scriptureOnlyAtoms.map (fun m => m.label)
 ```
 
-If `scriptureOnlyAtoms` is non-empty, the argument grounds a premise in
-Scripture with no scholarly support. That is permitted, but say so in the
+If `scriptureOnlyAtoms` is non-empty, the argument grounds a reading in
+Scripture with no scholarly support. (A `.textual` claim, which only reports
+what a passage says, is never listed.) That is permitted, but say so in the
 module docstring — `BornInBethlehem` does, for `jesusBornInBethlehem`.
 
 ## 7 — the module docstring

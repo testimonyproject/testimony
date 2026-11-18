@@ -1032,6 +1032,10 @@ def ArgumentPackage.scriptureOnlyAtoms : List AtomMeta
 ```
 
 `manifest` is every atom the premises rest on, deduplicated and mapped through
-`cite`. `scriptureOnlyAtoms` filters it to those appealing to Scripture with no
-scholarly support — the circularity surface described in
-[Scope and limits](./scope-and-limits.md#circularity-specifically).
+`cite`. `scriptureOnlyAtoms` filters it to the readings taken from Scripture
+with no scholarly support (`AtomMeta.readsScriptureAlone`) — the circularity
+surface described in
+[Scope and limits](./scope-and-limits.md#circularity-specifically). A textual
+claim, one that only reports what a passage says, is not among them: citing the
+passage is all its source can be. Each package's page lists these readings under
+its derivation, and says nothing when there are none.

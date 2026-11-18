@@ -51,7 +51,11 @@ The library does not forbid this. Sometimes a text really is plain, and
 demanding external corroboration for every reading would be its own distortion.
 What the library does is make it **computable**: `Source.isScriptureOnly` is
 `true` exactly when a premise appeals to Scripture with no scholarly support,
-and `ArgumentPackage.scriptureOnlyAtoms` lists them.
+and `ArgumentPackage.scriptureOnlyAtoms` lists those that are readings rather
+than reports of what a text says. A claim that Deuteronomy 18:22 says a word
+that fails is not the Lord's needs no commentator; a claim about what a passage
+means, or that an event happened, does. The page lists the readings under each
+package that assumes them.
 
 In the Bethlehem argument, `jesusBornInBethlehem` is such a premise: the
 historicity of the Bethlehem birth is disputed in critical scholarship, and the

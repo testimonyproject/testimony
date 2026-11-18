@@ -100,7 +100,8 @@ primary := .scripture [ { ref := .verse ⟨.romans, 3, 28⟩ } ]
 ```
 
 A premise whose references are *all* scripture is flagged by
-`Source.isScriptureOnly` and appears in the argument's `scriptureOnlyAtoms`.
+`Source.isScriptureOnly`, and unless its kind is `.textual` it appears in the
+argument's `scriptureOnlyAtoms`.
 That is intended; do not work around it by attaching an irrelevant commentary.
 
 ## Step 5 — regenerate and verify
