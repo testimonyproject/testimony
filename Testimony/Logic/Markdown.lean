@@ -322,9 +322,14 @@ def explanation [DecidableEq α] (order : List α) (e : Page.Explanation α) : S
     String.intercalate "\n" (e.restsOn.map (restingClaim order e.cite)) ++
     (if Page.Explanation.isLiteral e.crux then "" else
       "\n  - the step itself — " ++
-      (if e.inferences.isEmpty then "*unrated*" else
-        String.intercalate "; " (e.inferences.map fun s =>
-          "*" ++ confidence s.confidence ++ "*: " ++ source s))) ++ "\n"
+      (match e.rating with
+       | some s => "*" ++ confidence s.confidence ++ "*: " ++ source s
+       | none =>
+         if e.inferences.isEmpty then "*unrated*" else
+           "*not rated on its own*. These ratings are for the steps of *" ++
+           escape e.holder ++ "* together, not for this one: " ++
+           String.intercalate "; " (e.inferences.map fun s =>
+             "*" ++ confidence s.confidence ++ "*: " ++ source s))) ++ "\n"
 
 /-- Every reading of a rival's claim, answered: each horn with what the claim
 commits the rival to, who reads it that way, and what happens to it against
@@ -566,6 +571,40 @@ def step [DecidableEq α] (order : List α) (cite : Option (α → AtomMeta))
     derivationRows [derivationRow order "" φ
       (cite.bind fun c => Latex.loneGlossWith (inWords order c) φ)]
 
+/-- A source in words, as print says it (`Latex.sourceWords`). -/
+def sourceWords (s : Source) : String :=
+  "Rated *" ++ confidence s.confidence ++ "*, held in the " ++ escape (tradition s.tradition) ++
+    " tradition: " ++ source s ++ ".\n"
+
+/-- A claim's citation in words, as print says it (`Latex.claimWords'`). -/
+def claimWords (m : AtomMeta) : String :=
+  "The claim: *" ++ escape m.label ++ "* (" ++ kind m.kind ++ "). " ++ sourceWords m.source
+
+/-- A reading in words, as print says it (`Latex.readingWords`): the claims on
+the page it takes as false, or, where fewer, those it takes as true. -/
+def readingWords [DecidableEq α] (order : List α) (cite : Option (α → AtomMeta))
+    (truth : List (α × Bool)) : String :=
+  match cite with
+  | none => ""
+  | some c =>
+    let onPage := truth.filter fun (a, _) => order.contains a
+    let falses := onPage.filter (!·.2)
+    let trues := onPage.filter (·.2)
+    let (listed, lead, rest) :=
+      if falses.length ≤ trues.length then
+        (falses, "On this reading these claims are false:",
+          if falses.isEmpty then "Every claim on this page is true on this reading."
+          else "Every other claim on this page is true.")
+      else
+        (trues, "On this reading only these claims are true:",
+          "Every other claim on this page is false.")
+    if listed.isEmpty then rest ++ "\n"
+    else
+      lead ++ "\n\n" ++
+      derivationRows (listed.map fun (a, _) =>
+        "- " ++ inlineMath (varLink (order.idxOf a)) ++ " " ++ escape (c a).label ++ "\n") ++
+      "\n" ++ rest ++ "\n"
+
 /-- Render one item against the page's atom ordering, and the legend's citations
 where the page has a legend. A lone formula, or a list of them, is set as rows of
 a derivation, as in print, so a step says what it delivers there too. -/
@@ -590,6 +629,12 @@ def item [DecidableEq α] (order : List α) (cite : Option (α → AtomMeta)) :
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++
       derivationRows (φs.zipIdx.map fun (φ, i) => derivationRow order (rowLabel i) φ
         (cite.bind fun c => Latex.glossWith (inWords order c) none φ))
+  | .source d doc s =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ sourceWords s
+  | .claim d doc m =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ claimWords m
+  | .reading d doc truth =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ readingWords order cite truth
   | .other d doc sig =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ leanBlock sig
   | .result d doc stmt proposed =>
