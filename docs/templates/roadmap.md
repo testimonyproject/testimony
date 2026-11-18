@@ -383,10 +383,14 @@ who prevailed. Rated, Berry's and Motyer's steps are `disputed` and tie with the
 critic (`nothing_prevails_on_motyer_alone`). The verdict rests on Postell's
 inference — an oracle on the Assyrian timeline, read messianically, refutes the
 exclusion — rated `plausible` because no source cited grants its grounds and
-keeps the exclusion. He gives it two instances, Isaiah 9 and 11 and Micah 5:
-either suffices (`scriptural_reading_prevails_without_postell`), and without
-both nothing prevails (`nothing_prevails_without_the_counterexamples`). That
-makes the ratings premises of the result, and says which one to contest.
+keeps the exclusion. He gives it two instances, Isaiah 9 and 11 and Micah 5. The
+Micah instance is `disputed`: Rashi grants that Micah's ruler is the Messiah,
+facing Assyria, and still reads 7:14 of a child of Ahaz's day, and Ibn Ezra gives
+the reason, "the sign was given to Ahaz". So without the Isaiah instance nothing
+prevails (`nothing_prevails_without_postell`), and the verdict rests on that one
+step, still `plausible` because every reader found who keeps 7:14 near-term
+reads Isaiah 9 of Hezekiah, denying a ground rather than the step. That makes
+the ratings premises of the result, and says which one to contest.
 
 **A premise can be load-bearing in one role and not another.** The sola
 scriptura seed asserted in prose that the whole dispute reduces to whether
