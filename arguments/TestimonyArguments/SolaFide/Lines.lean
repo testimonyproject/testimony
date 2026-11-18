@@ -66,7 +66,8 @@ before it (7:41–43). Three readers are cited for it:
 - Osvaldo Padilla: her actions "stem from the fact that she loves much because
   she has been forgiven much".
 - Melanchthon, in the *Apology of the Augsburg Confession*: "Christ interprets
-  Himself when He adds: Thy faith hath saved thee".
+  Himself when He adds: Thy faith hath saved thee", the translation giving Luke
+  7:50 in the King James wording.
 - Marshall, in his commentary on the Greek text, from the grammar: "for" here
   means "as is evidenced by the fact that".
 

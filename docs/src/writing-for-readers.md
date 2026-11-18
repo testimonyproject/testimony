@@ -43,6 +43,34 @@ sets the accuracy.
 prints it before you say anything about it. A reader who has the words in front
 of them can follow an argument about those words.
 
+**Quote a modern translation made from the earliest texts, and say which.** The
+library does not quote the King James Version, whose New Testament rests on the
+late Greek text of its day. Quote, in this order of preference, the NET Bible
+(NET), the Legacy Standard Bible (LSB) or the New Revised Standard Version
+(NRSV or NRSVue); otherwise the English Standard Version (ESV); otherwise the
+New International Version (NIV). Pick one per argument and say so once, in the
+argument's opening prose; mark any quotation from another translation with its
+abbreviation, "(Genesis 3:15, LSB)". Quote the translation word for word,
+capitals included, from the publisher's own text. The one exception is a
+quotation inside a cited author's words: when Calvin's translator or Wesley
+gives a verse in the King James wording, keep it as the source has it, and say
+that the wording is the source's.
+
+When the argument turns on a word, check that the translation you quote does
+not settle the question for one side. The LSB prints "He shall bruise you on the
+head" (Genesis 3:15) with a capital, because it reads the verse of Christ; the
+modern translations give "contrary to" for παρ' ὅ in Galatians 1:8, where the
+older "other than" suits Calvin and "contrary to" suits Aquinas. Where that
+happens, give the Greek or Hebrew in brackets and say how the translations part,
+rather than choosing the wording that helps.
+
+Every translation but the NET limits how much may be quoted without written
+permission: the ESV and the NIV 500 verses, the LSB 1,000, the NRSV 500, the
+NABRE 5,000 words, none of them a whole book. Each also asks for a notice, which
+the translation's bibliography entry carries in its note and the printed
+editions repeat in "How this edition was made". A translation the library has
+not quoted before needs an entry, with its notice, before its first quotation.
+
 **English first, then the original term in brackets.** Write "works of the law"
 (ἔργα νόμου), not ἔργα νόμου alone. The English is what the lay reader holds
 on to. The Greek or Hebrew is the handle a scholar needs to look the question

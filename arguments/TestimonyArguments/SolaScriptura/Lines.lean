@@ -4,13 +4,13 @@ import TestimonyArguments.SolaScriptura.Sources
 # TestimonyArguments.SolaScriptura.Lines — three objections, and the answers to them
 
 Three routes are encoded to the conclusion that Scripture is the sole
-infallible rule. The classical line reads Scripture as "given by inspiration of
-God" and able to make the believer "throughly furnished" (2 Timothy 3:16–17),
-sufficient and clear, and holds that Scripture teaches the principle itself.
-The eliminative line holds that Scripture is infallible and that no other rule
-is. Mark 7's
-line is taken in its own chapter. Against them stand three objections, and they
-come from different directions, so that answering one does not answer another.
+infallible rule. The classical line reads Scripture as "God-breathed" and able
+to make the believer "thoroughly equipped for every good work" (2 Timothy
+3:16–17), sufficient and clear, and holds that Scripture teaches the principle
+itself. The eliminative line holds that Scripture is infallible and that no
+other rule is. Mark 7's line is taken in its own chapter. Against them stand
+three objections, and they come from different directions, so that answering one
+does not answer another.
 
 **Self-refutation.** If a doctrine binds only when Scripture teaches it, and
 Scripture does not teach sola scriptura, the position fails by its own
@@ -146,14 +146,15 @@ def mark7ToPrinciple : Formula Claim :=
   p .mark7TraditionCanNullify ➝ p .godsWordJudgesTradition
 
 /-- **The same principle from Jesus' sayings and Paul's letters**, without Mark 7.
-Jesus says that "the scripture cannot be broken" (John 10:35) and that not "one
-jot or one tittle" shall pass from the law (Matthew 5:18); Paul says that even
-he, or an angel, would be accursed for preaching "any other gospel" than the one
-he had preached (Galatians 1:8–9), and warns a church against teaching "after
-the tradition of men … and not after Christ" (Colossians 2:8, 20–22). Together
-they say what Mark 7 says: God's word judges human tradition. Rated
-`wellSupported`: Aquinas grants Galatians 1:8 and the principle with it, and
-denies only that every addition is "another gospel" (`jesusAndPaulPrincipleInference`). -/
+Jesus says that "the Scripture cannot be broken" (John 10:35) and that "not the
+smallest letter or stroke shall pass from the Law" (Matthew 5:18); Paul says
+that even he, or an angel, would be accursed for proclaiming "a gospel contrary
+to the gospel we have proclaimed" (Galatians 1:8–9), and warns a church against
+teaching "according to the tradition of men … and not according to Christ"
+(Colossians 2:8, 20–22). Together they say what Mark 7 says: God's word judges
+human tradition. Rated `wellSupported`: Aquinas grants Galatians 1:8 and the
+principle with it, and denies only that every addition is "another gospel"
+(`jesusAndPaulPrincipleInference`). -/
 @[solaScripturaDefs]
 def jesusAndPaulToPrinciple : Formula Claim :=
   ⋀ [ p .john10_35ScriptureCannotBeBroken, p .matthew5_18LawShallNotPass
@@ -162,8 +163,8 @@ def jesusAndPaulToPrinciple : Formula Claim :=
 
 /-- **Acts 15, as the Reformers read it.** Men from Judaea laid the custom of
 Moses on the gentiles as a condition of salvation (15:1); Peter answered with
-the gospel, salvation "through the grace of the Lord Jesus Christ" (15:10–11),
-and James with Scripture, "as it is written" (15:15–17). So the gospel judged
+the gospel, salvation "through the grace of the Lord Jesus" (15:10–11), and
+James with Scripture, "just as it is written" (15:15–17). So the gospel judged
 even the oldest tradition, and the council judged by Scripture. And the
 apostles' own office ended with them, so a council after them lacks what the
 council at Jerusalem had: it binds only as far as it agrees with the word, and
@@ -177,14 +178,14 @@ def acts15ToCouncilUnderScripture : Formula Claim :=
   ➝ notP .councilBindsWithTheSpiritsAuthority
 
 /-- **Acts 15, as Rome reads it.** The council's letter says "it seemed good to
-the Holy Ghost, and to us" (15:28), and its decrees were "delivered" to the
-churches "for to keep" (16:4). The council was "the apostles and elders" (15:6,
-22–23; 16:4), and the apostles' office did not end with them but continues in
-those who succeed them. So a general council binds with the Spirit's authority,
-and cannot err. The last premise is carried in by `apostolicSuccessionLine`.
-Rated `disputed`: the Westminster Confession cites the same texts for the
-authority of councils and denies that councils since the apostles cannot err
-(`acts15RomanInference`). -/
+the Holy Spirit and to us" (15:28), and its decrees were delivered to the
+churches "for them to keep" (16:4). The council was "the apostles and elders"
+(15:6, 22–23; 16:4), and the apostles' office did not end with them but
+continues in those who succeed them. So a general council binds with the
+Spirit's authority, and cannot err. The last premise is carried in by
+`apostolicSuccessionLine`. Rated `disputed`: the Westminster Confession cites
+the same texts for the authority of councils and denies that councils since the
+apostles cannot err (`acts15RomanInference`). -/
 @[solaScripturaDefs]
 def acts15ToCouncilWithTheSpirit : Formula Claim :=
   ⋀ [ p .acts15_28SeemedGoodToTheHolyGhost, p .acts16_4DecreesDelivered
@@ -192,11 +193,11 @@ def acts15ToCouncilWithTheSpirit : Formula Claim :=
   ➝ p .councilBindsWithTheSpiritsAuthority
 
 /-- **The apostles' office, as the Reformers read it.** The apostle chosen in
-Judas's place had to be one who had "companied with us all the time" and was "a
-witness with us of his resurrection" (Acts 1:21–22); Paul was the last to see
-the risen Christ, "last of all he was seen of me also" (1 Corinthians 15:8);
-Peter counts Paul's letters with "the other scriptures" (2 Peter 3:15–16); and
-Paul writes as "an apostle" beside "Timothy our brother" (2 Corinthians 1:1;
+Judas's place had to be one who had "accompanied us all the time" and was "a
+witness with us of His resurrection" (Acts 1:21–22); Paul was the last to see
+the risen Christ, "last of all ... He appeared to me also" (1 Corinthians 15:8);
+Peter counts Paul's letters with "the rest of the Scriptures" (2 Peter 3:15–16);
+and Paul writes as "an apostle" beside "Timothy our brother" (2 Corinthians 1:1;
 Colossians 1:1). So the apostles' own office ended with them. Rated `disputed`:
 *Lumen Gentium* 20 grants the texts and holds that the apostles' office is
 permanent in the order of bishops (`apostlesOfficeEndedInference`). -/
@@ -206,13 +207,13 @@ def apostlesToTheirOfficeEnded : Formula Claim :=
     , p .peter3_15_16PaulsEpistlesWithTheScriptures, p .salutationsApostleAndBrother ]
   ➝ p .apostlesOfficeEndedWithThem
 
-/-- **The apostles' office, as Rome reads it.** "His bishoprick let another take"
-(Acts 1:20); "commit thou to faithful men, who shall be able to teach others
-also" (2 Timothy 2:2); and Clement records that the apostles appointed bishops
-and deacons, with instructions that "other approved men should succeed them in
-their ministry" (1 Clement 44). So the apostles' office did not end with them.
-Rated `disputed`: Calvin grants the texts and holds that the apostolic office
-was not "instituted in the Church to be perpetual"
+/-- **The apostles' office, as Rome reads it.** "Let another man take his office
+(ἐπισκοπή)" (Acts 1:20); "entrust these to faithful men who will be able to
+teach others also" (2 Timothy 2:2); and Clement records that the apostles
+appointed bishops and deacons, with instructions that "other approved men should
+succeed them in their ministry" (1 Clement 44). So the apostles' office did not
+end with them. Rated `disputed`: Calvin grants the texts and holds that the
+apostolic office was not "instituted in the Church to be perpetual"
 (`apostolicSuccessionInference`). -/
 @[solaScripturaDefs]
 def successionToTheOfficeContinuing : Formula Claim :=
@@ -220,29 +221,29 @@ def successionToTheOfficeContinuing : Formula Claim :=
     , p .clement42_44SuccessorsAppointed ]
   ➝ notP .apostlesOfficeEndedWithThem
 
-/-- **Moses' seat, as the Reformers read it.** Jesus bids the crowd observe what
-the scribes and Pharisees bid, because they sit in Moses' seat (Matthew
-23:2–3); in the same discourse he condemns their teaching on oaths as the
-teaching of "blind guides" (23:16–22), and in Mark 7 the elders' tradition as
-making void the word of God. So the seat binds only so far as Moses is taught
-from it: an office in the Church is heard as far as it teaches God's word, and
-not for the seat alone. Rated `disputed`: Cornelius a Lapide grants the texts
-and holds that the scribes were to be obeyed in all "not contrary to Moses and
-the Law" (`mosesSeatReformedInference`). -/
+/-- **Moses' seat, as the Reformers read it.** Jesus bids the crowd do and keep
+what the scribes and Pharisees tell them, because they sit in "the chair of
+Moses" (Matthew 23:2–3); in the same discourse he condemns their teaching on
+oaths as the teaching of "blind guides" (23:16–22), and in Mark 7 the elders'
+tradition as making void the word of God. So the seat binds only so far as Moses
+is taught from it: an office in the Church is heard as far as it teaches God's
+word, and not for the seat alone. Rated `disputed`: Cornelius a Lapide grants
+the texts and holds that the scribes were to be obeyed in all "not contrary to
+Moses and the Law" (`mosesSeatReformedInference`). -/
 @[solaScripturaDefs]
 def mosesSeatToTheWordTaught : Formula Claim :=
   ⋀ [ p .matthew23_2_3MosesSeat, p .matthew23_16_22BlindGuides
     , p .mark7TraditionCanNullify ]
   ➝ notP .teachingOfficeHeardByItsSeat
 
-/-- **Moses' seat, as Rome reads it.** Jesus bids the crowd observe what those in
-Moses' seat bid, though "they say, and do not" (Matthew 23:2–3). So the seat
-carries an authority of teaching that passes to those who succeed to it, and in
-the Church those who hold the teaching office are heeded for the seat they
-hold, in what is not contrary to God's law, even when they live ill. Rated
-`disputed`: Calvin grants the text and holds that the scribes were to be obeyed
-"only so far as they adhere to the pure and simple exposition of the Law"
-(`mosesSeatRomanInference`). -/
+/-- **Moses' seat, as Rome reads it.** Jesus bids the crowd do and keep what
+those in Moses' chair tell them, though "they say things and do not do them"
+(Matthew 23:2–3). So the seat carries an authority of teaching that passes to
+those who succeed to it, and in the Church those who hold the teaching office
+are heeded for the seat they hold, in what is not contrary to God's law, even
+when they live ill. Rated `disputed`: Calvin grants the text and holds that the
+scribes were to be obeyed "only so far as they adhere to the pure and simple
+exposition of the Law" (`mosesSeatRomanInference`). -/
 @[solaScripturaDefs]
 def mosesSeatToTheOffice : Formula Claim :=
   p .matthew23_2_3MosesSeat ➝ p .teachingOfficeHeardByItsSeat
@@ -411,11 +412,11 @@ def acts15ReformedLine : Line Claim :=
   , delivers := notP .councilBindsWithTheSpiritsAuthority
   , inference := some acts15ReformedInference }
 
-/-- **Acts 15, Rome's reading**, as a line of its own: "it seemed good to the Holy
-Ghost, and to us" (15:28), the decrees delivered to keep (16:4), and the council
-of "the apostles and elders" (15:6, 22–23). With the apostles' office continuing,
-which `apostolicSuccessionLine` carries in, it delivers that a general council
-binds with the Spirit's authority. -/
+/-- **Acts 15, Rome's reading**, as a line of its own: "it seemed good to the
+Holy Spirit and to us" (15:28), the decrees delivered to keep (16:4), and the
+council of "the apostles and elders" (15:6, 22–23). With the apostles' office
+continuing, which `apostolicSuccessionLine` carries in, it delivers that a
+general council binds with the Spirit's authority. -/
 @[solaScripturaDefs]
 def acts15RomanLine : Line Claim :=
   { name := "Acts 15, Rome's reading (the council binds with the Spirit's authority)"

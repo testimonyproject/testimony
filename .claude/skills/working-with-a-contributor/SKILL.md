@@ -37,6 +37,13 @@ and what is missing. If they did not, ask for the five in one message.
 Ask for everything missing at once, with what you will assume for each if they
 do not know, and carry on with the rest. Never ask one question per turn.
 
+If they quote the King James Version, or a translation the library does not
+use, quote the verse instead from the one the argument uses (the NET, LSB or
+NRSV, else the ESV or NIV; `docs/src/writing-for-readers.md`). When the claim
+rests on a word, read the verse back to them in the new wording with the
+claims, and ask whether it still says what they meant: a change of translation
+can move a claim as surely as a change of words.
+
 ### 2. Read the claims back, and wait
 
 Before writing any Lean, show the person the claims as a numbered list:

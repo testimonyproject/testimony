@@ -39,50 +39,53 @@ words that carry a reading are kept as the text has them.
 - **2 Thessalonians 2:15** says that the traditions (παραδόσεις) are to be held
   as what the apostles taught, and that they were taught by spoken word and by
   letter.
-- **John 10:35** says that "the scripture" (ἡ γραφή) cannot be broken, and
-  **Matthew 5:18** that not one jot or one tittle shall pass from the law till
-  all be fulfilled. What cannot be broken, and what shall not pass, are kept as
+- **John 10:35** says that "the Scripture" (ἡ γραφή) cannot be broken, and
+  **Matthew 5:18** that not the smallest letter or stroke shall pass from the
+  Law until all is accomplished. What cannot be broken, and what shall not pass,
+  are kept as
   the texts' own phrases.
-- **Galatians 1:8–9** says that whoever preaches any other gospel than the one
-  Paul preached, Paul himself or an angel from heaven, is accursed (ἀνάθεμα).
-  Whether "other" reaches an addition or only something alien is the step's
-  question, and the meaning does not answer it.
+- **Galatians 1:8–9** says that whoever proclaims a gospel contrary to the one
+  Paul proclaimed, Paul himself or an angel from heaven, is accursed (ἀνάθεμα).
+  Whether "contrary to" (παρ' ὅ, also rendered "besides" or "other than")
+  reaches an addition or only something alien is the step's question, and the
+  meaning does not answer it.
 - **Colossians 2:8, 20–22** says that the philosophy Paul warns against is
-  "after the tradition" (παράδοσις) of men and not after Christ, and that the
-  rules "Touch not; taste not; handle not" are commandments of men. The second
-  is the concept Mark 7's meaning uses for the elders' tradition, because
-  Lightfoot traces Paul's phrase to Isaiah 29:13, the verse Jesus quotes in
-  Mark 7.
-- **Acts 15:1** says that certain men from Judaea taught that except the
-  gentiles were circumcised "after the manner" (ἔθος, custom) of Moses they
-  could not be saved: what they taught, not that it was so. **15:10–11** says
-  that the yoke (ζυγός) is one "which neither our fathers nor we were able to
-  bear", and that grace is the ground on which "we shall be saved" (σωθῆναι).
+  "according to the tradition" (παράδοσις) of men and not according to Christ,
+  and that the rules "Do not handle, nor taste, nor touch" are commandments of
+  men. The second is the concept Mark 7's meaning uses for the elders'
+  tradition, because Lightfoot traces Paul's phrase to Isaiah 29:13, the verse
+  Jesus quotes in Mark 7.
+- **Acts 15:1** says that some men from Judea taught that unless the gentiles
+  were circumcised "according to the custom" (ἔθος) of Moses they could not be
+  saved: what they taught, not that it was so. **15:10–11** says that the yoke
+  (ζυγός) is one "which neither our fathers nor we have been able to bear", and
+  that grace is the ground on which "we are saved" (σωθῆναι).
   **15:15–17** says that the words of the prophets, as Amos is written, agree
   with God's visiting the Gentiles to take out of them a people (15:14).
 - **Acts 15:23–29** says that the decree came by a letter, and **15:28** that it
-  was by the Holy Ghost and by the apostles and elders: "it seemed good to the
-  Holy Ghost, and to us". Whether the Spirit is its ground or its means is left
+  was by the Holy Spirit and by the apostles and elders: "it seemed good to the
+  Holy Spirit and to us". Whether the Spirit is its ground or its means is left
   open, as the text leaves it. **16:4** says that the decree was delivered
   (παρεδίδοσαν) to the churches to keep. The decree is one particular in all
-  three, because 16:4 names it as "the decrees ... ordained of the apostles and
-  elders which were at Jerusalem".
-- **Acts 1:21–22** says that the one ordained in Judas's place had to be one of
-  the men who companied with the apostles and a witness of the resurrection;
-  **1 Corinthians 15:8** that Paul was the last to whom the risen Christ was
-  seen; **2 Peter 3:15–16** that Paul's epistles are wrested as "the other
-  scriptures" are; and **2 Corinthians 1:1** and **Colossians 1:1** that Paul is
+  three, because 16:4 names it as "the decrees which had been decided upon by
+  the apostles and elders who were in Jerusalem".
+- **Acts 1:21–22** says that the one chosen in Judas's place had to be one of
+  the men who accompanied the apostles and a witness of the resurrection; **1
+  Corinthians 15:8** that Paul was the last to whom the risen Christ appeared;
+  **2 Peter 3:15–16** that Paul's letters are distorted as "the rest of the
+  Scriptures" are; and **2 Corinthians 1:1** and **Colossians 1:1** that Paul is
   an apostle and Timothy "our brother". **1 Thessalonians 1:1–2:6** says that
-  the letter is from Paul, Silvanus and Timotheus, and that its writers might
-  have been burdensome "as the apostles of Christ"; whether that takes in all
-  three the meaning leaves open. **Acts 1:20** says that another is to take
-  Judas's bishoprick (ἐπισκοπή), **2 Timothy 2:2** that Timothy is to commit what
-  he heard to faithful men who shall teach others, and Acts 15:6–16:4 that the
-  council was the apostles' and the elders'. **1 Clement 42 and 44** is given as
-  what Clement records, not as what the apostles did.
-- **Matthew 23:2–3** says that the scribes and the Pharisees sit in Moses' seat
-  (καθέδρα), that whatever they bid is what the hearers are to "observe and do"
-  (ποιήσατε καὶ τηρεῖτε), and that their works are not. **23:16–22** says that
+  the letter is from Paul, Silvanus and Timothy, and that its writers could have
+  been a burden "as apostles of Christ"; whether that takes in all three the
+  meaning leaves open. **Acts 1:20** says that another is to take Judas's office
+  (ἐπισκοπή), **2 Timothy 2:2** that Timothy is to entrust what he heard to
+  faithful men who will teach others, and Acts 15:6–16:4 that the council was
+  the apostles' and the elders'. **1 Clement 42 and 44** is given as what
+  Clement records, not as what the apostles did.
+- **Matthew 23:2–3** says that the scribes and the Pharisees sit in "the chair
+  of Moses" (καθέδρα), that all they tell the hearers is what they are to "do
+  and keep" (ποιήσατε καὶ τηρεῖτε), and that their works are not. **23:16–22**
+  says that
   their teaching on oaths is the teaching of "blind guides". Whether the seat is
   heeded for itself or for the law taught from it is the two readings' question,
   and the meaning does not answer it.
@@ -112,7 +115,7 @@ proved from evidence that can still be produced, and that it may not be bound on
 the Church as the word of God. It does not say that the apostles taught nothing
 by word of mouth; Whitaker's claim is about proof. Rome's reading of Acts 15
 says that a general council's definition of faith, after the apostles, is
-infallible and is the Holy Ghost's as well as the council's; the Reformed
+infallible and is the Holy Spirit's as well as the council's; the Reformed
 reading denies it. Rome's reading of Moses' seat says that what the Church's
 teaching office teaches, where it is not contrary to God's law, is to be heeded
 for the seat its teachers hold; the Reformed reading denies it. Calvin's claim
@@ -327,12 +330,12 @@ abbrev traditionIReasoning : Term :=
   pt "Tradition I's reasoning on Scripture and the creedal consensus" .informationObject
 
 /-- The decree of the council at Jerusalem, which Acts 15:23–29 gives and 16:4
-calls "the decrees ... ordained of the apostles and elders". -/
+calls "the decrees which had been decided upon by the apostles and elders". -/
 abbrev jerusalemDecree : Term :=
   pt "the decree of the council at Jerusalem (Acts 15:23–29)" .informationObject
 
-/-- The Holy Ghost, as Acts 15:28 names him. -/
-abbrev holyGhost : Term := pt "the Holy Ghost" .agent
+/-- The Holy Spirit, as Acts 15:28 names him. -/
+abbrev holyGhost : Term := pt "the Holy Spirit" .agent
 
 /-- A general council's definition of faith, after the apostles. -/
 abbrev councilDefinition : Term :=
@@ -449,11 +452,11 @@ def means : Claim → Statement
       (pt "what cannot be broken (οὐ δύναται λυθῆναι)" .quality)
   | .matthew5_18LawShallNotPass =>
     .says matt5_18 <| rl .isA
-      (pt "one jot or one tittle of the law (ἰῶτα ἓν ἢ μία κεραία)" .informationObject)
-      (pt "what shall in no wise pass from the law, till all be fulfilled" .quality)
+      (pt "the smallest letter or stroke of the Law (ἰῶτα ἓν ἢ μία κεραία)" .informationObject)
+      (pt "what shall not pass from the Law until all is accomplished" .quality)
   | .galatians1_8AnotherGospelAccursed =>
     .says gal1_8_9 <| rl .isA
-      (pt ("whoever preaches any other gospel than the one Paul preached, " ++
+      (pt ("whoever proclaims a gospel contrary to (παρ' ὅ) the one Paul proclaimed, " ++
           "were it Paul himself or an angel from heaven") .agent)
       (pt "accursed (ἀνάθεμα)" .quality)
   | .colossians2_8TraditionOfMen =>
@@ -461,20 +464,20 @@ def means : Claim → Statement
       .both (rl .saidBy (wd .paradosis col2_8) colossianPhilosophy) <|
         .both (.not (rl .saidBy (pt "Christ" .agent) colossianPhilosophy))
           (rl .isA
-            (pt "the rules \"Touch not; taste not; handle not\" (2:21)" .informationObject)
+            (pt "the rules \"Do not handle, nor taste, nor touch\" (2:21)" .informationObject)
             (cn .commandmentsOfMen))
   | .acts15_1CircumcisionAfterMoses =>
-    .says acts15_1 <| rl .agentOf (pt "certain men which came down from Judaea" .agent)
-      (pt ("teaching the brethren that except they be circumcised after the manner " ++
-          "(ἔθος) of Moses, they cannot be saved") .event)
+    .says acts15_1 <| rl .agentOf (pt "some men who came down from Judea" .agent)
+      (pt ("teaching the brothers that unless they are circumcised according to the " ++
+          "custom (ἔθος) of Moses, they cannot be saved") .event)
   | .acts15_10_11YokeAndGrace =>
     .says acts15_10_11 <|
       .both (rl .isA (wd .zygos acts15_10)
-          (pt "what neither our fathers nor we were able to bear" .quality))
+          (pt "what neither our fathers nor we have been able to bear" .quality))
         (rl .groundOf (cn .grace) (wd .sozo acts15_11))
   | .acts15_15_17ProphetsAgree =>
     .says acts15_15_17 <| rl .consistentWith
-      (pt "the words of the prophets, as Amos 9:11–12 is written" .informationObject)
+      (pt "the words of the Prophets, as Amos 9:11–12 is written" .informationObject)
       (pt "God's visiting the Gentiles, to take out of them a people for his name (15:14)"
         .event)
   | .acts15_23_29DecreeWritten =>
@@ -493,38 +496,38 @@ def means : Claim → Statement
   | .matthew23_2_3MosesSeat =>
     .says matt23_2_3 <|
       .both (rl .agentOf (pt "the scribes and the Pharisees" .agent)
-          (pt "sitting in Moses' seat (ἐπὶ τῆς Μωϋσέως καθέδρας)" .event)) <|
+          (pt "sitting in the chair of Moses (ἐπὶ τῆς Μωϋσέως καθέδρας)" .event)) <|
         .both (rl .bindsAs
-            (pt "whatsoever the scribes and the Pharisees bid" .informationObject)
-            (pt "what the hearers are to observe and do (ποιήσατε καὶ τηρεῖτε)"
+            (pt "all that the scribes and the Pharisees tell the hearers" .informationObject)
+            (pt "what the hearers are to do and keep (ποιήσατε καὶ τηρεῖτε)"
               .informationObject))
           (.not (rl .bindsAs (pt "the works of the scribes and the Pharisees" .event)
-            (pt "what the hearers are to observe and do (ποιήσατε καὶ τηρεῖτε)"
+            (pt "what the hearers are to do and keep (ποιήσατε καὶ τηρεῖτε)"
               .informationObject)))
   | .matthew23_16_22BlindGuides =>
     .says matt23_16_22 <| rl .isA
-      (pt ("the scribes' teaching that whosoever shall swear by the temple, it is " ++
-          "nothing, but whosoever shall swear by the gold of the temple, he is a debtor")
+      (pt ("the scribes' teaching that whoever swears by the sanctuary, that is " ++
+          "nothing, but whoever swears by the gold of the sanctuary is obligated")
         .informationObject)
       (pt "the teaching of blind guides (ὁδηγοὶ τυφλοί)" .quality)
   | .acts1_21_22WitnessOfResurrection =>
-    .says acts1_21_22 <| rl .isA (pt "the one ordained in Judas's place" .agent)
-      (pt ("one of the men which companied with the apostles all the time the Lord " ++
-          "Jesus went in and out among them, a witness of his resurrection") .quality)
+    .says acts1_21_22 <| rl .isA (pt "the one chosen in Judas's place" .agent)
+      (pt ("one of the men who accompanied the apostles all the time the Lord " ++
+          "Jesus went in and out among them, a witness of His resurrection") .quality)
   | .corinthians15_8LastOfAll =>
     .says cor15_8 <| rl .isA (pt "Paul" .agent)
-      (pt "the last of all to whom the risen Christ was seen" .quality)
+      (pt "the last of all to whom the risen Christ appeared" .quality)
   | .peter3_15_16PaulsEpistlesWithTheScriptures =>
-    .says pet3_15_16 <| rl .isA (pt "all Paul's epistles" .informationObject)
-      (pt "what is wrested as the other scriptures are" .quality)
+    .says pet3_15_16 <| rl .isA (pt "all Paul's letters" .informationObject)
+      (pt "what is distorted as the rest of the Scriptures are" .quality)
   | .salutationsApostleAndBrother =>
     .also (.says cor2_1_1 salutation) (.says col1_1 salutation)
   | .thessalonians2_6ApostlesOfChrist =>
     .says thess1_1_2_6 <|
-      .both (rl .saidBy (pt "Paul, and Silvanus, and Timotheus" .agent)
+      .both (rl .saidBy (pt "Paul and Silvanus and Timothy" .agent)
           (pt "the first letter to the Thessalonians" .informationObject))
         (rl .isA (pt "the writers of the letter" .agent)
-          (pt "those who might have been burdensome as the apostles of Christ" .quality))
+          (pt "those who as apostles of Christ could have been a burden" .quality))
   | .apostlesOfficeEndedWithThem =>
     .holds <| rl .isA (pt "the office of the apostles of Christ" .quality)
       (pt "what ended with the apostles, their successors receiving their ministry only"
@@ -535,10 +538,10 @@ def means : Claim → Statement
       (rl .agentOf (pt "the elders at Jerusalem" .agent) (pt "the council at Jerusalem" .event))
   | .acts1_20BishoprickLetAnotherTake =>
     .says acts1_20 <| rl .agentOf (pt "another, in Judas's place" .agent)
-      (pt "taking his bishoprick (ἐπισκοπή)" .event)
+      (pt "taking his office (ἐπισκοπή)" .event)
   | .timothy2_2CommitToFaithfulMen =>
     .says tim2_2 <| rl .agentOf (pt "Timothy" .agent)
-      (pt ("committing what he heard of Paul to faithful men, who shall be able to " ++
+      (pt ("entrusting what he heard from Paul to faithful men who will be able to " ++
           "teach others also") .event)
   | .clement42_44SuccessorsAppointed =>
     .holds <| rl .agentOf (pt "Clement of Rome" .agent)

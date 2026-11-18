@@ -18,7 +18,10 @@ For each work or quotation you are given:
    ISBN-13 from an ISBN-10, confirm the derived one resolves too.
 2. **Quotations.** Find the passage in a public text and quote it back with its
    location (chapter, section, the edition's own numbering). Say which
-   translation you read. If the text is not public, say so.
+   translation you read. For a Bible verse, read it in the translation the
+   argument quotes (the NET at netbible.org, the LSB at read.lsbible.org, the
+   ESV at esv.org), never the King James Version unless the source being
+   checked quotes the KJV itself. If the text is not public, say so.
 3. **Locations.** A page or section number is verified only if you saw it. If
    you could not, say "cite the work whole".
 4. **Access.** For a journal article, say whether you read it and how: open

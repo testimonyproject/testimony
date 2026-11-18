@@ -85,6 +85,14 @@ than by its critic, it reaches the conclusion too (`tradition0_establishes`).
   Matthew 23:2–3 in opposite directions, and Mark 7 with Matthew 23 leaves the
   teaching office open ("Moses' seat, read both ways").
 
+Scripture is quoted from the Legacy Standard Bible (LSB), a literal translation
+made from the critical editions: Kittel's *Biblia Hebraica*, with the Dead Sea
+Scrolls, and the Nestle–Aland Greek New Testament. Where a word in the Greek
+matters to the argument, it is given in brackets after the English, and where
+the translations part over it, that is said where the word is used. A quotation
+inside a cited author's words is left as the author gave it, in whatever Bible
+he used.
+
 The claims themselves, each with its number, its source and its rating, are
 listed in the appendix, "The claims and their sources".
 -/

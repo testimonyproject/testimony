@@ -59,8 +59,12 @@ conversation that starts from this page goes quickly. One that starts from
 1. **The conclusion, in one sentence.** "Paul teaches that we are justified by
    faith apart from works." Not a topic; a sentence someone could deny.
 2. **The passages, quoted.** Chapter and verse, and the words in the English
-   translation you read. If a Greek or Hebrew word carries the argument, name
-   it if you know it; Claude can help find it if you do not.
+   translation you read, with its name. The library quotes modern translations
+   made from the earliest texts (the NET, LSB or NRSV first, then the ESV or
+   NIV) and not the King James Version, so if yours is the KJV, Claude will
+   find the same verse in one of those and check that it says what you need.
+   If a Greek or Hebrew word carries the argument, name it if you know it;
+   Claude can help find it if you do not.
 3. **The steps.** "Because Paul says X in Romans 3:28, and X means Y, it follows
    that Z." Each *because* and *so* is a step. Most arguments have between one
    and five.

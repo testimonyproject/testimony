@@ -14,9 +14,9 @@ and how firmly, and the sources that carry it.
 Two claims are worth flagging. Every party grants that Scripture is infallible
 (`scriptureIsInfallible`), and the first version of this argument never said
 so, though it concluded that Scripture is the sole *infallible* rule; the
-eliminative line needs it stated. And Paul's charge to "hold the traditions
-which ye have been taught, whether by word, or our epistle" (2 Thessalonians
-2:15) is a text both sides must account for, not a Roman premise
+eliminative line needs it stated. And Paul's charge to "hold to the traditions
+which you were taught, whether by word of mouth or by letter from us" (2
+Thessalonians 2:15) is a text both sides must account for, not a Roman premise
 (`thessalonians2_15TraditionBinding`). The first version filed it as the
 Catholic counter-text, which left the Protestant position with no answer to it.
 -/
@@ -171,55 +171,59 @@ inductive Claim
   alone that the Church draws her certainty about everything which has been
   revealed". -/
   | noUnwrittenTraditionShownApostolic
-  /-- John 10:35 — "the scripture cannot be broken". Jesus answers the charge
+  /-- John 10:35 — "the Scripture cannot be broken". Jesus answers the charge
   of blasphemy from Psalm 82:6, and rests the answer on this. What the text
   says, not yet what follows from it. -/
   | john10_35ScriptureCannotBeBroken
-  /-- Matthew 5:18 — "Till heaven and earth pass, one jot or one tittle shall in
-  no wise pass from the law, till all be fulfilled". The jot (ἰῶτα) is the
-  smallest letter, the tittle (κεραία) the smallest stroke of one. -/
+  /-- Matthew 5:18 — "until heaven and earth pass away, not the smallest letter
+  or stroke shall pass from the Law until all is accomplished". The smallest
+  letter is the iota (ἰῶτα), and the stroke (κεραία) the smallest mark of one.
+  -/
   | matthew5_18LawShallNotPass
-  /-- Galatians 1:8–9 — "though we, or an angel from heaven, preach any other
-  gospel unto you than that which we have preached unto you, let him be
-  accursed. As we said before, so say I now again, If any man preach any other
-  gospel unto you than that ye have received, let him be accursed." Paul puts
-  his own later preaching, and an angel's, under the gospel he had already
-  preached. -/
+  /-- Galatians 1:8–9 — "But even if we, or an angel from heaven, should
+  proclaim to you a gospel contrary to the gospel we have proclaimed to you, let
+  him be accursed! As we have said before, so I say again now, if any man is
+  proclaiming to you a gospel contrary to what you received, let him be
+  accursed!" Paul puts his own later preaching, and an angel's, under the gospel
+  he had already preached. "Contrary to" translates παρ' ὅ, which can also be
+  rendered "besides" or "other than"; how far it reaches, to any addition or
+  only to what is alien, is the point Calvin and Aquinas dispute, and the step's
+  rating weighs it. -/
   | galatians1_8AnotherGospelAccursed
-  /-- Colossians 2:8 and 2:20–22 — "Beware lest any man spoil you through
-  philosophy and vain deceit, after the tradition of men, after the rudiments
-  of the world, and not after Christ"; and of the rules "Touch not; taste not;
-  handle not", that they are "after the commandments and doctrines of men".
-  Paul is warning a church, not the elders of Jerusalem. -/
+  /-- Colossians 2:8 and 2:20–22 — "See to it that no one takes you captive
+  through philosophy and empty deception, according to the tradition of men,
+  according to the elementary principles of the world, and not according to
+  Christ"; and of the rules "Do not handle, nor taste, nor touch", that they are
+  "in accordance with the commands and teachings of men". Paul is warning a
+  church, not the elders of Jerusalem. -/
   | colossians2_8TraditionOfMen
-  /-- Acts 15:1 — "And certain men which came down from Judaea taught the
-  brethren, and said, Except ye be circumcised after the manner of Moses, ye
-  cannot be saved." "The manner" (ἔθος) is the custom of Moses: the oldest
-  practice Israel had, and one God himself had given. What the text reports,
-  not yet what follows from it. -/
+  /-- Acts 15:1 — "Some men came down from Judea and began teaching the
+  brothers, 'Unless you are circumcised according to the custom of Moses, you
+  cannot be saved.'" "The custom" (ἔθος) of Moses is the oldest practice Israel
+  had, and one God himself had given. What the text reports, not yet what
+  follows from it. -/
   | acts15_1CircumcisionAfterMoses
-  /-- Acts 15:10–11 — Peter at the council: "Now therefore why tempt ye God, to
-  put a yoke upon the neck of the disciples, which neither our fathers nor we
-  were able to bear? But we believe that through the grace of the Lord Jesus
-  Christ we shall be saved, even as they." -/
+  /-- Acts 15:10–11 — Peter at the council: "Now therefore why do you put God to
+  the test by placing upon the neck of the disciples a yoke which neither our
+  fathers nor we have been able to bear? But we believe that we are saved
+  through the grace of the Lord Jesus, in the same way as they also are." -/
   | acts15_10_11YokeAndGrace
-  /-- Acts 15:15–17 — James at the council: "And to this agree the words of the
-  prophets; as it is written, After this I will return, and will build again
-  the tabernacle of David, which is fallen down ... That the residue of men
-  might seek after the Lord, and all the Gentiles, upon whom my name is called".
-  He quotes Amos 9:11–12. -/
+  /-- Acts 15:15–17 — James at the council: "And with this the words of the
+  Prophets agree, just as it is written, 'After these things I will return, And
+  I will rebuild the fallen booth of David ... So that the rest of mankind may
+  seek the Lord, And all the Gentiles who are called by My name'". He quotes
+  Amos 9:11–12. -/
   | acts15_15_17ProphetsAgree
-  /-- Acts 15:23–29 — "And they wrote letters by them after this manner": the
-  council's decree went to the churches as a letter, and the letter is in
-  Scripture. -/
+  /-- Acts 15:23–29 — "and they sent this letter by them": the council's decree
+  went to the churches as a letter, and the letter is in Scripture. -/
   | acts15_23_29DecreeWritten
-  /-- Acts 15:28 — the council's letter: "For it seemed good to the Holy Ghost,
-  and to us, to lay upon you no greater burden than these necessary things". -/
+  /-- Acts 15:28 — the council's letter: "For it seemed good to the Holy Spirit
+  and to us to lay upon you no greater burden than these essentials". -/
   | acts15_28SeemedGoodToTheHolyGhost
-  /-- Acts 16:4 — "And as they went through the cities, they delivered them the
-  decrees for to keep, that were ordained of the apostles and elders which were
-  at Jerusalem." "Delivered" (παρεδίδοσαν) is the verb whose noun is "tradition"
-  (παράδοσις): the decrees were handed on. -/
+  /-- Acts 16:4 — "Now while they were passing through the cities, they were
+  delivering the decrees which had been decided upon by the apostles and elders
+  who were in Jerusalem, for them to keep." "Delivering" (παρεδίδοσαν) is the
+  verb whose noun is "tradition" (παράδοσις): the decrees were handed on. -/
   | acts16_4DecreesDelivered
   /-- A general council of the Church after the apostles binds with the Holy
   Spirit's authority, as the council at Jerusalem did: its definition of faith is
@@ -230,17 +234,18 @@ inductive Claim
   cites the same chapter for the authority of councils and holds that "All
   synods or councils since the apostles' times ... may err" (XXXI.4). -/
   | councilBindsWithTheSpiritsAuthority
-  /-- Matthew 23:2–3 — "The scribes and the Pharisees sit in Moses' seat: All
-  therefore whatsoever they bid you observe, that observe and do; but do not ye
-  after their works: for they say, and do not." The "seat" (καθέδρα) is the
-  teacher's chair; "observe" (τηρεῖτε) is the verb Mark 7:9 uses for keeping
-  "your own tradition". What the text says, not yet what follows from it. -/
+  /-- Matthew 23:2–3 — "The scribes and the Pharisees have seated themselves in
+  the chair of Moses; therefore all that they tell you, do and keep, but do not
+  do according to their deeds; for they say things and do not do them." The
+  "chair" (καθέδρα), Moses' seat, is the teacher's chair; "keep" (τηρεῖτε) is
+  the verb Mark 7:9 uses for keeping "your tradition". What the text says, not
+  yet what follows from it. -/
   | matthew23_2_3MosesSeat
-  /-- Matthew 23:16–22 — "Woe unto you, ye blind guides, which say, Whosoever
-  shall swear by the temple, it is nothing; but whosoever shall swear by the
-  gold of the temple, he is a debtor!" A teaching of the scribes, about which
-  oaths bind, that Jesus condemns in the same discourse in which he tells the
-  crowd to observe what they bid. -/
+  /-- Matthew 23:16–22 — "Woe to you, blind guides, who say, 'Whoever swears by
+  the sanctuary, that is nothing; but whoever swears by the gold of the
+  sanctuary is obligated.'" A teaching of the scribes, about which oaths bind,
+  that Jesus condemns in the same discourse in which he tells the crowd to
+  observe what they bid. -/
   | matthew23_16_22BlindGuides
   /-- Those who hold the teaching office in the Church are to be heeded by
   reason of the seat they hold, in whatever they teach that is not contrary to
@@ -254,30 +259,30 @@ inductive Claim
   pure and simple exposition of the Law". -/
   | teachingOfficeHeardByItsSeat
   /-- Acts 1:21–22 — the qualification for the apostle chosen in Judas's place:
-  "of these men which have companied with us all the time that the Lord Jesus
-  went in and out among us, Beginning from the baptism of John, unto that same
-  day that he was taken up from us, must one be ordained to be a witness with us
-  of his resurrection." What the text says, not yet what follows from it. -/
+  "it is necessary that of the men who have accompanied us all the time that the
+  Lord Jesus went in and out among us—beginning with the baptism of John until
+  the day that He was taken up from us—one of these must become a witness with
+  us of His resurrection." What the text says, not yet what follows from it. -/
   | acts1_21_22WitnessOfResurrection
   /-- 1 Corinthians 15:8 — Paul, at the end of the list of those to whom the
-  risen Christ appeared: "And last of all he was seen of me also, as of one born
-  out of due time." -/
+  risen Christ appeared: "and last of all, as to one untimely born, He appeared
+  to me also." -/
   | corinthians15_8LastOfAll
-  /-- 2 Peter 3:15–16 — "our beloved brother Paul also according to the wisdom
-  given unto him hath written unto you; As also in all his epistles ... which
-  they that are unlearned and unstable wrest, as they do also the other
-  scriptures". Paul's letters are counted with "the other scriptures". -/
+  /-- 2 Peter 3:15–16 — "our beloved brother Paul, according to the wisdom given
+  him, wrote to you, as also in all his letters ... which the untaught and
+  unstable distort, as they do also the rest of the Scriptures". Paul's letters
+  are counted with "the rest of the Scriptures". -/
   | peter3_15_16PaulsEpistlesWithTheScriptures
-  /-- 2 Corinthians 1:1 and Colossians 1:1 — "Paul, an apostle of Jesus Christ by
-  the will of God, and Timothy our brother" (2 Corinthians; Colossians has
-  "Timotheus our brother"). Paul calls himself an apostle and his companion a
+  /-- 2 Corinthians 1:1 and Colossians 1:1 — "Paul, an apostle of Christ Jesus
+  by the will of God, and Timothy our brother" (2 Corinthians 1:1; Colossians
+  1:1 reads the same). Paul calls himself an apostle and his companion a
   brother. -/
   | salutationsApostleAndBrother
-  /-- 1 Thessalonians 2:6, with 1:1 — the letter is from "Paul, and Silvanus, and
-  Timotheus", and it says "we might have been burdensome, as the apostles of
-  Christ" (2:7 in the Greek editions, where "burdensome" is ἐν βάρει, "of
-  weight"). Whether "apostles" here takes in Silvanus and Timothy the text
-  does not settle. Calvin takes it of Paul, "inasmuch as he was an Apostle of Christ";
+  /-- 1 Thessalonians 2:6, with 1:1 — the letter is from "Paul and Silvanus and
+  Timothy", and it says "as apostles of Christ we could have been a burden to
+  you" (2:7 in the Greek editions, where "a burden" is ἐν βάρει, "of weight").
+  Whether "apostles" here takes in Silvanus and Timothy the text does not
+  settle. Calvin takes it of Paul, "inasmuch as he was an Apostle of Christ";
   Coppieters, in the *Catholic Encyclopedia*, lists the verse among the passages
   "in which the extension of the word Apostle is doubtful". What the text says,
   and no more. -/
@@ -292,19 +297,21 @@ inductive Claim
   that "the apostles' office of nurturing the Church is permanent, and is to be
   exercised without interruption by the sacred order of bishops". -/
   | apostlesOfficeEndedWithThem
-  /-- Acts 15:6, 22–23 and 16:4 — the council was "the apostles and elders": "the
-  apostles and elders came together for to consider of this matter" (15:6), "it
-  pleased the apostles and elders, with the whole church" (15:22), the letter
-  went from "The apostles and elders and brethren" (15:23), and the decrees were
-  those "ordained of the apostles and elders which were at Jerusalem" (16:4). -/
+  /-- Acts 15:6, 22–23 and 16:4 — the council was "the apostles and elders":
+  "the apostles and the elders came together to look into this matter" (15:6),
+  "it seemed good to the apostles and the elders, with the whole church"
+  (15:22), the letter went from "The apostles and the brothers who are elders"
+  (15:23), and the decrees were those "decided upon by the apostles and elders
+  who were in Jerusalem" (16:4). -/
   | acts15ApostlesAndElders
-  /-- Acts 1:20 — Peter, of Judas: "For it is written in the book of Psalms, Let
-  his habitation be desolate, and let no man dwell therein: and his bishoprick
-  let another take." "Bishoprick" (ἐπισκοπή) is the office of oversight. -/
+  /-- Acts 1:20 — Peter, of Judas: "For it is written in the book of Psalms,
+  'Let his residence be made desolate, And let no one dwell in it'; and, 'Let
+  another man take his office.'" "Office" (ἐπισκοπή) is the office of oversight,
+  the word from which "bishop" (ἐπίσκοπος, overseer) comes. -/
   | acts1_20BishoprickLetAnotherTake
-  /-- 2 Timothy 2:2 — "And the things that thou hast heard of me among many
-  witnesses, the same commit thou to faithful men, who shall be able to teach
-  others also." -/
+  /-- 2 Timothy 2:2 — "And the things which you have heard from me in the
+  presence of many witnesses, entrust these to faithful men who will be able to
+  teach others also." -/
   | timothy2_2CommitToFaithfulMen
   /-- 1 Clement 42 and 44 — Clement of Rome, writing to Corinth near the end of
   the first century, records that the apostles "appointed the first-fruits [of
