@@ -39,15 +39,68 @@ LORD hath not spoken" (18:20–22). Both tests give the hearer something to chec
 for himself, what the prophet says and whether it comes true, and neither sends
 him to an office that cannot err.
 
+## Scripture decides what can be Scripture
+
+The New Testament applies the same tests to itself. Paul tells the Ephesians
+that they "are built upon the foundation of the apostles and prophets, Jesus
+Christ himself being the chief corner stone" (Ephesians 2:20), and Jude writes
+of "the faith which was once delivered unto the saints" (Jude 3). Peter counts
+an apostle's letters as Scripture. He writes that "our beloved brother Paul
+... hath written unto you; As also in all his epistles", which the unlearned
+"wrest, as they do also the other scriptures, unto their own destruction"
+(2 Peter 3:15–16). Earlier in the same
+chapter he sets "the commandment of us the apostles" beside "the words which
+were spoken before by the holy prophets" (3:2). In 1 Timothy 5:18, "the
+scripture saith" introduces a line of Deuteronomy and then "The labourer is
+worthy of his reward", a saying of Jesus that Luke 10:7 records. (The King
+James Version has "hire" in Luke and "reward" in Timothy, for the same Greek
+word, μισθός.)
+
+Being an apostle is not enough by itself. Paul holds even himself to the
+gospel already given: "But though we, or an angel from heaven, preach any other
+gospel unto you than that which we have preached unto you, let him be accursed"
+(Galatians 1:8). That is Deuteronomy 13 carried forward. A sign does not
+outweigh a message at odds with what God has said, and neither does an office.
+So for the New Testament the test has two parts: whether a book comes from an
+apostle, or from the apostles' circle as Mark, Luke and Hebrews were received,
+and whether it agrees with the Scripture already given.
+
+A book written after the apostles cannot pass the first part, however sound its
+teaching. The same holds for the books written between the Testaments. Josephus,
+writing at the end of the first century, says the Jews have "only twenty-two
+books ... which are justly believed to be divine", and that what was written
+after the Persian king Artaxerxes "hath not been esteemed of the like authority
+with the former by our forefathers, because there hath not been an exact
+succession of prophets since that time" (*Against Apion* I.8). 1 Maccabees
+says the same of its own day, which it calls the worst affliction Israel had
+known "since the time that a prophet was not seen among them" (9:27). This is
+the ground on which Protestants leave out the Apocrypha, the books Trent
+receives and the Reformers read but do not count as Scripture, and 1 Enoch.
+Jude quotes Enoch: "Behold, the Lord cometh with ten thousands of his saints"
+(Jude 14). Quoting a book is not receiving it, though, since Paul quotes Greek
+poets to the Athenians (Acts 17:28).
+
+## Under providence
+
+None of this is a committee's checklist. The Westminster Confession says the
+Old Testament in Hebrew and the New in Greek were "immediately inspired by God,
+and by his singular care and providence kept pure in all ages" (I.8). The tests
+are how the church recognises what God has kept and given. They are applied
+under that providence and do not take its place, which is why the reply
+counts it among its grounds.
+
 ## Books the Church read and did not receive
 
 The early Church drew a line between books it read and books it received as
 Scripture, and it said why. The Muratorian fragment, an early list of the New
 Testament books whose date is disputed (the late second century or the fourth),
-says that Hermas wrote the Shepherd "very recently in our times in the city of
-Rome ... And therefore it also ought to be read; but it cannot be made public in
-the Church to the people, nor placed among the prophets, as their number is
-complete, nor among the apostles". Athanasius, in his Festal Letter of 367,
+says that Hermas wrote the Shepherd (the *Pastor*, in the translation quoted)
+"very recently in our times in the city of Rome ... And therefore it also ought
+to be read; but it cannot be made public in the Church to the people, nor
+placed among the prophets, as their number is complete, nor among the apostles
+to the end of time". The fragment gives a reason only for the prophets. Read
+with "very recently in our times", its exclusion from the apostles is a
+judgement about when the book was written. Athanasius, in his Festal Letter of 367,
 lists the books of both Testaments and calls them "fountains of salvation ...
 Let no man add to these". He then names "other books besides these not indeed
 included in the Canon, but appointed by the Fathers to be read by those who
@@ -60,10 +113,12 @@ can weigh: when a book was written, whether it came from the apostles' time,
 what had been handed down. The last of these is a reason from the Church's
 reception, which is the ground Rome stands on.
 
-So the reply runs: Scripture itself gives tests for a word that claims to come
-from God, and the Church set books apart by reasons it stated; so identifying
-the canon is a matter of recognising what God gave, by tests, and needs no
-infallible authority outside Scripture to do it.
+So the reply runs. Scripture itself gives tests for a word that claims to come
+from God: agreement with what he has already said, and, for the New Testament,
+an apostle's authority. The Church set books apart by those reasons, and God by
+his providence keeps his word while it does. So identifying the canon is a
+matter of recognising what God gave, and needs no infallible authority outside
+Scripture to do it.
 
 ## Rome's answer
 
@@ -95,16 +150,18 @@ conclusion, the step from one to the other is rated `disputed`.
 
 ## Two Protestant cautions
 
-Michael Kruger agrees with the reply's conclusion and not with its route. His
-own answer is that the canon authenticates itself: Christ speaks in the books by
+Michael Kruger agrees with the reply's conclusion and with much of its route.
+His answer is that the canon authenticates itself: Christ speaks in the books by
 his Spirit, as Calvin rests the certainty of Scripture on "the secret testimony
-of the Spirit" (*Institutes* I.vii.4). Kruger faults the appeal to tests for
-which books belong, while granting that it has "rightly focused on apostolicity
-as a key component of canonicity", that is, on whether a book comes from an
-apostle or his circle (*Canon Revisited*, pp. 67–87). Sound doctrine alone
-cannot pick out the canon, because the Shepherd taught sound doctrine too, and
-it is apostolic time that the Muratorian fragment gives as its reason for
-setting the Shepherd apart.
+of the Spirit" (*Institutes* I.vii.4). His own model counts God's providential
+exposure of the books to the church and their apostolic origin among its parts,
+with the Spirit's witness (*Canon Revisited*, the chapter "My sheep hear my
+voice"). What he faults is the appeal to tests taken on their own, while
+granting that it has "rightly focused on apostolicity as a key component of
+canonicity", that is, on whether a book comes from an apostle or his circle
+(pp. 67–87). Sound doctrine alone cannot pick out the canon, because the
+Shepherd taught sound doctrine too. That is why the reply joins agreement with
+the earlier Scripture to apostolic origin, and both to providence.
 
 Lee Martin McDonald doubts that tests settled the list at all. The Fathers, he
 writes, "employed several criteria, often unequally", and the care with which
@@ -115,7 +172,7 @@ they cannot show that a book belongs in the canon.
 
 ## What the checks show
 
-Granted its three grounds and its step from them, the reply reaches what it
+Granted its eight grounds and its step from them, the reply reaches what it
 claims: identifying the canon does not need an infallible authority outside
 Scripture (`canon_tests_deny_the_ground`). The step is the part in dispute. Nor
 does the reply, on its own, deliver sola scriptura: with the tests granted,
@@ -153,14 +210,22 @@ be weighed against each other in a dispute (the section "Refusing a ground, and
 denying it" in "Three objections, and the answers to them"). -/
 
 /-- If Scripture tests a word that claims to come from God, by what it says
-and by whether it comes to pass, and the early Church set apart books it read
-for reasons it stated, then identifying the canon does not require an
-infallible authority outside Scripture. -/
+and by whether it comes to pass; if it builds the church on the apostles and
+counts their letters as Scripture, and holds even an apostle to the gospel
+first given; if the books written after prophecy ceased, and those after the
+apostles, were read but not received; and if God keeps his word by his
+providence while the tests are applied; then identifying the canon does not
+require an infallible authority outside Scripture. -/
 @[solaScripturaDefs]
 def canonTestsStep : Formula Claim :=
   ⋀ [ p .deut13_1_3ProphetOfOtherGods
     , p .deut18_20_22WordNotFulfilled
-    , p .booksReadButNotReceived ] ➝ notP .identifyingCanonRequiresInfallibleAuthority
+    , p .eph2_20FoundationOfApostles
+    , p .pet3_15_16PaulAmongScriptures
+    , p .gal1_8NoOtherGospel
+    , p .prophecyCeasedBeforeLaterBooks
+    , p .booksReadButNotReceived
+    , p .providenceKeepsScripture ] ➝ notP .identifyingCanonRequiresInfallibleAuthority
 
 /-- **The canon recognised by Scripture's tests.** -/
 @[solaScripturaDefs]
@@ -169,7 +234,12 @@ def canonTestsLine : Line Claim :=
   , grounds :=
       [ p .deut13_1_3ProphetOfOtherGods
       , p .deut18_20_22WordNotFulfilled
-      , p .booksReadButNotReceived ]
+      , p .eph2_20FoundationOfApostles
+      , p .pet3_15_16PaulAmongScriptures
+      , p .gal1_8NoOtherGospel
+      , p .prophecyCeasedBeforeLaterBooks
+      , p .booksReadButNotReceived
+      , p .providenceKeepsScripture ]
   , step := canonTestsStep
   , delivers := notP .identifyingCanonRequiresInfallibleAuthority
   , inference := some canonTestsInference }
@@ -183,12 +253,15 @@ def canonTestsReply : ArgumentPackage Claim :=
 /-! #### What it shows -/
 
 /-- **The reply denies the canon objection's ground.** Granted Moses' two tests
-(Deuteronomy 13:1–3 and 18:20–22), the early Church's setting apart of books
-it read but did not receive, and the step from these to the conclusion,
-identifying the canon does not require an infallible authority outside
-Scripture.
+(Deuteronomy 13:1–3 and 18:20–22), the apostles as the church's foundation
+(Ephesians 2:20) and their letters counted as Scripture (2 Peter 3:15–16),
+the apostles' gospel as the test of any later one (Galatians 1:8), the end of
+prophecy before the later Jewish books, the early Church's setting apart of
+books it read but did not receive, God's providence over his word, and the
+step from these to the conclusion, identifying the canon does not require an
+infallible authority outside Scripture.
 
-What this does not claim: that the three grounds are enough without the step.
+What this does not claim: that the eight grounds are enough without the step.
 The step is rated `disputed`, because Reid grants the grounds and denies the
 conclusion. -/
 @[headline]

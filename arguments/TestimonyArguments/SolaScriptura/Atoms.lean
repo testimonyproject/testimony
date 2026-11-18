@@ -109,6 +109,36 @@ inductive Claim
   sets the Shepherd and the Didache among books "appointed by the Fathers to be
   read by those who newly join us", and not in the canon. -/
   | booksReadButNotReceived
+  /-- God keeps his written word by his providence and brings it to his people.
+  The Westminster Confession says the Old Testament in Hebrew and the New in
+  Greek were "immediately inspired by God, and by his singular care and
+  providence kept pure in all ages" (I.8). The tests are applied under that
+  providence, not in place of it. -/
+  | providenceKeepsScripture
+  /-- Ephesians 2:20 — the church is "built upon the foundation of the apostles
+  and prophets, Jesus Christ himself being the chief corner stone"; and Jude 3
+  speaks of "the faith which was once delivered unto the saints". -/
+  | eph2_20FoundationOfApostles
+  /-- 2 Peter 3:15–16 — Peter writes that "our beloved brother Paul" has written
+  "in all his epistles", which the unlearned "wrest, as they do also the other
+  scriptures". He counts Paul's letters among the Scriptures. In 3:2 he sets
+  "the commandment of us the apostles" beside "the words which were spoken
+  before by the holy prophets"; and 1 Timothy 5:18 introduces, after a line of
+  Deuteronomy, "The labourer is worthy of his reward", with "the scripture
+  saith", a saying Luke 10:7 records from Jesus. -/
+  | pet3_15_16PaulAmongScriptures
+  /-- Galatians 1:8 — "But though we, or an angel from heaven, preach any other
+  gospel unto you than that which we have preached unto you, let him be
+  accursed." Deuteronomy's test, that a sign does not outweigh a message at
+  odds with what God has said, is applied to the apostles' own gospel. -/
+  | gal1_8NoOtherGospel
+  /-- The Jews of the first century held that prophecy had ceased, and did not
+  give the books written after it the authority of the earlier ones. Josephus
+  says that what was written after Artaxerxes "hath not been esteemed of the
+  like authority with the former ... because there hath not been an exact
+  succession of prophets since that time" (*Against Apion* I.8), and
+  1 Maccabees speaks of a time "that a prophet was not seen among them" (9:27). -/
+  | prophecyCeasedBeforeLaterBooks
   /-- Tradition carries real but fallible — ministerial, not magisterial —
   authority. **Tradition I.** -/
   | traditionHasMinisterialAuthority

@@ -4,7 +4,7 @@ import TestimonyArguments.SolaScriptura.Sources
 /-!
 # TestimonyArguments.Meanings.SolaScriptura — what each sola scriptura claim says
 
-**Fifty-seven of the sixty-seven claims have meanings** (`coverage_now`), and with
+**Sixty-two of the seventy-two claims have meanings** (`coverage_now`), and with
 them twenty-two of the argument's twenty-eight lines of reason can be read as moves,
 all of whose claims say something the checks can see: the eliminative line, both
 of Mark 7's lines, the line from Jesus' sayings and Paul's letters to the same
@@ -223,6 +223,8 @@ def all : List Claim :=
   , .churchMindIsInfallibleInterpreter, .canonKnownThroughChurchReception
   , .identifyingCanonRequiresInfallibleAuthority, .rivalAuthorityIsAlsoSelfAuthenticating
   , .deut13_1_3ProphetOfOtherGods, .deut18_20_22WordNotFulfilled, .booksReadButNotReceived
+  , .providenceKeepsScripture, .eph2_20FoundationOfApostles, .pet3_15_16PaulAmongScriptures
+  , .gal1_8NoOtherGospel, .prophecyCeasedBeforeLaterBooks
   , .traditionHasMinisterialAuthority, .traditionIDiffersInPrincipleFromTradition0
   , .individualRetainsUltimateInterpretiveAuthority, .choosingAnAuthorityIsItselfPrivateJudgment
   , .bindingnessAppliesToFirstOrderDoctrineOnly, .practiceNeitherCommandedNorForbiddenIsPermitted
@@ -314,6 +316,10 @@ theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
 /-- Deuteronomy 18:20–22. -/
 @[nolint defsWithUnderscore] abbrev deut18_20_22 : PassageRange :=
   rg .deuteronomy 18 20 18 22
+/-- Ephesians 2:20. -/
+@[nolint defsWithUnderscore] abbrev eph2_20 : PassageRange := vs .ephesians 2 20
+/-- Galatians 1:8. -/
+@[nolint defsWithUnderscore] abbrev gal1_8 : PassageRange := vs .galatians 1 8
 /-- 2 Timothy 2:2. -/
 @[nolint defsWithUnderscore] abbrev tim2_2 : PassageRange := vs .secondTimothy 2 2
 /-- Matthew 23:16–22. -/
@@ -433,6 +439,23 @@ def means : Claim → Statement
     .holds <| rl .agentOf (pt "the Muratorian fragment and Athanasius" .agent)
       (pt ("setting apart the Shepherd and the Didache as books read but not received " ++
           "into the canon, and saying why") .event)
+  | .providenceKeepsScripture =>
+    .holds <| rl .agentOf (pt "God, by his providence" .agent)
+      (pt "keeping his written word and bringing it to his people" .event)
+  | .eph2_20FoundationOfApostles =>
+    .says eph2_20 <| rl .isA (pt "the apostles and prophets" .agent)
+      (pt "the foundation the church is built on" .quality)
+  | .pet3_15_16PaulAmongScriptures =>
+    .says pet3_15_16 <| rl .isA (pt "Paul's epistles" .informationObject)
+      (pt "counted with the other scriptures" .quality)
+  | .gal1_8NoOtherGospel =>
+    .says gal1_8 <| rl .isA
+      (pt "one who preaches any other gospel, though an apostle or an angel" .agent)
+      (pt "accursed" .quality)
+  | .prophecyCeasedBeforeLaterBooks =>
+    .holds <| rl .agentOf (pt "the Jews of the first century" .agent)
+      (pt ("withholding from books written after prophecy ceased the authority of the " ++
+          "earlier ones") .event)
   | .traditionHasMinisterialAuthority =>
     .holds <| .both (rl .isA (cn .tradition) (cn .ministerialAuthority))
       (.not (rl .isA (cn .tradition) (cn .infallible)))
@@ -581,10 +604,10 @@ def means : Claim → Statement
 instance meanings : HasMeanings Claim :=
   { argument := "Sola scriptura", all, complete := all_complete, means }
 
-/-- **Fifty-seven of the 67 atoms are analysed**: the texts, in their own words,
+/-- **Sixty-two of the 72 atoms are analysed**: the texts, in their own words,
 and every claim a line's step reads except the three the module docstring
 names. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (57, 67) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (62, 72) := by decide
 
 /-- **The sola scriptura joins**: each pair of claims whose meanings exclude or
 entail one another, listed, and proved to be exactly what the meanings contain.

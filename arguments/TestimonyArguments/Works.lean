@@ -3082,6 +3082,25 @@ placed among the prophets, as their number is complete, nor among the apostles"
   , place := some "Buffalo, NY"
   , volume := some "5" }
 
+/-- Josephus, *Against Apion*, in William Whiston's translation, read at the
+Christian Classics Ethereal Library. In book I, section 8, Josephus counts
+"only twenty-two books ... which are justly believed to be divine", and says
+that what was written after Artaxerxes "hath not been esteemed of the like
+authority with the former by our forefathers, because there hath not been an
+exact succession of prophets since that time". -/
+@[bib_entry] def josephusAgainstApion : BibEntry := .webPage
+  { core :=
+      { key := "josephus-against-apion-whiston"
+      , role := .witness
+      , contributors :=
+          { authors := [.single "Flavius Josephus"]
+          , translators := [.person "William" "Whiston"] }
+      , title := "Against Apion, Book I"
+      , identifiers :=
+          [ .url "https://www.ccel.org/ccel/josephus/works/files/apion-1.htm"
+              (some "2026-11-18") ] }
+  , site := some "Christian Classics Ethereal Library" }
+
 /-- Basil of Caesarea, *Ascetical Works*, tr. M. Monica Wagner: Fathers of the
 Church volume 9, which carries Homily 20, "Of Humility" (p. 475). Verified at
 Open Library, ISBN 9780813209661 (Catholic University of America Press,

@@ -60,7 +60,7 @@ Sola scriptura
 
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:
-canonDispute.finite: 7 I, 2 RA, 2 CA, 0 PA, 11 edges
+canonDispute.finite: 12 I, 2 RA, 2 CA, 0 PA, 16 edges
 mark7Dispute.finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
 and 2 hearings, drawn with the disputes they restrict
 -/

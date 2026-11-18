@@ -65,9 +65,9 @@ def canonObjectionInference : Source :=
   , tradition := .romanCatholic
   , confidence := .wellSupported }
 
-/-- The rating of the step from Scripture's tests, and the Church's use of
-reasons, to the claim that identifying the canon needs no infallible
-authority: `disputed`. George Reid, writing in the *Catholic Encyclopedia*
+/-- The rating of the step from Scripture's tests, applied under providence, to
+the claim that identifying the canon needs no infallible authority outside
+Scripture: `disputed`. George Reid, writing in the *Catholic Encyclopedia*
 (1908), is the reader who grants the grounds and denies the conclusion. He
 grants that apostolicity is "a positive and partial touchstone", and narrates
 how the Shepherd and the Didache were set apart; and he names the test from
@@ -77,13 +77,17 @@ self-evident", so its "sole absolute criterion" is the Spirit witnessing "not
 Luther, but through the constituted organ and custodian of Its revelations, the
 Church". Augustine stands behind him: the canonical books are those "received by
 all the Catholic churches" (*On Christian Doctrine* II.8.12), a test of
-reception, not of agreement.
+reception, not of agreement. As a Catholic he reads every text the step cites
+as Scripture, Peter on Paul's letters among them, and holds that God keeps his
+word; his providence, on Reid's account, works through the Church that
+recognises the books.
 
 Two Protestant readers press on the step from the other side without denying
-its conclusion. Kruger criticises the criteria-of-canonicity model and grants
-that it "has rightly focused on apostolicity as a key component of canonicity"
-(pp. 67–87, at p. 87). McDonald finds the ancient criteria applied "often
-unequally" (p. 127). -/
+its conclusion. Kruger criticises the criteria-of-canonicity model taken on its
+own and grants that it "has rightly focused on apostolicity as a key component
+of canonicity" (pp. 67–87, at p. 87); his own model counts providential
+exposure and apostolic origin among its parts, with the Spirit's witness.
+McDonald finds the ancient criteria applied "often unequally" (p. 127). -/
 def canonTestsInference : Source :=
   { primary := .work reidCanonNewTestament (.sectionRef "The criterion of inspiration")
   , supporting :=
@@ -544,6 +548,71 @@ def cite : Claim → AtomMeta
             , .work mcdonaldIntegrityCanon (.pages 127 129) ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
+  | .providenceKeepsScripture =>
+    { label :=
+        "God by his providence keeps his written word and brings it to his people, and " ++
+        "the tests are applied under that providence"
+    , kind := .theological
+      -- Kruger's model names "providential exposure" of the books to the church
+      -- as one of its parts; the page is known only from reviews, so the chapter
+      -- is cited.
+    , source :=
+        { primary := .work westminsterConfession (.sectionRef "I.8")
+        , supporting :=
+            [ .work krugerCanonRevisited
+                (.sectionRef "\"My sheep hear my voice: canon as self-authenticating\"") ]
+        , tradition := .reformedProtestant
+        , confidence := .wellSupported } }
+  | .eph2_20FoundationOfApostles =>
+    { label :=
+        "Ephesians 2:20 and Jude 3 — the church is built on the foundation of the " ++
+        "apostles and prophets, and the faith was once delivered to the saints"
+    , kind := .textual
+    , source :=
+        { primary := .scripture
+            [ { ref := .verse ⟨.ephesians, 2, 20⟩ }, { ref := .verse ⟨.jude, 1, 3⟩ } ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .pet3_15_16PaulAmongScriptures =>
+    { label :=
+        "2 Peter 3:15–16 counts Paul's letters with \"the other scriptures\", 3:2 sets " ++
+        "the apostles' commandment beside the prophets, and 1 Timothy 5:18 calls a " ++
+        "saying Luke 10:7 records \"scripture\""
+    , kind := .textual
+    , source :=
+        { primary := .scripture
+            [ { ref := .range ⟨.secondPeter, 3, 15, 3, 16⟩ }
+            , { ref := .verse ⟨.secondPeter, 3, 2⟩ }
+            , { ref := .verse ⟨.firstTimothy, 5, 18⟩ }
+            , { ref := .verse ⟨.luke, 10, 7⟩ } ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .gal1_8NoOtherGospel =>
+    { label :=
+        "Galatians 1:8 — though we, or an angel from heaven, preach any other gospel " ++
+        "than the one first preached, let him be accursed"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.galatians, 1, 8⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .prophecyCeasedBeforeLaterBooks =>
+    { label :=
+        "First-century Jews held that prophecy had ceased, and did not give the books " ++
+        "written after it the authority of the earlier ones"
+    , kind := .historical
+      -- What Josephus reports, and what 1 Maccabees says of its own time. Trent
+      -- receives 1 Maccabees and the other books Josephus leaves out; the claim
+      -- is what was held then, not that Trent is wrong.
+    , source :=
+        { primary := .work josephusAgainstApion (.sectionRef "I.8")
+        , supporting :=
+            [ .scripture
+                [ { ref := .verse ⟨.firstMaccabees, 9, 27⟩ }
+                , { ref := .verse ⟨.firstMaccabees, 4, 46⟩ }
+                , { ref := .verse ⟨.firstMaccabees, 14, 41⟩ } ] ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
   | .traditionHasMinisterialAuthority =>
     { label := "Tradition carries real but fallible — ministerial — authority"
     , kind := .theological
