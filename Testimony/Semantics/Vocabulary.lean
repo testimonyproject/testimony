@@ -70,6 +70,9 @@ the word, not its meaning: what it means is a `Statement.means`. -/
 inductive Lexeme
   /-- δικαιόω, to justify. -/
   | dikaioo
+  /-- δίκαιος, righteous: the adjective of δικαιόω's family, as Romans 5:19 has it,
+  "the many will be made righteous" (δίκαιοι κατασταθήσονται). -/
+  | dikaios
   /-- δικαιοσύνη θεοῦ, the righteousness of God. -/
   | dikaiosyneTheou
   /-- ἔργα νόμου, works of the law. -/
@@ -464,6 +467,28 @@ inductive Rel
   (ἀκυρόω). -/
   | voids
 deriving DecidableEq, Repr
+
+/-- **How two different words are kin**, so that an argument may be tempted to
+read one by the other. -/
+inductive Kinship
+  /-- Words of one family in one language: a verb and its adjective. Reading one
+  by the other is what Barr called the root fallacy. -/
+  | cognate
+  /-- A word and the word a version puts for it: the Latin or the Greek of the
+  same text. -/
+  | translation
+deriving DecidableEq, Repr
+
+/-- **Which words are kin, and how**, in either order. The table is the
+vocabulary's own, and it grows with the vocabulary: a pair is added when two of
+its words are both in it. -/
+def Lexeme.kin (w v : Lexeme) : Option Kinship :=
+  let pairs : List (Lexeme × Lexeme × Kinship) :=
+    [ (.dikaios, .dikaioo, .cognate), (.pistis, .pisteuo, .cognate)
+    , (.iustificare, .dikaioo, .translation), (.allein, .monos, .translation)
+    , (.parthenos, .almah, .translation), (.neanis, .almah, .translation)
+    , (.ulemta, .almah, .translation), (.btulta, .almah, .translation) ]
+  (pairs.find? fun (a, b, _) => (a == w && b == v) || (a == v && b == w)).map (·.2.2)
 
 /-- A principle of reading, held for its own sake. -/
 inductive Principle
