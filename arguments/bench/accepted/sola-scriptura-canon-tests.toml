@@ -1,0 +1,5 @@
+[[accept]]
+benchmark = "leaves_open: parity leaves the canon open"
+metric = "time"
+up_to = 0.25
+reason = "The canon chapter adds eight claims to the sola scriptura argument (Moses' tests, the apostolic foundation, 2 Peter 3:15-16, Galatians 1:8, the end of prophecy, books read but not received, providence), so every reading of the argument's claims is a larger table: 64 claims become 72. The benchmark's own premises are unchanged; the cost is the size of the claim type it reads over, measured at +17%."
