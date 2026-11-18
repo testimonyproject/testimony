@@ -908,13 +908,28 @@ def baseCite : Claim → AtomMeta
   | .romans5_19ManyMadeRighteous =>
     { label := "Romans 5:19: through the obedience of the one the many will be made righteous"
     , kind := .textual
-      -- `consensus`: the text, and what its adjective means there, which both
-      -- sides grant. Ziesler, p. 199: "certainly something more than forensic",
-      -- the many "will really be righteous".
+      -- `consensus`: the text. What "made righteous" means there is its own
+      -- claim, `romans5_19MadeInwardlyRighteous`.
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.romans, 5, 19⟩ }]
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
+  | .romans5_19MadeInwardlyRighteous =>
+    { label := "In Romans 5:19, ‘made righteous’ means made righteous within"
+    , kind := .interpretive
+      -- `disputed`. Ziesler, p. 199: "certainly something more than forensic",
+      -- the many "will really be righteous"; Fitzmyer, pp. 118–19, the
+      -- "effective sense". Hodge grants the verse and denies it: καθίστημι
+      -- "never, in the New Testament, means to make, in the sense of effecting"
+      -- (Romans, 1864, p. 271), so the many are "constituted legally righteous"
+      -- (p. 272). So does Calvin: we are "made righteous 'by the obedience' of
+      -- Christ" only because "we are deemed righteous in the sight of God in
+      -- him" (Institutes III.xi.4, Beveridge).
+    , source :=
+        { primary := .work zieslerRighteousnessInPaul (.page 199)
+        , supporting := [.work fitzmyerRomans (.pages 118 119)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
   | .romans5_19BearsOnTheVerb =>
     { label := "Romans 5:19's ‘righteous’ (δίκαιος) bears on what Paul's verb ‘justify’ means"
     , kind := .linguistic

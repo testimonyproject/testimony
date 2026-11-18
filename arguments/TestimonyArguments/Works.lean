@@ -4578,6 +4578,47 @@ headers. Cited for his first rule (p. 3) and its application to Titus 2:13:
       , note := some "Third edition." }
   , publisher := "Vernor and Hood"
   , place := some "London" }
+/-- Calvin's *Institutes*, Book III, in Henry Beveridge's translation, as the
+Christian Classics Ethereal Library gives it, for III.xi on justification: that
+"to justify, therefore, is nothing else than to acquit from the charge of guilt"
+(§3); that justification and sanctification are "inseparable", as the sun's
+brightness and heat, and yet "reason itself prohibits us from transferring the
+peculiar properties of the one to the other" (§6); and that we could not be
+"made righteous 'by the obedience' of Christ (Rom. 5:19), were it not that we are
+deemed righteous in the sight of God in him" (§4). Read in CCEL's text of
+chapter 11; the volume's date was not checked, so none is given. -/
+@[bib_entry] def calvinInstitutesBeveridgeCcel : BibEntry := .book
+  { core :=
+      { key := "calvin-institutes-beveridge-ccel"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "Henry" "Beveridge"] }
+      , title := "Institutes of the Christian Religion"
+      , identifiers :=
+          [ .url "https://ccel.org/ccel/calvin/institutes/institutes.v.xii.html"
+                 (some "2026-11-18") ] }
+  , publisher := "Christian Classics Ethereal Library" }
+
+/-- Charles Hodge on Romans, in the revised edition of 1864, for 5:19 (pp. 270–74):
+καθίστημι "never, in the New Testament, means to make, in the sense of
+effecting, or causing a person or thing, to be in its character or nature other
+than it was before" (p. 271), so the many are "constituted legally righteous"
+(p. 272). The title page reads "New edition, revised, and in great measure
+rewritten", Philadelphia, William S. & Alfred Martien, 1864; read in the scan at
+archive.org. Published without an ISBN. -/
+@[bib_entry] def hodgeRomans : BibEntry := .book
+  { core :=
+      { key := "hodge-romans-1864"
+      , role := .scholarship
+      , contributors := { authors := [.person "Charles" "Hodge"] }
+      , title := "Commentary on the Epistle to the Romans"
+      , year := some { value := 1864 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentaryepi00hodg" (some "2026-11-18") ] }
+  , publisher := "William S. & Alfred Martien"
+  , place := some "Philadelphia" }
+
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'

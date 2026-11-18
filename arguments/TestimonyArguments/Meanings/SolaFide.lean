@@ -343,8 +343,9 @@ def means : Claim → Statement
   | .augustineGivesBothSenses =>
     .also (.glosses .augustine .dikaioo .makeRighteous) (.glosses .augustine .dikaioo .verdict)
   | .romans5_19ManyMadeRighteous =>
-    .also (.occurs .dikaios (vs .romans 5 19))
-      (.means .dikaios (.passage (vs .romans 5 19)) .makeRighteous)
+    .occurs .dikaios (vs .romans 5 19)
+  | .romans5_19MadeInwardlyRighteous =>
+    .means .dikaios (.passage (vs .romans 5 19)) .makeRighteous
   | .romans5_19BearsOnTheVerb =>
     .bears .dikaios (.passage (vs .romans 5 19)) .dikaioo (.usage .paul)
   | .godsVerdictIsEffective => .holds (rl .effects (cn .justification) (cn .sanctification))
@@ -405,7 +406,8 @@ def all : List Claim :=
   , .abrahamsGrantRewardsHisObedience, .countingWasForTheTesting
   , .aqedahBlessingAugmentedForObedience, .aqedahOathMeritedByObedience
   , .titus3_7UsesDikaioAsPaul, .romans4CountKeepsItsSense, .augustineGivesBothSenses
-  , .romans5_19ManyMadeRighteous, .romans5_19BearsOnTheVerb, .godsVerdictIsEffective ]
+  , .romans5_19ManyMadeRighteous, .romans5_19MadeInwardlyRighteous
+  , .romans5_19BearsOnTheVerb, .godsVerdictIsEffective ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -420,7 +422,7 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **A hundred and three of the hundred and thirty-four are analysed.** Of the
+/-- **A hundred and four of the hundred and thirty-five are analysed.** Of the
 thirty-one that are not, fifteen are the claims of the chapters on whether
 justification has degrees and on Abraham, whose content (a verdict's degrees, a
 covenant rite, a grant, a testing) the vocabulary cannot yet state. Of the other
@@ -433,7 +435,7 @@ of the obedience it requires, Galatians 1:6–9, Christ's command to baptise, Tr
 reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each needs a word
 the vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
 reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (103, 134) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (104, 135) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the

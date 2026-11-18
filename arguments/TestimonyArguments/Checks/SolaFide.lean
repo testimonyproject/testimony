@@ -43,7 +43,7 @@ Sola fide
 /--
 info: the charges, against every argument's lines:
 Sola fide
-  lines: 53, read: 34
+  lines: 58, read: 38
   attribute a view, against the argument's record:
     sandersLine: secondTempleJudaism, unrecorded
     trentWordLine: augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
@@ -69,7 +69,7 @@ Sola fide
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaFide
 
-/-- info: every package has a model with its postulates: 91, and 0 undecided -/
+/-- info: every package has a model with its postulates: 93, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaFide
 
@@ -85,7 +85,7 @@ Sola fide
 info: every dispute, as an AIF graph meeting Definition 1.1:
 jamesDispute.finite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
 jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
-solaFideDispute.finite: 69 I, 30 RA, 33 CA, 0 PA, 162 edges
+solaFideDispute.finite: 77 I, 36 RA, 42 CA, 0 PA, 193 edges
 and 3 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in

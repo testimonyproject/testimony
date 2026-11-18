@@ -555,9 +555,13 @@ inductive Claim
   | augustineGivesBothSenses
   /-- Romans 5:19 says: "through the obedience of the one man the many will be
   made righteous" (δίκαιοι κατασταθήσονται). The word is the adjective "righteous"
-  (δίκαιος), and "made righteous" is what it means there: the many "will really
-  be righteous", as Ziesler, who reads the verb otherwise, grants. -/
+  (δίκαιος), with the verb "appoint" or "constitute" (καθίστημι), and not the verb
+  "justify". A claim about the text, not about what "made righteous" means. -/
   | romans5_19ManyMadeRighteous
+  /-- In Romans 5:19, "made righteous" means made righteous within: the many "will
+  really be righteous", as Ziesler, who reads the verb "justify" otherwise, holds,
+  and Fitzmyer with him. A reading of the verse, which Hodge and Calvin deny. -/
+  | romans5_19MadeInwardlyRighteous
   /-- The adjective "righteous" (δίκαιος) in Romans 5:19 bears on Paul's verb
   "justify" (δικαιόω): what "made righteous" means there is what the verb means
   in Paul. Fitzmyer's reading needs this, since 5:19 has the adjective and not

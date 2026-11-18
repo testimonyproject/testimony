@@ -34,27 +34,47 @@ Three things come out.
   left of it (`trentsWord_burden`).
 - **Trent's reading at its strongest, with Fitzmyer's two roads beside
   Augustine's, needs three denied** (`trentsWordAtItsStrongest_burden`): the
-  step from Augustine, the step from the verdict, and one reading on the road
-  from Romans 5:19. Romans 5:19 has the adjective "righteous" (δίκαιος), not the
-  verb, so that road carries two readings, the verse's sense and the bridge from
-  the adjective to the verb, and either may be denied.
+  step from Augustine, one reading on the road from Romans 5:19, and one on the
+  road from the verdict. Romans 5:19 has the adjective "righteous" (δίκαιος),
+  not the verb, so that road carries three readings: that "made righteous"
+  there means made righteous within, that the adjective bears on the verb, and
+  the step from both. The verdict road carries two: that God's verdict is
+  effective, and the step from that to the word. There are six ways to make the
+  three denials, and no fewer denials will do.
 
 What this does not show is which readings are right. A burden counts the
 denials a reader must make. It does not weigh them, and the side that asks for
-more denials is not for that reason the better reading. Every step that a
-denial falls on is rated `disputed`, because a cited reader grants its grounds
-and denies its conclusion: Trent and Fitzmyer at the step from the courtroom
-sense, the Reformers at the step from the Latin, Ziesler at the bridge from
-Romans 5:19 and again at the step from the verdict. Each denial has a reader
-who makes it.
+more denials is not for that reason the better reading. Almost every reading a
+denial can fall on is rated `disputed`, because a cited reader grants its
+grounds and denies its conclusion: Trent and Fitzmyer at the step from the
+courtroom sense, the Reformers at the step from the Latin, Charles Hodge and
+Calvin at the reading of Romans 5:19 as renewal, Ziesler at the bridge from its
+adjective and at the step from the verdict, and Calvin at the verdict itself.
+The one exception is the step from Romans 5:19, read as renewal, and the bridge
+to the verb's sense, which no cited reader denies once both are granted.
+
+The Reformed side now answers each of those readings in the debate itself, not
+only in the ratings. The argument from Paul's word is heard with three answers
+from the Greek (`lexicalCaseAnsweringTheGreek`). Hodge reads Romans 5:19 as a
+standing: the verb there, καθίστημι, "never, in the New Testament, means to
+make, in the sense of effecting", so the many are "constituted legally
+righteous" (*Commentary on the Epistle to the Romans*, 1864, 271–72). Ziesler
+holds that the verse's adjective does not settle the verb. Calvin grants that
+God renews whom he justifies and denies that the verdict is what renews: light
+and heat come together from the sun, "and yet reason itself prohibits us from
+transferring the peculiar properties of the one to the other" (*Institutes*
+III.xi.6). Trent is heard with Fitzmyer's and Kertelge's roads
+(`tridentineOnPaulsWordAtItsStrongest`).
 
 No position wins this outright, and the defeat table says so plainly. A
 position defeats another when it attacks it and its weakest step is rated no
-lower than the other's. Here the steps on both sides are `disputed`, so every
-attack is a defeat, and each runs both ways. Of the 56 defeats in the debate
-over sola fide (`solaFideDispute`), not one is answered without a defeat in
-return. A one-way defeat would need a side whose every step no cited reader
-denies, and neither side has one. That is why the burdens matter: they say what
+lower than the other's. Here the weakest step on both sides is `disputed`, so
+every attack is a defeat, and each runs both ways. With both sides heard at
+their strongest, the debate over sola fide (`solaFideDispute`) has the same 56
+defeats it had before, and not one is answered without a defeat in return. The
+new answers and the new roads add attacks between the same two positions, and
+every one is a tie. A one-way defeat would need a side whose every step no
+cited reader denies, and neither side has one. That is why the burdens matter: they say what
 each side has to deny, when nothing settles which denial is right.
 
 Three checks that do not depend on who said what were also run over these
@@ -218,99 +238,10 @@ theorem trentsWord_burden :
 
 #print axioms trentsWord_burden
 
-/-- Fitzmyer's bridge, rated `disputed`. Fitzmyer grants that the verb "seems
-normally to have a declarative, forensic meaning" in the Septuagint, and in Paul
-at times. But "many instances are ambiguous, and the effective sense seems to be
-supported by 5:19, 'through the obedience of one many will be made upright'"
-(*Romans*, 118–19). Ziesler grants the verse, and that "certainly something more
-than forensic" is meant there, and denies that it bears on the verb, because
-the word in 5:19 is "righteous" (δίκαιοι), not "justify" (*The Meaning of
-Righteousness in Paul*, 199). -/
-def fitzmyerOnTheAdjective : Source :=
-  { primary := .work fitzmyerRomans (.pages 118 119)
-  , tradition := .romanCatholic
-  , confidence := .disputed }
-
-/-- **The bridge from Romans 5:19 to Paul's verb.** Romans 5:19 does not use the
-verb "justify" (δικαιόω). It says the many "will be made righteous" (δίκαιοι
-κατασταθήσονται), with the adjective "righteous" (δίκαιος). Fitzmyer's road
-needs what the adjective means there to be what the verb means in Paul. That
-is a reading in its own right, and it is the one Ziesler denies, so it stands
-here as a line of its own, which a reader can reject without rejecting the
-verse. The word-shift check (`Testimony.Semantics.Fallacy`) finds the move from
-the adjective to the verb granted, because this line states it. -/
-@[solaFideDefs]
-def fitzmyerBridgeLine : Line Claim :=
-  { name := "Romans 5:19's adjective bears on Paul's verb (Fitzmyer)"
-  , grounds := []
-  , step := p .romans5_19BearsOnTheVerb
-  , delivers := p .romans5_19BearsOnTheVerb
-  , inference := some fitzmyerOnTheAdjective }
-
-/-- The step from Romans 5:19 and the bridge to what Paul's verb means, rated
-`plausible`. Granted that the many in 5:19 are made righteous in fact, and that
-the adjective there bears on the verb, the verb carries the sense of making
-righteous. No cited reader grants both and denies this. Ziesler, who denies the
-conclusion, does so by denying the bridge (p. 199). -/
-def fitzmyerOnRomansFiveNineteen : Source :=
-  { primary := .work fitzmyerRomans (.pages 118 119)
-  , tradition := .romanCatholic
-  , confidence := .plausible }
-
-/-- **Paul's word, from Romans 5:19.** "Through the obedience of the one man the
-many will be made righteous." So, Fitzmyer argues, Paul's "justify" carries an
-effective sense: God's declaration makes the sinner upright. This is Trent's
-reading of the word on a modern Catholic exegete's ground, the Greek of
-Romans, rather than on the Latin. It rests on the verse and on the bridge from
-the verse's adjective to the verb. The bridge is not among this line's grounds,
-which a burden takes as granted. It comes from its own line
-(`fitzmyerBridgeLine`), so that a reader can deny it. -/
-@[solaFideDefs]
-def fitzmyerWordLine : Line Claim :=
-  { name := "Paul's word, from Romans 5:19 (Fitzmyer)"
-  , grounds := [p .romans5_19ManyMadeRighteous]
-  , step :=
-      ⋀ [p .romans5_19ManyMadeRighteous, p .romans5_19BearsOnTheVerb]
-      ➝ p .paulsJustifyDenotesRenewal
-  , delivers := p .paulsJustifyDenotesRenewal
-  , inference := some fitzmyerOnRomansFiveNineteen }
-
-/-- The step from God's effective verdict to what Paul's verb means, rated
-`disputed`. Fitzmyer, quoting Karl Kertelge: declaring a person upright has "not
-only a forensic effect, but as forensic also an 'effective' meaning" (*Romans*,
-118–19). Ziesler grants that the justified are also made a new creature, the
-two "interdependent and inseparable" (p. 212), and denies that the renewal is
-what the verb says (pp. 162–63). -/
-def kertelgeOnTheVerdict : Source :=
-  { primary := .work fitzmyerRomans (.pages 118 119)
-  , tradition := .romanCatholic
-  , confidence := .disputed }
-
-/-- **Paul's word, from what God's verdict does.** When God declares a sinner
-righteous, his word does what it says, and the sinner is made righteous. So the
-verb that names the declaration names the renewal too. This is the third road,
-Kertelge's, as Fitzmyer reports it, and it is the strongest form of the
-Catholic reading, because it grants the Reformers the courtroom sense and asks
-only that the verdict be effective.
-
-It reaches a sense of the word from a claim about God's act, not from a use or
-a reading of the word, and the sense-from-elsewhere check
-(`Testimony.Semantics.Fallacy`) reports it so. That is not a charge that the
-road is wrong. It says where its ground lies: in what God's verdict does, which
-Ziesler grants, rather than in what Paul's word means, which he denies. -/
-@[solaFideDefs]
-def effectiveVerdictLine : Line Claim :=
-  { name := "Paul's word, from God's effective verdict (Kertelge, via Fitzmyer)"
-  , grounds := [p .godsVerdictIsEffective]
-  , step := p .godsVerdictIsEffective ➝ p .paulsJustifyDenotesRenewal
-  , delivers := p .paulsJustifyDenotesRenewal
-  , inference := some kertelgeOnTheVerdict }
-
 /-- The roads to "Paul's 'justify' means renewal": Augustine's explanation, the
 bridge from Romans 5:19 with the step from it, and God's effective verdict. -/
 @[solaFideDefs]
-def trentsWordRoads : List (Line Claim) :=
-  [trentWordLine, fitzmyerBridgeLine, fitzmyerWordLine, effectiveVerdictLine]
+def trentsWordRoads : List (Line Claim) := trentWordLine :: modernCatholicWordRoads
 
 /-- **Trent's reading of Paul's word, at its strongest.** That Paul's "justify"
 means renewal, from Augustine's explanation, from Romans 5:19 and from God's
@@ -323,8 +254,8 @@ def trentsWordAtItsStrongest : ArgumentPackage Claim :=
   , conclusion := p .paulsJustifyDenotesRenewal
   , conclusionLabel := "Paul's δικαιόω denotes renewal"
   , inferences :=
-      [trentReadsPaulsWord, fitzmyerOnTheAdjective, fitzmyerOnRomansFiveNineteen,
-        kertelgeOnTheVerdict] }
+      [trentReadsPaulsWord, inwardOnRomansFiveNineteen, fitzmyerOnTheAdjective,
+        fitzmyerOnRomansFiveNineteen, kertelgeOnTheVerdictItself, kertelgeOnTheVerdict] }
 
 /-- **Trent's reading at its strongest can be held without contradiction.** -/
 theorem trentsWordAtItsStrongest_is_satisfiable :
@@ -332,35 +263,41 @@ theorem trentsWordAtItsStrongest_is_satisfiable :
   satisfied_by trentsWordReading [solaFideDefs]
 
 /-- **What a reader must deny to hold that Paul's "justify" does not mean
-renewal, against Trent's reading at its strongest.** There are two ways, and
-each denies three readings: the step from Augustine's explanation to Paul's
-word, the step from God's effective verdict to it, and one of the two readings
-on the road from Romans 5:19, either the bridge from the verse's adjective to
-the verb or the step from the verse and the bridge to the verb's sense. Keep
-any one of the three, and the case stands.
+renewal, against Trent's reading at its strongest.** Three readings, one from
+each road, and there are six ways to choose them:
+
+- the step from Augustine's explanation to Paul's word, on every way;
+- on the road from Romans 5:19, one of three: that "made righteous" there means
+  made righteous within, that the verse's adjective bears on the verb, or the
+  step from both to the verb's sense;
+- on the road from the verdict, one of two: that God's verdict is effective, or
+  the step from it to the word.
+
+Keep a whole road, and the case stands.
 
 So, put as strongly as its cited readers put it, Trent's reading asks more of
 its opponent than the Reformed reading does: three readings against two
-(`paulsWord_burden`). The Reformed have a denial ready at each point. At
+(`paulsWord_burden`). The Reformed have a cited denial ready at each road. At
 Augustine, that the Latin *iustificare* is not the Greek, and that Augustine
-gives the courtroom sense too. At Romans 5:19, Ziesler's, that the verse has
-the adjective and not the verb. At the verdict, Ziesler's again, that the
-renewal is real and inseparable from justification and still not what the verb
-says. Each of these denials answers a step rated `disputed`. The second way is
-different. It denies the step from the verse and the bridge to the verb's sense,
-rated `plausible`, and no cited reader denies that step once the bridge is
-granted. So the way a reader on record takes is the first, through the bridge.
+gives the courtroom sense too. At Romans 5:19, Hodge's and Calvin's, that "made
+righteous" there is a standing, not a renewal, or Ziesler's, that the adjective
+does not settle the verb. At the verdict, Calvin's, that the renewal comes with
+the verdict and not from it, or Ziesler's, that it is real and still not what
+the verb says. Only one reading in the table has no cited denier: the step from
+Romans 5:19, read as renewal, and the bridge to the verb's sense, rated
+`plausible`. The ways a reader on record takes pass it by.
 
 It does not show that Trent's reading is right because it is harder to
 overturn. A burden counts denials. It does not weigh them.
 
 What is novel: setting Fitzmyer's road from the Greek and Kertelge's from the
-verdict beside Augustine's from the Latin, as one case, with the bridge from
-the adjective stated as a reading of its own, and the proof that an opponent
-must deny three. -/
+verdict beside Augustine's from the Latin, as one case, with each road's
+readings stated as readings of their own, and the proof that an opponent must
+deny three. -/
 @[headline, proposed]
 theorem trentsWordAtItsStrongest_burden :
-    OpponentsBurden trentsWordAtItsStrongest trentsWordRoads [] [] [[0, 1, 3], [0, 2, 3]] :=
+    OpponentsBurden trentsWordAtItsStrongest trentsWordRoads [] []
+      [[0, 1, 4], [0, 1, 5], [0, 2, 4], [0, 2, 5], [0, 3, 4], [0, 3, 5]] :=
   .of_check rfl (by decide +kernel)
 
 #print axioms trentsWordAtItsStrongest_burden

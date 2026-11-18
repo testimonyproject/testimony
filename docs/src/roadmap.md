@@ -217,7 +217,7 @@ they are checked against — also generated, by `lake exe argdoc`.
 | `abraham_step_ratings` | `genesisFifteenStep.ratings = [(Standard.evidence, Computed.stands Confidence.wellSupported), (Standard.tradition, Computed.stands Confidence.wellSupported), (Standard.scriptural, Computed.stands Confidence.wellSupported)]` | **The step from Genesis 15 stands at `wellSupported` under every standard.** No dissent found survives its checks. |
 | `paulsWord_burden` ⚗ | `OpponentsBurden paulsWordCase paulsWordRoads [] [] [[0, 1], [0, 2]]` | **What a reader must deny to hold that Paul's "justify" means renewal.** The case reaches its conclusion by two roads: from how the word is used, and from Romans 4, where Paul … |
 | `trentsWord_burden` ⚗ | `OpponentsBurden trentsWordCase [trentWordLine] [] [] [[0]]` | **Trent's reading of Paul's word, on Augustine's explanation alone, fails at one point.** Deny the step from Augustine's explanation, and the Latin West's, to what Paul's Greek … |
-| `trentsWordAtItsStrongest_burden` ⚗ | `OpponentsBurden trentsWordAtItsStrongest trentsWordRoads [] [] [[0, 1, 3], [0, 2, 3]]` | **What a reader must deny to hold that Paul's "justify" does not mean renewal, against Trent's reading at its strongest.** There are two ways, and each denies three readings: the … |
+| `trentsWordAtItsStrongest_burden` ⚗ | `OpponentsBurden trentsWordAtItsStrongest trentsWordRoads [] [] [[0, 1, 4], [0, 1, 5], [0, 2, 4], [0, 2, 5], [0, 3, 4], [0, 3, 5]]` | **What a reader must deny to hold that Paul's "justify" does not mean renewal, against Trent's reading at its strongest.** Three readings, one from each road, and there are six … |
 
 ### [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md)
 

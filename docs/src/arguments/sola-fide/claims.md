@@ -173,8 +173,9 @@ positions in the debate carry.
 | <a id="claim-124"></a>\\(P_{124}\\) | Titus 3:5–7 uses ‘justified’ (δικαιόω) in the sense of Paul's letters | linguistic | Christian, hist.-gramm., plausible | [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), p. 162; Titus 3:5-7 |
 | <a id="claim-125"></a>\\(P_{125}\\) | ‘Count’ (λογίζομαι) keeps its sense from Romans 4:4–5 to 4:6–8 | linguistic | Christian, hist.-gramm., well supported | [Bauer 2000](../../bibliography.md#bauer-danker-lexicon-2000), §s.v. λογίζομαι; [Moo 1996](../../bibliography.md#moo-romans-1996), ad loc. Rom 4:3 |
 | <a id="claim-126"></a>\\(P_{126}\\) | Romans 5:19: through the obedience of the one the many will be made righteous ※ | textual | Christian, hist.-gramm., consensus | Rom 5:19 |
-| <a id="claim-127"></a>\\(P_{127}\\) | Romans 5:19's ‘righteous’ (δίκαιος) bears on what Paul's verb ‘justify’ means | linguistic | Roman Catholic, disputed | [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), pp. 118–119 |
-| <a id="claim-128"></a>\\(P_{128}\\) | God's verdict is effective: declaring the sinner righteous, it makes him righteous | theological | Roman Catholic, disputed | [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), pp. 118–119 |
+| <a id="claim-127"></a>\\(P_{127}\\) | In Romans 5:19, ‘made righteous’ means made righteous within | interpretive | Christian, hist.-gramm., disputed | [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), p. 199; [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), pp. 118–119 |
+| <a id="claim-128"></a>\\(P_{128}\\) | Romans 5:19's ‘righteous’ (δίκαιος) bears on what Paul's verb ‘justify’ means | linguistic | Roman Catholic, disputed | [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), pp. 118–119 |
+| <a id="claim-129"></a>\\(P_{129}\\) | God's verdict is effective: declaring the sinner righteous, it makes him righteous | theological | Roman Catholic, disputed | [Fitzmyer 1993](../../bibliography.md#fitzmyer-romans-1993), pp. 118–119 |
 
 </div>
 

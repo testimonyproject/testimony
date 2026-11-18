@@ -99,6 +99,13 @@ One premise, that Paul has his own words for renewal
 (`paulNamesRenewalOtherwise`), is cited to Scripture alone: it says what the
 texts say and no more.
 
+## Paul's word, from the Greek: two Catholic roads and the Reformed answers
+
+Trent read Paul's "justify" (δικαιόω) through Augustine's Latin. A modern
+Catholic exegete, Joseph Fitzmyer, gives the same reading two roads from the
+Greek (*Romans*, 118–19). Each road is taken here in the steps a reader can
+deny, and each step has the reader who denies it beside it.
+
 
 ## How this is checked
 
@@ -197,6 +204,327 @@ def trentReadsGrace : Source :=
           (Bib.Locus.sectionRef
             "Trent, Session VI (1547), Decree on Justification, ch. 7")],
     tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="inwardOnRomansFiveNineteen"></a>
+**`inwardOnRomansFiveNineteen`**
+
+The reading of Romans 5:19's "made righteous" as made righteous within, rated
+`disputed`. Ziesler holds that "certainly something more than forensic" is meant,
+that the many "will really be righteous" (*The Meaning of Righteousness in Paul*,
+199), and Fitzmyer reads it in the "effective sense" (*Romans*, 118–19). Charles
+Hodge grants the verse and denies the reading (`hodgeOnRomansFiveNineteen`).
+
+```lean
+def inwardOnRomansFiveNineteen : Source :=
+  { primary := Reference.work zieslerRighteousnessInPaul (Bib.Locus.page 199),
+    supporting := [Reference.work fitzmyerRomans (Bib.Locus.pages 118 119)],
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.disputed }
+```
+
+<a id="inwardSenseLine"></a>
+**`inwardSenseLine`** — Romans 5:19, 'made righteous' as made righteous within (Ziesler, Fitzmyer)
+
+**Romans 5:19, read as renewal.** "Through the obedience of the one man the many
+will be made righteous" (δίκαιοι κατασταθήσονται). Fitzmyer and Ziesler read
+"made righteous" as made righteous within: the many "will really be
+righteous".
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-126}{P_{126}}\\) — Romans 5:19: through the obedience of the one the many will be made righteous
+- (2) \\(\href{claims.html#claim-126}{P_{126}} \rightarrow \href{claims.html#claim-127}{P_{127}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-127}{P_{127}}\\) — *at issue:* In Romans 5:19, ‘made righteous’ means made righteous within
+
+</div>
+
+<a id="fitzmyerOnTheAdjective"></a>
+**`fitzmyerOnTheAdjective`**
+
+Fitzmyer's bridge, rated `disputed`. Fitzmyer grants that the verb "seems
+normally to have a declarative, forensic meaning" in the Septuagint, and in Paul
+at times. But "many instances are ambiguous, and the effective sense seems to be
+supported by 5:19, 'through the obedience of one many will be made upright'"
+(*Romans*, 118–19). Ziesler grants the verse, and that "certainly something more
+than forensic" is meant there, and denies that it bears on the verb, because
+the word in 5:19 is "righteous" (δίκαιοι), not "justify" (*The Meaning of
+Righteousness in Paul*, 199).
+
+```lean
+def fitzmyerOnTheAdjective : Source :=
+  { primary := Reference.work fitzmyerRomans (Bib.Locus.pages 118 119),
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="fitzmyerBridgeLine"></a>
+**`fitzmyerBridgeLine`** — Romans 5:19's adjective bears on Paul's verb (Fitzmyer)
+
+**The bridge from Romans 5:19 to Paul's verb.** Romans 5:19 does not use the
+verb "justify" (δικαιόω). It says the many "will be made righteous" (δίκαιοι
+κατασταθήσονται), with the adjective "righteous" (δίκαιος). Fitzmyer's road
+needs what the adjective means there to be what the verb means in Paul. That
+is a reading in its own right, and it is the one Ziesler denies, so it stands
+here as a line of its own, which a reader can reject without rejecting the
+verse. The word-shift check (`Testimony.Semantics.Fallacy`) finds the move from
+the adjective to the verb granted, because this line states it.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-128}{P_{128}}\\) — Romans 5:19's ‘righteous’ (δίκαιος) bears on what Paul's verb ‘justify’ means
+- \\(\vdash\\) \\(\href{claims.html#claim-128}{P_{128}}\\) — *at issue:* Romans 5:19's ‘righteous’ (δίκαιος) bears on what Paul's verb ‘justify’ means
+
+</div>
+
+<a id="fitzmyerOnRomansFiveNineteen"></a>
+**`fitzmyerOnRomansFiveNineteen`**
+
+The step from Romans 5:19, read as renewal, and the bridge to what Paul's verb
+means, rated `plausible`. Granted that the many in 5:19 are made righteous
+within, and that the adjective there bears on the verb, the verb carries the
+sense of making righteous. No cited reader grants both and denies this. Those
+who deny the conclusion deny one of the two: Hodge the reading of the verse,
+Ziesler the bridge.
+
+```lean
+def fitzmyerOnRomansFiveNineteen : Source :=
+  { primary := Reference.work fitzmyerRomans (Bib.Locus.pages 118 119),
+    tradition := Tradition.romanCatholic, confidence := Confidence.plausible }
+```
+
+<a id="fitzmyerWordLine"></a>
+**`fitzmyerWordLine`** — Paul's word, from Romans 5:19 (Fitzmyer)
+
+**Paul's word, from Romans 5:19.** "Through the obedience of the one man the
+many will be made righteous." So, Fitzmyer argues, Paul's "justify" carries an
+effective sense: God's declaration makes the sinner upright. This is Trent's
+reading of the word on a modern Catholic exegete's ground, the Greek of
+Romans, rather than on the Latin. It rests on two readings, each its own line
+so that a reader can deny it: that "made righteous" there means made righteous
+within (`inwardSenseLine`), and that the verse's adjective bears on the verb
+(`fitzmyerBridgeLine`). Neither is among this line's grounds, which a burden
+takes as granted.
+
+<div class="testimony-derivation">
+
+- (1) \\((\href{claims.html#claim-127}{P_{127}} \land \href{claims.html#claim-128}{P_{128}}) \rightarrow \href{claims.html#claim-52}{P_{52}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-52}{P_{52}}\\) — *at issue:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
+
+</div>
+
+<a id="kertelgeOnTheVerdictItself"></a>
+**`kertelgeOnTheVerdictItself`**
+
+That God's verdict is effective, rated `disputed`. Fitzmyer, quoting Karl
+Kertelge: declaring a person upright has "not only a forensic effect, but as
+forensic also an 'effective' meaning" (*Romans*, 118–19). Calvin grants that the
+two are given together and denies that the verdict does the renewing
+(`calvinOnTheVerdict`).
+
+```lean
+def kertelgeOnTheVerdictItself : Source :=
+  { primary := Reference.work fitzmyerRomans (Bib.Locus.pages 118 119),
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="kertelgeVerdictLine"></a>
+**`kertelgeVerdictLine`** — God's verdict is effective (Kertelge, via Fitzmyer)
+
+**God's verdict is effective.** When God declares a sinner righteous, his word
+does what it says, and the sinner is made righteous. Kertelge's claim, as
+Fitzmyer reports it. It is a claim about what God's declaration does, held as a
+line of its own so that a reader can deny it, as Calvin does.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-129}{P_{129}}\\) — God's verdict is effective: declaring the sinner righteous, it makes him righteous
+- \\(\vdash\\) \\(\href{claims.html#claim-129}{P_{129}}\\) — *at issue:* God's verdict is effective: declaring the sinner righteous, it makes him righteous
+
+</div>
+
+<a id="kertelgeOnTheVerdict"></a>
+**`kertelgeOnTheVerdict`**
+
+The step from God's effective verdict to what Paul's verb means, rated
+`disputed`. Fitzmyer, quoting Kertelge (*Romans*, 118–19). Ziesler grants that the
+justified are also made a new creature, the two "interdependent and
+inseparable" (p. 212), and denies that the renewal is what the verb says
+(pp. 162–63).
+
+```lean
+def kertelgeOnTheVerdict : Source :=
+  { primary := Reference.work fitzmyerRomans (Bib.Locus.pages 118 119),
+    tradition := Tradition.romanCatholic, confidence := Confidence.disputed }
+```
+
+<a id="effectiveVerdictLine"></a>
+**`effectiveVerdictLine`** — Paul's word, from God's effective verdict (Kertelge, via Fitzmyer)
+
+**Paul's word, from what God's verdict does.** If God's declaration makes the
+sinner righteous, the verb that names the declaration names the renewal too.
+This is the road Kertelge takes, as Fitzmyer reports it, and it is the strongest
+form of the Catholic reading, because it grants the Reformers the courtroom
+sense and asks only that the verdict be effective.
+
+It reaches a sense of the word from a claim about God's act, not from a use or
+a reading of the word, and the sense-from-elsewhere check
+(`Testimony.Semantics.Fallacy`) reports it so. That is not a charge that the
+road is wrong. It says where its ground lies: in what God's verdict does, not in
+what Paul's word means.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-129}{P_{129}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\)
+- \\(\vdash\\) \\(\href{claims.html#claim-52}{P_{52}}\\) — *at issue:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
+
+</div>
+
+<a id="modernCatholicWordRoads"></a>
+**`modernCatholicWordRoads`**
+
+Fitzmyer's and Kertelge's roads to Trent's reading of Paul's word, each in the
+steps a reader can deny: Romans 5:19 read as renewal, the bridge from its
+adjective to the verb, the step from both, God's verdict as effective, and the
+step from it.
+
+```lean
+def modernCatholicWordRoads : List (Line Claim) :=
+  [inwardSenseLine, fitzmyerBridgeLine,
+    fitzmyerWordLine, kertelgeVerdictLine,
+    effectiveVerdictLine]
+```
+
+<a id="hodgeOnRomansFiveNineteen"></a>
+**`hodgeOnRomansFiveNineteen`**
+
+Hodge's reading of Romans 5:19, rated `disputed`, because Ziesler and Fitzmyer
+grant the verse and read it as renewal. Charles Hodge: καθίστημι "never, in the
+New Testament, means to make, in the sense of effecting, or causing a person or
+thing, to be in its character or nature other than it was before"
+(*Commentary on the Epistle to the Romans*, 1864, p. 271). So "this cannot mean,
+that by the obedience of one the many shall be made holy": "as by the
+righteousness of Christ we are constituted legally righteous" (p. 272). Calvin
+reads the verse the same way: we could not be "made righteous 'by the
+obedience' of Christ (Rom. 5:19), were it not that we are deemed righteous in
+the sight of God in him and not in ourselves" (*Institutes* III.xi.4).
+
+```lean
+def hodgeOnRomansFiveNineteen : Source :=
+  { primary := Reference.work hodgeRomans (Bib.Locus.pages 271 272),
+    supporting :=
+      [Reference.work calvinInstitutesBeveridgeCcel
+          (Bib.Locus.sectionRef "III.xi.4")],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="hodgeVerseLine"></a>
+**`hodgeVerseLine`** — Romans 5:19, 'made righteous' as constituted righteous (Hodge, Calvin)
+
+**Romans 5:19, read as a verdict.** The verb in "will be made righteous" is
+καθίστημι, "to set down" or "constitute", and Hodge argues that it never means
+to make a person other in nature than he was. So the many are set in the rank of
+the righteous on the ground of Christ's obedience, as by Adam's disobedience
+they were set in the rank of sinners. "Made righteous" here is a standing, not a
+renewal. The Reformed answer to the first of Fitzmyer's readings.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-126}{P_{126}}\\) — Romans 5:19: through the obedience of the one the many will be made righteous
+- (2) \\(\href{claims.html#claim-126}{P_{126}} \rightarrow \lnot \href{claims.html#claim-127}{P_{127}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-127}{P_{127}}\\) — *at issue, the denial of:* In Romans 5:19, ‘made righteous’ means made righteous within
+
+</div>
+
+<a id="zieslerOnTheAdjective"></a>
+**`zieslerOnTheAdjective`**
+
+Ziesler's answer to the bridge, rated `disputed`, because Fitzmyer grants the
+verse and holds the bridge. Ziesler grants that "certainly something more than
+forensic" is meant at 5:19 and denies that it bears on the verb, because the
+word there is "righteous" (δίκαιοι), not "justify" (*The Meaning of
+Righteousness in Paul*, 199).
+
+```lean
+def zieslerOnTheAdjective : Source :=
+  { primary := Reference.work zieslerRighteousnessInPaul (Bib.Locus.page 199),
+    tradition := Tradition.christianHistoricalGrammatical,
+    confidence := Confidence.disputed }
+```
+
+<a id="zieslerAdjectiveLine"></a>
+**`zieslerAdjectiveLine`** — Romans 5:19's adjective does not settle the verb (Ziesler)
+
+**The adjective is not the verb.** Romans 5:19 says the many will be
+"righteous" (δίκαιοι). It does not say they will be "justified". So whatever the
+adjective means there, it does not settle what the verb means. Ziesler's answer
+to the second of Fitzmyer's readings, made by a reader who grants the first.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-126}{P_{126}}\\) — Romans 5:19: through the obedience of the one the many will be made righteous
+- (2) \\(\href{claims.html#claim-126}{P_{126}} \rightarrow \lnot \href{claims.html#claim-128}{P_{128}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-128}{P_{128}}\\) — *at issue, the denial of:* Romans 5:19's ‘righteous’ (δίκαιος) bears on what Paul's verb ‘justify’ means
+
+</div>
+
+<a id="calvinOnTheVerdict"></a>
+**`calvinOnTheVerdict`**
+
+Calvin's answer to the effective verdict, rated `disputed`, because Kertelge,
+as Fitzmyer reports him, grants that God renews whom he justifies and holds the
+verdict itself effective. Calvin, against Osiander: "as Christ cannot be divided
+into parts, so the two things, justification and sanctification, which we
+perceive to be united together in him, are inseparable." "But if the brightness
+of the sun cannot be separated from its heat, are we therefore to say, that the
+earth is warmed by light and illumined by heat? ... Here is a mutual and
+undivided connection, and yet reason itself prohibits us from transferring the
+peculiar properties of the one to the other" (*Institutes* III.xi.6). Both gifts
+come with Christ, "a twofold benefit": reconciliation, and being "sanctified by
+his Spirit" (III.xi.1).
+
+```lean
+def calvinOnTheVerdict : Source :=
+  {
+    primary :=
+      Reference.work calvinInstitutesBeveridgeCcel
+        (Bib.Locus.sectionRef "III.xi.6"),
+    supporting :=
+      [Reference.work calvinInstitutesBeveridgeCcel
+          (Bib.Locus.sectionRef "III.xi.1")],
+    tradition := Tradition.reformedProtestant,
+    confidence := Confidence.disputed }
+```
+
+<a id="calvinVerdictLine"></a>
+**`calvinVerdictLine`** — The renewal comes with the verdict, not from it (Calvin)
+
+**The renewal comes with the verdict, not from it.** Calvin grants Kertelge's
+starting point: "whomsoever, therefore, God receives into his favor, he presents
+with the Spirit of adoption, whose agency forms them anew into his image"
+(*Institutes* III.xi.6). He denies that the verdict does the renewing. Light and
+heat come together from the sun, and still the earth is not warmed by the
+light. So God renews those he justifies, and his verdict is not what renews
+them. The Reformed answer to Kertelge's road, at its first step.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-53}{P_{53}}\\) — When God justifies, he also renews: pardon and renewal are given together, not to be separated
+- (2) \\(\href{claims.html#claim-53}{P_{53}} \rightarrow \lnot \href{claims.html#claim-129}{P_{129}}\\)
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-129}{P_{129}}\\) — *at issue, the denial of:* God's verdict is effective: declaring the sinner righteous, it makes him righteous
+
+</div>
+
+<a id="reformedAnswersFromTheGreek"></a>
+**`reformedAnswersFromTheGreek`**
+
+The Reformed answers to the two roads from the Greek: Hodge on Romans 5:19,
+Ziesler on its adjective, and Calvin on the verdict.
+
+```lean
+def reformedAnswersFromTheGreek : List (Line Claim) :=
+  [hodgeVerseLine, zieslerAdjectiveLine,
+    calvinVerdictLine]
 ```
 
 <a id="trentOnPaulsWord"></a>
@@ -324,6 +652,145 @@ not refute itself.
 ```lean
 theorem tridentineOnPaulsWord_is_satisfiable : Satisfiable
     tridentineOnPaulsWord.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="tridentineOnPaulsWordAtItsStrongest"></a>
+**`tridentineOnPaulsWordAtItsStrongest`** — Trent, against 'not by works', read as what Paul's word means, with Fitzmyer's and Kertelge's roads
+
+**Trent, taken as a claim about Paul's word, at its strongest.** Trent's reading
+of the word rests on Augustine's explanation, as the Latin West received it. A
+modern Catholic exegete gives it two more roads, each from the Greek and not the
+Latin. Joseph Fitzmyer argues from Romans 5:19, "the many will be made
+righteous", and Karl Kertelge, whom Fitzmyer quotes, from God's verdict: it
+does what it says (*Romans*, 118–19). This is Trent taken that way, with both
+roads added (`modernCatholicWordRoads`). It is the position the debate over
+sola fide hears as Trent on Paul's word, so that the debate meets the reading
+as strongly as its cited readers put it.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-1}{P_{1}}\\) — Ephesians 2:8–9 teaches salvation by grace through faith, not of works
+- (2) \\(\href{claims.html#claim-2}{P_{2}}\\) — Romans 3:28 teaches justification by faith apart from works of the law
+- (3) \\(\href{claims.html#claim-3}{P_{3}}\\) — Galatians 2:16 teaches that no one is justified by works of the law
+- (4) \\(\href{claims.html#claim-5}{P_{5}}\\) — Titus 3:5 teaches that God saved us not by works done in righteousness
+- (5) \\(\href{claims.html#claim-24}{P_{24}}\\) — Scripture does not contradict itself
+- (6) \\(\href{claims.html#claim-33}{P_{33}}\\) — Justification is not remission of sins only, but renewal of the inward man
+- (7) \\(\href{claims.html#claim-35}{P_{35}}\\) — The inward renewal of the justified grows as they do good works in grace
+- (8) \\((\href{claims.html#claim-33}{P_{33}} \land \href{claims.html#claim-35}{P_{35}}) \rightarrow \href{claims.html#claim-32}{P_{32}}\\) — *would give:* Works performed in grace merit an increase of justification
+- (9) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-30}{P_{30}}\\) — *would deny:* Justification is a verdict only: pardon and righteousness counted, not poured in
+- (10) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-34}{P_{34}}\\) — *would deny:* Justification and sanctification are inseparable but distinct
+- (11) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \lnot \href{claims.html#claim-26}{P_{26}}\\) — *would deny:* Faith is sufficient: whoever believes is saved
+- (12) \\(\href{claims.html#claim-32}{P_{32}} \rightarrow \lnot \href{claims.html#claim-28}{P_{28}}\\)
+- (13) \\(\href{claims.html#claim-54}{P_{54}}\\) — Augustine explains "being justified" as "being made righteous", and the Latin West read iustificare so
+- (14) \\(\href{claims.html#claim-54}{P_{54}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\) — *would give:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
+- (15) \\(\href{claims.html#claim-33}{P_{33}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\) — *would give:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
+- (16) \\(\href{claims.html#claim-126}{P_{126}}\\) — Romans 5:19: through the obedience of the one the many will be made righteous
+- (17) \\(\href{claims.html#claim-126}{P_{126}} \rightarrow \href{claims.html#claim-127}{P_{127}}\\) — *would give:* In Romans 5:19, ‘made righteous’ means made righteous within
+- (18) \\(\href{claims.html#claim-128}{P_{128}}\\) — Romans 5:19's ‘righteous’ (δίκαιος) bears on what Paul's verb ‘justify’ means
+- (19) \\((\href{claims.html#claim-127}{P_{127}} \land \href{claims.html#claim-128}{P_{128}}) \rightarrow \href{claims.html#claim-52}{P_{52}}\\) — *would give:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
+- (20) \\(\href{claims.html#claim-129}{P_{129}}\\) — God's verdict is effective: declaring the sinner righteous, it makes him righteous
+- (21) \\(\href{claims.html#claim-129}{P_{129}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\) — *would give:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-28}{P_{28}}\\) — *at issue, the denial of:* Salvation is not by works: no work is its ground
+
+</div>
+
+Grounded in scripture alone: Romans 5:19: through the obedience of the one the many will be made righteous.
+
+<a id="tridentineOnPaulsWordAtItsStrongest_establishes"></a>
+**`tridentineOnPaulsWordAtItsStrongest_establishes`**
+
+Trent on Paul's word at its strongest still concludes what Trent concludes.
+
+```lean
+theorem tridentineOnPaulsWordAtItsStrongest_establishes : Establishes
+    tridentineOnPaulsWordAtItsStrongest
+-- axioms: propext, Quot.sound
+```
+
+<a id="tridentineOnPaulsWordAtItsStrongest_is_satisfiable"></a>
+**`tridentineOnPaulsWordAtItsStrongest_is_satisfiable`**
+
+**Trent on Paul's word at its strongest can be held without contradiction**, on
+the same reading as Trent on Paul's word, with Romans 5:19, its bridge to the
+verb and the effective verdict all granted.
+
+```lean
+theorem tridentineOnPaulsWordAtItsStrongest_is_satisfiable : Satisfiable
+    tridentineOnPaulsWordAtItsStrongest.premises
+-- axioms: propext, Quot.sound
+```
+
+<a id="lexicalCaseAnsweringTheGreek"></a>
+**`lexicalCaseAnsweringTheGreek`** — Paul's word (δικαιόω, by the rule of least meaning), with its answers from the Greek
+
+**The argument from Paul's word, with its answers from the Greek.** The
+argument from how the word is used (`lexicalCase`), with the Reformed answer to
+each reading the two Catholic roads from the Greek rest on: Hodge's reading of
+Romans 5:19 as a standing, Ziesler's that its adjective does not settle the verb,
+and Calvin's that the renewal comes with the verdict and not from it
+(`reformedAnswersFromTheGreek`). It is the position the debate over sola fide
+hears as the argument from Paul's word, so that Trent's reading at its strongest
+meets the Reformed reading at its strongest.
+
+<div class="testimony-derivation">
+
+- (1) \\(\href{claims.html#claim-49}{P_{49}}\\) — In Paul, ‘justify’ (δικαιόω) is a verdict: to declare righteous
+- (2) \\(\href{claims.html#claim-50}{P_{50}}\\) — Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’
+- (3) \\(\href{claims.html#claim-124}{P_{124}}\\) — Titus 3:5–7 uses ‘justified’ (δικαιόω) in the sense of Paul's letters
+- (4) \\(\href{claims.html#claim-51}{P_{51}}\\) — A word contributes the least meaning its context requires; one occurrence does not carry the whole concept
+- (5) \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-124}{P_{124}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\)
+- (6) \\(\href{claims.html#claim-126}{P_{126}}\\) — Romans 5:19: through the obedience of the one the many will be made righteous
+- (7) \\(\href{claims.html#claim-126}{P_{126}}\\) — Romans 5:19: through the obedience of the one the many will be made righteous
+- (8) \\(\href{claims.html#claim-53}{P_{53}}\\) — When God justifies, he also renews: pardon and renewal are given together, not to be separated
+- (9) \\(\href{claims.html#claim-126}{P_{126}} \rightarrow \lnot \href{claims.html#claim-127}{P_{127}}\\) — *would deny:* In Romans 5:19, ‘made righteous’ means made righteous within
+- (10) \\(\href{claims.html#claim-126}{P_{126}} \rightarrow \lnot \href{claims.html#claim-128}{P_{128}}\\) — *would deny:* Romans 5:19's ‘righteous’ (δίκαιος) bears on what Paul's verb ‘justify’ means
+- (11) \\(\href{claims.html#claim-53}{P_{53}} \rightarrow \lnot \href{claims.html#claim-129}{P_{129}}\\) — *would deny:* God's verdict is effective: declaring the sinner righteous, it makes him righteous
+- \\(\vdash\\) \\(\lnot \href{claims.html#claim-52}{P_{52}}\\) — *at issue, the denial of:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
+
+</div>
+
+Grounded in scripture alone: Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them beside ‘justify’, Romans 5:19: through the obedience of the one the many will be made righteous.
+
+<a id="answeringTheGreekReading"></a>
+**`answeringTheGreekReading`**
+
+The argument from Paul's word, with its answers, granted: the word does not
+mean renewal; "made righteous" in Romans 5:19 is a standing, and its adjective
+does not bear on the verb; God renews those he justifies, and his verdict is not
+what renews them.
+
+```lean
+def answeringTheGreekReading : Valuation Claim :=
+  fun a =>
+    match a with
+    | Claim.paulsJustifyDenotesRenewal => False
+    | Claim.romans5_19MadeInwardlyRighteous => False
+    | Claim.romans5_19BearsOnTheVerb => False
+    | Claim.godsVerdictIsEffective => False
+    | x => True
+```
+
+<a id="lexicalCaseAnsweringTheGreek_establishes"></a>
+**`lexicalCaseAnsweringTheGreek_establishes`**
+
+The argument from Paul's word still concludes what it concludes.
+
+```lean
+theorem lexicalCaseAnsweringTheGreek_establishes : Establishes
+    lexicalCaseAnsweringTheGreek
+-- axioms: propext, Quot.sound
+```
+
+<a id="lexicalCaseAnsweringTheGreek_is_satisfiable"></a>
+**`lexicalCaseAnsweringTheGreek_is_satisfiable`**
+
+**The argument from Paul's word, with its answers, can be held without
+contradiction.**
+
+```lean
+theorem lexicalCaseAnsweringTheGreek_is_satisfiable : Satisfiable
+    lexicalCaseAnsweringTheGreek.premises
 -- axioms: propext, Quot.sound
 ```
 

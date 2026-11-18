@@ -24,7 +24,7 @@ namespace TestimonyArguments.Checks.Articles
 
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:
-Howell2003.hearingFinite: 76 I, 32 RA, 36 CA, 1 PA, 178 edges
+Howell2003.hearingFinite: 84 I, 38 RA, 45 CA, 1 PA, 209 edges
 and 0 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in
