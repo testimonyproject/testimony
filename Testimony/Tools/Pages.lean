@@ -511,30 +511,56 @@ def latexChapters (a : Argument) (b : Body) : String :=
     (let notes := String.join (parts.map (·.notesTex))
      if (notes.trimAscii.toString).isEmpty then "" else sub "How this is checked" ++ notes))
 
-/-- **A printable document**: a title, a standing note under it, and a section
-for each argument — its heading the catalogue's title, its body the harvest's
-LaTeX. Every package built on the library sets its documents with it, so they
-are set alike. `tool` is the generator the document says it was made by.
+/-- An argument's abstract, set where a document puts it: under the title of
+the argument's own document, in the article class's own `abstract`; under its
+heading in a document of several, as a quotation headed "Abstract". Nothing
+where it has none. -/
+def latexAbstract (a : Argument) (alone : Bool) : String :=
+  if a.abstract.trimAscii.toString.isEmpty then ""
+  else if alone then
+    "\\begin{abstract}\n" ++ Logic.Latex.prose a.abstract ++ "\\end{abstract}\n\n"
+  else
+    "\\begin{quote}\\small\\noindent\\textbf{Abstract.}\\enspace " ++
+      Logic.Latex.prose a.abstract ++ "\\end{quote}\n\n"
+
+-- An argument printed alone opens with the article's own abstract; in a book,
+-- the abstract sits under the argument's heading; with none, nothing is set.
+#guard latexAbstract { ns := `X, slug := "x", title := "X", abstract := "It *holds*." } true ==
+  "\\begin{abstract}\nIt \\emph{holds}.\n\n\\end{abstract}\n\n"
+#guard (latexAbstract { ns := `X, slug := "x", title := "X", abstract := "A." } false).startsWith
+  "\\begin{quote}\\small\\noindent\\textbf{Abstract.}"
+#guard latexAbstract { ns := `X, slug := "x", title := "X" } true == ""
+
+/-- **A printable document**: a title, the abstract of the argument it holds if
+it holds one, a standing note, and a section for each argument — its heading
+the catalogue's title, its abstract under it, its body the harvest's LaTeX —
+and last, how the edition was made (`Logic.Latex.reproduction`). Every package
+built on the library sets its documents with it, so they are set alike. `made`
+says what makes this document: the package, its generator and the file.
 
 With `credits`, the document names the people behind its arguments, as
 `Logic.Latex.credits` works them out when it is typeset: one argument's under
 the title of a document that holds only it, and in a document of several,
 everyone's under the title and each argument's under its heading. -/
 def latexDocument (title note : String) (sections : List (Argument × Body))
-    (tool : String := "argtex") (credits : Bool := false) : String :=
+    (made : Logic.Latex.Reproduction) (credits : Bool := false) : String :=
   let alone := sections.length == 1
   let key := match sections with
     | [(a, _)] => a.ns.toString
     | _ => "all"
   (if credits then
-    Logic.Latex.preamble title tool ("\\credit{" ++ key ++ "}") Logic.Latex.credits
-   else Logic.Latex.preamble title tool) ++
+    Logic.Latex.preamble title ("\\credit{" ++ key ++ "}") Logic.Latex.credits
+   else Logic.Latex.preamble title) ++
+  (match sections with
+   | [(a, _)] => latexAbstract a true
+   | _ => "") ++
   note ++ Logic.Latex.contents ++
   String.join (sections.map fun (a, b) =>
     Logic.Latex.sectionHeading a.title ++
       (if credits && !alone then "\\creditline{" ++ a.ns.toString ++ "}\n\n" else "") ++
+      (if alone then "" else latexAbstract a false) ++
       (if a.chapters.isEmpty then b.latex else latexChapters a b)) ++
-  Logic.Latex.postamble
+  Logic.Latex.postamble (Logic.Latex.reproduction { made with credits })
 
 /-- A generated file's committed contents, or nothing if there is none, so that
 a check reports a missing file as stale. -/
@@ -583,7 +609,7 @@ def writeOrCheck (tool : String) (files : List (System.FilePath × String)) (che
       IO.println s!"{tool}: generated files are up to date"
       return 0
     for path in stale do
-      IO.eprintln s!"{tool}: {path} is stale — run `lake exe {tool}` and commit the result"
+      IO.eprintln s!"{tool}: {path} is stale — run `lake exe {tool}`"
     return 1
   for (path, contents) in files do
     if let some dir := path.parent then IO.FS.createDirAll dir

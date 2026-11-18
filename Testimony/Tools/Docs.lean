@@ -57,6 +57,15 @@ structure Argument where
   one page. Every module the argument is built from belongs to exactly one, and
   the generators check it. -/
   chapters : List Chapter := []
+  /-- The abstract: one paragraph, in Markdown, for a reader with little time,
+  saying what the argument asks, what it turns on, and what the checker found,
+  in the words the argument's own pages use. It is set under the title of the
+  argument's own document and under its heading in the book. Empty for none.
+
+  Editorial, as the title is, and held to what the results say: an abstract
+  that reports a verdict the results do not reach is the failure the library
+  exists to rule out, so it names verdicts only as the argument's prose does. -/
+  abstract : String := ""
 deriving Inhabited, Repr
 
 

@@ -54,19 +54,6 @@ and CI fails when it is out of date. Work on the gaps is tracked in
 [#236][issue].
 
 <!-- BEGIN GENERATED: lake exe statusgen -->
-
-**8 arguments**: 222 of 471 claims have analysed meanings, and the fallacy checks read 60 of 188 lines of reason.
-
-| Argument | Stage | Claims with meanings | Lines read for fallacies | What the fallacy checks found | Joins found | Definitions in use |
-|---|---|---|---|---|---|---|
-| [Born in Bethlehem — Micah 5:2](./arguments/born-in-bethlehem.md) | not yet read | 0 of 7 | 0 of 2 | — | none | 0 |
-| [Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3](./arguments/born-of-a-virgin.md) | meanings begun | 25 of 95 | 0 of 41 | — | 16, 9 through a definition | 1 |
-| [Sola fide](./arguments/sola-fide.md) | lines being checked | 97 of 128 | 31 of 49 | 12 need a word kept in one sense, unstated | 5, 1 through a definition | 4 |
-| [The canonical witness — faith alone, from the texts all parties accept](./arguments/canonical-witness.md) | lines being checked | 27 of 29 | 8 of 8 | 4 need a word kept in one sense, unstated | 7, none of them through a definition | 2 |
-| [Sola scriptura](./arguments/sola-scriptura.md) | lines being checked | 54 of 64 | 21 of 27 | nothing | 3, none of them through a definition | 3 |
-| [Sola gratia — Ephesians 2:8–9 and Romans 9:16](./arguments/sola-gratia.md) | meanings begun | 15 of 57 | 0 of 27 | — | 1, none of them through a definition | 3 |
-| [Spirit baptism — at conversion, after it, or in the sacraments](./arguments/spirit-baptism.md) | meanings begun | 4 of 15 | 0 of 0 | no lines of reason to read | 2, none of them through a definition | 0 |
-| [The Triune God — what Scripture settles, and what it leaves open](./arguments/trinity.md) | not yet read | 0 of 76 | 0 of 34 | — | none | 0 |
 <!-- END GENERATED: lake exe statusgen -->
 
 [issue]: https://github.com/testimonyproject/testimony/issues/236

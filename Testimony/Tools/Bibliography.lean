@@ -34,7 +34,7 @@ def generate (registry : List BibEntry) (source : String) (bibPath mdPath : Syst
       IO.println s!"bibgen: {registry.length} entries; generated files are up to date"
       return 0
     for path in stale do
-      IO.eprintln s!"bibgen: {path} is stale — run `lake exe bibgen` and commit the result"
+      IO.eprintln s!"bibgen: {path} is stale — run `lake exe bibgen`"
     return 1
   else
     if let some dir := mdPath.parent then IO.FS.createDirAll dir
