@@ -375,6 +375,7 @@ def whereAdamsKindFalls : Because reformed thirdWayAsAidWithoutWhich :=
     (by simp [solaGratiaDefs, caseOf])
     (by simp [solaGratiaDefs, caseOf])
     (by decide +kernel)
+  |>.ratedBy effectualInference (by simp [reformed, closingInferences])
 
 /-- **Why Trent stands against the third way, read as the saints' kind of
 help.** The crux is the second half of Trent's canon 4: the will, moved by God,
@@ -402,6 +403,7 @@ def whereTheSaintsKindFalls : Because tridentinePosition thirdWayAsAidByWhich :=
     (by simp [solaGratiaDefs, caseOf])
     (by simp [solaGratiaDefs, caseOf])
     (by decide +kernel)
+  |>.ratedByLine dissentLine rfl (by simp [tridentinePosition, solaGratiaDefs])
 
 /-- **What the ability God gives is, read both ways.** The claim is the third
 way's: God gives the one who hears the gospel the ability to believe, as Adam was

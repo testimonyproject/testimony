@@ -38,17 +38,21 @@ package: `python3 scripts/testimony_lint.py`.
 ## The generated files
 
 This package's generators write the documentation's generated files, at the
-repository's root:
+repository's root. None of them is committed: `.gitignore` keeps them out, and
+`scripts/generate-docs.sh` runs every generator, these and the examples', for
+the site, the PDFs and each pull request's preview.
 
 ```sh
 lake exe bibgen       # references.bib and docs/src/bibliography.md
-lake exe argdoc       # docs/src/arguments/*.md and the list in docs/src/SUMMARY.md
-lake exe statusgen    # the status table in docs/src/roadmap.md, and docs/src/maturity.md
+lake exe argdoc       # docs/src/arguments/*.md, and docs/src/SUMMARY.md from its template
+lake exe statusgen    # docs/src/roadmap.md and docs/src/maturity.md, from their templates
 lake exe argtex       # docs/latex/arguments.tex, and each argument in docs/latex/arguments/
 ```
 
-Each takes `--check`, which CI runs. Never edit what they write: change the
-docstring, and regenerate.
+The templates, in `docs/templates/`, hold each page's hand-written prose around
+an empty generated block. Each generator takes `--check`, which reports whether
+what is on disk is current. Never edit what they write: change the docstring,
+and regenerate.
 
 ## Where things are
 

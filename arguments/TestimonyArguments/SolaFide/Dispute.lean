@@ -1350,5 +1350,6 @@ def whyTheDominicalCaseStandsAgainstTrent : Because dominicalCase tridentineCase
     (by simp [dominicalCase, dominicalLine, Line.premises])
     (by simp [solaFideDefs, trentDefinitionSteps, Line.premises])
     (by decide +kernel)
+  |>.ratedBy trentAgainstFaithAlone (by simp [dominicalCase, solaFideDefs])
 
 end TestimonyArguments.SolaFide

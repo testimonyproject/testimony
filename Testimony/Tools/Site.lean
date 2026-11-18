@@ -28,6 +28,12 @@ structure Site where
   pagesDir : System.FilePath
   /-- The site's summary, whose marked block lists the pages. -/
   summaryPath : System.FilePath
+  /-- The summary as written by hand, with its marked block empty, which the
+  block is spliced into before the result is written to `summaryPath`. Where it
+  is `none`, the block is spliced into `summaryPath` in place. A package that
+  does not commit its generated pages keeps its template here, so that the
+  summary in git never holds the generated block. -/
+  summaryTemplate : Option System.FilePath := none
   /-- The print edition of the package's arguments, as a link from a page in the
   pages directory: `../pdf/arguments.pdf`. Empty where there is none, and the
   pages then say nothing of one. The PDF is typeset and put beside the site when
@@ -42,9 +48,20 @@ structure Site where
 
 namespace Site
 
+/-- A print edition's US Letter twin: `x.pdf` becomes `x-letter.pdf`, the name
+`scripts/typeset.sh --paper letter` gives it. -/
+def letterEdition (pdf : String) : String :=
+  (if pdf.endsWith ".pdf" then (pdf.dropEnd 4).toString else pdf) ++ "-letter.pdf"
+
+#guard letterEdition "../pdf/arguments.pdf" == "../pdf/arguments-letter.pdf"
+
+/-- A link to a print edition on A4, followed by its twin on US Letter. -/
+def editionLinks (text pdf : String) : String :=
+  "[" ++ text ++ "](" ++ pdf ++ ") (A4, or [US Letter](" ++ letterEdition pdf ++ "))"
+
 /-- The sentence that points a reader at the print editions, or nothing where
 there are none: this argument's own PDF where there is one, and the book of
-every argument. -/
+every argument, each on A4 and on US Letter. -/
 def printEdition (s : Site) (a : Argument) : String :=
   if s.pdf.isEmpty then "" else
   let release := "each tagged " ++
@@ -52,11 +69,12 @@ def printEdition (s : Site) (a : Argument) : String :=
     "carries a copy.\n\n"
   if s.argumentPdfDir.isEmpty then
     "Every argument is also set for print, the claims linked and the derivations " ++
-    "in words as here, in [one PDF](" ++ s.pdf ++ "), and " ++ release
+    "in words as here, in " ++ editionLinks "one PDF" s.pdf ++ ", and " ++ release
   else
     "This argument is also set for print, the claims linked and the derivations " ++
-    "in words as here, in [a PDF of its own](" ++ s.argumentPdfDir ++ "/" ++ a.slug ++
-    ".pdf). [One PDF](" ++ s.pdf ++ ") holds every argument together, and " ++ release
+    "in words as here, in " ++
+    editionLinks "a PDF of its own" (s.argumentPdfDir ++ "/" ++ a.slug ++ ".pdf") ++ ". " ++
+    editionLinks "One PDF" s.pdf ++ " holds every argument together, and " ++ release
 
 /-- The repository path an argument's sources live at. -/
 def source (s : Site) (a : Argument) : String := s.sourceRoot ++ sourcePath a.ns
@@ -281,12 +299,14 @@ report each stale page, a stale block and every stray page, and fail;
 otherwise write them all. Returns the exit code. -/
 def run (s : Site) (catalogue : List Argument) (harvest : List Body) (args : List String) :
     IO UInt32 := do
-  unless ← s.summaryPath.pathExists do
-    IO.eprintln s!"{s.tool}: {s.summaryPath} does not exist"
+  let template := s.summaryTemplate.getD s.summaryPath
+  unless ← template.pathExists do
+    IO.eprintln s!"{s.tool}: {template} does not exist"
     return 1
-  let summary ← IO.FS.readFile s.summaryPath
+  let source ← IO.FS.readFile template
+  let summary ← if ← s.summaryPath.pathExists then IO.FS.readFile s.summaryPath else pure ""
   let body := summaryMarkdown catalogue ++ "\n"
-  let updated ← match Testimony.Logic.Markdown.splice s.beginMarker s.endMarker summary body with
+  let updated ← match Testimony.Logic.Markdown.splice s.beginMarker s.endMarker source body with
     | .error e => do IO.eprintln s!"{s.tool}: {s.summaryPath}: {e}"; return 1
     | .ok t => pure t
   for (a, b) in sectionsOf catalogue harvest do
@@ -313,7 +333,7 @@ def run (s : Site) (catalogue : List Argument) (harvest : List Body) (args : Lis
     if ok then
       IO.println s!"{s.tool}: {pages.length} argument pages are up to date"
       return 0
-    IO.eprintln s!"{s.tool}: run `lake exe {s.tool}` and commit the result"
+    IO.eprintln s!"{s.tool}: run `lake exe {s.tool}`"
     return 1
   IO.FS.createDirAll s.pagesDir
   for (name, text) in pages do

@@ -364,6 +364,7 @@ def whereTheThiefMeetsFeeney : Because thiefCase trentOnTheWaterItself :=
     (by simp [thiefCase])
     (by simp [solaFideDefs])
     (by decide +kernel)
+  |>.ratedBy augustineOnTheThief (by simp [thiefCase, solaFideDefs])
 
 /-- **Why Rome's own teaching stands against Feeney's reading.** Everything turns on
 the step from what the desire brings: if the desire brings about the fruits of
@@ -381,6 +382,7 @@ def whereTheDesireMeetsFeeney : Because desireCase trentOnTheWaterItself :=
     (by simp [desireCase])
     (by simp [solaFideDefs])
     (by decide +kernel)
+  |>.ratedBy catechismOnDesire (by simp [desireCase, solaFideDefs])
 
 /-- **Why the Reformed answer stands against Trent taken in its own words.**
 Everything turns on the step from the desire: where the desire alone brings the
@@ -398,6 +400,7 @@ def whereTheDesireMeetsTrent : Because reformedOnTheDesire trentOnBaptismOrDesir
     (by simp [reformedOnTheDesire])
     (by simp [solaFideDefs, ArgumentPackage.readAs])
     (by decide +kernel)
+  |>.ratedBy westminsterOnTheDesire (by simp [reformedOnTheDesire, solaFideDefs])
 
 /-- **What Trent's instrumental cause claims, taken both ways.**
 
@@ -704,6 +707,7 @@ def whereCalvinMeetsTheBaptismalReading :
     (by simp [calvinOnJohnThreeFive])
     (by simp [solaFideDefs, ArgumentPackage.readAs])
     (by decide +kernel)
+  |>.ratedBy readingsWithoutTheWater (by simp [calvinOnJohnThreeFive, solaFideDefs])
 
 /-- **Why the natural-birth reading cannot keep Trent's step.** If the water is
 natural birth, the verse does not require water baptism. So Trent's step from
@@ -717,6 +721,7 @@ def whereBirthMeetsTrentsStep : Because birthOnJohnThreeFive trentWithNaturalBir
     (by simp)
     (by simp [solaFideDefs, ArgumentPackage.readAs])
     (by decide +kernel)
+  |>.ratedBy readingsWithoutTheWater (by simp [birthOnJohnThreeFive, solaFideDefs])
 
 /-- **Why the Ezekiel reading cannot keep Trent's step.** If the water is
 Ezekiel's cleansing and not baptism, the verse does not require water baptism. -/
@@ -730,6 +735,7 @@ def whereEzekielMeetsTrentsStep :
     (by simp)
     (by simp [solaFideDefs, ArgumentPackage.readAs])
     (by decide +kernel)
+  |>.ratedBy readingsWithoutTheWater (by simp [ezekielOnJohnThreeFive, solaFideDefs])
 
 /-- **Why Calvin's reading cannot keep Trent's step.** If the water is the
 Spirit's own cleansing, the verse does not require water baptism. -/
@@ -744,6 +750,7 @@ def whereTheSpiritMeetsTrentsStep :
     (by simp)
     (by simp [solaFideDefs, ArgumentPackage.readAs])
     (by decide +kernel)
+  |>.ratedBy readingsWithoutTheWater (by simp [calvinOnJohnThreeFive, solaFideDefs])
 
 /-- **What John 3:5 means, read four ways.** What can be taken more than one way is
 the verse Trent cites, not Trent. Trent argues: unless one is born of water and

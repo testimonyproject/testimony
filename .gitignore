@@ -2,9 +2,26 @@
 docs/book/
 .claude/settings.local.json
 
-# LaTeX build products. `arguments.tex` and each argument's own document under
-# `arguments/` are generated but committed, like the bibliography chapter;
-# everything the TeX engine derives from them is not.
+# Generated from the Lean source by `scripts/generate-docs.sh` (bibgen, argdoc,
+# argtex, statusgen, exampletex), and never committed: CI generates them for the
+# site, the PDFs and each pull request's preview. Committed, every pull request
+# that touched an argument or a citation edited them, and any two such pull
+# requests conflicted. Three pages hold hand-written prose around a generated
+# block; their source is in docs/templates/, and the page is generated from it.
+/references.bib
+docs/src/bibliography.md
+docs/src/arguments/
+docs/src/SUMMARY.md
+docs/src/roadmap.md
+docs/src/maturity.md
+docs/latex/arguments.tex
+docs/latex/arguments/*.tex
+# The house style the documents load, written beside them by argtex.
+docs/latex/testimony.sty
+docs/latex/arguments/testimony.sty
+
+# LaTeX build products: everything the TeX engine derives from the generated
+# documents.
 docs/latex/*.pdf
 docs/latex/*.aux
 docs/latex/*.bbl
@@ -13,6 +30,7 @@ docs/latex/*.log
 docs/latex/*.xdv
 docs/latex/references.bib
 docs/latex/credits.def
+docs/latex/edition.def
 docs/latex/arguments/*.pdf
 docs/latex/arguments/*.aux
 docs/latex/arguments/*.bbl
@@ -21,6 +39,7 @@ docs/latex/arguments/*.log
 docs/latex/arguments/*.xdv
 docs/latex/arguments/references.bib
 docs/latex/arguments/credits.def
+docs/latex/arguments/edition.def
 __pycache__/
 
 # Worktrees created for background agents; never part of a change.
