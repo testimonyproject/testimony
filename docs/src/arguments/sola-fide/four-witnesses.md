@@ -879,6 +879,22 @@ and his reading of 5:19 is an answer to Fitzmyer's. It does not overrule him:
 whether 5:19 bears on the verb at all is the point Fitzmyer and Ziesler divide
 on, and Trent's dissent stands untouched by it.
 
+The third verse readers cite for renewal is 1 Corinthians 6:11, "ye are washed,
+but ye are sanctified, but ye are justified". Ziesler grants that the context
+"is strongly ethical", and that "justified" there "seems here to have a moral
+renewal force". He still holds it forensic: "In fact it does not mean this, but
+it does imply it" (157–58). Over every use of the verb outside Romans and
+Galatians his summary is the same: "in each case the use is forensic", and
+1 Corinthians 6:11 and Titus 3:7, "while forensic, also hint at moral renewal in
+the background" (162). Renewal, for him, belongs to the noun, so that Paul's
+word-group expresses "both man's acceptance, and his moral renewal", the first
+"especially" by the verb and the second by the noun (163). His conclusion keeps
+both: justification "is entirely by grace through faith, it is declaratory",
+and the same person is "made a new creature whose life is now righteous in
+Christ", two moments "interdependent and inseparable" (212). That supports the
+step, which is about the verb alone, and says nothing against Trent, who holds
+the inseparable renewal to be part of justification itself.
+
 The texts that prove the verdict sense (Proverbs 17:15, Isaiah 5:23,
 Deuteronomy 25:1, Luke 10:29) support the first starting point, which Trent and
 Fitzmyer already grant, not the "and nothing more". Whether the step can rise
@@ -896,7 +912,8 @@ def leastMeaningSource : Source :=
     supporting :=
       [Reference.work mooRomans (Bib.Locus.sectionRef "p. 80"),
         Reference.work barrSemantics,
-        Reference.work zieslerRighteousnessInPaul (Bib.Locus.pages 199 200)],
+        Reference.work zieslerRighteousnessInPaul
+          (Bib.Locus.pageList [156, 157, 158, 162, 163, 199, 200, 212])],
     tradition := Tradition.christianHistoricalGrammatical,
     confidence := Confidence.disputed }
 ```
