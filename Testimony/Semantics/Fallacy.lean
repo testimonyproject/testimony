@@ -44,6 +44,24 @@ between two places where its premises only report the word's sense
   *conditional* on the word keeping its sense: not fallacious, but no stronger
   than that condition, which the library's own disputes may rate.
 
+## A move from one word to a kindred one
+
+Equivocation is one word in two senses. Its near neighbour is two words read as
+one. A verb and its adjective are of one family, and a version puts its own word
+for the original's, so an argument may read one by the other: Paul's verb
+"justify" (δικαιόω) by the adjective "righteous" (δίκαιος), or the Greek by the
+Latin *iustificare*. Barr called the first the root fallacy. Neither is a fault
+in itself, since kindred words often do share a sense, but the move then rests
+on that, and should say so. The vocabulary lists which words are kin
+(`Lexeme.kin`). A move **shifts** when a premise has one word and the conclusion
+uses, or says what means, a kindred word that no premise has at that place
+(`Move.shifts`). For each shift the move stands in one of two ways (`Shift`):
+
+- **granted** — a premise says the first word, where the move has it, bears the
+  sense the second has where the move concludes it (`Statement.bears`);
+- **unstated** — the move says nothing of it, and holds on that condition, as
+  it does on an unstated sameness of sense.
+
 ## Begging the question
 
 An argument begs the question when a premise already asserts what it concludes,
@@ -90,6 +108,18 @@ straw man when an attribution is unfair and the move argues against what it
 attributes (`Move.strawMen`). An unfair attribution the move leans on instead,
 citing a voice for what the voice denied, is reported as a misattribution
 (`Move.misattributions`).
+
+## Leaving out what a voice also said
+
+A move can cite a voice fairly and still cite it selectively. A reader who read a
+word two ways, cited for one, is borne out by the record, and the straw-man check
+passes him. So a second check compares a reading the move cites a voice for with
+every other reading the record gives the same voice for the same word, and
+reports those the move does not mention (`Move.omissions`). It does not say the
+move is wrong to prefer one: it says what a reader is owed. It looks at how a
+voice read a word (`Statement.glosses`). What a voice held is not compared, since
+whether one held content leaves another out is a question about the contents,
+which the reasoner does not yet decide.
 
 ## What none of this decides
 
@@ -219,6 +249,69 @@ it holds on. -/
 def conditionalOn (m : Move) : List Lexeme :=
   (m.equivocation.filterMap fun
     | (w, _, _, .unstated) => some w
+    | _ => none).eraseDups
+
+end Move
+
+/-! ### A move from one word to a kindred one -/
+
+/-- **How a move stands to one shift between kindred words it makes.** -/
+inductive Shift
+  /-- A premise says the first word, where the move has it, bears the sense
+  the second has where the move concludes it. -/
+  | granted
+  /-- The move says nothing of the bridge between the two words. -/
+  | unstated
+deriving DecidableEq, Repr
+
+namespace Statement
+
+/-- **Every place a statement has a word, as evidence**: where it uses the word,
+says what it means, or reports how a voice read it. A bridge between two words
+(`Statement.bears`) is left out: it is what licenses a shift, not evidence that
+the move has the second word's own sense in hand. -/
+def evidenceWords : Statement → List (Lexeme × Scope)
+  | .bears .. => []
+  | .denied s => s.evidenceWords
+  | .also s t => s.evidenceWords ++ t.evidenceWords
+  | s => s.words
+
+end Statement
+
+namespace Move
+
+/-- **The shifts between kindred words a move makes**: a premise has one word at
+one place, and the conclusion uses, or says what means, a different word of its
+kin (`Lexeme.kin`) at another, while no premise has the second word there. The
+move then reads the second word by the first: a verb by its adjective, or the
+Greek by the Latin. Each with how the two words are kin. -/
+def shifts (m : Move) : List (Lexeme × Scope × Lexeme × Scope × Kinship) :=
+  let from_ := (m.premises.flatMap Statement.evidenceWords).eraseDups
+  let to_ := (m.conclusion?.map fun c => c.uses ++ c.sensePlaces).getD []
+  let shifts := to_.eraseDups.flatMap fun (v, b) =>
+    if from_.contains (v, b) then [] else
+      from_.filterMap fun (w, a) =>
+        if w = v then none else (Lexeme.kin w v).map fun k => (w, a, v, b, k)
+  shifts.eraseDups
+
+/-- Whether a premise, read for what its words mean, states the bridge: that the
+first word, at its place, bears the sense the second has at its own. -/
+def bridges (m : Move) (w : Lexeme) (a : Scope) (v : Lexeme) (b : Scope) : Bool :=
+  m.premises.any fun s =>
+    let lits := (Ontology.closed Testimony.Ontology.shared s).lits
+    lits.contains ⟨true, .bears w a v b⟩ || lits.contains ⟨true, .bears v b w a⟩
+
+/-- **The word-shift check**: every shift the move makes between kindred words,
+and whether a premise states its bridge. -/
+def wordShifts (m : Move) : List (Lexeme × Lexeme × Kinship × Shift) :=
+  m.shifts.map fun (w, a, v, b, k) =>
+    (w, v, k, if m.bridges w a v b then .granted else .unstated)
+
+/-- The shifts the move makes without stating their bridge: the conditions it
+holds on, as an unstated sameness of sense is for one word. -/
+def unbridged (m : Move) : List (Lexeme × Lexeme × Kinship) :=
+  (m.wordShifts.filterMap fun
+    | (w, v, k, .unstated) => some (w, v, k)
     | _ => none).eraseDups
 
 end Move
@@ -513,6 +606,28 @@ left out, because what the voice held is then the question, not the move's
 fault. -/
 def strawMen (record : Voice → List α) (m : Move) : List (Statement × List α) :=
   (m.misattributions record).filter fun (a, _) => m.answers a
+
+/-- **What a move leaves out of a voice's reading**: for each reading of a word
+the move cites a voice for, the other senses the record says that same voice
+gave the same word, which the move does not mention, with the record's claims
+that give them. A voice who read a word two ways, cited for one, is cited
+selectively: the move may still be right, but a reader is owed the other. -/
+def omissions (record : Voice → List α) (m : Move) :
+    List (Statement × List (Sense × List α)) :=
+  let cited := m.attributions
+  cited.filterMap fun a =>
+    match a with
+    | .glosses v w s =>
+      let others := (record v).flatMap fun r =>
+        ((HasMeanings.means r).attributions.filterMap fun
+          | .glosses v' w' s' =>
+            if v' = v ∧ w' = w ∧ s' ≠ s ∧ !cited.contains (.glosses v w s')
+            then some (s', r) else none
+          | _ => none)
+      let senses := (others.map (·.1)).eraseDups
+      if senses.isEmpty then none
+      else some (a, senses.map fun s' => (s', (others.filter (·.1 == s')).map (·.2)))
+    | _ => none
 
 end Move
 

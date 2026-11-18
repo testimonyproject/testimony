@@ -28,8 +28,15 @@ types, and reports, for each argument:
   record of a voice is the argument's other claims about what the voice held or
   how it read a word (`Testimony.Semantics.recordOf`), without the line's own
   claims, which cannot bear themselves out;
-- and the lines that need a word to keep its sense and do not say so, with the
-  words. These are conditions, not faults.
+- the lines that need a word to keep its sense and do not say so, with the
+  words. These are conditions, not faults;
+- the lines that read one word by a kindred one, a verb by its adjective or the
+  Greek by the Latin, without a premise saying the one bears on the other
+  (`Testimony.Semantics.Move.unbridged`). Conditions too, not faults;
+- and the lines that cite a voice for one reading of a word when the record has
+  the same voice reading it another way as well
+  (`Testimony.Semantics.Move.omissions`). Not a fault either: a reader is owed
+  the other reading, and the page should give it.
 
 The report is pinned. It fails the build if a line equivocates on its own terms,
 argues from silence alone, or answers a straw man: the library may not do what it
@@ -83,6 +90,16 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
         ((a.voice?.map atomName).getD "?") ++ ", " ++ standing st))
   let strawMen := moves.filterMap fun (n, m) =>
     if (m.strawMen (recordFor n)).isEmpty then none else some n
+  let shifting := moves.filterMap fun (n, m) =>
+    if m.unbridged.isEmpty then none else
+      some (n ++ ": " ++ ", ".intercalate (m.unbridged.map fun (w, v, k) =>
+        atomName w ++ " for " ++ atomName v ++ " (" ++ atomName k ++ ")"))
+  let omitting := moves.filterMap fun (n, m) =>
+    match m.omissions (recordFor n) with
+    | [] => none
+    | os => some (n ++ ": " ++ "; ".intercalate (os.map fun (a, others) =>
+        ((a.voice?.map atomName).getD "?") ++ ", also " ++ ", ".intercalate
+          (others.map fun (s, cs) => atomName s ++ " in " ++ names cs)))
   let conditional := moves.filterMap fun (n, m) =>
     if m.conditionalOn.isEmpty then none else
       some (n ++ ": " ++ ", ".intercalate (m.conditionalOn.map fun w => atomName w))
@@ -97,7 +114,9 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
     part "rest on one another in a circle" onCircle ++
     part "answer a view the argument's record says its holder does not hold" strawMen ++
     part "attribute a view, against the argument's record" attributing ++
-    part "need a word to keep its sense, unstated" conditional
+    part "need a word to keep its sense, unstated" conditional ++
+    part "read one word by a kindred one, the bridge unstated" shifting ++
+    part "cite a voice for one reading, leaving out another the record has" omitting
   (String.intercalate "\n" (head ++ body), equivocating.length + silent.length + strawMen.length)
 
 /-- Whether a constant's type is `Line C`, and `C` its argument's claim type. -/

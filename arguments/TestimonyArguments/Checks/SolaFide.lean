@@ -60,6 +60,8 @@ Sola fide
     paulineWithoutWorksOfLaw: dikaioo, ergaNomou
     renewalWordLine: dikaioo
     romansFourExegesisLine: logizomai, erga
+  read one word by a kindred one, the bridge unstated:
+    trentWordLine: iustificare for dikaioo (translation)
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaFide

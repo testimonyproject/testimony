@@ -92,6 +92,8 @@ inductive Fact
   | means (w : Lexeme) (sc : Scope) (s : Sense)
   /-- A word has the same sense in both scopes. -/
   | sameSense (w : Lexeme) (a b : Scope)
+  /-- The first word, at the first place, bears the second's sense at the second. -/
+  | bears (w : Lexeme) (a : Scope) (v : Lexeme) (b : Scope)
   /-- This voice wrote this book. -/
   | wrote (v : Voice) (b : Book)
   /-- This voice read a word in this sense. -/
@@ -181,6 +183,7 @@ def Statement.shape : Statement → Shape
   | .heldBy v c => c.within (.heldBy v)
   | .means w sc s => .lit ⟨true, .means w sc s⟩
   | .sameSense w a b => .lit ⟨true, .sameSense w a b⟩
+  | .bears w a v b => .lit ⟨true, .bears w a v b⟩
   | .wrote v b => .lit ⟨true, .wrote v b⟩
   | .glosses v w s => .lit ⟨true, .glosses v w s⟩
   | .renders v p w => .lit ⟨true, .renders v p w⟩

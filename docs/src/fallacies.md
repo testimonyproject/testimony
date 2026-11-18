@@ -22,6 +22,7 @@ how they are spelled.
 | Charge | The question the check asks | Where it is | State |
 |---|---|---|---|
 | Equivocation | does the move give a word two senses where it needs one? | `Move.equivocation` | built |
+| Word shift | does the move read one word by a kindred one without saying so? | `Move.unbridged` | built |
 | Begging the question | does a premise already assert the conclusion? | `Move.begsAgainst` | built |
 | Circular reasoning | does a chain of moves come back to where it began? | `circular` | built |
 | Argument from silence | does the move state the expectation its silence needs? | `Move.silences` | built |
@@ -30,6 +31,7 @@ how they are spelled.
 | False dilemma | does a move pick one reading where others are fair? | would use `Dilemma` | not yet |
 | Straw man | does a move answer a view its subject does not hold? | `Move.strawMen` | built |
 | Misquotation | does a quotation say what the move says it says? | `says`, then a corpus | not yet |
+| Selective citation | does the move cite a voice for one reading and omit another? | `Move.omissions` | built |
 | Cherry-picking | which texts on the same words does the move ignore? | a query over meanings | not yet |
 | Double standard | does a party rest a claim on what its own rule refuses? | `ArgumentPackage.heldTo` | claims built |
 
@@ -145,6 +147,28 @@ The survey is here because the check once got it wrong. Its first version flagge
 line on James's word, which gathers the senses of δικαιόω outside Paul, as an equivocation. It
 was not one, and the check now tells a word used from a word talked about. `equivocation_cases`
 pins all seven results.
+
+## A word read by a kindred one
+
+Equivocation is one word in two senses. Its neighbour is two words read as one. A verb and its
+adjective are of one family, and a translation puts its own word for the original's, so an
+argument can read one by the other. Fitzmyer reads Paul's verb "justify" (δικαιόω) by the
+adjective in Romans 5:19, "the many will be made righteous" (δίκαιοι). The Latin West read
+Paul's Greek through its own *iustificare*. James Barr called the first kind of move the root
+fallacy. Neither is wrong in itself, because kindred words often do share a sense. But the
+argument then rests on that, and should say so.
+
+The vocabulary lists which words are kin, and how: as cognates in one language, or as a word
+and its translation (`Lexeme.kin`). A move **shifts** when a premise has one word, and the
+conclusion uses, or says what means, a kindred word that no premise has at that place
+(`Move.shifts`). If a premise says the first word bears the second's sense there
+(`Statement.bears`), the shift is granted. If nothing says so, the move holds on that
+condition, as it does on an unstated sameness of sense (`Move.unbridged`).
+
+**Caught.** The verb read by its adjective (`adjectiveForVerb`), and the Greek read by the
+Latin (`latinForGreek`). **Passed over.** The same move with the bridge stated
+(`adjectiveBridged`), and a move that has the verb's own evidence beside its adjective
+(`verbItself`), which reads nothing by anything. `wordshift_cases` pins them.
 
 ## Begging the question
 
@@ -312,6 +336,25 @@ a reader took a word to mean. And when the library checks its own lines (below),
 thin: an argument's only claims about what a voice held are the few written as attributions, so
 most of what the library knows of Trent, written as Trent's doctrine, is not yet on it.
 
+## Leaving out what a voice also said
+
+A move can cite a voice fairly and still cite it selectively. Augustine explains "being
+justified" as "being made righteous", and in the same chapter gives a second way of taking it,
+"deemed, or reckoned as just" (*On the Spirit and the Letter* 26.45). A move that cites the
+first is borne out by the record, so the straw-man check passes it. It has still left
+something out. The omission check compares each reading a move cites a voice for with every
+other reading the record gives that voice for the same word, and lists the ones the move does
+not mention (`Move.omissions`). It does not say the move is wrong to prefer one. It says what a
+reader is owed.
+
+**Caught.** Against a record in which Augustine read the word both ways, a move citing one
+reading (`citedForOne`). **Passed over.** The same move citing both (`citedForBoth`), and the
+first move against a record of one reading only. `omission_cases` pins them.
+
+The check compares readings of a word (`Statement.glosses`). It does not compare what a voice
+held, because whether one held content leaves another out is a question about the contents,
+which the reasoner does not yet decide.
+
 ## Checking your own lines
 
 A **package** is a set of arguments built on the library, as the worked arguments are. Read
@@ -326,7 +369,9 @@ reports, for each argument:
 - the lines that rest on one another in a circle;
 - the lines that answer a view the argument's own record says its holder does not hold;
 - the lines that attribute a view, and how each attribution stands to the record;
-- the lines that are conditional on a word keeping its sense, with the words.
+- the lines that are conditional on a word keeping its sense, with the words;
+- the lines that read one word by a kindred one without stating the bridge;
+- the lines that cite a voice for one reading and leave out another the record has.
 
 For a line, the record of a voice is the argument's other claims that say, or deny, what the
 voice held or how it read a word. The line's own claims are left out of it, because a ground

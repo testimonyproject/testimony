@@ -105,6 +105,10 @@ inductive Statement
   /-- A word has the same sense in both scopes. Linguistic, and the claim on
   which every contradiction between two texts using the word depends. -/
   | sameSense (w : Lexeme) (a b : Scope)
+  /-- **The first word, at the first place, bears the sense the second word has at
+  the second**: what an argument needs when it reads one word by a kindred one,
+  a verb by its adjective or the Greek by the Latin (`Lexeme.kin`). Linguistic. -/
+  | bears (w : Lexeme) (a : Scope) (v : Lexeme) (b : Scope)
   /-- A passage is written against this content. -/
   | opposes (p : PassageRange) (c : Content)
   /-- This voice wrote this book. Historical. -/
@@ -164,6 +168,7 @@ def words : Statement → List (Lexeme × Scope)
   | .says _ c | .teaches _ c | .opposes _ c | .heldBy _ c | .holds c => c.words
   | .means w sc _ => [(w, sc)]
   | .sameSense w a b => [(w, a), (w, b)]
+  | .bears w a v b => [(w, a), (v, b)]
   | .renders v p w => [(w, .usage v), (w, .passage p)]
   | .glosses v w _ => [(w, .usage v)]
   | .occurs w p | .occursOnlyIn w p => [(w, .passage p)]
