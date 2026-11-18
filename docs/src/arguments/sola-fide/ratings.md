@@ -850,7 +850,7 @@ tradition standard only.
 **The step about Paul's word, with the objection to it**: Trent's reading of the
 word, the strongest known.
 
-**The rating, computed.** *Paul's word (δικαιόω, by the rule of least meaning)* is cited at *disputed* ([Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)). Dissents encoded: *Trent, with Augustine (ch. 8)*. The strongest known: *Trent, with Augustine (ch. 8)*.
+**The rating, computed.** *Paul's word (δικαιόω, by the rule of least meaning)* is cited at *disputed* ([Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200). Dissents encoded: *Trent, with Augustine (ch. 8)*. The strongest known: *Trent, with Augustine (ch. 8)*.
 
 | Standard | Rating | Why |
 |---|---|---|

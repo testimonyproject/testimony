@@ -619,6 +619,19 @@ instances are ambiguous, and the effective sense seems to be supported by 5:19,
 upright has "not only a forensic effect, but as forensic also an 'effective'
 meaning", as he quotes Kertelge (*Romans*, 118–19).
 
+Ziesler answers on both verses, and his answer keeps the dispute where it is
+rather than ending it. At 5:19 he grants that "certainly something more than
+forensic" is meant, since the many "will really be righteous", but the word
+there is "righteous" (δίκαιοι), not the verb, and he reads justification and
+righteousness as "the twin, inseparable results of being in Christ" (*The
+Meaning of Righteousness in Paul*, 199). At 6:7, "he who has died is justified
+from sin", he weighs "freed from sin", which gives the verb "an unusual meaning,
+virtually amounting to 'make righteous'", and prefers "acquitted", which
+"retains the normal Pauline sense for the verb" (200). So he supports the step,
+and his reading of 5:19 is an answer to Fitzmyer's. It does not overrule him:
+whether 5:19 bears on the verb at all is the point Fitzmyer and Ziesler divide
+on, and Trent's dissent stands untouched by it.
+
 The texts that prove the verdict sense (Proverbs 17:15, Isaiah 5:23,
 Deuteronomy 25:1, Luke 10:29) support the first starting point, which Trent and
 Fitzmyer already grant, not the "and nothing more". Whether the step can rise
@@ -631,7 +644,9 @@ Gorman and the *Joint Declaration*, make a claim about what God does, not about
 the word. -/
 def leastMeaningSource : Source :=
   { primary := .work silvaBiblicalWords .whole
-  , supporting := [.work mooRomans (.sectionRef "p. 80"), .work barrSemantics .whole]
+  , supporting :=
+      [ .work mooRomans (.sectionRef "p. 80"), .work barrSemantics .whole
+      , .work zieslerRighteousnessInPaul (.pages 199 200) ]
   , tradition := .christianHistoricalGrammatical
   , confidence := .disputed }
 

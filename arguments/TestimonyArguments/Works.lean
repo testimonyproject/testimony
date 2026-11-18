@@ -2607,6 +2607,25 @@ only through the conciliar decree. -/
   , series := some "Anchor Bible"
   , seriesNumber := some "33" }
 
+/-- Ziesler's study of righteousness language in Paul: the verb forensic, the
+noun and adjective behavioural as well. Cited on Romans 5:19, where "something
+more than forensic" is said with "righteous" (δίκαιοι), not with the verb (199),
+and on 6:7, read as "acquitted", which "retains the normal Pauline sense for the
+verb" (200). Read on Internet Archive. Crossref ties the print ISBN and the DOI
+to the 1972 edition. -/
+@[bib_entry] def zieslerRighteousnessInPaul : BibEntry := .book
+  { core :=
+      { key := "ziesler-righteousness-in-paul-1972"
+      , contributors := { authors := [.person "J. A." "Ziesler"] }
+      , title := "The Meaning of Righteousness in Paul"
+      , subtitle := some "A Linguistic and Theological Enquiry"
+      , year := some { value := 1972 }
+      , identifiers := [.isbn "9780521083164", .doi "10.1017/CBO9780511758669"] }
+  , publisher := "Cambridge University Press"
+  , place := some "Cambridge"
+  , series := some "Society for New Testament Studies Monograph Series"
+  , seriesNumber := some "20" }
+
 /-- The standard lexicon of New Testament Greek (BDAG). Cited for δικαιόω, whose
 senses include "render a favorable verdict, vindicate". Verified at Open
 Library, ISBN 9780226039336 (3rd ed., University of Chicago Press, 2000). -/

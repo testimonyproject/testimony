@@ -2227,12 +2227,12 @@ or is answered by a position that does.
   - an inference step — [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
   - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [McGrath 2005](../../bibliography.md#mcgrath-iustitia-dei-2005)
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from John (6:28–29)*, weakest at *disputed*:
   - The believing of John 6:29 is trust, which brings nothing and receives Christ — [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
   - Good works are the fruit and evidence of saving faith, not its ground — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
@@ -2302,9 +2302,9 @@ which both defeat.
 **What this rests on.** The reasons state 3 defeats and 32 absences of defeat, each a cell of the defeat table, [`solaFideDispute_defeats`](#solaFideDispute_defeats), computed from the two parties' premises and checked by the kernel. Whether an attack survives turns on the attacker's weakest link and on the rating of what it attacks, so a changed rating can change the verdict. The weakest links:
 
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - In Galatians 2:16 ‘faith of Christ’ (πίστις Χριστοῦ) means our faith in Christ — [Dunn 1991](../../bibliography.md#dunn-once-more-pistis-christou-1991); [Matlock 2000](../../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [Sanders 1977](../../bibliography.md#sanders-paul-palestinian-judaism-1977)
@@ -2409,7 +2409,7 @@ argument.
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [McGrath 2005](../../bibliography.md#mcgrath-iustitia-dei-2005)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
@@ -2442,7 +2442,7 @@ argument.
   - an inference step — [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
   - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from John (6:28–29)*, weakest at *disputed*:
   - The believing of John 6:29 is trust, which brings nothing and receives Christ — [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
   - Good works are the fruit and evidence of saving faith, not its ground — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
@@ -2550,9 +2550,9 @@ position that defeats it.
   - an inference step — [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
   - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from John (6:28–29)*, weakest at *disputed*:
   - The believing of John 6:29 is trust, which brings nothing and receives Christ — [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
   - Good works are the fruit and evidence of saving faith, not its ground — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
@@ -2655,12 +2655,12 @@ gospel, and the apocalyptic reading, whose "not by works" it denies.
   - an inference step — [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
   - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [McGrath 2005](../../bibliography.md#mcgrath-iustitia-dei-2005)
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from John (6:28–29)*, weakest at *disputed*:
   - The believing of John 6:29 is trust, which brings nothing and receives Christ — [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
   - Good works are the fruit and evidence of saving faith, not its ground — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
@@ -2760,12 +2760,12 @@ case, and Paul's case defeats Trent.
   - an inference step — [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
   - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [McGrath 2005](../../bibliography.md#mcgrath-iustitia-dei-2005)
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from John (6:28–29)*, weakest at *disputed*:
   - The believing of John 6:29 is trust, which brings nothing and receives Christ — [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
   - Good works are the fruit and evidence of saving faith, not its ground — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
@@ -2853,12 +2853,12 @@ are Paul's case, John's, Trent, and Trent taken as a claim about Paul's word.
   - an inference step — [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
   - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [McGrath 2005](../../bibliography.md#mcgrath-iustitia-dei-2005)
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from John (6:28–29)*, weakest at *disputed*:
   - The believing of John 6:29 is trust, which brings nothing and receives Christ — [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
   - Good works are the fruit and evidence of saving faith, not its ground — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
@@ -2955,12 +2955,12 @@ defended includes Paul's case, and Paul's case defeats it.
   - an inference step — [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
   - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [McGrath 2005](../../bibliography.md#mcgrath-iustitia-dei-2005)
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from John (6:28–29)*, weakest at *disputed*:
   - The believing of John 6:29 is trust, which brings nothing and receives Christ — [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
   - Good works are the fruit and evidence of saving faith, not its ground — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
@@ -3049,12 +3049,12 @@ Trent taken as a claim about Paul's word, and Chrysostom.
   - an inference step — [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
   - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [McGrath 2005](../../bibliography.md#mcgrath-iustitia-dei-2005)
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from John (6:28–29)*, weakest at *disputed*:
   - The believing of John 6:29 is trust, which brings nothing and receives Christ — [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
   - Good works are the fruit and evidence of saving faith, not its ground — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
@@ -3145,12 +3145,12 @@ Trent, and Trent defeats it.
   - an inference step — [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
   - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [McGrath 2005](../../bibliography.md#mcgrath-iustitia-dei-2005)
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from John (6:28–29)*, weakest at *disputed*:
   - The believing of John 6:29 is trust, which brings nothing and receives Christ — [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
   - Good works are the fruit and evidence of saving faith, not its ground — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
@@ -3248,7 +3248,7 @@ Paul's word.
   - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [Gathercole 2002](../../bibliography.md#gathercole-where-boasting-2002); [Carson et al. 2001](../../bibliography.md#carson-variegated-nomism-1-2001)
   - an inference step — [Gathercole 2002](../../bibliography.md#gathercole-where-boasting-2002); [Carson et al. 2001](../../bibliography.md#carson-variegated-nomism-1-2001)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
@@ -3263,7 +3263,7 @@ Paul's word.
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [McGrath 2005](../../bibliography.md#mcgrath-iustitia-dei-2005)
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from John (6:28–29)*, weakest at *disputed*:
   - The believing of John 6:29 is trust, which brings nothing and receives Christ — [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
   - Good works are the fruit and evidence of saving faith, not its ground — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
@@ -3350,12 +3350,12 @@ includes Trent, and Trent defeats it.
   - Second Temple Judaism also held final vindication according to works (encoded as a denial, so it ranks disputed) — [Gathercole 2002](../../bibliography.md#gathercole-where-boasting-2002); [Carson et al. 2001](../../bibliography.md#carson-variegated-nomism-1-2001)
   - an inference step — [Gathercole 2002](../../bibliography.md#gathercole-where-boasting-2002); [Carson et al. 2001](../../bibliography.md#carson-variegated-nomism-1-2001)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [McGrath 2005](../../bibliography.md#mcgrath-iustitia-dei-2005)
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from John (6:28–29)*, weakest at *disputed*:
   - The believing of John 6:29 is trust, which brings nothing and receives Christ — [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
   - Good works are the fruit and evidence of saving faith, not its ground — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
@@ -3500,12 +3500,12 @@ him, defeat each other. Every one of these attacks is answered in return.
   - an inference step — [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
   - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Trent, against 'not by works', read as what Paul's word means*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 8; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Schaff 1887](../../bibliography.md#npnf1-05-1887), §On the Spirit and the Letter, ch. 45 (26.45); [McGrath 2005](../../bibliography.md#mcgrath-iustitia-dei-2005)
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from John (6:28–29)*, weakest at *disputed*:
   - The believing of John 6:29 is trust, which brings nothing and receives Christ — [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
   - Good works are the fruit and evidence of saving faith, not its ground — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
@@ -3569,9 +3569,9 @@ arguments about Paul's word, and it answers every position that attacks it.
 - *Trent, against 'not by works'*, weakest at *disputed*:
   - Justification is not remission of sins only, but renewal of the inward man — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), Decree on Justification, ch. 7; [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 11
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - In Galatians 2:16 ‘faith of Christ’ (πίστις Χριστοῦ) means our faith in Christ — [Dunn 1991](../../bibliography.md#dunn-once-more-pistis-christou-1991); [Matlock 2000](../../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [Sanders 1977](../../bibliography.md#sanders-paul-palestinian-judaism-1977)
@@ -3663,9 +3663,9 @@ can be defended includes Trent, and Trent defeats Paul's case.
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [Gathercole 2002](../../bibliography.md#gathercole-where-boasting-2002); [Carson et al. 2001](../../bibliography.md#carson-variegated-nomism-1-2001)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Luke 7:50: "your faith has saved you"*, weakest at *disputed*:
   - Luke 7:47 — her love is the evidence of her forgiveness, not its ground — [Marshall 1978](../../bibliography.md#marshall-luke-1978), ad loc. Luke 7:47; [Padilla 2021](../../bibliography.md#padilla-narrative-criticism-2021), pp. 54–54; [Kolb and Wengert 2000](../../bibliography.md#kolb-wengert-book-of-concord-2000), §Apology IV, on love and the fulfilling of the law: Luke 7:47–50; Luke 7:41-43; Luke 7:47; Luke 7:47-50
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
@@ -3797,9 +3797,9 @@ and Luther by Aquinas, and the Reformed answer to Chrysostom by Chrysostom.
 - *Law-observant Luke (Jervell)*, weakest at *disputed*:
   - an inference step — [Jervell 1972](../../bibliography.md#jervell-luke-people-god-1972)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from John (6:28–29)*, weakest at *disputed*:
   - The believing of John 6:29 is trust, which brings nothing and receives Christ — [Calvin 1847](../../bibliography.md#calvin-commentary-john-1847), ad loc. John 6:29; John 6:28-29
   - Good works are the fruit and evidence of saving faith, not its ground — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.2; XVI.2; XVI.5; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xvi.1; Jas 2:18-22; Eph 2:10; Rom 6:22; Luke 17:10
@@ -3882,9 +3882,9 @@ defended includes Chrysostom, who defeats it.
 - *Law-observant Luke (Jervell)*, weakest at *disputed*:
   - an inference step — [Jervell 1972](../../bibliography.md#jervell-luke-people-god-1972)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - In Galatians 2:16 ‘faith of Christ’ (πίστις Χριστοῦ) means our faith in Christ — [Dunn 1991](../../bibliography.md#dunn-once-more-pistis-christou-1991); [Matlock 2000](../../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [Sanders 1977](../../bibliography.md#sanders-paul-palestinian-judaism-1977)
@@ -3979,9 +3979,9 @@ of Christ".
   - an inference step — [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
   - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Covenantal nomism (Sanders, Dunn)*, weakest at *disputed*:
   - Second Temple Judaism: in by grace, staying in by works — [Sanders 1977](../../bibliography.md#sanders-paul-palestinian-judaism-1977)
   - an inference step — [Dunn 2005](../../bibliography.md#dunn-new-perspective-2005); [Wright 1997](../../bibliography.md#wright-what-paul-said-1997)
@@ -4055,7 +4055,7 @@ defended includes Jervell, who defeats it over the yoke.
   - an inference step — [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
   - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - In Galatians 2:16 ‘faith of Christ’ (πίστις Χριστοῦ) means our faith in Christ — [Dunn 1991](../../bibliography.md#dunn-once-more-pistis-christou-1991); [Matlock 2000](../../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [Sanders 1977](../../bibliography.md#sanders-paul-palestinian-judaism-1977)
@@ -4064,7 +4064,7 @@ defended includes Jervell, who defeats it over the yoke.
   - an inference step — [Tanner 1990](../../bibliography.md#tanner-decrees-1990), §Trent, Session VI (1547), canon 9
   - an inference step — [Gathercole 2002](../../bibliography.md#gathercole-where-boasting-2002); [Carson et al. 2001](../../bibliography.md#carson-variegated-nomism-1-2001)
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Apocalyptic reading, against faith as the condition*, weakest at *disputed*:
   - ‘Faith of Christ’ is Christ's own faithfulness, the means of God's rescue (encoded as a denial, so it ranks disputed) — [Campbell 2009](../../bibliography.md#campbell-deliverance-god-2009); [Martyn 1997](../../bibliography.md#martyn-galatians-1997), ad loc. Gal 2:16; [Hays 2002](../../bibliography.md#hays-faith-jesus-christ-2002)
   - ‘The righteousness of God’ (δικαιοσύνη θεοῦ) names God's act of rescue in Christ — [Campbell 2009](../../bibliography.md#campbell-deliverance-god-2009); [Martyn 1997](../../bibliography.md#martyn-galatians-1997); Rom 3:21-26
@@ -4136,9 +4136,9 @@ defended includes Aquinas, who defeats it over what believing is.
   - an inference step — [Moo 2013](../../bibliography.md#moo-galatians-2013), ad loc. Gal 1:6; [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1
   - an inference step — [Westminster Assembly 1647](../../bibliography.md#westminster-confession-1647), §XI.1; [Calvin 1960](../../bibliography.md#calvin-institutes-1960), §III.xi.2; [Morris 1965](../../bibliography.md#morris-apostolic-preaching-1965)
 - *Paul's word (δικαιόω, by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Romans 4:3–8, on Paul's word (by the rule of least meaning)*, weakest at *disputed*:
-  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004)
+  - an inference step — [Silva 1994](../../bibliography.md#silva-biblical-words-1994); [Moo 1996](../../bibliography.md#moo-romans-1996), §p. 80; [Barr 2004](../../bibliography.md#barr-semantics-2004); [Ziesler 1972](../../bibliography.md#ziesler-righteousness-in-paul-1972), pp. 199–200
 - *Sola fide from Paul (Galatians 2:16)*, weakest at *disputed*:
   - In Galatians 2:16 ‘faith of Christ’ (πίστις Χριστοῦ) means our faith in Christ — [Dunn 1991](../../bibliography.md#dunn-once-more-pistis-christou-1991); [Matlock 2000](../../bibliography.md#matlock-detheologizing-2000); Gal 2:16; Rom 3:22; Phil 3:9
   - Second Temple Judaism: in by grace, staying in by works (encoded as a denial, so it ranks disputed) — [Sanders 1977](../../bibliography.md#sanders-paul-palestinian-judaism-1977)

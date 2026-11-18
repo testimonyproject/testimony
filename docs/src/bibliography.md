@@ -6,7 +6,7 @@
 Every work cited anywhere in the library, generated from the Lean source.
 Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonyproject/testimony/blob/main/references.bib).
 
-264 entries, of which 37 carry no stable public identifier.
+265 entries, of which 37 carry no stable public identifier.
 
 - <a id="abasciano-corporate-election-romans-9-2006"></a>**`abasciano-corporate-election-romans-9-2006`** — Brian J. Abasciano. *Corporate Election in Romans 9: A Reply to Thomas Schreiner*. *Journal of the Evangelical Theological Society* 49.2: 351–371. 2006. [https://www.galaxie.com/article/jets49-2-08](https://www.galaxie.com/article/jets49-2-08), [https://evangelicalarminians.org/wp-content/uploads/2009/06/Article.-CORPORATE-ELECTION-IN-ROMANS-9.-Final-JETS-Version.pdf](https://evangelicalarminians.org/wp-content/uploads/2009/06/Article.-CORPORATE-ELECTION-IN-ROMANS-9.-Final-JETS-Version.pdf).
 - <a id="achtemeier-1-peter-1996"></a>**`achtemeier-1-peter-1996`** — Paul J. Achtemeier. *1 Peter: A Commentary on First Peter*. Minneapolis: Fortress Press. Hermeneia. 1996. ISBN 9780800660307.
@@ -268,6 +268,7 @@ Machine-readable BibTeX is at [`references.bib`](https://github.com/testimonypro
 - <a id="wright-justification-2009"></a>**`wright-justification-2009`** — N. T. Wright. *Justification: God's Plan and Paul's Vision*. Downers Grove, IL: IVP Academic. 2009. ISBN 9780830838639.
 - <a id="wright-what-paul-said-1997"></a>**`wright-what-paul-said-1997`** — N. T. Wright. *What Saint Paul Really Said: Was Paul of Tarsus the Real Founder of Christianity?*. Grand Rapids: Wm. B. Eerdmans. 1997. ISBN 9780802844453.
 - <a id="young-immanuel-prophecy-1953"></a>**`young-immanuel-prophecy-1953`** — Edward J. Young. *The Immanuel Prophecy: Isaiah 7:14–16*. *Westminster Theological Journal* 15.2: 97–124. 1953. [https://www.galaxie.com/article/wtj15-2-01](https://www.galaxie.com/article/wtj15-2-01). First of two parts; the second appeared in a later issue.
+- <a id="ziesler-righteousness-in-paul-1972"></a>**`ziesler-righteousness-in-paul-1972`** — J. A. Ziesler. *The Meaning of Righteousness in Paul: A Linguistic and Theological Enquiry*. Cambridge: Cambridge University Press. Society for New Testament Studies Monograph Series 20. 1972. ISBN 9780521083164, [DOI 10.1017/CBO9780511758669](https://doi.org/10.1017/CBO9780511758669).
 - <a id="basil-ascetical-works-1999"></a>**`basil-ascetical-works-1999`** — Basil of Caesarea. *Ascetical Works*. Translated by M. Monica Wagner. Washington, DC: Catholic University of America Press. The Fathers of the Church. Vol. 9. 1999. ISBN 9780813209661.
 - <a id="hilary-commentary-matthew-2013"></a>**`hilary-commentary-matthew-2013`** — Hilary of Poitiers. *Commentary on Matthew*. Translated by D. H. Williams. Washington, DC: Catholic University of America Press. The Fathers of the Church. Vol. 125. 2013. ISBN 9780813201252.
 - <a id="van-der-kooij-textzeugen-jesajabuches-1981"></a>**`van-der-kooij-textzeugen-jesajabuches-1981`** — Arie van der Kooij. *Die alten Textzeugen des Jesajabuches: Ein Beitrag zur Textgeschichte des Alten Testaments*. Freiburg, Switzerland; Göttingen: Universitätsverlag; Vandenhoeck & Ruprecht. Orbis Biblicus et Orientalis 35. 1981. ISBN 3727802375.
