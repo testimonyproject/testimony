@@ -49,7 +49,8 @@ return. A one-way defeat would need a step that no cited reader denies, and
 none of the readings above is such a step. That is why the burdens matter: they
 say what each side has to deny, when nothing settles which denial is right.
 
-Two checks that do not depend on who said what were also run over these roads.
+Two checks that do not depend on who said what were also run over these roads,
+and one thing came up that neither can see.
 
 - **Does a word keep its sense where the argument needs it to?** A line that
   sets one text beside another relies on their shared word meaning the same in
@@ -64,20 +65,20 @@ Two checks that do not depend on who said what were also run over these roads.
   the road through Romans 4 also needs "works" (ἔργα) in 4:4–5, "the one who
   works", to mean what it means in 4:6, "apart from works". Until a premise
   says so, that road holds only on that condition.
-- **What the check cannot see.** Fitzmyer's road argues from the adjective
-  "righteous" (δίκαιοι) in 5:19 to the verb "justify". That is a move from one
-  word to another, and the equivocation check tests one word in two senses, so
-  it passes over it. Ziesler's objection is exactly this move, and it is weighed
-  in the step's rating instead.
 - **Does Trent's line say what Augustine actually held?** It does. The record
   now carries what Augustine wrote in the chapter the line cites (26.45), and
   the check finds the line's attribution borne out by it
   (`augustineGivesBothSenses`). The same record shows that Augustine gave the
   courtroom sense too, "deemed, or reckoned as just", as a second way of taking
-  the word. The line quotes the first sense and not the second. The check
+  the word. The line cites the first sense and not the second. The check
   compares an attribution with the record and has no test for what a quotation
   leaves out, so that is a reader's observation, not a finding of the machine.
   What the Latin West held, the line's other attribution, is not yet on record.
+- **What neither check can see.** Fitzmyer's road argues from the adjective
+  "righteous" (δίκαιοι) in 5:19 to the verb "justify". That is a move from one
+  word to another, and the equivocation check tests one word in two senses, so
+  it passes over it. Ziesler's objection is exactly this move, and it is weighed
+  in the step's rating instead.
 
 
 ## How this is checked
