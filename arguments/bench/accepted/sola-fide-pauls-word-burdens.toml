@@ -1,0 +1,18 @@
+# PR #318: what each side must deny about Paul's word.
+# Both benchmarks check a sola fide package against its model. The PR adds six
+# claims to the sola fide vocabulary (the Titus and Romans 4 sameness premises,
+# Augustine's two senses, Romans 5:19, its bridge to the verb, and the
+# effective verdict), so every valuation over it is a little larger to reduce.
+# CI measured +6.4% and +6.9% on the first four claims.
+
+[[accept]]
+benchmark = "satisfied_by: the Pauline case"
+metric = "time"
+up_to = 0.15
+reason = "Six new sola fide claims: stated sameness premises, Augustine's record and Fitzmyer's and Kertelge's roads for Trent, so each valuation over the larger claim type costs more"
+
+[[accept]]
+benchmark = "satisfied_by: Trent grants the subjective genitive"
+metric = "time"
+up_to = 0.15
+reason = "Six new sola fide claims: stated sameness premises, Augustine's record and Fitzmyer's and Kertelge's roads for Trent, so each valuation over the larger claim type costs more"
