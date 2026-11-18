@@ -58,3 +58,27 @@ benchmark = "checks: AIF, every dispute"
 metric = "time"
 up_to = 0.20
 reason = "Both sides of Paul's word heard at their strongest in solaFideDispute: Trent on Paul's word gains Fitzmyer's and Kertelge's roads (five lines) and the argument from Paul's word the Reformed answers (three lines), so two of the 17 positions carry more premises in every cell; CI measured +8.5%"
+
+[[accept]]
+benchmark = "part of: sola fide, 289 cells"
+metric = "time"
+up_to = 0.20
+reason = "Both sides of Paul's word heard at their strongest in solaFideDispute: Trent on Paul's word gains Fitzmyer's and Kertelge's roads (five lines) and the argument from Paul's word the Reformed answers (three lines), so two of the 17 positions carry more premises in every cell; CI measured +9.0%"
+
+[[accept]]
+benchmark = "table: sola fide, first six rows, 102 cells"
+metric = "time"
+up_to = 0.20
+reason = "Both sides of Paul's word heard at their strongest in solaFideDispute: Trent on Paul's word gains Fitzmyer's and Kertelge's roads (five lines) and the argument from Paul's word the Reformed answers (three lines), so two of the 17 positions carry more premises in every cell; CI measured +9.4%"
+
+[[accept]]
+benchmark = "supports, certified: sola fide, 289 cells"
+metric = "time"
+up_to = 0.20
+reason = "Both sides of Paul's word heard at their strongest in solaFideDispute: Trent on Paul's word gains Fitzmyer's and Kertelge's roads (five lines) and the argument from Paul's word the Reformed answers (three lines), so two of the 17 positions carry more premises in every cell; CI measured +9.3%"
+
+[[accept]]
+benchmark = "cross cells, searched: sola fide against Mark 7, 85 cells"
+metric = "time"
+up_to = 0.20
+reason = "Both sides of Paul's word heard at their strongest in solaFideDispute: Trent on Paul's word gains Fitzmyer's and Kertelge's roads (five lines) and the argument from Paul's word the Reformed answers (three lines), so two of the 17 positions carry more premises in every cell; CI measured +5.3%"
