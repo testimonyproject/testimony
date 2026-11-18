@@ -4,6 +4,7 @@ import Testimony.Checks.Aif
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
+import Testimony.Checks.Readers
 import Testimony.Checks.Refutations
 
 /-!
@@ -49,6 +50,12 @@ Sola scriptura
 /-- info: every package has a model with its postulates: 40, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaScriptura
+
+/--
+info: every reading and step has a reader or is marked proposed: 40 packages, 32 lines
+-/
+#guard_msgs in
+#check_readers under TestimonyArguments.SolaScriptura
 
 /-- info: every non-entailment survives its postulates: 37, and 0 undecided -/
 #guard_msgs in

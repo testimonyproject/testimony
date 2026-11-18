@@ -47,20 +47,27 @@ An argument that Scripture predicts X, which reads Scripture as predicting X,
 and cites only Scripture for that reading, is assuming part of what it sets out
 to establish.
 
-The library does not forbid this. Sometimes a text really is plain, and
-demanding external corroboration for every reading would be its own distortion.
-What the library does is make it **computable**: `Source.isScriptureOnly` is
-`true` exactly when a premise appeals to Scripture with no scholarly support,
-and `ArgumentPackage.scriptureOnlyAtoms` lists those that are readings rather
-than reports of what a text says. A claim that Deuteronomy 18:22 says a word
-that fails is not the Lord's needs no commentator; a claim about what a passage
-means, or that an event happened, does. The page lists the readings under each
-package that assumes them.
+The library does not let it pass unmarked. `Source.isScriptureOnly` is `true`
+exactly when a premise appeals to Scripture with no scholarly support, and
+`ArgumentPackage.scriptureOnlyAtoms` lists those that are readings rather than
+reports of what a text says. A claim that Deuteronomy 18:22 says a word that
+fails is not the Lord's needs no commentator; a claim about what a passage
+means, or that an event happened, does. The arguments' builds run
+`#check_readers`, which fails on any such reading, and on any line of reason
+whose step names no one who draws it.
 
-In the Bethlehem argument, `jesusBornInBethlehem` is such a premise: the
-historicity of the Bethlehem birth is disputed in critical scholarship, and the
-argument assumes it on the authority of the texts whose reading is in question.
-That is stated in the module, and it is visible in the manifest.
+Sometimes a text really is plain, or no one in the literature has drawn the
+inference an argument needs, and demanding a citation that does not exist would
+be its own distortion. So the check has two ways out, and both show on the page:
+cite a reader who holds the reading or draws the step, or mark it the library's
+own with `Reference.proposal`, whose rationale says what was assembled and why.
+What it refuses is a reading or a step that is the library's own and is
+presented as if the text alone gave it.
+
+In the Bethlehem argument, for instance, the birth in Bethlehem is a claim
+about an event, so it is cited to Joseph Ratzinger and William Ramsay, who hold
+it as history, and rated `disputed`, because Raymond Brown and John Meier doubt
+it.
 
 ## The trust base
 

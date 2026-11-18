@@ -414,6 +414,126 @@ def tridentineInference : Source :=
   , tradition := .romanCatholic
   , confidence := .wellSupported }
 
+/-- The rating of the classical step, from 2 Timothy 3:16–17, sufficiency,
+clarity and Scripture's own teaching to "Scripture is the sole infallible rule":
+`wellSupported`. The Westminster Confession draws it, citing 2 Timothy 3:16–17
+for "the whole counsel of God … unto which nothing at any time is to be added,
+whether by new revelations of the Spirit, or traditions of men" (I.6). No reader
+was found who grants all five grounds and denies the conclusion. Rome denies the
+grounds instead: Staples, for Catholic Answers, that "II Timothy 3 … does not even
+hint at sola scriptura". Not `consensus`, for the reason `tridentineInference`
+is not: once the last ground is granted, the conclusion all but follows. -/
+def classicalInference : Source :=
+  { primary := .work westminsterConfession (.sectionRef "I.6")
+  , tradition := .reformedProtestant
+  , confidence := .wellSupported }
+
+/-- The rating of the eliminative step, from "Scripture is infallible" and "no
+other rule is" to "Scripture is the sole infallible rule": `wellSupported`. The
+step is close to what "sole" means. The Westminster Confession draws it: the
+supreme judge "can be no other but the Holy Spirit speaking in the Scripture"
+(I.10), and councils since the apostles "may err" (XXXI.4). No reader was found
+who grants both grounds and denies it. Vincent of Lérins grants the canon
+"sufficient of itself for everything" and still joins the Church's
+interpretation to it as a norm; that is a dispute over what "rule" means, not
+over this step. -/
+def eliminativeInference : Source :=
+  { primary := .work westminsterConfession (.sectionRef "I.10")
+  , supporting := [.work westminsterConfession (.sectionRef "XXXI.4")]
+  , tradition := .reformedProtestant
+  , confidence := .wellSupported }
+
+/-- The rating of Tradition 0's step: `wellSupported`. Geisler draws it in his
+review of Mathison (pp. 120–121, where the grounds are cited). Its grounds
+include the eliminative step's, so it can be rated no higher than that step,
+and no one was found who grants them and denies the conclusion. Mathison denies
+a ground, that creeds inform without binding, and that is weighed there. -/
+def tradition0Inference : Source :=
+  { primary := .work geislerReviewMathison (.sectionRef "120–121")
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- The rating of Tradition III's step, from an infallible magisterium to the
+denial that Scripture is the sole infallible rule: `wellSupported`. Vatican II
+draws it: "it is not from Sacred Scripture alone that the Church draws her
+certainty about everything which has been revealed", and Scripture, tradition
+and the teaching office "are so linked and joined together that one cannot
+stand without the others" (*Dei Verbum* 9–10). Protestants deny the ground, that
+the magisterium is infallible, not the step. -/
+def vaticanInference : Source :=
+  { primary := .work tannerDecrees (.sectionRef "Vatican II (1965), Dei Verbum 9–10")
+  , supporting := [.work tannerDecrees (.sectionRef "Vatican I (1870), Pastor Aeternus, ch. 4")]
+  , tradition := .romanCatholic
+  , confidence := .wellSupported }
+
+/-- The rating of the Orthodox step, from the infallible mind of the Church to the
+denial that Scripture is the sole infallible rule: `wellSupported`. Florovsky
+grounds the councils' teaching authority "in the infallibility of the Church".
+The Confession of Dositheus (Jerusalem, 1672) draws the conclusion in its second
+decree: Scripture is believed "not otherwise than as the Catholic Church hath
+interpreted and delivered the same", and the Church's witness is "not of
+inferior authority to that of the Divine Scriptures". No reader was found who
+grants the ground and denies the step. -/
+def orthodoxInference : Source :=
+  { primary := .work florovskyBibleChurchTradition .whole
+  , supporting := [.work wareOrthodoxChurch .whole]
+  , tradition := .easternOrthodox
+  , confidence := .wellSupported }
+
+/-- The rating of the self-refutation step, from "only what Scripture teaches
+binds" and "Scripture does not teach sola scriptura" to "Scripture is not the
+sole infallible rule": `disputed`. Broussard draws it: sola scriptura "must be
+proven from Scripture to pass its own test", "And given that it can't, it's
+self-defeating." Harper grants both grounds, "for the sake of argument", and
+denies the conclusion. What follows, he says, is only that the doctrine cannot
+be held infallibly; it "does not need to be taught explicitly in the Bible or
+infallibly known in order to be true". The grounds give "the doctrine does not
+bind", and the step passes from that to "the doctrine is false". -/
+def selfRefutationInference : Source :=
+  { primary := .work broussardBestArgument .whole
+  , supporting := [.work harperSelfRefuting .whole]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of the regress step, from ministerial tradition and the
+individual's final choice of whom to submit to, to "sola scriptura does not
+differ in principle from solo scriptura": `disputed`. Cross and Judisch draw it:
+"when I submit (so long as I agree), the one to whom I submit is me", so "there
+is no principled difference between sola scriptura and solo scriptura with
+respect to the locus of 'ultimate interpretive authority'". Mathison, replying
+to them, grants "the fact that an individual must determine whether or not to
+submit to an authority", and denies the conclusion: "there is in fact a real
+principled difference". -/
+def interpretiveRegressInference : Source :=
+  { primary := .work crossJudischInterpretiveAuthority (.sectionRef "§§ I, IV.B")
+  , supporting := [.work mathisonReplyCrossJudisch .whole]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of the step in Geisler's charge, from the two legs to "Tradition
+I's reasoning is circular": `wellSupported`. Geisler draws it (pp. 122–123).
+That each leg rests on the other is what circular means, and no reader was found
+who grants both legs and denies the circle. Allen and Swain deny the second leg,
+and that is weighed in its rating. -/
+def circleInference : Source :=
+  { primary := .work geislerReviewMathison (.sectionRef "122–123")
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- The rating of the step from the circle to its defeating Tradition I,
+provided not every appeal to an ultimate authority is circular: `plausible`,
+and the library's own. Geisler is cited for the conclusion, but no source was
+found that argues from the condition, and none that grants both grounds and
+denies the defeat. -/
+def circleDefeatsInference : Source :=
+  { primary := .proposal
+      ("Assembled here to state what Geisler's charge needs against Barrett's " ++
+       "parity reply: a circle counts against a position only if its rivals " ++
+       "escape it. Geisler is cited for the conclusion, not for this condition.")
+  , supporting := [.work geislerReviewMathison (.sectionRef "123")]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .plausible }
+
 /-- Citation and classification for every atom. Total, so nothing is
 uncited. -/
 def cite : Claim → AtomMeta
@@ -779,7 +899,7 @@ def cite : Claim → AtomMeta
         "The individual retains ultimate interpretive authority, exercised " ++
         "indirectly by choosing which body to submit to"
     , kind := .theological
-    , source := heldBy crossJudischInterpretiveAuthority "§ III" .romanCatholic }
+    , source := heldBy crossJudischInterpretiveAuthority "§ IV.A–B" .romanCatholic }
   | .choosingAnAuthorityIsItselfPrivateJudgment =>
     { label :=
         "Choosing which authority to submit to is itself private judgement, " ++

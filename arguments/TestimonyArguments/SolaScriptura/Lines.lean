@@ -353,7 +353,8 @@ def classicalLine : Line Claim :=
       , p .scriptureIsSufficient, p .scriptureIsPerspicuous
       , p .solaScripturaIsTaughtByScripture ]
   , step := toSoleRule
-  , delivers := p .scriptureIsSoleInfallibleRule }
+  , delivers := p .scriptureIsSoleInfallibleRule
+  , inference := some classicalInference }
 
 /-- **The eliminative line**, which reaches the conclusion without the hinge. -/
 @[solaScripturaDefs]
@@ -361,7 +362,8 @@ def eliminativeLine : Line Claim :=
   { name := "Eliminative (nothing else is infallible)"
   , grounds := [p .scriptureIsInfallible, p .noOtherRuleIsInfallible]
   , step := eliminativeToSoleRule
-  , delivers := p .scriptureIsSoleInfallibleRule }
+  , delivers := p .scriptureIsSoleInfallibleRule
+  , inference := some eliminativeInference }
 
 /-- **Mark 7**, as a line of its own: Jesus' rebuke of the elders' tradition,
 and the principle it enacts. It delivers the principle, and no more. -/
@@ -489,7 +491,8 @@ def tradition0Line : Line Claim :=
       [ p .historicalGrammaticalMethodSuffices, p .creedsAreInformativeNotNormative
       , p .scriptureIsInfallible, p .noOtherRuleIsInfallible ]
   , step := tradition0ToSoleRule
-  , delivers := p .scriptureIsSoleInfallibleRule }
+  , delivers := p .scriptureIsSoleInfallibleRule
+  , inference := some tradition0Inference }
 
 /-- **Tradition II**, the Tridentine two-source position. Its step is rated
 `wellSupported`: once unwritten tradition is granted as a source of revelation
@@ -512,7 +515,8 @@ def vaticanLine : Line Claim :=
   { name := "Tradition III (the magisterium as the one real source)"
   , grounds := [p .magisteriumIsInfallible]
   , step := magisterialDeniesSoleRule
-  , delivers := notP .scriptureIsSoleInfallibleRule }
+  , delivers := notP .scriptureIsSoleInfallibleRule
+  , inference := some vaticanInference }
 
 /-- **The Orthodox line**, grounded on the mind of the Church. -/
 @[solaScripturaDefs]
@@ -520,7 +524,8 @@ def orthodoxLine : Line Claim :=
   { name := "Orthodox (the mind of the Church)"
   , grounds := [p .churchMindIsInfallibleInterpreter]
   , step := orthodoxDeniesSoleRule
-  , delivers := notP .scriptureIsSoleInfallibleRule }
+  , delivers := notP .scriptureIsSoleInfallibleRule
+  , inference := some orthodoxInference }
 
 /-- **The self-refutation objection.** -/
 @[solaScripturaDefs]
@@ -530,7 +535,8 @@ def selfRefutationLine : Line Claim :=
       [ p .onlyScripturalDoctrineIsBinding
       , notP .solaScripturaIsTaughtByScripture ]
   , step := selfRefutationStep
-  , delivers := notP .scriptureIsSoleInfallibleRule }
+  , delivers := notP .scriptureIsSoleInfallibleRule
+  , inference := some selfRefutationInference }
 
 /-- **The canon objection.** -/
 @[solaScripturaDefs]
@@ -551,7 +557,8 @@ def interpretiveRegressLine : Line Claim :=
       [ p .traditionHasMinisterialAuthority
       , p .individualRetainsUltimateInterpretiveAuthority ]
   , step := interpretiveRegressStep
-  , delivers := notP .traditionIDiffersInPrincipleFromTradition0 }
+  , delivers := notP .traditionIDiffersInPrincipleFromTradition0
+  , inference := some interpretiveRegressInference }
 
 /-! #### The replies, as substituted grounds
 
@@ -624,7 +631,8 @@ def geislerCircleLine : Line Claim :=
       [ p .creedalConsensusRestsOnPerspicuity
       , p .perspicuityRequiresCreedalConsensus ]
   , step := circleStep
-  , delivers := p .traditionIReasoningIsCircular }
+  , delivers := p .traditionIReasoningIsCircular
+  , inference := some circleInference }
 
 /-- The charge pressed home: the circularity defeats the position. -/
 @[solaScripturaDefs]
@@ -634,7 +642,8 @@ def circleDefeatsLine : Line Claim :=
       [ p .traditionIReasoningIsCircular
       , notP .everyUltimateAuthorityIsCircular ]
   , step := circularityDefeats
-  , delivers := p .circularityDefeatsTraditionI }
+  , delivers := p .circularityDefeatsTraditionI
+  , inference := some circleDefeatsInference }
 
 /-- **Allen and Swain's reply.** The consensus is established by and
 accountable to scripture, so it is a product of reading scripture rather than a

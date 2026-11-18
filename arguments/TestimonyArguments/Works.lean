@@ -4828,6 +4828,92 @@ headers. Cited for his first rule (p. 3) and its application to Titus 2:13:
       , note := some "Third edition." }
   , publisher := "Vernor and Hood"
   , place := some "London" }
+/-- Karlo Broussard, "The Best Argument for Sola Scriptura", in Catholic
+Answers Magazine's online edition, 26 July 2023. He draws the self-refutation
+step: sola scriptura "must be proven from Scripture to pass its own test", "And
+given that it can't, it's self-defeating." -/
+@[bib_entry] def broussardBestArgument : BibEntry := .webPage
+  { core :=
+      { key := "broussard-best-argument-sola-scriptura"
+      , role := .witness
+      , contributors := { authors := [.person "Karlo" "Broussard"] }
+      , title := "The Best Argument for Sola Scriptura"
+      , year := some { value := 2023 }
+      , identifiers :=
+          [ .url "https://catholic.com/magazine/online-edition/the-best-argument-for-sola-scriptura"
+              (some "2026-11-18") ] }
+  , site := some "Catholic Answers Magazine" }
+
+/-- Sam Harper, "Is Sola Scriptura self-refuting?", on his blog Philochristos,
+16 January 2025. He grants, "for the sake of argument, that the Bible does not
+teach Sola Scriptura", and denies that it follows that sola scriptura is false:
+"Sola Scriptura does not need to be taught explicitly in the Bible or
+infallibly known in order to be true or in order to be known." -/
+@[bib_entry] def harperSelfRefuting : BibEntry := .webPage
+  { core :=
+      { key := "harper-sola-scriptura-self-refuting"
+      , role := .witness
+      , contributors := { authors := [.person "Sam" "Harper"] }
+      , title := "Is Sola Scriptura self-refuting?"
+      , year := some { value := 2025 }
+      , identifiers :=
+          [ .url "https://philochristos.blogspot.com/2025/01/is-sola-scriptura-self-refuting.html"
+              (some "2026-11-18") ] }
+  , site := some "Philochristos" }
+
+/-- Keith Mathison, "Solo Scriptura, Sola Scriptura, and Apostolic Succession: A
+Response to Bryan Cross and Neal Judisch", posted on the blog Thoughts of
+Francis Turretin, 15 February 2011 (author and date as the page gives them). He
+grants "the fact that an individual must determine whether or not to submit to
+an authority", and holds that "there is in fact a real principled difference
+between sola scriptura and solo scriptura". -/
+@[bib_entry] def mathisonReplyCrossJudisch : BibEntry := .webPage
+  { core :=
+      { key := "mathison-reply-cross-judisch"
+      , contributors := { authors := [.person "Keith A." "Mathison"] }
+      , title :=
+          "Solo Scriptura, Sola Scriptura, and Apostolic Succession: " ++
+          "A Response to Bryan Cross and Neal Judisch"
+      , year := some { value := 2011 }
+      , identifiers :=
+          [ .url "https://turretinfan.blogspot.com/2011/02/solo-scriptura-sola-scriptura-and.html"
+              (some "2026-11-18") ] }
+  , site := some "Thoughts of Francis Turretin" }
+
+/-- Joseph Ratzinger (Benedict XVI), *Jesus of Nazareth: The Infancy
+Narratives* (Image, 2012). Verified at Open Library, ISBN 9780385346405. He
+answers the exegetes who "take the view that when Matthew and Luke say Jesus was
+born in Bethlehem, they are making a theological statement, not a historical
+one": "If we abide by the sources, it is clear that Jesus was born in Bethlehem
+and grew up in Nazareth." The page is not verified. -/
+@[bib_entry] def ratzingerInfancyNarratives : BibEntry := .book
+  { core :=
+      { key := "ratzinger-infancy-narratives-2012"
+      , contributors := { authors := [.person "Joseph" "Ratzinger"] }
+      , title := "Jesus of Nazareth"
+      , subtitle := some "The Infancy Narratives"
+      , year := some { value := 2012 }
+      , identifiers := [.isbn "9780385346405"] }
+  , publisher := "Image" }
+
+/-- William M. Ramsay, *Was Christ Born at Bethlehem? A Study on the Credibility
+of St. Luke*, second edition (Hodder and Stoughton, London, 1898), read in the
+University of Toronto scan at archive.org. "Now Matthew and Luke agree that
+Jesus was born in Bethlehem" (p. 98), and the fourth Gospel assumes its readers
+know "the story of the birth in Bethlehem" (p. 97). -/
+@[bib_entry] def ramsayBornAtBethlehem : BibEntry := .book
+  { core :=
+      { key := "ramsay-born-at-bethlehem-1898"
+      , contributors := { authors := [.person "William M." "Ramsay"] }
+      , title := "Was Christ Born at Bethlehem?"
+      , subtitle := some "A Study on the Credibility of St. Luke"
+      , year := some { value := 1898 }
+      , identifiers :=
+          [ .url "https://archive.org/details/waschristbornatb00ramsuoft" (some "2026-11-18") ] }
+  , publisher := "Hodder and Stoughton"
+  , place := some "London"
+  , edition := some "second edition" }
+
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'

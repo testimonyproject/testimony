@@ -59,4 +59,5 @@ import Testimony.Checks.Maturity
 import Testimony.Checks.FallacyCases
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
+import Testimony.Checks.Readers
 import Testimony.Checks.Refutations

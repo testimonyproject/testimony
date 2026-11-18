@@ -119,6 +119,7 @@ Every check the library runs over its own arguments takes a namespace:
 #check_refutations under TestimonyExamples using unfoldSets
 #check_citations under TestimonyExamples
 #check_aif under TestimonyExamples
+#check_readers under TestimonyExamples
 ```
 
 Each report is pinned with `#guard_msgs`, so a change in any of them is a

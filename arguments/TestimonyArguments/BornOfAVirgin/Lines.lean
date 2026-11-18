@@ -1,4 +1,5 @@
 import TestimonyArguments.BornOfAVirgin.Atoms
+import TestimonyArguments.BornOfAVirgin.Sources
 import Testimony.Logic.Line
 
 /-!
@@ -537,6 +538,20 @@ with one missing.
 in common (Mary's conception, the agreement of the two narratives) is passed to
 `caseOf` as shared, because it belongs to no single strand. -/
 
+/-- The rating of Isaiah's step, from a messianic prediction of a virgin birth to
+the criterion: `wellSupported`. Motyer draws it: "in Him the full implications
+of Immanuel's birth of the [עַלְמָה] are realized", and "Matthew, therefore,
+performed no exegetical sleight of hand in translating Isaiah 7:14 with the word
+parthenos" (p. 125). The conclusion follows from the first ground by what its
+words mean, and no reader was found who grants the grounds and denies it.
+Wegner denies the first ground ("This is not to say that OT passages are
+prophesying Jesus"), and Brown and Bratcher the first two; those dissents are
+weighed in the grounds' ratings. -/
+def isaianicInference : Source :=
+  { primary := .work motyerContextContent (.page 125)
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
 /-- **The Isaianic line.** The predictive reading, the lexical premise, the
 Septuagint's rendering, and Matthew's quotation and intent. Its hinge is
 `almahMeansVirgin`, and the whole lexical dispute is about that one ground. -/
@@ -547,7 +562,23 @@ def isaianicLine : Line Claim :=
       [ p .isaiahPredictsVirginBirth, p .almahMeansVirgin, p .lxxRendersParthenos
       , p .matthewQuotesIsaiah, p .matthewIntendsFulfilment ]
   , step := toCriterion
-  , delivers := p .messiahBornOfVirgin }
+  , delivers := p .messiahBornOfVirgin
+  , inference := some isaianicInference }
+
+/-- The rating of the step from Genesis 3:15 to the criterion: `plausible`. Luther
+draws it, reading "her seed" as "the true Seed of Mary" (*On the Creation*,
+pp. 298–299), and Matthew Henry: "He was likewise to be the seed of a woman
+only, of a virgin". No reader was found who denies the conclusion. But Leupold
+and Keil grant the grounds as they read them and decline the step: "the
+expression used does not specifically prophesy the virgin birth" (Leupold,
+p. 169). So the step holds only on Luther's reading of what the woman's seed
+signifies, and it is rated no higher than `plausible`. -/
+def protoevangeliumInference : Source :=
+  { primary := .work lutherOnTheCreation (.pages 298 299)
+  , supporting :=
+      [ .work henryCommentary (.adLoc ⟨.genesis, 3, 15⟩), .work leupoldGenesis (.page 169) ]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .plausible }
 
 /-- **The protoevangelium line.** Genesis 3:15 read as the promise of a
 redeemer, a man's line counted through the father, and the claim that naming the
@@ -561,7 +592,24 @@ def protoevangeliumLine : Line Claim :=
       [ p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
       , p .seedReckonedThroughFather, p .seedOfTheWomanImpliesNoHumanFather ]
   , step := genesisToCriterion
-  , delivers := p .messiahBornOfVirgin }
+  , delivers := p .messiahBornOfVirgin
+  , inference := some protoevangeliumInference }
+
+/-- The rating of Micah's step, from the mother named alone at Micah 5:3 to the
+criterion: `wellSupported`. Miravalle draws it, finding in the verse "the same
+virginal sense as we see in Isaiah 7:14", and Vatican II reads the verse with
+Isaiah 7:14 of "the Virgin who shall conceive and bear a son" (*Lumen Gentium*
+55, n. 285). No reader was found who grants the grounds and denies the
+conclusion. Keil grants that the woman in travail is "the mother of the
+Messiah", and does not draw the inference; Brown denies that the mother's being
+named alone shows anything, which is weighed in that ground's rating. -/
+def micheanInference : Source :=
+  { primary := .work miravalleIntroductionToMary .whole
+  , supporting :=
+      [ .work tannerDecrees (.sectionRef "Vatican II (1964), Lumen Gentium 55")
+      , .work keilDelitzschMinorProphets (.adLoc ⟨.micah, 5, 3⟩) ]
+  , tradition := .romanCatholic
+  , confidence := .wellSupported }
 
 /-- **The Michean line.** The maternal-only wording of Micah 5:3 and the
 inference drawn from it. Its hinge is an argument from silence, and the rival
@@ -572,7 +620,26 @@ def micheanLine : Line Claim :=
   , grounds :=
       [ p .micah5_3NamesMotherOnly, p .maternalSilenceImpliesNoHumanFather ]
   , step := micahToCriterion
-  , delivers := p .messiahBornOfVirgin }
+  , delivers := p .messiahBornOfVirgin
+  , inference := some micheanInference }
+
+/-- The rating of the compositional step: `plausible`, and in part the library's
+own. Postell holds that "the interpretation of Isaiah 7 must focus on the
+literary strategy of Isaiah 7 in the book, rather than the historical events"
+(p. 492), and that 7:14 anticipates "a miracle of the magnitude of what we find
+in Matthew 1:23" (p. 493); Motyer, that the passage "must not be severed" from
+its setting (p. 123). But Postell reaches the virgin through the word, having
+argued that עַלְמָה means "young virgin". This strand leaves the word out and
+lets Matthew's intent say which miracle is meant, and that is assembled here. -/
+def compositionalInference : Source :=
+  { primary := .proposal
+      ("Postell reaches the virgin by reading עַלְמָה as 'young virgin' (p. 493). " ++
+       "This strand leaves that ground out and lets Matthew's intent name the " ++
+       "miracle the composition foretells, which is the library's assembly.")
+  , supporting :=
+      [ .work postellIsaiahMessianic (.pages 492 493), .work motyerContextContent (.page 123) ]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .plausible }
 
 /-- **The compositional line.** Isaiah 7's placement in an eschatologically
 framed unit, the principle that placement governs meaning, and the future birth
@@ -584,7 +651,23 @@ def compositionalLine : Line Claim :=
       [ p .isaiah2to12FramedByEschatology, p .compositionGovernsMeaning
       , p .compositionalReadingYieldsFutureBirth ]
   , step := compositionalToCriterion
-  , delivers := p .messiahBornOfVirgin }
+  , delivers := p .messiahBornOfVirgin
+  , inference := some compositionalInference }
+
+/-- The rating of the magisterial step: `wellSupported`. The Catechism draws it:
+"The Church sees here the fulfilment of the divine promise given through the
+prophet Isaiah: 'Behold, a virgin shall conceive and bear a son'" (§ 497), and
+Aquinas opens his question on Mary's virginity with the same verse (*Summa*
+III q.28 a.1). No reader was found who grants the grounds and denies the
+conclusion. Brown grants that the virginal conception "would be classified as a
+doctrine infallibly taught by the ordinary magisterium", and asks whether that
+"forecloses further investigation": a dissent from the second ground, that the
+teaching settles the question. -/
+def magisterialInference : Source :=
+  { primary := .work catechismCatholicChurch (.sectionRef "497")
+  , supporting := [.work aquinasSumma (.sectionRef "III q.28 a.1")]
+  , tradition := .romanCatholic
+  , confidence := .wellSupported }
 
 /-- **The magisterial line.** Papal teaching and the authority granted it.
 
@@ -600,7 +683,24 @@ def magisterialLine : Line Claim :=
       [ p .magisteriumTeachesVirginalConception
       , p .magisteriumIsDoctrinallyAuthoritative ]
   , step := magisterialToCriterion
-  , delivers := p .messiahBornOfVirgin }
+  , delivers := p .messiahBornOfVirgin
+  , inference := some magisterialInference }
+
+/-- The rating of the referential step, to "Mary answers the description at
+Isaiah 7:14 whatever עַלְמָה denotes": `wellSupported`. The fathers draw it:
+Cyril of Jerusalem (*Catechetical Lectures* 12.21), Eusebius (*Demonstration*
+VII.1) and Chrysostom (*Homilies on Matthew* 5). No reader was found who grants
+the grounds and denies that Mary has the features the description names. Wegner
+grants every ground and that Mary "was indeed a virgin" (p. 483), and holds that
+the woman Isaiah meant lived in Ahaz's day. That denies that Mary is the woman
+Isaiah described, which is a different claim from this one. -/
+def referentialInference : Source :=
+  { primary := .work cyrilCatecheticalLectures (.sectionRef "12.21")
+  , supporting :=
+      [ .work eusebiusDemonstratio (.sectionRef "VII.1")
+      , .work chrysostomHomiliesMatthew (.sectionRef "5") ]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
 
 /-- **The referential line.** The shared lexical ground, the Rebekah datum,
 and two claims about Mary — that she was a young woman of marriageable age, and
@@ -621,7 +721,23 @@ def referentialLine : Line Claim :=
       , p .maryWasAnAlmah, p .maryConceivedAsVirgin
       , p .qumranConfirmsAlmah ]
   , step := toDescriptionFit
-  , delivers := p .maryFitsIsaianicDescription }
+  , delivers := p .maryFitsIsaianicDescription
+  , inference := some referentialInference }
+
+/-- The rating of the versional step: `consensus`, and the library's own. It follows
+from its fourth ground, that the versions' divergence refutes the virgin sense,
+by what "refutes" means; every reader who denies the conclusion denies that
+ground instead, as Irenaeus rejects the rendering of "Theodotion the Ephesian
+… and Aquila of Pontus" (III.21.1). No source was found, at a verified place,
+that draws the step itself. -/
+def versionalInference : Source :=
+  { primary := .proposal
+      ("The conclusion follows from the ground that the versions' divergence " ++
+       "refutes the virgin sense; every reader who denies the conclusion " ++
+       "(Irenaeus III.21.1; Rico and Gentry) denies that ground.")
+  , supporting := [.work irenaeusAgainstHeresies (.sectionRef "III.21.1")]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .consensus }
 
 /-- **The versional line**, stated as the objector would state it: the Targum
 and the Three read the broad term, Qumran settles the Hebrew, and Matthew's
@@ -635,7 +751,22 @@ def versionalLine : Line Claim :=
       , p .versionalDivergenceRefutesVirginSense
       , p .lexicalSenseRequiredForFulfilment ]
   , step := versionalObjection
-  , delivers := notP .almahMeansVirgin }
+  , delivers := notP .almahMeansVirgin
+  , inference := some versionalInference }
+
+/-- The rating of Wegner's step, from הָרָה (pregnant) read as a predicate
+adjective to a woman already pregnant: `plausible`. Wegner draws it: הָרָה "is
+most likely a predicate adjective suggesting that the maiden is in the state of
+pregnancy", so that "within nine months she would have a son" (pp. 471, 476).
+Rhodea grants the parse and leaves the conclusion open: "the timeframe is either
+that the woman is about to conceive, or, as in some parallel uses, has conceived
+already", and at Judges 13:5–7 "the woman may already be pregnant or will
+conceive in the near future" (p. 66). -/
+def wegnerInference : Source :=
+  { primary := .work wegnerVirginBirths (.pageList [471, 476])
+  , supporting := [.work rhodeaDidMatthewConceive (.page 66)]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .plausible }
 
 /-- **The Wegner line.** The predicate-adjective parse, the near-term setting
 of the sign, the ordinary pregnancy that setting supplies, and the principle
@@ -657,7 +788,8 @@ def wegnerLine : Line Claim :=
       [ p .harahIsPredicateAdjective, p .isaiahIsNearTermSignToAhaz
       , p .pregnancyAtTheSignIsOrdinary, p .oneReferentSettlesDenotation ]
   , step := harahYieldsPresentPregnancy
-  , delivers := p .isaianicAlmahIsAlreadyPregnant }
+  , delivers := p .isaianicAlmahIsAlreadyPregnant
+  , inference := some wegnerInference }
 
 /-- The two steps that carry Wegner's line to its lexical conclusion: the
 pregnancy excludes virginity, and the referent settles the word. Passed to

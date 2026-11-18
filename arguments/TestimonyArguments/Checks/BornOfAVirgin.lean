@@ -4,6 +4,7 @@ import Testimony.Checks.Aif
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
+import Testimony.Checks.Readers
 import Testimony.Checks.Refutations
 
 /-!
@@ -56,6 +57,12 @@ Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
 /-- info: every package has a model with its postulates: 51, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.BornOfAVirgin
+
+/--
+info: every reading and step has a reader or is marked proposed: 51 packages, 41 lines
+-/
+#guard_msgs in
+#check_readers under TestimonyArguments.BornOfAVirgin
 
 /-- info: every non-entailment survives its postulates: 36, and 4 undecided -/
 #guard_msgs in
