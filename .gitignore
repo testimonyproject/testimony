@@ -16,6 +16,9 @@ docs/src/roadmap.md
 docs/src/maturity.md
 docs/latex/arguments.tex
 docs/latex/arguments/*.tex
+# The house style the documents load, written beside them by argtex.
+docs/latex/testimony.sty
+docs/latex/arguments/testimony.sty
 
 # LaTeX build products: everything the TeX engine derives from the generated
 # documents.

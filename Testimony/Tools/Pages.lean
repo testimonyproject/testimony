@@ -603,7 +603,7 @@ def latexDocument (title note : String) (sections : List (Argument × Body))
     | [(a, _)] => a.ns.toString
     | _ => "all"
   (if credits then
-    Logic.Latex.preamble title ("\\credit{" ++ key ++ "}") Logic.Latex.credits
+    Logic.Latex.preamble title ("\\credit{" ++ key ++ "}")
    else Logic.Latex.preamble title) ++
   (match sections with
    | [(a, _)] => latexAbstract a true
