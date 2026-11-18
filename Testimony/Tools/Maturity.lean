@@ -103,25 +103,26 @@ def beginMarker : String := "<!-- BEGIN GENERATED: lake exe statusgen -->"
 def endMarker : String := "<!-- END GENERATED: lake exe statusgen -->"
 
 /-- **Write the maturity table into its page, or check it**: with `--check`,
-fail if the committed block is stale; otherwise splice the table in. Returns the
-exit code. -/
+fail if the page is stale; otherwise splice the table in. Returns the exit code.
+As for the status table, the block is spliced into `template` and the result
+written to `page`; by default the template is the page itself. -/
 def run (page : System.FilePath) (sections : List Argument) (rows : List Maturity)
-    (args : List String) : IO UInt32 := do
-  unless ← page.pathExists do
-    IO.eprintln s!"statusgen: {page} does not exist"
+    (args : List String) (template : System.FilePath := page) : IO UInt32 := do
+  unless ← template.pathExists do
+    IO.eprintln s!"statusgen: {template} does not exist"
     return 1
-  let doc ← IO.FS.readFile page
+  let doc ← IO.FS.readFile template
+  let current ← if ← page.pathExists then IO.FS.readFile page else pure ""
   match splice beginMarker endMarker doc (maturityMarkdown sections rows) with
   | .error e =>
     IO.eprintln s!"statusgen: {page}: {e}"
     return 1
   | .ok updated =>
     if args.contains "--check" then
-      if doc == updated then
+      if current == updated then
         IO.println s!"statusgen: {rows.length} arguments' maturity; {page} is up to date"
         return 0
       IO.eprintln s!"statusgen: {page} is stale — run `lake exe statusgen`"
-      IO.eprintln "statusgen: and commit the result"
       return 1
     IO.FS.writeFile page updated
     IO.println s!"statusgen: wrote {page} ({rows.length} arguments' maturity)"

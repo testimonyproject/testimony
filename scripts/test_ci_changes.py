@@ -39,15 +39,11 @@ class Classify(unittest.TestCase):
                     self.jobs(path), {"lean": False, "docs": False, "image": False}
                 )
 
-    def test_generated_files_build(self) -> None:
+    def test_templates_the_generators_read_build(self) -> None:
         for path in (
-            "references.bib",
-            "docs/src/bibliography.md",
-            "docs/src/roadmap.md",
-            "docs/src/SUMMARY.md",
-            "docs/src/arguments/sola-fide.md",
-            "docs/latex/arguments.tex",
-            "docs/latex/arguments/sola-fide.tex",
+            "docs/templates/roadmap.md",
+            "docs/templates/SUMMARY.md",
+            "docs/templates/maturity.md",
         ):
             with self.subTest(path=path):
                 self.assertTrue(self.jobs(path)["lean"])

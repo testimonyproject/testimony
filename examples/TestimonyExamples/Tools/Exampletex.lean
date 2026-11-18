@@ -61,7 +61,9 @@ def note : String :=
 
 /-- An example's document. -/
 def document (e : Example) : String :=
-  latexDocument e.argument.title note (sectionsOf [e.argument] bodies) "exampletex"
+  latexDocument e.argument.title note (sectionsOf [e.argument] bodies)
+    { package := "examples", tool := "exampletex", dir := "examples/docs/latex",
+      file := e.file ++ ".tex" }
 
 end TestimonyExamples.Doc
 

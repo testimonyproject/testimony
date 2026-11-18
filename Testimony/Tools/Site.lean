@@ -28,6 +28,12 @@ structure Site where
   pagesDir : System.FilePath
   /-- The site's summary, whose marked block lists the pages. -/
   summaryPath : System.FilePath
+  /-- The summary as written by hand, with its marked block empty, which the
+  block is spliced into before the result is written to `summaryPath`. Where it
+  is `none`, the block is spliced into `summaryPath` in place. A package that
+  does not commit its generated pages keeps its template here, so that the
+  summary in git never holds the generated block. -/
+  summaryTemplate : Option System.FilePath := none
   /-- The print edition of the package's arguments, as a link from a page in the
   pages directory: `../pdf/arguments.pdf`. Empty where there is none, and the
   pages then say nothing of one. The PDF is typeset and put beside the site when
@@ -281,12 +287,14 @@ report each stale page, a stale block and every stray page, and fail;
 otherwise write them all. Returns the exit code. -/
 def run (s : Site) (catalogue : List Argument) (harvest : List Body) (args : List String) :
     IO UInt32 := do
-  unless ← s.summaryPath.pathExists do
-    IO.eprintln s!"{s.tool}: {s.summaryPath} does not exist"
+  let template := s.summaryTemplate.getD s.summaryPath
+  unless ← template.pathExists do
+    IO.eprintln s!"{s.tool}: {template} does not exist"
     return 1
-  let summary ← IO.FS.readFile s.summaryPath
+  let source ← IO.FS.readFile template
+  let summary ← if ← s.summaryPath.pathExists then IO.FS.readFile s.summaryPath else pure ""
   let body := summaryMarkdown catalogue ++ "\n"
-  let updated ← match Testimony.Logic.Markdown.splice s.beginMarker s.endMarker summary body with
+  let updated ← match Testimony.Logic.Markdown.splice s.beginMarker s.endMarker source body with
     | .error e => do IO.eprintln s!"{s.tool}: {s.summaryPath}: {e}"; return 1
     | .ok t => pure t
   for (a, b) in sectionsOf catalogue harvest do
@@ -313,7 +321,7 @@ def run (s : Site) (catalogue : List Argument) (harvest : List Body) (args : Lis
     if ok then
       IO.println s!"{s.tool}: {pages.length} argument pages are up to date"
       return 0
-    IO.eprintln s!"{s.tool}: run `lake exe {s.tool}` and commit the result"
+    IO.eprintln s!"{s.tool}: run `lake exe {s.tool}`"
     return 1
   IO.FS.createDirAll s.pagesDir
   for (name, text) in pages do

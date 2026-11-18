@@ -191,6 +191,12 @@ cd arguments && tectonic sola-fide.tex        # one argument on its own
 A Unicode engine is required: the claims contain Greek and Hebrew. Citations
 render as live `\cite` commands against the generated `references.bib`.
 
+Under its title a document gives a date and a version, and it ends with "How
+this edition was made": the steps to make it again from the commit it names.
+Both come from an `edition.def` beside the document, which
+`python3 scripts/edition.py docs/latex docs/latex/arguments`, run at the root,
+writes from git. Without it the document says it is an unrecorded copy.
+
 Atoms are numbered rather than named, which is the usual convention and the
 point of rendering at all. It separates an argument's *shape* from its content.
 So that the reader need not turn back to the legend at every row, each variable
@@ -198,8 +204,28 @@ links to its row there, and a derivation puts its claims into the legend's
 words: a premise that is a claim, which the position holds; a step, by what it
 *would give* — unless that is the conclusion — whether or not the position holds
 what the step needs; and the turnstile row, by the conclusion *at issue*,
-whether or not the premises reach it. A claim met only inside a step is left to
-its link.
+whether or not the premises reach it. Inside a package's derivation, a claim met
+only inside a step is left to its link, because the rows above it have said the
+claims the position holds.
+
+A step that stands on its own, as each line of reason does under its docstring,
+is set the other way round: built up from its claims, so that a reader meets
+each one in words before the formula joins them. Each claim the step needs gets
+a row with its label, its rating and its source; then, after the "therefore"
+sign (∴), what they give; then the formula, as a summary of what was just read.
+
+```
+If each of these holds,
+(1)  P₂  Romans 3:28 teaches justification by faith apart from works of the law
+         — well supported: Rom 3:28; Calvin, Institutes III.xi.19; Fitzmyer on Rom 3:28
+(2)  P₃  Galatians 2:16 teaches that no one is justified by works of the law
+         — well supported: …
+  …
+(5)  P₆  Paul's ‘works of the law’ means human works in general, not boundary markers
+         — disputed: …
+ ∴   P₂₅  Justification is by faith alone
+In symbols, the step is (P₂ ∧ P₃ ∧ P₈ ∧ P₇ ∧ P₆) → P₂₅.
+```
 
 ```
 (17)  (P₂ ∧ P₃ ∧ P₈ ∧ P₇ ∧ P₆) → P₂₅  — would give: Justification is by faith alone
