@@ -1782,11 +1782,12 @@ and both defeat him in return. Jervell and Peter's case defeat each other.
 Paul's gospel and Trent defeat each other, over Trent's definition. John's case
 meets Trent, the apocalyptic reading and Aquinas, each in both directions, and
 Aquinas and Luther defeat each other. Trent taken as a claim about Paul's word
-meets every position Trent meets, in both directions, and two more: the two
-arguments about Paul's word defeat it, and it defeats neither in return. Nothing
-else.
+meets every position Trent meets, in both directions, and two more: it and the
+two arguments about Paul's word defeat each other. Nothing else. Every defeat in
+the table runs both ways, so no position here defeats another without being
+defeated by it in return.
 
-Every one of the 225 answers, the defeats and the absences alike, is worked out
+Every one of the 289 answers, the defeats and the absences alike, is worked out
 from the positions' premises and checked by machine. The table above is what
 that working is checked against. None of it is assumed.
 
