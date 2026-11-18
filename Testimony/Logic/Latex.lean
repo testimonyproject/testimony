@@ -1087,9 +1087,19 @@ None of them belongs in the generator: the same source must make the same
 it, whose commit does not exist until then. So the file is written when the document is
 typeset, by `scripts/edition.py`, from the commit being typeset, as
 `credits.def` is by `scripts/credits.py`. Without it the document says it is an
-unrecorded copy, and dates itself the day it was typeset. -/
+unrecorded copy, and dates itself the day it was typeset.
+
+The paper is not part of the record, because one `.tex` makes every size of
+page: `\editionpaper` names the paper this copy is set on, "A4" or "US Letter"
+(or the name `scripts/typeset.sh --paper` was given), from `\testimonypaper`,
+which the preamble reads before the class (`preamble`). -/
 def edition : String :=
   "\\newif\\ifeditionrecorded\n\\newif\\ifeditionpreview\n" ++
+  "\\edef\\testimony@paper{\\testimonypaper}\\def\\testimony@aiv{a4}" ++
+  "\\def\\testimony@letter{letter}\n" ++
+  "\\newcommand{\\editionpaper}{\\ifx\\testimony@paper\\testimony@aiv A4\\else" ++
+  "\\ifx\\testimony@paper\\testimony@letter US Letter\\else" ++
+  "\\texttt{\\testimony@paper}\\fi\\fi}\n" ++
   "\\newcommand{\\editiondate}{\\today}\n" ++
   "\\newcommand{\\editionversion}{unrecorded}\n" ++
   "\\newcommand{\\editioncommit}{COMMIT}\n" ++
@@ -1122,12 +1132,18 @@ the commit the edition names (`edition`).
 The title matter says only when and which: a reader who wants to cite the
 document needs those, and a reader who wants to check it needs the rest, which
 is too long for a title page. The steps are the ones `.github/workflows/pdf.yml`
-takes, written out for one computer. -/
+takes, written out for one computer, and they end in one command for each size
+of page the workflow publishes, A4 and US Letter, since a reader may hold either
+(`\editionpaper`, defined in `edition`, says which). -/
 def reproduction (r : Reproduction) : String :=
   let cmd (lines : List String) : String :=
     "\\begin{alltt}\\small\n" ++ "\n".intercalate lines ++ "\n\\end{alltt}\n"
   let defs := if r.credits then "docs/latex docs/latex/arguments" else r.dir
-  let pdf := (r.file.dropEnd 4).toString ++ ".pdf"
+  let name := (r.file.dropEnd 4).toString
+  let pdf := name ++ ".pdf"
+  let letter := name ++ "-letter.pdf"
+  let a5 := name ++ "-a5.pdf"
+  let tex := r.dir ++ "/" ++ r.file
   "\n\\clearpage\n\\section*{How this edition was made}\n" ++
   "\\addcontentsline{toc}{section}{How this edition was made}\n" ++
   "This document was printed by a program, not set by hand. Its text comes from " ++
@@ -1149,12 +1165,17 @@ def reproduction (r : Reproduction) : String :=
   "so the steps below write \\texttt{COMMIT} where an edition names its own. A " ++
   "commit is one saved state of every file in the repository, named by a string " ++
   "of letters and digits that never changes what it names.\n\\fi\n\n" ++
+  "This copy is set on \\editionpaper{} paper. The steps below make the document " ++
+  "on A4 and on US Letter alike, and only the last of them differs between the " ++
+  "two.\n\n" ++
   "You need a computer running Linux or macOS (on Windows, the Windows Subsystem " ++
   "for Linux), with git, Python~3, an internet connection, and about 10\\,GB of " ++
   "free disk space.\n" ++
   "\\begin{enumerate}\n" ++
   "\\item Install elan, which installs the version of Lean the library asks for:\n" ++
   cmd ["curl https://elan.lean-lang.org/elan-init.sh -sSf | sh"] ++
+  "Then open a new terminal, so that it can find the \\texttt{lake} command elan " ++
+  "installed.\n" ++
   "\\item Install Tectonic, which sets the pages, following " ++
   "\\url{https://tectonic-typesetting.github.io/book/latest/installation/}.\n" ++
   "\\item Fetch the library, and turn it back to this edition's commit:\n" ++
@@ -1173,12 +1194,21 @@ def reproduction (r : Reproduction) : String :=
     "each argument" else "") ++ ":\n" ++
   cmd ((if r.credits then ["python3 scripts/credits.py " ++ defs] else []) ++
     ["python3 scripts/edition.py " ++ defs]) ++
-  "\\item Set the pages:\n" ++
-  cmd ["cd " ++ r.dir, "tectonic " ++ r.file] ++
+  "\\item Set the pages. For A4 paper:\n" ++
+  cmd ["scripts/typeset.sh " ++ tex] ++
+  "That makes \\texttt{" ++ escape (r.dir ++ "/" ++ pdf) ++ "}. For US Letter " ++
+  "paper:\n" ++
+  cmd ["scripts/typeset.sh --paper letter " ++ tex] ++
+  "That makes \\texttt{" ++ escape letter ++ "} beside it.\n" ++
   "\\end{enumerate}\n" ++
-  "That makes \\texttt{" ++ escape pdf ++ "}. Its words, numbers and references " ++
-  "are this edition's, and so should its pages be: the fonts it is set in come " ++
-  "with Tectonic, not from your computer.\n"
+  "Both sizes are set from the same source file, so they hold the same words, " ++
+  "numbers and references; only the size of the page differs, and with it where " ++
+  "the lines and pages break. Another size works the same way: " ++
+  "\\texttt{--paper a5} makes \\texttt{" ++ escape a5 ++ "}. The fonts the " ++
+  "document is set in come with Tectonic, not from your computer, so a copy you " ++
+  "make on the same paper as this one should match it page for page. The script " ++
+  "stops with an error if a character the document quotes is missing from those " ++
+  "fonts, rather than leave a blank where it should be.\n"
 
 /-- The fonts, and which font sets each script the documents quote.
 
