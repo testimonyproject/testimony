@@ -22,3 +22,39 @@ benchmark = "checks: ontology"
 metric = "time"
 up_to = 0.15
 reason = "Five sola fide claims gain meanings the ontology check now reads (Titus 3:7, Romans 4's count, Augustine's two senses, Romans 5:19 and its bridge to the verb, the effective verdict); CI measured +7.1%"
+
+[[accept]]
+benchmark = "supports: sola fide, 289 cells"
+metric = "time"
+up_to = 0.20
+reason = "Both sides of Paul's word heard at their strongest in solaFideDispute: Trent on Paul's word gains Fitzmyer's and Kertelge's roads (five lines) and the argument from Paul's word the Reformed answers (three lines), so two of the 17 positions carry more premises in every cell; CI measured +8.4%"
+
+[[accept]]
+benchmark = "part of, certified: sola fide, 289 cells"
+metric = "time"
+up_to = 0.20
+reason = "Both sides of Paul's word heard at their strongest in solaFideDispute: Trent on Paul's word gains Fitzmyer's and Kertelge's roads (five lines) and the argument from Paul's word the Reformed answers (three lines), so two of the 17 positions carry more premises in every cell; CI measured +11.9%"
+
+[[accept]]
+benchmark = "table, prepared: sola fide, first six rows, 102 cells"
+metric = "time"
+up_to = 0.20
+reason = "Both sides of Paul's word heard at their strongest in solaFideDispute: Trent on Paul's word gains Fitzmyer's and Kertelge's roads (five lines) and the argument from Paul's word the Reformed answers (three lines), so two of the 17 positions carry more premises in every cell; CI measured +12.0%"
+
+[[accept]]
+benchmark = "table, pruned: sola fide, first six rows, 102 cells"
+metric = "time"
+up_to = 0.20
+reason = "Both sides of Paul's word heard at their strongest in solaFideDispute: Trent on Paul's word gains Fitzmyer's and Kertelge's roads (five lines) and the argument from Paul's word the Reformed answers (three lines), so two of the 17 positions carry more premises in every cell; CI measured +6.9%"
+
+[[accept]]
+benchmark = "table, certified: sola fide, first six rows, 102 cells"
+metric = "time"
+up_to = 0.20
+reason = "Both sides of Paul's word heard at their strongest in solaFideDispute: Trent on Paul's word gains Fitzmyer's and Kertelge's roads (five lines) and the argument from Paul's word the Reformed answers (three lines), so two of the 17 positions carry more premises in every cell; CI measured +9.0%"
+
+[[accept]]
+benchmark = "checks: AIF, every dispute"
+metric = "time"
+up_to = 0.20
+reason = "Both sides of Paul's word heard at their strongest in solaFideDispute: Trent on Paul's word gains Fitzmyer's and Kertelge's roads (five lines) and the argument from Paul's word the Reformed answers (three lines), so two of the 17 positions carry more premises in every cell; CI measured +8.5%"
