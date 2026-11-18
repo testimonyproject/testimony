@@ -1,4 +1,5 @@
 import Testimony.Logic.Declare
+import Testimony.Logic.Dilemma
 import TestimonyArguments.Meanings.SolaScriptura
 import TestimonyArguments.SolaScriptura.Results
 
@@ -380,5 +381,405 @@ declare_verdict canonObjectionStandsAlone for canonDispute :
   proves @[headline] canon_objection_defensible
 
 #print axioms canon_objection_defensible
+
+/-! ## How Rome says the canon is known
+
+Reid's answer to the reply is that only the Church gives the certainty faith
+needs about which books are canonical. A Protestant reader will ask the next
+question: how is the Church's own authority known, so that it can give that
+certainty? Catholic writers answer it in more than one way, and each answer
+meets a different reply. So the objection's claim, that identifying the canon
+requires an infallible authority outside Scripture, is read four ways here,
+each with who reads it so, and each set against the Protestant reply that
+answers it.
+
+The first way proves the Church from Scripture received as inspired. William
+Whitaker, the Cambridge divine who answered Bellarmine in 1588, asks "whence do
+we know" that the Church cannot err in setting the canon, and answers that Rome
+must prove it from Scripture: "Surely it is a notable circle in which this
+argument revolves!" (*A Disputation on Holy Scripture*, pp. 334–335). The
+Catholic writers who state the second way grant the point. "That indeed would
+be a circular argument!", says the Catholic Answers tract "Proving Inspiration".
+
+The second way is the one that tract calls "really a spiral argument". Patrick
+Toner gives it in the *Catholic Encyclopedia* (1910): Scripture is used
+"merely as reliable historical sources" to show that Christ gave the Church
+infallible authority, and then "it is no vicious circle, but a perfectly
+legitimate logical procedure, to rely on the Church's authority for proof of
+what writings are inspired". William Chillingworth answered this kind of
+argument in 1638. Certainty reached by reasoning, he wrote, cannot "by natural
+means be more certain ... than of the weaker of the premises; as a river will
+not rise higher than the fountain from which it flows" (*The Religion of
+Protestants*, p. 66). Turretin says the same of the Church: it can be grasped
+"by human faith before Scripture", but not "known and believed ... by divine
+faith" until Scripture is known. The First Vatican Council denies that the
+history is so weak, condemning the claim that miracles "can never be known with
+certainty"; and it holds that faith believes "because of the authority of God
+himself", by grace, and not because of the arguments that make it credible
+(*Dei Filius*, ch. 3).
+
+The third way is the Church's own marks. Vatican I calls the Church, "by
+reason of her astonishing propagation, her outstanding holiness ... her
+catholic unity and her unconquerable stability", "a kind of great and
+perpetual motive of credibility" (ch. 3). Robert Bellarmine, the Jesuit
+cardinal whom Whitaker answered, grants that the marks do not make it evident
+that she is the true Church, only "evidently credible", since otherwise no one
+would deny it (*De Ecclesia militante* IV.3). Calvin adds that the Greeks claim
+the same unbroken succession of bishops (*Institutes* IV.ii.2), and Turretin
+that such marks are "common to other bodies" and "confuse rather than
+distinguish". Bellarmine still holds the Church's word certain, as Vatican I
+does, because faith rests on God's authority with "the effective help of power
+from on high".
+
+The fourth way needs no definition at all. Reid's own criterion is "the
+universal reception of compositions as Divinely inspired, or the ordinary
+teaching of the Church". The reply is that the reception was not universal for
+the books in question. Jerome wrote that "the Church reads Judith, Tobit, and
+the books of Maccabees, but does not admit them among the canonical
+Scriptures". Gregory the Great cited 1 Maccabees as a book "though not
+Canonical, yet brought out for the edifying of the Church" (*Morals on Job*
+XIX.xxi.34). And Cardinal Cajetan, a few years before Trent, followed Jerome.
+Reid grants all of this: "in the Latin Church, all through the Middle Ages we
+find evidence of hesitation about the character of the deuterocanonicals", and
+Trent's decree "was the first infallible and effectually promulgated
+pronouncement on the Canon". He answers that "these doubts must be regarded as
+more or less academic", because "Ecclesiastical usage and Roman tradition held
+firmly".
+
+So each reading falls to its reply, and the page says at what rating. The
+first falls at a step no one was found to dispute, because the Catholic writers
+leave that route themselves. The other three fall only at steps rated
+`disputed`, and the reason is the same each time: faith's certainty, Rome
+holds, comes from God's authority, believed by grace through the Church, and
+not from the arguments that lead to her. Against the marks and against
+reception Rome grants the reply's ground and answers only this. Against the
+spiral it also denies the ground, since Vatican I holds the history can be
+known with certainty. That is where the question now rests. -/
+
+/-! #### The four replies -/
+
+/-- If proving the Church from inspired Scripture, and inspiration from the
+Church, is a circle, then that is not how the authority that identifies the
+canon is known. -/
+@[solaScripturaDefs]
+def circleAnswerStep : Formula Claim :=
+  p .provingEachFromTheOtherIsCircular ➝ notP .churchKnownFromInspiredScripture
+
+/-- **Whitaker's circle.** -/
+@[solaScripturaDefs]
+def circleAnswerLine : Line Claim :=
+  { name := "Whitaker's circle"
+  , grounds := [p .provingEachFromTheOtherIsCircular]
+  , step := circleAnswerStep
+  , delivers := notP .churchKnownFromInspiredScripture
+  , inference := some circleAnswerInference }
+
+/-- Whitaker's circle, as an argument of its own. -/
+@[solaScripturaDefs]
+def circleAnswer : ArgumentPackage Claim :=
+  circleAnswerLine.asPackage cite
+    "the canon's authority is not known by proving the Church from inspired Scripture"
+
+/-- If a conclusion reasoned from history is no surer than that history, then
+the spiral does not give the certainty of faith about the canon. -/
+@[solaScripturaDefs]
+def spiralAnswerStep : Formula Claim :=
+  p .conclusionNoSurerThanItsHistory ➝ notP .spiralGivesCertaintyOfTheCanon
+
+/-- **No surer than its history.** -/
+@[solaScripturaDefs]
+def spiralAnswerLine : Line Claim :=
+  { name := "No surer than its history"
+  , grounds := [p .conclusionNoSurerThanItsHistory]
+  , step := spiralAnswerStep
+  , delivers := notP .spiralGivesCertaintyOfTheCanon
+  , inference := some spiralAnswerInference }
+
+/-- Chillingworth's answer to the spiral, as an argument of its own. -/
+@[solaScripturaDefs]
+def spiralAnswer : ArgumentPackage Claim :=
+  spiralAnswerLine.asPackage cite "the spiral does not give the certainty of faith"
+
+/-- If the marks make the Church's claim only credible, and other churches claim
+them too, then the marks do not give the certainty of faith about the canon. -/
+@[solaScripturaDefs]
+def marksAnswerStep : Formula Claim :=
+  p .marksMakeTheClaimOnlyCredible ➝ notP .marksGiveCertaintyOfTheCanon
+
+/-- **The marks make the claim only credible.** -/
+@[solaScripturaDefs]
+def marksAnswerLine : Line Claim :=
+  { name := "The marks make the claim only credible"
+  , grounds := [p .marksMakeTheClaimOnlyCredible]
+  , step := marksAnswerStep
+  , delivers := notP .marksGiveCertaintyOfTheCanon
+  , inference := some marksAnswerInference }
+
+/-- The answer from the marks, as an argument of its own. -/
+@[solaScripturaDefs]
+def marksAnswer : ArgumentPackage Claim :=
+  marksAnswerLine.asPackage cite "the Church's marks do not give the certainty of faith"
+
+/-- If the Latin Church did not receive the disputed books with one voice before
+Trent, then reception had not settled the canon. -/
+@[solaScripturaDefs]
+def receptionAnswerStep : Formula Claim :=
+  p .disputedBooksDoubtedBeforeTrent ➝ notP .receptionSettledTheCanon
+
+/-- **The doubts before Trent.** -/
+@[solaScripturaDefs]
+def receptionAnswerLine : Line Claim :=
+  { name := "The doubts before Trent"
+  , grounds := [p .disputedBooksDoubtedBeforeTrent]
+  , step := receptionAnswerStep
+  , delivers := notP .receptionSettledTheCanon
+  , inference := some receptionAnswerInference }
+
+/-- The answer from the doubts before Trent, as an argument of its own. -/
+@[solaScripturaDefs]
+def receptionAnswer : ArgumentPackage Claim :=
+  receptionAnswerLine.asPackage cite "reception had not settled the canon before Trent"
+
+/-! #### Four readings of the objection's claim -/
+
+/-- The objection's claim, **read as resting on Scripture received as
+inspired**: the infallible authority is known by proving the Church from
+Scripture as inspired. This is the reading Whitaker answers; the Catholic
+writers who state the spiral reject it. -/
+@[solaScripturaDefs]
+def asFromInspiredScripture : Reading Claim :=
+  { name := "as known from Scripture received as inspired"
+  , commits := p .churchKnownFromInspiredScripture
+  , source := (cite .churchKnownFromInspiredScripture).source }
+
+/-- The objection's claim, **read as the spiral**: Scripture read as history
+shows an infallible Church, whose word gives the certainty of faith. Toner and
+Catholic Answers read it so. -/
+@[solaScripturaDefs]
+def asSpiral : Reading Claim :=
+  { name := "as the spiral from history to the Church"
+  , commits := p .spiralGivesCertaintyOfTheCanon
+  , source := (cite .spiralGivesCertaintyOfTheCanon).source }
+
+/-- The objection's claim, **read as resting on the Church's marks**, as
+Vatican I describes them. -/
+@[solaScripturaDefs]
+def asMarks : Reading Claim :=
+  { name := "as known by the Church's marks"
+  , commits := p .marksGiveCertaintyOfTheCanon
+  , source := (cite .marksGiveCertaintyOfTheCanon).source }
+
+/-- The objection's claim, **read as reception without a definition**, Reid's
+own criterion. -/
+@[solaScripturaDefs]
+def asReception : Reading Claim :=
+  { name := "as universal reception, with no definition"
+  , commits := p .receptionSettledTheCanon
+  , source := (cite .receptionSettledTheCanon).source }
+
+/-- The objection, read as resting on Scripture received as inspired. -/
+@[solaScripturaDefs]
+def canonObjectionFromInspiredScripture : ArgumentPackage Claim :=
+  canonObjection.readAs (p .identifyingCanonRequiresInfallibleAuthority) asFromInspiredScripture
+
+/-- The objection, read as the spiral. -/
+@[solaScripturaDefs]
+def canonObjectionAsSpiral : ArgumentPackage Claim :=
+  canonObjection.readAs (p .identifyingCanonRequiresInfallibleAuthority) asSpiral
+
+/-- The objection, read as resting on the Church's marks. -/
+@[solaScripturaDefs]
+def canonObjectionAsMarks : ArgumentPackage Claim :=
+  canonObjection.readAs (p .identifyingCanonRequiresInfallibleAuthority) asMarks
+
+/-- The objection, read as reception with no definition. -/
+@[solaScripturaDefs]
+def canonObjectionAsReception : ArgumentPackage Claim :=
+  canonObjection.readAs (p .identifyingCanonRequiresInfallibleAuthority) asReception
+
+/-! #### Readings, written down -/
+
+/-- Rome's world: every claim holds, each of the four routes among them, except
+that Scripture is the sole infallible rule. -/
+def romeCanonReading : Valuation Claim := fun a =>
+  match a with
+  | .scriptureIsSoleInfallibleRule => False
+  | _ => True
+
+/-- The world of the four replies: every claim holds except the four routes to
+the Church's certainty about the canon. -/
+def repliesCanonReading : Valuation Claim := fun a =>
+  match a with
+  | .churchKnownFromInspiredScripture => False
+  | .spiralGivesCertaintyOfTheCanon => False
+  | .marksGiveCertaintyOfTheCanon => False
+  | .receptionSettledTheCanon => False
+  | _ => True
+
+/-! #### Each reading is fair, and each reply holds -/
+
+/-- The objection, read as resting on inspired Scripture, can be held without
+contradiction. -/
+theorem canonObjectionFromInspiredScripture_is_satisfiable :
+    Satisfiable canonObjectionFromInspiredScripture.premises := by
+  satisfied_by romeCanonReading [solaScripturaDefs]
+
+/-- The objection, read as the spiral, can be held without contradiction. -/
+theorem canonObjectionAsSpiral_is_satisfiable :
+    Satisfiable canonObjectionAsSpiral.premises := by
+  satisfied_by romeCanonReading [solaScripturaDefs]
+
+/-- The objection, read as resting on the marks, can be held without
+contradiction. -/
+theorem canonObjectionAsMarks_is_satisfiable :
+    Satisfiable canonObjectionAsMarks.premises := by
+  satisfied_by romeCanonReading [solaScripturaDefs]
+
+/-- The objection, read as reception, can be held without contradiction. -/
+theorem canonObjectionAsReception_is_satisfiable :
+    Satisfiable canonObjectionAsReception.premises := by
+  satisfied_by romeCanonReading [solaScripturaDefs]
+
+/-- Whitaker's circle delivers its conclusion. -/
+theorem circleAnswer_establishes : Establishes circleAnswer := by
+  establish [solaScripturaDefs]
+
+/-- Whitaker's circle can be held without contradiction. -/
+theorem circleAnswer_is_satisfiable : Satisfiable circleAnswer.premises := by
+  satisfied_by repliesCanonReading [solaScripturaDefs]
+
+/-- The answer to the spiral delivers its conclusion. -/
+theorem spiralAnswer_establishes : Establishes spiralAnswer := by
+  establish [solaScripturaDefs]
+
+/-- The answer to the spiral can be held without contradiction. -/
+theorem spiralAnswer_is_satisfiable : Satisfiable spiralAnswer.premises := by
+  satisfied_by repliesCanonReading [solaScripturaDefs]
+
+/-- The answer from the marks delivers its conclusion. -/
+theorem marksAnswer_establishes : Establishes marksAnswer := by
+  establish [solaScripturaDefs]
+
+/-- The answer from the marks can be held without contradiction. -/
+theorem marksAnswer_is_satisfiable : Satisfiable marksAnswer.premises := by
+  satisfied_by repliesCanonReading [solaScripturaDefs]
+
+/-- The answer from the doubts before Trent delivers its conclusion. -/
+theorem receptionAnswer_establishes : Establishes receptionAnswer := by
+  establish [solaScripturaDefs]
+
+/-- The answer from the doubts before Trent can be held without
+contradiction. -/
+theorem receptionAnswer_is_satisfiable : Satisfiable receptionAnswer.premises := by
+  satisfied_by repliesCanonReading [solaScripturaDefs]
+
+/-! #### Where each reading breaks -/
+
+/-- **Why the circle stands against the first reading.** The crux is Whitaker's
+step: a circle is not how the authority is known. It breaks the objection's
+claim together with the reading, and nothing else in the objection. The step is
+rated `wellSupported`, because the Catholic writers who state the spiral grant
+the circle and leave this route themselves. -/
+def whereTheFirstReadingFalls : Because circleAnswer canonObjectionFromInspiredScripture :=
+  Because.ofChecks circleAnswerStep
+    [p .provingEachFromTheOtherIsCircular] [] [p .provingEachFromTheOtherIsCircular]
+    [ p .identifyingCanonRequiresInfallibleAuthority
+    , p .identifyingCanonRequiresInfallibleAuthority ➝ p .churchKnownFromInspiredScripture ]
+    .derives circleAnswer_establishes circleAnswer_is_satisfiable
+    (by simp [solaScripturaDefs, Line.asPackage, Line.premises])
+    (by simp [solaScripturaDefs, Line.asPackage, Line.premises])
+    (by simp [solaScripturaDefs, Line.asPackage, Line.premises, ArgumentPackage.readAs])
+    (by decide +kernel)
+  |>.ratedByLine circleAnswerLine rfl (by simp [circleAnswer, Line.asPackage])
+
+/-- **Why the answer to the spiral stands against the second reading.** The
+crux is the step from "no surer than its history" to "no certainty of faith".
+It is rated `disputed`: Vatican I grants that faith does not rest on the
+arguments that make it credible, and holds it certain on God's authority, by
+grace. -/
+def whereTheSpiralFalls : Because spiralAnswer canonObjectionAsSpiral :=
+  Because.ofChecks spiralAnswerStep
+    [p .conclusionNoSurerThanItsHistory] [] [p .conclusionNoSurerThanItsHistory]
+    [ p .identifyingCanonRequiresInfallibleAuthority
+    , p .identifyingCanonRequiresInfallibleAuthority ➝ p .spiralGivesCertaintyOfTheCanon ]
+    .derives spiralAnswer_establishes spiralAnswer_is_satisfiable
+    (by simp [solaScripturaDefs, Line.asPackage, Line.premises])
+    (by simp [solaScripturaDefs, Line.asPackage, Line.premises])
+    (by simp [solaScripturaDefs, Line.asPackage, Line.premises, ArgumentPackage.readAs])
+    (by decide +kernel)
+  |>.ratedByLine spiralAnswerLine rfl (by simp [spiralAnswer, Line.asPackage])
+
+/-- **Why the answer from the marks stands against the third reading.** The crux
+is the step from "only credible" to "no certainty of faith", rated `disputed`:
+Bellarmine grants that the marks make the Church only "evidently credible", and
+still holds her word certain. -/
+def whereTheMarksFall : Because marksAnswer canonObjectionAsMarks :=
+  Because.ofChecks marksAnswerStep
+    [p .marksMakeTheClaimOnlyCredible] [] [p .marksMakeTheClaimOnlyCredible]
+    [ p .identifyingCanonRequiresInfallibleAuthority
+    , p .identifyingCanonRequiresInfallibleAuthority ➝ p .marksGiveCertaintyOfTheCanon ]
+    .derives marksAnswer_establishes marksAnswer_is_satisfiable
+    (by simp [solaScripturaDefs, Line.asPackage, Line.premises])
+    (by simp [solaScripturaDefs, Line.asPackage, Line.premises])
+    (by simp [solaScripturaDefs, Line.asPackage, Line.premises, ArgumentPackage.readAs])
+    (by decide +kernel)
+  |>.ratedByLine marksAnswerLine rfl (by simp [marksAnswer, Line.asPackage])
+
+/-- **Why the doubts before Trent stand against the fourth reading.** The crux is
+the step from the doubts to "reception had not settled the canon", rated
+`disputed`: Reid grants the doubts and calls them "more or less academic". -/
+def whereReceptionFalls : Because receptionAnswer canonObjectionAsReception :=
+  Because.ofChecks receptionAnswerStep
+    [p .disputedBooksDoubtedBeforeTrent] [] [p .disputedBooksDoubtedBeforeTrent]
+    [ p .identifyingCanonRequiresInfallibleAuthority
+    , p .identifyingCanonRequiresInfallibleAuthority ➝ p .receptionSettledTheCanon ]
+    .derives receptionAnswer_establishes receptionAnswer_is_satisfiable
+    (by simp [solaScripturaDefs, Line.asPackage, Line.premises])
+    (by simp [solaScripturaDefs, Line.asPackage, Line.premises])
+    (by simp [solaScripturaDefs, Line.asPackage, Line.premises, ArgumentPackage.readAs])
+    (by decide +kernel)
+  |>.ratedByLine receptionAnswerLine rfl (by simp [receptionAnswer, Line.asPackage])
+
+/-! #### The dilemma -/
+
+/-- **How the Church's authority over the canon is known, read four ways.** The
+claim is the objection's: identifying the canon requires an infallible authority
+outside Scripture.
+
+Read as resting on Scripture received as inspired, it falls to Whitaker's
+circle at a step rated `wellSupported`, and the Catholic writers who state the
+spiral do not hold it. Read as the spiral, as resting on the Church's marks, or
+as universal reception with no definition, it falls to Chillingworth's answer,
+to the answer from the marks, and to the doubts before Trent, each at a step
+rated `disputed`. Against the marks and against reception, Rome grants the
+reply's ground and answers that faith's certainty comes from God's authority,
+by grace, through the Church. Against the spiral it gives the same answer, and
+denies the ground as well, holding that the history can be known with
+certainty, so that ground is rated `disputed` too.
+
+Each reading is fair: the objection read any of these ways can be held without
+contradiction. The dilemma does not say which reading Rome means; it shows what
+each costs. -/
+def howTheCanonIsKnown : Dilemma canonObjection where
+  claim := p .identifyingCanonRequiresInfallibleAuthority
+  horns :=
+    [ { reading := asFromInspiredScripture
+      , fair := canonObjectionFromInspiredScripture_is_satisfiable
+      , fates := [.falls circleAnswer whereTheFirstReadingFalls]
+      , answered := by simp }
+    , { reading := asSpiral
+      , fair := canonObjectionAsSpiral_is_satisfiable
+      , fates := [.falls spiralAnswer whereTheSpiralFalls]
+      , answered := by simp }
+    , { reading := asMarks
+      , fair := canonObjectionAsMarks_is_satisfiable
+      , fates := [.falls marksAnswer whereTheMarksFall]
+      , answered := by simp }
+    , { reading := asReception
+      , fair := canonObjectionAsReception_is_satisfiable
+      , fates := [.falls receptionAnswer whereReceptionFalls]
+      , answered := by simp } ]
+  claim_mem := by simp [solaScripturaDefs, Line.asPackage, Line.premises]
+  two := by simp
 
 end TestimonyArguments.SolaScriptura

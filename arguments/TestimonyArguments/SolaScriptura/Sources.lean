@@ -96,6 +96,59 @@ def canonTestsInference : Source :=
   , tradition := .romanCatholic
   , confidence := .disputed }
 
+/-- The rating of Whitaker's step from the circle to the conclusion that the
+first route gives no certainty of the canon: `wellSupported`. No reader was
+found who grants that proving each from the other is circular and still holds
+that this route gives the certainty of faith. The Catholic writers who state
+the spiral grant the circle and leave this route, to argue from Scripture read
+only as history (Toner, *Catholic Encyclopedia*, "Infallibility"; Catholic
+Answers, "Proving Inspiration"). -/
+def circleAnswerInference : Source :=
+  { primary := .work whitakerDisputation (.pages 334 335)
+  , supporting := [.work catholicAnswersProvingInspiration (.sectionRef "A Spiral Argument")]
+  , tradition := .reformedProtestant
+  , confidence := .wellSupported }
+
+/-- The rating of the step from "no surer than its history" to the conclusion
+that the spiral gives no certainty of faith: `disputed`. Vatican I grants that
+faith does not rest on the arguments that make it credible: we believe "not
+because we perceive its intrinsic truth by the natural light of reason, but
+because of the authority of God himself", "with the grace of God inspiring and
+assisting us" (*Dei Filius*, ch. 3). So a reader may grant that the history is
+no surer than history, and still hold that the Church's word, believed by
+grace, gives the certainty of faith. -/
+def spiralAnswerInference : Source :=
+  { primary := .work tannerDecrees (.sectionRef "Vatican I (1870), Dei Filius, ch. 3")
+  , supporting := [.work chillingworthReligion (.page 66)]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of the step from "the marks make the claim only credible" to the
+conclusion that the marks give no certainty of faith: `disputed`. Bellarmine
+grants the ground in so many words: the marks make the Church "evidently
+credible", not evidently true (*De Ecclesia militante* IV.3). He denies the
+conclusion, as Vatican I does, because the assent of faith rests on God's
+authority with "the effective help of power from on high" (*Dei Filius*,
+ch. 3). -/
+def marksAnswerInference : Source :=
+  { primary := .work bellarmineOpera2 (.sectionRef "De Ecclesia militante IV.3, pp. 365–366")
+  , supporting := [.work tannerDecrees (.sectionRef "Vatican I (1870), Dei Filius, ch. 3")]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of the step from the doubts before Trent to the conclusion that
+reception had not settled the canon: `disputed`. Reid grants the doubts ("Few
+are found to unequivocally acknowledge their canonicity") and denies the
+conclusion: the doubts "must be regarded as more or less academic", because
+"Ecclesiastical usage and Roman tradition held firmly" (*Catholic
+Encyclopedia*, "Canon of the Old Testament"). -/
+def receptionAnswerInference : Source :=
+  { primary := .work reidCanonOldTestament
+      (.sectionRef "The canon of the Old Testament during the Middle Ages: The Latin Church")
+  , supporting := [.work whitakerDisputation (.page 333)]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
 /-- The rating of the step from Mark 7's principle to the sole rule: `disputed`.
 Grant that God's word judges human tradition and that no unwritten tradition can
 be shown to be apostolic, and a reader may still deny that Scripture is the
@@ -611,6 +664,102 @@ def cite : Claim → AtomMeta
                 [ { ref := .verse ⟨.firstMaccabees, 9, 27⟩ }
                 , { ref := .verse ⟨.firstMaccabees, 4, 46⟩ }
                 , { ref := .verse ⟨.firstMaccabees, 14, 41⟩ } ] ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .churchKnownFromInspiredScripture =>
+    { label :=
+        "The infallible authority that identifies the canon is known by proving the " ++
+        "Church from Scripture received as inspired"
+    , kind := .theological
+      -- No Catholic writer found holds this route; Toner and Catholic Answers
+      -- reject it as circular. It is the reading Whitaker answers.
+    , source := heldBy whitakerDisputation "pp. 334–335" .reformedProtestant }
+  | .spiralGivesCertaintyOfTheCanon =>
+    { label :=
+        "Scripture read as reliable history shows an infallible Church, whose word " ++
+        "gives the certainty of faith about which books are inspired"
+    , kind := .theological
+    , source :=
+        { primary := .work tonerInfallibility (.sectionRef "Proof from Scripture")
+        , supporting := [.work catholicAnswersProvingInspiration (.sectionRef "A Spiral Argument")]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .marksGiveCertaintyOfTheCanon =>
+    { label :=
+        "The Church's marks show it to be the infallible authority, and so give the " ++
+        "certainty of faith about the canon"
+    , kind := .theological
+    , source :=
+        { primary := .work tannerDecrees (.sectionRef "Vatican I (1870), Dei Filius, ch. 3")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .receptionSettledTheCanon =>
+    { label :=
+        "The Church's universal reception and ordinary teaching settled the canon " ++
+        "before any council defined it"
+    , kind := .theological
+    , source :=
+        { primary := .work reidCanonNewTestament (.sectionRef "The criterion of inspiration")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .provingEachFromTheOtherIsCircular =>
+    { label :=
+        "To prove the Church from Scripture received as inspired, and then Scripture's " ++
+        "inspiration from the Church, is to argue in a circle"
+    , kind := .theological
+      -- Granted by the Catholic sources that state the spiral: "That indeed
+      -- would be a circular argument!" (Catholic Answers); "no vicious circle"
+      -- only when Scripture is used "merely as reliable historical sources"
+      -- (Toner).
+    , source :=
+        { primary := .work whitakerDisputation (.pages 334 335)
+        , supporting :=
+            [ .work catholicAnswersProvingInspiration (.sectionRef "A Spiral Argument")
+            , .work tonerInfallibility (.sectionRef "Proof from Scripture") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .conclusionNoSurerThanItsHistory =>
+    { label :=
+        "A conclusion reasoned from history is, by natural means, no surer than that " ++
+        "history, and the judgement that the Gospels are reliable history is fallible"
+    , kind := .theological
+      -- Denied by Vatican I, which anathematises saying that miracles "can never
+      -- be known with certainty" (Dei Filius, ch. 3, canon 4), and by Newman,
+      -- who rejects "the pretentious axiom that probable reasoning can never
+      -- lead to certitude" (Grammar of Assent, ch. 6).
+    , source :=
+        { primary := .work chillingworthReligion (.page 66)
+        , supporting :=
+            [.work turretinInstitutio1 (.sectionRef "Locus II, Q. VI, §XXI, p. 85")]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .marksMakeTheClaimOnlyCredible =>
+    { label :=
+        "The Church's marks make its claim credible, not evident, and other churches " ++
+        "claim the same marks"
+    , kind := .theological
+    , source :=
+        { primary := .work bellarmineOpera2 (.sectionRef "De Ecclesia militante IV.3, pp. 365–366")
+        , supporting :=
+            [ .work calvinInstitutesBeveridge3 (.sectionRef "IV.ii.2")
+            , .work turretinInstitutio3 (.sectionRef "Locus XVIII, Q. XIII, §IV, pp. 83–84") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .disputedBooksDoubtedBeforeTrent =>
+    { label :=
+        "Before Trent the Latin Church did not receive the disputed books with one " ++
+        "voice: Jerome left them out, Gregory called 1 Maccabees not canonical, and " ++
+        "Cajetan followed Jerome"
+    , kind := .historical
+    , source :=
+        { primary := .work reidCanonOldTestament
+            (.sectionRef "The canon of the Old Testament during the Middle Ages: The Latin Church")
+        , supporting :=
+            [ .work npnf2v6
+                (.sectionRef "Jerome, Prefaces to Samuel and Kings, and to the Books of Solomon")
+            , .work gregoryMoralia2 (.sectionRef "XIX.xxi.34, p. 424")
+            , .work whitakerDisputation (.pages 47 48)
+            , .work reidCanonNewTestament .whole ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .traditionHasMinisterialAuthority =>

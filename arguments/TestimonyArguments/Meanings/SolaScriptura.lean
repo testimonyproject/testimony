@@ -4,14 +4,14 @@ import TestimonyArguments.SolaScriptura.Sources
 /-!
 # TestimonyArguments.Meanings.SolaScriptura — what each sola scriptura claim says
 
-**Sixty-two of the seventy-two claims have meanings** (`coverage_now`), and with
-them twenty-two of the argument's twenty-eight lines of reason can be read as moves,
+**Seventy of the eighty claims have meanings** (`coverage_now`), and with
+them twenty-six of the argument's thirty-two lines of reason can be read as moves,
 all of whose claims say something the checks can see: the eliminative line, both
 of Mark 7's lines, the line from Jesus' sayings and Paul's letters to the same
 principle, both readings of Acts 15, of the apostles' office and of Moses' seat,
 Geisler's Tradition 0, Trent, Vatican I, the
 Orthodox line, the canon objection with Kruger's reply and the reply from
-Scripture's tests, the interpretive-authority
+Scripture's tests, the four replies on how the canon is known, the interpretive-authority
 regress and Mathison's reply, and Geisler's circularity charge with both replies
 to it.
 `TestimonyArguments.Meanings.SolaFide` is the fuller worked example of the same
@@ -225,6 +225,10 @@ def all : List Claim :=
   , .deut13_1_3ProphetOfOtherGods, .deut18_20_22WordNotFulfilled, .booksReadButNotReceived
   , .providenceKeepsScripture, .eph2_20FoundationOfApostles, .pet3_15_16PaulAmongScriptures
   , .gal1_8NoOtherGospel, .prophecyCeasedBeforeLaterBooks
+  , .churchKnownFromInspiredScripture, .spiralGivesCertaintyOfTheCanon
+  , .marksGiveCertaintyOfTheCanon, .receptionSettledTheCanon
+  , .provingEachFromTheOtherIsCircular, .conclusionNoSurerThanItsHistory
+  , .marksMakeTheClaimOnlyCredible, .disputedBooksDoubtedBeforeTrent
   , .traditionHasMinisterialAuthority, .traditionIDiffersInPrincipleFromTradition0
   , .individualRetainsUltimateInterpretiveAuthority, .choosingAnAuthorityIsItselfPrivateJudgment
   , .bindingnessAppliesToFirstOrderDoctrineOnly, .practiceNeitherCommandedNorForbiddenIsPermitted
@@ -456,6 +460,36 @@ def means : Claim → Statement
     .holds <| rl .agentOf (pt "the Jews of the first century" .agent)
       (pt ("withholding from books written after prophecy ceased the authority of the " ++
           "earlier ones") .event)
+  | .churchKnownFromInspiredScripture =>
+    .holds <| rl .instrumentOf
+      (pt "proving the Church from Scripture received as inspired" .event)
+      (cn .identifyingTheCanon)
+  | .spiralGivesCertaintyOfTheCanon =>
+    .holds <| rl .instrumentOf
+      (pt "the Church's word, shown infallible from Scripture read as history" .informationObject)
+      (cn .identifyingTheCanon)
+  | .marksGiveCertaintyOfTheCanon =>
+    .holds <| rl .instrumentOf
+      (pt "the Church's marks: spread, holiness, unity and stability" .quality)
+      (cn .identifyingTheCanon)
+  | .receptionSettledTheCanon =>
+    .holds <| rl .instrumentOf
+      (pt "the Church's universal reception and ordinary teaching" .event)
+      (cn .identifyingTheCanon)
+  | .provingEachFromTheOtherIsCircular =>
+    .holds <| rl .isA
+      (pt "proving the Church from inspired Scripture and inspiration from the Church" .event)
+      (pt "an argument in a circle" .quality)
+  | .conclusionNoSurerThanItsHistory =>
+    .holds <| rl .isA
+      (pt "a conclusion reasoned from history, by natural means" .informationObject)
+      (pt "no surer than the history it starts from" .quality)
+  | .marksMakeTheClaimOnlyCredible =>
+    .holds <| rl .isA (pt "the Church's claim, shown by its marks" .informationObject)
+      (pt "credible, not evident, and claimed by other churches too" .quality)
+  | .disputedBooksDoubtedBeforeTrent =>
+    .holds <| rl .agentOf (pt "Jerome, Gregory the Great and Cajetan" .agent)
+      (pt "doubting the disputed books before Trent" .event)
   | .traditionHasMinisterialAuthority =>
     .holds <| .both (rl .isA (cn .tradition) (cn .ministerialAuthority))
       (.not (rl .isA (cn .tradition) (cn .infallible)))
@@ -604,10 +638,10 @@ def means : Claim → Statement
 instance meanings : HasMeanings Claim :=
   { argument := "Sola scriptura", all, complete := all_complete, means }
 
-/-- **Sixty-two of the 72 atoms are analysed**: the texts, in their own words,
+/-- **Seventy of the 80 atoms are analysed**: the texts, in their own words,
 and every claim a line's step reads except the three the module docstring
 names. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (62, 72) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (70, 80) := by decide
 
 /-- **The sola scriptura joins**: each pair of claims whose meanings exclude or
 entail one another, listed, and proved to be exactly what the meanings contain.

@@ -32,7 +32,7 @@ info: the shared ontology, in every argument:
 Sola scriptura
   joins: 3, with no definition: 3
   not a ground: held by 2, used of a text or voice by 1; derives nothing
-  the only means: held by 2, used of a text or voice by 1; derives nothing
+  the only means: held by 6, used of a text or voice by 1; derives nothing
   the whole ground: held by 2, used of a text or voice by 1; derives nothing
 -/
 #guard_msgs in
@@ -41,12 +41,12 @@ Sola scriptura
 /--
 info: the charges, against every argument's lines:
 Sola scriptura
-  lines: 28, read: 22
+  lines: 32, read: 26
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaScriptura
 
-/-- info: every package has a model with its postulates: 32, and 0 undecided -/
+/-- info: every package has a model with its postulates: 40, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaScriptura
 

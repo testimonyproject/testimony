@@ -2110,8 +2110,13 @@ kept, but "our scholars no longer view the American holiness hermeneutic of the
 /-- Whitaker's *Disputation*, the Elizabethan Reformed answer to Bellarmine. Its
 sixth question of the first controversy argues, against unwritten tradition,
 that "the papists have no such unwritten tradition which can be certainly shewn
-to have been always observed by the universal church" (506). Cited in the Parker
-Society edition; the modern reprints paginate differently. -/
+to have been always observed by the universal church" (506). On the canon, he
+asks "whence do we know" the Church cannot err in setting it, and answers that
+Rome proves the Church from Scripture: "Surely it is a notable circle in which
+this argument revolves!" (pp. 334–335); and of reception as the test, "then
+doubtless for many centuries there was no certain canon of scripture" (p. 333).
+Cited in the Parker Society edition, read in the University of Toronto's scan at
+the Internet Archive; the modern reprints paginate differently. -/
 @[bib_entry] def whitakerDisputation : BibEntry := .book
   { core :=
       { key := "whitaker-disputation-1849"
@@ -3100,6 +3105,174 @@ exact succession of prophets since that time". -/
           [ .url "https://www.ccel.org/ccel/josephus/works/files/apion-1.htm"
               (some "2026-11-18") ] }
   , site := some "Christian Classics Ethereal Library" }
+
+/-- Chillingworth's *The Religion of Protestants* (1638). On certainty reached
+by reasoning: "we cannot possibly by natural means be more certain of it than of
+the weaker of the premises; as a river will not rise higher than the fountain
+from which it flows" (p. 66). He grants the same of Protestants, and holds that
+the Spirit may give "a certainty of adherence beyond their certainty of
+evidence". Read in Princeton Theological Seminary's scan at the Internet
+Archive. -/
+@[bib_entry] def chillingworthReligion : BibEntry := .book
+  { core :=
+      { key := "chillingworth-religion-of-protestants-1846"
+      , role := .witness
+      , contributors := { authors := [.person "William" "Chillingworth"] }
+      , title := "The Religion of Protestants"
+      , subtitle := some "A Safe Way to Salvation"
+      , year := some { value := 1846 }
+      , identifiers :=
+          [ .url "https://archive.org/details/religionofprotes00chil" (some "2026-11-18") ]
+      , note := some "First published 1638." }
+  , publisher := "Henry G. Bohn"
+  , place := some "London" }
+
+/-- Bellarmine's *Opera omnia*, volume 2, with *De Ecclesia militante*. Of the
+marks of the Church he writes that they "do not make it evidently true that she
+is the true Church of God, but they make it evidently credible" ("non quidem
+efficiunt evidenter verum ... sed tamen efficiunt id evidenter credibile"), and
+that they are not evident simply, "since otherwise none would be found to deny
+it" (IV.3, pp. 365–366). Read in Boston College's scan at the Internet
+Archive. -/
+@[bib_entry] def bellarmineOpera2 : BibEntry := .book
+  { core :=
+      { key := "bellarmine-opera-omnia-2-1870"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "Robert" "Bellarmine"]
+          , editors := [.person "Justin" "Fèvre"] }
+      , title := "Opera omnia"
+      , year := some { value := 1870 }
+      , identifiers :=
+          [ .url "https://archive.org/details/operaomnia02bell_0" (some "2026-11-18") ] }
+  , publisher := "Ludovicus Vivès"
+  , place := some "Paris"
+  , volume := some "2" }
+
+/-- Turretin's *Institutio theologiae elencticae*, volume 1. The Church "can be
+grasped by us by human faith before Scripture ... but cannot be known and
+believed by divine faith except after Scripture is known" ("Ecclesia potest a
+nobis apprehendi fide humana ante Scripturam ... Sed non potest cognosci et
+credi ... fide divina, nisi post cognitam Scripturam", Locus II, Q. VI, §XXI,
+p. 85). Read in Princeton Theological Seminary's scan at the Internet
+Archive. -/
+@[bib_entry] def turretinInstitutio1 : BibEntry := .book
+  { core :=
+      { key := "turretin-institutio-1-1847"
+      , role := .witness
+      , contributors := { authors := [.person "Francis" "Turretin"] }
+      , title := "Institutio theologiae elencticae"
+      , year := some { value := 1847 }
+      , identifiers :=
+          [ .url "https://archive.org/details/institutiotheolo01turr" (some "2026-11-18") ]
+      , note := some "First published 1679–1685." }
+  , publisher := "John D. Lowe"
+  , place := some "Edinburgh"
+  , volume := some "1" }
+
+/-- Turretin's *Institutio theologiae elencticae*, volume 3. The Roman marks of
+antiquity, succession and perpetuity "could not be known without surveying the
+history of all councils and the annals of every age", and are "common to other
+bodies, not proper to one, and so confuse rather than distinguish" (Locus
+XVIII, Q. XIII, §IV, pp. 83–84). Read in Princeton Theological Seminary's scan
+at the Internet Archive. -/
+@[bib_entry] def turretinInstitutio3 : BibEntry := .book
+  { core :=
+      { key := "turretin-institutio-3-1847"
+      , role := .witness
+      , contributors := { authors := [.person "Francis" "Turretin"] }
+      , title := "Institutio theologiae elencticae"
+      , year := some { value := 1847 }
+      , identifiers :=
+          [ .url "https://archive.org/details/institutiotheolo03turr" (some "2026-11-18") ]
+      , note := some "First published 1679–1685." }
+  , publisher := "John D. Lowe"
+  , place := some "Edinburgh"
+  , volume := some "3" }
+
+/-- Gregory the Great's *Morals on the Book of Job*, volume 2, in the Library of
+the Fathers. Citing 1 Maccabees 6:46, Gregory writes that "we are not acting
+irregularly, if from the books, though not Canonical, yet brought out for the
+edifying of the Church, we bring forward testimony" (XIX.xxi.34, p. 424). Read
+in the University of Toronto's scan at the Internet Archive. -/
+@[bib_entry] def gregoryMoralia2 : BibEntry := .book
+  { core :=
+      { key := "gregory-morals-on-job-2-1844"
+      , role := .witness
+      , contributors :=
+          { authors := [.single "Gregory the Great"]
+          , translators := [.person "James" "Bliss", .person "Charles" "Marriott"] }
+      , title := "Morals on the Book of Job"
+      , year := some { value := 1844 }
+      , identifiers :=
+          [ .url "https://archive.org/details/moralsonbookofjo02greguoft"
+              (some "2026-11-18") ]
+      , note := some "Library of the Fathers." }
+  , publisher := "J. H. Parker"
+  , place := some "Oxford"
+  , volume := some "2" }
+
+/-- George Reid's article on the Old Testament canon in the *Catholic
+Encyclopedia*. He grants that "in the Latin Church, all through the Middle Ages
+we find evidence of hesitation about the character of the deuterocanonicals",
+that Florence "did not formally pass on their canonicity", and that Trent's
+decree "was the first infallible and effectually promulgated pronouncement on
+the Canon, addressed to the Church Universal". He holds the doubts "more or
+less academic", since "Ecclesiastical usage and Roman tradition held
+firmly". -/
+@[bib_entry] def reidCanonOldTestament : BibEntry := .inCollection
+  { core :=
+      { key := "reid-canon-old-testament-1908"
+      , role := .witness
+      , contributors := { authors := [.person "George" "Reid"] }
+      , title := "Canon of the Old Testament"
+      , year := some { value := 1908 }
+      , identifiers :=
+          [ .url "https://www.newadvent.org/cathen/03267a.htm" (some "2026-11-18") ]
+      , note := some "Volume 3." }
+  , containerTitle := "The Catholic Encyclopedia"
+  , containerEditors :=
+      [ .person "Charles G." "Herbermann", .person "Edward A." "Pace", .person "Condé B." "Pallen"
+      , .person "Thomas J." "Shahan", .person "John J." "Wynne" ]
+  , publisher := "Robert Appleton Company"
+  , place := some "New York" }
+
+/-- Patrick Toner's article on infallibility in the *Catholic Encyclopedia*.
+Scripture, used "merely as reliable historical sources", proves that Christ
+gave the Church infallible authority; then "it is no vicious circle, but a
+perfectly legitimate logical procedure, to rely on the Church's authority for
+proof of what writings are inspired" ("Proof from Scripture"). -/
+@[bib_entry] def tonerInfallibility : BibEntry := .inCollection
+  { core :=
+      { key := "toner-infallibility-1910"
+      , role := .witness
+      , contributors := { authors := [.person "Patrick J." "Toner"] }
+      , title := "Infallibility"
+      , year := some { value := 1910 }
+      , identifiers :=
+          [ .url "https://www.newadvent.org/cathen/07790a.htm" (some "2026-11-18") ]
+      , note := some "Volume 7." }
+  , containerTitle := "The Catholic Encyclopedia"
+  , containerEditors :=
+      [ .person "Charles G." "Herbermann", .person "Edward A." "Pace", .person "Condé B." "Pallen"
+      , .person "Thomas J." "Shahan", .person "John J." "Wynne" ]
+  , publisher := "Robert Appleton Company"
+  , place := some "New York" }
+
+/-- Catholic Answers' tract on proving the Bible's inspiration. It grants that
+basing inspiration on the Church and the Church on an inspired Bible "indeed
+would be a circular argument", and answers: "What we have is really a spiral
+argument. On the first level we argue to the reliability of the Bible insofar
+as it is history." The page names no author. -/
+@[bib_entry] def catholicAnswersProvingInspiration : BibEntry := .webPage
+  { core :=
+      { key := "catholic-answers-proving-inspiration"
+      , role := .witness
+      , contributors := { authors := [.corporate "Catholic Answers"] }
+      , title := "Proving Inspiration"
+      , identifiers :=
+          [ .url "https://www.catholic.com/tract/proving-inspiration" (some "2026-11-18") ] }
+  , site := some "Catholic Answers" }
 
 /-- Basil of Caesarea, *Ascetical Works*, tr. M. Monica Wagner: Fathers of the
 Church volume 9, which carries Homily 20, "Of Humility" (p. 475). Verified at

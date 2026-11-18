@@ -139,6 +139,34 @@ inductive Claim
   succession of prophets since that time" (*Against Apion* I.8), and
   1 Maccabees speaks of a time "that a prophet was not seen among them" (9:27). -/
   | prophecyCeasedBeforeLaterBooks
+  /-- The infallible authority that identifies the canon is known by proving the
+  Church from Scripture received as inspired. -/
+  | churchKnownFromInspiredScripture
+  /-- The "spiral": Scripture, read only as reliable history, shows that Christ
+  founded an infallible Church, and that Church's word gives the certainty of
+  faith about which books are inspired. -/
+  | spiralGivesCertaintyOfTheCanon
+  /-- The Church's marks, its spread, holiness, unity and stability, show it to
+  be the infallible authority, and so give the certainty of faith about the
+  canon. -/
+  | marksGiveCertaintyOfTheCanon
+  /-- The Church's universal reception and ordinary teaching settled which books
+  are canonical before any council defined the list. -/
+  | receptionSettledTheCanon
+  /-- To prove the Church from Scripture received as inspired, and then
+  Scripture's inspiration from the Church, is to argue in a circle. -/
+  | provingEachFromTheOtherIsCircular
+  /-- A conclusion reached by reasoning from history can be no more certain, by
+  natural means, than the history it starts from, and the judgement that the
+  Gospels are reliable history is a fallible one. -/
+  | conclusionNoSurerThanItsHistory
+  /-- The marks make the Church's claim credible, not evident, and other
+  churches claim the same marks. -/
+  | marksMakeTheClaimOnlyCredible
+  /-- Before Trent, the Latin Church did not receive the disputed books with one
+  voice: Jerome left them out of the canon, Gregory the Great called 1 Maccabees
+  "not Canonical", and Cajetan, on the eve of Trent, followed Jerome. -/
+  | disputedBooksDoubtedBeforeTrent
   /-- Tradition carries real but fallible — ministerial, not magisterial —
   authority. **Tradition I.** -/
   | traditionHasMinisterialAuthority
