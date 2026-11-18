@@ -640,10 +640,11 @@ def omissions (record : Voice → List α) (m : Move) :
       else some (a, senses.map fun s' => (s', (others.filter (·.1 == s')).map (·.2)))
     | _ => none
 
-/-- Whether a statement says what a text says, teaches or is written against,
-alone or as part of a conjunction. -/
+/-- Whether a statement is about a text: what it says, teaches or is written
+against, or that a word occurs in it, alone or as part of a conjunction. A word
+placed in a passage has a setting its sense can be read from. -/
 def _root_.Testimony.Semantics.Statement.textual : Statement → Bool
-  | .says .. | .teaches .. | .opposes .. => true
+  | .says .. | .teaches .. | .opposes .. | .occurs .. | .occursOnlyIn .. => true
   | .also s t => s.textual || t.textual
   | _ => false
 
