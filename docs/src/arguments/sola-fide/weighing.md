@@ -153,8 +153,8 @@ The two arguments about Paul's word can be defended, and are not forced
 (`pauls_word_defensible`, `pauls_word_not_forced`). Trent, taken as a claim
 about Paul's word, can be defended too (`trent_on_pauls_word_defensible`). They
 tie at one step: from the courtroom sense of "justify" to "and it means nothing
-more". Whether that step can rise above `disputed` turns on Romans 6:7 and
-1 Corinthians 6:11, which readers take both ways.
+more". Whether that step can rise above `disputed` turns on Romans 5:19, 6:7
+and 1 Corinthians 6:11, which readers take both ways.
 
 ### Nor does anything else win outright
 
@@ -2275,8 +2275,9 @@ It does not show that Paul's word means renewal, or that sola fide is false.
 Every position can be defended, and none loses (`pauls_word_defensible`,
 `trent_on_pauls_word_defensible`). What would move the verdict is an argument
 that answers Trent at that step from evidence both sides accept. The readings
-of Romans 6:7 and 1 Corinthians 6:11, which readers take both ways, are where
-it would have to be found.
+of Romans 5:19, 6:7 and 1 Corinthians 6:11, which readers take both ways, are
+where it would have to be found. Fitzmyer, a Catholic exegete who grants the
+courtroom sense, reads 5:19 as the "effective sense" (*Romans*, 118).
 
 ```lean
 theorem sola_fide_dispute_forces_nothing : Framework.grounded

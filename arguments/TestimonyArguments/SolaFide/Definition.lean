@@ -37,10 +37,13 @@ courtroom sense to "and nothing more" is `disputed`, because Trent grants where
 it starts and denies where it ends. Trent keeps the verdict: the justified "are
 not only reputed, but are truly called, and are, just". And Augustine gives the
 courtroom sense himself, "deemed, or reckoned as just" (*On the Spirit and the
-Letter* 26.45), beside "made righteous". Whether the step can rise above
-`disputed` turns on Romans 6:7 ("freed from sin", or "justified from sin") and
-1 Corinthians 6:11 ("you were washed, you were sanctified, you were justified"),
-which readers take both ways.
+Letter* 26.45), beside "made righteous". Fitzmyer, a modern Catholic exegete,
+grants the courtroom sense in the Septuagint and at times in Paul, and still
+finds the "effective sense" supported by Romans 5:19, "through the obedience of
+one many will be made upright" (*Romans*, 118). Whether the step can rise above
+`disputed` turns on that verse, on Romans 6:7 ("freed from sin", or "justified
+from sin") and on 1 Corinthians 6:11 ("you were washed, you were sanctified, you
+were justified"), which readers take both ways.
 
 ### Why Trent would take it so
 

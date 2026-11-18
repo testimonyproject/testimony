@@ -855,11 +855,22 @@ forensic sense beside "made righteous", "deemed, or reckoned as just" (*On the
 Spirit and the Letter* 26.45). So a cited reader grants the starting points and
 denies the conclusion, and the checks count Trent's reading a credible critique
 of this step under every standard (`trent_dissents_from_the_definition_steps`).
-By the library's rule that makes the step `disputed`. The texts that prove the
-verdict sense (Proverbs 17:15, Isaiah 5:23, Deuteronomy 25:1, Luke 10:29)
-support the first starting point, which Trent already grants, not the "and
-nothing more". Whether the step can rise above `disputed` turns on Romans 6:7
-and 1 Corinthians 6:11, which readers take both ways.
+By the library's rule that makes the step `disputed`.
+
+A modern Catholic exegete does the same, from the text rather than the council.
+Fitzmyer grants that in the Septuagint the verb "seems normally to have a
+declarative, forensic meaning", and that at times "the declarative seems to be,
+indeed, the sense in Paul's letters (e.g., 2:13; 3:4, 20; 8:33)". But "many
+instances are ambiguous, and the effective sense seems to be supported by 5:19,
+'through the obedience of one many will be made upright'". Declaring the sinner
+upright has "not only a forensic effect, but as forensic also an 'effective'
+meaning", as he quotes Kertelge (*Romans*, 118–19).
+
+The texts that prove the verdict sense (Proverbs 17:15, Isaiah 5:23,
+Deuteronomy 25:1, Luke 10:29) support the first starting point, which Trent and
+Fitzmyer already grant, not the "and nothing more". Whether the step can rise
+above `disputed` turns on Romans 5:19, 6:7 and 1 Corinthians 6:11, which readers
+take both ways.
 
 Those who deny the first starting point itself, VanLandingham among them, are
 weighed in that premise's rating. Those who hold that God's verdict renews,
