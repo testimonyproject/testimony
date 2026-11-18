@@ -1246,19 +1246,44 @@ where
      ("syriac", "FreeSans", "Syriac", [("0700", "074F")]),
      ("symbol", "FreeSerif", "", [("1D2C", "1D6A"), ("22C0", "22C3")])]
 
-/-- Preamble for a standalone document. Needs XeLaTeX: the claims contain Greek,
-Hebrew and Syriac, the rendered Lean contains `¬`, `→` and `⊢`, and `fonts`
-sets them with XeTeX's character classes.
+/-- **Credit, worked out when the document is typeset.** `\credit{key}`
+expands to what `credits.def`, beside the document, defines for `key`, and to
+nothing without it; `\creditline{key}` sets it centred under a heading, and sets
+nothing at all where there is no credit.
 
-`author`, where given, is set under the title, as LaTeX; it is how a document
-carries its credit (`credits`). Under it come the edition's date and version
-(`edition`), which say to a reader which copy they hold without naming the
-program that made it; how it was made is the last section's business
-(`reproduction`). `extra` is set last, before the document begins: the
-definitions the author line needs. -/
-def preamble (title : String) (author extra : String := "") : String :=
-  "\\documentclass[11pt]{article}\n" ++
-  "\\usepackage{amsmath,amssymb,array,booktabs,longtable,geometry,fontspec,xcolor,alltt}\n" ++
+The file is written by `scripts/credits.py` from git history when the PDF is
+made, not by the generator, and is not committed. A commit that names no person
+is credited to whoever merged it, so the credit changes at the moment of merge,
+and a committed document holding it would be stale on `main` from then on. -/
+def credits : String :=
+  "\\newcommand{\\credit}[1]{\\ifcsname credit@#1\\endcsname" ++
+  "\\csname credit@#1\\endcsname\\fi}\n" ++
+  "\\newcommand{\\creditline}[1]{\\ifcsname credit@#1\\endcsname" ++
+  "{\\centering\\credit{#1}\\par\\medskip}\\fi}\n" ++
+  "\\InputIfFileExists{credits.def}{}{}\n"
+
+/-- **The house style**: what every generated document shares, written once as
+the package `testimony.sty`, which each generator writes beside its documents
+and each document loads with one line. A document holds only its title, its
+author line and its text.
+
+It is built on KOMA-Script's `scrartcl`, the class `preamble` names, rather
+than on LaTeX's plain `article` with the margins and spacing set by hand. KOMA
+sets the width of the text block from the paper and the type size (`DIV`), so a
+line stays within the length a reader's eye can follow, and sets headings in
+the sans-serif face. Its foot margin, twice the head's, is the one thing
+overridden: it left a wide band of white under every page number. The sans
+face is FreeSans, so a heading that quotes Greek or Hebrew still has the glyphs
+(`fonts`).
+
+The rest is this library's own: a variable linked to its row in the legend
+(`\pvar`), a derivation's rows (`derivation`), the gloss after a formula
+(`\gloss`), the fonts, the edition's date and version (`edition`), and the
+credit lines (`credits`). -/
+def style : String :=
+  "\\NeedsTeXFormat{LaTeX2e}\n" ++
+  "\\ProvidesPackage{testimony}[Testimony house style, written by the generators]\n" ++
+  "\\usepackage{amsmath,amssymb,array,booktabs,longtable,fontspec,xcolor,alltt}\n" ++
   "\\usepackage{tikz}\\usetikzlibrary{arrows.meta}\n" ++
   "\\usepackage[hidelinks]{hyperref}\n" ++
   -- A variable links to its row in the legend, and is coloured so a reader can
@@ -1277,7 +1302,7 @@ def preamble (title : String) (author extra : String := "") : String :=
   -- the note a `\keepwithnext` keeps after it; a row is never split; and a page
   -- breaks between rows only where the generator starts a row with `\breakrow`
   -- (`breakable`).
-  "\\makeatletter\n" ++
+  -- A package reads `@` as a letter, so the internals need no `\makeatletter`.
   "\\newenvironment{derivation}\n" ++
   "  {\\begin{list}{}{\\setlength{\\leftmargin}{2.6em}\\setlength{\\labelwidth}{2.2em}%\n" ++
   "    \\setlength{\\labelsep}{0.4em}\\setlength{\\itemsep}{2pt}\\setlength{\\parsep}{0pt}%\n" ++
@@ -1286,14 +1311,12 @@ def preamble (title : String) (author extra : String := "") : String :=
   "  {\\end{list}}\n" ++
   "\\newcommand{\\breakrow}[1]{\\@itempenalty\\z@\\item[#1]\\@itempenalty\\@M}\n" ++
   "\\newcommand{\\keepwithnext}{\\@endparpenalty\\@M}\n" ++
-  "\\makeatother\n" ++
   -- No paragraph leaves a single line alone at the foot or the head of a page.
   -- A derivation cannot be parted from the paragraph before it, so without
   -- this TeX carries that paragraph's last line over with it, and the page
   -- opens on a fragment of a sentence.
   "\\clubpenalty=10000\n\\widowpenalty=10000\n" ++
   "\\newcommand{\\gloss}[1]{\\enspace---\\enspace{\\small\\itshape #1}}\n" ++
-  "\\geometry{margin=1in}\n" ++
   -- Long unbreakable words — a cite key, a declaration name in \\texttt — would
   -- otherwise spill into the margin rather than loosening the line.
   "\\setlength{\\emergencystretch}{3em}\n" ++
@@ -1302,28 +1325,50 @@ def preamble (title : String) (author extra : String := "") : String :=
   -- sentence; in text full of "ch. 16", "ad loc. Rom" and "p. 80" that reads
   -- as stray double spaces, and justification stretches them further.
   "\\frenchspacing\n" ++
+  -- The line length is KOMA's (`DIV=13`, set by `preamble`); the height is not.
+  -- KOMA gives the foot margin twice the head's, which on A4 left some 45mm
+  -- of white under the page number. Here the page keeps KOMA's width and runs
+  -- the text down to 24mm from the foot, with the number 11mm below it.
+  "\\RequirePackage{geometry}\n" ++
+  "\\edef\\testimony@geometry{width=\\the\\textwidth,top=22mm,bottom=24mm," ++
+  "footskip=11mm}\n" ++
+  "\\expandafter\\geometry\\expandafter{\\testimony@geometry}\n" ++
   fonts ++
+  "\\setsansfont{FreeSans}[Extension=.otf,UprightFont=*,BoldFont=*Bold,\n" ++
+  "  ItalicFont=*Oblique,BoldItalicFont=*BoldOblique]\n" ++
+  edition ++ credits ++
+  "\\endinput\n"
+
+/-- The style file's name, as a document loads it and a generator writes it. -/
+def styleFile : String := "testimony.sty"
+
+/-- Preamble for a standalone document: the class, the house style (`style`), and
+the title matter. Needs XeLaTeX: the claims contain Greek, Hebrew and Syriac,
+the rendered Lean contains `¬`, `→` and `⊢`, and `fonts` sets them with XeTeX's
+character classes.
+
+`author`, where given, is set under the title, as LaTeX; it is how a document
+carries its credit (`credits`). Under it come the edition's date and version
+(`edition`), which say to a reader which copy they hold without naming the
+program that made it; how it was made is the last section's business
+(`reproduction`). -/
+def preamble (title : String) (author : String := "") : String :=
+  -- `DIV=13` divides the page into thirteen strips and gives the margins three,
+  -- a wider text block than `DIV=11` and so fewer pages; `parskip=false` keeps
+  -- indented paragraphs, as the prose is written for. The style file sets the
+  -- page's height (`style`).
+  --
+  -- The paper is A4 unless `\testimonypaper` names another before the document
+  -- is read: `scripts/typeset.sh --paper letter` typesets a US Letter edition
+  -- through a one-line wrapper that defines it, so one `.tex` makes both.
+  "\\providecommand{\\testimonypaper}{a4}\n" ++
+  "\\documentclass[11pt,paper=\\testimonypaper,DIV=13,parskip=false]{scrartcl}\n" ++
+  "\\usepackage{testimony}\n" ++
   "\\title{" ++ escape title ++ "}\n" ++
   (if author.isEmpty then "" else "\\author{" ++ author ++ "}\n") ++
   "\\date{\\editiondate\\\\[2pt]{\\small Version \\editionversion" ++
   "\\ifeditionpreview\\\\\\editionremark\\fi}}\n" ++
-  edition ++ extra ++ "\\begin{document}\n\\maketitle\n"
-
-/-- **Credit, worked out when the document is typeset.** `\credit{key}`
-expands to what `credits.def`, beside the document, defines for `key`, and to
-nothing without it; `\creditline{key}` sets it centred under a heading, and sets
-nothing at all where there is no credit.
-
-The file is written by `scripts/credits.py` from git history when the PDF is
-made, not by the generator, and is not committed. A commit that names no person
-is credited to whoever merged it, so the credit changes at the moment of merge,
-and a committed document holding it would be stale on `main` from then on. -/
-def credits : String :=
-  "\\newcommand{\\credit}[1]{\\ifcsname credit@#1\\endcsname" ++
-  "\\csname credit@#1\\endcsname\\fi}\n" ++
-  "\\newcommand{\\creditline}[1]{\\ifcsname credit@#1\\endcsname" ++
-  "{\\centering\\credit{#1}\\par\\medskip}\\fi}\n" ++
-  "\\InputIfFileExists{credits.def}{}{}\n"
+  "\\begin{document}\n\\maketitle\n"
 
 /-- The table of contents, which the starred sections opt into by hand. -/
 def contents : String := "\\tableofcontents\n"

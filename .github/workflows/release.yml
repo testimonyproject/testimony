@@ -4,8 +4,9 @@ name: Release
 # pdf.yml from the tagged commit: the book of every argument, each argument on
 # its own, and the examples. The site links to the current PDFs, which docs.yml
 # puts beside it; a release is the dated copy a reader can cite. A release asset
-# has no directory, so each argument's is attached as <slug>.pdf; argtex guards
-# that slugs are unique.
+# has no directory, so each argument's is attached as <slug>.pdf, and on US
+# Letter as <slug>-letter.pdf; argtex guards that slugs are unique and that none
+# ends in -letter.
 on:
   push:
     tags: ['v*']

@@ -48,9 +48,20 @@ structure Site where
 
 namespace Site
 
+/-- A print edition's US Letter twin: `x.pdf` becomes `x-letter.pdf`, the name
+`scripts/typeset.sh --paper letter` gives it. -/
+def letterEdition (pdf : String) : String :=
+  (if pdf.endsWith ".pdf" then (pdf.dropEnd 4).toString else pdf) ++ "-letter.pdf"
+
+#guard letterEdition "../pdf/arguments.pdf" == "../pdf/arguments-letter.pdf"
+
+/-- A link to a print edition on A4, followed by its twin on US Letter. -/
+def editionLinks (text pdf : String) : String :=
+  "[" ++ text ++ "](" ++ pdf ++ ") (A4, or [US Letter](" ++ letterEdition pdf ++ "))"
+
 /-- The sentence that points a reader at the print editions, or nothing where
 there are none: this argument's own PDF where there is one, and the book of
-every argument. -/
+every argument, each on A4 and on US Letter. -/
 def printEdition (s : Site) (a : Argument) : String :=
   if s.pdf.isEmpty then "" else
   let release := "each tagged " ++
@@ -58,11 +69,12 @@ def printEdition (s : Site) (a : Argument) : String :=
     "carries a copy.\n\n"
   if s.argumentPdfDir.isEmpty then
     "Every argument is also set for print, the claims linked and the derivations " ++
-    "in words as here, in [one PDF](" ++ s.pdf ++ "), and " ++ release
+    "in words as here, in " ++ editionLinks "one PDF" s.pdf ++ ", and " ++ release
   else
     "This argument is also set for print, the claims linked and the derivations " ++
-    "in words as here, in [a PDF of its own](" ++ s.argumentPdfDir ++ "/" ++ a.slug ++
-    ".pdf). [One PDF](" ++ s.pdf ++ ") holds every argument together, and " ++ release
+    "in words as here, in " ++
+    editionLinks "a PDF of its own" (s.argumentPdfDir ++ "/" ++ a.slug ++ ".pdf") ++ ". " ++
+    editionLinks "One PDF" s.pdf ++ " holds every argument together, and " ++ release
 
 /-- The repository path an argument's sources live at. -/
 def source (s : Site) (a : Argument) : String := s.sourceRoot ++ sourcePath a.ns
