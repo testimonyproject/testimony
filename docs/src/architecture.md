@@ -161,8 +161,9 @@ Under the title, each document gives the date and version of its edition: the
 release's tag where there is one, and otherwise the short hash of the commit it
 was made from, dated by that commit, so one commit always makes the same
 edition. Its last section, "How this edition was made", says in plain words
-what made it and lists every step to make it again, ending in the commit to
-check out. These come from `scripts/edition.py`, which writes an `edition.def`
+what made it, which paper the copy is set on, and every step to make it again
+from the commit to check out, ending in one command for A4 and one for US
+Letter. These come from `scripts/edition.py`, which writes an `edition.def`
 beside each document when it is typeset, for the reason the credits do: the
 commit is not known when the `.tex` is generated. A pull request's PDF is
 typeset from GitHub's trial merge, so it says it is a preview of that pull
