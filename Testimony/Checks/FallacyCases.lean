@@ -528,6 +528,26 @@ theorem wordshift_cases :
       verbItself.shifts = [] := by
   decide
 
+/-- **Caught: the verb's sense drawn from the doctrine.** God's verdict brings
+about the sinner's renewal; Paul's verb is a verdict; so the verb means to make
+righteous. No premise gives the verb, or any word of its kin, that sense: it
+comes from a claim about what God does. -/
+def senseFromDoctrine : Move :=
+  argues
+    [ .holds (rl .effects (cn .justification) (cn .sanctification))
+    , .means .dikaioo (.usage .paul) .verdict ]
+    (.means .dikaioo (.usage .paul) .makeRighteous)
+
+/-- **A sense from elsewhere, caught and passed over.** The sense drawn from a
+doctrine is reported. A sense read from a kindred word, from a voice's reading of
+the word, or from the word itself is not: each has the sense from a word. -/
+theorem elsewhere_cases :
+    senseFromDoctrine.sensesFromElsewhere = [(.dikaioo, .usage .paul, .makeRighteous)] ∧
+      adjectiveForVerb.sensesFromElsewhere = [] ∧
+      latinForGreek.sensesFromElsewhere = [] ∧
+      verbItself.sensesFromElsewhere = [] := by
+  decide
+
 end Testimony.Checks.FallacyCases.WordShift
 
 /-! ### Leaving out what a voice also said -/

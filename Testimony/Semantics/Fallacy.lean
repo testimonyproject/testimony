@@ -62,6 +62,17 @@ uses, or says what means, a kindred word that no premise has at that place
 - **unstated** — the move says nothing of it, and holds on that condition, as
   it does on an unstated sameness of sense.
 
+A move can also take a word's sense from nowhere in the word at all. "God's verdict
+makes the sinner righteous; so the verb 'justify' means to make righteous" draws
+the verb's sense from a claim about what God does, not from any use of the word.
+Barr called reading a doctrine into each occurrence of its word illegitimate
+totality transfer. A move **draws a sense from elsewhere** when its conclusion
+says a word means something at a place and no premise gives that sense to the
+word, to a kindred word the move reads it by, or as someone's reading of it, and
+no premise is a text from whose setting the sense could be read
+(`Move.sensesFromElsewhere`). It is reported, not charged: a word may yet have
+the sense, but the move has not shown it from the word.
+
 ## Begging the question
 
 An argument begs the question when a premise already asserts what it concludes,
@@ -628,6 +639,32 @@ def omissions (record : Voice → List α) (m : Move) :
       if senses.isEmpty then none
       else some (a, senses.map fun s' => (s', (others.filter (·.1 == s')).map (·.2)))
     | _ => none
+
+/-- Whether a statement says what a text says, teaches or is written against,
+alone or as part of a conjunction. -/
+def _root_.Testimony.Semantics.Statement.textual : Statement → Bool
+  | .says .. | .teaches .. | .opposes .. => true
+  | .also s t => s.textual || t.textual
+  | _ => false
+
+/-- **The senses a move concludes a word has that nothing it argues from gives
+the word**: its conclusion says a word means something at a place, and no
+premise gives that sense to the word, to a kindred word the move reads it by, or
+as a voice's reading of it, and no premise is a text, from whose setting the word's
+sense might be read. The sense then comes from a claim about the thing the word
+is used for, and the move reads the doctrine into the word: what Barr called
+illegitimate totality transfer. Each with the word, the place and the sense. -/
+def sensesFromElsewhere (m : Move) : List (Lexeme × Scope × Sense) :=
+  let concluded := (m.conclusion?.map Statement.senses).getD []
+  let read : List (Lexeme × Sense) := m.premises.flatMap fun p =>
+    p.senses.map (fun (w, _, s) => (w, s)) ++
+      p.attributions.filterMap fun
+        | .glosses _ w s => some (w, s)
+        | _ => none
+  let given (w : Lexeme) (s : Sense) : Bool :=
+    read.any fun (w', s') => s' = s ∧ (w' = w ∨ (Lexeme.kin w' w).isSome)
+  if m.premises.any Statement.textual then [] else
+    concluded.filter fun (w, _, s) => !given w s
 
 end Move
 
