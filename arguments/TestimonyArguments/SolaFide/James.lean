@@ -37,9 +37,10 @@ evidence.
   was counted to him as righteousness" (James 2:23, quoting Genesis 15:6), and
   of Rahab. And a word contributes the least meaning its context requires. But
   the evidence from Matthew and the Law decides James's word only if James uses
-  the word as they do. Calvin says he does: James speaks "of the declaration,
-  and not of the imputation of righteousness" (on James 2:21). Trent, reading
-  the same verses, says James's word is the increase (ch. 10). So that premise is
+  the word as they do. Calvin reads it so: by the word James means "the
+  manifestation of righteousness by the conduct", and Paul "the gratuitous
+  imputation of righteousness" (on James 2:21). Trent, reading the same verses,
+  says James's word is the increase (ch. 10). So that premise is
   `disputed`, and on it the argument from the word and Trent's reading meet as
   equals.
 - **As a claim about what works do.** James's "justified" is a verdict, and the
@@ -916,8 +917,8 @@ outside Paul, where it declares, acquits or vindicates (Matthew 11:19, Deuterono
 spoken, and of Rahab. Each can be defended in this debate, and neither is forced.
 
 The two part at one premise: whether James uses the word as the Gospels and the
-Law use it. Calvin says he does (on James 2:21), and Trent, reading the same
-verses, says he does not. So the premise is rated `disputed`, and the argument
+Law use it. Calvin reads it so, as "the manifestation of righteousness by the
+conduct" (on James 2:21), and Trent, reading the same verses, does not. So the premise is rated `disputed`, and the argument
 from James's word is weighed as its rival is.
 
 It does not show that Trent's reading is right, or that the lexical evidence is
