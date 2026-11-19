@@ -55,7 +55,6 @@ Sola fide
     jamesLexicalLine (Moo): dikaioo
     johannineLine (Calvin): pisteuo
     johannineWithoutTrust (Calvin): pisteuo
-    lexicalLine (Silva): dikaioo
     paulineLine (Calvin): dikaioo, ergaNomou
     paulineWithoutPistisChristou (Calvin): dikaioo, ergaNomou
     paulineWithoutWorksOfLaw (Calvin): dikaioo, ergaNomou
@@ -76,7 +75,7 @@ Sola fide
 #check_postulates under TestimonyArguments.SolaFide
 
 /--
-info: every reading and step has a reader or is marked proposed: 88 packages, 49 lines
+info: every reading and step has a reader or is marked proposed: 93 packages, 58 lines
 -/
 #guard_msgs in
 #check_readers under TestimonyArguments.SolaFide
