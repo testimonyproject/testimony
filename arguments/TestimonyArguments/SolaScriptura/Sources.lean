@@ -66,9 +66,9 @@ def principleToSoleRuleInference : Source :=
   , confidence := .disputed }
 
 /-- The rating of the step from Jesus' sayings and Paul's letters to the principle:
-`wellSupported`. Jesus says that "the scripture cannot be broken" (John 10:35)
-and that not "one jot or one tittle" shall pass from the law (Matthew 5:18);
-Paul puts even an apostle and an angel under the gospel already preached
+`wellSupported`. Jesus says that "the Scripture cannot be broken" (John 10:35)
+and that "not the smallest letter or stroke shall pass from the Law" (Matthew
+5:18); Paul puts even an apostle and an angel under the gospel already preached
 (Galatians 1:8–9), and sets "the tradition of men" against Christ (Colossians
 2:8). From these to the principle that God's word judges human tradition, no
 reader was found who grants the texts and denies the principle.
@@ -83,13 +83,14 @@ Aquinas, Paul's "besides" means "adding something completely alien" (his
 lectures on Galatians, chapter 1, lecture 2). Rome's answer in Calvin's day was
 of the same kind, as Calvin reports it at the same verse: "they tell us, that we
 have not in our possession the whole of Paul's preaching". Paul himself commends
-what he handed on by word: "keep the ordinances, as I delivered them to you" (1
-Corinthians 11:2); "hold the traditions which ye have been taught, whether by
-word, or our epistle" (2 Thessalonians 2:15; compare 3:6). On that reading the
-test Paul sets is where a teaching came from, not whether it was written down.
-Both answers grant the principle, and deny that it makes Scripture the only
-measure; that denial is weighed where the argument needs it, at the premise
-about unwritten tradition and at the step to the sole rule, both `disputed`.
+what he handed on by word: the Corinthians "hold firmly to the traditions, just
+as I delivered them to you" (1 Corinthians 11:2); "hold to the traditions which
+you were taught, whether by word of mouth or by letter from us" (2 Thessalonians
+2:15; compare 3:6). On that reading the test Paul sets is where a teaching came
+from, not whether it was written down. Both answers grant the principle, and
+deny that it makes Scripture the only measure; that denial is weighed where the
+argument needs it, at the premise about unwritten tradition and at the step to
+the sole rule, both `disputed`.
 
 Rated `wellSupported`, as Mark 7's step is, and not `consensus`, because the
 step still generalises: John 10:35 and Matthew 5:18 speak of Scripture and the
@@ -98,10 +99,10 @@ in the church. Wenham's account of Jesus' teaching is the same as the step's:
 Jesus "repudiates the petty traditions of the elders in favour of a sane and
 spiritually minded attention to the Old Testament" (p. 28, of the grain plucked
 on the sabbath). He also notes the other side of it: of the scribes in Moses'
-seat Jesus says "all things therefore whatsoever they bid you, these do and
-observe" (Matthew 23:2–3), and "To Jesus scribal lore was valuable if linked
-with spiritual understanding" (p. 15). The principle judges tradition; it does
-not abolish it. -/
+seat Jesus says, in the English Wenham quotes, "all things therefore whatsoever
+they bid you, these do and observe" (Matthew 23:2–3), and "To Jesus scribal lore
+was valuable if linked with spiritual understanding" (p. 15). The principle
+judges tradition; it does not abolish it. -/
 def jesusAndPaulPrincipleInference : Source :=
   { primary := .work aquinasGalatians (.sectionRef "c. 1, lect. 2")
   , supporting :=
@@ -117,20 +118,21 @@ def jesusAndPaulPrincipleInference : Source :=
 
 /-- The rating of the Reformed step from Acts 15 to councils: `disputed`. The step
 reads the council at Jerusalem as the Reformers did. Men from Judaea taught that
-"Except ye be circumcised after the manner of Moses, ye cannot be saved" (15:1),
-so the oldest custom Israel had was laid on the gentiles as a condition of
-salvation. Peter answered it with the gospel, "through the grace of the Lord
-Jesus Christ we shall be saved, even as they" (15:10–11), and James with
-Scripture, "to this agree the words of the prophets; as it is written" (15:15).
-Calvin draws the conclusion at 15:15: the apostles "took nothing to themselves
-imperiously, but did reverently follow that which was prescribed in the word of
-God", and were not ashamed "to profess themselves to be the scholars of the
-Scripture". So a council after the apostles binds only as far as it agrees with
-the word, and may err. The Westminster Confession says so of councils: their
-decrees bind "if consonant to the Word of God", and "All synods or councils since
-the apostles' times, whether general or particular, may err, and many have
-erred; therefore they are not to be made the rule of faith or practice, but to
-be used as a help in both" (XXXI.3–4, in the numbering of 1647).
+"Unless you are circumcised according to the custom of Moses, you cannot be
+saved" (15:1), so the oldest custom Israel had was laid on the gentiles as a
+condition of salvation. Peter answered it with the gospel, "we are saved through
+the grace of the Lord Jesus, in the same way as they also are" (15:10–11), and
+James with Scripture, "with this the words of the Prophets agree, just as it is
+written" (15:15). Calvin draws the conclusion at 15:15: the apostles "took
+nothing to themselves imperiously, but did reverently follow that which was
+prescribed in the word of God", and were not ashamed "to profess themselves to
+be the scholars of the Scripture". So a council after the apostles binds only as
+far as it agrees with the word, and may err. The Westminster Confession says so
+of councils: their decrees bind "if consonant to the Word of God", and "All
+synods or councils since the apostles' times, whether general or particular, may
+err, and many have erred; therefore they are not to be made the rule of faith or
+practice, but to be used as a help in both" (XXXI.3–4, in the numbering of
+1647).
 
 Joseph Wilhelm, in the *Catholic Encyclopedia*, reads the same council and
 denies the conclusion. For him the decree of 15:28 shows "the mind of the
@@ -149,10 +151,11 @@ def acts15ReformedInference : Source :=
   , confidence := .disputed }
 
 /-- The rating of Rome's step from Acts 15 to councils: `disputed`. The council's
-letter says "it seemed good to the Holy Ghost, and to us" (15:28), and Paul and
-Silas "delivered them the decrees for to keep" in every city (16:4). From these
-Wilhelm concludes that a general council in union with the pope, like the
-council at Jerusalem, binds with the Spirit's authority and cannot err.
+letter says "it seemed good to the Holy Spirit and to us" (15:28), and Paul and
+Silas "were delivering the decrees ... for them to keep" in the cities they
+passed through (16:4). From these Wilhelm concludes that a general council in
+union with the pope, like the council at Jerusalem, binds with the Spirit's
+authority and cannot err.
 
 The Westminster Confession grants both texts and denies the conclusion. It cites
 Acts 15:27–31 and 16:4 as its proof that a council's decrees, "if consonant to
@@ -173,12 +176,12 @@ def acts15RomanInference : Source :=
 
 /-- The rating of the Reformed step from the texts on the apostles to the end of
 their office: `disputed`. The apostle chosen in Judas's place had to have
-"companied with us all the time that the Lord Jesus went in and out among us",
-to be "a witness with us of his resurrection" (Acts 1:21–22); Paul counts
-himself the last to whom the risen Christ appeared, "last of all he was seen of
-me also, as of one born out of due time" (1 Corinthians 15:8); Peter counts
-Paul's letters with "the other scriptures" (2 Peter 3:15–16); and Paul writes as
-"an apostle of Jesus Christ" with "Timothy our brother" (2 Corinthians 1:1,
+"accompanied us all the time that the Lord Jesus went in and out among us", to
+be "a witness with us of His resurrection" (Acts 1:21–22); Paul counts himself
+the last to whom the risen Christ appeared, "last of all, as to one untimely
+born, He appeared to me also" (1 Corinthians 15:8); Peter counts Paul's letters
+with "the rest of the Scriptures" (2 Peter 3:15–16); and Paul writes as "an
+apostle of Christ Jesus" with "Timothy our brother" (2 Corinthians 1:1,
 Colossians 1:1). So the apostles were a closed company, and their office ended
 with them. Calvin draws it so. At Acts 1:21 he grants that "Peter doth here
 require such a witness as saw the Lord after his resurrection ... For this did
@@ -208,26 +211,26 @@ def apostlesOfficeEndedInference : Source :=
   , confidence := .disputed }
 
 /-- The rating of Rome's step from the succession texts to the apostles' office
-continuing: `disputed`. Peter applies the Psalm to Judas, "his bishoprick
-(ἐπισκοπή) let another take" (Acts 1:20); Paul bids Timothy "commit thou to
-faithful men, who shall be able to teach others also" (2 Timothy 2:2); and
-Clement of Rome records that the apostles appointed bishops and deacons and
-"afterwards gave instructions, that when these should fall asleep, other
-approved men should succeed them in their ministry" (1 Clement 44). So the
-apostles' office continues in those who succeed them. *Lumen Gentium* 20 draws it
-so, and cites 2 Timothy 2:2 and 1 Clement 44 in its notes: "bishops by divine
-institution have succeeded to the place of the apostles".
+continuing: `disputed`. Peter applies the Psalm to Judas, "Let another man take
+his office (ἐπισκοπή)" (Acts 1:20); Paul bids Timothy "entrust these to faithful
+men who will be able to teach others also" (2 Timothy 2:2); and Clement of Rome
+records that the apostles appointed bishops and deacons and "afterwards gave
+instructions, that when these should fall asleep, other approved men should
+succeed them in their ministry" (1 Clement 44). So the apostles' office
+continues in those who succeed them. *Lumen Gentium* 20 draws it so, and cites 2
+Timothy 2:2 and 1 Clement 44 in its notes: "bishops by divine institution have
+succeeded to the place of the apostles".
 
-Calvin grants the texts and denies the conclusion. At Acts 1:20 he reads
-"bishoprick" as "a jurisdiction or government", and grants that "another may
-succeed him"; at 1:21 he answers that the apostleship "is not without the
-preaching of the gospel", so that "the Popish bishops ... brag that they are
-the successors of the apostles; but wherein are they like unto them?" (*Acts*,
-vol. 1, pp. 65–66). In the *Institutes* the apostolic office was not "instituted
-in the Church to be perpetual" (IV.iii.4). Whether Clement's "succeed them in
-their ministry" means succeeding to the apostles' office or to the ministry of
-the bishops and deacons they appointed is the question itself. So the step is
-`disputed`. -/
+Calvin grants the texts and denies the conclusion. At Acts 1:20 he reads the
+office, "bishoprick" in his translator's English, as "a jurisdiction or
+government", and grants that "another may succeed him"; at 1:21 he answers that
+the apostleship "is not without the preaching of the gospel", so that "the
+Popish bishops ... brag that they are the successors of the apostles; but
+wherein are they like unto them?" (*Acts*, vol. 1, pp. 65–66). In the
+*Institutes* the apostolic office was not "instituted in the Church to be
+perpetual" (IV.iii.4). Whether Clement's "succeed them in their ministry" means
+succeeding to the apostles' office or to the ministry of the bishops and deacons
+they appointed is the question itself. So the step is `disputed`. -/
 def apostolicSuccessionInference : Source :=
   { primary := .work calvinActs1 (.pages 65 66)
   , supporting :=
@@ -238,20 +241,21 @@ def apostolicSuccessionInference : Source :=
   , confidence := .disputed }
 
 /-- The rating of the Reformed step from Matthew 23:2–3 to the teaching office:
-`disputed`. Jesus tells the crowd to observe and do "whatsoever" the scribes and
-Pharisees bid, because they "sit in Moses' seat" (23:2–3). In the same discourse
-he condemns their teaching about oaths, "Woe unto you, ye blind guides, which
-say, Whosoever shall swear by the temple, it is nothing" (23:16–22), and in Mark
-7 and Matthew 15 he condemns the elders' tradition for making void the word of
-God. So, Calvin argues, the seat binds only so far as Moses is taught from it:
-"to sit in the chair of Moses is nothing else than to teach, according to the
-Law of God, how we ought to live", and "Christ exhorts the people to obey the
-scribes, only so far as they adhere to the pure and simple exposition of the
-Law" (pp. 74–75). He answers Rome by name: "The Papists reckon it enough, that
-those who issue laws should possess the title and occupy the station", and if
-Christ had meant to bind consciences to the commandments of men, "there would
-have been no good ground for what he said in another passage, that it is in vain
-to worship God by the commandments of men, (Matthew 15:9.)" (p. 75).
+`disputed`. Jesus tells the crowd to do and keep "all that" the scribes and
+Pharisees tell them, because they "have seated themselves in the chair of Moses"
+(23:2–3). In the same discourse he condemns their teaching about oaths, "Woe to
+you, blind guides, who say, 'Whoever swears by the sanctuary, that is nothing'"
+(23:16–22), and in Mark 7 and Matthew 15 he condemns the elders' tradition for
+making void the word of God. So, Calvin argues, the seat binds only so far as
+Moses is taught from it: "to sit in the chair of Moses is nothing else than to
+teach, according to the Law of God, how we ought to live", and "Christ exhorts
+the people to obey the scribes, only so far as they adhere to the pure and
+simple exposition of the Law" (pp. 74–75). He answers Rome by name: "The Papists
+reckon it enough, that those who issue laws should possess the title and occupy
+the station", and if Christ had meant to bind consciences to the commandments of
+men, "there would have been no good ground for what he said in another passage,
+that it is in vain to worship God by the commandments of men, (Matthew 15:9.)"
+(p. 75).
 
 Cornelius a Lapide grants every text the step reads and denies its conclusion.
 He calls the scribes of 23:16 "rightly called by Christ blind guides" (p. 40),
@@ -274,16 +278,16 @@ def mosesSeatReformedInference : Source :=
 
 /-- The rating of Rome's step from Matthew 23:2–3 to the teaching office:
 `disputed`. Jesus bids the crowd observe what the scribes and Pharisees bid,
-because of the seat they sit in, though "they say, and do not" (23:2–3).
-Cornelius a Lapide takes the seat as "the honour, dignity, and authority of
-teaching and commanding, which Moses had with the Jews, and to which the Scribes
-had succeeded", and draws the Church's case from it: "In like manner, the chair
-of S. Peter is used to signify the power and authority of teaching and ruling
-all the faithful throughout the world, in which the Roman Pontiffs succeed S.
-Peter" (p. 32). "Christians ought to bear in mind these words of Christ when they
-see certain Bishops, Pastors, and Magistrates not living in accordance with the
-law of Christ" (p. 33). So the office in the Church is heeded for its seat, even
-when its holders live ill.
+because of the seat they sit in, though "they say things and do not do them"
+(23:2–3). Cornelius a Lapide takes the seat as "the honour, dignity, and
+authority of teaching and commanding, which Moses had with the Jews, and to
+which the Scribes had succeeded", and draws the Church's case from it: "In like
+manner, the chair of S. Peter is used to signify the power and authority of
+teaching and ruling all the faithful throughout the world, in which the Roman
+Pontiffs succeed S. Peter" (p. 32). "Christians ought to bear in mind these
+words of Christ when they see certain Bishops, Pastors, and Magistrates not
+living in accordance with the law of Christ" (p. 33). So the office in the
+Church is heeded for its seat, even when its holders live ill.
 
 Calvin grants the text and denies the conclusion. He grants that the seat
 "denotes, at the same time, a lawful calling; for Christ commands that the
@@ -638,7 +642,7 @@ def cite : Claim → AtomMeta
         , tradition := .reformedProtestant
         , confidence := .disputed } }
   | .john10_35ScriptureCannotBeBroken =>
-    { label := "John 10:35 — the scripture cannot be broken"
+    { label := "John 10:35 — the Scripture cannot be broken"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.john, 10, 35⟩ }]
@@ -647,8 +651,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .matthew5_18LawShallNotPass =>
     { label :=
-        "Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, " ++
-        "till all be fulfilled"
+        "Matthew 5:18 — not the smallest letter or stroke shall pass from the Law " ++
+        "until all is accomplished"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.matthew, 5, 18⟩ }]
@@ -657,11 +661,11 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .galatians1_8AnotherGospelAccursed =>
     { label :=
-        "Galatians 1:8–9 — though we, or an angel from heaven, preach any other " ++
-        "gospel than that which we have preached, let him be accursed"
+        "Galatians 1:8–9 — even if we, or an angel from heaven, should proclaim a " ++
+        "gospel contrary to the gospel we have proclaimed, let him be accursed"
     , kind := .textual
       -- What the text says, which Calvin and Aquinas both grant. They differ
-      -- over what "any other gospel" (παρ' ὃ, "besides") reaches: an addition,
+      -- over what "contrary to" (παρ' ὃ, also "besides") reaches: an addition,
       -- or only something alien. That is weighed in the step's rating.
     , source :=
         { primary := .scripture [{ ref := .range ⟨.galatians, 1, 8, 1, 9⟩ }]
@@ -672,8 +676,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .colossians2_8TraditionOfMen =>
     { label :=
-        "Colossians 2:8, 20–22 — after the tradition of men, and not after " ++
-        "Christ; after the commandments and doctrines of men"
+        "Colossians 2:8, 20–22 — according to the tradition of men, and not " ++
+        "according to Christ; in accordance with the commands and teachings of men"
     , kind := .textual
     , source :=
         { primary :=
@@ -685,8 +689,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .acts15_1CircumcisionAfterMoses =>
     { label :=
-        "Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot " ++
-        "be saved"
+        "Acts 15:1 — unless you are circumcised according to the custom of Moses, " ++
+        "you cannot be saved"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.acts, 15, 1⟩ }]
@@ -694,8 +698,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .acts15_10_11YokeAndGrace =>
     { label :=
-        "Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; " ++
-        "through the grace of the Lord Jesus Christ we shall be saved"
+        "Acts 15:10–11 — a yoke which neither our fathers nor we have been able to " ++
+        "bear; we are saved through the grace of the Lord Jesus"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.acts, 15, 10, 15, 11⟩ }]
@@ -703,8 +707,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .acts15_15_17ProphetsAgree =>
     { label :=
-        "Acts 15:15–17 — to this agree the words of the prophets; as it is written " ++
-        "(Amos 9:11–12)"
+        "Acts 15:15–17 — with this the words of the Prophets agree, just as it is " ++
+        "written (Amos 9:11–12)"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.acts, 15, 15, 15, 17⟩ }]
@@ -712,7 +716,7 @@ def cite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .acts15_23_29DecreeWritten =>
-    { label := "Acts 15:23–29 — they wrote letters by them: the decree went out in writing"
+    { label := "Acts 15:23–29 — they sent this letter by them: the decree went out in writing"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.acts, 15, 23, 15, 29⟩ }]
@@ -720,8 +724,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .acts15_28SeemedGoodToTheHolyGhost =>
     { label :=
-        "Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you " ++
-        "no greater burden than these necessary things"
+        "Acts 15:28 — it seemed good to the Holy Spirit and to us to lay upon you " ++
+        "no greater burden than these essentials"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.acts, 15, 28⟩ }]
@@ -729,8 +733,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .acts16_4DecreesDelivered =>
     { label :=
-        "Acts 16:4 — they delivered them the decrees for to keep, that were " ++
-        "ordained of the apostles and elders which were at Jerusalem"
+        "Acts 16:4 — they were delivering the decrees which had been decided upon " ++
+        "by the apostles and elders who were in Jerusalem, for them to keep"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.acts, 16, 4⟩ }]
@@ -754,9 +758,9 @@ def cite : Claim → AtomMeta
         , confidence := .disputed } }
   | .matthew23_2_3MosesSeat =>
     { label :=
-        "Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all " ++
-        "whatsoever they bid you observe, that observe and do; but do not ye after " ++
-        "their works"
+        "Matthew 23:2–3 — the scribes and the Pharisees have seated themselves in " ++
+        "the chair of Moses; therefore all that they tell you, do and keep, but do " ++
+        "not do according to their deeds"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.matthew, 23, 2, 23, 3⟩ }]
@@ -765,8 +769,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .matthew23_16_22BlindGuides =>
     { label :=
-        "Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever " ++
-        "shall swear by the temple, it is nothing"
+        "Matthew 23:16–22 — woe to you, blind guides, who say, Whoever swears by " ++
+        "the sanctuary, that is nothing"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.matthew, 23, 16, 23, 22⟩ }]
@@ -788,8 +792,8 @@ def cite : Claim → AtomMeta
         , confidence := .disputed } }
   | .acts1_21_22WitnessOfResurrection =>
     { label :=
-        "Acts 1:21–22 — of these men which have companied with us all the time ... " ++
-        "must one be ordained to be a witness with us of his resurrection"
+        "Acts 1:21–22 — of the men who have accompanied us all the time ... one of " ++
+        "these must become a witness with us of His resurrection"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.acts, 1, 21, 1, 22⟩ }]
@@ -797,7 +801,7 @@ def cite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .corinthians15_8LastOfAll =>
-    { label := "1 Corinthians 15:8 — and last of all he was seen of me also"
+    { label := "1 Corinthians 15:8 — and last of all ... He appeared to me also"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.firstCorinthians, 15, 8⟩ }]
@@ -805,8 +809,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .peter3_15_16PaulsEpistlesWithTheScriptures =>
     { label :=
-        "2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do " ++
-        "also the other scriptures"
+        "2 Peter 3:15–16 — Paul's letters, which the untaught and unstable distort, " ++
+        "as they do also the rest of the Scriptures"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.secondPeter, 3, 15, 3, 16⟩ }]
@@ -814,7 +818,7 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .salutationsApostleAndBrother =>
     { label :=
-        "2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and " ++
+        "2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Christ Jesus, and " ++
         "Timothy our brother"
     , kind := .textual
     , source :=
@@ -826,8 +830,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .thessalonians2_6ApostlesOfChrist =>
     { label :=
-        "1 Thessalonians 2:6 (with 1:1) — from Paul, Silvanus and Timotheus: we " ++
-        "might have been burdensome, as the apostles of Christ"
+        "1 Thessalonians 2:6 (with 1:1) — from Paul, Silvanus and Timothy: as " ++
+        "apostles of Christ we could have been a burden"
     , kind := .textual
     , source :=
         { primary :=
@@ -862,7 +866,7 @@ def cite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .acts1_20BishoprickLetAnotherTake =>
-    { label := "Acts 1:20 — his bishoprick let another take"
+    { label := "Acts 1:20 — let another man take his office"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.acts, 1, 20⟩ }]
@@ -871,7 +875,7 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .timothy2_2CommitToFaithfulMen =>
     { label :=
-        "2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach " ++
+        "2 Timothy 2:2 — entrust these to faithful men who will be able to teach " ++
         "others also"
     , kind := .textual
     , source :=

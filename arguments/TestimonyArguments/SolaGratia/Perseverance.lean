@@ -54,11 +54,12 @@ seem to contradict Westminster even where he agrees with it.
 **John 10 and 1 John 2.** From John 10:27–29, the Reformed conclude that the
 elect persevere. Calvin reads the verse so: "the salvation of all the elect is
 not less certain than the power of God is invincible". Wesley grants the text and
-reads its promise as conditional, quoting 2 Peter 1:10: "They are *my sheep*,
-that *hear my voice*, that *follow me* in all holiness. And 'if ye do these
-things, ye shall never fall'". So the step is rated *disputed*, which means that
-a reader the library cites grants its grounds and denies its conclusion, and here
-gives his reason, the condition he reads in the promise.
+reads its promise as conditional, quoting 2 Peter 1:10 in the King James Version
+he used: "They are *my sheep*, that *hear my voice*, that *follow me* in all
+holiness. And 'if ye do these things, ye shall never fall'". So the step is
+rated *disputed*, which means that a reader the library cites grants its grounds
+and denies its conclusion, and here gives his reason, the condition he reads in
+the promise.
 
 From 1 John 2:19, "They went out from us, but they were not of us", the Reformed
 conclude that the truly justified are elect. They get there through a reading of
@@ -706,11 +707,11 @@ def lutheranOnPerseverance : ArgumentPackage Claim :=
 
 /-- **Wesley**, from *Serious Thoughts upon the Perseverance of the Saints*
 (1751). John 10:27–29, with the condition he reads in it, "if ye do these
-things, ye shall never fall" (2 Peter 1:10); and three texts read as describing
-true believers who fell: Hebrews 6:4–6, Hebrews 10:26–29 and 2 Peter 2:20–22.
-The condition is carried as Wesley states it, with no step drawn from it,
-because what it commits him to is what the dilemma below asks. His conclusion
-comes from the three texts. -/
+things, ye shall never fall" (2 Peter 1:10, in the King James wording Wesley
+quotes); and three texts read as describing true believers who fell: Hebrews
+6:4–6, Hebrews 10:26–29 and 2 Peter 2:20–22. The condition is carried as Wesley
+states it, with no step drawn from it, because what it commits him to is what
+the dilemma below asks. His conclusion comes from the three texts. -/
 @[solaGratiaDefs]
 def wesleyOnPerseverance : ArgumentPackage Claim :=
   { name := "Wesley (Serious Thoughts upon the Perseverance of the Saints)"

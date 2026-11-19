@@ -431,8 +431,8 @@ Aquinas grants Galatians 1:8 and the principle with it. Added to Mark 7, they
 still leave the sole rule open without that one premise
 (`every_text_without_the_hinge_leaves_the_sole_rule_open`). The council at Jerusalem (Acts 15) is
 read both ways. The Reformers read a council that let the gospel judge even the custom of Moses
-and judged by Scripture, "as it is written" (15:15); Rome reads one binding with the Spirit's
-authority, "it seemed good to the Holy Ghost, and to us" (15:28). Both pass through the apostles'
+and judged by Scripture, "just as it is written" (15:15); Rome reads one binding with the Spirit's
+authority, "it seemed good to the Holy Spirit and to us" (15:28). Both pass through the apostles'
 office: Calvin holds that it ended with them (Acts 1:21–22; 1 Corinthians 15:8), and *Lumen
 Gentium* 20 that it continues in the bishops (Acts 1:20; 2 Timothy 2:2; 1 Clement 44), and the
 texts alone leave that open (`apostolic_texts_leave_the_office_open`). Each grants the other's

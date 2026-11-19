@@ -201,12 +201,12 @@ def lxxReadsOneDescendantCited : AtomMeta :=
 What the New Testament says, cited to its text: each is a claim about what a
 passage reads, and none about what it means for Genesis. -/
 
-/-- `serpentNamedTheDevil`. "That old serpent, called the Devil, and Satan"
-(Revelation 12:9; again at 20:2): ὁ ὄφις ὁ ἀρχαῖος, the serpent of old. Collins
-gives these, with John 8:44, as the New Testament's identification of the
-serpent (147 n. 21). `consensus`: it is what the text reads. -/
+/-- `serpentNamedTheDevil`. "The serpent of old who is called the devil and
+Satan" (Revelation 12:9, LSB; again at 20:2): ὁ ὄφις ὁ ἀρχαῖος. Collins gives
+these, with John 8:44, as the New Testament's identification of the serpent (147
+n. 21). `consensus`: it is what the text reads. -/
 def serpentNamedTheDevilCited : AtomMeta :=
-  { label := "Revelation calls the devil 'that old serpent' (12:9, 20:2)"
+  { label := "Revelation calls the devil 'the serpent of old' (12:9, 20:2)"
   , kind := .textual
   , source :=
       { primary := .scripture Testimony.Scripture.serpentNamedTheDevil
@@ -225,9 +225,9 @@ def devilDestroyedThroughDeathCited : AtomMeta :=
       , tradition := .criticalScholarship
       , confidence := .consensus } }
 
-/-- `christDiedAndRose`. Christ "died for our sins", "was buried", and "rose
-again the third day" (1 Corinthians 15:3–4). `consensus`: it is what the text
-reads; whether it happened is not the claim. -/
+/-- `christDiedAndRose`. Christ "died for our sins", "was buried", and "was
+raised on the third day" (1 Corinthians 15:3–4, LSB). `consensus`: it is what
+the text reads; whether it happened is not the claim. -/
 def christDiedAndRoseCited : AtomMeta :=
   { label := "Paul says Christ died, was buried, and rose the third day"
   , kind := .textual
@@ -236,13 +236,13 @@ def christDiedAndRoseCited : AtomMeta :=
       , tradition := .criticalScholarship
       , confidence := .consensus } }
 
-/-- `sonMadeOfAWoman`. God sent forth his Son, "made of a woman", γενόμενον ἐκ
-γυναικός (Galatians 4:4). Whether Paul alludes to Genesis 3:15 here is
+/-- `sonMadeOfAWoman`. God sent forth His Son, "born of a woman", γενόμενον ἐκ
+γυναικός (Galatians 4:4, LSB). Whether Paul alludes to Genesis 3:15 here is
 disputed: Hamilton reads Jesus as "born of (i.e., the seed of) the woman", after
 Wifall (43, 53 n. 89); Lewis holds that it says only "that the Christ became
 human" (303). The atom claims only what Paul says. `consensus`. -/
 def sonMadeOfAWomanCited : AtomMeta :=
-  { label := "Paul says God sent his Son 'made of a woman' (Galatians 4:4)"
+  { label := "Paul says God sent his Son 'born of a woman' (Galatians 4:4)"
   , kind := .textual
   , source :=
       { primary := .scripture Testimony.Scripture.sonMadeOfAWoman
@@ -279,12 +279,12 @@ def seedWasOfTheWomanAloneCited : AtomMeta :=
       , tradition := .christianTypological
       , confidence := .disputed } }
 
-/-- `verseIsACurseOnTheSerpent`. "Because thou hast done this, thou art
-cursed" (3:14): the words of 3:15 are spoken to the serpent, as part of its
-sentence. Westermann classes them as a punishment oracle (260), the form-critical
-ground of his denial (`westermannLine`). `wellSupported`: the address and the
-curse are the text's; the classification is his, and is not contested by the
-readers cited here, who read a promise within the curse. -/
+/-- `verseIsACurseOnTheSerpent`. "Because you have done this, Cursed are you"
+(3:14, LSB): the words of 3:15 are spoken to the serpent, as part of its
+sentence. Westermann classes them as a punishment oracle (260), the
+form-critical ground of his denial (`westermannLine`). `wellSupported`: the
+address and the curse are the text's; the classification is his, and is not
+contested by the readers cited here, who read a promise within the curse. -/
 def verseIsACurseOnTheSerpentCited : AtomMeta :=
   { label := "Genesis 3:14–15 is a curse on the serpent, in the form of a punishment oracle"
   , kind := .interpretive
@@ -359,11 +359,11 @@ def strikerIsSingularCited : AtomMeta :=
       , confidence := .consensus } }
 
 /-- `serpentTwistsTheCommand`. What the text reads: the serpent speaks, and
-gives back God's command of 2:17 twisted — "Yea, hath God said, Ye shall not eat
-of every tree of the garden?" (3:1), "Ye shall not surely die" (3:4). Collins:
-"the snake's wording of v. 4 reflects knowledge of 2:17", and "animals do not
-have faculty of speech in Bible, hence there is some intervention here (cf Nu.
-22:28)" (146 n. 21). `consensus`: it is what the text reads. -/
+gives back God's command of 2:17 twisted — "Indeed, has God said, 'You shall not
+eat from any tree of the garden'?" (3:1), "You surely will not die!" (3:4, LSB).
+Collins: "the snake's wording of v. 4 reflects knowledge of 2:17", and "animals
+do not have faculty of speech in Bible, hence there is some intervention here
+(cf Nu. 22:28)" (146 n. 21). `consensus`: it is what the text reads. -/
 def serpentTwistsTheCommandCited : AtomMeta :=
   { label := "In Genesis 3 the serpent speaks, and knows and twists God's command"
   , kind := .textual

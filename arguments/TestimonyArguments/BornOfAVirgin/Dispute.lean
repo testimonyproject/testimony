@@ -7,9 +7,9 @@ import TestimonyArguments.BornOfAVirgin.Results
 
 Isaiah 7 opens in a crisis. The kings of Syria and of Israel have marched on
 Jerusalem, and Isaiah goes out to meet King Ahaz with a promise that the
-invasion will fail. He invites Ahaz to ask a sign, "either in the depth, or in
-the height above" (7:11, KJV). Ahaz refuses, and Isaiah answers that the Lord
-will give one anyway: the woman shall conceive and bear a son, and
+invasion will fail. He invites Ahaz to ask a sign, "deep as Sheol or high as
+heaven" (7:11, LSB). Ahaz refuses, and Isaiah answers that the Lord will give
+one anyway: the woman shall conceive and bear a son, and
 
 > "before the boy knows how to refuse the evil and choose the good, the land
 > whose two kings you dread will be deserted." (Isaiah 7:16)

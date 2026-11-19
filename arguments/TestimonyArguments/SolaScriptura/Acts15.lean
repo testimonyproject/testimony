@@ -5,28 +5,28 @@ import TestimonyArguments.SolaScriptura.Results
 # TestimonyArguments.SolaScriptura.Acts15 — the council at Jerusalem, read both ways
 
 Acts 15 tells of the council at Jerusalem, and both sides of the Reformation
-read it as their own. It begins with a demand: "certain men which
-came down from Judaea taught the brethren, and said, Except ye be circumcised
-after the manner of Moses, ye cannot be saved" (15:1). The apostles and elders
-meet. Peter asks "why tempt ye God, to put a yoke upon the neck of the
-disciples, which neither our fathers nor we were able to bear? But we believe
-that through the grace of the Lord Jesus Christ we shall be saved, even as they"
-(15:10–11). James answers from the prophets: "to this agree the words of the
-prophets; as it is written, After this I will return, and will build again the
-tabernacle of David, which is fallen down" (15:15–16, quoting Amos 9:11–12).
-The council writes to the gentile churches, "For it seemed good to the Holy
-Ghost, and to us, to lay upon you no greater burden than these necessary things"
-(15:28), and Paul and Silas, going through the cities, "delivered them the
-decrees for to keep, that were ordained of the apostles and elders which were at
-Jerusalem" (16:4).
+read it as their own. It begins with a demand: "Some men came down from Judea
+and began teaching the brothers, 'Unless you are circumcised according to the
+custom of Moses, you cannot be saved'" (15:1). The apostles and elders meet.
+Peter asks "why do you put God to the test by placing upon the neck of the
+disciples a yoke which neither our fathers nor we have been able to bear? But we
+believe that we are saved through the grace of the Lord Jesus, in the same way
+as they also are" (15:10–11). James answers from the prophets: "with this the
+words of the Prophets agree, just as it is written, 'After these things I will
+return, And I will rebuild the fallen booth of David'" (15:15–16, quoting Amos
+9:11–12). The council writes to the gentile churches, "For it seemed good to the
+Holy Spirit and to us to lay upon you no greater burden than these essentials"
+(15:28), and Paul and Silas, passing through the cities, "were delivering the
+decrees which had been decided upon by the apostles and elders who were in
+Jerusalem, for them to keep" (16:4).
 
-James's words are a quotation, not an allusion: he introduces them "as it is
-written" (`acts15QuotesAmos`). Calvin notes that the place "is not cited word
+James's words are a quotation, not an allusion: he introduces them "just as it
+is written" (`acts15QuotesAmos`). Calvin notes that the place "is not cited word
 for word as it is in the prophet". Luke gives Amos close to the Greek
 translation, the Septuagint. Where the Hebrew of Amos 9:12 reads "That they may
 possess the remnant of Edom", the Septuagint reads "that the remnant of men may
-seek" (ὅπως ἐκζητήσωσιν οἱ κατάλοιποι τῶν ἀνθρώπων), and so does Acts: "That the
-residue of men might seek after the Lord".
+seek" (ὅπως ἐκζητήσωσιν οἱ κατάλοιποι τῶν ἀνθρώπων), and so does Acts: "So that
+the rest of mankind may seek the Lord" (15:17).
 
 ## The Reformed reading
 
@@ -47,12 +47,12 @@ position reads Acts 15 this way (`acts15ReformedLine`).
 ## Rome's reading
 
 The council's letter claims more than agreement with Scripture: "it seemed good
-to the Holy Ghost, and to us". Joseph Wilhelm, writing on general councils in
+to the Holy Spirit and to us". Joseph Wilhelm, writing on general councils in
 the *Catholic Encyclopedia* of 1908, takes it as "the mind of the Apostles":
 they "put the seal of supreme authority on their decisions in attributing them
 to the joint action of the Spirit of God and of themselves", and general
 councils in union with the pope have the same "infallible authority". The
-decrees were then handed on to the churches to keep: "delivered" in 16:4
+decrees were then handed on to the churches to keep: "delivering" in 16:4
 (παρεδίδοσαν) is the verb whose noun is "tradition" (παράδοσις). Tradition III,
 the position resting on Vatican I, reads Acts 15 this way (`acts15RomanLine`).
 
@@ -63,39 +63,40 @@ So both readings pass through a second question: did the apostles' own office
 end with them, or does it continue in those who succeed them?
 
 The Reformers say it ended. The apostle chosen in Judas's place had to be one of
-the men "which have companied with us all the time that the Lord Jesus went in
-and out among us", to be "a witness with us of his resurrection" (Acts 1:21–22).
-Paul counts himself the last such witness: "last of all he was seen of me also,
-as of one born out of due time" (1 Corinthians 15:8). Peter puts Paul's letters
-with "the other scriptures" (2 Peter 3:15–16), and Paul writes as "an apostle of
-Jesus Christ" beside "Timothy our brother" (2 Corinthians 1:1; Colossians 1:1).
-Calvin draws the conclusion in the *Institutes*: the offices of apostle,
-prophet and evangelist "were not instituted in the Church to be perpetual", and
-the twelve, "to the number of whom Paul was afterwards added", were
-"distinguished from others by a peculiar title" (IV.iii.4–5). He does not say
-that nothing passes on. Pastors "have the same function as apostles", the
+the men "who have accompanied us all the time that the Lord Jesus went in and
+out among us", to be "a witness with us of His resurrection" (Acts 1:21–22).
+Paul counts himself the last such witness: "last of all, as to one untimely
+born, He appeared to me also" (1 Corinthians 15:8). Peter puts Paul's letters
+with "the rest of the Scriptures" (2 Peter 3:15–16), and Paul writes as "an
+apostle of Christ Jesus" beside "Timothy our brother" (2 Corinthians 1:1;
+Colossians 1:1). Calvin draws the conclusion in the *Institutes*: the offices of
+apostle, prophet and evangelist "were not instituted in the Church to be
+perpetual", and the twelve, "to the number of whom Paul was afterwards added",
+were "distinguished from others by a peculiar title" (IV.iii.4–5). He does not
+say that nothing passes on. Pastors "have the same function as apostles", the
 preaching of the gospel and the sacraments, but not their office
 (`apostlesOfficeEndedLine`).
 
 Rome says it continues. The council was not the apostles alone but "the
-apostles and elders" (15:6, 22–23; 16:4). Peter applies the Psalm to Judas, "his
-bishoprick (ἐπισκοπή) let another take" (Acts 1:20); Paul bids Timothy "commit thou
-to faithful men, who shall be able to teach others also" (2 Timothy 2:2); and
-Clement of Rome, writing to Corinth near the end of the first century, records
-that the apostles appointed bishops and deacons and "afterwards gave
+apostles and elders" (15:6, 22–23; 16:4). Peter applies the Psalm to Judas, "Let
+another man take his office (ἐπισκοπή)" (Acts 1:20), where the word is the one
+from which "bishop" (ἐπίσκοπος, overseer) comes; Paul bids Timothy "entrust
+these to faithful men who will be able to teach others also" (2 Timothy 2:2);
+and Clement of Rome, writing to Corinth near the end of the first century,
+records that the apostles appointed bishops and deacons and "afterwards gave
 instructions, that when these should fall asleep, other approved men should
 succeed them in their ministry" (1 Clement 44). The Second Vatican Council
 concludes that "the apostles' office of nurturing the Church is permanent, and
-is to be exercised without interruption by the sacred order of bishops"
-(*Lumen Gentium* 20) (`apostolicSuccessionLine`). Calvin grants Acts 1:20, that
-"another may succeed him", and answers at Acts 1:21 that the apostleship "is not
-without the preaching of the gospel", so that the bishops of his day "brag that
-they are the successors of the apostles; but wherein are they like unto them?"
+is to be exercised without interruption by the sacred order of bishops" (*Lumen
+Gentium* 20) (`apostolicSuccessionLine`). Calvin grants Acts 1:20, that "another
+may succeed him", and answers at Acts 1:21 that the apostleship "is not without
+the preaching of the gospel", so that the bishops of his day "brag that they are
+the successors of the apostles; but wherein are they like unto them?"
 
 One text cuts across the Reformed reading of the salutations. 1 Thessalonians is
-from "Paul, and Silvanus, and Timotheus" (1:1), and says "we might have been
-burdensome, as the apostles of Christ" (2:6). If "apostles" takes in Silvanus
-and Timothy, the title was wider than the eyewitnesses. Calvin reads it of Paul
+from "Paul and Silvanus and Timothy" (1:1), and says "as apostles of Christ we
+could have been a burden to you" (2:6). If "apostles" takes in Silvanus and
+Timothy, the title was wider than the eyewitnesses. Calvin reads it of Paul
 alone, "inasmuch as he was an Apostle of Christ", and H. Coppieters, in the
 *Catholic Encyclopedia*, lists the verse among the passages "in which the
 extension of the word Apostle is doubtful". The verse is recorded for what it
@@ -127,10 +128,11 @@ council binds with the Spirit's authority neither follows nor fails
 
 Nor does Rome's reading reach the premise the Mark 7 case for sola scriptura
 needs, that no unwritten tradition can now be shown to be apostolic. The
-decrees handed on in 16:4 were not unwritten: "they wrote letters by them"
+decrees handed on in 16:4 were not unwritten: "they sent this letter by them"
 (15:23), and the letter is in Scripture (15:23–29). Grant Rome's reading of Acts
 15 and that the decree was written, and the premise about unwritten tradition is
-left exactly where it was (`romes_reading_of_acts15_leaves_unwritten_tradition_open`).
+left exactly where it was
+(`romes_reading_of_acts15_leaves_unwritten_tradition_open`).
 
 These lines join the Protestant and Vatican I positions, and not the dispute
 over Mark 7. That dispute is about tradition, and none of its parties says
@@ -146,18 +148,18 @@ open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 
 /-! ### James and Amos -/
 
-/-- Acts 15:16 — "After this I will return, and will build again the tabernacle
-of David", where James's quotation of the prophets begins. -/
+/-- Acts 15:16 — "After these things I will return, And I will rebuild the
+fallen booth of David" (LSB), where James's quotation of the prophets begins. -/
 @[nolint defsWithUnderscore] def acts15_16 : Passage := ⟨.acts, 15, 16⟩
 
-/-- Amos 9:11 — "In that day will I raise up the tabernacle of David that is
-fallen". -/
+/-- Amos 9:11 — "In that day I will raise up the fallen booth of David" (LSB).
+-/
 @[nolint defsWithUnderscore] def amos9_11 : Passage := ⟨.amos, 9, 11⟩
 
 /-- **Acts 15:16–17 quotes Amos 9:11–12.** Typed `.quotation`, not `.allusion`:
-James introduces the words "as it is written". Calvin notes at 15:16 that they
-are "not cited word for word as it is in the prophet"; Luke gives them close to
-the Septuagint. -/
+James introduces the words "just as it is written". Calvin notes at 15:16 that
+they are "not cited word for word as it is in the prophet"; Luke gives them
+close to the Septuagint. -/
 def acts15QuotesAmos : IntertextEdge :=
   { fromPassage := acts15_16
   , toPassage := amos9_11
@@ -182,7 +184,7 @@ def acts15Reformed : ArgumentPackage Claim :=
     inferences :=
       apostlesOfficeEndedLine.inference.toList ++ acts15ReformedLine.inference.toList }
 
-/-- **Acts 15, Rome's reading**: "it seemed good to the Holy Ghost, and to us",
+/-- **Acts 15, Rome's reading**: "it seemed good to the Holy Spirit and to us",
 the decrees delivered to keep, the council of "the apostles and elders", the
 succession texts and the step from them that the apostles' office continues, and
 the step to councils: a general council binds with the Holy Spirit's
@@ -309,7 +311,7 @@ theorem acts15_texts_leave_the_council_open :
 #print axioms acts15_texts_leave_the_council_open
 
 /-- **Rome's reading of Acts 15 does not reach unwritten tradition.** Grant that
-"it seemed good to the Holy Ghost, and to us", that the decrees were delivered
+"it seemed good to the Holy Spirit and to us", that the decrees were delivered
 to keep, that the council was "the apostles and elders", the texts on the
 apostles' successors, Rome's steps from them, and that the decree went out as a
 letter (15:23–29): whether any unwritten tradition can now be shown to be

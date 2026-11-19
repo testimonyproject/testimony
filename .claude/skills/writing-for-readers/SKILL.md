@@ -29,7 +29,18 @@ The first sets the vocabulary. The second sets the accuracy.
 
 ## Rules
 
-1. Quote the passage in English before arguing about it.
+1. Quote the passage in English before arguing about it, from a modern
+   translation made from the earliest texts, never the King James Version:
+   NET, LSB or NRSV first, then ESV, then NIV. Name the translation once per
+   argument and mark any other, "(Genesis 3:15, LSB)". Keep KJV wording only
+   where a cited source itself quotes the KJV, and say it is the KJV's; never
+   for a contributor's own quotation. If the source's reading rests on a
+   textual variant the KJV follows, or on a Latin rendering that departs from
+   the Greek, encode that as a step of its own, cited, or file an issue for it.
+   Where a
+   translation's wording takes a side on a disputed word, give the original and
+   say how the translations part. Licences, limits and notices:
+   `docs/src/writing-for-readers.md`, "Quote a modern translation".
 2. English first, the original term in brackets, once per section:
    "works of the law" (ἔργα νόμου).
 3. Gloss every technical word where it is used, theological ("forensic": a
