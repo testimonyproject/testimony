@@ -940,18 +940,32 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .plausible } }
   | .johnBelievingKeepsItsSense =>
-    { label := "‘Believe’ keeps its sense between John 6:29 and John 3:16–18"
+    { label := "‘Believe’ keeps its sense between John 6:29 and ‘whoever believes in him’ in " ++
+        "John 3:16 and 3:18"
     , kind := .linguistic
-      -- `wellSupported`: both passages have the same construction, πιστεύειν
-      -- εἰς, and the two readers who divide over what Johannine believing is
-      -- read it one way across them. Aquinas reads 3:18's "believes in him" as
-      -- he reads 6:29, of faith that "tends toward him through love" (Super
-      -- Ioannem c. 3, lect. 3, nn. 485–486; on 6:29, n. 901). His dissent is
-      -- over what the sense is (`johannineBelievingIsTrust`), not whether it is
-      -- kept.
+      -- The ground is in the Greek: both passages have πιστεύειν εἰς, "believe
+      -- into" (`john_believing_into_in_both_passages`), and no edition in the
+      -- SBLGNT's apparatus (WH, Tregelles, NA28, Robinson–Pierpont) varies the
+      -- εἰς at 3:16, 3:18 or 6:29. Thayer lists all three under one sense
+      -- (1.b.γ, p. 511); Moulton (pp. 67–68) gives the construction one
+      -- meaning, "believe in", against the bare dative. Calvin on 6:29: "What is
+      -- the import of the word believe, we have explained under the Third
+      -- Chapter." Aquinas reads both as faith that tends toward him through
+      -- charity (c. 3, lect. 3, n. 486; c. 6, n. 901); his dissent is over what
+      -- the sense is (`johannineBelievingIsTrust`), not whether it is kept.
+      -- `wellSupported`: no reader found grants the construction and gives 6:29
+      -- another sense than 3:16 and 3:18a. Origen does split 3:18b, "in the
+      -- name", from "in him" (Commentary on John X.28), which is why the claim
+      -- is stated of "believes in him" only. Abbott allows "different shades of
+      -- meaning" in different contexts (§1517), of 6:35 and 6:40, not of 6:29.
+      -- Not `consensus`: BDAG, Bultmann, Schnackenburg and Brown are unread.
     , source :=
-        { primary := .work calvinJohn (.adLoc ⟨.john, 6, 29⟩)
-        , supporting := [.work aquinasJohn (.sectionRef "c. 3, lect. 3, nn. 485–486; c. 6, n. 901")]
+        { primary := .work thayerLexicon (.page 511)
+        , supporting :=
+            [ .work sblgnt (.sectionRef "John 3:16, 18; 6:29, with apparatus")
+            , .work moultonProlegomena (.pages 67 68)
+            , .work calvinJohn (.adLoc ⟨.john, 6, 29⟩)
+            , .work aquinasJohn (.sectionRef "c. 3, lect. 3, nn. 485–486; c. 6, n. 901") ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .jamesUsesDikaioAsOutsidePaul =>

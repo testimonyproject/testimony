@@ -1,5 +1,6 @@
 import TestimonyArguments.SolaFide.Results
 import Testimony.Logic.Because
+import Testimony.Corpus.Greek
 
 /-!
 # TestimonyArguments.SolaFide.Johannine — "this is the work of God, that you believe"
@@ -40,6 +41,31 @@ one reading on which the conclusion turns. On Calvin's reading John supplies
 faith alone without the readings the other strands depend on
 (`johannine_strand_establishes`).
 On Aquinas's it does not (`johannine_strand_rests_on_believing_as_trust`).
+
+## The same believing at 3:16 and at 6:29
+
+The strand reads the believing of 6:29 by the believing of 3:16–18, so it needs the word to mean the
+same in both. The Greek shows why a reader would expect it to. "Whoever believes in him" at 3:16 and
+3:18 is ὁ πιστεύων εἰς αὐτόν, and "that you believe in him whom he has sent" at 6:29 is πιστεύητε
+εἰς ὃν ἀπέστειλεν. Both are "believe into" (πιστεύειν εἰς) (`john_believing_into_in_both_passages`),
+a phrase Westcott calls "peculiarly characteristic of St John" (on 2:11, p. 39). The manuscripts do
+not unsettle it: no edition in the apparatus of the SBL Greek New Testament reads otherwise at those
+verses. Thayer's lexicon lists the three verses under one sense, "to have a faith directed unto,
+believing or in faith to give one's self up to, Jesus" (p. 511). Moulton's grammar gives the
+construction one meaning, "believe in", and sets it apart from "believe" with a bare dative (pp.
+67–68), as when the crowd at 6:30 asks for a sign so that they may believe *him* (πιστεύσωμέν σοι).
+Calvin, on 6:29, refers the reader back to chapter 3 for what "believe" means there, and Aquinas
+reads both verses of faith formed by charity. The two divide over what the believing is, and agree
+that it is one believing.
+
+So the premise that "believe" keeps its sense is rated well supported
+(`johnBelievingKeepsItsSense`). It is stated of "believes in him" only. At 3:18 John goes on to "has
+not believed in the name", and Origen reads believing in the name as a lesser faith than believing
+in him (*Commentary on John* X.28). Nor does the construction settle the sense by itself. John uses
+the same phrase of believers whom Jesus goes on to rebuke (8:30, with 8:31–47) and of rulers who
+would not confess him (12:42), so it is the context of 3:16 and 6:29, eternal life and the work God
+asks, that the readers above read alike. The standard modern lexicon (BDAG) and the commentaries of
+Bultmann, Schnackenburg and Brown have not been read for it.
 
 ## John has no word for "justify"
 
@@ -157,6 +183,33 @@ def thomistOnJohn : ArgumentPackage Claim :=
             [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johnBelievingKeepsItsSense]
         , thomistLine ]
         sharedGrounds closingSteps }
+
+/-! ### "Believe into", read from the Greek -/
+
+greek_passage greekJohnThreeSixteenToEighteen from JHN 3 16 18
+greek_passage greekJohnSixTwentyNine from JHN 6 29
+
+/-- Each place in a passage where a form of "believe" (πιστεύω) is followed at once by "into"
+(εἰς): its chapter, its verse, and the verb as printed. -/
+def believingInto (ws : List Corpus.Greek.Token) : List (Nat × Nat × String) :=
+  (ws.zip ws.tail).filterMap fun (t, u) =>
+    if t.lemma == "πιστεύω" && u.lemma == "εἰς" then some (t.chapter, t.verse, t.text) else none
+
+/-- **John 3:16–18 and 6:29 share the construction "believe into" (πιστεύειν εἰς), read from the
+Greek.** In the SBL Greek New Testament, "whoever believes in him" at 3:16 and at 3:18 is ὁ
+πιστεύων εἰς αὐτόν, and 3:18 goes on to "has not believed in the name" (πεπίστευκεν εἰς τὸ
+ὄνομα). At 6:29 "that you believe in him whom he has sent" is πιστεύητε εἰς ὃν ἀπέστειλεν. No
+other form of the verb in these verses is followed by εἰς: the "whoever does not believe" of
+3:18 has no object.
+
+What it does not claim: that a shared construction fixes a shared sense. It is the ground the
+premise that "believe" keeps its sense rests on (`johnBelievingKeepsItsSense`), and the sense
+is argued there, from the lexicon and the scholars cited for it. -/
+theorem john_believing_into_in_both_passages :
+    believingInto greekJohnThreeSixteenToEighteen =
+        [(3, 16, "πιστεύων"), (3, 18, "πιστεύων"), (3, 18, "πεπίστευκεν")] ∧
+      believingInto greekJohnSixTwentyNine = [(6, 29, "πιστεύητε")] := by
+  decide
 
 /-! ### Results -/
 

@@ -2785,6 +2785,49 @@ Library, ISBN 9780226039336 (3rd ed., University of Chicago Press, 2000). -/
   , place := some "Chicago"
   , edition := some "3rd" }
 
+/-- Thayer's lexicon, his translation and enlargement of Grimm's edition of Wilke's *Clavis
+Novi Testamenti*. Cited for πιστεύω, sense 1.b.γ (p. 511): "the phrase πιστεύειν εἰς τὸν
+Ἰησοῦν, εἰς τ. υἱὸν τοῦ θεοῦ, etc., is very common; prop. to have a faith directed unto,
+believing or in faith to give one's self up to, Jesus", listing John 3:16, 18 and 6:29 under
+the one sense. Read in the American Book Company's corrected edition scanned at the Internet
+Archive, whose title page is undated and gives copyright 1886 and 1889 to Harper & Brothers.
+It carries no ISBN; the Hendrickson reprint (ISBN 9781565632097) has not been read. -/
+@[bib_entry] def thayerLexicon : BibEntry := .book
+  { core :=
+      { key := "thayer-lexicon-1889"
+      , role := .text
+      , contributors := { authors := [.person "Joseph Henry" "Thayer"] }
+      , title := "A Greek-English Lexicon of the New Testament"
+      , subtitle := some "Being Grimm's Wilke's Clavis Novi Testamenti"
+      , year := some { value := 1889 }
+      , identifiers :=
+          [ .url "https://archive.org/details/greekenglishlexi00grimuoft"
+                 (some "2026-11-19") ] }
+  , publisher := "American Book Company"
+  , place := some "New York"
+  , edition := some "corrected" }
+
+/-- Moulton's *Prolegomena*, the first volume of his grammar of New Testament Greek. Cited for
+πιστεύειν εἰς (pp. 67–68): "The really important matter is the recognition of a clear
+distinction between believe on or in and believe with the dative simply", with a count of the
+constructions in which John's Gospel and First John have 37 of the New Testament's 45 uses of
+εἰς. Read in the second edition, with corrections and additions, scanned at the Internet
+Archive; it carries no ISBN. -/
+@[bib_entry] def moultonProlegomena : BibEntry := .book
+  { core :=
+      { key := "moulton-prolegomena-1906"
+      , role := .scholarship
+      , contributors := { authors := [.person "James Hope" "Moulton"] }
+      , title := "A Grammar of New Testament Greek"
+      , subtitle := some "Volume I: Prolegomena"
+      , year := some { value := 1906 }
+      , identifiers :=
+          [ .url "https://archive.org/details/grammarofnewtest01mouluoft"
+                 (some "2026-11-19") ] }
+  , publisher := "T. & T. Clark"
+  , place := some "Edinburgh"
+  , edition := some "2nd" }
+
 /-- Morris's lexical study of the apostolic vocabulary of salvation — redeem,
 propitiate, reconcile, justify — against its Old Testament background. Cited for
 the forensic sense of δικαιόω and its antithesis with condemnation. Verified at
