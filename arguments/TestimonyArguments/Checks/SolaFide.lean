@@ -56,9 +56,9 @@ Sola fide
     johannineLine (Calvin): pisteuo
     johannineWithoutTrust (Calvin): pisteuo
     lexicalLine (Silva): dikaioo
-    paulineLine (uncited): dikaioo, ergaNomou
-    paulineWithoutPistisChristou (uncited): dikaioo, ergaNomou
-    paulineWithoutWorksOfLaw (uncited): dikaioo, ergaNomou
+    paulineLine (Calvin): dikaioo, ergaNomou
+    paulineWithoutPistisChristou (Calvin): dikaioo, ergaNomou
+    paulineWithoutWorksOfLaw (Calvin): dikaioo, ergaNomou
     renewalWordLine (Trent): dikaioo
     romansFourExegesisLine (Moo): logizomai, erga
   read one word by a kindred one, the bridge unstated:
