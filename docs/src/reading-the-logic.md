@@ -215,10 +215,10 @@ The Isaiah 7:14 dispute shows both. Against the scriptural reading alone,
 nothing is forced: the critic and the scriptural reading each rest on something
 rated `disputed`, so each defeats the other, and the grounded extension is
 empty. Add the replies. Each defeats the critic, by denying a premise the
-critic's case turns on. The critic defeats two of them back, because their
-inferences are as contested as its premises; it cannot defeat Postell's two
-counterexamples, whose inference no cited source contests. So those two stand
-unanswered, and they defend everything else the critic attacked: the grounded
+critic's case turns on. The critic defeats three of them back, because their
+inferences are as contested as its premises; it cannot defeat Postell's argument
+from Isaiah 9 and 11, whose inference no cited source contests. So that one
+stands unanswered, and it defends everything else the critic attacked: the grounded
 extension is the scriptural reading with all the replies. The replies have not
 proved the predictive reading. They have answered the objection to it, which is
 what a reply is for.

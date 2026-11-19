@@ -97,7 +97,9 @@ rival is cited to the Westminster Confession, I.x.
   Ahaz's own day cannot also foretell a virgin birth. Heard alone against the
   scriptural reading, nothing prevails. Heard with the replies of Berry,
   Postell and Motyer, the scriptural reading prevails, and the verdict rests on
-  Postell's two counterexamples ("Was Isaiah's sign only for Ahaz?").
+  Postell's argument from Isaiah 9 and 11 ("Was Isaiah's sign only for Ahaz?").
+  His second counterexample, Micah 5, ties with the critic: Rashi reads Micah's
+  ruler as the Messiah and still reads 7:14 of a child born in Ahaz's day.
 - **Does Isaiah's grammar say the woman was already pregnant?** Paul Wegner
   argues so, and that a pregnant woman is no virgin. His argument is valid, and
   it needs the pregnancy to be an ordinary one. Supplied from his own reading of

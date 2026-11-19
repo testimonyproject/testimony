@@ -63,8 +63,8 @@ and it is the kind of thing prose almost never delivers.
 
 **Circularity becomes visible.** A premise grounded only in Scripture is
 epistemically different from one grounded in scholarship, and the library types
-the difference. `Source.isScriptureOnly` computes it, and every argument
-reports its scripture-only atoms. An argument from Scripture that reads
+the difference. `Source.isScriptureOnly` computes it, and every package's page
+lists the readings it takes from Scripture alone. An argument from Scripture that reads
 Scripture a particular way and cites only Scripture for that reading is
 assuming part of what it sets out to show. That is sometimes fine. It should
 never be invisible.

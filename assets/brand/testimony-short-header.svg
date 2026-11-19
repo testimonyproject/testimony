@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1080 236" width="1080" height="236">
+  <!-- Testimony — header bar for vertical videos (YouTube Shorts, Reels), 1080×236.
+       Sits in the top band of a 1080×1920 frame, over the blurred fill above the
+       picture. Transparent outside the bar, so export it with a clear background.
+       The mark is the primary mark (testimony-mark.svg), tile included, at 108 px. -->
+  <defs>
+    <linearGradient id="ink" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1f3a5f"/>
+      <stop offset="100%" stop-color="#0d1b2a"/>
+    </linearGradient>
+    <filter id="lift" x="-10%" y="-30%" width="120%" height="160%">
+      <feDropShadow dx="0" dy="6" stdDeviation="10" flood-color="#000000" flood-opacity="0.45"/>
+    </filter>
+  </defs>
+
+  <!-- bar: navy at 85% so the scene shows faintly through -->
+  <rect x="36" y="44" width="1008" height="150" rx="30" fill="#0d1b2a" fill-opacity="0.85" filter="url(#lift)"/>
+
+  <!-- primary mark, 512 viewBox scaled to 108 px -->
+  <g transform="translate(58,65) scale(0.2109375)">
+    <rect width="512" height="512" rx="96" fill="url(#ink)"/>
+    <g stroke="#e8c87a" stroke-width="52" stroke-linecap="round" fill="none">
+      <line x1="150" y1="104" x2="150" y2="408"/>
+      <line x1="92" y1="256" x2="388" y2="256"/>
+    </g>
+    <circle cx="150" cy="104" r="38" fill="#e8c87a"/>
+    <circle cx="150" cy="408" r="38" fill="#e8c87a"/>
+    <g stroke="#f2f2f0" stroke-width="28" stroke-linecap="butt" fill="none">
+      <line x1="150" y1="196" x2="150" y2="356"/>
+      <line x1="92" y1="256" x2="212" y2="256"/>
+    </g>
+    <rect x="404" y="220" width="72" height="72" rx="6" fill="#f2f2f0"/>
+  </g>
+
+  <text x="194" y="118" font-family="Georgia, 'Times New Roman', serif" font-size="56" fill="#f2f2f0">Testimony Project</text>
+  <text x="196" y="168" font-family="'SF Mono', Menlo, monospace" font-size="34" fill="#e8c87a">testimonyproject.info</text>
+</svg>

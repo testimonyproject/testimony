@@ -5,37 +5,36 @@ import TestimonyArguments.SolaScriptura.Acts15
 
 A reader who has followed Jesus against the elders in Mark 7 meets him, a few
 days before his death, saying something that sounds like the opposite. "The
-scribes and the Pharisees sit in Moses' seat: All therefore whatsoever they bid
-you observe, that observe and do; but do not ye after their works: for they
-say, and do not" (Matthew 23:2–3). The "seat" (καθέδρα) is a teacher's chair.
-The verb for "observe" (τηρεῖτε) is the one Mark 7:9 uses for keeping "your own
-tradition", in the text the SBL Greek New Testament prints; the Nestle-Aland
-edition prints "establish" (στήσητε) there instead. J. W. Wenham, in his 1953
-lecture on Jesus and the Old Testament, finds the saying "even more remarkable"
-than Matthew 5:17–20, and comments: "To Jesus scribal lore was valuable if
-linked with spiritual understanding". Jesus upholds the teaching of men he goes on to
-rebuke. Both sides of the Reformation read the saying, and they read it in
-opposite directions.
+scribes and the Pharisees have seated themselves in the chair of Moses;
+therefore all that they tell you, do and keep, but do not do according to their
+deeds; for they say things and do not do them" (Matthew 23:2–3). The "chair"
+(καθέδρα), Moses' seat, is a teacher's chair. The verb for "keep" (τηρεῖτε) is
+the one Mark 7:9 uses for keeping "your tradition", in the text the SBL Greek
+New Testament prints; the Nestle-Aland edition prints "establish" (στήσητε)
+there instead. J. W. Wenham, in his 1953 lecture on Jesus and the Old Testament,
+finds the saying "even more remarkable" than Matthew 5:17–20, and comments: "To
+Jesus scribal lore was valuable if linked with spiritual understanding". Jesus
+upholds the teaching of men he goes on to rebuke. Both sides of the Reformation
+read the saying, and they read it in opposite directions.
 
 ## The Reformed reading
 
-The same discourse condemns a teaching of the same scribes: "Woe unto you, ye
-blind guides, which say, Whosoever shall swear by the temple, it is nothing; but
-whosoever shall swear by the gold of the temple, he is a debtor!" (23:16–22). So
-Jesus cannot be binding his hearers to everything the scribes say. Calvin takes
-"Moses' seat" to mean the law taught from it: "to sit in the chair of Moses is
-nothing else than to teach, according to the Law of God, how we ought to live",
-and so "Christ exhorts the people to obey the scribes, only so far as they
-adhere to the pure and simple exposition of the Law". He grants that the seat
-"denotes, at the same time, a lawful calling", and that the scribes were to be
-heard "because they were the public teachers of the Church". What he denies is
-that the station is enough. "The Papists reckon it enough, that those who issue
-laws should possess the title and occupy the station". Were that so, there would
-be "no good ground" for Jesus' saying in Matthew 15:9, the parallel of Mark 7,
-"that it is in vain to worship God by the commandments of men". On this reading
-an office in the Church is heard as far as it teaches God's word, and not for
-its seat alone. The Protestant position reads Matthew 23 this way
-(`mosesSeatReformedLine`).
+The same discourse condemns a teaching of the same scribes: "Woe to you, blind
+guides, who say, 'Whoever swears by the sanctuary, that is nothing; but whoever
+swears by the gold of the sanctuary is obligated'" (23:16–22). So Jesus cannot
+be binding his hearers to everything the scribes say. Calvin takes "Moses' seat"
+to mean the law taught from it: "to sit in the chair of Moses is nothing else
+than to teach, according to the Law of God, how we ought to live", and so
+"Christ exhorts the people to obey the scribes, only so far as they adhere to
+the pure and simple exposition of the Law". He grants that the seat "denotes, at
+the same time, a lawful calling", and that the scribes were to be heard "because
+they were the public teachers of the Church". What he denies is that the station
+is enough. "The Papists reckon it enough, that those who issue laws should
+possess the title and occupy the station". Were that so, there would be "no good
+ground" for Jesus' saying in Matthew 15:9, the parallel of Mark 7, "that it is
+in vain to worship God by the commandments of men". On this reading an office in
+the Church is heard as far as it teaches God's word, and not for its seat alone.
+The Protestant position reads Matthew 23 this way (`mosesSeatReformedLine`).
 
 ## Rome's reading
 

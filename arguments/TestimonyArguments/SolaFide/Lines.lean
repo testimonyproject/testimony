@@ -1,4 +1,5 @@
 import TestimonyArguments.SolaFide.Atoms
+import TestimonyArguments.SolaFide.Sources
 import Testimony.Logic.Line
 import TestimonyArguments.Works
 
@@ -66,7 +67,8 @@ before it (7:41–43). Three readers are cited for it:
 - Osvaldo Padilla: her actions "stem from the fact that she loves much because
   she has been forgiven much".
 - Melanchthon, in the *Apology of the Augsburg Confession*: "Christ interprets
-  Himself when He adds: Thy faith hath saved thee".
+  Himself when He adds: Thy faith hath saved thee", the translation giving Luke
+  7:50 in the King James wording.
 - Marshall, in his commentary on the Greek text, from the grammar: "for" here
   means "as is evidenced by the fact that".
 
@@ -296,6 +298,26 @@ each of them says. -/
 def toThroughFaith : Formula Claim :=
   ⋀ [p .faithIsSufficient, p .ephesians2_8_9] ➝ p .salvationThroughFaith
 
+/-- The rating of Paul's step: `disputed`. Calvin draws it: "when we say that a
+man is justified by faith alone", and he refuses the plea that "the works
+excluded are ceremonial, not moral works" (*Institutes* III.xi.19). Trent grants
+the grounds and denies the conclusion. It reads "justified by faith" as the
+believer's faith, excludes every work, faith or works, from meriting the grace
+of justification (Session VI, ch. 8), and condemns "by faith alone" (canon 9).
+Augustine does the same before it. He takes "works of the law" to include "You
+shall not covet", and says "a man is not justified by the precepts of a holy
+life, but by faith in Jesus Christ"; the faith he means is the faith "which
+works by love" (*On the Spirit and the Letter*, chs. 21–22 and 26). -/
+def paulineInference : Source :=
+  { primary := .work calvinInstitutes (.sectionRef "III.xi.19")
+  , supporting :=
+      [ .work tannerDecrees
+          (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 8")
+      , .work npnfAugustineAntiPelagian
+          (.sectionRef "On the Spirit and the Letter, chs. 21–22 and 26") ]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
 /-- Paul's line of argument. What is distinctive to it is the reading of Galatians
 as a letter against requiring circumcision, and two disputed readings: of "works
 of the law" (ἔργα νόμου) and of "faith in Christ" (πίστις Χριστοῦ). The verses
@@ -312,7 +334,25 @@ def paulineLine : Line Claim :=
       [ p .galatiansOpposesCircumcisionAsRequirement, p .worksOfLawMeansWorksGenerally
       , p .pistisChristouObjective, p .paulsWordsKeepTheirSense ]
   , step := paulineToFaithAlone
-  , delivers := p .justificationByFaithAlone }
+  , delivers := p .justificationByFaithAlone
+  , inference := some paulineInference }
+
+/-- The rating of Luke's step: `disputed`. Calvin draws it. On 7:47, "loving is
+not here said to be the cause of pardon, but a subsequent manifestation"; on
+7:50, the saying "refutes also the error of those who imagine that the
+forgiveness of sins is purchased by charity", for Christ teaches "that we
+embrace by faith the offered mercy" (*Harmony*, vol. 2, pp. 139–141).
+Melanchthon reads the passage the same way (*Apology* IV). Trent, applied to the
+woman as the library applies it to the tax collector (`trentAgainstThePleaAlone`),
+grants that her faith saved her and that her love followed, and still requires
+the dispositions of Session VI, ch. 6, and condemns "nothing else is required"
+(canon 9). The step passes from one woman to whoever believes, and that is where
+Trent presses. -/
+def dominicalInference : Source :=
+  { primary := .work calvinHarmony2 (.pages 139 141)
+  , supporting := [.work bookOfConcord melanchthonOnLuke7]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
 
 /-- Luke's line of argument, resting on Jesus' words and not Paul's. What is
 distinctive to it is the reading of "saved" at Luke 7:50, and the reading of
@@ -322,7 +362,23 @@ def dominicalLine : Line Claim :=
   { name := "Dominical strand (σῴζω at Luke 7:50)"
   , grounds := [p .sozoIsSoteriological, p .luke7_47LoveIsEvidence]
   , step := dominicalToSufficiency
-  , delivers := p .faithIsSufficient }
+  , delivers := p .faithIsSufficient
+  , inference := some dominicalInference }
+
+/-- The rating of Peter's step: `disputed`. Calvin draws it: "those are justified
+by faith who, being free and quit from the yoke of the law, seek for salvation
+in the grace of Jesus Christ", the yoke being the law that "doth not promise
+life without adding the condition of perfect obedience" (*Acts*, vol. 2,
+pp. 57–59). He names the rival on the same page: those "who say that we are
+justified by the grace of Christ, because he regenerateth us by his Spirit, and
+giveth us strength to fulfil the law" (p. 59). Trent is that reader. It grants
+that not even the Jews "by the very letter itself of the law of Moses, were able
+to be liberated" (Session VI, ch. 1), and condemns faith alone (canon 9). -/
+def apostolicInference : Source :=
+  { primary := .work calvinActs2 (.pages 57 60)
+  , supporting := [.work bruceActs (.adLoc ⟨.acts, 15, 11⟩)]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
 
 /-- Peter's line of argument, as Luke reports him. What is distinctive to it is the
 reading of the yoke.
@@ -337,7 +393,8 @@ def apostolicLine : Line Claim :=
   { name := "Apostolic strand (Acts 15:7–11)"
   , grounds := [p .acts15YokeIsLawAsCondition]
   , step := apostolicToSufficiency
-  , delivers := p .faithIsSufficient }
+  , delivers := p .faithIsSufficient
+  , inference := some apostolicInference }
 
 /-- Calvin's step from John to justification. John never uses Paul's verb
 "justify" (δικαιόω), so passing from "eternal life through believing" to
@@ -363,6 +420,23 @@ def johannineLine : Line Claim :=
   , delivers := p .justificationByFaithAlone
   , inference := some calvinOnJohnSix }
 
+/-- The rating of the step that harmonises James with Paul: `disputed`. Moo and
+Johnson draw it at 2:24, and Calvin before them: James means "an empty opinion
+altogether differing from true faith", and "he is speaking of the manifestation,
+not of the imputation of righteousness" (*Institutes* III.xvii.11–12). Luther
+grants both grounds and denies the conclusion. In his preface to James (1522) he
+says James "wanted to guard against those who relied on faith without works",
+and holds works to be faith's fruit throughout, yet finds the letter "flatly
+against St. Paul and all the rest of Scripture in ascribing justification to
+works". -/
+def jamesInference : Source :=
+  { primary := .work mooJames (.adLoc james2_24)
+  , supporting :=
+      [ .work johnsonJames (.adLoc james2_24)
+      , .work calvinInstitutes (.sectionRef "III.xvii.11–12") ]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
 /-- The line that answers James. It is not a route to the conclusion. It answers the
 one verse that appears to stand against it. -/
 @[solaFideDefs]
@@ -370,7 +444,8 @@ def jamesLine : Line Claim :=
   { name := "Harmonisation of James 2:24"
   , grounds := [p .james2TargetsDeadFaith, p .worksAreFruitNotGround]
   , step := jamesHarmonisation
-  , delivers := p .james2_24Compatible }
+  , delivers := p .james2_24Compatible
+  , inference := some jamesInference }
 
 /-- **The apocalyptic reading** (Martyn, Campbell). If "faith of Christ" is Christ's
 own faithfulness, and "the righteousness of God" (δικαιοσύνη θεοῦ) is God's act
@@ -398,7 +473,8 @@ def apocalypticLine : Line Claim :=
   { name := "Apocalyptic reading (δικαιοσύνη θεοῦ as deliverance)"
   , grounds := [notP .pistisChristouObjective, p .righteousnessOfGodIsDeliverance]
   , step := deliveranceNotFaithAlone
-  , delivers := notP .justificationByFaithAlone }
+  , delivers := notP .justificationByFaithAlone
+  , inference := some campbellOnDeliverance }
 
 /-- **The New Perspective's reason** for its reading of "works of the law". Sanders
 argued that Judaism in Paul's day taught entry into the covenant by grace and

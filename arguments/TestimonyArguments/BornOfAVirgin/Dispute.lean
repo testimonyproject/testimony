@@ -7,9 +7,9 @@ import TestimonyArguments.BornOfAVirgin.Results
 
 Isaiah 7 opens in a crisis. The kings of Syria and of Israel have marched on
 Jerusalem, and Isaiah goes out to meet King Ahaz with a promise that the
-invasion will fail. He invites Ahaz to ask a sign, "either in the depth, or in
-the height above" (7:11, KJV). Ahaz refuses, and Isaiah answers that the Lord
-will give one anyway: the woman shall conceive and bear a son, and
+invasion will fail. He invites Ahaz to ask a sign, "deep as Sheol or high as
+heaven" (7:11, LSB). Ahaz refuses, and Isaiah answers that the Lord will give
+one anyway: the woman shall conceive and bear a son, and
 
 > "before the boy knows how to refuse the evil and choose the good, the land
 > whose two kings you dread will be deserted." (Isaiah 7:16)
@@ -49,7 +49,13 @@ it a hostile witness, and so a strong one.
 
 Postell's second counterexample is Micah 5, whose ruler is set against the
 Assyrian invasion and was read of the Messiah. Brown himself grants that
-reading.
+reading. So do the medieval Jewish commentators, and that is where the
+counterexample meets its answer. Rashi reads the ruler of Micah 5:1 as "the
+Messiah, son of David", and 5:4 of the time "should Assyria come … into our
+land as he comes now". Yet he reads Isaiah 7:14 of the prophet's own wife: "this
+year … the fourth year of Ahaz". Ibn Ezra says why a later referent is ruled
+out: "the sign was given to Ahaz", and the child it names was born long after.
+Micah 5 is a promise; 7:14 is a sign dated to Ahaz's crisis.
 
 Motyer, with Compton, goes for the critic's other ground. The sign of 7:14
 is addressed to the house of David, in plural pronouns, and only 7:15–16, with a
@@ -84,11 +90,11 @@ these:
   sense, cited `disputed`.
 - **Motyer defeats it too**, by contradicting its other premise: that 7:14 is
   a near-term sign to Ahaz at all, also cited `disputed`.
-- **The critical denial defeats Berry and Motyer back, but neither
-  counterexample.** It rebuts all four. Berry's and Motyer's inferences are
-  contested — a cited source grants each one's grounds and denies its
-  conclusion — so they are no stronger than the critic. Postell's inference is
-  not, and both counterexamples outrank it.
+- **The critical denial defeats Berry, Motyer and the Micah counterexample
+  back, but not Postell's Isaiah argument.** It rebuts all four. Berry's,
+  Motyer's and the Micah inference are contested — a cited source grants each
+  one's grounds and denies its conclusion — so they are no stronger than the
+  critic. The Isaiah inference is not, and it outranks the critic.
 
 ## What follows
 
@@ -96,11 +102,11 @@ Faced with the scriptural reading alone, **nothing prevails**: the two defeat
 each other, so neither must be accepted however the tie is broken
 (`nothing_prevails_unanswered`). Add the replies and **the scriptural reading
 prevails** (`scriptural_reading_prevails_once_replies_are_heard`). Nothing
-defeats Postell's counterexamples; they defeat the critic, which is the only
-party that defeats the scriptural reading, Berry or Motyer; and so all five
-stand. The critical denial cannot be defended at all, because nothing answers
-Postell (`critical_denial_indefensible`). Take away either counterexample and
-the scriptural reading still prevails; take away both and nothing does.
+defeats Postell's Isaiah argument; it defeats the critic, which is the only
+party that defeats the scriptural reading, Berry, Motyer or the Micah
+counterexample; and so all five stand. The critical denial cannot be defended at
+all, because nothing answers Postell (`critical_denial_indefensible`). Take away
+the Isaiah argument and nothing prevails (`nothing_prevails_without_postell`).
 
 This is the result entailment could not state. Adding premises never removes a
 conclusion; adding arguments can change what a dispute forces, and here it
@@ -128,21 +134,25 @@ proves that the whole weight of his reply falls on that step. So each ties with
 the critic, and heard alone Motyer settles nothing
 (`nothing_prevails_on_motyer_alone`).
 
-Postell's inference is `plausible`. It is a counterexample to the exclusion —
-an oracle on the Assyrian timeline, read messianically — and he gives two:
-Isaiah 9 and 11, and Micah 5, whose messianic reading Brown himself grants. No
-source cited here grants either set of grounds and keeps the exclusion.
+Postell's inference from Isaiah 9 and 11 is `plausible`. It is a counterexample
+to the exclusion — an oracle on the Assyrian timeline, read messianically — and
+no reader found grants both its grounds and keeps the exclusion. Rashi, Radak and
+Ibn Ezra all keep 7:14 near-term, but all three read Isaiah 9:5–6 of Hezekiah,
+so they deny a ground of the step, not the step. That ground is rated on its
+own.
 
-**The verdict rests on that inference.** Without Postell's Isaiah argument the
-scriptural reading still prevails, on the Micah counterexample
-(`scriptural_reading_prevails_without_postell`), so an attack on the grounds of
-either — dating Isaiah 11 later, say — leaves it standing. Without both, every
-party is defeated by someone and nothing prevails
-(`nothing_prevails_without_the_counterexamples`). The two share one inference,
-so they share one weakness: rated `disputed`, it would tie both with the critic
-as Berry's and Motyer's do. A critic who granted that such an oracle is read
-messianically and still held the exclusion — most likely by denying that
-Micah 5 or Isaiah 9 is a *sign* to Ahaz — would be the source to find.
+The same inference from Micah 5 is `disputed`. Rashi grants both its grounds and
+keeps 7:14 a sign for Ahaz's day, and Ibn Ezra states the exclusion as his
+reason. So the Micah counterexample ties with the critic, as Berry and Motyer do.
+
+**The verdict rests on that one inference.** Without Postell's Isaiah argument
+nothing prevails (`nothing_prevails_without_postell`), and without both
+counterexamples nothing prevails either
+(`nothing_prevails_without_the_counterexamples`). An answer to the Isaiah step
+would be a reader who reads Isaiah 9 and 11 of the Messiah, sets them in
+Isaiah's Assyrian crisis, and still keeps the exclusion for the sign of 7:14.
+Grogan's commentary in the *Expositor's Bible Commentary*, whom Postell names as
+the critic he answers, is the likeliest; it has not been read.
 
 ## What the church fathers add, and what they cannot
 
@@ -321,8 +331,9 @@ theorem berryObjection_strength : berryObjection.strength = 0 := by decide
 theorem postellParity_strength : postellParity.strength = 1 := by decide
 
 /-- The Micah counterexample's grounds are cited `consensus` and
-`wellSupported`, and its inference `plausible`. -/
-theorem micahParity_strength : micahParity.strength = 1 := by decide
+`wellSupported`, but its inference is `disputed`: Rashi grants both grounds and
+keeps 7:14 a sign for Ahaz's day. So it is no stronger than that step. -/
+theorem micahParity_strength : micahParity.strength = 0 := by decide
 
 /-- Motyer's observations are cited `consensus` and `wellSupported`, but his
 inference is `disputed`, and he is no stronger than it. -/
@@ -415,6 +426,15 @@ who identify the two children. -/
 theorem critical_defeats_motyer : Defeats criticalDenial motyerReply :=
   Horn.defeats_of_certified criticalDenial_strength motyerReply_strength (by horn_certify)
 
+/-- **The critical denial defeats the Micah counterexample back.** It holds the
+exclusion the counterexample denies, so it rebuts it, and the counterexample is
+no stronger than its step. Rashi reads Micah's ruler as "the Messiah, son of
+David", facing Assyria, and still reads 7:14 of the prophet's wife in "the
+fourth year of Ahaz"; Ibn Ezra gives the reason, "the sign was given to Ahaz".
+Micah 5 is not a sign dated to Ahaz's crisis, and 7:14 is. -/
+theorem critical_defeats_micah : Defeats criticalDenial micahParity :=
+  Horn.defeats_of_certified criticalDenial_strength micahParity_strength (by horn_certify)
+
 /-! #### What does not defeat -/
 
 /-- **The critical denial does not defeat Postell.** It rebuts him, but it is
@@ -426,17 +446,10 @@ fails (`critic_grants_postells_step_by_dating_the_oracles_later`). -/
 theorem critical_does_not_defeat_postell : ¬ Defeats criticalDenial postellParity :=
   Horn.not_defeats_of_certified criticalDenial_strength postellParity_strength (by horn_certify)
 
-/-- **The critical denial does not defeat the Micah counterexample**, for the
-reason it does not defeat Postell: it is weaker, and it contradicts none of the
-counterexample's premises. The critic can grant its step by reading Micah 5:2
-of a near-term Davidic king rather than messianically
-(`critic_grants_the_micah_step_by_a_royal_reading`). -/
-theorem critical_does_not_defeat_micah : ¬ Defeats criticalDenial micahParity :=
-  Horn.not_defeats_of_certified criticalDenial_strength micahParity_strength (by horn_certify)
-
 /-! #### Why these are not counters
 
-The two absences above are computed; the readings below say why. -/
+The absence above is computed; the readings below say why the critic can grant
+each counterexample's step without giving up the exclusion. -/
 
 /-- The critic's world, with Isaiah 9 and 11 taken off the Assyrian timeline of
 7:14 — the way out of the parity argument open to a reader who dates them
@@ -516,8 +529,8 @@ party establishes its conclusion, and every party's inferences are rated. -/
 declare_dispute isaiahDispute := partyNode using bornOfAVirginDefs
   /-- **Who defeats whom**, all thirty-six pairs: the critic and the scriptural
   reading defeat each other; each reply defeats the critic; the critic defeats
-  Berry and Motyer back, but neither of Postell's counterexamples; nothing
-  else.
+  Berry, Motyer and the Micah counterexample back, but not Postell's Isaiah
+  argument; nothing else.
 
   Every cell is computed from the parties' premises by `Horn.defeats?` and
   checked by the kernel; the table is what the computation is checked
@@ -525,7 +538,7 @@ declare_dispute isaiahDispute := partyNode using bornOfAVirginDefs
   defeats
     [ (.critical, .scriptural), (.scriptural, .critical), (.berry, .critical)
     , (.postell, .critical), (.motyer, .critical), (.micah, .critical)
-    , (.critical, .berry), (.critical, .motyer) ]
+    , (.critical, .berry), (.critical, .motyer), (.critical, .micah) ]
   /-- **Nothing supports anything** in the Isaiah dispute, in all thirty-six pairs:
   no party's conclusion entails a claim another rests on. Several conclusions do
   entail other parties' inference steps — Berry's and Postell's entail each
@@ -548,18 +561,24 @@ theorem replies_stand_with_the_scriptural_reading :
   satisfied_by motyerReading [Dispute.StandTogether, bornOfAVirginDefs]
 
 /-- How the scriptural reading prevails, in stages: nothing attacks Postell's
-two counterexamples, so they come first; they answer the critic, the only party
-that attacks the scriptural reading, Berry and Motyer, so those three come next.
-And the critic does not join them: the scriptural reading attacks it, and nothing
-among the five answers the scriptural reading. -/
+Isaiah argument, so it comes first; it answers the critic, the only party that
+attacks the scriptural reading, Berry, Motyer and the Micah counterexample, so
+those four come next. And the critic does not join them: the scriptural reading
+attacks it, and nothing among the five answers the scriptural reading. -/
 declare_verdict repliesHeardInStages for isaiahDispute :
-    .groundedExactly [[.postell, .micah], [.scriptural, .berry, .motyer]] [(.critical, .scriptural)]
+    .groundedExactly [[.postell], [.scriptural, .berry, .motyer, .micah]]
+      [(.critical, .scriptural)]
 
-/-- **Heard out, the scriptural reading prevails.** Nothing defeats either of
-Postell's counterexamples, so both are in the grounded extension from the first
-step. They defeat the critic — the only party that defeats the scriptural
-reading, Berry or Motyer — so at the second step all three join them; and
-nothing defends the critic. -/
+/-- **Heard out, the scriptural reading prevails.** Nothing defeats Postell's
+Isaiah argument, so it is in the grounded extension from the first step. It
+defeats the critic — the only party that defeats the scriptural reading, Berry,
+Motyer or the Micah counterexample — so at the second step all four join it;
+and nothing defends the critic.
+
+It rests on one rating: Postell's step from Isaiah 9 and 11, `plausible`
+because no reader found grants both its grounds and keeps the exclusion. The
+readers who keep 7:14 near-term, Rashi, Radak and Ibn Ezra among them, read
+9:5–6 of Hezekiah, and so deny a ground, not the step. -/
 @[headline]
 theorem scriptural_reading_prevails_once_replies_are_heard :
     grounded isaiahDispute.defeats =
@@ -625,22 +644,28 @@ declare_verdict motyerTiesWithTheCritic for motyerAlone :
 /-- Every party but Postell's Isaiah counterexample. -/
 declare_hearing withoutPostell := isaiahDispute except [Party.postell]
 
-/-- How the scriptural reading prevails without Postell's Isaiah argument, in
-stages: the Micah counterexample first, then the three it defends. -/
-declare_verdict micahCarriesTheVerdict for withoutPostell :
-    .grounded [Witness.listSub _ [.micah], Witness.listSub _ [.scriptural, .berry, .motyer]]
+/-- Why nothing prevails without Postell's Isaiah argument: the critic defeats
+every reply it faces, the Micah counterexample among them, and each defeats it
+back. -/
+declare_verdict micahTiesWithTheCritic for withoutPostell :
+    .nothingGrounded (Witness.Table.sub _
+      [ (.scriptural, .critical), (.critical, .scriptural), (.berry, .critical)
+      , (.motyer, .critical), (.micah, .critical) ])
+  /-- **Without Postell's Isaiah argument, nothing prevails.** The Micah
+  counterexample ties with the critic, as Berry and Motyer do. Rashi grants both
+  its grounds — the ruler of Micah 5:1 is "the Messiah, son of David", and 5:4
+  speaks of the time "should Assyria come … into our land" — and still reads
+  Isaiah 7:14 of the prophet's wife, in "the fourth year of Ahaz". Ibn Ezra gives
+  the reason: "the sign was given to Ahaz". So the step from Micah 5 is
+  `disputed`, and the counterexample is no stronger than the critic.
 
-/-- **Without Postell's Isaiah argument, the scriptural reading still
-prevails.** His Micah counterexample is defeated by nothing, and it defends the
-scriptural reading against the critic, as the Isaiah argument did. An attack on
-the grounds of either counterexample leaves the verdict standing. -/
-@[headline]
-theorem scriptural_reading_prevails_without_postell :
-    (⟨.scriptural, by decide⟩ : {i // i ∉ [Party.postell]}) ∈
-      grounded withoutPostell.defeats :=
-  micahCarriesTheVerdict.holds _ (by decide)
+  It does not show that Micah 5 is not messianic: Rashi reads it so. What it
+  shows is that a messianic oracle facing Assyria does not, by itself, answer a
+  critic who holds that a sign dated to Ahaz's crisis is not also a prediction.
+  The full dispute's verdict now rests on Postell's Isaiah argument alone. -/
+  proves @[headline] nothing_prevails_without_postell
 
-#print axioms scriptural_reading_prevails_without_postell
+#print axioms nothing_prevails_without_postell
 
 /-- Every party but the two counterexamples. -/
 declare_hearing withoutParity := isaiahDispute except [Party.postell, .micah]

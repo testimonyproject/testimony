@@ -214,10 +214,10 @@ info: the fallacy checks, over every argument's lines, each named with its reade
 The fixture
   lines: 4, read: 2, Scripture's own: 0
   carry what they deliver in a premise:
-    byTheHour (uncited): its premise denied by lastedTwoHours
+    byTheHour (proposed here): its premise denied by lastedTwoHours
   rest on one another in a circle:
-    byNotTwoHours (uncited)
-    byTheHour (uncited)
+    byNotTwoHours (proposed here)
+    byTheHour (proposed here)
 -/
 #guard_msgs in
 #check_fallacies under Testimony.Checks.Fixture

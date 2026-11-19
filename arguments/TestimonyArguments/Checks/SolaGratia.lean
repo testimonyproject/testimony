@@ -5,6 +5,7 @@ import Testimony.Checks.Conditions
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
+import Testimony.Checks.Readers
 import Testimony.Checks.Refutations
 
 /-!
@@ -50,6 +51,12 @@ Sola gratia — Ephesians 2:8–9 and Romans 9:16
 /-- info: every package has a model with its postulates: 36, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaGratia
+
+/--
+info: every reading and step has a reader or is marked proposed: 36 packages, 27 lines
+-/
+#guard_msgs in
+#check_readers under TestimonyArguments.SolaGratia
 
 /-- info: every non-entailment survives its postulates: 12, and 0 undecided -/
 #guard_msgs in

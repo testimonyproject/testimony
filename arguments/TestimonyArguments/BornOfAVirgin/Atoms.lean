@@ -219,7 +219,7 @@ inductive Claim
   /-- The Greek translator of Genesis read the woman's seed at 3:15 as one
   person. -/
   | lxxReadsOneDescendant
-  /-- Revelation calls the devil "that old serpent" (12:9, 20:2). -/
+  /-- Revelation calls the devil "the serpent of old" (12:9, 20:2). -/
   | serpentNamedTheDevil
   /-- Hebrews and 1 John say the Son came to destroy the devil and his works,
   through death (Hebrews 2:14; 1 John 3:8). -/
@@ -227,7 +227,7 @@ inductive Claim
   /-- Paul says Christ died, was buried, and rose the third day (1 Corinthians
   15:3–4). -/
   | christDiedAndRose
-  /-- Paul says God sent his Son "made of a woman" (Galatians 4:4). -/
+  /-- Paul says God sent his Son "born of a woman" (Galatians 4:4). -/
   | sonMadeOfAWoman
   /-- In Jesus the promise of Genesis 3:15 is fulfilled: the woman's seed,
   struck at the heel, crushes the serpent's head. **The fulfilment.** -/

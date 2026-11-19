@@ -38,6 +38,17 @@ structure AtomMeta where
   source : Source
 deriving Repr
 
+/-- Whether this claim is a reading taken from the text alone: cited to scripture
+and to nothing else, and not itself a report of what the text says.
+
+A textual claim — Deuteronomy 13:1–3 says this — needs no commentator, and
+citing the passage is all its source can be. A claim about what the passage
+means, what happened or what doctrine holds, cited to the passage alone, is a
+reading the argument assumes rather than argues for. Only the second is
+surfaced. -/
+def AtomMeta.readsScriptureAlone (m : AtomMeta) : Bool :=
+  m.source.isScriptureOnly && m.kind != .textual
+
 /-- A named position: its premises, its conclusion, and a citation for every
 atom either mentions. -/
 structure ArgumentPackage (α : Type) where
@@ -68,13 +79,15 @@ its classification and citation. Generated, never maintained. -/
 def manifest [DecidableEq α] (pkg : ArgumentPackage α) : List AtomMeta :=
   (pkg.atoms).map pkg.cite
 
-/-- The atoms this package grounds in scripture alone.
+/-- The readings this package takes from the text alone
+(`AtomMeta.readsScriptureAlone`).
 
 An argument from scripture that reads scripture a particular way, and cites only
 scripture for that reading, is assuming part of what it sets out to show. These
-are not forbidden, but a reader is entitled to see them listed. -/
+are not forbidden, but a reader is entitled to see them listed. A quotation of
+the text is not among them: what a passage says is not a reading of it. -/
 def scriptureOnlyAtoms [DecidableEq α] (pkg : ArgumentPackage α) : List AtomMeta :=
-  pkg.manifest.filter fun m => m.source.isScriptureOnly
+  pkg.manifest.filter AtomMeta.readsScriptureAlone
 
 /-- How many premises the package assumes. -/
 def premiseCount (pkg : ArgumentPackage α) : Nat := pkg.premises.length

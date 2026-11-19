@@ -4,9 +4,9 @@
 > It names the rules the ratings were already computed under, gives each its holders, and
 > checks whether each side keeps the rule it professes.
 
-A Protestant and a Catholic arguing over Romans 3:28, "a man is justified by faith without the
-deeds of the law", are seldom arguing only over Romans 3:28. Underneath is a disagreement about
-how anything is known from Scripture at all. The Westminster Confession says that "the
+A Protestant and a Catholic arguing over Romans 3:28, "a man is justified by faith apart from
+works of the Law" (LSB), are seldom arguing only over Romans 3:28. Underneath is a disagreement
+about how anything is known from Scripture at all. The Westminster Confession says that "the
 infallible rule of interpretation of Scripture is the Scripture itself" (I.ix), and that the
 supreme judge of controversies "can be no other but the Holy Spirit speaking in the Scripture"
 (I.x). The Council of Trent receives, beside the written books, the traditions "received by the

@@ -203,12 +203,12 @@ theorem usage_parity_blocks_wegner : ¬ Establishes wegnerUnderUsageParity := by
 
 The oldest reply goes to the ordinary pregnancy itself. Justin, Irenaeus and
 Origen answer the near-term reading with one argument. The oracle promised a
-*sign*, one offered "in the depth or in the height" (7:11), and an ordinary
-conception happens to every woman who is not barren, so it would be no sign.
-Rydelnik makes the same move today (`signLine`). It denies the one ground of
-Wegner's objection that the grammar does not supply. What that buys is
-measured exactly: with the fathers' grounds in place of the ordinary
-pregnancy, Wegner's conclusion about the word is left open by what remains
+*sign*, one offered "deep as Sheol or high as heaven" (7:11, LSB), and an
+ordinary conception happens to every woman who is not barren, so it would be no
+sign. Rydelnik makes the same move today (`signLine`). It denies the one ground
+of Wegner's objection that the grammar does not supply. What that buys is
+measured exactly: with the fathers' grounds in place of the ordinary pregnancy,
+Wegner's conclusion about the word is left open by what remains
 (`sign_leaves_the_lexical_conclusion_open`). The objection is blocked, and
 nothing is shown about the word.
 

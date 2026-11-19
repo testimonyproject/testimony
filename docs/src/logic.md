@@ -1058,6 +1058,17 @@ def ArgumentPackage.scriptureOnlyAtoms : List AtomMeta
 ```
 
 `manifest` is every atom the premises rest on, deduplicated and mapped through
-`cite`. `scriptureOnlyAtoms` filters it to those appealing to Scripture with no
-scholarly support — the circularity surface described in
-[Scope and limits](./scope-and-limits.md#circularity-specifically).
+`cite`. `scriptureOnlyAtoms` filters it to the readings taken from Scripture
+with no scholarly support (`AtomMeta.readsScriptureAlone`) — the circularity
+surface described in
+[Scope and limits](./scope-and-limits.md#circularity-specifically). A textual
+claim, one that only reports what a passage says, is not among them: citing the
+passage is all its source can be. Each package's page lists these readings under
+its derivation, and says nothing when there are none.
+
+The arguments' builds go further. `#check_readers under N`
+(`Testimony.Checks.Readers`) fails on any package under `N` whose
+`scriptureOnlyAtoms` is not empty, on any step rated by Scripture alone, and on
+any line of reason whose step carries no rating at all. A reading or a step the
+library advances itself is not forbidden; it is cited as `Reference.proposal`,
+with its rationale, so the page says it is the library's own.

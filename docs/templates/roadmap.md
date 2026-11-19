@@ -385,10 +385,14 @@ who prevailed. Rated, Berry's and Motyer's steps are `disputed` and tie with the
 critic (`nothing_prevails_on_motyer_alone`). The verdict rests on Postell's
 inference — an oracle on the Assyrian timeline, read messianically, refutes the
 exclusion — rated `plausible` because no source cited grants its grounds and
-keeps the exclusion. He gives it two instances, Isaiah 9 and 11 and Micah 5:
-either suffices (`scriptural_reading_prevails_without_postell`), and without
-both nothing prevails (`nothing_prevails_without_the_counterexamples`). That
-makes the ratings premises of the result, and says which one to contest.
+keeps the exclusion. He gives it two instances, Isaiah 9 and 11 and Micah 5. The
+Micah instance is `disputed`: Rashi grants that Micah's ruler is the Messiah,
+facing Assyria, and still reads 7:14 of a child of Ahaz's day, and Ibn Ezra gives
+the reason, "the sign was given to Ahaz". So without the Isaiah instance nothing
+prevails (`nothing_prevails_without_postell`), and the verdict rests on that one
+step, still `plausible` because every reader found who keeps 7:14 near-term
+reads Isaiah 9 of Hezekiah, denying a ground rather than the step. That makes
+the ratings premises of the result, and says which one to contest.
 
 **A premise can be load-bearing in one role and not another.** The sola
 scriptura seed asserted in prose that the whole dispute reduces to whether
@@ -433,8 +437,8 @@ Aquinas grants Galatians 1:8 and the principle with it. Added to Mark 7, they
 still leave the sole rule open without that one premise
 (`every_text_without_the_hinge_leaves_the_sole_rule_open`). The council at Jerusalem (Acts 15) is
 read both ways. The Reformers read a council that let the gospel judge even the custom of Moses
-and judged by Scripture, "as it is written" (15:15); Rome reads one binding with the Spirit's
-authority, "it seemed good to the Holy Ghost, and to us" (15:28). Both pass through the apostles'
+and judged by Scripture, "just as it is written" (15:15); Rome reads one binding with the Spirit's
+authority, "it seemed good to the Holy Spirit and to us" (15:28). Both pass through the apostles'
 office: Calvin holds that it ended with them (Acts 1:21–22; 1 Corinthians 15:8), and *Lumen
 Gentium* 20 that it continues in the bishops (Acts 1:20; 2 Timothy 2:2; 1 Clement 44), and the
 texts alone leave that open (`apostolic_texts_leave_the_office_open`). Each grants the other's
