@@ -4,6 +4,7 @@ import Testimony.Checks.Aif
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
+import Testimony.Checks.Readers
 import Testimony.Checks.Refutations
 
 /-!
@@ -53,6 +54,12 @@ The canonical witness
 /-- info: every package has a model with its postulates: 15, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.CanonicalWitness
+
+/--
+info: every reading and step has a reader or is marked proposed: 15 packages, 8 lines
+-/
+#guard_msgs in
+#check_readers under TestimonyArguments.CanonicalWitness
 
 /-- info: every non-entailment survives its postulates: 4, and 0 undecided -/
 #guard_msgs in

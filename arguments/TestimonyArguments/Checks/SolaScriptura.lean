@@ -4,6 +4,7 @@ import Testimony.Checks.Aif
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
+import Testimony.Checks.Readers
 import Testimony.Checks.Refutations
 
 /-!
@@ -32,7 +33,7 @@ info: the shared ontology, in every argument:
 Sola scriptura
   joins: 3, with no definition: 3
   not a ground: held by 2, used of a text or voice by 1; derives nothing
-  the only means: held by 2, used of a text or voice by 1; derives nothing
+  the only means: held by 6, used of a text or voice by 1; derives nothing
   the whole ground: held by 2, used of a text or voice by 1; derives nothing
 -/
 #guard_msgs in
@@ -41,16 +42,22 @@ Sola scriptura
 /--
 info: the charges, against every argument's lines:
 Sola scriptura
-  lines: 27, read: 21
+  lines: 32, read: 26
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaScriptura
 
-/-- info: every package has a model with its postulates: 31, and 0 undecided -/
+/-- info: every package has a model with its postulates: 40, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaScriptura
 
-/-- info: every non-entailment survives its postulates: 35, and 0 undecided -/
+/--
+info: every reading and step has a reader or is marked proposed: 40 packages, 32 lines
+-/
+#guard_msgs in
+#check_readers under TestimonyArguments.SolaScriptura
+
+/-- info: every non-entailment survives its postulates: 37, and 0 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments.SolaScriptura
 
@@ -60,6 +67,7 @@ Sola scriptura
 
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:
+canonDispute.finite: 12 I, 2 RA, 2 CA, 0 PA, 16 edges
 mark7Dispute.finite: 10 I, 6 RA, 7 CA, 2 PA, 32 edges
 and 2 hearings, drawn with the disputes they restrict
 -/

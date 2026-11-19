@@ -48,6 +48,107 @@ def mark7PrincipleInference : Source :=
   , tradition := .christianHistoricalGrammatical
   , confidence := .wellSupported }
 
+/-- The rating of the canon objection's step, from the Church's reception of the
+canon and the need for an infallible authority outside Scripture to identify
+it, to the denial that Scripture is the sole infallible rule: `wellSupported`.
+No reader was found who grants both grounds and denies the conclusion: if an
+infallible authority outside Scripture is needed to say which books are
+Scripture, Scripture is not the only infallible rule. Reid grants the grounds
+and the conclusion. The step is rated `wellSupported` rather than `consensus`
+because "infallible" may be read more loosely than Rome reads it. Calvin and
+Kruger answer the objection by denying its second ground, not this step. -/
+def canonObjectionInference : Source :=
+  { primary := .work reidCanonNewTestament (.sectionRef "The criterion of inspiration")
+  , supporting :=
+      [ .work tannerDecrees
+          (.sectionRef "Trent, Session IV (1546), Decree on Sacred Books and Traditions") ]
+  , tradition := .romanCatholic
+  , confidence := .wellSupported }
+
+/-- The rating of the step from Scripture's tests, applied under providence, to
+the claim that identifying the canon needs no infallible authority outside
+Scripture: `disputed`. George Reid, writing in the *Catholic Encyclopedia*
+(1908), is the reader who grants the grounds and denies the conclusion. He
+grants that apostolicity is "a positive and partial touchstone", and narrates
+how the Shepherd and the Didache were set apart; and he names the test from
+Scripture's own content and denies that it suffices. Inspiration "is not
+self-evident", so its "sole absolute criterion" is the Spirit witnessing "not
+... in the doctrinal and spiritual tenor of Holy Writ itself, according to
+Luther, but through the constituted organ and custodian of Its revelations, the
+Church". Augustine stands behind him: the canonical books are those "received by
+all the Catholic churches" (*On Christian Doctrine* II.8.12), a test of
+reception, not of agreement. As a Catholic he reads every text the step cites
+as Scripture, Peter on Paul's letters among them, and holds that God keeps his
+word; his providence, on Reid's account, works through the Church that
+recognises the books.
+
+Two Protestant readers press on the step from the other side without denying
+its conclusion. Kruger criticises the criteria-of-canonicity model taken on its
+own and grants that it "has rightly focused on apostolicity as a key component
+of canonicity" (pp. 67–87, at p. 87); his own model counts providential
+exposure and apostolic origin among its parts, with the Spirit's witness.
+McDonald finds the ancient criteria applied "often unequally" (p. 127). -/
+def canonTestsInference : Source :=
+  { primary := .work reidCanonNewTestament (.sectionRef "The criterion of inspiration")
+  , supporting :=
+      [ .work krugerCanonRevisited (.pages 67 87)
+      , .work mcdonaldIntegrityCanon (.pages 127 129) ]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of Whitaker's step from the circle to the conclusion that the
+first route gives no certainty of the canon: `wellSupported`. No reader was
+found who grants that proving each from the other is circular and still holds
+that this route gives the certainty of faith. The Catholic writers who state
+the spiral grant the circle and leave this route, to argue from Scripture read
+only as history (Toner, *Catholic Encyclopedia*, "Infallibility"; Catholic
+Answers, "Proving Inspiration"). -/
+def circleAnswerInference : Source :=
+  { primary := .work whitakerDisputation (.pages 334 335)
+  , supporting := [.work catholicAnswersProvingInspiration (.sectionRef "A Spiral Argument")]
+  , tradition := .reformedProtestant
+  , confidence := .wellSupported }
+
+/-- The rating of the step from "no surer than its history" to the conclusion
+that the spiral gives no certainty of faith: `disputed`. Vatican I grants that
+faith does not rest on the arguments that make it credible: we believe "not
+because we perceive its intrinsic truth by the natural light of reason, but
+because of the authority of God himself", "with the grace of God inspiring and
+assisting us" (*Dei Filius*, ch. 3). So a reader may grant that the history is
+no surer than history, and still hold that the Church's word, believed by
+grace, gives the certainty of faith. -/
+def spiralAnswerInference : Source :=
+  { primary := .work tannerDecrees (.sectionRef "Vatican I (1870), Dei Filius, ch. 3")
+  , supporting := [.work chillingworthReligion (.page 66)]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of the step from "the marks make the claim only credible" to the
+conclusion that the marks give no certainty of faith: `disputed`. Bellarmine
+grants the ground in so many words: the marks make the Church "evidently
+credible", not evidently true (*De Ecclesia militante* IV.3). He denies the
+conclusion, as Vatican I does, because the assent of faith rests on God's
+authority with "the effective help of power from on high" (*Dei Filius*,
+ch. 3). -/
+def marksAnswerInference : Source :=
+  { primary := .work bellarmineOpera2 (.sectionRef "De Ecclesia militante IV.3, pp. 365–366")
+  , supporting := [.work tannerDecrees (.sectionRef "Vatican I (1870), Dei Filius, ch. 3")]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of the step from the doubts before Trent to the conclusion that
+reception had not settled the canon: `disputed`. Reid grants the doubts ("Few
+are found to unequivocally acknowledge their canonicity") and denies the
+conclusion: the doubts "must be regarded as more or less academic", because
+"Ecclesiastical usage and Roman tradition held firmly" (*Catholic
+Encyclopedia*, "Canon of the Old Testament"). -/
+def receptionAnswerInference : Source :=
+  { primary := .work reidCanonOldTestament
+      (.sectionRef "The canon of the Old Testament during the Middle Ages: The Latin Church")
+  , supporting := [.work whitakerDisputation (.page 333)]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
 /-- The rating of the step from Mark 7's principle to the sole rule: `disputed`.
 Grant that God's word judges human tradition and that no unwritten tradition can
 be shown to be apostolic, and a reader may still deny that Scripture is the
@@ -317,6 +418,126 @@ def tridentineInference : Source :=
   , tradition := .romanCatholic
   , confidence := .wellSupported }
 
+/-- The rating of the classical step, from 2 Timothy 3:16–17, sufficiency,
+clarity and Scripture's own teaching to "Scripture is the sole infallible rule":
+`wellSupported`. The Westminster Confession draws it, citing 2 Timothy 3:16–17
+for "the whole counsel of God … unto which nothing at any time is to be added,
+whether by new revelations of the Spirit, or traditions of men" (I.6). No reader
+was found who grants all five grounds and denies the conclusion. Rome denies the
+grounds instead: Staples, for Catholic Answers, that "II Timothy 3 … does not even
+hint at sola scriptura". Not `consensus`, for the reason `tridentineInference`
+is not: once the last ground is granted, the conclusion all but follows. -/
+def classicalInference : Source :=
+  { primary := .work westminsterConfession (.sectionRef "I.6")
+  , tradition := .reformedProtestant
+  , confidence := .wellSupported }
+
+/-- The rating of the eliminative step, from "Scripture is infallible" and "no
+other rule is" to "Scripture is the sole infallible rule": `wellSupported`. The
+step is close to what "sole" means. The Westminster Confession draws it: the
+supreme judge "can be no other but the Holy Spirit speaking in the Scripture"
+(I.10), and councils since the apostles "may err" (XXXI.4). No reader was found
+who grants both grounds and denies it. Vincent of Lérins grants the canon
+"sufficient of itself for everything" and still joins the Church's
+interpretation to it as a norm; that is a dispute over what "rule" means, not
+over this step. -/
+def eliminativeInference : Source :=
+  { primary := .work westminsterConfession (.sectionRef "I.10")
+  , supporting := [.work westminsterConfession (.sectionRef "XXXI.4")]
+  , tradition := .reformedProtestant
+  , confidence := .wellSupported }
+
+/-- The rating of Tradition 0's step: `wellSupported`. Geisler draws it in his
+review of Mathison (pp. 120–121, where the grounds are cited). Its grounds
+include the eliminative step's, so it can be rated no higher than that step,
+and no one was found who grants them and denies the conclusion. Mathison denies
+a ground, that creeds inform without binding, and that is weighed there. -/
+def tradition0Inference : Source :=
+  { primary := .work geislerReviewMathison (.sectionRef "120–121")
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- The rating of Tradition III's step, from an infallible magisterium to the
+denial that Scripture is the sole infallible rule: `wellSupported`. Vatican II
+draws it: "it is not from Sacred Scripture alone that the Church draws her
+certainty about everything which has been revealed", and Scripture, tradition
+and the teaching office "are so linked and joined together that one cannot
+stand without the others" (*Dei Verbum* 9–10). Protestants deny the ground, that
+the magisterium is infallible, not the step. -/
+def vaticanInference : Source :=
+  { primary := .work tannerDecrees (.sectionRef "Vatican II (1965), Dei Verbum 9–10")
+  , supporting := [.work tannerDecrees (.sectionRef "Vatican I (1870), Pastor Aeternus, ch. 4")]
+  , tradition := .romanCatholic
+  , confidence := .wellSupported }
+
+/-- The rating of the Orthodox step, from the infallible mind of the Church to the
+denial that Scripture is the sole infallible rule: `wellSupported`. Florovsky
+grounds the councils' teaching authority "in the infallibility of the Church".
+The Confession of Dositheus (Jerusalem, 1672) draws the conclusion in its second
+decree: Scripture is believed "not otherwise than as the Catholic Church hath
+interpreted and delivered the same", and the Church's witness is "not of
+inferior authority to that of the Divine Scriptures". No reader was found who
+grants the ground and denies the step. -/
+def orthodoxInference : Source :=
+  { primary := .work florovskyBibleChurchTradition .whole
+  , supporting := [.work wareOrthodoxChurch .whole]
+  , tradition := .easternOrthodox
+  , confidence := .wellSupported }
+
+/-- The rating of the self-refutation step, from "only what Scripture teaches
+binds" and "Scripture does not teach sola scriptura" to "Scripture is not the
+sole infallible rule": `disputed`. Broussard draws it: sola scriptura "must be
+proven from Scripture to pass its own test", "And given that it can't, it's
+self-defeating." Harper grants both grounds, "for the sake of argument", and
+denies the conclusion. What follows, he says, is only that the doctrine cannot
+be held infallibly; it "does not need to be taught explicitly in the Bible or
+infallibly known in order to be true". The grounds give "the doctrine does not
+bind", and the step passes from that to "the doctrine is false". -/
+def selfRefutationInference : Source :=
+  { primary := .work broussardBestArgument .whole
+  , supporting := [.work harperSelfRefuting .whole]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of the regress step, from ministerial tradition and the
+individual's final choice of whom to submit to, to "sola scriptura does not
+differ in principle from solo scriptura": `disputed`. Cross and Judisch draw it:
+"when I submit (so long as I agree), the one to whom I submit is me", so "there
+is no principled difference between sola scriptura and solo scriptura with
+respect to the locus of 'ultimate interpretive authority'". Mathison, replying
+to them, grants "the fact that an individual must determine whether or not to
+submit to an authority", and denies the conclusion: "there is in fact a real
+principled difference". -/
+def interpretiveRegressInference : Source :=
+  { primary := .work crossJudischInterpretiveAuthority (.sectionRef "§§ I, IV.B")
+  , supporting := [.work mathisonReplyCrossJudisch .whole]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of the step in Geisler's charge, from the two legs to "Tradition
+I's reasoning is circular": `wellSupported`. Geisler draws it (pp. 122–123).
+That each leg rests on the other is what circular means, and no reader was found
+who grants both legs and denies the circle. Allen and Swain deny the second leg,
+and that is weighed in its rating. -/
+def circleInference : Source :=
+  { primary := .work geislerReviewMathison (.sectionRef "122–123")
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- The rating of the step from the circle to its defeating Tradition I,
+provided not every appeal to an ultimate authority is circular: `plausible`,
+and the library's own. Geisler is cited for the conclusion, but no source was
+found that argues from the condition, and none that grants both grounds and
+denies the defeat. -/
+def circleDefeatsInference : Source :=
+  { primary := .proposal
+      ("Assembled here to state what Geisler's charge needs against Barrett's " ++
+       "parity reply: a circle counts against a position only if its rivals " ++
+       "escape it. Geisler is cited for the conclusion, not for this condition.")
+  , supporting := [.work geislerReviewMathison (.sectionRef "123")]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .plausible }
+
 /-- Citation and classification for every atom. Total, so nothing is
 uncited. -/
 def cite : Claim → AtomMeta
@@ -451,11 +672,17 @@ def cite : Claim → AtomMeta
         , tradition := .romanCatholic
         , confidence := .consensus } }
   | .identifyingCanonRequiresInfallibleAuthority =>
-    { label := "Identifying the canon requires an infallible authority"
+    { label := "Identifying the canon requires an infallible authority outside Scripture"
     , kind := .theological
+      -- Held by Trent and, explicitly, by Reid ("through the constituted organ
+      -- and custodian of Its revelations, the Church"); denied by Calvin, for
+      -- whom the Church receiving Scripture "does not make that authentic which
+      -- was otherwise doubtful" (Institutes I.vii.2), and by Kruger.
     , source :=
         { primary := .work tannerDecrees
             (.sectionRef "Trent, Session IV (1546), Decree on Sacred Books and Traditions")
+        , supporting :=
+            [ .work reidCanonNewTestament (.sectionRef "The criterion of inspiration") ]
         , tradition := .romanCatholic
         , confidence := .disputed } }
   | .rivalAuthorityIsAlsoSelfAuthenticating =>
@@ -464,6 +691,201 @@ def cite : Claim → AtomMeta
         "circularity charge does not discriminate"
     , kind := .interpretive
     , source := heldBy krugerCanonRevisited "ch. 2" .reformedProtestant }
+  | .deut13_1_3ProphetOfOtherGods =>
+    { label :=
+        "Deuteronomy 13:1–3 — a prophet whose sign comes to pass, but who says, Let us " ++
+        "go after other gods, is not to be heard"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.deuteronomy, 13, 1, 13, 3⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .deut18_20_22WordNotFulfilled =>
+    { label :=
+        "Deuteronomy 18:20–22 — a word spoken in the LORD's name that does not come " ++
+        "to pass is a word the LORD has not spoken"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.deuteronomy, 18, 20, 18, 22⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .booksReadButNotReceived =>
+    { label :=
+        "The early Church set apart books it read but did not receive into the canon, " ++
+        "the Shepherd and the Didache among them, and said why"
+    , kind := .historical
+      -- What the documents say. Not every early writer agreed: Irenaeus quotes
+      -- the Shepherd as "the Scripture" (Against Heresies IV.20.2). The claim is
+      -- that these witnesses drew the line and gave their reasons, not that
+      -- everyone drew it in the same place.
+    , source :=
+        { primary := .work anf5 (.pages 603 604)
+        , supporting :=
+            [ .work npnf2v4 (.sectionRef "Athanasius, Festal Letter 39, §§6–7, p. 552")
+            , .work mcdonaldIntegrityCanon (.pages 127 129) ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .providenceKeepsScripture =>
+    { label :=
+        "God by his providence keeps his written word and brings it to his people, and " ++
+        "the tests are applied under that providence"
+    , kind := .theological
+      -- Kruger's model names "providential exposure" of the books to the church
+      -- as one of its parts; the page is known only from reviews, so the chapter
+      -- is cited.
+    , source :=
+        { primary := .work westminsterConfession (.sectionRef "I.8")
+        , supporting :=
+            [ .work krugerCanonRevisited
+                (.sectionRef "\"My sheep hear my voice: canon as self-authenticating\"") ]
+        , tradition := .reformedProtestant
+        , confidence := .wellSupported } }
+  | .eph2_20FoundationOfApostles =>
+    { label :=
+        "Ephesians 2:20 and Jude 3 — the church is built on the foundation of the " ++
+        "apostles and prophets, and the faith was once for all handed down to the saints"
+    , kind := .textual
+    , source :=
+        { primary := .scripture
+            [ { ref := .verse ⟨.ephesians, 2, 20⟩ }, { ref := .verse ⟨.jude, 1, 3⟩ } ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .pet3_15_16PaulAmongScriptures =>
+    { label :=
+        "2 Peter 3:15–16 counts Paul's letters with \"the rest of the Scriptures\", 3:2 sets " ++
+        "the apostles' commandment beside the prophets, and 1 Timothy 5:18 calls a " ++
+        "saying Luke 10:7 records \"scripture\""
+    , kind := .textual
+    , source :=
+        { primary := .scripture
+            [ { ref := .range ⟨.secondPeter, 3, 15, 3, 16⟩ }
+            , { ref := .verse ⟨.secondPeter, 3, 2⟩ }
+            , { ref := .verse ⟨.firstTimothy, 5, 18⟩ }
+            , { ref := .verse ⟨.luke, 10, 7⟩ } ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .gal1_8NoOtherGospel =>
+    { label :=
+        "Galatians 1:8 — even if we, or an angel from heaven, should proclaim a gospel " ++
+        "contrary to the one first proclaimed, let him be accursed"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.galatians, 1, 8⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .prophecyCeasedBeforeLaterBooks =>
+    { label :=
+        "First-century Jews held that prophecy had ceased, and did not give the books " ++
+        "written after it the authority of the earlier ones"
+    , kind := .historical
+      -- What Josephus reports, and what 1 Maccabees says of its own time. Trent
+      -- receives 1 Maccabees and the other books Josephus leaves out; the claim
+      -- is what was held then, not that Trent is wrong.
+    , source :=
+        { primary := .work josephusAgainstApion (.sectionRef "I.8")
+        , supporting :=
+            [ .scripture
+                [ { ref := .verse ⟨.firstMaccabees, 9, 27⟩ }
+                , { ref := .verse ⟨.firstMaccabees, 4, 46⟩ }
+                , { ref := .verse ⟨.firstMaccabees, 14, 41⟩ } ] ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .churchKnownFromInspiredScripture =>
+    { label :=
+        "The infallible authority that identifies the canon is known by proving the " ++
+        "Church from Scripture received as inspired"
+    , kind := .theological
+      -- No Catholic writer found holds this route; Toner and Catholic Answers
+      -- reject it as circular. It is the reading Whitaker answers.
+    , source := heldBy whitakerDisputation "pp. 334–335" .reformedProtestant }
+  | .spiralGivesCertaintyOfTheCanon =>
+    { label :=
+        "Scripture read as reliable history shows an infallible Church, whose word " ++
+        "gives the certainty of faith about which books are inspired"
+    , kind := .theological
+    , source :=
+        { primary := .work tonerInfallibility (.sectionRef "Proof from Scripture")
+        , supporting := [.work catholicAnswersProvingInspiration (.sectionRef "A Spiral Argument")]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .marksGiveCertaintyOfTheCanon =>
+    { label :=
+        "The Church's marks show it to be the infallible authority, and so give the " ++
+        "certainty of faith about the canon"
+    , kind := .theological
+    , source :=
+        { primary := .work tannerDecrees (.sectionRef "Vatican I (1870), Dei Filius, ch. 3")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .receptionSettledTheCanon =>
+    { label :=
+        "The Church's universal reception and ordinary teaching settled the canon " ++
+        "before any council defined it"
+    , kind := .theological
+    , source :=
+        { primary := .work reidCanonNewTestament (.sectionRef "The criterion of inspiration")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .provingEachFromTheOtherIsCircular =>
+    { label :=
+        "To prove the Church from Scripture received as inspired, and then Scripture's " ++
+        "inspiration from the Church, is to argue in a circle"
+    , kind := .theological
+      -- Granted by the Catholic sources that state the spiral: "That indeed
+      -- would be a circular argument!" (Catholic Answers); "no vicious circle"
+      -- only when Scripture is used "merely as reliable historical sources"
+      -- (Toner).
+    , source :=
+        { primary := .work whitakerDisputation (.pages 334 335)
+        , supporting :=
+            [ .work catholicAnswersProvingInspiration (.sectionRef "A Spiral Argument")
+            , .work tonerInfallibility (.sectionRef "Proof from Scripture") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .conclusionNoSurerThanItsHistory =>
+    { label :=
+        "A conclusion reasoned from history is, by natural means, no surer than that " ++
+        "history, and the judgement that the Gospels are reliable history is fallible"
+    , kind := .theological
+      -- Denied by Vatican I, which anathematises saying that miracles "can never
+      -- be known with certainty" (Dei Filius, ch. 3, canon 4), and by Newman,
+      -- who rejects "the pretentious axiom that probable reasoning can never
+      -- lead to certitude" (Grammar of Assent, ch. 6).
+    , source :=
+        { primary := .work chillingworthReligion (.page 66)
+        , supporting :=
+            [.work turretinInstitutio1 (.sectionRef "Locus II, Q. VI, §XXI, p. 85")]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .marksMakeTheClaimOnlyCredible =>
+    { label :=
+        "The Church's marks make its claim credible, not evident, and other churches " ++
+        "claim the same marks"
+    , kind := .theological
+    , source :=
+        { primary := .work bellarmineOpera2 (.sectionRef "De Ecclesia militante IV.3, pp. 365–366")
+        , supporting :=
+            [ .work calvinInstitutesBeveridge3 (.sectionRef "IV.ii.2")
+            , .work turretinInstitutio3 (.sectionRef "Locus XVIII, Q. XIII, §IV, pp. 83–84") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .disputedBooksDoubtedBeforeTrent =>
+    { label :=
+        "Before Trent the Latin Church did not receive the disputed books with one " ++
+        "voice: Jerome left them out, Gregory called 1 Maccabees not canonical, and " ++
+        "Cajetan followed Jerome"
+    , kind := .historical
+    , source :=
+        { primary := .work reidCanonOldTestament
+            (.sectionRef "The canon of the Old Testament during the Middle Ages: The Latin Church")
+        , supporting :=
+            [ .work npnf2v6
+                (.sectionRef "Jerome, Prefaces to Samuel and Kings, and to the Books of Solomon")
+            , .work gregoryMoralia2 (.sectionRef "XIX.xxi.34, p. 424")
+            , .work whitakerDisputation (.pages 47 48)
+            , .work reidCanonNewTestament .whole ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
   | .traditionHasMinisterialAuthority =>
     { label := "Tradition carries real but fallible — ministerial — authority"
     , kind := .theological
@@ -481,7 +903,7 @@ def cite : Claim → AtomMeta
         "The individual retains ultimate interpretive authority, exercised " ++
         "indirectly by choosing which body to submit to"
     , kind := .theological
-    , source := heldBy crossJudischInterpretiveAuthority "§ III" .romanCatholic }
+    , source := heldBy crossJudischInterpretiveAuthority "§ IV.A–B" .romanCatholic }
   | .choosingAnAuthorityIsItselfPrivateJudgment =>
     { label :=
         "Choosing which authority to submit to is itself private judgement, " ++

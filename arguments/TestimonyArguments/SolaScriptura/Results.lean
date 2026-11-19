@@ -483,7 +483,7 @@ deny, and each denial is an entailment. -/
 
 /-- **Kruger refuses the canon objection's ground; he does not deny it.** On
 the reading that grants his grounds and still denies the sole rule, identifying
-the canon does require an infallible authority. -/
+the canon does require an infallible authority outside Scripture. -/
 theorem kruger_refuses_rather_than_denies :
     ¬ Entails canonUnderParity.premises
       (∼(p .identifyingCanonRequiresInfallibleAuthority)) := by

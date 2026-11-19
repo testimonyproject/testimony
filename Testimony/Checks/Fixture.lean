@@ -163,7 +163,8 @@ def byTheHour : Line Claim :=
   { name := "By the hour"
   , grounds := [p .lastedAnHour]
   , step := p .lastedAnHour ➝ notP .lastedTwoHours
-  , delivers := notP .lastedTwoHours }
+  , delivers := notP .lastedTwoHours
+  , inference := some (fixture .plausible) }
 
 /-- **A line that rests on `byTheHour`, and that `byTheHour` rests on.** The meeting
 did not last two hours, so it lasted an hour: the converse of `byTheHour`, which
@@ -174,7 +175,8 @@ def byNotTwoHours : Line Claim :=
   { name := "By not two hours"
   , grounds := [notP .lastedTwoHours]
   , step := notP .lastedTwoHours ➝ p .lastedAnHour
-  , delivers := p .lastedAnHour }
+  , delivers := p .lastedAnHour
+  , inference := some (fixture .plausible) }
 
 /-- The one join: an hour and two hours exclude each other, by what "lasts"
 means (`Testimony.Ontology.Time.oneLength`). -/

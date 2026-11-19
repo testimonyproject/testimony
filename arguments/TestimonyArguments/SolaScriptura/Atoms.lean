@@ -83,13 +83,92 @@ inductive Claim
   | churchMindIsInfallibleInterpreter
   /-- The canon is known through the Church's reception of it. -/
   | canonKnownThroughChurchReception
-  /-- Identifying the canon requires an infallible authority. The hinge of the
-  canon objection. -/
+  /-- Identifying the canon requires an infallible authority outside Scripture.
+  The hinge of the canon objection. -/
   | identifyingCanonRequiresInfallibleAuthority
   /-- A rival's own foundational authority is self-authenticating too, so the
   circularity charge does not discriminate between the positions. Kruger's
   parity reply. -/
   | rivalAuthorityIsAlsoSelfAuthenticating
+  /-- Deuteronomy 13:1–3 — "If a prophet or a dreamer of dreams arises among you
+  and gives you a sign or a wonder, and the sign or the wonder comes true,
+  concerning which he spoke to you, saying, 'Let us walk after other gods (whom
+  you have not known) and let us serve them,' you shall not listen to the words
+  of that prophet" (LSB). A sign that comes true does not make him a prophet:
+  what he says is weighed against the God Israel already knows. -/
+  | deut13_1_3ProphetOfOtherGods
+  /-- Deuteronomy 18:20–22 — "Now you may say in your heart, 'How will we know the
+  word which Yahweh has not spoken?' When a prophet speaks in the name of
+  Yahweh, if the thing does not come about or come true, that is the thing which
+  Yahweh has not spoken" (18:21–22, LSB). -/
+  | deut18_20_22WordNotFulfilled
+  /-- The early Church set apart books it read but did not receive into the
+  canon, and gave its reasons. The Muratorian fragment says the Shepherd of
+  Hermas may be read but not placed "among the prophets, as their number is
+  complete, nor among the apostles"; Athanasius, in his Festal Letter of 367,
+  sets the Shepherd and the Didache among books "appointed by the Fathers to be
+  read by those who newly join us", and not in the canon. -/
+  | booksReadButNotReceived
+  /-- God keeps his written word by his providence and brings it to his people.
+  The Westminster Confession says the Old Testament in Hebrew and the New in
+  Greek were "immediately inspired by God, and by his singular care and
+  providence kept pure in all ages" (I.8). The tests are applied under that
+  providence, not in place of it. -/
+  | providenceKeepsScripture
+  /-- Ephesians 2:20 — the church is "built on the foundation of the apostles and
+  prophets, Christ Jesus Himself being the corner stone"; and Jude 3 speaks of
+  "the faith which was once for all handed down to the saints" (LSB). -/
+  | eph2_20FoundationOfApostles
+  /-- 2 Peter 3:15–16 — Peter writes that "our beloved brother Paul" wrote "in all
+  his letters" things which "the untaught and unstable distort, as they do also
+  the rest of the Scriptures" (LSB). He counts Paul's letters among the
+  Scriptures. In 3:2 he sets "the commandment of the Lord and Savior spoken by
+  your apostles" beside "the words spoken beforehand by the holy prophets"; and
+  1 Timothy 5:18 introduces, after a line of Deuteronomy, "The laborer is worthy
+  of his wages", with "the Scripture says", a saying Luke 10:7 records from
+  Jesus. -/
+  | pet3_15_16PaulAmongScriptures
+  /-- Galatians 1:8 — "But even if we, or an angel from heaven, should proclaim to
+  you a gospel contrary to the gospel we have proclaimed to you, let him be
+  accursed!" (LSB). Deuteronomy's test, that a sign does not outweigh a message at
+  odds with what God has said, is applied to the apostles' own gospel. -/
+  | gal1_8NoOtherGospel
+  /-- The Jews of the first century held that prophecy had ceased, and did not
+  give the books written after it the authority of the earlier ones. Josephus
+  says that what was written after Artaxerxes "hath not been esteemed of the
+  like authority with the former ... because there hath not been an exact
+  succession of prophets since that time" (*Against Apion* I.8, in Whiston's
+  translation), and 1 Maccabees speaks of a distress unknown "since the time a
+  prophet had last appeared among them" (9:27, NRSVUE). -/
+  | prophecyCeasedBeforeLaterBooks
+  /-- The infallible authority that identifies the canon is known by proving the
+  Church from Scripture received as inspired. -/
+  | churchKnownFromInspiredScripture
+  /-- The "spiral": Scripture, read only as reliable history, shows that Christ
+  founded an infallible Church, and that Church's word gives the certainty of
+  faith about which books are inspired. -/
+  | spiralGivesCertaintyOfTheCanon
+  /-- The Church's marks, its spread, holiness, unity and stability, show it to
+  be the infallible authority, and so give the certainty of faith about the
+  canon. -/
+  | marksGiveCertaintyOfTheCanon
+  /-- The Church's universal reception and ordinary teaching settled which books
+  are canonical before any council defined the list. -/
+  | receptionSettledTheCanon
+  /-- To prove the Church from Scripture received as inspired, and then
+  Scripture's inspiration from the Church, is to argue in a circle. -/
+  | provingEachFromTheOtherIsCircular
+  /-- A conclusion reached by reasoning from history can be no more certain, by
+  natural means, than the history it starts from, and the judgement that the
+  Gospels are reliable history is a fallible one. -/
+  | conclusionNoSurerThanItsHistory
+  /-- The marks make the Church's claim credible, not evident, and other
+  churches claim the same marks. -/
+  | marksMakeTheClaimOnlyCredible
+  /-- Before Trent, the Latin Church did not receive the disputed books with one
+  voice: Jerome left them out of the canon, Gregory the Great called 1 Maccabees
+  "not Canonical", and Cajetan, on the eve of Trent, followed Jerome. -/
+  | disputedBooksDoubtedBeforeTrent
   /-- Tradition carries real but fallible — ministerial, not magisterial —
   authority. **Tradition I.** -/
   | traditionHasMinisterialAuthority

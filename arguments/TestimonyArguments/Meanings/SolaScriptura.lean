@@ -4,13 +4,14 @@ import TestimonyArguments.SolaScriptura.Sources
 /-!
 # TestimonyArguments.Meanings.SolaScriptura — what each sola scriptura claim says
 
-**Fifty-four of the sixty-four claims have meanings** (`coverage_now`), and with
-them twenty-one of the argument's twenty-seven lines of reason can be read as moves,
+**Seventy of the eighty claims have meanings** (`coverage_now`), and with
+them twenty-six of the argument's thirty-two lines of reason can be read as moves,
 all of whose claims say something the checks can see: the eliminative line, both
 of Mark 7's lines, the line from Jesus' sayings and Paul's letters to the same
 principle, both readings of Acts 15, of the apostles' office and of Moses' seat,
 Geisler's Tradition 0, Trent, Vatican I, the
-Orthodox line, the canon objection and Kruger's reply, the interpretive-authority
+Orthodox line, the canon objection with Kruger's reply and the reply from
+Scripture's tests, the four replies on how the canon is known, the interpretive-authority
 regress and Mathison's reply, and Geisler's circularity charge with both replies
 to it.
 `TestimonyArguments.Meanings.SolaFide` is the fuller worked example of the same
@@ -49,6 +50,11 @@ words that carry a reading are kept as the text has them.
   Whether "contrary to" (παρ' ὅ, also rendered "besides" or "other than")
   reaches an addition or only something alien is the step's question, and the
   meaning does not answer it.
+- **Deuteronomy 13:1–3** says that a prophet whose sign comes to pass, but who
+  says "Let us go after other gods", is not to be heard, and **18:20–22** that a
+  word spoken in the LORD's name that does not come to pass is one the LORD has
+  not spoken. Both test a prophet's word. That they also test a book is the
+  reply's step, rated with its own source, and the meanings leave it out.
 - **Colossians 2:8, 20–22** says that the philosophy Paul warns against is
   "according to the tradition" (παράδοσις) of men and not according to Christ,
   and that the rules "Do not handle, nor taste, nor touch" are commandments of
@@ -219,6 +225,13 @@ def all : List Claim :=
   , .traditionIsCoordinateSourceOfRevelation, .magisteriumIsInfallible
   , .churchMindIsInfallibleInterpreter, .canonKnownThroughChurchReception
   , .identifyingCanonRequiresInfallibleAuthority, .rivalAuthorityIsAlsoSelfAuthenticating
+  , .deut13_1_3ProphetOfOtherGods, .deut18_20_22WordNotFulfilled, .booksReadButNotReceived
+  , .providenceKeepsScripture, .eph2_20FoundationOfApostles, .pet3_15_16PaulAmongScriptures
+  , .gal1_8NoOtherGospel, .prophecyCeasedBeforeLaterBooks
+  , .churchKnownFromInspiredScripture, .spiralGivesCertaintyOfTheCanon
+  , .marksGiveCertaintyOfTheCanon, .receptionSettledTheCanon
+  , .provingEachFromTheOtherIsCircular, .conclusionNoSurerThanItsHistory
+  , .marksMakeTheClaimOnlyCredible, .disputedBooksDoubtedBeforeTrent
   , .traditionHasMinisterialAuthority, .traditionIDiffersInPrincipleFromTradition0
   , .individualRetainsUltimateInterpretiveAuthority, .choosingAnAuthorityIsItselfPrivateJudgment
   , .bindingnessAppliesToFirstOrderDoctrineOnly, .practiceNeitherCommandedNorForbiddenIsPermitted
@@ -305,6 +318,15 @@ theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
   rg .firstThessalonians 1 1 2 6
 /-- Acts 15:6–16:4, where the council is "the apostles and elders". -/
 @[nolint defsWithUnderscore] abbrev acts15_6_16_4 : PassageRange := rg .acts 15 6 16 4
+/-- Deuteronomy 13:1–3. -/
+@[nolint defsWithUnderscore] abbrev deut13_1_3 : PassageRange := rg .deuteronomy 13 1 13 3
+/-- Deuteronomy 18:20–22. -/
+@[nolint defsWithUnderscore] abbrev deut18_20_22 : PassageRange :=
+  rg .deuteronomy 18 20 18 22
+/-- Ephesians 2:20. -/
+@[nolint defsWithUnderscore] abbrev eph2_20 : PassageRange := vs .ephesians 2 20
+/-- Galatians 1:8. -/
+@[nolint defsWithUnderscore] abbrev gal1_8 : PassageRange := vs .galatians 1 8
 /-- 2 Timothy 2:2. -/
 @[nolint defsWithUnderscore] abbrev tim2_2 : PassageRange := vs .secondTimothy 2 2
 /-- Matthew 23:16–22. -/
@@ -410,7 +432,67 @@ def means : Claim → Statement
   | .canonKnownThroughChurchReception =>
     .holds (rl .instrumentOf (cn .receptionOfTheCanon) (cn .identifyingTheCanon))
   | .identifyingCanonRequiresInfallibleAuthority =>
-    .holds (rl .necessaryFor (cn .infallibleAuthority) (cn .identifyingTheCanon))
+    .holds (rl .necessaryFor
+      (pt "an infallible authority outside Scripture" .agent) (cn .identifyingTheCanon))
+  | .deut13_1_3ProphetOfOtherGods =>
+    .says deut13_1_3 <| rl .isA
+      (pt "a prophet whose sign comes to pass, who says, Let us go after other gods" .agent)
+      (pt "one Israel is not to hearken to" .quality)
+  | .deut18_20_22WordNotFulfilled =>
+    .says deut18_20_22 <| rl .isA
+      (pt "a word spoken in the LORD's name that does not come to pass" .informationObject)
+      (pt "a word the LORD has not spoken" .quality)
+  | .booksReadButNotReceived =>
+    .holds <| rl .agentOf (pt "the Muratorian fragment and Athanasius" .agent)
+      (pt ("setting apart the Shepherd and the Didache as books read but not received " ++
+          "into the canon, and saying why") .event)
+  | .providenceKeepsScripture =>
+    .holds <| rl .agentOf (pt "God, by his providence" .agent)
+      (pt "keeping his written word and bringing it to his people" .event)
+  | .eph2_20FoundationOfApostles =>
+    .says eph2_20 <| rl .isA (pt "the apostles and prophets" .agent)
+      (pt "the foundation the church is built on" .quality)
+  | .pet3_15_16PaulAmongScriptures =>
+    .says pet3_15_16 <| rl .isA (pt "Paul's letters" .informationObject)
+      (pt "counted with the rest of the Scriptures" .quality)
+  | .gal1_8NoOtherGospel =>
+    .says gal1_8 <| rl .isA
+      (pt "one who proclaims a gospel contrary to the first, though an apostle or an angel" .agent)
+      (pt "accursed" .quality)
+  | .prophecyCeasedBeforeLaterBooks =>
+    .holds <| rl .agentOf (pt "the Jews of the first century" .agent)
+      (pt ("withholding from books written after prophecy ceased the authority of the " ++
+          "earlier ones") .event)
+  | .churchKnownFromInspiredScripture =>
+    .holds <| rl .instrumentOf
+      (pt "proving the Church from Scripture received as inspired" .event)
+      (cn .identifyingTheCanon)
+  | .spiralGivesCertaintyOfTheCanon =>
+    .holds <| rl .instrumentOf
+      (pt "the Church's word, shown infallible from Scripture read as history" .informationObject)
+      (cn .identifyingTheCanon)
+  | .marksGiveCertaintyOfTheCanon =>
+    .holds <| rl .instrumentOf
+      (pt "the Church's marks: spread, holiness, unity and stability" .quality)
+      (cn .identifyingTheCanon)
+  | .receptionSettledTheCanon =>
+    .holds <| rl .instrumentOf
+      (pt "the Church's universal reception and ordinary teaching" .event)
+      (cn .identifyingTheCanon)
+  | .provingEachFromTheOtherIsCircular =>
+    .holds <| rl .isA
+      (pt "proving the Church from inspired Scripture and inspiration from the Church" .event)
+      (pt "an argument in a circle" .quality)
+  | .conclusionNoSurerThanItsHistory =>
+    .holds <| rl .isA
+      (pt "a conclusion reasoned from history, by natural means" .informationObject)
+      (pt "no surer than the history it starts from" .quality)
+  | .marksMakeTheClaimOnlyCredible =>
+    .holds <| rl .isA (pt "the Church's claim, shown by its marks" .informationObject)
+      (pt "credible, not evident, and claimed by other churches too" .quality)
+  | .disputedBooksDoubtedBeforeTrent =>
+    .holds <| rl .agentOf (pt "Jerome, Gregory the Great and Cajetan" .agent)
+      (pt "doubting the disputed books before Trent" .event)
   | .traditionHasMinisterialAuthority =>
     .holds <| .both (rl .isA (cn .tradition) (cn .ministerialAuthority))
       (.not (rl .isA (cn .tradition) (cn .infallible)))
@@ -559,10 +641,10 @@ def means : Claim → Statement
 instance meanings : HasMeanings Claim :=
   { argument := "Sola scriptura", all, complete := all_complete, means }
 
-/-- **Fifty-four of the 64 atoms are analysed**: the texts, in their own words,
+/-- **Seventy of the 80 atoms are analysed**: the texts, in their own words,
 and every claim a line's step reads except the three the module docstring
 names. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (54, 64) := by decide
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (70, 80) := by decide
 
 /-- **The sola scriptura joins**: each pair of claims whose meanings exclude or
 entail one another, listed, and proved to be exactly what the meanings contain.

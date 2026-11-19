@@ -279,7 +279,7 @@ def legend [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) : String
   let order := n.order
   let rows := order.zipIdx.map fun (a, i) =>
     let m := cite a
-    let mark := if m.source.isScriptureOnly then scriptureOnlyMark else ""
+    let mark := if m.readsScriptureAlone then scriptureOnlyMark else ""
     varTarget n.anchor i ++ "$" ++ varName i ++ "$ & " ++ escape m.label ++ mark ++ " & " ++
       kind m.kind ++
       " & " ++ tradition m.source.tradition ++ ", " ++ confidence m.source.confidence ++
@@ -288,9 +288,10 @@ def legend [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) : String
     pcol "0.21" ++ "@{}}\n" ++
   "\\toprule\n & claim & kind & held & source \\\\\n\\midrule\n\\endhead\n" ++
   String.intercalate "\n" rows ++ "\n\\bottomrule\n\\end{longtable}\n\n" ++
-  (if order.any fun a => (cite a).source.citesScripture then
+  (if order.any fun a => (cite a).readsScriptureAlone then
     "\\noindent\\footnotesize " ++ scriptureOnlyMark ++
-    " grounded in scripture alone: the reading is assumed, not argued for.\n" ++
+    " a reading cited to the text alone, with no commentator: it is assumed here, " ++
+    "not argued for.\n" ++
     "\\normalsize\n"
   else "")
 
@@ -515,7 +516,7 @@ document's heading structure is the prose's own, and a heading per declaration
 would bury it under sixty entries of scaffolding.
 
 The leading `\par` is load-bearing. `\noindent` does not start a paragraph, so
-without it a label after a one-line note — "Grounded in scripture alone: …" —
+without it a label after a one-line note — "Read from the text alone …" —
 sets on the same line as the note and reads as part of it. `\nobreak` keeps the
 label with the docstring it introduces, and the trailing `\noindent` keeps that
 docstring from being indented away from it. -/
@@ -751,16 +752,16 @@ def readingWords [DecidableEq α] (n : Numbering α) (truth : List (α × Bool))
         "  \\item[] " ++ claimWords n cite a false ++ "\n")) ++
       "\\noindent " ++ rest ++ "\n"
 
-/-- Which of a package's premises are grounded in scripture alone, as a note
-under its derivation; nothing, in a document none of whose claims cites
-scripture. -/
-def scriptureNote [DecidableEq α] (order : List α) (pkg : ArgumentPackage α) : String :=
-  if !(order.any fun a => (pkg.cite a).source.citesScripture) then ""
-  else if pkg.scriptureOnlyAtoms.isEmpty then
-    "\\emph{No premise here rests on scripture alone.}\n"
+/-- Which of a package's premises are readings taken from the text alone
+(`AtomMeta.readsScriptureAlone`), as a note under its derivation; nothing when
+there are none. A quotation of the text is not such a reading, so a package
+whose only scripture-cited premises are quotations gets no note. -/
+def scriptureNote [DecidableEq α] (_order : List α) (pkg : ArgumentPackage α) : String :=
+  if pkg.scriptureOnlyAtoms.isEmpty then ""
   else
-    "\\emph{Grounded in scripture alone:} " ++
-    String.intercalate ", " (pkg.scriptureOnlyAtoms.map fun m => escape m.label) ++ ".\n"
+    "\\emph{Read from the text alone, with no commentator cited, and so assumed " ++
+    "here rather than argued for:} " ++
+    String.intercalate "; " (pkg.scriptureOnlyAtoms.map fun m => escape m.label) ++ ".\n"
 
 /-- The formulas of a list, inline and joined. -/
 def inlineFormulas [DecidableEq α] (n : Numbering α) (φs : List (Formula α)) : String :=
