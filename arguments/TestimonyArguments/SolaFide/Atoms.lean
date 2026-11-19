@@ -549,6 +549,32 @@ inductive Claim
   not count his sin". Paul joins Genesis 15:6 and Psalm 32:2 by the word they share, and his
   explanation of the one by the other needs the word to keep its sense. -/
   | romans4CountKeepsItsSense
+  /-- Paul's "justify" (δικαιόω) and "works of the law" (ἔργα νόμου) keep one
+  sense between Romans 3:28 and Galatians 2:16, and as Paul uses them
+  generally. The Pauline strand sets the two verses together and reads the
+  phrase as Paul's usage, so it needs this. -/
+  | paulsWordsKeepTheirSense
+  /-- The Latin *iustificare*, as the Latin West read it ("to be made just"),
+  bears the sense of Paul's Greek δικαιόω. Trent's reading of Paul's word goes
+  from Augustine's Latin gloss to the Greek, and so needs this. -/
+  | latinWordBearsPaulsSense
+  /-- "Works" (ἔργα) keeps one sense from Romans 4:4–5, the one who works and the
+  one who does not, to 4:6–8, righteousness "apart from works". -/
+  | romans4WorksKeepsItsSense
+  /-- "Believe" (πιστεύω) keeps one sense between John 6:29, "that you believe in
+  him whom he has sent", and John 3:16–18, "whoever believes in him". -/
+  | johnBelievingKeepsItsSense
+  /-- James uses "justify" (δικαιόω) in 2:21–25 in the sense it has outside Paul,
+  to declare, acquit or vindicate, as at Matthew 11:19 and Deuteronomy 25:1. -/
+  | jamesUsesDikaioAsOutsidePaul
+  /-- Through James 2:21–25, "justify" (δικαιόω) and "works" (ἔργα) keep one
+  sense: in 2:24 as in Abraham's case and Rahab's (2:21, 25). The word
+  "justify" occurs in James only in these verses. -/
+  | jamesKeepsHisWordsThroughTheParagraph
+  /-- "Faith" and "works" in James 2:18, "I will show you my faith by my works",
+  are the faith of Ephesians 2:8 and the works of 2:9–10: the works excluded as
+  the ground, and the good works God prepared, one word for one kind of deed. -/
+  | fruitTextsShareFaithAndWorks
   /-- Augustine gives both senses of "being justified": "being made righteous",
   and, as a second way of taking it, "deemed, or reckoned as just" (*On the
   Spirit and the Letter* 26.45). A claim about what Augustine wrote. -/

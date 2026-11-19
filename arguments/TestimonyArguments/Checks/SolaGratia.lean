@@ -1,6 +1,7 @@
 import TestimonyArguments.SolaGratia
 import TestimonyArguments.Meanings.SolaGratia
 import Testimony.Checks.Aif
+import Testimony.Checks.Conditions
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
@@ -73,5 +74,15 @@ and 0 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in
 #check_aif under TestimonyArguments.SolaGratia
+
+/--
+info: every dispute, its lines' conditions stated:
+perseveranceDispute.finite:
+  hidden premises: 0; lines not read: 14
+solaGratiaDispute.finite:
+  hidden premises: 0; lines not read: 12
+-/
+#guard_msgs in
+#check_conditions under TestimonyArguments.SolaGratia
 
 end TestimonyArguments.Checks.SolaGratia

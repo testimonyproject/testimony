@@ -153,7 +153,8 @@ def thomistOnJohn : ArgumentPackage Claim :=
     name := "Aquinas on John 6:29 (faith formed by charity)"
     premises :=
       caseOf
-        [ johannineLine.onGrounds [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving]
+        [ johannineLine.onGrounds
+            [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johnBelievingKeepsItsSense]
         , thomistLine ]
         sharedGrounds closingSteps }
 

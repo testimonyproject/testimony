@@ -1,6 +1,7 @@
 import TestimonyArguments.Trinity
 import TestimonyArguments.Meanings.Trinity
 import Testimony.Checks.Aif
+import Testimony.Checks.Conditions
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
@@ -72,5 +73,19 @@ and 0 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in
 #check_aif under TestimonyArguments.Trinity
+
+/--
+info: every dispute, its lines' conditions stated:
+caseDispute.finite:
+  hidden premises: 0; lines not read: 21
+deityDispute.finite:
+  hidden premises: 0; lines not read: 6
+orderDispute.finite:
+  hidden premises: 0; lines not read: 7
+processionDispute.finite:
+  hidden premises: 0; lines not read: 6
+-/
+#guard_msgs in
+#check_conditions under TestimonyArguments.Trinity
 
 end TestimonyArguments.Checks.Trinity

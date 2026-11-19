@@ -1,5 +1,6 @@
 import Testimony.Checks.Aif
 import Testimony.Checks.Citations
+import Testimony.Checks.Conditions
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Meanings
 import Testimony.Checks.Ontology
@@ -18,8 +19,9 @@ its checks so). This module makes forgetting a build failure.
 `#check_coverage under N` finds, for each check, everything under `N` that the
 check examines: every argument's claim type, for the meanings and the shared
 ontology; every claim type with a line of reason, for the fallacies; every
-package, for its postulates and for its readers; every non-entailment, for the postulates again;
-every refutation, for `establish`; every dispute's defeat table, for AIF; and
+package, for its postulates and for its readers; every non-entailment, for the
+postulates again; every refutation, for `establish`; every dispute's defeat table,
+for AIF and for the premises its lines leave unstated; and
 every definition, for the citations. It fails if any of them lies under no
 namespace that check has been run under, here or in a module imported here, and
 names each one. Its report states no count, so adding an argument, a package or
@@ -67,7 +69,8 @@ def checkTargets (env : Environment) (root : Name) : List (Name × Array Name) :
   return [ (`meanings, claims), (`ontology, claims), (`fallacies, lined.toArray)
          , (`postulates, packages), (`readers, packages)
          , (`refutationsPostulates, nonEntailments)
-         , (`refutations, refutations), (`aif, tables), (`citations, defs) ]
+         , (`refutations, refutations), (`aif, tables), (`conditions, tables)
+         , (`citations, defs) ]
 
 /-- Check that every check has been run under a namespace holding each thing it
 examines under `root`; see the module docstring. -/

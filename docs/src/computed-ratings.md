@@ -363,11 +363,11 @@ would not outrank Miller, and his dissent would count again.
 ## Phase two: every dispute weighs computed ratings
 
 A hearing weighs computed ratings, but a full dispute still weighs cited ones. For the James
-dispute these agree under the evidence standard only. The full dispute therefore forces
-James's word (`james_words_prevail`), while the hearing under the tradition standard finds it
-contested. Phase two ([#136][phase-two]) declares every dispute with its register and states
-each verdict under both standards. Splitting `Source.confidence` into support and register,
-and enforcing the steelman rule with a linter rule, is [#137][split].
+dispute these agree under the tradition standard, where what James's word means is contested
+(`james_word_contested`), and not under the evidence standard, where the hearing forces the
+argument from James's word. Phase two ([#136][phase-two]) declares every dispute with its
+register and states each verdict under both standards. Splitting `Source.confidence` into
+support and register, and enforcing the steelman rule with a linter rule, is [#137][split].
 
 This is not circular. A dissent's credibility depends only on entailment and warrant, never on
 ratings, so the computed ratings are fixed before the solver runs.

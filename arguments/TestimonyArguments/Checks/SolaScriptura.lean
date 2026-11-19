@@ -1,6 +1,7 @@
 import TestimonyArguments.SolaScriptura
 import TestimonyArguments.Meanings.SolaScriptura
 import Testimony.Checks.Aif
+import Testimony.Checks.Conditions
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
@@ -73,5 +74,15 @@ and 2 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in
 #check_aif under TestimonyArguments.SolaScriptura
+
+/--
+info: every dispute, its lines' conditions stated:
+canonDispute.finite:
+  hidden premises: 0; lines not read: 0
+mark7Dispute.finite:
+  hidden premises: 0; lines not read: 0
+-/
+#guard_msgs in
+#check_conditions under TestimonyArguments.SolaScriptura
 
 end TestimonyArguments.Checks.SolaScriptura

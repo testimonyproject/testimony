@@ -196,9 +196,9 @@ are weighed come from one record, and cannot disagree about the standard.
 
 - **What James's "justified" means depends on the standard**
   (`james_word_turns_on_the_standard`). Under the evidence standard the argument
-  from James's word is forced, as in the full debate: the reading through Paul
-  is not heard. Under the tradition standard it is heard, the step about the
-  word is weighed at `disputed`, and the question is contested. The argument
+  from James's word is forced: neither the reading through Paul nor Trent's
+  reading of the word is heard. Under the tradition standard both are heard, as
+  in the full debate, and the question is contested. The argument
   from James's word and the reading through Paul can each be defended, and
   neither is forced.
 - **Whether works are fruit and not ground depends on the standard too**
@@ -250,9 +250,10 @@ def canon24Assessment : Assessment Claim where
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted :=
-        [ (.evidence, [.worksCauseIncreaseOfJustification])
+        [ (.evidence, [.worksCauseIncreaseOfJustification, .jamesKeepsHisWordsThroughTheParagraph])
         , (.tradition, [])
-        , (.scriptural, [.worksCauseIncreaseOfJustification]) ] }
+        , (.scriptural,
+            [.worksCauseIncreaseOfJustification, .jamesKeepsHisWordsThroughTheParagraph]) ] }
   checked := by horn_certify
 
 /-- **Chapter 16, against "fruit, not ground".** It is argued, and it accepts
@@ -290,9 +291,9 @@ def trentWordAssessment : Assessment Claim where
   findings :=
     { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
     , unadmitted :=
-        [ (.evidence, [.jamesJustifyDenotesIncrease])
+        [ (.evidence, [.jamesJustifyDenotesIncrease, .jamesKeepsHisWordsThroughTheParagraph])
         , (.tradition, [])
-        , (.scriptural, [.jamesJustifyDenotesIncrease]) ] }
+        , (.scriptural, [.jamesJustifyDenotesIncrease, .jamesKeepsHisWordsThroughTheParagraph]) ] }
   checked := by horn_certify
 
 /-- **The reading through Paul, against the step about the word.** It is argued,
@@ -310,9 +311,9 @@ def renewalAssessment : Assessment Claim where
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
     , unadmitted :=
-        [ (.evidence, [.jamesUsesDikaioAsPaul])
+        [ (.evidence, [.jamesUsesDikaioAsPaul, .jamesKeepsHisWordsThroughTheParagraph])
         , (.tradition, [])
-        , (.scriptural, [.jamesUsesDikaioAsPaul]) ] }
+        , (.scriptural, [.jamesUsesDikaioAsPaul, .jamesKeepsHisWordsThroughTheParagraph]) ] }
   checked := by horn_certify
 
 /-- **Trent's reading of James's word is a disagreement, not an argument.** What it
@@ -426,7 +427,10 @@ def harmonyOnCanon24Assessment : Assessment Claim where
     , position := jamesHarmonyCase }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
+    , unadmitted :=
+        [ (.evidence, [.fruitTextsShareFaithAndWorks])
+        , (.tradition, [])
+        , (.scriptural, [.fruitTextsShareFaithAndWorks]) ] }
   checked := by horn_certify
 
 /-- **The Reformed reconciliation, against chapter 16's step.** It accepts the
@@ -443,7 +447,10 @@ def harmonyOnRewardAssessment : Assessment Claim where
     , position := jamesHarmonyCase }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
+    , unadmitted :=
+        [ (.evidence, [.fruitTextsShareFaithAndWorks])
+        , (.tradition, [])
+        , (.scriptural, [.fruitTextsShareFaithAndWorks]) ] }
   checked := by horn_certify
 
 /-- **Trent's premise that the reward is given to merits, with the objection to
@@ -468,17 +475,25 @@ def rewardStep : RatedStep Claim where
   register := [harmonyOnRewardAssessment]
   strongest := some 0
 
-/-- **The same checks, applied the other way: Rome's steps are disputed under every
-standard.** Westminster's answer to Trent's premise about merit, and the
-Reformed reconciliation's answers to canon 24's step and chapter 16's, each
-argue from texts and rest on no one's word alone. So each counts as an argument
-under the evidence standard as under the tradition standard, and each of Trent's
-claims is `disputed` under both.
+/-- **The same checks, applied the other way: what Rome's steps meet under each
+standard.** Westminster's answer to Trent's premise about merit argues from texts
+and rests on no one's word alone. So it counts as an argument under every
+standard, and Trent's premise is `disputed` under all three.
 
-Set beside `fruit_step_ratings`, this is the difference the checks find. The
-Reformed objections to Trent's claims are arguments under each of the three
-standards. Trent's objections to the Reformed step are arguments only under the
-standard that allows the council's word.
+The Reformed reconciliation's answers to canon 24's step and to chapter 16's are
+another matter. Each needs Ephesians 2:8–10 and James 2:18 to use "faith" and
+"works" in one sense, so that Paul's works and James's are the same works, and
+only Westminster (XVI.2) and Calvin (on James 2:18) say that they do. So each
+answer rests at that premise on a confession's and a theologian's word. It is an
+argument under the tradition standard, and not under the evidence or the
+Scripture standard. There, canon 24's step and chapter 16's stand at their cited
+rating, `disputed`.
+
+Set beside `fruit_step_ratings`, the checks now find the two sides alike. Trent's
+objections to the Reformed step are arguments only under the standard that
+allows the council's word, and the Reformed objections to Trent's two steps are
+arguments only under the standard that allows the Assembly's. The one exception
+is Westminster's answer on merit, which needs no one's word.
 
 It does not show that either side's step is right. -/
 @[headline]
@@ -488,13 +503,13 @@ theorem rome_steps_ratings :
         , (.tradition, .disputedBy ["Westminster XVI.5, XVI.6"])
         , (.scriptural, .disputedBy ["Westminster XVI.5, XVI.6"]) ] ∧
       canon24Step.ratings =
-        [ (.evidence, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"])
+        [ (.evidence, .stands .disputed)
         , (.tradition, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"])
-        , (.scriptural, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"]) ] ∧
+        , (.scriptural, .stands .disputed) ] ∧
       rewardStep.ratings =
-        [ (.evidence, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"])
+        [ (.evidence, .stands .disputed)
         , (.tradition, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"])
-        , (.scriptural, .disputedBy ["The Reformed harmony (Westminster XVI.2, XVI.5)"]) ] := by
+        , (.scriptural, .stands .disputed) ] := by
   decide +kernel
 
 #print axioms rome_steps_ratings
@@ -547,8 +562,10 @@ as a line of argument. -/
 @[solaFideDefs]
 def trentWordLine : Line Claim :=
   { name := "Paul's word, as the Latin West read it (Augustine; Trent, ch. 8)"
-  , grounds := [p .augustineReadsJustifyAsMakeRighteous]
-  , step := p .augustineReadsJustifyAsMakeRighteous ➝ p .paulsJustifyDenotesRenewal
+  , grounds := [p .augustineReadsJustifyAsMakeRighteous, p .latinWordBearsPaulsSense]
+  , step :=
+      ⋀ [p .augustineReadsJustifyAsMakeRighteous, p .latinWordBearsPaulsSense]
+      ➝ p .paulsJustifyDenotesRenewal
   , delivers := p .paulsJustifyDenotesRenewal
   , inference := some trentReadsPaulsWord }
 
@@ -711,7 +728,10 @@ def trentWordOnLexicalAssessment : Assessment Claim where
     , position := trentOnTheWordOfPaul }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
+    , unadmitted :=
+        [ (.evidence, [.latinWordBearsPaulsSense])
+        , (.tradition, [])
+        , (.scriptural, [.latinWordBearsPaulsSense]) ] }
   checked := by horn_certify
 
 /-- **Trent's definition taken as a claim about what God does, against the step in
@@ -763,19 +783,23 @@ def lexicalWordStep : RatedStep Claim where
 /-- **The same checks, from Trent's side.** Trent objects three times to the
 Reformed steps over its definition.
 
-- Its reading of Paul's word is an argument against the step about the word,
-  under every standard. Trent keeps the courtroom sense, since the justified
-  "are not only reputed, but are truly called, and are, just" (Session VI,
-  ch. 7), and argues from Augustine that the word means making righteous too.
-  So it grants the step's starting points and denies what the step draws from
-  them.
+- Its reading of Paul's word is argued. Trent keeps the courtroom sense, since
+  the justified "are not only reputed, but are truly called, and are, just"
+  (Session VI, ch. 7), and argues from Augustine that the word means making
+  righteous too. So it grants the step's starting points and denies what the
+  step draws from them. But Augustine wrote of the Latin *iustificare*, and the
+  argument needs the Latin word to bear the sense of Paul's Greek one, δικαιόω.
+  Trent says it does (ch. 7–8), and Melanchthon and Calvin deny it. So the
+  objection rests at that premise on the council's word, and it is an argument
+  under the tradition standard only.
 - Its definition, taken as a claim about what God does, is stated and not argued
   against Paul's gospel.
 - Its denial that faith suffices is an argument against Luke 18's step under the
   tradition standard only, because its one starting point is the definition.
 
-So the step about Paul's word is disputed under all three standards, by Trent's
-reading of the word.
+So the step about Paul's word is disputed by Trent's reading of the word under
+the tradition standard. Under the evidence and the Scripture standards it stands
+at its cited rating, which is `disputed` already.
 
 What it does not claim: that Trent's reading is right. `disputed` means there
 is an argued objection, not that the objection wins. The step's cited rating
@@ -787,9 +811,9 @@ theorem trent_dissents_from_the_definition_steps :
       trentSufficiencyOnLuke18Assessment.profile = [(.evidence, false), (.tradition, true)
       , (.scriptural, false)] ∧
       lexicalWordStep.ratings =
-        [(.evidence, .disputedBy ["Trent, with Augustine (ch. 8)"])
+        [(.evidence, .stands .disputed)
         , (.tradition, .disputedBy ["Trent, with Augustine (ch. 8)"])
-        , (.scriptural, .disputedBy ["Trent, with Augustine (ch. 8)"])] := by
+        , (.scriptural, .stands .disputed)] := by
   decide +kernel
 
 #print axioms trent_dissents_from_the_definition_steps
@@ -823,8 +847,6 @@ declare_rerated jamesRegister rows 2
   from the positions' premises with the ratings for that standard, and checked by
   machine. -/
   defeats fun
-    | .tradition =>
-      jamesDispute.defeatsTable ++ [(.trentOnTheWord, .lexical), (.renewalOnTheWord, .lexical)]
     | _ => jamesDispute.defeatsTable
 
 /-- The debate heard under the evidence standard. -/
@@ -881,11 +903,6 @@ theorem renewal_holds_increase :
     Entails (jamesDispute.node .renewalOnTheWord).premises (p .jamesJustifyDenotesIncrease) := by
   establish [solaFideDefs, jamesDispute]
 
-/-- The argument from James's word denies it. -/
-theorem lexical_denies_increase :
-    Entails (jamesDispute.node .lexical).premises (∼ p .jamesJustifyDenotesIncrease) := by
-  establish [solaFideDefs, jamesDispute]
-
 /-- Why the reading through Paul can be defended under the tradition standard: it
 answers the argument from James's word, now that the two are rated alike. -/
 declare_verdict renewalHeard for jamesUnderTradition using (jamesRegister.under .tradition) :
@@ -904,12 +921,18 @@ the rating agree.**
 Under the evidence standard the argument from James's word is forced, with the
 argument about James's faith and the Greek of both verses. The reading through
 Paul is not heard, because it rests on Trent's word that James's "justified"
-(δικαιόω) is Paul's.
+(δικαιόω) is Paul's, and Trent's reading of the word is not heard, because it
+rests on Trent's word at the reading itself.
 
-Under the tradition standard the reading through Paul is heard, the step about
-the word is weighed at the rating worked out for it there, `disputed`, and
-whether James's word means the increase of justice is contested. Each side can
-be defended, and neither is forced. -/
+Under the tradition standard both are heard, as in the full debate, and whether
+James's word means the increase of justice is contested. Each side can be
+defended, and neither is forced.
+
+What it does not show: that the argument from James's word rests on evidence
+alone. It needs James to use the word as it is used outside Paul, and that is
+Calvin's reading. The register enters only the objections to the Reformed
+steps, so the Reformed positions are heard under every standard, and are not
+held to the evidence standard's test themselves. -/
 @[headline]
 theorem james_word_turns_on_the_standard :
     grounded jamesUnderEvidence.defeats =

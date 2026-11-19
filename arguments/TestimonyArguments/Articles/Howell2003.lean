@@ -57,12 +57,11 @@ it needs does not survive the weighing (`faithDenialAnswered`).
 **What that does not reach.** The article's other case from James — "works
 actually justify", Abraham "justified by doing a work that grew out of his faith"
 — is the Catholic reading of James's "by works", weighed in `SolaFide.James`.
-Read as a claim about James's word δικαιόω (the increase of justice) it cannot be
-defended there (`trent_on_james_word_indefensible`); read as a claim about what
-works do before God (Trent, canon 24) it can be, and is not forced
-(`trent_on_works_defensible`, `trent_on_works_not_forced`). The article argues
-from James's words, so its own route is the first; the doctrine survives on the
-second.
+Read as a claim about James's word δικαιόω (the increase of justice) it can be
+defended there, and the question is contested (`james_word_contested`): the two
+readings part at whether James uses the word as it is used outside Paul. Read as
+a claim about what works do before God (Trent, canon 24) it can be defended too,
+and is not forced (`trent_on_works_defensible`, `trent_on_works_not_forced`).
 
 **The objector is held to the same check.** His reply — James 2:14 "is dealing
 with the problem of those who claim faith but who don't show it by their

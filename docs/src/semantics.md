@@ -202,10 +202,10 @@ is not thereby fallacious. It is **conditional**, on exactly those senses.
 
 The library's verdicts already say, of a position, whether it can be defended. A position is
 **indefensible** when no admissible set holds it: something defeats it, and nothing the dispute
-can hold answers that defeat. Trent's reading of James's "justified" as the increase of justice
-is indefensible in the James dispute (`trent_on_james_word_indefensible`). That is the
-library's own judgment, checked, and an article that argued the same would meet the same
-verdict, for the same stated reason.
+can hold answers that defeat. Trent's reading of Revelation 22:11 as "be justified still" is
+indefensible in the James dispute (`trent_on_revelation_indefensible`), because the Greek does
+not say it. That is the library's own judgment, checked, and an article that argued the same
+would meet the same verdict, for the same stated reason.
 
 So an article's claim is judged the same way, in four steps:
 
@@ -265,9 +265,9 @@ dead (2:17, 2:26); Trent reads it so (Session VI, ch. 7); the Reformers' confess
 faith that alone justifies "no dead faith" (Westminster XI.2). The denial the move needs does not
 survive the weighing (`faithDenialAnswered`). The article's other case from James — that works
 "actually justify" — is the Catholic reading of James's "by works", weighed in
-`TestimonyArguments.SolaFide.James`: as a claim about James's word it cannot be defended
-(`trent_on_james_word_indefensible`); as a claim about what works do before God it can, and is
-not forced (`trent_on_works_defensible`).
+`TestimonyArguments.SolaFide.James`: as a claim about James's word it can be defended, and the
+question is contested (`james_word_contested`); as a claim about what works do before God it can
+be defended too, and is not forced (`trent_on_works_defensible`).
 
 **The same check, on the other side.** The objector's reply — James 2:14 "is dealing with the
 problem of those who claim faith but who don't show it by their works" — takes "faith" in 2:14
@@ -287,10 +287,11 @@ authority inside the solver — "Scripture first, by default" — would decide t
 dispute by fiat, since whether a council's or a confession's word binds is what that dispute is
 about. And it applies to every side: in the James dispute (`james_warrants`) Trent's readings rest
 on Trent's word, and the readings of the Greek on Pius XII's and Westminster's at "the original
-outweighs any translation". The Reformed harmony rested on Westminster's word at "works are fruit,
-not ground" until it was given the Assembly's own proof texts as a step (`fruitLine`); it rests on
-Scripture now, and the step is still `disputed`, because Trent grants the texts and calls the
-fruit merit.
+outweighs any translation". The Reformed side rests on someone's word too. The harmony derives
+"works are fruit, not ground" from the Assembly's own proof texts (`fruitLine`), but the step
+needs those texts to use "faith" and "works" in one sense, and that rests on Westminster's and
+Calvin's word. The argument from James's word rests on Calvin's, that James uses "justify" as it
+is used outside Paul.
 
 The same check answers whether Rome contradicts itself over Trent's Latin texts
 (`TestimonyArguments.SolaFide.Vulgate`). Read as what the inspired authors wrote, Trent's "as it
@@ -326,9 +327,10 @@ courtroom sense of the verb to "and nothing more", and Trent's reading of the wo
 For James, four things are missing.
 
 1. **The dispute now exists** (`TestimonyArguments.SolaFide.James`), with the Catholic reading as
-   two parties: James's word as the increase of justice, which cannot be defended; and what works
-   do before God (canon 24), which can, against the Reformed harmony. What is left to decide is
-   the second.
+   two parties: James's word as the increase of justice, and what works do before God (canon 24).
+   Each can be defended and neither is forced. The first meets the argument from James's word,
+   and the two part at whether James uses the word as it is used outside Paul
+   (`james_word_contested`). The second meets the Reformed harmony.
 2. **The question splits by word and by verse.** What δικαιόω denotes at 2:21, 2:24 and 2:25;
    what πίστις denotes at 2:14, 2:17, 2:19 and 2:24; and whether each keeps its sense through
    the paragraph. The grammar can now state each as its own claim, and `sameSense` the claim that

@@ -198,7 +198,7 @@ stand for every work, and not for one mark of being a Jew. -/
 @[solaFideDefs]
 def paulineToFaithAlone : Formula Claim :=
   ⋀ [ p .romans3_28, p .galatians2_16, p .galatiansOpposesCircumcisionAsRequirement
-    , p .pistisChristouObjective, p .worksOfLawMeansWorksGenerally ]
+    , p .pistisChristouObjective, p .worksOfLawMeansWorksGenerally, p .paulsWordsKeepTheirSense ]
   ➝ p .justificationByFaithAlone
 
 /-- **Luke's strand.** From Jesus' words at Luke 7:50, "your faith has saved you",
@@ -239,7 +239,8 @@ believing is trust, which brings nothing of its own to God. Independent of
 Paul, of Luke 7:50 and of Acts 15. -/
 @[solaFideDefs]
 def johannineToFaithAlone : Formula Claim :=
-  ⋀ [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johannineBelievingIsTrust]
+  ⋀ [ p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johannineBelievingIsTrust
+    , p .johnBelievingKeepsItsSense ]
     ➝ p .justificationByFaithAlone
 
 /-- The answer to James. James 2:24 says "a person is justified by works and not by
@@ -331,7 +332,7 @@ def paulineLine : Line Claim :=
   { name := "Pauline strand (ἔργα νόμου, πίστις Χριστοῦ)"
   , grounds :=
       [ p .galatiansOpposesCircumcisionAsRequirement, p .worksOfLawMeansWorksGenerally
-      , p .pistisChristouObjective ]
+      , p .pistisChristouObjective, p .paulsWordsKeepTheirSense ]
   , step := paulineToFaithAlone
   , delivers := p .justificationByFaithAlone
   , inference := some paulineInference }
@@ -413,7 +414,8 @@ reading of believing as trust, which Aquinas denies. -/
 def johannineLine : Line Claim :=
   { name := "Johannine strand (John 6:29)"
   , grounds :=
-      [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johannineBelievingIsTrust]
+      [ p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johannineBelievingIsTrust
+      , p .johnBelievingKeepsItsSense ]
   , step := johannineToFaithAlone
   , delivers := p .justificationByFaithAlone
   , inference := some calvinOnJohnSix }
@@ -837,9 +839,11 @@ The second step puts the first to work, and it goes two ways.
 def romansFourExegesisLine : Line Claim :=
   { name := "Romans 4:3–8 (the ungodly, justified)"
   , grounds :=
-      [p .romans4_4_5, p .romans4_6_8, p .logizomaiIsReckoning, p .romans4CountKeepsItsSense]
+      [ p .romans4_4_5, p .romans4_6_8, p .logizomaiIsReckoning, p .romans4CountKeepsItsSense
+      , p .romans4WorksKeepsItsSense ]
   , step :=
-      ⋀ [p .romans4_4_5, p .romans4_6_8, p .logizomaiIsReckoning, p .romans4CountKeepsItsSense]
+      ⋀ [ p .romans4_4_5, p .romans4_6_8, p .logizomaiIsReckoning, p .romans4CountKeepsItsSense
+        , p .romans4WorksKeepsItsSense ]
       ➝ p .countedRighteousnessIsSinNotCounted
   , delivers := p .countedRighteousnessIsSinNotCounted
   , inference := some romansFourExegesisSource }
