@@ -40,7 +40,9 @@ structure Maturity where
   read : Nat
   /-- Read lines a premise of which already asserts what they deliver. -/
   carrying : Nat
-  /-- Read lines that need a word to keep its sense and do not say so. -/
+  /-- Read lines that need a word to keep its sense and do not say so: readers'
+  lines only, since a line setting out Scripture's own reasoning is never
+  charged (`Testimony.Logic.Line.drawnByScripture`). -/
   conditional : Nat
   /-- Read lines that rest on one another in a circle (`Testimony.Semantics.circular`). -/
   circular : Nat
@@ -58,16 +60,18 @@ arguing from silence alone are not counted: a line that commits either fails the
 build, so on any page generated from a passing build both are zero. -/
 def maturityOf (α : Type) [HasMeanings α] [DecidableEq α] (argument : Name)
     (lines : List (Line α)) : Maturity :=
-  let moves := lines.filterMap fun l =>
-    (l.asMove? (α := α)).bind fun m => if m.statements.all Statement.analysed then some m
+  let read := lines.filterMap fun l =>
+    (l.asMove? (α := α)).bind fun m => if m.statements.all Statement.analysed then some (l, m)
       else none
+  let moves := read.map (·.2)
+  let readers := (read.filter fun (l, _) => !l.drawnByScripture).map (·.2)
   let O := Testimony.Ontology.shared
   let (analysed, claims) := HasMeanings.coverage (α := α)
   { argument, title := HasMeanings.argument α, analysed, claims
   , lines := lines.length, read := moves.length
-  , carrying := (moves.filter fun m => !m.carriers.isEmpty).length
-  , conditional := (moves.filter fun m => !m.conditionalOn.isEmpty).length
-  , circular := (Testimony.Semantics.circular moves).length
+  , carrying := (readers.filter fun m => !m.carriers.isEmpty).length
+  , conditional := (readers.filter fun m => !m.conditionalOn.isEmpty).length
+  , circular := (Testimony.Semantics.circular readers).length
   , joins := (HasMeanings.exclusions (α := α)).length + (HasMeanings.entailments (α := α)).length
   , bare := (HasMeanings.exclusionsUnder (α := α) []).length +
       (HasMeanings.entailmentsUnder (α := α) []).length

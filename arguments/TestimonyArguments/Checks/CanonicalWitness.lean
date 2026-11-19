@@ -39,14 +39,14 @@ The canonical witness
 #check_ontology under TestimonyArguments.CanonicalWitness
 
 /--
-info: the charges, against every argument's lines:
+info: the fallacy checks, over every argument's lines, each named with its reader:
 The canonical witness
-  lines: 8, read: 8
+  lines: 8, read: 8, Scripture's own: 0
   need a word to keep its sense, unstated:
-    hebrewsLine: pistis
-    johannineLine: pisteuo
-    paulineFaithLine: dikaioo
-    paulineLine: pistis, sozo, erga
+    hebrewsLine (Bruce): pistis
+    johannineLine (Calvin): pisteuo
+    paulineFaithLine (Schreiner): dikaioo
+    paulineLine (Schreiner): pistis, sozo, erga
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.CanonicalWitness

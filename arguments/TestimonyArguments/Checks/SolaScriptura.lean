@@ -40,9 +40,9 @@ Sola scriptura
 #check_ontology under TestimonyArguments.SolaScriptura
 
 /--
-info: the charges, against every argument's lines:
+info: the fallacy checks, over every argument's lines, each named with its reader:
 Sola scriptura
-  lines: 32, read: 26
+  lines: 32, read: 26, Scripture's own: 0
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaScriptura

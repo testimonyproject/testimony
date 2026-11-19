@@ -42,25 +42,27 @@ Sola fide
 #check_ontology under TestimonyArguments.SolaFide
 
 /--
-info: the charges, against every argument's lines:
+info: the fallacy checks, over every argument's lines, each named with its reader:
 Sola fide
-  lines: 49, read: 31
+  lines: 49, read: 31, Scripture's own: 0
   attribute a view, against the argument's record:
-    sandersLine: secondTempleJudaism, unrecorded
-    trentWordLine: augustine, unrecorded; latinWest, unrecorded
+    sandersLine (Dunn): secondTempleJudaism, unrecorded
+    trentWordLine (Trent): augustine, unrecorded; latinWest, unrecorded
   need a word to keep its sense, unstated:
-    catholicJamesWordLine: erga, dikaioo
-    catholicJamesWorksLine: erga, dikaioo
-    fruitLine: pistis, erga
-    jamesLexicalLine: dikaioo
-    johannineLine: pisteuo
-    johannineWithoutTrust: pisteuo
-    lexicalLine: dikaioo
-    paulineLine: dikaioo, ergaNomou
-    paulineWithoutPistisChristou: dikaioo, ergaNomou
-    paulineWithoutWorksOfLaw: dikaioo, ergaNomou
-    renewalWordLine: dikaioo
-    romansFourExegesisLine: logizomai, erga
+    catholicJamesWordLine (Trent): erga, dikaioo
+    catholicJamesWorksLine (Trent): erga, dikaioo
+    fruitLine (Westminster Assembly): pistis, erga
+    jamesLexicalLine (Moo): dikaioo
+    johannineLine (Calvin): pisteuo
+    johannineWithoutTrust (Calvin): pisteuo
+    lexicalLine (Silva): dikaioo
+    paulineLine (Calvin): dikaioo, ergaNomou
+    paulineWithoutPistisChristou (Calvin): dikaioo, ergaNomou
+    paulineWithoutWorksOfLaw (Calvin): dikaioo, ergaNomou
+    renewalWordLine (Trent): dikaioo
+    romansFourExegesisLine (Moo): logizomai, erga
+  read one word by a kindred one, the bridge unstated:
+    trentWordLine (Trent): iustificare for dikaioo (translation)
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaFide

@@ -40,9 +40,9 @@ Sola gratia — Ephesians 2:8–9 and Romans 9:16
 #check_ontology under TestimonyArguments.SolaGratia
 
 /--
-info: the charges, against every argument's lines:
+info: the fallacy checks, over every argument's lines, each named with its reader:
 Sola gratia — Ephesians 2:8–9 and Romans 9:16
-  lines: 27, read: 0
+  lines: 27, read: 0, Scripture's own: 0
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaGratia

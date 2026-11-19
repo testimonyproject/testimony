@@ -37,9 +37,9 @@ The Triune God
 #check_ontology under TestimonyArguments.Trinity
 
 /--
-info: the charges, against every argument's lines:
+info: the fallacy checks, over every argument's lines, each named with its reader:
 The Triune God
-  lines: 34, read: 0
+  lines: 34, read: 0, Scripture's own: 0
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.Trinity

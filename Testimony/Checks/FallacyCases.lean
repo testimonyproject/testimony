@@ -21,6 +21,10 @@ The straw-man cases come after it, with a small record of what each voice
 holds, because that check compares what a move attributes with the record and
 needs one to compare with.
 
+Then the word-shift cases, a verb read by its adjective and the Greek by the
+Latin, and the omission cases, with a record in which Augustine read "justify"
+two ways, so that a move citing one of them is seen to leave out the other.
+
 The case the build itself must refuse: an argument of its own
 whose lines equivocate and argue from silence alone, run through
 `#check_fallacies`, with the failure pinned by `#guard_msgs`.
@@ -324,17 +328,17 @@ def strawMan : Line Claim :=
 error: lines that equivocate, argue from silence alone or answer a straw man, in:
 Testimony.Checks.FallacyCases.Refused.Claim
 A case the build must refuse
-  lines: 3, read: 3
+  lines: 3, read: 3, Scripture's own: 0
   read a word in two senses and need it the same:
-    contradiction
+    contradiction (uncited)
   argue from silence alone:
-    fromSilence
+    fromSilence (uncited)
   answer a view the argument's record says its holder does not hold:
-    strawMan
+    strawMan (uncited)
   attribute a view, against the argument's record:
-    strawMan: trent, contradicted by trentDeniesOwnWorks
+    strawMan (uncited): trent, contradicted by trentDeniesOwnWorks
   need a word to keep its sense, unstated:
-    contradiction: pistis
+    contradiction (uncited): pistis
 -/
 #guard_msgs in
 #check_fallacies under Testimony.Checks.FallacyCases.Refused
@@ -466,3 +470,227 @@ theorem strawman_cases :
   decide
 
 end Testimony.Checks.FallacyCases.StrawMan
+
+/-! ### A move from one word to a kindred one
+
+The word-shift cases. They need no record: whether a move reads one word by a
+kindred one is a matter of its own premises and conclusion. -/
+
+namespace Testimony.Checks.FallacyCases.WordShift
+
+open Testimony Testimony.Semantics Testimony.Semantics.Notation
+open Testimony.Checks.FallacyCases (argues)
+
+/-- Romans 5:19. -/
+@[nolint defsWithUnderscore] abbrev rom5_19 : PassageRange := vs .romans 5 19
+
+/-- **Caught: the verb read by its adjective.** Romans 5:19's "the many will be
+made righteous" (δίκαιοι) means made righteous; so Paul's verb "justify"
+(δικαιόω) means to make righteous. The move reads the verb by the adjective and
+says nothing of whether the one bears on the other. -/
+def adjectiveForVerb : Move :=
+  argues [.means .dikaios (.passage rom5_19) .makeRighteous]
+    (.means .dikaioo (.usage .paul) .makeRighteous)
+
+/-- **Passed over: the same, with the bridge stated.** A premise says the
+adjective in 5:19 bears the sense the verb has in Paul. Whether it does is
+disputed; stated, it can be weighed. -/
+def adjectiveBridged : Move :=
+  argues
+    [ .means .dikaios (.passage rom5_19) .makeRighteous
+    , .bears .dikaios (.passage rom5_19) .dikaioo (.usage .paul) ]
+    (.means .dikaioo (.usage .paul) .makeRighteous)
+
+/-- **Caught: the Greek read by the Latin.** The Latin West read *iustificare* as
+to make righteous; so Paul's δικαιόω means that. -/
+def latinForGreek : Move :=
+  argues [.glosses .latinWest .iustificare .makeRighteous]
+    (.means .dikaioo (.usage .paul) .makeRighteous)
+
+/-- **Passed over: a word and its own family member, both in the premises.** A
+move that has the verb itself where it concludes, beside its adjective, does not
+read the one by the other: it has the verb's own evidence. -/
+def verbItself : Move :=
+  argues
+    [ .means .dikaios (.passage rom5_19) .makeRighteous
+    , .means .dikaioo (.usage .paul) .verdict ]
+    (.denied (.means .dikaioo (.usage .paul) .makeRighteous))
+
+/-- **The word-shift check, caught and passed over.** The verb read by its
+adjective, and the Greek by the Latin, are each reported as an unstated shift;
+with the bridge stated, the shift is granted; and a move that has the verb's own
+evidence makes no shift at all. -/
+theorem wordshift_cases :
+    adjectiveForVerb.unbridged = [(.dikaios, .dikaioo, .cognate)] ∧
+      adjectiveBridged.wordShifts = [(.dikaios, .dikaioo, .cognate, .granted)] ∧
+      adjectiveBridged.unbridged = [] ∧
+      latinForGreek.unbridged = [(.iustificare, .dikaioo, .translation)] ∧
+      verbItself.shifts = [] := by
+  decide
+
+/-- **Caught: the verb's sense drawn from the doctrine.** God's verdict brings
+about the sinner's renewal; Paul's verb is a verdict; so the verb means to make
+righteous. No premise gives the verb, or any word of its kin, that sense: it
+comes from a claim about what God does. -/
+def senseFromDoctrine : Move :=
+  argues
+    [ .holds (rl .effects (cn .justification) (cn .sanctification))
+    , .means .dikaioo (.usage .paul) .verdict ]
+    (.means .dikaioo (.usage .paul) .makeRighteous)
+
+/-- **A sense from elsewhere, caught and passed over.** The sense drawn from a
+doctrine is reported. A sense read from a kindred word, from a voice's reading of
+the word, or from the word itself is not: each has the sense from a word. -/
+theorem elsewhere_cases :
+    senseFromDoctrine.sensesFromElsewhere = [(.dikaioo, .usage .paul, .makeRighteous)] ∧
+      adjectiveForVerb.sensesFromElsewhere = [] ∧
+      latinForGreek.sensesFromElsewhere = [] ∧
+      verbItself.sensesFromElsewhere = [] := by
+  decide
+
+end Testimony.Checks.FallacyCases.WordShift
+
+/-! ### Leaving out what a voice also said -/
+
+namespace Testimony.Checks.FallacyCases.Omission
+
+open Testimony Testimony.Semantics Testimony.Semantics.Notation
+open Testimony.Checks.FallacyCases (argues)
+
+/-- A record of how Augustine read "justify", for the omission cases. -/
+inductive Record
+  /-- Augustine read "being justified" both ways: as being made righteous, and as
+  being deemed righteous. -/
+  | augustineBothWays
+  /-- Augustine read "being justified" as being made righteous. -/
+  | augustineMakeRighteous
+deriving DecidableEq, Repr
+
+/-- The record's meanings. -/
+instance meanings : HasMeanings Record :=
+  { argument := "A record for the omission cases"
+  , all := [.augustineBothWays, .augustineMakeRighteous]
+  , means := fun
+      | .augustineBothWays =>
+        .also (.glosses .augustine .dikaioo .makeRighteous)
+          (.glosses .augustine .dikaioo .verdict)
+      | .augustineMakeRighteous => .glosses .augustine .dikaioo .makeRighteous
+  , complete := by intro a; cases a <;> decide }
+
+/-- A record in which Augustine read the word both ways. -/
+def bothWays : Voice → List Record
+  | .augustine => [.augustineBothWays]
+  | _ => []
+
+/-- A record in which Augustine read it one way only. -/
+def oneWay : Voice → List Record
+  | .augustine => [.augustineMakeRighteous]
+  | _ => []
+
+/-- Augustine read "justify" as to make righteous; so Paul's word means that. -/
+def citedForOne : Move :=
+  argues [.glosses .augustine .dikaioo .makeRighteous]
+    (.means .dikaioo (.usage .paul) .makeRighteous)
+
+/-- The same move, citing both of Augustine's readings. -/
+def citedForBoth : Move :=
+  argues
+    [ .glosses .augustine .dikaioo .makeRighteous
+    , .glosses .augustine .dikaioo .verdict ]
+    (.means .dikaioo (.usage .paul) .makeRighteous)
+
+/-- **The omission check, caught and passed over.** Against a record in which
+Augustine read the word both ways, a move citing one reading leaves out the
+other, and the check says which and where the record has it. A move citing both
+leaves nothing out, and against a record of one reading only, the first move
+leaves nothing out either. -/
+theorem omission_cases :
+    citedForOne.omissions bothWays =
+        [(.glosses .augustine .dikaioo .makeRighteous, [(.verdict, [.augustineBothWays])])] ∧
+      citedForBoth.omissions bothWays = [] ∧
+      citedForOne.omissions oneWay = [] := by
+  decide
+
+end Testimony.Checks.FallacyCases.Omission
+
+/-! ### Scripture's own reasoning, never charged
+
+The checks read lines of reason, and a line of reason is someone's. Most are a
+reader's: Trent's, Calvin's, Moo's, each line's step cited to the work that draws
+it. Some set out Scripture's own reasoning, as Paul reasons in Romans 4:3–5 from
+Genesis 15:6: "Abraham believed God, and it was counted to him as righteousness",
+so "to the one who does not work but believes … his faith is counted as
+righteousness". A step cited to Scripture itself is never charged. If the line
+needs "counted" (λογίζομαι) to keep one sense from Genesis to Romans, that need
+falls on the reader: it is what a reader must hold to follow the text, and the
+report sets it apart from the findings against readers.
+
+This case pins both. The same line is set out twice, once cited to Scripture and
+once proposed as a reader's line. The first is reported as Scripture's own
+reasoning, with what it asks of a reader; the second is listed with the
+conditions readers' lines are held to. -/
+
+namespace Testimony.Checks.FallacyCases.Scriptural
+
+open Testimony Testimony.Logic Testimony.Semantics Testimony.Semantics.Notation
+open Testimony.Checks.FallacyCases (rom4_5)
+
+/-- Genesis 15:6. -/
+@[nolint defsWithUnderscore] abbrev gen15_6 : PassageRange := vs .genesis 15 6
+
+/-- The case's atomic claims. -/
+inductive Claim
+  /-- Genesis 15:6 says Abraham's believing was counted to him as righteousness. -/
+  | genesisSays
+  /-- Romans 4:5 says the believer's faith is counted as righteousness. -/
+  | romansSays
+deriving DecidableEq, Repr
+
+/-- Every claim. -/
+def all : List Claim := [.genesisSays, .romansSays]
+
+/-- What each claim means. -/
+def means : Claim → Statement
+  | .genesisSays => .says gen15_6 (rl .instrumentOf (wd .pisteuo gen15_6) (wd .logizomai gen15_6))
+  | .romansSays => .says rom4_5 (rl .instrumentOf (wd .pistis rom4_5) (wd .logizomai rom4_5))
+
+/-- The case's meanings. -/
+instance meanings : HasMeanings Claim :=
+  { argument := "Scripture's own reasoning", all, means
+  , complete := by intro a; cases a <;> decide }
+
+/-- **Paul's own reasoning, from Genesis to Romans**, cited to Scripture itself
+(Romans 4:3–5). -/
+def paulFromGenesis : Line Claim :=
+  { name := "Paul, from Genesis 15:6"
+  , grounds := [p .genesisSays]
+  , step := p .genesisSays ➝ p .romansSays
+  , delivers := p .romansSays
+  , inference := some
+      { primary := .scripture [{ ref := vs .romans 4 3 }, { ref := rom4_5 }]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .consensus } }
+
+/-- **The same line, as a reader's**: proposed here, not cited to Scripture. -/
+def aReaderFromGenesis : Line Claim :=
+  { paulFromGenesis with
+    inference := some
+      { primary := .proposal "the same step, set out as a reader's line, for contrast"
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/--
+info: the fallacy checks, over every argument's lines, each named with its reader:
+Scripture's own reasoning
+  lines: 2, read: 2, Scripture's own: 1
+  need a word to keep its sense, unstated:
+    aReaderFromGenesis (proposed here): logizomai
+  read one word by a kindred one, the bridge unstated:
+    aReaderFromGenesis (proposed here): pisteuo for pistis (cognate)
+  Scripture's own reasoning, not charged: what a reader must hold to follow it:
+    paulFromGenesis (Scripture): logizomai kept in one sense, pisteuo for pistis (cognate)
+-/
+#guard_msgs in
+#check_fallacies under Testimony.Checks.FallacyCases.Scriptural
+
+end Testimony.Checks.FallacyCases.Scriptural

@@ -47,9 +47,9 @@ Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
 #check_ontology under TestimonyArguments.BornOfAVirgin
 
 /--
-info: the charges, against every argument's lines:
+info: the fallacy checks, over every argument's lines, each named with its reader:
 Born of a virgin — Isaiah 7:14, Genesis 3:15, Micah 5:2–3
-  lines: 41, read: 0
+  lines: 41, read: 0, Scripture's own: 0
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.BornOfAVirgin

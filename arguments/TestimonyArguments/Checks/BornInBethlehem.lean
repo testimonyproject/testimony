@@ -37,9 +37,9 @@ Born in Bethlehem — Micah 5:2
 #check_ontology under TestimonyArguments.BornInBethlehem
 
 /--
-info: the charges, against every argument's lines:
+info: the fallacy checks, over every argument's lines, each named with its reader:
 Born in Bethlehem — Micah 5:2
-  lines: 2, read: 0
+  lines: 2, read: 0, Scripture's own: 0
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.BornInBethlehem
