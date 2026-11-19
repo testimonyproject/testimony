@@ -31,7 +31,19 @@ Silva). To read renewal into the verdict from the doctrine is what Barr called
 passage: Paul explains the righteousness God counts to the ungodly as sin not
 counted, and by the same rule the verb he explains in that way does not also
 mean renewal.
-Every step of that answer is rated above `disputed`.
+
+Every link of that answer is rated above `disputed` but one. The step from the
+courtroom sense to "and nothing more" is `disputed`, because Trent grants where
+it starts and denies where it ends. Trent keeps the verdict: the justified "are
+not only reputed, but are truly called, and are, just". And Augustine gives the
+courtroom sense himself, "deemed, or reckoned as just" (*On the Spirit and the
+Letter* 26.45), beside "made righteous". Fitzmyer, a modern Catholic exegete,
+grants the courtroom sense in the Septuagint and at times in Paul, and still
+finds the "effective sense" supported by Romans 5:19, "through the obedience of
+one many will be made upright" (*Romans*, 118). Whether the step can rise above
+`disputed` turns on that verse, on Romans 6:7 ("freed from sin", or "justified
+from sin") and on 1 Corinthians 6:11 ("you were washed, you were sanctified, you
+were justified"), which readers take both ways.
 
 ### Why Trent would take it so
 
@@ -41,10 +53,11 @@ the phrase 'being justified' signify than being made righteous" (*On the Spirit
 and the Letter* 26.45). McGrath traces that inheritance through the medieval
 West. So this way of taking the definition has a starting point of its own, that
 Augustine explained the word so, which is rated `consensus` because he did. It
-then needs a step from the Latin explanation to the Greek word, and that step is
-where it fails. An explanation in one language does not settle what a word means
-in another, and the argument from usage says what the Greek word means in Paul
-(`whereTheLatinReadingFalls`).
+then needs a step from the Latin explanation to the Greek word. An explanation
+in one language does not settle what a word means in another, and the argument
+from usage says what the Greek word means in Paul (`whereTheLatinReadingFalls`).
+But that argument reaches "and nothing more" only by the `disputed` step above,
+so the two cannot be held together, and neither defeats the other outright.
 
 ### Taken as a claim about what God does
 
@@ -74,9 +87,10 @@ sense denies both.
 The two are put together and checked in one result
 (`whatTrentsDefinitionClaims`). Each way of taking the definition is fair, since
 Trent read either way can still be held without contradiction, and each is
-answered. The first cannot be held with what Paul's word means: it fails three times, each
-at a step rated `wellSupported`. The second is untouched by anything about the
-word, and conflicts with Paul's gospel and with Romans 4, each time at a step
+answered. The first cannot be held with the arguments about Paul's word: it
+meets them three times, each at the same step, rated `disputed`. The second is
+untouched by anything about the word, and conflicts with Paul's gospel and with
+Romans 4, each time at a step
 rated `disputed`. So a reader who grants that step rejects the definition taken
 that way, and a reader who denies it need not. Which way Trent means it is not
 something this chapter decides.
@@ -244,7 +258,8 @@ theorem lexical_case_does_not_reach_what_god_does :
 turns on one step: with the courtroom sense, Paul's own words for renewal and
 the rule of least meaning, "justify" does not mean renewal. What that
 contradicts is Trent's definition together with this way of taking it, and
-nothing else in Trent. Every link is rated above `disputed`. -/
+nothing else in Trent. Every link is rated above `disputed` but that step, which is
+`disputed`: Trent grants its starting points and denies its conclusion. -/
 def whereTrentsWordReadingFalls : Because lexicalCase tridentineOnPaulsWord :=
   Because.ofChecks lexicalLine.step lexicalLine.grounds [] lexicalLine.grounds
     [ p .justificationIncludesSanctification
@@ -265,7 +280,9 @@ on Augustine's explanation, and what fails is the step from that explanation to
 what the Greek word means. That Augustine explained it so is not in question; it
 is rated `consensus`. But a Latin explanation does not settle what the Greek
 word means in Paul, and the courtroom sense, Paul's own words for renewal and
-the rule of least meaning say it does not mean renewal. -/
+the rule of least meaning say it does not mean renewal. That last step is rated
+`disputed`, so the break is a tie, not a refutation: Trent grants the starting
+points and denies the step. -/
 def whereTheLatinReadingFalls : Because lexicalCase tridentineOnPaulsWord :=
   Because.ofChecks lexicalLine.step lexicalLine.grounds [] lexicalLine.grounds
     [ p .augustineReadsJustifyAsMakeRighteous
@@ -352,8 +369,10 @@ theorem romans_four_on_the_word_does_not_reach_what_god_does :
 Everything turns on the step from Paul's explanation, that the righteousness
 counted to the ungodly is sin not counted, by the rule of least meaning, to "the
 verb does not also mean renewal". What it contradicts is Trent's definition
-taken this way. Every link is rated `wellSupported` or better. It arrives from
-one passage where the argument from usage arrives from the word. -/
+taken this way. Every link is rated `wellSupported` or better but that step,
+which uses the rule of least meaning as the argument from usage does, and is
+rated `disputed` for the same reason. It arrives from one passage where the
+argument from usage arrives from the word. -/
 def whereRomansFourMeetsTheWordReading : Because romansFourOnTheWord tridentineOnPaulsWord :=
   Because.ofChecks glossByLeastMeaning
     (romansFourExegesisLine.grounds ++ [p .leastMeaning, romansFourExegesisLine.step]) []
@@ -403,11 +422,13 @@ def whereRomansFourMeetsWhatGodDoes : Because romansFourCase tridentineOnWhatGod
 justification is the sanctification and renewal of the inward person.
 
 *Taken as a claim about what Paul's word means*, namely that "justify" (δικαιόω)
-means that renewal, it cannot be held with the evidence for what the word means.
-It fails three times, each at a step rated `wellSupported`: against the argument
-from usage, as Trent states the definition; against the same argument, at the
-Latin explanation this reading rests on ("being justified" as "being made
-righteous"); and against Romans 4 read for the word.
+means that renewal, it cannot be held with the arguments about the word. It meets
+them three times, each at the step from the courtroom sense to "and nothing
+more", rated `disputed`: against the argument from usage, as Trent states the
+definition; against the same argument, at the Latin explanation this reading
+rests on ("being justified" as "being made righteous"); and against Romans 4
+read for the word. A reader who grants that step rejects the definition taken
+this way. A reader who denies it, as Trent does, need not.
 
 *Taken as a claim about what God does in justifying*, namely that he also
 renews, nothing about the word reaches it: neither the argument from usage nor

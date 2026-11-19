@@ -14,17 +14,23 @@ had proposed a New Perspective on Paul or an apocalyptic reading of him. Heard
 that way (`reformationAlone`), the apocalyptic reading, Sanders and his
 critics, and Jervell are set aside. Aquinas and Luther, and Chrysostom and the
 Reformed answer to him, are still heard, and modern scholars are still cited
-for the premises of the positions that remain. One thing is forced: Paul's "justify"
-(δικαιόω) does not mean the renewal of the inward person. So Trent cannot claim
-that its definition is what Paul's word means. What fails there is not
-Augustine's explanation of the word, which he certainly gave, but the step from
-a Latin explanation to what the Greek word means.
+for the premises of the positions that remain. Nothing is forced
+(`reformation_dispute_forces_nothing`), not even what Paul's "justify"
+(δικαιόω) means. The arguments from the word step from the courtroom sense of
+the verb to "and it means nothing more", and Trent grants the first and denies
+the second. Trent keeps the verdict, for the justified "are not only reputed,
+but are truly called, and are, just" (Session VI, ch. 7), and Augustine, whom
+Trent follows, gives the courtroom sense himself. So that step is rated
+`disputed`, and Trent's reading of the word ties with the Reformers'.
 
 Trent's definition taken as a claim about what God does is not touched by
-anything about the word. There Trent and the Reformers tie: each defeats the
-other, and the ratings, all `disputed`, cannot choose. The Reformation debate,
-heard alone, comes down to what justification *is*, which is the question of
-the chapter "What Trent means by justification" (`whatTrentsDefinitionClaims`).
+anything about the word. There too Trent and the Reformers tie: each defeats the
+other, and the ratings, all `disputed`, cannot choose. Trent as it states its
+definition can be held together with the arguments about the word
+(`trent_defensible_with_pauls_word`). So the Reformation debate, heard alone,
+comes down to two questions: whether Paul's word means more than a verdict, and
+what justification *is*, which is the question of the chapter "What Trent means
+by justification" (`whatTrentsDefinitionClaims`).
 
 ### If Trent were not heard, would Scripture establish sola fide?
 
@@ -80,31 +86,34 @@ critics, and Jervell. -/
 declare_hearing reformationAlone := solaFideDispute
   except [Party.apocalyptic, .sanders, .critics, .jervell]
 
-/-- How far the Reformation debate can be settled. Nothing defeats either argument
-about Paul's word, so both are accepted first, and nothing joins them. Each
-Reformed position is defeated by Trent. Trent is defeated by Paul's case, and by
-Luke's, Peter's and Paul's gospel. Trent taken as a claim about Paul's word is
-defeated by the argument from the word itself. -/
-declare_verdict reformationSettlesTheWord for reformationAlone :
-    .groundedExactly [Witness.listSub _ [.lexical, .romansOnTheWord]]
+/-- Why the Reformation debate forces nothing. Each Reformed position is defeated
+by Trent. Trent is defeated by Paul's case, and by Luke's, Peter's and Paul's
+gospel. Trent taken as a claim about Paul's word is defeated by the argument
+from the word, and that argument, and Romans 4 read for the word, by Trent
+taken that way. Aquinas and Luther, and Chrysostom and the Reformed answer to
+him, defeat each other. Every one of these attacks is answered in return. -/
+declare_verdict reformationSettlesNothing for reformationAlone :
+    .nothingGrounded
       (Witness.Table.sub _
         [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent)
         , (.trent, .pauline), (.gospel, .trent), (.trentOnPaulsWord, .lexical)
+        , (.lexical, .trentOnPaulsWord), (.romansOnTheWord, .trentOnPaulsWord)
         , (.johannine, .trent), (.aquinas, .luther), (.luther, .aquinas)
         , (.chrysostom, .pauline), (.sanctification, .trent) ])
-  /-- **What the Reformation debate forces: the meaning of Paul's word, and nothing
-  else.** Heard as Rome and the Reformers alone, the forced positions are exactly
-  the two arguments about Paul's word. Trent cannot claim that its definition is
-  what Paul's "justify" (δικαιόω) means.
+  /-- **The Reformation debate, heard alone, forces nothing.** Heard as Rome and the
+  Reformers alone, every position is in a tie the debate cannot settle, the
+  meaning of Paul's word among them. The arguments from the word take a step,
+  from the courtroom sense of "justify" (δικαιόω) to "and nothing more", that
+  Trent grants the starting points of and denies, so that step is rated
+  `disputed`, and Trent's reading of the word ties with them.
 
-  Nothing else is forced. Sola fide from each strand, Paul's gospel, and Trent's
-  definition as a claim about what God does each have an attacker they cannot
-  remove. -/
-  proves @[headline] reformation_dispute_forces_only_pauls_word :
-      grounded reformationAlone.defeats =
-    Solver.toSet (Witness.listSub _ [.lexical, .romansOnTheWord])
+  It does not show that Trent's reading of the word is right, or that the
+  Reformers' is wrong. Both can be defended (`trent_defensible_with_pauls_word`
+  holds Trent as it states its definition together with the arguments about
+  the word). -/
+  proves @[headline] reformation_dispute_forces_nothing
 
-#print axioms reformation_dispute_forces_only_pauls_word
+#print axioms reformation_dispute_forces_nothing
 
 /-- Why Trent can be defended in the Reformation debate: it can be held with the
 arguments about Paul's word, and it answers every position that attacks it. -/

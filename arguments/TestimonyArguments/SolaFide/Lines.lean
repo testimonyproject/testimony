@@ -602,17 +602,57 @@ is a courtroom word; Paul has other words for renewal; and a word contributes
 the least meaning its context requires. The method is Silva's, applied as Moo
 applies it to Romans.
 
-Cited at `wellSupported`. Trent keeps the first starting point, the verdict, for
-the justified "are not only reputed, but are truly called, and are, just"
-(Session VI, ch. 7), and denies that the word means no more; Augustine himself
-gives the forensic sense beside "made righteous", "deemed, or reckoned as just"
-(*On the Spirit and the Letter* 26.45). So a cited reader grants the starting
-points and denies the conclusion, and the checks count Trent's reading a
-credible critique of this step under every standard
-(`trent_dissents_from_the_definition_steps`). By the library's rule that makes
-the step `disputed`, and the disputes weigh it at `wellSupported`: this is the
-one place they rest on a rating the rule does not license. Whether the step can
-rise above `disputed` turns on Romans 6:7 and 1 Corinthians 6:11, which readers
+Rated `disputed`. Trent keeps the first starting point, the verdict, for the
+justified "are not only reputed, but are truly called, and are, just" (Session
+VI, ch. 7), and denies that the word means no more; Augustine himself gives the
+forensic sense beside "made righteous", "deemed, or reckoned as just" (*On the
+Spirit and the Letter* 26.45). So a cited reader grants the starting points and
+denies the conclusion, and the checks count Trent's reading a credible critique
+of this step under every standard (`trent_dissents_from_the_definition_steps`).
+By the library's rule that makes the step `disputed`.
+
+A modern Catholic exegete does the same, from the text rather than the council.
+Fitzmyer grants that in the Septuagint the verb "seems normally to have a
+declarative, forensic meaning", and that at times "the declarative seems to be,
+indeed, the sense in Paul's letters (e.g., 2:13; 3:4, 20; 8:33)". But "many
+instances are ambiguous, and the effective sense seems to be supported by 5:19,
+'through the obedience of one many will be made upright'". Declaring the sinner
+upright has "not only a forensic effect, but as forensic also an 'effective'
+meaning", as he quotes Kertelge (*Romans*, 118–19).
+
+Ziesler answers on both verses, and his answer keeps the dispute where it is
+rather than ending it. At 5:19 he grants that "certainly something more than
+forensic" is meant, since the many "will really be righteous", but the word
+there is "righteous" (δίκαιοι), not the verb, and he reads justification and
+righteousness as "the twin, inseparable results of being in Christ" (*The
+Meaning of Righteousness in Paul*, 199). At 6:7, "he who has died is justified
+from sin", he weighs "freed from sin", which gives the verb "an unusual meaning,
+virtually amounting to 'make righteous'", and prefers "acquitted", which
+"retains the normal Pauline sense for the verb" (200). So he supports the step,
+and his reading of 5:19 is an answer to Fitzmyer's. It does not overrule him:
+whether 5:19 bears on the verb at all is the point Fitzmyer and Ziesler divide
+on, and Trent's dissent stands untouched by it.
+
+The third verse readers cite for renewal is 1 Corinthians 6:11, "ye are washed,
+but ye are sanctified, but ye are justified". Ziesler grants that the context
+"is strongly ethical", and that "justified" there "seems here to have a moral
+renewal force". He still holds it forensic: "In fact it does not mean this, but
+it does imply it" (157–58). Over every use of the verb outside Romans and
+Galatians his summary is the same: "in each case the use is forensic", and
+1 Corinthians 6:11 and Titus 3:7, "while forensic, also hint at moral renewal in
+the background" (162). Renewal, for him, belongs to the noun, so that Paul's
+word-group expresses "both man's acceptance, and his moral renewal", the first
+"especially" by the verb and the second by the noun (163). His conclusion keeps
+both: justification "is entirely by grace through faith, it is declaratory",
+and the same person is "made a new creature whose life is now righteous in
+Christ", two moments "interdependent and inseparable" (212). That supports the
+step, which is about the verb alone, and says nothing against Trent, who holds
+the inseparable renewal to be part of justification itself.
+
+The texts that prove the verdict sense (Proverbs 17:15, Isaiah 5:23,
+Deuteronomy 25:1, Luke 10:29) support the first starting point, which Trent and
+Fitzmyer already grant, not the "and nothing more". Whether the step can rise
+above `disputed` turns on Romans 5:19, 6:7 and 1 Corinthians 6:11, which readers
 take both ways.
 
 Those who deny the first starting point itself, VanLandingham among them, are
@@ -621,9 +661,11 @@ Gorman and the *Joint Declaration*, make a claim about what God does, not about
 the word. -/
 def leastMeaningSource : Source :=
   { primary := .work silvaBiblicalWords .whole
-  , supporting := [.work mooRomans (.sectionRef "p. 80"), .work barrSemantics .whole]
+  , supporting :=
+      [ .work mooRomans (.sectionRef "p. 80"), .work barrSemantics .whole
+      , .work zieslerRighteousnessInPaul (.pageList [156, 157, 158, 162, 163, 199, 200, 212]) ]
   , tradition := .christianHistoricalGrammatical
-  , confidence := .wellSupported }
+  , confidence := .disputed }
 
 /-- **Paul's word**, read by the rule that a word means no more than its context
 requires.
