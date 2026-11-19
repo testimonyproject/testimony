@@ -311,8 +311,10 @@ telling them apart — five checks a dissent must pass to count as credible, und
 of evidence — and its first phase is built. It finds that Howell's move is a disagreement, not a
 critique (`howell_asserts_his_denial`). Trent's denial that works are fruit, not ground, rests at
 one claim on the council's word, so that step stands under the evidence standard and is disputed
-under the tradition standard (`fruit_turns_on_the_standard`). And what James's δικαιόω denotes
-turns on the standard in the same way (`james_word_turns_on_the_standard`). `Contested` and
+under the tradition standard. The Reformed harmony is held to the same test, and it rests on
+Westminster's word that the fruit texts share their terms, so under the evidence standard neither
+side is heard (`fruit_turns_on_the_standard`). What James's δικαιόω denotes turns on the standard
+in the same way (`james_word_turns_on_the_standard`). `Contested` and
 `DenialAnswered` remain the checks of whether a dissent survives the weighing: the Howell hearing
 shows one that does not (`faithDenialAnswered`), the James dispute one that does
 (`worksContested`).

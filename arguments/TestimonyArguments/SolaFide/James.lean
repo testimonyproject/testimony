@@ -136,13 +136,17 @@ defended** when none does.
   meets Westminster's reading of the same texts (`westminsterRewardLine`), which
   denies that the reward is given to merits. When only evidence anyone can check
   is counted, neither of Trent's readings of what works do stands as an
-  objection, and the Reformed reconciliation is forced
+  objection, and neither does the Reformed reconciliation, which rests on
+  Westminster's and Calvin's word that Ephesians 2 and James 2:18 share "faith"
+  and "works". Only Westminster's answer on the reward is forced then
   (the chapter "Why each step is rated as it is").
 - **Can be defended, and not forced.** The reading on which James's word means
   renewal because Paul's does (`renewalWordLine`). It and the argument from
   James's word defeat each other. When only evidence anyone can check is
   counted, it does not stand as an objection, because it rests on Trent's word
-  that James's word is Paul's (the chapter "Why each step is rated as it is").
+  that James's word is Paul's. Nor then does the argument from James's word,
+  which rests on Calvin's that James uses the word as it is used outside Paul
+  (the chapter "Why each step is rated as it is").
   It also meets the Reformed reconciliation, and the two defeat each other: the
   reconciliation says James's word does not have Paul's sense, and this reading
   says it does.
