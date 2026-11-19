@@ -165,5 +165,6 @@ def whereTrentPartsFromPaul : Because galatianGospel tridentineCase :=
       tauto)
     (by simp [solaFideDefs, tridentinePremises, Line.premises])
     (by decide +kernel)
+  |>.ratedBy verdictNotRenewalSource (by simp [galatianGospel, solaFideDefs])
 
 end TestimonyArguments.SolaFide

@@ -4,6 +4,7 @@ import Testimony.Checks.Aif
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
+import Testimony.Checks.Readers
 import Testimony.Checks.Refutations
 
 /-!
@@ -46,6 +47,12 @@ Born in Bethlehem — Micah 5:2
 /-- info: every package has a model with its postulates: 2, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.BornInBethlehem
+
+/--
+info: every reading and step has a reader or is marked proposed: 2 packages, 2 lines
+-/
+#guard_msgs in
+#check_readers under TestimonyArguments.BornInBethlehem
 
 /-- info: every non-entailment survives its postulates: 1, and 0 undecided -/
 #guard_msgs in

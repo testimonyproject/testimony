@@ -388,13 +388,13 @@ rather than confessional grounds.**
 
 **What is novel here.** No source was found advancing these texts as an answer
 to the circularity charge; the passages are cited and the use is assembled in
-this library. Acts 20:32 commends the Ephesian elders to "the word of his
-grace" rather than to their own office; Titus 1:9 constitutes the office by
-holding to "the trustworthy word as taught"; 1 Peter 5:2–3 forbids domineering.
-If scripture bounds the interpretive office, the consensus's own warrant is
-read off scripture, so it cannot be a precondition of reading scripture — and
-Westminster I.7 restricts the perspicuity claim to what is necessary for
-salvation, which is not the set of boundaries the creeds fix.
+this library. Acts 20:32 commends the Ephesian elders to "the word of His grace"
+rather than to their own office; Titus 1:9 constitutes the office by "holding
+fast the faithful word which is in accordance with the teaching"; 1 Peter 5:2–3
+forbids domineering. If scripture bounds the interpretive office, the
+consensus's own warrant is read off scripture, so it cannot be a precondition of
+reading scripture — and Westminster I.7 restricts the perspicuity claim to what
+is necessary for salvation, which is not the set of boundaries the creeds fix.
 
 **What would settle whether it is really new.** Mark Thompson's *A Clear and
 Present Word* treats the church-as-interpreter objection at length and was not
@@ -483,7 +483,7 @@ deny, and each denial is an entailment. -/
 
 /-- **Kruger refuses the canon objection's ground; he does not deny it.** On
 the reading that grants his grounds and still denies the sole rule, identifying
-the canon does require an infallible authority. -/
+the canon does require an infallible authority outside Scripture. -/
 theorem kruger_refuses_rather_than_denies :
     ¬ Entails canonUnderParity.premises
       (∼(p .identifyingCanonRequiresInfallibleAuthority)) := by

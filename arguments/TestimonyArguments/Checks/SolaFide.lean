@@ -4,6 +4,7 @@ import Testimony.Checks.Aif
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
+import Testimony.Checks.Readers
 import Testimony.Checks.Refutations
 
 /-!
@@ -70,6 +71,12 @@ Sola fide
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaFide
 
+/--
+info: every reading and step has a reader or is marked proposed: 88 packages, 49 lines
+-/
+#guard_msgs in
+#check_readers under TestimonyArguments.SolaFide
+
 /-- info: every non-entailment survives its postulates: 27, and 0 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments.SolaFide
@@ -82,7 +89,7 @@ Sola fide
 info: every dispute, as an AIF graph meeting Definition 1.1:
 jamesDispute.finite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
 jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
-solaFideDispute.finite: 67 I, 30 RA, 32 CA, 1 PA, 160 edges
+solaFideDispute.finite: 67 I, 30 RA, 33 CA, 0 PA, 160 edges
 and 3 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in

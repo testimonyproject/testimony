@@ -54,15 +54,15 @@ each.
 **The promise, and its fulfilment.** Whether the wording foretold a virgin birth
 is one question. Whether the promise is fulfilled in Jesus is another, and it
 does not need the first. Every term of the verse is met as the New Testament
-names it: the woman's seed, the Son "made of a woman" (Galatians 4:4); the
-serpent, "that old serpent, called the Devil" (Revelation 12:9); its head
-crushed, when the Son destroys the devil "through death" (Hebrews 2:14); his
-heel struck, in his death and rising. That fulfilment confirms that the verse
-was a promise, and it does so for a reader who denies the virginal conception
-too. With the virginal conception, it says one thing more: the seed in whom the
-promise is fulfilled was of the woman alone. The chapter
-"Is Genesis 3:15 a promise, fulfilled in Jesus?" weighs the fulfilment against
-Westermann's denial that the verse is a promise at all.
+names it: the woman's seed, the Son "born of a woman" (Galatians 4:4); the
+serpent, "the serpent of old who is called the devil" (Revelation 12:9); its
+head crushed, when the Son renders the devil powerless "through death" (Hebrews
+2:14), all in the LSB; his heel struck, in his death and rising. That fulfilment
+confirms that the verse was a promise, and it does so for a reader who denies
+the virginal conception too. With the virginal conception, it says one thing
+more: the seed in whom the promise is fulfilled was of the woman alone. The
+chapter "Is Genesis 3:15 a promise, fulfilled in Jesus?" weighs the fulfilment
+against Westermann's denial that the verse is a promise at all.
 
 **The Greek's "he".** The Septuagint calls the woman's seed "he", αὐτός, though
 σπέρμα is neuter, and Collins finds it "beyond question that the translator of
@@ -320,6 +320,7 @@ def whereTheSignifyingReadingMeetsLeupold : Because posterityCase protoevangeliu
       tauto)
     (by simp [bornOfAVirginDefs, ArgumentPackage.readAs, Line.asPackage, Line.premises])
     (by decide +kernel)
+  |>.ratedByLine posterityLine rfl (by simp [posterityCase, bornOfAVirginDefs, Line.asPackage])
 
 /-- **Why Lewis stands against the hinge, read as Luther reads it.** The crux is
 Lewis's step: Genesis speaks of Hagar's and Rebekah's seed too, so the woman's
@@ -339,6 +340,7 @@ def whereTheSignifyingReadingMeetsLewis : Because idiomCase protoevangeliumAsSig
       tauto)
     (by simp [bornOfAVirginDefs, ArgumentPackage.readAs, Line.asPackage, Line.premises])
     (by decide +kernel)
+  |>.ratedByLine idiomLine rfl (by simp [idiomCase, bornOfAVirginDefs, Line.asPackage])
 
 /-- **What the woman's seed marks, read both ways.** The claim is the
 protoevangelium strand's hinge: the seed being named as the woman's marks a

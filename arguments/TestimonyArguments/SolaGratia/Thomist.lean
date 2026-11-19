@@ -284,6 +284,7 @@ def whereTheAgentReadingFalls : Because reformed thomistAsAgent :=
     (by simp)
     (by simp [solaGratiaDefs, caseOf])
     (by decide +kernel)
+  |>.ratedBy passiveInference (by simp [reformed, closingInferences])
 
 /-- **Why Trent, on the Molinist reading, stands against the Thomists, with "not
 merely passive" in Garrigou-Lagrange's sense.** The crux is the first half of
@@ -302,6 +303,7 @@ def whereTheDispositionReadingFalls : Because tridentinePosition thomistAsDispos
     (by simp [solaGratiaDefs, caseOf])
     (by simp [solaGratiaDefs, caseOf])
     (by decide +kernel)
+  |>.ratedByLine cooperationLine rfl (by simp [tridentinePosition, solaGratiaDefs])
 
 /-- **What "not merely passive" means, read both ways.** The claim is the
 Thomists': under operating grace the will is not merely passive, but freely

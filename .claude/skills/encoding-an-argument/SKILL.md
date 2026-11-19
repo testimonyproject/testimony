@@ -13,7 +13,7 @@ on that page, so write each for that reader:
 
 - an atom's docstring says what the claim is, in a sentence someone could
   quote in a sermon or a seminar — the verse, the reader, the Greek word;
-- a result's name says what it establishes (`trent_on_pauls_word_indefensible`,
+- a result's name says what it establishes (`trent_on_james_word_indefensible`,
   not `thm3`), and its docstring says what it claims *and what it does not*;
 - a result is worth adding only if it answers a question that reader asks. See
   "Explaining a result" below for which certificate answers which question.
@@ -296,9 +296,16 @@ The sola fide argument uses all five: `whereTrentPartsFromPaul`,
 #eval reformed.scriptureOnlyAtoms.map (fun m => m.label)
 ```
 
-If `scriptureOnlyAtoms` is non-empty, the argument grounds a premise in
-Scripture with no scholarly support. That is permitted, but say so in the
-module docstring — `BornInBethlehem` does, for `jesusBornInBethlehem`.
+If `scriptureOnlyAtoms` is non-empty, the argument grounds a reading in
+Scripture with no scholarly support. (A `.textual` claim, which only reports
+what a passage says, is never listed.) The build refuses it: `#check_readers`,
+run in the argument's checks module, fails on every such claim and on every
+line of reason whose step carries no `inference`. Each has two ways out. Cite a
+reader who holds the reading or draws the step, at a verified location; or,
+when the literature was searched and no one does, mark it the library's own
+with `Reference.proposal` and a rationale saying what is assembled and why. Do
+not attach an irrelevant commentary to get past it, and do not mark a step
+proposed that a cited author in fact draws.
 
 ## 7 — the module docstring
 

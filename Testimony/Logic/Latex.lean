@@ -279,7 +279,7 @@ def legend [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) : String
   let order := n.order
   let rows := order.zipIdx.map fun (a, i) =>
     let m := cite a
-    let mark := if m.source.isScriptureOnly then scriptureOnlyMark else ""
+    let mark := if m.readsScriptureAlone then scriptureOnlyMark else ""
     varTarget n.anchor i ++ "$" ++ varName i ++ "$ & " ++ escape m.label ++ mark ++ " & " ++
       kind m.kind ++
       " & " ++ tradition m.source.tradition ++ ", " ++ confidence m.source.confidence ++
@@ -288,9 +288,10 @@ def legend [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) : String
     pcol "0.21" ++ "@{}}\n" ++
   "\\toprule\n & claim & kind & held & source \\\\\n\\midrule\n\\endhead\n" ++
   String.intercalate "\n" rows ++ "\n\\bottomrule\n\\end{longtable}\n\n" ++
-  (if order.any fun a => (cite a).source.citesScripture then
+  (if order.any fun a => (cite a).readsScriptureAlone then
     "\\noindent\\footnotesize " ++ scriptureOnlyMark ++
-    " grounded in scripture alone: the reading is assumed, not argued for.\n" ++
+    " a reading cited to the text alone, with no commentator: it is assumed here, " ++
+    "not argued for.\n" ++
     "\\normalsize\n"
   else "")
 
@@ -515,7 +516,7 @@ document's heading structure is the prose's own, and a heading per declaration
 would bury it under sixty entries of scaffolding.
 
 The leading `\par` is load-bearing. `\noindent` does not start a paragraph, so
-without it a label after a one-line note — "Grounded in scripture alone: …" —
+without it a label after a one-line note — "Read from the text alone …" —
 sets on the same line as the note and reads as part of it. `\nobreak` keeps the
 label with the docstring it introduces, and the trailing `\noindent` keeps that
 docstring from being indented away from it. -/
@@ -708,16 +709,59 @@ def step [DecidableEq α] (n : Numbering α) (φ : Formula α) : String :=
     "\\noindent " ++ stepSymbols ++ " \\(" ++ linked n φ ++ "\\).\n"
   | _, _ => rows (row n "\\item[]" φ (loneGloss n φ))
 
-/-- Which of a package's premises are grounded in scripture alone, as a note
-under its derivation; nothing, in a document none of whose claims cites
-scripture. -/
-def scriptureNote [DecidableEq α] (order : List α) (pkg : ArgumentPackage α) : String :=
-  if !(order.any fun a => (pkg.cite a).source.citesScripture) then ""
-  else if pkg.scriptureOnlyAtoms.isEmpty then
-    "\\emph{No premise here rests on scripture alone.}\n"
+/-- **A source in words.** Who holds a claim or a step, where, and how firmly,
+as a sentence: the rating and the tradition, then every reference, the primary
+first. It is the legend's "held" and "source" columns, said for one source on
+its own, so a rating that stands under a step's docstring reads as the legend
+does and not as the Lean that records it. -/
+def sourceWords (s : Source) : String :=
+  "\\par\\smallskip\\noindent Rated \\emph{" ++ confidence s.confidence ++ "}, held in the " ++
+    escape (tradition s.tradition) ++ " tradition: " ++ source s ++ ".\n"
+
+/-- **A claim's citation in words**: the claim, what kind of claim it is, and
+its source as `sourceWords` gives it. -/
+def claimWords' (m : AtomMeta) : String :=
+  "\\par\\smallskip\\noindent The claim: \\emph{" ++ escape m.label ++ "} (" ++ kind m.kind ++
+    ")." ++ sourceWords m.source
+
+/-- **A reading in words.** A reading written as a valuation says, of every
+claim, whether it is true; set as Lean it is a `match` over the claims'
+names. In words it is the claims it takes as false, each with its words and
+its link to the legend, and the rest taken as true; or, where it takes fewer
+as true, those, and the rest as false. A claim the page never mentions is left
+out, since nothing on the page turns on it. -/
+def readingWords [DecidableEq α] (n : Numbering α) (truth : List (α × Bool)) : String :=
+  match n.cite with
+  | none => ""
+  | some cite =>
+    let onPage := truth.filter fun (a, _) => n.order.contains a
+    let falses := onPage.filter (!·.2)
+    let trues := onPage.filter (·.2)
+    let (listed, lead, rest) :=
+      if falses.length ≤ trues.length then
+        (falses, "On this reading these claims are false:",
+          if falses.isEmpty then "Every claim on this page is true on this reading."
+          else "Every other claim on this page is true.")
+      else
+        (trues, "On this reading only these claims are true:",
+          "Every other claim on this page is false.")
+    if listed.isEmpty then "\\par\\smallskip\\noindent " ++ rest ++ "\n"
+    else
+      "\\par\\smallskip\\noindent " ++ lead ++ "\n" ++
+      rows (String.join (listed.map fun (a, _) =>
+        "  \\item[] " ++ claimWords n cite a false ++ "\n")) ++
+      "\\noindent " ++ rest ++ "\n"
+
+/-- Which of a package's premises are readings taken from the text alone
+(`AtomMeta.readsScriptureAlone`), as a note under its derivation; nothing when
+there are none. A quotation of the text is not such a reading, so a package
+whose only scripture-cited premises are quotations gets no note. -/
+def scriptureNote [DecidableEq α] (_order : List α) (pkg : ArgumentPackage α) : String :=
+  if pkg.scriptureOnlyAtoms.isEmpty then ""
   else
-    "\\emph{Grounded in scripture alone:} " ++
-    String.intercalate ", " (pkg.scriptureOnlyAtoms.map fun m => escape m.label) ++ ".\n"
+    "\\emph{Read from the text alone, with no commentator cited, and so assumed " ++
+    "here rather than argued for:} " ++
+    String.intercalate "; " (pkg.scriptureOnlyAtoms.map fun m => escape m.label) ++ ".\n"
 
 /-- The formulas of a list, inline and joined. -/
 def inlineFormulas [DecidableEq α] (n : Numbering α) (φs : List (Formula α)) : String :=
@@ -749,9 +793,14 @@ def explanation [DecidableEq α] (n : Numbering α) (e : Page.Explanation α) : 
     String.join (e.restsOn.map claim) ++
     (if Page.Explanation.isLiteral e.crux then "" else
       "\\item the step itself --- " ++
-      (if e.inferences.isEmpty then "\\emph{unrated}" else
-        String.intercalate "; " (e.inferences.map fun s =>
-          "\\emph{" ++ confidence s.confidence ++ "}: " ++ source s)) ++ "\n") ++
+      (match e.rating with
+       | some s => "\\emph{" ++ confidence s.confidence ++ "}: " ++ source s
+       | none =>
+         if e.inferences.isEmpty then "\\emph{unrated}" else
+           "\\emph{not rated on its own}. These ratings are for the steps of \\emph{" ++
+           escape e.holder ++ "} together, not for this one: " ++
+           String.intercalate "; " (e.inferences.map fun s =>
+             "\\emph{" ++ confidence s.confidence ++ "}: " ++ source s)) ++ "\n") ++
   "\\end{itemize}\n\\end{itemize}\n"
 
 /-- Every reading of a rival's claim, answered: each horn with what the claim
@@ -984,6 +1033,9 @@ def item [DecidableEq α] (n : Numbering α) : Page.Item α → String
       declLabel d "" ++ prose doc ++
       rows (String.join (φs.zipIdx.map fun (φ, i) =>
         row n (numbered i φs.length) φ (gloss n none φ)))
+  | .source d doc s => declLabel d "" ++ prose doc ++ sourceWords s
+  | .claim d doc m => declLabel d "" ++ prose doc ++ claimWords' m
+  | .reading d doc truth => declLabel d "" ++ prose doc ++ readingWords n truth
   | .other d doc src => declLabel d "" ++ prose doc ++ verbatim src
   | .result d doc stmt proposed =>
       declLabel d (if proposed then " \\textsuperscript{(proposed)}" else "") ++
@@ -1036,9 +1088,19 @@ None of them belongs in the generator: the same source must make the same
 it, whose commit does not exist until then. So the file is written when the document is
 typeset, by `scripts/edition.py`, from the commit being typeset, as
 `credits.def` is by `scripts/credits.py`. Without it the document says it is an
-unrecorded copy, and dates itself the day it was typeset. -/
+unrecorded copy, and dates itself the day it was typeset.
+
+The paper is not part of the record, because one `.tex` makes every size of
+page: `\editionpaper` names the paper this copy is set on, "A4" or "US Letter"
+(or the name `scripts/typeset.sh --paper` was given), from `\testimonypaper`,
+which the preamble reads before the class (`preamble`). -/
 def edition : String :=
   "\\newif\\ifeditionrecorded\n\\newif\\ifeditionpreview\n" ++
+  "\\edef\\testimony@paper{\\testimonypaper}\\def\\testimony@aiv{a4}" ++
+  "\\def\\testimony@letter{letter}\n" ++
+  "\\newcommand{\\editionpaper}{\\ifx\\testimony@paper\\testimony@aiv A4\\else" ++
+  "\\ifx\\testimony@paper\\testimony@letter US Letter\\else" ++
+  "\\texttt{\\testimony@paper}\\fi\\fi}\n" ++
   "\\newcommand{\\editiondate}{\\today}\n" ++
   "\\newcommand{\\editionversion}{unrecorded}\n" ++
   "\\newcommand{\\editioncommit}{COMMIT}\n" ++
@@ -1062,7 +1124,25 @@ structure Reproduction where
   /-- The programs to run in the package before `tool`: what writes the files
   the document needs beside it, such as the bibliography (`bibgen`). -/
   before : List String := []
+  /-- Which Bible translations the document quotes, in a sentence for the
+  reader, and the notice each one's publisher asks for, printed as given. -/
+  scripture : String × List String := ("", [])
 deriving Inhabited, Repr
+
+/-- The paragraph of the closing section that names the translations the
+document quotes Scripture from, with each publisher's notice: nothing, if it
+names none. `lead` says which translation quotes what, and each notice follows
+it as its publisher gives it. -/
+def scripturePermissions (lead : String) (notices : List String) : String :=
+  if notices.isEmpty then "" else
+    escape lead ++ "\n" ++
+    "\\begin{itemize}\n" ++
+    String.join (notices.map fun n => "\\item " ++ escape n ++ "\n") ++
+    "\\end{itemize}\n\n"
+
+#guard scripturePermissions "Quoted:" [] == ""
+#guard scripturePermissions "Quoted:" ["Used by permission."] ==
+  "Quoted:\n\\begin{itemize}\n\\item Used by permission.\n\\end{itemize}\n\n"
 
 /-- **How this edition was made**, the document's last section: what made it,
 for a reader who has never heard of Lean, and every step to make it again from
@@ -1071,12 +1151,20 @@ the commit the edition names (`edition`).
 The title matter says only when and which: a reader who wants to cite the
 document needs those, and a reader who wants to check it needs the rest, which
 is too long for a title page. The steps are the ones `.github/workflows/pdf.yml`
-takes, written out for one computer. -/
+takes, written out for one computer, and they end in one command for each size
+of page the workflow publishes, A4 and US Letter, since a reader may hold either
+(`\editionpaper`, defined in `edition`, says which). Before the steps it names
+the Bible translations the document quotes, with the notice each publisher asks
+for (`scripturePermissions`). -/
 def reproduction (r : Reproduction) : String :=
   let cmd (lines : List String) : String :=
     "\\begin{alltt}\\small\n" ++ "\n".intercalate lines ++ "\n\\end{alltt}\n"
   let defs := if r.credits then "docs/latex docs/latex/arguments" else r.dir
-  let pdf := (r.file.dropEnd 4).toString ++ ".pdf"
+  let name := (r.file.dropEnd 4).toString
+  let pdf := name ++ ".pdf"
+  let letter := name ++ "-letter.pdf"
+  let a5 := name ++ "-a5.pdf"
+  let tex := r.dir ++ "/" ++ r.file
   "\n\\clearpage\n\\section*{How this edition was made}\n" ++
   "\\addcontentsline{toc}{section}{How this edition was made}\n" ++
   "This document was printed by a program, not set by hand. Its text comes from " ++
@@ -1089,6 +1177,7 @@ def reproduction (r : Reproduction) : String :=
   "conclusion follows from its premises, that it does, and where it says a " ++
   "conclusion does not follow, that the counterexample it gives really is one. " ++
   "It does not check that any premise is true.\n\n" ++
+  scripturePermissions r.scripture.1 r.scripture.2 ++
   "\\ifeditionrecorded This edition, version \\editionversion, was made from " ++
   "the library as it stood on \\editiondate, at the commit named in step 3 " ++
   "below. A commit is one saved state of every file in the " ++
@@ -1098,12 +1187,17 @@ def reproduction (r : Reproduction) : String :=
   "so the steps below write \\texttt{COMMIT} where an edition names its own. A " ++
   "commit is one saved state of every file in the repository, named by a string " ++
   "of letters and digits that never changes what it names.\n\\fi\n\n" ++
+  "This copy is set on \\editionpaper{} paper. The steps below make the document " ++
+  "on A4 and on US Letter alike, and only the last of them differs between the " ++
+  "two.\n\n" ++
   "You need a computer running Linux or macOS (on Windows, the Windows Subsystem " ++
   "for Linux), with git, Python~3, an internet connection, and about 10\\,GB of " ++
   "free disk space.\n" ++
   "\\begin{enumerate}\n" ++
   "\\item Install elan, which installs the version of Lean the library asks for:\n" ++
   cmd ["curl https://elan.lean-lang.org/elan-init.sh -sSf | sh"] ++
+  "Then open a new terminal, so that it can find the \\texttt{lake} command elan " ++
+  "installed.\n" ++
   "\\item Install Tectonic, which sets the pages, following " ++
   "\\url{https://tectonic-typesetting.github.io/book/latest/installation/}.\n" ++
   "\\item Fetch the library, and turn it back to this edition's commit:\n" ++
@@ -1122,12 +1216,21 @@ def reproduction (r : Reproduction) : String :=
     "each argument" else "") ++ ":\n" ++
   cmd ((if r.credits then ["python3 scripts/credits.py " ++ defs] else []) ++
     ["python3 scripts/edition.py " ++ defs]) ++
-  "\\item Set the pages:\n" ++
-  cmd ["cd " ++ r.dir, "tectonic " ++ r.file] ++
+  "\\item Set the pages. For A4 paper:\n" ++
+  cmd ["scripts/typeset.sh " ++ tex] ++
+  "That makes \\texttt{" ++ escape (r.dir ++ "/" ++ pdf) ++ "}. For US Letter " ++
+  "paper:\n" ++
+  cmd ["scripts/typeset.sh --paper letter " ++ tex] ++
+  "That makes \\texttt{" ++ escape letter ++ "} beside it.\n" ++
   "\\end{enumerate}\n" ++
-  "That makes \\texttt{" ++ escape pdf ++ "}. Its words, numbers and references " ++
-  "are this edition's, and so should its pages be: the fonts it is set in come " ++
-  "with Tectonic, not from your computer.\n"
+  "Both sizes are set from the same source file, so they hold the same words, " ++
+  "numbers and references; only the size of the page differs, and with it where " ++
+  "the lines and pages break. Another size works the same way: " ++
+  "\\texttt{--paper a5} makes \\texttt{" ++ escape a5 ++ "}. The fonts the " ++
+  "document is set in come with Tectonic, not from your computer, so a copy you " ++
+  "make on the same paper as this one should match it page for page. The script " ++
+  "stops with an error if a character the document quotes is missing from those " ++
+  "fonts, rather than leave a blank where it should be.\n"
 
 /-- The fonts, and which font sets each script the documents quote.
 
@@ -1195,19 +1298,44 @@ where
      ("syriac", "FreeSans", "Syriac", [("0700", "074F")]),
      ("symbol", "FreeSerif", "", [("1D2C", "1D6A"), ("22C0", "22C3")])]
 
-/-- Preamble for a standalone document. Needs XeLaTeX: the claims contain Greek,
-Hebrew and Syriac, the rendered Lean contains `¬`, `→` and `⊢`, and `fonts`
-sets them with XeTeX's character classes.
+/-- **Credit, worked out when the document is typeset.** `\credit{key}`
+expands to what `credits.def`, beside the document, defines for `key`, and to
+nothing without it; `\creditline{key}` sets it centred under a heading, and sets
+nothing at all where there is no credit.
 
-`author`, where given, is set under the title, as LaTeX; it is how a document
-carries its credit (`credits`). Under it come the edition's date and version
-(`edition`), which say to a reader which copy they hold without naming the
-program that made it; how it was made is the last section's business
-(`reproduction`). `extra` is set last, before the document begins: the
-definitions the author line needs. -/
-def preamble (title : String) (author extra : String := "") : String :=
-  "\\documentclass[11pt]{article}\n" ++
-  "\\usepackage{amsmath,amssymb,array,booktabs,longtable,geometry,fontspec,xcolor,alltt}\n" ++
+The file is written by `scripts/credits.py` from git history when the PDF is
+made, not by the generator, and is not committed. A commit that names no person
+is credited to whoever merged it, so the credit changes at the moment of merge,
+and a committed document holding it would be stale on `main` from then on. -/
+def credits : String :=
+  "\\newcommand{\\credit}[1]{\\ifcsname credit@#1\\endcsname" ++
+  "\\csname credit@#1\\endcsname\\fi}\n" ++
+  "\\newcommand{\\creditline}[1]{\\ifcsname credit@#1\\endcsname" ++
+  "{\\centering\\credit{#1}\\par\\medskip}\\fi}\n" ++
+  "\\InputIfFileExists{credits.def}{}{}\n"
+
+/-- **The house style**: what every generated document shares, written once as
+the package `testimony.sty`, which each generator writes beside its documents
+and each document loads with one line. A document holds only its title, its
+author line and its text.
+
+It is built on KOMA-Script's `scrartcl`, the class `preamble` names, rather
+than on LaTeX's plain `article` with the margins and spacing set by hand. KOMA
+sets the width of the text block from the paper and the type size (`DIV`), so a
+line stays within the length a reader's eye can follow, and sets headings in
+the sans-serif face. Its foot margin, twice the head's, is the one thing
+overridden: it left a wide band of white under every page number. The sans
+face is FreeSans, so a heading that quotes Greek or Hebrew still has the glyphs
+(`fonts`).
+
+The rest is this library's own: a variable linked to its row in the legend
+(`\pvar`), a derivation's rows (`derivation`), the gloss after a formula
+(`\gloss`), the fonts, the edition's date and version (`edition`), and the
+credit lines (`credits`). -/
+def style : String :=
+  "\\NeedsTeXFormat{LaTeX2e}\n" ++
+  "\\ProvidesPackage{testimony}[Testimony house style, written by the generators]\n" ++
+  "\\usepackage{amsmath,amssymb,array,booktabs,longtable,fontspec,xcolor,alltt}\n" ++
   "\\usepackage{tikz}\\usetikzlibrary{arrows.meta}\n" ++
   "\\usepackage[hidelinks]{hyperref}\n" ++
   -- A variable links to its row in the legend, and is coloured so a reader can
@@ -1226,7 +1354,7 @@ def preamble (title : String) (author extra : String := "") : String :=
   -- the note a `\keepwithnext` keeps after it; a row is never split; and a page
   -- breaks between rows only where the generator starts a row with `\breakrow`
   -- (`breakable`).
-  "\\makeatletter\n" ++
+  -- A package reads `@` as a letter, so the internals need no `\makeatletter`.
   "\\newenvironment{derivation}\n" ++
   "  {\\begin{list}{}{\\setlength{\\leftmargin}{2.6em}\\setlength{\\labelwidth}{2.2em}%\n" ++
   "    \\setlength{\\labelsep}{0.4em}\\setlength{\\itemsep}{2pt}\\setlength{\\parsep}{0pt}%\n" ++
@@ -1235,14 +1363,12 @@ def preamble (title : String) (author extra : String := "") : String :=
   "  {\\end{list}}\n" ++
   "\\newcommand{\\breakrow}[1]{\\@itempenalty\\z@\\item[#1]\\@itempenalty\\@M}\n" ++
   "\\newcommand{\\keepwithnext}{\\@endparpenalty\\@M}\n" ++
-  "\\makeatother\n" ++
   -- No paragraph leaves a single line alone at the foot or the head of a page.
   -- A derivation cannot be parted from the paragraph before it, so without
   -- this TeX carries that paragraph's last line over with it, and the page
   -- opens on a fragment of a sentence.
   "\\clubpenalty=10000\n\\widowpenalty=10000\n" ++
   "\\newcommand{\\gloss}[1]{\\enspace---\\enspace{\\small\\itshape #1}}\n" ++
-  "\\geometry{margin=1in}\n" ++
   -- Long unbreakable words — a cite key, a declaration name in \\texttt — would
   -- otherwise spill into the margin rather than loosening the line.
   "\\setlength{\\emergencystretch}{3em}\n" ++
@@ -1251,28 +1377,50 @@ def preamble (title : String) (author extra : String := "") : String :=
   -- sentence; in text full of "ch. 16", "ad loc. Rom" and "p. 80" that reads
   -- as stray double spaces, and justification stretches them further.
   "\\frenchspacing\n" ++
+  -- The line length is KOMA's (`DIV=13`, set by `preamble`); the height is not.
+  -- KOMA gives the foot margin twice the head's, which on A4 left some 45mm
+  -- of white under the page number. Here the page keeps KOMA's width and runs
+  -- the text down to 24mm from the foot, with the number 11mm below it.
+  "\\RequirePackage{geometry}\n" ++
+  "\\edef\\testimony@geometry{width=\\the\\textwidth,top=22mm,bottom=24mm," ++
+  "footskip=11mm}\n" ++
+  "\\expandafter\\geometry\\expandafter{\\testimony@geometry}\n" ++
   fonts ++
+  "\\setsansfont{FreeSans}[Extension=.otf,UprightFont=*,BoldFont=*Bold,\n" ++
+  "  ItalicFont=*Oblique,BoldItalicFont=*BoldOblique]\n" ++
+  edition ++ credits ++
+  "\\endinput\n"
+
+/-- The style file's name, as a document loads it and a generator writes it. -/
+def styleFile : String := "testimony.sty"
+
+/-- Preamble for a standalone document: the class, the house style (`style`), and
+the title matter. Needs XeLaTeX: the claims contain Greek, Hebrew and Syriac,
+the rendered Lean contains `¬`, `→` and `⊢`, and `fonts` sets them with XeTeX's
+character classes.
+
+`author`, where given, is set under the title, as LaTeX; it is how a document
+carries its credit (`credits`). Under it come the edition's date and version
+(`edition`), which say to a reader which copy they hold without naming the
+program that made it; how it was made is the last section's business
+(`reproduction`). -/
+def preamble (title : String) (author : String := "") : String :=
+  -- `DIV=13` divides the page into thirteen strips and gives the margins three,
+  -- a wider text block than `DIV=11` and so fewer pages; `parskip=false` keeps
+  -- indented paragraphs, as the prose is written for. The style file sets the
+  -- page's height (`style`).
+  --
+  -- The paper is A4 unless `\testimonypaper` names another before the document
+  -- is read: `scripts/typeset.sh --paper letter` typesets a US Letter edition
+  -- through a one-line wrapper that defines it, so one `.tex` makes both.
+  "\\providecommand{\\testimonypaper}{a4}\n" ++
+  "\\documentclass[11pt,paper=\\testimonypaper,DIV=13,parskip=false]{scrartcl}\n" ++
+  "\\usepackage{testimony}\n" ++
   "\\title{" ++ escape title ++ "}\n" ++
   (if author.isEmpty then "" else "\\author{" ++ author ++ "}\n") ++
   "\\date{\\editiondate\\\\[2pt]{\\small Version \\editionversion" ++
   "\\ifeditionpreview\\\\\\editionremark\\fi}}\n" ++
-  edition ++ extra ++ "\\begin{document}\n\\maketitle\n"
-
-/-- **Credit, worked out when the document is typeset.** `\credit{key}`
-expands to what `credits.def`, beside the document, defines for `key`, and to
-nothing without it; `\creditline{key}` sets it centred under a heading, and sets
-nothing at all where there is no credit.
-
-The file is written by `scripts/credits.py` from git history when the PDF is
-made, not by the generator, and is not committed. A commit that names no person
-is credited to whoever merged it, so the credit changes at the moment of merge,
-and a committed document holding it would be stale on `main` from then on. -/
-def credits : String :=
-  "\\newcommand{\\credit}[1]{\\ifcsname credit@#1\\endcsname" ++
-  "\\csname credit@#1\\endcsname\\fi}\n" ++
-  "\\newcommand{\\creditline}[1]{\\ifcsname credit@#1\\endcsname" ++
-  "{\\centering\\credit{#1}\\par\\medskip}\\fi}\n" ++
-  "\\InputIfFileExists{credits.def}{}{}\n"
+  "\\begin{document}\n\\maketitle\n"
 
 /-- The table of contents, which the starred sections opt into by hand. -/
 def contents : String := "\\tableofcontents\n"
@@ -1411,6 +1559,22 @@ private def testNumbering : Numbering Nat :=
   "  \\item[] \\((\\pvar{A}{1} \\lor \\pvar{A}{2}) \\rightarrow \\pvar{A}{3}\\)" ++
     "\\gloss{\\emph{would give:} claim 2}\n" ++
   "\\end{derivation}\n"
+
+-- A reading says, in words, the claims it takes as false, or, where fewer, the
+-- claims it takes as true; a claim the page does not mention is left out.
+#guard readingWords testNumbering [(0, true), (1, false), (2, true), (7, false)] ==
+  "\\par\\smallskip\\noindent On this reading these claims are false:\n" ++
+  "\\begin{derivation}\n  \\item[] \\(\\pvar{A}{2}\\)\\enspace claim 1\n\\end{derivation}\n" ++
+  "\\noindent Every other claim on this page is true.\n"
+#guard readingWords testNumbering [(0, false), (1, false), (2, true)] ==
+  "\\par\\smallskip\\noindent On this reading only these claims are true:\n" ++
+  "\\begin{derivation}\n  \\item[] \\(\\pvar{A}{3}\\)\\enspace claim 2\n\\end{derivation}\n" ++
+  "\\noindent Every other claim on this page is false.\n"
+
+-- A source says its rating, its tradition and its references.
+#guard sourceWords (testCite 0).source ==
+  "\\par\\smallskip\\noindent Rated \\emph{disputed}, held in the adversarial trial " ++
+  "tradition: \\emph{proposed:} a test.\n"
 
 -- What is not a list of claims has no words: a disjunction, a denied conjunction.
 #guard gloss testNumbering none (.or (.atom 0) (.atom 1)) == none

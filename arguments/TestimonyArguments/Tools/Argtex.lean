@@ -84,10 +84,25 @@ def standaloneNote : String :=
   "The library also prints every argument together, as one book " ++
   "(\\texttt{arguments.pdf}). " ++ notationNote
 
+/-- Which translations the documents quote Scripture from, and the notice each
+publisher asks for, which the translation's bibliography entry carries in its
+note. Printed in the closing section of every document, the book's and each
+argument's alike, because a quotation from any of them may be in either. -/
+def scripture : String × List String :=
+  ("The library quotes Scripture from the translations below, by permission of " ++
+    "their publishers. Most quotations are from the English Standard Version " ++
+    "(ESV); the chapters on Scripture alone quote the Legacy Standard Bible " ++
+    "(LSB), and any other quotation from the LSB or the New American Bible, " ++
+    "Revised Edition (NABRE), is marked with its name. Where a cited author " ++
+    "quotes a verse in another translation, such as the King James Version, " ++
+    "the verse is given as the author gives it.",
+   [TestimonyArguments.esv, TestimonyArguments.lsb, TestimonyArguments.nabre].filterMap
+     (·.core.note))
+
 /-- How the book is made again: `argtex`, in `arguments/`, writes it. -/
 def bookMade : Logic.Latex.Reproduction :=
   { package := "arguments", tool := "argtex", dir := "docs/latex",
-    file := "arguments.tex", before := ["bibgen"] }
+    file := "arguments.tex", before := ["bibgen"], scripture }
 
 /-- The whole document: every catalogued argument, set as `latexDocument` sets
 any package's. -/
@@ -109,16 +124,22 @@ def standalone (a : Argument) : String :=
 -- its directory (`.github/workflows/release.yml`), so none may be the book's.
 #guard (arguments.map (·.slug)).eraseDups.length == arguments.length
 #guard arguments.all (·.slug != "arguments")
+-- Each document is also set on US Letter as `<slug>-letter.pdf`
+-- (`scripts/typeset.sh --paper letter`), so no slug may take that form.
+#guard arguments.all (!·.slug.endsWith "-letter")
 
-/-- Every file `argtex` writes: the book, then each argument alone. -/
+/-- Every file `argtex` writes: the book, then each argument alone, and the house
+style beside each, which every one of them loads (`Logic.Latex.style`). -/
 def files : List (System.FilePath × String) :=
   (texPath, document) ::
-    arguments.map fun a => (standaloneDir / (a.slug ++ ".tex"), standalone a)
+    arguments.map (fun a => (standaloneDir / (a.slug ++ ".tex"), standalone a)) ++
+    [((texPath.parent.getD ".") / Logic.Latex.styleFile, Logic.Latex.style),
+     (standaloneDir / Logic.Latex.styleFile, Logic.Latex.style)]
 
 /-- Entry point. -/
 def main (args : List String) : IO UInt32 := do
   let mut clean := true
-  for (path, tex) in files do
+  for (path, tex) in files.filter (·.1.extension == some "tex") do
     clean := (← reportStrayQuotes "argtex" path tex) && clean
   unless clean do return 1
   let check := args.contains "--check"

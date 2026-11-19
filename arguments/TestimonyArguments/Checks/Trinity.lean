@@ -4,6 +4,7 @@ import Testimony.Checks.Aif
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
+import Testimony.Checks.Readers
 import Testimony.Checks.Refutations
 
 /-!
@@ -46,6 +47,12 @@ The Triune God
 /-- info: every package has a model with its postulates: 28, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.Trinity
+
+/--
+info: every reading and step has a reader or is marked proposed: 28 packages, 34 lines
+-/
+#guard_msgs in
+#check_readers under TestimonyArguments.Trinity
 
 /-- info: every non-entailment survives its postulates: 12, and 0 undecided -/
 #guard_msgs in

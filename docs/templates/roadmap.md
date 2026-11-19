@@ -151,34 +151,36 @@ leaves Trent's step from the verse standing, and even then the step is
 disputed. Acts giving the Spirit before the water and after it is common ground
 (`trent_grants_god_is_not_bound`), not a Reformed win.
 
-**As a dispute, only Paul's word prevails; sola fide and Trent each stand, and
-neither is forced.** Weighed as a dispute — the four strands argued
-separately, Trent, the apocalyptic reading, Sanders, the critics, Jervell,
-Aquinas on John 6:29 and Luther's answer to him,
-Paul's gospel in Galatians, Paul's word, and Trent read as a claim about that
-word — one thing prevails outright: Paul's word, that δικαιόω does not denote
-the renewal of the inward man (`only_pauls_word_prevails`). It prevails by two
-routes: lexically, from the forensic sense, Paul's own words for renewal and the
-rule of least meaning (Joos; Silva; Barr); and exegetically, from Romans 4:3–8,
-where Paul glosses the righteousness counted to the ungodly as sin not counted.
-Every link of each is rated `wellSupported` or better, so Trent read as a claim
-about the word cannot be defended (`trent_on_pauls_word_indefensible`) — nor can
-the Latin gloss it rests on, "being justified" as "being made righteous".
-Every other party's weakest link is `disputed`, and every attack between Trent
-and a Reformed party runs both ways, including a claim a party derives on the
-way to its conclusion. So Luke's case, Paul's gospel and Trent — as Trent states
-it, tied to neither reading — are each defensible and none forced (`dominical_case_defensible`,
+**As a dispute, nothing prevails; sola fide and Trent each stand, and neither is
+forced.** Weighed as a dispute — the four strands argued separately, Trent, the
+apocalyptic reading, Sanders, the critics, Jervell, Aquinas on John 6:29 and
+Luther's answer to him, Paul's gospel in Galatians, Paul's word, and Trent read
+as a claim about that word — nothing prevails outright
+(`sola_fide_dispute_forces_nothing`). Paul's word, that δικαιόω does not denote
+the renewal of the inward man, is argued by two routes: lexically, from the
+forensic sense, Paul's own words for renewal and the rule of least meaning
+(Joos; Silva; Barr); and exegetically, from Romans 4:3–8, where Paul glosses the
+righteousness counted to the ungodly as sin not counted. Both routes take one
+step rated `disputed`, from the forensic sense to "and nothing more", because
+Trent keeps the verdict (the justified "are not only reputed, but are truly
+called, and are, just") and denies that the word means no more. So Trent read as
+a claim about the word ties with them, and can be defended
+(`trent_on_pauls_word_defensible`, `pauls_word_not_forced`). Every party's
+weakest link is `disputed`, and every attack between Trent and a Reformed party
+runs both ways, including a claim a party derives on the way to its conclusion.
+So Luke's case, Paul's gospel and Trent — as Trent states it, tied to neither
+reading — are each defensible and none forced (`dominical_case_defensible`,
 `dominical_case_not_forced`, `gospel_defensible`, `gospel_not_forced`,
 `trent_defensible`, `trent_not_forced`). The dilemma `whatTrentsDefinitionClaims`
 says why: read as a claim about Paul's word, Trent's definition cannot be held
-with the lexical and exegetical cases; read as a claim about what God does in
-justifying, nothing about the word reaches it, and it parts from Paul at the
-step from Galatians, that a verdict on a finished work excludes the renewal
-wrought in us (`whereTrentPartsFromPaul`), and at the step from Romans 4 —
-each rated `disputed`, because Augustine and Trent grant the texts and read them
-the other way. Two hearings answer narrower questions. Heard as Rome and the
-Reformers alone, only Paul's word is forced
-(`reformation_dispute_forces_only_pauls_word`). Heard without Trent, Luke's case,
+with the lexical and exegetical cases, and ties with them at that step; read as
+a claim about what God does in justifying, nothing about the word reaches it,
+and it parts from Paul at the step from Galatians, that a verdict on a finished
+work excludes the renewal wrought in us (`whereTrentPartsFromPaul`), and at the
+step from Romans 4 — each rated `disputed`, because Augustine and Trent grant
+the texts and read them the other way. Two hearings answer narrower questions.
+Heard as Rome and the Reformers alone, nothing is forced
+(`reformation_dispute_forces_nothing`). Heard without Trent, Luke's case,
 Paul's gospel and Paul's word are forced, but sola fide is still not — from Paul,
 because of Campbell's reading of πίστις Χριστοῦ, or from Peter, because of
 Jervell's reading of the yoke (`sola_fide_from_paul_not_forced_without_trent`,
@@ -383,10 +385,14 @@ who prevailed. Rated, Berry's and Motyer's steps are `disputed` and tie with the
 critic (`nothing_prevails_on_motyer_alone`). The verdict rests on Postell's
 inference — an oracle on the Assyrian timeline, read messianically, refutes the
 exclusion — rated `plausible` because no source cited grants its grounds and
-keeps the exclusion. He gives it two instances, Isaiah 9 and 11 and Micah 5:
-either suffices (`scriptural_reading_prevails_without_postell`), and without
-both nothing prevails (`nothing_prevails_without_the_counterexamples`). That
-makes the ratings premises of the result, and says which one to contest.
+keeps the exclusion. He gives it two instances, Isaiah 9 and 11 and Micah 5. The
+Micah instance is `disputed`: Rashi grants that Micah's ruler is the Messiah,
+facing Assyria, and still reads 7:14 of a child of Ahaz's day, and Ibn Ezra gives
+the reason, "the sign was given to Ahaz". So without the Isaiah instance nothing
+prevails (`nothing_prevails_without_postell`), and the verdict rests on that one
+step, still `plausible` because every reader found who keeps 7:14 near-term
+reads Isaiah 9 of Hezekiah, denying a ground rather than the step. That makes
+the ratings premises of the result, and says which one to contest.
 
 **A premise can be load-bearing in one role and not another.** The sola
 scriptura seed asserted in prose that the whole dispute reduces to whether
@@ -431,8 +437,8 @@ Aquinas grants Galatians 1:8 and the principle with it. Added to Mark 7, they
 still leave the sole rule open without that one premise
 (`every_text_without_the_hinge_leaves_the_sole_rule_open`). The council at Jerusalem (Acts 15) is
 read both ways. The Reformers read a council that let the gospel judge even the custom of Moses
-and judged by Scripture, "as it is written" (15:15); Rome reads one binding with the Spirit's
-authority, "it seemed good to the Holy Ghost, and to us" (15:28). Both pass through the apostles'
+and judged by Scripture, "just as it is written" (15:15); Rome reads one binding with the Spirit's
+authority, "it seemed good to the Holy Spirit and to us" (15:28). Both pass through the apostles'
 office: Calvin holds that it ended with them (Acts 1:21–22; 1 Corinthians 15:8), and *Lumen
 Gentium* 20 that it continues in the bishops (Acts 1:20; 2 Timothy 2:2; 1 Clement 44), and the
 texts alone leave that open (`apostolic_texts_leave_the_office_open`). Each grants the other's

@@ -62,7 +62,7 @@ check.
 | cell: status reading defeats Wegner | 74 ms | 11 MiB |
 | establish: Miller's case | 66 ms | 6 MiB |
 | rating: fruit, not ground | 34 ms | 9 MiB |
-| verdict: sola fide, only Paul's word unanswered | 29 ms | 6 MiB |
+| verdict: sola fide, nothing forced | 29 ms | 6 MiB |
 | rating: the laws' step, three standards | 28 ms | 5 MiB |
 | verdict: Septuagint, grounded in stages | 17 ms | 4 MiB |
 

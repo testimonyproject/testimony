@@ -8,21 +8,21 @@ The chapter "Does Genesis 3:15 rule out a human father?" asks what the wording
 of Genesis 3:15 says of a father. A reader of the whole Bible asks the next
 question. In the garden God tells the serpent that the woman's seed will crush
 its head, and that it will strike his heel. The Gospel tells of one born of a
-woman, struck in his death, who destroyed the devil through it. **Is the promise
+woman, struck in his death, who broke the devil's power through it. **Is the promise
 fulfilled in him, and does the fulfilment confirm that it was a promise?**
 
 ## The terms of the promise, and where Scripture says they are met
 
 | Genesis 3:15 | Where the New Testament names it |
 |---|---|
-| The woman's seed | The Son "made of a woman" (Galatians 4:4) |
-| The serpent | "that old serpent, called the Devil, and Satan" (Revelation 12:9; 20:2) |
-| His head crushed | "that through death he might destroy … the devil" (Hebrews 2:14; 1 John 3:8) |
-| His heel struck | He died, and rose the third day (1 Corinthians 15:3–4) |
+| The woman's seed | The Son "born of a woman" (Galatians 4:4) |
+| The serpent | "the serpent of old", "the devil and Satan" (Revelation 12:9; 20:2) |
+| His head crushed | "render powerless … the devil" (Hebrews 2:14; 1 John 3:8) |
+| His heel struck | He died, and was raised on the third day (1 Corinthians 15:3–4) |
 
-Romans 16:20, "the God of peace shall bruise Satan under your feet shortly", is
-left out: it is an allusion, and a disputed one (`fulfilmentLine` gives both
-sides).
+The New Testament is quoted from the Legacy Standard Bible (LSB). Romans 16:20,
+"the God of peace will soon crush Satan under your feet", is left out: it is an
+allusion, and a disputed one (`fulfilmentLine` gives both sides).
 
 ## Four positions
 

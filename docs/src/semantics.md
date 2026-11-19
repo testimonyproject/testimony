@@ -202,8 +202,8 @@ is not thereby fallacious. It is **conditional**, on exactly those senses.
 
 The library's verdicts already say, of a position, whether it can be defended. A position is
 **indefensible** when no admissible set holds it: something defeats it, and nothing the dispute
-can hold answers that defeat. Trent's definition, read as a claim about what Paul's word means,
-is indefensible in the sola fide dispute (`trent_on_pauls_word_indefensible`). That is the
+can hold answers that defeat. Trent's reading of James's "justified" as the increase of justice
+is indefensible in the James dispute (`trent_on_james_word_indefensible`). That is the
 library's own judgment, checked, and an article that argued the same would meet the same
 verdict, for the same stated reason.
 
@@ -320,9 +320,10 @@ shows one that does not (`faithDenialAnswered`), the James dispute one that does
 
 The library says a reading is right in one sense only: the dispute forces it. A reading is
 forced when it is in the grounded extension — every rival reading is indefensible, given
-premises that are cited and rated. Paul's word is forced in that sense
-(`only_pauls_word_prevails`), because the lexical case rests on links rated above `disputed`
-and nothing that attacks it is as strong. For James, four things are missing.
+premises that are cited and rated. Paul's word is not forced in that sense
+(`sola_fide_dispute_forces_nothing`): the lexical case takes a step rated `disputed`, from the
+courtroom sense of the verb to "and nothing more", and Trent's reading of the word ties with it.
+For James, four things are missing.
 
 1. **The dispute now exists** (`TestimonyArguments.SolaFide.James`), with the Catholic reading as
    two parties: James's word as the increase of justice, which cannot be defended; and what works

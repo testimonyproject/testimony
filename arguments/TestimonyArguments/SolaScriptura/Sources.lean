@@ -48,6 +48,107 @@ def mark7PrincipleInference : Source :=
   , tradition := .christianHistoricalGrammatical
   , confidence := .wellSupported }
 
+/-- The rating of the canon objection's step, from the Church's reception of the
+canon and the need for an infallible authority outside Scripture to identify
+it, to the denial that Scripture is the sole infallible rule: `wellSupported`.
+No reader was found who grants both grounds and denies the conclusion: if an
+infallible authority outside Scripture is needed to say which books are
+Scripture, Scripture is not the only infallible rule. Reid grants the grounds
+and the conclusion. The step is rated `wellSupported` rather than `consensus`
+because "infallible" may be read more loosely than Rome reads it. Calvin and
+Kruger answer the objection by denying its second ground, not this step. -/
+def canonObjectionInference : Source :=
+  { primary := .work reidCanonNewTestament (.sectionRef "The criterion of inspiration")
+  , supporting :=
+      [ .work tannerDecrees
+          (.sectionRef "Trent, Session IV (1546), Decree on Sacred Books and Traditions") ]
+  , tradition := .romanCatholic
+  , confidence := .wellSupported }
+
+/-- The rating of the step from Scripture's tests, applied under providence, to
+the claim that identifying the canon needs no infallible authority outside
+Scripture: `disputed`. George Reid, writing in the *Catholic Encyclopedia*
+(1908), is the reader who grants the grounds and denies the conclusion. He
+grants that apostolicity is "a positive and partial touchstone", and narrates
+how the Shepherd and the Didache were set apart; and he names the test from
+Scripture's own content and denies that it suffices. Inspiration "is not
+self-evident", so its "sole absolute criterion" is the Spirit witnessing "not
+... in the doctrinal and spiritual tenor of Holy Writ itself, according to
+Luther, but through the constituted organ and custodian of Its revelations, the
+Church". Augustine stands behind him: the canonical books are those "received by
+all the Catholic churches" (*On Christian Doctrine* II.8.12), a test of
+reception, not of agreement. As a Catholic he reads every text the step cites
+as Scripture, Peter on Paul's letters among them, and holds that God keeps his
+word; his providence, on Reid's account, works through the Church that
+recognises the books.
+
+Two Protestant readers press on the step from the other side without denying
+its conclusion. Kruger criticises the criteria-of-canonicity model taken on its
+own and grants that it "has rightly focused on apostolicity as a key component
+of canonicity" (pp. 67–87, at p. 87); his own model counts providential
+exposure and apostolic origin among its parts, with the Spirit's witness.
+McDonald finds the ancient criteria applied "often unequally" (p. 127). -/
+def canonTestsInference : Source :=
+  { primary := .work reidCanonNewTestament (.sectionRef "The criterion of inspiration")
+  , supporting :=
+      [ .work krugerCanonRevisited (.pages 67 87)
+      , .work mcdonaldIntegrityCanon (.pages 127 129) ]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of Whitaker's step from the circle to the conclusion that the
+first route gives no certainty of the canon: `wellSupported`. No reader was
+found who grants that proving each from the other is circular and still holds
+that this route gives the certainty of faith. The Catholic writers who state
+the spiral grant the circle and leave this route, to argue from Scripture read
+only as history (Toner, *Catholic Encyclopedia*, "Infallibility"; Catholic
+Answers, "Proving Inspiration"). -/
+def circleAnswerInference : Source :=
+  { primary := .work whitakerDisputation (.pages 334 335)
+  , supporting := [.work catholicAnswersProvingInspiration (.sectionRef "A Spiral Argument")]
+  , tradition := .reformedProtestant
+  , confidence := .wellSupported }
+
+/-- The rating of the step from "no surer than its history" to the conclusion
+that the spiral gives no certainty of faith: `disputed`. Vatican I grants that
+faith does not rest on the arguments that make it credible: we believe "not
+because we perceive its intrinsic truth by the natural light of reason, but
+because of the authority of God himself", "with the grace of God inspiring and
+assisting us" (*Dei Filius*, ch. 3). So a reader may grant that the history is
+no surer than history, and still hold that the Church's word, believed by
+grace, gives the certainty of faith. -/
+def spiralAnswerInference : Source :=
+  { primary := .work tannerDecrees (.sectionRef "Vatican I (1870), Dei Filius, ch. 3")
+  , supporting := [.work chillingworthReligion (.page 66)]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of the step from "the marks make the claim only credible" to the
+conclusion that the marks give no certainty of faith: `disputed`. Bellarmine
+grants the ground in so many words: the marks make the Church "evidently
+credible", not evidently true (*De Ecclesia militante* IV.3). He denies the
+conclusion, as Vatican I does, because the assent of faith rests on God's
+authority with "the effective help of power from on high" (*Dei Filius*,
+ch. 3). -/
+def marksAnswerInference : Source :=
+  { primary := .work bellarmineOpera2 (.sectionRef "De Ecclesia militante IV.3, pp. 365–366")
+  , supporting := [.work tannerDecrees (.sectionRef "Vatican I (1870), Dei Filius, ch. 3")]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of the step from the doubts before Trent to the conclusion that
+reception had not settled the canon: `disputed`. Reid grants the doubts ("Few
+are found to unequivocally acknowledge their canonicity") and denies the
+conclusion: the doubts "must be regarded as more or less academic", because
+"Ecclesiastical usage and Roman tradition held firmly" (*Catholic
+Encyclopedia*, "Canon of the Old Testament"). -/
+def receptionAnswerInference : Source :=
+  { primary := .work reidCanonOldTestament
+      (.sectionRef "The canon of the Old Testament during the Middle Ages: The Latin Church")
+  , supporting := [.work whitakerDisputation (.page 333)]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
 /-- The rating of the step from Mark 7's principle to the sole rule: `disputed`.
 Grant that God's word judges human tradition and that no unwritten tradition can
 be shown to be apostolic, and a reader may still deny that Scripture is the
@@ -66,9 +167,9 @@ def principleToSoleRuleInference : Source :=
   , confidence := .disputed }
 
 /-- The rating of the step from Jesus' sayings and Paul's letters to the principle:
-`wellSupported`. Jesus says that "the scripture cannot be broken" (John 10:35)
-and that not "one jot or one tittle" shall pass from the law (Matthew 5:18);
-Paul puts even an apostle and an angel under the gospel already preached
+`wellSupported`. Jesus says that "the Scripture cannot be broken" (John 10:35)
+and that "not the smallest letter or stroke shall pass from the Law" (Matthew
+5:18); Paul puts even an apostle and an angel under the gospel already preached
 (Galatians 1:8–9), and sets "the tradition of men" against Christ (Colossians
 2:8). From these to the principle that God's word judges human tradition, no
 reader was found who grants the texts and denies the principle.
@@ -83,13 +184,14 @@ Aquinas, Paul's "besides" means "adding something completely alien" (his
 lectures on Galatians, chapter 1, lecture 2). Rome's answer in Calvin's day was
 of the same kind, as Calvin reports it at the same verse: "they tell us, that we
 have not in our possession the whole of Paul's preaching". Paul himself commends
-what he handed on by word: "keep the ordinances, as I delivered them to you" (1
-Corinthians 11:2); "hold the traditions which ye have been taught, whether by
-word, or our epistle" (2 Thessalonians 2:15; compare 3:6). On that reading the
-test Paul sets is where a teaching came from, not whether it was written down.
-Both answers grant the principle, and deny that it makes Scripture the only
-measure; that denial is weighed where the argument needs it, at the premise
-about unwritten tradition and at the step to the sole rule, both `disputed`.
+what he handed on by word: the Corinthians "hold firmly to the traditions, just
+as I delivered them to you" (1 Corinthians 11:2); "hold to the traditions which
+you were taught, whether by word of mouth or by letter from us" (2 Thessalonians
+2:15; compare 3:6). On that reading the test Paul sets is where a teaching came
+from, not whether it was written down. Both answers grant the principle, and
+deny that it makes Scripture the only measure; that denial is weighed where the
+argument needs it, at the premise about unwritten tradition and at the step to
+the sole rule, both `disputed`.
 
 Rated `wellSupported`, as Mark 7's step is, and not `consensus`, because the
 step still generalises: John 10:35 and Matthew 5:18 speak of Scripture and the
@@ -98,10 +200,10 @@ in the church. Wenham's account of Jesus' teaching is the same as the step's:
 Jesus "repudiates the petty traditions of the elders in favour of a sane and
 spiritually minded attention to the Old Testament" (p. 28, of the grain plucked
 on the sabbath). He also notes the other side of it: of the scribes in Moses'
-seat Jesus says "all things therefore whatsoever they bid you, these do and
-observe" (Matthew 23:2–3), and "To Jesus scribal lore was valuable if linked
-with spiritual understanding" (p. 15). The principle judges tradition; it does
-not abolish it. -/
+seat Jesus says, in the English Wenham quotes, "all things therefore whatsoever
+they bid you, these do and observe" (Matthew 23:2–3), and "To Jesus scribal lore
+was valuable if linked with spiritual understanding" (p. 15). The principle
+judges tradition; it does not abolish it. -/
 def jesusAndPaulPrincipleInference : Source :=
   { primary := .work aquinasGalatians (.sectionRef "c. 1, lect. 2")
   , supporting :=
@@ -117,20 +219,21 @@ def jesusAndPaulPrincipleInference : Source :=
 
 /-- The rating of the Reformed step from Acts 15 to councils: `disputed`. The step
 reads the council at Jerusalem as the Reformers did. Men from Judaea taught that
-"Except ye be circumcised after the manner of Moses, ye cannot be saved" (15:1),
-so the oldest custom Israel had was laid on the gentiles as a condition of
-salvation. Peter answered it with the gospel, "through the grace of the Lord
-Jesus Christ we shall be saved, even as they" (15:10–11), and James with
-Scripture, "to this agree the words of the prophets; as it is written" (15:15).
-Calvin draws the conclusion at 15:15: the apostles "took nothing to themselves
-imperiously, but did reverently follow that which was prescribed in the word of
-God", and were not ashamed "to profess themselves to be the scholars of the
-Scripture". So a council after the apostles binds only as far as it agrees with
-the word, and may err. The Westminster Confession says so of councils: their
-decrees bind "if consonant to the Word of God", and "All synods or councils since
-the apostles' times, whether general or particular, may err, and many have
-erred; therefore they are not to be made the rule of faith or practice, but to
-be used as a help in both" (XXXI.3–4, in the numbering of 1647).
+"Unless you are circumcised according to the custom of Moses, you cannot be
+saved" (15:1), so the oldest custom Israel had was laid on the gentiles as a
+condition of salvation. Peter answered it with the gospel, "we are saved through
+the grace of the Lord Jesus, in the same way as they also are" (15:10–11), and
+James with Scripture, "with this the words of the Prophets agree, just as it is
+written" (15:15). Calvin draws the conclusion at 15:15: the apostles "took
+nothing to themselves imperiously, but did reverently follow that which was
+prescribed in the word of God", and were not ashamed "to profess themselves to
+be the scholars of the Scripture". So a council after the apostles binds only as
+far as it agrees with the word, and may err. The Westminster Confession says so
+of councils: their decrees bind "if consonant to the Word of God", and "All
+synods or councils since the apostles' times, whether general or particular, may
+err, and many have erred; therefore they are not to be made the rule of faith or
+practice, but to be used as a help in both" (XXXI.3–4, in the numbering of
+1647).
 
 Joseph Wilhelm, in the *Catholic Encyclopedia*, reads the same council and
 denies the conclusion. For him the decree of 15:28 shows "the mind of the
@@ -149,10 +252,11 @@ def acts15ReformedInference : Source :=
   , confidence := .disputed }
 
 /-- The rating of Rome's step from Acts 15 to councils: `disputed`. The council's
-letter says "it seemed good to the Holy Ghost, and to us" (15:28), and Paul and
-Silas "delivered them the decrees for to keep" in every city (16:4). From these
-Wilhelm concludes that a general council in union with the pope, like the
-council at Jerusalem, binds with the Spirit's authority and cannot err.
+letter says "it seemed good to the Holy Spirit and to us" (15:28), and Paul and
+Silas "were delivering the decrees ... for them to keep" in the cities they
+passed through (16:4). From these Wilhelm concludes that a general council in
+union with the pope, like the council at Jerusalem, binds with the Spirit's
+authority and cannot err.
 
 The Westminster Confession grants both texts and denies the conclusion. It cites
 Acts 15:27–31 and 16:4 as its proof that a council's decrees, "if consonant to
@@ -173,12 +277,12 @@ def acts15RomanInference : Source :=
 
 /-- The rating of the Reformed step from the texts on the apostles to the end of
 their office: `disputed`. The apostle chosen in Judas's place had to have
-"companied with us all the time that the Lord Jesus went in and out among us",
-to be "a witness with us of his resurrection" (Acts 1:21–22); Paul counts
-himself the last to whom the risen Christ appeared, "last of all he was seen of
-me also, as of one born out of due time" (1 Corinthians 15:8); Peter counts
-Paul's letters with "the other scriptures" (2 Peter 3:15–16); and Paul writes as
-"an apostle of Jesus Christ" with "Timothy our brother" (2 Corinthians 1:1,
+"accompanied us all the time that the Lord Jesus went in and out among us", to
+be "a witness with us of His resurrection" (Acts 1:21–22); Paul counts himself
+the last to whom the risen Christ appeared, "last of all, as to one untimely
+born, He appeared to me also" (1 Corinthians 15:8); Peter counts Paul's letters
+with "the rest of the Scriptures" (2 Peter 3:15–16); and Paul writes as "an
+apostle of Christ Jesus" with "Timothy our brother" (2 Corinthians 1:1,
 Colossians 1:1). So the apostles were a closed company, and their office ended
 with them. Calvin draws it so. At Acts 1:21 he grants that "Peter doth here
 require such a witness as saw the Lord after his resurrection ... For this did
@@ -208,26 +312,26 @@ def apostlesOfficeEndedInference : Source :=
   , confidence := .disputed }
 
 /-- The rating of Rome's step from the succession texts to the apostles' office
-continuing: `disputed`. Peter applies the Psalm to Judas, "his bishoprick
-(ἐπισκοπή) let another take" (Acts 1:20); Paul bids Timothy "commit thou to
-faithful men, who shall be able to teach others also" (2 Timothy 2:2); and
-Clement of Rome records that the apostles appointed bishops and deacons and
-"afterwards gave instructions, that when these should fall asleep, other
-approved men should succeed them in their ministry" (1 Clement 44). So the
-apostles' office continues in those who succeed them. *Lumen Gentium* 20 draws it
-so, and cites 2 Timothy 2:2 and 1 Clement 44 in its notes: "bishops by divine
-institution have succeeded to the place of the apostles".
+continuing: `disputed`. Peter applies the Psalm to Judas, "Let another man take
+his office (ἐπισκοπή)" (Acts 1:20); Paul bids Timothy "entrust these to faithful
+men who will be able to teach others also" (2 Timothy 2:2); and Clement of Rome
+records that the apostles appointed bishops and deacons and "afterwards gave
+instructions, that when these should fall asleep, other approved men should
+succeed them in their ministry" (1 Clement 44). So the apostles' office
+continues in those who succeed them. *Lumen Gentium* 20 draws it so, and cites 2
+Timothy 2:2 and 1 Clement 44 in its notes: "bishops by divine institution have
+succeeded to the place of the apostles".
 
-Calvin grants the texts and denies the conclusion. At Acts 1:20 he reads
-"bishoprick" as "a jurisdiction or government", and grants that "another may
-succeed him"; at 1:21 he answers that the apostleship "is not without the
-preaching of the gospel", so that "the Popish bishops ... brag that they are
-the successors of the apostles; but wherein are they like unto them?" (*Acts*,
-vol. 1, pp. 65–66). In the *Institutes* the apostolic office was not "instituted
-in the Church to be perpetual" (IV.iii.4). Whether Clement's "succeed them in
-their ministry" means succeeding to the apostles' office or to the ministry of
-the bishops and deacons they appointed is the question itself. So the step is
-`disputed`. -/
+Calvin grants the texts and denies the conclusion. At Acts 1:20 he reads the
+office, "bishoprick" in his translator's English, as "a jurisdiction or
+government", and grants that "another may succeed him"; at 1:21 he answers that
+the apostleship "is not without the preaching of the gospel", so that "the
+Popish bishops ... brag that they are the successors of the apostles; but
+wherein are they like unto them?" (*Acts*, vol. 1, pp. 65–66). In the
+*Institutes* the apostolic office was not "instituted in the Church to be
+perpetual" (IV.iii.4). Whether Clement's "succeed them in their ministry" means
+succeeding to the apostles' office or to the ministry of the bishops and deacons
+they appointed is the question itself. So the step is `disputed`. -/
 def apostolicSuccessionInference : Source :=
   { primary := .work calvinActs1 (.pages 65 66)
   , supporting :=
@@ -238,20 +342,21 @@ def apostolicSuccessionInference : Source :=
   , confidence := .disputed }
 
 /-- The rating of the Reformed step from Matthew 23:2–3 to the teaching office:
-`disputed`. Jesus tells the crowd to observe and do "whatsoever" the scribes and
-Pharisees bid, because they "sit in Moses' seat" (23:2–3). In the same discourse
-he condemns their teaching about oaths, "Woe unto you, ye blind guides, which
-say, Whosoever shall swear by the temple, it is nothing" (23:16–22), and in Mark
-7 and Matthew 15 he condemns the elders' tradition for making void the word of
-God. So, Calvin argues, the seat binds only so far as Moses is taught from it:
-"to sit in the chair of Moses is nothing else than to teach, according to the
-Law of God, how we ought to live", and "Christ exhorts the people to obey the
-scribes, only so far as they adhere to the pure and simple exposition of the
-Law" (pp. 74–75). He answers Rome by name: "The Papists reckon it enough, that
-those who issue laws should possess the title and occupy the station", and if
-Christ had meant to bind consciences to the commandments of men, "there would
-have been no good ground for what he said in another passage, that it is in vain
-to worship God by the commandments of men, (Matthew 15:9.)" (p. 75).
+`disputed`. Jesus tells the crowd to do and keep "all that" the scribes and
+Pharisees tell them, because they "have seated themselves in the chair of Moses"
+(23:2–3). In the same discourse he condemns their teaching about oaths, "Woe to
+you, blind guides, who say, 'Whoever swears by the sanctuary, that is nothing'"
+(23:16–22), and in Mark 7 and Matthew 15 he condemns the elders' tradition for
+making void the word of God. So, Calvin argues, the seat binds only so far as
+Moses is taught from it: "to sit in the chair of Moses is nothing else than to
+teach, according to the Law of God, how we ought to live", and "Christ exhorts
+the people to obey the scribes, only so far as they adhere to the pure and
+simple exposition of the Law" (pp. 74–75). He answers Rome by name: "The Papists
+reckon it enough, that those who issue laws should possess the title and occupy
+the station", and if Christ had meant to bind consciences to the commandments of
+men, "there would have been no good ground for what he said in another passage,
+that it is in vain to worship God by the commandments of men, (Matthew 15:9.)"
+(p. 75).
 
 Cornelius a Lapide grants every text the step reads and denies its conclusion.
 He calls the scribes of 23:16 "rightly called by Christ blind guides" (p. 40),
@@ -274,16 +379,16 @@ def mosesSeatReformedInference : Source :=
 
 /-- The rating of Rome's step from Matthew 23:2–3 to the teaching office:
 `disputed`. Jesus bids the crowd observe what the scribes and Pharisees bid,
-because of the seat they sit in, though "they say, and do not" (23:2–3).
-Cornelius a Lapide takes the seat as "the honour, dignity, and authority of
-teaching and commanding, which Moses had with the Jews, and to which the Scribes
-had succeeded", and draws the Church's case from it: "In like manner, the chair
-of S. Peter is used to signify the power and authority of teaching and ruling
-all the faithful throughout the world, in which the Roman Pontiffs succeed S.
-Peter" (p. 32). "Christians ought to bear in mind these words of Christ when they
-see certain Bishops, Pastors, and Magistrates not living in accordance with the
-law of Christ" (p. 33). So the office in the Church is heeded for its seat, even
-when its holders live ill.
+because of the seat they sit in, though "they say things and do not do them"
+(23:2–3). Cornelius a Lapide takes the seat as "the honour, dignity, and
+authority of teaching and commanding, which Moses had with the Jews, and to
+which the Scribes had succeeded", and draws the Church's case from it: "In like
+manner, the chair of S. Peter is used to signify the power and authority of
+teaching and ruling all the faithful throughout the world, in which the Roman
+Pontiffs succeed S. Peter" (p. 32). "Christians ought to bear in mind these
+words of Christ when they see certain Bishops, Pastors, and Magistrates not
+living in accordance with the law of Christ" (p. 33). So the office in the
+Church is heeded for its seat, even when its holders live ill.
 
 Calvin grants the text and denies the conclusion. He grants that the seat
 "denotes, at the same time, a lawful calling; for Christ commands that the
@@ -312,6 +417,126 @@ def tridentineInference : Source :=
       (.sectionRef "Trent, Session IV (1546), Decree on Sacred Books and Traditions")
   , tradition := .romanCatholic
   , confidence := .wellSupported }
+
+/-- The rating of the classical step, from 2 Timothy 3:16–17, sufficiency,
+clarity and Scripture's own teaching to "Scripture is the sole infallible rule":
+`wellSupported`. The Westminster Confession draws it, citing 2 Timothy 3:16–17
+for "the whole counsel of God … unto which nothing at any time is to be added,
+whether by new revelations of the Spirit, or traditions of men" (I.6). No reader
+was found who grants all five grounds and denies the conclusion. Rome denies the
+grounds instead: Staples, for Catholic Answers, that "II Timothy 3 … does not even
+hint at sola scriptura". Not `consensus`, for the reason `tridentineInference`
+is not: once the last ground is granted, the conclusion all but follows. -/
+def classicalInference : Source :=
+  { primary := .work westminsterConfession (.sectionRef "I.6")
+  , tradition := .reformedProtestant
+  , confidence := .wellSupported }
+
+/-- The rating of the eliminative step, from "Scripture is infallible" and "no
+other rule is" to "Scripture is the sole infallible rule": `wellSupported`. The
+step is close to what "sole" means. The Westminster Confession draws it: the
+supreme judge "can be no other but the Holy Spirit speaking in the Scripture"
+(I.10), and councils since the apostles "may err" (XXXI.4). No reader was found
+who grants both grounds and denies it. Vincent of Lérins grants the canon
+"sufficient of itself for everything" and still joins the Church's
+interpretation to it as a norm; that is a dispute over what "rule" means, not
+over this step. -/
+def eliminativeInference : Source :=
+  { primary := .work westminsterConfession (.sectionRef "I.10")
+  , supporting := [.work westminsterConfession (.sectionRef "XXXI.4")]
+  , tradition := .reformedProtestant
+  , confidence := .wellSupported }
+
+/-- The rating of Tradition 0's step: `wellSupported`. Geisler draws it in his
+review of Mathison (pp. 120–121, where the grounds are cited). Its grounds
+include the eliminative step's, so it can be rated no higher than that step,
+and no one was found who grants them and denies the conclusion. Mathison denies
+a ground, that creeds inform without binding, and that is weighed there. -/
+def tradition0Inference : Source :=
+  { primary := .work geislerReviewMathison (.sectionRef "120–121")
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- The rating of Tradition III's step, from an infallible magisterium to the
+denial that Scripture is the sole infallible rule: `wellSupported`. Vatican II
+draws it: "it is not from Sacred Scripture alone that the Church draws her
+certainty about everything which has been revealed", and Scripture, tradition
+and the teaching office "are so linked and joined together that one cannot
+stand without the others" (*Dei Verbum* 9–10). Protestants deny the ground, that
+the magisterium is infallible, not the step. -/
+def vaticanInference : Source :=
+  { primary := .work tannerDecrees (.sectionRef "Vatican II (1965), Dei Verbum 9–10")
+  , supporting := [.work tannerDecrees (.sectionRef "Vatican I (1870), Pastor Aeternus, ch. 4")]
+  , tradition := .romanCatholic
+  , confidence := .wellSupported }
+
+/-- The rating of the Orthodox step, from the infallible mind of the Church to the
+denial that Scripture is the sole infallible rule: `wellSupported`. Florovsky
+grounds the councils' teaching authority "in the infallibility of the Church".
+The Confession of Dositheus (Jerusalem, 1672) draws the conclusion in its second
+decree: Scripture is believed "not otherwise than as the Catholic Church hath
+interpreted and delivered the same", and the Church's witness is "not of
+inferior authority to that of the Divine Scriptures". No reader was found who
+grants the ground and denies the step. -/
+def orthodoxInference : Source :=
+  { primary := .work florovskyBibleChurchTradition .whole
+  , supporting := [.work wareOrthodoxChurch .whole]
+  , tradition := .easternOrthodox
+  , confidence := .wellSupported }
+
+/-- The rating of the self-refutation step, from "only what Scripture teaches
+binds" and "Scripture does not teach sola scriptura" to "Scripture is not the
+sole infallible rule": `disputed`. Broussard draws it: sola scriptura "must be
+proven from Scripture to pass its own test", "And given that it can't, it's
+self-defeating." Harper grants both grounds, "for the sake of argument", and
+denies the conclusion. What follows, he says, is only that the doctrine cannot
+be held infallibly; it "does not need to be taught explicitly in the Bible or
+infallibly known in order to be true". The grounds give "the doctrine does not
+bind", and the step passes from that to "the doctrine is false". -/
+def selfRefutationInference : Source :=
+  { primary := .work broussardBestArgument .whole
+  , supporting := [.work harperSelfRefuting .whole]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of the regress step, from ministerial tradition and the
+individual's final choice of whom to submit to, to "sola scriptura does not
+differ in principle from solo scriptura": `disputed`. Cross and Judisch draw it:
+"when I submit (so long as I agree), the one to whom I submit is me", so "there
+is no principled difference between sola scriptura and solo scriptura with
+respect to the locus of 'ultimate interpretive authority'". Mathison, replying
+to them, grants "the fact that an individual must determine whether or not to
+submit to an authority", and denies the conclusion: "there is in fact a real
+principled difference". -/
+def interpretiveRegressInference : Source :=
+  { primary := .work crossJudischInterpretiveAuthority (.sectionRef "§§ I, IV.B")
+  , supporting := [.work mathisonReplyCrossJudisch .whole]
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- The rating of the step in Geisler's charge, from the two legs to "Tradition
+I's reasoning is circular": `wellSupported`. Geisler draws it (pp. 122–123).
+That each leg rests on the other is what circular means, and no reader was found
+who grants both legs and denies the circle. Allen and Swain deny the second leg,
+and that is weighed in its rating. -/
+def circleInference : Source :=
+  { primary := .work geislerReviewMathison (.sectionRef "122–123")
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
+/-- The rating of the step from the circle to its defeating Tradition I,
+provided not every appeal to an ultimate authority is circular: `plausible`,
+and the library's own. Geisler is cited for the conclusion, but no source was
+found that argues from the condition, and none that grants both grounds and
+denies the defeat. -/
+def circleDefeatsInference : Source :=
+  { primary := .proposal
+      ("Assembled here to state what Geisler's charge needs against Barrett's " ++
+       "parity reply: a circle counts against a position only if its rivals " ++
+       "escape it. Geisler is cited for the conclusion, not for this condition.")
+  , supporting := [.work geislerReviewMathison (.sectionRef "123")]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .plausible }
 
 /-- Citation and classification for every atom. Total, so nothing is
 uncited. -/
@@ -447,11 +672,17 @@ def cite : Claim → AtomMeta
         , tradition := .romanCatholic
         , confidence := .consensus } }
   | .identifyingCanonRequiresInfallibleAuthority =>
-    { label := "Identifying the canon requires an infallible authority"
+    { label := "Identifying the canon requires an infallible authority outside Scripture"
     , kind := .theological
+      -- Held by Trent and, explicitly, by Reid ("through the constituted organ
+      -- and custodian of Its revelations, the Church"); denied by Calvin, for
+      -- whom the Church receiving Scripture "does not make that authentic which
+      -- was otherwise doubtful" (Institutes I.vii.2), and by Kruger.
     , source :=
         { primary := .work tannerDecrees
             (.sectionRef "Trent, Session IV (1546), Decree on Sacred Books and Traditions")
+        , supporting :=
+            [ .work reidCanonNewTestament (.sectionRef "The criterion of inspiration") ]
         , tradition := .romanCatholic
         , confidence := .disputed } }
   | .rivalAuthorityIsAlsoSelfAuthenticating =>
@@ -460,6 +691,201 @@ def cite : Claim → AtomMeta
         "circularity charge does not discriminate"
     , kind := .interpretive
     , source := heldBy krugerCanonRevisited "ch. 2" .reformedProtestant }
+  | .deut13_1_3ProphetOfOtherGods =>
+    { label :=
+        "Deuteronomy 13:1–3 — a prophet whose sign comes to pass, but who says, Let us " ++
+        "go after other gods, is not to be heard"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.deuteronomy, 13, 1, 13, 3⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .deut18_20_22WordNotFulfilled =>
+    { label :=
+        "Deuteronomy 18:20–22 — a word spoken in the LORD's name that does not come " ++
+        "to pass is a word the LORD has not spoken"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.deuteronomy, 18, 20, 18, 22⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .booksReadButNotReceived =>
+    { label :=
+        "The early Church set apart books it read but did not receive into the canon, " ++
+        "the Shepherd and the Didache among them, and said why"
+    , kind := .historical
+      -- What the documents say. Not every early writer agreed: Irenaeus quotes
+      -- the Shepherd as "the Scripture" (Against Heresies IV.20.2). The claim is
+      -- that these witnesses drew the line and gave their reasons, not that
+      -- everyone drew it in the same place.
+    , source :=
+        { primary := .work anf5 (.pages 603 604)
+        , supporting :=
+            [ .work npnf2v4 (.sectionRef "Athanasius, Festal Letter 39, §§6–7, p. 552")
+            , .work mcdonaldIntegrityCanon (.pages 127 129) ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .providenceKeepsScripture =>
+    { label :=
+        "God by his providence keeps his written word and brings it to his people, and " ++
+        "the tests are applied under that providence"
+    , kind := .theological
+      -- Kruger's model names "providential exposure" of the books to the church
+      -- as one of its parts; the page is known only from reviews, so the chapter
+      -- is cited.
+    , source :=
+        { primary := .work westminsterConfession (.sectionRef "I.8")
+        , supporting :=
+            [ .work krugerCanonRevisited
+                (.sectionRef "\"My sheep hear my voice: canon as self-authenticating\"") ]
+        , tradition := .reformedProtestant
+        , confidence := .wellSupported } }
+  | .eph2_20FoundationOfApostles =>
+    { label :=
+        "Ephesians 2:20 and Jude 3 — the church is built on the foundation of the " ++
+        "apostles and prophets, and the faith was once for all handed down to the saints"
+    , kind := .textual
+    , source :=
+        { primary := .scripture
+            [ { ref := .verse ⟨.ephesians, 2, 20⟩ }, { ref := .verse ⟨.jude, 1, 3⟩ } ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .pet3_15_16PaulAmongScriptures =>
+    { label :=
+        "2 Peter 3:15–16 counts Paul's letters with \"the rest of the Scriptures\", 3:2 sets " ++
+        "the apostles' commandment beside the prophets, and 1 Timothy 5:18 calls a " ++
+        "saying Luke 10:7 records \"scripture\""
+    , kind := .textual
+    , source :=
+        { primary := .scripture
+            [ { ref := .range ⟨.secondPeter, 3, 15, 3, 16⟩ }
+            , { ref := .verse ⟨.secondPeter, 3, 2⟩ }
+            , { ref := .verse ⟨.firstTimothy, 5, 18⟩ }
+            , { ref := .verse ⟨.luke, 10, 7⟩ } ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .gal1_8NoOtherGospel =>
+    { label :=
+        "Galatians 1:8 — even if we, or an angel from heaven, should proclaim a gospel " ++
+        "contrary to the one first proclaimed, let him be accursed"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.galatians, 1, 8⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .prophecyCeasedBeforeLaterBooks =>
+    { label :=
+        "First-century Jews held that prophecy had ceased, and did not give the books " ++
+        "written after it the authority of the earlier ones"
+    , kind := .historical
+      -- What Josephus reports, and what 1 Maccabees says of its own time. Trent
+      -- receives 1 Maccabees and the other books Josephus leaves out; the claim
+      -- is what was held then, not that Trent is wrong.
+    , source :=
+        { primary := .work josephusAgainstApion (.sectionRef "I.8")
+        , supporting :=
+            [ .scripture
+                [ { ref := .verse ⟨.firstMaccabees, 9, 27⟩ }
+                , { ref := .verse ⟨.firstMaccabees, 4, 46⟩ }
+                , { ref := .verse ⟨.firstMaccabees, 14, 41⟩ } ] ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .churchKnownFromInspiredScripture =>
+    { label :=
+        "The infallible authority that identifies the canon is known by proving the " ++
+        "Church from Scripture received as inspired"
+    , kind := .theological
+      -- No Catholic writer found holds this route; Toner and Catholic Answers
+      -- reject it as circular. It is the reading Whitaker answers.
+    , source := heldBy whitakerDisputation "pp. 334–335" .reformedProtestant }
+  | .spiralGivesCertaintyOfTheCanon =>
+    { label :=
+        "Scripture read as reliable history shows an infallible Church, whose word " ++
+        "gives the certainty of faith about which books are inspired"
+    , kind := .theological
+    , source :=
+        { primary := .work tonerInfallibility (.sectionRef "Proof from Scripture")
+        , supporting := [.work catholicAnswersProvingInspiration (.sectionRef "A Spiral Argument")]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .marksGiveCertaintyOfTheCanon =>
+    { label :=
+        "The Church's marks show it to be the infallible authority, and so give the " ++
+        "certainty of faith about the canon"
+    , kind := .theological
+    , source :=
+        { primary := .work tannerDecrees (.sectionRef "Vatican I (1870), Dei Filius, ch. 3")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .receptionSettledTheCanon =>
+    { label :=
+        "The Church's universal reception and ordinary teaching settled the canon " ++
+        "before any council defined it"
+    , kind := .theological
+    , source :=
+        { primary := .work reidCanonNewTestament (.sectionRef "The criterion of inspiration")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .provingEachFromTheOtherIsCircular =>
+    { label :=
+        "To prove the Church from Scripture received as inspired, and then Scripture's " ++
+        "inspiration from the Church, is to argue in a circle"
+    , kind := .theological
+      -- Granted by the Catholic sources that state the spiral: "That indeed
+      -- would be a circular argument!" (Catholic Answers); "no vicious circle"
+      -- only when Scripture is used "merely as reliable historical sources"
+      -- (Toner).
+    , source :=
+        { primary := .work whitakerDisputation (.pages 334 335)
+        , supporting :=
+            [ .work catholicAnswersProvingInspiration (.sectionRef "A Spiral Argument")
+            , .work tonerInfallibility (.sectionRef "Proof from Scripture") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .conclusionNoSurerThanItsHistory =>
+    { label :=
+        "A conclusion reasoned from history is, by natural means, no surer than that " ++
+        "history, and the judgement that the Gospels are reliable history is fallible"
+    , kind := .theological
+      -- Denied by Vatican I, which anathematises saying that miracles "can never
+      -- be known with certainty" (Dei Filius, ch. 3, canon 4), and by Newman,
+      -- who rejects "the pretentious axiom that probable reasoning can never
+      -- lead to certitude" (Grammar of Assent, ch. 6).
+    , source :=
+        { primary := .work chillingworthReligion (.page 66)
+        , supporting :=
+            [.work turretinInstitutio1 (.sectionRef "Locus II, Q. VI, §XXI, p. 85")]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .marksMakeTheClaimOnlyCredible =>
+    { label :=
+        "The Church's marks make its claim credible, not evident, and other churches " ++
+        "claim the same marks"
+    , kind := .theological
+    , source :=
+        { primary := .work bellarmineOpera2 (.sectionRef "De Ecclesia militante IV.3, pp. 365–366")
+        , supporting :=
+            [ .work calvinInstitutesBeveridge3 (.sectionRef "IV.ii.2")
+            , .work turretinInstitutio3 (.sectionRef "Locus XVIII, Q. XIII, §IV, pp. 83–84") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .disputedBooksDoubtedBeforeTrent =>
+    { label :=
+        "Before Trent the Latin Church did not receive the disputed books with one " ++
+        "voice: Jerome left them out, Gregory called 1 Maccabees not canonical, and " ++
+        "Cajetan followed Jerome"
+    , kind := .historical
+    , source :=
+        { primary := .work reidCanonOldTestament
+            (.sectionRef "The canon of the Old Testament during the Middle Ages: The Latin Church")
+        , supporting :=
+            [ .work npnf2v6
+                (.sectionRef "Jerome, Prefaces to Samuel and Kings, and to the Books of Solomon")
+            , .work gregoryMoralia2 (.sectionRef "XIX.xxi.34, p. 424")
+            , .work whitakerDisputation (.pages 47 48)
+            , .work reidCanonNewTestament .whole ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
   | .traditionHasMinisterialAuthority =>
     { label := "Tradition carries real but fallible — ministerial — authority"
     , kind := .theological
@@ -477,7 +903,7 @@ def cite : Claim → AtomMeta
         "The individual retains ultimate interpretive authority, exercised " ++
         "indirectly by choosing which body to submit to"
     , kind := .theological
-    , source := heldBy crossJudischInterpretiveAuthority "§ III" .romanCatholic }
+    , source := heldBy crossJudischInterpretiveAuthority "§ IV.A–B" .romanCatholic }
   | .choosingAnAuthorityIsItselfPrivateJudgment =>
     { label :=
         "Choosing which authority to submit to is itself private judgement, " ++
@@ -638,7 +1064,7 @@ def cite : Claim → AtomMeta
         , tradition := .reformedProtestant
         , confidence := .disputed } }
   | .john10_35ScriptureCannotBeBroken =>
-    { label := "John 10:35 — the scripture cannot be broken"
+    { label := "John 10:35 — the Scripture cannot be broken"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.john, 10, 35⟩ }]
@@ -647,8 +1073,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .matthew5_18LawShallNotPass =>
     { label :=
-        "Matthew 5:18 — one jot or one tittle shall in no wise pass from the law, " ++
-        "till all be fulfilled"
+        "Matthew 5:18 — not the smallest letter or stroke shall pass from the Law " ++
+        "until all is accomplished"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.matthew, 5, 18⟩ }]
@@ -657,11 +1083,11 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .galatians1_8AnotherGospelAccursed =>
     { label :=
-        "Galatians 1:8–9 — though we, or an angel from heaven, preach any other " ++
-        "gospel than that which we have preached, let him be accursed"
+        "Galatians 1:8–9 — even if we, or an angel from heaven, should proclaim a " ++
+        "gospel contrary to the gospel we have proclaimed, let him be accursed"
     , kind := .textual
       -- What the text says, which Calvin and Aquinas both grant. They differ
-      -- over what "any other gospel" (παρ' ὃ, "besides") reaches: an addition,
+      -- over what "contrary to" (παρ' ὃ, also "besides") reaches: an addition,
       -- or only something alien. That is weighed in the step's rating.
     , source :=
         { primary := .scripture [{ ref := .range ⟨.galatians, 1, 8, 1, 9⟩ }]
@@ -672,8 +1098,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .colossians2_8TraditionOfMen =>
     { label :=
-        "Colossians 2:8, 20–22 — after the tradition of men, and not after " ++
-        "Christ; after the commandments and doctrines of men"
+        "Colossians 2:8, 20–22 — according to the tradition of men, and not " ++
+        "according to Christ; in accordance with the commands and teachings of men"
     , kind := .textual
     , source :=
         { primary :=
@@ -685,8 +1111,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .acts15_1CircumcisionAfterMoses =>
     { label :=
-        "Acts 15:1 — except ye be circumcised after the manner of Moses, ye cannot " ++
-        "be saved"
+        "Acts 15:1 — unless you are circumcised according to the custom of Moses, " ++
+        "you cannot be saved"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.acts, 15, 1⟩ }]
@@ -694,8 +1120,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .acts15_10_11YokeAndGrace =>
     { label :=
-        "Acts 15:10–11 — a yoke which neither our fathers nor we were able to bear; " ++
-        "through the grace of the Lord Jesus Christ we shall be saved"
+        "Acts 15:10–11 — a yoke which neither our fathers nor we have been able to " ++
+        "bear; we are saved through the grace of the Lord Jesus"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.acts, 15, 10, 15, 11⟩ }]
@@ -703,8 +1129,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .acts15_15_17ProphetsAgree =>
     { label :=
-        "Acts 15:15–17 — to this agree the words of the prophets; as it is written " ++
-        "(Amos 9:11–12)"
+        "Acts 15:15–17 — with this the words of the Prophets agree, just as it is " ++
+        "written (Amos 9:11–12)"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.acts, 15, 15, 15, 17⟩ }]
@@ -712,7 +1138,7 @@ def cite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .acts15_23_29DecreeWritten =>
-    { label := "Acts 15:23–29 — they wrote letters by them: the decree went out in writing"
+    { label := "Acts 15:23–29 — they sent this letter by them: the decree went out in writing"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.acts, 15, 23, 15, 29⟩ }]
@@ -720,8 +1146,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .acts15_28SeemedGoodToTheHolyGhost =>
     { label :=
-        "Acts 15:28 — it seemed good to the Holy Ghost, and to us, to lay upon you " ++
-        "no greater burden than these necessary things"
+        "Acts 15:28 — it seemed good to the Holy Spirit and to us to lay upon you " ++
+        "no greater burden than these essentials"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.acts, 15, 28⟩ }]
@@ -729,8 +1155,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .acts16_4DecreesDelivered =>
     { label :=
-        "Acts 16:4 — they delivered them the decrees for to keep, that were " ++
-        "ordained of the apostles and elders which were at Jerusalem"
+        "Acts 16:4 — they were delivering the decrees which had been decided upon " ++
+        "by the apostles and elders who were in Jerusalem, for them to keep"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.acts, 16, 4⟩ }]
@@ -754,9 +1180,9 @@ def cite : Claim → AtomMeta
         , confidence := .disputed } }
   | .matthew23_2_3MosesSeat =>
     { label :=
-        "Matthew 23:2–3 — the scribes and the Pharisees sit in Moses' seat: all " ++
-        "whatsoever they bid you observe, that observe and do; but do not ye after " ++
-        "their works"
+        "Matthew 23:2–3 — the scribes and the Pharisees have seated themselves in " ++
+        "the chair of Moses; therefore all that they tell you, do and keep, but do " ++
+        "not do according to their deeds"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.matthew, 23, 2, 23, 3⟩ }]
@@ -765,8 +1191,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .matthew23_16_22BlindGuides =>
     { label :=
-        "Matthew 23:16–22 — woe unto you, ye blind guides, which say, Whosoever " ++
-        "shall swear by the temple, it is nothing"
+        "Matthew 23:16–22 — woe to you, blind guides, who say, Whoever swears by " ++
+        "the sanctuary, that is nothing"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.matthew, 23, 16, 23, 22⟩ }]
@@ -788,8 +1214,8 @@ def cite : Claim → AtomMeta
         , confidence := .disputed } }
   | .acts1_21_22WitnessOfResurrection =>
     { label :=
-        "Acts 1:21–22 — of these men which have companied with us all the time ... " ++
-        "must one be ordained to be a witness with us of his resurrection"
+        "Acts 1:21–22 — of the men who have accompanied us all the time ... one of " ++
+        "these must become a witness with us of His resurrection"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.acts, 1, 21, 1, 22⟩ }]
@@ -797,7 +1223,7 @@ def cite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .corinthians15_8LastOfAll =>
-    { label := "1 Corinthians 15:8 — and last of all he was seen of me also"
+    { label := "1 Corinthians 15:8 — and last of all ... He appeared to me also"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.firstCorinthians, 15, 8⟩ }]
@@ -805,8 +1231,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .peter3_15_16PaulsEpistlesWithTheScriptures =>
     { label :=
-        "2 Peter 3:15–16 — Paul's epistles, which the unlearned wrest, as they do " ++
-        "also the other scriptures"
+        "2 Peter 3:15–16 — Paul's letters, which the untaught and unstable distort, " ++
+        "as they do also the rest of the Scriptures"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .range ⟨.secondPeter, 3, 15, 3, 16⟩ }]
@@ -814,7 +1240,7 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .salutationsApostleAndBrother =>
     { label :=
-        "2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Jesus Christ, and " ++
+        "2 Corinthians 1:1; Colossians 1:1 — Paul, an apostle of Christ Jesus, and " ++
         "Timothy our brother"
     , kind := .textual
     , source :=
@@ -826,8 +1252,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .thessalonians2_6ApostlesOfChrist =>
     { label :=
-        "1 Thessalonians 2:6 (with 1:1) — from Paul, Silvanus and Timotheus: we " ++
-        "might have been burdensome, as the apostles of Christ"
+        "1 Thessalonians 2:6 (with 1:1) — from Paul, Silvanus and Timothy: as " ++
+        "apostles of Christ we could have been a burden"
     , kind := .textual
     , source :=
         { primary :=
@@ -862,7 +1288,7 @@ def cite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
   | .acts1_20BishoprickLetAnotherTake =>
-    { label := "Acts 1:20 — his bishoprick let another take"
+    { label := "Acts 1:20 — let another man take his office"
     , kind := .textual
     , source :=
         { primary := .scripture [{ ref := .verse ⟨.acts, 1, 20⟩ }]
@@ -871,7 +1297,7 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .timothy2_2CommitToFaithfulMen =>
     { label :=
-        "2 Timothy 2:2 — commit thou to faithful men, who shall be able to teach " ++
+        "2 Timothy 2:2 — entrust these to faithful men who will be able to teach " ++
         "others also"
     , kind := .textual
     , source :=

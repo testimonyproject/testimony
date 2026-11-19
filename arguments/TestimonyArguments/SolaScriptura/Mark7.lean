@@ -9,9 +9,9 @@ import Testimony.Logic.Tactic
 
 The Pharisees and scribes ask why Jesus' disciples eat with unwashed hands,
 against "the tradition of the elders". Jesus answers with Isaiah 29:13 — "in
-vain do they worship me, teaching as doctrines the commandments of men" — and
-with Corban: a gift vowed to God releases a son from supporting his father and
-mother, "thus making void the word of God by your tradition" (Mark 7:1–13;
+vain do they worship Me, Teaching as doctrines the commands of men" — and with
+Corban: a gift vowed to God releases a son from supporting his father and
+mother, "thus invalidating the word of God by your tradition" (Mark 7:1–13;
 Matthew 15:1–9). The Protestant case has always cited it, and here it is a line
 of reason of its own.
 

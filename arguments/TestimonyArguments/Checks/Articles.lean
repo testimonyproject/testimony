@@ -1,6 +1,7 @@
 import TestimonyArguments.Articles.Howell2003
 import Testimony.Checks.Aif
 import Testimony.Checks.Postulates
+import Testimony.Checks.Readers
 
 /-!
 # TestimonyArguments.Checks.Articles — the library's checks, over the articles
@@ -18,13 +19,19 @@ namespace TestimonyArguments.Checks.Articles
 #guard_msgs in
 #check_postulates under TestimonyArguments.Articles
 
+/--
+info: every reading and step has a reader or is marked proposed: 1 packages, 0 lines
+-/
+#guard_msgs in
+#check_readers under TestimonyArguments.Articles
+
 /-- info: every non-entailment survives its postulates: 0, and 0 undecided -/
 #guard_msgs in
 #check_refutations_postulates under TestimonyArguments.Articles
 
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:
-Howell2003.hearingFinite: 74 I, 32 RA, 35 CA, 2 PA, 176 edges
+Howell2003.hearingFinite: 74 I, 32 RA, 36 CA, 1 PA, 176 edges
 and 0 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in

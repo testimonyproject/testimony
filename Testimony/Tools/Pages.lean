@@ -35,10 +35,14 @@ added, renamed or deleted moves both renderings on the next run.
 
 A declaration is rendered as notation when its type says how: `ArgumentPackage`
 as premises above a turnstile, `Line` likewise, `Formula` and
-`List (Formula _)` as formulas. Everything else — a countermodel, which is a
-function, or a `FulfillmentCriterion` — is shown as Lean source, which is the
-honest fallback: a countermodel *is* the rival's reading, and `Valuation` being
-`α → Prop` there is nothing to enumerate.
+`List (Formula _)` as formulas. A `Source` and an `AtomMeta` are said in words,
+as the legend says them. A countermodel is a `Valuation`, a function into
+`Prop`, so there is nothing to enumerate at run time; but when its atom type is
+an enumeration, the harvest applies it to each claim and reduces the result to
+`True` or `False` (`readingTruth`), and the page lists the claims it takes as
+false in words. Everything else — a `FulfillmentCriterion`, a cite function, a
+dispute — is shown as Lean source, the honest fallback, and so is a valuation
+that does not reduce.
 
 Values above `valueWidth` characters are shown by signature alone. That is
 aimed at one declaration in particular: `cite` is a total function from every
@@ -351,6 +355,28 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
       return ""
     let tableFor := tableIn tableOf
 
+    -- A reading written as a valuation (`Valuation Claim`), read off one claim at
+    -- a time: the definition applied to each of the atom type's constructors,
+    -- reduced to `True` or `False`. `none` if the type is not a valuation over
+    -- an enumeration, or if any claim does not reduce to one of the two, and the
+    -- declaration falls back to being shown as Lean.
+    let readingTruth (info : ConstantInfo) : CommandElabM (Option (Array (Name × Bool))) :=
+      liftTermElabM do
+        unless info.type.getAppFn.constName? == some ``Logic.Valuation do return none
+        let some (Expr.const atomTyName _) := info.type.getAppArgs[0]? | return none
+        let some (ConstantInfo.inductInfo ind) := env.find? atomTyName | return none
+        unless info.hasValue do return none
+        let mut out : Array (Name × Bool) := #[]
+        for ctor in ind.ctors do
+          let some (ConstantInfo.ctorInfo ci) := env.find? ctor | return none
+          unless ci.numFields == 0 && ci.numParams == 0 do return none
+          let e ← Meta.whnfD (mkApp (mkConst info.name (info.levelParams.map mkLevelParam))
+            (mkConst ctor))
+          if e.isConstOf ``True then out := out.push (ctor, true)
+          else if e.isConstOf ``False then out := out.push (ctor, false)
+          else return none
+        return some out
+
     -- The declarations: each rendered by what its type says it is.
     let mut atomTy : Option Name := none
     for n in (declsOf.getD ns #[]) do
@@ -422,6 +448,13 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
           else if headIs ``List &&
               (info.type.getAppArgs[0]?.any fun a => headOf a == some ``Logic.Formula) then
             `(Logic.Page.Item.formulas $(quote dname) $(quote doc) $(mkIdent n))
+          else if headIs ``Testimony.Source then
+            `(Logic.Page.Item.source $(quote dname) $(quote doc) $(mkIdent n))
+          else if headIs ``Logic.AtomMeta then
+            `(Logic.Page.Item.claim $(quote dname) $(quote doc) $(mkIdent n))
+          else if let some truth ← readingTruth info then
+            let pairs ← truth.mapM fun (c, b) => `(($(mkIdent c), $(quote b)))
+            `(Logic.Page.Item.reading $(quote dname) $(quote doc) [$(pairs),*])
           else do
             let sig ← statement ns info.type
             let value ← match info.value? with
@@ -452,8 +485,29 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
       match atomTy.bind (fun c => env.find? c) with
       | some (.inductInfo val) => val.ctors.toArray.map fun c => mkIdent c
       | _ => #[]
+    -- The items after the introduction, in chunks of a fixed size, each its own
+    -- definition, joined with `++`. Written as one list literal, an argument's
+    -- items nest as deep as there are items, and the code generator's recursion
+    -- depth runs across all of them: sola fide, at some four hundred items, went
+    -- past it. Chunked, the depth is a chunk's, plus one per chunk. Chunking
+    -- needs the atom type, to type a chunk that holds only prose.
+    let restTerm ← match atomTy with
+      | some ty =>
+        let mut chunks : Array Ident := #[]
+        for (chunk, i) in (rest.toList.toChunks 64).zipIdx do
+          let name := mkIdent ((tableName.getId.appendAfter ns.getString!).appendAfter
+            ("Items" ++ toString i))
+          let chunkItems := chunk.toArray
+          elabCommand (← `(command|
+            /-- Part of one argument's page body, generated from the Lean source by
+            `derive_argument_bodies`. -/
+            def $name : List (Logic.Page.Item $(mkIdent ty)) := [$(chunkItems),*]))
+          chunks := chunks.push name
+        chunks.foldlM (init := ← `(term| ([] : List (Logic.Page.Item $(mkIdent ty)))))
+          fun acc c => `(term| $acc ++ $c)
+      | none => `(term| [$(rest),*])
     bodies := bodies.push
-      (ns, ← `(term| render $(quote ns) [$(ctors),*] [$(intro),*] [$(rest),*]
+      (ns, ← `(term| render $(quote ns) [$(ctors),*] [$(intro),*] $restTerm
         [$(modTerms),*]))
 
   -- One definition per argument, then the list of them. Written as one list
@@ -549,7 +603,7 @@ def latexDocument (title note : String) (sections : List (Argument × Body))
     | [(a, _)] => a.ns.toString
     | _ => "all"
   (if credits then
-    Logic.Latex.preamble title ("\\credit{" ++ key ++ "}") Logic.Latex.credits
+    Logic.Latex.preamble title ("\\credit{" ++ key ++ "}")
    else Logic.Latex.preamble title) ++
   (match sections with
    | [(a, _)] => latexAbstract a true

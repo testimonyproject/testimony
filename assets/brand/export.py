@@ -9,6 +9,7 @@ vector at its native resolution rather than downscaled from one master — text
 and thin strokes stay crisp. Small sizes (<=48) use the simplified mark.
 
 Usage:  python3 export.py          (writes into ../brand/exports/)
+        python3 export.py STEM ...  (export only the named targets)
 """
 import subprocess, pathlib, shutil, sys
 
@@ -20,6 +21,10 @@ MARK = BRAND / "testimony-mark.svg"
 MARK_SMALL = BRAND / "testimony-mark-small.svg"
 MARK_LIGHT = BRAND / "testimony-mark-light.svg"
 SOCIAL = BRAND / "testimony-social.svg"
+SHORT_HEADER = BRAND / "testimony-short-header.svg"
+
+# Overlays that must keep a clear background (PNG only, no JPG).
+TRANSPARENT = {"testimony-short-header-1080x236"}
 
 # (filename stem, source svg, width, height, purpose)
 TARGETS = [
@@ -43,13 +48,16 @@ TARGETS = [
     ("testimony-social-1280x640", SOCIAL, 1280, 640, "GitHub social preview, X header"),
     ("testimony-social-1600x800", SOCIAL, 1600, 800, "Patreon cover, high-DPI OG"),
     ("testimony-social-2400x1200", SOCIAL, 2400, 1200, "retina / print banner"),
+    # --- video overlays ---
+    ("testimony-short-header-1080x236", SHORT_HEADER, 1080, 236, "header bar for vertical videos (Shorts)"),
 ]
 
 
-def render(svg: pathlib.Path, png: pathlib.Path, w: int, h: int) -> None:
+def render(svg: pathlib.Path, png: pathlib.Path, w: int, h: int, clear: bool = False) -> None:
+    extra = ["--default-background-color=00000000"] if clear else []
     subprocess.run(
         [CHROME, "--headless", "--disable-gpu", "--hide-scrollbars",
-         "--force-device-scale-factor=1",
+         "--force-device-scale-factor=1", *extra,
          f"--screenshot={png}", f"--window-size={w},{h}", str(svg)],
         capture_output=True, check=False)
 
@@ -67,16 +75,23 @@ def main() -> int:
         return 1
     OUT.mkdir(exist_ok=True)
     rows = []
+    only = set(sys.argv[1:])  # optional: export just these stems
     for stem, svg, w, h, purpose in TARGETS:
+        if only and stem not in only:
+            continue
         png = OUT / f"{stem}.png"
-        jpg = OUT / f"{stem}.jpg"
-        render(svg, png, w, h)
-        to_jpg(png, jpg)
-        rows.append((stem, w, h, png.stat().st_size, jpg.stat().st_size, purpose))
+        clear = stem in TRANSPARENT
+        render(svg, png, w, h, clear)
+        jsize = 0
+        if not clear:
+            jpg = OUT / f"{stem}.jpg"
+            to_jpg(png, jpg)
+            jsize = jpg.stat().st_size
+        rows.append((stem, w, h, png.stat().st_size, jsize, purpose))
     print(f"{'file':32} {'size':>11} {'png':>8} {'jpg':>8}  purpose")
     for stem, w, h, ps, js, purpose in rows:
         print(f"{stem:32} {f'{w}x{h}':>11} {ps/1024:7.1f}K {js/1024:7.1f}K  {purpose}")
-    print(f"\n{len(rows)} sizes x 2 formats = {len(rows)*2} files in {OUT}")
+    print(f"\n{len(rows)} targets written to {OUT} (transparent overlays are PNG only)")
     return 0
 
 

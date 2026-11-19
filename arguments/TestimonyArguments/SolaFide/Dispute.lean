@@ -55,9 +55,9 @@ is worked out from the two positions' premises and checked by machine.
 - **Cannot be defended.** No consistent set of positions can include it and
   answer its attackers.
 
-## The ratings decide one thing
+## The ratings decide nothing
 
-Almost every position here has a weakest link rated `disputed`.
+Every position here has a weakest link rated `disputed`.
 
 - Each Reformed strand uses a step that Trent's canon 9 denies: to faith alone
   in Paul's case and John's, and to "faith suffices" in Luke's and Peter's.
@@ -67,18 +67,22 @@ Almost every position here has a weakest link rated `disputed`.
   Confession denies.
 - The apocalyptic reading denies a claim, and a premise that denies a claim is
   rated `disputed` by rule.
+- The two arguments about Paul's word share a step that Trent grants the
+  starting points of and denies. The first is from usage (`lexicalCase`):
+  "justify" (δικαιόω) is a courtroom word, Paul has other words for renewal, and
+  a word contributes the least meaning its context requires. The second is from
+  Romans 4 (`romansFourOnTheWord`): Paul explains the righteousness God counts
+  to the ungodly as sin not counted, and by the same rule the verb he explains
+  in that way does not also mean renewal. Their other links are rated
+  `wellSupported` or better. But Trent keeps the courtroom sense, for the
+  justified "are not only reputed, but are truly called, and are, just"
+  (Session VI, ch. 7), and denies that the word means no more; Augustine gives
+  the courtroom sense himself, "deemed, or reckoned as just" (*On the Spirit and
+  the Letter* 26.45), beside "made righteous". So the step from those starting
+  points to "and nothing more" is rated `disputed`.
 
 Between such positions no rating blocks an attack. The outcome depends only on
 who contradicts whom.
-
-The two exceptions are the two arguments about Paul's word. The first is from
-usage (`lexicalCase`): "justify" (δικαιόω) is a courtroom word, Paul has other
-words for renewal, and a word contributes the least meaning its context
-requires. The second is from Romans 4 (`romansFourOnTheWord`): Paul explains the
-righteousness God counts to the ungodly as sin not counted, and by the same rule
-the verb he explains in that way does not also mean renewal. Every link of each
-is rated `wellSupported` or better. Each contradicts one position, Trent taken
-as a claim about Paul's word, and those are the attacks the ratings decide.
 
 ## Who defeats whom
 
@@ -125,14 +129,13 @@ as a claim about Paul's word, and those are the attacks the ratings decide.
 - **Paul's gospel and Trent defeat each other**, over Trent's definition. The
   gospel line concludes that justification is not the renewal of the inward
   person. Both rest on something rated `disputed`.
-- **Paul's word defeats Trent taken as a claim about it, and is not defeated in
-  return** (`lexical_defeats_trent_on_pauls_word`,
-  `trent_on_pauls_word_does_not_defeat_lexical`). Taken that way, Trent's case
-  derives that "justify" means renewal. The argument from the word denies it.
-  Trent's reply rests on a definition rated `disputed`, and fails against an
-  argument rated `wellSupported`. Romans 4, read for the word, does the same
-  from one passage. Neither argument conflicts with anything else. In particular
-  neither conflicts with Trent's case as Trent states it, whose definition,
+- **Paul's word and Trent taken as a claim about it defeat each other**
+  (`lexical_defeats_trent_on_pauls_word`, `trent_on_pauls_word_defeats_lexical`).
+  Taken that way, Trent's case derives that "justify" means renewal. The
+  argument from the word denies it. Both rest on something rated `disputed`.
+  Romans 4, read for the word, meets Trent the same way, from one passage.
+  Neither argument conflicts with anything else. In particular neither
+  conflicts with Trent's case as Trent states it, whose definition,
   taken as it stands, says nothing about the word. Trent taken as a claim about
   Paul's word also meets every position Trent meets, in both directions: the
   four strands, the apocalyptic reading, Paul's gospel and the Reformed answer
@@ -140,20 +143,22 @@ as a claim about Paul's word, and those are the attacks the ratings decide.
 
 ## What follows
 
-### Only the meaning of Paul's word prevails outright
+### Nothing prevails outright
 
-The checking finds that the meaning of Paul's word is the one thing forced
-(`only_pauls_word_prevails`). The forced positions are exactly the two arguments
-about it. Every other position is attacked by one the debate cannot rule out.
-One loses: Trent taken as a claim about Paul's word. Every other is in a tie
-with a rival the debate cannot choose between.
+The checking finds that nothing is forced (`sola_fide_dispute_forces_nothing`),
+not even the meaning of Paul's word. Every position is attacked by one the
+debate cannot rule out, and none loses: every position can be defended.
 
-### Trent, taken as a claim about Paul's word, cannot be defended
+### Paul's word and Trent's reading of it tie
 
-This is the one position that loses (`trent_on_pauls_word_indefensible`). Both
-arguments about the word defeat it, and nothing answers either.
+The two arguments about Paul's word can be defended, and are not forced
+(`pauls_word_defensible`, `pauls_word_not_forced`). Trent, taken as a claim
+about Paul's word, can be defended too (`trent_on_pauls_word_defensible`). They
+tie at one step: from the courtroom sense of "justify" to "and it means nothing
+more". Whether that step can rise above `disputed` turns on Romans 5:19, 6:7
+and 1 Corinthians 6:11, which readers take both ways.
 
-### Beyond that, nothing wins outright
+### Nor does anything else win outright
 
 Luke's case, Paul's gospel and Trent as
 Trent states it can each be defended, and none is forced
@@ -176,15 +181,15 @@ claim that faith saves and not that faith alone does.
 
 The definition can be taken two ways, and
 the chapter "What Trent means by justification" answers both (`whatTrentsDefinitionClaims`).
-Taken as a claim about Paul's word, it cannot be held with the evidence for what
-the word means, and in this debate it cannot be defended. Taken as a claim about
-what God does in justifying, the argument from the word does not reach it. What
-then divides it from Paul is one step: that a verdict on Christ's finished work
-excludes the renewal worked in us (`whereTrentPartsFromPaul`). That step is
-rated `disputed`. Trent's case as Trent states it stands here for that second
-way of taking it. So the debate does not settle between Trent and the Reformed.
-It shows that Trent can keep its definition only as a claim about what God does,
-not about Paul's word, and it names the one step on which that claim depends.
+Taken as a claim about Paul's word, it meets the argument from the word at the
+step from the courtroom sense to "and nothing more", which is rated `disputed`,
+and the two tie. Taken as a claim about what God does in justifying, the
+argument from the word does not reach it. What then divides it from Paul is one
+step: that a verdict on Christ's finished work excludes the renewal worked in us
+(`whereTrentPartsFromPaul`). That step is rated `disputed` too. Trent's case as
+Trent states it stands here for that second way of taking it. So the debate does
+not settle between Trent and the Reformed, however the definition is taken. It
+names the step on which each way of taking it depends.
 
 ### An absence
 
@@ -213,13 +218,14 @@ verse and the parable of 7:41–43 suggest. Marshall argues this from the Greek:
 "for" (ὅτι) here means "as is evidenced by the fact that". Padilla reads it so:
 she "loves much because she has been forgiven much". So does Melanchthon in the
 *Apology of the Augsburg Confession*: "Christ interprets Himself when He adds:
-Thy faith hath saved thee", so the woman did not merit forgiveness "by that work
-of love". The premise is rated `disputed`. Marshall names those who read the
-love as the cause: Wellhausen, Creed, and most Roman Catholic commentators,
-Lagrange and Schürmann among them. Trent counts beginning to love God among the
-dispositions to justification (Session VI, ch. 6). None of them is heard here as
-a position of his own. No one in this debate argues that reading of 7:47, and
-none of those commentators is yet cited from his own work.
+Thy faith hath saved thee" (the translation gives Luke 7:50 in the King James
+wording), so the woman did not merit forgiveness "by that work of love". The
+premise is rated `disputed`. Marshall names those who read the love as the
+cause: Wellhausen, Creed, and most Roman Catholic commentators, Lagrange and
+Schürmann among them. Trent counts beginning to love God among the dispositions
+to justification (Session VI, ch. 6). None of them is heard here as a position
+of his own. No one in this debate argues that reading of 7:47, and none of those
+commentators is yet cited from his own work.
 
 ### John
 
@@ -559,14 +565,13 @@ theorem chrysostom_grants_the_pauline_texts :
 
 /-! #### How strong each position is
 
-Every position but two rests on something rated `disputed`, or denies a claim,
-which ranks at the bottom. Between two such positions no rating blocks an
-attack.
+Every position rests on something rated `disputed`, or denies a claim, which
+ranks at the bottom. Between two such positions no rating blocks an attack.
 
-The exceptions are the two arguments about Paul's word, from usage and from
-Romans 4. Every link of each is rated `wellSupported` or better. So an attack on
-either from a position at the bottom does not defeat it, and its attack on such
-a position does. -/
+The two arguments about Paul's word come nearest to an exception. Every link of
+each is rated `wellSupported` or better but one, the step they share from the
+courtroom sense of the verb to "and nothing more", which Trent grants the
+starting points of and denies. -/
 
 /-- Paul's case rests on its two disputed readings, and on the Reformed distinction.
 All are rated `disputed`. -/
@@ -607,17 +612,19 @@ theorem chrysostomCase_strength : chrysostomOnJohn.strength = 0 := by decide
 /-- The Reformed answer rests on its reading of the obedience, rated `disputed`:
 Chrysostom denies it. -/
 theorem sanctificationCase_strength : sanctificationCase.strength = 0 := by decide
-/-- **The argument from Paul's word rests on nothing disputed.** That the verb is a
+/-- **The argument from Paul's word rests on one disputed step.** That the verb is a
 courtroom word, and the rule of least meaning, are `wellSupported`. That Paul
-has other words for renewal is `consensus`. The step from them is
-`wellSupported`. So its weakest link ranks above the bottom. -/
-theorem lexicalCase_strength : lexicalCase.strength = 2 := by decide
+has other words for renewal is `consensus`. The step from them to "and so it
+does not mean renewal" is `disputed`, because Trent grants those starting points
+and denies it. So its weakest link ranks at the bottom. -/
+theorem lexicalCase_strength : lexicalCase.strength = 0 := by decide
 /-- Trent, taken as a claim about Paul's word, rests on everything Trent rests on. -/
 theorem tridentineOnPaulsWord_strength : tridentineOnPaulsWord.strength = 0 := by decide
-/-- **Nor does Romans 4, read for Paul's word.** Its texts are rated `wellSupported`
-or better. So are the sense of "count" (λογίζομαι), Paul's explanation, the rule
-of least meaning, and both steps. -/
-theorem romansFourOnTheWord_strength : romansFourOnTheWord.strength = 2 := by decide
+/-- **So does Romans 4, read for Paul's word.** Its texts are rated `wellSupported`
+or better. So are the sense of "count" (λογίζομαι), Paul's explanation and the
+rule of least meaning. But it takes the same step from the rule of least
+meaning, rated `disputed`. -/
+theorem romansFourOnTheWord_strength : romansFourOnTheWord.strength = 0 := by decide
 
 /-! #### The defeats
 
@@ -840,13 +847,14 @@ theorem lexical_defeats_trent_on_pauls_word : Defeats lexicalCase tridentineOnPa
   Horn.defeats_of_certified lexicalCase_strength tridentineOnPaulsWord_strength
     (by horn_certify)
 
-/-- **And the reply fails.** Trent, taken as a claim about Paul's word, attacks the
-argument from the word in turn. But Trent's weakest link is its definition,
-rated `disputed`, and the argument's is `wellSupported`. A weaker argument's
-contradiction does not defeat a stronger one. -/
-theorem trent_on_pauls_word_does_not_defeat_lexical :
-    ¬ Defeats tridentineOnPaulsWord lexicalCase :=
-  Horn.not_defeats_of_certified tridentineOnPaulsWord_strength lexicalCase_strength
+/-- **And Trent defeats it in return.** Trent, taken as a claim about Paul's word,
+attacks the argument from the word in turn. Trent's weakest link is its
+definition, rated `disputed`, and so is the argument's: the step from the
+courtroom sense to "and nothing more" is `disputed`, because Trent grants its
+starting points and denies what it draws from them. Between two positions at the
+bottom no rating blocks an attack, so the two defeat each other. -/
+theorem trent_on_pauls_word_defeats_lexical : Defeats tridentineOnPaulsWord lexicalCase :=
+  Horn.defeats_of_certified tridentineOnPaulsWord_strength lexicalCase_strength
     (by horn_certify)
 
 /-! #### Why these do not conflict
@@ -1044,11 +1052,12 @@ declare_dispute solaFideDispute := partyNode using solaFideDefs pruned rows 6
   Paul's gospel and Trent defeat each other, over Trent's definition. John's case
   meets Trent, the apocalyptic reading and Aquinas, each in both directions, and
   Aquinas and Luther defeat each other. Trent taken as a claim about Paul's word
-  meets every position Trent meets, in both directions, and two more: the two
-  arguments about Paul's word defeat it, and it defeats neither in return. Nothing
-  else.
+  meets every position Trent meets, in both directions, and two more: it and the
+  two arguments about Paul's word defeat each other. Nothing else. Every defeat in
+  the table runs both ways, so no position here defeats another without being
+  defeated by it in return.
 
-  Every one of the 225 answers, the defeats and the absences alike, is worked out
+  Every one of the 289 answers, the defeats and the absences alike, is worked out
   from the positions' premises and checked by machine. The table above is what
   that working is checked against. None of it is assumed. -/
   defeats
@@ -1059,6 +1068,7 @@ declare_dispute solaFideDispute := partyNode using solaFideDefs pruned rows 6
     , (.jervell, .apostolic), (.apostolic, .jervell), (.gospel, .trent), (.trent, .gospel)
     , (.gospel, .trentOnPaulsWord), (.trentOnPaulsWord, .gospel)
     , (.lexical, .trentOnPaulsWord), (.romansOnTheWord, .trentOnPaulsWord)
+    , (.trentOnPaulsWord, .lexical), (.trentOnPaulsWord, .romansOnTheWord)
     , (.pauline, .trentOnPaulsWord), (.dominical, .trentOnPaulsWord)
     , (.apostolic, .trentOnPaulsWord), (.apocalyptic, .trentOnPaulsWord)
     , (.trentOnPaulsWord, .pauline), (.trentOnPaulsWord, .dominical)
@@ -1130,65 +1140,98 @@ theorem apocalyptic_stands_with_the_critics_and_jervell :
 
 /-! ### What the dispute decides -/
 
-/-- How far the debate can be settled, and why no further. Nothing defeats either
-argument about Paul's word, so both are accepted first. Nothing joins them,
-because every other position has an attacker that those two do not rule out.
+/-- Why nothing is forced: every position has an attacker that no rating rules out.
 Each Reformed strand has Trent. Trent has Paul's case. The apocalyptic reading
 has Paul's case. Sanders has the critics, and the critics have Sanders. Jervell
 has Peter's case. Paul's gospel has Trent. Aquinas has Luther, and Luther has
-Aquinas. And Trent taken as a claim about Paul's word has the argument from the
-word itself. Some of these are ties, not losses: Paul's gospel answers Trent as
-Trent answers it. -/
-declare_verdict onlyPaulsWordUnanswered for solaFideDispute :
-    .groundedExactly [[.lexical, .romansOnTheWord]]
+Aquinas. Trent taken as a claim about Paul's word has the argument from the
+word, and the two arguments about the word have Trent taken that way. Every one
+of these is a tie, or meets one: each attacked position answers its attacker,
+or is answered by a position that does. -/
+declare_verdict nothingForcedUnanswered for solaFideDispute :
+    .nothingGrounded
       [ (.pauline, .trent), (.dominical, .trent), (.apostolic, .trent), (.trent, .pauline)
       , (.apocalyptic, .pauline), (.sanders, .critics), (.critics, .sanders)
       , (.jervell, .apostolic), (.gospel, .trent), (.trentOnPaulsWord, .lexical)
+      , (.lexical, .trentOnPaulsWord), (.romansOnTheWord, .trentOnPaulsWord)
       , (.johannine, .trent), (.aquinas, .luther), (.luther, .aquinas)
       , (.chrysostom, .pauline), (.sanctification, .trent) ]
+  /-- **Nothing prevails outright.** Heard together, the debate forces no position,
+  not even the meaning of Paul's word. Every position is attacked by one the
+  debate cannot rule out, and every weakest link is rated `disputed` or denies a
+  claim, so no rating breaks a tie.
 
-/-- **Only the meaning of Paul's word prevails outright.** What the debate forces,
-before any choice between rivals, is exactly this: Paul's "justify" (δικαιόω)
-does not mean the renewal of the inward person. It is argued two ways, from how
-the word is used and from Romans 4.
+  The two arguments about Paul's word, from how the word is used and from
+  Romans 4, used to prevail here. Both take the same step: from the courtroom
+  sense of "justify" (δικαιόω), and the rule that a word means no more than its
+  context requires, to "and so it does not mean renewal". That step is rated
+  `disputed`, because a cited reader grants its starting points and denies its
+  conclusion. Trent keeps the verdict, for the justified "are not only reputed,
+  but are truly called, and are, just" (Session VI, ch. 7), and Augustine gives
+  the courtroom sense himself, "deemed, or reckoned as just" (*On the Spirit and
+  the Letter* 26.45), beside "made righteous". So Trent, taken as a claim about
+  Paul's word, and the arguments about the word now defeat each other, and the
+  debate cannot choose between them.
 
-Nothing defeats either argument. The one position that contradicts them, Trent
-taken as a claim about Paul's word, rests on a definition rated `disputed`, and
-its replies fail against arguments whose every link is rated `wellSupported` or
-better.
+  It does not show that Paul's word means renewal, or that sola fide is false.
+  Every position can be defended, and none loses (`pauls_word_defensible`,
+  `trent_on_pauls_word_defensible`). What would move the verdict is an argument
+  that answers Trent at that step from evidence both sides accept. The readings
+  of Romans 5:19, 6:7 and 1 Corinthians 6:11, which readers take both ways, are
+  where it would have to be found. Fitzmyer, a Catholic exegete who grants the
+  courtroom sense, reads 5:19 as the "effective sense" (*Romans*, 118). -/
+  proves @[headline] sola_fide_dispute_forces_nothing
 
-It does not show that sola fide prevails, or that Trent's teaching is
-refuted. Nothing else is forced. Every other position is attacked by one the
-debate cannot rule out. One loses, Trent taken as a claim about Paul's word, and
-every other is in a tie with a rival the debate cannot choose between. -/
-@[headline]
-theorem only_pauls_word_prevails :
-    grounded solaFideDispute.defeats = {.lexical, .romansOnTheWord} :=
-  Eq.trans onlyPaulsWordUnanswered.holds (by ext x; cases x <;> simp [Solver.toSet])
+#print axioms sola_fide_dispute_forces_nothing
 
-#print axioms only_pauls_word_prevails
+/-- Why the argument from Paul's word can be defended: with Romans 4, read for the
+word, it answers its one attacker, Trent taken as a claim about Paul's word,
+which both defeat. -/
+declare_verdict paulsWordStandsWithRomansFour for solaFideDispute :
+    .credulous .lexical [.lexical, .romansOnTheWord]
+  /-- **The argument from Paul's word can be defended.** A consistent set of
+  positions holds it with Romans 4, read for the word, and answers every attack.
+  Its one attacker is Trent taken as a claim about Paul's word, and both
+  arguments defeat that in return. -/
+  proves @[headline] pauls_word_defensible
 
-/-- Why Trent, taken as a claim about Paul's word, cannot be defended: the argument
-from the word defeats it, and nothing defeats that argument. Romans 4, read for
-the word, defeats it too; one unanswered attacker is enough. -/
-declare_verdict trentsWordReadingAnswered for solaFideDispute :
-    .indefensible .trentOnPaulsWord [(.trentOnPaulsWord, .lexical)]
-  /-- **Trent, taken as a claim about Paul's word, cannot be defended.** No consistent
-  set of positions that answers its attackers can include it. The two arguments
-  about the word defeat it, and nothing answers either.
+#print axioms pauls_word_defensible
+
+/-- Why the argument from Paul's word is not forced: a set of positions that can be
+defended holds Trent, taken as a claim about Paul's word, with Trent as Trent
+states it, Sanders and Jervell, and that reading of Trent defeats the
+argument. -/
+declare_verdict paulsWordAnsweredByTrent for solaFideDispute :
+    .notSkeptical .lexical .trentOnPaulsWord [.trentOnPaulsWord, .trent, .sanders, .jervell]
+  /-- **Nor is the argument from Paul's word forced.** A consistent set of positions
+  that answers every attack holds Trent, taken as a claim about Paul's word, and
+  cannot hold the argument from the word with it. The two are in a tie at the
+  step from the courtroom sense to "and nothing more", which Trent grants the
+  starting points of and denies. -/
+  proves @[headline] pauls_word_not_forced
+
+#print axioms pauls_word_not_forced
+
+/-- Why Trent, taken as a claim about Paul's word, can be defended: it can be held
+with Trent as Trent states it, Sanders and Jervell, and it answers every
+position that defeats it. -/
+declare_verdict trentsWordReadingStands for solaFideDispute :
+    .credulous .trentOnPaulsWord [.trentOnPaulsWord, .trent, .sanders, .jervell]
+  /-- **Trent, taken as a claim about Paul's word, can be defended.** A consistent set
+  of positions includes it, with Trent as Trent states it, Sanders and Jervell,
+  and answers every attack. The two arguments about Paul's word defeat it, and it
+  defeats both in return, because the step they share is rated `disputed`.
 
   Trent's definition can be taken two ways. This is the first, weighed in the
-  debate (`whatTrentsDefinitionClaims`): if the definition says what Paul's
-  "justify" means, it cannot be defended here, for a stated and cited reason, at a
-  step rated `wellSupported`.
+  debate (`whatTrentsDefinitionClaims`): the definition read as saying what
+  Paul's "justify" means.
 
-  It does not show that Trent's definition is false as a statement of
-  what God does. That is the other way of taking it, and it can be defended
-  (`trent_defensible`). Nor that the position contradicts itself: taken alone it
-  can be held without contradiction. -/
-  proves @[headline] trent_on_pauls_word_indefensible
+  It does not show that Trent's reading of the word is right. It is not forced
+  (`pauls_word_defensible` names a defended set that leaves it out), and it is in
+  a tie with each position that attacks it. -/
+  proves @[headline] trent_on_pauls_word_defensible
 
-#print axioms trent_on_pauls_word_indefensible
+#print axioms trent_on_pauls_word_defensible
 
 /-- Why Trent can be defended: it can be held with Sanders and Jervell, and it
 answers every position that attacks it. Those are each Reformed strand, Paul's
@@ -1283,9 +1326,9 @@ declare_verdict lukeAnsweredByTrent for solaFideDispute :
   settles that. `whyTheDominicalCaseStandsAgainstTrent` places Luke's disagreement
   with Trent at Trent's definition. `whereTrentPartsFromPaul`, in the chapter
   "Where Trent parts from Paul", places Paul's at one step: that a verdict on
-  Christ's finished work excludes the renewal worked in us. The one thing the
-  ratings do decide is that Trent cannot claim its definition as the meaning of
-  Paul's word (`trent_on_pauls_word_indefensible`). -/
+  Christ's finished work excludes the renewal worked in us. The ratings do not
+  decide even the meaning of Paul's word: Trent's reading of it ties with the
+  arguments from the word (`trent_on_pauls_word_defensible`). -/
   proves @[headline] dominical_case_not_forced
 
 #print axioms dominical_case_not_forced
@@ -1350,5 +1393,6 @@ def whyTheDominicalCaseStandsAgainstTrent : Because dominicalCase tridentineCase
     (by simp [dominicalCase, dominicalLine, Line.premises])
     (by simp [solaFideDefs, trentDefinitionSteps, Line.premises])
     (by decide +kernel)
+  |>.ratedBy trentAgainstFaithAlone (by simp [dominicalCase, solaFideDefs])
 
 end TestimonyArguments.SolaFide

@@ -42,6 +42,10 @@ runs `#check_refutations` (in `arguments/`, one module per argument under
 checked, and the count is pinned with `#guard_msgs`, so adding a refutation
 means updating the number — the error shows the new one.
 
+The same build runs `#check_readers`, which fails on a reading cited to
+Scripture alone and on a line of reason whose step has no rating. The error
+names each one; cite a reader, or mark it `Reference.proposal` with a rationale.
+
 Expect **zero warnings**, not just zero errors. A missing docstring is a
 warning, and in this library a docstring states what a premise asserts and who
 holds it.

@@ -110,16 +110,18 @@ setting is checked in `whatTrentsDefinitionClaims`, and it depends on how the
 definition is taken.
 
 - **As a claim about the word**, that Paul's verb "justify" (δικαιόω) *means*
-  renewal, it fails three times, each at a step rated `wellSupported`. It fails
-  against the argument from usage: the verb is a courtroom word; Paul has other
-  words for renewal and sets them beside it (Titus 3:5–7; 1 Corinthians 6:11);
-  and a word contributes the least meaning its context requires. It fails at the
-  Latin explanation it rests on, since "justify" (*iustificare*) as "make
-  righteous" does not settle what the Greek word means. And it fails against
-  Romans 4 read for the word. In the main debate, Trent taken this way cannot be
-  defended (`trent_on_pauls_word_indefensible`). Luke 18 agrees with this
-  without adding a fourth failure: no reader cited here takes "justified" at
-  18:14 as the renewal itself.
+  renewal, it meets the arguments about the word three times, each at the same
+  step, rated `disputed`. It meets the argument from usage: the verb is a
+  courtroom word; Paul has other words for renewal and sets them beside it
+  (Titus 3:5–7; 1 Corinthians 6:11); and a word contributes the least meaning
+  its context requires. It meets it again at the Latin explanation it rests on,
+  since "justify" (*iustificare*) as "make righteous" does not settle what the
+  Greek word means. And it meets Romans 4 read for the word. Each time the break
+  is at the step from the courtroom sense to "and nothing more", which Trent
+  grants the start of and denies. In the main debate, Trent taken this way ties
+  with the arguments about the word (`trent_on_pauls_word_defensible`). Luke 18
+  adds no fourth meeting: no reader cited here takes "justified" at 18:14 as the
+  renewal itself.
 - **As a claim about what God does**, that when he justifies he also renews,
   nothing about the word reaches it. Taken this way, Trent can be held with
   every premise of the argument from usage
@@ -135,9 +137,10 @@ neither, so the check changes no verdict above.
 It does not show that logic refutes Rome. Trent's case can be held
 without contradiction taken either way. What the check shows is narrower, and it
 is as far as an argument from the meaning of words can go. The evidence about
-the word, rated `wellSupported`, tells against taking the definition as what the
-word means. Whether God's justifying act also includes renewal is something the
-word's meaning leaves open, and there the matter stands as the main debate
+the word tells against taking the definition as what the word means, but only by
+a step rated `disputed`, so it does not settle it. Whether God's justifying act
+also includes renewal is something the word's meaning leaves open, and there the
+matter stands as the main debate
 leaves it: a tie at the `disputed` step that `whereTrentPartsFromPaul` names
 (`gospel_not_forced`).
 
@@ -437,6 +440,7 @@ def whyLukeEighteenStandsAgainstTrent : Because luke18Case tridentineCase :=
     (by simp [luke18Case, luke18Line, Line.premises])
     (by simp [solaFideDefs, trentDefinitionSteps, Line.premises])
     (by decide +kernel)
+  |>.ratedByLine luke18Line rfl (by simp [luke18Case, solaFideDefs])
 
 /-! ### How strong each position is
 

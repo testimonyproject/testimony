@@ -43,6 +43,48 @@ sets the accuracy.
 prints it before you say anything about it. A reader who has the words in front
 of them can follow an argument about those words.
 
+**Quote a modern translation made from the earliest texts, and say which.** The
+library does not quote the King James Version, whose New Testament rests on the
+late Greek text of its day. Quote, in this order of preference, the NET Bible
+(NET), the Legacy Standard Bible (LSB) or the New Revised Standard Version
+(NRSV or NRSVue); otherwise the English Standard Version (ESV); otherwise the
+New International Version (NIV). Pick one per argument and say so once, in the
+argument's opening prose; mark any quotation from another translation with its
+abbreviation, "(Genesis 3:15, LSB)". Quote the translation word for word,
+capitals included, from the publisher's own text.
+
+The King James wording appears only where a cited source itself quotes the
+King James Version, and then it is kept: when Wesley gives 2 Peter 1:10 as "if
+ye do these things, ye shall never fall", the page quotes Wesley as he wrote,
+and says that the wording is the King James Version's. A contributor's own
+quotation from the KJV, or a verse the library quotes in its own voice, is never
+that exception; it is quoted from the argument's translation instead.
+
+Keeping a source's wording can hide a difference in the text it rests on. The
+King James Version follows the late Greek text of the sixteenth century, and a
+writer quoting the Vulgate follows a Latin that sometimes departs from the
+Greek. If a source's reading depends on such a variant, or on a Latin rendering
+the Greek does not support, that dependence is a step of the argument, not a
+matter of wording: encode it as a premise or step of its own, cited to the
+apparatus or a commentator who discusses the variant, so the reading's reliance
+on it is visible and can be denied. If it is too large to encode at once, file
+it as an issue before the pull request is opened.
+
+When the argument turns on a word, check that the translation you quote does
+not settle the question for one side. The LSB prints "He shall bruise you on the
+head" (Genesis 3:15) with a capital, because it reads the verse of Christ; the
+modern translations give "contrary to" for παρ' ὅ in Galatians 1:8, where the
+older "other than" suits Calvin and "contrary to" suits Aquinas. Where that
+happens, give the Greek or Hebrew in brackets and say how the translations part,
+rather than choosing the wording that helps.
+
+Every translation but the NET limits how much may be quoted without written
+permission: the ESV and the NIV 500 verses, the LSB 1,000, the NRSV 500, the
+NABRE 5,000 words, none of them a whole book. Each also asks for a notice, which
+the translation's bibliography entry carries in its note and the printed
+editions repeat in "How this edition was made". A translation the library has
+not quoted before needs an entry, with its notice, before its first quotation.
+
 **English first, then the original term in brackets.** Write "works of the law"
 (ἔργα νόμου), not ἔργα νόμου alone. The English is what the lay reader holds
 on to. The Greek or Hebrew is the handle a scholar needs to look the question

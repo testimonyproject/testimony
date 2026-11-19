@@ -4,16 +4,17 @@ import TestimonyArguments.SolaScriptura.Mark7
 # TestimonyArguments.SolaScriptura.JesusAndPaul — the same principle, beyond Mark 7
 
 A reader who has followed the case from Mark 7 may fairly ask whether it rests
-on one story. It does not. Jesus says elsewhere that "the scripture cannot be
-broken" (John 10:35), and that "Till heaven and earth pass, one jot or one
-tittle shall in no wise pass from the law, till all be fulfilled" (Matthew
-5:18). Paul writes to the Galatians, "though we, or an angel from heaven, preach
-any other gospel unto you than that which we have preached unto you, let him be
-accursed" (Galatians 1:8), and to the Colossians, "Beware lest any man spoil you
-through philosophy and vain deceit, after the tradition of men, after the
-rudiments of the world, and not after Christ" (Colossians 2:8). Of the rules
-"Touch not; taste not; handle not" he says that they are "after the
-commandments and doctrines of men" (2:21–22).
+on one story. It does not. Jesus says elsewhere that "the Scripture cannot be
+broken" (John 10:35), and that "until heaven and earth pass away, not the
+smallest letter or stroke shall pass from the Law until all is accomplished"
+(Matthew 5:18). Paul writes to the Galatians, "even if we, or an angel from
+heaven, should proclaim to you a gospel contrary to the gospel we have
+proclaimed to you, let him be accursed!" (Galatians 1:8), and to the Colossians,
+"See to it that no one takes you captive through philosophy and empty deception,
+according to the tradition of men, according to the elementary principles of the
+world, and not according to Christ" (Colossians 2:8). Of the rules "Do not
+handle, nor taste, nor touch" he says that they are "in accordance with the
+commands and teachings of men" (2:21–22).
 
 That last phrase is Isaiah's. J. B. Lightfoot notes that "The expression is
 taken ultimately from Isaiah xxix. 13", the verse Jesus quotes against the
@@ -31,10 +32,12 @@ tradition, and no commandment of men may be taught as God's word
 is rated `wellSupported`, as Mark 7's is. Thomas Aquinas, lecturing on Galatians,
 grants the text and the principle with it: "nothing is to be taught except what
 is contained, either implicitly or explicitly, in the Gospels and epistles and
-Sacred Scripture". What he denies is Calvin's reading of "any other gospel" as
-any gospel "to which the inventions of other men are added". For Aquinas Paul's
-"besides" means "adding something completely alien". That is a dispute about how
-far the principle reaches, not about the principle.
+Sacred Scripture". What he denies is Calvin's reading of Paul's words, that the
+gospel accursed is any gospel "to which the inventions of other men are added".
+The Greek is παρ' ὅ, which can be rendered "contrary to", "besides" or "other
+than", and for Aquinas Paul's "besides" means "adding something completely
+alien". That is a dispute about how far the principle reaches, not about the
+principle.
 
 ## What they do not deliver
 
@@ -45,9 +48,9 @@ still open: neither it nor its denial follows
 (`every_text_without_the_hinge_leaves_the_sole_rule_open`). Nor do they reach
 Trent read as the apostolic word handed on unwritten, which can be held with
 every one of them (`jesus_and_paul_do_not_reach_the_apostolic_word`). Rome
-answers that Paul also tells the Corinthians to "keep the ordinances, as I
-delivered them to you" (1 Corinthians 11:2), so that his measure is where a
-teaching came from, not whether it was written down.
+answers that Paul also praises the Corinthians because they "hold firmly to the
+traditions, just as I delivered them to you" (1 Corinthians 11:2), so that his
+measure is where a teaching came from, not whether it was written down.
 
 So the texts show that the principle does not hang on one story in the Gospels,
 and they leave the Reformation's question where Mark 7 left it. In the dispute
@@ -65,7 +68,8 @@ open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 
 /-! ### Paul and Isaiah 29:13 -/
 
-/-- Colossians 2:22 — "after the commandments and doctrines of men". -/
+/-- Colossians 2:22 — "in accordance with the commands and teachings of men"
+(LSB). -/
 @[nolint defsWithUnderscore] def colossians2_22 : Passage := ⟨.colossians, 2, 22⟩
 
 /-- **Colossians 2:22 alludes to Isaiah 29:13.** Typed `.allusion`, not
