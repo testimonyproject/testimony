@@ -22,3 +22,45 @@ benchmark = "satisfied_by: Trent grants the subjective genitive"
 metric = "time"
 up_to = 0.15
 reason = "Seven new sola fide claims, so each valuation over the larger claim type costs more to reduce; CI measured +6.7%"
+
+[[accept]]
+benchmark = "satisfied_by: the Pauline case"
+metric = "time"
+up_to = 0.15
+reason = "The Pauline lines now state that Paul keeps dikaioo and erga nomou in one sense, and the claim type is seven claims larger, so the model check reduces more; CI measured +6.5%"
+
+[[accept]]
+benchmark = "table: sola fide, first six rows, 102 cells"
+metric = "time"
+up_to = 0.15
+reason = "Four sola fide parties state conditions they had left unstated (Paul's words, the Latin word, Romans 4's works, John's believing), so they carry more premises in every cell; CI measured +6.4%, below the gate so far"
+
+[[accept]]
+benchmark = "table, pruned: sola fide, first six rows, 102 cells"
+metric = "time"
+up_to = 0.15
+reason = "Four sola fide parties state conditions they had left unstated (Paul's words, the Latin word, Romans 4's works, John's believing), so they carry more premises in every cell; CI measured +4.2%, below the gate so far"
+
+[[accept]]
+benchmark = "table, prepared: sola fide, first six rows, 102 cells"
+metric = "time"
+up_to = 0.15
+reason = "Four sola fide parties state conditions they had left unstated (Paul's words, the Latin word, Romans 4's works, John's believing), so they carry more premises in every cell; CI measured +2.4%, below the gate so far"
+
+[[accept]]
+benchmark = "part of, certified: sola fide, 289 cells"
+metric = "time"
+up_to = 0.15
+reason = "Four sola fide parties state conditions they had left unstated (Paul's words, the Latin word, Romans 4's works, John's believing), so they carry more premises in every cell; CI measured +3.7%, below the gate so far"
+
+[[accept]]
+benchmark = "supports: sola fide, 289 cells"
+metric = "time"
+up_to = 0.15
+reason = "Four sola fide parties state conditions they had left unstated (Paul's words, the Latin word, Romans 4's works, John's believing), so they carry more premises in every cell; CI measured +2.8%, below the gate so far"
+
+[[accept]]
+benchmark = "supports, certified: sola fide, 289 cells"
+metric = "time"
+up_to = 0.15
+reason = "Four sola fide parties state conditions they had left unstated (Paul's words, the Latin word, Romans 4's works, John's believing), so they carry more premises in every cell; CI measured +3.4%, below the gate so far"
