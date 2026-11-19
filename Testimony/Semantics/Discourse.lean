@@ -78,10 +78,13 @@ def assumes (m : Move) : List (Lexeme × Scope × Scope) :=
   | _ => []
 
 /-- Whether a premise of the move grants that a word has the same sense at two
-places. -/
+places, or at two places they lie within (`Scope.within`). -/
 def grants (m : Move) (w : Lexeme) (a b : Scope) : Bool :=
   match m.act with
-  | .argues ps _ => ps.any fun s => s == .sameSense w a b || s == .sameSense w b a
+  | .argues ps _ => ps.any fun
+    | .sameSense w' a' b' =>
+      w' == w && ((a.within a' && b.within b') || (a.within b' && b.within a'))
+    | _ => false
   | _ => false
 
 /-- The senses the move assumes the same and does not say so: the conditions on

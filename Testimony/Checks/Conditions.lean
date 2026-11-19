@@ -47,6 +47,9 @@ def unstatedConditions (m : Move) : List String :=
   (m.equivocation.filterMap fun
     | (w, a, b, .unstated) => some (atomName w ++ " the same in " ++ scopeLabel a ++ " and " ++
         scopeLabel b)
+    | (w, a, b, .partly ps) => some (atomName w ++ " the same in " ++ scopeLabel a ++ " and " ++
+        scopeLabel b ++ ", granted only between " ++
+        " and between ".intercalate (ps.map fun (x, y) => scopeLabel x ++ " and " ++ scopeLabel y))
     | _ => none) ++
   (m.unbridged.map fun (w, v, k) =>
     atomName w ++ " for " ++ atomName v ++ " (" ++ atomName k ++ ")")

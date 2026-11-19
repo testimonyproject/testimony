@@ -108,14 +108,35 @@ structure Pericope where
   endVerse : Nat
 deriving Repr, DecidableEq
 
-/-- Either a single verse or a contiguous range. Scripture citations quantify
-over this, so `Matthew 2:1; Luke 2:4–7` is two `PassageRange` values rather than
-one opaque string. -/
+/-- **Part of one verse**: the words from `first` to `last`, by their positions in the verse as
+the Greek corpus numbers them, from 1. A reader sees it as the verse with a letter, "John
+3:18a". The part is anchored by one word it contains, named by its dictionary form, which must
+occur in the part exactly once (`anchor`), so that "the half of 3:18 about believing in him" is
+found in the text, not asserted. Build one with `verse_part` (`Testimony.Corpus.Greek`), which
+reads the corpus and refuses a part whose words or anchor are not there. -/
+structure VersePart where
+  /-- The verse the part is of. -/
+  verse : Passage
+  /-- The letter a reader sees after the verse number: "a", "b". -/
+  letter : String
+  /-- The position of its first word in the verse. -/
+  first : Nat
+  /-- The position of its last word in the verse, inclusive. -/
+  last : Nat
+  /-- The dictionary form of the word that anchors it. -/
+  anchor : String
+deriving Repr, DecidableEq
+
+/-- Either a single verse, a contiguous range, or part of one verse. Scripture
+citations quantify over this, so `Matthew 2:1; Luke 2:4–7` is two `PassageRange`
+values rather than one opaque string. -/
 inductive PassageRange
   /-- A single verse. -/
   | verse (p : Passage)
   /-- A contiguous range of verses. -/
   | range (r : Pericope)
+  /-- Part of one verse. -/
+  | part (q : VersePart)
 deriving Repr, DecidableEq
 
 /-- The standard scholarly abbreviation for a book, following SBL style. Used
@@ -165,10 +186,48 @@ def Pericope.render (r : Pericope) : String :=
 def PassageRange.book : PassageRange → Book
   | .verse p => p.book
   | .range r => r.book
+  | .part q => q.verse.book
 
-/-- A verse or range as a reader expects it. -/
+/-- A verse, range or part of a verse as a reader expects it: `John 3:18a`. -/
 def PassageRange.render : PassageRange → String
   | .verse p => p.render
   | .range r => r.render
+  | .part q => q.verse.render ++ q.letter
+
+/-! ### Where one passage lies against another
+
+A passage is an interval of the text: from a first word to a last, in one book. A verse or a
+range runs from the start of its first verse to the end of its last; a part of a verse, from its
+first word to its last. So whether one passage lies within another, or overlaps it, is a
+comparison of the two intervals' ends, read as chapter, verse and word in that order. -/
+
+/-- The position standing for "to the end of the verse", past any word a verse has. -/
+def PassageRange.verseEnd : Nat := 1000000
+
+/-- Where a passage starts: chapter, verse and word, the word 0 for a whole verse. -/
+def PassageRange.start : PassageRange → Nat × Nat × Nat
+  | .verse p => (p.chapter, p.verse, 0)
+  | .range r => (r.startChapter, r.startVerse, 0)
+  | .part q => (q.verse.chapter, q.verse.verse, q.first)
+
+/-- Where a passage stops: chapter, verse and word, `verseEnd` for a whole verse. -/
+def PassageRange.stop : PassageRange → Nat × Nat × Nat
+  | .verse p => (p.chapter, p.verse, verseEnd)
+  | .range r => (r.endChapter, r.endVerse, verseEnd)
+  | .part q => (q.verse.chapter, q.verse.verse, q.last)
+
+/-- Chapter, verse and word, in reading order. -/
+def PassageRange.posLe (a b : Nat × Nat × Nat) : Bool :=
+  a.1 < b.1 || (a.1 == b.1 && (a.2.1 < b.2.1 || (a.2.1 == b.2.1 && a.2.2 ≤ b.2.2)))
+
+/-- **Whether a passage lies within another**: the same book, starting no earlier and stopping no
+later. A verse lies within itself, 3:16 within 3:16–18, and 3:18a within 3:18; 3:18 does not lie
+within 3:18a. -/
+def PassageRange.within (inner outer : PassageRange) : Bool :=
+  inner.book == outer.book && posLe outer.start inner.start && posLe inner.stop outer.stop
+
+/-- **Whether two passages share any of the text.** -/
+def PassageRange.overlaps (a b : PassageRange) : Bool :=
+  a.book == b.book && posLe a.start b.stop && posLe b.start a.stop
 
 end Testimony

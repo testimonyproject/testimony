@@ -1,4 +1,5 @@
 import Testimony.Checks.Fallacies
+import Testimony.Corpus.Greek
 
 /-!
 # Testimony.Checks.FallacyCases — what the fallacy checks must catch, and must not
@@ -16,6 +17,11 @@ flagged the sola fide line on James's word, which gathers what δικαιόω me
 Matthew and in Deuteronomy, as if a survey of a word needed its places alike.
 The check now tells a word used from a word talked about, and the survey stays
 here so that it cannot slip back.
+
+A premise may say a word keeps its sense across a range, or across only part of a verse. The
+next cases pin how the check reads that: what is granted of John 3:16–18 is granted of 3:16, and
+what is granted of 3:18a, "whoever believes in him is not condemned", is not granted of the whole
+of 3:18, whose second half speaks of believing "in the name".
 
 The straw-man cases come after it, with a small record of what each voice
 holds, because that check compares what a move attributes with the record and
@@ -108,6 +114,47 @@ theorem equivocation_cases :
       thatFaithGranted.equivocates = [] ∧ thatFaithGranted.conditionalOn = [] ∧
       survey.equivocates = [] ∧ survey.conditionalOn = [.dikaioo] ∧
       worksDiffer.equivocates = [] ∧ worksDiffer.conditionalOn = [] := by
+  decide
+
+/-! ### Part of a passage -/
+
+/-- John 6:29. -/
+@[nolint defsWithUnderscore] abbrev john6_29 : PassageRange := vs .john 6 29
+
+/-- John 3:16. -/
+@[nolint defsWithUnderscore] abbrev john3_16 : PassageRange := vs .john 3 16
+
+/-- **Passed over: a premise about a range covers a verse within it.** The move reads the
+believing of 6:29 by the believing of 3:16, and its premise says "believe" keeps its sense
+between 6:29 and all of 3:16–18. That covers 3:16. -/
+def believingWithinTheRange : Move :=
+  argues
+    [ .says john3_16 (rl .instrumentOf (wd .pisteuo john3_16) (cn .eternalLife))
+    , .sameSense .pisteuo (.passage john6_29) (.passage (rg .john 3 16 3 18)) ]
+    (.holds (rl .instrumentOf (wd .pisteuo john6_29) (cn .eternalLife)))
+
+/-- **Caught: a premise about half a verse does not cover the whole.** The move reads the
+believing of 6:29 by the believing of all of 3:18, and its premise says "believe" keeps its
+sense only between 6:29 and 3:18a. The rest of 3:18 is left unstated, and the check says that
+the premise grants part of what the move uses. -/
+def believingInHalfAVerse : Move :=
+  argues
+    [ .says (vs .john 3 18) (rl .instrumentOf (wd .pisteuo (vs .john 3 18)) (cn .eternalLife))
+    , .sameSense .pisteuo (.passage john6_29) (.passage Corpus.Greek.johnThreeEighteenA) ]
+    (.holds (rl .instrumentOf (wd .pisteuo john6_29) (cn .eternalLife)))
+
+/-- **The equivocation check, over parts of a passage.** A premise about 3:16–18 grants what the
+move needs of 3:16. A premise about 3:18a grants only part of what a move needs of all of 3:18,
+and the check reports it so, with the places the premise does cover, and counts the move
+conditional on "believe". -/
+theorem part_of_a_passage_cases :
+    believingWithinTheRange.equivocation =
+        [(.pisteuo, .passage john3_16, .passage john6_29, .granted)] ∧
+      believingWithinTheRange.conditionalOn = [] ∧
+      believingInHalfAVerse.equivocation =
+        [(.pisteuo, .passage (vs .john 3 18), .passage john6_29,
+          .partly [(.passage john6_29, .passage Corpus.Greek.johnThreeEighteenA)])] ∧
+      believingInHalfAVerse.conditionalOn = [.pisteuo] := by
   decide
 
 /-! ### Begging the question -/

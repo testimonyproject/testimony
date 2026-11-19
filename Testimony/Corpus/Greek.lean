@@ -185,6 +185,56 @@ elab_rules : command
   | `(greek_passage $n from $code $c $v₁ $[$v₂]?) =>
     greekPassage n code.getId.toString c.getNat v₁.getNat ((v₂.map (·.getNat)).getD v₁.getNat)
 
+/-! ### Part of a verse
+
+An argument sometimes needs half a verse: John 3:18 says "whoever believes in him is not
+condemned" and then "whoever does not believe is condemned already, because he has not believed
+in the name", and a reader may treat the two halves differently. `verse_part` names such a part
+by the positions of its first and last words, and by one word it contains, its anchor. It reads
+the corpus when the module is built and refuses the part, failing the build, unless the verse is
+there, the positions lie within it, and the anchor occurs in the part exactly once. So a part
+cannot silently stand for the whole verse, or for words the verse does not have. -/
+
+/-- Why a part of a verse cannot be anchored in these words of the verse, or `none` if it can. -/
+def partProblem (words : List Row) (first last : Nat) (anchor : String) : Option String :=
+  let n := words.length
+  if words.isEmpty then some "the verse has no words in the corpus"
+  else if first == 0 || first > last then some s!"words {first} to {last} are not a span"
+  else if last > n then some s!"the verse has {n} words, not {last}"
+  else
+    let span := words.filter fun r => first ≤ r.position && r.position ≤ last
+    match (span.filter (·.lemma == anchor)).length with
+    | 1 => none
+    | 0 => some s!"its anchor {anchor} is not among words {first} to {last}"
+    | k => some s!"its anchor {anchor} occurs {k} times among words {first} to {last}"
+
+/-- Write `def n : PassageRange`, part `letter` of verse `c:v` of the book with code `code`,
+words `first` to `last`, after checking it against the corpus. See the section above. -/
+def versePart (n : Ident) (code : String) (c v first last : Nat) (letter anchor : String) :
+    CommandElabM Unit := do
+  let some (_, bookName) := bookCodes.find? (·.1 == code)
+    | throwError "verse_part: no book with code {code}"
+  let rows ← liftIO (readBook code)
+  let words := (rows.filter fun r => r.chapter == c && r.verse == v).toList
+  if let some why := partProblem words first last anchor then
+    throwError "verse_part: {code} {c}:{v}{letter}: {why}"
+  let book := mkCIdent (``Testimony.Book ++ bookName)
+  elabCommand (← `(command|
+    /-- Part of a verse, anchored in the Greek corpus by `verse_part`. -/
+    def $n : Testimony.PassageRange :=
+      .part { verse := ⟨$book, $(quote c), $(quote v)⟩, letter := $(quote letter)
+            , first := $(quote first), last := $(quote last), anchor := $(quote anchor) }))
+
+/-- `verse_part n from JHN 3 18 1 6 "a" "πιστεύω"` writes `def n`, John 3:18a: in order, the
+book, chapter and verse, the positions of the part's first and last words, its letter, and the
+dictionary form of the word that anchors it. Here that is the verse's first six words, anchored
+by its one πιστεύω. -/
+syntax (name := versePartCmd) "verse_part " ident " from " ident num num num num str str : command
+
+elab_rules : command
+  | `(verse_part $n from $code $c $v $a $b $l $w) =>
+    versePart n code.getId.toString c.getNat v.getNat a.getNat b.getNat l.getString w.getString
+
 /-- `#greek_corpus` reports every imported book and how many words it has. -/
 syntax (name := greekCorpusCmd) "#greek_corpus" : command
 
@@ -224,5 +274,33 @@ theorem john1_1_theos :
        john1_1[14]?.map Token.isVerb)) =
       some ("θεός", true, true, some false, some true) := by
   decide
+
+/-! ### A part of a verse, read -/
+
+verse_part johnThreeEighteenA from JHN 3 18 1 6 "a" "πιστεύω"
+
+/-- **John 3:18a lies within John 3:18 and within John 3:16–18, and 3:18 does not lie within
+it.** The part is the verse's first six words, ὁ πιστεύων εἰς αὐτὸν οὐ κρίνεται, "whoever
+believes in him is not condemned", and `verse_part` has checked that its one πιστεύω is there.
+It does not overlap 3:17. -/
+theorem john3_18a_lies_within :
+    johnThreeEighteenA.render = "John 3:18a" ∧
+    johnThreeEighteenA.within (.verse ⟨.john, 3, 18⟩) ∧
+    johnThreeEighteenA.within (.range ⟨.john, 3, 16, 3, 18⟩) ∧
+    !(PassageRange.verse ⟨.john, 3, 18⟩).within johnThreeEighteenA ∧
+    !johnThreeEighteenA.overlaps (.verse ⟨.john, 3, 17⟩) := by
+  decide
+
+/--
+error: verse_part: JHN 3:18b: its anchor πιστεύω occurs 2 times among words 7 to 23
+-/
+#guard_msgs in
+verse_part johnThreeEighteenBAmbiguous from JHN 3 18 7 23 "b" "πιστεύω"
+
+/--
+error: verse_part: JHN 3:18c: the verse has 23 words, not 30
+-/
+#guard_msgs in
+verse_part johnThreeEighteenOverlong from JHN 3 18 1 30 "c" "πιστεύω"
 
 end Testimony.Corpus.Greek
