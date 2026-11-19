@@ -49,20 +49,6 @@ Sola fide
   attribute a view, against the argument's record:
     sandersLine (Dunn): secondTempleJudaism, unrecorded
     trentWordLine (Trent): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
-  need a word to keep its sense, unstated:
-    catholicJamesWordLine (Trent): erga, dikaioo
-    catholicJamesWorksLine (Trent): erga, dikaioo
-    fruitLine (Westminster Assembly): pistis, erga
-    jamesLexicalLine (Moo): dikaioo
-    johannineLine (Calvin): pisteuo
-    johannineWithoutTrust (Calvin): pisteuo
-    paulineLine (Calvin): dikaioo, ergaNomou
-    paulineWithoutPistisChristou (Calvin): dikaioo, ergaNomou
-    paulineWithoutWorksOfLaw (Calvin): dikaioo, ergaNomou
-    renewalWordLine (Trent): dikaioo
-    romansFourExegesisLine (Moo): erga
-  read one word by a kindred one, the bridge unstated:
-    trentWordLine (Trent): iustificare for dikaioo (translation)
   cite a voice for one reading, leaving out another the record has:
     trentWordLine (Trent): augustine, also verdict in augustineGivesBothSenses
   conclude a word's sense from no use or reading of the word:

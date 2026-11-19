@@ -77,6 +77,8 @@ and 2 hearings, drawn with the disputes they restrict
 
 /--
 info: every dispute, its lines' conditions stated:
+canonDispute.finite:
+  hidden premises: 0; lines not read: 0
 mark7Dispute.finite:
   hidden premises: 0; lines not read: 0
 -/
