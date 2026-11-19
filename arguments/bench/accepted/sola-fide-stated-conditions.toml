@@ -1,0 +1,24 @@
+# PR #338: no hidden premise enters a dispute.
+# The PR states, as cited premises, the seven conditions sola fide's dispute
+# lines had left unstated: that a word keeps one sense between the places it
+# joins, or that the Latin word bears the Greek one's sense. That is seven new
+# sola fide claims, each with a meaning the ontology check reads, and new grounds
+# in the James lines and in the Pauline and Johannine lines.
+
+[[accept]]
+benchmark = "checks: ontology"
+metric = "time"
+up_to = 0.30
+reason = "Seven new sola fide claims with sameness meanings: the shared 'same sense' definition is now stated or denied by 11 claims, not 5, and the ontology check reads each; CI measured +18.9%"
+
+[[accept]]
+benchmark = "row, certified: James hearing under evidence, Trent's word, 12 cells"
+metric = "time"
+up_to = 0.15
+reason = "The James lines now state that James keeps his words through 2:21-25 and uses 'justify' as it is used outside Paul, so each of the row's positions carries more premises; CI measured +7.0%"
+
+[[accept]]
+benchmark = "satisfied_by: Trent grants the subjective genitive"
+metric = "time"
+up_to = 0.15
+reason = "Seven new sola fide claims, so each valuation over the larger claim type costs more to reduce; CI measured +6.7%"
