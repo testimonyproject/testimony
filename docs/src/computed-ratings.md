@@ -251,9 +251,15 @@ claims a standard does not admit named. Disagreements are marked as disagreement
 - **Why the standards differ.** No exegete's statement that James's word is Paul's has been
   verified, so that ground rests on Trent's word. A verified one would make the step
   `disputed` under both standards ([#139][registers]).
-- **The hearings agree with the rating** (`james_word_turns_on_the_standard`). Under the
-  evidence standard the hearing forces James's word. Under the tradition standard it weighs
-  the step at `disputed`, and the question is contested.
+- **The hearings** (`james_word_turns_on_the_standard`). The register holds both sides to the
+  same test: the argument from James's word is entered as an objection to the renewal reading,
+  as the renewal reading is to it. Under the evidence standard neither is heard. The renewal
+  reading rests on Trent's word that James's word is Paul's, and the argument from James's word
+  on Calvin's that James uses it as it is used outside Paul; both rest on Calvin's and Trent's
+  reading that James keeps his words through 2:21–25 (`james_readings_heard`). So the question
+  is not heard there, although the step's rating stands at `wellSupported`: no admitted
+  objection brings the step down, but its own premises rest on a reader's word. Under the
+  tradition standard the hearing weighs the step at `disputed`, and the question is contested.
 
 **Works as fruit, not ground: a bridge stated.**
 - **The support.** Westminster's step is `wellSupported`. The Lutheran World Federation and the
@@ -269,8 +275,10 @@ claims a standard does not admit named. Disagreements are marked as disagreement
 - **The rating** (`fruit_step_ratings`). The support stands at `wellSupported` under the
   evidence standard, where neither of Trent's dissents is credible, and the step is `disputed`
   under the tradition standard, where both are.
-- **The hearings agree** (`fruit_turns_on_the_standard`). Under the evidence standard the
-  hearing forces the Reformed harmony. Under the tradition standard it is contested.
+- **The hearings** (`fruit_turns_on_the_standard`). Under the evidence standard the Reformed
+  harmony is not heard, because the step's own premise that Ephesians 2 and James 2:18 share
+  "faith" and "works" rests on Westminster's and Calvin's word; nor are Trent's dissents. Under
+  the tradition standard it is contested.
 - **What this does not show.** It shows that Trent's denial does not stand on Scripture and
   evidence alone. It does not show that the reward texts teach the Reformed reading: they
   teach neither side's account of merit without a further claim.
@@ -281,15 +289,16 @@ claims a standard does not admit named. Disagreements are marked as disagreement
   concludes that the reward is of grace, not rendered to merits. It is a credible critique under
   both standards.
 - **The Reformed harmony against canon 24's step and chapter 16's.** It is a credible critique
-  under both standards.
-- **So each of Trent's claims is `disputed` under both** (`rome_steps_ratings`). Set beside
-  `fruit_step_ratings`, that is the asymmetry the checks find. The Reformed dissents from
-  Trent are critiques under either standard, while Trent's dissents from the Reformed step are
-  critiques only where the council's word is admitted. Neither side's step is proved right by
-  this. What differs is what each dissent rests on.
-- **The hearings.** Under the evidence standard, the hearing forces Westminster's answer
-  along with the harmony. Under the tradition standard, Westminster's answer and chapter 16
-  defeat each other, and neither is forced.
+  under the tradition standard only, because it rests on Westminster's and Calvin's word that
+  the fruit texts share their terms (`rome_steps_ratings`).
+- **So the two sides come out alike** (`rome_steps_ratings`). Chapter 16's merit premise is
+  `disputed` under every standard, by Westminster. Canon 24's and chapter 16's steps are
+  `disputed` by the harmony under the tradition standard only, as the Reformed step is by
+  Trent's dissents (`fruit_step_ratings`). Neither side's step is proved right by this. What
+  differs is what each dissent rests on.
+- **The hearings.** Under the evidence standard, the hearing forces Westminster's answer, and
+  hears neither the harmony nor chapter 16. Under the tradition standard, Westminster's answer
+  and chapter 16 defeat each other, and neither is forced.
 
 **Disagreements, not critiques.** Trent's reading of James's word and Howell's move each hold
 the denial they need as a premise (`trent_on_the_word_is_asserted`,
@@ -364,8 +373,8 @@ would not outrank Miller, and his dissent would count again.
 
 A hearing weighs computed ratings, but a full dispute still weighs cited ones. For the James
 dispute these agree under the tradition standard, where what James's word means is contested
-(`james_word_contested`), and not under the evidence standard, where the hearing forces the
-argument from James's word. Phase two ([#136][phase-two]) declares every dispute with its
+(`james_word_contested`), and not under the evidence standard, where the hearing hears neither
+reading of the word. Phase two ([#136][phase-two]) declares every dispute with its
 register and states each verdict under both standards. Splitting `Source.confidence` into
 support and register, and enforcing the steelman rule with a linter rule, is [#137][split].
 
