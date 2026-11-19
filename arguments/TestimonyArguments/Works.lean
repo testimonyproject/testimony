@@ -4582,6 +4582,7 @@ with the body of the sun" (p. 122). -/
           [ .url "https://archive.org/details/christendomastray1884" (some "2026-11-14") ] }
   , publisher := "R. Roberts"
   , place := some "Birmingham" }
+
 /-- Garrigou-Lagrange's commentary on Aquinas's treatise on grace (*Summa*
 I-II qq. 109–114), the Thomist school's case for grace "efficacious of itself,
 intrinsically". Read in the EWTN library's reproduction, which has no page
@@ -4941,6 +4942,7 @@ headers. Cited for his first rule (p. 3) and its application to Titus 2:13:
       , note := some "Third edition." }
   , publisher := "Vernor and Hood"
   , place := some "London" }
+
 /-- Calvin's *Institutes*, Book III, in Henry Beveridge's translation, as the
 Christian Classics Ethereal Library gives it, for III.xi on justification: that
 "to justify, therefore, is nothing else than to acquit from the charge of guilt"
