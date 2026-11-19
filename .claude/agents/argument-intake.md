@@ -23,10 +23,13 @@ Return, in this order:
    rather than a claim, propose a sentence and say it is your proposal.
 2. **Passages.** Each with chapter and verse and the words the notes quote,
    and the translation they are in if the notes say. Flag any passage the notes
-   name and do not quote, and any quoted from the King James Version: the
-   library quotes the NET, LSB or NRSV, else the ESV or NIV, so the session
-   must find the verse in one of those and check that the claim survives the
-   change of wording (`docs/src/writing-for-readers.md`).
+   name and do not quote, and any the notes quote from the King James Version
+   in their own voice: the library quotes the NET, LSB or NRSV, else the ESV or
+   NIV, so the session must find the verse in one of those and check that the
+   claim survives the change of wording (`docs/src/writing-for-readers.md`).
+   A verse a cited source itself quotes in the KJV stays as the source has it;
+   flag it if the source's reading may rest on a textual variant or on a Latin
+   rendering that departs from the Greek, because that is a step to encode.
 3. **Claims.** A numbered list, one sentence each, in plain English, with:
    the source the notes give for it (or "none given"); a suggested rating
    (disputed, plausible, well supported, consensus) and one line on why; and

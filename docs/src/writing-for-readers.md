@@ -51,10 +51,24 @@ late Greek text of its day. Quote, in this order of preference, the NET Bible
 New International Version (NIV). Pick one per argument and say so once, in the
 argument's opening prose; mark any quotation from another translation with its
 abbreviation, "(Genesis 3:15, LSB)". Quote the translation word for word,
-capitals included, from the publisher's own text. The one exception is a
-quotation inside a cited author's words: when Calvin's translator or Wesley
-gives a verse in the King James wording, keep it as the source has it, and say
-that the wording is the source's.
+capitals included, from the publisher's own text.
+
+The King James wording appears only where a cited source itself quotes the
+King James Version, and then it is kept: when Wesley gives 2 Peter 1:10 as "if
+ye do these things, ye shall never fall", the page quotes Wesley as he wrote,
+and says that the wording is the King James Version's. A contributor's own
+quotation from the KJV, or a verse the library quotes in its own voice, is never
+that exception; it is quoted from the argument's translation instead.
+
+Keeping a source's wording can hide a difference in the text it rests on. The
+King James Version follows the late Greek text of the sixteenth century, and a
+writer quoting the Vulgate follows a Latin that sometimes departs from the
+Greek. If a source's reading depends on such a variant, or on a Latin rendering
+the Greek does not support, that dependence is a step of the argument, not a
+matter of wording: encode it as a premise or step of its own, cited to the
+apparatus or a commentator who discusses the variant, so the reading's reliance
+on it is visible and can be denied. If it is too large to encode at once, file
+it as an issue before the pull request is opened.
 
 When the argument turns on a word, check that the translation you quote does
 not settle the question for one side. The LSB prints "He shall bruise you on the
