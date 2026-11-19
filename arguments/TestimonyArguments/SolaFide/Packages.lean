@@ -56,19 +56,22 @@ def dominicalWithoutSozo : Line Claim :=
 @[solaFideDefs]
 def paulineWithoutWorksOfLaw : Line Claim :=
   paulineLine.onGrounds
-    [p .galatiansOpposesCircumcisionAsRequirement, p .pistisChristouObjective]
+    [p .galatiansOpposesCircumcisionAsRequirement, p .pistisChristouObjective,
+      p .paulsWordsKeepTheirSense]
 
 /-- Paul's line without the reading of "faith in Christ". -/
 @[solaFideDefs]
 def paulineWithoutPistisChristou : Line Claim :=
   paulineLine.onGrounds
-    [p .galatiansOpposesCircumcisionAsRequirement, p .worksOfLawMeansWorksGenerally]
+    [p .galatiansOpposesCircumcisionAsRequirement, p .worksOfLawMeansWorksGenerally,
+      p .paulsWordsKeepTheirSense]
 
 /-- The Johannine line without the reading of believing as trust. Its texts
 stay: they are not what is being tested. -/
 @[solaFideDefs]
 def johannineWithoutTrust : Line Claim :=
-  johannineLine.onGrounds [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving]
+  johannineLine.onGrounds
+    [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johnBelievingKeepsItsSense]
 
 /-- The New Perspective on Paul. It denies the traditional reading of "works of the
 law" (ἔργα νόμου) and accepts justification by faith, which is what Dunn and
@@ -119,7 +122,8 @@ def subjectiveGenitive : ArgumentPackage Claim :=
       caseOf
         [ paulineLine.onGrounds
             [ p .galatiansOpposesCircumcisionAsRequirement
-            , p .worksOfLawMeansWorksGenerally, notP .pistisChristouObjective ]
+            , p .worksOfLawMeansWorksGenerally, notP .pistisChristouObjective
+            , p .paulsWordsKeepTheirSense ]
         , dominicalLine, apostolicLine, johannineLine ]
         sharedGrounds closingSteps }
 
@@ -296,7 +300,8 @@ def graceAndWorksWithoutAnyLexicalPremise : ArgumentPackage Claim :=
     name := "Grace and works, minus every lexical premise"
     premises :=
       caseOf
-        [ paulineLine.onGrounds [p .galatiansOpposesCircumcisionAsRequirement]
+        [ paulineLine.onGrounds
+            [p .galatiansOpposesCircumcisionAsRequirement, p .paulsWordsKeepTheirSense]
         , dominicalWithoutSozo, apostolicLine.onGrounds [], johannineWithoutTrust ]
         sharedGrounds closingSteps
     conclusion := graceNotWorks

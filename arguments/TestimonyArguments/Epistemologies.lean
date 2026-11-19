@@ -34,14 +34,24 @@ rule. Its steps are not, yet: a step's citation records who disputes it, not wha
 A party that asks its rival for Scripture and rests a claim on a confession's word alone keeps
 two rules.
 
-Every party held to a rule keeps it (`sola_fide_own_rules`). It was not so when the check was
-first run, and what the check found changed the encoding. Four Reformed readings — sola fide
-from Paul, from Peter at Jerusalem and from John 6, and the Reformed answer to Chrysostom —
-each assert that justification and sanctification are inseparable but distinct: that God's
-pardoning and accepting a sinner, and his making that sinner holy over a life, always go
-together and are not the same thing. The library had cited that claim to the Westminster
-Confession and to Calvin alone, so by Westminster's own rule, which admits Scripture and
-evidence and not a confession's word, the four rested a claim on what they refuse their rival.
+Every party held to a rule keeps it but one (`sola_fide_own_rules`). Sola fide from John 6
+reads "believe" (πιστεύω) at John 6:29 in the sense it has at John 3:16–18, and it needs the
+word to keep that sense between the two. That is cited to Calvin, with Aquinas, who divides from
+him over what Johannine believing is and still reads the word one way across both passages. Both
+are theologians' readings, and Westminster's rule admits Scripture and evidence and not a
+theologian's word. So by its own rule the reading rests that premise on what it refuses its
+rival. The ground both readers give is in the text: the two passages share the construction
+πιστεύειν εἰς, "believe into". A citation that rests the premise on that evidence would let the
+reading keep its rule; none has been entered yet.
+
+The other Reformed readings did not keep their rule either when the check was first run, and what
+the check found changed the encoding. Four Reformed readings — sola fide from Paul, from Peter at
+Jerusalem and from John 6, and the Reformed answer to Chrysostom — each assert that justification
+and sanctification are inseparable but distinct: that God's pardoning and accepting a sinner, and
+his making that sinner holy over a life, always go together and are not the same thing. The
+library had cited that claim to the Westminster Confession and to Calvin alone, so by
+Westminster's own rule, which admits Scripture and evidence and not a confession's word, the four
+rested a claim on what they refuse their rival.
 
 The fault was the encoding's, not the readings'. A Reformed reader cites the Confession as a
 summary pointing to its Scripture proofs, and the library had cited the summary without the
@@ -263,9 +273,11 @@ def breakTheirRule : List Party := parties.filter fun q => (ownRule q).any (!·.
 /-- The parties held to no rule. -/
 def heldToNone : List Party := parties.filter fun q => (professes q).isNone
 
-/-- **Every party to the sola fide dispute keeps the rule it professes.** Every claim each party
-held to a rule asserts rests on what its rule admits. Aquinas, Luther and Chrysostom are held to
-none.
+/-- **Every party to the sola fide dispute keeps the rule it professes, but one.** Every claim
+each party held to a rule asserts rests on what its rule admits, except one premise of sola fide
+from John 6: that "believe" keeps its sense between John 6:29 and John 3:16–18, which rests on
+Calvin's and Aquinas's readings, and Westminster's rule admits no theologian's word. Aquinas,
+Luther and Chrysostom are held to none.
 
 It did not, when this check was first run. Four Reformed readings — sola fide from Paul, from
 Peter and from John 6, and the Reformed answer to Chrysostom — asserted that justification and
@@ -282,7 +294,7 @@ claim. It says only that the claim now rests on the kind of ground the readings'
 Whose authority a claim rests on is read from the tradition its citation records, a proxy. And
 it says nothing of steps, whose citations record their ratings, not what they rest on. -/
 theorem sola_fide_own_rules :
-    breakTheirRule = [] ∧ heldToNone = [.aquinas, .luther, .chrysostom] := by
+    breakTheirRule = [.johannine] ∧ heldToNone = [.aquinas, .luther, .chrysostom] := by
   decide +kernel
 
 /-- **Each rule does work: Trent's readings keep their own and fail Westminster's.** Trent's

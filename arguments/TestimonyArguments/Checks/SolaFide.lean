@@ -1,6 +1,7 @@
 import TestimonyArguments.SolaFide
 import TestimonyArguments.Meanings.SolaFide
 import Testimony.Checks.Aif
+import Testimony.Checks.Conditions
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
@@ -35,7 +36,7 @@ Sola fide
   the only means: held by 3, used of a text or voice by 9; derives:
     justificationByFaithAlone excludes baptismIsInstrumentalCause
   the whole ground: held by 3, used of a text or voice by 6; derives nothing
-  the same sense, both ways: stated or denied by 5; derives nothing
+  the same sense, both ways: stated or denied by 11; derives nothing
 -/
 #guard_msgs in
 #check_ontology under TestimonyArguments.SolaFide
@@ -47,20 +48,6 @@ Sola fide
   attribute a view, against the argument's record:
     sandersLine (Dunn): secondTempleJudaism, unrecorded
     trentWordLine (Trent): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
-  need a word to keep its sense, unstated:
-    catholicJamesWordLine (Trent): erga, dikaioo
-    catholicJamesWorksLine (Trent): erga, dikaioo
-    fruitLine (Westminster Assembly): pistis, erga
-    jamesLexicalLine (Moo): dikaioo
-    johannineLine (Calvin): pisteuo
-    johannineWithoutTrust (Calvin): pisteuo
-    paulineLine (uncited): dikaioo, ergaNomou
-    paulineWithoutPistisChristou (uncited): dikaioo, ergaNomou
-    paulineWithoutWorksOfLaw (uncited): dikaioo, ergaNomou
-    renewalWordLine (Trent): dikaioo
-    romansFourExegesisLine (Moo): erga
-  read one word by a kindred one, the bridge unstated:
-    trentWordLine (Trent): iustificare for dikaioo (translation)
   cite a voice for one reading, leaving out another the record has:
     trentWordLine (Trent): augustine, also verdict in augustineGivesBothSenses
   conclude a word's sense from no use or reading of the word:
@@ -83,12 +70,24 @@ Sola fide
 
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:
-jamesDispute.finite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
+jamesDispute.finite: 38 I, 13 RA, 11 CA, 4 PA, 83 edges
 jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
-solaFideDispute.finite: 77 I, 36 RA, 42 CA, 0 PA, 193 edges
+solaFideDispute.finite: 80 I, 36 RA, 42 CA, 0 PA, 196 edges
 and 3 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in
 #check_aif under TestimonyArguments.SolaFide
+
+/--
+info: every dispute, its lines' conditions stated:
+jamesDispute.finite:
+  hidden premises: 0; lines not read: 4
+jesusWordsDispute.finite:
+  hidden premises: 0; lines not read: 1
+solaFideDispute.finite:
+  hidden premises: 0; lines not read: 6
+-/
+#guard_msgs in
+#check_conditions under TestimonyArguments.SolaFide
 
 end TestimonyArguments.Checks.SolaFide

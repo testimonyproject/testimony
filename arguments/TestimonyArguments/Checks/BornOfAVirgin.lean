@@ -1,6 +1,7 @@
 import TestimonyArguments.BornOfAVirgin
 import TestimonyArguments.Meanings.BornOfAVirgin
 import Testimony.Checks.Aif
+import Testimony.Checks.Conditions
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
@@ -77,5 +78,23 @@ and 5 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in
 #check_aif under TestimonyArguments.BornOfAVirgin
+
+/--
+info: every dispute, its lines' conditions stated:
+genesisDispute.finite:
+  hidden premises: 0; lines not read: 3
+isaiahDispute.finite:
+  hidden premises: 0; lines not read: 9
+matthewDispute.finite:
+  hidden premises: 0; lines not read: 2
+promiseDispute.finite:
+  hidden premises: 0; lines not read: 4
+septuagintDispute.finite:
+  hidden premises: 0; lines not read: 5
+wegnerDispute.finite:
+  hidden premises: 0; lines not read: 3
+-/
+#guard_msgs in
+#check_conditions under TestimonyArguments.BornOfAVirgin
 
 end TestimonyArguments.Checks.BornOfAVirgin

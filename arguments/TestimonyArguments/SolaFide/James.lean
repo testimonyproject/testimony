@@ -35,7 +35,13 @@ evidence.
   "deeds" translates ἔργα, the word James uses for "works". James uses it of
   Abraham offering Isaac (Genesis 22), long after "Abraham believed God, and it
   was counted to him as righteousness" (James 2:23, quoting Genesis 15:6), and
-  of Rahab. And a word contributes the least meaning its context requires.
+  of Rahab. And a word contributes the least meaning its context requires. But
+  the evidence from Matthew and the Law decides James's word only if James uses
+  the word as they do. Calvin says he does: James speaks "of the declaration,
+  and not of the imputation of righteousness" (on James 2:21). Trent, reading
+  the same verses, says James's word is the increase (ch. 10). So that premise is
+  `disputed`, and on it the argument from the word and Trent's reading meet as
+  equals.
 - **As a claim about what works do.** James's "justified" is a verdict, and the
   works it is "by" are a cause of that verdict's increase, not only its fruit
   (canon 24). Nothing about the word bears on this. It meets the Reformed
@@ -107,15 +113,18 @@ defended** when none does.
 
 ## What the debate decides
 
-- **Forced** (`james_words_prevail`). James's "justified" does not mean the
-  increase of justice. The faith James 2:24 denies is not the Reformers' faith.
-  Revelation 22:11, in the critical Greek text, does not say "be justified
-  still". Sirach 18:22 in Greek does not say "be not afraid to be justified even
-  to death".
-- **Cannot be defended.** Trent's reading of James's word
-  (`trent_on_james_word_indefensible`), and its use of Revelation 22:11
+- **Forced** (`james_faith_prevails`). The faith James 2:24 denies is not the
+  Reformers' faith. Revelation 22:11, in the critical Greek text, does not say
+  "be justified still". Sirach 18:22 in Greek does not say "be not afraid to be
+  justified even to death".
+- **Cannot be defended.** Trent's use of Revelation 22:11
   (`trent_on_revelation_indefensible`) and Sirach 18:22
   (`trent_on_sirach_indefensible`) as texts for the increase of justification.
+- **Contested** (`james_word_contested`). Whether James's "justified" means the
+  increase of justice. The argument from James's word and Trent's reading of it
+  defeat each other, and each can be defended. They part at one premise: whether
+  James uses the word as the Gospels and the Law use it. Calvin says he does, and
+  Trent denies it.
 - **Can be defended, and not forced.** Trent's reading of what works do
   (`trent_on_works_defensible`, `trent_on_works_not_forced`), and, against it,
   the Reformed reconciliation of James with Paul. Whether works are only the
@@ -128,19 +137,24 @@ defended** when none does.
   is counted, neither of Trent's readings of what works do stands as an
   objection, and the Reformed reconciliation is forced
   (the chapter "Why each step is rated as it is").
-- **Cannot be defended, at the ratings the sources were given.** The reading on
-  which James's word means renewal because Paul's does (`renewalWordLine`). The
-  argument from James's word defeats it. When a tradition's own teaching is
-  allowed to count as an objection, it does stand as one, and then the question
-  is contested (the chapter "Why each step is rated as it is"). It also meets the
-  Reformed reconciliation, and the two defeat each other: the reconciliation
-  says James's word does not have Paul's sense, and this reading says it does.
+- **Can be defended, and not forced.** The reading on which James's word means
+  renewal because Paul's does (`renewalWordLine`). It and the argument from
+  James's word defeat each other. When only evidence anyone can check is
+  counted, it does not stand as an objection, because it rests on Trent's word
+  that James's word is Paul's (the chapter "Why each step is rated as it is").
+  It also meets the Reformed reconciliation, and the two defeat each other: the
+  reconciliation says James's word does not have Paul's sense, and this reading
+  says it does.
 
-So of the three texts chapter 10 cites, one is left: James 2:24, taken as a
-claim about what works do before God. Each reading of the three that rests on
-what a word or a verse *says* cannot be defended. Trent's reading of the reward
-texts (chapter 16) can also be defended. No other text was weighed here. What
-remains is a claim about God's verdict, and there these pages cannot choose.
+So of the three texts chapter 10 cites, two fall: Revelation 22:11 and Sirach
+18:22, each read for what the verse *says*. James 2:24 is left, read two ways.
+Taken as a claim about James's word, it meets an argument from the word's use
+elsewhere that is no stronger than it, because both need a reading of how James
+uses the word. Taken as a claim about what works do before God, it meets the
+Reformed reconciliation, and there each side rests on its own confession.
+Trent's reading of the reward texts (chapter 16) can also be defended. No other
+text was weighed here, and these pages cannot choose between the readings that
+remain.
 
 ## A rating that was lowered, against the Reformed side
 
@@ -172,10 +186,17 @@ given to merits. The reading through Paul rests on Trent's word at one claim,
 that James uses the word as Paul does. The two readings of the Greek rest, at
 "the original text outweighs any translation", on the word of Pius XII and of
 Westminster. Both sides accept it, so it decides the matter between them. It is
-still a claim taken on authority. The argument from James's word, the argument
-about James's faith, and the Reformed reconciliation rest on nothing but
-Scripture and evidence. This is reported beside the verdicts and does not affect
-them.
+still a claim taken on authority.
+
+The Reformed side has its own. The argument from James's word rests on Calvin's
+word that James uses "justify" as it is used outside Paul. The Reformed
+reconciliation rests on Westminster's and Calvin's word that Ephesians 2:8–10 and
+James 2:18 use "faith" and "works" in one sense. And every reading of James's
+"justified by works", on either side, takes Calvin's word, which Trent shares,
+that James keeps his words in one sense through 2:21–25. Each of these is a
+reading of the text, which a commentator gives and the text does not state. Only
+the argument about James's faith rests on nothing but Scripture and evidence.
+This is reported beside the verdicts and does not affect them.
 
 ## Westminster's texts for "fruit, not ground"
 
@@ -331,9 +352,12 @@ increase of justice. -/
 @[solaFideDefs]
 def jamesLexicalLine : Line Claim :=
   { name := "James's word (δικαιόω, by the rule of least meaning)"
-  , grounds := [p .dikaioIsDeclarativeOutsidePaul, p .james2JustifiedByWorks, p .leastMeaning]
+  , grounds :=
+      [ p .dikaioIsDeclarativeOutsidePaul, p .james2JustifiedByWorks, p .leastMeaning
+      , p .jamesUsesDikaioAsOutsidePaul, p .jamesKeepsHisWordsThroughTheParagraph ]
   , step :=
-      ⋀ [p .dikaioIsDeclarativeOutsidePaul, p .james2JustifiedByWorks, p .leastMeaning]
+      ⋀ [ p .dikaioIsDeclarativeOutsidePaul, p .james2JustifiedByWorks, p .leastMeaning
+        , p .jamesUsesDikaioAsOutsidePaul, p .jamesKeepsHisWordsThroughTheParagraph ]
       ➝ notP .jamesJustifyDenotesIncrease
   , delivers := notP .jamesJustifyDenotesIncrease
   , inference := some jamesLexicalSource }
@@ -360,10 +384,11 @@ justice received, so James 2:24 teaches the increase of justification. -/
 def catholicJamesWordLine : Line Claim :=
   { name := "James 2:24, read for the increase of justification"
   , grounds :=
-      [p .james2_24NotByFaithAlone, p .james2JustifiedByWorks, p .jamesJustifyDenotesIncrease]
+      [ p .james2_24NotByFaithAlone, p .james2JustifiedByWorks, p .jamesJustifyDenotesIncrease
+      , p .jamesKeepsHisWordsThroughTheParagraph ]
   , step :=
       ⋀ [p .james2_24NotByFaithAlone, p .james2JustifiedByWorks,
-          p .jamesJustifyDenotesIncrease]
+          p .jamesJustifyDenotesIncrease, p .jamesKeepsHisWordsThroughTheParagraph]
       ➝ p .scriptureTeachesIncreaseOfJustification
   , delivers := p .scriptureTeachesIncreaseOfJustification
   , inference := some trentIncreaseSource }
@@ -376,10 +401,10 @@ def catholicJamesWorksLine : Line Claim :=
   { name := "James 2:24, read by canon 24"
   , grounds :=
       [p .james2_24NotByFaithAlone, p .james2JustifiedByWorks,
-        p .worksCauseIncreaseOfJustification]
+        p .worksCauseIncreaseOfJustification, p .jamesKeepsHisWordsThroughTheParagraph]
   , step :=
       ⋀ [p .james2_24NotByFaithAlone, p .james2JustifiedByWorks,
-          p .worksCauseIncreaseOfJustification]
+          p .worksCauseIncreaseOfJustification, p .jamesKeepsHisWordsThroughTheParagraph]
       ➝ notP .worksAreFruitNotGround
   , delivers := notP .worksAreFruitNotGround
   , inference := some trentWorksSource }
@@ -456,9 +481,11 @@ not merely state it. -/
 def renewalWordLine : Line Claim :=
   { name := "James's word, read through Paul's (the renewal reading)"
   , grounds :=
-      [p .paulsJustifyDenotesRenewal, p .jamesUsesDikaioAsPaul, p .james2JustifiedByWorks]
+      [ p .paulsJustifyDenotesRenewal, p .jamesUsesDikaioAsPaul, p .james2JustifiedByWorks
+      , p .jamesKeepsHisWordsThroughTheParagraph ]
   , step :=
-      ⋀ [p .paulsJustifyDenotesRenewal, p .jamesUsesDikaioAsPaul, p .james2JustifiedByWorks]
+      ⋀ [ p .paulsJustifyDenotesRenewal, p .jamesUsesDikaioAsPaul, p .james2JustifiedByWorks
+        , p .jamesKeepsHisWordsThroughTheParagraph ]
       ➝ p .jamesJustifyDenotesIncrease
   , delivers := p .jamesJustifyDenotesIncrease
   , inference := some renewalWordSource }
@@ -534,10 +561,12 @@ def fruitLine : Line Claim :=
   { name := "Works as fruit (Westminster XVI.2, XVI.5, and its proofs)"
   , grounds :=
       [ p .ephesians2_8_9, p .ephesians2_10CreatedForGoodWorks, p .james2_18ShowFaithByWorks
-      , p .romans6_22FruitToSanctification, p .luke17_10UnworthyServants ]
+      , p .romans6_22FruitToSanctification, p .luke17_10UnworthyServants
+      , p .fruitTextsShareFaithAndWorks ]
   , step :=
       ⋀ [ p .ephesians2_8_9, p .ephesians2_10CreatedForGoodWorks, p .james2_18ShowFaithByWorks
-        , p .romans6_22FruitToSanctification, p .luke17_10UnworthyServants ]
+        , p .romans6_22FruitToSanctification, p .luke17_10UnworthyServants
+        , p .fruitTextsShareFaithAndWorks ]
       ➝ p .worksAreFruitNotGround
   , delivers := p .worksAreFruitNotGround
   , inference := some fruitSource }
@@ -702,8 +731,11 @@ theorem renewalOnTheWord_is_satisfiable : Satisfiable renewalOnTheWord.premises 
 
 /-! ### How strong each position is -/
 
-/-- The argument from James's word rests on nothing rated below `wellSupported`. -/
-theorem jamesLexicalCase_strength : jamesLexicalCase.strength = 2 := by decide
+/-- The argument from James's word rests, at its weakest, on a `disputed` claim: that
+James uses "justify" as the Gospels and the Law use it, outside Paul. Calvin reads
+him so, and Trent, reading the same verses, says James's word is the increase of a
+righteousness already given (`jamesUsesDikaioAsOutsidePaul`). -/
+theorem jamesLexicalCase_strength : jamesLexicalCase.strength = 0 := by decide
 /-- The argument about James's faith rests on nothing rated below `wellSupported`. -/
 theorem jamesFaithCase_strength : jamesFaithCase.strength = 2 := by decide
 /-- The Reformed reconciliation rests on its reading of what James is attacking, and
@@ -784,10 +816,12 @@ the texts, and the bottom for the rest. -/
 declare_dispute jamesDispute := jamesPartyNode using solaFideDefs
   /-- **Who defeats whom**, for all 144 pairs.
 
-  The argument from James's word defeats Trent's reading of that word, and the
-  reply fails. It defeats the reading through Paul too, whose reply fails for the
-  same reason: it rests on Paul's word as renewal, rated `disputed`, against an
-  argument rated `wellSupported`.
+  The argument from James's word and Trent's reading of that word defeat each
+  other. So do the argument from James's word and the reading through Paul. The
+  argument from James's word needs James to use "justify" as the Gospels and the
+  Law use it, outside Paul, and Trent, reading the same verses, denies that he
+  does. So it is rated `disputed` at that premise, as its rivals are at theirs,
+  and no side's reply fails for weakness.
 
   The Greek of Revelation 22:11 and of Sirach 18:22 defeat Trent's Latin readings
   of them, and the replies fail.
@@ -809,66 +843,99 @@ declare_dispute jamesDispute := jamesPartyNode using solaFideDefs
 
   Every answer is worked out from the positions' premises and checked by machine. -/
   defeats
-    [ (.lexical, .trentOnTheWord), (.harmony, .trentOnWorks), (.trentOnWorks, .harmony)
+    [ (.lexical, .trentOnTheWord), (.trentOnTheWord, .lexical)
+    , (.harmony, .trentOnWorks), (.trentOnWorks, .harmony)
     , (.revelationText, .trentOnRevelation), (.sirachText, .trentOnSirach)
-    , (.harmony, .trentOnReward), (.trentOnReward, .harmony), (.lexical, .renewalOnTheWord)
+    , (.harmony, .trentOnReward), (.trentOnReward, .harmony)
+    , (.lexical, .renewalOnTheWord), (.renewalOnTheWord, .lexical)
     , (.westminsterOnReward, .trentOnReward), (.trentOnReward, .westminsterOnReward)
     , (.harmony, .renewalOnTheWord), (.renewalOnTheWord, .harmony) ]
 
 /-! ### What the debate decides -/
 
-/-- How far the debate can be settled. Nothing defeats the argument from James's
-word, the argument about James's faith, or the Greek of the two verses, so those
-are accepted first, and nothing joins them. Trent's readings of James's word, of
-Revelation 22:11 and of Sirach 18:22 each have an attacker that remains: the one
-that defeats it. The Reformed reconciliation and Trent's reading of what works
-do have each other. -/
+/-- How far the debate can be settled. Nothing defeats the argument about James's
+faith or the Greek of the two verses, so those are accepted first, and nothing
+joins them. The argument from James's word and Trent's reading of that word each
+have an attacker that remains: the other. Trent's readings of Revelation 22:11 and
+of Sirach 18:22 each have the Greek. The Reformed reconciliation and Trent's
+reading of what works do have each other. -/
 declare_verdict jamesWordsUnanswered for jamesDispute :
-    .groundedExactly [[.lexical, .faith, .revelationText, .sirachText]]
-      [ (.trentOnTheWord, .lexical), (.trentOnRevelation, .revelationText)
+    .groundedExactly [[.faith, .revelationText, .sirachText]]
+      [ (.lexical, .trentOnTheWord), (.trentOnTheWord, .lexical)
+      , (.trentOnRevelation, .revelationText)
       , (.trentOnSirach, .sirachText), (.harmony, .trentOnWorks), (.trentOnWorks, .harmony)
       , (.trentOnReward, .harmony), (.renewalOnTheWord, .lexical)
       , (.westminsterOnReward, .trentOnReward) ]
 
-/-- **What James's words say, and what the Greek of Trent's other two texts says,
-prevails outright.** Exactly four positions are forced. James's "justified"
-(δικαιόω) does not mean the increase of justice. The faith James 2:24 denies is
-not the faith of the Reformers' formula. Revelation 22:11, in the critical Greek
-text, does not say "be justified still". And Sirach 18:22, in Greek, does not
-say "be not afraid to be justified even to death". Nothing in the debate answers
-any of them.
+/-- **What James's faith is, and what the Greek of Trent's other two texts says,
+prevails outright.** Exactly three positions are forced. The faith James 2:24
+denies is not the faith of the Reformers' formula. Revelation 22:11, in the
+critical Greek text, does not say "be justified still". And Sirach 18:22, in
+Greek, does not say "be not afraid to be justified even to death". Nothing in the
+debate answers any of them.
 
-It does not show that James 2:24 agrees with Paul, or that works are
-not a cause of the increase of justification. Neither is forced. Nor that the
-Greek of Sirach 18:22 lacks the word "justified": it has it, in a sentence about
-vows. -/
+It does not show what James's "justified" (δικαιόω) means. That is contested
+(`james_word_contested`). Nor does it show that James 2:24 agrees with Paul, or
+that works are not a cause of the increase of justification. Neither is forced.
+Nor that the Greek of Sirach 18:22 lacks the word "justified": it has it, in a
+sentence about vows. -/
 @[headline]
-theorem james_words_prevail :
+theorem james_faith_prevails :
     grounded jamesDispute.defeats =
-      {.lexical, .faith, .revelationText, .sirachText} :=
+      {.faith, .revelationText, .sirachText} :=
   Eq.trans jamesWordsUnanswered.holds (by ext x; cases x <;> simp [Solver.toSet])
 
-#print axioms james_words_prevail
+#print axioms james_faith_prevails
 
-/-- Why Trent's reading of James's word cannot be defended: the argument from
-James's word defeats it, and nothing defeats that argument. -/
-declare_verdict trentOnTheWordAnswered for jamesDispute :
-    .indefensible .trentOnTheWord [(.trentOnTheWord, .lexical)]
-  /-- **Trent's reading of James's word cannot be defended.** If "justified by works"
-  in James 2:24 is taken to mean the increase of the justice received, being made
-  more just, it cannot be defended in this debate. Outside Paul the word declares,
-  acquits or vindicates. James uses it of Abraham at Genesis 22, after Genesis
-  15:6 had been spoken, and of Rahab. And nothing in James's setting requires a
-  second, inward sense. The step from that evidence to "the word does not mean the
-  increase of justice" is rated `wellSupported`. The reading rests on Trent's word
-  alone.
+/-- Why Trent's reading of James's word can be defended: it answers the one
+position that attacks it, the argument from James's word. -/
+declare_verdict trentOnTheWordStands for jamesDispute :
+    .credulous .trentOnTheWord [.faith, .trentOnTheWord, .revelationText, .sirachText]
 
-  It does not show that works are no cause of the increase of
-  justification. That is a claim about God's verdict, not about James's word, and
-  it is weighed separately (`trent_on_works_defensible`). -/
-  proves @[headline] trent_on_james_word_indefensible
+/-- Why the argument from James's word can be defended: it answers Trent's reading
+of the word and the reading through Paul. -/
+declare_verdict lexicalStands for jamesDispute :
+    .credulous .lexical [.lexical, .faith, .revelationText, .sirachText]
 
-#print axioms trent_on_james_word_indefensible
+/-- Trent's reading of James's word holds that "justified" there means the increase
+of justice. -/
+theorem trentOnTheWord_holds_increase :
+    Entails (jamesDispute.node .trentOnTheWord).premises (p .jamesJustifyDenotesIncrease) := by
+  establish [solaFideDefs, jamesDispute]
+
+/-- The argument from James's word denies it. -/
+theorem lexical_denies_increase :
+    Entails (jamesDispute.node .lexical).premises (∼ p .jamesJustifyDenotesIncrease) := by
+  establish [solaFideDefs, jamesDispute]
+
+/-- **What James's "justified" means is contested.** Trent reads "justified by
+works" in James 2:24 as the increase of the justice received, being made more just
+(Session VI, ch. 10). The argument from James's word reads it as the word is used
+outside Paul, where it declares, acquits or vindicates (Matthew 11:19, Deuteronomy
+25:1), and James uses it of Abraham at Genesis 22, after Genesis 15:6 had been
+spoken, and of Rahab. Each can be defended in this debate, and neither is forced.
+
+The two part at one premise: whether James uses the word as the Gospels and the
+Law use it. Calvin says he does (on James 2:21), and Trent, reading the same
+verses, says he does not. So the premise is rated `disputed`, and the argument
+from James's word is weighed as its rival is.
+
+It does not show that Trent's reading is right, or that the lexical evidence is
+weak. The step from that evidence to "the word does not mean the increase of
+justice" is still rated `wellSupported`. What it shows is that the step needs
+James to keep the sense the word has elsewhere, and that is the point in
+dispute. -/
+@[headline]
+theorem james_word_contested :
+    Nonempty (Contested jamesDispute (p .jamesJustifyDenotesIncrease)) :=
+  ⟨{ holder := .trentOnTheWord
+     denier := .lexical
+     holds := trentOnTheWord_holds_increase
+     denies := lexical_denies_increase
+     holderDefensible := trentOnTheWordStands.holds
+     denierDefensible := lexicalStands.holds }⟩
+
+#print axioms james_word_contested
 
 /-- Why Trent's Revelation 22:11 cannot be defended: the Greek defeats it, and
 nothing defeats the Greek. -/
@@ -979,21 +1046,28 @@ Each of Trent's other four readings rests on Trent's word at the reading itself.
 The two readings of the Greek rest on the word of Pius XII and of Westminster
 alike, at the principle that the original outweighs any translation.
 
-The argument from James's word, the argument about James's faith, and the
-Reformed reconciliation, which now derives "fruit, not ground" from
-Westminster's proof texts, rest on nothing but Scripture and evidence. -/
+The argument from James's word rests on Calvin's word that James uses "justify"
+as it is used outside Paul. The Reformed reconciliation rests on Westminster's
+word that its proof texts share "faith" and "works". Every reading of James's
+"by works" takes Calvin's word, which Trent shares, that James keeps his words in
+one sense through 2:21–25. Only the argument about James's faith rests on
+nothing but Scripture and evidence. -/
 theorem james_warrants :
-    jamesLexicalCase.restingOnAuthority = [] ∧
+    jamesLexicalCase.restingOnAuthority =
+      [.jamesUsesDikaioAsOutsidePaul, .jamesKeepsHisWordsThroughTheParagraph] ∧
     jamesFaithCase.restingOnAuthority = [] ∧
-    jamesHarmonyCase.restingOnAuthority = [] ∧
-    catholicJamesOnTheWord.restingOnAuthority = [.jamesJustifyDenotesIncrease] ∧
-    catholicJamesOnWorks.restingOnAuthority = [.worksCauseIncreaseOfJustification] ∧
+    jamesHarmonyCase.restingOnAuthority = [.fruitTextsShareFaithAndWorks] ∧
+    catholicJamesOnTheWord.restingOnAuthority =
+      [.jamesJustifyDenotesIncrease, .jamesKeepsHisWordsThroughTheParagraph] ∧
+    catholicJamesOnWorks.restingOnAuthority =
+      [.worksCauseIncreaseOfJustification, .jamesKeepsHisWordsThroughTheParagraph] ∧
     trentOnRevelation.restingOnAuthority = [.rev22_11BeJustifiedStill] ∧
     trentOnSirach.restingOnAuthority = [.sir18_22BeJustifiedToDeath] ∧
     revelationTextCase.restingOnAuthority = [.originalTextDecides] ∧
     sirachTextCase.restingOnAuthority = [.originalTextDecides] ∧
     trentOnReward.restingOnAuthority = [.rewardRenderedToMerits] ∧
-    renewalOnTheWord.restingOnAuthority = [.jamesUsesDikaioAsPaul] ∧
+    renewalOnTheWord.restingOnAuthority =
+      [.jamesUsesDikaioAsPaul, .jamesKeepsHisWordsThroughTheParagraph] ∧
     westminsterOnReward.restingOnAuthority = [] := by
   decide
 

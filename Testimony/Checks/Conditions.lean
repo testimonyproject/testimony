@@ -43,7 +43,7 @@ def scopeLabel : Testimony.Semantics.Scope → String
 /-- What a line needs and leaves unstated: each word it needs kept in one sense
 between two places, and each kindred word it reads another by without the
 bridge. -/
-def unstatedConditions {α : Type} [HasMeanings α] (m : Move) : List String :=
+def unstatedConditions (m : Move) : List String :=
   (m.equivocation.filterMap fun
     | (w, a, b, .unstated) => some (atomName w ++ " the same in " ++ scopeLabel a ++ " and " ++
         scopeLabel b)
@@ -60,7 +60,7 @@ def conditionReport {α : Type} [HasMeanings α] [DecidableEq α] [HasPostulates
     (lines : List (String × Line α)) : List String × Nat := Id.run do
   let mut out : List String := []
   let mut found := 0
-  let mut unread := 0
+  let mut unread : List String := []
   for i in parties do
     let held := (d.node i).premises
     let inPkg := lines.filter fun (_, l) => l.premises.all held.contains
@@ -72,14 +72,14 @@ def conditionReport {α : Type} [HasMeanings α] [DecidableEq α] [HasPostulates
     for (n, l) in once do
       if l.drawnByScripture then continue
       match (l.asMove? (α := α)).filter fun m => m.statements.all Statement.analysed with
-      | none => unread := unread + 1
+      | none => unread := if unread.contains n then unread else n :: unread
       | some m =>
-        let cs := unstatedConditions (α := α) m
+        let cs := unstatedConditions m
         unless cs.isEmpty do
           found := found + cs.length
           out := out ++ ["    " ++ (d.node i).name ++ ": " ++ n ++ " (" ++ l.drawnBy ++ "): " ++
             ", ".intercalate cs]
-  return (s!"  hidden premises: {found}; lines not read: {unread}" :: out, found)
+  return (s!"  hidden premises: {found}; lines not read: {unread.length}" :: out, found)
 
 /-- Every party of every dispute under `root`, against every line of reason; see
 the module docstring. -/

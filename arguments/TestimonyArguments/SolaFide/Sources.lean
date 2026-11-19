@@ -896,6 +896,107 @@ def baseCite : Claim → AtomMeta
         , supporting := [.work mooRomans (.adLoc ⟨.romans, 4, 3⟩)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
+  | .paulsWordsKeepTheirSense =>
+    { label := "Paul’s ‘justify’ and ‘works of the law’ keep one sense in Romans 3:28, " ++
+        "Galatians 2:16 and his usage"
+    , kind := .linguistic
+      -- Proposed: every reading of the two verses found takes the phrase one way
+      -- in both, Dunn's and the Reformed alike, but no page stating it has been
+      -- read. `disputed`: Barclay grants the verses and denies that "works"
+      -- reaches as far in Galatians as in Romans, where it is "as if by some
+      -- general theological principle (4:1–4)" (p. 11).
+    , source :=
+        { primary := .proposal ("the Pauline strand joins Romans 3:28 and Galatians 2:16 and " ++
+            "reads 'works of the law' as Paul's usage, so it needs the words to keep one sense")
+        , supporting := [.work barclayPaulAndTheLaw (.page 11)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .latinWordBearsPaulsSense =>
+    { label := "The Latin ‘iustificare’, read as ‘made just’, bears the sense of Paul’s δικαιόω"
+    , kind := .linguistic
+      -- Trent reads Paul's word through the Latin (ch. 7–8), with Augustine's
+      -- gloss. `disputed`: the Reformers read the same verses and deny that the
+      -- Greek means "made just". Melanchthon: "to justify signifies, according
+      -- to forensic usage, to acquit a guilty one and declare him righteous"
+      -- (Apology IV, on Romans 5:1); Calvin: "To justify, therefore, is nothing
+      -- else than to acquit from the charge of guilt" (Institutes III.xi.3).
+    , source :=
+        { primary := .work tannerDecrees
+            (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 7–8")
+        , supporting :=
+            [ .work npnfAugustineAntiPelagian
+                (.sectionRef "On the Spirit and the Letter, ch. 45 (26.45)") ]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .romans4WorksKeepsItsSense =>
+    { label := "‘Works’ keeps its sense from Romans 4:4–5 to 4:6–8"
+    , kind := .linguistic
+      -- `plausible`: Moo reads the passage so, and no reader has been found who
+      -- grants the verses and gives "works" two senses across them. The New
+      -- Perspective commentaries (Dunn, WBC; Wright, NIB) are the likeliest to
+      -- and have not been read, so it is not rated higher.
+    , source :=
+        { primary := .work mooRomans (.adLoc ⟨.romans, 4, 4⟩)
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .plausible } }
+  | .johnBelievingKeepsItsSense =>
+    { label := "‘Believe’ keeps its sense between John 6:29 and John 3:16–18"
+    , kind := .linguistic
+      -- `wellSupported`: both passages have the same construction, πιστεύειν
+      -- εἰς, and the two readers who divide over what Johannine believing is
+      -- read it one way across them. Aquinas reads 3:18's "believes in him" as
+      -- he reads 6:29, of faith that "tends toward him through love" (Super
+      -- Ioannem c. 3, lect. 3, nn. 485–486; on 6:29, n. 901). His dissent is
+      -- over what the sense is (`johannineBelievingIsTrust`), not whether it is
+      -- kept.
+    , source :=
+        { primary := .work calvinJohn (.adLoc ⟨.john, 6, 29⟩)
+        , supporting := [.work aquinasJohn (.sectionRef "c. 3, lect. 3, nn. 485–486; c. 6, n. 901")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .jamesUsesDikaioAsOutsidePaul =>
+    { label := "James uses ‘justify’ in 2:21–25 as it is used outside Paul: to declare or " ++
+        "vindicate"
+    , kind := .linguistic
+      -- Calvin gives "the two fold meaning, of the word justified. Paul means by
+      -- it the gratuitous imputation of righteousness before the tribunal of
+      -- God; and James, the manifestation of righteousness by the conduct". He
+      -- does not cite Matthew 11:19 or Deuteronomy 25:1. `disputed`: Trent reads
+      -- James 2:24 of the increase of justice received (ch. 10), the renewal
+      -- reading (`jamesUsesDikaioAsPaul`).
+    , source :=
+        { primary := .work calvinCatholicEpistles (.adLoc ⟨.james, 2, 21⟩)
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .jamesKeepsHisWordsThroughTheParagraph =>
+    { label := "‘Justify’ and ‘works’ keep one sense through James 2:21–25"
+    , kind := .linguistic
+      -- `wellSupported`: the rival readers agree. Calvin reads 2:21 of "the
+      -- proof he gave of his justification" and 2:24 as "his righteousness is
+      -- known and proved by its fruits"; Trent reads 2:24 as the increase of
+      -- the justice of 2:21's Abraham (ch. 10). No reader found splits 2:24 from
+      -- 2:21. Not `consensus` on two readers.
+    , source :=
+        { primary := .work calvinCatholicEpistles (.adLoc ⟨.james, 2, 24⟩)
+        , supporting :=
+            [.work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 10")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .fruitTextsShareFaithAndWorks =>
+    { label := "The faith and works of James 2:18b are those of Ephesians 2:8–10"
+    , kind := .linguistic
+      -- Westminster sets the texts side by side as proofs (XVI.2), so it reads
+      -- them alike. Calvin says the same of 2:18b's "my faith": "fruit ever
+      -- comes from the living root of a good tree", though the faith James's
+      -- opponent boasts of (2:14, 19) is "the empty name of faith". `plausible`:
+      -- no reader has been read who denies it of 2:18b, but the harmonisers who
+      -- set Paul's excluded works apart from James's (Moo, on 2:14–26) have not
+      -- been read.
+    , source :=
+        { primary := .work westminsterConfession (.sectionRef "XVI.2")
+        , supporting := [.work calvinCatholicEpistles (.adLoc ⟨.james, 2, 18⟩)]
+        , tradition := .reformedProtestant
+        , confidence := .plausible } }
   | .augustineGivesBothSenses =>
     { label := "Augustine gives both senses of ‘being justified’: made righteous, and deemed just"
     , kind := .historical

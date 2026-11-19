@@ -174,10 +174,11 @@ Romans 4:3–8.
 - (6) \\(\href{claims.html#claim-55}{P_{55}}\\) — Romans 4:6–8: righteousness counted apart from works — sins forgiven, sin not counted
 - (7) \\(\href{claims.html#claim-56}{P_{56}}\\) — ‘Count’ (λογίζομαι) in Romans 4:3–11 is the language of an account: credited to one
 - (8) \\(\href{claims.html#claim-125}{P_{125}}\\) — ‘Count’ (λογίζομαι) keeps its sense from Romans 4:4–5 to 4:6–8
-- (9) \\(\href{claims.html#claim-51}{P_{51}}\\) — A word contributes the least meaning its context requires; one occurrence does not carry the whole concept
-- (10) \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-124}{P_{124}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\)
-- (11) \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}} \land \href{claims.html#claim-125}{P_{125}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\) — *would give:* In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted
-- (12) \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\)
+- (9) \\(\href{claims.html#claim-128}{P_{128}}\\) — ‘Works’ keeps its sense from Romans 4:4–5 to 4:6–8
+- (10) \\(\href{claims.html#claim-51}{P_{51}}\\) — A word contributes the least meaning its context requires; one occurrence does not carry the whole concept
+- (11) \\((\href{claims.html#claim-49}{P_{49}} \land \href{claims.html#claim-50}{P_{50}} \land \href{claims.html#claim-124}{P_{124}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\)
+- (12) \\((\href{claims.html#claim-4}{P_{4}} \land \href{claims.html#claim-55}{P_{55}} \land \href{claims.html#claim-56}{P_{56}} \land \href{claims.html#claim-125}{P_{125}} \land \href{claims.html#claim-128}{P_{128}}) \rightarrow \href{claims.html#claim-57}{P_{57}}\\) — *would give:* In Romans 4:6–8 Paul explains righteousness counted apart from works as sin not counted
+- (13) \\((\href{claims.html#claim-57}{P_{57}} \land \href{claims.html#claim-51}{P_{51}}) \rightarrow \lnot \href{claims.html#claim-52}{P_{52}}\\)
 - \\(\vdash\\) \\(\lnot \href{claims.html#claim-52}{P_{52}}\\) — *at issue, the denial of:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
 
 </div>
@@ -190,13 +191,15 @@ Grounded in scripture alone: Paul names renewal with other words (ἀνακαί�
 Every premise of Paul's word, by both roads, granted: the word does not mean
 renewal.
 
-```lean
-def paulsWordReading : Valuation Claim :=
-  fun a =>
-    match a with
-    | Claim.paulsJustifyDenotesRenewal => False
-    | x => True
-```
+On this reading these claims are false:
+
+<div class="testimony-derivation">
+
+- \\(\href{claims.html#claim-52}{P_{52}}\\) Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
+
+</div>
+
+Every other claim on this page is true.
 
 <a id="paulsWordCase_is_satisfiable"></a>
 **`paulsWordCase_is_satisfiable`**
@@ -254,7 +257,8 @@ theorem paulsWord_burden : OpponentsBurden paulsWordCase paulsWordRoads [] []
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-54}{P_{54}}\\) — Augustine explains "being justified" as "being made righteous", and the Latin West read iustificare so
-- (2) \\(\href{claims.html#claim-54}{P_{54}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\)
+- (2) \\(\href{claims.html#claim-127}{P_{127}}\\) — The Latin ‘iustificare’, read as ‘made just’, bears the sense of Paul’s δικαιόω
+- (3) \\((\href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-127}{P_{127}}) \rightarrow \href{claims.html#claim-52}{P_{52}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-52}{P_{52}}\\) — *at issue:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
 
 </div>
@@ -266,10 +270,7 @@ No premise here rests on scripture alone.
 
 Every premise of Trent's reading granted: the word means renewal.
 
-```lean
-def trentsWordReading : Valuation Claim :=
-  fun x => True
-```
+Every claim on this page is true on this reading.
 
 <a id="trentsWordCase_is_satisfiable"></a>
 **`trentsWordCase_is_satisfiable`**
@@ -329,13 +330,14 @@ effective verdict.
 <div class="testimony-derivation">
 
 - (1) \\(\href{claims.html#claim-54}{P_{54}}\\) — Augustine explains "being justified" as "being made righteous", and the Latin West read iustificare so
-- (2) \\(\href{claims.html#claim-126}{P_{126}}\\) — Romans 5:19: through the obedience of the one the many will be made righteous
-- (3) \\(\href{claims.html#claim-54}{P_{54}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\)
-- (4) \\(\href{claims.html#claim-126}{P_{126}} \rightarrow \href{claims.html#claim-127}{P_{127}}\\) — *would give:* In Romans 5:19, ‘made righteous’ means made righteous within
-- (5) \\(\href{claims.html#claim-128}{P_{128}}\\) — Romans 5:19's ‘righteous’ (δίκαιος) bears on what Paul's verb ‘justify’ means
-- (6) \\((\href{claims.html#claim-127}{P_{127}} \land \href{claims.html#claim-128}{P_{128}}) \rightarrow \href{claims.html#claim-52}{P_{52}}\\)
-- (7) \\(\href{claims.html#claim-129}{P_{129}}\\) — God's verdict is effective: declaring the sinner righteous, it makes him righteous
-- (8) \\(\href{claims.html#claim-129}{P_{129}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\)
+- (2) \\(\href{claims.html#claim-127}{P_{127}}\\) — The Latin ‘iustificare’, read as ‘made just’, bears the sense of Paul’s δικαιόω
+- (3) \\(\href{claims.html#claim-133}{P_{133}}\\) — Romans 5:19: through the obedience of the one the many will be made righteous
+- (4) \\((\href{claims.html#claim-54}{P_{54}} \land \href{claims.html#claim-127}{P_{127}}) \rightarrow \href{claims.html#claim-52}{P_{52}}\\)
+- (5) \\(\href{claims.html#claim-133}{P_{133}} \rightarrow \href{claims.html#claim-134}{P_{134}}\\) — *would give:* In Romans 5:19, ‘made righteous’ means made righteous within
+- (6) \\(\href{claims.html#claim-135}{P_{135}}\\) — Romans 5:19's ‘righteous’ (δίκαιος) bears on what Paul's verb ‘justify’ means
+- (7) \\((\href{claims.html#claim-134}{P_{134}} \land \href{claims.html#claim-135}{P_{135}}) \rightarrow \href{claims.html#claim-52}{P_{52}}\\)
+- (8) \\(\href{claims.html#claim-136}{P_{136}}\\) — God's verdict is effective: declaring the sinner righteous, it makes him righteous
+- (9) \\(\href{claims.html#claim-136}{P_{136}} \rightarrow \href{claims.html#claim-52}{P_{52}}\\)
 - \\(\vdash\\) \\(\href{claims.html#claim-52}{P_{52}}\\) — *at issue:* Paul's word ‘justify’ means the renewal of the inward man, not only a verdict
 
 </div>

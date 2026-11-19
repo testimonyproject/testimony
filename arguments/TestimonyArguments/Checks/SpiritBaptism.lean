@@ -1,6 +1,7 @@
 import TestimonyArguments.SpiritBaptism
 import TestimonyArguments.Meanings.SpiritBaptism
 import Testimony.Checks.Aif
+import Testimony.Checks.Conditions
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
@@ -50,5 +51,13 @@ and 0 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in
 #check_aif under TestimonyArguments.SpiritBaptism
+
+/--
+info: every dispute, its lines' conditions stated:
+spiritBaptismDispute.finite:
+  hidden premises: 0; lines not read: 0
+-/
+#guard_msgs in
+#check_conditions under TestimonyArguments.SpiritBaptism
 
 end TestimonyArguments.Checks.SpiritBaptism

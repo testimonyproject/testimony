@@ -4619,6 +4619,28 @@ archive.org. Published without an ISBN. -/
   , publisher := "William S. & Alfred Martien"
   , place := some "Philadelphia" }
 
+/-- Barclay's survey of the debate after Sanders, for how far "works" reaches in
+each letter. In Galatians "the discussion of 'law' and 'works of the law' is
+wholly restricted to the question of Gentile observance of the Mosaic Torah",
+while in Romans "'works' are contrasted with 'faith' and 'grace' as if by some
+general theological principle (4:1–4)" (p. 11). Read in the open text at The
+Gospel Coalition and in the scanned print issue (September 1986, pp. 5–15). No
+DOI. -/
+@[bib_entry] def barclayPaulAndTheLaw : BibEntry := .article
+  { core :=
+      { key := "barclay-paul-and-the-law-1986"
+      , contributors := { authors := [.person "John M. G." "Barclay"] }
+      , title := "Paul and the law: observations on some recent debates"
+      , year := some { value := 1986 }
+      , identifiers :=
+          [ .url ("https://www.thegospelcoalition.org/themelios/article/" ++
+                  "paul-and-the-law-observations-on-some-recent-debates/")
+                 (some "2026-11-19") ] }
+  , journal := "Themelios"
+  , volume := some "12"
+  , issue := some "1"
+  , pages := some (5, 15) }
+
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'

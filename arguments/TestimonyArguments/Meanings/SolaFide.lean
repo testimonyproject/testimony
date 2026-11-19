@@ -304,7 +304,10 @@ def means : Claim → Statement
     .opaque "Revelation 22:11 and Sirach 18:22 confirm the increase from the originals"
   | .originalTextDecides =>
     .opaque "What the original text does not say, a translation does not establish"
-  | .jamesUsesDikaioAsPaul => .sameSense .dikaioo (.passage james2_24) (.usage .paul)
+  | .jamesUsesDikaioAsPaul =>
+    .also (.sameSense .dikaioo (.passage james2_24) (.usage .paul)) <|
+      .also (.sameSense .dikaioo (.passage james2_21_25) (.usage .paul))
+        (.sameSense .dikaioo (.usage .james) (.usage .paul))
   | .firstPeter2_5AcceptableThroughChrist =>
     .opaque "Spiritual sacrifices are acceptable to God through Jesus Christ (1 Pet 2:5)"
   | .rewardRenderedToMerits => .holds (rl .merits (cn .works) (cn .eternalLife))
@@ -340,6 +343,30 @@ def means : Claim → Statement
     .also (.sameSense .logizomai (.passage rom4_4_5) (.passage rom4_6_8)) <|
       .also (.sameSense .logizomai (.passage rom4_4_5) (.passage (rg .romans 4 3 4 11)))
         (.sameSense .logizomai (.passage rom4_6_8) (.passage (rg .romans 4 3 4 11)))
+  | .paulsWordsKeepTheirSense =>
+    .also (.sameSense .dikaioo (.passage rom3_28) (.passage gal2_16)) <|
+      .also (.sameSense .ergaNomou (.passage rom3_28) (.passage gal2_16)) <|
+        .also (.sameSense .ergaNomou (.passage rom3_28) (.usage .paul))
+          (.sameSense .ergaNomou (.passage gal2_16) (.usage .paul))
+  | .latinWordBearsPaulsSense => .bears .iustificare (.usage .latinWest) .dikaioo (.usage .paul)
+  | .romans4WorksKeepsItsSense => .sameSense .erga (.passage rom4_4_5) (.passage rom4_6_8)
+  | .johnBelievingKeepsItsSense =>
+    .sameSense .pisteuo (.passage john6_29) (.passage (rg .john 3 16 3 18))
+  | .jamesUsesDikaioAsOutsidePaul =>
+    .also (.sameSense .dikaioo (.passage james2_21_25) (.passage (vs .matthew 11 19))) <|
+      .also (.sameSense .dikaioo (.passage james2_21_25) (.passage (vs .deuteronomy 25 1))) <|
+        .also (.sameSense .dikaioo (.usage .james) (.passage (vs .matthew 11 19)))
+          (.sameSense .dikaioo (.usage .james) (.passage (vs .deuteronomy 25 1)))
+  | .jamesKeepsHisWordsThroughTheParagraph =>
+    .also (.sameSense .erga (.passage james2_24) (.passage james2_21_25)) <|
+      .also (.sameSense .dikaioo (.passage james2_24) (.passage james2_21_25)) <|
+        .also (.sameSense .dikaioo (.passage james2_24) (.usage .james))
+          (.sameSense .dikaioo (.passage james2_21_25) (.usage .james))
+  | .fruitTextsShareFaithAndWorks =>
+    .also (.sameSense .pistis (.passage eph2_8_9) (.passage (vs .james 2 18))) <|
+      .also (.sameSense .erga (.passage eph2_8_9) (.passage (vs .ephesians 2 10))) <|
+        .also (.sameSense .erga (.passage eph2_8_9) (.passage (vs .james 2 18)))
+          (.sameSense .erga (.passage (vs .ephesians 2 10)) (.passage (vs .james 2 18)))
   | .augustineGivesBothSenses =>
     .also (.glosses .augustine .dikaioo .makeRighteous) (.glosses .augustine .dikaioo .verdict)
   | .romans5_19ManyMadeRighteous =>
@@ -406,6 +433,9 @@ def all : List Claim :=
   , .abrahamsGrantRewardsHisObedience, .countingWasForTheTesting
   , .aqedahBlessingAugmentedForObedience, .aqedahOathMeritedByObedience
   , .titus3_7UsesDikaioAsPaul, .romans4CountKeepsItsSense, .augustineGivesBothSenses
+  , .paulsWordsKeepTheirSense, .latinWordBearsPaulsSense, .romans4WorksKeepsItsSense
+  , .johnBelievingKeepsItsSense, .jamesUsesDikaioAsOutsidePaul
+  , .jamesKeepsHisWordsThroughTheParagraph, .fruitTextsShareFaithAndWorks
   , .romans5_19ManyMadeRighteous, .romans5_19MadeInwardlyRighteous
   , .romans5_19BearsOnTheVerb, .godsVerdictIsEffective ]
 
@@ -422,7 +452,7 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **A hundred and four of the hundred and thirty-five are analysed.** Of the
+/-- **A hundred and eleven of the hundred and forty-two are analysed.** Of the
 thirty-one that are not, fifteen are the claims of the chapters on whether
 justification has degrees and on Abraham, whose content (a verdict's degrees, a
 covenant rite, a grant, a testing) the vocabulary cannot yet state. Of the other
@@ -435,7 +465,7 @@ of the obedience it requires, Galatians 1:6–9, Christ's command to baptise, Tr
 reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each needs a word
 the vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
 reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (104, 135) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (111, 142) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the
@@ -444,15 +474,17 @@ Matthew 3:11, three ways. Fifteen readings at six places; each pair is counted
 in both orders, so twenty-six ordered pairs. -/
 theorem contested_length : (HasMeanings.contested (α := Claim)).length = 26 := by decide
 
-/-- **Twenty-four claims turn on δικαιόω**: six Pauline texts that use it or name
+/-- **Twenty-eight claims turn on δικαιόω**: six Pauline texts that use it or name
 renewal beside it; the forensic reading of Paul's word, the renewal reading,
 Augustine's gloss, and the two senses he gives; that Titus 3:5–7 uses it in Paul's
-sense; that Romans 5:19's "righteous" bears on it; the verdict and the tax collector
-of Luke 18; James 2:21–25, James 2:24, and whether 2:24 is compatible with Paul; the
-word outside Paul, Trent's reading of James's word, and the claim that James's word
-is Paul's; and Revelation 22:11 and Sirach 18:22, each in the Latin and in the
-Greek. -/
-theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 24 := by decide
+sense; that Romans 5:19's "righteous" bears on it; that it keeps one sense in Romans
+3:28 and Galatians 2:16; that the Latin *iustificare* bears its sense; the verdict
+and the tax collector of Luke 18; James 2:21–25, James 2:24, and whether 2:24 is
+compatible with Paul; the word outside Paul, Trent's reading of James's word, the
+claim that James's word is Paul's, the claim that it is the word as used outside
+Paul, and that it keeps one sense through James 2:21–25; and Revelation 22:11 and
+Sirach 18:22, each in the Latin and in the Greek. -/
+theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 28 := by decide
 
 /-- **The sola fide joins**: each pair of claims whose meanings exclude each
 other, read for what their words mean (`Testimony.Ontology.shared`). Every
