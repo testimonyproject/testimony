@@ -140,6 +140,25 @@ carries the conclusion may be true; an expectation may be well grounded; and
 an attribution the record contradicts may show the record wrong, not the move.
 The checks report where the move's weight falls. What holds the weight up is weighed
 where the library weighs everything else, in its disputes.
+
+## Whose reasoning is checked
+
+The library is written by Christians for readers who hold Scripture to be the
+word of God, and these checks are not a way of finding fault with it. A text
+enters a move only as a premise, what the verse says, and the checks read moves,
+never premises. A move is someone's reasoning from the texts: Trent's, Calvin's,
+Moo's, or a line this library proposes. A line of reason names who draws its step
+(`Testimony.Logic.Line.inference`), and every finding names that reader
+(`Testimony.Logic.Line.drawnBy`), so a reader of the report sees whose reading
+needs the condition.
+
+Some lines set out Scripture's own reasoning, as Paul reasons in Romans 4 from
+Genesis 15:6. A step cited to Scripture itself is never charged
+(`Testimony.Logic.Line.drawnByScripture`). If such a line needs "counted"
+(λογίζομαι) to keep one sense from Genesis to Romans, that is what a reader must
+hold to follow the text, and it is reported as that. If the encoding of such a
+line would equivocate or argue from silence alone, the build fails, and the
+fault is the encoding's: it has read the text wrongly.
 -/
 
 namespace Testimony.Semantics

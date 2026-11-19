@@ -85,6 +85,31 @@ operation keeps the change visible instead of hiding it in a retyped list. -/
 def onGrounds (l : Line α) (grounds : List (Formula α)) : Line α :=
   { l with grounds := grounds }
 
+/-- Whether the line sets out Scripture's own reasoning: its step is cited to
+Scripture itself, not to a reader of it. The fallacy checks never charge such a
+line. What it needs is a condition on reading the text, not a fault in it
+(`Testimony.Checks.fallacyReport`). -/
+def drawnByScripture (l : Line α) : Bool :=
+  l.inference.any (·.primary.isScripture)
+
+/-- Who the line's step is cited to, for a report: the first author of the work
+its step cites; for a collection with no author, as a council's decrees are
+cited from an edition, the cited section's name up to its first comma ("Trent"),
+else the work's title; "Scripture" for Scripture itself, "proposed here" for the library's
+own construction, and "uncited" for a line whose step cites no one. -/
+def drawnBy (l : Line α) : String :=
+  match l.inference with
+  | none => "uncited"
+  | some s =>
+    match s.primary with
+    | .scripture _ => "Scripture"
+    | .proposal _ => "proposed here"
+    | .work e locus =>
+      match e.core.contributors.authors, locus with
+      | a :: _, _ => a.sortKey
+      | [], .sectionRef r => (r.splitOn ",").headD e.core.title
+      | [], _ => e.core.title
+
 end Line
 
 /-- A case built from lines of reason: every line's grounds, then the premises

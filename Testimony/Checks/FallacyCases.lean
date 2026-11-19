@@ -328,17 +328,17 @@ def strawMan : Line Claim :=
 error: lines that equivocate, argue from silence alone or answer a straw man, in:
 Testimony.Checks.FallacyCases.Refused.Claim
 A case the build must refuse
-  lines: 3, read: 3
+  lines: 3, read: 3, Scripture's own: 0
   read a word in two senses and need it the same:
-    contradiction
+    contradiction (uncited)
   argue from silence alone:
-    fromSilence
+    fromSilence (uncited)
   answer a view the argument's record says its holder does not hold:
-    strawMan
+    strawMan (uncited)
   attribute a view, against the argument's record:
-    strawMan: trent, contradicted by trentDeniesOwnWorks
+    strawMan (uncited): trent, contradicted by trentDeniesOwnWorks
   need a word to keep its sense, unstated:
-    contradiction: pistis
+    contradiction (uncited): pistis
 -/
 #guard_msgs in
 #check_fallacies under Testimony.Checks.FallacyCases.Refused
@@ -612,3 +612,85 @@ theorem omission_cases :
   decide
 
 end Testimony.Checks.FallacyCases.Omission
+
+/-! ### Scripture's own reasoning, never charged
+
+The checks read lines of reason, and a line of reason is someone's. Most are a
+reader's: Trent's, Calvin's, Moo's, each line's step cited to the work that draws
+it. Some set out Scripture's own reasoning, as Paul reasons in Romans 4:3–5 from
+Genesis 15:6: "Abraham believed God, and it was counted to him as righteousness",
+so "to the one who does not work but believes … his faith is counted as
+righteousness". A step cited to Scripture itself is never charged. If the line
+needs "counted" (λογίζομαι) to keep one sense from Genesis to Romans, that need
+falls on the reader: it is what a reader must hold to follow the text, and the
+report sets it apart from the findings against readers.
+
+This case pins both. The same line is set out twice, once cited to Scripture and
+once proposed as a reader's line. The first is reported as Scripture's own
+reasoning, with what it asks of a reader; the second is listed with the
+conditions readers' lines are held to. -/
+
+namespace Testimony.Checks.FallacyCases.Scriptural
+
+open Testimony Testimony.Logic Testimony.Semantics Testimony.Semantics.Notation
+open Testimony.Checks.FallacyCases (rom4_5)
+
+/-- Genesis 15:6. -/
+@[nolint defsWithUnderscore] abbrev gen15_6 : PassageRange := vs .genesis 15 6
+
+/-- The case's atomic claims. -/
+inductive Claim
+  /-- Genesis 15:6 says Abraham's believing was counted to him as righteousness. -/
+  | genesisSays
+  /-- Romans 4:5 says the believer's faith is counted as righteousness. -/
+  | romansSays
+deriving DecidableEq, Repr
+
+/-- Every claim. -/
+def all : List Claim := [.genesisSays, .romansSays]
+
+/-- What each claim means. -/
+def means : Claim → Statement
+  | .genesisSays => .says gen15_6 (rl .instrumentOf (wd .pisteuo gen15_6) (wd .logizomai gen15_6))
+  | .romansSays => .says rom4_5 (rl .instrumentOf (wd .pistis rom4_5) (wd .logizomai rom4_5))
+
+/-- The case's meanings. -/
+instance meanings : HasMeanings Claim :=
+  { argument := "Scripture's own reasoning", all, means
+  , complete := by intro a; cases a <;> decide }
+
+/-- **Paul's own reasoning, from Genesis to Romans**, cited to Scripture itself
+(Romans 4:3–5). -/
+def paulFromGenesis : Line Claim :=
+  { name := "Paul, from Genesis 15:6"
+  , grounds := [p .genesisSays]
+  , step := p .genesisSays ➝ p .romansSays
+  , delivers := p .romansSays
+  , inference := some
+      { primary := .scripture [{ ref := vs .romans 4 3 }, { ref := rom4_5 }]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .consensus } }
+
+/-- **The same line, as a reader's**: proposed here, not cited to Scripture. -/
+def aReaderFromGenesis : Line Claim :=
+  { paulFromGenesis with
+    inference := some
+      { primary := .proposal "the same step, set out as a reader's line, for contrast"
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
+
+/--
+info: the fallacy checks, over every argument's lines, each named with its reader:
+Scripture's own reasoning
+  lines: 2, read: 2, Scripture's own: 1
+  need a word to keep its sense, unstated:
+    aReaderFromGenesis (proposed here): logizomai
+  read one word by a kindred one, the bridge unstated:
+    aReaderFromGenesis (proposed here): pisteuo for pistis (cognate)
+  Scripture's own reasoning, not charged: what a reader must hold to follow it:
+    paulFromGenesis (Scripture): logizomai kept in one sense, pisteuo for pistis (cognate)
+-/
+#guard_msgs in
+#check_fallacies under Testimony.Checks.FallacyCases.Scriptural
+
+end Testimony.Checks.FallacyCases.Scriptural
