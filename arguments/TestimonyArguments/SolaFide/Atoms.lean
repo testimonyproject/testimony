@@ -562,7 +562,10 @@ inductive Claim
   one who does not, to 4:6–8, righteousness "apart from works". -/
   | romans4WorksKeepsItsSense
   /-- "Believe" (πιστεύω) keeps one sense between John 6:29, "that you believe in
-  him whom he has sent", and John 3:16–18, "whoever believes in him". -/
+  him whom he has sent", and "whoever believes in him" in John 3:16 and 3:18. All
+  three have the same Greek construction, "believe into" (πιστεύειν εἰς). The
+  claim is not made of 3:18's "believed in the name", which Origen reads as a
+  lesser faith than believing in him. -/
   | johnBelievingKeepsItsSense
   /-- James uses "justify" (δικαιόω) in 2:21–25 in the sense it has outside Paul,
   to declare, acquit or vindicate, as at Matthew 11:19 and Deuteronomy 25:1. -/
