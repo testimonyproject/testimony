@@ -918,8 +918,9 @@ spoken, and of Rahab. Each can be defended in this debate, and neither is forced
 
 The two part at one premise: whether James uses the word as the Gospels and the
 Law use it. Calvin reads it so, as "the manifestation of righteousness by the
-conduct" (on James 2:21), and Trent, reading the same verses, does not. So the premise is rated `disputed`, and the argument
-from James's word is weighed as its rival is.
+conduct" (on James 2:21), and Trent, reading the same verses, does not. So the
+premise is rated `disputed`, and the argument from James's word is weighed as its
+rival is.
 
 It does not show that Trent's reading is right, or that the lexical evidence is
 weak. The step from that evidence to "the word does not mean the increase of
