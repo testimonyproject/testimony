@@ -4,6 +4,7 @@ import Testimony.Checks.Aif
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
+import Testimony.Checks.Readers
 import Testimony.Checks.Refutations
 
 /-!
@@ -54,9 +55,10 @@ Sola fide
     jamesLexicalLine (Moo): dikaioo
     johannineLine (Calvin): pisteuo
     johannineWithoutTrust (Calvin): pisteuo
-    paulineLine (uncited): dikaioo, ergaNomou
-    paulineWithoutPistisChristou (uncited): dikaioo, ergaNomou
-    paulineWithoutWorksOfLaw (uncited): dikaioo, ergaNomou
+    lexicalLine (Silva): dikaioo
+    paulineLine (Calvin): dikaioo, ergaNomou
+    paulineWithoutPistisChristou (Calvin): dikaioo, ergaNomou
+    paulineWithoutWorksOfLaw (Calvin): dikaioo, ergaNomou
     renewalWordLine (Trent): dikaioo
     romansFourExegesisLine (Moo): erga
   read one word by a kindred one, the bridge unstated:
@@ -72,6 +74,12 @@ Sola fide
 /-- info: every package has a model with its postulates: 93, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaFide
+
+/--
+info: every reading and step has a reader or is marked proposed: 88 packages, 49 lines
+-/
+#guard_msgs in
+#check_readers under TestimonyArguments.SolaFide
 
 /-- info: every non-entailment survives its postulates: 27, and 0 undecided -/
 #guard_msgs in

@@ -1,4 +1,5 @@
 import TestimonyArguments.BornOfAVirgin.Atoms
+import TestimonyArguments.BornOfAVirgin.Sources
 import Testimony.Logic.Line
 
 /-!
@@ -50,9 +51,18 @@ reckoning.
 
 The second strand goes back to the garden, where God says to the serpent:
 
-> "And I will put enmity between thee and the woman, and between thy seed and
-> her seed; it shall bruise thy head, and thou shalt bruise his heel."
-> (Genesis 3:15, KJV)
+> "And I will put enmity
+> Between you and the woman,
+> And between your seed and her seed;
+> He shall bruise you on the head,
+> And you shall bruise him on the heel."
+> (Genesis 3:15, LSB)
+
+The Hebrew has no capital letters. The Legacy Standard Bible capitalises its
+pronouns for God and for Christ, so its "He" prints a reading of the verse, that
+the one who strikes is the Messiah. The chapters named below weigh that
+reading, and whether the Hebrew הוּא here means "he" or "it"; the type does not
+settle either.
 
 The strand reads the verse as the first promise of a redeemer, the
 *protoevangelium* ("first gospel"), and takes its wording, "her seed" (זֶרַע
@@ -537,6 +547,20 @@ with one missing.
 in common (Mary's conception, the agreement of the two narratives) is passed to
 `caseOf` as shared, because it belongs to no single strand. -/
 
+/-- The rating of Isaiah's step, from a messianic prediction of a virgin birth to
+the criterion: `wellSupported`. Motyer draws it: "in Him the full implications
+of Immanuel's birth of the [עַלְמָה] are realized", and "Matthew, therefore,
+performed no exegetical sleight of hand in translating Isaiah 7:14 with the word
+parthenos" (p. 125). The conclusion follows from the first ground by what its
+words mean, and no reader was found who grants the grounds and denies it.
+Wegner denies the first ground ("This is not to say that OT passages are
+prophesying Jesus"), and Brown and Bratcher the first two; those dissents are
+weighed in the grounds' ratings. -/
+def isaianicInference : Source :=
+  { primary := .work motyerContextContent (.page 125)
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
 /-- **The Isaianic line.** The predictive reading, the lexical premise, the
 Septuagint's rendering, and Matthew's quotation and intent. Its hinge is
 `almahMeansVirgin`, and the whole lexical dispute is about that one ground. -/
@@ -547,7 +571,23 @@ def isaianicLine : Line Claim :=
       [ p .isaiahPredictsVirginBirth, p .almahMeansVirgin, p .lxxRendersParthenos
       , p .matthewQuotesIsaiah, p .matthewIntendsFulfilment ]
   , step := toCriterion
-  , delivers := p .messiahBornOfVirgin }
+  , delivers := p .messiahBornOfVirgin
+  , inference := some isaianicInference }
+
+/-- The rating of the step from Genesis 3:15 to the criterion: `plausible`. Luther
+draws it, reading "her seed" as "the true Seed of Mary" (*On the Creation*,
+pp. 298–299), and Matthew Henry: "He was likewise to be the seed of a woman
+only, of a virgin". No reader was found who denies the conclusion. But Leupold
+and Keil grant the grounds as they read them and decline the step: "the
+expression used does not specifically prophesy the virgin birth" (Leupold,
+p. 169). So the step holds only on Luther's reading of what the woman's seed
+signifies, and it is rated no higher than `plausible`. -/
+def protoevangeliumInference : Source :=
+  { primary := .work lutherOnTheCreation (.pages 298 299)
+  , supporting :=
+      [ .work henryCommentary (.adLoc ⟨.genesis, 3, 15⟩), .work leupoldGenesis (.page 169) ]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .plausible }
 
 /-- **The protoevangelium line.** Genesis 3:15 read as the promise of a
 redeemer, a man's line counted through the father, and the claim that naming the
@@ -561,7 +601,24 @@ def protoevangeliumLine : Line Claim :=
       [ p .genesis3_15SeedOfTheWoman, p .genesis3_15IsProtoevangelium
       , p .seedReckonedThroughFather, p .seedOfTheWomanImpliesNoHumanFather ]
   , step := genesisToCriterion
-  , delivers := p .messiahBornOfVirgin }
+  , delivers := p .messiahBornOfVirgin
+  , inference := some protoevangeliumInference }
+
+/-- The rating of Micah's step, from the mother named alone at Micah 5:3 to the
+criterion: `wellSupported`. Miravalle draws it, finding in the verse "the same
+virginal sense as we see in Isaiah 7:14", and Vatican II reads the verse with
+Isaiah 7:14 of "the Virgin who shall conceive and bear a son" (*Lumen Gentium*
+55, n. 285). No reader was found who grants the grounds and denies the
+conclusion. Keil grants that the woman in travail is "the mother of the
+Messiah", and does not draw the inference; Brown denies that the mother's being
+named alone shows anything, which is weighed in that ground's rating. -/
+def micheanInference : Source :=
+  { primary := .work miravalleIntroductionToMary .whole
+  , supporting :=
+      [ .work tannerDecrees (.sectionRef "Vatican II (1964), Lumen Gentium 55")
+      , .work keilDelitzschMinorProphets (.adLoc ⟨.micah, 5, 3⟩) ]
+  , tradition := .romanCatholic
+  , confidence := .wellSupported }
 
 /-- **The Michean line.** The maternal-only wording of Micah 5:3 and the
 inference drawn from it. Its hinge is an argument from silence, and the rival
@@ -572,7 +629,26 @@ def micheanLine : Line Claim :=
   , grounds :=
       [ p .micah5_3NamesMotherOnly, p .maternalSilenceImpliesNoHumanFather ]
   , step := micahToCriterion
-  , delivers := p .messiahBornOfVirgin }
+  , delivers := p .messiahBornOfVirgin
+  , inference := some micheanInference }
+
+/-- The rating of the compositional step: `plausible`, and in part the library's
+own. Postell holds that "the interpretation of Isaiah 7 must focus on the
+literary strategy of Isaiah 7 in the book, rather than the historical events"
+(p. 492), and that 7:14 anticipates "a miracle of the magnitude of what we find
+in Matthew 1:23" (p. 493); Motyer, that the passage "must not be severed" from
+its setting (p. 123). But Postell reaches the virgin through the word, having
+argued that עַלְמָה means "young virgin". This strand leaves the word out and
+lets Matthew's intent say which miracle is meant, and that is assembled here. -/
+def compositionalInference : Source :=
+  { primary := .proposal
+      ("Postell reaches the virgin by reading עַלְמָה as 'young virgin' (p. 493). " ++
+       "This strand leaves that ground out and lets Matthew's intent name the " ++
+       "miracle the composition foretells, which is the library's assembly.")
+  , supporting :=
+      [ .work postellIsaiahMessianic (.pages 492 493), .work motyerContextContent (.page 123) ]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .plausible }
 
 /-- **The compositional line.** Isaiah 7's placement in an eschatologically
 framed unit, the principle that placement governs meaning, and the future birth
@@ -584,7 +660,23 @@ def compositionalLine : Line Claim :=
       [ p .isaiah2to12FramedByEschatology, p .compositionGovernsMeaning
       , p .compositionalReadingYieldsFutureBirth ]
   , step := compositionalToCriterion
-  , delivers := p .messiahBornOfVirgin }
+  , delivers := p .messiahBornOfVirgin
+  , inference := some compositionalInference }
+
+/-- The rating of the magisterial step: `wellSupported`. The Catechism draws it:
+"The Church sees here the fulfilment of the divine promise given through the
+prophet Isaiah: 'Behold, a virgin shall conceive and bear a son'" (§ 497), and
+Aquinas opens his question on Mary's virginity with the same verse (*Summa*
+III q.28 a.1). No reader was found who grants the grounds and denies the
+conclusion. Brown grants that the virginal conception "would be classified as a
+doctrine infallibly taught by the ordinary magisterium", and asks whether that
+"forecloses further investigation": a dissent from the second ground, that the
+teaching settles the question. -/
+def magisterialInference : Source :=
+  { primary := .work catechismCatholicChurch (.sectionRef "497")
+  , supporting := [.work aquinasSumma (.sectionRef "III q.28 a.1")]
+  , tradition := .romanCatholic
+  , confidence := .wellSupported }
 
 /-- **The magisterial line.** Papal teaching and the authority granted it.
 
@@ -600,7 +692,24 @@ def magisterialLine : Line Claim :=
       [ p .magisteriumTeachesVirginalConception
       , p .magisteriumIsDoctrinallyAuthoritative ]
   , step := magisterialToCriterion
-  , delivers := p .messiahBornOfVirgin }
+  , delivers := p .messiahBornOfVirgin
+  , inference := some magisterialInference }
+
+/-- The rating of the referential step, to "Mary answers the description at
+Isaiah 7:14 whatever עַלְמָה denotes": `wellSupported`. The fathers draw it:
+Cyril of Jerusalem (*Catechetical Lectures* 12.21), Eusebius (*Demonstration*
+VII.1) and Chrysostom (*Homilies on Matthew* 5). No reader was found who grants
+the grounds and denies that Mary has the features the description names. Wegner
+grants every ground and that Mary "was indeed a virgin" (p. 483), and holds that
+the woman Isaiah meant lived in Ahaz's day. That denies that Mary is the woman
+Isaiah described, which is a different claim from this one. -/
+def referentialInference : Source :=
+  { primary := .work cyrilCatecheticalLectures (.sectionRef "12.21")
+  , supporting :=
+      [ .work eusebiusDemonstratio (.sectionRef "VII.1")
+      , .work chrysostomHomiliesMatthew (.sectionRef "5") ]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
 
 /-- **The referential line.** The shared lexical ground, the Rebekah datum,
 and two claims about Mary — that she was a young woman of marriageable age, and
@@ -621,7 +730,23 @@ def referentialLine : Line Claim :=
       , p .maryWasAnAlmah, p .maryConceivedAsVirgin
       , p .qumranConfirmsAlmah ]
   , step := toDescriptionFit
-  , delivers := p .maryFitsIsaianicDescription }
+  , delivers := p .maryFitsIsaianicDescription
+  , inference := some referentialInference }
+
+/-- The rating of the versional step: `consensus`, and the library's own. It follows
+from its fourth ground, that the versions' divergence refutes the virgin sense,
+by what "refutes" means; every reader who denies the conclusion denies that
+ground instead, as Irenaeus rejects the rendering of "Theodotion the Ephesian
+… and Aquila of Pontus" (III.21.1). No source was found, at a verified place,
+that draws the step itself. -/
+def versionalInference : Source :=
+  { primary := .proposal
+      ("The conclusion follows from the ground that the versions' divergence " ++
+       "refutes the virgin sense; every reader who denies the conclusion " ++
+       "(Irenaeus III.21.1; Rico and Gentry) denies that ground.")
+  , supporting := [.work irenaeusAgainstHeresies (.sectionRef "III.21.1")]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .consensus }
 
 /-- **The versional line**, stated as the objector would state it: the Targum
 and the Three read the broad term, Qumran settles the Hebrew, and Matthew's
@@ -635,7 +760,22 @@ def versionalLine : Line Claim :=
       , p .versionalDivergenceRefutesVirginSense
       , p .lexicalSenseRequiredForFulfilment ]
   , step := versionalObjection
-  , delivers := notP .almahMeansVirgin }
+  , delivers := notP .almahMeansVirgin
+  , inference := some versionalInference }
+
+/-- The rating of Wegner's step, from הָרָה (pregnant) read as a predicate
+adjective to a woman already pregnant: `plausible`. Wegner draws it: הָרָה "is
+most likely a predicate adjective suggesting that the maiden is in the state of
+pregnancy", so that "within nine months she would have a son" (pp. 471, 476).
+Rhodea grants the parse and leaves the conclusion open: "the timeframe is either
+that the woman is about to conceive, or, as in some parallel uses, has conceived
+already", and at Judges 13:5–7 "the woman may already be pregnant or will
+conceive in the near future" (p. 66). -/
+def wegnerInference : Source :=
+  { primary := .work wegnerVirginBirths (.pageList [471, 476])
+  , supporting := [.work rhodeaDidMatthewConceive (.page 66)]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .plausible }
 
 /-- **The Wegner line.** The predicate-adjective parse, the near-term setting
 of the sign, the ordinary pregnancy that setting supplies, and the principle
@@ -657,7 +797,8 @@ def wegnerLine : Line Claim :=
       [ p .harahIsPredicateAdjective, p .isaiahIsNearTermSignToAhaz
       , p .pregnancyAtTheSignIsOrdinary, p .oneReferentSettlesDenotation ]
   , step := harahYieldsPresentPregnancy
-  , delivers := p .isaianicAlmahIsAlreadyPregnant }
+  , delivers := p .isaianicAlmahIsAlreadyPregnant
+  , inference := some wegnerInference }
 
 /-- The two steps that carry Wegner's line to its lexical conclusion: the
 pregnancy excludes virginity, and the referent settles the word. Passed to
@@ -1050,14 +1191,14 @@ def greekHeLine : Line Claim :=
 
 The strands above ask what the wording of Genesis 3:15 says. The reader's next
 question runs the other way: the Gospel tells of one who was born of a woman,
-was struck, and destroyed the devil. Does that fulfil the promise, and does the
-fulfilment confirm that it was a promise? -/
+was struck, and broke the devil's power. Does that fulfil the promise, and does
+the fulfilment confirm that it was a promise? -/
 
 /-- **The fulfilment.** Each term of Genesis 3:15 met, as the New Testament names
-it: the woman's seed in the Son "made of a woman"; the serpent in "that old
-serpent, called the Devil"; its head crushed when the Son destroys the devil
-"through death"; his heel struck in his death, and the wound not the end of him
-in his rising. So in Jesus the promise is fulfilled. -/
+it: the woman's seed in the Son "born of a woman"; the serpent in "the serpent
+of old who is called the devil"; its head crushed when the Son renders the devil
+powerless "through death"; his heel struck in his death, and the wound not the
+end of him in his rising. So in Jesus the promise is fulfilled. -/
 @[bornOfAVirginDefs]
 def termsMetInJesus : Formula Claim :=
   ⋀ [ p .genesis3_15SeedOfTheWoman, p .sonMadeOfAWoman, p .serpentNamedTheDevil
@@ -1122,14 +1263,14 @@ def fulfilmentSource (c : Confidence) : Source :=
 /-- **The fulfilment of Genesis 3:15**, read from Scripture: every term of the
 promise is met in Jesus, as the New Testament itself names it.
 
-- **The woman's seed**: God sent his Son, "made of a woman" (Galatians 4:4).
-- **The serpent**: "that old serpent, called the Devil, and Satan" (Revelation
-  12:9; 20:2).
-- **Its head crushed**: the Son shared flesh and blood "that through death he
-  might destroy him that had the power of death, that is, the devil" (Hebrews
-  2:14); he "was manifested, that he might destroy the works of the devil" (1
-  John 3:8).
-- **His heel struck**: he died, and rose the third day (1 Corinthians 15:3–4),
+- **The woman's seed**: God sent forth His Son, "born of a woman" (Galatians 4:4).
+- **The serpent**: "the serpent of old who is called the devil and Satan" (Revelation 12:9; 20:2).
+- **Its head crushed**: the Son shared flesh and blood "that through death He
+  might render powerless him who had the power of death, that is, the devil"
+  (Hebrews 2:14); he "was manifested for this purpose, to destroy the works of
+  the devil" (1 John 3:8). "Render powerless" is καταργήσῃ, which Hamilton below
+  gives as "nullified" and other translations as "destroy".
+- **His heel struck**: he died, and was raised on the third day (1 Corinthians 15:3–4),
   a wound and not the end of him.
 
 Irenaeus reads it so: the seed "appointed to tread down his head — which was born
@@ -1151,14 +1292,14 @@ Leupold each deny that "her seed" means Christ alone — Calvin finds the word
 collective noun is to be understood of one man only?" — and each holds the
 conclusion as worded: "we must necessarily come to one head" (Calvin 170–71).
 
-**The texts it rests on, and how they are linked.** Revelation's "that old
-serpent" names the serpent of the garden. Romans 16:20, "the God of peace shall
-bruise Satan under your feet shortly", is not counted: it is an allusion, and a
-disputed one, with Calvin (171), Keil (102) and Hamilton (42) for it, and Lewis
-("one possible allusion", 303) and Collins (147 n. 24, "if Paul was alluding to
-this text at all") doubting it. Galatians 4:4 is cited for what it says, that
-the Son was made of a woman; whether Paul alludes to Genesis there is disputed
-too (`sonMadeOfAWoman`).
+**The texts it rests on, and how they are linked.** Revelation's "serpent of
+old" names the serpent of the garden. Romans 16:20, "the God of peace will soon
+crush Satan under your feet", is not counted: it is an allusion, and a disputed
+one, with Calvin (171), Keil (102) and Hamilton (42) for it, and Lewis ("one
+possible allusion", 303) and Collins (147 n. 24, "if Paul was alluding to this
+text at all") doubting it. Galatians 4:4 is cited for what it says, that the Son
+was born of a woman; whether Paul alludes to Genesis there is disputed too
+(`sonMadeOfAWoman`).
 
 **Its rating.** `disputed`, on Westermann. He grants what every ground reads —
 none of them says the New Testament *quotes* Genesis 3:15 — and denies that the
@@ -1279,9 +1420,9 @@ Genesis 3 says of the serpent, of whom the blow falls on, and of who sets the
 enmity.
 
 - **The serpent speaks, and knows the command.** It gives back God's word of
-  2:17 twisted, "Ye shall not surely die" (3:4). Collins: "the snake's wording of
-  v. 4 reflects knowledge of 2:17", and "animals do not have faculty of speech in
-  Bible, hence there is some intervention here" (146 n. 21).
+  2:17 twisted, "You surely will not die!" (3:4). Collins: "the snake's wording
+  of v. 4 reflects knowledge of 2:17", and "animals do not have faculty of
+  speech in Bible, hence there is some intervention here" (146 n. 21).
 - **It is the instrument of an evil power.** Delitzsch, as Collins quotes him:
   "an animal not speaking of its own accord, but as made the instrument of itself
   by the evil principle". Woudstra: "There is a diabolical subtlety in the
@@ -1348,12 +1489,12 @@ also names her posterity. Collins allows the collective too, the Messiah "as the
 (primary) seed, and his followers as 'seed' by virtue of their relation to him"
 (148 n. 24).
 
-Paul reads the singular "seed" of the promise to Abraham as one person: "He
-saith not, And to seeds, as of many; but as of one, And to thy seed, which is
-Christ" (Galatians 3:16). That is a precedent for reading the word of one, not
-a reading of Genesis 3:15, and no reader found takes it as one; Calvin uses it so
-("So Paul, from the seed of Abraham, leads us to Christ", 171). It is not counted
-as a ground.
+Paul reads the singular "seed" of the promise to Abraham as one person: "He does
+not say, 'And to seeds,' as referring to many, but rather to one, 'And to your
+seed,' that is, Christ" (Galatians 3:16). That is a precedent for reading the
+word of one, not a reading of Genesis 3:15, and no reader found takes it as one;
+Calvin uses it so ("So Paul, from the seed of Abraham, leads us to Christ",
+171). It is not counted as a ground.
 
 Rated `disputed`. Keil grants the first two grounds — "the posterity of a man may
 consist of a whole tribe or of one son only", and the victory is "over the
@@ -1665,12 +1806,15 @@ def postellLine : Line Claim :=
       [ p .isaiah9And11AreMessianic, p .isaiah9And11ShareTheAssyrianTimeline ]
   , step := parityDefeatsNearTermExclusion
   , delivers := notP .nearTermExcludesMessianicSense
-    -- `plausible`: a counterexample to the exclusion, and no source cited
-    -- here grants both grounds and keeps the exclusion. A critic's answer
-    -- would deny a ground — that 9 and 11 are messianic in Isaiah's own
-    -- sense — and the grounds are rated separately. Not `wellSupported`: the
-    -- argument is recent and unanswered, which is not the same as established.
-  , inference := some (postellOnIsaiah (.pages 487 489) .plausible) }
+    -- `plausible`: a counterexample to the exclusion, and no source found
+    -- grants both grounds and keeps the exclusion. Searched (issue #75):
+    -- Rashi, Radak and Ibn Ezra on Isaiah 7:14, 9:5–6 and 11:1; the Targum;
+    -- Walton, JETS 30 (1987). Each reader who keeps 7:14 near-term reads 9:5–6
+    -- of Hezekiah, so denies a ground, not the step; the grounds are rated
+    -- separately. Not read: Grogan (EBC), Roberts (Hermeneia), Blenkinsopp
+    -- (AB), Wildberger, Sweeney, Childs. Not `wellSupported`: the argument is
+    -- recent and unanswered, which is not the same as established.
+  , inference := some (postellOnIsaiah (.pages 479 481) .plausible) }
 
 /-- **Motyer's reply**, as an argument, with Compton: the sign is given to the
 house of David and the near-term timetable passes to Isaiah's son, so Isaiah
@@ -1700,11 +1844,21 @@ def micahLine : Line Claim :=
   , grounds := [ p .micahRulerFacesAssyria, p .micahRulerReadMessianically ]
   , step := micahParityDefeatsNearTermExclusion
   , delivers := notP .nearTermExcludesMessianicSense
-    -- `plausible`, as for the Isaiah counterexample and for the same reason:
-    -- no source cited grants both grounds and keeps the exclusion. A critic's
-    -- likeliest answer is a disanalogy — Micah 5 is not a sign to Ahaz — and
-    -- the same answer would meet `postellLine`.
-  , inference := some (postellOnIsaiah (.page 481) .plausible) }
+    -- `disputed`: Rashi grants both grounds — the ruler of 5:1 is "the
+    -- Messiah, son of David", and 5:4 speaks of the time "should Assyria come
+    -- … into our land as he comes now" — and still reads 7:14 of the
+    -- prophet's wife, "this year … the fourth year of Ahaz". Ibn Ezra states
+    -- the exclusion as his reason at 7:14: "the sign was given to Ahaz".
+    -- That is the disanalogy: Micah 5 is not a sign dated to Ahaz's crisis.
+  , inference := some
+      { primary := .work postellIsaiahMessianic (.page 481)
+      , supporting :=
+          [ .work rashiOnTheProphets (.adLoc ⟨.micah, 5, 1⟩)
+          , .work rashiOnTheProphets (.adLoc ⟨.micah, 5, 4⟩)
+          , .work rashiOnTheProphets (.adLoc ⟨.isaiah, 7, 14⟩)
+          , .work ibnEzraOnIsaiah (.adLoc ⟨.isaiah, 7, 14⟩) ]
+      , tradition := .christianHistoricalGrammatical
+      , confidence := .disputed } }
 
 /-! #### What the strands share -/
 

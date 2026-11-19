@@ -329,7 +329,7 @@ promises anyone perseverance without condition: "In the preceding text, the
 condition is only implied. In this it is plainly expressed. They are *my sheep*,
 that *hear my voice*, that *follow me* in all holiness. And 'if ye do these
 things, ye shall never fall'" (*Serious Thoughts upon the Perseverance of the
-Saints*, §18), quoting 2 Peter 1:10. -/
+Saints*, §18), quoting 2 Peter 1:10 in the King James Version. -/
 def john10Inference : Source :=
   { primary := .work wesleyWorks9 (.pages 444 445)
   , supporting := [.work calvinJohn (.pages 415 416), concord "Solid Declaration XI.45"]

@@ -119,6 +119,8 @@ def solaScripturaChapters : List Chapter :=
     , modules := [ `TestimonyArguments.SolaScriptura.Lines
                  , `TestimonyArguments.SolaScriptura.Packages
                  , `TestimonyArguments.SolaScriptura.Results ] }
+  , { slug := "canon", title := "How the canon is recognised"
+    , modules := [`TestimonyArguments.SolaScriptura.Canon] }
   , { slug := "mark-7", title := "What Jesus' rebuke of tradition settles"
     , modules := [`TestimonyArguments.SolaScriptura.Mark7] }
   , { slug := "jesus-and-paul", title := "The same principle, beyond Mark 7"

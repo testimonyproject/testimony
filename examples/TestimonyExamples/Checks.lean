@@ -3,6 +3,7 @@ import Testimony.Checks.Aif
 import Testimony.Checks.Citations
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
+import Testimony.Checks.Readers
 import Testimony.Checks.Refutations
 
 /-!
@@ -43,6 +44,12 @@ The grits
 /-- info: every package has a model with its postulates: 3, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyExamples
+
+/--
+info: every reading and step has a reader or is marked proposed: 3 packages, 1 lines
+-/
+#guard_msgs in
+#check_readers under TestimonyExamples
 
 /-- info: every non-entailment survives its postulates: 1, and 0 undecided -/
 #guard_msgs in

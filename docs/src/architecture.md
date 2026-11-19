@@ -35,7 +35,7 @@ boundary visible at all times.
 | `Testimony.Tools.*` | What a package's generators are made of: `Pages`, the harvest its site and its PDF share, `Site` and `Status`, which set the pages and the status table, `Bibliography`, and `Docs`, a catalogue's entries |
 | `Testimony.Logic.Aif` | Every dispute as an Argument Interchange Format graph, and AIF's Definition 1.1 as a check (see [Standards](./standards.md)) |
 | `Testimony.Semantics.Upper` | The upper categories a term can name — DOLCE's, each with its BFO counterpart |
-| `Testimony.Checks.*` | Checks a package runs over its arguments, in its build: `Refutations`, that `establish` fails, as not Horn, on every package it refutes; `Meanings`, `Ontology`, `Postulates`, and `Aif`. Each takes a namespace. The library runs them over `Fixture`, a small case of its own |
+| `Testimony.Checks.*` | Checks a package runs over its arguments, in its build: `Refutations`, that `establish` fails, as not Horn, on every package it refutes; `Meanings`, `Ontology`, `Postulates`, `Aif`, and `Readers`, that every reading past the text and every line's step cites a reader or is marked the library's own (`Reference.proposal`). Each takes a namespace. The library runs them over `Fixture`, a small case of its own |
 
 ## The library, and the packages built on it
 

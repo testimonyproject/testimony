@@ -1,6 +1,7 @@
 import TestimonyArguments.Articles.Howell2003
 import Testimony.Checks.Aif
 import Testimony.Checks.Postulates
+import Testimony.Checks.Readers
 
 /-!
 # TestimonyArguments.Checks.Articles — the library's checks, over the articles
@@ -17,6 +18,12 @@ namespace TestimonyArguments.Checks.Articles
 /-- info: every package has a model with its postulates: 1, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.Articles
+
+/--
+info: every reading and step has a reader or is marked proposed: 1 packages, 0 lines
+-/
+#guard_msgs in
+#check_readers under TestimonyArguments.Articles
 
 /-- info: every non-entailment survives its postulates: 0, and 0 undecided -/
 #guard_msgs in

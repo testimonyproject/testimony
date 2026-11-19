@@ -252,7 +252,7 @@ def cite : Claim → AtomMeta
       -- (Jer 36): the second scroll's oracles mean what their placement in the
       -- book makes them mean. A reader who holds that the historical setting of
       -- an oracle fixes its sense rejects this outright.
-    , source := postellOnIsaiah (.pages 483 486) .disputed }
+    , source := postellOnIsaiah (.pages 476 479) .disputed }
   | .isaiah9And11AreMessianic =>
     { label := "Isaiah 9:5–6 and 11:1–10 are read as messianic without reservation"
     , kind := .interpretive
@@ -260,13 +260,13 @@ def cite : Claim → AtomMeta
       -- stronger witness here precisely because it is hostile elsewhere: it
       -- reads 9:5-6 and 11:1 messianically while declining to read 7:14 so.
     , source :=
-        { postellOnIsaiah (.pages 487 489) .wellSupported with
+        { postellOnIsaiah (.pages 479 481) .wellSupported with
           supporting := [.work chiltonIsaiahTargum .whole] } }
   | .isaiah9And11ShareTheAssyrianTimeline =>
     { label := "Isaiah 9 and 11 sit on the same near-term Assyrian timeline as 7:14"
     , kind := .textual
     , source :=
-        { postellOnIsaiah (.pages 487 489) .wellSupported with
+        { postellOnIsaiah (.pages 479 481) .wellSupported with
           supporting := [.scripture assyrianTimeline] } }
   | .compositionalReadingYieldsFutureBirth =>
     { label := "Read compositionally, Isaiah 7:14 anticipates a future, miraculous birth"

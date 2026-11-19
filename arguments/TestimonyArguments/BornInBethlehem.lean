@@ -41,13 +41,17 @@ single line of reason, from Micah's oracle through Matthew's reading of it. So
 it is the weakest of the library's fulfilment arguments: deny the one reading of
 Micah and nothing is left standing, which is why the critical reading costs its
 holders so little. The argument "Born of a virgin", by contrast, runs on four
-strands. The second is that the claim that Jesus was born in Bethlehem is cited
-to the birth narratives of Matthew and Luke alone. The historicity of the
-Bethlehem birth is disputed in critical scholarship, so the claim is rated
-`disputed`, and the manifest lists it among the claims resting on Scripture
-alone (`scriptureOnlyAtoms`). An argument that took it on the authority of the
-texts whose reading is in question would be assuming part of what it sets out to
-show, and the page says so rather than hiding it. -/
+strands. The second is that the birth in Bethlehem is itself disputed as
+history. Matthew and Luke both place it there, and Joseph Ratzinger, answering
+the exegetes who read their Bethlehem as "a theological statement, not a
+historical one", holds that "if we abide by the sources, it is clear that Jesus
+was born in Bethlehem and grew up in Nazareth"; William Ramsay argued the same
+a century before him. Raymond Brown judged the evidence for it "much weaker than
+the evidence for Davidic descent", because of "such a general ignorance of
+Jesus' birthplace" in the rest of the Gospels, and John Meier, while granting it
+"cannot be positively ruled out", reads the Gospels' predominant view as that
+Jesus came "only from Nazareth". So the claim is cited to those who hold it and
+rated `disputed`, and the argument's conclusion is no surer than it. -/
 
 namespace TestimonyArguments.BornInBethlehem
 
@@ -129,10 +133,14 @@ def cite : Claim → AtomMeta
   | .jesusBornInBethlehem =>
     { label := "Jesus of Nazareth was born in Bethlehem"
     , kind := .historical
-      -- Scripture alone, and disputed in critical scholarship. Surfaced by
-      -- `scriptureOnlyAtoms`.
+      -- Held by Ratzinger and Ramsay as history; doubted by Brown (Appendix III,
+      -- "Birth at Bethlehem") and Meier. Pages for the lending copies are not
+      -- verified, so those works are cited whole.
     , source :=
-        { primary := .scripture bethlehemBirthNarratives
+        { primary := .work ratzingerInfancyNarratives .whole
+        , supporting :=
+            [ .work ramsayBornAtBethlehem (.pages 97 98)
+            , .scripture bethlehemBirthNarratives ]
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .micahIsNearTermOracle =>
@@ -167,6 +175,19 @@ def toCriterion : Formula Claim :=
 def toFulfilment : Formula Claim :=
   ⋀ [p .messiahBornInBethlehem, p .jesusBornInBethlehem] ➝ p .jesusSatisfiesCriterion
 
+/-- The rating of the step from Micah's prediction and Matthew's intent to the
+criterion that the Messiah be born in Bethlehem: `wellSupported`. Keil draws it:
+"the coming forth from Bethlehem implies birth in Bethlehem", by "the divine
+appointment that Christ was born in Bethlehem, the city of David". No reader was
+found who grants the grounds and denies the conclusion. Radak reads the verse of
+"the King Messiah" and gives as the reason that he will be "of the seed of David,
+who was from Bethlehem"; that reads "come forth" as descent, and so bears on
+what the first ground means, not on this step. -/
+def predictiveInference : Source :=
+  { primary := .work keilDelitzschMinorProphets (.adLoc micah5_2)
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .wellSupported }
+
 /-- **The predictive line.** Micah's oracle read as prophecy, Matthew's
 quotation read as a fulfilment claim, and the criterion that follows. -/
 @[bornInBethlehemDefs]
@@ -176,7 +197,8 @@ def predictiveLine : Line Claim :=
       [ p .micahPredictsBethlehem, p .matthewQuotesMicah
       , p .matthewIntendsFulfilment ]
   , step := toCriterion
-  , delivers := p .messiahBornInBethlehem }
+  , delivers := p .messiahBornInBethlehem
+  , inference := some predictiveInference }
 
 /-- **The critical line.** Matthew's quotation is granted, Micah's oracle is read
 as one about a ruler of his own day, and the prediction is denied. The step is

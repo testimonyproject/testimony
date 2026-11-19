@@ -3,6 +3,7 @@ import TestimonyArguments.SolaScriptura.Sources
 import TestimonyArguments.SolaScriptura.Lines
 import TestimonyArguments.SolaScriptura.Packages
 import TestimonyArguments.SolaScriptura.Results
+import TestimonyArguments.SolaScriptura.Canon
 import TestimonyArguments.SolaScriptura.Mark7
 import TestimonyArguments.SolaScriptura.JesusAndPaul
 import TestimonyArguments.SolaScriptura.Acts15
@@ -65,6 +66,13 @@ than by its critic, it reaches the conclusion too (`tradition0_establishes`).
   denying one of its own grounds, and the replies from parity leave the
   question open rather than settle it
   ("Three objections, and the answers to them").
+- **Does the Church have to identify the canon infallibly?** Scripture sets
+  its own tests for a word that claims to come from God (Deuteronomy 13 and
+  18), and the early Church set apart books it read and did not receive, the
+  Shepherd and the Didache, by reasons it stated. That reply denies the
+  objection's need for an infallible authority outside Scripture. Weighed against the objection,
+  each defeats the other, and the dispute forces neither
+  ("How the canon is recognised").
 - **What does Mark 7 settle?** Jesus' rebuke of the elders' tradition delivers a
   principle Rome also holds. To reach sola scriptura it needs one more premise,
   that no unwritten tradition can now be shown to be apostolic, and Rome denies
@@ -85,6 +93,14 @@ than by its critic, it reaches the conclusion too (`tradition0_establishes`).
   Matthew 23:2–3 in opposite directions, and Mark 7 with Matthew 23 leaves the
   teaching office open ("Moses' seat, read both ways").
 
+Scripture is quoted from the Legacy Standard Bible (LSB), a literal translation
+made from the critical editions: Kittel's *Biblia Hebraica*, with the Dead Sea
+Scrolls, and the Nestle–Aland Greek New Testament. Where a word in the Greek
+matters to the argument, it is given in brackets after the English, and where
+the translations part over it, that is said where the word is used. A quotation
+inside a cited author's words is left as the author gave it, in whatever Bible
+he used.
+
 The claims themselves, each with its number, its source and its rating, are
 listed in the appendix, "The claims and their sources".
 -/
@@ -99,6 +115,7 @@ listed in the appendix, "The claims and their sources".
 | `Lines.lean` | the inference steps, the lines, and the replies as substituted grounds |
 | `Packages.lean` | the positions, the objections, and the variants the results refute |
 | `Results.lean` | every `@[headline]` result on the positions and objections |
+| `Canon.lean` | the reply from Scripture's tests to the canon objection, weighed against it |
 | `Mark7.lean` | Mark 7 and the tradition Trent receives: the packages, the dilemma |
 | `JesusAndPaul.lean` | the same principle from Jesus' sayings and Paul's letters |
 | `Acts15.lean` | the council at Jerusalem, read by the Reformers and by Rome |

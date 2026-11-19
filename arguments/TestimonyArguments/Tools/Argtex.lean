@@ -84,10 +84,25 @@ def standaloneNote : String :=
   "The library also prints every argument together, as one book " ++
   "(\\texttt{arguments.pdf}). " ++ notationNote
 
+/-- Which translations the documents quote Scripture from, and the notice each
+publisher asks for, which the translation's bibliography entry carries in its
+note. Printed in the closing section of every document, the book's and each
+argument's alike, because a quotation from any of them may be in either. -/
+def scripture : String × List String :=
+  ("The library quotes Scripture from the translations below, by permission of " ++
+    "their publishers. Most quotations are from the English Standard Version " ++
+    "(ESV); the chapters on Scripture alone quote the Legacy Standard Bible " ++
+    "(LSB), and any other quotation from the LSB or the New American Bible, " ++
+    "Revised Edition (NABRE), is marked with its name. Where a cited author " ++
+    "quotes a verse in another translation, such as the King James Version, " ++
+    "the verse is given as the author gives it.",
+   [TestimonyArguments.esv, TestimonyArguments.lsb, TestimonyArguments.nabre].filterMap
+     (·.core.note))
+
 /-- How the book is made again: `argtex`, in `arguments/`, writes it. -/
 def bookMade : Logic.Latex.Reproduction :=
   { package := "arguments", tool := "argtex", dir := "docs/latex",
-    file := "arguments.tex", before := ["bibgen"] }
+    file := "arguments.tex", before := ["bibgen"], scripture }
 
 /-- The whole document: every catalogued argument, set as `latexDocument` sets
 any package's. -/
