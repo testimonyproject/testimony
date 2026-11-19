@@ -41,30 +41,30 @@ Sola fide
 #check_ontology under TestimonyArguments.SolaFide
 
 /--
-info: the charges, against every argument's lines:
+info: the fallacy checks, over every argument's lines, each named with its reader:
 Sola fide
-  lines: 58, read: 38
+  lines: 58, read: 38, Scripture's own: 0
   attribute a view, against the argument's record:
-    sandersLine: secondTempleJudaism, unrecorded
-    trentWordLine: augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
+    sandersLine (Dunn): secondTempleJudaism, unrecorded
+    trentWordLine (Trent): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
   need a word to keep its sense, unstated:
-    catholicJamesWordLine: erga, dikaioo
-    catholicJamesWorksLine: erga, dikaioo
-    fruitLine: pistis, erga
-    jamesLexicalLine: dikaioo
-    johannineLine: pisteuo
-    johannineWithoutTrust: pisteuo
-    paulineLine: dikaioo, ergaNomou
-    paulineWithoutPistisChristou: dikaioo, ergaNomou
-    paulineWithoutWorksOfLaw: dikaioo, ergaNomou
-    renewalWordLine: dikaioo
-    romansFourExegesisLine: erga
+    catholicJamesWordLine (Trent): erga, dikaioo
+    catholicJamesWorksLine (Trent): erga, dikaioo
+    fruitLine (Westminster Assembly): pistis, erga
+    jamesLexicalLine (Moo): dikaioo
+    johannineLine (Calvin): pisteuo
+    johannineWithoutTrust (Calvin): pisteuo
+    paulineLine (uncited): dikaioo, ergaNomou
+    paulineWithoutPistisChristou (uncited): dikaioo, ergaNomou
+    paulineWithoutWorksOfLaw (uncited): dikaioo, ergaNomou
+    renewalWordLine (Trent): dikaioo
+    romansFourExegesisLine (Moo): erga
   read one word by a kindred one, the bridge unstated:
-    trentWordLine: iustificare for dikaioo (translation)
+    trentWordLine (Trent): iustificare for dikaioo (translation)
   cite a voice for one reading, leaving out another the record has:
-    trentWordLine: augustine, also verdict in augustineGivesBothSenses
+    trentWordLine (Trent): augustine, also verdict in augustineGivesBothSenses
   conclude a word's sense from no use or reading of the word:
-    effectiveVerdictLine: dikaioo as makeRighteous
+    effectiveVerdictLine (Fitzmyer): dikaioo as makeRighteous
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaFide
