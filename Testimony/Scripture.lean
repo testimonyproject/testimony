@@ -185,32 +185,35 @@ def shechemUnderTheLaw : List ScriptureCitation :=
   , verseIn .masoretic ⟨.deuteronomy, 22, 21⟩ ]
 
 /-- Genesis 2:17 and 3:1–5 — the command, and the serpent who speaks it back,
-twisted: "Yea, hath God said, Ye shall not eat of every tree of the garden?"
-(3:1), and "Ye shall not surely die" (3:4). -/
+twisted: "Indeed, has God said, 'You shall not eat from any tree of the
+garden'?" (3:1), and "You surely will not die!" (3:4, LSB). -/
 def serpentTwistsTheCommand : List ScriptureCitation :=
   [ verseIn .masoretic ⟨.genesis, 2, 17⟩
   , rangeIn .masoretic ⟨.genesis, 3, 1, 3, 5⟩ ]
 
-/-- Revelation 12:9 and 20:2 — "that old serpent, called the Devil, and Satan"
-(ὁ ὄφις ὁ ἀρχαῖος). Scripture's own name for the serpent of the garden. -/
+/-- Revelation 12:9 and 20:2 — "the serpent of old who is called the devil and
+Satan" (ὁ ὄφις ὁ ἀρχαῖος; 12:9, LSB). Scripture's own name for the serpent of
+the garden. -/
 def serpentNamedTheDevil : List ScriptureCitation :=
   [ verseIn .nestleAland28 ⟨.revelation, 12, 9⟩
   , verseIn .nestleAland28 ⟨.revelation, 20, 2⟩ ]
 
 /-- Hebrews 2:14 and 1 John 3:8 — the Son shares flesh and blood "that through
-death he might destroy him that had the power of death, that is, the devil",
-and "was manifested, that he might destroy the works of the devil". -/
+death He might render powerless him who had the power of death, that is, the
+devil", and "was manifested for this purpose, to destroy the works of the devil"
+(LSB). "Render powerless" is καταργήσῃ, which other translations give as
+"destroy". -/
 def devilDestroyedThroughDeath : List ScriptureCitation :=
   [ verseIn .nestleAland28 ⟨.hebrews, 2, 14⟩
   , verseIn .nestleAland28 ⟨.firstJohn, 3, 8⟩ ]
 
-/-- 1 Corinthians 15:3–4 — Christ "died for our sins", "was buried", and "rose
-again the third day": a wound, and not the end of him. -/
+/-- 1 Corinthians 15:3–4 — Christ "died for our sins", "was buried", and "was
+raised on the third day" (LSB): a wound, and not the end of him. -/
 def christDiedAndRose : List ScriptureCitation :=
   [ rangeIn .nestleAland28 ⟨.firstCorinthians, 15, 3, 15, 4⟩ ]
 
-/-- Galatians 4:4 — God sent forth his Son, "made of a woman" (γενόμενον ἐκ
-γυναικός). -/
+/-- Galatians 4:4 — God sent forth His Son, "born of a woman" (γενόμενον ἐκ
+γυναικός; LSB). -/
 def sonMadeOfAWoman : List ScriptureCitation :=
   [ verseIn .nestleAland28 ⟨.galatians, 4, 4⟩ ]
 

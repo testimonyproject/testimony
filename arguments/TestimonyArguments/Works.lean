@@ -277,20 +277,50 @@ year is given for the volume, because the record does not give one. -/
   , place := some "Cambridge"
   , volume := some "2" }
 
-/-- The English Standard Version, the English Bible these pages quote. First
-published by Crossway in 2001; quoted from the current text edition, which the
-publisher gives as "ESV Text Edition: 2025". No ISBN is given, because the
-catalogued ISBN is that of a 2001 printing. -/
+/-- The English Standard Version, the English Bible most of these pages quote.
+First published by Crossway in 2001; quoted from the current text edition, which
+the publisher gives as "ESV Text Edition: 2025". No ISBN is given, because the
+catalogued ISBN is that of a 2001 printing. Crossway allows up to 500 verses to
+be quoted without written permission, so long as they are not a whole book and
+not a quarter or more of the work that quotes them, with the notice the entry's
+note gives. -/
 @[bib_entry] def esv : BibEntry := .book
   { core :=
       { key := "crossway-esv-2001"
       , contributors := {}
       , title := "The Holy Bible, English Standard Version"
       , year := some { value := 2001 }
-      , note := some "Quoted from ESV Text Edition: 2025."
+      , note := some ("Quoted from ESV Text Edition: 2025. Scripture quotations " ++
+          "from the ESV are from the ESV® Bible (The Holy Bible, English " ++
+          "Standard Version®), © 2001 by Crossway, a publishing ministry of Good " ++
+          "News Publishers. Used by permission. All rights reserved.")
       , identifiers := [.url "https://www.esv.org/" (some "2026-11-10")] }
   , publisher := "Crossway"
   , place := some "Wheaton, Illinois" }
+
+/-- The Legacy Standard Bible, which the chapters on Scripture alone quote, and
+the other pages where a quotation is marked LSB. A revision of the New American
+Standard Bible by the Lockman Foundation, published in 2021 with Three Sixteen
+Publishing; its Old Testament is made from Kittel's *Biblia Hebraica* and its
+New from the 27th edition of Nestle–Aland, with the 28th in the General
+Epistles (the translators' foreword). Read on the publisher's site, so no single
+printing's ISBN is recorded. The publisher allows up to 1,000 verses to be
+quoted without written permission, so long as they are not a whole book and not
+half or more of the work that quotes them, with the notice the entry's note
+gives, which on a web page must link to LSBible.org. -/
+@[bib_entry] def lsb : BibEntry := .webPage
+  { core :=
+      { key := "lockman-lsb-2021"
+      , role := .text
+      , contributors := { authors := [.corporate "The Lockman Foundation"] }
+      , title := "Legacy Standard Bible"
+      , year := some { value := 2021 }
+      , note := some ("Scripture quotations from the LSB are taken from the (LSB®) Legacy " ++
+          "Standard Bible®, Copyright © 2021 by The Lockman Foundation. Used by " ++
+          "permission. All rights reserved. Managed in partnership with Three Sixteen " ++
+          "Publishing Inc. LSBible.org and 316publishing.com.")
+      , identifiers := [.url "https://lsbible.org/" (some "2026-11-18")] }
+  , site := some "LSBible.org" }
 
 /-- Calvin's *Antidote* to the decree on justification of Trent's sixth session,
 written in 1547. Beveridge's translation numbers the decree's chapter on
@@ -1600,8 +1630,8 @@ of Concord Article X, which defines adiaphora as rites "neither commanded nor
 forbidden in the Word of God" — the wider of the two statements this library
 uses for the premise that practices need no scriptural warrant, Westminster I.6
 being the narrower. Also cited for Melanchthon's *Apology of the Augsburg
-Confession*, which reads Luke 7:47 ("she loved much") by 7:50 ("thy faith hath
-saved thee") — the dominical strand of sola fide. -/
+Confession*, which reads Luke 7:47 ("she loved much") by 7:50 ("Your faith has
+saved you", LSB) — the dominical strand of sola fide. -/
 @[bib_entry] def bookOfConcord : BibEntry := .book
   { core :=
       { key := "kolb-wengert-book-of-concord-2000"
@@ -3757,7 +3787,10 @@ Trent cites for the increase of justification (Session VI, ch. 10) are read. -/
 Conference of Catholic Bishops. Cited for how the Catholic Church's own
 translators render Revelation 22:11 ("The righteous must still do right") and
 Sirach 18:22 ("do not wait until death to fulfill them"). Read on the bishops'
-site; no single printing's ISBN is recorded. -/
+site; no single printing's ISBN is recorded. The bishops allow fewer than 5,000
+words to be quoted without written permission, so long as they are less than
+two-fifths of a book of the Bible and of the work that quotes them, with the
+notice the entry's note gives. -/
 @[bib_entry] def nabre : BibEntry := .webPage
   { core :=
       { key := "usccb-nabre-2011"
@@ -3765,6 +3798,12 @@ site; no single printing's ISBN is recorded. -/
       , contributors := { authors := [.corporate "United States Conference of Catholic Bishops"] }
       , title := "New American Bible, Revised Edition"
       , year := some { value := 2011 }
+      , note := some ("Scripture texts from the NABRE are taken from the New American " ++
+          "Bible, revised edition © 2010, 1991, 1986, 1970 Confraternity of Christian " ++
+          "Doctrine, Washington, D.C. and are used by permission of the copyright " ++
+          "owner. All Rights Reserved. No part of the New American Bible may be " ++
+          "reproduced in any form without permission in writing from the copyright " ++
+          "owner.")
       , identifiers := [.url "https://bible.usccb.org/bible" (some "2026-10-03")] }
   , site := some "USCCB" }
 

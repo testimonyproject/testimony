@@ -26,41 +26,39 @@ Scripture at all.
 
 Israel had to tell God's word from a counterfeit long before there was a
 Church. Moses gave two tests. The first is agreement with what God has already
-said: "If there arise among you a prophet, or a dreamer of dreams, and giveth
-thee a sign or a wonder, And the sign or the wonder come to pass, whereof he
-spake unto thee, saying, Let us go after other gods, which thou hast not known,
-and let us serve them; Thou shalt not hearken unto the words of that prophet"
-(Deuteronomy 13:1–3, KJV). The second is whether the word comes true. "But the
-prophet, which shall presume to speak a word in my name, which I have not
-commanded him to speak, or that shall speak in the name of other gods, even
-that prophet shall die. And if thou say in thine heart, How shall we know the
-word which the LORD hath not spoken? When a prophet speaketh in the name of the
-LORD, if the thing follow not, nor come to pass, that is the thing which the
-LORD hath not spoken" (18:20–22). Both tests give the hearer something to check
-for himself, what the prophet says and whether it comes true, and neither sends
-him to an office that cannot err.
+said: "If a prophet or a dreamer of dreams arises among you and gives you a sign
+or a wonder, and the sign or the wonder comes true, concerning which he spoke to
+you, saying, 'Let us walk after other gods (whom you have not known) and let us
+serve them,' you shall not listen to the words of that prophet" (Deuteronomy
+13:1–3). The second is whether the word comes true. "But the prophet who speaks
+a word presumptuously in My name which I have not commanded him to speak, or
+which he speaks in the name of other gods, that prophet shall die. Now you may
+say in your heart, 'How will we know the word which Yahweh has not spoken?' When
+a prophet speaks in the name of Yahweh, if the thing does not come about or come
+true, that is the thing which Yahweh has not spoken" (18:20–22). Both tests give
+the hearer something to check for himself, what the prophet says and whether it
+comes true, and neither sends him to an office that cannot err.
 
 ## Scripture decides what can be Scripture
 
 The New Testament applies the same tests to itself. Paul tells the Ephesians
-that they "are built upon the foundation of the apostles and prophets, Jesus
-Christ himself being the chief corner stone" (Ephesians 2:20), and Jude writes
-of "the faith which was once delivered unto the saints" (Jude 3). Peter counts
-an apostle's letters as Scripture. He writes that "our beloved brother Paul
-... hath written unto you; As also in all his epistles", which the unlearned
-"wrest, as they do also the other scriptures, unto their own destruction"
-(2 Peter 3:15–16). Earlier in the same
-chapter he sets "the commandment of us the apostles" beside "the words which
-were spoken before by the holy prophets" (3:2). In 1 Timothy 5:18, "the
-scripture saith" introduces a line of Deuteronomy and then "The labourer is
-worthy of his reward", a saying of Jesus that Luke 10:7 records. (The King
-James Version has "hire" in Luke and "reward" in Timothy, for the same Greek
-word, μισθός.)
+that they have been "built on the foundation of the apostles and prophets,
+Christ Jesus Himself being the corner stone" (Ephesians 2:20), and Jude writes
+of "the faith which was once for all handed down to the saints" (Jude 3). Peter
+counts an apostle's letters as Scripture. He writes that "our beloved brother
+Paul ... wrote to you, as also in all his letters", in which are things "which
+the untaught and unstable distort, as they do also the rest of the Scriptures,
+to their own destruction" (2 Peter 3:15–16). Earlier in the same chapter he sets
+"the commandment of the Lord and Savior spoken by your apostles" beside "the
+words spoken beforehand by the holy prophets" (3:2). In 1 Timothy 5:18, "the
+Scripture says" introduces a line of Deuteronomy and then "The laborer is worthy
+of his wages", a saying of Jesus that Luke 10:7 records in the same words
+(μισθός, "wages", in both).
 
 Being an apostle is not enough by itself. Paul holds even himself to the
-gospel already given: "But though we, or an angel from heaven, preach any other
-gospel unto you than that which we have preached unto you, let him be accursed"
-(Galatians 1:8). That is Deuteronomy 13 carried forward. A sign does not
+gospel already given: "But even if we, or an angel from heaven, should proclaim
+to you a gospel contrary to the gospel we have proclaimed to you, let him be
+accursed!" (Galatians 1:8). That is Deuteronomy 13 carried forward. A sign does not
 outweigh a message at odds with what God has said, and neither does an office.
 So for the New Testament the test has two parts: whether a book comes from an
 apostle, or from the apostles' circle as Mark, Luke and Hebrews were received,
@@ -72,12 +70,12 @@ writing at the end of the first century, says the Jews have "only twenty-two
 books ... which are justly believed to be divine", and that what was written
 after the Persian king Artaxerxes "hath not been esteemed of the like authority
 with the former by our forefathers, because there hath not been an exact
-succession of prophets since that time" (*Against Apion* I.8). 1 Maccabees
-says the same of its own day, which it calls the worst affliction Israel had
-known "since the time that a prophet was not seen among them" (9:27). This is
+succession of prophets since that time" (*Against Apion* I.8, in Whiston's
+translation). 1 Maccabees says the same of its own day, a distress "such as had
+not been since the time a prophet had last appeared among them" (9:27, NRSVUE). This is
 the ground on which Protestants leave out the Apocrypha, the books Trent
 receives and the Reformers read but do not count as Scripture, and 1 Enoch.
-Jude quotes Enoch: "Behold, the Lord cometh with ten thousands of his saints"
+Jude quotes Enoch: "Behold, the Lord came with many thousands of His holy ones"
 (Jude 14). Quoting a book is not receiving it, though, since Paul quotes Greek
 poets to the Athenians (Acts 17:28).
 

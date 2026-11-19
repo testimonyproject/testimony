@@ -51,9 +51,18 @@ reckoning.
 
 The second strand goes back to the garden, where God says to the serpent:
 
-> "And I will put enmity between thee and the woman, and between thy seed and
-> her seed; it shall bruise thy head, and thou shalt bruise his heel."
-> (Genesis 3:15, KJV)
+> "And I will put enmity
+> Between you and the woman,
+> And between your seed and her seed;
+> He shall bruise you on the head,
+> And you shall bruise him on the heel."
+> (Genesis 3:15, LSB)
+
+The Hebrew has no capital letters. The Legacy Standard Bible capitalises its
+pronouns for God and for Christ, so its "He" prints a reading of the verse, that
+the one who strikes is the Messiah. The chapters named below weigh that
+reading, and whether the Hebrew הוּא here means "he" or "it"; the type does not
+settle either.
 
 The strand reads the verse as the first promise of a redeemer, the
 *protoevangelium* ("first gospel"), and takes its wording, "her seed" (זֶרַע
@@ -1182,14 +1191,14 @@ def greekHeLine : Line Claim :=
 
 The strands above ask what the wording of Genesis 3:15 says. The reader's next
 question runs the other way: the Gospel tells of one who was born of a woman,
-was struck, and destroyed the devil. Does that fulfil the promise, and does the
-fulfilment confirm that it was a promise? -/
+was struck, and broke the devil's power. Does that fulfil the promise, and does
+the fulfilment confirm that it was a promise? -/
 
 /-- **The fulfilment.** Each term of Genesis 3:15 met, as the New Testament names
-it: the woman's seed in the Son "made of a woman"; the serpent in "that old
-serpent, called the Devil"; its head crushed when the Son destroys the devil
-"through death"; his heel struck in his death, and the wound not the end of him
-in his rising. So in Jesus the promise is fulfilled. -/
+it: the woman's seed in the Son "born of a woman"; the serpent in "the serpent
+of old who is called the devil"; its head crushed when the Son renders the devil
+powerless "through death"; his heel struck in his death, and the wound not the
+end of him in his rising. So in Jesus the promise is fulfilled. -/
 @[bornOfAVirginDefs]
 def termsMetInJesus : Formula Claim :=
   ⋀ [ p .genesis3_15SeedOfTheWoman, p .sonMadeOfAWoman, p .serpentNamedTheDevil
@@ -1254,14 +1263,14 @@ def fulfilmentSource (c : Confidence) : Source :=
 /-- **The fulfilment of Genesis 3:15**, read from Scripture: every term of the
 promise is met in Jesus, as the New Testament itself names it.
 
-- **The woman's seed**: God sent his Son, "made of a woman" (Galatians 4:4).
-- **The serpent**: "that old serpent, called the Devil, and Satan" (Revelation
-  12:9; 20:2).
-- **Its head crushed**: the Son shared flesh and blood "that through death he
-  might destroy him that had the power of death, that is, the devil" (Hebrews
-  2:14); he "was manifested, that he might destroy the works of the devil" (1
-  John 3:8).
-- **His heel struck**: he died, and rose the third day (1 Corinthians 15:3–4),
+- **The woman's seed**: God sent forth His Son, "born of a woman" (Galatians 4:4).
+- **The serpent**: "the serpent of old who is called the devil and Satan" (Revelation 12:9; 20:2).
+- **Its head crushed**: the Son shared flesh and blood "that through death He
+  might render powerless him who had the power of death, that is, the devil"
+  (Hebrews 2:14); he "was manifested for this purpose, to destroy the works of
+  the devil" (1 John 3:8). "Render powerless" is καταργήσῃ, which Hamilton below
+  gives as "nullified" and other translations as "destroy".
+- **His heel struck**: he died, and was raised on the third day (1 Corinthians 15:3–4),
   a wound and not the end of him.
 
 Irenaeus reads it so: the seed "appointed to tread down his head — which was born
@@ -1283,14 +1292,14 @@ Leupold each deny that "her seed" means Christ alone — Calvin finds the word
 collective noun is to be understood of one man only?" — and each holds the
 conclusion as worded: "we must necessarily come to one head" (Calvin 170–71).
 
-**The texts it rests on, and how they are linked.** Revelation's "that old
-serpent" names the serpent of the garden. Romans 16:20, "the God of peace shall
-bruise Satan under your feet shortly", is not counted: it is an allusion, and a
-disputed one, with Calvin (171), Keil (102) and Hamilton (42) for it, and Lewis
-("one possible allusion", 303) and Collins (147 n. 24, "if Paul was alluding to
-this text at all") doubting it. Galatians 4:4 is cited for what it says, that
-the Son was made of a woman; whether Paul alludes to Genesis there is disputed
-too (`sonMadeOfAWoman`).
+**The texts it rests on, and how they are linked.** Revelation's "serpent of
+old" names the serpent of the garden. Romans 16:20, "the God of peace will soon
+crush Satan under your feet", is not counted: it is an allusion, and a disputed
+one, with Calvin (171), Keil (102) and Hamilton (42) for it, and Lewis ("one
+possible allusion", 303) and Collins (147 n. 24, "if Paul was alluding to this
+text at all") doubting it. Galatians 4:4 is cited for what it says, that the Son
+was born of a woman; whether Paul alludes to Genesis there is disputed too
+(`sonMadeOfAWoman`).
 
 **Its rating.** `disputed`, on Westermann. He grants what every ground reads —
 none of them says the New Testament *quotes* Genesis 3:15 — and denies that the
@@ -1411,9 +1420,9 @@ Genesis 3 says of the serpent, of whom the blow falls on, and of who sets the
 enmity.
 
 - **The serpent speaks, and knows the command.** It gives back God's word of
-  2:17 twisted, "Ye shall not surely die" (3:4). Collins: "the snake's wording of
-  v. 4 reflects knowledge of 2:17", and "animals do not have faculty of speech in
-  Bible, hence there is some intervention here" (146 n. 21).
+  2:17 twisted, "You surely will not die!" (3:4). Collins: "the snake's wording
+  of v. 4 reflects knowledge of 2:17", and "animals do not have faculty of
+  speech in Bible, hence there is some intervention here" (146 n. 21).
 - **It is the instrument of an evil power.** Delitzsch, as Collins quotes him:
   "an animal not speaking of its own accord, but as made the instrument of itself
   by the evil principle". Woudstra: "There is a diabolical subtlety in the
@@ -1480,12 +1489,12 @@ also names her posterity. Collins allows the collective too, the Messiah "as the
 (primary) seed, and his followers as 'seed' by virtue of their relation to him"
 (148 n. 24).
 
-Paul reads the singular "seed" of the promise to Abraham as one person: "He
-saith not, And to seeds, as of many; but as of one, And to thy seed, which is
-Christ" (Galatians 3:16). That is a precedent for reading the word of one, not
-a reading of Genesis 3:15, and no reader found takes it as one; Calvin uses it so
-("So Paul, from the seed of Abraham, leads us to Christ", 171). It is not counted
-as a ground.
+Paul reads the singular "seed" of the promise to Abraham as one person: "He does
+not say, 'And to seeds,' as referring to many, but rather to one, 'And to your
+seed,' that is, Christ" (Galatians 3:16). That is a precedent for reading the
+word of one, not a reading of Genesis 3:15, and no reader found takes it as one;
+Calvin uses it so ("So Paul, from the seed of Abraham, leads us to Christ",
+171). It is not counted as a ground.
 
 Rated `disputed`. Keil grants the first two grounds — "the posterity of a man may
 consist of a whole tribe or of one son only", and the victory is "over the

@@ -37,6 +37,22 @@ and what is missing. If they did not, ask for the five in one message.
 Ask for everything missing at once, with what you will assume for each if they
 do not know, and carry on with the rest. Never ask one question per turn.
 
+If they quote a verse from the King James Version themselves, or from a
+translation the library does not use, quote it instead from the one the
+argument uses (the NET, LSB or NRSV, else the ESV or NIV;
+`docs/src/writing-for-readers.md`). When the claim rests on a word, read the
+verse back to them in the new wording with the claims, and ask whether it still
+says what they meant: a change of translation can move a claim as surely as a
+change of words.
+
+A source they cite is different. If Calvin, Wesley or a confession quotes the
+KJV, keep the source's wording and say it is the KJV's; that is the only place
+the KJV appears. Then ask whether the source's reading rests on the text the KJV
+translates, a variant the critical Greek does not print, or on a Latin
+rendering that departs from the Greek. If it does, that is a step of the
+argument: add it to the claims you read back, cited, or tell them it will be
+filed as an issue of its own.
+
 ### 2. Read the claims back, and wait
 
 Before writing any Lean, show the person the claims as a numbered list:

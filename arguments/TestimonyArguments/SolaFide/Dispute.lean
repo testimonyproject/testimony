@@ -213,13 +213,14 @@ verse and the parable of 7:41–43 suggest. Marshall argues this from the Greek:
 "for" (ὅτι) here means "as is evidenced by the fact that". Padilla reads it so:
 she "loves much because she has been forgiven much". So does Melanchthon in the
 *Apology of the Augsburg Confession*: "Christ interprets Himself when He adds:
-Thy faith hath saved thee", so the woman did not merit forgiveness "by that work
-of love". The premise is rated `disputed`. Marshall names those who read the
-love as the cause: Wellhausen, Creed, and most Roman Catholic commentators,
-Lagrange and Schürmann among them. Trent counts beginning to love God among the
-dispositions to justification (Session VI, ch. 6). None of them is heard here as
-a position of his own. No one in this debate argues that reading of 7:47, and
-none of those commentators is yet cited from his own work.
+Thy faith hath saved thee" (the translation gives Luke 7:50 in the King James
+wording), so the woman did not merit forgiveness "by that work of love". The
+premise is rated `disputed`. Marshall names those who read the love as the
+cause: Wellhausen, Creed, and most Roman Catholic commentators, Lagrange and
+Schürmann among them. Trent counts beginning to love God among the dispositions
+to justification (Session VI, ch. 6). None of them is heard here as a position
+of his own. No one in this debate argues that reading of 7:47, and none of those
+commentators is yet cited from his own work.
 
 ### John
 
