@@ -15,6 +15,7 @@ import TestimonyArguments.SolaFide.Vulgate
 import TestimonyArguments.SolaFide.Ratings
 import TestimonyArguments.SolaFide.Verdict
 import TestimonyArguments.SolaFide.Abraham
+import TestimonyArguments.SolaFide.Burdens
 
 /-!
 # TestimonyArguments.SolaFide — justified by grace, through faith, not by works

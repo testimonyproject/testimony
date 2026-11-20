@@ -539,6 +539,68 @@ inductive Claim
   /-- The covenant oath of Genesis 22:16–18, to bless the nations through
   Abraham's seed, was merited by the binding of Isaac (Hahn). -/
   | aqedahOathMeritedByObedience
+  /-- Titus 3:5–7 uses "justified" (δικαιόω) in the sense Paul's letters give it:
+  "being justified by his grace" is the verdict sense, set beside "the washing
+  of regeneration and renewal of the Holy Spirit". The line on Paul's word
+  draws on Titus 3:5–7 for Paul's usage, and so needs this. -/
+  | titus3_7UsesDikaioAsPaul
+  /-- "Count" (λογίζομαι) keeps one sense through Romans 4:3–11: the same in 4:4–5,
+  where faith is "counted as righteousness", and in 4:6–8, where the Lord "will
+  not count his sin". Paul joins Genesis 15:6 and Psalm 32:2 by the word they share, and his
+  explanation of the one by the other needs the word to keep its sense. -/
+  | romans4CountKeepsItsSense
+  /-- Paul's "justify" (δικαιόω) and "works of the law" (ἔργα νόμου) keep one
+  sense between Romans 3:28 and Galatians 2:16, and as Paul uses them
+  generally. The Pauline strand sets the two verses together and reads the
+  phrase as Paul's usage, so it needs this. -/
+  | paulsWordsKeepTheirSense
+  /-- The Latin *iustificare*, as the Latin West read it ("to be made just"),
+  bears the sense of Paul's Greek δικαιόω. Trent's reading of Paul's word goes
+  from Augustine's Latin gloss to the Greek, and so needs this. -/
+  | latinWordBearsPaulsSense
+  /-- "Works" (ἔργα) keeps one sense from Romans 4:4–5, the one who works and the
+  one who does not, to 4:6–8, righteousness "apart from works". -/
+  | romans4WorksKeepsItsSense
+  /-- "Believe" (πιστεύω) keeps one sense between John 6:29, "that you believe in
+  him whom he has sent", and "whoever believes in him" in John 3:16 and 3:18. All
+  three have the same Greek construction, "believe into" (πιστεύειν εἰς). The
+  claim is not made of 3:18's "believed in the name", which Origen reads as a
+  lesser faith than believing in him. -/
+  | johnBelievingKeepsItsSense
+  /-- James uses "justify" (δικαιόω) in 2:21–25 in the sense it has outside Paul,
+  to declare, acquit or vindicate, as at Matthew 11:19 and Deuteronomy 25:1. -/
+  | jamesUsesDikaioAsOutsidePaul
+  /-- Through James 2:21–25, "justify" (δικαιόω) and "works" (ἔργα) keep one
+  sense: in 2:24 as in Abraham's case and Rahab's (2:21, 25). The word
+  "justify" occurs in James only in these verses. -/
+  | jamesKeepsHisWordsThroughTheParagraph
+  /-- "Faith" and "works" in James 2:18, "I will show you my faith by my works",
+  are the faith of Ephesians 2:8 and the works of 2:9–10: the works excluded as
+  the ground, and the good works God prepared, one word for one kind of deed. -/
+  | fruitTextsShareFaithAndWorks
+  /-- Augustine gives both senses of "being justified": "being made righteous",
+  and, as a second way of taking it, "deemed, or reckoned as just" (*On the
+  Spirit and the Letter* 26.45). A claim about what Augustine wrote. -/
+  | augustineGivesBothSenses
+  /-- Romans 5:19 says: "through the obedience of the one man the many will be
+  made righteous" (δίκαιοι κατασταθήσονται). The word is the adjective "righteous"
+  (δίκαιος), with the verb "appoint" or "constitute" (καθίστημι), and not the verb
+  "justify". A claim about the text, not about what "made righteous" means. -/
+  | romans5_19ManyMadeRighteous
+  /-- In Romans 5:19, "made righteous" means made righteous within: the many "will
+  really be righteous", as Ziesler, who reads the verb "justify" otherwise, holds,
+  and Fitzmyer with him. A reading of the verse, which Hodge and Calvin deny. -/
+  | romans5_19MadeInwardlyRighteous
+  /-- The adjective "righteous" (δίκαιος) in Romans 5:19 bears on Paul's verb
+  "justify" (δικαιόω): what "made righteous" means there is what the verb means
+  in Paul. Fitzmyer's reading needs this, since 5:19 has the adjective and not
+  the verb, and it is what Ziesler denies. -/
+  | romans5_19BearsOnTheVerb
+  /-- God's verdict is effective: in declaring the sinner righteous, God makes him
+  righteous. "Not only a forensic effect, but as forensic also an 'effective'
+  meaning" (Kertelge, quoted by Fitzmyer). A claim about what God's declaration
+  does. -/
+  | godsVerdictIsEffective
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaFide

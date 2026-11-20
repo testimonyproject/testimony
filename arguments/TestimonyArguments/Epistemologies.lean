@@ -34,14 +34,26 @@ rule. Its steps are not, yet: a step's citation records who disputes it, not wha
 A party that asks its rival for Scripture and rests a claim on a confession's word alone keeps
 two rules.
 
-Every party held to a rule keeps it (`sola_fide_own_rules`). It was not so when the check was
-first run, and what the check found changed the encoding. Four Reformed readings — sola fide
-from Paul, from Peter at Jerusalem and from John 6, and the Reformed answer to Chrysostom —
-each assert that justification and sanctification are inseparable but distinct: that God's
-pardoning and accepting a sinner, and his making that sinner holy over a life, always go
-together and are not the same thing. The library had cited that claim to the Westminster
-Confession and to Calvin alone, so by Westminster's own rule, which admits Scripture and
-evidence and not a confession's word, the four rested a claim on what they refuse their rival.
+Every party held to a rule keeps it (`sola_fide_own_rules`). The closest case is sola fide from
+John 6. It reads "believe" (πιστεύω) at John 6:29, "that you believe in him whom he has sent", in
+the sense the word has in "whoever believes in him" at John 3:16 and 3:18, and it needs the word
+to keep that sense between them. Calvin and Aquinas both read it so, and they are theologians,
+whose word Westminster's rule does not admit. But the premise rests on more than their word. The
+Greek of both passages has the same construction, πιστεύειν εἰς, "believe into", and no edition
+in the apparatus of the SBL Greek New Testament reads otherwise at those verses
+(`john_believing_into_in_both_passages`). Thayer's lexicon lists all three verses under one sense
+of the phrase, "to have a faith directed unto … Jesus" (p. 511), and Moulton's grammar gives the
+construction one meaning, "believe in", set against the bare dative (pp. 67–68). A lexicon and a
+grammar are evidence anyone can check, and Westminster's rule admits evidence.
+
+The other Reformed readings did not keep their rule either when the check was first run, and what
+the check found changed the encoding. Four Reformed readings — sola fide from Paul, from Peter at
+Jerusalem and from John 6, and the Reformed answer to Chrysostom — each assert that justification
+and sanctification are inseparable but distinct: that God's pardoning and accepting a sinner, and
+his making that sinner holy over a life, always go together and are not the same thing. The
+library had cited that claim to the Westminster Confession and to Calvin alone, so by
+Westminster's own rule, which admits Scripture and evidence and not a confession's word, the four
+rested a claim on what they refuse their rival.
 
 The fault was the encoding's, not the readings'. A Reformed reader cites the Confession as a
 summary pointing to its Scripture proofs, and the library had cited the summary without the
@@ -264,8 +276,11 @@ def breakTheirRule : List Party := parties.filter fun q => (ownRule q).any (!·.
 def heldToNone : List Party := parties.filter fun q => (professes q).isNone
 
 /-- **Every party to the sola fide dispute keeps the rule it professes.** Every claim each party
-held to a rule asserts rests on what its rule admits. Aquinas, Luther and Chrysostom are held to
-none.
+held to a rule asserts rests on what its rule admits. Sola fide from John 6 needs "believe" to
+keep its sense between John 6:29 and "whoever believes in him" at John 3:16 and 3:18. That rests
+on the Greek both passages share, πιστεύειν εἰς, on Thayer's lexicon, which lists the three
+verses under one sense, and on Moulton's grammar, as well as on Calvin and Aquinas; so it rests
+on evidence, which Westminster's rule admits. Aquinas, Luther and Chrysostom are held to none.
 
 It did not, when this check was first run. Four Reformed readings — sola fide from Paul, from
 Peter and from John 6, and the Reformed answer to Chrysostom — asserted that justification and
@@ -278,8 +293,9 @@ with its Scripture proofs, and it is cited there now, with those proofs (1 Corin
 and 1:30; Romans 4:6, 8; Ezekiel 36:27; Hebrews 9:13–14; Romans 3:24–25; Romans 6:6, 14).
 
 What it does not claim: that the Reformed readings are right, or that the proofs prove the
-claim. It says only that the claim now rests on the kind of ground the readings' own rule admits.
-Whose authority a claim rests on is read from the tradition its citation records, a proxy. And
+claim, nor that a construction two passages share fixes the sense the word has in both. It says
+only that each claim rests on the kind of ground the readings' own rule admits. Whose authority
+a claim rests on is read from the tradition its citation records, a proxy. And
 it says nothing of steps, whose citations record their ratings, not what they rest on. -/
 theorem sola_fide_own_rules :
     breakTheirRule = [] ∧ heldToNone = [.aquinas, .luther, .chrysostom] := by

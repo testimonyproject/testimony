@@ -872,6 +872,202 @@ def baseCite : Claim → AtomMeta
         { primary := .work kuruvillaAqedah (.page 507)
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
+  | .titus3_7UsesDikaioAsPaul =>
+    { label := "Titus 3:5–7 uses ‘justified’ (δικαιόω) in the sense of Paul's letters"
+    , kind := .linguistic
+      -- `plausible`: Ziesler, p. 162, over every use of the verb outside Romans
+      -- and Galatians: "in each case the use is forensic", and Titus 3:7 and
+      -- 1 Corinthians 6:11, "while forensic, also hint at moral renewal in the
+      -- background". It does not need Paul to have written Titus
+      -- (`titusIsPauline`, `disputed`): only that the verb keeps his sense.
+    , source :=
+        { primary := .work zieslerRighteousnessInPaul (.page 162)
+        , supporting := [.scripture [{ ref := .range ⟨.titus, 3, 5, 3, 7⟩ }]]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .plausible } }
+  | .romans4CountKeepsItsSense =>
+    { label := "‘Count’ (λογίζομαι) keeps its sense from Romans 4:4–5 to 4:6–8"
+    , kind := .linguistic
+      -- `wellSupported`, on the evidence `logizomaiIsReckoning` cites: the
+      -- lexicon and Moo read the verb through Romans 4:3–11 as crediting to an
+      -- account, one sense across the passage, which is this claim.
+    , source :=
+        { primary := .work bdag (.sectionRef "s.v. λογίζομαι")
+        , supporting := [.work mooRomans (.adLoc ⟨.romans, 4, 3⟩)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .paulsWordsKeepTheirSense =>
+    { label := "Paul’s ‘justify’ and ‘works of the law’ keep one sense in Romans 3:28, " ++
+        "Galatians 2:16 and his usage"
+    , kind := .linguistic
+      -- Proposed: every reading of the two verses found takes the phrase one way
+      -- in both, Dunn's and the Reformed alike, but no page stating it has been
+      -- read. `disputed`: Barclay grants the verses and denies that "works"
+      -- reaches as far in Galatians as in Romans, where it is "as if by some
+      -- general theological principle (4:1–4)" (p. 11).
+    , source :=
+        { primary := .proposal ("the Pauline strand joins Romans 3:28 and Galatians 2:16 and " ++
+            "reads 'works of the law' as Paul's usage, so it needs the words to keep one sense")
+        , supporting := [.work barclayPaulAndTheLaw (.page 11)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .latinWordBearsPaulsSense =>
+    { label := "The Latin ‘iustificare’, read as ‘made just’, bears the sense of Paul’s δικαιόω"
+    , kind := .linguistic
+      -- Trent reads Paul's word through the Latin (ch. 7–8), with Augustine's
+      -- gloss. `disputed`: the Reformers read the same verses and deny that the
+      -- Greek means "made just". Melanchthon: "to justify signifies, according
+      -- to forensic usage, to acquit a guilty one and declare him righteous"
+      -- (Apology IV, on Romans 5:1); Calvin: "To justify, therefore, is nothing
+      -- else than to acquit from the charge of guilt" (Institutes III.xi.3).
+    , source :=
+        { primary := .work tannerDecrees
+            (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 7–8")
+        , supporting :=
+            [ .work npnfAugustineAntiPelagian
+                (.sectionRef "On the Spirit and the Letter, ch. 45 (26.45)") ]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .romans4WorksKeepsItsSense =>
+    { label := "‘Works’ keeps its sense from Romans 4:4–5 to 4:6–8"
+    , kind := .linguistic
+      -- `plausible`: Moo reads the passage so, and no reader has been found who
+      -- grants the verses and gives "works" two senses across them. The New
+      -- Perspective commentaries (Dunn, WBC; Wright, NIB) are the likeliest to
+      -- and have not been read, so it is not rated higher.
+    , source :=
+        { primary := .work mooRomans (.adLoc ⟨.romans, 4, 4⟩)
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .plausible } }
+  | .johnBelievingKeepsItsSense =>
+    { label := "‘Believe’ keeps its sense between John 6:29 and ‘whoever believes in him’ in " ++
+        "John 3:16 and 3:18"
+    , kind := .linguistic
+      -- The ground is in the Greek: both passages have πιστεύειν εἰς, "believe
+      -- into" (`john_believing_into_in_both_passages`), and no edition in the
+      -- SBLGNT's apparatus (WH, Tregelles, NA28, Robinson–Pierpont) varies the
+      -- εἰς at 3:16, 3:18 or 6:29. Thayer lists all three under one sense
+      -- (1.b.γ, p. 511); Moulton (pp. 67–68) gives the construction one
+      -- meaning, "believe in", against the bare dative. Calvin on 6:29: "What is
+      -- the import of the word believe, we have explained under the Third
+      -- Chapter." Aquinas reads both as faith that tends toward him through
+      -- charity (c. 3, lect. 3, n. 486; c. 6, n. 901); his dissent is over what
+      -- the sense is (`johannineBelievingIsTrust`), not whether it is kept.
+      -- `wellSupported`: no reader found grants the construction and gives 6:29
+      -- another sense than 3:16 and 3:18a. Origen does split 3:18b, "in the
+      -- name", from "in him" (Commentary on John X.28), which is why the claim
+      -- is stated of "believes in him" only. Abbott allows "different shades of
+      -- meaning" in different contexts (§1517), of 6:35 and 6:40, not of 6:29.
+      -- Not `consensus`: BDAG, Bultmann, Schnackenburg and Brown are unread.
+    , source :=
+        { primary := .work thayerLexicon (.page 511)
+        , supporting :=
+            [ .work sblgnt (.sectionRef "John 3:16, 18; 6:29, with apparatus")
+            , .work moultonProlegomena (.pages 67 68)
+            , .work calvinJohn (.adLoc ⟨.john, 6, 29⟩)
+            , .work aquinasJohn (.sectionRef "c. 3, lect. 3, nn. 485–486; c. 6, n. 901") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .jamesUsesDikaioAsOutsidePaul =>
+    { label := "James uses ‘justify’ in 2:21–25 as it is used outside Paul: to declare or " ++
+        "vindicate"
+    , kind := .linguistic
+      -- Calvin gives "the two fold meaning, of the word justified. Paul means by
+      -- it the gratuitous imputation of righteousness before the tribunal of
+      -- God; and James, the manifestation of righteousness by the conduct". He
+      -- does not cite Matthew 11:19 or Deuteronomy 25:1. `disputed`: Trent reads
+      -- James 2:24 of the increase of justice received (ch. 10), the renewal
+      -- reading (`jamesUsesDikaioAsPaul`).
+    , source :=
+        { primary := .work calvinCatholicEpistles (.adLoc ⟨.james, 2, 21⟩)
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .jamesKeepsHisWordsThroughTheParagraph =>
+    { label := "‘Justify’ and ‘works’ keep one sense through James 2:21–25"
+    , kind := .linguistic
+      -- `wellSupported`: the rival readers agree. Calvin reads 2:21 of "the
+      -- proof he gave of his justification" and 2:24 as "his righteousness is
+      -- known and proved by its fruits"; Trent reads 2:24 as the increase of
+      -- the justice of 2:21's Abraham (ch. 10). No reader found splits 2:24 from
+      -- 2:21. Not `consensus` on two readers.
+    , source :=
+        { primary := .work calvinCatholicEpistles (.adLoc ⟨.james, 2, 24⟩)
+        , supporting :=
+            [.work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 10")]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .fruitTextsShareFaithAndWorks =>
+    { label := "The faith and works of James 2:18b are those of Ephesians 2:8–10"
+    , kind := .linguistic
+      -- Westminster sets the texts side by side as proofs (XVI.2), so it reads
+      -- them alike. Calvin says the same of 2:18b's "my faith": "fruit ever
+      -- comes from the living root of a good tree", though the faith James's
+      -- opponent boasts of (2:14, 19) is "the empty name of faith". `plausible`:
+      -- no reader has been read who denies it of 2:18b, but the harmonisers who
+      -- set Paul's excluded works apart from James's (Moo, on 2:14–26) have not
+      -- been read.
+    , source :=
+        { primary := .work westminsterConfession (.sectionRef "XVI.2")
+        , supporting := [.work calvinCatholicEpistles (.adLoc ⟨.james, 2, 18⟩)]
+        , tradition := .reformedProtestant
+        , confidence := .plausible } }
+  | .augustineGivesBothSenses =>
+    { label := "Augustine gives both senses of ‘being justified’: made righteous, and deemed just"
+    , kind := .historical
+      -- `consensus`: what Augustine wrote, in the chapter Trent's line cites.
+    , source :=
+        { primary := .work npnfAugustineAntiPelagian
+            (.sectionRef "On the Spirit and the Letter, ch. 45 (26.45)")
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .romans5_19ManyMadeRighteous =>
+    { label := "Romans 5:19: through the obedience of the one the many will be made righteous"
+    , kind := .textual
+      -- `consensus`: the text. What "made righteous" means there is its own
+      -- claim, `romans5_19MadeInwardlyRighteous`.
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.romans, 5, 19⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .romans5_19MadeInwardlyRighteous =>
+    { label := "In Romans 5:19, ‘made righteous’ means made righteous within"
+    , kind := .interpretive
+      -- `disputed`. Ziesler, p. 199: "certainly something more than forensic",
+      -- the many "will really be righteous"; Fitzmyer, pp. 118–19, the
+      -- "effective sense". Hodge grants the verse and denies it: καθίστημι
+      -- "never, in the New Testament, means to make, in the sense of effecting"
+      -- (Romans, 1864, p. 271), so the many are "constituted legally righteous"
+      -- (p. 272). So does Calvin: we are "made righteous 'by the obedience' of
+      -- Christ" only because "we are deemed righteous in the sight of God in
+      -- him" (Institutes III.xi.4, Beveridge).
+    , source :=
+        { primary := .work zieslerRighteousnessInPaul (.page 199)
+        , supporting := [.work fitzmyerRomans (.pages 118 119)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
+  | .romans5_19BearsOnTheVerb =>
+    { label := "Romans 5:19's ‘righteous’ (δίκαιος) bears on what Paul's verb ‘justify’ means"
+    , kind := .linguistic
+      -- `disputed`. Fitzmyer, pp. 118–19: "the effective sense seems to be
+      -- supported by 5:19". Ziesler, p. 199, grants the verse and that the many
+      -- "will really be righteous", and denies the bridge: the word there is the
+      -- adjective, not the verb.
+    , source :=
+        { primary := .work fitzmyerRomans (.pages 118 119)
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .godsVerdictIsEffective =>
+    { label := "God's verdict is effective: declaring the sinner righteous, it makes him righteous"
+    , kind := .theological
+      -- `disputed`. Fitzmyer, pp. 118–19, quoting Kertelge: declaring upright has
+      -- "not only a forensic effect, but as forensic also an 'effective'
+      -- meaning". Ziesler, p. 212, grants that the justified are also "made a new
+      -- creature", the two moments "interdependent and inseparable", and holds
+      -- that the renewal is not what the verb says (pp. 162–63).
+    , source :=
+        { primary := .work fitzmyerRomans (.pages 118 119)
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
   | .aqedahOathMeritedByObedience =>
     { label := "The oath of Genesis 22:16–18 was merited by the binding of Isaac"
     , kind := .interpretive

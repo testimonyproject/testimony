@@ -100,14 +100,26 @@ it.
 An equivocation uses one word in two senses and relies on it meaning the same throughout. The
 check looks at every word the move *uses* at two places. A word is used inside what a text
 says, what a reader held, or what is held to be so. A word only *talked about*, in a claim of
-what it means, is not used. For each word the move needs alike, the check reports one of three
+what it means, is not used. For each word the move needs alike, the check reports one of four
 things:
 
-- **granted** — a premise says the word keeps its sense;
+- **granted** — a premise says the word keeps its sense, between the two places or between two
+  places they lie within: what a premise says of John 3:16–18, it says of 3:16;
 - **read apart** — the move's own statements give it different senses at the two places, and
   it still needs them one. That is the fallacy, on the move's own terms;
+- **granted only in part** — a premise says the word keeps its sense between places that
+  overlap the two the move needs without covering them. A premise about John 3:18a, "whoever
+  believes in him is not condemned", says nothing of the rest of 3:18, which speaks of
+  believing "in the name". The move is conditional on the rest;
 - **unstated** — the move says nothing either way. It is then *conditional* on the word keeping
   its sense: not fallacious, but no stronger than that condition.
+
+A place can be part of a verse. `verse_part` (`Testimony.Corpus.Greek`) names one by the
+positions of its first and last words in the Greek, and by one word it contains, by dictionary
+form. It reads the corpus as the module is built and fails the build unless the words are there
+and the anchoring word occurs in the part exactly once, so half a verse cannot silently stand
+for the whole. The cases are pinned in `Testimony.Checks.FallacyCases`
+(`part_of_a_passage_cases`).
 
 The check compares senses as the vocabulary names them. Two senses a reader might count as one
 are counted as two, so what it finds is only as fine as the vocabulary.

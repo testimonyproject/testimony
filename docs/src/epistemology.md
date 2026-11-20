@@ -129,9 +129,18 @@ Romans 6:6 and 14. Calvin's text for Scripture distinguishing the two is 1 Corin
 
 So the encoding was changed. The claim is now cited to the Larger Catechism, with its proofs,
 in both arguments that assert it, sola fide and the canonical witness. Every party held to a
-rule now keeps it (`sola_fide_own_rules`). No rating and no verdict moved, because nothing
-weighs a claim by what it rests on. What moved is what a reader can check: the texts are on
-the page.
+rule now keeps it (`sola_fide_own_rules`). No rating and no verdict moved, because
+nothing weighs a claim by what it rests on. What moved is what a reader can check: the texts
+are on the page.
+
+Sola fide from John 6 keeps its rule as well, on a premise that could have failed it. It reads
+"believe" at John 6:29 in the sense the word has in "whoever believes in him" at John 3:16 and
+3:18, and it needs the word to keep that sense between them. Calvin and Aquinas read it so, but
+Westminster's rule admits no theologian's word on its own. The premise rests on evidence too: the
+Greek of both passages has the construction πιστεύειν εἰς, "believe into", which no edition in the
+SBL Greek New Testament's apparatus varies there; Thayer's lexicon lists the three verses under
+one sense (p. 511); and Moulton's grammar gives the construction one meaning, "believe in"
+(pp. 67–68).
 
 This is what the check is for. A rule each side professes, applied to each side's own claims,
 found a premise the library had cited on a confession's word alone, and pointed to the wrong

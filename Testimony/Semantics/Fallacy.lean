@@ -215,6 +215,10 @@ inductive Sameness
   and those at the second, with none in common, and the move still needs the
   word the same at both. -/
   | readApart (here there : List Sense)
+  /-- A premise says the word keeps its sense between places that overlap the
+two the move needs, and does not cover them: granted of part of what the move
+uses, and not of the rest. -/
+  | partly (granted : List (Scope × Scope))
   /-- The move neither says nor denies that the word keeps its sense. -/
   | unstated
 deriving DecidableEq, Repr
@@ -226,11 +230,29 @@ def sensesAt (m : Move) (w : Lexeme) (sc : Scope) : List Sense :=
   ((m.statements.flatMap Statement.senses).filterMap fun (w', sc', s) =>
     if w' = w ∧ sc' = sc then some s else none).eraseDups
 
-/-- Whether a premise, read for what its words mean, states that a word keeps
-its sense between two places, in either order. -/
+/-- Every pair of places between which a premise, read for what its words mean,
+states that a word keeps its sense, each pair once in whichever order it was found. -/
+def samenessesGranted (m : Move) (w : Lexeme) : List (Scope × Scope) :=
+  let all := m.premises.flatMap fun s =>
+    (Ontology.closed Testimony.Ontology.shared s).lits.filterMap fun
+      | ⟨true, .sameSense w' a b⟩ => if w' == w then some (a, b) else none
+      | _ => none
+  all.foldl (fun acc (a, b) =>
+    if acc.contains (a, b) || acc.contains (b, a) then acc else acc ++ [(a, b)]) []
+
+/-- Whether a premise states that a word keeps its sense between two places, in
+either order, or between two places they lie within: what a premise says of a
+word throughout 3:16–18, it says of 3:16. -/
 def establishesSameness (m : Move) (w : Lexeme) (a b : Scope) : Bool :=
-  m.premises.any fun s =>
-    (Ontology.closed Testimony.Ontology.shared s).lits.contains ⟨true, .sameSense w a b⟩
+  (m.samenessesGranted w).any fun (a', b') =>
+    (a.within a' && b.within b') || (a.within b' && b.within a')
+
+/-- The places a premise grants the word's sameness between that only overlap
+the two the move needs, without covering them: the premise speaks of part of
+what the move uses, as one about 3:18a does of a move that uses all of 3:18. -/
+def partlyGranted (m : Move) (w : Lexeme) (a b : Scope) : List (Scope × Scope) :=
+  (m.samenessesGranted w).filter fun (a', b') =>
+    (a.overlaps a' && b.overlaps b') || (a.overlaps b' && b.overlaps a')
 
 /-- The word, if any, whose sameness the move concludes: a move concluding that
 a word does or does not keep its sense assumes nothing about that word. -/
@@ -260,7 +282,9 @@ def sameness (m : Move) (w : Lexeme) (a b : Scope) : Sameness :=
   let there := m.sensesAt w b
   if !here.isEmpty && !there.isEmpty && here.all (!there.contains ·) then .readApart here there
   else if m.establishesSameness w a b then .granted
-  else .unstated
+  else match m.partlyGranted w a b with
+    | [] => .unstated
+    | ps => .partly ps
 
 /-- **The equivocation check**: every sameness of sense the move needs, and how
 it stands to each. -/
@@ -278,7 +302,7 @@ def equivocates (m : Move) : List Lexeme :=
 it holds on. -/
 def conditionalOn (m : Move) : List Lexeme :=
   (m.equivocation.filterMap fun
-    | (w, _, _, .unstated) => some w
+    | (w, _, _, .unstated) | (w, _, _, .partly _) => some w
     | _ => none).eraseDups
 
 end Move

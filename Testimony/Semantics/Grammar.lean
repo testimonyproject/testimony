@@ -66,6 +66,24 @@ def Scope.isPassageOf : Scope → Bool
   | .passageOf .. => true
   | _ => false
 
+/-- **Whether one place lies within another**: a passage within a passage, as
+`PassageRange.within` reads them, and a passage of a voice's text within a
+passage of the same voice's text. A voice's usage lies only within itself. What
+a premise says of a word throughout a place, it says at every place within it. -/
+def Scope.within : Scope → Scope → Bool
+  | .passage p, .passage q => p.within q
+  | .passageOf v p, .passageOf v' q => v == v' && p.within q
+  | .usage v, .usage v' => v == v'
+  | _, _ => false
+
+/-- **Whether two places share any of the text**: two passages, or two passages
+of one voice's text, that overlap; a voice's usage overlaps only itself. -/
+def Scope.overlaps : Scope → Scope → Bool
+  | .passage p, .passage q => p.overlaps q
+  | .passageOf v p, .passageOf v' q => v == v' && p.overlaps q
+  | .usage v, .usage v' => v == v'
+  | _, _ => false
+
 /-- What a slot in a relation holds: a concept, a word as it is used somewhere
 (whose sense is left to a separate `Statement.means`), or a particular — one
 thing or occurrence, named and of a stated kind. -/

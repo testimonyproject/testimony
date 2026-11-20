@@ -2785,6 +2785,49 @@ Library, ISBN 9780226039336 (3rd ed., University of Chicago Press, 2000). -/
   , place := some "Chicago"
   , edition := some "3rd" }
 
+/-- Thayer's lexicon, his translation and enlargement of Grimm's edition of Wilke's *Clavis
+Novi Testamenti*. Cited for πιστεύω, sense 1.b.γ (p. 511): "the phrase πιστεύειν εἰς τὸν
+Ἰησοῦν, εἰς τ. υἱὸν τοῦ θεοῦ, etc., is very common; prop. to have a faith directed unto,
+believing or in faith to give one's self up to, Jesus", listing John 3:16, 18 and 6:29 under
+the one sense. Read in the American Book Company's corrected edition scanned at the Internet
+Archive, whose title page is undated and gives copyright 1886 and 1889 to Harper & Brothers.
+It carries no ISBN; the Hendrickson reprint (ISBN 9781565632097) has not been read. -/
+@[bib_entry] def thayerLexicon : BibEntry := .book
+  { core :=
+      { key := "thayer-lexicon-1889"
+      , role := .text
+      , contributors := { authors := [.person "Joseph Henry" "Thayer"] }
+      , title := "A Greek-English Lexicon of the New Testament"
+      , subtitle := some "Being Grimm's Wilke's Clavis Novi Testamenti"
+      , year := some { value := 1889 }
+      , identifiers :=
+          [ .url "https://archive.org/details/greekenglishlexi00grimuoft"
+                 (some "2026-11-19") ] }
+  , publisher := "American Book Company"
+  , place := some "New York"
+  , edition := some "corrected" }
+
+/-- Moulton's *Prolegomena*, the first volume of his grammar of New Testament Greek. Cited for
+πιστεύειν εἰς (pp. 67–68): "The really important matter is the recognition of a clear
+distinction between believe on or in and believe with the dative simply", with a count of the
+constructions in which John's Gospel and First John have 37 of the New Testament's 45 uses of
+εἰς. Read in the second edition, with corrections and additions, scanned at the Internet
+Archive; it carries no ISBN. -/
+@[bib_entry] def moultonProlegomena : BibEntry := .book
+  { core :=
+      { key := "moulton-prolegomena-1906"
+      , role := .scholarship
+      , contributors := { authors := [.person "James Hope" "Moulton"] }
+      , title := "A Grammar of New Testament Greek"
+      , subtitle := some "Volume I: Prolegomena"
+      , year := some { value := 1906 }
+      , identifiers :=
+          [ .url "https://archive.org/details/grammarofnewtest01mouluoft"
+                 (some "2026-11-19") ] }
+  , publisher := "T. & T. Clark"
+  , place := some "Edinburgh"
+  , edition := some "2nd" }
+
 /-- Morris's lexical study of the apostolic vocabulary of salvation — redeem,
 propitiate, reconcile, justify — against its Old Testament background. Cited for
 the forensic sense of δικαιόω and its antithesis with condemnation. Verified at
@@ -4582,6 +4625,7 @@ with the body of the sun" (p. 122). -/
           [ .url "https://archive.org/details/christendomastray1884" (some "2026-11-14") ] }
   , publisher := "R. Roberts"
   , place := some "Birmingham" }
+
 /-- Garrigou-Lagrange's commentary on Aquinas's treatise on grace (*Summa*
 I-II qq. 109–114), the Thomist school's case for grace "efficacious of itself,
 intrinsically". Read in the EWTN library's reproduction, which has no page
@@ -4941,6 +4985,70 @@ headers. Cited for his first rule (p. 3) and its application to Titus 2:13:
       , note := some "Third edition." }
   , publisher := "Vernor and Hood"
   , place := some "London" }
+
+/-- Calvin's *Institutes*, Book III, in Henry Beveridge's translation, as the
+Christian Classics Ethereal Library gives it, for III.xi on justification: that
+"to justify, therefore, is nothing else than to acquit from the charge of guilt"
+(§3); that justification and sanctification are "inseparable", as the sun's
+brightness and heat, and yet "reason itself prohibits us from transferring the
+peculiar properties of the one to the other" (§6); and that we could not be
+"made righteous 'by the obedience' of Christ (Rom. 5:19), were it not that we are
+deemed righteous in the sight of God in him" (§4). Read in CCEL's text of
+chapter 11; the volume's date was not checked, so none is given. -/
+@[bib_entry] def calvinInstitutesBeveridgeCcel : BibEntry := .book
+  { core :=
+      { key := "calvin-institutes-beveridge-ccel"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "John" "Calvin"]
+          , translators := [.person "Henry" "Beveridge"] }
+      , title := "Institutes of the Christian Religion"
+      , identifiers :=
+          [ .url "https://ccel.org/ccel/calvin/institutes/institutes.v.xii.html"
+                 (some "2026-11-18") ] }
+  , publisher := "Christian Classics Ethereal Library" }
+
+/-- Charles Hodge on Romans, in the revised edition of 1864, for 5:19 (pp. 270–74):
+καθίστημι "never, in the New Testament, means to make, in the sense of
+effecting, or causing a person or thing, to be in its character or nature other
+than it was before" (p. 271), so the many are "constituted legally righteous"
+(p. 272). The title page reads "New edition, revised, and in great measure
+rewritten", Philadelphia, William S. & Alfred Martien, 1864; read in the scan at
+archive.org. Published without an ISBN. -/
+@[bib_entry] def hodgeRomans : BibEntry := .book
+  { core :=
+      { key := "hodge-romans-1864"
+      , role := .scholarship
+      , contributors := { authors := [.person "Charles" "Hodge"] }
+      , title := "Commentary on the Epistle to the Romans"
+      , year := some { value := 1864 }
+      , identifiers :=
+          [ .url "https://archive.org/details/commentaryepi00hodg" (some "2026-11-18") ] }
+  , publisher := "William S. & Alfred Martien"
+  , place := some "Philadelphia" }
+
+/-- Barclay's survey of the debate after Sanders, for how far "works" reaches in
+each letter. In Galatians "the discussion of 'law' and 'works of the law' is
+wholly restricted to the question of Gentile observance of the Mosaic Torah",
+while in Romans "'works' are contrasted with 'faith' and 'grace' as if by some
+general theological principle (4:1–4)" (p. 11). Read in the open text at The
+Gospel Coalition and in the scanned print issue (September 1986, pp. 5–15). No
+DOI. -/
+@[bib_entry] def barclayPaulAndTheLaw : BibEntry := .article
+  { core :=
+      { key := "barclay-paul-and-the-law-1986"
+      , contributors := { authors := [.person "John M. G." "Barclay"] }
+      , title := "Paul and the law: observations on some recent debates"
+      , year := some { value := 1986 }
+      , identifiers :=
+          [ .url ("https://www.thegospelcoalition.org/themelios/article/" ++
+                  "paul-and-the-law-observations-on-some-recent-debates/")
+                 (some "2026-11-19") ] }
+  , journal := "Themelios"
+  , volume := some "12"
+  , issue := some "1"
+  , pages := some (5, 15) }
+
 /-- Karlo Broussard, "The Best Argument for Sola Scriptura", in Catholic
 Answers Magazine's online edition, 26 July 2023. He draws the self-refutation
 step: sola scriptura "must be proven from Scripture to pass its own test", "And

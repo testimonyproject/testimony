@@ -1,6 +1,7 @@
 import TestimonyArguments.SolaFide
 import TestimonyArguments.Meanings.SolaFide
 import Testimony.Checks.Aif
+import Testimony.Checks.Conditions
 import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
@@ -36,7 +37,7 @@ Sola fide
   the only means: held by 3, used of a text or voice by 9; derives:
     justificationByFaithAlone excludes baptismIsInstrumentalCause
   the whole ground: held by 3, used of a text or voice by 6; derives nothing
-  the same sense, both ways: stated or denied by 3; derives nothing
+  the same sense, both ways: stated or denied by 11; derives nothing
 -/
 #guard_msgs in
 #check_ontology under TestimonyArguments.SolaFide
@@ -44,35 +45,24 @@ Sola fide
 /--
 info: the fallacy checks, over every argument's lines, each named with its reader:
 Sola fide
-  lines: 49, read: 31, Scripture's own: 0
+  lines: 58, read: 38, Scripture's own: 0
   attribute a view, against the argument's record:
     sandersLine (Dunn): secondTempleJudaism, unrecorded
-    trentWordLine (Trent): augustine, unrecorded; latinWest, unrecorded
-  need a word to keep its sense, unstated:
-    catholicJamesWordLine (Trent): erga, dikaioo
-    catholicJamesWorksLine (Trent): erga, dikaioo
-    fruitLine (Westminster Assembly): pistis, erga
-    jamesLexicalLine (Moo): dikaioo
-    johannineLine (Calvin): pisteuo
-    johannineWithoutTrust (Calvin): pisteuo
-    lexicalLine (Silva): dikaioo
-    paulineLine (Calvin): dikaioo, ergaNomou
-    paulineWithoutPistisChristou (Calvin): dikaioo, ergaNomou
-    paulineWithoutWorksOfLaw (Calvin): dikaioo, ergaNomou
-    renewalWordLine (Trent): dikaioo
-    romansFourExegesisLine (Moo): logizomai, erga
-  read one word by a kindred one, the bridge unstated:
-    trentWordLine (Trent): iustificare for dikaioo (translation)
+    trentWordLine (Trent): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
+  cite a voice for one reading, leaving out another the record has:
+    trentWordLine (Trent): augustine, also verdict in augustineGivesBothSenses
+  conclude a word's sense from no use or reading of the word:
+    effectiveVerdictLine (Fitzmyer): dikaioo as makeRighteous
 -/
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaFide
 
-/-- info: every package has a model with its postulates: 88, and 0 undecided -/
+/-- info: every package has a model with its postulates: 93, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaFide
 
 /--
-info: every reading and step has a reader or is marked proposed: 88 packages, 49 lines
+info: every reading and step has a reader or is marked proposed: 93 packages, 58 lines
 -/
 #guard_msgs in
 #check_readers under TestimonyArguments.SolaFide
@@ -87,12 +77,24 @@ info: every reading and step has a reader or is marked proposed: 88 packages, 49
 
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:
-jamesDispute.finite: 35 I, 13 RA, 9 CA, 6 PA, 77 edges
+jamesDispute.finite: 38 I, 13 RA, 11 CA, 4 PA, 83 edges
 jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
-solaFideDispute.finite: 67 I, 30 RA, 33 CA, 0 PA, 160 edges
+solaFideDispute.finite: 80 I, 36 RA, 42 CA, 0 PA, 196 edges
 and 3 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in
 #check_aif under TestimonyArguments.SolaFide
+
+/--
+info: every dispute, its lines' conditions stated:
+jamesDispute.finite:
+  hidden premises: 0; lines not read: 4
+jesusWordsDispute.finite:
+  hidden premises: 0; lines not read: 1
+solaFideDispute.finite:
+  hidden premises: 0; lines not read: 6
+-/
+#guard_msgs in
+#check_conditions under TestimonyArguments.SolaFide
 
 end TestimonyArguments.Checks.SolaFide

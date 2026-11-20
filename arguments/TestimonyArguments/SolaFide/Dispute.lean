@@ -997,9 +997,13 @@ inductive Party
   /-- Paul's gospel in Galatians, against Trent's definition. -/
   | gospel
   /-- Paul's word, read by the rule of least meaning: "justify" (δικαιόω) does not
-  mean renewal. -/
+  mean renewal. Heard with the Reformed answers to the Catholic roads from the
+  Greek: Hodge and Calvin on Romans 5:19, Ziesler on its adjective, and Calvin on
+  the verdict. -/
   | lexical
-  /-- Trent, with its definition taken as a claim about Paul's word. -/
+  /-- Trent, with its definition taken as a claim about Paul's word, at its
+  strongest: on Augustine's explanation, and on Fitzmyer's and Kertelge's roads
+  from the Greek. -/
   | trentOnPaulsWord
   /-- Romans 4:3–8, read for what Paul's word means: the same conclusion as the
   argument from usage, reached from one passage. -/
@@ -1030,8 +1034,8 @@ def partyNode : Party → ArgumentPackage Claim
   | .critics => criticsCase
   | .jervell => jervellCase
   | .gospel => galatianGospel
-  | .lexical => lexicalCase
-  | .trentOnPaulsWord => tridentineOnPaulsWord
+  | .lexical => lexicalCaseAnsweringTheGreek
+  | .trentOnPaulsWord => tridentineOnPaulsWordAtItsStrongest
   | .romansOnTheWord => romansFourOnTheWord
   | .johannine => johannineParty
   | .aquinas => aquinasCase
@@ -1176,10 +1180,19 @@ declare_verdict nothingForcedUnanswered for solaFideDispute :
   It does not show that Paul's word means renewal, or that sola fide is false.
   Every position can be defended, and none loses (`pauls_word_defensible`,
   `trent_on_pauls_word_defensible`). What would move the verdict is an argument
-  that answers Trent at that step from evidence both sides accept. The readings
-  of Romans 5:19, 6:7 and 1 Corinthians 6:11, which readers take both ways, are
-  where it would have to be found. Fitzmyer, a Catholic exegete who grants the
-  courtroom sense, reads 5:19 as the "effective sense" (*Romans*, 118). -/
+  that answers Trent at that step from evidence both sides accept.
+
+  Both sides are heard here at their strongest. Trent on Paul's word has, beside
+  Augustine's explanation, Fitzmyer's two roads from the Greek: Romans 5:19, "the
+  many will be made righteous", and Kertelge's effective verdict
+  (`tridentineOnPaulsWordAtItsStrongest`). The argument from Paul's word has the
+  Reformed answer to each: Hodge and Calvin read 5:19 as a standing, Ziesler
+  holds that its adjective does not settle the verb, and Calvin that the renewal
+  comes with the verdict and not from it (`lexicalCaseAnsweringTheGreek`). Every
+  one of those readings has a cited reader who denies it, so the new attacks are
+  ties too, and the verdict is the one the narrower positions gave. Romans 6:7
+  and 1 Corinthians 6:11, which readers also take both ways, are not yet
+  heard. -/
   proves @[headline] sola_fide_dispute_forces_nothing
 
 #print axioms sola_fide_dispute_forces_nothing

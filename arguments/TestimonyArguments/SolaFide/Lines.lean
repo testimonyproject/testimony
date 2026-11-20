@@ -198,7 +198,7 @@ stand for every work, and not for one mark of being a Jew. -/
 @[solaFideDefs]
 def paulineToFaithAlone : Formula Claim :=
   ⋀ [ p .romans3_28, p .galatians2_16, p .galatiansOpposesCircumcisionAsRequirement
-    , p .pistisChristouObjective, p .worksOfLawMeansWorksGenerally ]
+    , p .pistisChristouObjective, p .worksOfLawMeansWorksGenerally, p .paulsWordsKeepTheirSense ]
   ➝ p .justificationByFaithAlone
 
 /-- **Luke's strand.** From Jesus' words at Luke 7:50, "your faith has saved you",
@@ -239,7 +239,8 @@ believing is trust, which brings nothing of its own to God. Independent of
 Paul, of Luke 7:50 and of Acts 15. -/
 @[solaFideDefs]
 def johannineToFaithAlone : Formula Claim :=
-  ⋀ [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johannineBelievingIsTrust]
+  ⋀ [ p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johannineBelievingIsTrust
+    , p .johnBelievingKeepsItsSense ]
     ➝ p .justificationByFaithAlone
 
 /-- The answer to James. James 2:24 says "a person is justified by works and not by
@@ -331,7 +332,7 @@ def paulineLine : Line Claim :=
   { name := "Pauline strand (ἔργα νόμου, πίστις Χριστοῦ)"
   , grounds :=
       [ p .galatiansOpposesCircumcisionAsRequirement, p .worksOfLawMeansWorksGenerally
-      , p .pistisChristouObjective ]
+      , p .pistisChristouObjective, p .paulsWordsKeepTheirSense ]
   , step := paulineToFaithAlone
   , delivers := p .justificationByFaithAlone
   , inference := some paulineInference }
@@ -413,7 +414,8 @@ reading of believing as trust, which Aquinas denies. -/
 def johannineLine : Line Claim :=
   { name := "Johannine strand (John 6:29)"
   , grounds :=
-      [p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johannineBelievingIsTrust]
+      [ p .john6_29WorkIsBelieving, p .johnLifeThroughBelieving, p .johannineBelievingIsTrust
+      , p .johnBelievingKeepsItsSense ]
   , step := johannineToFaithAlone
   , delivers := p .justificationByFaithAlone
   , inference := some calvinOnJohnSix }
@@ -756,15 +758,28 @@ inward sense, and to supply one from the doctrine is the mistake Barr called
 "illegitimate totality transfer": reading into one use of a word everything it
 can mean elsewhere. So Paul's "justify" does not mean renewal.
 
+The second of those draws on Titus 3:5–7, "the washing of regeneration and
+renewal of the Holy Spirit … so that being justified by his grace". So the line
+also needs "justified" there to be the word in Paul's sense, and it says so: a
+line that set one text beside another without it would rest on a word keeping
+its sense unsaid. Ziesler holds that it does: outside Romans and Galatians "in
+each case the use is forensic", and Titus 3:7, "while forensic", only hints at
+renewal "in the background" (*The Meaning of Righteousness in Paul*, 162). That
+does not need Paul to have written Titus, which is `disputed`
+(`titusIsPauline`), only that the verb there keeps his sense.
+
 The line says nothing about what God does when he justifies. That is the other
 way of reading Trent's definition, and this line does not reach it
 (the chapter "What Trent means by justification"). -/
 @[solaFideDefs]
 def lexicalLine : Line Claim :=
   { name := "Paul's word (δικαιόω, by the rule of least meaning)"
-  , grounds := [p .dikaioIsForensic, p .paulNamesRenewalOtherwise, p .leastMeaning]
+  , grounds :=
+      [ p .dikaioIsForensic, p .paulNamesRenewalOtherwise, p .titus3_7UsesDikaioAsPaul
+      , p .leastMeaning ]
   , step :=
-      ⋀ [p .dikaioIsForensic, p .paulNamesRenewalOtherwise, p .leastMeaning]
+      ⋀ [ p .dikaioIsForensic, p .paulNamesRenewalOtherwise, p .titus3_7UsesDikaioAsPaul
+        , p .leastMeaning ]
       ➝ notP .paulsJustifyDenotesRenewal
   , delivers := notP .paulsJustifyDenotesRenewal
   , inference := some leastMeaningSource }
@@ -773,7 +788,9 @@ def lexicalLine : Line Claim :=
 
 /-- The reading of Romans 4:3–8. Paul uses the language of an account ("counted",
 λογίζομαι), sets it against wages, and explains what is counted by quoting a
-psalm. Cited to Moo on Romans. Rated `wellSupported`: Augustine and Trent accept
+psalm. It explains the one "count" by the other, so it needs the word to keep
+its sense from 4:4–5 to 4:6–8, and says so (`romans4CountKeepsItsSense`). Cited
+to Moo on Romans. Rated `wellSupported`: Augustine and Trent accept
 the texts and dispute what follows from them, not what Paul says the counting
 is. -/
 def romansFourExegesisSource : Source :=
@@ -821,9 +838,12 @@ The second step puts the first to work, and it goes two ways.
 @[solaFideDefs]
 def romansFourExegesisLine : Line Claim :=
   { name := "Romans 4:3–8 (the ungodly, justified)"
-  , grounds := [p .romans4_4_5, p .romans4_6_8, p .logizomaiIsReckoning]
+  , grounds :=
+      [ p .romans4_4_5, p .romans4_6_8, p .logizomaiIsReckoning, p .romans4CountKeepsItsSense
+      , p .romans4WorksKeepsItsSense ]
   , step :=
-      ⋀ [p .romans4_4_5, p .romans4_6_8, p .logizomaiIsReckoning]
+      ⋀ [ p .romans4_4_5, p .romans4_6_8, p .logizomaiIsReckoning, p .romans4CountKeepsItsSense
+        , p .romans4WorksKeepsItsSense ]
       ➝ p .countedRighteousnessIsSinNotCounted
   , delivers := p .countedRighteousnessIsSinNotCounted
   , inference := some romansFourExegesisSource }
