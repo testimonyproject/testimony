@@ -1,6 +1,7 @@
 import Testimony.Checks.Meanings
 import Testimony.Checks.Ontology
 import Testimony.Semantics.Fallacy
+import Testimony.Semantics.Finding
 
 /-!
 # Testimony.Checks.Fallacies — the library's own lines, checked as an article's are
@@ -50,8 +51,12 @@ reader must hold to follow the text (`Testimony.Semantics.Fallacy`, "Whose
 reasoning is checked").
 
 The report is pinned. It fails the build if a line equivocates on its own terms,
-argues from silence alone, or answers a straw man: the library may not do what it
-checks articles for. A line that carries its conclusion in a premise is reported and does not
+argues from silence alone, or answers a straw man, and does not declare it: the
+library may not do what it checks articles for. A rival's line may declare the
+fault it commits, beside it, as `<line>.expected` (`Testimony.Semantics.Finding`),
+and the declaration is checked both ways: it fails the build if the checks do not
+find exactly what it declares, and it may not go on Scripture's own reasoning or
+on the library's own step. A line that carries its conclusion in a premise is reported and does not
 fail the build, because a premise that restates what no one denies begs no
 question; the report says whom it is addressed to.
 
@@ -75,7 +80,8 @@ out Scripture's own reasoning (`Testimony.Logic.Line.drawnByScripture`) is never
 listed among the findings against readers: what it needs is reported apart, as
 what a reader must hold to follow the text. -/
 def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
-    (lines : List (String × Line α)) : String × Nat :=
+    (lines : List (String × Line α)) (declared : List (String × List (Finding α)) := []) :
+    String × Nat :=
   let read := lines.filterMap fun (n, l) =>
     (l.asMove? (α := α)).bind fun m => if m.statements.all Statement.analysed
       then some (n ++ " (" ++ l.drawnBy ++ ")", l, m) else none
@@ -96,6 +102,23 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
   let recordFor (n : String) (v : Voice) : List α :=
     (recordOf α v).filter fun a => !(ownClaims n).contains a
   let names (cs : List α) := ", ".intercalate (cs.map atomName)
+  let declaredFor (k : String) : List (Finding α) :=
+    ((declared.find? (·.1 == k)).map (·.2)).getD []
+  let declOf (n : String) : List (Finding α) :=
+    ((lines.find? fun (k, l) => n == k ++ " (" ++ l.drawnBy ++ ")").map fun (k, _) =>
+      declaredFor k).getD []
+  let showFinding : Finding α → String
+    | .equivocates ws => "equivocation on " ++ ", ".intercalate (ws.map atomName)
+    | .fromSilence ts => s!"argument from the silence of {ts.length} text(s) alone"
+    | .strawMan as => "straw man of " ++ ", ".intercalate (as.map fun (a, cs) =>
+        ((a.voice?.map atomName).getD "?") ++ ", contradicted by " ++
+          (if cs.isEmpty then "nothing" else names cs))
+    | .conditionalOn ws => "sense kept, unstated, of " ++ ", ".intercalate (ws.map atomName)
+  let showMismatch : Mismatch α → String
+    | .absent d => "declares " ++ showFinding d ++ "; not found"
+    | .differs d f => "declares " ++ showFinding d ++ ",\n        but finds " ++ showFinding f
+    | .undeclared f => showFinding f ++ "; not declared"
+    | .twice d => "declares " ++ d.kind ++ " twice"
   let standing : Attribution α → String
     | .fair cs => "borne out by " ++ names cs
     | .unfair cs => "contradicted by " ++ names cs
@@ -108,6 +131,24 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
         ((a.voice?.map atomName).getD "?") ++ ", " ++ standing st))
   let strawMen := moves.filterMap fun (n, m) =>
     if (m.strawMen (recordFor n)).isEmpty then none else some n
+  let mismatched := moves.filterMap fun (n, m) =>
+    match m.mismatches (recordFor n) (declOf n) with
+    | [] => none
+    | ms => some (n ++ ":" ++ String.join (ms.map fun x => "\n      " ++ showMismatch x))
+  let borneOut := moves.filterMap fun (n, m) =>
+    let ds := declOf n
+    if ds.isEmpty || n.endsWith "(proposed here)" || !(m.mismatches (recordFor n) ds).isEmpty
+    then none
+    else some (n ++ ": " ++ "; ".intercalate (ds.map showFinding))
+  -- A declaration belongs on a reader's step, never the library's own or Scripture's, and
+  -- on one the checks can read. That a step cites its reader is `#check_readers`'s to say.
+  let misplaced := lines.filterMap fun (k, l) =>
+    if (declaredFor k).isEmpty then none
+    else if l.drawnByScripture then some (k ++ ": on Scripture's own reasoning")
+    else if l.drawnBy == "proposed here" then some (k ++ ": on the library's own step")
+    else if !(moves.any fun (n, _) => n == k ++ " (" ++ l.drawnBy ++ ")") then
+      some (k ++ ": on a line the checks cannot read")
+    else none
   let shiftsOf (m : Move) := m.unbridged.map fun (w, v, k) =>
     atomName w ++ " for " ++ atomName v ++ " (" ++ atomName k ++ ")"
   let shifting := moves.filterMap fun (n, m) =>
@@ -140,6 +181,10 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
   let head := [HasMeanings.argument α,
     s!"  lines: {lines.length}, read: {read.length}, Scripture's own: {scriptural.length}"]
   let body :=
+    part "declare a finding the checks do not bear out, or commit a fault undeclared"
+      mismatched ++
+    part "declare a finding where no declaration may go" misplaced ++
+    part "commit what they declare, as declared" borneOut ++
     part "read a word in two senses and need it the same" equivocating ++
     part "carry what they deliver in a premise" carrying ++
     part "argue from silence alone" silent ++
@@ -153,7 +198,7 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
     part "Scripture's own reasoning, not charged: what a reader must hold to follow it"
       toFollow
   (String.intercalate "\n" (head ++ body),
-    equivocating.length + silent.length + strawMen.length + encodingFaults)
+    mismatched.length + misplaced.length + encodingFaults)
 
 /-- Whether a constant's type is `Line C`, and `C` its argument's claim type. -/
 def lineClaimType? (ty : Expr) : Option Name :=
@@ -161,17 +206,40 @@ def lineClaimType? (ty : Expr) : Option Name :=
   | some ``Testimony.Logic.Line, #[c] => c.constName?
   | _, _ => none
 
+/-- Whether a constant's type is `List (Finding C)`: a step's declared findings,
+and `C` its argument's claim type. -/
+def findingsClaimType? (ty : Expr) : Option Name :=
+  match ty.getAppFn.constName?, ty.getAppArgs with
+  | some ``List, #[f] =>
+    match f.getAppFn.constName?, f.getAppArgs with
+    | some ``Testimony.Semantics.Finding, #[c] => c.constName?
+    | _, _ => none
+  | _, _ => none
+
 /-- Report what the fallacy checks find in every argument's lines under `root`;
-see the module docstring. -/
+see the module docstring. A line `l` declares its findings as `l.expected`, a
+`List (Finding C)` declared beside it. -/
 def checkFallacies (root : Name) : CommandElabM Unit := do
   let env ← getEnv
   let mut byType : Std.HashMap Name (Array Name) := {}
+  let mut orphans : Array Name := #[]
   for (name, info) in env.constants.toList do
     if name.isInternal then continue
     match lineClaimType? info.type with
     | some c =>
       if isClaimType env c root then byType := byType.insert c ((byType.getD c #[]).push name)
     | none => pure ()
+    match findingsClaimType? info.type with
+    | some c =>
+      if isClaimType env c root then
+        let isLine := match name, env.find? name.getPrefix with
+          | .str _ "expected", some i => (lineClaimType? i.type).isSome
+          | _, _ => false
+        unless isLine do orphans := orphans.push name
+    | none => pure ()
+  unless orphans.isEmpty do
+    throwError m!"declared findings that are not a line's `expected`, in:\n{MessageData.joinSep
+      (orphans.toList.map toMessageData) "\n"}"
   let mut reports : Array String := #[]
   let mut failing : Array Name := #[]
   for (c, names) in byType.toList do
@@ -183,7 +251,13 @@ def checkFallacies (root : Name) : CommandElabM Unit := do
         let pairs ← sorted.toList.mapM fun n =>
           mkAppM ``Prod.mk #[toExpr n.getString!, mkConst n]
         let lst ← mkListLit pairTy pairs
-        let e ← mkAppOptM ``fallacyReport #[some (mkConst c), none, none, none, some lst]
+        let findingTy := mkApp (mkConst ``Testimony.Semantics.Finding) (mkConst c)
+        let declTy ← mkAppM ``Prod #[mkConst ``String, mkApp (mkConst ``List [.zero]) findingTy]
+        let decls ← (sorted.toList.filter fun n => env.contains (n.str "expected")).mapM fun n =>
+          mkAppM ``Prod.mk #[toExpr n.getString!, mkConst (n.str "expected")]
+        let declLst ← mkListLit declTy decls
+        let e ← mkAppOptM ``fallacyReport
+          #[some (mkConst c), none, none, none, some lst, some declLst]
         some <$> unsafe evalExpr (String × Nat) (toTypeExpr (String × Nat)) e
       catch _ => pure none
     match r? with
@@ -195,7 +269,7 @@ def checkFallacies (root : Name) : CommandElabM Unit := do
     throwError "#check_fallacies found no line to check"
   let sorted := reports.qsort (· < ·)
   unless failing.isEmpty do
-    let head := "lines that equivocate, argue from silence alone or answer a straw man, in:"
+    let head := "lines with an undeclared fault, or a declared finding not borne out, in:"
     throwError m!"{head}\n{MessageData.joinSep
       (failing.toList.map toMessageData) "\n"}\n{String.intercalate "\n" sorted.toList}"
   recordChecked `fallacies root

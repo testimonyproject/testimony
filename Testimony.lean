@@ -46,6 +46,9 @@ import Testimony.Semantics.Ontology
 import Testimony.Semantics.Meaning
 import Testimony.Semantics.Discourse
 import Testimony.Semantics.Fallacy
+import Testimony.Semantics.Finding
+import Testimony.Logic.Bundle
+import Testimony.Checks.BundleCases
 import Testimony.Ontology
 import Testimony.Corpus.Table
 import Testimony.Corpus.Greek

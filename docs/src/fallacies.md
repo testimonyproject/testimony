@@ -433,8 +433,8 @@ two sola fide lines that attribute a view, Sanders' account of Second Temple Jud
 *unrecorded*: the argument cites nothing else about what either voice held.
 
 It fails the build on three of these, a line that reads a word two ways, one that argues from
-silence alone, or one that answers a straw man: the library may not do what it checks articles
-for. A carried premise is reported
+silence alone, or one that answers a straw man, unless the line declares it (below): the library
+may not do what it checks articles for. A carried premise is reported
 but does not fail the build, because whether it begs the question depends on whom the line is
 addressed to. A circle of lines is reported and does not fail the build either. A line does not
 record which position holds it, and a circle is a fault only in one position's reasoning; an
@@ -445,6 +445,45 @@ a change a reviewer sees.
 A line is read only when every claim it uses has a meaning. The
 [maturity page](./maturity.md) counts, for every argument, how many of its lines are read and
 what the checks found in them.
+
+### Declaring a fallacy where it is committed
+
+Sometimes the clearest answer to a reader's question is the argument a writer actually makes,
+fallacy and all, set out so that the reader can see where it breaks. A rival's line may commit
+one of the three faults if it says so, beside the line, with the fault's witness: which word it
+reads two ways, which text's silence it argues from, which attribution answers a view its
+holder does not hold, and which of the argument's claims contradict that attribution. The
+declaration is a definition named for the line, `<line>.expected`, a list of findings
+(`Testimony.Semantics.Finding`):
+
+```lean
+/-- Answers a straw man, and says so. -/
+def strawMan : Line Claim :=
+  { name := "Trent made to say it"
+  , grounds := [p .trentSaysWorksSuffice]
+  , step := p .trentSaysWorksSuffice ➝ p .worksDoNotSuffice
+  , delivers := p .worksDoNotSuffice }
+
+/-- The straw man `strawMan` answers, declared with the claim that contradicts it. -/
+def strawMan.expected : List (Finding Claim) :=
+  [.strawMan [(.heldBy .trent worksSuffice, [.trentDeniesOwnWorks])]]
+```
+
+The check then runs both ways. The build still fails if a declared finding is not found, or is
+found with another witness, or if a fault is found that no declaration names. So a declaration
+can never hide a fault the line does not commit, or one it commits differently. A declaration
+may also name an unstated condition, a word whose sense the line needs kept
+(`.conditionalOn`), and it is held to the same test. It may not go on Scripture's own reasoning
+or on a step the library proposes itself, because the library may not commit what it checks
+others for. Every finding stays in the report, declared or not, so the same checks are seen to
+run on every side.
+
+What a declaration does not do is answer the fallacy. A declared fault is there to be shown and
+answered. When a [bundle](./bundles.md) quotes the line in an exchange, a later turn must answer
+it there, or the bundle does not build.
+
+The cases `FallacyCases.Declared` and `FallacyCases.Misdeclared` pin both directions: two lines
+whose declared faults are borne out, and three declarations the build must refuse.
 
 ### Making the build refuse a case
 
@@ -458,10 +497,17 @@ the case's own record of Trent contradicts. `#check_fallacies` is run over it in
 
 ```lean
 /--
-error: lines that equivocate, argue from silence alone or answer a straw man, in:
+error: lines with an undeclared fault, or a declared finding not borne out, in:
 Testimony.Checks.FallacyCases.Refused.Claim
 A case the build must refuse
   lines: 3, read: 3, Scripture's own: 0
+  declare a finding the checks do not bear out, or commit a fault undeclared:
+    contradiction (uncited):
+      equivocation on dikaioo; not declared
+    fromSilence (uncited):
+      argument from the silence of 1 text(s) alone; not declared
+    strawMan (uncited):
+      straw man of trent, contradicted by trentDeniesOwnWorks; not declared
   read a word in two senses and need it the same:
     contradiction (uncited)
   argue from silence alone:

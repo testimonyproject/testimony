@@ -372,10 +372,17 @@ def strawMan : Line Claim :=
   , delivers := p .worksDoNotSuffice }
 
 /--
-error: lines that equivocate, argue from silence alone or answer a straw man, in:
+error: lines with an undeclared fault, or a declared finding not borne out, in:
 Testimony.Checks.FallacyCases.Refused.Claim
 A case the build must refuse
   lines: 3, read: 3, Scripture's own: 0
+  declare a finding the checks do not bear out, or commit a fault undeclared:
+    contradiction (uncited):
+      equivocation on dikaioo; not declared
+    fromSilence (uncited):
+      argument from the silence of 1 text(s) alone; not declared
+    strawMan (uncited):
+      straw man of trent, contradicted by trentDeniesOwnWorks; not declared
   read a word in two senses and need it the same:
     contradiction (uncited)
   argue from silence alone:
@@ -741,3 +748,234 @@ Scripture's own reasoning
 #check_fallacies under Testimony.Checks.FallacyCases.Scriptural
 
 end Testimony.Checks.FallacyCases.Scriptural
+
+/-! ### Declared findings
+
+A rival's step may commit one of the faults above if it says so, next to the
+step, with the witness (`Testimony.Semantics.Finding`). The check then runs both
+ways. First, on moves: a declaration borne out exactly leaves nothing to report;
+one the move does not bear out, or bears out with another witness, is reported;
+so is a fault left undeclared, and a kind declared twice. -/
+
+namespace Testimony.Checks.FallacyCases.StrawMan
+
+open Testimony Testimony.Semantics Testimony.Semantics.Notation
+
+/-- Trent made to say what it condemns, and answered: the straw man as the
+check finds it. -/
+abbrev ownWorksStrawMan : Finding Record :=
+  .strawMan [(.heldBy .trent worksSuffice, [.trentOnOwnWorks])]
+
+/-- **Declarations, borne out and not.** The straw man declared as found leaves
+nothing. Declared with no contradicting claim, it differs from what is found.
+Declared on Trent taken at his word, it is absent. Left undeclared, it is
+reported. Declared twice, the second is reported. -/
+theorem declared_cases :
+    ownWorks.mismatches record [ownWorksStrawMan] = [] ∧
+      ownWorks.mismatches record [.strawMan [(.heldBy .trent worksSuffice, [])]] =
+        [.differs (.strawMan [(.heldBy .trent worksSuffice, [])]) ownWorksStrawMan] ∧
+      meritAnswered.mismatches record [ownWorksStrawMan] = [.absent ownWorksStrawMan] ∧
+      ownWorks.mismatches record [] = [.undeclared ownWorksStrawMan] ∧
+      ownWorks.mismatches record [ownWorksStrawMan, ownWorksStrawMan] =
+        [.twice ownWorksStrawMan] := by
+  decide
+
+end Testimony.Checks.FallacyCases.StrawMan
+
+/-! Then on lines, through `#check_fallacies`. A line declares its findings as
+`expected`, a definition beside it named for the line. Two lines commit the
+faults the refused case commits, and declare them: the build passes, and the
+report says each commits what it declares, as declared. -/
+
+namespace Testimony.Checks.FallacyCases.Declared
+
+open Testimony Testimony.Logic Testimony.Semantics Testimony.Semantics.Notation
+open Testimony.Checks.FallacyCases (rom3_28)
+
+/-- The case's atomic claims. -/
+inductive Claim
+  /-- The word "alone" is not in Romans 3:28. -/
+  | aloneNotInRomans
+  /-- Paul did not teach that faith is the only means of justification. -/
+  | paulDidNotTeach
+  /-- Trent held that a person's own works are not enough for justification. -/
+  | trentDeniesOwnWorks
+  /-- Trent held that a person's own works are enough for justification. -/
+  | trentSaysWorksSuffice
+  /-- Works are not enough for justification. -/
+  | worksDoNotSuffice
+deriving DecidableEq, Repr
+
+/-- Every claim. -/
+def all : List Claim :=
+  [.aloneNotInRomans, .paulDidNotTeach, .trentDeniesOwnWorks, .trentSaysWorksSuffice,
+    .worksDoNotSuffice]
+
+/-- Works are enough for justification. -/
+abbrev worksSuffice : Content := rl .sufficientFor (cn .works) (cn .justification)
+
+/-- What each claim means. -/
+def means : Claim → Statement
+  | .aloneNotInRomans => .denied (.occurs .monos rom3_28)
+  | .paulDidNotTeach =>
+    .denied (.heldBy .paul (rl .soleInstrumentOf (cn .faith) (cn .justification)))
+  | .trentDeniesOwnWorks => .heldBy .trent (.not worksSuffice)
+  | .trentSaysWorksSuffice => .heldBy .trent worksSuffice
+  | .worksDoNotSuffice => .holds (.not worksSuffice)
+
+/-- The case's meanings. -/
+instance meanings : HasMeanings Claim :=
+  { argument := "Faults declared where they are committed", all, means
+  , complete := by intro a; cases a <;> decide }
+
+/-- **Argues from silence alone, and says so.** -/
+def fromSilence : Line Claim :=
+  { name := "Not in the verse"
+  , grounds := [p .aloneNotInRomans]
+  , step := p .aloneNotInRomans ➝ p .paulDidNotTeach
+  , delivers := p .paulDidNotTeach }
+
+/-- The silence `fromSilence` argues from, declared. -/
+def fromSilence.expected : List (Finding Claim) :=
+  [.fromSilence [.occurs .monos rom3_28]]
+
+/-- **Answers a straw man, and says so.** -/
+def strawMan : Line Claim :=
+  { name := "Trent made to say it"
+  , grounds := [p .trentSaysWorksSuffice]
+  , step := p .trentSaysWorksSuffice ➝ p .worksDoNotSuffice
+  , delivers := p .worksDoNotSuffice }
+
+/-- The straw man `strawMan` answers, declared with the claim that contradicts
+it. -/
+def strawMan.expected : List (Finding Claim) :=
+  [.strawMan [(.heldBy .trent worksSuffice, [.trentDeniesOwnWorks])]]
+
+/--
+info: the fallacy checks, over every argument's lines, each named with its reader:
+Faults declared where they are committed
+  lines: 2, read: 2, Scripture's own: 0
+  commit what they declare, as declared:
+    fromSilence (uncited): argument from the silence of 1 text(s) alone
+    strawMan (uncited): straw man of trent, contradicted by trentDeniesOwnWorks
+  argue from silence alone:
+    fromSilence (uncited)
+  answer a view the argument's record says its holder does not hold:
+    strawMan (uncited)
+  attribute a view, against the argument's record:
+    strawMan (uncited): trent, contradicted by trentDeniesOwnWorks
+-/
+#guard_msgs in
+#check_fallacies under Testimony.Checks.FallacyCases.Declared
+
+end Testimony.Checks.FallacyCases.Declared
+
+/-! And the declarations the build must refuse: one the line does not bear out,
+one with another witness than the line's, and one on a step the library proposes
+itself, which may never commit what the library checks others for. -/
+
+namespace Testimony.Checks.FallacyCases.Misdeclared
+
+open Testimony Testimony.Logic Testimony.Semantics Testimony.Semantics.Notation
+open Testimony.Checks.FallacyCases (rom3_28)
+
+/-- The case's atomic claims. -/
+inductive Claim
+  /-- The word "alone" is not in Romans 3:28. -/
+  | aloneNotInRomans
+  /-- Paul did not teach that faith is the only means of justification. -/
+  | paulDidNotTeach
+  /-- Trent held that a person's own works are not enough for justification. -/
+  | trentDeniesOwnWorks
+  /-- Trent held that a person's own works are enough for justification. -/
+  | trentSaysWorksSuffice
+  /-- Works are not enough for justification. -/
+  | worksDoNotSuffice
+deriving DecidableEq, Repr
+
+/-- Every claim. -/
+def all : List Claim :=
+  [.aloneNotInRomans, .paulDidNotTeach, .trentDeniesOwnWorks, .trentSaysWorksSuffice,
+    .worksDoNotSuffice]
+
+/-- Works are enough for justification. -/
+abbrev worksSuffice : Content := rl .sufficientFor (cn .works) (cn .justification)
+
+/-- What each claim means. -/
+def means : Claim → Statement
+  | .aloneNotInRomans => .denied (.occurs .monos rom3_28)
+  | .paulDidNotTeach =>
+    .denied (.heldBy .paul (rl .soleInstrumentOf (cn .faith) (cn .justification)))
+  | .trentDeniesOwnWorks => .heldBy .trent (.not worksSuffice)
+  | .trentSaysWorksSuffice => .heldBy .trent worksSuffice
+  | .worksDoNotSuffice => .holds (.not worksSuffice)
+
+/-- The case's meanings. -/
+instance meanings : HasMeanings Claim :=
+  { argument := "Declarations the build must refuse", all, means
+  , complete := by intro a; cases a <;> decide }
+
+/-- **Argues from silence, and declares a straw man instead.** The straw man is
+absent, and the silence is undeclared. -/
+def wrongKind : Line Claim :=
+  { name := "Not in the verse"
+  , grounds := [p .aloneNotInRomans]
+  , step := p .aloneNotInRomans ➝ p .paulDidNotTeach
+  , delivers := p .paulDidNotTeach }
+
+/-- A straw man `wrongKind` does not answer. -/
+def wrongKind.expected : List (Finding Claim) :=
+  [.strawMan [(.heldBy .trent worksSuffice, [.trentDeniesOwnWorks])]]
+
+/-- **Answers a straw man, and declares it with no contradicting claim.** -/
+def wrongWitness : Line Claim :=
+  { name := "Trent made to say it"
+  , grounds := [p .trentSaysWorksSuffice]
+  , step := p .trentSaysWorksSuffice ➝ p .worksDoNotSuffice
+  , delivers := p .worksDoNotSuffice }
+
+/-- The straw man `wrongWitness` answers, with the wrong witness. -/
+def wrongWitness.expected : List (Finding Claim) :=
+  [.strawMan [(.heldBy .trent worksSuffice, [])]]
+
+/-- **The library's own step, declaring the straw man it answers.** -/
+def ownStep : Line Claim :=
+  { name := "Trent made to say it, by the library"
+  , grounds := [p .trentSaysWorksSuffice]
+  , step := p .trentSaysWorksSuffice ➝ p .worksDoNotSuffice
+  , delivers := p .worksDoNotSuffice
+  , inference := some
+      { primary := .proposal "a test case: the library may not commit a straw man"
+      , tradition := .reformedProtestant, confidence := .disputed } }
+
+/-- The straw man `ownStep` answers, declared as found. -/
+def ownStep.expected : List (Finding Claim) :=
+  [.strawMan [(.heldBy .trent worksSuffice, [.trentDeniesOwnWorks])]]
+
+/--
+error: lines with an undeclared fault, or a declared finding not borne out, in:
+Testimony.Checks.FallacyCases.Misdeclared.Claim
+Declarations the build must refuse
+  lines: 3, read: 3, Scripture's own: 0
+  declare a finding the checks do not bear out, or commit a fault undeclared:
+    wrongKind (uncited):
+      declares straw man of trent, contradicted by trentDeniesOwnWorks; not found
+      argument from the silence of 1 text(s) alone; not declared
+    wrongWitness (uncited):
+      declares straw man of trent, contradicted by nothing,
+        but finds straw man of trent, contradicted by trentDeniesOwnWorks
+  declare a finding where no declaration may go:
+    ownStep: on the library's own step
+  argue from silence alone:
+    wrongKind (uncited)
+  answer a view the argument's record says its holder does not hold:
+    ownStep (proposed here)
+    wrongWitness (uncited)
+  attribute a view, against the argument's record:
+    ownStep (proposed here): trent, contradicted by trentDeniesOwnWorks
+    wrongWitness (uncited): trent, contradicted by trentDeniesOwnWorks
+-/
+#guard_msgs in
+#check_fallacies under Testimony.Checks.FallacyCases.Misdeclared
+
+end Testimony.Checks.FallacyCases.Misdeclared

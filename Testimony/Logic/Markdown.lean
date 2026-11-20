@@ -257,7 +257,7 @@ of the whole page.
 The wrapping `<div>` is what the stylesheet hangs the column widths on, and the
 blank line after it is load-bearing: it closes the HTML block, so the table
 inside is read as Markdown rather than passed through as raw HTML. -/
-def legend [DecidableEq α] (cite : α → AtomMeta) (order : List α) : String :=
+def legend (cite : α → AtomMeta) (order : List α) : String :=
   let rows := order.zipIdx.map fun (a, i) =>
     let m := cite a
     let mark := if m.readsScriptureAlone then " ※" else ""
@@ -386,6 +386,39 @@ def seg (links : List Page.BecauseLink) : Page.Seg → String
       | some d => "[defeats](#" ++ d ++ ")"
       | none => "defeats"
     "*" ++ escape a ++ "* " ++ verb ++ " *" ++ escape b ++ "*"
+
+/-- The last component of a declaration's name: what its label on a page is. -/
+def shortName (n : String) : String := ((n.splitOn ".").getLast?).getD n
+
+/-- An exchange, told: each turn's paragraph under its party's name, then the
+sentence that joins it to the turn it names, as the solver found it, and what the
+line it quotes declares; then how the parties stand to one another, in a
+paragraph, with a table as well when there are many of them. -/
+def exchange (links : List Page.BecauseLink) (x : Page.Exchange) : String :=
+  let segs (ss : List Page.Seg) : String := String.join (ss.map (seg links))
+  let turn (t : Page.ExchangeTurn) : String :=
+    let quoted := if t.quoting.isEmpty then "" else
+      "It quotes [`" ++ shortName t.quoting ++ "`](#" ++ shortName t.quoting ++ "). "
+    let joined := segs (Page.Exchange.connective t ++
+      (if t.relation.isEmpty || t.findings.isEmpty then [] else [.text " "]) ++
+      Page.Exchange.declared t)
+    let after := (quoted ++ joined).trimAscii.toString
+    "**" ++ escape t.party ++ ".** " ++ t.doc ++ "\n\n" ++
+      (if after.isEmpty then "" else after ++ "\n\n")
+  let ps := x.parties
+  let table := if ps.length ≤ Page.Exchange.manyParties then "" else
+    let names (l : List String) : String :=
+      if l.isEmpty then "—" else String.intercalate ", " (l.map fun n => "*" ++ escape n ++ "*")
+    "| Position | Defeats | Is defeated by |\n|---|---|---|\n" ++
+    String.join (ps.map fun a =>
+      let beats := x.pairs.filterMap fun (p, q, pq, qp) =>
+        if p == a && pq then some q else if q == a && qp then some p else none
+      let beaten := x.pairs.filterMap fun (p, q, pq, qp) =>
+        if p == a && qp then some q else if q == a && pq then some p else none
+      "| *" ++ escape a ++ "* | " ++ names beats ++ " | " ++ names beaten ++ " |\n") ++ "\n"
+  let summary := Page.Exchange.summary x
+  String.join (x.turns.map turn) ++
+    (if summary.isEmpty then "" else segs summary ++ "\n\n") ++ table
 
 /-- A count with its noun, singular or plural. -/
 def count (n : Nat) (one many : String) : String :=
@@ -654,6 +687,8 @@ def item [DecidableEq α] (order : List α) (cite : Option (α → AtomMeta)) :
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ assessed a
   | .rated d doc r =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ rated r
+  | .exchange d doc x links =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ exchange links x
 
 /-- The body of a generated page: the legend, then every item in source order.
 

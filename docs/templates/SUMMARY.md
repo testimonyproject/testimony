@@ -20,6 +20,7 @@
 - [Style guide](./style-guide.md)
 - [Meanings and articles (draft)](./semantics.md)
 - [Checking an argument for fallacies](./fallacies.md)
+- [Telling an exchange](./bundles.md)
 - [The Greek text as data](./corpus.md)
 - [Which text a claim rests on (design)](./textual-criticism.md)
 - [Computed ratings (design)](./computed-ratings.md)

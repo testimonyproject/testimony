@@ -107,7 +107,8 @@ every quotation opened with the wrong one. Each mark becomes an opening or a
 closing curly mark by what surrounds it, and an apostrophe stays an apostrophe
 (`’`). Text between backticks is code, and is left alone. -/
 def smartQuotes (s : String) : String :=
-  let rec go (prev : Option Char) (inCode : Bool) : List Char → List Char
+  let rec /-- The marks set so far, with the character before and whether it is in code. -/
+    go (prev : Option Char) (inCode : Bool) : List Char → List Char
     | [] => []
     | '`' :: rest => '`' :: go (some '`') (!inCode) rest
     | c :: rest =>
@@ -275,7 +276,7 @@ generated Markdown pages are: a document that sets four positions and three
 objections against each other is read by comparing them, and that needs
 $P_{9}$ to mean one thing throughout. Each row is the target its variable's
 links land on. -/
-def legend [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) : String :=
+def legend (n : Numbering α) (cite : α → AtomMeta) : String :=
   let order := n.order
   let rows := order.zipIdx.map fun (a, i) =>
     let m := cite a
@@ -346,7 +347,8 @@ nested more than one deep, and an unclosed marker is treated as the literal
 character it is — which is what a reader of the source would expect, and what
 keeps a stray asterisk from swallowing the rest of a paragraph. -/
 partial def inlineProse (s : String) : String :=
-  let rec go : List Char → String
+  let rec /-- The characters still to set. -/
+    go : List Char → String
     | [] => ""
     | '`' :: rest =>
       match upTo ['`'] rest with
@@ -470,7 +472,8 @@ lines is a list, a run of `>` lines is a quotation, and anything between fences
 is left alone. A quotation's lines, their `>` taken off, are prose in their own
 right, so a quote may hold several paragraphs or a list. -/
 partial def prose (md : String) : String :=
-  let rec go : List String → String
+  let rec /-- The lines still to set. -/
+    go : List String → String
     | [] => ""
     | line :: rest =>
       if line.trimAscii.toString.isEmpty then go rest
@@ -900,12 +903,47 @@ def seg (links : List Page.BecauseLink) : Page.Seg → String
       | some d => " (\\texttt{" ++ codeEscape d ++ "})"
       | none => ""
 
+/-- An exchange, told: each turn's paragraph under its party's name, then the
+sentence that joins it to the turn it names, as the solver found it, and what the
+line it quotes declares; then how the parties stand to one another, in a
+paragraph, with a table as well when there are many of them. -/
+def exchange (links : List Page.BecauseLink) (x : Page.Exchange) : String :=
+  let segs (ss : List Page.Seg) : String := String.join (ss.map (seg links))
+  let turn (t : Page.ExchangeTurn) : String :=
+    let quoted := if t.quoting.isEmpty then "" else
+      "It quotes \\texttt{" ++ codeEscape (((t.quoting.splitOn ".").getLast?).getD "") ++
+        "}. "
+    let joined := segs (Page.Exchange.connective t ++
+      (if t.relation.isEmpty || t.findings.isEmpty then [] else [.text " "]) ++
+      Page.Exchange.declared t)
+    let after := (quoted ++ joined).trimAscii.toString
+    "\\paragraph{" ++ escape t.party ++ ".} " ++ prose t.doc ++
+      (if after.isEmpty then "" else after ++ "\n\n")
+  let ps := x.parties
+  let table := if ps.length ≤ Page.Exchange.manyParties then "" else
+    let names (l : List String) : String :=
+      if l.isEmpty then "---" else
+        String.intercalate ", " (l.map fun n => "\\emph{" ++ escape n ++ "}")
+    "\\begin{tabular}{lll}\nPosition & Defeats & Is defeated by \\\\\n\\hline\n" ++
+    String.join (ps.map fun a =>
+      let beats := x.pairs.filterMap fun (p, q, pq, qp) =>
+        if p == a && pq then some q else if q == a && qp then some p else none
+      let beaten := x.pairs.filterMap fun (p, q, pq, qp) =>
+        if p == a && qp then some q else if q == a && pq then some p else none
+      "\\emph{" ++ escape a ++ "} & " ++ names beats ++ " & " ++ names beaten ++
+        " \\\\\n") ++
+    "\\end{tabular}\n\n"
+  let summary := Page.Exchange.summary x
+  String.join (x.turns.map turn) ++
+    (if summary.isEmpty then "" else segs summary ++ "\n\n") ++ table
+
 /-- Nested `itemize` environments for a list of lines with depths: open one
 where the depth rises, close where it falls. LaTeX nests lists four deep at
 most, so a deeper line is set at the fourth level rather than failing the
 build. -/
 def nested (lines : List (Nat × String)) : String :=
-  let rec go : Nat → List (Nat × String) → String
+  let rec /-- The lines still to set, at the depth open so far. -/
+    go : Nat → List (Nat × String) → String
     | cur, [] => String.join (List.replicate cur "\\end{itemize}\n")
     | cur, (d, l) :: rest =>
       let depth := min d 3 + 1
@@ -1048,6 +1086,7 @@ def item [DecidableEq α] (n : Numbering α) : Page.Item α → String
       declLabel d "" ++ prose doc ++ graph g defeats supports parts
   | .assessed d doc a => declLabel d "" ++ prose doc ++ assessed a
   | .rated d doc r => declLabel d "" ++ prose doc ++ rated r
+  | .exchange d doc x links => declLabel d "" ++ prose doc ++ exchange links x
 
 /-- One argument's body: its introductory prose, its legend, then every item in
 source order. The heading above it is the caller's, as the page title is in the
