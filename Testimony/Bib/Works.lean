@@ -225,9 +225,15 @@ the Open Scriptures Hebrew Bible's reading of the text, and is cited as theirs. 
       , title := "MACULA Hebrew Linguistic Datasets"
       , subtitle := some "Westminster Leningrad Codex"
       , identifiers :=
-          [.url "https://github.com/Clear-Bible/macula-hebrew" (some "2026-11-20")] }
+          [.url "https://github.com/Clear-Bible/macula-hebrew" (some "2026-11-20")]
+      , licence := some
+          { name := "CC BY 4.0", url := "https://creativecommons.org/licenses/by/4.0/"
+          , credit := "MACULA Hebrew Linguistic Datasets, available at " ++
+              "https://github.com/Clear-Bible/macula-hebrew/, copyright 2022–2024 by " ++
+              "Biblica, Inc. The library keeps the Westminster Leningrad Codex text, in the " ++
+              "public domain, with the Open Scriptures Hebrew Bible's morphology (CC BY 4.0) " ++
+              "and MACULA's parts of speech and dictionary forms, and drops the rest" } }
   , commit := some "47db250bd55d0d8577f2a94fba114ef16c35b23c"
-  , license := some "CC BY 4.0"
   , maintainer := some "Biblica, Inc." }
 
 /-- STEPBible's table of versification traditions, TVTMS ("Translators Versification Traditions
@@ -244,9 +250,13 @@ Hebrew corpus (`Testimony.Corpus.Table`). -/
       , contributors := { authors := [.corporate "STEPBible"] }
       , title := "TVTMS: Translators Versification Traditions with Methodology for Standardisation"
       , identifiers :=
-          [.url "https://github.com/STEPBible/STEPBible-Data" (some "2026-11-20")] }
+          [.url "https://github.com/STEPBible/STEPBible-Data" (some "2026-11-20")]
+      , licence := some
+          { name := "CC BY 4.0", url := "https://creativecommons.org/licenses/by/4.0/"
+          , credit := "Data created by www.STEPBible.org based on work at Tyndale House " ++
+              "Cambridge. The library keeps the English and Hebrew verse numbers of " ++
+              "the books it imports" } }
   , commit := some "5de0a47f35f0fc13dfe1430d104e5db8a4285f9c"
-  , license := some "CC BY 4.0"
   , maintainer := some "STEPBible.org" }
 
 /-- Berry's dictionary article on the virgin birth. Cited for two things the
