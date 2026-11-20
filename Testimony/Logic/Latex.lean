@@ -900,6 +900,40 @@ def seg (links : List Page.BecauseLink) : Page.Seg → String
       | some d => " (\\texttt{" ++ codeEscape d ++ "})"
       | none => ""
 
+/-- An exchange, told: each turn's paragraph under its party's name, then the
+sentence that joins it to the turn it names, as the solver found it, and what the
+line it quotes declares; then how the parties stand to one another, in a
+paragraph, with a table as well when there are many of them. -/
+def exchange (links : List Page.BecauseLink) (x : Page.Exchange) : String :=
+  let segs (ss : List Page.Seg) : String := String.join (ss.map (seg links))
+  let turn (t : Page.ExchangeTurn) : String :=
+    let quoted := if t.quoting.isEmpty then "" else
+      "It quotes \\texttt{" ++ codeEscape (((t.quoting.splitOn ".").getLast?).getD "") ++
+        "}. "
+    let joined := segs (Page.Exchange.connective t ++
+      (if t.relation.isEmpty || t.findings.isEmpty then [] else [.text " "]) ++
+      Page.Exchange.declared t)
+    let after := (quoted ++ joined).trimAscii.toString
+    "\\paragraph{" ++ escape t.party ++ ".} " ++ prose t.doc ++
+      (if after.isEmpty then "" else after ++ "\n\n")
+  let ps := x.parties
+  let table := if ps.length ≤ Page.Exchange.manyParties then "" else
+    let names (l : List String) : String :=
+      if l.isEmpty then "---" else
+        String.intercalate ", " (l.map fun n => "\\emph{" ++ escape n ++ "}")
+    "\\begin{tabular}{lll}\nPosition & Defeats & Is defeated by \\\\\n\\hline\n" ++
+    String.join (ps.map fun a =>
+      let beats := x.pairs.filterMap fun (p, q, pq, qp) =>
+        if p == a && pq then some q else if q == a && qp then some p else none
+      let beaten := x.pairs.filterMap fun (p, q, pq, qp) =>
+        if p == a && qp then some q else if q == a && pq then some p else none
+      "\\emph{" ++ escape a ++ "} & " ++ names beats ++ " & " ++ names beaten ++
+        " \\\\\n") ++
+    "\\end{tabular}\n\n"
+  let summary := Page.Exchange.summary x
+  String.join (x.turns.map turn) ++
+    (if summary.isEmpty then "" else segs summary ++ "\n\n") ++ table
+
 /-- Nested `itemize` environments for a list of lines with depths: open one
 where the depth rises, close where it falls. LaTeX nests lists four deep at
 most, so a deeper line is set at the fourth level rather than failing the
@@ -1048,6 +1082,7 @@ def item [DecidableEq α] (n : Numbering α) : Page.Item α → String
       declLabel d "" ++ prose doc ++ graph g defeats supports parts
   | .assessed d doc a => declLabel d "" ++ prose doc ++ assessed a
   | .rated d doc r => declLabel d "" ++ prose doc ++ rated r
+  | .exchange d doc x links => declLabel d "" ++ prose doc ++ exchange links x
 
 /-- One argument's body: its introductory prose, its legend, then every item in
 source order. The heading above it is the caller's, as the page title is in the

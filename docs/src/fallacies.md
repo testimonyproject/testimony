@@ -479,7 +479,8 @@ others for. Every finding stays in the report, declared or not, so the same chec
 run on every side.
 
 What a declaration does not do is answer the fallacy. A declared fault is there to be shown and
-answered, and the page should show the answer beside it.
+answered. When a [bundle](./bundles.md) quotes the line in an exchange, a later turn must answer
+it there, or the bundle does not build.
 
 The cases `FallacyCases.Declared` and `FallacyCases.Misdeclared` pin both directions: two lines
 whose declared faults are borne out, and three declarations the build must refuse.

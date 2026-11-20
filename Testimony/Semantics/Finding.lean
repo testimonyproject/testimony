@@ -27,7 +27,8 @@ What it does not do: decide that the writer is wrong. A declared straw man says
 the step answers a view its holder does not hold, by the argument's own record of
 that holder. Whether the step's conclusion is true is weighed where the argument
 weighs it. Nor does it check that a declared fault is answered: a declaration
-sets the fault out to be shown, and the answer is the argument's to give.
+sets the fault out to be shown, and the answer is the argument's to give. A bundle
+that quotes the line (`Testimony.Logic.Bundle`) must give it.
 -/
 
 namespace Testimony.Semantics
