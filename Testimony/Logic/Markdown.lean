@@ -257,7 +257,7 @@ of the whole page.
 The wrapping `<div>` is what the stylesheet hangs the column widths on, and the
 blank line after it is load-bearing: it closes the HTML block, so the table
 inside is read as Markdown rather than passed through as raw HTML. -/
-def legend [DecidableEq α] (cite : α → AtomMeta) (order : List α) : String :=
+def legend (cite : α → AtomMeta) (order : List α) : String :=
   let rows := order.zipIdx.map fun (a, i) =>
     let m := cite a
     let mark := if m.readsScriptureAlone then " ※" else ""

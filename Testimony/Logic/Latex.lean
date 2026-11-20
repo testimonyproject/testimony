@@ -107,7 +107,8 @@ every quotation opened with the wrong one. Each mark becomes an opening or a
 closing curly mark by what surrounds it, and an apostrophe stays an apostrophe
 (`’`). Text between backticks is code, and is left alone. -/
 def smartQuotes (s : String) : String :=
-  let rec go (prev : Option Char) (inCode : Bool) : List Char → List Char
+  let rec /-- The marks set so far, with the character before and whether it is in code. -/
+    go (prev : Option Char) (inCode : Bool) : List Char → List Char
     | [] => []
     | '`' :: rest => '`' :: go (some '`') (!inCode) rest
     | c :: rest =>
@@ -275,7 +276,7 @@ generated Markdown pages are: a document that sets four positions and three
 objections against each other is read by comparing them, and that needs
 $P_{9}$ to mean one thing throughout. Each row is the target its variable's
 links land on. -/
-def legend [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) : String :=
+def legend (n : Numbering α) (cite : α → AtomMeta) : String :=
   let order := n.order
   let rows := order.zipIdx.map fun (a, i) =>
     let m := cite a
@@ -346,7 +347,8 @@ nested more than one deep, and an unclosed marker is treated as the literal
 character it is — which is what a reader of the source would expect, and what
 keeps a stray asterisk from swallowing the rest of a paragraph. -/
 partial def inlineProse (s : String) : String :=
-  let rec go : List Char → String
+  let rec /-- The characters still to set. -/
+    go : List Char → String
     | [] => ""
     | '`' :: rest =>
       match upTo ['`'] rest with
@@ -470,7 +472,8 @@ lines is a list, a run of `>` lines is a quotation, and anything between fences
 is left alone. A quotation's lines, their `>` taken off, are prose in their own
 right, so a quote may hold several paragraphs or a list. -/
 partial def prose (md : String) : String :=
-  let rec go : List String → String
+  let rec /-- The lines still to set. -/
+    go : List String → String
     | [] => ""
     | line :: rest =>
       if line.trimAscii.toString.isEmpty then go rest
@@ -939,7 +942,8 @@ where the depth rises, close where it falls. LaTeX nests lists four deep at
 most, so a deeper line is set at the fourth level rather than failing the
 build. -/
 def nested (lines : List (Nat × String)) : String :=
-  let rec go : Nat → List (Nat × String) → String
+  let rec /-- The lines still to set, at the depth open so far. -/
+    go : Nat → List (Nat × String) → String
     | cur, [] => String.join (List.replicate cur "\\end{itemize}\n")
     | cur, (d, l) :: rest =>
       let depth := min d 3 + 1
