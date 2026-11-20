@@ -7,6 +7,7 @@ import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
 import Testimony.Checks.Readers
 import Testimony.Checks.Refutations
+import Testimony.Checks.VerseParts
 
 /-!
 # Testimony.Checks.Covered — every check reaches everything under a package
@@ -21,10 +22,11 @@ check examines: every argument's claim type, for the meanings and the shared
 ontology; every claim type with a line of reason, for the fallacies; every
 package, for its postulates and for its readers; every non-entailment, for the
 postulates again; every refutation, for `establish`; every dispute's defeat table,
-for AIF and for the premises its lines leave unstated; and
-every definition, for the citations. It fails if any of them lies under no
-namespace that check has been run under, here or in a module imported here, and
-names each one. Its report states no count, so adding an argument, a package or
+for AIF and for the premises its lines leave unstated; every definition, for
+the citations; and every declaration that builds a part of a verse, for the
+reading of each part against the Greek corpus. It fails if any of them lies
+under no namespace that check has been run under, here or in a module imported
+here, and names each one. Its report states no count, so adding an argument, a package or
 a line to one never changes it.
 -/
 
@@ -50,6 +52,7 @@ def checkTargets (env : Environment) (root : Name) : List (Name × Array Name) :
   let mut refutations : Array Name := #[]
   let mut tables : Array Name := #[]
   let mut defs : Array Name := #[]
+  let mut parts : Array Name := #[]
   for (name, info) in env.constants.toList do
     if !name.isInternal then
       if let some c := lineClaimType? info.type then
@@ -57,6 +60,7 @@ def checkTargets (env : Environment) (root : Name) : List (Name × Array Name) :
     unless root.isPrefixOf name do continue
     if isClaimType env name root then claims := claims.push name
     if isDisputeTable info.type then tables := tables.push name
+    if !versePartMachinery name && buildsVersePart info then parts := parts.push name
     match info with
     | .defnInfo d =>
       unless Testimony.Bib.bibEntryAttr.hasTag env name || bibMachinery name do
@@ -70,7 +74,7 @@ def checkTargets (env : Environment) (root : Name) : List (Name × Array Name) :
          , (`postulates, packages), (`readers, packages)
          , (`refutationsPostulates, nonEntailments)
          , (`refutations, refutations), (`aif, tables), (`conditions, tables)
-         , (`citations, defs) ]
+         , (`citations, defs), (`verseParts, parts) ]
 
 /-- Check that every check has been run under a namespace holding each thing it
 examines under `root`; see the module docstring. -/

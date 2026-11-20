@@ -121,6 +121,13 @@ and the anchoring word occurs in the part exactly once, so half a verse cannot s
 for the whole. The cases are pinned in `Testimony.Checks.FallacyCases`
 (`part_of_a_passage_cases`).
 
+A part can still be written out by hand, without `verse_part`, so the build does not trust how
+a part was made. `#check_verse_parts` (`Testimony.Checks.VerseParts`) finds every part of a
+verse built anywhere in the library or the arguments, reads its verse from the corpus again, and
+fails the build on any whose words or anchor are not there, or whose fields are not written out.
+A hand-written part that the corpus bears out passes; one it does not is refused, and both
+outcomes are pinned beside the check.
+
 The check compares senses as the vocabulary names them. Two senses a reader might count as one
 are counted as two, so what it finds is only as fine as the vocabulary.
 
