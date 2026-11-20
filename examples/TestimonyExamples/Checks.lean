@@ -5,6 +5,7 @@ import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
 import Testimony.Checks.Readers
 import Testimony.Checks.Refutations
+import Testimony.Checks.VerseParts
 
 /-!
 # TestimonyExamples.Checks — the library's checks, over the examples
@@ -15,8 +16,9 @@ the library holds its own cases to the same standard, and here the examples
 do: every case's claims have meanings and pinned joins, no package is emptied
 by its meanings, no refutation is undone by them, `establish` fails on every
 refuted package as not Horn, every bibliography entry is a `@[bib_entry]`
-definition whose key no other entry shares, and every dispute is a graph meeting
-the Argument Interchange Format's Definition 1.1. The reports are pinned, so a change in any
+definition whose key no other entry shares, every dispute is a graph meeting
+the Argument Interchange Format's Definition 1.1, and every part of a verse is
+read from the Greek corpus. The reports are pinned, so a change in any
 of them is a change a reviewer sees.
 -/
 
@@ -71,5 +73,9 @@ and 0 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in
 #check_aif under TestimonyExamples
+
+/-- info: no part of a verse is built under TestimonyExamples -/
+#guard_msgs in
+#check_verse_parts under TestimonyExamples
 
 end TestimonyExamples

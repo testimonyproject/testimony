@@ -113,7 +113,9 @@ the Greek corpus numbers them, from 1. A reader sees it as the verse with a lett
 3:18a". The part is anchored by one word it contains, named by its dictionary form, which must
 occur in the part exactly once (`anchor`), so that "the half of 3:18 about believing in him" is
 found in the text, not asserted. Build one with `verse_part` (`Testimony.Corpus.Greek`), which
-reads the corpus and refuses a part whose words or anchor are not there. -/
+reads the corpus and refuses a part whose words or anchor are not there. A part written out by
+hand is read from the corpus again by `#check_verse_parts` (`Testimony.Checks.VerseParts`),
+which fails the build on any the corpus does not bear out. -/
 structure VersePart where
   /-- The verse the part is of. -/
   verse : Passage

@@ -11,6 +11,7 @@ import TestimonyArguments.Meanings
 import TestimonyArguments.Articles.Howell2003
 import Testimony.Checks.Citations
 import Testimony.Checks.Covered
+import Testimony.Checks.VerseParts
 
 /-!
 # TestimonyArguments.Checks — the library's checks, over every argument
@@ -35,7 +36,10 @@ change a reviewer sees:
   `@[bib_entry]` definition, and no two share a key, so a citation's key names
   its entry;
 - **AIF**: every dispute is a graph meeting the Argument Interchange Format's
-  Definition 1.1.
+  Definition 1.1;
+- **parts of verses**: every part of a verse, the library's and the arguments',
+  wherever it is built and however it was written, is read again from the Greek
+  corpus, and the build fails on one whose words or anchor are not there.
 
 Each argument's checks run in a module of their own, `Checks.<Argument>`, under
 its namespace, and their reports are pinned there. Pinned here, every argument's
@@ -50,7 +54,8 @@ The citations check reads every entry in the environment, so it runs here,
 once, over everything. Its report counts every definition in the package, which
 every pull request changes, so only its failures are pinned: it fails the build
 on an entry built outside a `@[bib_entry]` definition, on two entries sharing a
-key, and on finding nothing to check.
+key, and on finding nothing to check. The check of parts of verses runs here too,
+over the library and over the package, because a part may be built in any module.
 -/
 
 namespace TestimonyArguments
@@ -60,6 +65,14 @@ namespace TestimonyArguments
 
 #guard_msgs (drop info) in
 #check_citations under TestimonyArguments
+
+/-- info: every part of a verse under Testimony is read from the Greek corpus: 1 -/
+#guard_msgs in
+#check_verse_parts under Testimony
+
+/-- info: no part of a verse is built under TestimonyArguments -/
+#guard_msgs in
+#check_verse_parts under TestimonyArguments
 
 /-- info: every check reaches everything under TestimonyArguments -/
 #guard_msgs in
