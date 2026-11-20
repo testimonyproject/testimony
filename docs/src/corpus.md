@@ -11,7 +11,8 @@ library now holds the Greek New Testament as data so that they can be.
 The text is the SBL Greek New Testament, edited by Michael Holmes (2010). The
 analysis of each word, its part of speech, its dictionary form, its parsing and
 its role in its clause, is MACULA Greek's, Clear Bible's annotation of that text.
-Both are licensed CC BY 4.0. `scripts/import_greek.py` reads MACULA's word table
+Both are licensed CC BY 4.0, and every printed document that cites either
+credits it as its licence asks. `scripts/import_greek.py` reads MACULA's word table
 and writes one file per book under `data/greek/macula-sblgnt/`, keeping only the
 columns the library reads; the README there records the source and its checksum.
 So far John, Colossians, Titus and Hebrews are imported, the books the first

@@ -117,6 +117,23 @@ inductive Role
   | witness
 deriving Repr, DecidableEq
 
+/-- **The licence a work's text or data is published under**, and the credit it
+asks for, so that a document that cites the work can give that credit
+(`Testimony.Tools.Pages.licenceCredits`). Recorded for a work whose own words or
+data the library reads or reprints: the SBL Greek New Testament, the datasets
+the corpus is imported from. A work under copyright, cited at a page, has none.
+
+`credit` is the attribution as the licensor words it, with the changes the
+library made where the licence asks that they be stated. -/
+structure WorkLicence where
+  /-- The licence's short name: "CC BY 4.0". -/
+  name : String
+  /-- Where the licence's own text is. -/
+  url : String
+  /-- The credit the licence asks for, as the licensor words it. -/
+  credit : String
+deriving Repr, DecidableEq
+
 /-- Fields every entry type carries. -/
 structure WorkCore where
   /-- The stable handle for this entry. -/
@@ -135,6 +152,9 @@ structure WorkCore where
   note : Option String := none
   /-- What the work is, as a warrant. Most cited works are scholarship. -/
   role : Role := .scholarship
+  /-- The licence its text or data is published under, where the library
+  records one. -/
+  licence : Option WorkLicence := none
 deriving Repr, DecidableEq
 
 /-- A monograph or commentary. -/
@@ -244,8 +264,6 @@ structure DatasetData where
   version : Option String := none
   /-- Exact revision, where the dataset lives in version control. -/
   commit : Option String := none
-  /-- Licence the data is published under. -/
-  license : Option String := none
   /-- Who maintains it. -/
   maintainer : Option String := none
 deriving Repr, DecidableEq
