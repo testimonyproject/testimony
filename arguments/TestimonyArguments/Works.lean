@@ -1684,9 +1684,7 @@ doctrine of Scripture. -/
 of Concord Article X, which defines adiaphora as rites "neither commanded nor
 forbidden in the Word of God" — the wider of the two statements this library
 uses for the premise that practices need no scriptural warrant, Westminster I.6
-being the narrower. Also cited for Melanchthon's *Apology of the Augsburg
-Confession*, which reads Luke 7:47 ("she loved much") by 7:50 ("Your faith has
-saved you", LSB) — the dominical strand of sola fide. -/
+being the narrower. -/
 @[bib_entry] def bookOfConcord : BibEntry := .book
   { core :=
       { key := "kolb-wengert-book-of-concord-2000"
@@ -4217,7 +4215,11 @@ corporate, of a people. -/
 and English, whose English is the translation bookofconcord.org reproduces.
 Cited by article and paragraph for the Formula of Concord and the Augsburg
 Confession where its wording is quoted; Kolb and Wengert's translation, the
-library's other edition, words them differently. Public domain; no ISBN. -/
+library's other edition, words them differently. Cited by page for
+Melanchthon's *Apology*, which reads Luke 7:47 ("she loved much") by 7:50
+("Thy faith hath saved thee"), the dominical strand of sola fide; Project
+Gutenberg's text of the *Apology* is the same translation. Public domain; no
+ISBN. -/
 @[bib_entry] def concordiaTriglotta : BibEntry := .book
   { core :=
       { key := "concordia-triglotta-1921"
@@ -4229,7 +4231,8 @@ library's other edition, words them differently. Public domain; no ISBN. -/
       , year := some { value := 1921 }
       , identifiers :=
           [ .url "https://archive.org/details/concordiatriglot00unse" (some "2026-11-14")
-          , .url "https://bookofconcord.org/about-the-translation/" (some "2026-11-14") ] }
+          , .url "https://bookofconcord.org/about-the-translation/" (some "2026-11-14")
+          , .url "https://www.gutenberg.org/ebooks/6744" (some "2026-11-20") ] }
   , publisher := "Concordia Publishing House"
   , place := some "St. Louis" }
 

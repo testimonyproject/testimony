@@ -67,8 +67,9 @@ before it (7:41–43). Three readers are cited for it:
 - Osvaldo Padilla: her actions "stem from the fact that she loves much because
   she has been forgiven much".
 - Melanchthon, in the *Apology of the Augsburg Confession*: "Christ interprets
-  Himself when He adds: Thy faith hath saved thee", the translation giving Luke
-  7:50 in the King James wording.
+  Himself when He adds: Thy faith hath saved thee". The translation is Bente and
+  Dau's, in the *Concordia Triglotta* (1921), and it gives Luke 7:50 in the King
+  James wording.
 - Marshall, in his commentary on the Greek text, from the grammar: "for" here
   means "as is evidenced by the fact that".
 
@@ -350,7 +351,7 @@ the dispositions of Session VI, ch. 6, and condemns "nothing else is required"
 Trent presses. -/
 def dominicalInference : Source :=
   { primary := .work calvinHarmony2 (.pages 139 141)
-  , supporting := [.work bookOfConcord melanchthonOnLuke7]
+  , supporting := [.work concordiaTriglotta melanchthonOnLuke7]
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
