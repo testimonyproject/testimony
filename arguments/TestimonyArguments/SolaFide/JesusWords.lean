@@ -6,7 +6,7 @@ import TestimonyArguments.SolaFide.Hearings
 
 The four witnesses include two sayings of Jesus, Luke 7:50 and John 6:29. But a
 reader who has followed Paul and Peter this far will want to hear more from
-Jesus himself. Three more passages are the ones each side cites.
+Jesus Himself. Three more passages are the ones each side cites.
 
 ### Luke 18:9–14: the Pharisee and the tax collector
 
@@ -122,7 +122,7 @@ definition is taken.
   with the arguments about the word (`trent_on_pauls_word_defensible`). Luke 18
   adds no fourth meeting: no reader cited here takes "justified" at 18:14 as the
   renewal itself.
-- **As a claim about what God does**, that when he justifies he also renews,
+- **As a claim about what God does**, that when He justifies He also renews,
   nothing about the word reaches it. Taken this way, Trent can be held with
   every premise of the argument from usage
   (`lexical_case_does_not_reach_what_god_does`). It meets Paul (Galatians,
@@ -131,7 +131,7 @@ definition is taken.
   Declaration* do, need not.
 
 Which of the two Trent means is itself rated `disputed`, and the check does not
-decide it. In this debate Trent is heard as it states its definition, tied to
+decide it. This debate hears Trent's definition as Trent states it, tied to
 neither, so the check changes no verdict above.
 
 It does not show that logic refutes Rome. Trent's case can be held

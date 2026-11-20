@@ -96,7 +96,7 @@ def newPerspective : ArgumentPackage Claim :=
         sharedGrounds closingSteps }
 
 /-- The Finnish reading of Luther (Mannermaa): the Reformed case, with the
-verdict-only account of justification denied. Christ himself is present in faith
+verdict-only account of justification denied. Christ Himself is present in faith
 and is the believer's righteousness, so justification is not a declaration and
 nothing more.
 
