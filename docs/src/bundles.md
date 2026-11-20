@@ -55,10 +55,10 @@ a bundle that leaves one standing does not build.
 ## On the page
 
 The page tells the exchange in order. Each turn is its party's paragraph, then the sentence that
-joins it to the turn it names, in the solver's words ("This answers *By the clock*: *By the
-minutes* defeats *By the clock*, and *By the clock* does not defeat it in return"), and, for a
-quoted line that declares a fallacy, which fallacy it is and which turn answers it. A defeat
-that a `Because` on the page explains links to it.
+joins it to the turn it names, in the solver's words ("This answers *By the clock*: it defeats
+it, and *By the clock* does not defeat it in return"), and, for a quoted line that declares a
+fallacy, which fallacy it is and which turn answers it. A defeat named in the closing paragraph
+links to the `Because` that explains it, if the page has one.
 
 After the turns comes one paragraph on how the positions stand to one another, for the pairs no
 turn has joined. It is written as a reader would say it: "each of these positions defeats every

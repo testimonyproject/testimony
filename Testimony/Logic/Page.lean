@@ -304,11 +304,11 @@ solver found it. Empty for a turn that only enters. -/
 def connective (t : ExchangeTurn) : List Seg :=
   match t.relation with
   | "answers" =>
-    [.text "This answers ", .party t.target, .text ": ", .defeat t.party t.target,
-      .text ", and ", .party t.target, .text " does not defeat it in return."]
+    [.text "This answers ", .party t.target, .text ": it defeats it, and ", .party t.target,
+      .text " does not defeat it in return."]
   | "meets" =>
-    [.text "Neither gives way: ", .defeat t.party t.target, .text ", and ",
-      .defeat t.target t.party, .text "."]
+    [.party t.party, .text " and ", .party t.target,
+      .text " defeat each other, so neither gives way."]
   | "standsApart" =>
     [.party t.party, .text " and ", .party t.target,
       .text " stand apart: neither defeats the other."]
