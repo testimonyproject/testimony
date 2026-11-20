@@ -302,7 +302,7 @@ def variantMarkdown : BibEntry → String
     mdClause d.maintainer
     ++ mdClause (d.version.map fun v => "Version " ++ v)
     ++ mdClause (d.commit.map fun c => "Commit `" ++ c ++ "`")
-    ++ mdClause d.license
+    ++ mdClause (d.core.licence.map (·.name))
   | .webPage d => mdClause d.site
   | .film d =>
     " Film" ++ (if d.directors.isEmpty then "" else ", directed by " ++ agentsDisplay d.directors)

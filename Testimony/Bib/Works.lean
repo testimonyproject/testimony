@@ -143,7 +143,13 @@ with a version to be reproducible. -/
       , contributors :=
           { authors := [.corporate "Eep Talstra Centre for Bible and Computer"] }
       , title := "Biblia Hebraica Stuttgartensia (Amstelodamensis)"
-      , identifiers := [.url "https://github.com/ETCBC/bhsa"] }
+      , identifiers := [.url "https://github.com/ETCBC/bhsa"]
+      , licence := some
+          { name := "CC BY-NC 4.0"
+          , url := "https://creativecommons.org/licenses/by-nc/4.0/"
+          , credit := "Biblia Hebraica Stuttgartensia (Amstelodamensis), by the Eep " ++
+              "Talstra Centre for Bible and Computer, Vrije Universiteit Amsterdam. " ++
+              "Cited, never imported: its licence forbids commercial use" } }
   , maintainer := some "ETCBC, Vrije Universiteit Amsterdam" }
 
 /-- The Open Scriptures Hebrew Bible: a morphologically tagged, openly licensed
@@ -154,8 +160,11 @@ Hebrew text. -/
       , role := .text
       , contributors := { authors := [.corporate "Open Scriptures"] }
       , title := "Open Scriptures Hebrew Bible"
-      , identifiers := [.url "https://github.com/openscriptures/morphhb"] }
-  , license := some "CC BY 4.0" }
+      , identifiers := [.url "https://github.com/openscriptures/morphhb"]
+      , licence := some
+          { name := "CC BY 4.0", url := "https://creativecommons.org/licenses/by/4.0/"
+          , credit := "Original work of the Open Scriptures Hebrew Bible available at " ++
+              "https://github.com/openscriptures/morphhb" } } }
 
 /-- The SBL Greek New Testament, Holmes's critical text, whose apparatus compares
 it with Westcott–Hort, Tregelles, the NIV's text and the Byzantine text of
@@ -169,7 +178,12 @@ text of the library's Greek corpus (`Testimony.Corpus.Greek`). -/
       , contributors := { editors := [.person "Michael W." "Holmes"] }
       , title := "The Greek New Testament: SBL Edition"
       , year := some { value := 2010 }
-      , identifiers := [.isbn "9781589835351"] }
+      , identifiers := [.isbn "9781589835351"]
+      , licence := some
+          { name := "CC BY 4.0", url := "https://creativecommons.org/licenses/by/4.0/"
+          , credit := "The Greek New Testament: SBL Edition, edited by Michael W. " ++
+              "Holmes, copyright 2010 by the Society of Biblical Literature and Logos " ++
+              "Bible Software" } }
   , publisher := "Society of Biblical Literature"
   , siglum := some "SBLGNT" }
 
@@ -188,8 +202,12 @@ text, and is cited as theirs. -/
       , title := "MACULA Greek Linguistic Datasets"
       , subtitle := some "SBLGNT edition"
       , identifiers :=
-          [.url "https://github.com/Clear-Bible/macula-greek" (some "2026-11-16")] }
-  , license := some "CC BY 4.0"
+          [.url "https://github.com/Clear-Bible/macula-greek" (some "2026-11-16")]
+      , licence := some
+          { name := "CC BY 4.0", url := "https://creativecommons.org/licenses/by/4.0/"
+          , credit := "MACULA Greek Linguistic Datasets, copyright 2022–2024 by " ++
+              "Biblica, Inc. The library keeps only the morphology and syntactic roles " ++
+              "of its SBLGNT word table, and drops the rest" } }
   , maintainer := some "Biblica, Inc." }
 
 /-- Berry's dictionary article on the virgin birth. Cited for two things the
