@@ -6,6 +6,7 @@ import Testimony.Logic.Dilemma
 import Testimony.Logic.Verdict
 import Testimony.Logic.Map
 import Testimony.Logic.Burden
+import Testimony.Logic.Bundle
 import Testimony.Logic.Credibility
 import Testimony.Logic.Latex
 import Testimony.Logic.Markdown
@@ -430,6 +431,9 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
             `(Logic.Page.Item.verdict $(quote dname) $(quote doc)
                 (Logic.Verdict.view $(mkIdent n)) [$(becauseLinks),*]
                 $(quote (tableFor info.type)))
+          else if headIs ``Logic.Bundle then
+            `(Logic.Page.Item.exchange $(quote dname) $(quote doc)
+                (Logic.Bundle.view $(mkIdent n)) [$(becauseLinks),*])
           else if headIs ``Logic.ArgumentMap then
             `(Logic.Page.Item.graph $(quote dname) $(quote doc)
                 (Logic.ArgumentMap.view $(mkIdent n)) $(quote (tableFor info.type))

@@ -267,6 +267,110 @@ def conflicted (g : Graph) : Nat :=
 
 end Graph
 
+/-- One turn of an exchange, as a page shows it: the data of a bundle's `Turn`
+(`Testimony.Logic.Bundle`), in words. -/
+structure ExchangeTurn where
+  /-- The party, by its package's name. -/
+  party : String
+  /-- What the page says of the turn. -/
+  doc : String
+  /-- How it stands to an earlier turn: `answers`, `meets`, `standsApart`, or
+  empty when it only enters. -/
+  relation : String := ""
+  /-- The earlier turn's party, by its package's name; empty if none. -/
+  target : String := ""
+  /-- The declaration of the line the turn quotes; empty if none. -/
+  quoting : String := ""
+  /-- The fallacies that line declares it commits, by kind. -/
+  findings : List String := []
+  /-- The party of the first later turn that answers this one; empty if none. -/
+  answeredBy : String := ""
+deriving Repr
+
+/-- An exchange, as a page shows it: its turns in order, and every pair of the
+parties they set out, with whether each defeats the other. -/
+structure Exchange where
+  /-- The turns, in the order a reader meets them. -/
+  turns : List ExchangeTurn
+  /-- Each pair of distinct parties, in the order the turns first set them out:
+  the two names, whether the first defeats the second, and the reverse. -/
+  pairs : List (String × String × Bool × Bool)
+deriving Repr
+
+namespace Exchange
+
+/-- The sentence that joins a turn to the earlier one it names, in words, as the
+solver found it. Empty for a turn that only enters. -/
+def connective (t : ExchangeTurn) : List Seg :=
+  match t.relation with
+  | "answers" =>
+    [.text "This answers ", .party t.target, .text ": ", .defeat t.party t.target,
+      .text ", and ", .party t.target, .text " does not defeat it in return."]
+  | "meets" =>
+    [.text "Neither gives way: ", .defeat t.party t.target, .text ", and ",
+      .defeat t.target t.party, .text "."]
+  | "standsApart" =>
+    [.party t.party, .text " and ", .party t.target,
+      .text " stand apart: neither defeats the other."]
+  | _ => []
+
+/-- What a turn quoting a declared fallacy says of it, in words. Empty for a
+turn that quotes none. -/
+def declared (t : ExchangeTurn) : List Seg :=
+  if t.findings.isEmpty then [] else
+  let what := String.intercalate " and " (t.findings.map ("a " ++ ·))
+  let lead := "The line it quotes commits " ++ what ++
+    ", and says so where it is written. It is set out here to be answered"
+  if t.answeredBy.isEmpty then [.text (lead ++ ".")]
+  else [.text (lead ++ " by "), .party t.answeredBy, .text "."]
+
+/-- The parties the turns set out, in order, each once. -/
+def parties (x : Exchange) : List String := (x.turns.map (·.party)).eraseDups
+
+/-- Whether some turn already says how the two parties stand. -/
+def joined (x : Exchange) (a b : String) : Bool :=
+  x.turns.any fun t => !t.relation.isEmpty &&
+    ((t.party == a && t.target == b) || (t.party == b && t.target == a))
+
+/-- Above this many parties, the page sets the defeats out as a table as well
+as in words. -/
+def manyParties : Nat := 5
+
+/-- How the parties of an exchange stand to one another, as a paragraph: that
+they all defeat each other, or that none does, or else the defeats between the
+pairs no turn has joined. Empty when the turns have already said how every pair
+stands. A page with more than `manyParties` parties says how many pairs have a
+defeat, and sets them out in a table. -/
+def summary (x : Exchange) : List Seg :=
+  let n := x.parties.length
+  let defeats := x.pairs.filter fun (_, _, ab, ba) => ab || ba
+  let unjoined := x.pairs.filter fun (a, b, _, _) => !x.joined a b
+  if n < 2 || unjoined.isEmpty then []
+  else if x.pairs.all (fun (_, _, ab, ba) => ab && ba) then
+    [.text (if n == 2 then "The two positions defeat each other, so neither gives way."
+      else "Each of these positions defeats every other, so none of them gives way.")]
+  else if defeats.isEmpty then
+    [.text (if n == 2 then "Neither position defeats the other."
+      else "None of these positions defeats another.")]
+  else if n > manyParties then
+    [.text ("Between the " ++ toString n ++ " positions told here, " ++
+      toString defeats.length ++ " of the " ++ toString x.pairs.length ++
+      " pairs have a defeat, one way or both, as the table sets out.")]
+  else
+    let one : String × String × Bool × Bool → List Seg
+      | (a, b, true, true) => [.defeat a b, .text ", and ", .defeat b a, .text "."]
+      | (a, b, true, false) => [.defeat a b, .text ", and is not defeated by it."]
+      | (a, b, _, _) => [.defeat b a, .text ", and is not defeated by it."]
+    let found := unjoined.filter fun (_, _, ab, ba) => ab || ba
+    let sentences := (found.map one).intersperse [.text " "] |>.flatten
+    let rest := if found.length == unjoined.length then [] else
+      [.text (if found.isEmpty then "No other pair of these positions defeats either way."
+        else " No other pair defeats either way.")]
+    (if found.isEmpty then [] else [.text "Of the pairs no turn has joined: "]) ++
+      sentences ++ rest
+
+end Exchange
+
 /-- One element of a generated page.
 
 `prose` is a module docstring, lifted whole; the rest are declarations, each
@@ -316,6 +420,10 @@ inductive Item (α : Type)
   | assessed (decl doc : String) (a : Assessed)
   /-- A step's rating, computed from its register: a `RatedStep`. -/
   | rated (decl doc : String) (r : Rated)
+  /-- An exchange between positions, told in order: its turns, and how each
+  stands to an earlier one, as the solver finds it (`Logic.Bundle`). A defeat it
+  states links to the `Because` explaining it, if the page has one. -/
+  | exchange (decl doc : String) (x : Exchange) (links : List BecauseLink)
 
 namespace Item
 
