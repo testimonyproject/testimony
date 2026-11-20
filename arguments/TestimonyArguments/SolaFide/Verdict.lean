@@ -61,7 +61,7 @@ renewal of the inward man" (ch. 7), and a renewal can grow. So the argument from
 the courtroom reaches Trent only with the Reformed definition beside it, that
 justification is a verdict and nothing more (Westminster XI.1).
 
-The checking bears this out in three results.
+Three results bear this out.
 
 - **Granted the Reformed definition, justification has no degrees**, and works
   cannot increase it (`verdictOnDegrees_establishes`,
