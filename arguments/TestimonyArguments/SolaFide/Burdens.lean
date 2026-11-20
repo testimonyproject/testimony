@@ -6,7 +6,7 @@ import TestimonyArguments.SolaFide.Ratings
 
 The chapters before this one found that Trent and the Reformers part over one
 word. Paul writes that God "justifies" (δικαιόω), and the question is whether
-the word means that God declares a person righteous, or also that he makes the
+the word means that God declares a person righteous, or also that He makes the
 person righteous within. This chapter asks what a reader on each side has to
 deny to hold that position, and it asks the machine rather than the scholars.
 
@@ -60,7 +60,7 @@ standing: the verb there, καθίστημι, "never, in the New Testament, mean
 make, in the sense of effecting", so the many are "constituted legally
 righteous" (*Commentary on the Epistle to the Romans*, 1864, 271–72). Ziesler
 holds that the verse's adjective does not settle the verb. Calvin grants that
-God renews whom he justifies and denies that the verdict is what renews: light
+God renews whom He justifies and denies that the verdict is what renews: light
 and heat come together from the sun, "and yet reason itself prohibits us from
 transferring the peculiar properties of the one to the other" (*Institutes*
 III.xi.6). Trent is heard with Fitzmyer's and Kertelge's roads

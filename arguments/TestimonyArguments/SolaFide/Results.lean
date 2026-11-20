@@ -141,7 +141,7 @@ theorem johannine_strand_survives_the_other_three :
 #print axioms johannine_strand_survives_the_other_three
 
 /-- **Nor on "faith in Christ".** Grant Hays that the phrase in Galatians 2:16
-(πίστις Χριστοῦ) means Christ's own faithfulness and not our faith in him. Keep
+(πίστις Χριστοῦ) means Christ's own faithfulness and not our faith in Him. Keep
 everything else. Sola fide still follows.
 
 A reader who wins this point for Hays has cost the Reformed case its route
@@ -307,7 +307,7 @@ theorem grace_and_works_rest_on_no_lexical_premise :
 
 /-- **The argument does not depend on justification being only a verdict.** Grant
 the Finnish reading of Luther (Mannermaa): justification is not a declaration
-and nothing more, because Christ himself is present in faith. Sola fide still
+and nothing more, because Christ Himself is present in faith. Sola fide still
 follows. The proof adds that one denial to the Reformed premises and uses
 nothing else.
 
