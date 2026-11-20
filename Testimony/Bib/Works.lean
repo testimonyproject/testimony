@@ -192,6 +192,45 @@ text, and is cited as theirs. -/
   , license := some "CC BY 4.0"
   , maintainer := some "Biblica, Inc." }
 
+/-- MACULA Hebrew, Clear Bible's linguistic annotation of the Hebrew Bible: the Westminster
+Leningrad Codex, in the public domain, with the Open Scriptures Hebrew Bible's morphology,
+licensed CC BY 4.0, and Clear Bible's analysis, licensed CC BY 4.0 by Biblica. The library's
+Hebrew corpus (`Testimony.Corpus.Hebrew`) is read from its word table,
+`WLC/tsv/macula-hebrew.tsv`, at revision `47db250bd55d0d8577f2a94fba114ef16c35b23c`, read on
+2026-11-20; the table's SHA-256 is given in `data/hebrew/macula-wlc/README.md`. The parsing is
+the Open Scriptures Hebrew Bible's reading of the text, and is cited as theirs. -/
+@[bib_entry] def maculaHebrew : BibEntry := .dataset
+  { core :=
+      { key := "clear-macula-hebrew"
+      , role := .text
+      , contributors := { authors := [.corporate "Clear Bible"] }
+      , title := "MACULA Hebrew Linguistic Datasets"
+      , subtitle := some "Westminster Leningrad Codex"
+      , identifiers :=
+          [.url "https://github.com/Clear-Bible/macula-hebrew" (some "2026-11-20")] }
+  , commit := some "47db250bd55d0d8577f2a94fba114ef16c35b23c"
+  , license := some "CC BY 4.0"
+  , maintainer := some "Biblica, Inc." }
+
+/-- STEPBible's table of versification traditions, TVTMS ("Translators Versification Traditions
+with Methodology for Standardisation"), made by STEPBible.org from work at Tyndale House,
+Cambridge, and licensed CC BY 4.0. It
+says, verse by verse, where English, Hebrew, Latin and Greek Bibles number a verse differently.
+The library reads its English and Hebrew columns, at STEPBible-Data revision
+`5de0a47f35f0fc13dfe1430d104e5db8a4285f9c`, read on 2026-11-20, to find an English verse in the
+Hebrew corpus (`Testimony.Corpus.Table`). -/
+@[bib_entry] def stepTvtms : BibEntry := .dataset
+  { core :=
+      { key := "stepbible-tvtms"
+      , role := .text
+      , contributors := { authors := [.corporate "STEPBible"] }
+      , title := "TVTMS: Translators Versification Traditions with Methodology for Standardisation"
+      , identifiers :=
+          [.url "https://github.com/STEPBible/STEPBible-Data" (some "2026-11-20")] }
+  , commit := some "5de0a47f35f0fc13dfe1430d104e5db8a4285f9c"
+  , license := some "CC BY 4.0"
+  , maintainer := some "STEPBible.org" }
+
 /-- Berry's dictionary article on the virgin birth. Cited for two things the
 argument from Isaiah 7:14 turns on: that how Isaiah 7:14 was fulfilled in Ahaz's
 own day is itself an open question, and that the semantic range of עַלְמָה does

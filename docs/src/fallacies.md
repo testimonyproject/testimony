@@ -114,16 +114,16 @@ things:
 - **unstated** — the move says nothing either way. It is then *conditional* on the word keeping
   its sense: not fallacious, but no stronger than that condition.
 
-A place can be part of a verse. `verse_part` (`Testimony.Corpus.Greek`) names one by the
-positions of its first and last words in the Greek, and by one word it contains, by dictionary
-form. It reads the corpus as the module is built and fails the build unless the words are there
-and the anchoring word occurs in the part exactly once, so half a verse cannot silently stand
-for the whole. The cases are pinned in `Testimony.Checks.FallacyCases`
-(`part_of_a_passage_cases`).
+A place can be part of a verse. `verse_part` (`Testimony.Corpus.Table`) names one by the
+positions of its first and last words in the Greek, or in the Hebrew for the Old Testament, and
+by one word it contains, by dictionary form. It reads the corpus as the module is built and
+fails the build unless the words are there and the anchoring word occurs in the part exactly
+once, so half a verse cannot silently stand for the whole. The cases are pinned in
+`Testimony.Checks.FallacyCases` (`part_of_a_passage_cases`).
 
 A part can still be written out by hand, without `verse_part`, so the build does not trust how
 a part was made. `#check_verse_parts` (`Testimony.Checks.VerseParts`) finds every part of a
-verse built anywhere in the library or the arguments, reads its verse from the corpus again, and
+verse built anywhere in the library or the arguments, reads its verse from the text again, and
 fails the build on any whose words or anchor are not there, or whose fields are not written out.
 A hand-written part that the corpus bears out passes; one it does not is refused, and both
 outcomes are pinned beside the check.
