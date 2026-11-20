@@ -86,7 +86,7 @@ syntax (name := checkCitationsCmd) "#check_citations" " under " ident : command
 elab_rules : command
   | `(#check_citations under $root) => checkCitations [root.getId]
 
-/-- info: every entry is a tagged definition, and every key names one: 51 definitions, 17 entries -/
+/-- info: every entry is a tagged definition, and every key names one: 51 definitions, 19 entries -/
 #guard_msgs in
 #check_citations under Testimony.Checks.Fixture
 

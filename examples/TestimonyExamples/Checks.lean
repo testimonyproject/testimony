@@ -61,7 +61,7 @@ info: every reading and step has a reader or is marked proposed: 3 packages, 1 l
 #guard_msgs in
 #check_refutations under TestimonyExamples using unfoldSets
 
-/-- info: every entry is a tagged definition, and every key names one: 78 definitions, 19 entries -/
+/-- info: every entry is a tagged definition, and every key names one: 78 definitions, 21 entries -/
 #guard_msgs in
 #check_citations under TestimonyExamples
 
