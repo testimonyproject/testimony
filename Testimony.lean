@@ -46,6 +46,7 @@ import Testimony.Semantics.Ontology
 import Testimony.Semantics.Meaning
 import Testimony.Semantics.Discourse
 import Testimony.Semantics.Fallacy
+import Testimony.Semantics.Finding
 import Testimony.Ontology
 import Testimony.Corpus.Greek
 import Testimony.Corpus.Rendering
