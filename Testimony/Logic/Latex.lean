@@ -1127,6 +1127,10 @@ structure Reproduction where
   /-- Which Bible translations the document quotes, in a sentence for the
   reader, and the notice each one's publisher asks for, printed as given. -/
   scripture : String × List String := ("", [])
+  /-- The works the document cites whose licence asks for credit
+  (`BibEntry.core.licence`), each credited in the closing section
+  (`licenceCredits`). -/
+  licensed : List BibEntry := []
 deriving Inhabited, Repr
 
 /-- The paragraph of the closing section that names the translations the
@@ -1144,6 +1148,27 @@ def scripturePermissions (lead : String) (notices : List String) : String :=
 #guard scripturePermissions "Quoted:" ["Used by permission."] ==
   "Quoted:\n\\begin{itemize}\n\\item Used by permission.\n\\end{itemize}\n\n"
 
+/-- The works in `works` that `tex` cites, by a `\cite` of their key with or
+without a pinpoint, in the order of `works`. -/
+def citedIn (tex : String) (works : List BibEntry) : List BibEntry :=
+  works.filter fun e =>
+    (tex.splitOn ("\\cite{" ++ e.key ++ "}")).length > 1 ||
+      (tex.splitOn ("]{" ++ e.key ++ "}")).length > 1
+
+/-- The paragraph of the closing section that credits each cited work whose
+licence asks for credit, as the licence asks: its credit, the licence's name,
+and where the licence is: nothing, if the document cites none. -/
+def licenceCredits (works : List BibEntry) : String :=
+  let items := works.filterMap fun e => e.core.licence.map fun l =>
+    "\\item " ++ escape l.credit ++ ". Licensed under " ++ escape l.name ++
+      ", \\url{" ++ l.url ++ "}.\n"
+  if items.isEmpty then "" else
+    "This document cites the works below, which are published under licences that " ++
+    "ask for credit. Each is credited as its licence asks.\n" ++
+    "\\begin{itemize}\n" ++ String.join items ++ "\\end{itemize}\n\n"
+
+#guard licenceCredits [] == ""
+
 /-- **How this edition was made**, the document's last section: what made it,
 for a reader who has never heard of Lean, and every step to make it again from
 the commit the edition names (`edition`).
@@ -1155,7 +1180,8 @@ takes, written out for one computer, and they end in one command for each size
 of page the workflow publishes, A4 and US Letter, since a reader may hold either
 (`\editionpaper`, defined in `edition`, says which). Before the steps it names
 the Bible translations the document quotes, with the notice each publisher asks
-for (`scripturePermissions`). -/
+for (`scripturePermissions`), and credits each work it cites whose licence asks
+for credit (`licenceCredits`). -/
 def reproduction (r : Reproduction) : String :=
   let cmd (lines : List String) : String :=
     "\\begin{alltt}\\small\n" ++ "\n".intercalate lines ++ "\n\\end{alltt}\n"
@@ -1178,6 +1204,7 @@ def reproduction (r : Reproduction) : String :=
   "conclusion does not follow, that the counterexample it gives really is one. " ++
   "It does not check that any premise is true.\n\n" ++
   scripturePermissions r.scripture.1 r.scripture.2 ++
+  licenceCredits r.licensed ++
   "\\ifeditionrecorded This edition, version \\editionversion, was made from " ++
   "the library as it stood on \\editiondate, at the commit named in step 3 " ++
   "below. A commit is one saved state of every file in the " ++

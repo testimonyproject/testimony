@@ -963,6 +963,7 @@ def baseCite : Claim → AtomMeta
         { primary := .work thayerLexicon (.page 511)
         , supporting :=
             [ .work sblgnt (.sectionRef "John 3:16, 18; 6:29, with apparatus")
+            , .work maculaGreek (.sectionRef "John 3:16–18; 6:29, lemmas")
             , .work moultonProlegomena (.pages 67 68)
             , .work calvinJohn (.adLoc ⟨.john, 6, 29⟩)
             , .work aquinasJohn (.sectionRef "c. 3, lect. 3, nn. 485–486; c. 6, n. 901") ]

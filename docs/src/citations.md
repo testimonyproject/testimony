@@ -83,6 +83,17 @@ reference resolves.
    citation on an [argument page](./arguments/sola-scriptura.md) links to —
    `bibliography.md#moo-romans-2018` lands a reader on the entry.
 
+   **A work whose text or data is openly licensed records its licence.** The
+   SBL Greek New Testament, MACULA Greek and the Hebrew datasets carry
+   `licence := some { name, url, credit }` in their `core`, with the credit
+   worded as the licensor asks, and any change the library made stated in it
+   where the licence asks for that. Every printed document that cites such a
+   work then credits it in its last section, "How this edition was made"
+   (`Logic.Latex.licenceCredits`), and a document that does not cite it does not.
+   A work licensed for non-commercial use only, such as the ETCBC's BHSA, is cited
+   at a page and never imported, because the printed editions may be sold to
+   support the project.
+
 3. **Cite it** from a `Source`, with a pinpoint:
 
    ```lean

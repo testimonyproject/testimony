@@ -79,6 +79,12 @@ attribute's *local module state*. A key may be used once across both.
   compile-time `#guard` both check this.
 - The docstring is required (`linter.missingDocs`) and should say why the work
   is cited here, not restate its title.
+- A work whose text or data the library reads or reprints under an open licence
+  records it: `licence := some { name := "CC BY 4.0", url := …, credit := … }` in
+  its `core`, the credit worded as the licensor's own page words it (read the
+  licence file, never guess), with any change the library made. Each PDF that
+  cites the work then credits it. Data licensed for non-commercial use only is
+  cited at a page, never imported (decided 2026-11-20).
 
 ## Step 4 — cite it
 
