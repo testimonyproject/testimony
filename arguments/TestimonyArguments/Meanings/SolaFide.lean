@@ -1,5 +1,6 @@
 import Testimony.Semantics.Meaning
 import TestimonyArguments.SolaFide.Sources
+import Testimony.Corpus.Greek
 
 /-!
 # TestimonyArguments.Meanings.SolaFide — what each sola fide claim says
@@ -69,6 +70,14 @@ open TestimonyArguments.SolaFide (Claim)
 @[nolint defsWithUnderscore] abbrev james2_24 : PassageRange := vs .james 2 24
 /-- John 6:29. -/
 @[nolint defsWithUnderscore] abbrev john6_29 : PassageRange := vs .john 6 29
+
+/-- John 3:16. -/
+@[nolint defsWithUnderscore] abbrev john3_16 : PassageRange := vs .john 3 16
+
+/-- John 3:18a, "whoever believes in him is not condemned": the verse's first six words, anchored
+in the Greek by its one πιστεύω (`Testimony.Corpus.Greek.johnThreeEighteenA`). -/
+@[nolint defsWithUnderscore] abbrev john3_18a : PassageRange :=
+  Testimony.Corpus.Greek.johnThreeEighteenA
 /-- John 3:5. -/
 @[nolint defsWithUnderscore] abbrev john3_5 : PassageRange := vs .john 3 5
 /-- Matthew 3:11. -/
@@ -169,8 +178,8 @@ def means : Claim → Statement
   | .john6_29WorkIsBelieving =>
     .says (rg .john 6 28 6 29) (rl .includes (wd .erga john6_29) (wd .pisteuo john6_29))
   | .johnLifeThroughBelieving =>
-    .says (rg .john 3 16 3 18) (rl .instrumentOf (wd .pisteuo (rg .john 3 16 3 18))
-      (cn .eternalLife))
+    .says (rg .john 3 16 3 18) (.both (rl .instrumentOf (wd .pisteuo john3_16) (cn .eternalLife))
+      (rl .instrumentOf (wd .pisteuo john3_18a) (cn .eternalLife)))
   | .obedienceIsSanctification =>
     .opaque "the obedience of John 3:36 and Matthew 7:21 is sanctification, the fruit of faith"
   | .john3_36WhoeverDoesNotObey =>
@@ -351,7 +360,9 @@ def means : Claim → Statement
   | .latinWordBearsPaulsSense => .bears .iustificare (.usage .latinWest) .dikaioo (.usage .paul)
   | .romans4WorksKeepsItsSense => .sameSense .erga (.passage rom4_4_5) (.passage rom4_6_8)
   | .johnBelievingKeepsItsSense =>
-    .sameSense .pisteuo (.passage john6_29) (.passage (rg .john 3 16 3 18))
+    .also (.sameSense .pisteuo (.passage john6_29) (.passage john3_16)) <|
+      .also (.sameSense .pisteuo (.passage john6_29) (.passage john3_18a))
+        (.sameSense .pisteuo (.passage john3_16) (.passage john3_18a))
   | .jamesUsesDikaioAsOutsidePaul =>
     .also (.sameSense .dikaioo (.passage james2_21_25) (.passage (vs .matthew 11 19))) <|
       .also (.sameSense .dikaioo (.passage james2_21_25) (.passage (vs .deuteronomy 25 1))) <|
