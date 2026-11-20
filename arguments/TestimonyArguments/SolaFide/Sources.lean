@@ -183,11 +183,14 @@ def calvinOnActsTen : Source :=
 
 /-- Where Melanchthon reads Luke 7:47 in the light of 7:50, in the *Apology of the
 Augsburg Confession* (1531): the part of Article IV on love and the fulfilling
-of the law. The *Concordia Triglotta* numbers it Article III, 31–34. The
-reference is given by article and topic because paragraph numbers differ between
-editions. -/
+of the law, which the *Concordia Triglotta* heads Article III. The words quoted,
+"For Christ interprets Himself [this very passage] when He adds: Thy faith hath
+saved thee", are Bente and Dau's, on p. 163 of the 1921 printing, read on the
+Internet Archive's scan; bookofconcord.org, which reproduces that translation,
+numbers the paragraph 31, and Project Gutenberg's text of it (eBook #6744) has
+the same words. -/
 def melanchthonOnLuke7 : Locus :=
-  .sectionRef "Apology IV, on love and the fulfilling of the law: Luke 7:47–50"
+  .page 163
 
 /-- The step in the apocalyptic reading: from Christ's own faithfulness and God's
 act of rescue to the denial that faith is the condition. Rated `plausible`: no
@@ -410,7 +413,7 @@ def baseCite : Claim → AtomMeta
       -- the premise is not `consensus`. A cited argument for healing here would
       -- lower it, and would enter `Dispute.lean` as a party.
     , source :=
-        { primary := .work bookOfConcord melanchthonOnLuke7
+        { primary := .work concordiaTriglotta melanchthonOnLuke7
         , supporting :=
             [ .work padillaNarrativeCriticism (.pages 54 55)
             , .scripture [{ ref := .range luke7_47to50 }]
@@ -445,7 +448,7 @@ def baseCite : Claim → AtomMeta
         { primary := .work marshallLuke (.adLoc luke7_47)
         , supporting :=
             [ .work padillaNarrativeCriticism (.pages 54 54)
-            , .work bookOfConcord melanchthonOnLuke7
+            , .work concordiaTriglotta melanchthonOnLuke7
             , .scripture [{ ref := .range luke7_41to43 }, { ref := .verse luke7_47 }]
             , .scripture [{ ref := .range luke7_47to50 }] ]
         , tradition := .christianHistoricalGrammatical
