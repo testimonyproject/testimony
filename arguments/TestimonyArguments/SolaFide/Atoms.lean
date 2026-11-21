@@ -251,8 +251,8 @@ inductive Claim
   house justified. -/
   | luke18_9_14TaxCollectorJustified
   /-- "Justified" (δεδικαιωμένος) at Luke 18:14 is God's verdict: the tax collector
-  goes home accepted as righteous before God. This says what the word means in
-  Jesus' own parable. It does not say what else God gives with the verdict. -/
+  goes home accepted as righteous before God. This is what the word means in
+  Jesus' own parable, whatever else God gives with the verdict. -/
   | luke18JustifiedIsVerdict
   /-- The tax collector brings no works that merit anything, only a humble and
   contrite plea for mercy. The Pharisee's works (18:11–12) do not justify him.
@@ -417,8 +417,8 @@ inductive Claim
   nothing hinder you from paying a vow in due time, and do not wait until death
   to be justified" (μὴ μείνῃς ἕως θανάτου δικαιωθῆναι), which the Catholic
   Church's own translation renders "do not wait until death to fulfill them". It
-  has the verb "to be justified". It does not say "be not afraid", and it does
-  not say "pray always", as the Vulgate does. -/
+  has the verb "to be justified", where the Vulgate has "be not afraid" and "pray
+  always". -/
   | sir18_22GreekIsAVow
   /-- The original text, "written by the inspired author himself, has more authority
   and greater weight than any even the very best translation" (Pius XII, *Divino
@@ -435,7 +435,7 @@ inductive Claim
   | vulgateFreeFromDoctrinalError
   /-- Trent's "as it is written" at Revelation 22:11 and Sirach 18:22 quotes the
   Vulgate as the Church's approved text: a reading free from error in faith, to
-  be used in teaching. It does not quote it as what the inspired authors wrote.
+  be used in teaching, rather than as what the inspired authors wrote.
   This is Trent's citation, **read as Pius XII reads Trent's decree on the
   Vulgate**. -/
   | trentQuotesTheVulgateJuridically

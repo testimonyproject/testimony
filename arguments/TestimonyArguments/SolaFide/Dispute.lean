@@ -298,10 +298,10 @@ def paulineCase : ArgumentPackage Claim :=
 saved you", with "saved" (σῴζω) read as saved from sin and the woman's love
 (7:47) read as the evidence of her forgiveness: her faith sufficed.
 
-It carries nothing Luke does not say. It does not carry Paul's texts, the answer
-to James, or the Reformed account of what justification is. And it does not
-claim what Paul argues, that faith *alone* saves. So it is attacked only by what
-denies Luke's own claim. -/
+It carries what Luke says and nothing more: not Paul's texts, the answer to
+James, or the Reformed account of what justification is, nor what Paul argues,
+that faith *alone* saves. So it is attacked only by what denies Luke's own
+claim. -/
 @[solaFideDefs]
 def dominicalCase : ArgumentPackage Claim :=
   { reformed with
@@ -552,8 +552,8 @@ Galatians 2:16, Romans 4:4–5, Ephesians 2:8–9 and Titus 3:5.
 
 Where Chrysostom stands against the Reformed case, he stands
 against a reading of those verses, the step from them to faith alone, and not
-against anything they say. It does not show that his reading of John 3:36
-is right. -/
+against anything they say. His own reading of John 3:36 is weighed in the
+debate on its own. -/
 @[headline]
 theorem chrysostom_grants_the_pauline_texts :
     Grants chrysostomOnJohn
@@ -1177,8 +1177,7 @@ declare_verdict nothingForcedUnanswered for solaFideDispute :
   Paul's word, and the arguments about the word now defeat each other, and the
   debate cannot choose between them.
 
-  It does not show that Paul's word means renewal, or that sola fide is false.
-  Every position can be defended, and none loses (`pauls_word_defensible`,
+  The tie leaves every position defensible, and none loses (`pauls_word_defensible`,
   `trent_on_pauls_word_defensible`). What would move the verdict is an argument
   that answers Trent at that step from evidence both sides accept.
 
@@ -1237,11 +1236,9 @@ declare_verdict trentsWordReadingStands for solaFideDispute :
 
   Trent's definition can be taken two ways. This is the first, weighed in the
   debate (`whatTrentsDefinitionClaims`): the definition read as saying what
-  Paul's "justify" means.
-
-  It does not show that Trent's reading of the word is right. It is not forced
-  (`pauls_word_defensible` names a defended set that leaves it out), and it is in
-  a tie with each position that attacks it. -/
+  Paul's "justify" means. Read so, it is defensible and no more: it is in a tie
+  with each position that attacks it, and a defended set can leave it out
+  (`pauls_word_defensible`). -/
   proves @[headline] trent_on_pauls_word_defensible
 
 #print axioms trent_on_pauls_word_defensible
@@ -1258,10 +1255,9 @@ declare_verdict trentStandsWithSandersAndJervell for solaFideDispute :
   ratings, all at the bottom, break no tie.
 
   The arguments about Paul's word do not attack it. Trent's definition, taken as
-  it stands, says nothing about what "justify" means.
-
-  It does not show that Trent prevails. It is not forced
-  (`trent_not_forced`). It is in a tie with each of those seven positions. -/
+  it stands, says nothing about what "justify" means. Trent is defensible and no
+  more: it is in a tie with each of those seven positions, and a defended set can
+  leave it out (`trent_not_forced`). -/
   proves @[headline] trent_defensible
 
 #print axioms trent_defensible

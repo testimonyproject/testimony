@@ -24,9 +24,10 @@ worth building only if the generated page answers it in words they can follow.
   "where exactly do Trent and Paul part?" is a `Because`; "what if the
   definition means the word, not the reality?" is a `Dilemma`; "what did the
   Reformation itself decide?" is a hearing.
-- **Every result says, in its docstring, what it claims and what it does not**,
-  in plain words, and names the texts, readers and ratings it turns on. The
-  docstring *is* the page.
+- **Every result says, in its docstring, exactly what it claims**, in plain
+  words, and names the texts, readers and ratings it turns on. A limit goes in
+  the sentence it qualifies, not in a sentence of its own about what the result
+  does not show. The docstring *is* the page.
 - **Report what the solver computes, whichever way it goes.** A verdict that
   disappoints the argument's author is still the verdict, and the page says so.
 - **Never tune the encoding to reach a verdict**, and never drop a cited reader
@@ -58,7 +59,9 @@ short form:
 - Quote the passage in English before arguing about it.
 - English first, original term in brackets: "works of the law" (ἔργα νόμου).
 - Gloss every technical word, theological or logical, where it is used.
-- Name who holds a view. Say what a result claims, then what it does not.
+- Name who holds a view. Say what a result is, and make its limit part of that
+  sentence: "the step is rated `disputed`, because Trent grants its grounds and
+  denies its conclusion", not "It does not show that the step is right."
 - Put identifiers in brackets after the sentence that states the point in
   words. A sentence that needs the identifier to make sense needs rewriting.
 - Plain sentences of varied length, joined with *because* and *so* where the

@@ -205,8 +205,8 @@ means saved there, not healed. And "for she loved much" (7:47) gives the
 evidence of her forgiveness, not its cause, so that what Jesus names as saving
 her is her faith.
 
-The strand says that her faith saved her, and no more. It does not say that
-nothing else could have. It owes nothing to Paul or to the dispute over "works
+The strand says that her faith saved her, and leaves open whether anything
+else could have. It owes nothing to Paul or to the dispute over "works
 of the law". -/
 @[solaFideDefs]
 def dominicalToSufficiency : Formula Claim :=

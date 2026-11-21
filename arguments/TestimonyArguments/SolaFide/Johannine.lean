@@ -202,9 +202,9 @@ Greek.** In the SBL Greek New Testament, "whoever believes in him" at 3:16 and a
 other form of the verb in these verses is followed by εἰς: the "whoever does not believe" of
 3:18 has no object.
 
-What it does not claim: that a shared construction fixes a shared sense. It is the ground the
-premise that "believe" keeps its sense rests on (`johnBelievingKeepsItsSense`), and the sense
-is argued there, from the lexicon and the scholars cited for it. -/
+The shared construction is the ground the premise that "believe" keeps its sense rests on
+(`johnBelievingKeepsItsSense`), and the sense itself is argued there, from the lexicon and the
+scholars cited for it. -/
 theorem john_believing_into_in_both_passages :
     believingInto greekJohnThreeSixteenToEighteen =
         [(3, 16, "πιστεύων"), (3, 18, "πιστεύων"), (3, 18, "πεπίστευκεν")] ∧
@@ -216,11 +216,8 @@ theorem john_believing_into_in_both_passages :
 /-- **John's strand, argued alone, delivers sola fide.** Grant that the
 believing of 6:29 is trust, and the work God requires is believing, which earns
 nothing. Sola fide then follows without the readings Paul's, Luke's and Peter's
-strands depend on.
-
-It does not show that John 6:29 is the only text used. Grace and "not
-by works" come from the verses every strand shares and from the answer to
-James. -/
+strands depend on. Grace and "not by works" come, beside John 6:29, from the
+verses every strand shares and from the answer to James. -/
 @[headline]
 theorem johannine_strand_establishes : Establishes johannineCase := by
   establish [solaFideDefs]
@@ -267,9 +264,8 @@ Grant Aquinas that the believing of John 6:29 is faith formed by charity, keep
 Paul, Luke and Acts as the Reformed read them, and sola fide still follows.
 
 Losing the argument over John 6:29 costs the Reformed case one
-strand and not its conclusion. It does not show that Aquinas would accept
-the rest. He would not, and the package is not his position; it is the Reformed
-case with one concession made. -/
+strand and not its conclusion. The package is the Reformed case with one
+concession made, not Aquinas's position: he would not accept the rest. -/
 @[headline]
 theorem believing_as_trust_not_load_bearing : Establishes reformedGrantingAquinasOnJohn := by
   establish [solaFideDefs]
@@ -340,10 +336,8 @@ def galatiansTextsAlone : ArgumentPackage Claim :=
 Galatians 3:11–12 and that the law commands love, and grant Luther's step. Then
 the believing of John 6:29 is not faith formed by charity: a faith that
 justified because love formed it would justify by the law, and the law is not of
-faith.
-
-It does not show that Calvin's reading is thereby established. It
-removes Aquinas's reading, and only if the step is granted. -/
+faith. Granted the step, this removes Aquinas's reading, which leaves Calvin's
+still to be argued. -/
 @[headline]
 theorem luther_answers_aquinas_from_galatians : Establishes lutherOnGalatians := by
   establish [solaFideDefs]
@@ -488,8 +482,8 @@ Matthew 7:21, read as he reads them, believing does not suffice for salvation
 without a right life.
 
 His argument is valid, and its premises are two texts nobody
-here disputes. It does not show that the step is sound. Calvin accepts
-both texts and denies it, so the step is rated `disputed`. -/
+here disputes. Its step is another matter: Calvin accepts both texts and
+denies it, so the step is rated `disputed`. -/
 @[headline]
 theorem chrysostom_reads_john3_36_against_faith_alone : Establishes chrysostomOnJohn := by
   establish [solaFideDefs]
@@ -509,8 +503,8 @@ Reformed one, on which not obeying the Son is refusing to believe Him. Another
 holds both texts and that faith does not suffice: Chrysostom's and Aquinas's.
 
 Neither side can settle the question by pointing at the
-words. It does not show that the two readings are equally good. That is
-a matter for the sources, and the page reports what they say. -/
+words; how good each reading is, is a matter for the sources, and the page
+reports what they say. -/
 @[headline]
 theorem john3_36_leaves_faiths_sufficiency_open :
     Independent [p Claim.john3_36WhoeverDoesNotObey, p .matthew7_21_23DoingTheWill]
@@ -531,11 +525,11 @@ Chrysostom concludes that it does not. No consistent reading holds every premise
 of both.
 
 A reader has to choose between Calvin's reading of John and
-Chrysostom's conclusion as written out here. It does not claim which to
-choose. Each rests on a step rated `disputed`.
+Chrysostom's conclusion as written out here, and each rests on a step rated
+`disputed`.
 
-Nor does it claim that the faith Chrysostom speaks of, right belief without a
-right life, is the faith the Reformers say justifies. His conclusion is written
+The faith Chrysostom speaks of, right belief without a right life, may not be
+the faith the Reformers say justifies. His conclusion is written
 out here as "faith does not suffice". A reader who takes him to deny only what
 James calls dead faith (see the section on James) need not choose. -/
 @[headline]

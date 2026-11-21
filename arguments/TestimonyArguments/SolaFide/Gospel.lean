@@ -32,7 +32,7 @@ so, the standard lexicon of New Testament Greek (BDAG), Morris, Moo, Irons,
 Wright, and the Catholic scholar Fitzmyer among them (`dikaioIsForensic`, rated
 `wellSupported`). The *Joint Declaration on the Doctrine of Justification*
 (1999), signed by the Catholic Church, confesses that God "no longer imputes to
-them their sin" (§22). It does not speak to the sense of the verb.
+them their sin" (§22), without a word on the sense of the verb.
 
 ### What Trent denies
 
@@ -51,8 +51,8 @@ The checking finds that the whole disagreement is that one step, and that what
 the step contradicts in Trent is its definition, and nothing else
 (`whereTrentPartsFromPaul`).
 
-This does not show that the step is true. It shows that the step is the whole of
-the disagreement. Grant it, and Trent's definition cannot stand. Deny it, and
+Whether the step is true is the question left standing, because the step is the
+whole of the disagreement. Grant it, and Trent's definition cannot stand. Deny it, and
 Paul's gospel, as written out here, does not reach Trent's definition at all.
 -/
 
@@ -75,10 +75,7 @@ def galatianGospelReading : Valuation Claim := fun a =>
 /-- **Paul's gospel, read this way, denies Trent's definition.** From Galatians
 1:6–9, 2:21, 5:2–4 and 1 Corinthians 15:3, read as one claim, with "justify"
 (δικαιόω) as a courtroom word: justification is not the renewal of the inward
-person.
-
-It does not show that the reading is beyond dispute. Two of its steps
-are rated `disputed`, and Trent accepts every text. -/
+person. Two of its steps are rated `disputed`, and Trent accepts every text. -/
 @[headline]
 theorem galatianGospel_establishes : Establishes galatianGospel := by
   establish [solaFideDefs]
@@ -126,12 +123,10 @@ theorem trent_grants_the_gospel_texts :
 
 /-- **Trent's case can be held together with the verdict sense of Paul's verb.**
 Nothing in Trent's case denies that "justify" is a courtroom word. The meaning
-of the word is not where they part.
-
-It does not show that Trent or the *Joint Declaration* teaches the
-verdict sense. The Declaration confesses that God no longer counts sin (§22),
-and does not speak to the sense of the verb. This result says only that the two
-can be held together. -/
+of the word is not where they part. The two can be held together, though
+neither Trent nor the *Joint Declaration* teaches the verdict sense: the
+Declaration confesses that God no longer counts sin (§22), and leaves the sense
+of the verb alone. -/
 theorem trent_grants_the_forensic_sense : Grants tridentineCase (p .dikaioIsForensic) := by
   satisfied_by jointDeclarationReading [Grants, solaFideDefs]
 
