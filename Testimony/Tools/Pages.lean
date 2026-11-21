@@ -599,26 +599,43 @@ says what makes this document: the package, its generator and the file.
 With `credits`, the document names the people behind its arguments, as
 `Logic.Latex.credits` works them out when it is typeset: one argument's under
 the title of a document that holds only it, and in a document of several,
-everyone's under the title and each argument's under its heading. -/
+everyone's under the title and each argument's under its heading.
+
+`works` is the package's bibliography. Every work in it that the document cites
+and whose licence asks for credit is credited in the last section
+(`Logic.Latex.licenceCredits`), so a document that cites the SBL Greek New
+Testament says so, and one that does not, does not. -/
 def latexDocument (title note : String) (sections : List (Argument × Body))
-    (made : Logic.Latex.Reproduction) (credits : Bool := false) : String :=
+    (made : Logic.Latex.Reproduction) (credits : Bool := false)
+    (works : List Bib.BibEntry := []) : String :=
   let alone := sections.length == 1
   let key := match sections with
     | [(a, _)] => a.ns.toString
     | _ => "all"
+  let body := String.join (sections.map fun (a, b) =>
+    Logic.Latex.sectionHeading a.title ++
+      (if credits && !alone then "\\creditline{" ++ a.ns.toString ++ "}\n\n" else "") ++
+      (if alone then "" else latexAbstract a false) ++
+      (if a.chapters.isEmpty then b.latex else latexChapters a b))
+  let licensed := (Logic.Latex.citedIn body works).filter (·.core.licence.isSome)
   (if credits then
     Logic.Latex.preamble title ("\\credit{" ++ key ++ "}")
    else Logic.Latex.preamble title) ++
   (match sections with
    | [(a, _)] => latexAbstract a true
    | _ => "") ++
-  note ++ Logic.Latex.contents ++
-  String.join (sections.map fun (a, b) =>
-    Logic.Latex.sectionHeading a.title ++
-      (if credits && !alone then "\\creditline{" ++ a.ns.toString ++ "}\n\n" else "") ++
-      (if alone then "" else latexAbstract a false) ++
-      (if a.chapters.isEmpty then b.latex else latexChapters a b)) ++
-  Logic.Latex.postamble (Logic.Latex.reproduction { made with credits })
+  note ++ Logic.Latex.contents ++ body ++
+  Logic.Latex.postamble (Logic.Latex.reproduction { made with credits, licensed })
+
+-- A work is credited where it is cited, with or without a pinpoint, and only there;
+-- its credit names its licence, escaped for LaTeX.
+#guard (Logic.Latex.citedIn "x \\cite[p. 3]{holmes-sblgnt-2010} y"
+  [Bib.sblgnt, Bib.oshbDataset]).map (·.key) == ["holmes-sblgnt-2010"]
+#guard (Logic.Latex.citedIn "x \\cite{holmes-sblgnt-2010x} y" [Bib.sblgnt]).isEmpty
+#guard ((Logic.Latex.licenceCredits [Bib.maculaGreek]).splitOn
+  "copyright 2022–2024 by Biblica, Inc. The library keeps only the morphology and syntactic \
+  roles of its SBLGNT word table, and drops the rest. Licensed under CC BY 4.0, \
+  \\url{https://creativecommons.org/licenses/by/4.0/}.").length == 2
 
 /-- A generated file's committed contents, or nothing if there is none, so that
 a check reports a missing file as stale. -/

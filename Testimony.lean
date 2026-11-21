@@ -50,7 +50,9 @@ import Testimony.Semantics.Finding
 import Testimony.Logic.Bundle
 import Testimony.Checks.BundleCases
 import Testimony.Ontology
+import Testimony.Corpus.Table
 import Testimony.Corpus.Greek
+import Testimony.Corpus.Hebrew
 import Testimony.Corpus.Rendering
 import Testimony.Checks.Fixture
 import Testimony.Checks.Coverage

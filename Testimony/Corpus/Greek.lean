@@ -1,5 +1,5 @@
 import Lean
-import Testimony.Text
+import Testimony.Corpus.Table
 
 /-!
 # Testimony.Corpus.Greek — the Greek New Testament, word by word
@@ -92,71 +92,15 @@ def isVerb (t : Token) : Bool := t.wordClass == "verb"
 
 end Token
 
-/-- MACULA's code for each book of the New Testament. -/
-def bookCodes : List (String × Lean.Name) :=
-  [ ("MAT", `matthew), ("MRK", `mark), ("LUK", `luke), ("JHN", `john), ("ACT", `acts)
-  , ("ROM", `romans), ("1CO", `firstCorinthians), ("2CO", `secondCorinthians)
-  , ("GAL", `galatians), ("EPH", `ephesians), ("PHP", `philippians), ("COL", `colossians)
-  , ("1TH", `firstThessalonians), ("2TH", `secondThessalonians), ("1TI", `firstTimothy)
-  , ("2TI", `secondTimothy), ("TIT", `titus), ("PHM", `philemon), ("HEB", `hebrews)
-  , ("JAS", `james), ("1PE", `firstPeter), ("2PE", `secondPeter), ("1JN", `firstJohn)
-  , ("2JN", `secondJohn), ("3JN", `thirdJohn), ("JUD", `jude), ("REV", `revelation) ]
-
-/-- The directory the corpus is read from: `data/greek/macula-sblgnt`, found by
-looking up from the working directory, so that a build from the library's root
-and one from `arguments/` read the same files. -/
-def dataDir : IO System.FilePath := do
-  let mut dir ← IO.currentDir
-  for _ in [0:6] do
-    let candidate := dir / "data" / "greek" / "macula-sblgnt"
-    if ← candidate.isDir then return candidate
-    match dir.parent with
-    | some p => dir := p
-    | none => break
-  throw <| IO.userError "Testimony.Corpus.Greek: data/greek/macula-sblgnt not found"
-
-/-- One row of a book's file, read into its fields: chapter, verse, position, and
-the five columns after the reference. -/
-structure Row where
-  /-- Its chapter. -/
-  chapter : Nat
-  /-- Its verse. -/
-  verse : Nat
-  /-- Its position in the verse. -/
-  position : Nat
-  /-- Its role. -/
-  role : String
-  /-- Its part of speech. -/
-  wordClass : String
-  /-- The word as printed. -/
-  text : String
-  /-- Its dictionary form. -/
-  lemma : String
-  /-- Its parsing. -/
-  morph : String
-
-/-- Read a row of a book's file: `JHN 1:1!14  p  noun  θεὸς  θεός  N-NSM`. -/
-def parseRow (line : String) : Option Row := do
-  match line.splitOn "\t" with
-  | [ref, role, cls, text, lemma, morph] =>
-    let [_, cv] := ref.splitOn " " | none
-    let [chv, pos] := cv.splitOn "!" | none
-    let [ch, v] := chv.splitOn ":" | none
-    pure { chapter := ← ch.toNat?, verse := ← v.toNat?, position := ← pos.toNat?
-         , role, wordClass := cls, text, lemma, morph }
-  | _ => none
+/-- MACULA's code for each book of the New Testament (`Testimony.Corpus.greek`). -/
+def bookCodes : List (String × Lean.Name) := Testimony.Corpus.greek.books
 
 /-- Every row of one book's file, in the order of its words. -/
-def readBook (code : String) : IO (Array Row) := do
-  let path := (← dataDir) / s!"{code}.tsv"
-  let lines := (← IO.FS.readFile path).splitOn "\n"
-  let mut rows := #[]
-  for line in lines.drop 1 do
-    if line.isEmpty then continue
-    match parseRow line with
-    | some r => rows := rows.push r
-    | none => throw <| IO.userError s!"Testimony.Corpus.Greek: cannot read {path}: {line}"
-  return rows
+def readBook (code : String) : IO (Array Testimony.Corpus.Row) :=
+  Testimony.Corpus.greek.readBook code
+
+/-- The directory the corpus is read from: `data/greek/macula-sblgnt`. -/
+def dataDir : IO System.FilePath := Testimony.Corpus.greek.dir
 
 /-- Write `def n : List Token` for verses `v₁` to `v₂` of chapter `c` of the book
 with MACULA code `code`. See the module docstring. -/
@@ -184,56 +128,6 @@ syntax (name := greekPassageCmd) "greek_passage " ident " from " ident num num (
 elab_rules : command
   | `(greek_passage $n from $code $c $v₁ $[$v₂]?) =>
     greekPassage n code.getId.toString c.getNat v₁.getNat ((v₂.map (·.getNat)).getD v₁.getNat)
-
-/-! ### Part of a verse
-
-An argument sometimes needs half a verse: John 3:18 says "whoever believes in him is not
-condemned" and then "whoever does not believe is condemned already, because he has not believed
-in the name", and a reader may treat the two halves differently. `verse_part` names such a part
-by the positions of its first and last words, and by one word it contains, its anchor. It reads
-the corpus when the module is built and refuses the part, failing the build, unless the verse is
-there, the positions lie within it, and the anchor occurs in the part exactly once. So a part
-cannot silently stand for the whole verse, or for words the verse does not have. -/
-
-/-- Why a part of a verse cannot be anchored in these words of the verse, or `none` if it can. -/
-def partProblem (words : List Row) (first last : Nat) (anchor : String) : Option String :=
-  let n := words.length
-  if words.isEmpty then some "the verse has no words in the corpus"
-  else if first == 0 || first > last then some s!"words {first} to {last} are not a span"
-  else if last > n then some s!"the verse has {n} words, not {last}"
-  else
-    let span := words.filter fun r => first ≤ r.position && r.position ≤ last
-    match (span.filter (·.lemma == anchor)).length with
-    | 1 => none
-    | 0 => some s!"its anchor {anchor} is not among words {first} to {last}"
-    | k => some s!"its anchor {anchor} occurs {k} times among words {first} to {last}"
-
-/-- Write `def n : PassageRange`, part `letter` of verse `c:v` of the book with code `code`,
-words `first` to `last`, after checking it against the corpus. See the section above. -/
-def versePart (n : Ident) (code : String) (c v first last : Nat) (letter anchor : String) :
-    CommandElabM Unit := do
-  let some (_, bookName) := bookCodes.find? (·.1 == code)
-    | throwError "verse_part: no book with code {code}"
-  let rows ← liftIO (readBook code)
-  let words := (rows.filter fun r => r.chapter == c && r.verse == v).toList
-  if let some why := partProblem words first last anchor then
-    throwError "verse_part: {code} {c}:{v}{letter}: {why}"
-  let book := mkCIdent (``Testimony.Book ++ bookName)
-  elabCommand (← `(command|
-    /-- Part of a verse, anchored in the Greek corpus by `verse_part`. -/
-    def $n : Testimony.PassageRange :=
-      .part { verse := ⟨$book, $(quote c), $(quote v)⟩, letter := $(quote letter)
-            , first := $(quote first), last := $(quote last), anchor := $(quote anchor) }))
-
-/-- `verse_part n from JHN 3 18 1 6 "a" "πιστεύω"` writes `def n`, John 3:18a: in order, the
-book, chapter and verse, the positions of the part's first and last words, its letter, and the
-dictionary form of the word that anchors it. Here that is the verse's first six words, anchored
-by its one πιστεύω. -/
-syntax (name := versePartCmd) "verse_part " ident " from " ident num num num num str str : command
-
-elab_rules : command
-  | `(verse_part $n from $code $c $v $a $b $l $w) =>
-    versePart n code.getId.toString c.getNat v.getNat a.getNat b.getNat l.getString w.getString
 
 /-- `#greek_corpus` reports every imported book and how many words it has. -/
 syntax (name := greekCorpusCmd) "#greek_corpus" : command

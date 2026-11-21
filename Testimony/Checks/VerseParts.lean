@@ -1,15 +1,18 @@
 import Testimony.Corpus.Greek
+import Testimony.Corpus.Hebrew
 import Testimony.Checks.Coverage
 
 /-!
-# Testimony.Checks.VerseParts — every part of a verse is read from the Greek
+# Testimony.Checks.VerseParts — every part of a verse is read from the Greek or the Hebrew
 
 A premise can speak of half a verse: John 3:18a, "whoever believes in him is not condemned",
 without 3:18b, "whoever does not believe is condemned already". Such a part is named by the
-positions of its first and last words in the verse, as the Greek corpus numbers them, and by one
-word it contains, its anchor (`Testimony.VersePart`). `verse_part` (`Testimony.Corpus.Greek`)
-builds one, and it reads the corpus while the module is built: it fails unless the verse is
-there, the positions lie inside it, and the anchor occurs in the part exactly once.
+positions of its first and last words in the verse, as the Greek or Hebrew text numbers them,
+and by one word it contains, its anchor (`Testimony.VersePart`). `verse_part`
+(`Testimony.Corpus.Table`) builds one, and it reads the text while the module is built: it fails
+unless the verse is there, the positions lie inside it, and the anchor occurs in the part
+exactly once. A part of the Old Testament is read from the Hebrew, at the verse that English
+Bibles' number stands for there (`Testimony.Corpus.Hebrew`).
 
 Nothing in the type makes anyone use `verse_part`, though. A part is a value, and a value can
 be written out by hand, `.part { verse := ⟨.john, 3, 18⟩, first := 7, last := 23, … }`, and it
@@ -19,10 +22,11 @@ reads every part again.
 
 `#check_verse_parts under N` finds every part of a verse built under the namespace `N`: in the
 value of every definition, and in the statement of every definition and theorem, wherever in
-the term the part stands. For each it reads the verse from the corpus and asks of it what
+the term the part stands. For each it reads the verse from its text and asks of it what
 `verse_part` asks (`partProblem`). It fails the build, naming the declaration and the reason, if
 
-- the book has no Greek text in the corpus, so the part cannot be read at all;
+- the book is in neither text, or its file has not been imported, so the part cannot be read;
+- the Hebrew numbers the English verse otherwise than as one whole verse;
 - the positions are not a span inside the verse;
 - the anchor is not among the part's words, or occurs there more than once; or
 - the part is not written out, so that its verse, positions or anchor are not known until
@@ -40,7 +44,7 @@ the library and over its own namespace.
 
 namespace Testimony.Checks
 
-open Lean Elab Command Meta Testimony.Corpus.Greek
+open Lean Elab Command Meta Testimony.Corpus
 
 /-- Whether a declaration belongs to the machinery of `VersePart` itself: its constructor,
 recursors and projections, and the instances it derives, whose terms name the constructor
@@ -78,9 +82,11 @@ def buildsVersePart (info : ConstantInfo) : Bool :=
     | .defnInfo d => !(versePartsIn d.value).isEmpty
     | _ => false
 
-/-- A part of a verse as written out in a term: the book's code in the corpus, chapter, verse,
-the letter, the positions of its first and last words, and its anchor. -/
+/-- A part of a verse as written out in a term: the text that holds its book, the book's code
+there, chapter, verse, the letter, the positions of its first and last words, and its anchor. -/
 structure WrittenPart where
+  /-- The text that holds its book. -/
+  corpus : Corpus
   /-- The book's code in the corpus, `JHN`. -/
   code : String
   /-- Its chapter. -/
@@ -119,21 +125,20 @@ def readWrittenPart (e : Expr) : MetaM (Except String WrittenPart) := do
     return .error "its verse is not written out"
   let some book := (← whnf p.getAppArgs[0]!).constName?
     | return .error "its book is not written out"
-  let some code := bookCodes.find? (fun (_, b) => ``Testimony.Book ++ b == book) |>.map (·.1)
-    | return .error s!"{book} has no Greek text, so the part cannot be read from the corpus"
+  let some (corpus, code) := codeOfBook? book
+    | return .error s!"{book} is in neither the Greek nor the Hebrew text"
   let some chapter ← nat p.getAppArgs[1]! | return .error "its chapter is not written out"
   let some verse ← nat p.getAppArgs[2]! | return .error "its verse number is not written out"
   let some letter ← str args[1]! | return .error "its letter is not written out"
   let some first ← nat args[2]! | return .error "its first word is not written out"
   let some last ← nat args[3]! | return .error "its last word is not written out"
   let some anchor ← str args[4]! | return .error "its anchor is not written out"
-  return .ok { code, chapter, verse, letter, first, last, anchor }
+  return .ok { corpus, code, chapter, verse, letter, first, last, anchor }
 
 /-- Every problem with the parts of verses built by the declarations `names`, as messages,
-and how many parts were read and passed. Each book's file is read once. -/
+and how many parts were read and passed. -/
 def versePartProblems (names : Array Name) : CommandElabM (Array MessageData × Nat) := do
   let env ← getEnv
-  let mut books : Std.HashMap String (Array Row) := {}
   let mut problems : Array MessageData := #[]
   let mut passed : Nat := 0
   for name in names do
@@ -147,18 +152,9 @@ def versePartProblems (names : Array Name) : CommandElabM (Array MessageData × 
       | .error why => problems := problems.push m!"{name}: {why}"
       | .ok w =>
         let place := s!"{w.code} {w.chapter}:{w.verse}{w.letter}"
-        let rows ← match books[w.code]? with
-          | some rows => pure (some rows)
-          | none =>
-            try
-              let rows ← liftIO (readBook w.code)
-              pure (some rows)
-            catch _ => pure none
-        let some rows := rows
-          | problems := problems.push m!"{name}: {place}: the corpus has no file for {w.code}"
-            continue
-        books := books.insert w.code rows
-        let words := (rows.filter fun r => r.chapter == w.chapter && r.verse == w.verse).toList
+        match ← liftIO (w.corpus.verseWords w.code w.chapter w.verse) with
+        | .error why => problems := problems.push m!"{name}: {place}: {why}"
+        | .ok words =>
         match partProblem words w.first w.last w.anchor with
         | some why => problems := problems.push m!"{name}: {place}: {why}"
         | none => passed := passed + 1
@@ -167,9 +163,9 @@ def versePartProblems (names : Array Name) : CommandElabM (Array MessageData × 
 /-- Fail, naming each one, if any problems were found. -/
 def refuseVerseParts (problems : Array MessageData) : CommandElabM Unit := do
   unless problems.isEmpty do
-    throwError m!"parts of verses the Greek corpus does not bear out:\n{
+    throwError m!"parts of verses the Greek or Hebrew text does not bear out:\n{
       MessageData.joinSep problems.toList "\n"}\nwrite each part with `verse_part`, which reads \
-      it from the corpus"
+      it from the text"
 
 /-- The declarations under `root` whose statement or value builds a part of a verse, in order
 of name. -/
@@ -187,10 +183,10 @@ def checkVerseParts (root : Name) : CommandElabM Unit := do
   if passed == 0 then
     logInfo m!"no part of a verse is built under {root}"
   else
-    logInfo m!"every part of a verse under {root} is read from the Greek corpus: {passed}"
+    logInfo m!"every part of a verse under {root} is read from its Greek or Hebrew text: {passed}"
 
 /-- `#check_verse_parts under N` reads every part of a verse built under the namespace `N`
-against the Greek corpus, and fails the build on any the corpus does not bear out. -/
+against its Greek or Hebrew text, and fails the build on any the text does not bear out. -/
 syntax (name := checkVersePartsCmd) "#check_verse_parts" " under " ident : command
 
 /-- `#check_verse_parts in cmd` runs `cmd`, reads every part of a verse built by what it
@@ -209,20 +205,22 @@ elab_rules : command
       else some name
     let (problems, passed) ← versePartProblems added.toArray
     refuseVerseParts problems
-    logInfo m!"read from the Greek corpus: {passed}"
+    logInfo m!"read from its Greek or Hebrew text: {passed}"
 
 /-! ### What the check passes, and what it refuses
 
 The part `verse_part` built, John 3:18a, is read again and passes. -/
 
-/-- info: every part of a verse under Testimony.Corpus is read from the Greek corpus: 1 -/
+/--
+info: every part of a verse under Testimony.Corpus is read from its Greek or Hebrew text: 3
+-/
 #guard_msgs in
 #check_verse_parts under Testimony.Corpus
 
 /-! The same part written out by hand passes too, because the corpus bears it out: it is not
 how a part is written that the check asks about, but whether the words are there. -/
 
-/-- info: read from the Greek corpus: 1 -/
+/-- info: read from its Greek or Hebrew text: 1 -/
 #guard_msgs in
 #check_verse_parts in
 /-- John 3:18a, written out by hand. -/
@@ -235,9 +233,9 @@ verse, a part anchored by a word it does not hold, and a part of a book the corp
 have. -/
 
 /--
-error: parts of verses the Greek corpus does not bear out:
+error: parts of verses the Greek or Hebrew text does not bear out:
 Testimony.Checks.handWrittenB: JHN 3:18b: its anchor πιστεύω occurs 2 times among words 7 to 23
-write each part with `verse_part`, which reads it from the corpus
+write each part with `verse_part`, which reads it from the text
 -/
 #guard_msgs in
 #check_verse_parts in
@@ -246,9 +244,9 @@ def handWrittenB : PassageRange :=
   .part { verse := ⟨.john, 3, 18⟩, letter := "b", first := 7, last := 23, anchor := "πιστεύω" }
 
 /--
-error: parts of verses the Greek corpus does not bear out:
+error: parts of verses the Greek or Hebrew text does not bear out:
 Testimony.Checks.handWrittenOverlong: JHN 3:18c: the verse has 23 words, not 30
-write each part with `verse_part`, which reads it from the corpus
+write each part with `verse_part`, which reads it from the text
 -/
 #guard_msgs in
 #check_verse_parts in
@@ -257,9 +255,9 @@ def handWrittenOverlong : PassageRange :=
   .part { verse := ⟨.john, 3, 18⟩, letter := "c", first := 1, last := 30, anchor := "πιστεύω" }
 
 /--
-error: parts of verses the Greek corpus does not bear out:
+error: parts of verses the Greek or Hebrew text does not bear out:
 Testimony.Checks.handWrittenUnanchored: JHN 3:16b: its anchor ἀγαπάω is not among words 10 to 20
-write each part with `verse_part`, which reads it from the corpus
+write each part with `verse_part`, which reads it from the text
 -/
 #guard_msgs in
 #check_verse_parts in
@@ -268,9 +266,9 @@ def handWrittenUnanchored : PassageRange :=
   .part { verse := ⟨.john, 3, 16⟩, letter := "b", first := 10, last := 20, anchor := "ἀγαπάω" }
 
 /--
-error: parts of verses the Greek corpus does not bear out:
+error: parts of verses the Greek or Hebrew text does not bear out:
 Testimony.Checks.handWrittenRomans: ROM 3:28a: the corpus has no file for ROM
-write each part with `verse_part`, which reads it from the corpus
+write each part with `verse_part`, which reads it from the text
 -/
 #guard_msgs in
 #check_verse_parts in
@@ -278,13 +276,28 @@ write each part with `verse_part`, which reads it from the corpus
 def handWrittenRomans : PassageRange :=
   .part { verse := ⟨.romans, 3, 28⟩, letter := "a", first := 1, last := 3, anchor := "λογίζομαι" }
 
+/-! A hand-written part of the Old Testament is read from the Hebrew at the verse its English
+number stands for. Ephrathah is in English Micah 5:2, which the Hebrew numbers 5:1. A part that
+puts it in English 5:1, the Hebrew's 4:14, is refused. -/
+
+/--
+error: parts of verses the Greek or Hebrew text does not bear out:
+Testimony.Checks.handWrittenMicah: MIC 5:1a: its anchor אֶפְרָתָה is not among words 1 to 8
+write each part with `verse_part`, which reads it from the text
+-/
+#guard_msgs in
+#check_verse_parts in
+/-- Ephrathah, put in the verse before its own. -/
+def handWrittenMicah : PassageRange :=
+  .part { verse := ⟨.micah, 5, 1⟩, letter := "a", first := 1, last := 8, anchor := "אֶפְרָתָה" }
+
 /-! A part built by a function from its argument cannot be read, because its words are not
 known until the function is applied. -/
 
 /--
-error: parts of verses the Greek corpus does not bear out:
+error: parts of verses the Greek or Hebrew text does not bear out:
 Testimony.Checks.handWrittenFromArgument: its words wait on a value not yet supplied
-write each part with `verse_part`, which reads it from the corpus
+write each part with `verse_part`, which reads it from the text
 -/
 #guard_msgs in
 #check_verse_parts in
