@@ -108,6 +108,7 @@ def bookMade : Logic.Latex.Reproduction :=
 any package's. -/
 def document : String :=
   latexDocument documentTitle note (sectionsOf arguments bodies) bookMade (credits := true)
+    (works := TestimonyArguments.bibliography)
 
 /-- Where each argument's own document is written: `<slug>.tex` in this
 directory. -/
@@ -117,7 +118,7 @@ def standaloneDir : System.FilePath := "../docs/latex/arguments"
 def standalone (a : Argument) : String :=
   latexDocument a.title standaloneNote (sectionsOf [a] bodies)
     { bookMade with dir := "docs/latex/arguments", file := a.slug ++ ".tex" }
-    (credits := true)
+    (credits := true) (works := TestimonyArguments.bibliography)
 
 -- Each argument's document is named by its slug, so two arguments with one slug
 -- would write one file and lose the other. A release attaches every PDF without

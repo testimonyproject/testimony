@@ -617,7 +617,9 @@ position on the procession, and an article check of LST's own sentences.
 text data. The Greek New Testament has begun: John, Colossians, Titus and Hebrews
 are imported from MACULA Greek's annotation of the SBLGNT, so a claim about what
 the Greek contains is checked against the data ([The Greek text as
-data](./corpus.md), [#247]). The Hebrew Bible (BHSA, OSHB) is still to come.
+data](./corpus.md), [#247]). The Hebrew Bible has begun too: Isaiah and Micah are
+imported from MACULA Hebrew's annotation of the Westminster Leningrad Codex, so far
+to check the parts of verses an argument names.
 Linguistic premises can then cite actual morphological annotation rather than a
 commentary's report of it, which matters most for exactly the lexical premises
 that keep turning out to be load-bearing.

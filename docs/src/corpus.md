@@ -11,7 +11,8 @@ library now holds the Greek New Testament as data so that they can be.
 The text is the SBL Greek New Testament, edited by Michael Holmes (2010). The
 analysis of each word, its part of speech, its dictionary form, its parsing and
 its role in its clause, is MACULA Greek's, Clear Bible's annotation of that text.
-Both are licensed CC BY 4.0. `scripts/import_greek.py` reads MACULA's word table
+Both are licensed CC BY 4.0, and every printed document that cites either
+credits it as its licence asks. `scripts/import_greek.py` reads MACULA's word table
 and writes one file per book under `data/greek/macula-sblgnt/`, keeping only the
 columns the library reads; the README there records the source and its checksum.
 So far John, Colossians, Titus and Hebrews are imported, the books the first
@@ -65,6 +66,32 @@ supplied word. Aligned word by word, its two verses add "other" four times and
 (`colossians_additions`). Whether the context implies "other", as the Witnesses
 hold, is a reading, and stays one. The alignments are the library's own.
 
+## The Hebrew text
+
+Isaiah and Micah are imported from the Hebrew Bible, so far for one use: naming
+part of a verse and having the build check that its words are there. The text is
+the Westminster Leningrad Codex, a transcription of the Leningrad Codex, the
+oldest complete manuscript of the Hebrew Bible, and it is in the public domain.
+The parsing is the Open Scriptures Hebrew Bible's, carried in MACULA Hebrew,
+Clear Bible's annotation of the codex, both licensed CC BY 4.0.
+`scripts/import_hebrew.py` writes one file per book under
+`data/hebrew/macula-wlc/` (`Testimony.Corpus.Hebrew`).
+
+Two things differ from the Greek. A written Hebrew word is often several entries
+in the table, because "and you" (וְאַתָּה) is a conjunction and a pronoun
+written as one word. A part of a verse counts written words. And the Hebrew
+numbers some verses differently from English Bibles: what English Bibles call
+Micah 5:2, "But you, O Bethlehem Ephrathah" (ESV), is 5:1 in the Hebrew. The
+library names verses as English Bibles do, so the build looks each one up in
+STEPBible's table of versification traditions (TVTMS, CC BY 4.0) before reading
+it. Where the Hebrew joins an English verse to another or splits it, as it
+prints English Isaiah 64:1 at the end of its 63:19, the build refuses to name a
+part of it.
+
+The words are the Masoretic Text's, as one manuscript has them. Where the
+Septuagint or the Dead Sea Scrolls read otherwise, the table gives the Masoretic
+reading alone ([#327][hebrew-issue]).
+
 ## What comes next
 
 The next steps ([#247][issue]) test grammatical rules, Colwell's, Harner's,
@@ -72,3 +99,4 @@ Sharp's and a translator's own, over every place their construction occurs, and
 let what the text contains enter a dispute as a premise every party can check.
 
 [issue]: https://github.com/testimonyproject/testimony/issues/247
+[hebrew-issue]: https://github.com/testimonyproject/testimony/issues/327
