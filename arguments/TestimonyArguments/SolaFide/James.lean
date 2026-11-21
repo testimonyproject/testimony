@@ -1043,19 +1043,17 @@ def worksContested : Contested jamesDispute (p .worksAreFruitNotGround) where
 /-! ### The exchange, told in order -/
 
 /-- **The exchange over James 2:24, in the order the replies come.** Two
-questions run through it. What does James's word "justified" (δικαιόω) mean? And
-what do the works it is "by" do? Each reply is set beside the position it meets.
-The sentence after each one, saying who defeats whom, is computed from the two
-positions' premises, so it cannot say more than they do. When two positions
-defeat each other, each contradicts something the other rests on, and neither is
-rated stronger. That is a tie, and it refutes neither.
+questions run through it: what James's word "justified" (δικαιόω) means, and
+what the works it is "by" do. Each reply is set beside the position it meets, and
+the sentence after it, saying who defeats whom, is computed from the two
+positions' premises.
 
-What it shows: on both questions the positions meet as equals, and none gives
-way. What it does not show: which reading of James is right. Every position here
-rests on at least one reading rated `disputed` (contested by a cited reader), and
-the exchange shows where. Nor is it the whole debate: the Reformed harmony also
-ties with Trent's reading of the reward texts (Session VI, ch. 16), which is
-weighed below and not told here. -/
+On both questions the positions meet as equals. Where two positions defeat each
+other, each contradicts something the other rests on and neither is rated
+stronger, so the question is left a tie. Every position here rests on at least
+one reading rated `disputed` (contested by a cited reader), and each turn says
+which. The Reformed harmony meets one more of Trent's readings, of the texts that
+promise a reward for works (Session VI, ch. 16), weighed later in the chapter. -/
 declare_bundle jamesExchange in jamesDispute.finite where
   /-- Outside Paul, "justify" declares or vindicates: "wisdom is justified by her
   deeds" (Matthew 11:19, ESV). Scholars of word meaning hold that a word should
@@ -1067,8 +1065,8 @@ declare_bundle jamesExchange in jamesDispute.finite where
   /-- Trent reads the same passage the other way. The justified "are still
   further justified", and James 2:24 is one of its three texts for it (Session
   VI, ch. 10). So "justified" in James is the increase of the justice already
-  received. Each side needs a premise about how James uses the word, and neither
-  premise is better than `disputed`. -/
+  received. Each side needs a premise about how James uses the word, and each
+  premise is rated `disputed`. -/
   turn JamesParty.trentOnTheWord meets JamesParty.lexical
   /-- This reading comes at the word from Paul. Paul's "justify" means the renewal
   of the inward person, as Augustine explained it and as VanLandingham argues from
@@ -1085,8 +1083,8 @@ declare_bundle jamesExchange in jamesDispute.finite where
   turn JamesParty.harmony meets JamesParty.renewalOnTheWord
   /-- Trent's canon 24 condemns anyone who says good works "are merely the fruits
   and signs of Justification obtained, but not a cause of the increase thereof".
-  Here Westminster and Trent's decree stand against each other, and nothing about
-  the word decides between them. -/
+  Here Westminster and Trent's decree stand against each other on what works do,
+  each resting on its own confession. -/
   turn JamesParty.trentOnWorks meets JamesParty.harmony
 
 /-! ### What each position rests on -/

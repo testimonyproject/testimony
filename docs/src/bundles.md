@@ -15,7 +15,7 @@ stands to a turn before it:
 - it **meets** that turn: each defeats the other, so neither gives way;
 - it **stands apart** from that turn: neither defeats the other.
 
-A turn that says none of these only enters the exchange, and claims nothing about the others.
+A turn with none of these simply enters the exchange.
 
 ```lean
 /-- The meeting's length, told as an exchange. -/
@@ -65,12 +65,12 @@ turn has joined. It is written as a reader would say it: "each of these position
 other, so none of them gives way", or "none of these positions defeats another", or the defeats
 pair by pair. Above five positions the page also sets the defeats out in a table.
 
-## What a bundle does not do
+## What a bundle decides
 
-It decides nothing the dispute does not. It is the dispute's defeats, put in an order and told.
-Two arguments that share no claim never defeat each other, so a bundle within one dispute
-cannot join them; that waits on bridges between arguments, each cited to the scholar or article
-that draws it, or marked as proposed.
+Only what the dispute decides: a bundle is the dispute's defeats, put in an order and told. Its
+turns are parties to one dispute. Two arguments that share no claim never defeat each other, so
+joining them waits on bridges between arguments, each cited to the scholar or article that
+draws it, or marked as proposed.
 
 The cases in `Testimony.Checks.BundleCases` pin what a bundle must refuse and what it lets
 through, and how the page sets it.

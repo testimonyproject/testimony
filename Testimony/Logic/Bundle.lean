@@ -29,9 +29,8 @@ A turn may quote a line of reason. If that line declares a fallacy it commits
 (`Testimony.Semantics.Finding`), a later turn must answer the turn that quotes
 it: a fallacy is set out in a bundle only to be answered there.
 
-What a bundle does not do: decide anything the dispute does not. It is the
-dispute's defeats, put in an order and told. A turn with no relation is only
-entered into the exchange, and claims nothing about the others.
+A bundle decides only what the dispute decides: it is the dispute's defeats, put
+in an order and told. A turn with no relation simply enters the exchange.
 -/
 
 namespace Testimony.Logic

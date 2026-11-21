@@ -424,14 +424,12 @@ declare_verdict howellAnswered for hearing using hearingFinite :
   "by works" (`trent_on_works_defensible`). -/
   proves howell_indefensible
 
-/-- **Howell's argument, answered in order.** First comes Paul's case, which the
-objector stands on. Then Howell's move from the phrase "faith alone". Then
-James's own words about faith. The sentence after each turn, saying who
-defeats whom, is computed from the positions' premises.
-
-What it shows: Howell's move and Paul's case meet without either giving way, and
-James's faith answers the move. What it does not show: that Paul's case prevails
-in the whole sola fide dispute, which the hearing weighs on its own terms. -/
+/-- **Howell's argument, answered in order.** The objector stands on Paul's
+case. Howell replies from the phrase "faith alone", and James's own words about
+faith answer him. The sentence after each turn, saying who defeats whom, is
+computed from the positions' premises. Howell's move and Paul's case meet as
+equals, and James's faith answers the move outright. How Paul's case fares in the
+whole sola fide dispute is weighed in the hearing. -/
 declare_bundle howellExchange in hearingFinite where
   /-- The objector stands on Paul: "a person is not justified by works of the
   law but through faith in Jesus Christ" (Galatians 2:16, ESV). The case from
