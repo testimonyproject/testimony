@@ -7,6 +7,7 @@ import Testimony.Logic.Contest
 import Testimony.Logic.Credibility
 import Testimony.Logic.Certificate
 import Testimony.Logic.Declare
+import Testimony.Logic.Bundle
 
 /-!
 # TestimonyArguments.Articles.Howell2003 — an article, checked against the library
@@ -422,6 +423,30 @@ declare_verdict howellAnswered for hearing using hearingFinite :
   Catholic reader grants. Nor does it touch the Catholic reading of James's
   "by works" (`trent_on_works_defensible`). -/
   proves howell_indefensible
+
+/-- **Howell's argument, answered in order.** The objector stands on Paul's
+case. Howell replies from the phrase "faith alone", and James's own words about
+faith answer him. The sentence after each turn, saying who defeats whom, is
+computed from the positions' premises. Howell's move and Paul's case meet as
+equals, and James's faith answers the move outright. How Paul's case fares in the
+whole sola fide dispute is weighed in the hearing. -/
+declare_bundle howellExchange in hearingFinite where
+  /-- The objector stands on Paul: "a person is not justified by works of the
+  law but through faith in Jesus Christ" (Galatians 2:16, ESV). The case from
+  Paul concludes that justification is by faith alone. -/
+  turn (Party.sola .pauline)
+  /-- Howell answers from the phrase itself: "The phrase 'faith alone' does occur
+  in the New Testament: one time, in James 2:24. There the inspired apostle
+  denies that justification is from faith alone." The move needs James's
+  "faith" to be the faith the Reformers say alone justifies, and it does not say
+  so (`faithAlone_unstated`). -/
+  turn Party.howell meets (Party.sola .pauline)
+  /-- James's own words answer the move. The faith he denies justifies is the
+  faith without works that he calls dead (2:17, 2:26). Trent reads it so
+  (Session VI, ch. 7), and Westminster calls the faith that justifies "no dead
+  faith" (XI.2). So the phrase James denies is not the formula the Reformers
+  affirm. -/
+  turn Party.faith answers Party.howell
 
 /-- James's faith derives that the faith James denies is not the Reformers'. -/
 theorem faith_holds :

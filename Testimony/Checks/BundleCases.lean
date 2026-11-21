@@ -104,8 +104,8 @@ declares. The pairs a turn has already joined are not said again. -/
     "says so where it is written. It is set out here to be answered by " ++
     "*By the minutes*.\n\n" ++
   "**By the minutes.** The minutes answer it.\n\n" ++
-  "This answers *By the clock*: *By the minutes* defeats *By the clock*, and " ++
-    "*By the clock* does not defeat it in return.\n\n"
+  "This answers *By the clock*: it defeats it, and *By the clock* does not defeat it " ++
+    "in return.\n\n"
 
 /-- Three positions, one pair joined by a turn: the paragraph after the turns
 states the pairs no turn has joined, as the table has them. -/

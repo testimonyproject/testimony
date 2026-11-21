@@ -3,6 +3,7 @@ import TestimonyArguments.SolaFide.Hearings
 import Testimony.Logic.Dilemma
 import Testimony.Logic.Contest
 import Testimony.Logic.Warrant
+import Testimony.Logic.Bundle
 
 /-!
 # TestimonyArguments.SolaFide.James — James 2:24, and the increase of justification
@@ -1038,6 +1039,53 @@ def worksContested : Contested jamesDispute (p .worksAreFruitNotGround) where
   denies := trentOnWorks_denies_fruit
   holderDefensible := harmonyStands.holds
   denierDefensible := trent_on_works_defensible
+
+/-! ### The exchange, told in order -/
+
+/-- **The exchange over James 2:24, in the order the replies come.** Two
+questions run through it: what James's word "justified" (δικαιόω) means, and
+what the works it is "by" do. Each reply is set beside the position it meets, and
+the sentence after it, saying who defeats whom, is computed from the two
+positions' premises.
+
+On both questions the positions meet as equals. Where two positions defeat each
+other, each contradicts something the other rests on and neither is rated
+stronger, so the question is left a tie. Every position here rests on at least
+one reading rated `disputed` (contested by a cited reader), and each turn says
+which. The Reformed harmony meets one more of Trent's readings, of the texts that
+promise a reward for works (Session VI, ch. 16), weighed later in the chapter. -/
+declare_bundle jamesExchange in jamesDispute.finite where
+  /-- Outside Paul, "justify" declares or vindicates: "wisdom is justified by her
+  deeds" (Matthew 11:19, ESV). Scholars of word meaning hold that a word should
+  be given the smallest sense its context allows. Calvin reads James's word as
+  Matthew uses it: by it James means "the manifestation of righteousness by the
+  conduct" (on James 2:21). So James's "justified" is not the increase of justice
+  (Trent's word for righteousness, Latin *iustitia*). -/
+  turn JamesParty.lexical
+  /-- Trent reads the same passage the other way. The justified "are still
+  further justified", and James 2:24 is one of its three texts for it (Session
+  VI, ch. 10). So "justified" in James is the increase of the justice already
+  received. Each side needs a premise about how James uses the word, and each
+  premise is rated `disputed`. -/
+  turn JamesParty.trentOnTheWord meets JamesParty.lexical
+  /-- This reading comes at the word from Paul. Paul's "justify" means the renewal
+  of the inward person, as Augustine explained it and as VanLandingham argues from
+  the lexicon. James uses the word as Paul does. Abraham was already counted
+  righteous at Genesis 15:6 (James 2:23), so a further making righteous at
+  Genesis 22 is an increase. -/
+  turn JamesParty.renewalOnTheWord meets JamesParty.lexical
+  /-- The Reformed harmony answers the second question. Works are "the fruits and
+  evidences of a true and lively faith" (Westminster XVI.2), and not, on the
+  Reformed reading, the ground of justification. So James 2:24 does not
+  contradict Paul. If it does not, James's "justified" does not carry Paul's
+  sense, and that denies the renewal reading's claim that James uses the word as
+  Paul does. -/
+  turn JamesParty.harmony meets JamesParty.renewalOnTheWord
+  /-- Trent's canon 24 condemns anyone who says good works "are merely the fruits
+  and signs of Justification obtained, but not a cause of the increase thereof".
+  Here Westminster and Trent's decree stand against each other on what works do,
+  each resting on its own confession. -/
+  turn JamesParty.trentOnWorks meets JamesParty.harmony
 
 /-! ### What each position rests on -/
 

@@ -15,7 +15,7 @@ stands to a turn before it:
 - it **meets** that turn: each defeats the other, so neither gives way;
 - it **stands apart** from that turn: neither defeats the other.
 
-A turn that says none of these only enters the exchange, and claims nothing about the others.
+A turn with none of these simply enters the exchange.
 
 ```lean
 /-- The meeting's length, told as an exchange. -/
@@ -55,22 +55,22 @@ a bundle that leaves one standing does not build.
 ## On the page
 
 The page tells the exchange in order. Each turn is its party's paragraph, then the sentence that
-joins it to the turn it names, in the solver's words ("This answers *By the clock*: *By the
-minutes* defeats *By the clock*, and *By the clock* does not defeat it in return"), and, for a
-quoted line that declares a fallacy, which fallacy it is and which turn answers it. A defeat
-that a `Because` on the page explains links to it.
+joins it to the turn it names, in the solver's words ("This answers *By the clock*: it defeats
+it, and *By the clock* does not defeat it in return"), and, for a quoted line that declares a
+fallacy, which fallacy it is and which turn answers it. A defeat named in the closing paragraph
+links to the `Because` that explains it, if the page has one.
 
 After the turns comes one paragraph on how the positions stand to one another, for the pairs no
 turn has joined. It is written as a reader would say it: "each of these positions defeats every
 other, so none of them gives way", or "none of these positions defeats another", or the defeats
 pair by pair. Above five positions the page also sets the defeats out in a table.
 
-## What a bundle does not do
+## What a bundle decides
 
-It decides nothing the dispute does not. It is the dispute's defeats, put in an order and told.
-Two arguments that share no claim never defeat each other, so a bundle within one dispute
-cannot join them; that waits on bridges between arguments, each cited to the scholar or article
-that draws it, or marked as proposed.
+Only what the dispute decides: a bundle is the dispute's defeats, put in an order and told. Its
+turns are parties to one dispute. Two arguments that share no claim never defeat each other, so
+joining them waits on bridges between arguments, each cited to the scholar or article that
+draws it, or marked as proposed.
 
 The cases in `Testimony.Checks.BundleCases` pin what a bundle must refuse and what it lets
 through, and how the page sets it.
