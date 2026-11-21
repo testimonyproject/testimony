@@ -35,6 +35,7 @@ how they are spelled.
 | Selective citation | does the move cite a voice for one reading and omit another? | `Move.omissions` | built |
 | Cherry-picking | which texts on the same words does the move ignore? | a query over meanings | not yet |
 | Double standard | does a party rest a claim on what its own rule refuses? | `ArgumentPackage.heldTo` | claims built |
+| Red herring | does a turn told as a reply share a claim, or a meaning, with what it replies to? | `evades` in a bundle | built |
 
 The checks for a non sequitur and an indefensible claim work on whole positions rather than
 single moves. A non sequitur is shown by a **countermodel**: a way of taking every premise as
@@ -42,6 +43,11 @@ true and the conclusion as false, which proves the conclusion does not follow
 ([Reading the logic](./reading-the-logic.md) explains them). An indefensible claim is shown in a
 **hearing**: the dispute the library settles between rival positions, each with its cited
 premises, which reports whether a position can be held against the others.
+
+A red herring is a reply that changes the subject, and it is checked in an exchange, one turn
+against another. A turn in a [bundle](./bundles.md#a-reply-and-a-red-herring) may be told as a
+reply to an earlier one. If the two positions share no claim, and no meaning that joins two of
+their claims, the reply is a red herring, and the bundle must say so and answer it.
 
 None of the move checks returns a bare "fallacy". Each says which premise, stated or not, the
 move's weight falls on, and the begging and straw-man checks also name which of the library's

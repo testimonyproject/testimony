@@ -10,7 +10,9 @@ import Testimony.Logic.Markdown
 A bundle (`Testimony.Logic.Bundle`) tells a dispute's defeats in order. These
 cases run it over the fixture's dispute, in which the minutes defeat the clock
 and the clock's attack is refused: once as the exchange is, and three times as
-it is not, each refusal pinned by `#guard_msgs`.
+it is not, each refusal pinned by `#guard_msgs`. Then over two meetings heard as
+one (`Testimony.Checks.TwoMeetings`), whose claims are kept apart, so that a turn
+from one meeting told as a reply to the other is a red herring.
 
 None of these cases is anyone's argument.
 -/
@@ -36,7 +38,7 @@ theorem meetingLength_turns :
 refuses it. -/
 
 /--
-error: declare_bundle: a turn said to be one that meets an earlier turn, where the solver finds:
+error: declare_bundle: a turn said to meet an earlier turn, where the solver finds:
   Party.minutes defeats Party.clock
   Party.clock does not defeat Party.minutes
 Change what the bundle says, not the encoding.
@@ -54,9 +56,9 @@ it. The line quoted is a test case's, which declares the straw man it answers
 (`Testimony.Checks.FallacyCases.Declared.strawMan`). -/
 
 /--
-error: declare_bundle: a turn quotes a line that declares a fallacy it commits,
-and no later turn answers it. A fallacy is set out in a bundle only to be
-answered there.
+error: declare_bundle: a turn sets out a fallacy, its own or one the line it quotes
+declares, and no later turn answers it. A fallacy is set out in a bundle only
+to be answered there.
 -/
 #guard_msgs in
 /-- Not an exchange a bundle may tell. -/
@@ -126,5 +128,102 @@ def summaryText (x : Page.Exchange) : String :=
 #guard summaryText { threeWay with
     pairs := [("A", "B", true, true), ("A", "C", true, true), ("B", "C", true, true)] } ==
   "Each of these positions defeats every other, so none of them gives way."
+
+/-! ### A reply, and a red herring
+
+In two meetings heard as one, each meeting's minutes and clock share a meaning:
+an hour and two hours exclude each other. Nothing of the first meeting touches
+the second. -/
+
+/-- The first meeting's minutes and clock share a meaning, and the second
+meeting's clock shares nothing with the first meeting's minutes. -/
+theorem shares_within_a_meeting :
+    TwoMeetings.dispute.shares (.inl .minutes) (.inl .clock) = true ∧
+      TwoMeetings.dispute.shares (.inr .clock) (.inl .minutes) = false := by
+  decide +kernel
+
+/-- **A reply on the subject** passes the relevance check, and a red herring
+fails it: the first meeting's minutes reply to its clock, and the second
+meeting's clock does not. -/
+theorem relevant_reply :
+    (Relation.responds (Sum.inl Party.clock)).relevant TwoMeetings.dispute.shares
+        (.inl .minutes) = true ∧
+      (Relation.responds (Sum.inl Party.minutes)).relevant TwoMeetings.dispute.shares
+        (.inr .clock) = false := by
+  decide +kernel
+
+/-- **The second meeting's clock, told as a reply to the first meeting's
+minutes**, evades them, and the second meeting's minutes answer it. -/
+declare_bundle aRedHerring in TwoMeetings.finite where
+  /-- The first meeting's minutes say it ran an hour. -/
+  turn (Sum.inl Party.minutes)
+  /-- The second meeting's clock says that meeting ran two hours. -/
+  turn (Sum.inr Party.clock) evades (Sum.inl Party.minutes)
+  /-- The second meeting's minutes say it ran one. -/
+  turn (Sum.inr Party.minutes) answers (Sum.inr Party.clock)
+
+/-- The evading turn is charged with a red herring. -/
+theorem aRedHerring_charges :
+    aRedHerring.turns.map (·.charges) = [[], ["red herring"], []] := rfl
+
+/-! **A red herring left unanswered** is refused. -/
+
+/--
+error: declare_bundle: a turn sets out a fallacy, its own or one the line it quotes
+declares, and no later turn answers it. A fallacy is set out in a bundle only
+to be answered there.
+-/
+#guard_msgs in
+/-- Not an exchange a bundle may tell. -/
+declare_bundle unansweredHerring in TwoMeetings.finite where
+  /-- The first meeting's minutes. -/
+  turn (Sum.inl Party.minutes)
+  /-- The second meeting's clock, evading them. -/
+  turn (Sum.inr Party.clock) evades (Sum.inl Party.minutes)
+
+/-! **A red herring told as a reply** is refused, and the refusal names it. -/
+
+/--
+error: declare_bundle: a turn said to reply to an earlier turn shares no claim with it,
+and no meaning. A reply on another subject is a red herring: say `evades`, and
+answer it in a later turn.
+-/
+#guard_msgs in
+/-- Not an exchange a bundle may tell. -/
+declare_bundle aDisguisedHerring in TwoMeetings.finite where
+  /-- The first meeting's minutes. -/
+  turn (Sum.inl Party.minutes)
+  /-- The second meeting's clock, said to reply to them. -/
+  turn (Sum.inr Party.clock) responds (Sum.inl Party.minutes)
+
+/-! **A defeat told as a reply** is refused: where the solver finds a defeat, the
+turn answers or meets, and the bundle must say which. -/
+
+/--
+error: declare_bundle: a turn said to reply to an earlier turn, where the solver finds:
+  (Sum.inl Party.minutes) defeats (Sum.inl Party.clock)
+  (Sum.inl Party.clock) does not defeat (Sum.inl Party.minutes)
+Change what the bundle says, not the encoding.
+-/
+#guard_msgs in
+/-- Not an exchange a bundle may tell. -/
+declare_bundle aDefeatToldAsAReply in TwoMeetings.finite where
+  /-- The first meeting's clock. -/
+  turn (Sum.inl Party.clock)
+  /-- The first meeting's minutes, said only to reply to it. -/
+  turn (Sum.inl Party.minutes) responds (Sum.inl Party.clock)
+
+-- On the page, the red herring is named, with the turn that answers it. Both
+-- meetings' packages carry the same names, so the page names them alike.
+#guard Markdown.exchange [] aRedHerring.view ==
+  "**By the minutes.** The first meeting's minutes say it ran an hour.\n\n" ++
+  "**By the clock.** The second meeting's clock says that meeting ran two hours.\n\n" ++
+  "It is told as a reply, but it shares no claim with *By the minutes*, and no meaning: " ++
+    "it is a red herring, a reply that changes the subject. It is set out here to be " ++
+    "answered by *By the minutes*.\n\n" ++
+  "**By the minutes.** The second meeting's minutes say it ran one.\n\n" ++
+  "This answers *By the clock*: it defeats it, and *By the clock* does not defeat it " ++
+    "in return.\n\n" ++
+  "No other pair of these positions defeats either way.\n\n"
 
 end Testimony.Checks.BundleCases

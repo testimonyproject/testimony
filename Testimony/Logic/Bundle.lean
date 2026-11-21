@@ -17,7 +17,11 @@ may say how it stands to a turn before it:
 
 - it **answers** that turn: it defeats it, and is not defeated by it;
 - it **meets** that turn: each defeats the other, so neither gives way;
-- it **stands apart** from that turn: neither defeats the other.
+- it **stands apart** from that turn: neither defeats the other;
+- it **replies** to that turn: neither defeats the other, but the two share a
+  claim, or a meaning that joins two of their claims;
+- it **evades** that turn: told as a reply, it shares no claim with it and no
+  meaning. That is a red herring, a reply that changes the subject.
 
 Every stated relation is checked against the dispute's defeats, as the solver
 computes them (`Testimony.Logic.Solver.Finite`). So the words that join the
@@ -25,9 +29,17 @@ turns are the solver's findings, and a bundle that says "answers" where the
 solver finds a standoff does not build. The fix is to the prose, never to the
 encoding.
 
+Whether two turns share a claim is read from their packages: a claim either
+rests on or delivers, the same for both, or two claims named together by one of
+the argument's meaning postulates (`HasPostulates`), as "lasted an hour" and
+"lasted two hours" are. A defeat between two positions is decided over those
+claims, so where the solver finds one, the two always share a claim; a reply
+and a red herring are told only where it finds none.
+
 A turn may quote a line of reason. If that line declares a fallacy it commits
 (`Testimony.Semantics.Finding`), a later turn must answer the turn that quotes
-it: a fallacy is set out in a bundle only to be answered there.
+it: a fallacy is set out in a bundle only to be answered there. A turn that
+evades is a red herring of its own, and must be answered in the same way.
 
 A bundle decides only what the dispute decides: it is the dispute's defeats, put
 in an order and told. A turn with no relation simply enters the exchange.
@@ -36,6 +48,28 @@ in an order and told. A turn with no relation simply enters the exchange.
 namespace Testimony.Logic
 
 variable {ι : Type}
+
+/-! ### Which claims two positions share -/
+
+section Shares
+
+variable {α : Type} [HasPostulates α] [DecidableEq α]
+
+/-- Whether two claims touch: they are the same claim, or one of the meaning
+postulates names both, as a definition joining what two words mean. -/
+def touches (a b : α) : Bool :=
+  a == b || (HasPostulates.postulates : List (Formula α)).any fun f =>
+    (atomsOf f).contains a && (atomsOf f).contains b
+
+/-- The claims a party's position rests on or delivers. -/
+def Dispute.claims (d : Dispute α ι) (i : ι) : List α :=
+  (d.node i).atoms ++ atomsOf (d.node i).conclusion
+
+/-- Whether two parties share a claim, or a meaning that joins one of each. -/
+def Dispute.shares (d : Dispute α ι) (i j : ι) : Bool :=
+  (d.claims i).any fun a => (d.claims j).any (touches a)
+
+end Shares
 
 /-- **How a turn stands to an earlier one.** -/
 inductive Relation (ι : Type)
@@ -47,6 +81,12 @@ inductive Relation (ι : Type)
   | meets (earlier : ι)
   /-- Neither defeats the other. -/
   | standsApart (earlier : ι)
+  /-- A reply on the same subject: neither defeats the other, and the two share
+  a claim, or a meaning. -/
+  | responds (earlier : ι)
+  /-- A red herring: told as a reply, it shares no claim with the earlier turn,
+  and no meaning. -/
+  | evades (earlier : ι)
 deriving DecidableEq, Repr
 
 namespace Relation
@@ -54,21 +94,34 @@ namespace Relation
 /-- The earlier turn's party, if the relation names one. -/
 def target? : Relation ι → Option ι
   | .enters => none
-  | .answers j | .meets j | .standsApart j => some j
+  | .answers j | .meets j | .standsApart j | .responds j | .evades j => some j
+
+/-- Whether the relation names a red herring. -/
+def evading : Relation ι → Bool
+  | .evades _ => true
+  | _ => false
 
 /-- **What the relation claims**, of party `i`, under the defeat relation `R`. -/
 def Holds (R : ι → ι → Prop) (i : ι) : Relation ι → Prop
   | .enters => True
   | .answers j => R i j ∧ ¬ R j i
   | .meets j => R i j ∧ R j i
-  | .standsApart j => ¬ R i j ∧ ¬ R j i
+  | .standsApart j | .responds j | .evades j => ¬ R i j ∧ ¬ R j i
 
 /-- The same, computed from a Boolean defeat table. -/
 def check (d : ι → ι → Bool) (i : ι) : Relation ι → Bool
   | .enters => true
   | .answers j => d i j && !d j i
   | .meets j => d i j && d j i
-  | .standsApart j => !d i j && !d j i
+  | .standsApart j | .responds j | .evades j => !d i j && !d j i
+
+/-- **Whether a reply is on the subject**, given which parties share a claim:
+one that replies must share one, and one that evades must share none. Every
+other relation passes. -/
+def relevant (s : ι → ι → Bool) (i : ι) : Relation ι → Bool
+  | .responds j => s i j
+  | .evades j => !s i j
+  | _ => true
 
 /-- What the computation says, the relation holds. -/
 theorem holds_of_check {R : ι → ι → Prop} (F : Solver.Finite R) {i : ι} :
@@ -80,7 +133,7 @@ theorem holds_of_check {R : ι → ι → Prop} (F : Solver.Finite R) {i : ι} :
   | .meets j, h => by
     simp only [check, Bool.and_eq_true] at h
     exact ⟨(F.spec i j).2 h.1, (F.spec j i).2 h.2⟩
-  | .standsApart j, h => by
+  | .standsApart j, h | .responds j, h | .evades j, h => by
     simp only [check, Bool.and_eq_true, Bool.not_eq_true'] at h
     exact ⟨fun hij => by simp [(F.spec i j).1 hij] at h,
       fun hji => by simp [(F.spec j i).1 hji] at h⟩
@@ -108,8 +161,13 @@ deriving Repr
 
 namespace Turn
 
-/-- Whether the turn quotes a line that declares a fallacy it commits. -/
-def declares (t : Turn ι) : Bool := !t.findings.isEmpty
+/-- The fallacies the turn sets out: a red herring, if it evades, and those
+the line it quotes declares. -/
+def charges (t : Turn ι) : List String :=
+  (if t.relation.evading then ["red herring"] else []) ++ t.findings
+
+/-- Whether the turn sets out a fallacy, its own or the line's it quotes. -/
+def declares (t : Turn ι) : Bool := !t.charges.isEmpty
 
 variable [DecidableEq ι]
 
@@ -122,8 +180,7 @@ where
     | [] => true
     | t :: ts => (t.relation.target?.all seen.contains) && go (t.party :: seen) ts
 
-/-- Whether every turn that quotes a declared fallacy is answered by a later
-turn. -/
+/-- Whether every turn that sets out a fallacy is answered by a later turn. -/
 def answered : List (Turn ι) → Bool
   | [] => true
   | t :: ts =>
@@ -139,10 +196,16 @@ structure Bundle [DecidableEq ι] (R : ι → ι → Prop) where
   turns : List (Turn ι)
   /-- Each relation names an earlier turn. -/
   ordered : Turn.ordered turns = true
-  /-- Each turn that quotes a declared fallacy is answered later. -/
+  /-- Each turn that sets out a fallacy is answered later. -/
   answered : Turn.answered turns = true
   /-- Each stated relation holds. -/
   holds : ∀ t ∈ turns, t.relation.Holds R t.party
+  /-- Which parties share a claim, or a meaning: `Dispute.shares`, when the
+  bundle is declared over a dispute. -/
+  shares : ι → ι → Bool
+  /-- Each reply shares a claim with the turn it replies to, and each red
+  herring shares none. -/
+  relevant : turns.all (fun t => t.relation.relevant shares t.party) = true
   /-- The dispute in the solver's form, from which the page states how every
   pair of the turns' parties stands. -/
   finite : Solver.Finite R
@@ -153,9 +216,11 @@ variable [DecidableEq ι] {R : ι → ι → Prop}
 
 /-- A bundle whose relations are checked by computing them from the dispute in
 the solver's form. -/
-def ofFinite (F : Solver.Finite R) (doc : String) (turns : List (Turn ι))
+def ofFinite (F : Solver.Finite R) (shares : ι → ι → Bool) (doc : String)
+    (turns : List (Turn ι))
     (ordered : Turn.ordered turns = true) (answered : Turn.answered turns = true)
-    (checked : turns.all (fun t => t.relation.check F.defeats t.party) = true) :
+    (checked : turns.all (fun t => t.relation.check F.defeats t.party) = true)
+    (relevant : turns.all (fun t => t.relation.relevant shares t.party) = true) :
     Bundle R where
   doc := doc
   turns := turns
@@ -163,6 +228,14 @@ def ofFinite (F : Solver.Finite R) (doc : String) (turns : List (Turn ι))
   answered := answered
   holds t ht := Relation.holds_of_check F (List.all_eq_true.1 checked t ht)
   finite := F
+  shares := shares
+  relevant := relevant
+
+/-- Which parties share a claim, or a meaning, in the dispute whose solver form
+is given: `Dispute.shares`. -/
+def sharesOf {α : Type} [HasPostulates α] [DecidableEq α] {d : Dispute α ι}
+    (_ : Solver.Finite d.defeats) : ι → ι → Bool :=
+  d.shares
 
 /-- The parties the turns set out, in order, each once, with their names. -/
 def parties (b : Bundle R) : List (ι × String) :=
@@ -180,6 +253,8 @@ def view (b : Bundle R) : Page.Exchange :=
       | .answers j => ("answers", nameOf j)
       | .meets j => ("meets", nameOf j)
       | .standsApart j => ("standsApart", nameOf j)
+      | .responds j => ("responds", nameOf j)
+      | .evades j => ("evades", nameOf j)
     { party := t.name, doc := t.doc, relation := rel, target := target,
       quoting := t.quoting.getD "", findings := t.findings,
       answeredBy := ((later.find? (·.relation == .answers t.party)).map (·.name)).getD "" }
@@ -200,7 +275,8 @@ namespace Testimony.Logic.BundleCmd
 open Lean Elab Command
 
 /-- How a turn stands to an earlier one, as written. -/
-syntax bundleRel := (&"answers" <|> &"meets" <|> &"standsApart") term:max
+syntax bundleRel :=
+  (&"answers" <|> &"meets" <|> &"standsApart" <|> &"responds" <|> &"evades") term:max
 
 /-- One turn, as written: its docstring, its party, how it stands to an earlier
 turn, and the line of reason it quotes. -/
@@ -209,10 +285,10 @@ syntax bundleTurn := (docComment)? &"turn " term:max (bundleRel)? (&"quoting" id
 /-- `declare_bundle B in F where`, then its turns: the exchange `B`, a `Bundle`,
 whose relations are checked against `F : Solver.Finite R`, the dispute in the
 solver's form (`D.finite`). Each turn is `turn p`, then optionally `answers q`,
-`meets q` or `standsApart q` for a party `q` of an earlier turn, and `quoting l`
-for a line of reason `l`. Its docstring is what the page says of it. A turn that
-quotes a line declaring a fallacy (`l.expected`) must be answered by a later
-turn. -/
+`meets q`, `standsApart q`, `responds q` or `evades q` for a party `q` of an
+earlier turn, and `quoting l` for a line of reason `l`. Its docstring is what the
+page says of it. A turn that evades, or that quotes a line declaring a fallacy
+(`l.expected`), must be answered by a later turn. -/
 syntax (name := bundleCmd) (docComment)? "declare_bundle " ident &" in " term:max &" where"
   withPosition((ppLine colGe bundleTurn)+) : command
 
@@ -237,7 +313,7 @@ elab_rules : command
       let r := ty.appArg!
       if r.isAppOf ``Dispute.defeats then return some r.appArg! else return none
     let nameOf (p : Term) : CommandElabM String := do
-      let shown := (p.raw.reprint.getD "?").trimAscii.toString
+      let shown := (p.raw.unsetTrailing.reprint.getD "?").trimAscii.toString
       let some d := dispute? | return shown
       liftTermElabM do
         let dTy ← Meta.whnfR (← Meta.inferType d)
@@ -255,6 +331,8 @@ elab_rules : command
             | `(bundleRel| answers $q) => `(Relation.answers $q)
             | `(bundleRel| meets $q) => `(Relation.meets $q)
             | `(bundleRel| standsApart $q) => `(Relation.standsApart $q)
+            | `(bundleRel| responds $q) => `(Relation.responds $q)
+            | `(bundleRel| evades $q) => `(Relation.evades $q)
             | _ => throwErrorAt r "declare_bundle: unknown relation"
         let (quoting, findings) ← match l? with
           | none => pure ((← `(none)), (← `([])))
@@ -280,33 +358,51 @@ elab_rules : command
       | `(bundleTurn| $[$_td?]? turn $p $[$r?]? $[quoting $_l?]?) =>
         let some r := r? | continue
         let (word, q) ← match r with
-          | `(bundleRel| answers $q) => pure ("answers", q)
-          | `(bundleRel| meets $q) => pure ("meets", q)
-          | `(bundleRel| standsApart $q) => pure ("stands apart from", q)
+          | `(bundleRel| answers $q) => pure ("answer", q)
+          | `(bundleRel| meets $q) => pure ("meet", q)
+          | `(bundleRel| standsApart $q) => pure ("stand apart from", q)
+          | `(bundleRel| responds $q) => pure ("reply to", q)
+          | `(bundleRel| evades $q) => pure ("evade", q)
           | _ => throwErrorAt r "declare_bundle: unknown relation"
         let pq ← evalBool (← `(Solver.Finite.defeats $f $p $q))
         let qp ← evalBool (← `(Solver.Finite.defeats $f $q $p))
         let ok := match word with
-          | "answers" => pq && !qp
-          | "meets" => pq && qp
+          | "answer" => pq && !qp
+          | "meet" => pq && qp
           | _ => !pq && !qp
         unless ok do
-          let name (x : Term) : String := (x.raw.reprint.getD "?").trimAscii.toString
+          let name (x : Term) : String :=
+            (x.raw.unsetTrailing.reprint.getD "?").trimAscii.toString
           let say (x y : Term) (b : Bool) : String :=
             s!"  {name x} {if b then "defeats" else "does not defeat"} {name y}"
-          throwErrorAt r m!"declare_bundle: a turn said to be one that {word} an earlier \
-            turn, where the solver finds:\n{say p q pq}\n{say q p qp}\n\
+          throwErrorAt r m!"declare_bundle: a turn said to {word} an earlier turn, \
+            where the solver finds:\n{say p q pq}\n{say q p qp}\n\
             Change what the bundle says, not the encoding."
+        if word == "reply to" || word == "evade" then
+          if dispute?.isNone then
+            throwErrorAt r "declare_bundle: whether a turn replies to another or evades it \
+              is read from the dispute's packages, so the bundle must be declared over a \
+              dispute's solver form"
+          let shared ← evalBool (← `(Bundle.sharesOf $f $p $q))
+          if word == "reply to" && !shared then
+            throwErrorAt r m!"declare_bundle: a turn said to reply to an earlier turn \
+              shares no claim with it,\nand no meaning. A reply on another subject is a \
+              red herring: say `evades`, and\nanswer it in a later turn."
+          if word == "evade" && shared then
+            throwErrorAt r m!"declare_bundle: a turn said to evade an earlier turn shares \
+              a claim with it, or a meaning.\nIt replies on the same subject: say \
+              `responds`."
       | _ => pure ()
     unless ← evalBool (← `(Turn.ordered [$terms,*])) do
       throwError "declare_bundle: a turn is said to stand to a party no earlier turn sets out"
     unless ← evalBool (← `(Turn.answered [$terms,*])) do
-      throwError m!"declare_bundle: a turn quotes a line that declares a fallacy it \
-        commits,\nand no later turn answers it. A fallacy is set out in a bundle only \
-        to be\nanswered there."
+      throwError m!"declare_bundle: a turn sets out a fallacy, its own or one the line \
+        it quotes\ndeclares, and no later turn answers it. A fallacy is set out in a \
+        bundle only\nto be answered there."
     let bdoc := Syntax.mkStrLit (← text doc?)
-    let cmd ← `($[$doc?]? def $b := Bundle.ofFinite $f $bdoc [$terms,*]
-      (by decide +kernel) (by decide +kernel) (by decide +kernel))
+    let shares ← if dispute?.isSome then `(Bundle.sharesOf $f) else `(fun _ _ => true)
+    let cmd ← `($[$doc?]? def $b := Bundle.ofFinite $f $shares $bdoc [$terms,*]
+      (by decide +kernel) (by decide +kernel) (by decide +kernel) (by decide +kernel))
     elabCommand cmd
 
 end Testimony.Logic.BundleCmd

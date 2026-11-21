@@ -274,8 +274,8 @@ structure ExchangeTurn where
   party : String
   /-- What the page says of the turn. -/
   doc : String
-  /-- How it stands to an earlier turn: `answers`, `meets`, `standsApart`, or
-  empty when it only enters. -/
+  /-- How it stands to an earlier turn: `answers`, `meets`, `standsApart`,
+  `responds`, `evades`, or empty when it only enters. -/
   relation : String := ""
   /-- The earlier turn's party, by its package's name; empty if none. -/
   target : String := ""
@@ -312,6 +312,16 @@ def connective (t : ExchangeTurn) : List Seg :=
   | "standsApart" =>
     [.party t.party, .text " and ", .party t.target,
       .text " stand apart: neither defeats the other."]
+  | "responds" =>
+    [.text "This replies to ", .party t.target,
+      .text " on a claim the two share, but neither defeats the other."]
+  | "evades" =>
+    let lead := "It is told as a reply, but it shares no claim with "
+    let charge := ", and no meaning: it is a red herring, a reply that changes the " ++
+      "subject. It is set out here to be answered"
+    [.text lead, .party t.target, .text charge] ++
+      (if t.answeredBy.isEmpty then [.text "."]
+       else [.text " by ", .party t.answeredBy, .text "."])
   | _ => []
 
 /-- What a turn quoting a declared fallacy says of it, in words. Empty for a
