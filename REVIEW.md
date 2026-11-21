@@ -21,7 +21,7 @@ pages or weaken trust in a checked result:
   changed result with every paragraph that describes it, including hand-written
   pages under `docs/src/` and the module docstring of the argument.
 - **A result that says more than its theorem.** The docstring claims something
-  the statement does not prove, or omits what the result does not claim.
+  the statement does not prove, or states a claim without the limit it has.
 - **An encoding tuned toward a verdict.** A rating raised without a new cited
   argument; a cited reader removed or weakened; a rival written so that it
   loses; a premise list retyped instead of varied with `Line.onGrounds`.
@@ -50,7 +50,9 @@ changed page a visitor reads, check it against
   it has not been explained;
 - a sentence that cannot be understood without knowing what a source
   identifier means;
-- a headline result whose docstring does not say what it does not claim.
+- a headline result whose docstring states a claim without its limit, or gives
+  the limit as a separate "It does not show…" sentence instead of inside the
+  claim.
 
 Report as a Nit: a sentence that could be shorter, a contrast that could be a
 plain statement, a paragraph that announces its own importance.

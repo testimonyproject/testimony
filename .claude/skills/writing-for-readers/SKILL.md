@@ -47,7 +47,8 @@ The first sets the vocabulary. The second sets the accuracy.
    verdict, as in a court) and logical ("forced": accepted however the open
    disagreements are settled).
 4. Name who holds a view. Never "some scholars".
-5. A result's docstring says what it claims, then what it does not.
+5. A result's docstring says exactly what it claims. A limit goes in the
+   sentence it qualifies, never in an "It does not show…" sentence of its own.
 6. State the point in words; put the identifier in brackets afterwards.
 7. Report the verdict the machine gave. A tie is a tie.
 8. Describe a rival in words its holders would accept, with their own source.
@@ -70,7 +71,7 @@ says is true.
 2. **List the facts the old docstring states**: texts, readers, ratings,
    results named. Every one survives the rewrite or is removed on purpose.
 3. **Rewrite from the passage outward**: the verse, what each side takes it to
-   mean, who they are, what the result shows, what it does not show.
+   mean, who they are, what the result shows and what that rests on.
 4. **Keep every quotation exactly as it stands.** Quotations were verified
    against a source. Do not smooth, shorten or re-translate them. A new
    quotation needs the `source-verifier` agent first.

@@ -45,7 +45,9 @@ against it. Report:
    opponents' words, a reader mentioned without his reason, a tradition's
    position given without its own source.
 5. **Prose that says more than the result**: a docstring claiming what its
-   theorem does not state, or silent about what the result does not claim.
+   theorem does not state, or a claim stated without the limit it has. Flag a
+   limit given as a separate "It does not show…" sentence too: it belongs in
+   the sentence it qualifies.
 6. **Prose that disagrees with a result**: a paragraph describing a verdict,
    a count of strands or parties, or a rating that the theorems on the page no
    longer state. Check names and numbers against the theorems.

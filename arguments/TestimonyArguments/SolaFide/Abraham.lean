@@ -571,9 +571,9 @@ def hahnAssessment : Assessment Claim where
 
 /-- **Hahn does not dissent from the step from Genesis 15**, under any standard.
 What he says the binding of Isaac merited is the oath of Genesis 22 and the
-blessing of the nations it swears, not the righteousness counted at 15:6. It does
-not show that Hahn would accept the step: in what was read of him he does not
-discuss Genesis 15:6. -/
+blessing of the nations it swears, not the righteousness counted at 15:6. Nor
+does he grant the step: in what was read of him he does not discuss Genesis
+15:6. -/
 @[headline]
 theorem hahn_does_not_reach_the_counting :
     ∀ s, ¬ Dissent.Credible s hahnAssessment.dissent := by
