@@ -134,9 +134,8 @@ Which of the two Trent means is itself rated `disputed`, and the check does not
 decide it. This debate hears Trent's definition as Trent states it, tied to
 neither, so the check changes no verdict above.
 
-It does not show that logic refutes Rome. Trent's case can be held
-without contradiction taken either way. What the check shows is narrower, and it
-is as far as an argument from the meaning of words can go. The evidence about
+Trent's case can be held without contradiction taken either way, so what the
+check finds is as far as an argument from the meaning of words can go. The evidence about
 the word tells against taking the definition as what the word means, but only by
 a step rated `disputed`, so it does not settle it. Whether God's justifying act
 also includes renewal is something the word's meaning leaves open, and there the
@@ -562,9 +561,9 @@ declare_verdict jesusWordsSettleNothing for jesusWordsDispute :
   is, and each reading of Matthew with its rival. Every weakest link is
   `disputed`, so no rating breaks a tie.
 
-  It does not show that Jesus' words say nothing. Each position can be
-  defended, and Trent accepts every word of Luke 18 (`trent_grants_the_parable`).
-  What the debate cannot do is choose between readings rated alike. -/
+  Each position can be defended, and Trent accepts every word of Luke 18
+  (`trent_grants_the_parable`); what the debate cannot do is choose between
+  readings rated alike. -/
   proves @[headline] jesus_words_force_nothing
 
 #print axioms jesus_words_force_nothing
@@ -668,8 +667,8 @@ declare_verdict withoutTrentLukeSettles for jesusWordsWithoutTrent :
   readings of Matthew 7 and 19 still tie, each with its rival, because they
   conflict with each other and not with Luke.
 
-  It does not show that faith *alone* is forced. Luke's sayings claim
-  that faith sufficed, not that nothing else is a condition. Rome's readings of
+  What is forced is that faith suffices, short of faith *alone*: Luke's sayings
+  claim that faith sufficed, not that nothing else is a condition. Rome's readings of
   Matthew, which say that salvation is not apart from works, can be held with them
   (`luke_stands_with_rome_on_matthew`). -/
   proves @[headline] without_trent_luke_is_forced :

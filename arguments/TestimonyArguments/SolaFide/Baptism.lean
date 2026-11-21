@@ -283,7 +283,7 @@ def reformedOnBaptismReading : Valuation Claim := fun a =>
 /-! ### Each position holds together -/
 
 /-- Trent's claim follows from its premises, trivially, since its one premise is the
-claim itself. This records the position. It does not argue for it. -/
+claim itself. This records the position as Trent states it. -/
 theorem trentOnBaptism_establishes : Establishes trentOnBaptism := by
   granted [solaFideDefs]
 

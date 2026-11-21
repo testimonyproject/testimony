@@ -80,16 +80,15 @@ justification" weighs that definition. What this chapter adds is the reason the
 Reformers cared about it: on their definition, Trent's increase has nothing to
 increase.
 
-## What this does not show
+## The justified still grow
 
-It does not show that the justified do not grow. Both sides hold that the
-renewal of the justified grows through good works (`renewalGrowsThroughGoodWorks`).
-The Reformed call that growth sanctification, as the Westminster Larger Catechism
-does when it sets the two side by side (Q. 77): justification "doth equally free
-all believers from the revenging wrath of God, and that perfectly in this life";
-sanctification "is neither equal in all, nor in this life perfect in any, but
-growing up to perfection". What the courtroom argument denies is that the growth
-is an increase of *justification*.
+Both sides hold that the renewal of the justified grows through good works
+(`renewalGrowsThroughGoodWorks`). The Reformed call that growth sanctification,
+as the Westminster Larger Catechism does when it sets the two side by side (Q.
+77): justification "doth equally free all believers from the revenging wrath of
+God, and that perfectly in this life"; sanctification "is neither equal in all,
+nor in this life perfect in any, but growing up to perfection". What the
+courtroom argument denies is that the growth is an increase of *justification*.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -224,10 +223,8 @@ def trentOnDegreesReading : Valuation Claim := fun a =>
 
 /-- **Granted the Reformed definition, justification has no degrees.** From the
 courtroom texts, a verdict acquits or condemns and has no degrees; justification
-is a verdict and nothing more; so it has no degrees.
-
-It does not show that justification is only a verdict. That is the
-Reformed definition, and Trent denies it. -/
+is a verdict and nothing more; so it has no degrees. That justification is
+only a verdict is the Reformed definition, and Trent denies it. -/
 @[headline]
 theorem verdictOnDegrees_establishes : Establishes verdictOnDegrees := by
   establish [solaFideDefs]
@@ -240,10 +237,8 @@ theorem verdictOnDegrees_is_satisfiable : Satisfiable verdictOnDegrees.premises 
 
 /-- **On the same premises, works do not merit an increase of justification.**
 This is what canon 24 condemns, reached from the courtroom and the Reformed
-definition.
-
-It does not show that the justified do not grow. Both sides hold that
-the renewal of the justified grows; the Reformed call it sanctification. -/
+definition. The justified still grow: both sides hold that the renewal of the
+justified grows, and the Reformed call that growth sanctification. -/
 @[headline]
 theorem no_degrees_denies_the_increase : Establishes verdictAgainstIncrease := by
   establish [solaFideDefs]
@@ -257,10 +252,8 @@ theorem verdictAgainstIncrease_is_satisfiable :
 
 /-- **Trent's increase follows from its own premises.** Justification is the
 renewal of the inward man, the renewal grows through good works, and so
-justification increases and has degrees.
-
-It does not show that Trent's definition is right. The Westminster
-Confession denies it (XI.1). -/
+justification increases and has degrees. The definition is Trent's, and the
+Westminster Confession denies it (XI.1). -/
 @[headline]
 theorem trentOnDegrees_establishes : Establishes trentOnDegrees := by
   establish [solaFideDefs]
@@ -275,10 +268,8 @@ theorem trentOnDegrees_is_satisfiable : Satisfiable trentOnDegrees.premises := b
 Its position on the increase of justification can be held together with
 Deuteronomy 25:1, Proverbs 17:15, Romans 8:33–34 and the step from them to "a
 verdict has no degrees". For Trent justification is more than a verdict, so a
-verdict's having no degrees does not touch it.
-
-It does not show that Trent says verdicts have no degrees. The result
-says only that nothing in its position denies it. -/
+verdict's having no degrees does not touch it. Trent does not say that verdicts
+have no degrees; nothing in its position denies it. -/
 @[headline]
 theorem trent_grants_that_verdicts_have_no_degrees :
     Satisfiable (trentOnDegrees.premises ++ courtroomLine.premises) := by
@@ -290,10 +281,9 @@ theorem trent_grants_that_verdicts_have_no_degrees :
 to Trent's position that a verdict has no degrees, that justification is a
 verdict only, and the step from those two to "no degrees", and it can no longer
 be held. Together with `trent_grants_that_verdicts_have_no_degrees`, this puts
-the whole disagreement about degrees at the Reformed definition.
-
-It does not claim which side is right about the definition. That is
-weighed in the chapter "What Trent means by justification". -/
+the whole disagreement about degrees at the Reformed definition. Which side is
+right about the definition is weighed in the chapter "What Trent means by
+justification". -/
 @[headline]
 theorem degrees_turn_on_the_definition :
     ¬ Satisfiable (trentOnDegrees.premises ++

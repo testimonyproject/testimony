@@ -57,17 +57,17 @@ of the three texts chapter 10 cites, only James 2:24 is left to confirm the
 doctrine from the originals. It is weighed in
 the chapter "James 2:24".
 
-## What this does not show
+## Where Rome is consistent
 
-It does not show that Rome contradicts itself. Trent does not say which way its
+Rome can still be read without contradiction. Trent does not say which way its
 "as it is written" is meant, and Pius XII supplies the way on which there is no
 contradiction. The first contradicts Pius XII. The second makes the two texts an
 appeal to the Church's authority, which Pius XII himself asks to be confirmed
 from the originals, and the originals do not confirm it.
 
-Nor does it show that the doctrine is false. Pius XII holds the Vulgate free
-from error in faith because Rome holds the doctrine true on other grounds. This
-section is about what these two texts can bear.
+The doctrine itself rests elsewhere: Pius XII holds the Vulgate free from error
+in faith because Rome holds the doctrine true on other grounds, and this section
+is about what these two texts can bear.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -96,9 +96,8 @@ it, says "the righteous must still do right". With those two, the claim that the
 inspired author wrote "let him be justified still" cannot be true. Every premise
 is Rome's own.
 
-It does not show that Trent meant its citation that way. Taken as Pius
-XII takes Trent's use of the Vulgate, there is no contradiction
-(`pius_reading_is_consistent`). -/
+Trent need not have meant its citation that way. Taken as Pius XII takes Trent's
+use of the Vulgate, there is no contradiction (`pius_reading_is_consistent`). -/
 @[headline]
 theorem trent_as_the_inspired_text_contradicts_pius :
     ¬ Satisfiable romeOnTheInspiredText :=
@@ -175,9 +174,8 @@ sentence about paying a vow before death, and not the Latin's "be not afraid ...
 even to death". So of the three texts chapter 10 cites, only James 2:24 is left
 to confirm the doctrine from the originals.
 
-It does not show that the Greek of Sirach 18:22 could not be read in
-Trent's favour. That would be a further argument about what its "be justified"
-means, and none is written down here. -/
+Reading the Greek of Sirach 18:22 in Trent's favour would take a further
+argument about what its "be justified" means, and none is written down here. -/
 @[headline]
 theorem pius_finds_no_confirmation : Establishes piusOnTrentsVulgate := by
   establish [solaFideDefs]
