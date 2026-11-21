@@ -275,7 +275,8 @@ structure ExchangeTurn where
   /-- What the page says of the turn. -/
   doc : String
   /-- How it stands to an earlier turn: `answers`, `meets`, `standsApart`,
-  `responds`, `evades`, or empty when it only enters. -/
+  `responds`, `evades`, `restates`, `concedes`, `shifts`, or empty when it only
+  enters. -/
   relation : String := ""
   /-- The earlier turn's party, by its package's name; empty if none. -/
   target : String := ""
@@ -285,6 +286,13 @@ structure ExchangeTurn where
   findings : List String := []
   /-- The party of the first later turn that answers this one; empty if none. -/
   answeredBy : String := ""
+  /-- What the turn's position concludes, in words; empty if not known. -/
+  concludes : String := ""
+  /-- What the earlier turn's position concludes; empty if none. -/
+  targetConcludes : String := ""
+  /-- The party of the first earlier turn that answers the earlier turn named;
+  empty if none. -/
+  answeredEarlierBy : String := ""
 deriving Repr
 
 /-- An exchange, as a page shows it: its turns in order, and every pair of the
@@ -320,6 +328,22 @@ def connective (t : ExchangeTurn) : List Seg :=
     let charge := ", and no meaning: it is a red herring, a reply that changes the " ++
       "subject. It is set out here to be answered"
     [.text lead, .party t.target, .text charge] ++
+      (if t.answeredBy.isEmpty then [.text "."]
+       else [.text " by ", .party t.answeredBy, .text "."])
+  | "restates" =>
+    [.text "This sets out the position of ", .party t.target,
+      .text " again, with the same conclusion."]
+  | "concedes" =>
+    [.text "This gives up what ", .party t.target, .text (" concluded (" ++
+      t.targetConcludes ++ "), and says so. It concludes instead: " ++ t.concludes ++ ".")]
+  | "shifts" =>
+    let after : List Seg := if t.answeredEarlierBy.isEmpty then [] else
+      [.text " once ", .party t.answeredEarlierBy, .text " had answered it"]
+    [.text "It is told as the position of ", .party t.target,
+      .text (" again, but it concludes something else. That position concluded (" ++
+        t.targetConcludes ++ "), and this concludes (" ++ t.concludes ++ ")")] ++ after ++
+      [.text (". That is moving the goalposts: changing what is defended once it has " ++
+        "been answered. It is set out here to be answered")] ++
       (if t.answeredBy.isEmpty then [.text "."]
        else [.text " by ", .party t.answeredBy, .text "."])
   | _ => []

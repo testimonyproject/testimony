@@ -78,7 +78,7 @@ theorem answered_declares : answered.turns.map (·.findings) = [["straw man"], [
 
 /-- **The clock said to answer the minutes**, which defeat it: refused, because
 the solver finds the reverse. -/
-example : ¬ (Turn.mk Party.clock (.answers .minutes) "" "" none []).relation.Holds
+example : ¬ ({ party := Party.clock, relation := .answers .minutes } : Turn Party).relation.Holds
     dispute.defeats .clock := by
   intro h
   exact h.2 ((dispute_defeats _ _).2 trivial)
@@ -86,15 +86,19 @@ example : ¬ (Turn.mk Party.clock (.answers .minutes) "" "" none []).relation.Ho
 /-- **A relation to a turn not yet told** is refused: the minutes answer the
 clock before the clock has entered. -/
 theorem answer_before_the_turn :
-    Turn.ordered [Turn.mk Party.minutes (.answers .clock) "" "" none [],
-      Turn.mk Party.clock .enters "" "" none []] = false := by decide
+    Turn.ordered [({ party := .minutes, relation := .answers .clock } : Turn Party),
+      { party := .clock }] = false := by decide
+
+/-- A turn quoting a line that declares a straw man. -/
+def quotesAStrawMan : Turn Party :=
+  { party := .clock, quoting := some "aLine", findings := ["straw man"] }
 
 /-- **A turn quoting a declared fallacy, left unanswered**, is refused; answered,
 it is let through. -/
 theorem declared_must_be_answered :
-    Turn.answered [Turn.mk Party.clock .enters "" "" (some "aLine") ["straw man"]] = false ∧
-      Turn.answered [Turn.mk Party.clock .enters "" "" (some "aLine") ["straw man"],
-        Turn.mk Party.minutes (.answers .clock) "" "" none []] = true := by decide
+    Turn.answered [quotesAStrawMan] = false ∧
+      Turn.answered [quotesAStrawMan, { party := .minutes, relation := .answers .clock }] =
+        true := by decide
 
 /-! **On the page.** Each turn is its party's paragraph, then the sentence that
 joins it to the turn it names, in the solver's words, and what the line it quotes
@@ -112,8 +116,8 @@ declares. The pairs a turn has already joined are not said again. -/
 /-- Three positions, one pair joined by a turn: the paragraph after the turns
 states the pairs no turn has joined, as the table has them. -/
 def threeWay : Page.Exchange :=
-  { turns := [⟨"A", "", "", "", "", [], ""⟩, ⟨"B", "", "meets", "A", "", [], ""⟩,
-      ⟨"C", "", "", "", "", [], ""⟩]
+  { turns := [{ party := "A", doc := "" },
+      { party := "B", doc := "", relation := "meets", target := "A" }, { party := "C", doc := "" }]
     pairs := [("A", "B", true, true), ("A", "C", false, false), ("B", "C", false, true)] }
 
 /-- The summary paragraph, as the page sets it. -/
@@ -147,9 +151,9 @@ fails it: the first meeting's minutes reply to its clock, and the second
 meeting's clock does not. -/
 theorem relevant_reply :
     (Relation.responds (Sum.inl Party.clock)).relevant TwoMeetings.dispute.shares
-        (.inl .minutes) = true ∧
+        TwoMeetings.dispute.sameConclusion (.inl .minutes) = true ∧
       (Relation.responds (Sum.inl Party.minutes)).relevant TwoMeetings.dispute.shares
-        (.inr .clock) = false := by
+        TwoMeetings.dispute.sameConclusion (.inr .clock) = false := by
   decide +kernel
 
 /-- **The second meeting's clock, told as a reply to the first meeting's
@@ -225,5 +229,89 @@ declare_bundle aDefeatToldAsAReply in TwoMeetings.finite where
   "This answers *By the clock*: it defeats it, and *By the clock* does not defeat it " ++
     "in return.\n\n" ++
   "No other pair of these positions defeats either way.\n\n"
+
+/-! ### Moving the goalposts
+
+The first meeting's clock is answered by its minutes. The clock then comes back,
+told as the same position, about the second meeting: it concludes something
+else, so it shifts, and the second meeting's minutes answer it. Told instead as
+giving the first conclusion up, the same turn concedes, and nothing is charged. -/
+
+/-- **A shift, after an answer**, set out and answered. -/
+declare_bundle movedGoalposts in TwoMeetings.finite where
+  /-- The first meeting's clock says it ran two hours. -/
+  turn (Sum.inl Party.clock)
+  /-- The first meeting's minutes answer it. -/
+  turn (Sum.inl Party.minutes) answers (Sum.inl Party.clock)
+  /-- The clock again, now of the second meeting. -/
+  turn (Sum.inr Party.clock) shifts (Sum.inl Party.clock)
+  /-- The second meeting's minutes answer that too. -/
+  turn (Sum.inr Party.minutes) answers (Sum.inr Party.clock)
+
+/-- The shifting turn is charged with moving the goalposts. -/
+theorem movedGoalposts_charges :
+    movedGoalposts.turns.map (·.charges) = [[], [], ["moving the goalposts"], []] := rfl
+
+/-- **The same turn, told as a concession**, is let through, and charged with
+nothing. -/
+declare_bundle aConcession in TwoMeetings.finite where
+  /-- The first meeting's clock says it ran two hours. -/
+  turn (Sum.inl Party.clock)
+  /-- The first meeting's minutes answer it. -/
+  turn (Sum.inl Party.minutes) answers (Sum.inl Party.clock)
+  /-- The clock gives up the first meeting, and speaks of the second. -/
+  turn (Sum.inr Party.clock) concedes (Sum.inl Party.clock)
+
+/-- The conceding turn is charged with nothing. -/
+theorem aConcession_charges : aConcession.turns.map (·.charges) = [[], [], []] := rfl
+
+/-! **A shift told as a restatement** is refused, and the refusal names it. -/
+
+/--
+error: declare_bundle: a turn said to restate an earlier turn concludes something else.
+Told as the same position, that is moving the goalposts: say `shifts`, and answer it
+in a later turn. If the turn gives the earlier conclusion up, say `concedes`.
+-/
+#guard_msgs in
+/-- Not an exchange a bundle may tell. -/
+declare_bundle aDisguisedShift in TwoMeetings.finite where
+  /-- The first meeting's clock. -/
+  turn (Sum.inl Party.clock)
+  /-- The first meeting's minutes answer it. -/
+  turn (Sum.inl Party.minutes) answers (Sum.inl Party.clock)
+  /-- The clock of the second meeting, said to restate the first. -/
+  turn (Sum.inr Party.clock) restates (Sum.inl Party.clock)
+
+/-! **A shift before any answer** is refused: the goalposts move only once a
+position has been answered. -/
+
+/--
+error: declare_bundle: a turn shifts from a position no earlier turn answers.
+The goalposts move only once a position has been answered: say `concedes`, or
+answer the position first.
+-/
+#guard_msgs in
+/-- Not an exchange a bundle may tell. -/
+declare_bundle anEarlyShift in TwoMeetings.finite where
+  /-- The first meeting's clock. -/
+  turn (Sum.inl Party.clock)
+  /-- The clock of the second meeting, said to shift from it. -/
+  turn (Sum.inr Party.clock) shifts (Sum.inl Party.clock)
+  /-- The second meeting's minutes answer it. -/
+  turn (Sum.inr Party.minutes) answers (Sum.inr Party.clock)
+
+-- On the page, a shift names both conclusions and the turn that answered the
+-- first. The two meetings' packages share their labels, so the case is set by hand.
+#guard String.join ((Page.Exchange.connective
+    { party := "The clock, again", doc := "", relation := "shifts", target := "The clock",
+      concludes := "the second meeting ran two hours",
+      targetConcludes := "the first meeting ran two hours",
+      answeredEarlierBy := "The first minutes",
+      answeredBy := "The second minutes" }).map (Markdown.seg [])) ==
+  "It is told as the position of *The clock* again, but it concludes something else. " ++
+    "That position concluded (the first meeting ran two hours), and this concludes " ++
+    "(the second meeting ran two hours) once *The first minutes* had answered it. " ++
+    "That is moving the goalposts: changing what is defended once it has been " ++
+    "answered. It is set out here to be answered by *The second minutes*."
 
 end Testimony.Checks.BundleCases

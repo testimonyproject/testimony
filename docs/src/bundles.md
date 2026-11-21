@@ -16,6 +16,10 @@ stands to a turn before it:
 - it **stands apart** from that turn: neither defeats the other;
 - it **responds** to that turn: neither defeats the other, but the two share a claim;
 - it **evades** that turn: told as a reply, it shares no claim with it, a red herring.
+- it **restates** that turn: it sets out the same position again, with the same conclusion;
+- it **concedes** to that turn: it concludes something else, and says it gives the first up;
+- it **shifts** from that turn: told as the same position once that turn has been answered, it
+  concludes something else, which is moving the goalposts.
 
 A turn with none of these simply enters the exchange.
 
@@ -74,6 +78,25 @@ the earlier one. The build then checks that the two really share nothing, and th
 treated as a declared fallacy: a later turn must answer it. Where the solver finds a defeat, the
 two positions always share a claim, so a defeat is told as an answer or a meeting, never as a
 reply.
+
+## Moving the goalposts
+
+A position that has been answered sometimes comes back. If it comes back with the conclusion it
+had, the turn **restates** it. If it comes back concluding something else, and is still told as
+the same position, it has moved the goalposts: it changes what is defended once the first claim
+has been answered. An author sets that out by writing that the turn **shifts** from the earlier
+one. The build checks that the two conclusions differ and that some earlier turn answered the
+first, and a later turn must answer the shift. A turn that gives the first conclusion up, and
+says so, **concedes** instead, and nothing is charged. The build refuses a restatement whose
+conclusion has changed:
+
+```text
+error: declare_bundle: a turn said to restate an earlier turn concludes something else.
+Told as the same position, that is moving the goalposts: say `shifts`, and answer it
+in a later turn. If the turn gives the earlier conclusion up, say `concedes`.
+```
+
+On the page, a shift names both conclusions and the turn that answered the first.
 
 ## On the page
 

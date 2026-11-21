@@ -21,7 +21,13 @@ may say how it stands to a turn before it:
 - it **replies** to that turn: neither defeats the other, but the two share a
   claim, or a meaning that joins two of their claims;
 - it **evades** that turn: told as a reply, it shares no claim with it and no
-  meaning. That is a red herring, a reply that changes the subject.
+  meaning. That is a red herring, a reply that changes the subject;
+- it **restates** that turn: it sets out the same position again, with the same
+  conclusion;
+- it **concedes** to that turn: it concludes something else, and says it gives
+  the earlier conclusion up;
+- it **shifts** from that turn: told as the same position after that turn was
+  answered, it concludes something else. That is moving the goalposts.
 
 Every stated relation is checked against the dispute's defeats, as the solver
 computes them (`Testimony.Logic.Solver.Finite`). So the words that join the
@@ -39,7 +45,8 @@ and a red herring are told only where it finds none.
 A turn may quote a line of reason. If that line declares a fallacy it commits
 (`Testimony.Semantics.Finding`), a later turn must answer the turn that quotes
 it: a fallacy is set out in a bundle only to be answered there. A turn that
-evades is a red herring of its own, and must be answered in the same way.
+evades is a red herring of its own, and a turn that shifts moves the goalposts:
+each must be answered in the same way.
 
 A bundle decides only what the dispute decides: it is the dispute's defeats, put
 in an order and told. A turn with no relation simply enters the exchange.
@@ -69,6 +76,20 @@ def Dispute.claims (d : Dispute α ι) (i : ι) : List α :=
 def Dispute.shares (d : Dispute α ι) (i j : ι) : Bool :=
   (d.claims i).any fun a => (d.claims j).any (touches a)
 
+/-- Whether two formulas are written the same, part by part. Structural, so the
+kernel can decide it. -/
+def sameFormula : Formula α → Formula α → Bool
+  | .atom a, .atom b => a == b
+  | .falsum, .falsum => true
+  | .and p q, .and p' q' => sameFormula p p' && sameFormula q q'
+  | .or p q, .or p' q' => sameFormula p p' && sameFormula q q'
+  | .imp p q, .imp p' q' => sameFormula p p' && sameFormula q q'
+  | _, _ => false
+
+/-- Whether two parties conclude the same thing. -/
+def Dispute.sameConclusion (d : Dispute α ι) (i j : ι) : Bool :=
+  sameFormula (d.node i).conclusion (d.node j).conclusion
+
 end Shares
 
 /-- **How a turn stands to an earlier one.** -/
@@ -87,6 +108,13 @@ inductive Relation (ι : Type)
   /-- A red herring: told as a reply, it shares no claim with the earlier turn,
   and no meaning. -/
   | evades (earlier : ι)
+  /-- The same position again: the same conclusion as the earlier turn. -/
+  | restates (earlier : ι)
+  /-- A concession: a different conclusion, told as giving the earlier one up. -/
+  | concedes (earlier : ι)
+  /-- Moving the goalposts: told as the earlier position after it was answered,
+  but concluding something else. -/
+  | shifts (earlier : ι)
 deriving DecidableEq, Repr
 
 namespace Relation
@@ -94,39 +122,45 @@ namespace Relation
 /-- The earlier turn's party, if the relation names one. -/
 def target? : Relation ι → Option ι
   | .enters => none
-  | .answers j | .meets j | .standsApart j | .responds j | .evades j => some j
+  | .answers j | .meets j | .standsApart j | .responds j | .evades j
+  | .restates j | .concedes j | .shifts j => some j
 
-/-- Whether the relation names a red herring. -/
-def evading : Relation ι → Bool
-  | .evades _ => true
-  | _ => false
+/-- The fallacy the relation itself names, if any. -/
+def charge? : Relation ι → Option String
+  | .evades _ => some "red herring"
+  | .shifts _ => some "moving the goalposts"
+  | _ => none
 
 /-- **What the relation claims**, of party `i`, under the defeat relation `R`. -/
 def Holds (R : ι → ι → Prop) (i : ι) : Relation ι → Prop
-  | .enters => True
+  | .enters | .restates _ | .concedes _ | .shifts _ => True
   | .answers j => R i j ∧ ¬ R j i
   | .meets j => R i j ∧ R j i
   | .standsApart j | .responds j | .evades j => ¬ R i j ∧ ¬ R j i
 
 /-- The same, computed from a Boolean defeat table. -/
 def check (d : ι → ι → Bool) (i : ι) : Relation ι → Bool
-  | .enters => true
+  | .enters | .restates _ | .concedes _ | .shifts _ => true
   | .answers j => d i j && !d j i
   | .meets j => d i j && d j i
   | .standsApart j | .responds j | .evades j => !d i j && !d j i
 
-/-- **Whether a reply is on the subject**, given which parties share a claim:
-one that replies must share one, and one that evades must share none. Every
-other relation passes. -/
-def relevant (s : ι → ι → Bool) (i : ι) : Relation ι → Bool
+/-- **Whether a relation reads the positions rightly**, given which parties
+share a claim (`s`) and which conclude the same (`c`): one that replies must
+share a claim, and one that evades must share none; one that restates must
+conclude the same, and one that concedes or shifts must conclude something
+else. Every other relation passes. -/
+def relevant (s c : ι → ι → Bool) (i : ι) : Relation ι → Bool
   | .responds j => s i j
   | .evades j => !s i j
+  | .restates j => c i j
+  | .concedes j | .shifts j => !c i j
   | _ => true
 
 /-- What the computation says, the relation holds. -/
 theorem holds_of_check {R : ι → ι → Prop} (F : Solver.Finite R) {i : ι} :
     ∀ {r : Relation ι}, check F.defeats i r = true → Holds R i r
-  | .enters, _ => trivial
+  | .enters, _ | .restates _, _ | .concedes _, _ | .shifts _, _ => trivial
   | .answers j, h => by
     simp only [check, Bool.and_eq_true, Bool.not_eq_true'] at h
     exact ⟨(F.spec i j).2 h.1, fun hji => by simp [(F.spec j i).1 hji] at h⟩
@@ -157,6 +191,8 @@ structure Turn (ι : Type) where
   /-- The fallacies that line declares it commits, by kind
   (`Testimony.Semantics.Finding.kind`). A turn with any must be answered. -/
   findings : List String := []
+  /-- What the party's position concludes, as its package names it. -/
+  concludes : String := ""
 deriving Repr
 
 namespace Turn
@@ -164,7 +200,7 @@ namespace Turn
 /-- The fallacies the turn sets out: a red herring, if it evades, and those
 the line it quotes declares. -/
 def charges (t : Turn ι) : List String :=
-  (if t.relation.evading then ["red herring"] else []) ++ t.findings
+  t.relation.charge?.toList ++ t.findings
 
 /-- Whether the turn sets out a fallacy, its own or the line's it quotes. -/
 def declares (t : Turn ι) : Bool := !t.charges.isEmpty
@@ -179,6 +215,23 @@ where
   go (seen : List ι) : List (Turn ι) → Bool
     | [] => true
     | t :: ts => (t.relation.target?.all seen.contains) && go (t.party :: seen) ts
+
+/-- Whether every turn that shifts from an earlier one comes after a turn that
+answers it: the goalposts move only once a position has been answered. -/
+def shiftsAnswered : List (Turn ι) → Bool :=
+  go []
+where
+  /-- With the parties already answered. -/
+  go (answered : List ι) : List (Turn ι) → Bool
+    | [] => true
+    | t :: ts =>
+      let ok := match t.relation with
+        | .shifts j => answered.contains j
+        | _ => true
+      let answered := match t.relation with
+        | .answers j => j :: answered
+        | _ => answered
+      ok && go answered ts
 
 /-- Whether every turn that sets out a fallacy is answered by a later turn. -/
 def answered : List (Turn ι) → Bool
@@ -203,9 +256,15 @@ structure Bundle [DecidableEq ι] (R : ι → ι → Prop) where
   /-- Which parties share a claim, or a meaning: `Dispute.shares`, when the
   bundle is declared over a dispute. -/
   shares : ι → ι → Bool
+  /-- Which parties conclude the same: `Dispute.sameConclusion`, when the bundle
+  is declared over a dispute. -/
+  same : ι → ι → Bool
   /-- Each reply shares a claim with the turn it replies to, and each red
-  herring shares none. -/
-  relevant : turns.all (fun t => t.relation.relevant shares t.party) = true
+  herring shares none; each restatement concludes the same, and each concession
+  or shift concludes something else. -/
+  relevant : turns.all (fun t => t.relation.relevant shares same t.party) = true
+  /-- Each shift comes after a turn that answers the position it shifts from. -/
+  shiftsAnswered : Turn.shiftsAnswered turns = true
   /-- The dispute in the solver's form, from which the page states how every
   pair of the turns' parties stands. -/
   finite : Solver.Finite R
@@ -216,11 +275,12 @@ variable [DecidableEq ι] {R : ι → ι → Prop}
 
 /-- A bundle whose relations are checked by computing them from the dispute in
 the solver's form. -/
-def ofFinite (F : Solver.Finite R) (shares : ι → ι → Bool) (doc : String)
+def ofFinite (F : Solver.Finite R) (shares same : ι → ι → Bool) (doc : String)
     (turns : List (Turn ι))
     (ordered : Turn.ordered turns = true) (answered : Turn.answered turns = true)
     (checked : turns.all (fun t => t.relation.check F.defeats t.party) = true)
-    (relevant : turns.all (fun t => t.relation.relevant shares t.party) = true) :
+    (relevant : turns.all (fun t => t.relation.relevant shares same t.party) = true)
+    (shiftsAnswered : Turn.shiftsAnswered turns = true) :
     Bundle R where
   doc := doc
   turns := turns
@@ -229,13 +289,21 @@ def ofFinite (F : Solver.Finite R) (shares : ι → ι → Bool) (doc : String)
   holds t ht := Relation.holds_of_check F (List.all_eq_true.1 checked t ht)
   finite := F
   shares := shares
+  same := same
   relevant := relevant
+  shiftsAnswered := shiftsAnswered
 
 /-- Which parties share a claim, or a meaning, in the dispute whose solver form
 is given: `Dispute.shares`. -/
 def sharesOf {α : Type} [HasPostulates α] [DecidableEq α] {d : Dispute α ι}
     (_ : Solver.Finite d.defeats) : ι → ι → Bool :=
   d.shares
+
+/-- Which parties conclude the same, in the dispute whose solver form is given:
+`Dispute.sameConclusion`. -/
+def sameOf {α : Type} [HasPostulates α] [DecidableEq α] {d : Dispute α ι}
+    (_ : Solver.Finite d.defeats) : ι → ι → Bool :=
+  d.sameConclusion
 
 /-- The parties the turns set out, in order, each once, with their names. -/
 def parties (b : Bundle R) : List (ι × String) :=
@@ -255,7 +323,16 @@ def view (b : Bundle R) : Page.Exchange :=
       | .standsApart j => ("standsApart", nameOf j)
       | .responds j => ("responds", nameOf j)
       | .evades j => ("evades", nameOf j)
+      | .restates j => ("restates", nameOf j)
+      | .concedes j => ("concedes", nameOf j)
+      | .shifts j => ("shifts", nameOf j)
+    let concludesOf (j : ι) : String :=
+      ((b.turns.find? (·.party == j)).map (·.concludes)).getD ""
+    let earlier := b.turns.take (b.turns.length - later.length - 1)
     { party := t.name, doc := t.doc, relation := rel, target := target,
+      concludes := t.concludes, targetConcludes := (t.relation.target?.map concludesOf).getD "",
+      answeredEarlierBy := (t.relation.target?.bind fun j =>
+        (earlier.find? (·.relation == .answers j)).map (·.name)).getD "",
       quoting := t.quoting.getD "", findings := t.findings,
       answeredBy := ((later.find? (·.relation == .answers t.party)).map (·.name)).getD "" }
   let ps := b.parties
@@ -276,7 +353,8 @@ open Lean Elab Command
 
 /-- How a turn stands to an earlier one, as written. -/
 syntax bundleRel :=
-  (&"answers" <|> &"meets" <|> &"standsApart" <|> &"responds" <|> &"evades") term:max
+  (&"answers" <|> &"meets" <|> &"standsApart" <|> &"responds" <|> &"evades" <|>
+    &"restates" <|> &"concedes" <|> &"shifts") term:max
 
 /-- One turn, as written: its docstring, its party, how it stands to an earlier
 turn, and the line of reason it quotes. -/
@@ -285,10 +363,11 @@ syntax bundleTurn := (docComment)? &"turn " term:max (bundleRel)? (&"quoting" id
 /-- `declare_bundle B in F where`, then its turns: the exchange `B`, a `Bundle`,
 whose relations are checked against `F : Solver.Finite R`, the dispute in the
 solver's form (`D.finite`). Each turn is `turn p`, then optionally `answers q`,
-`meets q`, `standsApart q`, `responds q` or `evades q` for a party `q` of an
-earlier turn, and `quoting l` for a line of reason `l`. Its docstring is what the
-page says of it. A turn that evades, or that quotes a line declaring a fallacy
-(`l.expected`), must be answered by a later turn. -/
+`meets q`, `standsApart q`, `responds q`, `evades q`, `restates q`, `concedes q`
+or `shifts q` for a party `q` of an earlier turn, and `quoting l` for a line of
+reason `l`. Its docstring is what the page says of it. A turn that evades or
+shifts, or that quotes a line declaring a fallacy (`l.expected`), must be
+answered by a later turn. -/
 syntax (name := bundleCmd) (docComment)? "declare_bundle " ident &" in " term:max &" where"
   withPosition((ppLine colGe bundleTurn)+) : command
 
@@ -321,6 +400,15 @@ elab_rules : command
         Term.synthesizeSyntheticMVarsNoPostponing
         let e ← Meta.mkAppM ``ArgumentPackage.name #[← Meta.mkAppM ``Dispute.node #[d, pE]]
         unsafe Meta.evalExpr String (mkConst ``String) (← instantiateMVars e)
+    let concludesOf (p : Term) : CommandElabM String := do
+      let some d := dispute? | return ""
+      liftTermElabM do
+        let dTy ← Meta.whnfR (← Meta.inferType d)
+        let pE ← Term.elabTermEnsuringType p dTy.appArg!
+        Term.synthesizeSyntheticMVarsNoPostponing
+        let e ← Meta.mkAppM ``ArgumentPackage.conclusionLabel
+          #[← Meta.mkAppM ``Dispute.node #[d, pE]]
+        unsafe Meta.evalExpr String (mkConst ``String) (← instantiateMVars e)
     let mut terms : Array Term := #[]
     for t in turns do
       match t with
@@ -333,6 +421,9 @@ elab_rules : command
             | `(bundleRel| standsApart $q) => `(Relation.standsApart $q)
             | `(bundleRel| responds $q) => `(Relation.responds $q)
             | `(bundleRel| evades $q) => `(Relation.evades $q)
+            | `(bundleRel| restates $q) => `(Relation.restates $q)
+            | `(bundleRel| concedes $q) => `(Relation.concedes $q)
+            | `(bundleRel| shifts $q) => `(Relation.shifts $q)
             | _ => throwErrorAt r "declare_bundle: unknown relation"
         let (quoting, findings) ← match l? with
           | none => pure ((← `(none)), (← `([])))
@@ -346,7 +437,8 @@ elab_rules : command
             pure ((← `(some $s)), found)
         let docS := Syntax.mkStrLit (← text td?)
         let nameS := Syntax.mkStrLit (← nameOf p)
-        terms := terms.push (← `(Turn.mk $p $rel $nameS $docS $quoting $findings))
+        let concS := Syntax.mkStrLit (← concludesOf p)
+        terms := terms.push (← `(Turn.mk $p $rel $nameS $docS $quoting $findings $concS))
       | _ => throwErrorAt t "declare_bundle: a turn is `turn p`, then a relation and `quoting l`"
     -- Each relation computed now, so that a refusal says what the solver found.
     let evalBool (t : Term) : CommandElabM Bool := liftTermElabM do
@@ -363,7 +455,24 @@ elab_rules : command
           | `(bundleRel| standsApart $q) => pure ("stand apart from", q)
           | `(bundleRel| responds $q) => pure ("reply to", q)
           | `(bundleRel| evades $q) => pure ("evade", q)
+          | `(bundleRel| restates $q) => pure ("restate", q)
+          | `(bundleRel| concedes $q) => pure ("concede to", q)
+          | `(bundleRel| shifts $q) => pure ("shift from", q)
           | _ => throwErrorAt r "declare_bundle: unknown relation"
+        if word == "restate" || word == "concede to" || word == "shift from" then
+          if dispute?.isNone then
+            throwErrorAt r "declare_bundle: what a position concludes is read from the \
+              dispute's packages, so the bundle must be declared over a dispute's solver form"
+          let same ← evalBool (← `(Bundle.sameOf $f $p $q))
+          if word == "restate" && !same then
+            throwErrorAt r m!"declare_bundle: a turn said to restate an earlier turn \
+              concludes something else.\nTold as the same position, that is moving the \
+              goalposts: say `shifts`, and answer it\nin a later turn. If the turn gives \
+              the earlier conclusion up, say `concedes`."
+          if word != "restate" && same then
+            throwErrorAt r m!"declare_bundle: a turn said to {word} an earlier turn \
+              concludes the same.\nIt sets out the same position again: say `restates`."
+          continue
         let pq ← evalBool (← `(Solver.Finite.defeats $f $p $q))
         let qp ← evalBool (← `(Solver.Finite.defeats $f $q $p))
         let ok := match word with
@@ -395,14 +504,20 @@ elab_rules : command
       | _ => pure ()
     unless ← evalBool (← `(Turn.ordered [$terms,*])) do
       throwError "declare_bundle: a turn is said to stand to a party no earlier turn sets out"
+    unless ← evalBool (← `(Turn.shiftsAnswered [$terms,*])) do
+      throwError m!"declare_bundle: a turn shifts from a position no earlier turn \
+        answers.\nThe goalposts move only once a position has been answered: say \
+        `concedes`, or\nanswer the position first."
     unless ← evalBool (← `(Turn.answered [$terms,*])) do
       throwError m!"declare_bundle: a turn sets out a fallacy, its own or one the line \
         it quotes\ndeclares, and no later turn answers it. A fallacy is set out in a \
         bundle only\nto be answered there."
     let bdoc := Syntax.mkStrLit (← text doc?)
     let shares ← if dispute?.isSome then `(Bundle.sharesOf $f) else `(fun _ _ => true)
-    let cmd ← `($[$doc?]? def $b := Bundle.ofFinite $f $shares $bdoc [$terms,*]
-      (by decide +kernel) (by decide +kernel) (by decide +kernel) (by decide +kernel))
+    let same ← if dispute?.isSome then `(Bundle.sameOf $f) else `(fun _ _ => true)
+    let cmd ← `($[$doc?]? def $b := Bundle.ofFinite $f $shares $same $bdoc [$terms,*]
+      (by decide +kernel) (by decide +kernel) (by decide +kernel) (by decide +kernel)
+      (by decide +kernel))
     elabCommand cmd
 
 end Testimony.Logic.BundleCmd
