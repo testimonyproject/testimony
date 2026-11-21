@@ -51,11 +51,10 @@ So the step's rating depends on whether a council's word counts
 them. Under the tradition standard it is `disputed`, by the reading through
 Paul.
 
-Before the reading through Paul was written down, the same checks refused any
-rating above `disputed` under all three standards, because the strongest known
-objection was missing (`lexical_step_before_the_steelman`). Writing down the
-strongest objection is what permits the higher rating, and only where that
-objection fails.
+Without the reading through Paul, the same checks refuse any rating above
+`disputed` under all three standards, because the strongest known objection is
+missing (`lexical_step_before_the_steelman`). A step rises above `disputed` only
+once its strongest objection is heard, and only where that objection fails.
 
 ## Works as fruit, not ground
 

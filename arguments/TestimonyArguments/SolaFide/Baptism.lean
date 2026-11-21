@@ -232,7 +232,7 @@ def reformedOnTheDesire : ArgumentPackage Claim :=
 /-! ### The positions, written out -/
 
 /-- Rome's position. Baptism is the instrumental cause. The desire for it brings its
-fruits. The thief is saved. God is not bound to his sacraments. The water of
+fruits. The thief is saved. God is not bound to His sacraments. The water of
 John 3:5 is baptismal. And the washing itself is not necessary for salvation.
 Since baptism is a means of justification, faith is not the only means; and
 since justification includes sanctification, it is not a verdict only. -/
@@ -752,8 +752,8 @@ def whereTheSpiritMeetsTrentsStep :
     (by decide +kernel)
   |>.ratedBy readingsWithoutTheWater (by simp [calvinOnJohnThreeFive, solaFideDefs])
 
-/-- **What John 3:5 means, read four ways.** What can be taken more than one way is
-the verse Trent cites, not Trent. Trent argues: unless one is born of water and
+/-- **What John 3:5 means, read four ways.** It is the verse Trent cites, not
+Trent, that can be read more than one way. Trent argues: unless one is born of water and
 the Spirit, he cannot enter the kingdom of God; therefore water baptism is
 required. Each of the four readings is a reading of the verse's "water", held by
 the reader named. For each, the question is whether Trent's step from the verse
@@ -767,9 +767,9 @@ Read with its water as natural birth, as Ezekiel's cleansing, or as the Spirit's
 own cleansing, Trent's step cannot be kept, each time at a `wellSupported` step.
 
 So only the baptismal reading leaves Trent's step standing. Which reading is
-right is not decided here: each is cited, and each is disputed. Each is fair. By
-itself it contradicts nothing, and it fails only when joined to the step its own
-holders draw from it. -/
+right is not decided here: each is cited, and each is disputed. Each is fair,
+because by itself it contradicts nothing; it fails only when joined to the step
+its own holders draw from it. -/
 def whatJohnThreeFiveMeans : Dilemma trentOnJohnThreeFive where
   claim := p .john3_5WaterAndSpirit
   horns :=

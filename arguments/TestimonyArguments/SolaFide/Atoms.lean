@@ -77,7 +77,7 @@ inductive Claim
   rescuing the world in Christ, and not a standing given to those who meet the
   condition of faith. The apocalyptic reading (Martyn, Campbell). -/
   | righteousnessOfGodIsDeliverance
-  /-- Luke 7:50 — Jesus tells the woman who anointed him, "your faith has saved
+  /-- Luke 7:50 — Jesus tells the woman who anointed Him, "your faith has saved
   you", immediately after declaring her sins forgiven. -/
   | luke7_50FaithHasSavedYou
   /-- "Saved" (σῴζω) at Luke 7:50 means saved from sin, and not healed of an
@@ -216,7 +216,7 @@ inductive Claim
   be made inwardly just. This is Trent's definition, **read as a claim about
   Paul's word**. -/
   | paulsJustifyDenotesRenewal
-  /-- When God justifies, he also renews. Pardon and the renewal of the inward
+  /-- When God justifies, He also renews. Pardon and the renewal of the inward
   person are given together and are not to be separated. This is Trent's
   definition, **read as a claim about what God does**. Stated this way, it is
   what the *Joint Declaration* confesses and what Calvin grants. -/
@@ -270,8 +270,8 @@ inductive Claim
   entering the kingdom in its own right, not only the fruit of faith. -/
   | matthew7ObedienceIsAGround
   /-- **The Reformed reading of Matthew 7:21–23**: to do the Father's will
-  includes believing in Christ, and "I never knew you" means he never counted
-  them his own — no union with him by faith, whatever they did in his name. -/
+  includes believing in Christ, and "I never knew you" means He never counted
+  them His own — no union with Him by faith, whatever they did in His name. -/
   | matthew7DoingIncludesBelieving
   /-- Matthew 19:16–22 — asked what good deed he must do to have eternal life,
   Jesus tells the young man "If you would enter life, keep the commandments";
@@ -324,7 +324,7 @@ inductive Claim
   /-- Acts 10:44–48 — the Spirit falls on Cornelius's household while Peter is
   still speaking, and they are baptized afterwards. -/
   | acts10SpiritThenWater
-  /-- God is not bound to water baptism: he gives the Spirit before it and after it.
+  /-- God is not bound to water baptism: He gives the Spirit before it and after it.
   "God has bound salvation to the sacrament of Baptism, but he himself is not
   bound by his sacraments" (Catechism 1257). Both sides accept this. -/
   | godNotBoundToWater
@@ -504,7 +504,7 @@ inductive Claim
   /-- Romans 4:10 — "How then was it counted to him? Was it before or after he
   had been circumcised? It was not after, but before he was circumcised." -/
   | romans4_10BeforeCircumcision
-  /-- The covenant of Genesis 15 binds God alone: he alone passes between the
+  /-- The covenant of Genesis 15 binds God alone: He alone passes between the
   pieces, as one who swears an oath on his own life (compare Jeremiah 34:18), and
   "he swore by himself" (Hebrews 6:13). **The Reformed reading of the
   ritual.** -/
