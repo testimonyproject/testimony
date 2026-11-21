@@ -6,7 +6,7 @@ import Testimony.Corpus.Greek
 # TestimonyArguments.SolaFide.Johannine — "this is the work of God, that you believe"
 
 The day after the feeding of the five thousand, the crowd finds Jesus across
-the lake and asks him a question about works:
+the lake and asks Him a question about works:
 
 > "What must we do, to be doing the works of God?" Jesus answered them, "This
 > is the work of God, that you believe in him whom he has sent" (John
@@ -28,7 +28,7 @@ Nobody in this dispute denies the verse. They differ on what its believing is.
   no reward can be paid".
 - **Aquinas** reads it as faith formed by charity, that is, faith made alive by
   love. He takes Paul to distinguish faith "only from external works", so that
-  believing is itself an inward work. To believe *in* him, as the goal one
+  believing is itself an inward work. To believe *in* Him, as the goal one
   moves toward, "is proper to faith
   living through the love of charity", and such faith "is the principle of all
   our good works" (*Super Ioannem* 6, lect. 3, n. 901). The Council of Trent
@@ -53,7 +53,8 @@ not unsettle it: no edition in the apparatus of the SBL Greek New Testament read
 verses. Thayer's lexicon lists the three verses under one sense, "to have a faith directed unto,
 believing or in faith to give one's self up to, Jesus" (p. 511). Moulton's grammar gives the
 construction one meaning, "believe in", and sets it apart from "believe" with a bare dative (pp.
-67–68), as when the crowd at 6:30 asks for a sign so that they may believe *him* (πιστεύσωμέν σοι).
+67–68), as when the crowd at 6:30 asks for a sign so that they may believe Him, with no "in"
+(πιστεύσωμέν σοι).
 Calvin, on 6:29, refers the reader back to chapter 3 for what "believe" means there, and Aquinas
 reads both verses of faith formed by charity. The two divide over what the believing is, and agree
 that it is one believing.
@@ -61,9 +62,9 @@ that it is one believing.
 So the premise that "believe" keeps its sense is rated well supported
 (`johnBelievingKeepsItsSense`). It is stated of "believes in him" only. At 3:18 John goes on to "has
 not believed in the name", and Origen reads believing in the name as a lesser faith than believing
-in him (*Commentary on John* X.28). Nor does the construction settle the sense by itself. John uses
+in Him (*Commentary on John* X.28). Nor does the construction settle the sense by itself. John uses
 the same phrase of believers whom Jesus goes on to rebuke (8:30, with 8:31–47) and of rulers who
-would not confess him (12:42), so it is the context of 3:16 and 6:29, eternal life and the work God
+would not confess Him (12:42), so it is the context of 3:16 and 6:29, eternal life and the work God
 asks, that the readers above read alike. The standard modern lexicon (BDAG) and the commentaries of
 Bultmann, Schnackenburg and Brown have not been read for it.
 
@@ -73,8 +74,8 @@ Paul's verb for "justify" (δικαιόω) does not occur in John's Gospel. So t
 strand has to step from "eternal life through believing" to "justified by faith
 alone", and that step is an inference, not the meaning of a word. It is cited to
 Calvin, whose comment on 6:29 speaks of the righteousness faith receives from
-Christ. It is rated `plausible`. No cited source accepts the strand's premises
-and rejects the step, but no cited source argues the step at length either.
+Christ. It is rated `plausible`, because no cited source accepts the strand's
+premises and rejects the step, and none argues the step at length either.
 
 ## Luther's answer to Aquinas
 
@@ -91,14 +92,14 @@ His argument runs: love is what the law commands, and "the law is not of faith"
 (Galatians 3:12), so a faith that justifies because love forms it would justify
 by the law after all.
 
-The argument is encoded as a line of its own (`lutherLine`). Its two starting
-points are ones Aquinas accepts: the text of Galatians 3:11–12, and that love of
-God and neighbour is what the law commands (Deuteronomy 6:5). The step from them
-is Luther's. Grant the step, and Aquinas's reading of John 6:29 falls
-(`luther_answers_aquinas_from_galatians`). Without the step the texts do not
-exclude his reading (`luther_answer_rests_on_his_step`). The step is rated
-`disputed`, because Aquinas accepts both starting points and rejects the
-conclusion. His reason for rejecting it is not yet cited here.
+Aquinas accepts both of Luther's starting points: the text of Galatians 3:11–12,
+and that love of God and neighbour is what the law commands (Deuteronomy 6:5).
+The step from them is Luther's own (`lutherLine`). Grant the step, and Aquinas's
+reading of John 6:29 falls (`luther_answers_aquinas_from_galatians`). Without
+the step the texts do not exclude his reading
+(`luther_answer_rests_on_his_step`). The step is rated `disputed`, because
+Aquinas accepts both starting points and rejects the conclusion. His reason for
+rejecting it is not yet cited here.
 
 Two limits. Removing Aquinas's reading does not establish Calvin's: "not formed
 by charity" is a weaker claim than "trust". And the Catholic reply rests on
@@ -115,9 +116,8 @@ one that addresses him.
 
 ## Where the strand stands in the whole dispute
 
-The strand is one of the four strands of the Reformed case, and John's case,
-Aquinas's and Luther's are parties to the sola fide dispute. Three things are
-checked.
+John's case, Aquinas's and Luther's are all parties to the main sola fide
+dispute, and three results show where they stand:
 
 - **John supplies "through faith" without the other three strands.** Leave out
   the disputed readings in Paul, Luke and Acts. Keep what every strand shares:
@@ -171,8 +171,8 @@ def johannineCase : ArgumentPackage Claim :=
     premises := caseOf [johannineLine] sharedGrounds closingSteps }
 
 /-- Aquinas on John: every text John's strand reads, and every shared premise, with
-the believing read as faith formed by charity. This is the rival John's strand
-was written against. -/
+the believing read as faith formed by charity. It is the rival John's strand has
+to answer. -/
 @[solaFideDefs]
 def thomistOnJohn : ArgumentPackage Claim :=
   { reformed with
@@ -244,7 +244,7 @@ text the strand reads, and read their believing as he does, faith made alive by
 love, and sola fide no longer follows.
 
 So John's Gospel, like Paul's Galatians and Luke 7:50, reaches the conclusion
-only through a reading: here, of what it is to believe *in* him. -/
+only through a reading: here, of what it is to believe *in* Him. -/
 @[headline]
 theorem johannine_strand_rests_on_believing_as_trust : ¬ Establishes thomistOnJohn := by
   refute_with thomistReading [solaFideDefs]
@@ -396,8 +396,7 @@ def whyLutherAnswersAquinas : Because lutherOnGalatians thomistOnJohn :=
 
 /-! ### John 3:36: "whoever does not obey the Son"
 
-Three chapters on, John sets two words side by side that a reader of this
-debate cannot pass over:
+Earlier in the Gospel, John sets two words side by side:
 
 > "Whoever believes in the Son has eternal life; whoever does not obey the Son
 > shall not see life, but the wrath of God remains on him" (John 3:36).
@@ -406,8 +405,8 @@ The verse sets *not obeying* against *believing*. Does believing, in John,
 include obeying? And if it does, can faith alone be what saves? The record
 points two ways, one on the word and one on the doctrine.
 
-The Greek for "does not obey" (ὁ ἀπειθῶν) is read by the
-commentators cited here as unbelief seen in what it does. Westcott: "believeth
+The commentators cited here read the Greek for "does not obey" (ὁ ἀπειθῶν) as
+unbelief seen in what it does. Westcott: "believeth
 not] disobeyeth. Disbelief is regarded in its activity." Calvin's comment takes
 the clause of "all who do not believe in Christ". Among modern commentators,
 Ridderbos: "'Disobeys' serves as a description of 'unbelief'". Carson takes the
@@ -424,9 +423,9 @@ believe rightly on the Father, the Son, and the Holy Ghost, yet if he lead not a
 right life, his faith will avail nothing towards his salvation" (*Homilies on
 John* 31).
 
-Chrysostom's argument is written out as starting points, a step and a conclusion
-(`chrysostomLine`). Its starting points are two texts every reader here accepts.
-The step from them to "faith does not suffice" is his. Three things are checked.
+Chrysostom starts from two texts every reader here accepts, and the step from
+them to "faith does not suffice" is his own (`chrysostomLine`). Three results
+follow from that:
 
 - Granted his step, his conclusion follows
   (`chrysostom_reads_john3_36_against_faith_alone`).
@@ -506,7 +505,7 @@ theorem chrysostomOnJohn_is_satisfiable : Satisfiable chrysostomOnJohn.premises 
 
 /-- **The wording of John 3:36 and Matthew 7:21 leaves open whether faith
 suffices.** One consistent reading holds both texts and that faith suffices: the
-Reformed one, on which not obeying the Son is refusing to believe him. Another
+Reformed one, on which not obeying the Son is refusing to believe Him. Another
 holds both texts and that faith does not suffice: Chrysostom's and Aquinas's.
 
 Neither side can settle the question by pointing at the
@@ -573,9 +572,9 @@ and lively faith" (XVI.2), and the sanctification of the justified is distinct
 from their justification (XIII.1, XI.1). So, read whole, John 3:36 says what its
 first half says in terms: "Whoever believes in the Son has eternal life."
 
-The reading is written out as a line of its own (`sanctificationLine`), and heard
-in the main debate as the Reformed answer to Chrysostom. It is rated `disputed`.
-Chrysostom accepts both texts and reads them the other way, and so does a modern
+The main debate hears this reading as the Reformed answer to Chrysostom
+(`sanctificationLine`). It is rated `disputed`, because Chrysostom accepts both
+texts and reads them the other way, and so does a modern
 reader: Stanley holds that "Endurance is a condition for final salvation", and
 reads Matthew 7:21 as making doing the Father's will a condition and not only its
 evidence. The commentaries above were read through their e-book editions, so
