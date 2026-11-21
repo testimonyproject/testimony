@@ -314,4 +314,64 @@ declare_bundle anEarlyShift in TwoMeetings.finite where
     "That is moving the goalposts: changing what is defended once it has been " ++
     "answered. It is set out here to be answered by *The second minutes*."
 
+/-! ### Ignoring the rebuttal
+
+The minutes answer the clock. The clock then sets out its position again, with
+the same conclusion, and does not defeat the minutes: it ignores the rebuttal,
+and the minutes answer it again. -/
+
+/-- **A rebuttal ignored**, set out and answered. -/
+declare_bundle anIgnoredRebuttal in finite where
+  /-- The clock says the meeting ran two hours. -/
+  turn Party.clock
+  /-- The minutes answer it. -/
+  turn Party.minutes answers Party.clock
+  /-- The clock says it again. -/
+  turn Party.clock ignores Party.clock
+  /-- The minutes answer it again. -/
+  turn Party.minutes answers Party.clock
+
+/-- The restating turn is charged with ignoring the rebuttal. -/
+theorem anIgnoredRebuttal_charges :
+    anIgnoredRebuttal.turns.map (·.charges) = [[], [], ["ignoring the rebuttal"], []] := rfl
+
+/-! **The same turn, told as a plain restatement**, is refused. -/
+
+/--
+error: declare_bundle: a turn said to restate an earlier one leaves standing a turn that defeated
+that position, or a turn said to ignore a rebuttal leaves none standing. Restated
+without an answer, a defeated position ignores the rebuttal: say `ignores`, and
+answer it in a later turn. A restatement that defeats every rebuttal says `restates`.
+-/
+#guard_msgs in
+/-- Not an exchange a bundle may tell. -/
+declare_bundle aRebuttalPassedOver in finite where
+  /-- The clock. -/
+  turn Party.clock
+  /-- The minutes answer it. -/
+  turn Party.minutes answers Party.clock
+  /-- The clock, said only to restate itself. -/
+  turn Party.clock restates Party.clock
+
+/-- The clock, answered by the minutes, then told again under `r`. -/
+def rebutted (r : Relation Party) : List (Turn Party) :=
+  [{ party := .clock }, { party := .minutes, relation := .answers .clock },
+    { party := .clock, relation := r }]
+
+/-- **A restatement that defeats its rebuttal** is let through, and one said to
+ignore a rebuttal where it defeats every one is refused: here under a table in
+which every party defeats every other. -/
+theorem restating_meets_the_rebuttal :
+    Turn.rebuttalsMet (fun _ _ => true) (rebutted (.restates .clock)) = true ∧
+      Turn.rebuttalsMet (fun _ _ => true) (rebutted (.ignores .clock)) = false := by
+  decide
+
+-- On the page, the turn names the rebuttal it leaves standing.
+#guard String.join ((Page.Exchange.connective (anIgnoredRebuttal.view.turns[2]?.getD
+    { party := "", doc := "" })).map (Markdown.seg [])) ==
+  "This sets out the position of *By the clock* again, with the same conclusion, but it " ++
+    "does not defeat *By the minutes*, which defeated that position. That is ignoring " ++
+    "the rebuttal: restating a position without answering what defeated it. It is set " ++
+    "out here to be answered by *By the minutes*."
+
 end Testimony.Checks.BundleCases

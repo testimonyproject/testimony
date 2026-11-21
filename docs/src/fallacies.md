@@ -37,6 +37,7 @@ how they are spelled.
 | Double standard | does a party rest a claim on what its own rule refuses? | `ArgumentPackage.heldTo` | claims built |
 | Red herring | does a turn told as a reply share a claim, or a meaning, with what it replies to? | `evades` in a bundle | built |
 | Moving the goalposts | after a position is answered, does its next turn defend another conclusion as the same? | `shifts` in a bundle | built |
+| Ignoring the rebuttal | does a turn restate a defeated position without defeating what defeated it? | `ignores` in a bundle | built |
 
 The checks for a non sequitur and an indefensible claim work on whole positions rather than
 single moves. A non sequitur is shown by a **countermodel**: a way of taking every premise as
@@ -53,6 +54,9 @@ Moving the goalposts is checked the same way. A turn told as setting out an answ
 again must conclude what that position concluded. If it concludes something else, it has moved
 the goalposts, and the bundle must say so and answer it, unless the turn gives the first
 conclusion up and says it does.
+A turn that sets out a position again, with the same conclusion, must also defeat every
+earlier turn that defeated it. If it leaves one standing, it ignores the rebuttal, and the
+bundle must say so and answer it.
 
 None of the move checks returns a bare "fallacy". Each says which premise, stated or not, the
 move's weight falls on, and the begging and straw-man checks also name which of the library's

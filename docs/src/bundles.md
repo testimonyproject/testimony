@@ -20,6 +20,8 @@ stands to a turn before it:
 - it **concedes** to that turn: it concludes something else, and says it gives the first up;
 - it **shifts** from that turn: told as the same position once that turn has been answered, it
   concludes something else, which is moving the goalposts.
+- it **ignores** a rebuttal of that turn: it sets out the same position again, and does not
+  defeat a turn that defeated it.
 
 A turn with none of these simply enters the exchange.
 
@@ -97,6 +99,12 @@ in a later turn. If the turn gives the earlier conclusion up, say `concedes`.
 ```
 
 On the page, a shift names both conclusions and the turn that answered the first.
+
+A restatement has a condition of its own. Once a turn has defeated a position, setting the
+position out again answers nothing unless the new turn defeats that rebuttal. So a turn that
+**restates** must defeat every earlier turn that defeated the position. One that leaves a
+rebuttal standing **ignores** it, which is ignoring the rebuttal: the author says so, a later
+turn must answer it, and the page names the rebuttal left standing.
 
 ## On the page
 

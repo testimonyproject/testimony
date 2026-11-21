@@ -275,8 +275,8 @@ structure ExchangeTurn where
   /-- What the page says of the turn. -/
   doc : String
   /-- How it stands to an earlier turn: `answers`, `meets`, `standsApart`,
-  `responds`, `evades`, `restates`, `concedes`, `shifts`, or empty when it only
-  enters. -/
+  `responds`, `evades`, `restates`, `concedes`, `shifts`, `ignores`, or empty
+  when it only enters. -/
   relation : String := ""
   /-- The earlier turn's party, by its package's name; empty if none. -/
   target : String := ""
@@ -293,6 +293,9 @@ structure ExchangeTurn where
   /-- The party of the first earlier turn that answers the earlier turn named;
   empty if none. -/
   answeredEarlierBy : String := ""
+  /-- The parties of the earlier turns that defeated the position the turn sets
+  out again, and that it does not defeat in return. -/
+  leftStanding : List String := []
 deriving Repr
 
 /-- An exchange, as a page shows it: its turns in order, and every pair of the
@@ -333,6 +336,15 @@ def connective (t : ExchangeTurn) : List Seg :=
   | "restates" =>
     [.text "This sets out the position of ", .party t.target,
       .text " again, with the same conclusion."]
+  | "ignores" =>
+    let names := (t.leftStanding.map Seg.party).intersperse (.text " and ")
+    [.text "This sets out the position of ", .party t.target,
+      .text " again, with the same conclusion, but it does not defeat "] ++ names ++
+      [.text (", which defeated that position. That is ignoring the rebuttal: " ++
+        "restating a position without answering what defeated it. It is set out here " ++
+        "to be answered")] ++
+      (if t.answeredBy.isEmpty then [.text "."]
+       else [.text " by ", .party t.answeredBy, .text "."])
   | "concedes" =>
     [.text "This gives up what ", .party t.target, .text (" concluded (" ++
       t.targetConcludes ++ "), and says so. It concludes instead: " ++ t.concludes ++ ".")]

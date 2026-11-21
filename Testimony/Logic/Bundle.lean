@@ -27,7 +27,11 @@ may say how it stands to a turn before it:
 - it **concedes** to that turn: it concludes something else, and says it gives
   the earlier conclusion up;
 - it **shifts** from that turn: told as the same position after that turn was
-  answered, it concludes something else. That is moving the goalposts.
+  answered, it concludes something else. That is moving the goalposts;
+- it **ignores** a rebuttal of that turn: it sets out the same position again,
+  with the same conclusion, and does not defeat a turn that defeated it. That is
+  ignoring the rebuttal. A turn that restates must defeat every earlier turn
+  that defeated the position it restates.
 
 Every stated relation is checked against the dispute's defeats, as the solver
 computes them (`Testimony.Logic.Solver.Finite`). So the words that join the
@@ -45,8 +49,9 @@ and a red herring are told only where it finds none.
 A turn may quote a line of reason. If that line declares a fallacy it commits
 (`Testimony.Semantics.Finding`), a later turn must answer the turn that quotes
 it: a fallacy is set out in a bundle only to be answered there. A turn that
-evades is a red herring of its own, and a turn that shifts moves the goalposts:
-each must be answered in the same way.
+evades is a red herring of its own, a turn that shifts moves the goalposts, and
+a turn that ignores a rebuttal leaves it standing: each must be answered in the
+same way.
 
 A bundle decides only what the dispute decides: it is the dispute's defeats, put
 in an order and told. A turn with no relation simply enters the exchange.
@@ -115,6 +120,9 @@ inductive Relation (ι : Type)
   /-- Moving the goalposts: told as the earlier position after it was answered,
   but concluding something else. -/
   | shifts (earlier : ι)
+  /-- Ignoring the rebuttal: the earlier position again, with the same
+  conclusion, leaving standing a turn that defeated it. -/
+  | ignores (earlier : ι)
 deriving DecidableEq, Repr
 
 namespace Relation
@@ -123,24 +131,25 @@ namespace Relation
 def target? : Relation ι → Option ι
   | .enters => none
   | .answers j | .meets j | .standsApart j | .responds j | .evades j
-  | .restates j | .concedes j | .shifts j => some j
+  | .restates j | .concedes j | .shifts j | .ignores j => some j
 
 /-- The fallacy the relation itself names, if any. -/
 def charge? : Relation ι → Option String
   | .evades _ => some "red herring"
   | .shifts _ => some "moving the goalposts"
+  | .ignores _ => some "ignoring the rebuttal"
   | _ => none
 
 /-- **What the relation claims**, of party `i`, under the defeat relation `R`. -/
 def Holds (R : ι → ι → Prop) (i : ι) : Relation ι → Prop
-  | .enters | .restates _ | .concedes _ | .shifts _ => True
+  | .enters | .restates _ | .concedes _ | .shifts _ | .ignores _ => True
   | .answers j => R i j ∧ ¬ R j i
   | .meets j => R i j ∧ R j i
   | .standsApart j | .responds j | .evades j => ¬ R i j ∧ ¬ R j i
 
 /-- The same, computed from a Boolean defeat table. -/
 def check (d : ι → ι → Bool) (i : ι) : Relation ι → Bool
-  | .enters | .restates _ | .concedes _ | .shifts _ => true
+  | .enters | .restates _ | .concedes _ | .shifts _ | .ignores _ => true
   | .answers j => d i j && !d j i
   | .meets j => d i j && d j i
   | .standsApart j | .responds j | .evades j => !d i j && !d j i
@@ -153,14 +162,14 @@ else. Every other relation passes. -/
 def relevant (s c : ι → ι → Bool) (i : ι) : Relation ι → Bool
   | .responds j => s i j
   | .evades j => !s i j
-  | .restates j => c i j
+  | .restates j | .ignores j => c i j
   | .concedes j | .shifts j => !c i j
   | _ => true
 
 /-- What the computation says, the relation holds. -/
 theorem holds_of_check {R : ι → ι → Prop} (F : Solver.Finite R) {i : ι} :
     ∀ {r : Relation ι}, check F.defeats i r = true → Holds R i r
-  | .enters, _ | .restates _, _ | .concedes _, _ | .shifts _, _ => trivial
+  | .enters, _ | .restates _, _ | .concedes _, _ | .shifts _, _ | .ignores _, _ => trivial
   | .answers j, h => by
     simp only [check, Bool.and_eq_true, Bool.not_eq_true'] at h
     exact ⟨(F.spec i j).2 h.1, fun hji => by simp [(F.spec j i).1 hji] at h⟩
@@ -233,6 +242,28 @@ where
         | _ => answered
       ok && go answered ts
 
+/-- The earlier turns that defeated the position a turn sets out again, and
+that the turn does not defeat in return, under the defeat table `d`. -/
+def leftStanding (d : ι → ι → Bool) (t : Turn ι) (earlier : List (Turn ι)) (j : ι) :
+    List (Turn ι) :=
+  earlier.filter fun e => d e.party j && !d t.party e.party
+
+/-- Whether every restatement defeats each earlier turn that defeated the
+position it restates, and every turn said to ignore a rebuttal leaves one
+standing. -/
+def rebuttalsMet (d : ι → ι → Bool) : List (Turn ι) → Bool :=
+  go []
+where
+  /-- With the turns already told, latest first. -/
+  go (earlier : List (Turn ι)) : List (Turn ι) → Bool
+    | [] => true
+    | t :: ts =>
+      let ok := match t.relation with
+        | .restates j => (leftStanding d t earlier j).isEmpty
+        | .ignores j => !(leftStanding d t earlier j).isEmpty
+        | _ => true
+      ok && go (t :: earlier) ts
+
 /-- Whether every turn that sets out a fallacy is answered by a later turn. -/
 def answered : List (Turn ι) → Bool
   | [] => true
@@ -268,6 +299,9 @@ structure Bundle [DecidableEq ι] (R : ι → ι → Prop) where
   /-- The dispute in the solver's form, from which the page states how every
   pair of the turns' parties stands. -/
   finite : Solver.Finite R
+  /-- Each restatement defeats every earlier turn that defeated the position,
+  and each turn said to ignore a rebuttal leaves one standing. -/
+  rebuttals : Turn.rebuttalsMet finite.defeats turns = true
 
 namespace Bundle
 
@@ -280,7 +314,8 @@ def ofFinite (F : Solver.Finite R) (shares same : ι → ι → Bool) (doc : Str
     (ordered : Turn.ordered turns = true) (answered : Turn.answered turns = true)
     (checked : turns.all (fun t => t.relation.check F.defeats t.party) = true)
     (relevant : turns.all (fun t => t.relation.relevant shares same t.party) = true)
-    (shiftsAnswered : Turn.shiftsAnswered turns = true) :
+    (shiftsAnswered : Turn.shiftsAnswered turns = true)
+    (rebuttals : Turn.rebuttalsMet F.defeats turns = true) :
     Bundle R where
   doc := doc
   turns := turns
@@ -292,6 +327,7 @@ def ofFinite (F : Solver.Finite R) (shares same : ι → ι → Bool) (doc : Str
   same := same
   relevant := relevant
   shiftsAnswered := shiftsAnswered
+  rebuttals := rebuttals
 
 /-- Which parties share a claim, or a meaning, in the dispute whose solver form
 is given: `Dispute.shares`. -/
@@ -326,6 +362,7 @@ def view (b : Bundle R) : Page.Exchange :=
       | .restates j => ("restates", nameOf j)
       | .concedes j => ("concedes", nameOf j)
       | .shifts j => ("shifts", nameOf j)
+      | .ignores j => ("ignores", nameOf j)
     let concludesOf (j : ι) : String :=
       ((b.turns.find? (·.party == j)).map (·.concludes)).getD ""
     let earlier := b.turns.take (b.turns.length - later.length - 1)
@@ -333,6 +370,8 @@ def view (b : Bundle R) : Page.Exchange :=
       concludes := t.concludes, targetConcludes := (t.relation.target?.map concludesOf).getD "",
       answeredEarlierBy := (t.relation.target?.bind fun j =>
         (earlier.find? (·.relation == .answers j)).map (·.name)).getD "",
+      leftStanding := (t.relation.target?.map fun j =>
+        (Turn.leftStanding b.finite.defeats t earlier j).map (·.name)).getD [],
       quoting := t.quoting.getD "", findings := t.findings,
       answeredBy := ((later.find? (·.relation == .answers t.party)).map (·.name)).getD "" }
   let ps := b.parties
@@ -354,7 +393,7 @@ open Lean Elab Command
 /-- How a turn stands to an earlier one, as written. -/
 syntax bundleRel :=
   (&"answers" <|> &"meets" <|> &"standsApart" <|> &"responds" <|> &"evades" <|>
-    &"restates" <|> &"concedes" <|> &"shifts") term:max
+    &"restates" <|> &"concedes" <|> &"shifts" <|> &"ignores") term:max
 
 /-- One turn, as written: its docstring, its party, how it stands to an earlier
 turn, and the line of reason it quotes. -/
@@ -363,11 +402,11 @@ syntax bundleTurn := (docComment)? &"turn " term:max (bundleRel)? (&"quoting" id
 /-- `declare_bundle B in F where`, then its turns: the exchange `B`, a `Bundle`,
 whose relations are checked against `F : Solver.Finite R`, the dispute in the
 solver's form (`D.finite`). Each turn is `turn p`, then optionally `answers q`,
-`meets q`, `standsApart q`, `responds q`, `evades q`, `restates q`, `concedes q`
-or `shifts q` for a party `q` of an earlier turn, and `quoting l` for a line of
-reason `l`. Its docstring is what the page says of it. A turn that evades or
-shifts, or that quotes a line declaring a fallacy (`l.expected`), must be
-answered by a later turn. -/
+`meets q`, `standsApart q`, `responds q`, `evades q`, `restates q`, `concedes q`,
+`shifts q` or `ignores q` for a party `q` of an earlier turn, and `quoting l` for
+a line of reason `l`. Its docstring is what the page says of it. A turn that
+evades, shifts or ignores a rebuttal, or that quotes a line declaring a fallacy
+(`l.expected`), must be answered by a later turn. -/
 syntax (name := bundleCmd) (docComment)? "declare_bundle " ident &" in " term:max &" where"
   withPosition((ppLine colGe bundleTurn)+) : command
 
@@ -424,6 +463,7 @@ elab_rules : command
             | `(bundleRel| restates $q) => `(Relation.restates $q)
             | `(bundleRel| concedes $q) => `(Relation.concedes $q)
             | `(bundleRel| shifts $q) => `(Relation.shifts $q)
+            | `(bundleRel| ignores $q) => `(Relation.ignores $q)
             | _ => throwErrorAt r "declare_bundle: unknown relation"
         let (quoting, findings) ← match l? with
           | none => pure ((← `(none)), (← `([])))
@@ -458,8 +498,10 @@ elab_rules : command
           | `(bundleRel| restates $q) => pure ("restate", q)
           | `(bundleRel| concedes $q) => pure ("concede to", q)
           | `(bundleRel| shifts $q) => pure ("shift from", q)
+          | `(bundleRel| ignores $q) => pure ("ignore a rebuttal of", q)
           | _ => throwErrorAt r "declare_bundle: unknown relation"
-        if word == "restate" || word == "concede to" || word == "shift from" then
+        if word == "restate" || word == "concede to" || word == "shift from" ||
+            word == "ignore a rebuttal of" then
           if dispute?.isNone then
             throwErrorAt r "declare_bundle: what a position concludes is read from the \
               dispute's packages, so the bundle must be declared over a dispute's solver form"
@@ -469,9 +511,13 @@ elab_rules : command
               concludes something else.\nTold as the same position, that is moving the \
               goalposts: say `shifts`, and answer it\nin a later turn. If the turn gives \
               the earlier conclusion up, say `concedes`."
-          if word != "restate" && same then
+          if (word == "concede to" || word == "shift from") && same then
             throwErrorAt r m!"declare_bundle: a turn said to {word} an earlier turn \
               concludes the same.\nIt sets out the same position again: say `restates`."
+          if word == "ignore a rebuttal of" && !same then
+            throwErrorAt r m!"declare_bundle: a turn said to ignore a rebuttal of an \
+              earlier turn concludes something else.\nIt is not the same position: \
+              say `shifts` or `concedes`."
           continue
         let pq ← evalBool (← `(Solver.Finite.defeats $f $p $q))
         let qp ← evalBool (← `(Solver.Finite.defeats $f $q $p))
@@ -504,6 +550,12 @@ elab_rules : command
       | _ => pure ()
     unless ← evalBool (← `(Turn.ordered [$terms,*])) do
       throwError "declare_bundle: a turn is said to stand to a party no earlier turn sets out"
+    unless ← evalBool (← `(Turn.rebuttalsMet (Solver.Finite.defeats $f) [$terms,*])) do
+      throwError m!"declare_bundle: a turn said to restate an earlier one leaves standing \
+        a turn that defeated\nthat position, or a turn said to ignore a rebuttal leaves \
+        none standing. Restated\nwithout an answer, a defeated position ignores the \
+        rebuttal: say `ignores`, and\nanswer it in a later turn. A restatement that \
+        defeats every rebuttal says `restates`."
     unless ← evalBool (← `(Turn.shiftsAnswered [$terms,*])) do
       throwError m!"declare_bundle: a turn shifts from a position no earlier turn \
         answers.\nThe goalposts move only once a position has been answered: say \
@@ -517,7 +569,7 @@ elab_rules : command
     let same ← if dispute?.isSome then `(Bundle.sameOf $f) else `(fun _ _ => true)
     let cmd ← `($[$doc?]? def $b := Bundle.ofFinite $f $shares $same $bdoc [$terms,*]
       (by decide +kernel) (by decide +kernel) (by decide +kernel) (by decide +kernel)
-      (by decide +kernel))
+      (by decide +kernel) (by decide +kernel))
     elabCommand cmd
 
 end Testimony.Logic.BundleCmd
