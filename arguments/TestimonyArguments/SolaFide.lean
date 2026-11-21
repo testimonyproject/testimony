@@ -91,7 +91,7 @@ The Reformed case reaches "through faith" by four routes, called *strands*:
 
 - **Paul**, answering the teachers in Galatia: "a person is not justified by
   works of the law but through faith in Jesus Christ" (Galatians 2:16).
-- **Jesus, in Luke**, to the woman who anointed his feet: "your faith has saved
+- **Jesus, in Luke**, to the woman who anointed His feet: "your faith has saved
   you; go in peace" (Luke 7:50).
 - **Peter, in Acts**, at the Jerusalem council: "we believe that we will be
   saved through the grace of the Lord Jesus, just as they will" (Acts 15:11).
@@ -119,7 +119,7 @@ chapters keep separate: what justification *is*. Three answers are heard.
 - **Trent's answer** is that justification is "not remission of sins merely,
   but also the sanctification and renewal of the inward man".
 - **The Finnish reading of Luther** (Mannermaa and his school) is that in faith
-  Christ himself is present in the believer, so justification is not a verdict
+  Christ Himself is present in the believer, so justification is not a verdict
   *and nothing more*.
 
 The Reformed case with the Finnish denial added, that justification is not only
@@ -211,7 +211,7 @@ Each later chapter takes one question a reader brings to this debate.
   neither is Luke's "faith suffices". Campbell, Sanders and Dunn, Jervell, and
   Aquinas each still stand against one strand, and Chrysostom against all four
   ("Weighing the positions").
-- **What does Jesus himself say?** The tax collector "went down to his house
+- **What does Jesus Himself say?** The tax collector "went down to his house
   justified" (Luke 18:14). Trent's case is consistent with every word of the
   parable, and meets it where it meets Luke 7:50. Matthew 7:21–23 and 19:16–22
   are each read both ways, and neither settles its question alone ("What Jesus'

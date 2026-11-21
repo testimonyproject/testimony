@@ -61,7 +61,7 @@ so the two cannot be held together, and neither defeats the other outright.
 
 ### Taken as a claim about what God does
 
-On this reading the definition says that when God justifies he also renews:
+On this reading the definition says that when God justifies He also renews:
 pardon and renewal given together, "not to be separated", as the *Joint
 Declaration* (§22) confesses. No argument about the word reaches it. It can be
 held with everything the argument from usage says about "justify", and Calvin
@@ -84,16 +84,16 @@ from Galatians and from Romans 4, and each has to be answered
 both start from the courtroom sense of the verb, so a reader who denies that
 sense denies both.
 
-The two are put together and checked in one result
-(`whatTrentsDefinitionClaims`). Each way of taking the definition is fair, since
+Put together, the two ways come to this (`whatTrentsDefinitionClaims`). Each way
+of taking the definition is fair, since
 Trent read either way can still be held without contradiction, and each is
 answered. The first cannot be held with the arguments about Paul's word: it
 meets them three times, each at the same step, rated `disputed`. The second is
 untouched by anything about the word, and conflicts with Paul's gospel and with
 Romans 4, each time at a step
 rated `disputed`. So a reader who grants that step rejects the definition taken
-that way, and a reader who denies it need not. Which way Trent means it is not
-something this chapter decides.
+that way, and a reader who denies it need not. This chapter does not decide
+which way Trent means it.
 
 One premise, that Paul has his own words for renewal
 (`paulNamesRenewalOtherwise`), is cited to Scripture alone: it says what the
@@ -122,7 +122,7 @@ This follows from three things: the verb is a courtroom word; Paul has other
 words for renewal; and a word contributes the least meaning its context
 requires.
 
-It does not claim anything about what God does when he justifies. It is
+It does not claim anything about what God does when He justifies. It is
 a result about a word. -/
 @[headline]
 theorem lexicalCase_establishes : Establishes lexicalCase := by
@@ -216,10 +216,10 @@ def fitzmyerOnTheAdjective : Source :=
 verb "justify" (δικαιόω). It says the many "will be made righteous" (δίκαιοι
 κατασταθήσονται), with the adjective "righteous" (δίκαιος). Fitzmyer's road
 needs what the adjective means there to be what the verb means in Paul. That
-is a reading in its own right, and it is the one Ziesler denies, so it stands
-here as a line of its own, which a reader can reject without rejecting the
-verse. The word-shift check (`Testimony.Semantics.Fallacy`) finds the move from
-the adjective to the verb granted, because this line states it. -/
+is a reading in its own right, and Ziesler denies it, so a reader can reject it
+without rejecting the verse. Because the reading is stated, the word-shift check
+finds the move from the adjective to the verb granted
+(`Testimony.Semantics.Fallacy`). -/
 @[solaFideDefs]
 def fitzmyerBridgeLine : Line Claim :=
   { name := "Romans 5:19's adjective bears on Paul's verb (Fitzmyer)"
@@ -243,8 +243,8 @@ def fitzmyerOnRomansFiveNineteen : Source :=
 many will be made righteous." So, Fitzmyer argues, Paul's "justify" carries an
 effective sense: God's declaration makes the sinner upright. This is Trent's
 reading of the word on a modern Catholic exegete's ground, the Greek of
-Romans, rather than on the Latin. It rests on two readings, each its own line
-so that a reader can deny it: that "made righteous" there means made righteous
+Romans, rather than on the Latin. It rests on two readings, each argued
+separately so that a reader can deny either: that "made righteous" there means made righteous
 within (`inwardSenseLine`), and that the verse's adjective bears on the verb
 (`fitzmyerBridgeLine`). Neither is among this line's grounds, which a burden
 takes as granted. -/
@@ -268,10 +268,10 @@ def kertelgeOnTheVerdictItself : Source :=
   , tradition := .romanCatholic
   , confidence := .disputed }
 
-/-- **God's verdict is effective.** When God declares a sinner righteous, his word
-does what it says, and the sinner is made righteous. Kertelge's claim, as
-Fitzmyer reports it. It is a claim about what God's declaration does, held as a
-line of its own so that a reader can deny it, as Calvin does. -/
+/-- **God's verdict is effective.** When God declares a sinner righteous, His word
+does what it says, and the sinner is made righteous. The claim is Kertelge's, as
+Fitzmyer reports it, and it is about what God's declaration does. Calvin denies
+it. -/
 @[solaFideDefs]
 def kertelgeVerdictLine : Line Claim :=
   { name := "God's verdict is effective (Kertelge, via Fitzmyer)"
@@ -339,7 +339,7 @@ def hodgeOnRomansFiveNineteen : Source :=
 to make a person other in nature than he was. So the many are set in the rank of
 the righteous on the ground of Christ's obedience, as by Adam's disobedience
 they were set in the rank of sinners. "Made righteous" here is a standing, not a
-renewal. The Reformed answer to the first of Fitzmyer's readings. -/
+renewal. This is the Reformed answer to the first of Fitzmyer's readings. -/
 @[solaFideDefs]
 def hodgeVerseLine : Line Claim :=
   { name := "Romans 5:19, 'made righteous' as constituted righteous (Hodge, Calvin)"
@@ -360,8 +360,9 @@ def zieslerOnTheAdjective : Source :=
 
 /-- **The adjective is not the verb.** Romans 5:19 says the many will be
 "righteous" (δίκαιοι). It does not say they will be "justified". So whatever the
-adjective means there, it does not settle what the verb means. Ziesler's answer
-to the second of Fitzmyer's readings, made by a reader who grants the first. -/
+adjective means there, it does not settle what the verb means. This is
+Ziesler's answer to the second of Fitzmyer's readings, and Ziesler grants the
+first. -/
 @[solaFideDefs]
 def zieslerAdjectiveLine : Line Claim :=
   { name := "Romans 5:19's adjective does not settle the verb (Ziesler)"
@@ -371,7 +372,7 @@ def zieslerAdjectiveLine : Line Claim :=
   , inference := some zieslerOnTheAdjective }
 
 /-- Calvin's answer to the effective verdict, rated `disputed`, because Kertelge,
-as Fitzmyer reports him, grants that God renews whom he justifies and holds the
+as Fitzmyer reports him, grants that God renews whom He justifies and holds the
 verdict itself effective. Calvin, against Osiander: "as Christ cannot be divided
 into parts, so the two things, justification and sanctification, which we
 perceive to be united together in him, are inseparable." "But if the brightness
@@ -392,8 +393,8 @@ starting point: "whomsoever, therefore, God receives into his favor, he presents
 with the Spirit of adoption, whose agency forms them anew into his image"
 (*Institutes* III.xi.6). He denies that the verdict does the renewing. Light and
 heat come together from the sun, and still the earth is not warmed by the
-light. So God renews those he justifies, and his verdict is not what renews
-them. The Reformed answer to Kertelge's road, at its first step. -/
+light. So God renews those He justifies, and His verdict is not what renews
+them. This is the Reformed answer to Kertelge's road, at its first step. -/
 @[solaFideDefs]
 def calvinVerdictLine : Line Claim :=
   { name := "The renewal comes with the verdict, not from it (Calvin)"
@@ -467,10 +468,9 @@ of the word rests on Augustine's explanation, as the Latin West received it. A
 modern Catholic exegete gives it two more roads, each from the Greek and not the
 Latin. Joseph Fitzmyer argues from Romans 5:19, "the many will be made
 righteous", and Karl Kertelge, whom Fitzmyer quotes, from God's verdict: it
-does what it says (*Romans*, 118–19). This is Trent taken that way, with both
-roads added (`modernCatholicWordRoads`). It is the position the debate over
-sola fide hears as Trent on Paul's word, so that the debate meets the reading
-as strongly as its cited readers put it. -/
+does what it says (*Romans*, 118–19). The debate over sola fide hears Trent on
+Paul's word with both roads added (`modernCatholicWordRoads`), so that it meets
+the reading as strongly as its cited readers put it. -/
 @[solaFideDefs]
 def tridentineOnPaulsWordAtItsStrongest : ArgumentPackage Claim :=
   { tridentineOnPaulsWord with
@@ -498,9 +498,9 @@ argument from how the word is used (`lexicalCase`), with the Reformed answer to
 each reading the two Catholic roads from the Greek rest on: Hodge's reading of
 Romans 5:19 as a standing, Ziesler's that its adjective does not settle the verb,
 and Calvin's that the renewal comes with the verdict and not from it
-(`reformedAnswersFromTheGreek`). It is the position the debate over sola fide
-hears as the argument from Paul's word, so that Trent's reading at its strongest
-meets the Reformed reading at its strongest. -/
+(`reformedAnswersFromTheGreek`). The debate over sola fide hears the argument
+from Paul's word in this form, so that Trent's reading at its strongest meets the
+Reformed reading at its strongest. -/
 @[solaFideDefs]
 def lexicalCaseAnsweringTheGreek : ArgumentPackage Claim :=
   { lexicalCase with
@@ -512,7 +512,7 @@ def lexicalCaseAnsweringTheGreek : ArgumentPackage Claim :=
 
 /-- The argument from Paul's word, with its answers, granted: the word does not
 mean renewal; "made righteous" in Romans 5:19 is a standing, and its adjective
-does not bear on the verb; God renews those he justifies, and his verdict is not
+does not bear on the verb; God renews those He justifies, and His verdict is not
 what renews them. -/
 def answeringTheGreekReading : Valuation Claim := fun a =>
   match a with
@@ -740,7 +740,7 @@ rests on ("being justified" as "being made righteous"); and against Romans 4
 read for the word. A reader who grants that step rejects the definition taken
 this way. A reader who denies it, as Trent does, need not.
 
-*Taken as a claim about what God does in justifying*, namely that he also
+*Taken as a claim about what God does in justifying*, namely that He also
 renews, nothing about the word reaches it: neither the argument from usage nor
 Romans 4 read for the word. It conflicts with Paul twice, each time at a step
 rated `disputed`: with his gospel in Galatians, at the step

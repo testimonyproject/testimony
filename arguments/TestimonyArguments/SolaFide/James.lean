@@ -339,7 +339,7 @@ unworthy servants who have done only their duty (Luke 17:10, XVI.5). To one who
 works, wages are counted as due, and to one who believes, as a gift (Romans
 4:4–5, XVI.5). And their sacrifices are acceptable to God through Jesus Christ
 (1 Peter 2:5, XVI.6). So God "is pleased to accept and reward" works accepted in
-his Son, and the reward is of grace, not merit (XVI.5, XVI.6). Rated `disputed`:
+His Son, and the reward is of grace, not merit (XVI.5, XVI.6). Rated `disputed`:
 Trent accepts these texts and holds the reward to be given to merits (Session
 VI, ch. 16, canon 32). -/
 def westminsterRewardSource : Source :=

@@ -2019,7 +2019,7 @@ def tridentineCite : Claim → AtomMeta
   | c => baseCite c
 
 /-- The Finnish reading of Luther: justification is not a verdict only, because
-Christ himself is present in faith and is the believer's righteousness.
+Christ Himself is present in faith and is the believer's righteousness.
 Everything else as in `reformedCite`. -/
 def finnishCite : Claim → AtomMeta
   | .justificationIsForensicOnly =>

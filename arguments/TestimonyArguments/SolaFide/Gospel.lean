@@ -22,8 +22,7 @@ Fifteen centuries later the Council of Trent defined justification this way:
 > "not remission of sins merely, but also the sanctification and renewal of the
 > inward man" (Session VI, ch. 7).
 
-Where exactly do Trent and Paul part? First, what Trent can accept; then the
-one step it denies; then what the checking found.
+Where exactly do Trent and Paul part?
 
 ### What Trent can accept
 
@@ -65,7 +64,7 @@ open Testimony Testimony.Logic
 
 /-! ### The gospel line holds together -/
 
-/-- Paul's gospel as this line reads it: every text true, Christ's work the whole
+/-- Paul's gospel as Moo and Westminster read it: every text true, Christ's work the whole
 ground, the verdict a courtroom one, and justification not the renewal of the
 inward person. -/
 def galatianGospelReading : Valuation Claim := fun a =>
@@ -117,7 +116,7 @@ def jointDeclarationReading : Valuation Claim := fun a =>
   | _ => True
 
 /-- **Trent can accept every text of the gospel line.** Nothing Trent holds denies
-that Christ died for our sins, that righteousness through the law would make his
+that Christ died for our sins, that righteousness through the law would make His
 death needless, or that another gospel is accursed. -/
 theorem trent_grants_the_gospel_texts :
     Grants tridentineCase
