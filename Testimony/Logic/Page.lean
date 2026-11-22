@@ -296,6 +296,10 @@ structure ExchangeTurn where
   /-- The parties of the earlier turns that defeated the position the turn sets
   out again, and that it does not defeat in return. -/
   leftStanding : List String := []
+  /-- The title of the work the turn comes from; empty if it names none. -/
+  source : String := ""
+  /-- That work's date, as the page writes it ("1547", "c. 390"); empty if none. -/
+  year : String := ""
 deriving Repr
 
 /-- An exchange, as a page shows it: its turns in order, and every pair of the

@@ -2,6 +2,7 @@ import Testimony.Logic.Declare
 import TestimonyArguments.SolaFide.Definition
 import TestimonyArguments.SolaFide.Johannine
 import Testimony.Logic.Because
+import Testimony.Logic.Bundle
 
 /-!
 # TestimonyArguments.SolaFide.Dispute — the positions weighed against each other
@@ -1141,6 +1142,67 @@ theorem apocalyptic_stands_with_sanders_and_jervell :
 theorem apocalyptic_stands_with_the_critics_and_jervell :
     solaFideDispute.StandTogether [.apocalyptic, .critics, .jervell] := by
   satisfied_by apocalypticCriticsJervellReading [Dispute.StandTogether, solaFideDefs]
+
+/-! ### Trent's definition, and the answers to it, in the order they came -/
+
+/-- The arguments from Paul's word, from usage and from Romans 4, share no claim
+with Trent as Trent states it, and no meaning that joins two of their claims. -/
+theorem the_word_arguments_share_nothing_with_trent :
+    solaFideDispute.shares .lexical .trent = false ∧
+      solaFideDispute.shares .romansOnTheWord .trent = false := by
+  decide +kernel
+
+/-- **Trent's definition, and the answers to it, in the order they were given.**
+In 1547 the Council of Trent defined justification as "not remission of sins
+merely, but also the sanctification and renewal of the inward man" (Session VI,
+ch. 7). A century later the Westminster Assembly answered from Paul's letter to
+the Galatians. In 1993 Joseph Fitzmyer gave Trent's reading of Paul's word two
+roads from the Greek, and scholars of word meaning answered on the word. Paul
+wrote long before any of them, so each turn is a later reader's reading, named
+with the work it comes from and that work's date.
+
+The arguments from Paul's word answer Trent only when Trent is read as a claim
+about that word. They share no claim with the definition as the council states
+it, and no meaning (`the_word_arguments_share_nothing_with_trent`), so told as
+replies to it they would change the subject, the fault called a red herring. The
+sentence after each turn, saying who defeats whom, is computed from the two
+positions' premises, whatever their dates. -/
+declare_bundle trentsDefinitionExchange in solaFideDispute.finite where
+  /-- The council defines justification as the renewal of the inward person, and
+  holds that the renewal grows as the justified do good works (ch. 10). So good
+  works increase justification (canon 24), and salvation is not apart from
+  works. -/
+  turn Party.trent from trentSessionVI
+  /-- The Westminster Confession denies the definition (XI.1), and reads
+  Galatians as Douglas Moo reads it today. The teachers Paul opposed added
+  circumcision to faith in Christ, and he called the addition a different gospel
+  (1:6–9). Read with the courtroom sense of "justify", Christ's work is the whole
+  ground of justification, so the renewal worked in us is no part of it. Trent
+  accepts every text and denies that nothing is added (canons 24, 32), so the
+  step is rated `disputed`. -/
+  turn Party.gospel meets Party.trent from westminsterConfession
+  /-- Read as a claim about Paul's word, Trent's definition says that "justify"
+  (δικαιόω) in Paul means renewal, as Augustine explained the Latin word: "what
+  else does the phrase 'being justified' signify than being made righteous" (*On
+  the Spirit and the Letter* 26.45). Joseph Fitzmyer, a Catholic exegete, gave
+  that reading two roads from the Greek: Romans 5:19, "the many will be made
+  righteous", and Karl Kertelge's verdict that does what it says (*Romans*,
+  118–19). So set out, Trent's conclusion defeats each position that defeated
+  the definition as the council states it. -/
+  turn Party.trentOnPaulsWord restates Party.trent from fitzmyerRomans
+  /-- Scholars of word meaning answer on the word. "Justify" is a courtroom word,
+  Paul has other words for renewal and sets them beside it (Titus 3:5–7;
+  1 Corinthians 6:11), and a word contributes the least meaning its context
+  requires (Joos, 1972; Silva). Hodge (1864) and Ziesler (1972) had already
+  answered the readings of Romans 5:19 that Fitzmyer relies on, and Calvin the
+  verdict that renews. The step to "and nothing more" is rated `disputed`,
+  because Trent grants where it starts and denies where it ends. -/
+  turn Party.lexical meets Party.trentOnPaulsWord from silvaBiblicalWords
+  /-- Douglas Moo reads Romans 4 the same way. Paul explains the righteousness
+  God counts to the ungodly as sin not counted (4:6–8), and by the same rule the
+  verb he explains that way does not also mean renewal. Augustine reads the
+  passage the other way, so this step too is rated `disputed`. -/
+  turn Party.romansOnTheWord meets Party.trentOnPaulsWord from mooRomans
 
 /-! ### What the dispute decides -/
 

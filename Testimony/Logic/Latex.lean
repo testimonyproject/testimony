@@ -917,7 +917,11 @@ def exchange (links : List Page.BecauseLink) (x : Page.Exchange) : String :=
       (if t.relation.isEmpty || t.findings.isEmpty then [] else [.text " "]) ++
       Page.Exchange.declared t)
     let after := (quoted ++ joined).trimAscii.toString
-    "\\paragraph{" ++ escape t.party ++ ".} " ++ prose t.doc ++
+    let from_ := if t.source.isEmpty then "" else
+      " (\\emph{" ++ escape t.source ++ "}" ++
+        (if t.year.isEmpty then "" else ", " ++ escape t.year) ++ ")"
+    "\\paragraph{" ++ escape t.party ++ from_ ++ ".}" ++ " " ++
+      prose t.doc ++
       (if after.isEmpty then "" else after ++ "\n\n")
   let ps := x.parties
   let table := if ps.length ≤ Page.Exchange.manyParties then "" else

@@ -91,6 +91,20 @@ Trent's Decree on Justification, used by the `tridentine` package. -/
   , place := some "Washington, DC"
   , totalVolumes := some 2 }
 
+/-- The Sixth Session of the Council of Trent, with its decree on justification and
+its canons, which dates what Trent decided on justification: the session was
+"celebrated on the thirteenth day of the month of January, 1547", as Waterworth's
+translation heads it (Hanover College transcription, read 2026-11-22). Cited
+through Tanner's edition. -/
+@[bib_entry] def trentSessionVI : BibEntry := .ancientWork
+  { core :=
+      { key := "trent-session-vi-1547"
+      , role := .authority
+      , contributors := { authors := [.corporate "Council of Trent"] }
+      , title := "The Sixth Session: Decree on Justification" }
+  , composed := some { value := 1547 }
+  , editionUsed := some "tanner-decrees-1990" }
+
 /-- Marshall's NIGTC commentary on Luke — a commentary on the Greek text, which
 is what an argument about the sense of σῴζω needs. -/
 @[bib_entry] def marshallLuke : BibEntry := .book
