@@ -13,7 +13,15 @@ stands to a turn before it:
 
 - it **answers** that turn: it defeats it, and is not defeated by it in return;
 - it **meets** that turn: each defeats the other, so neither gives way;
-- it **stands apart** from that turn: neither defeats the other.
+- it **stands apart** from that turn: neither defeats the other;
+- it **responds** to that turn: neither defeats the other, but the two share a claim;
+- it **evades** that turn: told as a reply, it shares no claim with it, a red herring.
+- it **restates** that turn: it sets out the same position again, with the same conclusion;
+- it **concedes** to that turn: it concludes something else, and says it gives the first up;
+- it **shifts** from that turn: told as the same position once that turn has been answered, it
+  concludes something else, which is moving the goalposts.
+- it **ignores** a rebuttal of that turn: it sets out the same position again, and does not
+  defeat a turn that defeated it.
 
 A turn with none of these simply enters the exchange.
 
@@ -33,7 +41,7 @@ the solver finds, and a bundle that says "answers" where the solver finds a stan
 build:
 
 ```text
-error: declare_bundle: a turn said to be one that meets an earlier turn, where the solver finds:
+error: declare_bundle: a turn said to meet an earlier turn, where the solver finds:
   Party.minutes defeats Party.clock
   Party.clock does not defeat Party.minutes
 Change what the bundle says, not the encoding.
@@ -51,6 +59,52 @@ A turn may quote a line of reason: `turn Party.clock quoting strawMan`. If that 
 fallacy it commits ([Declaring a fallacy where it is committed][declaring]), a later turn must
 answer the turn that quotes it. A fallacy is set out in a bundle only to be answered there, and
 a bundle that leaves one standing does not build.
+
+## A reply, and a red herring
+
+Two positions that neither defeats the other may still be about the same thing. A turn that
+**responds** to an earlier one says so: neither defeats the other, and the two share a claim, or
+a meaning that joins two of their claims, as "the meeting lasted an hour" and "the meeting
+lasted two hours" are joined by what *lasts* means. The build reads which claims each position
+rests on or delivers, and refuses a reply that shares none:
+
+```text
+error: declare_bundle: a turn said to reply to an earlier turn shares no claim with it,
+and no meaning. A reply on another subject is a red herring: say `evades`, and
+answer it in a later turn.
+```
+
+A reply that shares nothing with what it replies to is a red herring: it changes the subject.
+An author may set one out, as a debate sometimes has one, by writing that the turn **evades**
+the earlier one. The build then checks that the two really share nothing, and the turn is
+treated as a declared fallacy: a later turn must answer it. Where the solver finds a defeat, the
+two positions always share a claim, so a defeat is told as an answer or a meeting, never as a
+reply.
+
+## Moving the goalposts
+
+A position that has been answered sometimes comes back. If it comes back with the conclusion it
+had, the turn **restates** it. If it comes back concluding something else, and is still told as
+the same position, it has moved the goalposts: it changes what is defended once the first claim
+has been answered. An author sets that out by writing that the turn **shifts** from the earlier
+one. The build checks that the two conclusions differ and that some earlier turn answered the
+first, and a later turn must answer the shift. A turn that gives the first conclusion up, and
+says so, **concedes** instead, and nothing is charged. The build refuses a restatement whose
+conclusion has changed:
+
+```text
+error: declare_bundle: a turn said to restate an earlier turn concludes something else.
+Told as the same position, that is moving the goalposts: say `shifts`, and answer it
+in a later turn. If the turn gives the earlier conclusion up, say `concedes`.
+```
+
+On the page, a shift names both conclusions and the turn that answered the first.
+
+A restatement has a condition of its own. Once a turn has defeated a position, setting the
+position out again answers nothing unless the new turn defeats that rebuttal. So a turn that
+**restates** must defeat every earlier turn that defeated the position. One that leaves a
+rebuttal standing **ignores** it, which is ignoring the rebuttal: the author says so, a later
+turn must answer it, and the page names the rebuttal left standing.
 
 ## On the page
 
