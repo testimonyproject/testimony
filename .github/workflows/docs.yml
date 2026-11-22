@@ -90,3 +90,20 @@ jobs:
           path: docs/book
       - id: deployment
         uses: actions/deploy-pages@v4
+
+      # The custom domain lives in the repository's Pages settings, not in the
+      # deployed files: a deploy from Actions ignores docs/src/CNAME. If the
+      # setting is cleared, the deploy still succeeds, the site moves to
+      # testimonyproject.github.io/testimony/ and testimonyproject.info serves
+      # GitHub's 404, as happened on 21 November 2026. Fail here, so that a
+      # cleared setting turns this run red instead of passing unnoticed.
+      - name: Custom domain still set
+        env:
+          PAGE_URL: ${{ steps.deployment.outputs.page_url }}
+          EXPECTED: https://testimonyproject.info/
+        run: |
+          if [ "$PAGE_URL" != "$EXPECTED" ]; then
+            echo "::error::Pages deployed to $PAGE_URL, not $EXPECTED." \
+              "Set Settings > Pages > Custom domain to testimonyproject.info."
+            exit 1
+          fi
