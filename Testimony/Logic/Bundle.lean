@@ -53,6 +53,12 @@ evades is a red herring of its own, a turn that shifts moves the goalposts, and
 a turn that ignores a rebuttal leaves it standing: each must be answered in the
 same way.
 
+A turn may name a work its position cites (`from w`), and then it is dated by
+that work: the year it was composed, for a work cited through a later edition
+(`Testimony.Bib.BibEntry.dated`). Dated turns must come in the order of their
+dates, so an exchange is told as it happened, and a reply never comes before
+what it replies to.
+
 A bundle decides only what the dispute decides: it is the dispute's defeats, put
 in an order and told. A turn with no relation simply enters the exchange.
 -/
@@ -80,6 +86,21 @@ def Dispute.claims (d : Dispute α ι) (i : ι) : List α :=
 /-- Whether two parties share a claim, or a meaning that joins one of each. -/
 def Dispute.shares (d : Dispute α ι) (i j : ι) : Bool :=
   (d.claims i).any fun a => (d.claims j).any (touches a)
+
+/-- The keys of the works a party's position cites: for each claim it rests on or
+delivers, and for each of its inference steps, the source's principal reference
+and those it draws on. -/
+def Dispute.citedKeys (d : Dispute α ι) (i : ι) : List String :=
+  let sources := (d.claims i).map (fun a => ((d.node i).cite a).source) ++
+    (d.node i).inferences
+  sources.flatMap fun s => (s.primary :: s.supporting).filterMap fun r =>
+    r.entry.map (·.core.key)
+
+/-- Whether a party's position cites a work, or the edition the work is cited
+through. -/
+def Dispute.citesWork (d : Dispute α ι) (i : ι) (w : Testimony.Bib.BibEntry) : Bool :=
+  let keys := d.citedKeys i
+  keys.contains w.core.key || w.editionUsed.any keys.contains
 
 /-- Whether two formulas are written the same, part by part. Structural, so the
 kernel can decide it. -/
@@ -202,6 +223,9 @@ structure Turn (ι : Type) where
   findings : List String := []
   /-- What the party's position concludes, as its package names it. -/
   concludes : String := ""
+  /-- The work the turn comes from, which dates it: one the position cites, or a
+  work cited through an edition the position cites. -/
+  source : Option Testimony.Bib.BibEntry := none
 deriving Repr
 
 namespace Turn
@@ -210,6 +234,22 @@ namespace Turn
 the line it quotes declares. -/
 def charges (t : Turn ι) : List String :=
   t.relation.charge?.toList ++ t.findings
+
+/-- The year of the work the turn comes from, if it names one that is dated. -/
+def year (t : Turn ι) : Option Int := (t.source.bind (·.dated)).map (·.value)
+
+/-- Whether the turns that are dated come in the order of their dates. A reply
+can then name only a turn of the same date or earlier. -/
+def chronological : List (Turn ι) → Bool :=
+  go none
+where
+  /-- With the latest date so far. -/
+  go (latest : Option Int) : List (Turn ι) → Bool
+    | [] => true
+    | t :: ts => match t.year, latest with
+      | some y, some l => decide (l ≤ y) && go (some y) ts
+      | some y, none => go (some y) ts
+      | none, _ => go latest ts
 
 /-- Whether the turn sets out a fallacy, its own or the line's it quotes. -/
 def declares (t : Turn ι) : Bool := !t.charges.isEmpty
@@ -296,6 +336,13 @@ structure Bundle [DecidableEq ι] (R : ι → ι → Prop) where
   relevant : turns.all (fun t => t.relation.relevant shares same t.party) = true
   /-- Each shift comes after a turn that answers the position it shifts from. -/
   shiftsAnswered : Turn.shiftsAnswered turns = true
+  /-- Which works each party's position cites: `Dispute.citesWork`, when the
+  bundle is declared over a dispute. -/
+  cites : ι → Testimony.Bib.BibEntry → Bool
+  /-- Each turn that names the work it comes from names one its position cites. -/
+  sourced : turns.all (fun t => t.source.all (cites t.party)) = true
+  /-- The dated turns come in the order of their dates. -/
+  chronological : Turn.chronological turns = true
   /-- The dispute in the solver's form, from which the page states how every
   pair of the turns' parties stands. -/
   finite : Solver.Finite R
@@ -315,7 +362,10 @@ def ofFinite (F : Solver.Finite R) (shares same : ι → ι → Bool) (doc : Str
     (checked : turns.all (fun t => t.relation.check F.defeats t.party) = true)
     (relevant : turns.all (fun t => t.relation.relevant shares same t.party) = true)
     (shiftsAnswered : Turn.shiftsAnswered turns = true)
-    (rebuttals : Turn.rebuttalsMet F.defeats turns = true) :
+    (rebuttals : Turn.rebuttalsMet F.defeats turns = true)
+    (cites : ι → Testimony.Bib.BibEntry → Bool)
+    (sourced : turns.all (fun t => t.source.all (cites t.party)) = true)
+    (chronological : Turn.chronological turns = true) :
     Bundle R where
   doc := doc
   turns := turns
@@ -328,6 +378,9 @@ def ofFinite (F : Solver.Finite R) (shares same : ι → ι → Bool) (doc : Str
   relevant := relevant
   shiftsAnswered := shiftsAnswered
   rebuttals := rebuttals
+  cites := cites
+  sourced := sourced
+  chronological := chronological
 
 /-- Which parties share a claim, or a meaning, in the dispute whose solver form
 is given: `Dispute.shares`. -/
@@ -340,6 +393,12 @@ def sharesOf {α : Type} [HasPostulates α] [DecidableEq α] {d : Dispute α ι}
 def sameOf {α : Type} [HasPostulates α] [DecidableEq α] {d : Dispute α ι}
     (_ : Solver.Finite d.defeats) : ι → ι → Bool :=
   d.sameConclusion
+
+/-- Which works each party cites, in the dispute whose solver form is given:
+`Dispute.citesWork`. -/
+def citesOf {α : Type} [HasPostulates α] [DecidableEq α] {d : Dispute α ι}
+    (_ : Solver.Finite d.defeats) : ι → Testimony.Bib.BibEntry → Bool :=
+  d.citesWork
 
 /-- The parties the turns set out, in order, each once, with their names. -/
 def parties (b : Bundle R) : List (ι × String) :=
@@ -373,6 +432,10 @@ def view (b : Bundle R) : Page.Exchange :=
       leftStanding := (t.relation.target?.map fun j =>
         (Turn.leftStanding b.finite.defeats t earlier j).map (·.name)).getD [],
       quoting := t.quoting.getD "", findings := t.findings,
+      source := (t.source.map (·.core.title)).getD "",
+      year := (t.source.bind (·.dated)).map (fun y =>
+        (if y.approximate then "c. " else "") ++
+          (if y.value < 0 then toString (-y.value) ++ " BC" else toString y.value)) |>.getD "",
       answeredBy := ((later.find? (·.relation == .answers t.party)).map (·.name)).getD "" }
   let ps := b.parties
   let pairs := ps.zipIdx.flatMap fun ((i, a), k) =>
@@ -397,14 +460,17 @@ syntax bundleRel :=
 
 /-- One turn, as written: its docstring, its party, how it stands to an earlier
 turn, and the line of reason it quotes. -/
-syntax bundleTurn := (docComment)? &"turn " term:max (bundleRel)? (&"quoting" ident)?
+syntax bundleTurn :=
+  (docComment)? &"turn " term:max (bundleRel)? (&"quoting" ident)? (&"from" ident)?
 
 /-- `declare_bundle B in F where`, then its turns: the exchange `B`, a `Bundle`,
 whose relations are checked against `F : Solver.Finite R`, the dispute in the
 solver's form (`D.finite`). Each turn is `turn p`, then optionally `answers q`,
 `meets q`, `standsApart q`, `responds q`, `evades q`, `restates q`, `concedes q`,
-`shifts q` or `ignores q` for a party `q` of an earlier turn, and `quoting l` for
-a line of reason `l`. Its docstring is what the page says of it. A turn that
+`shifts q` or `ignores q` for a party `q` of an earlier turn, `quoting l` for
+a line of reason `l`, and `from w` for the work `w` the turn comes from, which
+its position must cite and which dates it: dated turns must come in date
+order. Its docstring is what the page says of it. A turn that
 evades, shifts or ignores a rebuttal, or that quotes a line declaring a fallacy
 (`l.expected`), must be answered by a later turn. -/
 syntax (name := bundleCmd) (docComment)? "declare_bundle " ident &" in " term:max &" where"
@@ -451,7 +517,7 @@ elab_rules : command
     let mut terms : Array Term := #[]
     for t in turns do
       match t with
-      | `(bundleTurn| $[$td?]? turn $p $[$r?]? $[quoting $l?]?) =>
+      | `(bundleTurn| $[$td?]? turn $p $[$r?]? $[quoting $l?]? $[from $w?]?) =>
         let rel ← match r? with
           | none => `(Relation.enters)
           | some r => match r with
@@ -478,8 +544,13 @@ elab_rules : command
         let docS := Syntax.mkStrLit (← text td?)
         let nameS := Syntax.mkStrLit (← nameOf p)
         let concS := Syntax.mkStrLit (← concludesOf p)
-        terms := terms.push (← `(Turn.mk $p $rel $nameS $docS $quoting $findings $concS))
-      | _ => throwErrorAt t "declare_bundle: a turn is `turn p`, then a relation and `quoting l`"
+        let src ← match w? with
+          | none => `(none)
+          | some w => `(some $w)
+        terms := terms.push
+          (← `(Turn.mk $p $rel $nameS $docS $quoting $findings $concS $src))
+      | _ => throwErrorAt t "declare_bundle: a turn is `turn p`, then a relation, \
+          `quoting l` and `from w`"
     -- Each relation computed now, so that a refusal says what the solver found.
     let evalBool (t : Term) : CommandElabM Bool := liftTermElabM do
       let e ← Term.elabTermEnsuringType t (mkConst ``Bool)
@@ -487,7 +558,16 @@ elab_rules : command
       unsafe Meta.evalExpr Bool (mkConst ``Bool) (← instantiateMVars e)
     for t in turns do
       match t with
-      | `(bundleTurn| $[$_td?]? turn $p $[$r?]? $[quoting $_l?]?) =>
+      | `(bundleTurn| $[$_td?]? turn $p $[$r?]? $[quoting $_l?]? $[from $w?]?) =>
+        if let some w := w? then
+          if dispute?.isNone then
+            throwErrorAt w "declare_bundle: whether a position cites a work is read from \
+              the dispute's packages, so the bundle must be declared over a dispute's \
+              solver form"
+          unless ← evalBool (← `(Bundle.citesOf $f $p $w)) do
+            throwErrorAt w m!"declare_bundle: the turn's position cites neither this work \
+              nor the edition it is\ncited through, so the work cannot date the turn. \
+              Name a work the position cites."
         let some r := r? | continue
         let (word, q) ← match r with
           | `(bundleRel| answers $q) => pure ("answer", q)
@@ -560,6 +640,10 @@ elab_rules : command
       throwError m!"declare_bundle: a turn shifts from a position no earlier turn \
         answers.\nThe goalposts move only once a position has been answered: say \
         `concedes`, or\nanswer the position first."
+    unless ← evalBool (← `(Turn.chronological [$terms,*])) do
+      throwError m!"declare_bundle: the dated turns are not in the order of their \
+        dates.\nTell the exchange as it happened: a reply comes after what it replies \
+        to."
     unless ← evalBool (← `(Turn.answered [$terms,*])) do
       throwError m!"declare_bundle: a turn sets out a fallacy, its own or one the line \
         it quotes\ndeclares, and no later turn answers it. A fallacy is set out in a \
@@ -567,9 +651,11 @@ elab_rules : command
     let bdoc := Syntax.mkStrLit (← text doc?)
     let shares ← if dispute?.isSome then `(Bundle.sharesOf $f) else `(fun _ _ => true)
     let same ← if dispute?.isSome then `(Bundle.sameOf $f) else `(fun _ _ => true)
+    let cites ← if dispute?.isSome then `(Bundle.citesOf $f) else `(fun _ _ => true)
     let cmd ← `($[$doc?]? def $b := Bundle.ofFinite $f $shares $same $bdoc [$terms,*]
       (by decide +kernel) (by decide +kernel) (by decide +kernel) (by decide +kernel)
-      (by decide +kernel) (by decide +kernel))
+      (by decide +kernel) (by decide +kernel) $cites (by decide +kernel)
+      (by decide +kernel))
     elabCommand cmd
 
 end Testimony.Logic.BundleCmd

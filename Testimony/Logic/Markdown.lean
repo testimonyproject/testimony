@@ -403,7 +403,10 @@ def exchange (links : List Page.BecauseLink) (x : Page.Exchange) : String :=
       (if t.relation.isEmpty || t.findings.isEmpty then [] else [.text " "]) ++
       Page.Exchange.declared t)
     let after := (quoted ++ joined).trimAscii.toString
-    "**" ++ escape t.party ++ ".** " ++ t.doc ++ "\n\n" ++
+    let from_ := if t.source.isEmpty then ".**" else
+      "** (*" ++ escape t.source ++ "*" ++ (if t.year.isEmpty then "" else ", " ++ t.year) ++ ")."
+    "**" ++ escape t.party ++ from_ ++ " " ++
+      t.doc ++ "\n\n" ++
       (if after.isEmpty then "" else after ++ "\n\n")
   let ps := x.parties
   let table := if ps.length ≤ Page.Exchange.manyParties then "" else

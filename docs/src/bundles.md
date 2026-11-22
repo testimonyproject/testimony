@@ -106,6 +106,22 @@ position out again answers nothing unless the new turn defeats that rebuttal. So
 rebuttal standing **ignores** it, which is ignoring the rebuttal: the author says so, a later
 turn must answer it, and the page names the rebuttal left standing.
 
+## Told in the order it happened
+
+An exchange between readers of Scripture took place over centuries. Paul wrote long before the
+Council of Trent, so he never replies to it; the Westminster divines wrote a century after Trent's
+decree on justification; modern commentators come later still. A reader needs that order to see
+how a doctrine developed, even where the solver weighs every position at once.
+
+So a turn may name the work it comes from: `turn Party.gospel meets Party.trent from
+westminsterConfession`. The work must be one its position cites, or the edition it is cited
+through, or the bundle does not build. The turn's date is the work's own: for an ancient or
+historical work, the year it was composed (`BibEntry.dated`), not the year of the translation
+the library quotes. The dated turns of a bundle must come in the order of their dates, so a reply
+is never told before what it replies to. On the page each dated turn's heading names the work and
+its year: "**Trent, against 'not by works'** (*The Sixth Session: Decree on Justification*,
+1547)".
+
 ## On the page
 
 The page tells the exchange in order. Each turn is its party's paragraph, then the sentence that

@@ -381,6 +381,13 @@ def BibEntry.editionUsed : BibEntry → Option CiteKey
   | .ancientWork d => d.editionUsed
   | _ => none
 
+/-- When the work was written or issued: an ancient work's date of
+composition, where it has one, else the entry's year. A council's decree cited
+through a later translation is dated by the decree, not the translation. -/
+def BibEntry.dated : BibEntry → Option Year
+  | .ancientWork d => d.composed <|> d.core.year
+  | e => e.core.year
+
 /-- A pinpoint within a cited work. -/
 inductive Locus
   /-- The work as a whole. -/

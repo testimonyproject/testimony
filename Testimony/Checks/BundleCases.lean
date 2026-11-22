@@ -374,4 +374,44 @@ theorem restating_meets_the_rebuttal :
     "the rebuttal: restating a position without answering what defeated it. It is set " ++
     "out here to be answered by *By the minutes*."
 
+/-! ### Told in the order it happened
+
+A turn may name the work it comes from, and that work dates it. The dated turns
+must come in the order of their dates, so a reply always comes after what it
+replies to. -/
+
+/-- A turn dated by the work it names. -/
+def datedBy (p : Party) (w : Testimony.Bib.BibEntry) : Turn Party :=
+  { party := p, source := some w }
+
+/-- **Dated turns in order** pass, and the same turns reversed fail: Motyer's
+*Isaiah* (1993) before France's *Matthew* (2007), and not after. -/
+theorem told_in_order :
+    Turn.chronological [datedBy .clock Testimony.Bib.motyerIsaiah,
+        datedBy .minutes Testimony.Bib.franceMatthew] = true ∧
+      Turn.chronological [datedBy .clock Testimony.Bib.franceMatthew,
+        datedBy .minutes Testimony.Bib.motyerIsaiah] = false := by decide
+
+/-! **A turn dated by a work its position does not cite** is refused. -/
+
+/--
+error: declare_bundle: the turn's position cites neither this work nor the edition it is
+cited through, so the work cannot date the turn. Name a work the position cites.
+-/
+#guard_msgs in
+/-- Not an exchange a bundle may tell. -/
+declare_bundle anUncitedDate in finite where
+  /-- The clock, said to come from a commentary on Matthew. -/
+  turn Party.clock from Testimony.Bib.franceMatthew
+
+/-! **On the page**, the work and its date follow the party's name. -/
+
+/-- A turn dated by the work it comes from, as the page receives it. -/
+def datedTurn : Page.ExchangeTurn :=
+  { party := "Trent", doc := "The council defines.", source := "The Sixth Session"
+  , year := "1547" }
+
+#guard Markdown.exchange [] { turns := [datedTurn], pairs := [] } ==
+  "**Trent** (*The Sixth Session*, 1547). The council defines.\n\n"
+
 end Testimony.Checks.BundleCases
