@@ -30,9 +30,8 @@ open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 texts all four strands read, the disputed reading each strand depends on, and
 the answer to James 2:24.
 
-The argument is valid. It does not show that the
-premises are true. Each disputed reading is denied by a scholar cited on this
-page. -/
+The argument is valid, and it is as strong as its premises: each disputed
+reading is denied by a scholar cited on this page. -/
 @[headline]
 theorem reformed_establishes : Establishes reformed := by
   establish [solaFideDefs]
@@ -45,9 +44,9 @@ justification by faith. Leave Paul's phrase to them, and sola fide still
 follows, from Jesus' words at Luke 7:50.
 
 Winning the argument over "works of the law" does not defeat
-sola fide. It does not show that Dunn or Wright would put it this way, or
-that their reading of Paul is right. Their critics dispute the reading, not this
-result. -/
+sola fide. The package grants Dunn and Wright their reading of Paul, without
+judging it, and the conclusion is put in its own words, not theirs. Their critics
+dispute the reading, not this result. -/
 @[headline]
 theorem newPerspective_establishes : Establishes newPerspective := by
   establish [solaFideDefs]
@@ -72,8 +71,8 @@ def tridentineReading : Valuation Claim := fun a =>
 second part: on Trent's account salvation is not apart from works.
 
 A reader who holds what Trent holds is not committed to sola fide, and the
-reading above shows a consistent way to hold it. It does not show that Trent is
-wrong, or right. -/
+reading above shows a consistent way to hold it. Whether Trent is right is
+weighed in the debate. -/
 @[headline]
 theorem tridentine_not_establishes : ¬ Establishes tridentine := by
   refute_with tridentineReading [solaFideDefs]
@@ -106,9 +105,8 @@ answer to James. Sola fide still follows, with Peter's speech at Jerusalem
 (Acts 15:7–11) as the only route to faith.
 
 Peter's strand does not lean on any of the other three
-disputes. It does not show that Peter's strand is beyond dispute, or
-that Acts 15 is the only text used. The strand rests on its own disputed
-reading, of the yoke at 15:10. The result's name is older than the strand from
+disputes. It rests on a disputed reading of its own, of the yoke at 15:10, and
+on the shared verses beside Acts 15. The result's name is older than the strand from
 John; John's reading is left out as well. -/
 @[headline]
 theorem apostolic_strand_survives_paul_and_luke :
@@ -126,8 +124,7 @@ the only route to faith: "This is the work of God, that you believe in him whom
 he has sent."
 
 A reader who wins the disputes over Paul, Luke and Acts has
-not yet answered John. It does not show that John's strand is beyond
-dispute, or that John 6:29 is the only text used. Grace and "not by works" still
+not yet answered John. Grace and "not by works" still
 come from the shared verses and the answer to James. The strand rests on
 reading that believing as trust, which Aquinas denies
 (`johannine_strand_rests_on_believing_as_trust`), and on a step from "eternal
@@ -145,8 +142,8 @@ theorem johannine_strand_survives_the_other_three :
 everything else. Sola fide still follows.
 
 A reader who wins this point for Hays has cost the Reformed case its route
-through Paul, and not its conclusion. It does not show that the point is
-unimportant to Paul's strand. Within that strand everything depends on it; see
+through Paul, and not its conclusion. Within Paul's strand, though, everything
+depends on it; see
 `pistisChristou_jointly_load_bearing`. -/
 @[headline]
 theorem pistisChristou_not_load_bearing : Establishes subjectiveGenitive := by
@@ -192,10 +189,10 @@ of the law". It hangs on that, *or* on Luke's "saved", *or* on Peter's yoke,
 The same holds with "faith of Christ" (πίστις Χριστοῦ) in place of "works of the
 law"; see `pistisChristou_jointly_load_bearing`.
 
-It does not show that the four are independent in practice. A reader
-who takes "works of the law" as boundary markers will usually read Peter's yoke
-the same way. The result shows that four separate premises would each have to
-be denied. It does not show that four separate groups of scholars deny them. -/
+The four are separate premises, and each would have to be denied, though in
+practice they travel together: a reader who takes "works of the law" as boundary
+markers will usually read Peter's yoke the same way, and one group of scholars
+may deny all four. -/
 @[headline]
 theorem lexical_premises_jointly_load_bearing :
     ¬ Establishes reformedWithoutEveryStrandsPremise := by

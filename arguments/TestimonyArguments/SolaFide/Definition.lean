@@ -120,10 +120,8 @@ def lexicalReading : Valuation Claim := fun a =>
 /-- **Paul's "justify" (δικαιόω) does not mean the renewal of the inward person.**
 This follows from three things: the verb is a courtroom word; Paul has other
 words for renewal; and a word contributes the least meaning its context
-requires.
-
-It does not claim anything about what God does when He justifies. It is
-a result about a word. -/
+requires. It is a result about a word, and leaves open what God does when He
+justifies. -/
 @[headline]
 theorem lexicalCase_establishes : Establishes lexicalCase := by
   establish [solaFideDefs]
@@ -359,7 +357,7 @@ def zieslerOnTheAdjective : Source :=
   , confidence := .disputed }
 
 /-- **The adjective is not the verb.** Romans 5:19 says the many will be
-"righteous" (δίκαιοι). It does not say they will be "justified". So whatever the
+"righteous" (δίκαιοι), not "justified". So whatever the
 adjective means there, it does not settle what the verb means. This is
 Ziesler's answer to the second of Fitzmyer's readings, and Ziesler grants the
 first. -/
@@ -631,10 +629,8 @@ def whereTrentsGraceReadingFalls : Because galatianGospel tridentineOnWhatGodDoe
 
 /-- **Romans 4, read this way, denies Trent's definition.** Paul explains the
 righteousness God counts to the ungodly as sin not counted. With the courtroom
-sense of the verb, renewal is no part of justification.
-
-It does not show that the reading is beyond dispute. Augustine accepts
-the same verses and reads them the other way, so the step is rated `disputed`. -/
+sense of the verb, renewal is no part of justification. Augustine accepts the
+same verses and reads them the other way, so the step is rated `disputed`. -/
 @[headline]
 theorem romansFourCase_establishes : Establishes romansFourCase := by
   establish [solaFideDefs, caseOf]

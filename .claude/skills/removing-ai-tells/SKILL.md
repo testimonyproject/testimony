@@ -55,10 +55,25 @@ after the facts that raise it.
 this shows: …". Write the sentence.
 
 **6. The template.** The same frame for every result: "What this claims: … What
-it does not claim: …". The rule that a result says what it claims and what it
-does not stands; the frame does not have to. Say it in words that fit the
-result: "This shows only that the argument is valid; whether its premises are
-true is the next chapter's question."
+it does not claim: …". Say what the result is, in words that fit it.
+
+**6a. Saying what it is not.** "It does not show that…", "Nor does it show…",
+"What it does not claim: …", a section headed "What this does not show". Each
+is a hedge set apart from the claim it qualifies, and a page with one after
+every result reads as generated. Describe what the result is; if it needs a
+stronger qualification, make it part of that sentence.
+
+- Before: "Granted the Reformed definition, justification has no degrees. It
+  does not show that justification is only a verdict. That is the Reformed
+  definition, and Trent denies it."
+- After: "Granted the Reformed definition, justification has no degrees. That
+  justification is only a verdict is the Reformed definition, and Trent denies
+  it."
+- Before: "It does not show that Weinfeld is wrong about the grant. It may well
+  have rewarded Abraham's obedience. The result says that, even so, nothing
+  follows…"
+- After: "The grant may well have rewarded Abraham's obedience, as Weinfeld
+  says, and still nothing follows…"
 
 **7. Triplets.** "The texts, the readers and the ratings." "Clear, exact and
 fair." Three-part rhythm on every other sentence is a signature. Use the number

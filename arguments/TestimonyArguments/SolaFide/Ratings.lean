@@ -64,7 +64,7 @@ Catholic Church confess together that good works "follow justification and are
 its fruits" (§37), and that "whatever in the justified precedes or follows the
 free gift of faith is neither the basis of justification nor merits it" (§25,
 *Joint Declaration*). That joint statement is about the *ground* of
-justification. It does not settle whether works do anything further. On that the
+justification, and leaves open whether works do anything further. On that the
 Declaration records the two sides apart. Catholics hold that good works
 "contribute to growth in grace, so that the righteousness that comes from God is
 preserved and communion with Christ is deepened" (§38). Lutherans hold "a
@@ -92,12 +92,11 @@ Under the evidence standard neither objection stands, and the support remains
 `wellSupported`. Under the tradition standard both stand, and the step is
 `disputed`.
 
-This shows exactly that, and no more. Trent's denial does not stand on Scripture
-and checkable evidence alone. A reader who accepts the council's word has an
-argued objection. A reader who does not has none. It does not show that the
-reward texts teach the Reformed reading of them. It shows that Trent's
-objection, as written down here, needs one claim that is cited to the council
-alone.
+So Trent's denial does not stand on Scripture and checkable evidence alone. A
+reader who accepts the council's word has an argued objection, and a reader who
+does not has none, because Trent's objection, as written down here, needs one
+claim that is cited to the council alone. The reward texts themselves are still
+read both ways.
 
 ## The same checks, applied the other way
 
@@ -239,11 +238,11 @@ hearing, not the full debate, that gives the consistent result. Having every
 debate weigh worked-out ratings is the next stage of the design
 (`docs/src/computed-ratings.md`).
 
-## What this does not show
+## What the checks decide
 
-An objection that counts as an argument does not show the step wrong, and an
-objection that fails does not show it right. These checks say only whether the
-disagreement is one between arguments. Which side prevails is what the hearing
+These checks decide whether the disagreement is one between arguments. An
+objection that counts as an argument may still lose, and a step whose objections
+fail is unopposed, not proved. Which side prevails is what the hearing
 works out, from the ratings each side rests on.
 -/
 
@@ -361,11 +360,8 @@ Both of Trent's objections are argued, and each rests at one claim on the
 council's word alone: canon 24's, that works cause the increase of
 justification; and chapter 16's, that the reward the texts promise is given to
 the works as merits. Under the tradition standard, which allows the council's
-word, both count as arguments, and the step is `disputed`.
-
-It does not show that the reward texts teach the Reformed reading. It
-shows that Trent's objection, as written down here, needs one claim cited to the
-council alone. -/
+word, both count as arguments, and the step is `disputed`. So Trent's
+objection, as written down here, needs one claim cited to the council alone. -/
 @[headline]
 theorem fruit_step_ratings :
     fruitStep.ratings =
@@ -580,9 +576,7 @@ Set beside `fruit_step_ratings`, the checks now find the two sides alike. Trent'
 objections to the Reformed step are arguments only under the standard that
 allows the council's word, and the Reformed objections to Trent's two steps are
 arguments only under the standard that allows the Assembly's. The one exception
-is Westminster's answer on merit, which needs no one's word.
-
-It does not show that either side's step is right. -/
+is Westminster's answer on merit, which needs no one's word. -/
 @[headline]
 theorem rome_steps_ratings :
     meritPremise.ratings =
@@ -770,10 +764,8 @@ standard.** Taken as a claim about what God does, the definition is met by
 Paul's gospel and Romans 4. Taken as a claim about Paul's word, it is met by
 Romans 4's explanation of the verb. Its step to "faith does not suffice" is met
 by Luke 18. Each of those argues from texts and from evidence anyone can check,
-so each is an argument under each of the three standards.
-
-It does not show that the definition is false. `disputed` means there
-is an argued objection, not that the objection wins. -/
+so each is an argument under each of the three standards. `disputed` means
+there is an argued objection, still to be weighed. -/
 @[headline]
 theorem trent_definition_ratings :
     definitionPremise.ratings =
@@ -886,11 +878,9 @@ Reformed steps over its definition.
 
 So the step about Paul's word is disputed by Trent's reading of the word under
 the tradition standard. Under the evidence and the Scripture standards it stands
-at its cited rating, which is `disputed` already.
-
-What it does not claim: that Trent's reading is right. `disputed` means there
-is an argued objection, not that the objection wins. The step's cited rating
-agrees with this check: it is `disputed`, and the dispute weighs it so. -/
+at its cited rating, which is `disputed` already. `disputed` means there is an
+argued objection, still to be weighed, and the step's cited rating agrees with
+this check: it is `disputed`, and the dispute weighs it so. -/
 @[headline]
 theorem trent_dissents_from_the_definition_steps :
     trentWordOnLexicalAssessment.findings.kind = .argued ∧
@@ -1056,10 +1046,9 @@ standard they do not line up: the step about James's word stands there at
 admits brings it down, but the argument that takes the step is not heard,
 because two of its own premises rest on Calvin's word.
 
-What it does not show: that either reading of the word is wrong, or that no
-argument from evidence alone could settle it. It shows that, as the readings
-are written down here, each takes a reader's word at a premise the evidence
-standard does not admit. -/
+As the readings are written down here, each takes a reader's word at a premise
+the evidence standard does not admit. An argument from evidence alone that
+settled the word would change that. -/
 @[headline]
 theorem james_word_turns_on_the_standard :
     grounded jamesUnderEvidence.defeats =
@@ -1122,10 +1111,7 @@ reading of the reward texts can each be defended, and neither is forced. There
 the verdict and the rating agree. Under the evidence standard the step stands at
 `wellSupported` (`fruit_step_ratings`) while the reconciliation that takes it is
 not heard, because the premise that the fruit texts share their terms is one of
-the step's own grounds, and it rests on Westminster's and Calvin's word.
-
-What it does not show: that works are a cause of the increase of justification,
-or that the reward texts teach Trent's reading. -/
+the step's own grounds, and it rests on Westminster's and Calvin's word. -/
 @[headline]
 theorem fruit_turns_on_the_standard :
     grounded jamesUnderEvidence.defeats =
