@@ -14,7 +14,8 @@ on that page, so write each for that reader:
 - an atom's docstring says what the claim is, in a sentence someone could
   quote in a sermon or a seminar — the verse, the reader, the Greek word;
 - a result's name says what it establishes (`trent_on_revelation_indefensible`,
-  not `thm3`), and its docstring says what it claims *and what it does not*;
+  not `thm3`), and its docstring says exactly what it claims, its limits stated
+  inside that claim rather than in an "it does not show" sentence;
 - a result is worth adding only if it answers a question that reader asks. See
   "Explaining a result" below for which certificate answers which question.
 

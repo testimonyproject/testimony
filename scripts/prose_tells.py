@@ -40,6 +40,10 @@ HABITS: dict[str, re.Pattern[str]] = {
         r"\b(?:[Tt]wo|[Tt]hree|[Ff]our) (?:things|reasons|ways)[^.:]{0,30}:|\b[Tt]he answer:"
     ),
     "claims / does not claim template": re.compile(r"What (?:this|it) (?:does not )?claims?:"),
+    "saying what it is not": re.compile(
+        r"\b(?:It|This|That|Nor does it|The result) (?:does not|doesn't)"
+        r" (?:show|claim|establish|prove)\b|\b[Ww]hat (?:this|it) does not (?:show|claim)\b"
+    ),
     "em dash": re.compile(r"—"),
     # Outside brackets: "(Romans 3:28; Galatians 2:16)" is a citation list.
     "semicolon": re.compile(r";(?![^()]*\))"),

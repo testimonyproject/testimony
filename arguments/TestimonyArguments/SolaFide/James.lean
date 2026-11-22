@@ -100,8 +100,8 @@ truly said, that Faith without works is dead" (Session VI, ch. 7). The
 Westminster Confession, a Reformed confession of 1647, says the faith that alone
 justifies "is no dead faith, but worketh by love" (Westminster XI.2). So the
 phrase James denies is not the formula the Reformers affirm (`jamesFaithLine`).
-This answers an argument from the phrase. It does not answer James's "by works",
-which is the question above.
+This answers an argument from the phrase, and leaves James's "by works" to the
+question above.
 
 ## The words used here
 
@@ -878,13 +878,12 @@ prevails outright.** Exactly three positions are forced. The faith James 2:24
 denies is not the faith of the Reformers' formula. Revelation 22:11, in the
 critical Greek text, does not say "be justified still". And Sirach 18:22, in
 Greek, does not say "be not afraid to be justified even to death". Nothing in the
-debate answers any of them.
+debate answers any of them. (The Greek of Sirach 18:22 has the word
+"justified", in a sentence about vows.)
 
-It does not show what James's "justified" (δικαιόω) means. That is contested
-(`james_word_contested`). Nor does it show that James 2:24 agrees with Paul, or
-that works are not a cause of the increase of justification. Neither is forced.
-Nor that the Greek of Sirach 18:22 lacks the word "justified": it has it, in a
-sentence about vows. -/
+What James's "justified" (δικαιόω) means stays contested
+(`james_word_contested`), and so do whether James 2:24 agrees with Paul and
+whether works are a cause of the increase of justification: neither is forced. -/
 @[headline]
 theorem james_faith_prevails :
     grounded jamesDispute.defeats =
@@ -925,11 +924,8 @@ The two part at one premise: whether James uses the word as the Gospels and the
 Law use it. Calvin reads it so, as "the manifestation of righteousness by the
 conduct" (on James 2:21), and Trent, reading the same verses, does not. So the
 premise is rated `disputed`, and the argument from James's word is weighed as its
-rival is.
-
-It does not show that Trent's reading is right, or that the lexical evidence is
-weak. The step from that evidence to "the word does not mean the increase of
-justice" is still rated `wellSupported`. What it shows is that the step needs
+rival is. The lexical evidence stays strong: the step from it to "the word does
+not mean the increase of justice" is rated `wellSupported`. But that step needs
 James to keep the sense the word has elsewhere, and that is the point in
 dispute. -/
 @[headline]
@@ -955,11 +951,11 @@ declare_verdict trentOnRevelationAnswered for jamesDispute :
   still do right". And the original, "written by the inspired author himself",
   outweighs any translation (*Divino Afflante Spiritu* §16).
 
-  It does not show that Trent's citation is an error of doctrine. Taken
-  as Pius XII takes Trent's decree on the Vulgate, as a reading the Church
-  approves and holds free from error in faith, it is consistent with all he says,
-  and rests on the Church's authority and not on the inspired text
-  (the chapter "Trent's two Latin texts"). -/
+  Trent's citation can still stand as doctrine. Taken as Pius XII takes Trent's
+  decree on the Vulgate, as a reading the Church approves and holds free from
+  error in faith, it is consistent with all he says, and rests on the Church's
+  authority and not on the inspired text (the chapter "Trent's two Latin
+  texts"). -/
   proves @[headline] trent_on_revelation_indefensible
 
 #print axioms trent_on_revelation_indefensible
@@ -975,9 +971,9 @@ declare_verdict trentOnSirachAnswered for jamesDispute :
   fulfill them". Whether Sirach is Scripture is not in question here: the verdict
   holds on Trent's own list of the biblical books.
 
-  It does not show that the Greek has no "be justified". It has the verb.
-  What it lacks is the Latin's "be not afraid ... even to death", the words in
-  which Trent reads continued growth in justice. -/
+  The Greek has the verb "be justified". What it lacks is the Latin's "be not
+  afraid ... even to death", the words in which Trent reads continued growth in
+  justice. -/
   proves @[headline] trent_on_sirach_indefensible
 
 #print axioms trent_on_sirach_indefensible
@@ -992,10 +988,8 @@ declare_verdict trentOnWorksStands for jamesDispute :
   works by which James says a person is justified are a cause of that verdict's
   increase and not merely its fruit. The Reformed reconciliation denies this, and
   the debate cannot choose: at that point each side rests on its own confession,
-  rated `disputed`.
-
-  It does not show that works are a cause of the increase. The reading is
-  not forced (`trent_on_works_not_forced`). -/
+  rated `disputed`. So Trent's reading is defensible and not forced
+  (`trent_on_works_not_forced`). -/
   proves @[headline] trent_on_works_defensible
 
 #print axioms trent_on_works_defensible

@@ -101,10 +101,15 @@ are settled". If a term needs a paragraph, link to
 "Dunn and Wright, building on Sanders" tells them where to look, and tells the
 scholar whether the position is fairly described.
 
-**Say what a result claims, then what it does not.** Every headline result's
-docstring does both, in plain words. The second half matters more: a reader
+**Say exactly what a result is, with its limit inside the claim.** A reader
 will take "John carries the conclusion alone" to mean John's reading is beyond
-dispute unless the next sentence says it is not.
+dispute, so the sentence has to say what it rests on: "John carries the
+conclusion alone, on a reading of 'believe' that Aquinas denies." Do not add a
+sentence of its own about what the result does not show ("It does not show
+that…", "Nor does it show…", a section headed "What this does not show"). Said
+that way the limit reads as a hedge, and a page full of them reads as
+generated. Describe what the result is, and if it needs a stronger
+qualification, make it part of the sentence.
 
 **Put source names in brackets, at the end.** A reader does not need
 `pistisChristou_jointly_load_bearing` to follow a sentence. State the point in
@@ -188,7 +193,8 @@ Read the generated page, not the docstring. Then ask:
 
 1. Could someone with an English Bible and no Greek follow each paragraph?
 2. Is every Greek, Hebrew or Latin term given in English first?
-3. Does each result say what it claims and what it does not?
+3. Does each result say exactly what it claims, with its limits inside the
+   sentences they qualify, and no "it does not show" sentence?
 4. Would a holder of each position accept the description of it?
 5. Does every paragraph agree with the result it describes, as it stands after
    your change?

@@ -42,9 +42,8 @@ Three things come out.
   effective, and the step from that to the word. There are six ways to make the
   three denials, and no fewer denials will do.
 
-What this does not show is which readings are right. A burden counts the
-denials a reader must make. It does not weigh them, and the side that asks for
-more denials is not for that reason the better reading. Almost every reading a
+A burden counts the denials a reader must make and weighs none of them, so
+asking an opponent for more denials does not make a side the better reading. Almost every reading a
 denial can fall on is rated `disputed`, because a cited reader grants its
 grounds and denies its conclusion: Trent and Fitzmyer at the step from the
 courtroom sense, the Reformers at the step from the Latin, Charles Hodge and
@@ -108,8 +107,8 @@ roads (`Testimony.Semantics.Fallacy`).
   wrote that "justified" means "made just" (*On the Spirit and the Letter*
   26.45). In the same passage he gives the other sense, "deemed, or reckoned
   as just" (`augustineGivesBothSenses`), and the line leaves that out. The
-  check reports the omission. It does not make Trent's reading wrong, since
-  Augustine himself put the renewal first, but a reader is owed both.
+  check reports the omission. Trent's reading survives it, since Augustine
+  himself put the renewal first, but a reader is owed both.
 - **Does a line reach a word's sense from something other than the word?**
   Kertelge's road reaches "justify means make righteous" from what God's
   verdict does, with no use or reading of the word among its premises
@@ -185,10 +184,8 @@ No single denial overturns it, and no other set does. Trent's reading of Paul's
 word takes the second way: it meets the case at the two steps that apply the
 rule of least meaning (`whereTrentsWordReadingFalls`,
 `whereRomansFourMeetsTheWordReading`), and accepts the reading of Romans 4:6–8,
-as Augustine does.
-
-It does not show that either step is right. Both are rated `disputed`, because
-Trent and Fitzmyer grant their grounds and deny what they conclude.
+as Augustine does. Both steps are rated `disputed`, because Trent and Fitzmyer
+grant their grounds and deny what they conclude.
 
 What is novel: both roads are old. The proof that these are the only two ways
 to overturn the case, so that no single denial is enough, is the library's. -/
@@ -227,7 +224,7 @@ and it is enough: the case has no second road.
 That step is rated `disputed`. Augustine himself gives the courtroom sense as a
 second way of taking the word (`augustineGivesBothSenses`), and the Latin
 *iustificare* is not the Greek δικαιόω, which is what the argument from Paul's
-word denies at this point. It does not show that the step is wrong.
+word denies at this point.
 
 What is novel: the reading is Augustine's and Trent's. The proof that it stands
 or falls at this one step is the library's. -/
@@ -287,8 +284,8 @@ the verb says. Only one reading in the table has no cited denier: the step from
 Romans 5:19, read as renewal, and the bridge to the verb's sense, rated
 `plausible`. The ways a reader on record takes pass it by.
 
-It does not show that Trent's reading is right because it is harder to
-overturn. A burden counts denials. It does not weigh them.
+A burden counts denials and weighs none of them: a reading harder to overturn
+is not for that reason right.
 
 What is novel: setting Fitzmyer's road from the Greek and Kertelge's from the
 verdict beside Augustine's from the Latin, as one case, with each road's

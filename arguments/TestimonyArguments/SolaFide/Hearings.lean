@@ -105,12 +105,9 @@ declare_verdict reformationSettlesNothing for reformationAlone :
   meaning of Paul's word among them. The arguments from the word take a step,
   from the courtroom sense of "justify" (δικαιόω) to "and nothing more", that
   Trent grants the starting points of and denies, so that step is rated
-  `disputed`, and Trent's reading of the word ties with them.
-
-  It does not show that Trent's reading of the word is right, or that the
-  Reformers' is wrong. Both can be defended (`trent_defensible_with_pauls_word`
-  holds Trent as it states its definition together with the arguments about
-  the word). -/
+  `disputed`, and Trent's reading of the word ties with them, so both it and the
+  Reformers' can be defended (`trent_defensible_with_pauls_word` holds Trent as
+  it states its definition together with the arguments about the word). -/
   proves @[headline] reformation_dispute_forces_nothing
 
 #print axioms reformation_dispute_forces_nothing
@@ -174,10 +171,8 @@ declare_verdict withoutTrentSettles for withoutTrent :
 
   Luke's "faith suffices" is no longer among them. Chrysostom, reading John 3:36
   and Matthew 7:21, concludes that believing is not enough without a right life,
-  and so stands against it (`luke_not_forced_without_trent`).
-
-  It does not show that *faith alone*, or even "faith suffices", is
-  refuted. Each is in a tie; see the results that follow. -/
+  and so stands against it (`luke_not_forced_without_trent`). *Faith alone* and
+  "faith suffices" are each left in a tie, as the results that follow show. -/
   proves @[headline] without_trent_pauls_gospel_and_word_prevail :
       grounded withoutTrent.defeats =
     Solver.toSet (Witness.listSub _ [.gospel, .lexical, .romansOnTheWord])
@@ -199,8 +194,8 @@ declare_verdict lukeAnsweredByChrysostom for withoutTrent :
   you" (Luke 7:50) as saying that faith sufficed.
 
   A reading of two other sayings of Jesus, rated `disputed`, ties
-  with Luke's. It does not show that Chrysostom outranks Luke, or that any
-  text of Luke's is contradicted. Luke's case defeats Chrysostom in return, and
+  with Luke's, and the tie runs both ways: Luke's case defeats Chrysostom in
+  return, and no text of Luke's is contradicted.
   Chrysostom accepts every word of Luke 7:50; what he denies is the step from it
   to "faith suffices". -/
   proves @[headline] luke_not_forced_without_trent
@@ -254,8 +249,8 @@ declare_verdict johnAnsweredByAquinas for withoutTrent :
   be held with it.
 
   Without the Council, John 6:29 still does not compel faith
-  alone, because what believing is remains contested. It does not show that
-  Aquinas's reading wins. John's case can be held just as consistently. Luther's
+  alone, because what believing is remains contested, and John's case can be held
+  just as consistently as Aquinas's reading. Luther's
   argument and Aquinas's each defeat the other, and neither is removed. -/
   proves @[headline] sola_fide_from_john_not_forced_without_trent
 

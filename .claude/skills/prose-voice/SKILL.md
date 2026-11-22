@@ -86,7 +86,9 @@ reached, not announced and then taken apart.
 4. **What the checking found.** In words: what follows from which premises, what
    is left open, which way the verdict went. Name the results in brackets at the
    end of the sentence that states them, as `writing-for-readers` requires.
-5. **What it does not settle**, once.
+5. **What is still open**, once, said as a fact about the debate: "the step is
+   rated `disputed`, and Calvin denies it". Not a list of what the result does
+   not show.
 6. **A road onward.** One sentence pointing to the chapter that takes the next
    question, when there is one.
 
