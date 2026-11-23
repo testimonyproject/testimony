@@ -45,11 +45,13 @@ Sola fide
 /--
 info: the fallacy checks, over every argument's lines, each named with its reader:
 Sola fide
-  lines: 76, read: 46, Scripture's own: 0
+  lines: 78, read: 47, Scripture's own: 0
   attribute a view, against the argument's record:
+    renewalLine (Augustine): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
     sandersLine (Dunn): secondTempleJudaism, unrecorded
     trentWordLine (Trent): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
   cite a voice for one reading, leaving out another the record has:
+    renewalLine (Augustine): augustine, also verdict in augustineGivesBothSenses
     trentWordLine (Trent): augustine, also verdict in augustineGivesBothSenses
   conclude a word's sense from no use or reading of the word:
     effectiveVerdictLine (Fitzmyer): dikaioo as makeRighteous
@@ -57,12 +59,12 @@ Sola fide
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaFide
 
-/-- info: every package has a model with its postulates: 106, and 0 undecided -/
+/-- info: every package has a model with its postulates: 108, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaFide
 
 /--
-info: every reading and step has a reader or is marked proposed: 106 packages, 76 lines
+info: every reading and step has a reader or is marked proposed: 108 packages, 78 lines
 -/
 #guard_msgs in
 #check_readers under TestimonyArguments.SolaFide
@@ -77,6 +79,7 @@ info: every reading and step has a reader or is marked proposed: 106 packages, 7
 
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:
+beforeTrentDispute.finite: 6 I, 2 RA, 0 CA, 0 PA, 6 edges
 jamesDispute.finite: 38 I, 13 RA, 11 CA, 4 PA, 83 edges
 jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
 reformationDispute.finite: 28 I, 16 RA, 8 CA, 0 PA, 61 edges
@@ -88,6 +91,8 @@ and 3 hearings, drawn with the disputes they restrict
 
 /--
 info: every dispute, its lines' conditions stated:
+beforeTrentDispute.finite:
+  hidden premises: 0; lines not read: 1
 jamesDispute.finite:
   hidden premises: 0; lines not read: 4
 jesusWordsDispute.finite:

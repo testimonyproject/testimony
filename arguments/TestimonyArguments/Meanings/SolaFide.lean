@@ -408,6 +408,10 @@ def means : Claim → Statement
   | .faithKeepsItsSenseInRomansAndEphesians =>
     .sameSense .pistis (.passage rom3_28) (.passage eph2_8_9)
   | .worksKeepsItsSenseInRomans4And11 => .sameSense .erga (.passage rom4_4_5) (.passage rom11_6)
+  | .fathersWroteFaithAlone =>
+    .opaque "Hilary, Basil, Ambrosiaster, Chrysostom, Origen, Bernard, Aquinas: faith alone"
+  | .justifiedByFaithWithoutPriorWorks =>
+    .opaque "the ungodly are justified by faith alone, as a gift, no prior work earning it"
   | .countingWasForTheTesting =>
     .opaque "What was counted at Gen 15:6 was credited for his faithfulness when tested"
   | .abrahamFoundFaithfulWhenTested =>
@@ -469,7 +473,8 @@ def all : List Claim :=
   , .johnBelievingKeepsItsSense, .jamesUsesDikaioAsOutsidePaul
   , .jamesKeepsHisWordsThroughTheParagraph, .fruitTextsShareFaithAndWorks
   , .romans5_19ManyMadeRighteous, .romans5_19MadeInwardlyRighteous
-  , .romans5_19BearsOnTheVerb, .godsVerdictIsEffective, .romans1_16_17, .romans11_6
+  , .romans5_19BearsOnTheVerb, .godsVerdictIsEffective, .fathersWroteFaithAlone
+  , .justifiedByFaithWithoutPriorWorks, .romans1_16_17, .romans11_6
   , .acts13_39, .firstCorinthians13_2, .galatians2_4_5, .galatians5_6
   , .justifyingFaithIsFormedByCharity, .titus2_14, .philippians3_8_9
   , .restsOnChristsImputedRighteousness, .faithKeepsItsSenseInRomansAndEphesians
@@ -488,11 +493,13 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **A hundred and sixteen of the hundred and fifty-four are analysed.** Of the
-thirty-eight that are not, seven are the claims of the chapter on the
-Reformation's case: five texts its voices argue from, the schoolmen's faith formed by love,
-and the double righteousness of Regensburg, which need words the vocabulary
-lacks, a form and a resting on. Fifteen are the claims of the chapters on whether
+/-- **A hundred and sixteen of the hundred and fifty-six are analysed.** Of the
+forty that are not, two are the claims of the chapter on what was read in Paul
+before Trent: what the fathers wrote of faith alone, and justification with no
+prior work earning it. Seven are the claims of the chapter on the Reformation's
+case: five texts its voices argue from, the schoolmen's faith formed by love, and
+the double righteousness of Regensburg, which need words the vocabulary lacks, a
+form and a resting on. Fifteen are the claims of the chapters on whether
 justification has degrees and on Abraham, whose content (a verdict's degrees, a
 covenant rite, a grant, a testing) the vocabulary cannot yet state. Of the other
 sixteen, four are Pius XII's and Trent's claims about the Vulgate and one is the
@@ -504,7 +511,7 @@ of the obedience it requires, Galatians 1:6–9, Christ's command to baptise, Tr
 reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each needs a word
 the vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
 reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (116, 154) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (116, 156) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the

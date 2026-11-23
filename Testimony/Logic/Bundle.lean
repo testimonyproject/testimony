@@ -102,6 +102,24 @@ def Dispute.citesWork (d : Dispute α ι) (i : ι) (w : Testimony.Bib.BibEntry) 
   let keys := d.citedKeys i
   keys.contains w.core.key || w.editionUsed.any keys.contains
 
+/-- Whether a reference was written before a year: Scripture always, a work when
+its date (`Testimony.Bib.BibEntry.dated`, the year it was composed for a work
+cited through a later edition) is earlier, and the library's own proposal,
+which cites no one, always. A work with no date is not counted as earlier. -/
+def _root_.Testimony.Reference.before (y : Int) : Reference → Bool
+  | .scripture _ => true
+  | .proposal _ => true
+  | .work e _ => e.dated.any (·.value < y)
+
+/-- **Whether a party's position rests only on what was written before a year**:
+every reference cited for its claims and for its steps, primary and supporting,
+is Scripture or a work dated earlier. So a hearing of the debate before Trent
+can be checked to hear no position that cites a later reader. -/
+def Dispute.citesOnlyBefore (d : Dispute α ι) (i : ι) (y : Int) : Bool :=
+  let sources := (d.claims i).map (fun a => ((d.node i).cite a).source) ++
+    (d.node i).inferences
+  sources.all fun s => (s.primary :: s.supporting).all (Reference.before y)
+
 /-- Whether two formulas are written the same, part by part. Structural, so the
 kernel can decide it. -/
 def sameFormula : Formula α → Formula α → Bool
