@@ -1072,6 +1072,81 @@ def baseCite : Claim → AtomMeta
         { primary := .work fitzmyerRomans (.pages 118 119)
         , tradition := .romanCatholic
         , confidence := .disputed } }
+  | .romans1_16_17 =>
+    { label := "Romans 1:16–17: the gospel is God's power for salvation to everyone who believes"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.romans, 1, 16, 1, 17⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .romans11_6 =>
+    { label := "Romans 11:6: if by grace, then no longer by works"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.romans, 11, 6⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .acts13_39 =>
+    { label := "Acts 13:39: everyone who believes is justified by Jesus"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.acts, 13, 39⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .firstCorinthians13_2 =>
+    { label := "1 Corinthians 13:2: all faith without love is nothing"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.firstCorinthians, 13, 2⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .galatians2_4_5 =>
+    { label := "Galatians 2:4–5: Paul did not yield, so that the truth of the gospel would remain"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.galatians, 2, 4, 2, 5⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .galatians5_6 =>
+    { label := "Galatians 5:6: what counts in Christ is faith working through love"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.galatians, 5, 6⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .justifyingFaithIsFormedByCharity =>
+    { label := "The faith that justifies is faith formed by love"
+    , kind := .theological
+      -- The Confutation of 1530, to Article V: "not faith alone ... but faith
+      -- which worketh by love" (Jacobs, p. 212).
+    , source :=
+        { primary := .work romanConfutation (.page 212)
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .titus2_14 =>
+    { label := "Titus 2:14: Christ purifies a people zealous for good works"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.titus, 2, 14⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .philippians3_8_9 =>
+    { label := "Philippians 3:8–9: not a righteousness of my own, but the righteousness from God"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.philippians, 3, 8, 3, 9⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .restsOnChristsImputedRighteousness =>
+    { label := "Before God the believer rests on Christ's righteousness given, not on his own"
+    , kind := .theological
+      -- `disputed`: Trent grants the texts and anathematises justification "by
+      -- the sole imputation of the justice of Christ" (Session VI, canon 11).
+    , source :=
+        { primary := .work contariniOnJustification (.page 592)
+        , supporting := [.work regensburgArticleFive (.sectionRef "col. 200")]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
   | .aqedahOathMeritedByObedience =>
     { label := "The oath of Genesis 22:16–18 was merited by the binding of Isaac"
     , kind := .interpretive

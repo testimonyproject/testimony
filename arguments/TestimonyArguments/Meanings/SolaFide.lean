@@ -387,6 +387,18 @@ def means : Claim → Statement
   | .romans5_19BearsOnTheVerb =>
     .bears .dikaios (.passage (vs .romans 5 19)) .dikaioo (.usage .paul)
   | .godsVerdictIsEffective => .holds (rl .effects (cn .justification) (cn .sanctification))
+  | .romans1_16_17 => .opaque "Romans 1:16-17: the righteous by faith will live"
+  | .romans11_6 => .opaque "Romans 11:6: by grace, so no longer by works"
+  | .acts13_39 => .opaque "Acts 13:39: everyone who believes is justified"
+  | .firstCorinthians13_2 => .opaque "1 Corinthians 13:2: all faith without love is nothing"
+  | .galatians2_4_5 => .opaque "Galatians 2:4-5: that the truth of the gospel would remain"
+  | .galatians5_6 => .opaque "Galatians 5:6: faith working through love"
+  | .justifyingFaithIsFormedByCharity =>
+    .opaque "the faith that justifies is faith formed by love"
+  | .titus2_14 => .opaque "Titus 2:14: a people zealous for good works"
+  | .philippians3_8_9 => .opaque "Philippians 3:8-9: not a righteousness of my own"
+  | .restsOnChristsImputedRighteousness =>
+    .opaque "before God the believer rests on Christ's righteousness given, not his own"
   | .countingWasForTheTesting =>
     .opaque "What was counted at Gen 15:6 was credited for his faithfulness when tested"
   | .abrahamFoundFaithfulWhenTested =>
@@ -448,7 +460,10 @@ def all : List Claim :=
   , .johnBelievingKeepsItsSense, .jamesUsesDikaioAsOutsidePaul
   , .jamesKeepsHisWordsThroughTheParagraph, .fruitTextsShareFaithAndWorks
   , .romans5_19ManyMadeRighteous, .romans5_19MadeInwardlyRighteous
-  , .romans5_19BearsOnTheVerb, .godsVerdictIsEffective ]
+  , .romans5_19BearsOnTheVerb, .godsVerdictIsEffective, .romans1_16_17, .romans11_6
+  , .acts13_39, .firstCorinthians13_2, .galatians2_4_5, .galatians5_6
+  , .justifyingFaithIsFormedByCharity, .titus2_14, .philippians3_8_9
+  , .restsOnChristsImputedRighteousness ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -463,8 +478,11 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **A hundred and eleven of the hundred and forty-two are analysed.** Of the
-thirty-one that are not, fifteen are the claims of the chapters on whether
+/-- **A hundred and eleven of the hundred and fifty-two are analysed.** Of the
+forty-one that are not, ten are the claims of the chapter on the Reformation's
+case: eight texts its voices argue from, the schoolmen's faith formed by love,
+and the double righteousness of Regensburg, which need words the vocabulary
+lacks, a form and a resting on. Fifteen are the claims of the chapters on whether
 justification has degrees and on Abraham, whose content (a verdict's degrees, a
 covenant rite, a grant, a testing) the vocabulary cannot yet state. Of the other
 sixteen, four are Pius XII's and Trent's claims about the Vulgate and one is the
@@ -476,7 +494,7 @@ of the obedience it requires, Galatians 1:6–9, Christ's command to baptise, Tr
 reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each needs a word
 the vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
 reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (111, 142) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (111, 152) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the

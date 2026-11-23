@@ -601,6 +601,42 @@ inductive Claim
   meaning" (Kertelge, quoted by Fitzmyer). A claim about what God's declaration
   does. -/
   | godsVerdictIsEffective
+  /-- Romans 1:16–17: the gospel is God's power for salvation to everyone who
+  believes, for in it God's righteousness is revealed, "from faith to faith", as
+  it is written, "the righteous by faith will live". -/
+  | romans1_16_17
+  /-- Romans 11:6: if it is by grace, it is no longer by works, otherwise grace
+  would no longer be grace. -/
+  | romans11_6
+  /-- Acts 13:39: by Jesus everyone who believes is justified from everything
+  from which the law of Moses could not justify. Paul preaching at Pisidian
+  Antioch, as Luke reports him. -/
+  | acts13_39
+  /-- 1 Corinthians 13:2: though one has all faith, so as to remove mountains, and
+  has not love, he is nothing. -/
+  | firstCorinthians13_2
+  /-- Galatians 2:4–5: Paul did not yield to the false brothers for a moment,
+  "so that the truth of the gospel would remain" with the Galatians. -/
+  | galatians2_4_5
+  /-- Galatians 5:6: in Christ Jesus neither circumcision nor uncircumcision
+  counts for anything, but faith working through love. -/
+  | galatians5_6
+  /-- The faith that justifies is faith formed by love (*fides caritate
+  formata*): faith justifies as love gives it life, and not without it. The
+  schoolmen's reading of Galatians 5:6, which the Confutation of 1530 holds and
+  Luther denies. -/
+  | justifyingFaithIsFormedByCharity
+  /-- Titus 2:14: Christ gave Himself for us to redeem us and to purify for
+  Himself a people of His own, zealous for good works. -/
+  | titus2_14
+  /-- Philippians 3:8–9: Paul counts everything loss, to be found in Christ, not
+  having a righteousness of his own from the law, but the righteousness from God
+  that comes through faith in Christ. -/
+  | philippians3_8_9
+  /-- Before God the believer rests on the righteousness of Christ, given and
+  counted to him, and not on the righteousness worked in him, which is begun and
+  imperfect. The double righteousness of Regensburg (1541) and Contarini. -/
+  | restsOnChristsImputedRighteousness
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaFide
