@@ -637,6 +637,14 @@ inductive Claim
   counted to him, and not on the righteousness worked in him, which is begun and
   imperfect. The double righteousness of Regensburg (1541) and Contarini. -/
   | restsOnChristsImputedRighteousness
+  /-- "Faith" (πίστις) keeps one sense between Romans 3:28 and Ephesians 2:8–9.
+  The *Apology* sets the two verses together as one argument for faith alone, so
+  it needs this. -/
+  | faithKeepsItsSenseInRomansAndEphesians
+  /-- "Works" (ἔργα) keeps one sense between Romans 4:4–5 and Romans 11:6.
+  Zwingli sets the two together as one argument that salvation is not of works,
+  so he needs this. -/
+  | worksKeepsItsSenseInRomans4And11
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaFide

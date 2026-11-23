@@ -1147,6 +1147,26 @@ def baseCite : Claim → AtomMeta
         , supporting := [.work regensburgArticleFive (.sectionRef "col. 200")]
         , tradition := .romanCatholic
         , confidence := .disputed } }
+  | .faithKeepsItsSenseInRomansAndEphesians =>
+    { label := "‘Faith’ keeps one sense in Romans 3:28 and Ephesians 2:8–9"
+    , kind := .linguistic
+      -- The Apology joins the two verses in one argument (IV.73, Triglot
+      -- pp. 140–141), and so reads the word one way in both. No reader found
+      -- grants both verses and denies that the word keeps its sense.
+    , source :=
+        { primary := .work melanchthonApology (.pages 140 141)
+        , tradition := .reformedProtestant
+        , confidence := .wellSupported } }
+  | .worksKeepsItsSenseInRomans4And11 =>
+    { label := "‘Works’ keeps one sense in Romans 4:4–5 and Romans 11:6"
+    , kind := .linguistic
+      -- Zwingli joins the two verses in one sentence (Heller, p. 137), and so
+      -- reads the word one way in both. No reader found grants both verses and
+      -- denies that the word keeps its sense.
+    , source :=
+        { primary := .work zwingliTrueAndFalseReligion (.page 137)
+        , tradition := .reformedProtestant
+        , confidence := .wellSupported } }
   | .aqedahOathMeritedByObedience =>
     { label := "The oath of Genesis 22:16–18 was merited by the binding of Isaac"
     , kind := .interpretive

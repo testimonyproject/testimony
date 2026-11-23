@@ -122,7 +122,7 @@ each side grants the other's texts and denies its conclusion: the Confutation
 and Eck cite Romans 3 and Galatians, the *Apology* and Tyndale take up James 2,
 and Luther and Calvin read Galatians 5:6 and the texts on reward. So each attack
 across the line is met by one in return, and nothing is forced
-(`reformation_debate_forces_nothing`). The Reformers' positions can all be held
+(`luthers_contemporaries_force_nothing`). The Reformers' positions can all be held
 together (`the_reformers_stand_together`), and so can the Catholic positions,
 Regensburg among them, because the article's faith "efficacious through love" is
 read here as Contarini read it, faith formed by love
@@ -230,14 +230,18 @@ def zwingliStep : Source :=
 /-- **Grace avails nothing if salvation is due to works, as Zwingli read Paul in
 1525.** No one is justified by works of the law (Galatians 2:16); to the worker
 wages are owed, not a gift (Romans 4:4); and if it is by grace, it is no longer
-by works (Romans 11:6). So no work is a ground of salvation: believers "through
+by works (Romans 11:6). Zwingli reads "works" the same way in both verses, as
+the argument needs. So no work is a ground of salvation: believers "through
 faith … are sure of salvation", their sins "not imputed to them as such because
 of their faith". -/
 @[solaFideDefs]
 def zwingliLine : Line Claim :=
   { name := "Zwingli: grace avails nothing if salvation is due to works (1525)"
-  , grounds := [p .galatians2_16, p .romans4_4_5, p .romans11_6]
-  , step := ⋀ [p .galatians2_16, p .romans4_4_5, p .romans11_6] ➝ p .salvationNotByWorks
+  , grounds :=
+      [p .galatians2_16, p .romans4_4_5, p .romans11_6, p .worksKeepsItsSenseInRomans4And11]
+  , step :=
+      ⋀ [p .galatians2_16, p .romans4_4_5, p .romans11_6, p .worksKeepsItsSenseInRomans4And11] ➝
+        p .salvationNotByWorks
   , delivers := p .salvationNotByWorks
   , inference := some zwingliStep }
 
@@ -484,13 +488,15 @@ def apologyJamesStep : Source :=
 /-- **By faith alone we are justified, as the *Apology* answered in 1531.** "The
 particle alone offends some, although even Paul says, Rom. 3, 28", that a man is
 justified by faith apart from the works of the law, and we are saved by grace
-through faith, "not of works" (Ephesians 2:8–9). What is excluded is "the
-opinion of merit", and so "by faith alone we are justified." -/
+through faith, "not of works" (Ephesians 2:8–9). The two verses are one argument
+only if "faith" means the same in both, and Melanchthon reads it so. What is
+excluded is "the opinion of merit", and so "by faith alone we are justified." -/
 @[solaFideDefs]
 def apologyLine : Line Claim :=
   { name := "The Apology: by faith alone we are justified (1531)"
-  , grounds := [p .romans3_28, p .ephesians2_8_9]
-  , step := ⋀ [p .romans3_28, p .ephesians2_8_9] ➝ p .justificationByFaithAlone
+  , grounds := [p .romans3_28, p .ephesians2_8_9, p .faithKeepsItsSenseInRomansAndEphesians]
+  , step := ⋀ [p .romans3_28, p .ephesians2_8_9, p .faithKeepsItsSenseInRomansAndEphesians] ➝
+      p .justificationByFaithAlone
   , delivers := p .justificationByFaithAlone
   , inference := some apologyStep }
 
@@ -939,8 +945,8 @@ declare_verdict reformationSettles for reformationDispute :
   is forced, and none is ruled out. The sides part at two claims: whether the
   faith that justifies does so alone or as formed by love, and whether good
   works made worthy by grace are a ground of salvation. -/
-  proves @[headline] reformation_debate_forces_nothing
+  proves @[headline] luthers_contemporaries_force_nothing
 
-#print axioms reformation_debate_forces_nothing
+#print axioms luthers_contemporaries_force_nothing
 
 end TestimonyArguments.SolaFide

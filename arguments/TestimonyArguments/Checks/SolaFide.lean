@@ -33,11 +33,11 @@ def unfoldSet : List (Name × Name) :=
 info: the shared ontology, in every argument:
 Sola fide
   joins: 5, with no definition: 4
-  not a ground: held by 4, used of a text or voice by 13; derives nothing
-  the only means: held by 3, used of a text or voice by 9; derives:
+  not a ground: held by 4, used of a text or voice by 14; derives nothing
+  the only means: held by 3, used of a text or voice by 11; derives:
     justificationByFaithAlone excludes baptismIsInstrumentalCause
   the whole ground: held by 3, used of a text or voice by 6; derives nothing
-  the same sense, both ways: stated or denied by 11; derives nothing
+  the same sense, both ways: stated or denied by 13; derives nothing
 -/
 #guard_msgs in
 #check_ontology under TestimonyArguments.SolaFide
@@ -45,7 +45,7 @@ Sola fide
 /--
 info: the fallacy checks, over every argument's lines, each named with its reader:
 Sola fide
-  lines: 58, read: 38, Scripture's own: 0
+  lines: 76, read: 46, Scripture's own: 0
   attribute a view, against the argument's record:
     sandersLine (Dunn): secondTempleJudaism, unrecorded
     trentWordLine (Trent): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
@@ -57,12 +57,12 @@ Sola fide
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaFide
 
-/-- info: every package has a model with its postulates: 93, and 0 undecided -/
+/-- info: every package has a model with its postulates: 106, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaFide
 
 /--
-info: every reading and step has a reader or is marked proposed: 93 packages, 58 lines
+info: every reading and step has a reader or is marked proposed: 106 packages, 76 lines
 -/
 #guard_msgs in
 #check_readers under TestimonyArguments.SolaFide
@@ -79,6 +79,7 @@ info: every reading and step has a reader or is marked proposed: 93 packages, 58
 info: every dispute, as an AIF graph meeting Definition 1.1:
 jamesDispute.finite: 38 I, 13 RA, 11 CA, 4 PA, 83 edges
 jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
+reformationDispute.finite: 28 I, 16 RA, 8 CA, 0 PA, 61 edges
 solaFideDispute.finite: 80 I, 36 RA, 42 CA, 0 PA, 196 edges
 and 3 hearings, drawn with the disputes they restrict
 -/
@@ -91,6 +92,8 @@ jamesDispute.finite:
   hidden premises: 0; lines not read: 4
 jesusWordsDispute.finite:
   hidden premises: 0; lines not read: 1
+reformationDispute.finite:
+  hidden premises: 0; lines not read: 9
 solaFideDispute.finite:
   hidden premises: 0; lines not read: 6
 -/
