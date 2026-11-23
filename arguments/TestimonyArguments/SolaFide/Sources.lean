@@ -225,6 +225,34 @@ def reformedWorksOfLawSource : Source :=
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
+/-- **What the fathers and schoolmen before Trent wrote of faith alone**, each
+read in his own Latin or Greek, or in a published translation of it.
+Ambrosiaster on Romans 3:24: "they are justified freely because, doing nothing
+and giving nothing in return, they are justified by faith alone, a gift of God"
+(*sola fide justificati sunt dono Dei*). Hilary on Matthew 8: "faith alone
+justifies" (*fides enim sola justificat*). Basil, *On Humility* 3: justified "by
+faith alone, the faith in Christ" (πίστει δὲ μόνῃ τῇ εἰς Χριστόν). Chrysostom on
+Romans 3:27: God justified "without needing works, but looking for faith only".
+Origen, in Rufinus's Latin, on Romans 3:28: faith alone suffices, as for the
+thief on the cross, justified "without works of the law"; and at once, that one
+who acts unjustly after justification "has scorned the grace of justification".
+Bernard, on the Song of Songs: "being justified by faith alone, he shall have
+peace with God" (22.8). Aquinas on 1 Timothy 1:8: in the law's moral precepts
+"there is no hope of justification, but in faith alone" (*sed in sola fide*).
+Chrysostom's and Bernard's words are their cited translators'; the other
+renderings of the Latin and Greek are the library's own. -/
+def fathersOnFaithAlone : Source :=
+  { primary := .work ambrosiasterRomans (.sectionRef "on Romans 3:24")
+  , supporting :=
+      [ .work hilaryOnMatthew (.sectionRef "8.6")
+      , .work basilHumility (.sectionRef "3")
+      , .work chrysostomRomans (.sectionRef "Homily 7, on Romans 3:27")
+      , .work origenRomansRufinus (.sectionRef "III, on Romans 3:27–28")
+      , .work bernardSongOfSongs (.sectionRef "22.8")
+      , .work aquinasFirstTimothy (.sectionRef "c. 1, lect. 3") ]
+  , tradition := .christianHistoricalGrammatical
+  , confidence := .consensus }
+
 /-- The sources shared by every position: for the verses, and for the premises about
 how to read them, whose wording none of the positions disputes. -/
 def baseCite : Claim → AtomMeta
@@ -1072,6 +1100,17 @@ def baseCite : Claim → AtomMeta
         { primary := .work fitzmyerRomans (.pages 118 119)
         , tradition := .romanCatholic
         , confidence := .disputed } }
+  | .fathersWroteFaithAlone =>
+    { label := "Before Trent, readers of Paul East and West wrote that the ungodly are " ++
+        "justified by faith alone"
+    , kind := .historical
+      -- `consensus`: that they wrote it is read in their own Latin and Greek.
+      -- What they meant by it is the question `fathersReadAsTheReformers` asks.
+    , source := fathersOnFaithAlone }
+  | .justifiedByFaithWithoutPriorWorks =>
+    { label := "God justifies the ungodly by faith alone, as a gift, and no prior work earns it"
+    , kind := .theological
+    , source := { fathersOnFaithAlone with confidence := .wellSupported } }
   | .aqedahOathMeritedByObedience =>
     { label := "The oath of Genesis 22:16–18 was merited by the binding of Isaac"
     , kind := .interpretive
@@ -1182,7 +1221,7 @@ def baseCite : Claim → AtomMeta
             [ .work schreinerFaithAlone .whole
             , .work mannermaaChristPresentInFaith .whole
             , .work anf1 (.sectionRef "1 Clement 32.4")
-            , .work hilaryMatthew (.sectionRef "8.6")
+            , .work hilaryOnMatthew (.sectionRef "8.6")
             , .work basilAsceticalWorks (.sectionRef "Homily 20, Of Humility") ] } }
   | .faithIsSufficient =>
     { label := "Faith is sufficient: whoever believes is saved"

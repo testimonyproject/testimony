@@ -5152,6 +5152,268 @@ know "the story of the birth in Bethlehem" (p. 97). -/
   , place := some "London"
   , edition := some "second edition" }
 
+/-! ### Before Trent: the fathers and schoolmen on faith alone
+
+Added for `SolaFide.BeforeTrent`. Each father is cited through the edition his
+words were read in: Migne's *Patrologia* for the Latin and Greek, read in the
+Internet Archive's scans, Eales for Bernard, the Corpus Thomisticum for Aquinas,
+and the Nicene and Post-Nicene Fathers for Chrysostom and Augustine. -/
+
+/-- Migne's *Patrologia Latina*, volume 17, which prints Ambrosiaster's
+commentary on Romans among the works ascribed to Ambrose ("Opera S. Ambrosii
+appendix"). Read in the Internet Archive's scan of the 1845 printing. -/
+@[bib_entry] def migneLatina17 : BibEntry := .book
+  { core :=
+      { key := "migne-patrologia-latina-17-1845"
+      , role := .text
+      , contributors := { editors := [.person "Jacques-Paul" "Migne"] }
+      , title := "Patrologiae Cursus Completus, Series Latina"
+      , year := some { value := 1845 }
+      , identifiers :=
+          [ .url ("https://archive.org/details/" ++
+              "bim_early-english-books-1641-1700_patrologiae-cursus-completus-_1845_17")
+              (some "2026-11-22") ] }
+  , publisher := "J.-P. Migne"
+  , place := some "Paris"
+  , volume := some "17" }
+
+/-- Migne's *Patrologia Latina*, volume 9, which prints Hilary of Poitiers's
+commentary on Matthew. Read in the Internet Archive's scan; the printing's year
+was not read. -/
+@[bib_entry] def migneLatina9 : BibEntry := .book
+  { core :=
+      { key := "migne-patrologia-latina-9"
+      , role := .text
+      , contributors := { editors := [.person "Jacques-Paul" "Migne"] }
+      , title := "Patrologiae Cursus Completus, Series Latina"
+      , identifiers :=
+          [.url "https://archive.org/details/patrologiaecur09mign" (some "2026-11-22")] }
+  , publisher := "J.-P. Migne"
+  , place := some "Paris"
+  , volume := some "9" }
+
+/-- Migne's *Patrologia Graeca*, volume 14, which prints Rufinus's Latin
+translation of Origen's commentary on Romans. Read in the Internet Archive's
+scan; the printing's year was not read. -/
+@[bib_entry] def migneGraeca14 : BibEntry := .book
+  { core :=
+      { key := "migne-patrologia-graeca-14"
+      , role := .text
+      , contributors := { editors := [.person "Jacques-Paul" "Migne"] }
+      , title := "Patrologiae Cursus Completus, Series Graeca"
+      , identifiers :=
+          [.url "https://archive.org/details/patrologiaecurs270unkngoog" (some "2026-11-22")] }
+  , publisher := "J.-P. Migne"
+  , place := some "Paris"
+  , volume := some "14" }
+
+/-- Migne's *Patrologia Graeca*, volume 31, which prints Basil of Caesarea's
+homilies. Read in the Internet Archive's scan; the printing's year was not
+read. -/
+@[bib_entry] def migneGraeca31 : BibEntry := .book
+  { core :=
+      { key := "migne-patrologia-graeca-31"
+      , role := .text
+      , contributors := { editors := [.person "Jacques-Paul" "Migne"] }
+      , title := "Patrologiae Cursus Completus, Series Graeca"
+      , identifiers :=
+          [ .url "https://archive.org/details/patrologiae_cursus_completus_gr_vol_031"
+              (some "2026-11-22") ] }
+  , publisher := "J.-P. Migne"
+  , place := some "Paris"
+  , volume := some "31" }
+
+/-- Bernard's sermons on the Song of Songs in Samuel Eales's translation, from
+Mabillon's edition: volume 4 of the *Life and Works*, dated 1896 on its title
+page. Read in the Internet Archive's scan. -/
+@[bib_entry] def ealesBernardSong : BibEntry := .book
+  { core :=
+      { key := "eales-bernard-song-of-songs-1896"
+      , role := .text
+      , contributors :=
+          { editors := [.person "Jean" "Mabillon"]
+          , translators := [.person "Samuel J." "Eales"] }
+      , title := "Life and Works of Saint Bernard, Abbot of Clairvaux"
+      , subtitle := some "Cantica Canticorum: Eighty-Six Sermons on the Song of Solomon"
+      , year := some { value := 1896 }
+      , identifiers :=
+          [ .url "https://archive.org/details/LifeWorksOfSBernardClairvauxV4"
+              (some "2026-11-22") ] }
+  , publisher := "John Hodges"
+  , place := some "London"
+  , volume := some "4" }
+
+/-- The Corpus Thomisticum's Latin text of Aquinas's commentary on 1 Timothy,
+from the Turin edition of 1953. -/
+@[bib_entry] def corpusThomisticumFirstTimothy : BibEntry := .webPage
+  { core :=
+      { key := "corpus-thomisticum-super-i-tim"
+      , role := .text
+      , contributors := {}
+      , title := "Super I Epistolam B. Pauli ad Timotheum lectura"
+      , identifiers :=
+          [.url "https://www.corpusthomisticum.org/ct1.html" (some "2026-11-22")] }
+  , site := some "Corpus Thomisticum" }
+
+/-- Chrysostom's homilies on Acts and Romans in the Nicene and Post-Nicene Fathers,
+first series, volume 11: the Romans homilies translated by J. B. Morris and
+revised by W. H. Simcox. Read in the Christian Classics Ethereal Library's text;
+its year was not read. -/
+@[bib_entry] def npnfChrysostomActsRomans : BibEntry := .book
+  { core :=
+      { key := "npnf1-11"
+      , role := .text
+      , contributors := { editors := [.person "Philip" "Schaff"] }
+      , title :=
+          "A Select Library of the Nicene and Post-Nicene Fathers of the Christian Church"
+      , subtitle := some ("First Series, Volume 11: Saint Chrysostom — Homilies on the " ++
+          "Acts of the Apostles and the Epistle to the Romans")
+      , identifiers :=
+          [.url "https://www.ccel.org/ccel/schaff/npnf111.html" (some "2026-11-22")] }
+  , publisher := "T&T Clark" }
+
+/-- Ambrosiaster's commentary on Romans, for 3:24: "they are justified freely
+because, doing nothing and giving nothing in return, they are justified by faith
+alone, a gift of God" (*sola fide justificati sunt dono Dei*). Read in Migne's
+Latin. Written while Damasus was bishop of Rome (366–384), as the commentary
+itself says, so dated c. 375 (Catholic Encyclopedia, "Ambrosiaster"). -/
+@[bib_entry] def ambrosiasterRomans : BibEntry := .ancientWork
+  { core :=
+      { key := "ambrosiaster-romans-375"
+      , role := .witness
+      , contributors := { authors := [.single "Ambrosiaster"] }
+      , title := "Commentary on Romans" }
+  , originalTitle := some "Commentaria in Epistolam ad Romanos"
+  , composed := some { value := 375, approximate := true }
+  , editionUsed := some "migne-patrologia-latina-17-1845" }
+
+/-- Origen's commentary on Romans, in Rufinus's Latin, for 3:28: faith alone
+suffices, so that one who only believes is justified, as the thief on the cross
+was, "without works of the law". Read in Migne's Latin. Dated by Rufinus's
+translation, c. 406, which is the text read; Origen wrote the Greek c. 246
+(the publisher's description of Scheck's translation). -/
+@[bib_entry] def origenRomansRufinus : BibEntry := .ancientWork
+  { core :=
+      { key := "origen-romans-rufinus-406"
+      , role := .witness
+      , contributors := { authors := [.single "Origen"], translators := [.single "Rufinus"] }
+      , title := "Commentary on Romans" }
+  , originalTitle := some "Commentaria in Epistolam ad Romanos"
+  , composed := some { value := 406, approximate := true }
+  , editionUsed := some "migne-patrologia-graeca-14" }
+
+/-- Hilary of Poitiers's commentary on Matthew, for 8.6: "faith alone justifies"
+(*fides enim sola justificat*). Read in Migne's Latin. Dated c. 352, as most
+scholars date it (Beckwith, *Journal of Ecclesiastical History* 58, 2007). -/
+@[bib_entry] def hilaryOnMatthew : BibEntry := .ancientWork
+  { core :=
+      { key := "hilary-matthew-352"
+      , role := .witness
+      , contributors := { authors := [.single "Hilary of Poitiers"] }
+      , title := "Commentary on Matthew" }
+  , originalTitle := some "Commentarius in Matthaeum"
+  , composed := some { value := 352, approximate := true }
+  , editionUsed := some "migne-patrologia-latina-9" }
+
+/-- Basil of Caesarea's homily *On Humility*, for §3: one who knows himself
+lacking true righteousness, justified "by faith alone, the faith in Christ"
+(πίστει δὲ μόνῃ τῇ εἰς Χριστὸν δεδικαιωμένον). Read in Migne's Greek. Likely
+preached c. 375, while Basil was bishop (Ford, *Themelios* 44.2). -/
+@[bib_entry] def basilHumility : BibEntry := .ancientWork
+  { core :=
+      { key := "basil-humility-375"
+      , role := .witness
+      , contributors := { authors := [.single "Basil of Caesarea"] }
+      , title := "Homily on Humility" }
+  , originalTitle := some "Περὶ ταπεινοφροσύνης"
+  , composed := some { value := 375, approximate := true }
+  , editionUsed := some "migne-patrologia-graeca-31" }
+
+/-- Chrysostom's seventh homily on Romans, for 3:27: God "has not only saved,
+but has even justified, … without needing works, but looking for faith only".
+Written c. 391 (Catholic Encyclopedia, "Chrysostom"). -/
+@[bib_entry] def chrysostomRomans : BibEntry := .ancientWork
+  { core :=
+      { key := "chrysostom-homilies-romans-391"
+      , role := .witness
+      , contributors := { authors := [.single "John Chrysostom"] }
+      , title := "Homilies on Romans" }
+  , composed := some { value := 391, approximate := true }
+  , editionUsed := some "npnf1-11" }
+
+/-- Bernard of Clairvaux's twenty-second sermon on the Song of Songs, §8:
+"being justified by faith alone, he shall have peace with God". Mabillon's
+preface dates the first twenty-four sermons between Advent 1135 and 1137. -/
+@[bib_entry] def bernardSongOfSongs : BibEntry := .ancientWork
+  { core :=
+      { key := "bernard-song-of-songs-1135"
+      , role := .witness
+      , contributors := { authors := [.single "Bernard of Clairvaux"] }
+      , title := "Sermons on the Song of Songs" }
+  , originalTitle := some "Sermones super Cantica Canticorum"
+  , composed := some { value := 1135, approximate := true }
+  , editionUsed := some "eales-bernard-song-of-songs-1896" }
+
+/-- Aquinas's commentary on 1 Timothy, chapter 1, lecture 3, on 1:8: in the moral
+precepts of the law "there is no hope of justification, but in faith alone"
+(*non est ergo in eis spes iustificationis, sed in sola fide*). Read in the
+Corpus Thomisticum's Latin. The year of the lectures is disputed (Weisheipl's
+catalogue, no. 34), so the work is dated by Aquinas's death in 1274. -/
+@[bib_entry] def aquinasFirstTimothy : BibEntry := .ancientWork
+  { core :=
+      { key := "aquinas-first-timothy-1274"
+      , role := .witness
+      , contributors := { authors := [.person "Thomas" "Aquinas"] }
+      , title := "Commentary on the First Epistle to Timothy" }
+  , originalTitle := some "Super I Epistolam B. Pauli ad Timotheum lectura"
+  , composed := some { value := 1274, approximate := true }
+  , editionUsed := some "corpus-thomisticum-super-i-tim" }
+
+/-- Augustine's *On the Spirit and the Letter*, for 26.45: "what else does the
+phrase 'being justified' signify than being made righteous", in the Nicene and
+Post-Nicene Fathers' translation, ch. 45. Written about the end of 412, as that
+edition's introductory note says. -/
+@[bib_entry] def augustineSpiritAndLetter : BibEntry := .ancientWork
+  { core :=
+      { key := "augustine-spirit-letter-412"
+      , role := .witness
+      , contributors := { authors := [.single "Augustine"] }
+      , title := "On the Spirit and the Letter" }
+  , originalTitle := some "De spiritu et littera"
+  , composed := some { value := 412 }
+  , editionUsed := some "npnf1-05-1887" }
+
+/-- Thomas Oden's reader of patristic texts on justification, which argues that
+leading fathers "anticipated standard classic Reformation teaching on
+justification". Not read beyond the catalogue and search fragments; cited as a
+whole. Verified at Open Library, ISBN 9780802839664. -/
+@[bib_entry] def odenJustificationReader : BibEntry := .book
+  { core :=
+      { key := "oden-justification-reader-2002"
+      , contributors := { authors := [.person "Thomas C." "Oden"] }
+      , title := "The Justification Reader"
+      , year := some { value := 2002 }
+      , identifiers := [.isbn "9780802839664"] }
+  , publisher := "Eerdmans"
+  , place := some "Grand Rapids" }
+
+/-- D. H. Williams on justification by faith before Augustine: Latin theology
+"promulgated the tenets of unmerited grace and the necessity of righteousness
+that come only through justifying faith", and Hilary's commentary on Matthew
+"explicitly formulates a biblical theology of 'fides sola iustificat'"
+(abstract). Verified at Crossref. -/
+@[bib_entry] def williamsPatristicJustification : BibEntry := .article
+  { core :=
+      { key := "williams-justification-patristic-2006"
+      , contributors := { authors := [.person "D. H." "Williams"] }
+      , title := "Justification by Faith: A Patristic Doctrine"
+      , year := some { value := 2006 }
+      , identifiers := [.doi "10.1017/S0022046906008207"] }
+  , journal := "The Journal of Ecclesiastical History"
+  , volume := some "57"
+  , issue := some "4"
+  , pages := some (649, 667) }
+
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'

@@ -387,6 +387,10 @@ def means : Claim → Statement
   | .romans5_19BearsOnTheVerb =>
     .bears .dikaios (.passage (vs .romans 5 19)) .dikaioo (.usage .paul)
   | .godsVerdictIsEffective => .holds (rl .effects (cn .justification) (cn .sanctification))
+  | .fathersWroteFaithAlone =>
+    .opaque "Hilary, Basil, Ambrosiaster, Chrysostom, Origen, Bernard, Aquinas: faith alone"
+  | .justifiedByFaithWithoutPriorWorks =>
+    .opaque "the ungodly are justified by faith alone, as a gift, no prior work earning it"
   | .countingWasForTheTesting =>
     .opaque "What was counted at Gen 15:6 was credited for his faithfulness when tested"
   | .abrahamFoundFaithfulWhenTested =>
@@ -448,7 +452,8 @@ def all : List Claim :=
   , .johnBelievingKeepsItsSense, .jamesUsesDikaioAsOutsidePaul
   , .jamesKeepsHisWordsThroughTheParagraph, .fruitTextsShareFaithAndWorks
   , .romans5_19ManyMadeRighteous, .romans5_19MadeInwardlyRighteous
-  , .romans5_19BearsOnTheVerb, .godsVerdictIsEffective ]
+  , .romans5_19BearsOnTheVerb, .godsVerdictIsEffective, .fathersWroteFaithAlone
+  , .justifiedByFaithWithoutPriorWorks ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -463,8 +468,10 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **A hundred and eleven of the hundred and forty-two are analysed.** Of the
-thirty-one that are not, fifteen are the claims of the chapters on whether
+/-- **A hundred and eleven of the hundred and forty-four are analysed.** Of the
+thirty-three that are not, two are the claims of the chapter on what was read in
+Paul before Trent: what the fathers wrote of faith alone, and justification with
+no prior work earning it. Fifteen are the claims of the chapters on whether
 justification has degrees and on Abraham, whose content (a verdict's degrees, a
 covenant rite, a grant, a testing) the vocabulary cannot yet state. Of the other
 sixteen, four are Pius XII's and Trent's claims about the Vulgate and one is the
@@ -476,7 +483,7 @@ of the obedience it requires, Galatians 1:6–9, Christ's command to baptise, Tr
 reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each needs a word
 the vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
 reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (111, 142) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (111, 144) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the
