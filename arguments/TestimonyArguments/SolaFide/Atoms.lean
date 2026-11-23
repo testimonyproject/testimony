@@ -610,6 +610,33 @@ inductive Claim
   /-- God justifies the ungodly by faith alone, as a gift, and no work that comes
   before faith earns it. -/
   | justifiedByFaithWithoutPriorWorks
+  /-- Galatians 5:6 says that in Christ Jesus neither circumcision nor
+  uncircumcision counts for anything, "but only faith working through love". -/
+  | galatians5_6FaithWorkingThroughLove
+  /-- Romans 11:6 says that if the remnant is chosen by grace, "it is no longer on
+  the basis of works; otherwise grace would no longer be grace". -/
+  | romans11_6NoLongerOfWorks
+  /-- James 2:17 and 2:26 say that faith without works is dead. -/
+  | james2_17FaithWithoutWorksIsDead
+  /-- The faith that justifies is faith formed by charity: in Galatians 5:6 the
+  faith that counts is the faith that works through love. -/
+  | faithFormedByCharityJustifies
+  /-- The love of Galatians 5:6 is the fruit of faith, not a second thing that
+  justifies with it. -/
+  | loveIsTheFruitOfFaith
+  /-- The Abraham whom Paul says was not justified by works (Romans 4:1–5) was
+  already a believer, doing good works from faith. -/
+  | abrahamOfRomans4WasABeliever
+  /-- The works Paul excludes from justification are works done without grace,
+  before faith, by the will's own strength, and not works done from faith. -/
+  | paulExcludesOnlyWorksWithoutGrace
+  /-- "Works" (ἔργα) in Romans 4:4–5 has the sense Paul gives the word wherever he
+  excludes works from justification: there the Apostle himself explains what he
+  means by it. -/
+  | romans4_4ExplainsPaulsWorks
+  /-- "Work" in John 6:29, where believing is "the work of God", has the sense
+  Paul gives "works" when he excludes works from justification. -/
+  | john6_29WorkIsPaulsWorks
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaFide

@@ -188,6 +188,9 @@ inductive Sense
   | lawAsCondition
   /-- Deeds that grow out of faith. -/
   | worksOfFaith
+  /-- Deeds done without grace, before faith, by the will's own strength: the
+  works Bellarmine holds Paul excludes from justification. -/
+  | worksWithoutGrace
   /-- Trust in Christ, receiving and bringing nothing: faith as Calvin's
   "passive work". -/
   | trust

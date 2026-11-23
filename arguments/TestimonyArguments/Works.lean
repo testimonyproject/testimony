@@ -3308,6 +3308,31 @@ Archive. -/
   , place := some "Paris"
   , volume := some "2" }
 
+/-- Bellarmine's *Opera omnia*, volume 6, with *De justificatione*. In book I,
+ch. 19 (pp. 192–194), he answers the texts brought for faith alone. He grants
+that Romans 4, Ephesians 2 and Titus 3 "simply exclude works, with no mention of
+the law of Moses", and holds that the works excluded are those done before
+faith, by the will's own strength, from Romans 4:4: to the one who works, wages
+are counted "as debt, not as grace". He answers Chemnitz that Abraham "was
+indeed reborn" when Paul speaks of him (p. 194). In book II, ch. 4 (pp.
+217–218), the faith that justifies is faith "formed, and as it were given life,
+by love" (Galatians 5:6). Read in the Latin, in the Internet Archive's scan; the
+title page gives Vivès, Paris, 1873. -/
+@[bib_entry] def bellarmineOpera6 : BibEntry := .book
+  { core :=
+      { key := "bellarmine-opera-omnia-6-1873"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "Robert" "Bellarmine"]
+          , editors := [.person "Justin" "Fèvre"] }
+      , title := "Opera omnia"
+      , year := some { value := 1873 }
+      , identifiers :=
+          [ .url "https://archive.org/details/operaomnia06bell_0" (some "2026-11-23") ] }
+  , publisher := "Ludovicus Vivès"
+  , place := some "Paris"
+  , volume := some "6" }
+
 /-- Turretin's *Institutio theologiae elencticae*, volume 1. The Church "can be
 grasped by us by human faith before Scripture ... but cannot be known and
 believed by divine faith except after Scripture is known" ("Ecclesia potest a
@@ -5382,6 +5407,52 @@ edition's introductory note says. -/
   , originalTitle := some "De spiritu et littera"
   , composed := some { value := 412 }
   , editionUsed := some "npnf1-05-1887" }
+
+/-! ### Faith working through love -/
+
+/-- Aquinas's lectures on Galatians, as a work of his own time, dated for the
+exchange on faith working through love. On 5:6 the faith that counts is "faith,
+not unformed, but the kind that worketh by charity" (c. 5, lect. 2). The year of
+the lectures is disputed, so the work is dated, like his lectures on 1 Timothy,
+by his death in 1274. Read in Larcher's translation and the Corpus Thomisticum's
+Latin. -/
+@[bib_entry] def aquinasGalatiansLectures : BibEntry := .ancientWork
+  { core :=
+      { key := "aquinas-galatians-1274"
+      , role := .witness
+      , contributors := { authors := [.person "Thomas" "Aquinas"] }
+      , title := "Commentary on the Epistle to the Galatians" }
+  , originalTitle := some "Super Epistolam B. Pauli ad Galatas lectura"
+  , composed := some { value := 1274, approximate := true }
+  , editionUsed := some "aquinas-commentary-galatians-1966" }
+
+/-- Calvin's answer to the decree of Trent's sixth session, written in 1547, the
+year the decree was published, dated for the exchange on faith working through
+love. Read in Beveridge's translation of 1851 (`calvinAntidote`), whose pages the
+library cites. -/
+@[bib_entry] def calvinAntidoteWork : BibEntry := .ancientWork
+  { core :=
+      { key := "calvin-antidote-1547"
+      , role := .witness
+      , contributors := { authors := [.person "John" "Calvin"] }
+      , title := "Acts of the Council of Trent, with the Antidote" }
+  , originalTitle := some "Acta synodi Tridentinae cum antidoto"
+  , composed := some { value := 1547 }
+  , editionUsed := some "calvin-antidote-trent-1851" }
+
+/-- Bellarmine's *De justificatione*, in the third volume of his *Disputationes
+de controversiis*, published at Ingolstadt in 1593, dated for the exchange on
+faith working through love. Read in Vivès's edition of 1873
+(`bellarmineOpera6`), whose pages the library cites. -/
+@[bib_entry] def bellarmineDeJustificatione : BibEntry := .ancientWork
+  { core :=
+      { key := "bellarmine-de-justificatione-1593"
+      , role := .witness
+      , contributors := { authors := [.person "Robert" "Bellarmine"] }
+      , title := "On Justification" }
+  , originalTitle := some "De justificatione"
+  , composed := some { value := 1593 }
+  , editionUsed := some "bellarmine-opera-omnia-6-1873" }
 
 /-- Thomas Oden's reader of patristic texts on justification, which argues that
 leading fathers "anticipated standard classic Reformation teaching on

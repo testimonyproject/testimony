@@ -1105,12 +1105,106 @@ def baseCite : Claim → AtomMeta
         "justified by faith alone"
     , kind := .historical
       -- `consensus`: that they wrote it is read in their own Latin and Greek.
-      -- What they meant by it is the question `fathersReadAsTheReformers` asks.
+      -- What they meant by it is weighed with Trent's definition.
     , source := fathersOnFaithAlone }
   | .justifiedByFaithWithoutPriorWorks =>
     { label := "God justifies the ungodly by faith alone, as a gift, and no prior work earns it"
     , kind := .theological
     , source := { fathersOnFaithAlone with confidence := .wellSupported } }
+  | .galatians5_6FaithWorkingThroughLove =>
+    { label := "Galatians 5:6: in Christ only faith working through love counts for anything"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.galatians, 5, 6⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .romans11_6NoLongerOfWorks =>
+    { label := "Romans 11:6: if by grace, it is no longer on the basis of works"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.romans, 11, 6⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .james2_17FaithWithoutWorksIsDead =>
+    { label := "James 2:17, 26: faith without works is dead"
+    , kind := .textual
+    , source :=
+        { primary := .scripture
+            [{ ref := .verse ⟨.james, 2, 17⟩ }, { ref := .verse ⟨.james, 2, 26⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .faithFormedByCharityJustifies =>
+    { label := "The faith that justifies is faith formed by charity (Galatians 5:6)"
+    , kind := .interpretive
+      -- Aquinas on 5:6: "faith, not unformed, but the kind that worketh by
+      -- charity"; Bellarmine, II.4, p. 218: faith "formed, and as it were given
+      -- life, by love". `disputed`: Calvin grants the verse and reads the love as
+      -- faith's fruit (*Antidote*, p. 119).
+    , source :=
+        { primary := .work aquinasGalatians (.sectionRef "c. 5, lect. 2")
+        , supporting := [.work bellarmineOpera6 (.pages 217 218)]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .loveIsTheFruitOfFaith =>
+    { label := "The love of Galatians 5:6 is the fruit of faith"
+    , kind := .interpretive
+      -- Calvin, *Antidote*, p. 119: "if love is the fruit and effect of faith, who
+      -- sees not that the informal faith which they have fabricated is a vain
+      -- figment?" `disputed`: Aquinas and Bellarmine grant the verse and read the
+      -- faith as formed by the love.
+    , source :=
+        { primary := .work calvinAntidote (.page 119)
+        , supporting := [.work calvinGalatians (.adLoc ⟨.galatians, 5, 6⟩)]
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .abrahamOfRomans4WasABeliever =>
+    { label := "The Abraham of Romans 4:1–5 was already a believer doing good works"
+    , kind := .interpretive
+      -- Calvin, *Antidote*, p. 123: "Let us observe that he is speaking of the holy
+      -- Patriarch." Bellarmine grants it, answering Chemnitz: "Abraham at the time
+      -- of which the Apostle speaks was indeed reborn, and did many good works
+      -- from faith" (I.19, p. 194). No cited reader denies it.
+    , source :=
+        { primary := .work calvinAntidote (.page 123)
+        , supporting := [.work bellarmineOpera6 (.page 194)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .paulExcludesOnlyWorksWithoutGrace =>
+    { label := "The works Paul excludes are works done without grace, before faith"
+    , kind := .interpretive
+      -- Bellarmine, I.19, p. 193: the works opposed to faith are "the works which
+      -- precede faith, and are done by the strength of free will alone".
+      -- `disputed`: Calvin grants Romans 4:4–5 and that it is said of Abraham, a
+      -- believer, and denies it (*Antidote*, p. 123).
+    , source :=
+        { primary := .work bellarmineOpera6 (.pages 192 194)
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .romans4_4ExplainsPaulsWorks =>
+    { label := "Romans 4:4–5 explains what Paul means by the works he excludes"
+    , kind := .linguistic
+      -- Bellarmine, I.19, p. 193: "in this place the Apostle himself explains what
+      -- ought to be understood by the works which are opposed to faith". Calvin
+      -- reads Paul's works from the same verses (*Antidote*, p. 123), so both sides
+      -- grant it.
+    , source :=
+        { primary := .work bellarmineOpera6 (.page 193)
+        , supporting := [.work calvinAntidote (.page 123)]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .wellSupported } }
+  | .john6_29WorkIsPaulsWorks =>
+    { label := "The \"work\" of John 6:29 is a work in the sense of Paul's excluded works"
+    , kind := .linguistic
+      -- Bellarmine, I.16: believing is a work, "and is called by this name in the
+      -- Gospel", with Augustine, *On the Predestination of the Saints* 7, that faith
+      -- is not set apart from works as though it were not a work. `disputed`:
+      -- Calvin grants that John 6:29 calls believing a work and denies it is one
+      -- in that sense, for faith is "a passive work, to which no reward can be
+      -- paid" (on John 6:29).
+    , source :=
+        { primary := .work bellarmineOpera6 (.sectionRef "De justificatione I.16")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
   | .aqedahOathMeritedByObedience =>
     { label := "The oath of Genesis 22:16–18 was merited by the binding of Isaac"
     , kind := .interpretive
