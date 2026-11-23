@@ -20,3 +20,15 @@ benchmark = "checks: AIF, every dispute"
 metric = "time"
 up_to = 0.15
 reason = "One more dispute to check: the Reformation exchange, thirteen parties, 61 edges in its AIF graph. CI measured +5.2% to +8.8%"
+
+[[accept]]
+benchmark = "checks: postulates, every package"
+metric = "time"
+up_to = 0.12
+reason = "Thirteen new sola fide packages, each checked for a model with its postulates (108 packages, from 95 on main). CI measured +5.5%"
+
+[[accept]]
+benchmark = "checks: ontology"
+metric = "time"
+up_to = 0.12
+reason = "Twelve new sola fide claims, two with same-sense meanings the ontology check reads in every argument line. CI measured +6.7%"
