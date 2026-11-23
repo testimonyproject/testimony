@@ -24,6 +24,8 @@ def solaFideChapters : List Chapter :=
                  , `TestimonyArguments.SolaFide.Results ] }
   , { slug := "john", title := "John: \"this is the work of God, that you believe\""
     , modules := [`TestimonyArguments.SolaFide.Johannine] }
+  , { slug := "before-trent", title := "Was faith alone read in Paul before Trent?"
+    , modules := [`TestimonyArguments.SolaFide.BeforeTrent] }
   , { slug := "trent-and-paul", title := "Where Trent parts from Paul"
     , modules := [`TestimonyArguments.SolaFide.Gospel] }
   , { slug := "trents-definition", title := "What Trent means by justification"

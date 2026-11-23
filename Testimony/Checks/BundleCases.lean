@@ -414,4 +414,12 @@ def datedTurn : Page.ExchangeTurn :=
 #guard Markdown.exchange [] { turns := [datedTurn], pairs := [] } ==
   "**Trent** (*The Sixth Session*, 1547). The council defines.\n\n"
 
+/-! **Written before a year.** Scripture always is; a work is when its date is
+earlier, as Motyer's *Isaiah* (1993) is before 2000 and France's *Matthew* (2007)
+is not. -/
+
+#guard (Reference.scripture []).before 1545
+#guard (Reference.work Testimony.Bib.motyerIsaiah .whole).before 2000
+#guard !(Reference.work Testimony.Bib.franceMatthew .whole).before 2000
+
 end Testimony.Checks.BundleCases

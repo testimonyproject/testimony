@@ -601,6 +601,15 @@ inductive Claim
   meaning" (Kertelge, quoted by Fitzmyer). A claim about what God's declaration
   does. -/
   | godsVerdictIsEffective
+  /-- Before Trent, readers of Paul in the East and the West wrote that the
+  ungodly are justified by faith alone: Hilary of Poitiers ("faith alone
+  justifies"), Basil of Caesarea, Ambrosiaster ("justified by faith alone, a gift
+  of God"), Chrysostom, Origen in Rufinus's Latin, Bernard of Clairvaux and
+  Thomas Aquinas. A claim about what they wrote, not about what they meant by it. -/
+  | fathersWroteFaithAlone
+  /-- God justifies the ungodly by faith alone, as a gift, and no work that comes
+  before faith earns it. -/
+  | justifiedByFaithWithoutPriorWorks
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaFide
