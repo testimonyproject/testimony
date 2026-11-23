@@ -1,0 +1,22 @@
+# PR #382: Luther's contemporaries, 1521-1541, as a chapter of sola fide.
+# The chapter adds twelve sola fide claims (the texts its voices argue from,
+# faith formed by charity, Regensburg's double righteousness, and two stated
+# same-sense conditions) and a thirteen-party dispute of its own.
+
+[[accept]]
+benchmark = "satisfied_by: the Pauline case"
+metric = "time"
+up_to = 0.20
+reason = "The sola fide claim type is twelve claims larger, so each valuation over it costs more to reduce; the Pauline case itself is unchanged. CI measured +12%"
+
+[[accept]]
+benchmark = "satisfied_by: Trent grants the subjective genitive"
+metric = "time"
+up_to = 0.20
+reason = "The sola fide claim type is twelve claims larger, so each valuation over it costs more to reduce; Trent's case itself is unchanged. CI measured +14.3%"
+
+[[accept]]
+benchmark = "checks: AIF, every dispute"
+metric = "time"
+up_to = 0.15
+reason = "One more dispute to check: the Reformation exchange, thirteen parties, 61 edges in its AIF graph. CI measured +5.2% to +8.8%"
