@@ -34,38 +34,33 @@ thirteenth. Trent itself grants that much: "none of those things which precede
 justification, whether faith or works, merit the grace itself of justification"
 (Session VI, ch. 8).
 
-What the fathers meant by it is another question, and the one that divided
-Trent from the Reformers. Augustine, writing about the end of 412, explained
-"being justified" as "being made righteous" (*On the Spirit and the Letter*,
-ch. 45), so that justification includes the renewal of the person, though in
-the same passage he allows "deemed, or reckoned as just" as a second way of
-taking the word. Aquinas read it the same way, and so did the Latin West after
-him. The Reformers held that
-justification is a verdict only, kept distinct from the renewal that comes with
-it. Modern historians part over whether the fathers' "faith alone" meant that.
-Thomas Oden (2002) and D. H. Williams (2006) find the Reformation's teaching
-anticipated in them. Alister McGrath (*Iustitia Dei*) calls the Reformers'
-distinction between justification and renewal "a genuine theological novum".
+Augustine, writing about the end of 412, explained "being justified" as "being
+made righteous" (*On the Spirit and the Letter*, ch. 45), so that justification
+includes the renewal of the person, though in the same passage he allows
+"deemed, or reckoned as just" as a second way of taking the word. Aquinas read
+it the same way, and so did the Latin West after him. That is a question about
+what justification is, not about the means by which it is received, and the
+chapter on Trent's definition weighs it (`whatTrentsDefinitionClaims`). Modern
+historians part over whether the fathers also meant a verdict only, as the
+Reformers did: Thomas Oden (2002) and D. H. Williams (2006) find the
+Reformation's teaching anticipated in them, and Alister McGrath (*Iustitia Dei*)
+calls the Reformers' distinction between justification and renewal "a genuine
+theological novum".
 
-The positions are heard in two ways. Heard as a whole, the dispute includes the
-reading of the fathers as the Reformers read them, which rests on Oden and
-Williams. Heard alone (`beforeTrentAlone`), the debate keeps only the positions
-that cite nothing written after 1545, and the build checks that they cite
-nothing later (`heard_before_trent`). In both, the fathers' reading of Paul is
-forced (`the_fathers_reading_stands_before_trent`,
-`the_fathers_reading_stands_in_the_whole_debate`). No position defeats it.
-The Reformers hold it, and their reading of the fathers is built on it, so it
-lends them its conclusion. Augustine's reading denies nothing it says either:
-the same chapter of his treatise is headed "it is not by their works, but by
-grace, that the doers of the law are justified". Before Trent, faith alone and
-justification as making righteous were held together
-(`faith_alone_stood_with_augustine`).
+Every position here cites only Scripture and works written before 1545, and the
+build checks that it cites nothing later (`heard_before_trent`). The fathers'
+reading of Paul is forced, and so is Augustine's
+(`the_fathers_reading_stands_before_trent`). Nothing defeats either, because
+Augustine's reading denies nothing the fathers' says: the same chapter of his
+treatise is headed "it is not by their works, but by grace, that the doers of
+the law are justified". Before Trent, faith alone and justification as making
+righteous were held together (`faith_alone_stood_with_augustine`).
 
-What is not settled is narrower: whether the justification the fathers said is
-by faith alone is a verdict only, or also the renewal of the person. The
-Reformers read the fathers as teaching the verdict, and Augustine taught the
-renewal. That step is rated `disputed` on both sides, so there, and only there,
-Augustine's reading and the Reformers' reading of the fathers defeat each other.
+What divided Trent from the Reformers came later, and is weighed in later
+chapters, each in its place: whether baptism is the instrument of justification
+(Session VI, ch. 7), whether good works increase it (canon 24), and whether
+grace once received is lost by mortal sin (ch. 15), which the chapter on
+perseverance in *Sola gratia* weighs.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -184,45 +179,6 @@ def renewalLine : Line Claim :=
 def augustineCase : ArgumentPackage Claim :=
   renewalLine.asPackage beforeTrentCite "justification includes the renewal of the person"
 
-/-! ### The fathers read as the Reformers read them -/
-
-/-- **Who draws the step to a verdict only.** Thomas Oden, who finds in the
-fathers "standard Reformation teaching" already in the fourth century, and D. H.
-Williams, for whom Hilary "explicitly formulates a biblical theology of 'fides
-sola iustificat'". Rated `disputed`, because McGrath grants that the fathers wrote
-of faith alone and denies that they kept justification distinct from renewal:
-the Reformers' distinction is "a genuine theological novum". -/
-def reformersOnTheFathersStep : Source :=
-  { primary := .work odenJustificationReader .whole
-  , supporting := [.work williamsPatristicJustification .whole]
-  , tradition := .reformedProtestant
-  , confidence := .disputed }
-
-/-- **The fathers' faith alone, read as the Reformers' verdict.** What the
-fathers wrote of faith alone, and justification by faith alone with no prior
-work earning it, mean what the Reformers taught: justification is a verdict
-only, forgiveness and righteousness counted, and not the renewal of the
-person. -/
-@[solaFideDefs]
-def reformersOnTheFathersLine : Line Claim :=
-  { name := "The fathers' faith alone is the Reformers' verdict (Oden, Williams)"
-  , grounds := [p .fathersWroteFaithAlone, p .justifiedByFaithWithoutPriorWorks]
-  , step := ⋀ [p .fathersWroteFaithAlone, p .justifiedByFaithWithoutPriorWorks] ➝
-      p .justificationIsForensicOnly
-  , delivers := p .justificationIsForensicOnly
-  , inference := some reformersOnTheFathersStep }
-
-/-- The fathers read as the Reformers read them, as a position: the fathers'
-reading of Paul, and the step from it to a verdict only. -/
-@[solaFideDefs]
-def reformersOnTheFathers : ArgumentPackage Claim :=
-  { name := "The fathers read as the Reformers read them"
-  , cite := beforeTrentCite
-  , premises := fathersLine.premises ++ reformersOnTheFathersLine.premises
-  , conclusion := p .justificationIsForensicOnly
-  , conclusionLabel := "justification is a verdict only"
-  , inferences := [fathersStep, reformersOnTheFathersStep] }
-
 /-! ### The debate before Trent, weighed -/
 
 /-- The parties to the debate over what was read in Paul before Trent. -/
@@ -231,8 +187,6 @@ inductive BeforeTrentParty
   | fathers
   /-- Augustine: justification makes righteous. -/
   | augustine
-  /-- The fathers read as the Reformers read them: a verdict only. -/
-  | reformersOnTheFathers
 deriving DecidableEq
 
 /-- The package each party argues from. -/
@@ -240,42 +194,28 @@ deriving DecidableEq
 def beforeTrentNode : BeforeTrentParty → ArgumentPackage Claim
   | .fathers => fathersCase
   | .augustine => augustineCase
-  | .reformersOnTheFathers => reformersOnTheFathers
 
 /-- The debate over what was read in Paul before Trent. -/
 declare_dispute beforeTrentDispute := beforeTrentNode using solaFideDefs
-  /-- **Who defeats whom**, all 9 pairs. Augustine's reading and the Reformers'
-  reading of the fathers defeat each other, because a verdict only and a
-  justification that includes renewal cannot both be true. Nothing defeats the
-  fathers' reading of Paul, and it defeats nothing. Every cell is checked by the
-  kernel. -/
-  defeats [(.augustine, .reformersOnTheFathers), (.reformersOnTheFathers, .augustine)]
-  /-- **One position supports another**, in all 9 pairs: the fathers' reading of
-  Paul lends the Reformers' reading of the fathers its conclusion, which that
-  reading takes as a ground. Every cell is checked by the kernel. -/
-  supports [(.fathers, .reformersOnTheFathers)]
-  /-- Each party's case is part of its own and of no other's, except that the
-  fathers' reading is part of the Reformers' reading of them. Every cell is
+  /-- **Who defeats whom**, all 4 pairs: nothing defeats anything. The fathers'
+  reading of Paul and Augustine's share no claim either denies. Every cell is
   checked by the kernel. -/
-  partOf [(.fathers, .reformersOnTheFathers)]
+  defeats []
+  /-- **Nothing supports anything**, in all 4 pairs. Every cell is checked by the
+  kernel. -/
+  supports []
+  /-- Each party's case is part of its own and of no other's. Every cell is
+  checked by the kernel. -/
+  partOf []
   /-- The debate before Trent drawn: who defeats whom. -/
   map beforeTrentMap
 
-/-- **The debate before Trent, heard alone**: the fathers' reading of Paul and
-Augustine's, which cite only Scripture and works written before 1545. Not heard:
-the fathers read as the Reformers read them, which rests on modern
-historians. -/
-declare_hearing beforeTrentAlone := beforeTrentDispute
-  except [BeforeTrentParty.reformersOnTheFathers]
-
-/-- **The hearing before Trent hears only what was written before 1545.** Every
+/-- **The debate before Trent hears only what was written before 1545.** Every
 reference the fathers' reading and Augustine's cite, for their claims and for
-their steps, is Scripture or a work dated before 1545, and the Reformers'
-reading of the fathers cites works written after it. -/
+their steps, is Scripture or a work dated before 1545. -/
 theorem heard_before_trent :
     beforeTrentDispute.citesOnlyBefore .fathers 1545 = true ∧
-      beforeTrentDispute.citesOnlyBefore .augustine 1545 = true ∧
-      beforeTrentDispute.citesOnlyBefore .reformersOnTheFathers 1545 = false := by
+      beforeTrentDispute.citesOnlyBefore .augustine 1545 = true := by
   decide +kernel
 
 /-- The reading on which the fathers' faith alone and Augustine's renewal hold
@@ -300,34 +240,15 @@ theorem faith_alone_stood_with_augustine :
     beforeTrentDispute.StandTogether [.fathers, .augustine] := by
   satisfied_by faithAloneWithRenewalReading [Dispute.StandTogether, solaFideDefs]
 
-/-- Why both readings before Trent are forced: nothing heard before 1545 defeats
-either. -/
-declare_verdict beforeTrentSettles for beforeTrentAlone :
-    .groundedExactly [Witness.listSub _ [.fathers, .augustine]] (Witness.Table.sub _ [])
+/-- Why both readings before Trent are forced: nothing defeats either. -/
+declare_verdict beforeTrentSettles for beforeTrentDispute :
+    .groundedExactly [[.fathers, .augustine]] []
   /-- **Before Trent, the fathers' reading of Paul is forced, and so is
-  Augustine's.** Heard on Scripture and works before 1545 alone, nothing defeats
+  Augustine's.** Heard on Scripture and works before 1545, nothing defeats
   either: justification by faith alone, with no work before faith earning it,
   and justification as making righteous were held together. -/
   proves @[headline] the_fathers_reading_stands_before_trent
 
 #print axioms the_fathers_reading_stands_before_trent
-
-/-- Why the fathers' reading is forced in the whole debate: nothing defeats it.
-Augustine and the Reformers' reading of the fathers defeat each other. -/
-declare_verdict fathersSettle for beforeTrentDispute :
-    .groundedExactly [[.fathers]]
-      [(.augustine, .reformersOnTheFathers), (.reformersOnTheFathers, .augustine)]
-  /-- **The fathers' reading of Paul is forced in the whole debate too.** Heard
-  with the Reformers' reading of the fathers, nothing defeats it. The Reformers
-  hold that the ungodly are justified by faith alone, with no prior work earning
-  it, as the fathers wrote, and their reading of the fathers takes that as a
-  ground. What they part with Augustine over is what that justification is: a
-  verdict only, or also the renewal of the person. The step from the fathers'
-  words to a verdict only is rated `disputed`, as is Augustine's step to
-  renewal, so on that question alone his reading and the Reformers' reading of
-  the fathers defeat each other, and neither is forced. -/
-  proves @[headline] the_fathers_reading_stands_in_the_whole_debate
-
-#print axioms the_fathers_reading_stands_in_the_whole_debate
 
 end TestimonyArguments.SolaFide
