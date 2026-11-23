@@ -53,12 +53,18 @@ Williams. Heard alone (`beforeTrentAlone`), the debate keeps only the positions
 that cite nothing written after 1545, and the build checks that they cite
 nothing later (`heard_before_trent`). In both, the fathers' reading of Paul is
 forced (`the_fathers_reading_stands_before_trent`,
-`the_fathers_reading_stands_in_the_whole_debate`). No position defeats it,
-Augustine's included, because Augustine's reading denies nothing it says: the
-same chapter of his treatise is headed "it is not by their works, but by grace,
-that the doers of the law are justified". Before Trent, faith alone and justification as making
-righteous were held together (`faith_alone_stood_with_augustine`). The step from
-the fathers' words to the Reformers' verdict is rated `disputed`, and there
+`the_fathers_reading_stands_in_the_whole_debate`). No position defeats it.
+The Reformers hold it, and their reading of the fathers is built on it, so it
+lends them its conclusion. Augustine's reading denies nothing it says either:
+the same chapter of his treatise is headed "it is not by their works, but by
+grace, that the doers of the law are justified". Before Trent, faith alone and
+justification as making righteous were held together
+(`faith_alone_stood_with_augustine`).
+
+What is not settled is narrower: whether the justification the fathers said is
+by faith alone is a verdict only, or also the renewal of the person. The
+Reformers read the fathers as teaching the verdict, and Augustine taught the
+renewal. That step is rated `disputed` on both sides, so there, and only there,
 Augustine's reading and the Reformers' reading of the fathers defeat each other.
 -/
 
@@ -312,12 +318,14 @@ declare_verdict fathersSettle for beforeTrentDispute :
     .groundedExactly [[.fathers]]
       [(.augustine, .reformersOnTheFathers), (.reformersOnTheFathers, .augustine)]
   /-- **The fathers' reading of Paul is forced in the whole debate too.** Heard
-  with the Reformers' reading of the fathers, nothing defeats it, because neither
-  side denies that the fathers taught justification by faith alone with no prior
-  work earning it. What the two sides part over is what it means. The step from
-  the fathers' words to a verdict only is rated `disputed`, as is Augustine's
-  step to renewal, so his reading and the Reformers' reading of the fathers
-  defeat each other, and neither is forced. -/
+  with the Reformers' reading of the fathers, nothing defeats it. The Reformers
+  hold that the ungodly are justified by faith alone, with no prior work earning
+  it, as the fathers wrote, and their reading of the fathers takes that as a
+  ground. What they part with Augustine over is what that justification is: a
+  verdict only, or also the renewal of the person. The step from the fathers'
+  words to a verdict only is rated `disputed`, as is Augustine's step to
+  renewal, so on that question alone his reading and the Reformers' reading of
+  the fathers defeat each other, and neither is forced. -/
   proves @[headline] the_fathers_reading_stands_in_the_whole_debate
 
 #print axioms the_fathers_reading_stands_in_the_whole_debate
