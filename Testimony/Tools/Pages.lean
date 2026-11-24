@@ -557,7 +557,13 @@ def latexChapters (a : Argument) (b : Body) : String :=
     let parts := c.modules.filterMap fun m => b.parts.find? (·.module == m)
     let heading := Logic.Latex.escape c.title
     let sub (t : String) := "\\subsubsection*{" ++ Logic.Latex.escape t ++ "}\n"
-    "\\subsection*{" ++ heading ++ "}\n\\addcontentsline{toc}{subsection}{" ++ heading ++
+    -- A chapter that opens a part is preceded by the part's title, in the text
+    -- and in the table of contents.
+    let part := if c.part.isEmpty then "" else
+      let t := Logic.Latex.escape c.part
+      "\\bigskip\\noindent{\\large\\scshape " ++ t ++ "}\\par\\medskip\n" ++
+        "\\addcontentsline{toc}{subsection}{\\scshape " ++ t ++ "}\n"
+    part ++ "\\subsection*{" ++ heading ++ "}\n\\addcontentsline{toc}{subsection}{" ++ heading ++
       "}\n" ++
     String.join (parts.zipIdx.map fun (p, j) =>
       (if j == 0 || p.subtitle.isEmpty then ""

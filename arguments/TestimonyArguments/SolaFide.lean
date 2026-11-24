@@ -11,6 +11,8 @@ import TestimonyArguments.SolaFide.Hearings
 import TestimonyArguments.SolaFide.BeforeTrent
 import TestimonyArguments.SolaFide.FaithAndCharity
 import TestimonyArguments.SolaFide.Reformation
+import TestimonyArguments.SolaFide.TrentAnswers
+import TestimonyArguments.SolaFide.WhatScriptureSays
 import TestimonyArguments.SolaFide.JesusWords
 import TestimonyArguments.SolaFide.Baptism
 import TestimonyArguments.SolaFide.James
@@ -107,8 +109,8 @@ Luke it is that "saved" at 7:50 means saved, which no scholar found denies. The
 case does not hang on any one of those readings: take any one away
 and the others still reach the conclusion. Only when such a reading is
 taken from every strand at once does sola fide fail to follow
-(`lexical_premises_jointly_load_bearing`). The next chapter takes the four in
-turn, and John has a chapter of his own.
+(`lexical_premises_jointly_load_bearing`). The chapter "Four witnesses: Paul,
+Luke, Acts and John" takes the four in turn, and John has a chapter of his own.
 
 ## What justification is
 
@@ -193,9 +195,24 @@ Luke's case, Paul's gospel and Trent can each be defended, and none is forced.
 John's case ties with Trent, the apocalyptic reading, Aquinas and Chrysostom, as
 the other strands tie with their rivals.
 
+## The story, in the order it was told
+
+The chapters after this one come in two parts. The first tells the story of the
+doctrine in the order its voices wrote. It begins with the texts themselves
+("What Scripture says"). Then it asks whether faith alone was read in Paul by
+the fathers and the schoolmen, from the 350s to the 1270s ("Was faith alone read
+in Paul before Trent?"), follows the Reformers and their Catholic opponents from
+1521 to the colloquy at Regensburg ("The Reformation's case, 1521–1541"), and
+ends with the council's decree of 1547 ("The council answers, 1547"). Each
+chapter after the texts cites, for what its voices hold, only what was written
+in their own time, so that a reply never comes before what it answers; the
+ratings name readers of any date. Each closes with which positions survive the
+others and which have been defeated so far.
+
 ## The questions the later chapters take
 
-Each later chapter takes one question a reader brings to this debate.
+The second part takes one question a reader brings to this debate in each
+chapter.
 
 - **Where exactly do Trent and Paul part?** At one step: that a verdict on
   Christ's finished work excludes the renewal worked in us. Trent can grant

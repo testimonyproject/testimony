@@ -52,7 +52,7 @@ Sola fide
 /--
 info: the fallacy checks, over every argument's lines, each named with its reader:
 Sola fide
-  lines: 96, read: 59, Scripture's own: 0
+  lines: 97, read: 59, Scripture's own: 0
   commit what they declare, as declared:
     bellarmineFormedFaithLine (Bellarmine): reading against usage: ἀγάπη at work in ἐνεργουμένη
     bellarminePassiveLine (Bellarmine): reading against usage: ἀγάπη at work in ἐνεργουμένη
@@ -80,19 +80,19 @@ Sola fide
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaFide
 
-/-- info: every package has a model with its postulates: 121, and 0 undecided -/
+/-- info: every package has a model with its postulates: 125, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaFide
 
 /--
-info: every reading and step has a reader or is marked proposed: 121 packages, 96 lines
+info: every reading and step has a reader or is marked proposed: 125 packages, 97 lines
 -/
 #guard_msgs in
 #check_readers under TestimonyArguments.SolaFide
 
 /--
 info: every claim resting where the copies differ takes a reading, rated no higher:
-121 packages, 98 claims citing Scripture, 0 naming the edition they read
+125 packages, 98 claims citing Scripture, 0 naming the edition they read
 -/
 #guard_msgs in
 #check_readings under TestimonyArguments.SolaFide
@@ -113,6 +113,7 @@ jamesDispute.finite: 38 I, 13 RA, 11 CA, 4 PA, 83 edges
 jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
 reformationDispute.finite: 41 I, 20 RA, 11 CA, 0 PA, 83 edges
 solaFideDispute.finite: 80 I, 36 RA, 42 CA, 0 PA, 196 edges
+trentAnswersDispute.finite: 19 I, 7 RA, 2 CA, 0 PA, 26 edges
 and 3 hearings, drawn with the disputes they restrict
 -/
 #guard_msgs in
@@ -132,6 +133,8 @@ reformationDispute.finite:
   hidden premises: 0; lines not read: 13
 solaFideDispute.finite:
   hidden premises: 0; lines not read: 6
+trentAnswersDispute.finite:
+  hidden premises: 0; lines not read: 2
 -/
 #guard_msgs in
 #check_conditions under TestimonyArguments.SolaFide
