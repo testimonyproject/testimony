@@ -11,9 +11,11 @@ definition:
 > justification is "not remission of sins merely, but also the sanctification
 > and renewal of the inward man" (Session VI, ch. 7).
 
-The Westminster Confession denies it (XI.1). But the definition can be taken in two ways, as a claim
-about a word or as a claim about what God does, and each way meets a different
-objection.
+The Westminster Confession denies it: God justifies "not by infusing
+righteousness into them, but by pardoning their sins, and by accounting and
+accepting their persons as righteous" (XI.1). But the definition can be taken in
+two ways, as a claim about a word or as a claim about what God does, and each
+way meets a different objection.
 
 ### Taken as a claim about Paul's word
 
@@ -180,7 +182,10 @@ deny, and each step has the reader who denies it beside it. -/
 `disputed`. Ziesler holds that "certainly something more than forensic" is meant,
 that the many "will really be righteous" (*The Meaning of Righteousness in Paul*,
 199), and Fitzmyer reads it in the "effective sense" (*Romans*, 118–19). Charles
-Hodge grants the verse and denies the reading (`hodgeOnRomansFiveNineteen`). -/
+Hodge grants the verse and denies the reading, because καθίστημι "never, in the
+New Testament, means to make, in the sense of effecting, or causing a person or
+thing, to be in its character or nature other than it was before" (*Romans*,
+p. 271; `hodgeOnRomansFiveNineteen`). -/
 def inwardOnRomansFiveNineteen : Source :=
   { primary := .work zieslerRighteousnessInPaul (.page 199)
   , supporting := [.work fitzmyerRomans (.pages 118 119)]
@@ -216,10 +221,11 @@ def fitzmyerOnTheAdjective : Source :=
 verb "justify" (δικαιόω). It says the many "will be made righteous" (δίκαιοι
 κατασταθήσονται), with the adjective "righteous" (δίκαιος). Fitzmyer's road
 needs what the adjective means there to be what the verb means in Paul. That
-is a reading in its own right, and Ziesler denies it, so a reader can reject it
-without rejecting the verse. Because the reading is stated, the word-shift check
-finds the move from the adjective to the verb granted
-(`Testimony.Semantics.Fallacy`). -/
+is a reading in its own right, and Ziesler denies it, because the word in 5:19
+is "righteous" (δίκαιοι), not "justify" (*The Meaning of Righteousness in
+Paul*, 199), so a reader can reject it without rejecting the verse. Because the
+reading is stated, the word-shift check finds the move from the adjective to the
+verb granted (`Testimony.Semantics.Fallacy`). -/
 @[solaFideDefs]
 def fitzmyerBridgeLine : Line Claim :=
   { name := "Romans 5:19's adjective bears on Paul's verb (Fitzmyer)"
@@ -261,8 +267,10 @@ def fitzmyerWordLine : Line Claim :=
 /-- That God's verdict is effective, rated `disputed`. Fitzmyer, quoting Karl
 Kertelge: declaring a person upright has "not only a forensic effect, but as
 forensic also an 'effective' meaning" (*Romans*, 118–19). Calvin grants that the
-two are given together and denies that the verdict does the renewing
-(`calvinOnTheVerdict`). -/
+two are given together and denies that the verdict does the renewing, because
+light and heat come together from the sun, "and yet reason itself prohibits us
+from transferring the peculiar properties of the one to the other" (*Institutes*
+III.xi.6; `calvinOnTheVerdict`). -/
 def kertelgeOnTheVerdictItself : Source :=
   { primary := .work fitzmyerRomans (.pages 118 119)
   , tradition := .romanCatholic
@@ -271,7 +279,9 @@ def kertelgeOnTheVerdictItself : Source :=
 /-- **God's verdict is effective.** When God declares a sinner righteous, His word
 does what it says, and the sinner is made righteous. The claim is Kertelge's, as
 Fitzmyer reports it, and it is about what God's declaration does. Calvin denies
-it. -/
+it: God renews those He justifies, but as the sun's heat is not its light,
+"reason itself prohibits us from transferring the peculiar properties of the one
+to the other" (*Institutes* III.xi.6). -/
 @[solaFideDefs]
 def kertelgeVerdictLine : Line Claim :=
   { name := "God's verdict is effective (Kertelge, via Fitzmyer)"
@@ -575,7 +585,9 @@ turns on one step: with the courtroom sense, Paul's own words for renewal and
 the rule of least meaning, "justify" does not mean renewal. What that
 contradicts is Trent's definition together with this way of taking it, and
 nothing else in Trent. Every link is rated above `disputed` but that step, which is
-`disputed`: Trent grants its starting points and denies its conclusion. -/
+`disputed`: Trent grants its starting points and denies its conclusion, because
+the justified "are not only reputed, but are truly called, and are, just,
+receiving justice within us" (Session VI, ch. 7). -/
 def whereTrentsWordReadingFalls : Because lexicalCase tridentineOnPaulsWord :=
   Because.ofChecks lexicalLine.step lexicalLine.grounds [] lexicalLine.grounds
     [ p .justificationIncludesSanctification
@@ -598,7 +610,9 @@ is rated `consensus`. But a Latin explanation does not settle what the Greek
 word means in Paul, and the courtroom sense, Paul's own words for renewal and
 the rule of least meaning say it does not mean renewal. That last step is rated
 `disputed`, so the break is a tie, not a refutation: Trent grants the starting
-points and denies the step. -/
+points and denies the step, reading Paul with Augustine, for whom "being
+justified" signifies "being made righteous" (*On the Spirit and the Letter*
+26.45). -/
 def whereTheLatinReadingFalls : Because lexicalCase tridentineOnPaulsWord :=
   Because.ofChecks lexicalLine.step lexicalLine.grounds [] lexicalLine.grounds
     [ p .augustineReadsJustifyAsMakeRighteous
@@ -638,7 +652,9 @@ def whereTrentsGraceReadingFalls : Because galatianGospel tridentineOnWhatGodDoe
 /-- **Romans 4, read this way, denies Trent's definition.** Paul explains the
 righteousness God counts to the ungodly as sin not counted. With the courtroom
 sense of the verb, renewal is no part of justification. Augustine accepts the
-same verses and reads them the other way, so the step is rated `disputed`. -/
+same verses and reads them the other way, because for him "being justified"
+signifies "being made righteous" (*On the Spirit and the Letter* 26.45), so the
+step is rated `disputed`. -/
 @[headline]
 theorem romansFourCase_establishes : Establishes romansFourCase := by
   establish [solaFideDefs, caseOf]
@@ -742,7 +758,8 @@ more", rated `disputed`: against the argument from usage, as Trent states the
 definition; against the same argument, at the Latin explanation this reading
 rests on ("being justified" as "being made righteous"); and against Romans 4
 read for the word. A reader who grants that step rejects the definition taken
-this way. A reader who denies it, as Trent does, need not.
+this way. A reader who denies it, as Trent does because the justified are "truly
+called, and are, just" (Session VI, ch. 7), need not.
 
 *Taken as a claim about what God does in justifying*, namely that He also
 renews, nothing about the word reaches it: neither the argument from usage nor

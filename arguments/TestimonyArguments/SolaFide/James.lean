@@ -126,7 +126,9 @@ defended** when none does.
   increase of justice. The argument from James's word and Trent's reading of it
   defeat each other, and each can be defended. They part at one premise: whether
   James uses the word as the Gospels and the Law use it. Calvin says he does, and
-  Trent denies it.
+  Trent denies it, because it reads James 2:24 as the justified who, "faith
+  co-operating with good works, increase in that justice which they have
+  received" (Session VI, ch. 10).
 - **Can be defended, and not forced.** Trent's reading of what works do
   (`trent_on_works_defensible`, `trent_on_works_not_forced`), and, against it,
   the Reformed reconciliation of James with Paul. Whether works are only the
@@ -135,12 +137,13 @@ defended** when none does.
   Trent's reading of the texts that promise a reward (chapter 16,
   `trentRewardLine`) meets the Reformed reconciliation in the same way. It also
   meets Westminster's reading of the same texts (`westminsterRewardLine`), which
-  denies that the reward is given to merits. When only evidence anyone can check
-  is counted, neither of Trent's readings of what works do stands as an
-  objection, and neither does the Reformed reconciliation, which rests on
-  Westminster's and Calvin's word that Ephesians 2 and James 2:18 share "faith"
-  and "works". Only Westminster's answer on the reward is forced then
-  (the chapter "Why each step is rated as it is").
+  denies that the reward is given to merits, because "we cannot by our best works
+  merit pardon of sin, or eternal life at the hand of God" (XVI.5). When only
+  evidence anyone can check is counted, neither of Trent's readings of what
+  works do stands as an objection, and neither does the Reformed reconciliation,
+  which rests on Westminster's and Calvin's word that Ephesians 2 and James 2:18
+  share "faith" and "works". Only Westminster's answer on the reward is forced
+  then (the chapter "Why each step is rated as it is").
 - **Can be defended, and not forced.** The reading on which James's word means
   renewal because Paul's does (`renewalWordLine`). It and the argument from
   James's word defeat each other. When only evidence anyone can check is
@@ -274,7 +277,9 @@ def jamesFaithSource : Source :=
 
 /-- Trent's reading of its three texts as teaching the increase of justification
 (Session VI, ch. 10). Rated `disputed`: the Reformed accept the texts and deny
-that they teach it. -/
+that they teach it. Calvin's reason, at James 2:21, is that James means "the
+manifestation of righteousness by the conduct", and Paul "the gratuitous
+imputation of righteousness". -/
 def trentIncreaseSource : Source :=
   { primary := .work tannerDecrees (.sectionRef "Trent, Session VI (1547), ch. 10")
   , tradition := .romanCatholic
@@ -830,7 +835,8 @@ declare_dispute jamesDispute := jamesPartyNode using solaFideDefs
   other. So do the argument from James's word and the reading through Paul. The
   argument from James's word needs James to use "justify" as the Gospels and the
   Law use it, outside Paul, and Trent, reading the same verses, denies that he
-  does. So it is rated `disputed` at that premise, as its rivals are at theirs,
+  does, reading James's "justified" as the increase of justice (Session VI,
+  ch. 10). So it is rated `disputed` at that premise, as its rivals are at theirs,
   and no side's reply fails for weakness.
 
   The Greek of Revelation 22:11 and of Sirach 18:22 defeat Trent's Latin readings
@@ -840,6 +846,9 @@ declare_dispute jamesDispute := jamesPartyNode using solaFideDefs
   each other: canon 24's, and chapter 16's from the reward texts. Westminster's
   reading of the reward texts and chapter 16's defeat each other: each denies what
   the other holds about merit, and both rest on a reading rated `disputed`.
+  Chapter 16 holds eternal life to be "a reward … to be faithfully rendered to
+  their good works and merits", and Westminster that "we cannot by our best works
+  merit pardon of sin, or eternal life at the hand of God" (XVI.5).
 
   The Reformed reconciliation and the reading through Paul defeat each other
   through what their claims mean. The reconciliation holds that James 2:24 does
@@ -990,10 +999,11 @@ declare_verdict trentOnWorksStands for jamesDispute :
   from James's word, the argument about James's faith, and the Greek of both
   verses. It accepts that James's "justified" is a verdict, and holds that the
   works by which James says a person is justified are a cause of that verdict's
-  increase and not merely its fruit. The Reformed reconciliation denies this, and
-  the debate cannot choose: at that point each side rests on its own confession,
-  rated `disputed`. So Trent's reading is defensible and not forced
-  (`trent_on_works_not_forced`). -/
+  increase and not merely its fruit. The Reformed reconciliation denies this,
+  because good works "are the fruits and evidences of a true and lively faith"
+  (Westminster XVI.2), and the debate cannot choose: at that point each side
+  rests on its own confession, rated `disputed`. So Trent's reading is
+  defensible and not forced (`trent_on_works_not_forced`). -/
   proves @[headline] trent_on_works_defensible
 
 #print axioms trent_on_works_defensible
@@ -1020,16 +1030,20 @@ theorem harmony_holds_fruit :
     Entails (jamesDispute.node .harmony).premises (p .worksAreFruitNotGround) := by
   establish [solaFideDefs, jamesDispute]
 
-/-- Trent's reading of what works do denies that. -/
+/-- Trent's reading of what works do denies that, because canon 24 condemns
+whoever says good works are "merely the fruits and signs of Justification
+obtained, but not a cause of the increase thereof". -/
 theorem trentOnWorks_denies_fruit :
     Entails (jamesDispute.node .trentOnWorks).premises (∼ p .worksAreFruitNotGround) := by
   establish [solaFideDefs, jamesDispute]
 
 /-- **Whether works are only the fruit of justification is contested, and the
-weighing confirms it.** The Reformed reconciliation holds it. Trent's reading of
-James 2:24 by canon 24 denies it. Each can be defended, and neither is forced.
-So the rating `disputed` on that premise (`worksAreFruitNotGround`) agrees with
-what the weighing finds. -/
+weighing confirms it.** The Reformed reconciliation holds it, with Westminster:
+good works "are the fruits and evidences of a true and lively faith" (XVI.2).
+Trent's reading of James 2:24 by canon 24 denies it, condemning whoever calls
+good works "merely the fruits and signs of Justification obtained". Each can be
+defended, and neither is forced. So the rating `disputed` on that premise
+(`worksAreFruitNotGround`) agrees with what the weighing finds. -/
 def worksContested : Contested jamesDispute (p .worksAreFruitNotGround) where
   holder := .harmony
   denier := .trentOnWorks

@@ -61,11 +61,16 @@ is worked out from the two positions' premises and checked by machine.
 Every position here has a weakest link rated `disputed`.
 
 - Each Reformed strand uses a step that Trent's canon 9 denies: to faith alone
-  in Paul's case and John's, and to "faith suffices" in Luke's and Peter's.
+  in Paul's case and John's, and to "faith suffices" in Luke's and Peter's. Trent
+  denies it because faith, "unless hope and charity be added thereto, neither
+  unites man perfectly with Christ, nor makes him a living member of His body"
+  (Session VI, ch. 7).
 - Paul's, Peter's and John's cases hold the Reformed distinction between
   justification and sanctification, which Trent condemns.
 - Trent rests on its definition of justification, which the Westminster
-  Confession denies.
+  Confession denies: God justifies "not by infusing righteousness into them, but
+  by pardoning their sins, and by accounting and accepting their persons as
+  righteous" (XI.1).
 - The apocalyptic reading denies a claim, and a premise that denies a claim is
   rated `disputed` by rule.
 - The two arguments about Paul's word share a step that Trent grants the
@@ -88,7 +93,9 @@ who contradicts whom.
 ## Who defeats whom
 
 - **Trent and each Reformed strand defeat each other.** Paul's, Peter's and
-  John's cases conclude "not by works", which Trent denies. Trent's definition
+  John's cases conclude "not by works", which Trent denies, holding good works
+  done in grace to be "a cause of the increase" of justification (canon 24).
+  Trent's definition
   of justification, "not remission of sins merely, but also the sanctification
   and renewal of the inward man" (Session VI, ch. 7), contradicts the
   distinction between justification and sanctification that they hold. That is
@@ -99,16 +106,20 @@ who contradicts whom.
   that faith without charity suffices. Luke's case reads "Your faith has saved
   you" (Luke 7:50) as saying that her faith sufficed.
 - **The apocalyptic reading and Paul's case defeat each other.** It denies that
-  Galatians 2:16 speaks of faith *in* Christ, and Paul's case concludes faith
-  alone. **It does not conflict with Luke's case or Peter's.** They say that
-  faith saves, which it grants. It says that faith is not the condition, which
-  they do not deny.
+  Galatians 2:16 speaks of faith *in* Christ, because Martyn and Campbell read
+  "faith of Christ" (πίστις Χριστοῦ) as Christ's own faithfulness, and Paul's
+  case concludes faith alone. **It does not conflict with Luke's case or
+  Peter's.** They say that faith saves, which it grants. It says that faith is
+  not the condition, which they do not deny.
 - **The apocalyptic reading and Trent defeat each other.** They agree that
   justification is not by faith alone. But the apocalyptic reading derives "not
   by works", since God's rescue depends on nothing a person does, and Trent
-  denies that.
+  denies that, because works done in grace "truly merit increase of grace"
+  (canon 32).
 - **Sanders defeats Paul's case**, by denying the reading of "works of the law",
-  and Paul's case defeats him in return. **Sanders and the critics defeat each
+  because on his account Judaism taught entry into the covenant by grace, so the
+  works Paul refuses are the marks that kept gentiles out, as Dunn infers. Paul's
+  case defeats him in return. **Sanders and the critics defeat each
   other.**
 - **Jervell and Peter's case defeat each other**, over the yoke.
 - **John's case meets four positions, each in both directions.** Trent, however
@@ -280,12 +291,13 @@ def reformedOntology : List (Formula Claim) :=
 /-- **Paul's case**: sola fide from Galatians 2:16, argued alone.
 
 Its reading of "works of the law" is derived, not assumed. It rests on the
-critics' line, which denies Sanders' account of Judaism and reads Galatians as
-written against requiring circumcision. That is where the scholarly debate lies
-(`critics_carry_the_pauline_strand`, `sanders_costs_the_pauline_strand`). So
-Sanders meets Paul's case here over the history of Judaism in Paul's day, not
-over Paul's Greek. The critics' inference is rated with the rest, as
-Gathercole's. -/
+critics' line, which denies Sanders' account of Judaism, because Jewish texts of
+the period also speak of final vindication according to works (Gathercole), and
+reads Galatians as written against requiring circumcision. That is where the
+scholarly debate lies (`critics_carry_the_pauline_strand`,
+`sanders_costs_the_pauline_strand`). So Sanders meets Paul's case here over the
+history of Judaism in Paul's day, not over Paul's Greek. The critics' inference
+is rated with the rest, as Gathercole's. -/
 @[solaFideDefs]
 def paulineCase : ArgumentPackage Claim :=
   { reformed with
@@ -326,7 +338,8 @@ It holds the Reformed distinction between justification and sanctification, as
 Paul's and Peter's cases do, so Trent meets it on the same ground. Two
 inferences are rated: Calvin's step from John's "eternal life through
 believing" to justification, and the step to faith alone that Trent's canon 9
-denies. -/
+denies, because faith without hope and charity "neither unites man perfectly
+with Christ, nor makes him a living member of His body" (Session VI, ch. 7). -/
 @[solaFideDefs]
 def johannineParty : ArgumentPackage Claim :=
   { reformed with
@@ -425,7 +438,8 @@ but also the sanctification and renewal of the inward man" (ch. 7). Grant that.
 Grant also that the renewal grows as the justified do good works (ch. 10). Then
 good works increase justification (canon 24), which denies "not by works" (ch.
 16). The Reformed grant the growth, which Westminster XIII.1 calls
-sanctification, and deny the definition. -/
+sanctification, and deny the definition, because God justifies "not by infusing
+righteousness into them, but by pardoning their sins" (XI.1). -/
 
 /-- Trent's case with one change: its definition of justification is exchanged for
 the Reformed distinction. Everything else Trent holds is kept, including that
@@ -576,26 +590,30 @@ ranks at the bottom. Between two such positions no rating blocks an attack.
 The two arguments about Paul's word come nearest to an exception. Every link of
 each is rated `wellSupported` or better but one, the step they share from the
 courtroom sense of the verb to "and nothing more", which Trent grants the
-starting points of and denies. -/
+starting points of and denies, because the justified "are not only reputed, but
+are truly called, and are, just" (Session VI, ch. 7). -/
 
 /-- Paul's case rests on its two disputed readings, and on the Reformed distinction.
 All are rated `disputed`. -/
 theorem paulineCase_strength : paulineCase.strength = 1 := by decide
-/-- Luke's case uses a step that Trent's canon 9 denies, so its weakest link is
-`disputed`. Of its own two premises, the sense of "saved" (σῴζω) is rated
-`wellSupported`. The reading of 7:47 is `disputed`, because Marshall names the
-commentators who read her love as the cause of her forgiveness. -/
+/-- Luke's case uses a step that Trent's canon 9 denies, because faith without hope
+and charity "neither unites man perfectly with Christ" (Session VI, ch. 7), so
+its weakest link is `disputed`. Of its own two premises, the sense of "saved"
+(σῴζω) is rated `wellSupported`. The reading of 7:47 is `disputed`, because
+Marshall names the commentators who read her love as the cause of her
+forgiveness. -/
 theorem dominicalCase_strength : dominicalCase.strength = 1 := by decide
 /-- Peter's case rests on the reading of the yoke, rated `disputed`. -/
 theorem apostolicCase_strength : apostolicCase.strength = 1 := by decide
 /-- Trent rests on its definition of justification, rated `disputed`. -/
 theorem tridentineCase_strength : tridentineCase.strength = 1 := by decide
-/-- The apocalyptic case denies that Galatians 2:16 speaks of faith *in* Christ, and
-a denial ranks at the bottom. -/
+/-- The apocalyptic case denies that Galatians 2:16 speaks of faith *in* Christ,
+reading it as Christ's own faithfulness, and a denial ranks at the bottom. -/
 theorem apocalypticCase_strength : apocalypticCase.strength = 1 := by decide
 /-- Sanders' case rests on his account of Judaism, rated `disputed`. -/
 theorem sandersCase_strength : sandersCase.strength = 1 := by decide
-/-- The critics' case denies that account. -/
+/-- The critics' case denies that account, because Jewish texts of the period also
+speak of final vindication according to works (Gathercole). -/
 theorem criticsCase_strength : criticsCase.strength = 1 := by decide
 /-- Jervell's step is contested, by Bruce. -/
 theorem jervellCase_strength : jervellCase.strength = 1 := by decide
@@ -603,25 +621,37 @@ theorem jervellCase_strength : jervellCase.strength = 1 := by decide
 to "renewal is no part of justification". Both are rated `disputed`. -/
 theorem galatianGospel_strength : galatianGospel.strength = 1 := by decide
 /-- John's case rests on the Reformed distinction and on a step that Trent's canon 9
-denies, both `disputed`. Its own reading, believing as trust, is `disputed` too:
-Aquinas denies it. -/
+denies, because faith without hope and charity "neither unites man perfectly
+with Christ" (Session VI, ch. 7), both `disputed`. Its own reading, believing as
+trust, is `disputed` too: Aquinas denies it, because to believe in God as one's
+end "is proper to faith living through the love of charity" (*Super Ioannem* 6,
+lect. 3, n. 901). -/
 theorem johannineParty_strength : johannineParty.strength = 1 := by decide
 /-- Aquinas's case rests on his reading of John 6:29, rated `disputed`: Calvin
-denies it. -/
+denies it, because faith "brings nothing to God, but, on the contrary, places man
+before God as empty and poor, that he may be filled with Christ" (on John
+6:29). -/
 theorem aquinasCase_strength : aquinasCase.strength = 1 := by decide
-/-- Luther's answer rests on his step, which Aquinas denies. -/
+/-- Luther's answer rests on his step, which Aquinas denies, because Paul
+distinguishes faith "only from external works" (*Super Ioannem* 6, lect. 3,
+n. 901), so a faith formed by charity does not justify by the law. -/
 theorem lutherOnGalatians_strength : lutherOnGalatians.strength = 1 := by decide
 /-- Chrysostom's case rests on his step, rated `disputed`: Calvin accepts both
-texts and denies it. -/
+texts and denies it, because the words of Matthew 7:21 "do not exclude faith,
+but presuppose it as the principle from which other good works flow" (*Harmony*,
+pp. 367–68). -/
 theorem chrysostomCase_strength : chrysostomOnJohn.strength = 1 := by decide
 /-- The Reformed answer rests on its reading of the obedience, rated `disputed`:
-Chrysostom denies it. -/
+Chrysostom denies it, because "though a man believe rightly on the Father, the
+Son, and the Holy Ghost, yet if he lead not a right life, his faith will avail
+nothing towards his salvation" (*Homilies on John* 31). -/
 theorem sanctificationCase_strength : sanctificationCase.strength = 1 := by decide
 /-- **The argument from Paul's word rests on one disputed step.** That the verb is a
 courtroom word, and the rule of least meaning, are `wellSupported`. That Paul
 has other words for renewal is `consensus`. The step from them to "and so it
 does not mean renewal" is `disputed`, because Trent grants those starting points
-and denies it. So its weakest link ranks at the bottom. -/
+and denies it: the justified "are truly called, and are, just" (Session VI,
+ch. 7). So its weakest link ranks at the bottom. -/
 theorem lexicalCase_strength : lexicalCase.strength = 1 := by decide
 /-- Trent, taken as a claim about Paul's word, rests on everything Trent rests on. -/
 theorem tridentineOnPaulsWord_strength : tridentineOnPaulsWord.strength = 1 := by decide
@@ -637,12 +667,15 @@ Each is worked out from the two positions' premises and checked by machine:
 first whether one contradicts the other, then which is the weaker. -/
 
 /-- **Trent defeats Paul's case.** Trent's case leads to the denial of "not by
-works", which contradicts the conclusion of Paul's. -/
+works", because good works done in grace are "a cause of the increase" of
+justification (canon 24), which contradicts the conclusion of Paul's. -/
 theorem trent_defeats_pauline : Defeats tridentineCase paulineCase :=
   Horn.defeats_of_certified tridentineCase_strength paulineCase_strength (by horn_certify)
 
 /-- **Trent defeats Luke's case.** Trent's definition, with canon 9, denies that
-faith suffices, which is what Luke's case concludes. -/
+faith suffices, because faith "unless hope and charity be added thereto" does
+not make one "a living member of His body" (Session VI, ch. 7), and that is
+what Luke's case concludes. -/
 theorem trent_defeats_dominical : Defeats tridentineCase dominicalCase :=
   Horn.defeats_of_certified tridentineCase_strength dominicalCase_strength (by horn_certify)
 
@@ -651,7 +684,8 @@ theorem trent_defeats_apostolic : Defeats tridentineCase apostolicCase :=
   Horn.defeats_of_certified tridentineCase_strength apostolicCase_strength (by horn_certify)
 
 /-- **Paul's case defeats Trent in return.** It leads to "not by works", which Trent
-denies. -/
+denies, holding good works "a cause of the increase" of justification
+(canon 24). -/
 theorem pauline_defeats_trent : Defeats paulineCase tridentineCase :=
   Horn.defeats_of_certified paulineCase_strength tridentineCase_strength (by horn_certify)
 
@@ -665,12 +699,15 @@ theorem apostolic_defeats_trent : Defeats apostolicCase tridentineCase :=
 
 /-- **The apocalyptic reading defeats Trent.** It holds "not by works" by a step of
 its own, since God's rescue depends on nothing a person does, and Trent denies
-it. -/
+it, because the justified by good works "truly merit increase of grace"
+(canon 32). -/
 theorem apocalyptic_defeats_trent : Defeats apocalypticCase tridentineCase :=
   Horn.defeats_of_certified apocalypticCase_strength tridentineCase_strength (by horn_certify)
 
 /-- **The apocalyptic reading defeats Paul's case.** It denies that Galatians 2:16
-speaks of faith *in* Christ, a premise of Paul's strand rated `disputed`. -/
+speaks of faith *in* Christ, a premise of Paul's strand rated `disputed`,
+because it reads "faith of Christ" as Christ's own faithfulness (Martyn,
+Campbell). -/
 theorem apocalyptic_defeats_pauline : Defeats apocalypticCase paulineCase :=
   Horn.defeats_of_certified apocalypticCase_strength paulineCase_strength (by horn_certify)
 
@@ -692,7 +729,9 @@ theorem apostolic_does_not_defeat_apocalyptic : ¬ Defeats apostolicCase apocaly
   Horn.not_defeats_of_certified apostolicCase_strength apocalypticCase_strength (by horn_certify)
 
 /-- **Sanders defeats Paul's case.** His account of Judaism, with Dunn's inference,
-denies the reading of "works of the law" as works in general. -/
+denies the reading of "works of the law" as works in general: if Judaism taught
+entry by grace and staying in by obedience, what Paul refuses is not works as
+such but the practices that kept gentiles out. -/
 theorem sanders_defeats_pauline : Defeats sandersCase paulineCase :=
   Horn.defeats_of_certified sandersCase_strength paulineCase_strength (by horn_certify)
 
@@ -705,11 +744,15 @@ theorem pauline_defeats_sanders : Defeats paulineCase sandersCase :=
 theorem sanders_defeats_critics : Defeats sandersCase criticsCase :=
   Horn.defeats_of_certified sandersCase_strength criticsCase_strength (by horn_certify)
 
-/-- **The critics defeat Sanders.** They deny the account of Judaism he starts from. -/
+/-- **The critics defeat Sanders.** They deny the account of Judaism he starts from,
+because Jewish texts of the period also speak of final vindication according to
+works (Gathercole). -/
 theorem critics_defeat_sanders : Defeats criticsCase sandersCase :=
   Horn.defeats_of_certified criticsCase_strength sandersCase_strength (by horn_certify)
 
-/-- **Jervell defeats Peter's case.** He denies its reading of the yoke. -/
+/-- **Jervell defeats Peter's case.** He denies its reading of the yoke, because
+Luke shows the Jewish believers keeping the law (Acts 21:20–24), and the
+council's decree lays part of it on gentiles (Acts 15:20–21). -/
 theorem jervell_defeats_apostolic : Defeats jervellCase apostolicCase :=
   Horn.defeats_of_certified jervellCase_strength apostolicCase_strength (by horn_certify)
 
@@ -838,7 +881,8 @@ theorem apocalyptic_does_not_defeat_apostolic : ¬ Defeats apocalypticCase apost
 justification is not by faith alone. But the apocalyptic reading *derives* "not
 by works" on the way, since God's rescue is a gift that depends on nothing a
 person does. Trent denies that: works done in grace merit an increase of
-justification. So Trent contradicts something the apocalyptic reading derives. -/
+justification (Session VI, canon 32). So Trent contradicts something the
+apocalyptic reading derives. -/
 theorem trent_defeats_apocalyptic : Defeats tridentineCase apocalypticCase :=
   Horn.defeats_of_certified tridentineCase_strength apocalypticCase_strength (by horn_certify)
 
@@ -866,8 +910,10 @@ theorem lexical_defeats_trent_on_pauls_word : Defeats lexicalCase tridentineOnPa
 attacks the argument from the word in turn. Trent's weakest link is its
 definition, rated `disputed`, and so is the argument's: the step from the
 courtroom sense to "and nothing more" is `disputed`, because Trent grants its
-starting points and denies what it draws from them. Between two positions at the
-bottom no rating blocks an attack, so the two defeat each other. -/
+starting points and denies what it draws from them: the justified "are not only
+reputed, but are truly called, and are, just" (Session VI, ch. 7). Between two
+positions at the bottom no rating blocks an attack, so the two defeat each
+other. -/
 theorem trent_on_pauls_word_defeats_lexical : Defeats tridentineOnPaulsWord lexicalCase :=
   Horn.defeats_of_certified tridentineOnPaulsWord_strength lexicalCase_strength
     (by horn_certify)
@@ -1195,13 +1241,16 @@ declare_bundle trentsDefinitionExchange in solaFideDispute.finite where
   works increase justification (canon 24), and salvation is not apart from
   works. -/
   turn Party.trent from trentSessionVI
-  /-- The Westminster Confession denies the definition (XI.1), and reads
-  Galatians as Douglas Moo reads it today. The teachers Paul opposed added
+  /-- The Westminster Confession denies the definition, because God justifies "not
+  by infusing righteousness into them, but by pardoning their sins" (XI.1), and
+  reads Galatians as Douglas Moo reads it today. The teachers Paul opposed added
   circumcision to faith in Christ, and he called the addition a different gospel
-  (1:6–9). Read with the courtroom sense of "justify", Christ's work is the whole
-  ground of justification, so the renewal worked in us is no part of it. Trent
-  accepts every text and denies that nothing is added (canons 24, 32), so the
-  step is rated `disputed`. -/
+  (1:6–9). Read with the courtroom sense of "justify", Christ's work is the
+  whole ground of justification, so the renewal worked in us is no part of it.
+  Trent accepts every text and denies that nothing is added, because good works
+  done in grace are "a cause of the increase" of justification (canon 24) and
+  "truly merit increase of grace" (canon 32), so the step is rated `disputed`.
+  -/
   turn Party.gospel meets Party.trent from westminsterConfession
   /-- Read as a claim about Paul's word, Trent's definition says that "justify"
   (δικαιόω) in Paul means renewal, as Augustine explained the Latin word: "what
@@ -1218,7 +1267,9 @@ declare_bundle trentsDefinitionExchange in solaFideDispute.finite where
   requires (Joos, 1972; Silva). Hodge (1864) and Ziesler (1972) had already
   answered the readings of Romans 5:19 that Fitzmyer relies on, and Calvin the
   verdict that renews. The step to "and nothing more" is rated `disputed`,
-  because Trent grants where it starts and denies where it ends. -/
+  because Trent grants where it starts and denies where it ends: the justified
+  "are not only reputed, but are truly called, and are, just" (Session VI,
+  ch. 7). -/
   turn Party.lexical meets Party.trentOnPaulsWord from silvaBiblicalWords
   /-- Douglas Moo reads Romans 4 the same way. Paul explains the righteousness
   God counts to the ungodly as sin not counted (4:6–8), and by the same rule the
@@ -1303,7 +1354,8 @@ declare_verdict paulsWordAnsweredByTrent for solaFideDispute :
   that answers every attack holds Trent, taken as a claim about Paul's word, and
   cannot hold the argument from the word with it. The two are in a tie at the
   step from the courtroom sense to "and nothing more", which Trent grants the
-  starting points of and denies. -/
+  starting points of and denies, because the justified "are truly called, and
+  are, just" (Session VI, ch. 7). -/
   proves @[headline] pauls_word_not_forced
 
 #print axioms pauls_word_not_forced
@@ -1329,7 +1381,8 @@ declare_verdict trentsWordReadingStands for solaFideDispute :
 
 /-- Why Trent can be defended: it can be held with Sanders and Jervell, and it
 answers every position that attacks it. Those are each Reformed strand, Paul's
-gospel, and the apocalyptic reading, whose "not by works" it denies. -/
+gospel, and the apocalyptic reading, whose "not by works" it denies, because good
+works done in grace are "a cause of the increase" of justification (canon 24). -/
 declare_verdict trentStandsWithSandersAndJervell for solaFideDispute :
     .credulous .trent [.trent, .sanders, .jervell]
   /-- **Trent can be defended.** A consistent set of positions includes it, with
@@ -1397,9 +1450,11 @@ declare_verdict lukeStandsWithPeter for solaFideDispute :
   it, can be held with every position but Trent, however Trent's definition is
   taken, and Chrysostom. Those are its only attackers, and Luke's case defeats
   each in return. Against Trent the point at issue is what justification is:
-  Trent's definition denies that faith without charity suffices, and Luke's words
-  say her faith saved her. Against Chrysostom it is whether the right life Jesus
-  requires elsewhere (John 3:36, Matthew 7:21) is a second condition beside faith. -/
+  Trent's definition denies that faith without charity suffices, since faith
+  "unless hope and charity be added thereto" does not make one "a living member
+  of His body" (Session VI, ch. 7), and Luke's words say her faith saved her.
+  Against Chrysostom it is whether the right life Jesus requires elsewhere (John
+  3:36, Matthew 7:21) is a second condition beside faith. -/
   proves @[headline] dominical_case_defensible
 
 #print axioms dominical_case_defensible

@@ -88,8 +88,10 @@ three each rule it out, at a step rated `wellSupported`.
 The baptismal reading cannot be held together with Calvin's. The step from
 Calvin's reading is `wellSupported`, but his reading itself is `disputed`, and
 Trent condemns it. Even on the baptismal reading Trent's step stays `disputed`:
-Calvin accepts the verse and denies that it requires water baptism. Which
-reading is right is not decided here.
+Calvin accepts the verse and denies that it requires water baptism, because he
+takes "water and the Spirit" to name one thing: "I simply understand the Spirit,
+which is water" (*Institutes* IV.xvi.25). Which reading is right is not decided
+here.
 
 ## Acts gives both orders
 
@@ -129,7 +131,9 @@ def trentOnBaptism : ArgumentPackage Claim :=
 
 /-- Taking the instrumental cause so that the washing itself is necessary for
 salvation. This is Feeney's reading. Rated `disputed`: Rome's own teaching
-denies it (Catechism 1258–1260). -/
+denies it, because for those who die before baptism their desire for it "assures
+them the salvation that they were not able to receive through the sacrament"
+(Catechism 1258–1260; the words are from 1259). -/
 def feeneyReadsTrent : Source :=
   { primary := .work feeneyBreadOfLife .whole
   , tradition := .romanCatholic
@@ -209,7 +213,9 @@ def desireCase : ArgumentPackage Claim :=
 desire for it, and the desire alone brings the fruits of baptism without the
 sacrament, then the sacrament is not the instrument of justification. Held by
 Westminster (XXVIII.5; XI.2). Rated `disputed`, because Aquinas accepts the
-starting points and denies the conclusion. -/
+starting points and denies the conclusion: the desire is a desire for the
+sacrament, and those who have it, "when baptized, they receive a yet greater
+fulness of grace and virtues" (*Summa* III q.69 a.4 ad 2). -/
 @[solaFideDefs]
 def desireToNotTheInstrument : Formula Claim :=
   ⋀ [p .baptismOrItsDesire, p .desireBringsFruitsWithoutTheSacrament]
@@ -375,8 +381,10 @@ def whereTheThiefMeetsFeeney : Because thiefCase trentOnTheWaterItself :=
 /-- **Why Rome's own teaching stands against Feeney's reading.** Everything turns on
 the step from what the desire brings: if the desire brings about the fruits of
 baptism, the washing itself is not necessary for salvation. Feeney denies the
-starting point. Whoever accepts it, as the Catechism does, cannot hold his
-reading. -/
+starting point: he grants that the desire justifies and denies that it saves.
+His own words for that denial have not been read and checked here (*Bread of
+Life* is cited whole). Whoever accepts the starting point, as the Catechism
+does, cannot hold his reading. -/
 def whereTheDesireMeetsFeeney : Because desireCase trentOnTheWaterItself :=
   Because.ofChecks desireToNotNecessary
     [p .desireBringsFruitsWithoutTheSacrament] []
@@ -444,7 +452,9 @@ def whatTrentsInstrumentalCauseClaims : Dilemma trentOnBaptism where
 /-! ### John 3:5 -/
 
 /-- Trent's step from John 3:5: the verse requires water baptism. Rated `disputed`:
-Calvin accepts the verse and denies the step. -/
+Calvin accepts the verse and denies the step, because "by water, therefore, is
+meant nothing more than the inward purification and invigoration which is
+produced by the Holy Spirit" (on John 3:5, p. 110). -/
 @[solaFideDefs]
 def johnThreeFiveToWater : Formula Claim :=
   p .john3_5WaterAndSpirit ➝ p .john3_5RequiresWaterBaptism

@@ -128,10 +128,11 @@ he has sent."
 A reader who wins the disputes over Paul, Luke and Acts has
 not yet answered John. Grace and "not by works" still
 come from the shared verses and the answer to James. The strand rests on
-reading that believing as trust, which Aquinas denies
-(`johannine_strand_rests_on_believing_as_trust`), and on a step from "eternal
-life through believing" to "justified by faith alone" that is rated
-`plausible`. -/
+reading that believing as trust, which Aquinas denies, because to believe in God
+as one's end "is proper to faith living through the love of charity" (*Super
+Ioannem* 6, lect. 3, n. 901; `johannine_strand_rests_on_believing_as_trust`),
+and on a step from "eternal life through believing" to "justified by faith
+alone" that is rated `plausible`. -/
 @[headline]
 theorem johannine_strand_survives_the_other_three :
     Establishes reformedRestingOnJohn := by
@@ -329,10 +330,11 @@ theorem forensic_justification_not_load_bearing : Establishes finnish :=
 
 /-- **On the critics' account of Judaism, Paul alone reaches sola fide.** Gathercole
 and others deny that Judaism in Paul's day was simply "in by grace, staying in
-by obedience". Grant them that, keep Galatians as a letter against requiring
-circumcision, and leave Luke, Acts and John out. Sola fide follows from Paul,
-and the reading of "works of the law" as works in general is derived and not
-assumed. -/
+by obedience", because Jewish texts of the period also speak of final
+vindication according to works. Grant them that, keep Galatians as a letter
+against requiring circumcision, and leave Luke, Acts and John out. Sola fide
+follows from Paul, and the reading of "works of the law" as works in general is
+derived and not assumed. -/
 @[headline]
 theorem critics_carry_the_pauline_strand : Establishes paulineStrandOnTheCritics := by
   establish [solaFideDefs]

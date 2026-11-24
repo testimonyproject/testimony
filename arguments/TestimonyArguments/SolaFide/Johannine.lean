@@ -301,7 +301,10 @@ theorem johannineCase_is_satisfiable : Satisfiable johannineCase.premises := by
 of faith, so faith formed by charity would justify by the law. Rated `disputed`:
 Aquinas accepts both starting points, the text and that the law commands love,
 and denies the conclusion, holding that the faith which justifies is formed by
-charity. -/
+charity, because Paul distinguishes faith "only from external works" (*Super
+Ioannem* 6, lect. 3, n. 901), and "charity is called the form of faith in so
+far as the act of faith is perfected and formed by charity" (*Summa* II-II q.4
+a.3). -/
 def lutherOnGalatiansThree : Source :=
   { primary := .work lutherGalatians (.adLoc ⟨.galatians, 3, 12⟩)
   , supporting := [.work lutherGalatians (.adLoc ⟨.galatians, 3, 11⟩)]
@@ -352,7 +355,9 @@ theorem luther_answers_aquinas_from_galatians : Establishes lutherOnGalatians :=
 Aquinas's reading. On Aquinas's reading Galatians 3:11–12 holds, the law
 commands love, and the believing of 6:29 is faith formed by charity. What
 decides it is whether faith formed by charity counts as justification "by the
-law". That is Luther's step, and Aquinas denies it. -/
+law". That is Luther's step, and Aquinas denies it, because Paul distinguishes
+faith "only from external works" (*Super Ioannem* 6, lect. 3, n. 901), so the
+inward work of a faith formed by love is not a work of the law. -/
 @[headline]
 theorem luther_answer_rests_on_his_step : ¬ Establishes galatiansTextsAlone := by
   refute_with thomistReading [solaFideDefs]
@@ -439,7 +444,9 @@ follow from that:
 
 The step is rated `disputed`. Calvin accepts both texts and denies the
 conclusion: he reads the doing of Matthew 7:21 as including faith, and good
-works as what follows faith. Among modern readers Chrysostom has company:
+works as what follows faith. "These words, therefore, do not exclude faith, but
+presuppose it as the principle from which other good works flow" (*Harmony*,
+pp. 367–68). Among modern readers Chrysostom has company:
 Stanley holds that "Endurance is a condition for final salvation", and reads
 Matthew 7:21 so.
 
@@ -458,7 +465,9 @@ commentaries of Brown, Schnackenburg and Barrett. -/
 "faith alone is not sufficient to salvation". Stanley, a modern reader, holds
 works "a condition to final salvation" in the Synoptic Gospels, Matthew 7:21
 among the texts. Rated `disputed`: Calvin accepts both texts and denies the
-conclusion, and so do the modern Reformed readers cited for the answer. -/
+conclusion, and so do the modern Reformed readers cited for the answer. Calvin's
+reason is that the words of Matthew 7:21 "do not exclude faith, but presuppose
+it as the principle from which other good works flow" (*Harmony*, 367–68). -/
 def chrysostomOnJohnThreeThirtySix : Source :=
   { primary := .work chrysostomHomiliesJohn (.sectionRef "Homily 31, §1")
   , supporting := [.work stanleyDidJesusTeach .whole]
@@ -489,7 +498,9 @@ without a right life.
 
 His argument is valid, and its premises are two texts nobody
 here disputes. Its step is another matter: Calvin accepts both texts and
-denies it, so the step is rated `disputed`. -/
+denies it, because Matthew 7:21 does "not exclude faith, but presuppose it as
+the principle from which other good works flow" (*Harmony*, pp. 367–68). So the
+step is rated `disputed`. -/
 @[headline]
 theorem chrysostom_reads_john3_36_against_faith_alone : Establishes chrysostomOnJohn := by
   establish [solaFideDefs]
@@ -584,8 +595,10 @@ they are cited by verse and not by page. -/
 obedience they require read as sanctification, to "faith suffices". Schreiner:
 "the necessity of good works doesn't contradict sola fide" (p. 55). Calvin on
 3:36: "He shows that enjoyment consists in faith." Rated `disputed`: Chrysostom
-accepts both texts and denies that believing suffices, and Stanley holds works a
-condition of final salvation. -/
+accepts both texts and denies that believing suffices, because "if he lead not a
+right life, his faith will avail nothing towards his salvation" (*Homilies on
+John* 31), and Stanley holds that "Endurance is a condition for final
+salvation". -/
 def obedienceAsFruitSource : Source :=
   { primary := .work schreinerJustificationByWorks (.pages 55 55)
   , supporting :=

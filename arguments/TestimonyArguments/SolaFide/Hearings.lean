@@ -104,10 +104,12 @@ declare_verdict reformationSettlesNothing for reformationAlone :
   Reformers alone, every position is in a tie the debate cannot settle, the
   meaning of Paul's word among them. The arguments from the word take a step,
   from the courtroom sense of "justify" (δικαιόω) to "and nothing more", that
-  Trent grants the starting points of and denies, so that step is rated
-  `disputed`, and Trent's reading of the word ties with them, so both it and the
-  Reformers' can be defended (`trent_defensible_with_pauls_word` holds Trent as
-  it states its definition together with the arguments about the word). -/
+  Trent grants the starting points of and denies, because the justified "are not
+  only reputed, but are truly called, and are, just" (Session VI, ch. 7). So that
+  step is rated `disputed`, and Trent's reading of the word ties with them, so
+  both it and the Reformers' can be defended (`trent_defensible_with_pauls_word`
+  holds Trent as it states its definition together with the arguments about the
+  word). -/
   proves @[headline] reformation_dispute_forces_nothing
 
 #print axioms reformation_dispute_forces_nothing
@@ -197,7 +199,8 @@ declare_verdict lukeAnsweredByChrysostom for withoutTrent :
   with Luke's, and the tie runs both ways: Luke's case defeats Chrysostom in
   return, and no text of Luke's is contradicted.
   Chrysostom accepts every word of Luke 7:50; what he denies is the step from it
-  to "faith suffices". -/
+  to "faith suffices", because "if he lead not a right life, his faith will avail
+  nothing towards his salvation" (*Homilies on John* 31). -/
   proves @[headline] luke_not_forced_without_trent
 
 #print axioms luke_not_forced_without_trent

@@ -114,7 +114,9 @@ inductive Claim
   conclusion.** -/
   | salvationByGrace
   /-- Salvation is not by works: no work, however done, is its ground. **Second part
-  of the conclusion**, and the one Trent denies. -/
+  of the conclusion**, and the one Trent denies, because it holds good works done
+  in grace to be "a cause of the increase" of justification, and not "merely the
+  fruits and signs of Justification obtained" (Session VI, canon 24). -/
   | salvationNotByWorks
   /-- Salvation is received through faith: faith is the means by which it is
   received. **Third part of the conclusion**, and the one the apocalyptic
@@ -123,7 +125,11 @@ inductive Claim
   /-- Justification is a verdict and nothing more ("forensic only"): God pardons,
   and counts Christ's righteousness to the believer. It is not righteousness
   poured into the person. This is the Reformed account of what justification
-  *is*. Trent denies it, and so does the Finnish reading of Luther. -/
+  *is*. Trent denies it, condemning justification "by the sole imputation of the
+  justice of Christ, or by the sole remission of sins, to the exclusion of the
+  grace and the charity" poured into the heart (Session VI, canon 11). The Finnish
+  reading of Luther denies it too, because in faith Christ Himself is present and
+  is the believer's righteousness (Mannermaa, *Christ Present in Faith*). -/
   | justificationIsForensicOnly
   /-- Judaism in Paul's day held that one enters the covenant by grace and stays in
   it by obedience. Sanders named this *covenantal nomism*. -/
@@ -137,7 +143,8 @@ inductive Claim
   /-- Justification and sanctification cannot be separated and are not the same
   thing. Justification is God's pardon and acceptance. Sanctification is the
   renewal that follows. **The Reformed distinction**, which Trent's definition
-  denies. -/
+  denies, because for the council justification is itself "the sanctification
+  and renewal of the inward man" (Session VI, ch. 7). -/
   | justificationDistinctFromSanctification
   /-- The inward renewal of the justified grows as they do good works in grace. Both
   sides accept this. Trent calls the growth an increase of justification, and
@@ -589,12 +596,20 @@ inductive Claim
   | romans5_19ManyMadeRighteous
   /-- In Romans 5:19, "made righteous" means made righteous within: the many "will
   really be righteous", as Ziesler, who reads the verb "justify" otherwise, holds,
-  and Fitzmyer with him. A reading of the verse, which Hodge and Calvin deny. -/
+  and Fitzmyer with him. A reading of the verse, which Hodge and Calvin deny.
+  Hodge's reason is the verb: καθίστημι "never, in the New Testament, means to
+  make, in the sense of effecting, or causing a person or thing, to be in its
+  character or nature other than it was before" (*Romans*, p. 271). Calvin's is
+  that we could not be made righteous by Christ's obedience "were it not that we
+  are deemed righteous in the sight of God in him and not in ourselves"
+  (*Institutes* III.xi.4). -/
   | romans5_19MadeInwardlyRighteous
   /-- The adjective "righteous" (δίκαιος) in Romans 5:19 bears on Paul's verb
   "justify" (δικαιόω): what "made righteous" means there is what the verb means
   in Paul. Fitzmyer's reading needs this, since 5:19 has the adjective and not
-  the verb, and it is what Ziesler denies. -/
+  the verb, and it is what Ziesler denies, because the word in 5:19 is
+  "righteous" (δίκαιοι) and not "justify" (*The Meaning of Righteousness in
+  Paul*, p. 199). -/
   | romans5_19BearsOnTheVerb
   /-- God's verdict is effective: in declaring the sinner righteous, God makes him
   righteous. "Not only a forensic effect, but as forensic also an 'effective'

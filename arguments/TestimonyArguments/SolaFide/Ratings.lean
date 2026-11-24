@@ -452,7 +452,9 @@ def harmonyOnCanon24Assessment : Assessment Claim where
 reward texts, and accepts for the sake of argument even that the reward is given
 to merits. It argues that works are the fruit of faith and not its ground. An
 argument under all three standards. Westminster's own answer goes further and
-denies the second starting point (`westminsterAssessment`). -/
+denies the second starting point (`westminsterAssessment`), because "we cannot
+by our best works merit pardon of sin, or eternal life at the hand of God"
+(XVI.5). -/
 def harmonyOnRewardAssessment : Assessment Claim where
   dissenter := "The Reformed harmony (Westminster XVI.2, XVI.5)"
   against := trentRewardLine.name
@@ -868,7 +870,11 @@ Reformed steps over its definition.
   righteous too. So it grants the step's starting points and denies what the
   step draws from them. But Augustine wrote of the Latin *iustificare*, and the
   argument needs the Latin word to bear the sense of Paul's Greek one, δικαιόω.
-  Trent says it does (ch. 7–8), and Melanchthon and Calvin deny it. So the
+  Trent says it does (ch. 7–8), and Melanchthon and Calvin deny it, because the
+  Greek word is a courtroom word. Melanchthon: "to justify signifies, according
+  to forensic usage, to acquit a guilty one and declare him righteous" (*Apology*
+  IV, on Romans 5:1). Calvin: "To justify, therefore, is nothing else than to
+  acquit from the charge of guilt" (*Institutes* III.xi.3). So the
   objection rests at that premise on the council's word, and it is an argument
   under the tradition standard only.
 - Its definition, taken as a claim about what God does, is stated and not argued

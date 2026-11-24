@@ -228,7 +228,10 @@ def trentOnDegreesReading : Valuation Claim := fun a =>
 /-- **Granted the Reformed definition, justification has no degrees.** From the
 courtroom texts, a verdict acquits or condemns and has no degrees; justification
 is a verdict and nothing more; so it has no degrees. That justification is
-only a verdict is the Reformed definition, and Trent denies it. -/
+only a verdict is the Reformed definition, and Trent denies it, condemning
+justification "by the sole imputation of the justice of Christ, or by the sole
+remission of sins, to the exclusion of the grace and the charity" poured into
+the heart (Session VI, canon 11). -/
 @[headline]
 theorem verdictOnDegrees_establishes : Establishes verdictOnDegrees := by
   establish [solaFideDefs]
@@ -257,7 +260,9 @@ theorem verdictAgainstIncrease_is_satisfiable :
 /-- **Trent's increase follows from its own premises.** Justification is the
 renewal of the inward man, the renewal grows through good works, and so
 justification increases and has degrees. The definition is Trent's, and the
-Westminster Confession denies it (XI.1). -/
+Westminster Confession denies it: God justifies "not by infusing righteousness
+into them, but by pardoning their sins, and by accounting and accepting their
+persons as righteous" (XI.1). -/
 @[headline]
 theorem trentOnDegrees_establishes : Establishes trentOnDegrees := by
   establish [solaFideDefs]

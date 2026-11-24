@@ -118,17 +118,21 @@ definition is taken.
   since "justify" (*iustificare*) as "make righteous" does not settle what the
   Greek word means. And it meets Romans 4 read for the word. Each time the break
   is at the step from the courtroom sense to "and nothing more", which Trent
-  grants the start of and denies. In the main debate, Trent taken this way ties
-  with the arguments about the word (`trent_on_pauls_word_defensible`). Luke 18
-  adds no fourth meeting: no reader cited here takes "justified" at 18:14 as the
-  renewal itself.
+  grants the start of and denies, because the justified "are not only reputed,
+  but are truly called, and are, just" (Session VI, ch. 7). In the main debate,
+  Trent taken this way ties with the arguments about the word
+  (`trent_on_pauls_word_defensible`). Luke 18 adds no fourth meeting: no reader
+  cited here takes "justified" at 18:14 as the renewal itself.
 - **As a claim about what God does**, that when He justifies He also renews,
   nothing about the word reaches it. Taken this way, Trent can be held with
   every premise of the argument from usage
   (`lexical_case_does_not_reach_what_god_does`). It meets Paul (Galatians,
   Romans 4) and Luke only at steps rated `disputed`. A reader who grants those
   steps rejects it, and one who denies them, as Augustine and the *Joint
-  Declaration* do, need not.
+  Declaration* do, need not. Augustine denies them because "being justified"
+  signifies "being made righteous" (*On the Spirit and the Letter* 26.45), and
+  the *Joint Declaration*'s Annex because justification is "forgiveness of sins
+  and being made righteous" (Annex 2 A).
 
 Which of the two Trent means is itself rated `disputed`, and the check does not
 decide it. This debate hears Trent's definition as Trent states it, tied to
@@ -159,7 +163,9 @@ open Testimony Testimony.Logic Testimony.Logic.Framework
 only a plea for mercy, and goes home justified, which is God's verdict. So what
 justified him was not his works but his trust in God's mercy: faith sufficed.
 Rated `disputed`: Trent accepts the text and the absence of works, and denies
-that the plea was enough alone (Session VI, ch. 6 and canon 9). -/
+that the plea was enough alone, because it requires the dispositions it lists,
+fear, hope, beginning to love God and penitence (Session VI, ch. 6), and
+condemns whoever says "nothing else is required to co-operate" (canon 9). -/
 @[solaFideDefs]
 def luke18ToSufficiency : Formula Claim :=
   ⋀ [ p .luke18_9_14TaxCollectorJustified, p .luke18JustifiedIsVerdict
@@ -194,7 +200,9 @@ def luke18Case : ArgumentPackage Claim :=
 /-- The Catholic step from Matthew 7:21. If doing the Father's will is a condition
 of entering the kingdom in its own right, then salvation is not apart from
 works. Rated `disputed`: Calvin accepts the text and denies that the doing is
-more than the fruit of faith. -/
+more than the fruit of faith: "These words, therefore, do not exclude faith, but
+presuppose it as the principle from which other good works flow" (*Harmony*,
+pp. 367–68). -/
 @[solaFideDefs]
 def matthew7ToWorks : Formula Claim :=
   ⋀ [p .matthew7_21_23DoingTheWill, p .matthew7ObedienceIsAGround]
@@ -244,7 +252,10 @@ def matthew7FaithCase : ArgumentPackage Claim :=
 
 /-- The Catholic step from Matthew 19:17. If keeping the commandments is the way to
 life, then salvation is not apart from works. Rated `disputed`: Calvin accepts
-the text and denies that it is the way for any sinner. -/
+the text and denies that it is the way for any sinner, because the passage was
+"erroneously interpreted by some of the ancients, whom the Papists have
+followed, as if Christ taught that, by keeping the law, we may merit eternal
+life" (*Harmony*, p. 394). -/
 @[solaFideDefs]
 def matthew19ToWorks : Formula Claim :=
   ⋀ [p .matthew19_17KeepTheCommandments, p .matthew19CommandmentsAreTheWayToLife]
