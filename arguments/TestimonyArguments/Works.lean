@@ -336,6 +336,26 @@ gives, which on a web page must link to LSBible.org. -/
       , identifiers := [.url "https://lsbible.org/" (some "2026-11-18")] }
   , site := some "LSBible.org" }
 
+/-- The NET Bible, which the chapter "What Scripture says" of sola fide quotes,
+each quotation marked (NET). Published by Biblical Studies Press, its second
+edition in 2019; the text is read through Bible.org's own service
+(labs.bible.org), so no single printing's ISBN is recorded. The publisher allows
+the text to be quoted without written permission in a work given away free, so
+long as each quotation is followed by "(NET)" and the work carries the notice
+the entry's note gives (netbible.com/copyright, read 24 November 2026). -/
+@[bib_entry] def netBible : BibEntry := .webPage
+  { core :=
+      { key := "bsp-net-bible-2019"
+      , role := .text
+      , contributors := { authors := [.corporate "Biblical Studies Press"] }
+      , title := "The NET Bible"
+      , year := some { value := 2019 }
+      , note := some ("Scripture quoted by permission. Quotations designated (NET) are " ++
+          "from the NET Bible® copyright ©1996, 2019 by Biblical Studies Press, L.L.C. " ++
+          "http://netbible.com All rights reserved.")
+      , identifiers := [.url "https://netbible.com/copyright" (some "2026-11-24")] }
+  , site := some "netbible.com" }
+
 /-- Calvin's *Antidote* to the decree on justification of Trent's sixth session,
 written in 1547. Beveridge's translation numbers the decree's chapter on
 the increase of justification XI ("Under the eleventh head"); in Trent's own
