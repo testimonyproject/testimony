@@ -73,16 +73,71 @@ inductive Confidence
   | consensus
 deriving Repr, DecidableEq
 
+/-- **Which of three questions a claim about the words of a verse needs answered.**
+"The best manuscripts lack this verse" can mean any of them, and an argument must
+say which, because the dispute between two readers often turns on it
+(`docs/src/textual-criticism.md`).
+A claim that Jesus says something in Mark 16:16 needs Mark to have written the
+verse; a claim that Scripture, as Rome receives it, says so needs only that Rome
+receives it. -/
+inductive TextQuestion
+  /-- What the copies say: that Codex Vaticanus ends Mark at 16:8 is a fact about
+  a manuscript, checked against the manuscript. -/
+  | attestation
+  /-- What the author wrote: a textual critic's judgement, drawn from the copies,
+  rated like any other reading. -/
+  | originality
+  /-- What a church receives as Scripture, whoever wrote it: Trent received the
+  books "entire with all their parts", as the Vulgate has them. -/
+  | reception
+deriving Repr, DecidableEq
+
+/-- How the question is named to a reader. -/
+def TextQuestion.render : TextQuestion → String
+  | .attestation => "what the copies say"
+  | .originality => "what the author wrote"
+  | .reception => "what is received as Scripture"
+
+/-- **The reading a claim takes at a place where the copies differ**: the place,
+by the name of its variation unit (`Testimony.VariationUnit.place`), and the
+reading there, by its label, both as a reader sees them. A name, not the unit
+itself, because the unit carries cited judgements, and a citation cannot hold the
+sources that cite it. `#check_readings` (`Testimony.Checks.Readings`) finds the
+unit and the reading, and fails the build if either is not there. -/
+structure ReadingTaken where
+  /-- The variation unit's name: "Romans 9:5, the punctuation". -/
+  place : String
+  /-- The label of the reading taken there: "a comma: Christ is God over all". -/
+  reading : String
+deriving Repr, DecidableEq
+
 /-- A citation of scripture. Typed against `PassageRange` rather than stored as
 prose, so that citations are traversable — "what cites Isaiah 7:14?" is an
-answerable question — and so that `Source.isScriptureOnly` is computable. -/
+answerable question — and so that `Source.isScriptureOnly` is computable.
+
+A claim about what a verse says names the text it read (`tradition`), and, where
+the copies differ inside the words it rests on, which question it needs answered
+and the reading it takes (`question`, `takes`). -/
 structure ScriptureCitation where
   /-- The verse or range cited. -/
   ref : PassageRange
   /-- Which text-form is being cited, where it matters (the LXX's `parthenos`
   against the Masoretic `almah`, for instance). -/
   tradition : Option TextualTradition := none
+  /-- The question about the text the claim needs answered, where it rests on a
+  place the copies differ. -/
+  question : Option TextQuestion := none
+  /-- The reading it takes at each place the copies differ inside the words it
+  rests on, or that a cited reader holds bears on them. -/
+  takes : List ReadingTaken := []
 deriving Repr, DecidableEq
+
+/-- A citation as a reader sees it: the verse, the edition it was read in, and the
+reading it takes wherever the copies differ: "Rom 9:5 (SBLGNT), taking “a comma: Christ
+is God over all” where the copies differ". -/
+def ScriptureCitation.render (c : ScriptureCitation) : String :=
+  c.ref.render ++ (c.tradition.map (fun t => " (" ++ t.siglum ++ ")")).getD "" ++
+    String.join (c.takes.map fun t => ", taking “" ++ t.reading ++ "” where the copies differ")
 
 /-- What a claim is grounded in.
 

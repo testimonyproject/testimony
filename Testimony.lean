@@ -9,6 +9,7 @@ import Testimony.Bib.Works
 import Testimony.Bib.Registry
 import Testimony.Bib.Render
 import Testimony.Provenance
+import Testimony.Variants
 import Testimony.Intertext
 import Testimony.Scripture
 import Testimony.Logic.Basic
@@ -66,5 +67,7 @@ import Testimony.Checks.FallacyCases
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
 import Testimony.Checks.Readers
+import Testimony.Checks.Readings
+import Testimony.Variants.Units
 import Testimony.Checks.Refutations
 import Testimony.Checks.VerseParts

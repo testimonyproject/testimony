@@ -1,5 +1,6 @@
 import TestimonyArguments.Trinity.Atoms
 import TestimonyArguments.Works
+import Testimony.Variants.Units
 
 /-!
 # TestimonyArguments.Trinity.Sources — citation and classification for every atom
@@ -744,7 +745,10 @@ def cite : Claim → AtomMeta
   | .oneNameOfThree =>
     { label := "Matthew 28:19 — \"in the name of the Father and of the Son and of the Holy Spirit\""
     , kind := .textual
-    , source := text [{ ref := .verse ⟨.matthew, 28, 19⟩ }] }
+    , source :=
+        { text [{ ref := .verse ⟨.matthew, 28, 19⟩, question := some .originality
+                 , takes := [Variants.threefoldName] }] with
+          confidence := .disputed } }
   | .firstbornOfAllCreation =>
     { label := "Colossians 1:15 — \"the firstborn of all creation\""
     , kind := .textual
@@ -894,7 +898,10 @@ def cite : Claim → AtomMeta
   | .throneOGod =>
     { label := "Hebrews 1:8 — \"Your throne, O God, is forever and ever\""
     , kind := .textual
-    , source := text [{ ref := .verse ⟨.hebrews, 1, 8⟩ }] }
+    , source :=
+        { text [{ ref := .verse ⟨.hebrews, 1, 8⟩, question := some .originality
+                 , takes := [Variants.yourKingdom] }] with
+          confidence := .disputed } }
   | .greatGodAndSavior =>
     { label := "Titus 2:13 — \"our great God and Savior Jesus Christ\""
     , kind := .textual
@@ -902,7 +909,10 @@ def cite : Claim → AtomMeta
   | .godOverAll =>
     { label := "Romans 9:5 — \"the Christ, who is God over all, blessed forever\""
     , kind := .textual
-    , source := text [{ ref := .verse ⟨.romans, 9, 5⟩ }] }
+    , source :=
+        { text [{ ref := .verse ⟨.romans, 9, 5⟩, question := some .originality
+                 , takes := [Variants.commaGodOverAll] }] with
+          confidence := .disputed } }
   | .everyKneeToJesus =>
     { label := "Philippians 2:10–11, from Isaiah 45:23 — every knee bows at the name of Jesus"
     , kind := .textual

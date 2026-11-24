@@ -293,6 +293,7 @@ elab_rules : command
 
 /--
 info: the Greek corpus:
+MAT: 18329 words
 JHN: 15625 words
 ROM: 7055 words
 1CO: 6812 words

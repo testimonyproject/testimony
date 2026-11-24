@@ -66,7 +66,7 @@ namespace TestimonyArguments
 #guard_msgs (drop info) in
 #check_citations under TestimonyArguments
 
-/-- info: every part of a verse under Testimony is read from its Greek or Hebrew text: 3 -/
+/-- info: every part of a verse under Testimony is read from its Greek or Hebrew text: 8 -/
 #guard_msgs in
 #check_verse_parts under Testimony
 

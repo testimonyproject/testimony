@@ -44,6 +44,15 @@ initialize proposedAttr : TagAttribute ←
   registerTagAttribute `proposed
     "a result this library constructs rather than reports; docstring must state what is novel"
 
+/-- Marks a place where the copies of a book differ (`Testimony.VariationUnit`).
+`#check_readings` (`Testimony.Checks.Readings`) finds every unit so marked, and
+holds every claim whose words lie inside one to take a reading there; a unit
+declared and not marked would be a place the build does not know the copies
+differ. -/
+initialize variationUnitAttr : TagAttribute ←
+  registerTagAttribute `variation_unit
+    "a place where the copies differ; #check_readings holds every claim resting on it"
+
 /-! ## The unfold sets
 
 One simp set per argument, holding every definition its proofs must unfold to
