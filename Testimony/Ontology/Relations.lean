@@ -2,7 +2,7 @@ import Testimony.Ontology.Relations.Definitions
 import Testimony.Ontology.Relations.Examples
 
 /-!
-# What three relation words commit a reader to
+# What five relation words commit a reader to
 
 **A draft article.** The library says what each of its claims means, in a small
 vocabulary shared by every argument (`Testimony.Semantics.Vocabulary`), so that
@@ -12,14 +12,15 @@ which justification is received" and "baptism is a means by which justification
 is received" do not contradict each other on their face; they contradict each
 other because of what *only* means.
 
-This article writes out what three of the vocabulary's relation words commit a
+This article writes out what five of the vocabulary's relation words commit a
 reader to, searches the library for every claim that uses them, and reports what
 follows. It adds no word to the vocabulary and no claim to any argument.
 
 ## Derived, not assembled
 
-The vocabulary already defines each relation word, in a sentence. Three of those
-sentences say more than the word's name, and say it of another word; each is
+The vocabulary already defines each relation word, in a sentence. Five of those
+sentences say more than the word's name, and say it of another word or of the
+word itself; each is
 written out as a definition the reasoner holds, with the sentence as its source
 (`Relations.Definitions`):
 
@@ -28,6 +29,11 @@ written out as a definition the reasoner holds, with the sentence as its source
   (`onlyMeans`).
 - **The whole ground of a thing is a ground of it, and nothing else is**
   (`wholeGround`).
+- **What works through a means moves it**, as the hand moves the stick it works
+  through (`meansIsMoved`).
+- **What moves a thing is not moved by it**, in the same respect: moving runs
+  one way, as Aristotle says, "the first movent moves the last, whereas the last
+  does not move the first" (*Physics* VIII.5, 256a) (`movingRunsOneWay`).
 
 A definition says what a word means, and no reader disputes that. Where one
 tradition holds of a word what another denies, it is a premise of that
@@ -41,7 +47,7 @@ what it does in each is computed for every argument the library has, by
 
 ## What the search found
 
-Three arguments use the five words: sola fide, the canonical witness and sola
+Three arguments use the seven words: sola fide, the canonical witness and sola
 scriptura (`Testimony.Checks.Ontology`). Most uses in sola fide are inside a
 frame — what Romans 3:28 or Galatians 2:16 *says*, what James 2 is *written
 against* — and the definitions do not reach inside a frame

@@ -65,6 +65,8 @@ def tridentineReading : Valuation Claim := fun a =>
   | .justificationDistinctFromSanctification => False
   | .faithIsSufficient => False
   | .justificationByFaithAlone => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Trent's premises do not lead to sola fide.** They lead to the denial of its
@@ -174,6 +176,8 @@ def neitherLexicalReading : Valuation Claim := fun a =>
   | .justificationByFaithAlone => False
   | .faithIsSufficient => False
   | .salvationThroughFaith => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Sola fide fails to follow only when every strand loses its disputed
@@ -213,6 +217,8 @@ def neitherPistisNorSozoReading : Valuation Claim := fun a =>
   | .justificationByFaithAlone => False
   | .faithIsSufficient => False
   | .salvationThroughFaith => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Within Paul's strand, "faith in Christ" is needed.** Deny that Galatians 2:16
@@ -260,6 +266,8 @@ def apocalypticReading : Valuation Claim := fun a =>
   | .justificationByFaithAlone => False
   | .faithIsSufficient => False
   | .salvationThroughFaith => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **The apocalyptic reading does not lead to sola fide.** It does not reach the
@@ -342,6 +350,8 @@ def sandersReading : Valuation Claim := fun a =>
   | .justificationByFaithAlone => False
   | .faithIsSufficient => False
   | .salvationThroughFaith => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **On Sanders' account, Paul alone does not.** Grant Sanders his account of
@@ -364,6 +374,8 @@ def jamesUnharmonisedReading : Valuation Claim := fun a =>
   match a with
   | .james2_24Compatible => False
   | .salvationNotByWorks => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **The argument depends on answering James.** Remove the two premises that
@@ -430,6 +442,8 @@ def newPerspectiveOwnReading : Valuation Claim := fun a =>
   | .worksOfLawMeansWorksGenerally => False
   | .baptismIsInstrumentalCause => False
   | .justificationIncludesSanctification => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- The New Perspective's premises can all be true together. -/
@@ -441,6 +455,8 @@ else in the Reformed case holds. -/
 def subjectiveGenitiveReading : Valuation Claim := fun a =>
   match a with
   | .pistisChristouObjective => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- That position can be held without contradiction, so
@@ -453,6 +469,8 @@ the Reformed case holds. -/
 def lawObservantLukeReading : Valuation Claim := fun a =>
   match a with
   | .acts15YokeIsLawAsCondition => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- That position can be held without contradiction, so
@@ -468,6 +486,8 @@ def criticalAuthorshipReading : Valuation Claim := fun a =>
   | .titusIsPauline => False
   | .firstPeterIsPetrine => False
   | .secondPeterIsPetrine => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- That position can be held without contradiction, so
@@ -516,6 +536,8 @@ holds. -/
 def finnishReading : Valuation Claim := fun a =>
   match a with
   | .justificationIsForensicOnly => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- That position can be held without contradiction, so
@@ -536,6 +558,8 @@ def criticsReading : Valuation Claim := fun a =>
   | .secondTempleCovenantalNomism => False
   | .baptismIsInstrumentalCause => False
   | .justificationIncludesSanctification => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- That position can be held without contradiction, so

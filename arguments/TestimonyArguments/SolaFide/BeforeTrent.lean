@@ -231,6 +231,8 @@ def faithAloneWithRenewalReading : Valuation Claim := fun a =>
   | .jamesUsesDikaioAsPaul => False
   | .rev22_11BeJustifiedStill => False
   | .sir18_22BeJustifiedToDeath => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Before Trent, faith alone stood with Augustine.** One reading satisfies the

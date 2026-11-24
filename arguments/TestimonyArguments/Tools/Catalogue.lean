@@ -28,6 +28,8 @@ def solaFideChapters : List Chapter :=
     , modules := [`TestimonyArguments.SolaFide.BeforeTrent] }
   , { slug := "trent-and-paul", title := "Where Trent parts from Paul"
     , modules := [`TestimonyArguments.SolaFide.Gospel] }
+  , { slug := "faith-and-charity", title := "Faith working through love"
+    , modules := [`TestimonyArguments.SolaFide.FaithAndCharity] }
   , { slug := "trents-definition", title := "What Trent means by justification"
     , modules := [`TestimonyArguments.SolaFide.Definition] }
   , { slug := "what-each-side-must-deny", title := "What each side must deny about Paul's word"

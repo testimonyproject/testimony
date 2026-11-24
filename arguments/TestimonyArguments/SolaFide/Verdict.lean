@@ -210,6 +210,8 @@ def verdictOnDegreesReading : Valuation Claim := fun a =>
   | .justificationHasDegrees => False
   | .worksMeritIncreaseOfJustification => False
   | .justificationIncludesSanctification => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- Trent's reading, granting the courtroom texts and that a verdict has no
@@ -217,6 +219,8 @@ degrees: justification is more than a verdict, so its increase stands. -/
 def trentOnDegreesReading : Valuation Claim := fun a =>
   match a with
   | .justificationIsForensicOnly => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-! ### Results -/

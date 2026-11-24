@@ -21,6 +21,15 @@ with the rationale a proposal must give. What the check refuses is the third
 way, a reading or a step that is the library's own and is presented as if the
 text alone gave it.
 
+It holds one rating to a rule of its own. `refuted` is the one rating no reader
+gives: a claim is cited `refuted` exactly where the library computes it from
+Scripture's own words, because the word's spelling rules out the voice the claim
+gives it (`Statement.misreads`), or because the claim names as the one at work
+in a verb what the author, in every use whose spelling makes it active, never
+names (`Statement.againstUsage`). So the check fails on a claim cited `refuted`
+that neither refutes, on a claim one of them refutes that is cited at a reader's
+rating, and on a line whose step is cited `refuted`.
+
 It holds every line of reason under the namespace to the same rule. A line with
 no rating of its step (`Line.inference` left `none`) names no one who draws its
 inference and does not say it is the library's own either, so the check fails
@@ -38,6 +47,35 @@ def unreadByAnyone {α : Type} [DecidableEq α] (pkg : Logic.ArgumentPackage α)
     List String × Nat :=
   (pkg.scriptureOnlyAtoms.map (·.label),
     (pkg.inferences.filter fun s => s.isScriptureOnly).length)
+
+/-- **Where a package's `refuted` ratings and the Greek disagree.** A claim is
+cited `refuted` exactly where the library computes the refutation: where what it
+asserts gives a Greek word a voice its spelling rules out (`Statement.misreads`),
+or names as at work in a verb what its author's usage never does
+(`Statement.againstUsage`). Each label returned is a claim cited `refuted` that
+neither refutes, or a claim one of them refutes that is cited at a reader's
+rating. -/
+def refutedMismatches {α : Type} [Semantics.HasMeanings α]
+    (pkg : Logic.ArgumentPackage α) : List String :=
+  pkg.premises.filterMap fun
+    | .atom a =>
+      let m := pkg.cite a
+      let cited := m.source.confidence == .refuted
+      let s := Semantics.HasMeanings.means a
+      let misread := s.misreads || s.againstUsage
+      if cited && !misread then
+        some (m.label ++ "\" is cited refuted, and nothing the library computes refutes it")
+      else if misread && !cited then
+        some (m.label ++
+          "\" reads the Greek as its spelling or its author's usage rules out, " ++
+          "and is not cited refuted")
+      else none
+    | _ => none
+
+/-- Whether a line's step is cited `refuted`. No step is: the library computes
+`refuted` only of a claim whose reading of the Greek the text itself rules out. -/
+def lineCitedRefuted {α : Type} (l : Logic.Line α) : Bool :=
+  l.inference.any (·.confidence == .refuted)
 
 /-- Whether a line of reason carries no rating of its step at all. Such a line
 cannot enter a dispute, which refuses a step nobody has rated, but it can stand
@@ -60,6 +98,13 @@ def checkReaders (roots : List Name) : CommandElabM Unit := do
         let ty ← inferType e
         some <$> unsafe evalExpr (List String × Nat) ty e
       catch _ => pure none
+    let refuted? ← liftTermElabM do
+      try
+        let e ← mkAppM ``refutedMismatches #[mkConst name]
+        some <$> unsafe evalExpr (List String) (← inferType e) e
+      catch _ => pure none
+    for l in refuted?.getD [] do
+      problems := problems.push m!"{name}: \"{l}"
     match found? with
     | some ([], 0) => checked := checked + 1
     | some (labels, steps) =>
@@ -79,14 +124,23 @@ def checkReaders (roots : List Name) : CommandElabM Unit := do
         let e ← mkAppM ``lineUnrated #[mkConst name]
         some <$> unsafe evalExpr Bool (← inferType e) e
       catch _ => pure none
+    let citedRefuted? ← liftTermElabM do
+      try
+        let e ← mkAppM ``lineCitedRefuted #[mkConst name]
+        some <$> unsafe evalExpr Bool (← inferType e) e
+      catch _ => pure none
+    if citedRefuted? == some true then
+      problems := problems.push m!"{name}: the line's step is cited refuted, which no reader \
+        may rate it"
     match unrated? with
     | some false => lines := lines + 1
     | some true => problems := problems.push m!"{name}: the line's step is rated by no one"
     | none => problems := problems.push m!"{name}: the check could not be run"
   unless problems.isEmpty do
-    throwError m!"readings and steps with no reader:\n{
-      MessageData.joinSep problems.toList "\n"}\ncite a reader who holds each, or mark it \
-      the library's own with `Reference.proposal`"
+    throwError m!"readings and steps with no reader, or rated `refuted` against what the \
+      library computes:\n{MessageData.joinSep problems.toList "\n"}\ncite a reader who holds \
+      each, or mark it the library's own with `Reference.proposal`; cite `refuted` exactly \
+      the claims whose reading of the Greek the data contradicts"
   if checked == 0 then
     throwError "#check_readers found no package to check"
   for r in roots do recordChecked `readers r

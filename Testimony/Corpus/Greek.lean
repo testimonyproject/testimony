@@ -67,6 +67,14 @@ structure Token where
   /-- Its parsing, in Robinson's codes: `N-NSM` is a noun, nominative singular
   masculine. -/
   morph : String
+  /-- For a verb, the dictionary forms of the words MACULA's analysis of its
+  clause gives as its first argument: who or what does what the verb says, the
+  subject of an active, and of a middle or passive form the word it is said of.
+  A participle used as a noun, "the one who works", is replaced by the word it
+  refers to. Empty where the text names none. -/
+  actors : List String := []
+  /-- Where those words stand, in the same order: `GAL 2:6!14`. -/
+  actorRefs : List String := []
 deriving Repr, DecidableEq
 
 namespace Token
@@ -89,6 +97,76 @@ def isPredicate (t : Token) : Bool := t.role == "p"
 
 /-- Whether the word is a verb. -/
 def isVerb (t : Token) : Bool := t.wordClass == "verb"
+
+end Token
+
+/-- **The voice of a Greek verb.** In the active the subject acts ("faith works");
+in the passive it is acted on ("faith is moved"); in the middle it acts, and the
+action stays with it ("faith is at work"). In some tenses the middle and the
+passive are spelled alike, so the spelling of such a form does not say which it
+is, and a reader decides from how the verb is used. -/
+inductive GreekVoice
+  /-- The subject acts. -/
+  | active
+  /-- The subject acts, and the action stays with it. -/
+  | middle
+  /-- The subject is acted on. -/
+  | passive
+deriving DecidableEq, Repr
+
+/-- The voice, in a word, for a report. -/
+def GreekVoice.name : GreekVoice → String
+  | .active => "active"
+  | .middle => "middle"
+  | .passive => "passive"
+
+namespace Token
+
+/-- **The voice the parsing gives a verb**, in Robinson's codes: the letter after
+the tense in `V-PMP-NSF` (present, middle, participle). `A` is active, `M` middle,
+`P` passive; `D` and `O` are the middle and passive of a verb with no active
+(deponent), and are read as middle and passive. `E` and `N`, middle or passive,
+leave the choice open, and so does a verb with no voice: none is given. -/
+def voice? (t : Token) : Option GreekVoice :=
+  if !t.isVerb then none else
+  match t.morph.toList with
+  | 'V' :: '-' :: rest =>
+    match rest.dropWhile Char.isDigit with
+    | _ :: 'A' :: _ => some .active
+    | _ :: 'M' :: _ | _ :: 'D' :: _ => some .middle
+    | _ :: 'P' :: _ | _ :: 'O' :: _ => some .passive
+    | _ => none
+  | _ => none
+
+/-- **The voices the spelling of a verb allows.** In the present, the imperfect,
+the perfect and the pluperfect, the middle and the passive are spelled alike, so
+a form the data tags middle or passive there could be either: the tag is its
+editors' reading of how the verb is used, and the form allows both. In the
+aorist and the future they are spelled apart, so the form allows the one its tag
+gives, unless the tag itself is `E` or `N`, middle or passive. An active form
+allows the active alone. A word that is not a verb has no voice. -/
+def formVoices (t : Token) : List GreekVoice :=
+  if !t.isVerb then [] else
+  match t.morph.toList with
+  | 'V' :: '-' :: rest =>
+    match rest.dropWhile Char.isDigit with
+    | _ :: 'A' :: _ => [.active]
+    | tense :: v :: _ =>
+      let spelledAlike := tense == 'P' || tense == 'I' || tense == 'R' || tense == 'L'
+      if v == 'E' || v == 'N' || (spelledAlike && (v == 'M' || v == 'D' || v == 'P' || v == 'O'))
+      then [.middle, .passive]
+      else if v == 'M' || v == 'D' then [.middle]
+      else if v == 'P' || v == 'O' then [.passive]
+      else []
+    | _ => []
+  | _ => []
+
+/-- The verse the word stands in. -/
+def verseOf (t : Token) : PassageRange := .verse ⟨t.book, t.chapter, t.verse⟩
+
+/-- Where the word stands, as a reference: `Gal 5:6, word 15`. -/
+def place (t : Token) : String :=
+  s!"{t.book.abbrev} {t.chapter}:{t.verse}, word {t.position}"
 
 end Token
 
@@ -115,7 +193,8 @@ def greekPassage (n : Ident) (code : String) (c v₁ v₂ : Nat) : CommandElabM 
     `(term| { book := $book, chapter := $(quote r.chapter), verse := $(quote r.verse)
             , position := $(quote r.position), role := $(quote r.role)
             , wordClass := $(quote r.wordClass), text := $(quote r.text)
-            , lemma := $(quote r.lemma), morph := $(quote r.morph) })
+            , lemma := $(quote r.lemma), morph := $(quote r.morph)
+            , actors := $(quote r.actors), actorRefs := $(quote r.actorRefs) })
   elabCommand (← `(command|
     /-- Words of the Greek New Testament, read from MACULA Greek (SBLGNT) by
     `greek_passage`. -/
@@ -128,6 +207,76 @@ syntax (name := greekPassageCmd) "greek_passage " ident " from " ident num num (
 elab_rules : command
   | `(greek_passage $n from $code $c $v₁ $[$v₂]?) =>
     greekPassage n code.getId.toString c.getNat v₁.getNat ((v₂.map (·.getNat)).getD v₁.getNat)
+
+/-- Write `def n : Token`, the one word of verse `c:v` of the book with MACULA code
+`code` whose dictionary form is `lemma`. Refused, failing the build, unless the
+verse has exactly one such word. -/
+def greekWord (n : Ident) (code : String) (c v : Nat) (lemma : String) : CommandElabM Unit := do
+  let some (_, bookName) := bookCodes.find? (·.1 == code)
+    | throwError "greek_word: no book with code {code}"
+  let rows ← liftIO (readBook code)
+  let picked := rows.filter fun r => r.chapter == c && r.verse == v && r.lemma == lemma
+  let r ← match picked.toList with
+    | [r] => pure r
+    | [] => throwError "greek_word: {code} {c}:{v} has no word {lemma}"
+    | rs => throwError "greek_word: {code} {c}:{v} has {rs.length} words {lemma}"
+  let book := mkCIdent (``Testimony.Book ++ bookName)
+  elabCommand (← `(command|
+    /-- A word of the Greek New Testament, read from MACULA Greek (SBLGNT) by
+    `greek_word`. -/
+    def $n : Token :=
+      { book := $book, chapter := $(quote r.chapter), verse := $(quote r.verse)
+      , position := $(quote r.position), role := $(quote r.role)
+      , wordClass := $(quote r.wordClass), text := $(quote r.text)
+      , lemma := $(quote r.lemma), morph := $(quote r.morph)
+      , actors := $(quote r.actors), actorRefs := $(quote r.actorRefs) }))
+
+/-- `greek_word n from GAL 5 6 "ἐνεργέω"` writes `def n : Token`, the word of
+Galatians 5:6 whose dictionary form is ἐνεργέω, read from the data when the
+module is built; the verse must have exactly one. -/
+syntax (name := greekWordCmd) "greek_word " ident " from " ident num num str : command
+
+elab_rules : command
+  | `(greek_word $n from $code $c $v $lemma) =>
+    greekWord n code.getId.toString c.getNat v.getNat lemma.getString
+
+/-- MACULA's codes for the thirteen letters the New Testament ascribes to Paul,
+Romans to Philemon. Whether he wrote each of them himself is argued; the canon
+puts his name to each, and the usage read here is the usage of those letters. -/
+def paulsLetters : List String :=
+  ["ROM", "1CO", "2CO", "GAL", "EPH", "PHP", "COL", "1TH", "2TH", "1TI", "2TI", "TIT", "PHM"]
+
+/-- Write `def n : List Token`, every word whose dictionary form is `lemma` in the
+books with the given MACULA codes, in their order: how those books use the word.
+Refused, failing the build, if a book has no file in the corpus. -/
+def greekUsage (n : Ident) (lemma : String) (codes : List String) : CommandElabM Unit := do
+  let mut terms : Array (TSyntax `term) := #[]
+  for code in codes do
+    let some (_, bookName) := bookCodes.find? (·.1 == code)
+      | throwError "greek_usage: no book with code {code}"
+    unless ← liftIO ((← liftIO dataDir) / s!"{code}.tsv").pathExists do
+      throwError "greek_usage: the corpus has no file for {code}"
+    let book := mkCIdent (``Testimony.Book ++ bookName)
+    for r in (← liftIO (readBook code)).filter (·.lemma == lemma) do
+      let t ← `(term|
+        { book := $book, chapter := $(quote r.chapter), verse := $(quote r.verse)
+        , position := $(quote r.position), role := $(quote r.role)
+        , wordClass := $(quote r.wordClass), text := $(quote r.text)
+        , lemma := $(quote r.lemma), morph := $(quote r.morph)
+        , actors := $(quote r.actors), actorRefs := $(quote r.actorRefs) })
+      terms := terms.push t
+  elabCommand (← `(command|
+    /-- Every use of a word in a set of books of the Greek New Testament, read
+    from MACULA Greek (SBLGNT) by `greek_usage`. -/
+    def $n : List Token := [$terms,*]))
+
+/-- `greek_usage n of "ἐνεργέω" in Paul` writes `def n : List Token`, every use of
+ἐνεργέω in the letters ascribed to Paul (`paulsLetters`), read from the data when
+the module is built. -/
+syntax (name := greekUsageCmd) "greek_usage " ident " of " str " in " &"Paul" : command
+
+elab_rules : command
+  | `(greek_usage $n of $lemma in Paul) => greekUsage n lemma.getString paulsLetters
 
 /-- `#greek_corpus` reports every imported book and how many words it has. -/
 syntax (name := greekCorpusCmd) "#greek_corpus" : command
@@ -145,8 +294,19 @@ elab_rules : command
 /--
 info: the Greek corpus:
 JHN: 15625 words
+ROM: 7055 words
+1CO: 6812 words
+2CO: 4473 words
+GAL: 2226 words
+EPH: 2416 words
+PHP: 1626 words
 COL: 1580 words
+1TH: 1473 words
+2TH: 820 words
+1TI: 1591 words
+2TI: 1235 words
 TIT: 659 words
+PHM: 334 words
 HEB: 4935 words
 -/
 #guard_msgs in
@@ -196,5 +356,37 @@ error: verse_part: JHN 3:18c: the verse has 23 words, not 30
 -/
 #guard_msgs in
 verse_part johnThreeEighteenOverlong from JHN 3 18 1 30 "c" "πιστεύω"
+
+/-! ### How Paul uses ἐνεργέω -/
+
+greek_usage energeoInPaul of "ἐνεργέω" in Paul
+
+/-- **The uses of a word in its author's letters**, where the library has read
+them: for a use of ἐνεργέω in a letter ascribed to Paul, every use of it in those
+letters (`energeoInPaul`); for any other word, none yet. -/
+def Token.usage (t : Token) : List Token :=
+  if t.lemma == "ἐνεργέω" && energeoInPaul.contains t then energeoInPaul else []
+
+/-- **Who or what is at work, where the spelling makes the verb active**: the
+words the uses of `u` whose forms allow only the active name as the one doing
+the work, each once, in the order the uses stand. -/
+def agentsNamed (u : List Token) : List String :=
+  ((u.filter (·.formVoices == [.active])).flatMap (·.actors)).eraseDups
+
+/-- **Paul's eighteen uses of ἐνεργέω, and who is at work in them.** Of the
+eighteen, ten are spelled as actives only, and in nine of those MACULA's analysis
+names the one at work: God (θεός) at 1 Corinthians 12:6, Galatians 2:8 twice,
+3:5 and Ephesians 1:11 and 1:20; the one Spirit (εἷς, πνεῦμα) at 1 Corinthians
+12:11; the spirit now at work in the sons of disobedience (πνεῦμα) at Ephesians
+2:2; and the Philippians, "beloved" (ἀγαπητός), told to work at Philippians
+2:13, where God is the one who works in them to will and to work. The other
+eight are present or imperfect forms that can be middle or passive, and what
+they are said of is a thing: passions, comfort, death, the mystery of
+lawlessness, power, energy, the word of God, and at Galatians 5:6 faith. -/
+theorem energeo_in_paul :
+    energeoInPaul.length = 18 ∧
+      (energeoInPaul.filter (·.formVoices == [.active])).length = 10 ∧
+      agentsNamed energeoInPaul = ["θεός", "εἷς", "πνεῦμα", "ἀγαπητός"] := by
+  decide
 
 end Testimony.Corpus.Greek
