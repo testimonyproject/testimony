@@ -637,6 +637,18 @@ inductive Claim
   /-- "Work" in John 6:29, where believing is "the work of God", has the sense
   Paul gives "works" when he excludes works from justification. -/
   | john6_29WorkIsPaulsWorks
+  /-- In Galatians 5:6 the participle ἐνεργουμένη, "working", is passive: faith is
+  worked, moved and acted upon, by love. -/
+  | energoumeneIsPassive
+  /-- In Galatians 5:6 the participle ἐνεργουμένη, "working", is middle: faith is
+  the one at work. -/
+  | energoumeneIsMiddle
+  /-- In Galatians 5:6 love moves faith: faith works because, and as, love moves
+  it, as the soul moves the body. -/
+  | loveMovesFaith
+  /-- In Galatians 5:6 faith works through love as its means: faith is the one at
+  work, and love is how it works. -/
+  | faithWorksThroughLove
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaFide

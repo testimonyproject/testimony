@@ -1205,6 +1205,54 @@ def baseCite : Claim → AtomMeta
         { primary := .work bellarmineOpera6 (.sectionRef "De justificatione I.16")
         , tradition := .romanCatholic
         , confidence := .disputed } }
+  | .energoumeneIsPassive =>
+    { label := "Galatians 5:6: ἐνεργουμένη is passive, faith moved by love"
+    , kind := .linguistic
+      -- Bellarmine, II.4, p. 219: "Ubi illud (operatur) passive accipiendum est,
+      -- non active. Est enim in Graeco ἐνεργουμένη, id est mota atque acta".
+      -- `refuted`: the Greek data parses the word middle (V-PMP-NSF), and
+      -- `#check_readers` holds the citation to that computation.
+    , source :=
+        { primary := .work bellarmineOpera6 (.page 219)
+        , tradition := .romanCatholic
+        , confidence := .refuted } }
+  | .energoumeneIsMiddle =>
+    { label := "Galatians 5:6: ἐνεργουμένη is middle, faith the one at work"
+    , kind := .linguistic
+      -- Lightfoot, pp. 204–205: "the middle voice according to the general usage
+      -- of St Paul … ἐνεργεῖσθαι is never passive in St Paul". Burton, p. 281:
+      -- "middle, not passive". MACULA parses it V-PMP-NSF, present middle.
+      -- `consensus`: the one reader cited for the passive is refuted by the data.
+    , source :=
+        { primary := .work lightfootGalatians (.pages 204 205)
+        , supporting :=
+            [ .work burtonGalatians (.page 281)
+            , .work maculaGreek (.sectionRef "Galatians 5:6, word 15") ]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .loveMovesFaith =>
+    { label := "In Galatians 5:6 love moves faith, as the soul moves the body"
+    , kind := .interpretive
+      -- Bellarmine, II.4, p. 218: "fides, quae agitur, ac movetur … per
+      -- dilectionem"; the Rheims New Testament (1582), on 5:6: "not as by an
+      -- instrument, but as the body worketh by the soul". `disputed`: Calvin
+      -- grants the verse and reads the love as faith's fruit (*Antidote*, p. 119).
+    , source :=
+        { primary := .work bellarmineOpera6 (.page 218)
+        , supporting := [.work rheimsNewTestament (.adLoc ⟨.galatians, 5, 6⟩)]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .faithWorksThroughLove =>
+    { label := "In Galatians 5:6 faith works through love as its means"
+    , kind := .interpretive
+      -- Burton, p. 281: διά "denotes not antecedent cause but mediate agency",
+      -- made certain "not on grammatical grounds". `disputed`: the Rheims note
+      -- grants that faith is what works and denies that charity is its
+      -- instrument.
+    , source :=
+        { primary := .work burtonGalatians (.page 281)
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
   | .aqedahOathMeritedByObedience =>
     { label := "The oath of Genesis 22:16–18 was merited by the binding of Isaac"
     , kind := .interpretive

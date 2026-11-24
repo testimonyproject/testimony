@@ -267,14 +267,14 @@ def handWrittenUnanchored : PassageRange :=
 
 /--
 error: parts of verses the Greek or Hebrew text does not bear out:
-Testimony.Checks.handWrittenRomans: ROM 3:28a: the corpus has no file for ROM
+Testimony.Checks.handWrittenJames: JAS 2:24a: the corpus has no file for JAS
 write each part with `verse_part`, which reads it from the text
 -/
 #guard_msgs in
 #check_verse_parts in
-/-- Part of Romans 3:28, a book the corpus does not yet have. -/
-def handWrittenRomans : PassageRange :=
-  .part { verse := ⟨.romans, 3, 28⟩, letter := "a", first := 1, last := 3, anchor := "λογίζομαι" }
+/-- Part of James 2:24, a book the corpus does not yet have. -/
+def handWrittenJames : PassageRange :=
+  .part { verse := ⟨.james, 2, 24⟩, letter := "a", first := 1, last := 4, anchor := "δικαιόω" }
 
 /-! A hand-written part of the Old Testament is read from the Hebrew at the verse its English
 number stands for. Ephrathah is in English Micah 5:2, which the Hebrew numbers 5:1. A part that

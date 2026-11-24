@@ -1,5 +1,6 @@
 import Testimony.Semantics.Vocabulary
 import Testimony.Semantics.Upper
+import Testimony.Corpus.Greek
 
 /-!
 # Testimony.Semantics.Grammar — what a claim says, as a term
@@ -145,6 +146,12 @@ inductive Statement
   | principle (h : Principle)
   /-- This word occurs in this passage. Textual, and decidable from the text. -/
   | occurs (w : Lexeme) (p : PassageRange)
+  /-- **This word of the Greek, where it stands, is in this voice.** Textual: a
+  claim about the text's grammar, which the parsing of the Greek data bears out
+  or contradicts (`Statement.misreads`). The word is read from the data by
+  `greek_word`, so it is the text's word, at its place. -/
+  | parses (w : Lexeme) (t : Testimony.Corpus.Greek.Token)
+      (v : Testimony.Corpus.Greek.GreekVoice)
   /-- This word occurs in this passage and nowhere else in the New Testament.
   -/
   | occursOnlyIn (w : Lexeme) (p : PassageRange)
@@ -190,9 +197,23 @@ def words : Statement → List (Lexeme × Scope)
   | .renders v p w => [(w, .usage v), (w, .passage p)]
   | .glosses v w _ => [(w, .usage v)]
   | .occurs w p | .occursOnlyIn w p => [(w, .passage p)]
+  | .parses w t _ => [(w, .passage t.verseOf)]
   | .denied s => s.words
   | .also s t | .expects s t => s.words ++ t.words
   | .wrote .. | .principle _ | .opaque _ => []
+
+/-- **Whether a statement misreads the Greek**: it says a word stands in one
+voice where the Greek data's parsing gives it another, or denies it the voice the
+parsing gives. A form the parsing leaves open, middle or passive, is misread by
+neither. Read through conjunctions; a statement about anything else misreads
+nothing. -/
+def misreads : Statement → Bool
+  | .parses _ t v => match t.voice? with
+    | some v' => v' != v
+    | none => false
+  | .denied (.parses _ t v) => t.voice? == some v
+  | .also s t => s.misreads || t.misreads
+  | _ => false
 
 /-- The lexemes a statement turns on. -/
 def lexemes (s : Statement) : List Lexeme := s.words.map Prod.fst

@@ -104,7 +104,21 @@ check reports, for each silence a move argues from, whether it states the
 expectation (`Silence`). An expectation stated is then a premise like any other,
 which the library's claims may deny (`Move.against`).
 
-## Straw man
+## Misreading the original
+
+An argument may rest on what the original says, and the original may not say
+it: "the verb is passive, so faith is moved by love", where the verb is middle,
+and faith is the one at work. A premise of that kind is a claim about the text's
+grammar, and the text's grammar is data the library holds: every word of the
+imported books of the Greek New Testament, with its parsing
+(`Testimony.Corpus.Greek`). So a claim that a word, at its place, is in a voice
+(`Statement.parses`) is read against the parsing, and a move **misreads the
+original** when it argues from such a claim and the parsing gives the word
+another voice (`Move.misreadings`). Where the spelling leaves the voice open, as
+the present middle and passive are spelled alike, the parsing is Clear Bible's
+reading of the word, and a report that rests on it says so; where the parsing
+leaves it open too, nothing is charged.
+
 
 A straw man answers a view its holder does not hold: "Trent teaches that a
 person's own works are enough to justify him, and Romans 3:28 says otherwise."
@@ -497,6 +511,32 @@ def fromSilenceAlone (m : Move) : List Statement :=
     | (t, _, .unexpected) => some t
     | _ => none
 
+/-! ### Misreading the original -/
+
+/-- **The readings of the Greek a move argues from that the Greek does not
+bear**: each premise that says a word stands in a voice the data's parsing does
+not give it (`Statement.misreads`). -/
+def misreadings (m : Move) : List Statement :=
+  m.premises.filter Statement.misreads
+
+/-! ### Reversed cause and effect -/
+
+/-- **Where the move turns a mover into the moved**: each pair of terms the
+move's conclusion says the first moves the second, read under the shared
+definitions, where the move's premises, read under them too, say the second
+moves the first. A means is moved by the one at work through it
+(`Testimony.Ontology.Relations.meansIsMoved`), so a premise that faith works
+through love, and a conclusion that love moves faith, are such a pair. -/
+def reversals (m : Move) : List (Term × Term) :=
+  match m.conclusion? with
+  | none => []
+  | some c =>
+    let held := Ontology.close Testimony.Ontology.shared (m.premises.flatMap (·.shape.lits))
+    (Ontology.closed Testimony.Ontology.shared c).lits.filterMap fun
+      | ⟨true, .rel .moves a b⟩ =>
+        if held.contains ⟨true, .rel .moves b a⟩ then some (a, b) else none
+      | _ => none
+
 end Move
 
 /-! ### The whole move, against an argument
@@ -535,7 +575,23 @@ def begsAgainst (m : Move) : List (Statement × List α) :=
 
 end Move
 
-/-! ### Straw man
+/-! ### Reversed cause and effect
+
+A cause is not the effect of its own effect, in the same respect. Aristotle put
+it with a stick: "the stick moves the stone and is moved by the hand", and "the
+first movent moves the last, whereas the last does not move the first"
+(*Physics* VIII.5, 256a). Aquinas says it of every instrument: "an instrument
+does not work save as moved by the principal agent" (*Summa Theologiae* III
+q.62 a.4). So a move **reverses cause and effect** when its conclusion says one
+thing moves another and its own premises, read under the shared definitions,
+say the second moves the first (`Move.reversals`): that faith works through
+love, so that love is the means faith is at work by, and that love moves faith.
+Two things may cause each other in different ways, as exercise causes fitness
+and fitness is the end of exercise (*Physics* II.3, 195a); the check reads one
+relation, moving, in one respect, and a move that means another respect must
+say so in another relation.
+
+## Straw man
 
 A straw man answers a view its holder does not hold. The move says that someone
 held a thing, argues against the thing, and the thing is not what they hold. So

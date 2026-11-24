@@ -356,8 +356,9 @@ def weakestLink (pkg : ArgumentPackage α) : List Page.Held :=
       let m := pkg.cite a
       -- A party's own citation labels a denied atom as the party holds it, so
       -- the label is shown as written; what is added is why it ranks where it does.
-      if r == 0 then some ⟨m.label ++ " (encoded as a denial, so it ranks disputed)",
-        .disputed, m.source⟩ else none
+      if r == Confidence.disputed.rank then
+        some ⟨m.label ++ " (encoded as a denial, so it ranks disputed)", .disputed, m.source⟩
+      else none
     | _ => none
   let hasStep := pkg.premises.any fun φ => match φ with
     | .atom _ => false

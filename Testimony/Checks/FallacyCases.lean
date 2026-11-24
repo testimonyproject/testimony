@@ -281,6 +281,58 @@ theorem silence_cases :
       wrongExpectation.fromSilenceAlone = [romansSaysOnly] := by
   decide
 
+/-! ### Misreading the original, and reversed cause and effect -/
+
+/-- Galatians 5:6. -/
+@[nolint defsWithUnderscore] abbrev gal5_6 : PassageRange := vs .galatians 5 6
+
+open Testimony.Corpus.Greek in
+greek_word galatiansWorking from GAL 5 6 "ἐνεργέω"
+
+/-- That ἐνεργουμένη in Galatians 5:6 is passive. -/
+abbrev saysPassive : Statement := .parses .energeo galatiansWorking .passive
+
+/-- That it is middle. -/
+abbrev saysMiddle : Statement := .parses .energeo galatiansWorking .middle
+
+/-- That love moves faith. -/
+abbrev loveMovesFaith : Statement := .holds (rl .moves (wd .agape gal5_6) (wd .pistis gal5_6))
+
+/-- That faith works through love. -/
+abbrev faithThroughLove : Statement :=
+  .holds (rl .worksThrough (wd .pistis gal5_6) (wd .agape gal5_6))
+
+/-- From the passive, that love moves faith: the classic case. -/
+def fromThePassive : Move := argues [saysPassive] loveMovesFaith
+
+/-- From the middle, that faith works through love: the near miss. -/
+def fromTheMiddle : Move := argues [saysMiddle] faithThroughLove
+
+/-- From the denial of the middle: a misreading too, since the data gives it. -/
+def denyingTheMiddle : Move := argues [.denied saysMiddle] loveMovesFaith
+
+/-- From faith working through love, that love moves faith: the means made the
+mover. -/
+def meansMadeMover : Move := argues [faithThroughLove] loveMovesFaith
+
+/-- From love moving faith, that love moves faith: no reversal, only a premise
+restated. -/
+def moverKept : Move := argues [loveMovesFaith] loveMovesFaith
+
+/-- **The Greek is read, not assumed, and a means is not made its user's
+mover.** The word of Galatians 5:6 read from the data is ἐνεργουμένη, parsed
+middle. A move from the claim that it is passive misreads the original, and so
+does one from the denial that it is middle; one from the claim that it is middle
+does not. A move from faith working through love to love moving faith reverses
+cause and effect; one that only restates that love moves faith does not. -/
+theorem misreading_and_reversal_cases :
+    galatiansWorking.text = "ἐνεργουμένη" ∧ galatiansWorking.voice? = some .middle ∧
+      fromThePassive.misreadings = [saysPassive] ∧ fromTheMiddle.misreadings = [] ∧
+      denyingTheMiddle.misreadings = [.denied saysMiddle] ∧
+      meansMadeMover.reversals = [(wd .agape gal5_6, wd .pistis gal5_6)] ∧
+      moverKept.reversals = [] ∧ fromTheMiddle.reversals = [] := by
+  decide
+
 end Testimony.Checks.FallacyCases
 
 /-! ### A case the build must refuse

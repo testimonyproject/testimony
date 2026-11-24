@@ -52,6 +52,9 @@ open TestimonyArguments.SolaFide (Claim)
 @[nolint defsWithUnderscore] abbrev rom4_4_5 : PassageRange := rg .romans 4 4 4 5
 /-- Galatians 5:6. -/
 @[nolint defsWithUnderscore] abbrev gal5_6 : PassageRange := vs .galatians 5 6
+
+open Testimony.Corpus.Greek in
+greek_word galatiansWorking from GAL 5 6 "ἐνεργέω"
 /-- Romans 11:6. -/
 @[nolint defsWithUnderscore] abbrev rom11_6 : PassageRange := vs .romans 11 6
 /-- Romans 4:6–8. -/
@@ -406,6 +409,10 @@ def means : Claim → Statement
   | .paulExcludesOnlyWorksWithoutGrace => .means .erga (.usage .paul) .worksWithoutGrace
   | .romans4_4ExplainsPaulsWorks => .sameSense .erga (.passage rom4_4_5) (.usage .paul)
   | .john6_29WorkIsPaulsWorks => .sameSense .erga (.passage john6_29) (.usage .paul)
+  | .energoumeneIsPassive => .parses .energeo galatiansWorking .passive
+  | .energoumeneIsMiddle => .parses .energeo galatiansWorking .middle
+  | .loveMovesFaith => .holds (rl .moves (wd .agape gal5_6) (wd .pistis gal5_6))
+  | .faithWorksThroughLove => .holds (rl .worksThrough (wd .pistis gal5_6) (wd .agape gal5_6))
   | .countingWasForTheTesting =>
     .opaque "What was counted at Gen 15:6 was credited for his faithfulness when tested"
   | .abrahamFoundFaithfulWhenTested =>
@@ -472,7 +479,8 @@ def all : List Claim :=
   , .romans11_6NoLongerOfWorks, .james2_17FaithWithoutWorksIsDead
   , .faithFormedByCharityJustifies, .loveIsTheFruitOfFaith, .abrahamOfRomans4WasABeliever
   , .paulExcludesOnlyWorksWithoutGrace, .romans4_4ExplainsPaulsWorks
-  , .john6_29WorkIsPaulsWorks ]
+  , .john6_29WorkIsPaulsWorks, .energoumeneIsPassive, .energoumeneIsMiddle, .loveMovesFaith
+  , .faithWorksThroughLove ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -487,7 +495,7 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **A hundred and nineteen of the hundred and fifty-three are analysed.** Of the
+/-- **A hundred and twenty-three of the hundred and fifty-seven are analysed.** Of the
 thirty-four that are not, two are the claims of the chapter on what was read in
 Paul before Trent: what the fathers wrote of faith alone, and justification with
 no prior work earning it. One is the chapter on faith working through love: that
@@ -503,7 +511,7 @@ of the obedience it requires, Galatians 1:6–9, Christ's command to baptise, Tr
 reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each needs a word
 the vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
 reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (119, 153) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (123, 157) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the
@@ -539,6 +547,12 @@ credibility check holds `a → ¬b` for each, as background
   meanings were read, before, only for denials of a whole claim.
 - Trent's Latin Revelation 22:11 and Sirach 18:22 exclude the Greek of each,
   which says the word is not there.
+- That ἐνεργουμένη in Galatians 5:6 is passive excludes that it is middle: a word
+  has one voice (`Testimony.Ontology.Voice.oneVoice`).
+- That love moves faith in Galatians 5:6 excludes that faith works through love
+  as its means: what works through a means moves it, and what moves a thing is
+  not moved by it (`Testimony.Ontology.Relations.meansIsMoved`,
+  `movingRunsOneWay`).
 
 No claim's meaning entails another's: none asserts all another does. The atom
 type keeps these claims apart; their meanings join them. The lists are proved to
@@ -548,14 +562,17 @@ Disputes hold them too, so every named reading a dispute is checked against
 respects them: where a reading is otherwise silent on a pair, it denies the
 claim its world does not hold — Paul's verb as renewal, the Latin of the two
 verses, James's word as Paul's, baptism as the instrument, justification as
-renewal — and holds the other. -/
+renewal, the passive of Galatians 5:6, love as what moves faith — and holds the
+other. -/
 instance joins : HasJoins Claim where
   exclusions :=
     [ (.james2_24Compatible, .jamesUsesDikaioAsPaul)
     , (.justificationByFaithAlone, .baptismIsInstrumentalCause)
     , (.justificationIsForensicOnly, .justificationIncludesSanctification)
     , (.rev22_11BeJustifiedStill, .rev22_11GreekDoRighteousness)
-    , (.sir18_22BeJustifiedToDeath, .sir18_22GreekIsAVow) ]
+    , (.sir18_22BeJustifiedToDeath, .sir18_22GreekIsAVow)
+    , (.energoumeneIsPassive, .energoumeneIsMiddle)
+    , (.loveMovesFaith, .faithWorksThroughLove) ]
   exclusions_pinned := by decide +kernel
   entailments := []
   entailments_pinned := by decide +kernel
@@ -569,7 +586,9 @@ argument's packages unfold to this list, so a named reading must satisfy it. -/
       , p .justificationByFaithAlone ➝ notP .baptismIsInstrumentalCause
       , p .justificationIsForensicOnly ➝ notP .justificationIncludesSanctification
       , p .rev22_11BeJustifiedStill ➝ notP .rev22_11GreekDoRighteousness
-      , p .sir18_22BeJustifiedToDeath ➝ notP .sir18_22GreekIsAVow ] :=
+      , p .sir18_22BeJustifiedToDeath ➝ notP .sir18_22GreekIsAVow
+      , p .energoumeneIsPassive ➝ notP .energoumeneIsMiddle
+      , p .loveMovesFaith ➝ notP .faithWorksThroughLove ] :=
   rfl
 
 attribute [solaFideDefs] Testimony.Logic.ArgumentPackage.held

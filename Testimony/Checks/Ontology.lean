@@ -50,6 +50,7 @@ def ontologyReport (α : Type) [HasMeanings α] [DecidableEq α] [Repr α] : Str
       let uses := match d.form with
         | .inUsage => "stated at a passage of a voice's text by " ++ toString held
         | .sameSenseBothWays => "stated or denied by " ++ toString held
+        | .oneVoice => "stated by " ++ toString held
         | _ => "held by " ++ toString held ++ ", used of a text or voice by " ++ toString framed
       ("  " ++ d.name ++ ": " ++ uses ++
         (if derived.isEmpty then "; derives nothing" else "; derives:")) :: derived

@@ -2,6 +2,7 @@ import Testimony.Ontology.Relations.Definitions
 import Testimony.Ontology.Time.Definitions
 import Testimony.Ontology.Usage.Definitions
 import Testimony.Ontology.Sense.Definitions
+import Testimony.Ontology.Voice.Definitions
 
 /-!
 # Testimony.Ontology.Shared — the definitions every check holds
@@ -21,6 +22,7 @@ namespace Testimony.Ontology
 
 /-- **The shared ontology**: every article's definitions. -/
 def shared : Semantics.Ontology :=
-  Relations.definitions ++ Time.definitions ++ Usage.definitions ++ Sense.definitions
+  Relations.definitions ++ Time.definitions ++ Usage.definitions ++ Sense.definitions ++
+    Voice.definitions
 
 end Testimony.Ontology

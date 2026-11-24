@@ -151,7 +151,7 @@ examples, `lake exe exampletex` writes one document per case, and
   claims as a kind. Each was added to the library as a general feature, with
   its alignment to DOLCE and BFO stated (see [Standards](./standards.md)), so
   the next case has them.
-- **Ratings that mean something else.** The four ratings are the library's, and
+- **Ratings that mean something else.** The ratings are the library's, and
   so is the rule for them: a step is `disputed` when a cited source grants its
   grounds and denies its conclusion. In a trial the cited sources are the
   record, and the rule reads the same.

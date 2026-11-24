@@ -72,6 +72,12 @@ def statingSameSense : List α :=
   (all : List α).filter fun a => (means a).shape.lits.any fun l =>
     match l.fact with | .sameSense .. => true | _ => false
 
+/-- The atoms whose meaning states that a word of the Greek text is in a voice:
+where the definition of a parsing bears. -/
+def statingVoice : List α :=
+  (all : List α).filter fun a => (means a).shape.lits.any fun l =>
+    match l.fact with | .parses .. => true | _ => false
+
 /-- **Where a definition bears**: the atoms that hold its relation words as
 doctrine, and those that use them of a text or a voice; for the definition
 about a usage, the atoms that state a word's sense at a passage of a voice's
@@ -80,6 +86,7 @@ state or deny that a word keeps its sense. -/
 def bearing : Axiom → List α × List α
   | .inUsage => (statingPassageSenses, [])
   | .sameSenseBothWays => (statingSameSense, [])
+  | .oneVoice => (statingVoice, [])
   | ax => (holding ax.rels, framing ax.rels)
 
 /-- **What one definition of an ontology contributes**: the exclusions, and the

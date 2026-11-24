@@ -26,6 +26,8 @@ how they are spelled.
 | Begging the question | does a premise already assert the conclusion? | `Move.begsAgainst` | built |
 | Circular reasoning | does a chain of moves come back to where it began? | `circular` | built |
 | Argument from silence | does the move state the expectation its silence needs? | `Move.silences` | built |
+| Misreading the original | does a premise give a Greek word a voice its parsing does not? | `Move.misreadings` | built |
+| Reversed cause and effect | does the move make a thing the mover of what, by its premises, moves it? | `Move.reversals` | built |
 | Non sequitur | does the conclusion follow from what is stated? | `refute_with` | built |
 | Indefensible claim | can a position survive the dispute it is heard in? | a hearing | built |
 | False dilemma | does a move pick one reading where others are fair? | would use `Dilemma` | not yet |
@@ -324,6 +326,64 @@ The check sees only two shapes. Its premises must deny that a passage says, teac
 something, and its conclusion must be a denial. An argument from silence about some other record
 ("the early writers never mention it"), or one that draws a positive conclusion, is not seen
 until it is written in that form.
+
+## Misreading the original
+
+An argument can rest on what the original says, and the original can say otherwise. Robert
+Bellarmine read Galatians 5:6, "faith working through love", as faith "moved and driven" by
+love, because, he wrote, "in the Greek it is ἐνεργουμένη", to be "taken passively, not
+actively" (*De justificatione* II.4). Paul uses the middle of this verb eight times, and each
+time the subject is the one at work. J. B. Lightfoot drew the conclusion: "ἐνεργεῖσθαι is never
+passive in St Paul … and therefore this passage does not express the doctrine of 'fides caritate
+formata'".
+
+A claim of that kind is about the text's grammar, and the library holds the grammar as data:
+every word of the imported books of the Greek New Testament, with its parsing
+(`Testimony.Corpus.Greek`). `greek_word` reads one word from the data when the module is built,
+and a claim that the word, where it stands, is in a voice (`Statement.parses`) is read against
+its parsing. A move **misreads the original** when it argues from such a claim and the parsing
+gives the word another voice, or from the denial of the voice the parsing gives
+(`Move.misreadings`). The charge fails the build unless the line declares it, and the claim is
+the one claim the library rates `refuted`: `#check_readers` fails on a claim the data
+contradicts that is cited at a reader's rating, and on a claim cited `refuted` that the data
+does not contradict.
+
+The parsing is an interpretation where the spelling allows two. The present middle and
+passive are spelled alike, so MACULA's "middle" for ἐνεργουμένη is Clear Bible's reading of the
+word, made from how Paul uses it, and a page that reports the charge says so. Where the parsing
+itself leaves the voice open, nothing is charged.
+
+**Caught.** A move from the claim that ἐνεργουμένη in Galatians 5:6 is passive
+(`fromThePassive`), and one from the denial that it is middle (`denyingTheMiddle`). **Passed
+over.** A move from the claim that it is middle (`fromTheMiddle`).
+
+## Reversed cause and effect
+
+A cause is not the effect of its own effect, in the same respect. Aristotle's example is a
+stick: "the stick moves the stone and is moved by the hand", and "the first movent moves the
+last, whereas the last does not move the first" (*Physics* VIII.5, 256a). Thomas Aquinas says
+the same of every instrument: it "does not work save as moved by the principal agent" (*Summa
+Theologiae* III q.62 a.4).
+
+Two of the vocabulary's relations carry this. One thing **works through** another when the
+second is the means by which the first is at work, and one thing **moves** another when the
+second acts because, and as, the first moves it. The shared ontology holds that what works
+through a means moves it, and that moving runs one way (`meansIsMoved`, `movingRunsOneWay`). A
+move **reverses cause and effect** when its conclusion says one thing moves another, and its own
+premises, read under those definitions, say the second moves the first (`Move.reversals`). The
+charge fails the build unless the line declares it.
+
+Things can cause each other in different ways: "hard work causes fitness and vice versa, but
+again not in the same way, but the one as end, the other as the origin of change" (*Physics*
+II.3, 195a). The check reads one relation in one respect. A reader who holds that love is not
+faith's means but its form, "as the body worketh by the soul" (the Rheims New Testament's note
+on Galatians 5:6, 1582), holds another relation, and the check does not charge that reader.
+Whether love is faith's means or its form is then a question for the dispute.
+
+**Caught.** A move from faith working through love to love moving faith (`meansMadeMover`).
+**Passed over.** A move that only restates that love moves faith (`moverKept`), and one from
+the middle voice to faith working through love (`fromTheMiddle`).
+`misreading_and_reversal_cases` pins these results.
 
 ## Straw man
 

@@ -330,8 +330,8 @@ elab_rules : command
           cases i <;> simp [$set:ident, Line.asPackage]))
     -- Each party's weakest link, as a table, and checked.
     elabCommand (← `(command|
-      /-- Each party's weakest link, as its package computes it: `0` for `disputed`,
-      up to `3` for `consensus`. Computed when the dispute was declared. -/
+      /-- Each party's weakest link, as its package computes it: `0` for `refuted`,
+      `1` for `disputed`, up to `4` for `consensus`. Computed when the dispute was declared. -/
       def $(dot `strength) : $ι → ℕ := fun i => match i with $[| $ctorTerms => $strengthRhs]*))
     elabCommand (← `(command|
       /-- Each party's weakest link is what the table says, checked by the kernel. -/

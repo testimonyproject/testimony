@@ -233,8 +233,8 @@ instance : DecidableRel defeats := fun i j => by
 /-- Each party's weakest link: the minutes at `consensus`, the clock at
 `disputed`. -/
 def strength : Party → ℕ
-  | .minutes => 3
-  | .clock => 0
+  | .minutes => 4
+  | .clock => 1
 
 /-- Each party's weakest link, as its package computes it. -/
 theorem node_strength : ∀ i, (node i).strength = strength i

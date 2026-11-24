@@ -106,14 +106,14 @@ theorem reply_rests_on_its_inference :
 
 /-- Wegner is no stronger than his contested grounds: the ordinary pregnancy,
 the near-term setting and the referent principle, each cited `disputed`. -/
-theorem wegnerLexical_strength : wegnerLexical.strength = 0 := by decide
+theorem wegnerLexical_strength : wegnerLexical.strength = 1 := by decide
 
 /-- The fathers' second ground is `consensus` and their inference `plausible`,
 but their first ground is `disputed`, and they are no stronger than it. -/
-theorem signArgument_strength : signArgument.strength = 0 := by decide
+theorem signArgument_strength : signArgument.strength = 1 := by decide
 
 /-- The reply's grounds are `consensus`, but its inference is `disputed`. -/
-theorem ordinarySignReply_strength : ordinarySignReply.strength = 0 := by decide
+theorem ordinarySignReply_strength : ordinarySignReply.strength = 1 := by decide
 
 /-! ### The defeats -/
 

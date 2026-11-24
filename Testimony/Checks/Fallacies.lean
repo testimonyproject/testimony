@@ -107,6 +107,24 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
   let declOf (n : String) : List (Finding α) :=
     ((lines.find? fun (k, l) => n == k ++ " (" ++ l.drawnBy ++ ")").map fun (k, _) =>
       declaredFor k).getD []
+  let showReading : Statement → String
+    | .parses _ t v => t.text ++ " " ++ v.name ++ ", parsed " ++
+        ((t.voice?.map (·.name)).getD "open")
+    | .denied (.parses _ t v) => t.text ++ " not " ++ v.name ++ ", parsed " ++
+        ((t.voice?.map (·.name)).getD "open")
+    | _ => "a reading of the Greek"
+  let showTerm : Testimony.Semantics.Term → String
+    | .concept c => atomName c
+    | .word w _ => atomName w
+    | .particular n _ => n
+  let showPair : Testimony.Semantics.Term × Testimony.Semantics.Term → String :=
+    fun (a, b) => showTerm a ++ " moves " ++ showTerm b
+  let reversing := moves.filterMap fun (n, m) =>
+    if m.reversals.isEmpty then none else
+      some (n ++ ": " ++ "; ".intercalate (m.reversals.map showPair))
+  let misreading := moves.filterMap fun (n, m) =>
+    if m.misreadings.isEmpty then none else
+      some (n ++ ": " ++ "; ".intercalate (m.misreadings.map showReading))
   let showFinding : Finding α → String
     | .equivocates ws => "equivocation on " ++ ", ".intercalate (ws.map atomName)
     | .fromSilence ts => s!"argument from the silence of {ts.length} text(s) alone"
@@ -114,6 +132,8 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
         ((a.voice?.map atomName).getD "?") ++ ", contradicted by " ++
           (if cs.isEmpty then "nothing" else names cs))
     | .conditionalOn ws => "sense kept, unstated, of " ++ ", ".intercalate (ws.map atomName)
+    | .misreadsOriginal rs => "misreading of " ++ "; ".intercalate (rs.map showReading)
+    | .reversesCause ps => "reversal of " ++ "; ".intercalate (ps.map showPair)
   let showMismatch : Mismatch α → String
     | .absent d => "declares " ++ showFinding d ++ "; not found"
     | .differs d f => "declares " ++ showFinding d ++ ",\n        but finds " ++ showFinding f
@@ -172,10 +192,12 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
     let needs :=
       (m.conditionalOn.map fun w => atomName w ++ " kept in one sense") ++
       (m.equivocates.map fun _ => "the encoding gives a word two senses") ++
+      (m.misreadings.map fun _ => "the encoding misreads the Greek") ++
       shiftsOf m ++ fromElsewhere m
     if needs.isEmpty then none else some (n ++ ": " ++ ", ".intercalate needs)
   let encodingFaults := (scriptural.filter fun (_, _, m) =>
-    !m.equivocates.isEmpty || !m.fromSilenceAlone.isEmpty).length
+    !m.equivocates.isEmpty || !m.fromSilenceAlone.isEmpty || !m.misreadings.isEmpty ||
+      !m.reversals.isEmpty).length
   let part (title : String) (xs : List String) : List String :=
     if xs.isEmpty then [] else ("  " ++ title ++ ":") :: xs.map ("    " ++ ·)
   let head := [HasMeanings.argument α,
@@ -188,6 +210,8 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
     part "read a word in two senses and need it the same" equivocating ++
     part "carry what they deliver in a premise" carrying ++
     part "argue from silence alone" silent ++
+    part "argue from a reading of the Greek its parsing does not bear" misreading ++
+    part "conclude that a thing moves what, by their premises, moves it" reversing ++
     part "rest on one another in a circle" onCircle ++
     part "answer a view the argument's record says its holder does not hold" strawMen ++
     part "attribute a view, against the argument's record" attributing ++

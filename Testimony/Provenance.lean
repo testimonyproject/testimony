@@ -57,6 +57,11 @@ deriving Repr, DecidableEq
 
 /-- Confidence a source attaches to a claim. Deliberately coarse. -/
 inductive Confidence
+  /-- Refuted: the text, read as its data reads it, denies it. Never a reader's
+  rating: a citation carries it exactly where the library computes the
+  refutation, from the Greek data's parsing of the word the claim reads, and
+  `#check_readers` fails the build wherever the two differ. -/
+  | refuted
   /-- Actively contested by competent scholars. -/
   | disputed
   /-- Defensible, but not established. -/

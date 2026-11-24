@@ -106,6 +106,9 @@ inductive Fact
   | occurs (w : Lexeme) (p : PassageRange)
   /-- This word occurs in this passage and nowhere else in the New Testament. -/
   | occursOnlyIn (w : Lexeme) (p : PassageRange)
+  /-- This word of the Greek, where it stands, is in this voice. -/
+  | parses (w : Lexeme) (t : Testimony.Corpus.Greek.Token)
+      (v : Testimony.Corpus.Greek.GreekVoice)
   /-- Were the first statement so, the second would be: kept whole. -/
   | expects (s t : Statement)
 deriving DecidableEq, Repr
@@ -190,6 +193,7 @@ def Statement.shape : Statement → Shape
   | .principle h => .lit ⟨true, .principle h⟩
   | .occurs w p => .lit ⟨true, .occurs w p⟩
   | .occursOnlyIn w p => .lit ⟨true, .occursOnlyIn w p⟩
+  | .parses w t v => .lit ⟨true, .parses w t v⟩
   | .expects s t => .lit ⟨true, .expects s t⟩
   | .denied s => s.shape.deny
   | .also s t => s.shape.union t.shape
@@ -208,6 +212,10 @@ inductive Axiom
   /-- A thing stands in the relation to one thing only: an occurrence lasts one
   length of time. -/
   | functional (r : Rel)
+  /-- The relation runs one way: if the first stands in it to the second, the
+  second does not stand in it to the first. What moves a thing is not moved by
+  it, in the same respect. -/
+  | asymmetric (r : Rel)
   /-- A sense a word has in one passage of a voice's text is a sense it has in
   that voice's usage. Not the converse: a word with two senses in a usage need
   not have both in every passage. -/
@@ -215,6 +223,8 @@ inductive Axiom
   /-- A word that has the same sense at one place as at another has the same
   sense at the other as at the first: sameness of sense runs both ways. -/
   | sameSenseBothWays
+  /-- A token of the text in one voice is in no other: a form has one parsing. -/
+  | oneVoice
 deriving DecidableEq, Repr
 
 /-- **A definition**: what one of the vocabulary's words commits its reader to,
@@ -245,15 +255,19 @@ def yields : Axiom → Lit → List Lit
   | .denies r s, ⟨pos, .rel r' a b⟩ =>
     (if r' = r then [⟨!pos, .rel s a b⟩] else []) ++
       (if r' = s then [⟨!pos, .rel r a b⟩] else [])
+  | .asymmetric r, ⟨true, .rel r' a b⟩ => if r' = r then [⟨false, .rel r b a⟩] else []
   | .inUsage, ⟨true, .means w (.passageOf v _) s⟩ => [⟨true, .means w (.usage v) s⟩]
   | .sameSenseBothWays, ⟨pos, .sameSense w a b⟩ => [⟨pos, .sameSense w b a⟩]
+  | .oneVoice, ⟨true, .parses w t v⟩ =>
+    ([.active, .middle, .passive] : List Testimony.Corpus.Greek.GreekVoice).filterMap fun v' =>
+      if v' = v then none else some ⟨false, .parses w t v'⟩
   | _, _ => []
 
 /-- The relations a definition is about: none, for one about a usage. -/
 def rels : Axiom → List Rel
   | .implies r s | .denies r s | .only r s => [r, s]
-  | .functional r => [r]
-  | .inUsage | .sameSenseBothWays => []
+  | .functional r | .asymmetric r => [r]
+  | .inUsage | .sameSenseBothWays | .oneVoice => []
 
 /-- Whether two literals clash under one definition: for **only**, two
 different things each standing in the relation to the same thing, one of them

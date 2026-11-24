@@ -95,21 +95,21 @@ open Testimony Testimony.Logic Testimony.Logic.Framework
 
 /-- **Mark 7's principle does not rest on anything disputed.** The text is
 `consensus`, and the step from it `wellSupported`, so its weakest link is well
-supported: `2` on the scale from `0`, disputed, to `3`, consensus. -/
-theorem mark7Principle_strength : mark7Principle.strength = 2 := by decide
+supported: `3` on the scale from `1`, disputed, to `4`, consensus. -/
+theorem mark7Principle_strength : mark7Principle.strength = 3 := by decide
 /-- Mark 7's case rests on the premise that no unwritten tradition can now be
 shown to be apostolic, rated `disputed`. -/
-theorem mark7Case_strength : mark7Case.strength = 0 := by decide
+theorem mark7Case_strength : mark7Case.strength = 1 := by decide
 /-- Trent rests on tradition as a coordinate source of revelation, rated
 `disputed`. -/
-theorem tridentineCase_strength : tridentineCase.strength = 0 := by decide
+theorem tridentineCase_strength : tridentineCase.strength = 1 := by decide
 /-- Trent read as commandments of men rests on everything Trent does, and on
 Calvin's reading, rated `disputed`. -/
 theorem tridentineAsMensCommandments_strength :
-    tridentineAsMensCommandments.strength = 0 := by decide
+    tridentineAsMensCommandments.strength = 1 := by decide
 /-- Trent read as the apostolic word rests on everything Trent does. -/
 theorem tridentineAsApostolicWord_strength :
-    tridentineAsApostolicWord.strength = 0 := by decide
+    tridentineAsApostolicWord.strength = 1 := by decide
 
 /-! ### The dispute -/
 

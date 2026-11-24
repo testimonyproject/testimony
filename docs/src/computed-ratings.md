@@ -347,6 +347,17 @@ weigh the evidence that stands: Genesis 34:3 is answered by an argument, the sta
 and an argument strikes nothing. It is weighed, in a dispute, and the next section says what
 follows.
 
+A claim may also be refuted outright, where it is a reading of the Greek that the Greek text
+contradicts. Bellarmine read ἐνεργουμένη in Galatians 5:6 as passive, "moved and acted upon",
+and the MACULA data parses it middle. Such a claim's meaning says which word of the text it
+reads and in what voice (`Statement.parses`), so the library compares the two itself, and the
+claim is cited `refuted`, a rating no reader gives and the lowest a premise can have. The
+build fails wherever a citation says `refuted` and the data does not contradict the claim, or
+the data contradicts it and the citation says anything else (`#check_readers`). In a dispute
+the claim ranks below every reader's rating, so a position that rests on it defeats no one
+who contradicts it, and is defeated by anyone who does
+(`TestimonyArguments.SolaFide.faith_and_charity_is_a_tie`).
+
 ## Dissents overruled in a dispute
 
 A credible dissent can still lose when it is weighed. It is **overruled** (`Overruled`) when

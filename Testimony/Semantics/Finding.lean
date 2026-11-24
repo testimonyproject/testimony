@@ -45,6 +45,12 @@ inductive Finding (α : Type)
   /-- The step answers these attributions, each contradicted by the listed claims
   of the argument's record of its voice (`Move.strawMen`). -/
   | strawMan (answered : List (Statement × List α))
+  /-- The step argues from these readings of the Greek, each a voice the data's
+  parsing does not give the word (`Move.misreadings`). -/
+  | misreadsOriginal (readings : List Statement)
+  /-- The step concludes that the first of each pair moves the second, where its
+  premises say the second moves the first (`Move.reversals`). -/
+  | reversesCause (pairs : List (Term × Term))
   /-- The step needs these words to keep their sense and does not say so
   (`Move.conditionalOn`). A condition, not a fault: declared, it is checked like
   the others, and undeclared it is only reported. -/
@@ -60,6 +66,8 @@ def kind : Finding α → String
   | .equivocates _ => "equivocation"
   | .fromSilence _ => "argument from silence alone"
   | .strawMan _ => "straw man"
+  | .misreadsOriginal _ => "misreading of the original"
+  | .reversesCause _ => "reversal of cause and effect"
   | .conditionalOn _ => "a word's sense kept, unstated"
 
 /-- Whether two findings are of one kind, whatever their witnesses. -/
@@ -67,6 +75,8 @@ def sameKind : Finding α → Finding α → Bool
   | .equivocates _, .equivocates _ => true
   | .fromSilence _, .fromSilence _ => true
   | .strawMan _, .strawMan _ => true
+  | .misreadsOriginal _, .misreadsOriginal _ => true
+  | .reversesCause _, .reversesCause _ => true
   | .conditionalOn _, .conditionalOn _ => true
   | _, _ => false
 
@@ -75,6 +85,8 @@ def isEmpty : Finding α → Bool
   | .equivocates ws => ws.isEmpty
   | .fromSilence ps => ps.isEmpty
   | .strawMan as => as.isEmpty
+  | .misreadsOriginal rs => rs.isEmpty
+  | .reversesCause ps => ps.isEmpty
   | .conditionalOn ws => ws.isEmpty
 
 end Finding
@@ -101,14 +113,18 @@ def found (record : Voice → List α) (m : Move) : Finding α → Finding α
   | .equivocates _ => .equivocates m.equivocates
   | .fromSilence _ => .fromSilence m.fromSilenceAlone
   | .strawMan _ => .strawMan (m.strawMen record)
+  | .misreadsOriginal _ => .misreadsOriginal m.misreadings
+  | .reversesCause _ => .reversesCause m.reversals
   | .conditionalOn _ => .conditionalOn m.conditionalOn
 
 /-- **The faults the checks find in a move**: equivocation, arguing from silence
-alone and answering a straw man, each with its witness, those found only. A
+alone, answering a straw man, misreading the original and reversing cause and effect,
+each with its witness, those found only. A
 step of the library's own that commits any of them fails the build. -/
 def faults (record : Voice → List α) (m : Move) : List (Finding α) :=
   [ .equivocates m.equivocates, .fromSilence m.fromSilenceAlone
-  , .strawMan (m.strawMen record) ].filter (!·.isEmpty)
+  , .strawMan (m.strawMen record), .misreadsOriginal m.misreadings
+  , .reversesCause m.reversals ].filter (!·.isEmpty)
 
 variable [DecidableEq α]
 

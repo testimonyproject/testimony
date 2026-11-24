@@ -368,29 +368,29 @@ theorem millerCase_is_satisfiable : Satisfiable millerCase.premises := by
 
 /-- The witness is no stronger than its claim about the word, cited
 `disputed`. Its step is rated `plausible`, and does not lower it further. -/
-theorem septuagintWitness_strength : septuagintWitness.strength = 0 := by decide
+theorem septuagintWitness_strength : septuagintWitness.strength = 1 := by decide
 
 /-- Wegner's grounds are well supported and `consensus`, but his inference is
 `disputed`, on Rico and Gentry and on Bratcher. -/
-theorem driftObjection_strength : driftObjection.strength = 0 := by decide
+theorem driftObjection_strength : driftObjection.strength = 1 := by decide
 
 /-- Rico and Gentry's grounds are `consensus`, but their inference is
 `disputed`, on Davidson and Meade. -/
-theorem usageCase_strength : usageCase.strength = 0 := by decide
+theorem usageCase_strength : usageCase.strength = 1 := by decide
 
 /-- Miller's grounds are `consensus`, what the Greek reads, and `wellSupported`,
 his premise about the noun; but his inference is `disputed`, on Rico and Gentry
 and on Bratcher, who grant both and hold the word means "virgin". -/
-theorem millerCase_strength : millerCase.strength = 0 := by decide
+theorem millerCase_strength : millerCase.strength = 1 := by decide
 
 /-- The laws' grounds are `consensus`, what the Greek reads, but their inference
 is `disputed`, on Miller. -/
-theorem lawsCase_strength : lawsCase.strength = 0 := by decide
+theorem lawsCase_strength : lawsCase.strength = 1 := by decide
 
 /-- The status reading's grounds are `consensus`, what the texts read, and its
 inference is `plausible`: no cited reader grants the law's words in Genesis 34
 and denies it, and none has been found who argues it. -/
-theorem dinahCase_strength : dinahCase.strength = 1 := by decide
+theorem dinahCase_strength : dinahCase.strength = 2 := by decide
 
 /-! ### The defeats -/
 

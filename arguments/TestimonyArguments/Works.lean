@@ -5454,6 +5454,62 @@ faith working through love. Read in Vivès's edition of 1873
   , composed := some { value := 1593 }
   , editionUsed := some "bellarmine-opera-omnia-6-1873" }
 
+/-- The Rheims New Testament of 1582, the English Catholic translation made at
+the English College then at Rheims, with its annotations. Galatians 5:6 reads
+"faith that worketh by charitie", and the note on the verse answers the
+Reformed reading: "when it is said that faith worketh by charitie, it is not as
+by an instrument, but as the body worketh by the soul, the matter by the forme
+… Wherupon the Schooles cal Charitie, the forme or life of faith". Read in the
+Internet Archive's scan; its page is not cited, because the scan's pages are not
+numbered there. -/
+@[bib_entry] def rheimsNewTestament : BibEntry := .ancientWork
+  { core :=
+      { key := "rheims-new-testament-1582"
+      , contributors := { authors := [.corporate "English College at Rheims"] }
+      , role := .witness
+      , title := "The New Testament of Jesus Christ, translated faithfully into English"
+      , identifiers :=
+          [ .url "https://archive.org/details/1582RhemesNewTestament" (some "2026-11-24") ] }
+  , composed := some { value := 1582 } }
+
+/-- Lightfoot's commentary on Galatians, in the tenth edition, published the year
+after his death. On 5:6: "ἐνεργουμένη] 'working'; the middle voice according to
+the general usage of St Paul … ἐνεργεῖσθαι is never passive in St Paul … and
+therefore this passage does not express the doctrine of 'fides caritate
+formata'" (pp. 204–205). Read in the Internet Archive's scan, whose catalogue
+record gives the tenth edition, Macmillan, London, 1890. -/
+@[bib_entry] def lightfootGalatians : BibEntry := .book
+  { core :=
+      { key := "lightfoot-galatians-1890"
+      , contributors := { authors := [.person "J. B." "Lightfoot"] }
+      , title := "Saint Paul's Epistle to the Galatians"
+      , subtitle := some "A Revised Text with Introduction, Notes, and Dissertations"
+      , year := some { value := 1890 }
+      , identifiers :=
+          [ .url "https://archive.org/details/saintpaulsepistl00lighuoft" (some "2026-11-24") ] }
+  , publisher := "Macmillan"
+  , place := some "London"
+  , edition := some "10th edition" }
+
+/-- Burton's commentary on Galatians in the International Critical Commentary.
+On 5:6: "Ἐνεργουμένη is to be taken, in accordance with the regular usage of
+ἐνεργεῖσθαι in Paul, as middle, not passive", and "That the preposition διά
+denotes not antecedent cause but mediate agency … is made practically certain
+not on grammatical grounds, but because of the nature of the two attitudes
+expressed by πίστις and ἀγάπη" (p. 281). Read in the Internet Archive's scan,
+whose catalogue record gives T. & T. Clark, Edinburgh, 1921. -/
+@[bib_entry] def burtonGalatians : BibEntry := .book
+  { core :=
+      { key := "burton-galatians-icc-1921"
+      , contributors := { authors := [.person "Ernest De Witt" "Burton"] }
+      , title := "A Critical and Exegetical Commentary on the Epistle to the Galatians"
+      , year := some { value := 1921 }
+      , identifiers :=
+          [ .url "https://archive.org/details/criticalexegetic00burtuoft" (some "2026-11-24") ] }
+  , publisher := "T. & T. Clark"
+  , place := some "Edinburgh"
+  , series := some "International Critical Commentary" }
+
 /-- Thomas Oden's reader of patristic texts on justification, which argues that
 leading fathers "anticipated standard classic Reformation teaching on
 justification". Not read beyond the catalogue and search fragments; cited as a

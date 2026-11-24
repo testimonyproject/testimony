@@ -92,6 +92,53 @@ def isVerb (t : Token) : Bool := t.wordClass == "verb"
 
 end Token
 
+/-- **The voice of a Greek verb.** In the active the subject acts ("faith works");
+in the passive it is acted on ("faith is moved"); in the middle it acts, and the
+action stays with it ("faith is at work"). In some tenses the middle and the
+passive are spelled alike, so the spelling of such a form does not say which it
+is, and a reader decides from how the verb is used. -/
+inductive GreekVoice
+  /-- The subject acts. -/
+  | active
+  /-- The subject acts, and the action stays with it. -/
+  | middle
+  /-- The subject is acted on. -/
+  | passive
+deriving DecidableEq, Repr
+
+/-- The voice, in a word, for a report. -/
+def GreekVoice.name : GreekVoice → String
+  | .active => "active"
+  | .middle => "middle"
+  | .passive => "passive"
+
+namespace Token
+
+/-- **The voice the parsing gives a verb**, in Robinson's codes: the letter after
+the tense in `V-PMP-NSF` (present, middle, participle). `A` is active, `M` middle,
+`P` passive; `D` and `O` are the middle and passive of a verb with no active
+(deponent), and are read as middle and passive. `E` and `N`, middle or passive,
+leave the choice open, and so does a verb with no voice: none is given. -/
+def voice? (t : Token) : Option GreekVoice :=
+  if !t.isVerb then none else
+  match t.morph.toList with
+  | 'V' :: '-' :: rest =>
+    match rest.dropWhile Char.isDigit with
+    | _ :: 'A' :: _ => some .active
+    | _ :: 'M' :: _ | _ :: 'D' :: _ => some .middle
+    | _ :: 'P' :: _ | _ :: 'O' :: _ => some .passive
+    | _ => none
+  | _ => none
+
+/-- The verse the word stands in. -/
+def verseOf (t : Token) : PassageRange := .verse ⟨t.book, t.chapter, t.verse⟩
+
+/-- Where the word stands, as a reference: `Gal 5:6, word 15`. -/
+def place (t : Token) : String :=
+  s!"{t.book.abbrev} {t.chapter}:{t.verse}, word {t.position}"
+
+end Token
+
 /-- MACULA's code for each book of the New Testament (`Testimony.Corpus.greek`). -/
 def bookCodes : List (String × Lean.Name) := Testimony.Corpus.greek.books
 
@@ -129,6 +176,37 @@ elab_rules : command
   | `(greek_passage $n from $code $c $v₁ $[$v₂]?) =>
     greekPassage n code.getId.toString c.getNat v₁.getNat ((v₂.map (·.getNat)).getD v₁.getNat)
 
+/-- Write `def n : Token`, the one word of verse `c:v` of the book with MACULA code
+`code` whose dictionary form is `lemma`. Refused, failing the build, unless the
+verse has exactly one such word. -/
+def greekWord (n : Ident) (code : String) (c v : Nat) (lemma : String) : CommandElabM Unit := do
+  let some (_, bookName) := bookCodes.find? (·.1 == code)
+    | throwError "greek_word: no book with code {code}"
+  let rows ← liftIO (readBook code)
+  let picked := rows.filter fun r => r.chapter == c && r.verse == v && r.lemma == lemma
+  let r ← match picked.toList with
+    | [r] => pure r
+    | [] => throwError "greek_word: {code} {c}:{v} has no word {lemma}"
+    | rs => throwError "greek_word: {code} {c}:{v} has {rs.length} words {lemma}"
+  let book := mkCIdent (``Testimony.Book ++ bookName)
+  elabCommand (← `(command|
+    /-- A word of the Greek New Testament, read from MACULA Greek (SBLGNT) by
+    `greek_word`. -/
+    def $n : Token :=
+      { book := $book, chapter := $(quote r.chapter), verse := $(quote r.verse)
+      , position := $(quote r.position), role := $(quote r.role)
+      , wordClass := $(quote r.wordClass), text := $(quote r.text)
+      , lemma := $(quote r.lemma), morph := $(quote r.morph) }))
+
+/-- `greek_word n from GAL 5 6 "ἐνεργέω"` writes `def n : Token`, the word of
+Galatians 5:6 whose dictionary form is ἐνεργέω, read from the data when the
+module is built; the verse must have exactly one. -/
+syntax (name := greekWordCmd) "greek_word " ident " from " ident num num str : command
+
+elab_rules : command
+  | `(greek_word $n from $code $c $v $lemma) =>
+    greekWord n code.getId.toString c.getNat v.getNat lemma.getString
+
 /-- `#greek_corpus` reports every imported book and how many words it has. -/
 syntax (name := greekCorpusCmd) "#greek_corpus" : command
 
@@ -145,7 +223,13 @@ elab_rules : command
 /--
 info: the Greek corpus:
 JHN: 15625 words
+ROM: 7055 words
+2CO: 4473 words
+GAL: 2226 words
+EPH: 2416 words
 COL: 1580 words
+1TH: 1473 words
+2TH: 820 words
 TIT: 659 words
 HEB: 4935 words
 -/

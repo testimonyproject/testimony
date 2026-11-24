@@ -79,4 +79,21 @@ theorem the_definitions_stop_at_a_frame :
       false := by
   decide
 
+/-- Faith works through love: love is the means by which faith is at work. -/
+abbrev faithThroughLove : Statement := .holds (rl .worksThrough (cn .faith) (cn .charity))
+
+/-- Love moves faith: faith acts because, and as, love moves it. -/
+abbrev loveMovesFaith : Statement := .holds (rl .moves (cn .charity) (cn .faith))
+
+/-- **"Works through" and "moves", at work.** That faith works through love,
+and that love moves faith, cannot both be held: what works through a means moves
+it, and what moves a thing is not moved by it. With either definition taken out
+they can, so each does part of the work. -/
+theorem the_means_is_moved_at_work :
+    Ontology.excludeEachOther [meansIsMoved, movingRunsOneWay] faithThroughLove loveMovesFaith =
+        true ∧
+      Ontology.excludeEachOther [meansIsMoved] faithThroughLove loveMovesFaith = false ∧
+      Ontology.excludeEachOther [movingRunsOneWay] faithThroughLove loveMovesFaith = false := by
+  decide
+
 end Testimony.Ontology.Relations
