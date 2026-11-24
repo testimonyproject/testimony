@@ -12,14 +12,14 @@ reason = "The sola fide claim type is twenty-two claims larger, so each valuatio
 [[accept]]
 benchmark = "satisfied_by: Trent grants the subjective genitive"
 metric = "time"
-up_to = 0.20
-reason = "The sola fide claim type is twelve claims larger, so each valuation over it costs more to reduce; Trent's case itself is unchanged. CI measured +14.3%"
+up_to = 0.30
+reason = "The sola fide claim type is twenty-two claims larger, so each valuation over it costs more to reduce; Trent's case itself is unchanged. CI measured +14.3% with twelve claims, +21.8% with twenty-two"
 
 [[accept]]
 benchmark = "checks: AIF, every dispute"
 metric = "time"
 up_to = 0.15
-reason = "One more dispute to check: the Reformation exchange, thirteen parties, 61 edges in its AIF graph. CI measured +5.2% to +8.8%"
+reason = "One more dispute to check: the Reformation exchange, seventeen parties, 83 edges in its AIF graph. CI measured +5.2% to +8.8%"
 
 [[accept]]
 benchmark = "checks: postulates, every package"
