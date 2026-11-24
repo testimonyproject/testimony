@@ -408,6 +408,18 @@ def means : Claim → Statement
   | .faithKeepsItsSenseInRomansAndEphesians =>
     .sameSense .pistis (.passage rom3_28) (.passage eph2_8_9)
   | .worksKeepsItsSenseInRomans4And11 => .sameSense .erga (.passage rom4_4_5) (.passage rom11_6)
+  | .faithEfficaciousThroughLove =>
+    .opaque "the article's words: the justifying faith is efficacious through love"
+  | .justifiedHaveAnInherentRighteousness =>
+    .opaque "the justified have a righteousness of their own, inherent in them"
+  | .romans5_5 => .opaque "Romans 5:5: God's love poured into our hearts"
+  | .secondPeter1_4 => .opaque "2 Peter 1:4: participants of the divine nature"
+  | .romans6_17_18 => .opaque "Romans 6:17-18: enslaved to righteousness"
+  | .firstCorinthians7_22 => .opaque "1 Corinthians 7:22: a slave belonging to Christ"
+  | .firstTimothy1_5 => .opaque "1 Timothy 1:5: love that comes from sincere faith"
+  | .galatians5_22 => .opaque "Galatians 5:22: the fruit of the Spirit is love"
+  | .romans3_10 => .opaque "Romans 3:10: no one is righteous, not even one"
+  | .psalm143_2 => .opaque "Psalm 143:2: no one living is righteous before you"
   | .fathersWroteFaithAlone =>
     .opaque "Hilary, Basil, Ambrosiaster, Chrysostom, Origen, Bernard, Aquinas: faith alone"
   | .justifiedByFaithWithoutPriorWorks =>
@@ -478,7 +490,9 @@ def all : List Claim :=
   , .acts13_39, .firstCorinthians13_2, .galatians2_4_5, .galatians5_6
   , .justifyingFaithIsFormedByCharity, .titus2_14, .philippians3_8_9
   , .restsOnChristsImputedRighteousness, .faithKeepsItsSenseInRomansAndEphesians
-  , .worksKeepsItsSenseInRomans4And11 ]
+  , .worksKeepsItsSenseInRomans4And11, .faithEfficaciousThroughLove
+  , .justifiedHaveAnInherentRighteousness, .romans5_5, .secondPeter1_4, .romans6_17_18
+  , .firstCorinthians7_22, .firstTimothy1_5, .galatians5_22, .romans3_10, .psalm143_2 ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -493,13 +507,15 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **A hundred and sixteen of the hundred and fifty-six are analysed.** Of the
-forty that are not, two are the claims of the chapter on what was read in Paul
+/-- **A hundred and sixteen of the hundred and sixty-six are analysed.** Of the
+fifty that are not, two are the claims of the chapter on what was read in Paul
 before Trent: what the fathers wrote of faith alone, and justification with no
-prior work earning it. Seven are the claims of the chapter on the Reformation's
-case: five texts its voices argue from, the schoolmen's faith formed by love, and
-the double righteousness of Regensburg, which need words the vocabulary lacks, a
-form and a resting on. Fifteen are the claims of the chapters on whether
+prior work earning it. Seventeen are the claims of the chapter on the
+Reformation's case: thirteen texts its voices argue from, the schoolmen's faith
+formed by love, the Regensburg article's faith efficacious through love,
+Contarini's righteousness inherent in us, and the resting on Christ's
+righteousness given, which need words the vocabulary lacks: a form, an efficacy,
+an inherence and a resting on. Fifteen are the claims of the chapters on whether
 justification has degrees and on Abraham, whose content (a verdict's degrees, a
 covenant rite, a grant, a testing) the vocabulary cannot yet state. Of the other
 sixteen, four are Pius XII's and Trent's claims about the Vulgate and one is the
@@ -511,7 +527,7 @@ of the obedience it requires, Galatians 1:6–9, Christ's command to baptise, Tr
 reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each needs a word
 the vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
 reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (116, 156) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (116, 166) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the

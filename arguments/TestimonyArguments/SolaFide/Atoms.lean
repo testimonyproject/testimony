@@ -645,6 +645,35 @@ inductive Claim
   Zwingli sets the two together as one argument that salvation is not of works,
   so he needs this. -/
   | worksKeepsItsSenseInRomans4And11
+  /-- The Regensburg article's own words, May 1541: "the justifying faith is that
+  faith which is efficacious through love" (col. 200). A claim about what the
+  article says, before it is read either way. -/
+  | faithEfficaciousThroughLove
+  /-- The justified have a righteousness of their own, inherent in them, by which
+  they begin to be righteous, beside Christ's righteousness given to them.
+  Contarini's "double righteousness" (1541). -/
+  | justifiedHaveAnInherentRighteousness
+  /-- Romans 5:5: God's love has been poured into our hearts through the Holy
+  Spirit. -/
+  | romans5_5
+  /-- 2 Peter 1:4: that through His promises we may become participants of the
+  divine nature. -/
+  | secondPeter1_4
+  /-- Romans 6:17–18: those who were slaves of sin have become obedient from the
+  heart, and, set free from sin, have become enslaved to righteousness. -/
+  | romans6_17_18
+  /-- 1 Corinthians 7:22: whoever was free when called is a slave belonging to
+  Christ. -/
+  | firstCorinthians7_22
+  /-- 1 Timothy 1:5: the aim of the instruction is love that comes from a pure
+  heart, a good conscience, and sincere faith. -/
+  | firstTimothy1_5
+  /-- Galatians 5:22: the fruit of the Spirit is love. -/
+  | galatians5_22
+  /-- Romans 3:10: "There is no one who is righteous, not even one." -/
+  | romans3_10
+  /-- Psalm 143:2: "no one living is righteous before you." -/
+  | psalm143_2
   /-- Before Trent, readers of Paul in the East and the West wrote that the
   ungodly are justified by faith alone: Hilary of Poitiers ("faith alone
   justifies"), Basil of Caesarea, Ambrosiaster ("justified by faith alone, a gift

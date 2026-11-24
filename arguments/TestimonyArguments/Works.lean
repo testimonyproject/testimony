@@ -5581,6 +5581,62 @@ the translations are the library's own. -/
   , originalTitle := some "Epistola de iustificatione"
   , composed := some { value := 1541 }
   , editionUsed := some "contarini-opera-1571" }
+
+/-- *Letters of John Calvin*, volume 1, compiled from the original manuscripts and
+edited by Jules Bonnet, translated from the Latin and French, printed at
+Philadelphia by the Presbyterian Board of Publication (entered 1858). Read in the
+Internet Archive's scan of Princeton Theological Seminary's copy. -/
+@[bib_entry] def bonnetCalvinLetters1 : BibEntry := .book
+  { core :=
+      { key := "bonnet-letters-of-calvin-1-1858"
+      , role := .text
+      , contributors := { editors := [.person "Jules" "Bonnet"] }
+      , title := "Letters of John Calvin"
+      , subtitle := some "Volume 1"
+      , year := some { value := 1858 }
+      , identifiers :=
+          [.url "https://archive.org/details/lettersofjohncal01calv" (some "2026-11-24")] }
+  , publisher := "Presbyterian Board of Publication"
+  , place := some "Philadelphia"
+  , volume := some "1" }
+
+/-- Calvin's letter to Farel from Regensburg, May 11, 1541 (Bonnet, letter 67,
+pp. 260–261), on the article on justification: "You will be astonished, I am
+sure, that our opponents have yielded so much, when you read the extracted
+copy"; "Our friends have thus retained also the substance of the true doctrine,
+so that nothing can be comprehended within it which is not to be found in our
+writings" (p. 260). Read in Bonnet's English. -/
+@[bib_entry] def calvinToFarelOnRegensburg : BibEntry := .ancientWork
+  { core :=
+      { key := "calvin-to-farel-1541-05-11"
+      , role := .witness
+      , contributors := { authors := [.person "John" "Calvin"] }
+      , title := "Letter to Farel from Regensburg, May 11, 1541" }
+  , composed := some { value := 1541 }
+  , editionUsed := some "bonnet-letters-of-calvin-1-1858" }
+
+/-- The Protestant estates' answer to the Emperor on the Regensburg book, given
+him on July 12, 1541, which Melanchthon wrote (*Corpus Reformatorum* 4, nos.
+2300–2302, the editor's note at col. 476). With it go the preachers' notes on
+the agreed articles, "In conciliatis articulis annotata aut omissa" (col. 483).
+On the article on justification: some read "efficacious faith" as "faith with
+works"; "ours, when they said 'living or efficacious faith', meant that they
+spoke not of a bare knowledge of the history, … but of trust laying hold of the
+mercy promised for Christ's sake"; "faith itself is a burning motion, consoling,
+obeying Christ, and giving life"; so "either this declaration should be added,
+or the word 'efficacious' taken out" (col. 485). Against those who think "their
+own purity or perfection is the price of eternal life", they cite "no one living
+is righteous before you" (Psalm 143:2, col. 486). Read in the Latin; the
+translations are the library's own. -/
+@[bib_entry] def protestantsOnTheRegensburgBook : BibEntry := .ancientWork
+  { core :=
+      { key := "protestants-on-regensburg-book-1541"
+      , role := .authority
+      , contributors := { authors := [.person "Philipp" "Melanchthon"] }
+      , title := "The Protestants' Answer to the Emperor on the Regensburg Book" }
+  , originalTitle := some "Protestantes ad Caesarem de libro Ratisbonensi"
+  , composed := some { value := 1541 }
+  , editionUsed := some "corpus-reformatorum-4" }
 /-! ### Before Trent: the fathers and schoolmen on faith alone
 
 Added for `SolaFide.BeforeTrent`. Each father is cited through the edition his

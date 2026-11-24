@@ -110,26 +110,46 @@ that "the sinner is justified through a living and efficacious faith"; that "the
 justifying faith is that faith which is efficacious through love; but meanwhile
 this is true, that we are justified by this faith in so far as it lays hold of
 the mercy and righteousness which is imputed to us for Christ's sake"; and that
-the believer, though he receives an inherent righteousness too, "does not rest
-on" it, "but on the righteousness of Christ alone, given to us." Contarini's
-letter of May 25 explains it as a "double righteousness", one inherent and one
-given with Christ, and reads "efficacious through love" as "formed by charity".
-He grounds the resting on Christ's righteousness in Philippians 3:8–9, "not
-having a righteousness of my own".
+the faithful soul "does not rest on" a righteousness inherent in it, "but on the
+righteousness of Christ alone, given to us", as Paul counted all things loss
+"not having a righteousness of my own" (Philippians 3:8–9).
+
+Both sides then read the same words their own way. On May 11 Calvin, who was
+there, wrote to Farel: "You will be astonished, I am sure, that our opponents
+have yielded so much"; "nothing can be comprehended within it which is not to be
+found in our writings." On May 25 Contarini explained the article as a "double
+righteousness", one "inherent in us, by which we begin to be righteous", and one
+"given to us with Christ", and read "efficacious through love" as "formed by
+charity". In July the Protestant estates, in an answer Melanchthon wrote for
+them, asked that the word "efficacious" be explained or struck out, because some
+read it as "faith with works"; by "efficacious" they had meant that "faith itself
+is a burning motion, consoling, obeying Christ, and giving life."
+
+**An answer proposed here.** Paul writes that love "comes from a pure heart, a
+good conscience, and sincere faith" (1 Timothy 1:5), and that "the fruit of the
+Spirit is love" (Galatians 5:22). Whoever believes is "a slave belonging to
+Christ" (1 Corinthians 7:22), obedient "from the heart" (Romans 6:17–18), and a
+slave wants what his Master wants. So love is faith's fruit, and not its form.
+And "there is no one who is righteous, not even one" (Romans 3:10), so no one has
+a righteousness of his own beside Christ's. Both steps are the chapter's own,
+marked proposed.
 
 **What the debate decides.** Every step in it is rated `disputed`, because
 each side grants the other's texts and denies its conclusion: the Confutation
 and Eck cite Romans 3 and Galatians, the *Apology* and Tyndale take up James 2,
-and Luther and Calvin read Galatians 5:6 and the texts on reward. So each attack
-across the line is met by one in return, and nothing is forced
-(`luthers_contemporaries_force_nothing`). The Reformers' positions can all be held
-together (`the_reformers_stand_together`), and so can the Catholic positions,
-Regensburg among them, because the article's faith "efficacious through love" is
-read here as Contarini read it, faith formed by love
-(`rome_and_regensburg_stand_together`). The two sides part at two claims: whether
-the faith that justifies does so alone or as formed by love, and whether good
-works, made worthy by grace, are a ground of salvation. Trent took up both in
-1547.
+Luther and Calvin read Galatians 5:6 and the texts on reward, and Calvin and
+Contarini read the same article. So each attack across the line is met by one in
+return, and only the Regensburg article, in its own words, is forced
+(`before_trent_only_regensburg_is_forced`): no one before Trent denies what it
+says. It can be held with the Reformers (`the_reformers_stand_together`) and
+with Rome (`rome_and_regensburg_stand_together`). Where it stands is decided by
+how its "efficacious through love" is read, and each reading falls at a step
+rated `disputed` (`whatTheRegensburgFaithIs`). Put as a truth table for one
+person, the texts from Paul, Hebrews and John make him justified exactly when he
+believes, whatever his works (`justified_exactly_when_he_believes`). The sides
+part at two claims: whether the faith that justifies does so alone or as formed
+by love, and whether good works, made worthy by grace, are a ground of
+salvation. Trent took up both in 1547.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -328,11 +348,11 @@ def tyndaleStep : Source :=
   , tradition := .reformedProtestant
   , confidence := .disputed }
 
-/-- **Who reads James that way, in 1528.** Tyndale, pp. 61 and 119. Rated
+/-- **Who reads James that way, in 1528.** Tyndale, pp. 61 and 119–120. Rated
 `disputed`, because Eck grants James 2 and reads it the other way, as excluding
 faith alone. -/
 def tyndaleJamesStep : Source :=
-  { primary := .work tyndaleWickedMammon (.page 119)
+  { primary := .work tyndaleWickedMammon (.pages 119 120)
   , supporting := [.work tyndaleWickedMammon (.page 61)]
   , tradition := .reformedProtestant
   , confidence := .disputed }
@@ -353,7 +373,9 @@ def tyndaleLine : Line Claim :=
 says that faith without works is dead, and that Abraham was justified by works
 when he offered Isaac (2:17, 2:21). Tyndale reads the deed as a witness: "His
 deed justified him before the world; that is, it declared and uttered the faith
-which both justified him before God". So James and Paul agree, because "faith
+which both justified him before God". Rahab too "before God … was justified by
+faith, which wrought that outward deed", for she had confessed Israel's God
+before she saved the spies (Joshua 2). So James and Paul agree, because "faith
 therefore justifieth in the heart, and before God; and the deeds justify
 outwardly before the world." -/
 @[solaFideDefs]
@@ -683,68 +705,223 @@ def calvinSadoletoCase : ArgumentPackage Claim :=
 
 /-! ### Regensburg, 1541 -/
 
-/-- **Who draws the step to faith efficacious through love, in May 1541.** The
-Regensburg article, col. 200, as Contarini glosses it, p. 592. Rated `disputed`,
-as Cajetan's is. -/
-def regensburgFaithStep : Source :=
+/-- **Who draws the step to Christ's righteousness, in May 1541.** The
+Regensburg article, col. 200, and Contarini, p. 592, from Philippians 3:8–9.
+Rated `disputed`, because Trent grants the text six years later and condemns
+justification "by the sole imputation of the justice of Christ" (canon 11). -/
+def regensburgRestStep : Source :=
   { primary := .work regensburgArticleFive (.sectionRef "col. 200")
   , supporting := [.work contariniOnJustification (.page 592)]
   , tradition := .romanCatholic
   , confidence := .disputed }
 
-/-- **Who draws the step to Christ's righteousness, in May 1541.** Contarini,
-p. 592, from Philippians 3:8–9, and the Regensburg article, col. 200. Rated
-`disputed`, because Trent grants the text six years later and condemns
-justification "by the sole imputation of the justice of Christ" (canon 11). -/
-def regensburgRestStep : Source :=
+/-- **The believer rests on Christ's righteousness alone, as the Regensburg
+article holds.** The article joins its faith to Paul's words in Philippians
+3:8–9, "not having a righteousness of my own", but the righteousness from God
+through faith. "The justifying faith is that faith which is efficacious through
+love; but meanwhile this is true, that we are justified by this faith in so far
+as it lays hold of the mercy and righteousness which is imputed to us for
+Christ's sake", and the faithful soul "does not rest on" a righteousness
+inherent in it, "but on the righteousness of Christ alone, given to us"
+(col. 200). -/
+@[solaFideDefs]
+def regensburgRestLine : Line Claim :=
+  { name := "Regensburg: rest on Christ's righteousness alone, given to us (1541)"
+  , grounds := [p .faithEfficaciousThroughLove, p .philippians3_8_9]
+  , step := ⋀ [p .faithEfficaciousThroughLove, p .philippians3_8_9] ➝
+      p .restsOnChristsImputedRighteousness
+  , delivers := p .restsOnChristsImputedRighteousness
+  , inference := some regensburgRestStep }
+
+/-- The Regensburg article on justification, in its own words, as a position:
+the faith that justifies is efficacious through love, and before God the
+believer rests on Christ's righteousness alone, given to him. -/
+@[solaFideDefs]
+def regensburgCase : ArgumentPackage Claim :=
+  regensburgRestLine.asPackage reformationCite
+    "before God the believer rests on Christ's righteousness alone, given to him"
+
+/-- **Who draws the step, on May 11, 1541.** Calvin, writing to Farel from
+Regensburg, p. 260 in Bonnet; and the Protestant estates' answer to the Emperor
+of July 12, which says what "efficacious" means, col. 485. Rated `disputed`,
+because Contarini grants the article's words and reads them as faith formed by
+charity (p. 592). -/
+def calvinFarelStep : Source :=
+  { primary := .work calvinToFarelOnRegensburg (.page 260)
+  , supporting := [.work protestantsOnTheRegensburgBook (.sectionRef "col. 485")]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- **The article's faith is not faith formed by love, as Calvin read it in May
+1541.** He wrote to Farel of the agreed formula: "You will be astonished, I am
+sure, that our opponents have yielded so much"; "nothing can be comprehended
+within it which is not to be found in our writings." The Reformers' writings
+deny that the faith which justifies is formed by love. In July the Protestant
+estates, in an answer Melanchthon wrote, said what the word means: "ours, when
+they said 'living or efficacious faith', meant that they spoke not of a bare
+knowledge of the history", but "of trust laying hold of the mercy promised for
+Christ's sake", for "faith itself is a burning motion, consoling, obeying Christ,
+and giving life." So "efficacious through love" says what faith does, and not
+what forms it. -/
+@[solaFideDefs]
+def calvinFarelLine : Line Claim :=
+  { name := "Calvin to Farel: nothing in it that is not in our writings (1541)"
+  , grounds := [p .faithEfficaciousThroughLove]
+  , step := p .faithEfficaciousThroughLove ➝ notP .justifyingFaithIsFormedByCharity
+  , delivers := notP .justifyingFaithIsFormedByCharity
+  , inference := some calvinFarelStep }
+
+/-- Calvin's letter to Farel, as a position. -/
+@[solaFideDefs]
+def calvinFarelCase : ArgumentPackage Claim :=
+  calvinFarelLine.asPackage reformationCite
+    "the article's faith, efficacious through love, is not faith formed by love"
+
+/-- **Who draws the step, on May 25, 1541.** Contarini, p. 592. Rated
+`disputed`, because the Protestant estates grant the article's words and deny
+that they mean faith with works (col. 485). -/
+def contariniFormedStep : Source :=
   { primary := .work contariniOnJustification (.page 592)
+  , tradition := .romanCatholic
+  , confidence := .disputed }
+
+/-- **"Efficacious through love" means "formed by love", as Contarini read the
+article.** "We are justified by faith, not formally", as whiteness makes a wall
+white, but as the cause that brings it about; "every motion is imperfect unless
+it reaches its end, and so the motion of faith, unless it reaches charity, is
+imperfect. Therefore the faith which justifies is faith formed by charity, or
+efficacious through charity" (p. 592). -/
+@[solaFideDefs]
+def contariniFormedLine : Line Claim :=
+  { name := "Contarini: efficacious through charity, that is, formed by it (1541)"
+  , grounds := [p .faithEfficaciousThroughLove]
+  , step := p .faithEfficaciousThroughLove ➝ p .justifyingFaithIsFormedByCharity
+  , delivers := p .justifyingFaithIsFormedByCharity
+  , inference := some contariniFormedStep }
+
+/-- Contarini's reading of the article's faith, on its own. -/
+@[solaFideDefs]
+def contariniFormedCase : ArgumentPackage Claim :=
+  contariniFormedLine.asPackage reformationCite "the faith that justifies is formed by love"
+
+/-- **Who draws the step, on May 25, 1541.** Contarini, p. 591. Rated
+`disputed`, because the answer proposed below grants both texts and denies that
+the righteousness is ours; no reader of 1541 has yet been found who does. -/
+def contariniInherentStep : Source :=
+  { primary := .work contariniOnJustification (.page 591)
   , supporting := [.work regensburgArticleFive (.sectionRef "col. 200")]
   , tradition := .romanCatholic
   , confidence := .disputed }
 
-/-- **The justifying faith is efficacious through love, as Regensburg agreed in
-1541.** What counts in Christ is faith working through love (Galatians 5:6), so
-"the justifying faith is that faith which is efficacious through love".
-Contarini, who agreed it, explains "efficacious through charity" as "formed by
-charity", and the position is read here as he read it. -/
+/-- **The justified have a righteousness of their own, as Contarini held.**
+God's love has been poured into our hearts through the Holy Spirit (Romans 5:5),
+and we become participants of the divine nature (2 Peter 1:4). So "we attain a
+double righteousness, one inherent in us, by which we begin to be righteous and
+are made partakers of the divine nature, and have charity poured into our
+hearts; the other not inherent, but given to us with Christ" (p. 591). He adds
+that "in the sight of God we cannot be held righteous on account of this
+righteousness of ours", which "is begun and imperfect" (p. 592). The article
+itself says the justified are "called righteous on account of inherent
+righteousness, because we do what is righteous", citing 1 John 3:7 (col. 200). -/
 @[solaFideDefs]
-def regensburgFaithLine : Line Claim :=
-  { name := "Regensburg: justifying faith is efficacious through love (1541)"
-  , grounds := [p .galatians5_6]
-  , step := p .galatians5_6 ➝ p .justifyingFaithIsFormedByCharity
-  , delivers := p .justifyingFaithIsFormedByCharity
-  , inference := some regensburgFaithStep }
+def contariniInherentLine : Line Claim :=
+  { name := "Contarini: a righteousness inherent in us, begun and imperfect (1541)"
+  , grounds := [p .romans5_5, p .secondPeter1_4]
+  , step := ⋀ [p .romans5_5, p .secondPeter1_4] ➝ p .justifiedHaveAnInherentRighteousness
+  , delivers := p .justifiedHaveAnInherentRighteousness
+  , inference := some contariniInherentStep }
 
-/-- **The believer rests on Christ's righteousness, as Regensburg and Contarini
-held in 1541.** Paul counts all things loss to be found in Christ, "not having a
-righteousness of my own", but the righteousness from God through faith
-(Philippians 3:8–9). So, though the justified receive an inherent righteousness,
-the believer "does not rest on" it, "but on the righteousness of Christ alone,
-given to us", for, as Contarini adds, "this righteousness of ours is begun and
-imperfect". -/
+/-- Contarini's letter, as a position: the article's faith is faith formed by
+love, and the justified have a righteousness inherent in them as well as
+Christ's, given. -/
 @[solaFideDefs]
-def regensburgRestLine : Line Claim :=
-  { name := "Regensburg and Contarini: rest on Christ's righteousness given (1541)"
-  , grounds := [p .philippians3_8_9]
-  , step := p .philippians3_8_9 ➝ p .restsOnChristsImputedRighteousness
-  , delivers := p .restsOnChristsImputedRighteousness
-  , inference := some regensburgRestStep }
-
-/-- The Regensburg article, with Contarini's letter, as a position: the faith
-that justifies is efficacious through love, and before God the believer rests on
-Christ's righteousness given to him. -/
-@[solaFideDefs]
-def regensburgCase : ArgumentPackage Claim :=
-  { name := "The Regensburg article on justification (1541)"
+def contariniCase : ArgumentPackage Claim :=
+  { name := "Contarini's letter on justification (1541)"
   , cite := reformationCite
-  , premises := caseOf [regensburgFaithLine, regensburgRestLine] [] []
-  , conclusion := p .restsOnChristsImputedRighteousness
-  , conclusionLabel := "before God the believer rests on Christ's righteousness given"
-  , inferences := [regensburgFaithStep, regensburgRestStep] }
+  , premises := caseOf [contariniFormedLine, contariniInherentLine] [] []
+  , conclusion := p .justifyingFaithIsFormedByCharity
+  , conclusionLabel := "the faith that justifies is formed by love"
+  , inferences := [contariniFormedStep, contariniInherentStep] }
+
+/-! ### An answer proposed here -/
+
+/-- **Who draws the step.** It is proposed here, from Paul and James. The
+Protestant estates of 1541 come closest: faith is "obeying Christ" (col. 485).
+Rated `disputed`, because Contarini and Cajetan hold the opposite conclusion. -/
+def faithsFruitStep : Source :=
+  { primary := .proposal ("love comes from sincere faith (1 Tim 1:5) and is the fruit " ++
+      "of the Spirit (Gal 5:22); those in Christ are created for good works (Eph 2:10), " ++
+      "which show their faith (Jas 2:18), and as Christ's slaves they obey Him from the " ++
+      "heart (Rom 6:17-18; 1 Cor 7:22); so love follows faith as its fruit and does not " ++
+      "give it its form")
+  , supporting := [.work protestantsOnTheRegensburgBook (.sectionRef "col. 485")]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- **Love is faith's fruit, not its form.** Paul writes that "the aim of such
+instruction is love that comes from a pure heart, a good conscience, and sincere
+faith" (1 Timothy 1:5), and that "the fruit of the Spirit is love" (Galatians
+5:22). Those who believe are "created in Christ Jesus for good works" (Ephesians
+2:10), and James says, "I by my works will show you faith" (James 2:18). Whoever
+believes belongs to Christ as a slave belongs to his master: "whoever was free
+when called is a slave belonging to Christ" (1 Corinthians 7:22), and those once
+slaves of sin "have become obedient from the heart" and "enslaved to
+righteousness" (Romans 6:17–18). A slave wants what his Master wants. So love
+comes out of faith, as its fruit, and the faith that justifies is not faith
+formed by love. -/
+@[solaFideDefs]
+def faithsFruitLine : Line Claim :=
+  { name := "Love is faith's fruit, not its form (proposed)"
+  , grounds :=
+      [ p .firstTimothy1_5, p .galatians5_22, p .ephesians2_10CreatedForGoodWorks
+      , p .james2_18ShowFaithByWorks, p .firstCorinthians7_22, p .romans6_17_18 ]
+  , step :=
+      ⋀ [ p .firstTimothy1_5, p .galatians5_22, p .ephesians2_10CreatedForGoodWorks
+        , p .james2_18ShowFaithByWorks, p .firstCorinthians7_22, p .romans6_17_18 ] ➝
+        notP .justifyingFaithIsFormedByCharity
+  , delivers := notP .justifyingFaithIsFormedByCharity
+  , inference := some faithsFruitStep }
+
+/-- **Who draws the step.** It is proposed here. The Protestant estates cite
+Psalm 143:2 against those who think "their own purity or perfection is the
+price of eternal life" (col. 486). Rated `disputed`, because Contarini grants
+that "in the sight of God we cannot be held righteous on account of this
+righteousness of ours" (p. 592) and still calls it ours (p. 591). -/
+def noneRighteousStep : Source :=
+  { primary := .proposal ("no one is righteous, not even one (Rom 3:10), and no one " ++
+      "living is righteous before God (Ps 143:2); so the justified have no righteousness " ++
+      "of their own, and the only righteousness they have is Christ's, given")
+  , supporting := [.work protestantsOnTheRegensburgBook (.sectionRef "col. 486")]
+  , tradition := .reformedProtestant
+  , confidence := .disputed }
+
+/-- **No one has a righteousness of his own.** "There is no one who is righteous,
+not even one" (Romans 3:10), and "no one living is righteous before you" (Psalm
+143:2). So the justified have no righteousness of their own beside Christ's: the
+righteousness they have is His, given to them. -/
+@[solaFideDefs]
+def noneRighteousLine : Line Claim :=
+  { name := "No one is righteous, not even one (proposed)"
+  , grounds := [p .romans3_10, p .psalm143_2]
+  , step := ⋀ [p .romans3_10, p .psalm143_2] ➝ notP .justifiedHaveAnInherentRighteousness
+  , delivers := notP .justifiedHaveAnInherentRighteousness
+  , inference := some noneRighteousStep }
+
+/-- The answer proposed here, as a position: love is faith's fruit and not its
+form, and no one has a righteousness of his own. -/
+@[solaFideDefs]
+def proposedAnswerCase : ArgumentPackage Claim :=
+  { name := "Love is faith's fruit, and no one is righteous of himself (proposed)"
+  , cite := reformationCite
+  , premises := caseOf [faithsFruitLine, noneRighteousLine] [] []
+  , conclusion := notP .justifyingFaithIsFormedByCharity
+  , conclusionLabel := "the faith that justifies is not faith formed by love"
+  , inferences := [faithsFruitStep, noneRighteousStep] }
 
 /-! ### The debate, weighed -/
 
-/-- The voices of the Reformation's debate, in the order they wrote. -/
+/-- The voices of the Reformation's debate, in the order they wrote, and the
+answer proposed here last. -/
 inductive ReformationParty
   /-- Melanchthon's *Loci*, 1521. -/
   | melanchthon
@@ -770,8 +947,15 @@ inductive ReformationParty
   | sadoleto
   /-- Calvin's reply to Sadoleto, September 1539. -/
   | calvin
-  /-- The Regensburg article, with Contarini's letter, May 1541. -/
+  /-- The Regensburg article, in its own words, May 1541. -/
   | regensburg
+  /-- Calvin's letter to Farel, May 11, 1541. -/
+  | calvinFarel
+  /-- Contarini's letter on justification, May 25, 1541. -/
+  | contarini
+  /-- The answer proposed here: love is faith's fruit, and no one is righteous
+  of himself. -/
+  | proposed
 deriving DecidableEq
 
 /-- The package each voice argues from. -/
@@ -790,6 +974,9 @@ def reformationNode : ReformationParty → ArgumentPackage Claim
   | .sadoleto => sadoletoCase
   | .calvin => calvinSadoletoCase
   | .regensburg => regensburgCase
+  | .calvinFarel => calvinFarelCase
+  | .contarini => contariniCase
+  | .proposed => proposedAnswerCase
 
 /-- The Reformation's debate on justification, 1521–1541. -/
 declare_dispute reformationDispute := reformationNode using solaFideDefs
@@ -799,9 +986,11 @@ declare_dispute reformationDispute := reformationNode using solaFideDefs
   On faith alone, Eck and the Confutation meet each of the five voices who
   teach it: Melanchthon, Tyndale, the Augsburg Confession, the *Apology* and
   Barnes. On merit, Eck and the Confutation meet Zwingli. On faith formed by
-  love, Luther and Calvin meet each of the four voices who teach it: the
-  Confutation, Cajetan, Sadoleto and Regensburg. Nothing on one side defeats
-  anything on its own side. Every cell is checked by the kernel. -/
+  love, Luther, Calvin, Calvin's letter to Farel and the answer proposed here
+  meet each of the four voices who teach it: the Confutation, Cajetan, Sadoleto
+  and Contarini. The Regensburg article, read in its own words, meets no one and
+  is met by no one. Nothing on one side defeats anything on its own side. Every
+  cell is checked by the kernel. -/
   defeats [ (.melanchthon, .confutation), (.confutation, .melanchthon)
           , (.tyndale, .confutation), (.confutation, .tyndale)
           , (.augsburg, .confutation), (.confutation, .augsburg)
@@ -812,10 +1001,18 @@ declare_dispute reformationDispute := reformationNode using solaFideDefs
           , (.augsburg, .eck), (.eck, .augsburg), (.apology, .eck), (.eck, .apology)
           , (.barnes, .eck), (.eck, .barnes)
           , (.luther, .cajetan), (.cajetan, .luther), (.luther, .sadoleto), (.sadoleto, .luther)
-          , (.luther, .regensburg), (.regensburg, .luther)
+          , (.luther, .contarini), (.contarini, .luther)
           , (.calvin, .confutation), (.confutation, .calvin), (.calvin, .cajetan)
           , (.cajetan, .calvin), (.calvin, .sadoleto), (.sadoleto, .calvin)
-          , (.calvin, .regensburg), (.regensburg, .calvin)
+          , (.calvin, .contarini), (.contarini, .calvin)
+          , (.calvinFarel, .confutation), (.confutation, .calvinFarel)
+          , (.calvinFarel, .cajetan), (.cajetan, .calvinFarel)
+          , (.calvinFarel, .sadoleto), (.sadoleto, .calvinFarel)
+          , (.calvinFarel, .contarini), (.contarini, .calvinFarel)
+          , (.proposed, .confutation), (.confutation, .proposed)
+          , (.proposed, .cajetan), (.cajetan, .proposed)
+          , (.proposed, .sadoleto), (.sadoleto, .proposed)
+          , (.proposed, .contarini), (.contarini, .proposed)
           , (.zwingli, .eck), (.eck, .zwingli), (.zwingli, .confutation), (.confutation, .zwingli) ]
   /-- **Nothing supports anything.** Every cell is checked by the kernel. -/
   supports []
@@ -828,9 +1025,9 @@ declare_dispute reformationDispute := reformationNode using solaFideDefs
 
 /-- **The Reformation's case, told in the order it was made.** Each turn is a
 voice of the years before Trent, named with the work it comes from and that
-work's date, and the turns come in the order of those dates. Where a turn is
-said to meet an earlier one, the two defeat each other, as the solver computes
-from their premises. -/
+work's date, and the turns come in the order of those dates; the answer
+proposed here comes last. Where a turn is said to meet an earlier one, the two
+defeat each other, as the solver computes from their premises. -/
 declare_bundle reformationExchange in reformationDispute.finite where
   /-- In December 1521 Melanchthon's *Loci* teaches, from Abraham and Romans 4,
   that "faith alone justifies". -/
@@ -874,19 +1071,34 @@ declare_bundle reformationExchange in reformationDispute.finite where
   [no] share in justification", and that Paul restricts justifying faith "to a
   gratuitous promise of the divine favour". -/
   turn ReformationParty.calvin meets ReformationParty.sadoleto from calvinReplyToSadoleto
-  /-- In May 1541 the Regensburg article, with Contarini's letter, holds both:
-  the faith that justifies is "efficacious through love", and the believer rests
-  "on the righteousness of Christ alone, given to us". Read as Contarini read
-  it, its first half meets Calvin as Sadoleto's did. -/
-  turn ReformationParty.regensburg meets ReformationParty.calvin from regensburgArticleFive
+  /-- In May 1541 the speakers of both sides at Regensburg accept an article that
+  says the justifying faith is "efficacious through love", and that the believer
+  rests "on the righteousness of Christ alone, given to us". In its own words it
+  says nothing that either side denies. -/
+  turn ReformationParty.regensburg from regensburgArticleFive
+  /-- On May 11 Calvin writes to Farel that "nothing can be comprehended within it
+  which is not to be found in our writings": its faith is not faith formed by
+  love. -/
+  turn ReformationParty.calvinFarel responds ReformationParty.regensburg
+    from calvinToFarelOnRegensburg
+  /-- On May 25 Contarini explains the same words as "faith formed by charity, or
+  efficacious through charity", and adds a righteousness "inherent in us". -/
+  turn ReformationParty.contarini meets ReformationParty.calvinFarel
+    from contariniOnJustification
+  /-- The answer proposed here: love comes from sincere faith and is the fruit of
+  the Spirit, so it is faith's fruit and not its form; and "there is no one who is
+  righteous, not even one", so no one has a righteousness of his own. -/
+  turn ReformationParty.proposed meets ReformationParty.contarini
 
 /-- The Reformers' reading, on which every one of their positions holds: faith
-alone justifies, the faith that justifies is not formed by love, no work is a
-ground of salvation, and James agrees with Paul. Where it is otherwise silent it
-holds every claim, except those the argument's meanings exclude. -/
+alone justifies, the faith that justifies is not formed by love, no one has a
+righteousness of his own, no work is a ground of salvation, and James agrees
+with Paul. Where it is otherwise silent it holds every claim, except those the
+argument's meanings exclude. -/
 def reformersReading : Valuation Claim := fun a =>
   match a with
   | .justifyingFaithIsFormedByCharity => False
+  | .justifiedHaveAnInherentRighteousness => False
   | .justificationIsForensicOnly => False
   | .baptismIsInstrumentalCause => False
   | .jamesUsesDikaioAsPaul => False
@@ -894,21 +1106,23 @@ def reformersReading : Valuation Claim := fun a =>
   | .sir18_22BeJustifiedToDeath => False
   | _ => True
 
-/-- **The Reformers' positions stand together.** One reading satisfies
-Melanchthon, Zwingli, Tyndale, the Augsburg Confession, the *Apology*, Barnes,
-Luther and Calvin at once: whatever each argues from, none of them denies what
-another holds. -/
+/-- **The Reformers' positions stand together, and the Regensburg article with
+them.** One reading satisfies Melanchthon, Zwingli, Tyndale, the Augsburg
+Confession, the *Apology*, Barnes, Luther, Calvin, Calvin's letter to Farel, the
+answer proposed here and the Regensburg article in its own words at once:
+whatever each argues from, none of them denies what another holds. -/
 theorem the_reformers_stand_together :
     reformationDispute.StandTogether
-      [.melanchthon, .zwingli, .tyndale, .augsburg, .apology, .barnes, .luther, .calvin] := by
+      [ .melanchthon, .zwingli, .tyndale, .augsburg, .apology, .barnes, .luther, .calvin
+      , .regensburg, .calvinFarel, .proposed ] := by
   satisfied_by reformersReading [Dispute.StandTogether, solaFideDefs]
 
 /-- The Catholic reading of the same years, on which every Catholic position
-holds, Regensburg's among them: faith alone does not justify, the faith that
-justifies is formed by love, good works made worthy by grace are a ground of
-salvation, and before God the believer rests on Christ's righteousness given.
-Where it is otherwise silent it holds every claim, except those the argument's
-meanings exclude. -/
+holds: faith alone does not justify, the faith that justifies is formed by
+love, the justified have a righteousness inherent in them, good works made
+worthy by grace are a ground of salvation, and before God the believer rests on
+Christ's righteousness given. Where it is otherwise silent it holds every claim,
+except those the argument's meanings exclude. -/
 def romeAndRegensburgReading : Valuation Claim := fun a =>
   match a with
   | .justificationByFaithAlone => False
@@ -920,33 +1134,252 @@ def romeAndRegensburgReading : Valuation Claim := fun a =>
   | .sir18_22BeJustifiedToDeath => False
   | _ => True
 
-/-- **The Catholic positions stand together, and Regensburg with them.** One
-reading satisfies Eck, the Confutation, Cajetan, Sadoleto and the Regensburg
-article at once, because the article's faith "efficacious through love" is read
-as Contarini read it, faith formed by love, and its resting on Christ's
-righteousness given denies nothing the others hold. -/
+/-- **The Catholic positions stand together, and the Regensburg article with
+them too.** One reading satisfies Eck, the Confutation, Cajetan, Sadoleto,
+Contarini and the Regensburg article in its own words at once. So the article,
+read in its own words, can be held with either side: what decides where it
+stands is how its "efficacious through love" is read
+(`whatTheRegensburgFaithIs`). -/
 theorem rome_and_regensburg_stand_together :
-    reformationDispute.StandTogether [.eck, .confutation, .cajetan, .sadoleto, .regensburg] := by
+    reformationDispute.StandTogether
+      [.eck, .confutation, .cajetan, .sadoleto, .contarini, .regensburg] := by
   satisfied_by romeAndRegensburgReading [Dispute.StandTogether, solaFideDefs]
 
-/-- Why nothing is forced: every voice is defeated by one from the other side,
-and defeats it in return. -/
+/-! ### The article's faith, read both ways -/
+
+/-- The article's "efficacious through love", **read as Contarini read it**:
+faith formed by love. -/
+@[solaFideDefs]
+def regensburgAsFormed : Reading Claim :=
+  { name := "as faith formed by love, with Contarini"
+  , commits := p .justifyingFaithIsFormedByCharity
+  , source := contariniFormedStep }
+
+/-- The article's "efficacious through love", **read as Calvin read it**: faith
+that works through love, and is not formed by it. -/
+@[solaFideDefs]
+def regensburgAsFruit : Reading Claim :=
+  { name := "as faith that bears love as its fruit, with Calvin"
+  , commits := notP .justifyingFaithIsFormedByCharity
+  , source := calvinFarelStep }
+
+/-- The Regensburg article, read with Contarini. -/
+@[solaFideDefs]
+def regensburgFormed : ArgumentPackage Claim :=
+  regensburgCase.readAs (p .faithEfficaciousThroughLove) regensburgAsFormed
+
+/-- The Regensburg article, read with Calvin. -/
+@[solaFideDefs]
+def regensburgFruit : ArgumentPackage Claim :=
+  regensburgCase.readAs (p .faithEfficaciousThroughLove) regensburgAsFruit
+
+/-- **The article read with Contarini can be held without contradiction.** -/
+theorem regensburgFormed_is_satisfiable : Satisfiable regensburgFormed.premises := by
+  satisfied_by romeAndRegensburgReading [solaFideDefs]
+
+/-- **The article read with Calvin can be held without contradiction.** -/
+theorem regensburgFruit_is_satisfiable : Satisfiable regensburgFruit.premises := by
+  satisfied_by reformersReading [solaFideDefs]
+
+/-- Calvin's letter delivers what it concludes. -/
+theorem calvinFarelCase_establishes : Establishes calvinFarelCase := by
+  establish [solaFideDefs]
+
+/-- Calvin's letter can be held without contradiction. -/
+theorem calvinFarelCase_is_satisfiable : Satisfiable calvinFarelCase.premises := by
+  satisfied_by reformersReading [solaFideDefs]
+
+/-- Contarini's reading delivers what it concludes. -/
+theorem contariniFormedCase_establishes : Establishes contariniFormedCase := by
+  establish [solaFideDefs]
+
+/-- Contarini's reading can be held without contradiction. -/
+theorem contariniFormedCase_is_satisfiable : Satisfiable contariniFormedCase.premises := by
+  satisfied_by romeAndRegensburgReading [solaFideDefs]
+
+/-- **Why Calvin stands against the article read with Contarini.** Everything
+turns on one step, Calvin's: the article's faith, efficacious through love, is
+not faith formed by love. Contarini's reading says it is. The step is rated
+`disputed`, because Contarini grants the article's words and denies Calvin's
+conclusion. -/
+def whereTheFormedReadingFalls : Because calvinFarelCase regensburgFormed :=
+  Because.ofChecks calvinFarelLine.step calvinFarelLine.grounds [] calvinFarelLine.grounds
+    [p .faithEfficaciousThroughLove ➝ p .justifyingFaithIsFormedByCharity]
+    .derives calvinFarelCase_establishes calvinFarelCase_is_satisfiable
+    (by simp [calvinFarelCase, Line.asPackage, Line.premises])
+    (fun φ hφ => by
+      simp only [calvinFarelCase, calvinFarelLine, Line.asPackage, Line.premises,
+        List.mem_append, List.mem_cons, List.not_mem_nil, or_false] at hφ ⊢
+      tauto)
+    (by simp [solaFideDefs, ArgumentPackage.readAs, Line.asPackage, Line.premises])
+    (by decide +kernel)
+  |>.ratedByLine calvinFarelLine rfl (by simp [calvinFarelCase, solaFideDefs, Line.asPackage])
+
+/-- **Why Contarini stands against the article read with Calvin.** Everything
+turns on one step, Contarini's: the article's faith, efficacious through love, is
+faith formed by love. Calvin's reading says it is not. The step is rated
+`disputed`, because the Protestant estates grant the article's words and deny
+that they mean faith with works. -/
+def whereTheFruitReadingFalls : Because contariniFormedCase regensburgFruit :=
+  Because.ofChecks contariniFormedLine.step contariniFormedLine.grounds []
+    contariniFormedLine.grounds
+    [p .faithEfficaciousThroughLove ➝ notP .justifyingFaithIsFormedByCharity]
+    .derives contariniFormedCase_establishes contariniFormedCase_is_satisfiable
+    (by simp [contariniFormedCase, Line.asPackage, Line.premises])
+    (fun φ hφ => by
+      simp only [contariniFormedCase, contariniFormedLine, Line.asPackage, Line.premises,
+        List.mem_append, List.mem_cons, List.not_mem_nil, or_false] at hφ ⊢
+      tauto)
+    (by simp [solaFideDefs, ArgumentPackage.readAs, Line.asPackage, Line.premises])
+    (by decide +kernel)
+  |>.ratedByLine contariniFormedLine rfl
+    (by simp [contariniFormedCase, solaFideDefs, Line.asPackage])
+
+/-- **What the Regensburg article's faith is, read both ways.** The article says
+"the justifying faith is that faith which is efficacious through love". Read as
+Contarini read it, faith formed by love, it stands with Rome, and Calvin's
+letter stands against it. Read as Calvin read it, faith that bears love as its
+fruit, it stands with the Reformers, and Contarini's letter stands against it.
+Each reading is fair: the article, read either way, can be held without
+contradiction. Each falls at a step rated `disputed`, so the words alone do not
+settle which side the article is on; that is decided by which reading of them is
+right, and the answer proposed here argues from Paul and James for the second. -/
+def whatTheRegensburgFaithIs : Dilemma regensburgCase where
+  claim := p .faithEfficaciousThroughLove
+  horns :=
+    [ { reading := regensburgAsFormed
+      , fair := regensburgFormed_is_satisfiable
+      , fates := [.falls calvinFarelCase whereTheFormedReadingFalls]
+      , answered := by simp }
+    , { reading := regensburgAsFruit
+      , fair := regensburgFruit_is_satisfiable
+      , fates := [.falls contariniFormedCase whereTheFruitReadingFalls]
+      , answered := by simp } ]
+  claim_mem := by simp [solaFideDefs, Line.asPackage, Line.premises]
+  two := by simp
+
+/-! ### Faith, works and being justified, as a table
+
+The answer proposed here can also be put as a truth table for one person: does
+he believe, does he do good works, and is he justified? Each row is one way
+those three could stand, and a row is allowed when every text below holds of it.
+The texts are Paul's, Hebrews' and John's, and one step from James is proposed.
+
+- If he believes, he is justified: "by grace you have been saved through faith"
+  (Ephesians 2:8); "those who believe in him are not condemned" (John 3:18);
+  "one believes with the heart, leading to righteousness, and one confesses
+  with the mouth, leading to salvation" (Romans 10:10). The confession comes out
+  of what the heart already believes.
+- If he does not believe, he is not justified, whatever his works: "if Abraham
+  was justified by works, he has something to boast about, but not before God"
+  (Romans 4:2); "without faith it is impossible to please Him" (Hebrews 11:6);
+  "those who do not believe are condemned already" (John 3:18). Jesus says the
+  same of works done in His name without knowing Him: "did we not prophesy in
+  your name, and cast out demons in your name, and do many mighty works in your
+  name?" "I never knew you; go away from me" (Matthew 7:22–23). The verse before
+  it says that only "the one who does the will of my Father in heaven" enters
+  the kingdom (7:21); the table does not decide what that will includes.
+- If he believes, he does good works, because the works come out of the faith.
+  This is the step proposed here, from James's grammar: "faith was active along
+  with his works" (συνήργει, worked together with them), "and by works faith was
+  brought to completion" (ἐκ τῶν ἔργων ἐτελειώθη, James 2:22), and "faith by
+  itself, if it has no works, is dead" (James 2:17). James says what the works
+  do: "I by my works will show you faith" (James 2:18), κἀγώ σοι δείξω ἐκ τῶν
+  ἔργων μου τὴν πίστιν, "I will show you, out of my works, my faith". The works
+  show the faith; they are its evidence. The order of James's own examples
+  bears it out. He quotes "Abraham believed God, and it was reckoned to
+  him as righteousness" (James 2:23, from Genesis 15:6), which comes years
+  before the offering of Isaac (Genesis 22). Rahab confessed "the Lord your God
+  is indeed God in heaven above and on earth below" (Joshua 2:11) before she hid
+  the spies. Tyndale drew the same order from both in 1528: Abraham's deed
+  "declared and uttered the faith which both justified him before God, and
+  wrought that wonderful work", and Rahab "before God … was justified by faith,
+  which wrought that outward deed" (*Wicked Mammon*, pp. 119–120).
+
+  Trent reads the same chapter the other way: it cites James 2:24, "a person is
+  justified by works and not by faith alone", for the increase of justification by
+  works (Session VI, ch. 10). The Latin is not the cause: the Vulgate renders both
+  verses word for word, *fides cooperabatur operibus illius, et ex operibus fides
+  consummata est* and *ex operibus iustificatur homo, et non ex fide tantum*. The
+  two readings part at what "justify" means, to declare righteous or to make
+  righteous. Nor do they part at who justifies. James's verb is passive,
+  δικαιοῦται, "is justified", and his "by works" is ἐξ ἔργων, "out of works",
+  which marks where the verdict comes from, not who gives it, for Greek names the
+  doer of a passive with ὑπό. Paul names Him: "It is God who justifies" (Romans
+  8:33). Trent says the same, naming "a merciful God" the efficient cause of
+  justification (Session VI, ch. 7).
+
+The kernel checks every one of the eight rows. -/
+
+/-- Whether a row is allowed by the texts from Paul, Hebrews and John: if he
+believes he is justified, and if he does not believe he is not. Works are a
+column of the table and appear in no condition. -/
+def paulsRow (faith _works justified : Bool) : Bool :=
+  (!faith || justified) && (faith || !justified)
+
+/-- Whether a row is allowed when the step proposed from James is added: if he
+believes, he does good works. -/
+def fruitRow (faith works justified : Bool) : Bool :=
+  paulsRow faith works justified && (!faith || works)
+
+/-- **On the texts from Paul, Hebrews and John, he is justified exactly when he
+believes, and his works make no difference.** In every allowed row of the
+eight, "justified" has the value "believes" has, whichever value "works" has.
+This is the table Dean proposed, faith ∧ (works ∨ ¬works) → justified, together
+with its converse, checked row by row. -/
+theorem justified_exactly_when_he_believes :
+    ∀ faith works justified : Bool,
+      paulsRow faith works justified = true → justified = faith := by
+  decide
+
+/-- **On those texts alone, a believer with no works is justified.** The row
+"believes, no works, justified" is allowed. It is the thief on the cross, who
+had no time for works and was told, "today you will be with me in paradise"
+(Luke 23:43). -/
+theorem a_believer_without_works_is_justified : paulsRow true false true = true := rfl
+
+/-- **With the step proposed from James, every believer has works, and still
+works decide nothing.** Adding "if he believes, he does good works" rules out the
+row "believes, no works", and in every row that is left he is justified exactly
+when he believes. -/
+theorem with_james_works_follow_and_decide_nothing :
+    (∀ justified : Bool, fruitRow true false justified = false) ∧
+    ∀ faith works justified : Bool,
+      fruitRow faith works justified = true → justified = faith := by
+  decide
+
+/-- **The table cannot tell a fruit from a condition.** With the step proposed
+from James, in every allowed row "justified" also has the value of "believes
+and has works". So the rows alone fit "works are faith's fruit" and "works are a
+condition with faith" equally. What tells them apart is not the table but the
+direction of the step from James: whether works come out of faith, as proposed
+here, or are added to it, as Trent reads James 2:24. -/
+theorem the_table_cannot_tell_fruit_from_condition :
+    ∀ faith works justified : Bool,
+      fruitRow faith works justified = true → justified = (faith && works) := by
+  decide
+
+/-- Why nothing is forced but the article: every voice but the article is
+defeated by one from the other side, and defeats it in return. -/
 declare_verdict reformationSettles for reformationDispute :
-    .nothingGrounded
+    .groundedExactly [[.regensburg]]
       [ (.zwingli, .eck), (.melanchthon, .confutation), (.tyndale, .confutation)
       , (.augsburg, .confutation), (.apology, .confutation), (.barnes, .confutation)
       , (.luther, .confutation), (.confutation, .melanchthon), (.eck, .melanchthon)
       , (.cajetan, .luther), (.sadoleto, .luther), (.calvin, .sadoleto)
-      , (.regensburg, .luther) ]
-  /-- **Before Trent, the Reformation's debate forces nothing.** Heard together,
-  every voice from 1521 to 1541 is defeated by one from the other side and
-  defeats it in return, because every step on both sides is rated `disputed`:
-  each side grants the other's texts and denies its conclusion. So no position
-  is forced, and none is ruled out. The sides part at two claims: whether the
-  faith that justifies does so alone or as formed by love, and whether good
-  works made worthy by grace are a ground of salvation. -/
-  proves @[headline] luthers_contemporaries_force_nothing
+      , (.calvinFarel, .contarini), (.contarini, .calvinFarel), (.proposed, .contarini) ]
+  /-- **Before Trent, only the Regensburg article, in its own words, is forced.**
+  Heard together, every other voice from 1521 to 1541 is defeated by one from
+  the other side and defeats it in return, because every step on both sides is
+  rated `disputed`: each side grants the other's texts and denies its
+  conclusion. The article that both sides' speakers accepted in May 1541 is
+  attacked by no one, because in its own words it says nothing either side
+  denies: the faith that justifies is "efficacious through love", and the
+  believer rests "on the righteousness of Christ alone, given to us". The sides
+  part at how that faith is read: formed by love, as Contarini read it, or
+  bearing love as its fruit, as Calvin read it. -/
+  proves @[headline] before_trent_only_regensburg_is_forced
 
-#print axioms luthers_contemporaries_force_nothing
+#print axioms before_trent_only_regensburg_is_forced
 
 end TestimonyArguments.SolaFide

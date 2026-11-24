@@ -45,7 +45,7 @@ Sola fide
 /--
 info: the fallacy checks, over every argument's lines, each named with its reader:
 Sola fide
-  lines: 78, read: 47, Scripture's own: 0
+  lines: 82, read: 47, Scripture's own: 0
   attribute a view, against the argument's record:
     renewalLine (Augustine): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
     sandersLine (Dunn): secondTempleJudaism, unrecorded
@@ -59,12 +59,12 @@ Sola fide
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaFide
 
-/-- info: every package has a model with its postulates: 108, and 0 undecided -/
+/-- info: every package has a model with its postulates: 114, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaFide
 
 /--
-info: every reading and step has a reader or is marked proposed: 108 packages, 78 lines
+info: every reading and step has a reader or is marked proposed: 114 packages, 82 lines
 -/
 #guard_msgs in
 #check_readers under TestimonyArguments.SolaFide
@@ -82,7 +82,7 @@ info: every dispute, as an AIF graph meeting Definition 1.1:
 beforeTrentDispute.finite: 6 I, 2 RA, 0 CA, 0 PA, 6 edges
 jamesDispute.finite: 38 I, 13 RA, 11 CA, 4 PA, 83 edges
 jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
-reformationDispute.finite: 28 I, 16 RA, 8 CA, 0 PA, 61 edges
+reformationDispute.finite: 41 I, 20 RA, 11 CA, 0 PA, 83 edges
 solaFideDispute.finite: 80 I, 36 RA, 42 CA, 0 PA, 196 edges
 and 3 hearings, drawn with the disputes they restrict
 -/
@@ -98,7 +98,7 @@ jamesDispute.finite:
 jesusWordsDispute.finite:
   hidden premises: 0; lines not read: 1
 reformationDispute.finite:
-  hidden premises: 0; lines not read: 9
+  hidden premises: 0; lines not read: 13
 solaFideDispute.finite:
   hidden premises: 0; lines not read: 6
 -/

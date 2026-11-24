@@ -1195,6 +1195,86 @@ def baseCite : Claim → AtomMeta
         { primary := .work zwingliTrueAndFalseReligion (.page 137)
         , tradition := .reformedProtestant
         , confidence := .wellSupported } }
+  | .faithEfficaciousThroughLove =>
+    { label := "The Regensburg article: the justifying faith is efficacious through love"
+    , kind := .theological
+      -- The article's own words, which both sides' speakers accepted in May 1541.
+      -- `disputed`: the Protestant estates asked in July that "efficacious" be
+      -- explained or struck out, because some read it as faith with works (CR 4,
+      -- col. 485).
+    , source :=
+        { primary := .work regensburgArticleFive (.sectionRef "col. 200")
+        , supporting := [.work protestantsOnTheRegensburgBook (.sectionRef "col. 485")]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .justifiedHaveAnInherentRighteousness =>
+    { label := "The justified have a righteousness of their own, inherent in them"
+    , kind := .theological
+      -- Contarini, p. 591: "a double righteousness, one inherent in us, by which
+      -- we begin to be righteous". The article says the justified "are called
+      -- righteous on account of inherent righteousness, because we do what is
+      -- righteous" (col. 200). `disputed`: see `noneRighteousLine`.
+    , source :=
+        { primary := .work contariniOnJustification (.page 591)
+        , supporting := [.work regensburgArticleFive (.sectionRef "col. 200")]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .romans5_5 =>
+    { label := "Romans 5:5: God's love has been poured into our hearts through the Holy Spirit"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.romans, 5, 5⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .secondPeter1_4 =>
+    { label := "2 Peter 1:4: participants of the divine nature"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.secondPeter, 1, 4⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .romans6_17_18 =>
+    { label := "Romans 6:17–18: obedient from the heart, enslaved to righteousness"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.romans, 6, 17, 6, 18⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .firstCorinthians7_22 =>
+    { label := "1 Corinthians 7:22: whoever was free when called is a slave belonging to Christ"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.firstCorinthians, 7, 22⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .firstTimothy1_5 =>
+    { label := "1 Timothy 1:5: love that comes from sincere faith"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.firstTimothy, 1, 5⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .galatians5_22 =>
+    { label := "Galatians 5:22: the fruit of the Spirit is love"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.galatians, 5, 22⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .romans3_10 =>
+    { label := "Romans 3:10: there is no one who is righteous, not even one"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.romans, 3, 10⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .psalm143_2 =>
+    { label := "Psalm 143:2: no one living is righteous before you"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.psalms, 143, 2⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
   | .fathersWroteFaithAlone =>
     { label := "Before Trent, readers of Paul East and West wrote that the ungodly are " ++
         "justified by faith alone"
