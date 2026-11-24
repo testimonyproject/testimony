@@ -1,15 +1,16 @@
 # Which text a claim rests on (design)
 
-> **A design note. Nothing here is built yet, and nothing here changes a verdict.** It scopes
-> the next step of checking claims against the text: making the library say, for every claim
-> that rests on the wording of a verse, which text it read, where the manuscripts differ, and
-> how secure the reading is. The phases at the end are filed as issues that anyone can take.
+> **A design note, with its first phase built.** It scopes checking claims against the text:
+> making the library say, for every claim that rests on the wording of a verse, which text it
+> read, where the manuscripts differ, and how secure the reading is. The first phase, variation
+> units and the rating ceiling, is in the library ([What is built](#what-is-built)); the rest
+> are filed as issues that anyone can take.
 
-A Christian reading the King James Version finds at 1 John 5:7 the plainest statement of the
-Trinity in the New Testament: "For there are three that bear record in heaven, the Father, the
-Word, and the Holy Ghost: and these three are one." A Christian reading the ESV finds no such
-sentence. The verse is there, numbered 7, but it reads "For there are three that testify", and
-the heavenly witnesses are gone. Neither translator made a mistake. They translated different
+A Christian reading the King James Version finds at 1 John 5:7 what looks like the plainest
+statement of the Trinity in the New Testament: three witnesses in heaven, the Father, the Word
+and the Holy Spirit, "and these three are one". A Christian reading a modern translation finds
+no such sentence. The verse is there, numbered 7, but it says only that three testify, and the
+heavenly witnesses are gone. Neither translator made a mistake. They translated different
 Greek texts. The words about the Father, the Word and the Spirit, called the Comma Johanneum,
 stand in Latin manuscripts from the fourth century on and in only a handful of late Greek ones.
 Erasmus left them out of his first two editions of the Greek New Testament, in 1516 and 1519,
@@ -19,6 +20,11 @@ and put them into the third, in 1522. From his text they passed into the Textus 
 So "1 John 5:7 says that these three are one" is true of one text and false of another. The
 library already checks what follows from a claim like that. It does not yet check which text
 the claim is true of. This page sets out how it would.
+
+The library quotes the King James Version only where a scholar it cites quotes it and reasons
+from it, and then answers from the Greek and from the passage around it, or from scholars who
+rebut the reading from Scripture. Where this page describes what the Textus Receptus says, it
+describes it, or gives the Greek.
 
 ## What the library holds now
 
@@ -36,12 +42,42 @@ Three pieces are in place.
 - **A premise can be marked textual.** "What a text says: wording, variants, attestation" is a
   kind of premise (`PremiseKind.textual`).
 
-Nothing checks any of it. A textual premise can cite a verse in no named text, and most do. A
-claim can rest on a verse whose wording the manuscripts dispute and still be rated `consensus`,
-the library's highest rating, meaning "accepted across traditions, including by those with no
-stake in it". In the Trinity argument, 26 of the 29 claims about what a text says are cited this
-way, from Scripture alone, in no named text, at `consensus`. Most of those ratings are probably
-right. But nothing in the build would notice if one were not.
+Before the first phase, nothing checked any of it. A textual premise could cite a verse in no
+named text, and most did. A claim could rest on a verse whose wording the manuscripts dispute and
+still be rated `consensus`, the library's highest rating, meaning "accepted across traditions,
+including by those with no stake in it". In the Trinity argument, 26 of the 29 claims about what
+a text says were cited this way, from Scripture alone, in no named text, at `consensus`.
+
+## What is built
+
+The first phase is in the library.
+
+- **Places where the copies differ, as data.** A variation unit (`Testimony.VariationUnit`)
+  records where it is, down to the word where the Greek corpus holds the book, what kind of
+  difference it is, its readings with the editions that print them, and every cited judgement
+  on them, each saying which of the three questions below it answers. Seven are written, in
+  `Testimony.Variants.Units`: Mark 16:9–20, John 7:53–8:11, 1 John 5:7–8, Matthew 19:17a,
+  Matthew 28:19b, Romans 9:5 and Hebrews 1:8b. Each hears a cited reader on both sides of what
+  the author wrote, and `#check_variation_units` fails the build on one that does not.
+- **A citation says which reading it takes.** A citation of Scripture can name its edition, the
+  question it needs answered, and the reading it takes at each unit (`ScriptureCitation`), and
+  the page shows the reading beside the verse.
+- **The ceiling, checked.** `#check_readings` (`Testimony.Checks.Readings`) fails the build on
+  a claim whose words lie inside a unit and which does not say which reading it takes there, on
+  a reading the unit lacks, on a reading taken with no question named, and on a claim rated
+  above the reading it rests on. It runs over every argument, and its pinned report counts how
+  many claims citing Scripture name the edition they read, so that the count shows how far the
+  next step has come.
+
+The ceiling lowered four ratings from `consensus` to `disputed`, and moved no verdict. In the
+Trinity argument, Romans 9:5 (`godOverAll`) takes the comma, which Hort answers with a full stop;
+Hebrews 1:8 (`throneOGod`) takes "your kingdom", which Westcott answers with "his kingdom" and
+"God is Thy throne"; and Matthew 28:19 (`oneNameOfThree`) takes the threefold name, which
+Conybeare answered with the shorter form Eusebius quotes. In sola fide, the claim that Christ
+commands baptism (`baptismCommandedByChrist`) rests on the same words of Matthew 28:19. The claim
+on Matthew 19:17 (`matthew19_17KeepTheCommandments`) now cites the half of the verse it rests
+on, 19:17b, which lies outside the unit, and keeps its rating. No claim in any argument rests on
+the longer ending of Mark, the woman taken in adultery or the heavenly witnesses.
 
 ## Three questions a reader asks of a verse
 
@@ -96,13 +132,13 @@ works and passages. Each would hold:
 - the judgement of each cited critic on which reading is original, rated by the library's rule.
 
 Punctuation earns its own kind because it is the editors', not the copyists'. The earliest
-manuscripts have almost none. Romans 9:5 is the classic case. With a comma, Paul calls Christ
-"God over all, blessed forever" (ESV). With a full stop, the verse ends in a blessing of God:
-"of their race, according to the flesh, is the Christ. God who is over all be blessed for ever"
-(RSV, 1952). The letters are the same. The Trinity argument cites the first reading, at
-`consensus`, from Scripture alone (`godOverAll`). Under this design that claim would have to
-name the punctuation unit, and its rating would be computed as below. What that computation
-gives is not decided here.
+manuscripts have almost none. Romans 9:5 is the classic case. With a comma after "according to
+the flesh", Paul calls Christ God over all, blessed forever. With a full stop, the Christ comes
+from Israel according to the flesh, and the verse ends in a blessing of the God who is over all.
+The letters are the same, and Westcott and Hort, who agree on almost every reading, part over
+the comma in one signed note. The Trinity argument cites the first reading (`godOverAll`). It
+now names the punctuation unit and takes the comma, and the ceiling below rates it `disputed`,
+because Hort, a cited reader, prefers the full stop.
 
 ## How a reading's certainty enters the ratings
 
@@ -134,12 +170,14 @@ cited reader in doubt.
 The rule does not only lower ratings. It also shows when a variant does not matter, which is the
 far more common finding, and a reader deserves to see it.
 
-Sola fide cites Matthew 19:17. The manuscripts differ in the verse's first half. The Byzantine
-text has Jesus say "Why callest thou me good? there is none good but one, that is, God" (KJV);
-the critical text has "Why do you ask me about what is good? There is only one who is good"
-(ESV). The argument's claim rests on the second half, "If you would enter life, keep the
-commandments" (`matthew19_17KeepTheCommandments`), which every edition prints alike. Located
-to the word, the claim lies outside the unit, and the build would say so.
+Sola fide cites Matthew 19:17. The manuscripts differ in the verse's first half. In the
+Byzantine text Jesus asks why the young man calls Him good, and says that no one is good but
+one, God (Τί με λέγεις ἀγαθόν; Οὐδεὶς ἀγαθός, εἰ μὴ εἷς, ὁ θεός), as in Mark 10:18 and Luke
+18:19. In the critical text He asks why the man asks Him about what is good, and says that
+there is one who is good (Τί με ἐρωτᾷς περὶ τοῦ ἀγαθοῦ; εἷς ἐστιν ὁ ἀγαθός). The argument's
+claim rests on the second half, "If you would enter life, keep the commandments"
+(`matthew19_17KeepTheCommandments`), which every edition prints alike. Located to the word, it
+cites 19:17b, and lies outside the unit at 19:17a.
 
 The Trinity argument cites John 8:17–18, "the testimony of two people is true"
 (`twoWitnesses`). The passage about the woman taken in adultery, John 7:53–8:11, is missing
@@ -151,8 +189,9 @@ Hebrews 1:8 shows why position alone is not enough. The Trinity argument quotes 
 O God, is forever and ever" (`throneOGod`), and those words are not in dispute. The next words
 are. Most manuscripts read "the scepter of *your* kingdom"; the oldest collection of Paul's
 letters, a papyrus from about AD 200, and the two great fourth-century codices read "the scepter
-of *his* kingdom". Commentators have argued that the second reading favours taking the verse as
-"God is your throne", not "Your throne, O God", and phase 1 must cite who. A variant outside a
+of *his* kingdom". B. F. Westcott takes the verse as "God is Thy throne", a rendering he says is
+"required if we adopt the reading αὐτοῦ for σου" (*The Epistle to the Hebrews*, 1892, pp.
+25–26). A variant outside a
 claim's words can bear on how they are read. So the dependence of a claim on a unit is computed
 where the words overlap, and declared, with the reader who draws it, where a reader holds that
 a reading nearby bears on the claim. A declared dependence is a step like any other: it cites
@@ -163,7 +202,7 @@ who draws it, or it is marked as the library's own.
 The library reports every rating under three standards of evidence, and the text-critical cases
 show why it must. Some who defend the Textus Receptus, often called the Confessional Text
 position, hold it as the text God preserved, on the ground of the Westminster Confession: the
-Scriptures, "by His singular care and providence, kept pure in all ages, are therefore
+Scriptures, "by his singular care and providence kept pure in all ages, are therefore
 authentical" (I.viii). That is an argument from a confession. Under the tradition standard it is
 heard, and a reading such as the Comma Johanneum, defended on it, keeps a credible dissent
 behind it. Under the evidence standard, which admits only texts and argued scholarship, it is
@@ -346,10 +385,15 @@ allows.
    1901 that it was the original, though every Greek manuscript and version that has the verse
    reads the threefold name), Romans 9:5, Hebrews 1:8 and Matthew 19:17. Every textual claim the
    arguments already make is then given its text, and any rating the ceiling moves is reported.
+   Built ([What is built](#what-is-built)), except that naming every claim's edition is left to
+   one pull request per argument, after which an unnamed edition fails the build, and Metzger's
+   pages and his committee's {A}–{D} grades wait to be read. A reading graded {C} or {D} will be
+   rated no higher than `disputed`, as the library's own proposal.
 2. **Where the editions differ, from the data.** Import the edition-agreement data the licences
    allow for the books the library reads, and compute every place where the editions differ.
    Check 2, no silent dependence, runs over every argument. The misquotation check runs over
-   every quoted word.
+   every quoted word. The Vulgate joins as an edition, from a public-domain text, so that an
+   argument that the Latin departs from the Greek or the Hebrew is checked against both.
 3. **What the early copies have.** Import open transcriptions of early manuscripts, so that a
    claim of attestation ("Vaticanus ends Mark at 16:8") is checked against the manuscript. The
    argument-from-silence check learns the silence of a witness.

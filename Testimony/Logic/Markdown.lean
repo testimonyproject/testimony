@@ -223,7 +223,7 @@ an anchor of the entry's cite key on every line — and a proposal is marked as
 the library's own construction. -/
 def reference : Reference → String
   | .scripture refs =>
-      String.intercalate "; " (refs.map fun r => escape r.ref.render)
+      String.intercalate "; " (refs.map fun r => escape r.render)
   | .work e l =>
       let link := "[" ++ citedWork e ++ "](" ++ bibliographyPath ++ "#" ++ e.key ++ ")"
       let loc := locus l

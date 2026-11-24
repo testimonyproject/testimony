@@ -375,6 +375,156 @@ occupy. The library's upper categories name their BFO counterparts from it. -/
   , publisher := "MIT Press"
   , place := some "Cambridge, MA" }
 
+/-! ### The textual critics the variation units cite (`Testimony.Variants.Units`) -/
+
+/-- Westcott and Hort's edition of the Greek New Testament, its second volume: the Introduction
+and the Appendix, whose "Notes on Select Readings" give the editors' reasons at each place they
+discuss. A note signed W. or H. is that editor's alone, where the two differ. Read in the
+Internet Archive's scan of the 1881 Macmillan printing. -/
+@[bib_entry] def westcottHortAppendix : BibEntry := .book
+  { core :=
+      { key := "westcott-hort-introduction-appendix-1881"
+      , contributors :=
+          { authors :=
+              [.person "Brooke Foss" "Westcott", .person "Fenton John Anthony" "Hort"] }
+      , title := "The New Testament in the Original Greek"
+      , subtitle := some "Introduction and Appendix"
+      , year := some { value := 1881 }
+      , identifiers :=
+          [.url "https://archive.org/details/newtestament00ddgoog" (some "2026-11-24")] }
+  , publisher := "Macmillan"
+  , place := some "Cambridge and London"
+  , volume := some "2"
+  , totalVolumes := some 2 }
+
+/-- Robinson and Pierpont's edition of the Byzantine Textform, the text most later Greek
+manuscripts share, edited on the view that it best reflects what the authors wrote. Its Preface
+says so: "The Byzantine-priority hypothesis thus appears to offer the most plausible scenario
+for canonical autograph transmission." Read in the 2005 edition, whose copyright page permits
+anyone to copy and distribute it. ISBN confirmed at Open Library. -/
+@[bib_entry] def robinsonPierpont : BibEntry := .criticalEdition
+  { core :=
+      { key := "robinson-pierpont-byzantine-2005"
+      , role := .text
+      , contributors :=
+          { editors := [.person "Maurice A." "Robinson", .person "William G." "Pierpont"] }
+      , title := "The New Testament in the Original Greek"
+      , subtitle := some "Byzantine Textform 2005"
+      , year := some { value := 2005 }
+      , identifiers := [.isbn "9780759800779"] }
+  , publisher := "Chilton Book Publishing"
+  , place := some "Southborough, MA"
+  , siglum := some "RP2005" }
+
+/-- Four views of the ending of Mark, edited by David Alan Black, with Maurice Robinson among
+those who argue that Mark 16:9–20 is authentic, as the publisher's description says. Cited
+whole for Robinson's view: his chapter's title and pages are not yet verified. ISBN confirmed at
+Open Library. -/
+@[bib_entry] def blackEndingOfMark : BibEntry := .book
+  { core :=
+      { key := "black-ending-of-mark-2008"
+      , contributors := { editors := [.person "David Alan" "Black"] }
+      , title := "Perspectives on the Ending of Mark"
+      , subtitle := some "4 Views"
+      , year := some { value := 2008 }
+      , identifiers := [.isbn "9780805447620"] }
+  , publisher := "B&H Academic"
+  , place := some "Nashville" }
+
+/-- R. L. Dabney on the readings of the Greek New Testament that bear on doctrine, published
+unsigned in the *Southern Presbyterian Review* and reprinted under his name in his
+*Discussions*, volume 1 (1890), pages 350–390. On 1 John 5:7 he argues for the probability of
+the received reading and says his object is "to keep it an open question". Read in the Internet
+Archive's scan of the Review. -/
+@[bib_entry] def dabneyDoctrinalReadings : BibEntry := .article
+  { core :=
+      { key := "dabney-doctrinal-various-readings-1871"
+      , contributors := { authors := [.person "Robert Lewis" "Dabney"] }
+      , title := "The Doctrinal Various Readings of the New Testament Greek"
+      , year := some { value := 1871 }
+      , identifiers :=
+          [.url "https://archive.org/details/pts_southernpresbyte_3331-08_v20tov22"
+             (some "2026-11-24")] }
+  , journal := "Southern Presbyterian Review"
+  , volume := some "22"
+  , issue := some "2"
+  , pages := some (191, 234) }
+
+/-- F. C. Conybeare's case that Eusebius of Caesarea knew Matthew 28:19 in a shorter form,
+"make disciples of all the nations in my name", and that the text "was not yet authoritatively
+fixed by the church". DOI confirmed at Crossref; read in the Internet Archive's scan of the
+volume. -/
+@[bib_entry] def conybeareEusebianForm : BibEntry := .article
+  { core :=
+      { key := "conybeare-eusebian-form-1901"
+      , contributors := { authors := [.person "F. C." "Conybeare"] }
+      , title := "The Eusebian Form of the Text Matth. 28, 19"
+      , year := some { value := 1901 }
+      , identifiers := [.doi "10.1515/zntw.1901.2.1.275"] }
+  , journal := "Zeitschrift für die neutestamentliche Wissenschaft"
+  , volume := some "2"
+  , pages := some (275, 288) }
+
+/-- F. H. Chase's reply to Conybeare: the evidence "establishes without a shadow of doubt or
+uncertainty the genuineness of Matt. xxviii 19". DOI confirmed at Crossref; read in the Internet
+Archive's scan of the issue. -/
+@[bib_entry] def chaseCommandToBaptize : BibEntry := .article
+  { core :=
+      { key := "chase-command-to-baptize-1905"
+      , contributors := { authors := [.person "F. H." "Chase"] }
+      , title := "The Lord's Command to Baptize (St. Matthew xxviii. 19)"
+      , year := some { value := 1905 }
+      , identifiers := [.doi "10.1093/jts/os-VI.24.481"] }
+  , journal := "The Journal of Theological Studies"
+  , volume := some "6"
+  , issue := some "24"
+  , pages := some (481, 512) }
+
+/-- Murray J. Harris on Hebrews 1:8–9: he takes ὁ θεός as a vocative, "Your throne, O God", and,
+"with most textual critics and the vast majority of commentators", σου, "your kingdom", as the
+earlier text. DOI confirmed at Crossref; read in the open PDF. -/
+@[bib_entry] def harrisHebrewsTheos : BibEntry := .article
+  { core :=
+      { key := "harris-hebrews-1-8-1985"
+      , contributors := { authors := [.person "Murray J." "Harris"] }
+      , title := "The Translation and Significance of Ὁ ΘΕΟΣ in Hebrews 1:8-9"
+      , year := some { value := 1985 }
+      , identifiers := [.doi "10.53751/001c.30575"] }
+  , journal := "Tyndale Bulletin"
+  , volume := some "36"
+  , pages := some (129, 162) }
+
+/-- B. F. Westcott's commentary on the Greek text of Hebrews, in its second edition. At 1:8 his
+text reads αὐτοῦ, "his kingdom", with ℵ and B, and he takes the first clause as "God is Thy
+throne", a rendering he says is "required if we adopt the reading αὐτοῦ for σου". Read in the
+Internet Archive's scan of the 1892 printing. -/
+@[bib_entry] def westcottHebrews : BibEntry := .book
+  { core :=
+      { key := "westcott-hebrews-1892"
+      , contributors := { authors := [.person "Brooke Foss" "Westcott"] }
+      , title := "The Epistle to the Hebrews"
+      , subtitle := some "The Greek Text with Notes and Essays"
+      , year := some { value := 1892 }
+      , identifiers :=
+          [.url "https://archive.org/details/epistletohebrew00westgoog" (some "2026-11-24")] }
+  , publisher := "Macmillan"
+  , place := some "London and New York"
+  , edition := some "2nd edition" }
+
+/-- J. W. Burgon's attack on the Revised Version of 1881 and the Greek text behind it. He calls
+the critical reading of Matthew 19:17, "Why do you ask me about what is good?", "an absurd
+fabrication". Read in the Internet Archive's scan of the 1883 printing. -/
+@[bib_entry] def burgonRevisionRevised : BibEntry := .book
+  { core :=
+      { key := "burgon-revision-revised-1883"
+      , contributors := { authors := [.person "John William" "Burgon"] }
+      , title := "The Revision Revised"
+      , year := some { value := 1883 }
+      , identifiers :=
+          [.url "https://archive.org/details/revisionrevisedt00burg" (some "2026-11-24")] }
+  , publisher := "John Murray"
+  , place := some "London" }
+
 derive_bib_registry registry
 
 end Testimony.Bib

@@ -82,7 +82,37 @@ inductive TextualTradition
   Hebrew was *understood* in Aramaic-speaking Judaism, which is a different
   question from what the Hebrew says. -/
   | targum
+  /-- The SBL Greek New Testament (2010), Michael Holmes's critical text, the text
+  of the library's Greek corpus (`Testimony.Corpus.Greek`). -/
+  | sblgnt
+  /-- The Tyndale House Greek New Testament (2017), edited by Dirk Jongkind and
+  Peter Williams from the earliest manuscripts. -/
+  | tyndaleHouse
+  /-- The Byzantine text that most later manuscripts share, as Maurice Robinson
+  and William Pierpont print it (2005). -/
+  | byzantine
+  /-- The Textus Receptus, the "received text" printed from Erasmus on, in
+  Scrivener's edition of 1894, which gives the Greek the King James Version
+  translated. -/
+  | textusReceptus
+  /-- Westcott and Hort's critical text of 1881. -/
+  | westcottHort
 deriving Repr, DecidableEq
+
+/-- How an edition is named to a reader: its usual siglum, "NA28", "SBLGNT". -/
+def TextualTradition.siglum : TextualTradition → String
+  | .masoretic => "MT"
+  | .septuagint => "LXX"
+  | .deadSeaScrolls => "Qumran"
+  | .nestleAland28 => "NA28"
+  | .vulgate => "Vulgate"
+  | .peshitta => "Peshitta"
+  | .targum => "Targum Jonathan"
+  | .sblgnt => "SBLGNT"
+  | .tyndaleHouse => "THGNT"
+  | .byzantine => "RP2005"
+  | .textusReceptus => "TR (Scrivener 1894)"
+  | .westcottHort => "WH"
 
 /-- A verse-level reference: book, chapter, verse. -/
 structure Passage where

@@ -3,6 +3,7 @@ import Testimony.Checks.Aif
 import Testimony.Checks.Conditions
 import Testimony.Checks.Postulates
 import Testimony.Checks.Readers
+import Testimony.Checks.Readings
 
 /-!
 # TestimonyArguments.Checks.Articles — the library's checks, over the articles
@@ -25,6 +26,13 @@ info: every reading and step has a reader or is marked proposed: 1 packages, 0 l
 -/
 #guard_msgs in
 #check_readers under TestimonyArguments.Articles
+
+/--
+info: every claim resting where the copies differ takes a reading, rated no higher:
+1 packages, 2 claims citing Scripture, 0 naming the edition they read
+-/
+#guard_msgs in
+#check_readings under TestimonyArguments.Articles
 
 /-- info: every non-entailment survives its postulates: 0, and 0 undecided -/
 #guard_msgs in

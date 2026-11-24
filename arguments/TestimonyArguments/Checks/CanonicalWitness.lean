@@ -5,6 +5,7 @@ import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
 import Testimony.Checks.Readers
+import Testimony.Checks.Readings
 import Testimony.Checks.Refutations
 
 /-!
@@ -60,6 +61,13 @@ info: every reading and step has a reader or is marked proposed: 15 packages, 8 
 -/
 #guard_msgs in
 #check_readers under TestimonyArguments.CanonicalWitness
+
+/--
+info: every claim resting where the copies differ takes a reading, rated no higher:
+15 packages, 27 claims citing Scripture, 0 naming the edition they read
+-/
+#guard_msgs in
+#check_readings under TestimonyArguments.CanonicalWitness
 
 /-- info: every non-entailment survives its postulates: 4, and 0 undecided -/
 #guard_msgs in

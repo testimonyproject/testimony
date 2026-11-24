@@ -6,6 +6,7 @@ import Testimony.Checks.Meanings
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
 import Testimony.Checks.Readers
+import Testimony.Checks.Readings
 import Testimony.Checks.Refutations
 import Testimony.Checks.VerseParts
 
@@ -71,7 +72,7 @@ def checkTargets (env : Environment) (root : Name) : List (Name × Array Name) :
       if (refutedEntailment? t.type).isSome then refutations := refutations.push name
     | _ => pure ()
   return [ (`meanings, claims), (`ontology, claims), (`fallacies, lined.toArray)
-         , (`postulates, packages), (`readers, packages)
+         , (`postulates, packages), (`readers, packages), (`readings, packages)
          , (`refutationsPostulates, nonEntailments)
          , (`refutations, refutations), (`aif, tables), (`conditions, tables)
          , (`citations, defs), (`verseParts, parts) ]

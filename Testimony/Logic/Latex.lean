@@ -217,7 +217,7 @@ def locus : Locus → String
 /-- A reference: scripture in plain text, works as live `\cite` commands. -/
 def reference : Reference → String
   | .scripture refs =>
-      String.intercalate "; " (refs.map fun r => escape r.ref.render)
+      String.intercalate "; " (refs.map fun r => escape r.render)
   | .work e l =>
       let loc := locus l
       if loc.isEmpty then "\\cite{" ++ e.key ++ "}"

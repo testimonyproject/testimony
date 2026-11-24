@@ -15,8 +15,9 @@ Both are licensed CC BY 4.0, and every printed document that cites either
 credits it as its licence asks. `scripts/import_greek.py` reads MACULA's word table
 and writes one file per book under `data/greek/macula-sblgnt/`, keeping only the
 columns the library reads; the README there records the source and its checksum.
-So far John, Colossians, Titus and Hebrews are imported, the books the first
-questions need ([#247][issue]); the import takes any book.
+So far Matthew, John, Hebrews and the thirteen letters ascribed to Paul are
+imported, the books the arguments' questions have needed ([#247][issue]); the
+import takes any book.
 
 ## What a word looks like
 

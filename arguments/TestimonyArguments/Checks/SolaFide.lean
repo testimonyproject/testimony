@@ -6,6 +6,7 @@ import Testimony.Checks.Fallacies
 import Testimony.Checks.Ontology
 import Testimony.Checks.Postulates
 import Testimony.Checks.Readers
+import Testimony.Checks.Readings
 import Testimony.Checks.Refutations
 
 /-!
@@ -88,6 +89,13 @@ info: every reading and step has a reader or is marked proposed: 121 packages, 9
 -/
 #guard_msgs in
 #check_readers under TestimonyArguments.SolaFide
+
+/--
+info: every claim resting where the copies differ takes a reading, rated no higher:
+121 packages, 98 claims citing Scripture, 0 naming the edition they read
+-/
+#guard_msgs in
+#check_readings under TestimonyArguments.SolaFide
 
 /-- info: every non-entailment survives its postulates: 27, and 0 undecided -/
 #guard_msgs in

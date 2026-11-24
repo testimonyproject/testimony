@@ -1,6 +1,7 @@
 import TestimonyArguments.SolaFide.Atoms
 import Testimony.Logic.Package
 import TestimonyArguments.Works
+import Testimony.Variants.Units
 
 /-!
 # TestimonyArguments.SolaFide.Sources — a source for every claim
@@ -1947,7 +1948,7 @@ def baseCite : Claim → AtomMeta
     { label := "Matthew 19:17 — \"If you would enter life, keep the commandments\""
     , kind := .textual
     , source :=
-        { primary := .scripture [{ ref := .range matthew19_16to22 }]
+        { primary := .scripture [{ ref := Variants.matthewNineteenSeventeenB }]
         , supporting := [.work waterworthTrent (.page 35)]
         , tradition := .christianHistoricalGrammatical
         , confidence := .consensus } }
@@ -1976,10 +1977,14 @@ def baseCite : Claim → AtomMeta
     { label := "Christ commands baptism with water (Matthew 28:19; Acts 2:38)"
     , kind := .textual
     , source :=
-        { primary := .scripture [{ ref := .verse matthew28_19 }, { ref := .verse acts2_38 }]
+        { primary :=
+            .scripture
+              [ { ref := .verse matthew28_19, question := some .originality
+                , takes := [Variants.threefoldName] }
+              , { ref := .verse acts2_38 } ]
         , supporting := [.work westminsterConfession (.sectionRef "XXVIII.1")]
         , tradition := .christianHistoricalGrammatical
-        , confidence := .consensus } }
+        , confidence := .disputed } }
   | .baptismIsInstrumentalCause =>
     { label := "Water baptism is the instrumental cause of justification"
     , kind := .theological
