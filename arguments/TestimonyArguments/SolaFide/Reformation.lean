@@ -252,7 +252,14 @@ Scripture to deny that our works are meritorious" (Jacobs, p. 211). Its reason
 is that Scripture promises a reward, "every man shall receive his own reward,
 according to his own labor" (1 Corinthians 3:8), and that grace is not set aside
 by it: "our works of themselves have no merit, but ... God's grace makes them
-worthy of eternal life" (p. 211). -/
+worthy of eternal life" (p. 211). The *Apology* answers from the same verse that
+the reward is given to those already justified: works merit "not for the
+remission of sins, for grace or justification (for these we obtain only by
+faith), but for other rewards", and "those who merit this are justified before
+they do the Law" (Triglot pp. 175, 221). Paul is writing of those who build on
+the one foundation, "Jesus Christ" (1 Corinthians 3:11), and of a builder whose
+work is burned up he says that "the builder will be saved, but only as through
+fire" (3:15). So the reward follows salvation, and does not decide it. -/
 def zwingliStep : Source :=
   { primary := .work zwingliTrueAndFalseReligion (.page 137)
   , tradition := .reformedProtestant
