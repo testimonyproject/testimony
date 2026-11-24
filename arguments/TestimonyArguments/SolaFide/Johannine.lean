@@ -234,6 +234,8 @@ def thomistReading : Valuation Claim := fun a =>
   | .justificationByFaithAlone => False
   | .faithIsSufficient => False
   | .salvationThroughFaith => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **John's strand depends on reading believing as trust.** Grant Aquinas every
@@ -277,6 +279,8 @@ trust, and everything else holds. -/
 def concedingJohnReading : Valuation Claim := fun a =>
   match a with
   | .johannineBelievingIsTrust => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- That package can be held without contradiction, so
@@ -360,6 +364,8 @@ charity, and everything else holds. -/
 def lutherReading : Valuation Claim := fun a =>
   match a with
   | .johannineBelievingIsFormedByCharity => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- Luther's position can be held without contradiction, so

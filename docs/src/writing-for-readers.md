@@ -234,4 +234,4 @@ package, "tie" for two positions that defeat each other, "starting points" for
 a step's grounds, and "can be held without contradiction" for satisfiable. And
 it keeps a small set of words as terms of its own, each explained where it
 first appears on the page: *strand*, *defeats*, *forced*, *can be defended*,
-and the four ratings.
+and the ratings.

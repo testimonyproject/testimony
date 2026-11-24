@@ -276,9 +276,11 @@ of their faith". -/
 def zwingliLine : Line Claim :=
   { name := "Zwingli: grace avails nothing if salvation is due to works (1525)"
   , grounds :=
-      [p .galatians2_16, p .romans4_4_5, p .romans11_6, p .worksKeepsItsSenseInRomans4And11]
+      [ p .galatians2_16, p .romans4_4_5, p .romans11_6NoLongerOfWorks
+      , p .worksKeepsItsSenseInRomans4And11 ]
   , step :=
-      ⋀ [p .galatians2_16, p .romans4_4_5, p .romans11_6, p .worksKeepsItsSenseInRomans4And11] ➝
+      ⋀ [ p .galatians2_16, p .romans4_4_5, p .romans11_6NoLongerOfWorks
+        , p .worksKeepsItsSenseInRomans4And11 ] ➝
         p .salvationNotByWorks
   , delivers := p .salvationNotByWorks
   , inference := some zwingliStep }
@@ -1178,6 +1180,8 @@ def reformersReading : Valuation Claim := fun a =>
   | .jamesUsesDikaioAsPaul => False
   | .rev22_11BeJustifiedStill => False
   | .sir18_22BeJustifiedToDeath => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **The Reformers' positions stand together, and the Regensburg article with
@@ -1206,6 +1210,8 @@ def romeAndRegensburgReading : Valuation Claim := fun a =>
   | .jamesUsesDikaioAsPaul => False
   | .rev22_11BeJustifiedStill => False
   | .sir18_22BeJustifiedToDeath => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **The Catholic positions stand together, and the Regensburg article with

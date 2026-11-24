@@ -72,6 +72,12 @@ def statingSameSense : List α :=
   (all : List α).filter fun a => (means a).shape.lits.any fun l =>
     match l.fact with | .sameSense .. => true | _ => false
 
+/-- The atoms whose meaning states that a word of the Greek text is in a voice:
+where the definition of a parsing bears. -/
+def statingVoice : List α :=
+  (all : List α).filter fun a => (means a).shape.lits.any fun l =>
+    match l.fact with | .parses .. => true | _ => false
+
 /-- **Where a definition bears**: the atoms that hold its relation words as
 doctrine, and those that use them of a text or a voice; for the definition
 about a usage, the atoms that state a word's sense at a passage of a voice's
@@ -80,15 +86,26 @@ state or deny that a word keeps its sense. -/
 def bearing : Axiom → List α × List α
   | .inUsage => (statingPassageSenses, [])
   | .sameSenseBothWays => (statingSameSense, [])
+  | .oneVoice => (statingVoice, [])
   | ax => (holding ax.rels, framing ax.rels)
+
+/-- **What one definition contributes, of joins already found**: of the
+exclusions `ex` and entailments `en` found under the ontology, those that do not
+hold under it with that definition taken out. Each pair is asked again on its
+own, so the joins under the whole ontology are found once for every definition
+rather than once for each. -/
+def contributedFrom (ex en : List (α × α)) (O : Ontology) (i : Nat) :
+    List (α × α) × List (α × α) :=
+  let without := O.eraseIdx i
+  let shape (a : α) := Ontology.closed without (means a)
+  (ex.filter fun (a, b) => !Ontology.excludes without (shape a) (shape b),
+   en.filter fun (a, b) => !Ontology.entails without (shape a) (shape b))
 
 /-- **What one definition of an ontology contributes**: the exclusions, and the
 entailments, found under the ontology and not under it with that definition
 taken out. -/
 def contributed [DecidableEq α] (O : Ontology) (i : Nat) : List (α × α) × List (α × α) :=
-  let without := O.eraseIdx i
-  ((exclusionsUnder O).filter fun e => !(exclusionsUnder without).contains e,
-   (entailmentsUnder O).filter fun e => !(entailmentsUnder without).contains e)
+  contributedFrom (exclusionsUnder O) (entailmentsUnder O) O i
 
 end HasMeanings
 

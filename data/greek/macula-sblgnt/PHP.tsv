@@ -1,0 +1,1627 @@
+ref	role	class	text	lemma	morph	actor	actor_ref
+PHP 1:1!1		noun	Παῦλος	Παῦλος	N-NSM		
+PHP 1:1!2		conj	καὶ	καί	CONJ		
+PHP 1:1!3		noun	Τιμόθεος	Τιμόθεος	N-NSM		
+PHP 1:1!4		noun	δοῦλοι	δοῦλος	N-NPM		
+PHP 1:1!5		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 1:1!6		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHP 1:1!7		adj	πᾶσιν	πᾶς	A-DPM		
+PHP 1:1!8		det	τοῖς	ὁ	T-DPM		
+PHP 1:1!9		adj	ἁγίοις	ἅγιος	A-DPM		
+PHP 1:1!10		prep	ἐν	ἐν	PREP		
+PHP 1:1!11		noun	Χριστῷ	Χριστός	N-DSM		
+PHP 1:1!12		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+PHP 1:1!13		det	τοῖς	ὁ	T-DPM		
+PHP 1:1!14	vc	verb	οὖσιν	εἰμί	V-PAP-DPM		
+PHP 1:1!15		prep	ἐν	ἐν	PREP		
+PHP 1:1!16		noun	Φιλίπποις	Φίλιπποι	N-DPM		
+PHP 1:1!17		prep	σὺν	σύν	PREP		
+PHP 1:1!18		noun	ἐπισκόποις	ἐπίσκοπος	N-DPM		
+PHP 1:1!19		conj	καὶ	καί	CONJ		
+PHP 1:1!20		noun	διακόνοις	διάκονος	N-DPM		
+PHP 1:2!1		noun	χάρις	χάρις	N-NSF		
+PHP 1:2!2	io	pron	ὑμῖν	σύ	P-2DP		
+PHP 1:2!3		conj	καὶ	καί	CONJ		
+PHP 1:2!4		noun	εἰρήνη	εἰρήνη	N-NSF		
+PHP 1:2!5		prep	ἀπὸ	ἀπό	PREP		
+PHP 1:2!6		noun	θεοῦ	θεός	N-GSM		
+PHP 1:2!7		noun	πατρὸς	πατήρ	N-GSM		
+PHP 1:2!8		pron	ἡμῶν	ἐγώ	P-1GP		
+PHP 1:2!9		conj	καὶ	καί	CONJ		
+PHP 1:2!10		noun	κυρίου	κύριος	N-GSM		
+PHP 1:2!11		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHP 1:2!12		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 1:3!1	v	verb	Εὐχαριστῶ	εὐχαριστέω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 1:3!2		det	τῷ	ὁ	T-DSM		
+PHP 1:3!3		noun	θεῷ	θεός	N-DSM		
+PHP 1:3!4		pron	μου	ἐγώ	P-1GS		
+PHP 1:3!5		prep	ἐπὶ	ἐπί	PREP		
+PHP 1:3!6		adj	πάσῃ	πᾶς	A-DSF		
+PHP 1:3!7		det	τῇ	ὁ	T-DSF		
+PHP 1:3!8		noun	μνείᾳ	μνεία	N-DSF		
+PHP 1:3!9		pron	ὑμῶν	σύ	P-2GP		
+PHP 1:4!1	adv	adv	πάντοτε	πάντοτε	ADV		
+PHP 1:4!2		prep	ἐν	ἐν	PREP		
+PHP 1:4!3		adj	πάσῃ	πᾶς	A-DSF		
+PHP 1:4!4		noun	δεήσει	δέησις	N-DSF		
+PHP 1:4!5		pron	μου	ἐγώ	P-1GS		
+PHP 1:4!6		prep	ὑπὲρ	ὑπέρ	PREP		
+PHP 1:4!7		adj	πάντων	πᾶς	A-GPM		
+PHP 1:4!8		pron	ὑμῶν	σύ	P-2GP		
+PHP 1:4!9		prep	μετὰ	μετά	PREP		
+PHP 1:4!10		noun	χαρᾶς	χαρά	N-GSF		
+PHP 1:4!11		det	τὴν	ὁ	T-ASF		
+PHP 1:4!12		noun	δέησιν	δέησις	N-ASF		
+PHP 1:4!13	v	verb	ποιούμενος	ποιέω	V-PMP-NSM	Παῦλος	PHP 1:1!1
+PHP 1:5!1		prep	ἐπὶ	ἐπί	PREP		
+PHP 1:5!2		det	τῇ	ὁ	T-DSF		
+PHP 1:5!3		noun	κοινωνίᾳ	κοινωνία	N-DSF		
+PHP 1:5!4		pron	ὑμῶν	σύ	P-2GP		
+PHP 1:5!5		prep	εἰς	εἰς	PREP		
+PHP 1:5!6		det	τὸ	ὁ	T-ASN		
+PHP 1:5!7		noun	εὐαγγέλιον	εὐαγγέλιον	N-ASN		
+PHP 1:5!8		prep	ἀπὸ	ἀπό	PREP		
+PHP 1:5!9		det	τῆς	ὁ	T-GSF		
+PHP 1:5!10		adj	πρώτης	πρῶτος	A-GSF-S		
+PHP 1:5!11		noun	ἡμέρας	ἡμέρα	N-GSF		
+PHP 1:5!12		prep	ἄχρι	ἄχρι	ADV		
+PHP 1:5!13		det	τοῦ	ὁ	T-GSM		
+PHP 1:5!14		adv	νῦν	νῦν	ADV		
+PHP 1:6!1	v	verb	πεποιθὼς	πείθω	V-2RAP-NSM	Παῦλος	PHP 1:1!1
+PHP 1:6!2		adj	αὐτὸ	αὐτός	P-ASN		
+PHP 1:6!3		pron	τοῦτο	οὗτος	D-ASN		
+PHP 1:6!4		adv	ὅτι	ὅτι	CONJ		
+PHP 1:6!5		det	ὁ	ὁ	T-NSM		
+PHP 1:6!6	v	verb	ἐναρξάμενος	ἐνάρχομαι	V-ADP-NSM		
+PHP 1:6!7		prep	ἐν	ἐν	PREP		
+PHP 1:6!8		pron	ὑμῖν	σύ	P-2DP		
+PHP 1:6!9		noun	ἔργον	ἔργον	N-ASN		
+PHP 1:6!10		adj	ἀγαθὸν	ἀγαθός	A-ASN		
+PHP 1:6!11	v	verb	ἐπιτελέσει	ἐπιτελέω	V-FAI-3S		
+PHP 1:6!12		prep	ἄχρι	ἄχρι	ADV		
+PHP 1:6!13		noun	ἡμέρας	ἡμέρα	N-GSF		
+PHP 1:6!14		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 1:6!15		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHP 1:7!1		conj	καθώς	καθώς	ADV		
+PHP 1:7!2	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+PHP 1:7!3	p	adj	δίκαιον	δίκαιος	A-NSN		
+PHP 1:7!4	adv	pron	ἐμοὶ	ἐγώ	P-1DS		
+PHP 1:7!5	o	pron	τοῦτο	οὗτος	D-ASN		
+PHP 1:7!6	v	verb	φρονεῖν	φρονέω	V-PAN	Παῦλος	PHP 1:1!1
+PHP 1:7!7		prep	ὑπὲρ	ὑπέρ	PREP		
+PHP 1:7!8		adj	πάντων	πᾶς	A-GPM		
+PHP 1:7!9		pron	ὑμῶν	σύ	P-2GP		
+PHP 1:7!10		prep	διὰ	διά	PREP		
+PHP 1:7!11		det	τὸ	ὁ	T-ASN		
+PHP 1:7!12	v	verb	ἔχειν	ἔχω	V-PAN	ἐγώ	PHP 1:7!13
+PHP 1:7!13	s	pron	με	ἐγώ	P-1AS		
+PHP 1:7!14		prep	ἐν	ἐν	PREP		
+PHP 1:7!15		det	τῇ	ὁ	T-DSF		
+PHP 1:7!16		noun	καρδίᾳ	καρδία	N-DSF		
+PHP 1:7!17	o	pron	ὑμᾶς	σύ	P-2AP		
+PHP 1:7!18		prep	ἔν	ἐν	PREP		
+PHP 1:7!19		conj	τε	τέ	PRT		
+PHP 1:7!20		det	τοῖς	ὁ	T-DPM		
+PHP 1:7!21		noun	δεσμοῖς	δεσμός	N-DPM		
+PHP 1:7!22		pron	μου	ἐγώ	P-1GS		
+PHP 1:7!23		conj	καὶ	καί	CONJ		
+PHP 1:7!24		prep	ἐν	ἐν	PREP		
+PHP 1:7!25		det	τῇ	ὁ	T-DSF		
+PHP 1:7!26		noun	ἀπολογίᾳ	ἀπολογία	N-DSF		
+PHP 1:7!27		conj	καὶ	καί	CONJ		
+PHP 1:7!28		noun	βεβαιώσει	βεβαίωσις	N-DSF		
+PHP 1:7!29		det	τοῦ	ὁ	T-GSN		
+PHP 1:7!30		noun	εὐαγγελίου	εὐαγγέλιον	N-GSN		
+PHP 1:7!31		noun	συγκοινωνούς	συγκοινωνός	N-APM		
+PHP 1:7!32		pron	μου	ἐγώ	P-1GS		
+PHP 1:7!33		det	τῆς	ὁ	T-GSF		
+PHP 1:7!34		noun	χάριτος	χάρις	N-GSF		
+PHP 1:7!35		adj	πάντας	πᾶς	A-APM		
+PHP 1:7!36		pron	ὑμᾶς	σύ	P-2AP		
+PHP 1:7!37	vc	verb	ὄντας	εἰμί	V-PAP-APM		
+PHP 1:8!1		noun	μάρτυς	μάρτυς	N-NSM		
+PHP 1:8!2		conj	γάρ	γάρ	CONJ		
+PHP 1:8!3		pron	μου	ἐγώ	P-1GS		
+PHP 1:8!4		det	ὁ	ὁ	T-NSM		
+PHP 1:8!5		noun	θεός	θεός	N-NSM		
+PHP 1:8!6		adv	ὡς	ὡς	ADV		
+PHP 1:8!7	v	verb	ἐπιποθῶ	ἐπιποθέω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 1:8!8		adj	πάντας	πᾶς	A-APM		
+PHP 1:8!9		pron	ὑμᾶς	σύ	P-2AP		
+PHP 1:8!10		prep	ἐν	ἐν	PREP		
+PHP 1:8!11		noun	σπλάγχνοις	σπλάγχνον	N-DPN		
+PHP 1:8!12		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 1:8!13		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHP 1:9!1		conj	καὶ	καί	CONJ		
+PHP 1:9!2	o	pron	τοῦτο	οὗτος	D-ASN		
+PHP 1:9!3	v	verb	προσεύχομαι	προσεύχομαι	V-PNI-1S	Παῦλος	PHP 1:1!1
+PHP 1:9!4		adv	ἵνα	ἵνα	CONJ		
+PHP 1:9!5		det	ἡ	ὁ	T-NSF		
+PHP 1:9!6		noun	ἀγάπη	ἀγάπη	N-NSF		
+PHP 1:9!7		pron	ὑμῶν	σύ	P-2GP		
+PHP 1:9!8	adv	adv	ἔτι	ἔτι	ADV		
+PHP 1:9!9		adv	μᾶλλον	μᾶλλον	ADV		
+PHP 1:9!10		conj	καὶ	καί	CONJ		
+PHP 1:9!11		adv	μᾶλλον	μᾶλλον	ADV		
+PHP 1:9!12	v	verb	περισσεύῃ	περισσεύω	V-PAS-3S	ἀγάπη	PHP 1:9!6
+PHP 1:9!13		prep	ἐν	ἐν	PREP		
+PHP 1:9!14		noun	ἐπιγνώσει	ἐπίγνωσις	N-DSF		
+PHP 1:9!15		conj	καὶ	καί	CONJ		
+PHP 1:9!16		adj	πάσῃ	πᾶς	A-DSF		
+PHP 1:9!17		noun	αἰσθήσει	αἴσθησις	N-DSF		
+PHP 1:10!1		prep	εἰς	εἰς	PREP		
+PHP 1:10!2		det	τὸ	ὁ	T-ASN		
+PHP 1:10!3	v	verb	δοκιμάζειν	δοκιμάζω	V-PAN	σύ	PHP 1:10!4
+PHP 1:10!4	s	pron	ὑμᾶς	σύ	P-2AP		
+PHP 1:10!5		det	τὰ	ὁ	T-APN		
+PHP 1:10!6	v	verb	διαφέροντα	διαφέρω	V-PAP-APN		
+PHP 1:10!7		conj	ἵνα	ἵνα	CONJ		
+PHP 1:10!8	vc	verb	ἦτε	εἰμί	V-PAS-2P		
+PHP 1:10!9		adj	εἰλικρινεῖς	εἰλικρινής	A-NPM		
+PHP 1:10!10		conj	καὶ	καί	CONJ		
+PHP 1:10!11		adj	ἀπρόσκοποι	ἀπρόσκοπος	A-NPM		
+PHP 1:10!12		prep	εἰς	εἰς	PREP		
+PHP 1:10!13		noun	ἡμέραν	ἡμέρα	N-ASF		
+PHP 1:10!14		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 1:11!1	v	verb	πεπληρωμένοι	πληρόω	V-RPP-NPM		
+PHP 1:11!2		noun	καρπὸν	καρπός	N-ASM		
+PHP 1:11!3		noun	δικαιοσύνης	δικαιοσύνη	N-GSF		
+PHP 1:11!4		det	τὸν	ὁ	T-ASM		
+PHP 1:11!5		prep	διὰ	διά	PREP		
+PHP 1:11!6		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHP 1:11!7		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 1:11!8		prep	εἰς	εἰς	PREP		
+PHP 1:11!9		noun	δόξαν	δόξα	N-ASF		
+PHP 1:11!10		conj	καὶ	καί	CONJ		
+PHP 1:11!11		noun	ἔπαινον	ἔπαινος	N-ASM		
+PHP 1:11!12		noun	θεοῦ	θεός	N-GSM		
+PHP 1:12!1	v	verb	Γινώσκειν	γινώσκω	V-PAN	σύ	PHP 1:12!3
+PHP 1:12!2		conj	δὲ	δέ	CONJ		
+PHP 1:12!3	s	pron	ὑμᾶς	σύ	P-2AP		
+PHP 1:12!4	v	verb	βούλομαι	βούλομαι	V-PNI-1S	Παῦλος	PHP 1:1!1
+PHP 1:12!5	aux	noun	ἀδελφοί	ἀδελφός	N-VPM		
+PHP 1:12!6		conj	ὅτι	ὅτι	CONJ		
+PHP 1:12!7		det	τὰ	ὁ	T-NPN		
+PHP 1:12!8		prep	κατ	κατά	PREP		
+PHP 1:12!9		pron	ἐμὲ	ἐγώ	P-1AS		
+PHP 1:12!10	adv	adv	μᾶλλον	μᾶλλον	ADV		
+PHP 1:12!11		prep	εἰς	εἰς	PREP		
+PHP 1:12!12		noun	προκοπὴν	προκοπή	N-ASF		
+PHP 1:12!13		det	τοῦ	ὁ	T-GSN		
+PHP 1:12!14		noun	εὐαγγελίου	εὐαγγέλιον	N-GSN		
+PHP 1:12!15	v	verb	ἐλήλυθεν	ἔρχομαι	V-2RAI-3S	ὁ	PHP 1:12!7
+PHP 1:13!1		conj	ὥστε	ὥστε	CONJ		
+PHP 1:13!2		det	τοὺς	ὁ	T-APM		
+PHP 1:13!3		noun	δεσμούς	δεσμός	N-APM		
+PHP 1:13!4		pron	μου	ἐγώ	P-1GS		
+PHP 1:13!5	p	adj	φανεροὺς	φανερός	A-APM		
+PHP 1:13!6		prep	ἐν	ἐν	PREP		
+PHP 1:13!7		noun	Χριστῷ	Χριστός	N-DSM		
+PHP 1:13!8	vc	verb	γενέσθαι	γίνομαι	V-2ADN		
+PHP 1:13!9		prep	ἐν	ἐν	PREP		
+PHP 1:13!10		adj	ὅλῳ	ὅλος	A-DSN		
+PHP 1:13!11		det	τῷ	ὁ	T-DSN		
+PHP 1:13!12		noun	πραιτωρίῳ	πραιτώριον	N-DSN		
+PHP 1:13!13		conj	καὶ	καί	CONJ		
+PHP 1:13!14		det	τοῖς	ὁ	T-DPM		
+PHP 1:13!15		adj	λοιποῖς	λοιπός	A-DPM		
+PHP 1:13!16		adj	πᾶσιν	πᾶς	A-DPM		
+PHP 1:14!1		conj	καὶ	καί	CONJ		
+PHP 1:14!2		det	τοὺς	ὁ	T-APM		
+PHP 1:14!3		adj	πλείονας	πολύς	A-APM-C		
+PHP 1:14!4		det	τῶν	ὁ	T-GPM		
+PHP 1:14!5		noun	ἀδελφῶν	ἀδελφός	N-GPM		
+PHP 1:14!6		prep	ἐν	ἐν	PREP		
+PHP 1:14!7		noun	κυρίῳ	κύριος	N-DSM		
+PHP 1:14!8	v	verb	πεποιθότας	πείθω	V-2RAP-APM	πολύς	PHP 1:14!3
+PHP 1:14!9		det	τοῖς	ὁ	T-DPM		
+PHP 1:14!10		noun	δεσμοῖς	δεσμός	N-DPM		
+PHP 1:14!11		pron	μου	ἐγώ	P-1GS		
+PHP 1:14!12	adv	adv	περισσοτέρως	περισσοτέρως	ADV-C		
+PHP 1:14!13	v	verb	τολμᾶν	τολμάω	V-PAN	πολύς	PHP 1:14!3
+PHP 1:14!14	adv	adv	ἀφόβως	ἀφόβως	ADV		
+PHP 1:14!15		det	τὸν	ὁ	T-ASM		
+PHP 1:14!16		noun	λόγον	λόγος	N-ASM		
+PHP 1:14!17	v	verb	λαλεῖν	λαλέω	V-PAN		
+PHP 1:15!1	s	pron	Τινὲς	τις	X-NPM		
+PHP 1:15!2		conj	μὲν	μέν	PRT		
+PHP 1:15!3		adv	καὶ	καί	CONJ		
+PHP 1:15!4		prep	διὰ	διά	PREP		
+PHP 1:15!5		noun	φθόνον	φθόνος	N-ASM		
+PHP 1:15!6		conj	καὶ	καί	CONJ		
+PHP 1:15!7		noun	ἔριν	ἔρις	N-ASF		
+PHP 1:15!8	s	pron	τινὲς	τις	X-NPM		
+PHP 1:15!9		conj	δὲ	δέ	CONJ		
+PHP 1:15!10		adv	καὶ	καί	CONJ		
+PHP 1:15!11		prep	δι	διά	PREP		
+PHP 1:15!12		noun	εὐδοκίαν	εὐδοκία	N-ASF		
+PHP 1:15!13		det	τὸν	ὁ	T-ASM		
+PHP 1:15!14		noun	Χριστὸν	Χριστός	N-ASM		
+PHP 1:15!15	v	verb	κηρύσσουσιν	κηρύσσω	V-PAI-3P	τις	PHP 1:15!8
+PHP 1:16!1	s	det	οἱ	ὁ	T-NPM		
+PHP 1:16!2		conj	μὲν	μέν	PRT		
+PHP 1:16!3		prep	ἐξ	ἐκ	PREP		
+PHP 1:16!4		noun	ἀγάπης	ἀγάπη	N-GSF		
+PHP 1:16!5	v	verb	εἰδότες	οἶδα	V-RAP-NPM	τις	PHP 1:15!8
+PHP 1:16!6		conj	ὅτι	ὅτι	CONJ		
+PHP 1:16!7		prep	εἰς	εἰς	PREP		
+PHP 1:16!8		noun	ἀπολογίαν	ἀπολογία	N-ASF		
+PHP 1:16!9		det	τοῦ	ὁ	T-GSN		
+PHP 1:16!10		noun	εὐαγγελίου	εὐαγγέλιον	N-GSN		
+PHP 1:16!11	v	verb	κεῖμαι	κεῖμαι	V-PNI-1S	Παῦλος	PHP 1:1!1
+PHP 1:17!1	s	det	οἱ	ὁ	T-NPM		
+PHP 1:17!2		conj	δὲ	δέ	CONJ		
+PHP 1:17!3		prep	ἐξ	ἐκ	PREP		
+PHP 1:17!4		noun	ἐριθείας	ἐριθεία	N-GSF		
+PHP 1:17!5		det	τὸν	ὁ	T-ASM		
+PHP 1:17!6		noun	Χριστὸν	Χριστός	N-ASM		
+PHP 1:17!7	v	verb	καταγγέλλουσιν	καταγγέλλω	V-PAI-3P	ὁ	PHP 1:17!1
+PHP 1:17!8	adv	adv	οὐχ	οὐ	PRT-N		
+PHP 1:17!9	adv	adv	ἁγνῶς	ἁγνῶς	ADV		
+PHP 1:17!10	v	verb	οἰόμενοι	οἶμαι	V-PNP-NPM	τις	PHP 1:15!1
+PHP 1:17!11	o	noun	θλῖψιν	θλῖψις	N-ASF		
+PHP 1:17!12	v	verb	ἐγείρειν	ἐγείρω	V-PAN	τις	PHP 1:15!1
+PHP 1:17!13		det	τοῖς	ὁ	T-DPM		
+PHP 1:17!14		noun	δεσμοῖς	δεσμός	N-DPM		
+PHP 1:17!15		pron	μου	ἐγώ	P-1GS		
+PHP 1:18!1	s	pron	τί	τίς	I-NSN		
+PHP 1:18!2		conj	γάρ	γάρ	CONJ		
+PHP 1:18!3		conj	πλὴν	πλήν	ADV		
+PHP 1:18!4		conj	ὅτι	ὅτι	CONJ		
+PHP 1:18!5		adj	παντὶ	πᾶς	A-DSM		
+PHP 1:18!6		noun	τρόπῳ	τρόπος	N-DSM		
+PHP 1:18!7		conj	εἴτε	εἴτε	CONJ		
+PHP 1:18!8		noun	προφάσει	πρόφασις	N-DSF		
+PHP 1:18!9		conj	εἴτε	εἴτε	CONJ		
+PHP 1:18!10		noun	ἀληθείᾳ	ἀλήθεια	N-DSF		
+PHP 1:18!11	s	noun	Χριστὸς	Χριστός	N-NSM		
+PHP 1:18!12	v	verb	καταγγέλλεται	καταγγέλλω	V-PPI-3S		
+PHP 1:18!13		conj	καὶ	καί	CONJ		
+PHP 1:18!14		prep	ἐν	ἐν	PREP		
+PHP 1:18!15		pron	τούτῳ	οὗτος	D-DSN		
+PHP 1:18!16	v	verb	χαίρω	χαίρω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 1:18!17		conj	ἀλλὰ	ἀλλά	CONJ		
+PHP 1:18!18	adv	adv	καὶ	καί	CONJ		
+PHP 1:18!19	v	verb	χαρήσομαι	χαίρω	V-2FOI-1S		
+PHP 1:19!1	v	verb	οἶδα	οἶδα	V-RAI-1S	Παῦλος	PHP 1:1!1
+PHP 1:19!2		conj	γὰρ	γάρ	CONJ		
+PHP 1:19!3		conj	ὅτι	ὅτι	CONJ		
+PHP 1:19!4	s	pron	τοῦτό	οὗτος	D-NSN		
+PHP 1:19!5	adv	pron	μοι	ἐγώ	P-1DS		
+PHP 1:19!6	v	verb	ἀποβήσεται	ἀποβαίνω	V-FDI-3S	οὗτος	PHP 1:19!4
+PHP 1:19!7		prep	εἰς	εἰς	PREP		
+PHP 1:19!8		noun	σωτηρίαν	σωτηρία	N-ASF		
+PHP 1:19!9		prep	διὰ	διά	PREP		
+PHP 1:19!10		det	τῆς	ὁ	T-GSF		
+PHP 1:19!11		pron	ὑμῶν	σύ	P-2GP		
+PHP 1:19!12		noun	δεήσεως	δέησις	N-GSF		
+PHP 1:19!13		conj	καὶ	καί	CONJ		
+PHP 1:19!14		noun	ἐπιχορηγίας	ἐπιχορηγία	N-GSF		
+PHP 1:19!15		det	τοῦ	ὁ	T-GSN		
+PHP 1:19!16		noun	πνεύματος	πνεῦμα	N-GSN		
+PHP 1:19!17		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHP 1:19!18		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 1:20!1		prep	κατὰ	κατά	PREP		
+PHP 1:20!2		det	τὴν	ὁ	T-ASF		
+PHP 1:20!3		noun	ἀποκαραδοκίαν	ἀποκαραδοκία	N-ASF		
+PHP 1:20!4		conj	καὶ	καί	CONJ		
+PHP 1:20!5		noun	ἐλπίδα	ἐλπίς	N-ASF		
+PHP 1:20!6		pron	μου	ἐγώ	P-1GS		
+PHP 1:20!7		adv	ὅτι	ὅτι	CONJ		
+PHP 1:20!8		prep	ἐν	ἐν	PREP		
+PHP 1:20!9		adj	οὐδενὶ	οὐδείς	A-DSN-N		
+PHP 1:20!10	v	verb	αἰσχυνθήσομαι	αἰσχύνομαι	V-FPI-1S		
+PHP 1:20!11		conj	ἀλλ	ἀλλά	CONJ		
+PHP 1:20!12		prep	ἐν	ἐν	PREP		
+PHP 1:20!13		adj	πάσῃ	πᾶς	A-DSF		
+PHP 1:20!14		noun	παρρησίᾳ	παρρησία	N-DSF		
+PHP 1:20!15		conj	ὡς	ὡς	ADV		
+PHP 1:20!16		adv	πάντοτε	πάντοτε	ADV		
+PHP 1:20!17	adv	adv	καὶ	καί	CONJ		
+PHP 1:20!18	adv	adv	νῦν	νῦν	ADV		
+PHP 1:20!19	v	verb	μεγαλυνθήσεται	μεγαλύνω	V-FPI-3S		
+PHP 1:20!20	s	noun	Χριστὸς	Χριστός	N-NSM		
+PHP 1:20!21		prep	ἐν	ἐν	PREP		
+PHP 1:20!22		det	τῷ	ὁ	T-DSN		
+PHP 1:20!23		noun	σώματί	σῶμα	N-DSN		
+PHP 1:20!24		pron	μου	ἐγώ	P-1GS		
+PHP 1:20!25		conj	εἴτε	εἴτε	CONJ		
+PHP 1:20!26		prep	διὰ	διά	PREP		
+PHP 1:20!27		noun	ζωῆς	ζωή	N-GSF		
+PHP 1:20!28		conj	εἴτε	εἴτε	CONJ		
+PHP 1:20!29		prep	διὰ	διά	PREP		
+PHP 1:20!30		noun	θανάτου	θάνατος	N-GSM		
+PHP 1:21!1	adv	pron	ἐμοὶ	ἐγώ	P-1DS		
+PHP 1:21!2		conj	γὰρ	γάρ	CONJ		
+PHP 1:21!3		det	τὸ	ὁ	T-NSN		
+PHP 1:21!4	v	verb	ζῆν	ζάω	V-PAN		
+PHP 1:21!5	p	noun	Χριστὸς	Χριστός	N-NSM		
+PHP 1:21!6		conj	καὶ	καί	CONJ		
+PHP 1:21!7		det	τὸ	ὁ	T-NSN		
+PHP 1:21!8	v	verb	ἀποθανεῖν	ἀποθνῄσκω	V-2AAN		
+PHP 1:21!9	p	noun	κέρδος	κέρδος	N-NSN		
+PHP 1:22!1		conj	εἰ	εἰ	COND		
+PHP 1:22!2		conj	δὲ	δέ	CONJ		
+PHP 1:22!3		det	τὸ	ὁ	T-NSN		
+PHP 1:22!4	v	verb	ζῆν	ζάω	V-PAN		
+PHP 1:22!5		prep	ἐν	ἐν	PREP		
+PHP 1:22!6		noun	σαρκί	σάρξ	N-DSF		
+PHP 1:22!7	s	pron	τοῦτό	οὗτος	D-NSN		
+PHP 1:22!8	adv	pron	μοι	ἐγώ	P-1DS		
+PHP 1:22!9		noun	καρπὸς	καρπός	N-NSM		
+PHP 1:22!10		noun	ἔργου	ἔργον	N-GSN		
+PHP 1:22!11		conj	καὶ	καί	CONJ		
+PHP 1:22!12	o	pron	τί	τίς	I-ASN		
+PHP 1:22!13	v	verb	αἱρήσομαι	αἱρέομαι	V-FMI-1S	Παῦλος	PHP 1:1!1
+PHP 1:22!14	adv	adv	οὐ	οὐ	PRT-N		
+PHP 1:22!15	v	verb	γνωρίζω	γνωρίζω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 1:23!1	v	verb	συνέχομαι	συνέχω	V-PPI-1S		
+PHP 1:23!2		conj	δὲ	δέ	CONJ		
+PHP 1:23!3		prep	ἐκ	ἐκ	PREP		
+PHP 1:23!4		det	τῶν	ὁ	T-GPN		
+PHP 1:23!5		num	δύο	δύο	A-NUI		
+PHP 1:23!6		det	τὴν	ὁ	T-ASF		
+PHP 1:23!7		noun	ἐπιθυμίαν	ἐπιθυμία	N-ASF		
+PHP 1:23!8	v	verb	ἔχων	ἔχω	V-PAP-NSM	Παῦλος	PHP 1:1!1
+PHP 1:23!9		prep	εἰς	εἰς	PREP		
+PHP 1:23!10		det	τὸ	ὁ	T-ASN		
+PHP 1:23!11	v	verb	ἀναλῦσαι	ἀναλύω	V-AAN	Παῦλος	PHP 1:1!1
+PHP 1:23!12		conj	καὶ	καί	CONJ		
+PHP 1:23!13		prep	σὺν	σύν	PREP		
+PHP 1:23!14		noun	Χριστῷ	Χριστός	N-DSM		
+PHP 1:23!15	vc	verb	εἶναι	εἰμί	V-PAN		
+PHP 1:23!16	adv	adj	πολλῷ	πολύς	A-DSN		
+PHP 1:23!17		conj	γὰρ	γάρ	CONJ		
+PHP 1:23!18	adv	adv	μᾶλλον	μᾶλλον	ADV		
+PHP 1:23!19	p	adj	κρεῖσσον	κρείττων	A-NSN-C		
+PHP 1:24!1		det	τὸ	ὁ	T-NSN		
+PHP 1:24!2		conj	δὲ	δέ	CONJ		
+PHP 1:24!3	v	verb	ἐπιμένειν	ἐπιμένω	V-PAN	Παῦλος	PHP 1:1!1
+PHP 1:24!4		prep	ἐν	ἐν	PREP		
+PHP 1:24!5		det	τῇ	ὁ	T-DSF		
+PHP 1:24!6		noun	σαρκὶ	σάρξ	N-DSF		
+PHP 1:24!7	p	adj	ἀναγκαιότερον	ἀναγκαῖος	A-NSN-C		
+PHP 1:24!8		prep	δι	διά	PREP		
+PHP 1:24!9		pron	ὑμᾶς	σύ	P-2AP		
+PHP 1:25!1		conj	καὶ	καί	CONJ		
+PHP 1:25!2	o	pron	τοῦτο	οὗτος	D-ASN		
+PHP 1:25!3	v	verb	πεποιθὼς	πείθω	V-2RAP-NSM	Παῦλος	PHP 1:1!1
+PHP 1:25!4	v	verb	οἶδα	οἶδα	V-RAI-1S	Παῦλος	PHP 1:1!1
+PHP 1:25!5		conj	ὅτι	ὅτι	CONJ		
+PHP 1:25!6		verb	μενῶ	μένω	V-FAI-1S	Παῦλος	PHP 1:1!1
+PHP 1:25!7		conj	καὶ	καί	CONJ		
+PHP 1:25!8		verb	παραμενῶ	παραμένω	V-FAI-1S	Παῦλος	PHP 1:1!1
+PHP 1:25!9		adj	πᾶσιν	πᾶς	A-DPM		
+PHP 1:25!10		pron	ὑμῖν	σύ	P-2DP		
+PHP 1:25!11		prep	εἰς	εἰς	PREP		
+PHP 1:25!12		det	τὴν	ὁ	T-ASF		
+PHP 1:25!13		pron	ὑμῶν	σύ	P-2GP		
+PHP 1:25!14		noun	προκοπὴν	προκοπή	N-ASF		
+PHP 1:25!15		conj	καὶ	καί	CONJ		
+PHP 1:25!16		noun	χαρὰν	χαρά	N-ASF		
+PHP 1:25!17		det	τῆς	ὁ	T-GSF		
+PHP 1:25!18		noun	πίστεως	πίστις	N-GSF		
+PHP 1:26!1		conj	ἵνα	ἵνα	CONJ		
+PHP 1:26!2		det	τὸ	ὁ	T-NSN		
+PHP 1:26!3		noun	καύχημα	καύχημα	N-NSN		
+PHP 1:26!4		pron	ὑμῶν	σύ	P-2GP		
+PHP 1:26!5	v	verb	περισσεύῃ	περισσεύω	V-PAS-3S	καύχημα	PHP 1:26!3
+PHP 1:26!6		prep	ἐν	ἐν	PREP		
+PHP 1:26!7		noun	Χριστῷ	Χριστός	N-DSM		
+PHP 1:26!8		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+PHP 1:26!9		prep	ἐν	ἐν	PREP		
+PHP 1:26!10		pron	ἐμοὶ	ἐγώ	P-1DS		
+PHP 1:26!11		prep	διὰ	διά	PREP		
+PHP 1:26!12		det	τῆς	ὁ	T-GSF		
+PHP 1:26!13		adj	ἐμῆς	ἐμός	S-1SGSF		
+PHP 1:26!14		noun	παρουσίας	παρουσία	N-GSF		
+PHP 1:26!15		adv	πάλιν	πάλιν	ADV		
+PHP 1:26!16		prep	πρὸς	πρός	PREP		
+PHP 1:26!17		pron	ὑμᾶς	σύ	P-2AP		
+PHP 1:27!1	adv	adj	Μόνον	μόνος	ADV		
+PHP 1:27!2	adv	adv	ἀξίως	ἀξίως	ADV		
+PHP 1:27!3		det	τοῦ	ὁ	T-GSN		
+PHP 1:27!4		noun	εὐαγγελίου	εὐαγγέλιον	N-GSN		
+PHP 1:27!5		det	τοῦ	ὁ	T-GSM		
+PHP 1:27!6		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 1:27!7	v	verb	πολιτεύεσθε	πολιτεύομαι	V-PNM-2P	ἀδελφός	PHP 1:12!5
+PHP 1:27!8		conj	ἵνα	ἵνα	CONJ		
+PHP 1:27!9		conj	εἴτε	εἴτε	CONJ		
+PHP 1:27!10	v	verb	ἐλθὼν	ἔρχομαι	V-2AAP-NSM	Παῦλος	PHP 1:1!1
+PHP 1:27!11		conj	καὶ	καί	CONJ		
+PHP 1:27!12	v	verb	ἰδὼν	ὁράω	V-2AAP-NSM	Παῦλος	PHP 1:1!1
+PHP 1:27!13	o	pron	ὑμᾶς	σύ	P-2AP		
+PHP 1:27!14		conj	εἴτε	εἴτε	CONJ		
+PHP 1:27!15	v	verb	ἀπὼν	ἄπειμι	V-PAP-NSM	Παῦλος	PHP 1:1!1
+PHP 1:27!16	v	verb	ἀκούω	ἀκούω	V-PAS-1S	Παῦλος	PHP 1:1!1
+PHP 1:27!17		det	τὰ	ὁ	T-APN		
+PHP 1:27!18		prep	περὶ	περί	PREP		
+PHP 1:27!19		pron	ὑμῶν	σύ	P-2GP		
+PHP 1:27!20		adv	ὅτι	ὅτι	CONJ		
+PHP 1:27!21	v	verb	στήκετε	στήκω	V-PAI-2P	ἀδελφός	PHP 1:12!5
+PHP 1:27!22		prep	ἐν	ἐν	PREP		
+PHP 1:27!23		adj	ἑνὶ	εἷς	A-DSN		
+PHP 1:27!24		noun	πνεύματι	πνεῦμα	N-DSN		
+PHP 1:27!25		adj	μιᾷ	εἷς	A-DSF		
+PHP 1:27!26		noun	ψυχῇ	ψυχή	N-DSF		
+PHP 1:27!27	v	verb	συναθλοῦντες	συναθλέω	V-PAP-NPM	ἀδελφός	PHP 1:12!5
+PHP 1:27!28		det	τῇ	ὁ	T-DSF		
+PHP 1:27!29		noun	πίστει	πίστις	N-DSF		
+PHP 1:27!30		det	τοῦ	ὁ	T-GSN		
+PHP 1:27!31		noun	εὐαγγελίου	εὐαγγέλιον	N-GSN		
+PHP 1:28!1		conj	καὶ	καί	CONJ		
+PHP 1:28!2	adv	adv	μὴ	μή	PRT-N		
+PHP 1:28!3	v	verb	πτυρόμενοι	πτύρομαι	V-PPP-NPM		
+PHP 1:28!4		prep	ἐν	ἐν	PREP		
+PHP 1:28!5		adj	μηδενὶ	μηδείς	A-DSN-N		
+PHP 1:28!6		prep	ὑπὸ	ὑπό	PREP		
+PHP 1:28!7		det	τῶν	ὁ	T-GPM		
+PHP 1:28!8	v	verb	ἀντικειμένων	ἀντίκειμαι	V-PNP-GPM		
+PHP 1:28!9	s	pron	ἥτις	ὅστις	R-NSF		
+PHP 1:28!10	vc	verb	ἐστὶν	εἰμί	V-PAI-3S		
+PHP 1:28!11	adv	pron	αὐτοῖς	αὐτός	P-DPM		
+PHP 1:28!12		noun	ἔνδειξις	ἔνδειξις	N-NSF		
+PHP 1:28!13		noun	ἀπωλείας	ἀπώλεια	N-GSF		
+PHP 1:28!14		pron	ὑμῶν	σύ	P-2GP		
+PHP 1:28!15		conj	δὲ	δέ	CONJ		
+PHP 1:28!16		noun	σωτηρίας	σωτηρία	N-GSF		
+PHP 1:28!17		conj	καὶ	καί	CONJ		
+PHP 1:28!18	s	pron	τοῦτο	οὗτος	D-NSN		
+PHP 1:28!19		prep	ἀπὸ	ἀπό	PREP		
+PHP 1:28!20		noun	θεοῦ	θεός	N-GSM		
+PHP 1:29!1		conj	ὅτι	ὅτι	CONJ		
+PHP 1:29!2	io	pron	ὑμῖν	σύ	P-2DP		
+PHP 1:29!3	v	verb	ἐχαρίσθη	χαρίζομαι	V-API-3S		
+PHP 1:29!4		det	τὸ	ὁ	T-NSN		
+PHP 1:29!5		prep	ὑπὲρ	ὑπέρ	PREP		
+PHP 1:29!6		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 1:29!7		adv	οὐ	οὐ	PRT-N		
+PHP 1:29!8		adv	μόνον	μόνον	ADV		
+PHP 1:29!9		det	τὸ	ὁ	T-NSN		
+PHP 1:29!10		prep	εἰς	εἰς	PREP		
+PHP 1:29!11		pron	αὐτὸν	αὐτός	P-ASM		
+PHP 1:29!12	v	verb	πιστεύειν	πιστεύω	V-PAN	ἀδελφός	PHP 1:12!5
+PHP 1:29!13		conj	ἀλλὰ	ἀλλά	CONJ		
+PHP 1:29!14		adv	καὶ	καί	CONJ		
+PHP 1:29!15		det	τὸ	ὁ	T-NSN		
+PHP 1:29!16		prep	ὑπὲρ	ὑπέρ	PREP		
+PHP 1:29!17		pron	αὐτοῦ	αὐτός	P-GSM		
+PHP 1:29!18	v	verb	πάσχειν	πάσχω	V-PAN	ἀδελφός	PHP 1:12!5
+PHP 1:30!1		det	τὸν	ὁ	T-ASM		
+PHP 1:30!2		adj	αὐτὸν	αὐτός	P-ASM		
+PHP 1:30!3		noun	ἀγῶνα	ἀγών	N-ASM		
+PHP 1:30!4	v	verb	ἔχοντες	ἔχω	V-PAP-NPM	ἀδελφός	PHP 1:12!5
+PHP 1:30!5	o	pron	οἷον	οἷος	K-ASM		
+PHP 1:30!6	v	verb	εἴδετε	ὁράω	V-2AAI-2P	ἀδελφός	PHP 1:12!5
+PHP 1:30!7		prep	ἐν	ἐν	PREP		
+PHP 1:30!8		pron	ἐμοὶ	ἐγώ	P-1DS		
+PHP 1:30!9		conj	καὶ	καί	CONJ		
+PHP 1:30!10	adv	adv	νῦν	νῦν	ADV		
+PHP 1:30!11	v	verb	ἀκούετε	ἀκούω	V-PAI-2P	ἀδελφός	PHP 1:12!5
+PHP 1:30!12		prep	ἐν	ἐν	PREP		
+PHP 1:30!13		pron	ἐμοί	ἐγώ	P-1DS		
+PHP 2:1!1		conj	Εἴ	εἰ	COND		
+PHP 2:1!2		pron	τις	τις	X-NSF		
+PHP 2:1!3		conj	οὖν	οὖν	CONJ		
+PHP 2:1!4		noun	παράκλησις	παράκλησις	N-NSF		
+PHP 2:1!5		prep	ἐν	ἐν	PREP		
+PHP 2:1!6		noun	Χριστῷ	Χριστός	N-DSM		
+PHP 2:1!7		conj	εἴ	εἰ	COND		
+PHP 2:1!8		pron	τι	τις	X-NSN		
+PHP 2:1!9		noun	παραμύθιον	παραμύθιον	N-NSN		
+PHP 2:1!10		noun	ἀγάπης	ἀγάπη	N-GSF		
+PHP 2:1!11		conj	εἴ	εἰ	COND		
+PHP 2:1!12		pron	τις	τις	X-NSF		
+PHP 2:1!13		noun	κοινωνία	κοινωνία	N-NSF		
+PHP 2:1!14		noun	πνεύματος	πνεῦμα	N-GSN		
+PHP 2:1!15		conj	εἴ	εἰ	COND		
+PHP 2:1!16		pron	τις	τις	X-NSM		
+PHP 2:1!17		noun	σπλάγχνα	σπλάγχνον	N-NPN		
+PHP 2:1!18		conj	καὶ	καί	CONJ		
+PHP 2:1!19		noun	οἰκτιρμοί	οἰκτιρμός	N-NPM		
+PHP 2:2!1	v	verb	πληρώσατέ	πληρόω	V-AAM-2P	ἀδελφός	PHP 1:12!5
+PHP 2:2!2		pron	μου	ἐγώ	P-1GS		
+PHP 2:2!3		det	τὴν	ὁ	T-ASF		
+PHP 2:2!4		noun	χαρὰν	χαρά	N-ASF		
+PHP 2:2!5		conj	ἵνα	ἵνα	CONJ		
+PHP 2:2!6		det	τὸ	ὁ	T-ASN		
+PHP 2:2!7		adj	αὐτὸ	αὐτός	P-ASN		
+PHP 2:2!8	v	verb	φρονῆτε	φρονέω	V-PAS-2P	ἀδελφός	PHP 1:12!5
+PHP 2:2!9		det	τὴν	ὁ	T-ASF		
+PHP 2:2!10		adj	αὐτὴν	αὐτός	P-ASF		
+PHP 2:2!11		noun	ἀγάπην	ἀγάπη	N-ASF		
+PHP 2:2!12	v	verb	ἔχοντες	ἔχω	V-PAP-NPM	ἀδελφός	PHP 1:12!5
+PHP 2:2!13	adv	adj	σύμψυχοι	σύμψυχος	A-NPM		
+PHP 2:2!14		det	τὸ	ὁ	T-ASN		
+PHP 2:2!15		adj	ἓν	εἷς	A-ASN		
+PHP 2:2!16	v	verb	φρονοῦντες	φρονέω	V-PAP-NPM	ἀδελφός	PHP 1:12!5
+PHP 2:3!1	o	adj	μηδὲν	μηδείς	A-ASN-N		
+PHP 2:3!2		prep	κατ	κατά	PREP		
+PHP 2:3!3		noun	ἐριθείαν	ἐριθεία	N-ASF		
+PHP 2:3!4		conj	μηδὲ	μηδέ	CONJ-N		
+PHP 2:3!5		prep	κατὰ	κατά	PREP		
+PHP 2:3!6		noun	κενοδοξίαν	κενοδοξία	N-ASF		
+PHP 2:3!7		conj	ἀλλὰ	ἀλλά	CONJ		
+PHP 2:3!8		det	τῇ	ὁ	T-DSF		
+PHP 2:3!9		noun	ταπεινοφροσύνῃ	ταπεινοφροσύνη	N-DSF		
+PHP 2:3!10	o	pron	ἀλλήλους	ἀλλήλων	C-APM		
+PHP 2:3!11	v	verb	ἡγούμενοι	ἡγέομαι	V-PNP-NPM	ἀδελφός	PHP 1:12!5
+PHP 2:3!12	v	verb	ὑπερέχοντας	ὑπερέχω	V-PAP-APM		
+PHP 2:3!13	adv	pron	ἑαυτῶν	ἑαυτοῦ	F-2GPM		
+PHP 2:4!1		adv	μὴ	μή	PRT-N		
+PHP 2:4!2		det	τὰ	ὁ	T-APN		
+PHP 2:4!3		pron	ἑαυτῶν	ἑαυτοῦ	F-2GPM		
+PHP 2:4!4	adv	adj	ἕκαστοι	ἕκαστος	A-NPM		
+PHP 2:4!5	v	verb	σκοποῦντες	σκοπέω	V-PAP-NPM	ἀδελφός	PHP 1:12!5
+PHP 2:4!6		conj	ἀλλὰ	ἀλλά	CONJ		
+PHP 2:4!7		adv	καὶ	καί	CONJ		
+PHP 2:4!8		det	τὰ	ὁ	T-APN		
+PHP 2:4!9		adj	ἑτέρων	ἕτερος	A-GPM		
+PHP 2:4!10	adv	adj	ἕκαστοι	ἕκαστος	A-NPM		
+PHP 2:5!1	o	pron	τοῦτο	οὗτος	D-ASN		
+PHP 2:5!2	v	verb	φρονεῖτε	φρονέω	V-PAM-2P	ἀδελφός	PHP 1:12!5
+PHP 2:5!3		prep	ἐν	ἐν	PREP		
+PHP 2:5!4		pron	ὑμῖν	σύ	P-2DP		
+PHP 2:5!5	s	pron	ὃ	ὅς	R-NSN		
+PHP 2:5!6	adv	adv	καὶ	καί	CONJ		
+PHP 2:5!7		prep	ἐν	ἐν	PREP		
+PHP 2:5!8		noun	Χριστῷ	Χριστός	N-DSM		
+PHP 2:5!9		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+PHP 2:6!1	s	pron	ὃς	ὅς	R-NSM		
+PHP 2:6!2		prep	ἐν	ἐν	PREP		
+PHP 2:6!3		noun	μορφῇ	μορφή	N-DSF		
+PHP 2:6!4		noun	θεοῦ	θεός	N-GSM		
+PHP 2:6!5	v	verb	ὑπάρχων	ὑπάρχω	V-PAP-NSM	Χριστός	PHP 2:5!8
+PHP 2:6!6	adv	adv	οὐχ	οὐ	PRT-N		
+PHP 2:6!7	o2	noun	ἁρπαγμὸν	ἁρπαγμός	N-ASM		
+PHP 2:6!8	v	verb	ἡγήσατο	ἡγέομαι	V-ADI-3S	ὅς	PHP 2:6!1
+PHP 2:6!9		det	τὸ	ὁ	T-ASN		
+PHP 2:6!10	vc	verb	εἶναι	εἰμί	V-PAN		
+PHP 2:6!11	p	adj	ἴσα	ἴσος	A-APN		
+PHP 2:6!12	adv	noun	θεῷ	θεός	N-DSM		
+PHP 2:7!1		conj	ἀλλὰ	ἀλλά	CONJ		
+PHP 2:7!2	o	pron	ἑαυτὸν	ἑαυτοῦ	F-3ASM		
+PHP 2:7!3	v	verb	ἐκένωσεν	κενόω	V-AAI-3S	Χριστός	PHP 2:5!8
+PHP 2:7!4		noun	μορφὴν	μορφή	N-ASF		
+PHP 2:7!5		noun	δούλου	δοῦλος	N-GSM		
+PHP 2:7!6	v	verb	λαβών	λαμβάνω	V-2AAP-NSM	Χριστός	PHP 2:5!8
+PHP 2:7!7		prep	ἐν	ἐν	PREP		
+PHP 2:7!8		noun	ὁμοιώματι	ὁμοίωμα	N-DSN		
+PHP 2:7!9		noun	ἀνθρώπων	ἄνθρωπος	N-GPM		
+PHP 2:7!10	vc	verb	γενόμενος	γίνομαι	V-2ADP-NSM		
+PHP 2:7!11		conj	καὶ	καί	CONJ		
+PHP 2:7!12	adv	noun	σχήματι	σχῆμα	N-DSN		
+PHP 2:7!13	v	verb	εὑρεθεὶς	εὑρίσκω	V-APP-NSM		
+PHP 2:7!14		conj	ὡς	ὡς	ADV		
+PHP 2:7!15	s	noun	ἄνθρωπος	ἄνθρωπος	N-NSM		
+PHP 2:8!1	v	verb	ἐταπείνωσεν	ταπεινόω	V-AAI-3S	Χριστός	PHP 2:5!8
+PHP 2:8!2	o	pron	ἑαυτὸν	ἑαυτοῦ	F-3ASM		
+PHP 2:8!3	vc	verb	γενόμενος	γίνομαι	V-2ADP-NSM		
+PHP 2:8!4	p	adj	ὑπήκοος	ὑπήκοος	A-NSM		
+PHP 2:8!5		prep	μέχρι	μέχρι(ς)	ADV		
+PHP 2:8!6		noun	θανάτου	θάνατος	N-GSM		
+PHP 2:8!7		noun	θανάτου	θάνατος	N-GSM		
+PHP 2:8!8		conj	δὲ	δέ	CONJ		
+PHP 2:8!9		noun	σταυροῦ	σταυρός	N-GSM		
+PHP 2:9!1		conj	διὸ	διό	CONJ		
+PHP 2:9!2		adv	καὶ	καί	CONJ		
+PHP 2:9!3		det	ὁ	ὁ	T-NSM		
+PHP 2:9!4		noun	θεὸς	θεός	N-NSM		
+PHP 2:9!5	o	pron	αὐτὸν	αὐτός	P-ASM		
+PHP 2:9!6	v	verb	ὑπερύψωσεν	ὑπερυψόω	V-AAI-3S	θεός	PHP 2:9!4
+PHP 2:9!7		conj	καὶ	καί	CONJ		
+PHP 2:9!8	v	verb	ἐχαρίσατο	χαρίζομαι	V-ADI-3S	θεός	PHP 2:9!4
+PHP 2:9!9	io	pron	αὐτῷ	αὐτός	P-DSM		
+PHP 2:9!10		det	τὸ	ὁ	T-ASN		
+PHP 2:9!11		noun	ὄνομα	ὄνομα	N-ASN		
+PHP 2:9!12		det	τὸ	ὁ	T-ASN		
+PHP 2:9!13		prep	ὑπὲρ	ὑπέρ	PREP		
+PHP 2:9!14		adj	πᾶν	πᾶς	A-ASN		
+PHP 2:9!15		noun	ὄνομα	ὄνομα	N-ASN		
+PHP 2:10!1		conj	ἵνα	ἵνα	CONJ		
+PHP 2:10!2		prep	ἐν	ἐν	PREP		
+PHP 2:10!3		det	τῷ	ὁ	T-DSN		
+PHP 2:10!4		noun	ὀνόματι	ὄνομα	N-DSN		
+PHP 2:10!5		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHP 2:10!6		adj	πᾶν	πᾶς	A-NSN		
+PHP 2:10!7		noun	γόνυ	γόνυ	N-NSN		
+PHP 2:10!8	v	verb	κάμψῃ	κάμπτω	V-AAS-3S	γόνυ	PHP 2:10!7
+PHP 2:10!9		adj	ἐπουρανίων	ἐπουράνιος	A-GPM		
+PHP 2:10!10		conj	καὶ	καί	CONJ		
+PHP 2:10!11		adj	ἐπιγείων	ἐπίγειος	A-GPN		
+PHP 2:10!12		conj	καὶ	καί	CONJ		
+PHP 2:10!13		adj	καταχθονίων	καταχθόνιος	A-GPM		
+PHP 2:11!1		conj	καὶ	καί	CONJ		
+PHP 2:11!2		adj	πᾶσα	πᾶς	A-NSF		
+PHP 2:11!3		noun	γλῶσσα	γλῶσσα	N-NSF		
+PHP 2:11!4	v	verb	ἐξομολογήσηται	ἐξομολογέω	V-AMS-3S	γλῶσσα	PHP 2:11!3
+PHP 2:11!5		conj	ὅτι	ὅτι	CONJ		
+PHP 2:11!6	p	noun	κύριος	κύριος	N-NSM		
+PHP 2:11!7		noun	Ἰησοῦς	Ἰησοῦς	N-NSM		
+PHP 2:11!8		noun	Χριστὸς	Χριστός	N-NSM		
+PHP 2:11!9		prep	εἰς	εἰς	PREP		
+PHP 2:11!10		noun	δόξαν	δόξα	N-ASF		
+PHP 2:11!11		noun	θεοῦ	θεός	N-GSM		
+PHP 2:11!12		noun	πατρός	πατήρ	N-GSM		
+PHP 2:12!1		conj	Ὥστε	ὥστε	CONJ		
+PHP 2:12!2		adj	ἀγαπητοί	ἀγαπητός	A-VPM		
+PHP 2:12!3		pron	μου	ἐγώ	P-1GS		
+PHP 2:12!4		conj	καθὼς	καθώς	ADV		
+PHP 2:12!5	adv	adv	πάντοτε	πάντοτε	ADV		
+PHP 2:12!6	v	verb	ὑπηκούσατε	ὑπακούω	V-AAI-2P	ἀγαπητός	PHP 2:12!2
+PHP 2:12!7		adv	μὴ	μή	PRT-N		
+PHP 2:12!8		conj	ὡς	ὡς	ADV		
+PHP 2:12!9		prep	ἐν	ἐν	PREP		
+PHP 2:12!10		det	τῇ	ὁ	T-DSF		
+PHP 2:12!11		noun	παρουσίᾳ	παρουσία	N-DSF		
+PHP 2:12!12		pron	μου	ἐγώ	P-1GS		
+PHP 2:12!13	adv	adj	μόνον	μόνος	ADV		
+PHP 2:12!14		conj	ἀλλὰ	ἀλλά	CONJ		
+PHP 2:12!15	adv	adv	νῦν	νῦν	ADV		
+PHP 2:12!16		adj	πολλῷ	πολύς	A-DSN		
+PHP 2:12!17		adv	μᾶλλον	μᾶλλον	ADV		
+PHP 2:12!18		prep	ἐν	ἐν	PREP		
+PHP 2:12!19		det	τῇ	ὁ	T-DSF		
+PHP 2:12!20		noun	ἀπουσίᾳ	ἀπουσία	N-DSF		
+PHP 2:12!21		pron	μου	ἐγώ	P-1GS		
+PHP 2:12!22		prep	μετὰ	μετά	PREP		
+PHP 2:12!23		noun	φόβου	φόβος	N-GSM		
+PHP 2:12!24		conj	καὶ	καί	CONJ		
+PHP 2:12!25		noun	τρόμου	τρόμος	N-GSM		
+PHP 2:12!26		det	τὴν	ὁ	T-ASF		
+PHP 2:12!27		pron	ἑαυτῶν	ἑαυτοῦ	F-2GPM		
+PHP 2:12!28		noun	σωτηρίαν	σωτηρία	N-ASF		
+PHP 2:12!29	v	verb	κατεργάζεσθε	κατεργάζομαι	V-PNM-2P	ἀγαπητός	PHP 2:12!2
+PHP 2:13!1	s	noun	θεὸς	θεός	N-NSM		
+PHP 2:13!2		conj	γάρ	γάρ	CONJ		
+PHP 2:13!3	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+PHP 2:13!4		det	ὁ	ὁ	T-NSM		
+PHP 2:13!5	v	verb	ἐνεργῶν	ἐνεργέω	V-PAP-NSM		
+PHP 2:13!6		prep	ἐν	ἐν	PREP		
+PHP 2:13!7		pron	ὑμῖν	σύ	P-2DP		
+PHP 2:13!8		conj	καὶ	καί	CONJ		
+PHP 2:13!9		det	τὸ	ὁ	T-ASN		
+PHP 2:13!10	v	verb	θέλειν	θέλω	V-PAN	ἀγαπητός	PHP 2:12!2
+PHP 2:13!11		conj	καὶ	καί	CONJ		
+PHP 2:13!12		det	τὸ	ὁ	T-ASN		
+PHP 2:13!13	v	verb	ἐνεργεῖν	ἐνεργέω	V-PAN	ἀγαπητός	PHP 2:12!2
+PHP 2:13!14		prep	ὑπὲρ	ὑπέρ	PREP		
+PHP 2:13!15		det	τῆς	ὁ	T-GSF		
+PHP 2:13!16		noun	εὐδοκίας	εὐδοκία	N-GSF		
+PHP 2:14!1	o	adj	Πάντα	πᾶς	A-APN		
+PHP 2:14!2	v	verb	ποιεῖτε	ποιέω	V-PAM-2P	ἀγαπητός	PHP 2:12!2
+PHP 2:14!3		prep	χωρὶς	χωρίς	ADV		
+PHP 2:14!4		noun	γογγυσμῶν	γογγυσμός	N-GPM		
+PHP 2:14!5		conj	καὶ	καί	CONJ		
+PHP 2:14!6		noun	διαλογισμῶν	διαλογισμός	N-GPM		
+PHP 2:15!1		conj	ἵνα	ἵνα	CONJ		
+PHP 2:15!2	vc	verb	γένησθε	γίνομαι	V-2ADS-2P		
+PHP 2:15!3		adj	ἄμεμπτοι	ἄμεμπτος	A-NPM		
+PHP 2:15!4		conj	καὶ	καί	CONJ		
+PHP 2:15!5		adj	ἀκέραιοι	ἀκέραιος	A-NPM		
+PHP 2:15!6		noun	τέκνα	τέκνον	N-NPN		
+PHP 2:15!7		noun	θεοῦ	θεός	N-GSM		
+PHP 2:15!8		adj	ἄμωμα	ἄμωμος	A-NPN		
+PHP 2:15!9		adj	μέσον	μέσος	A-ASN		
+PHP 2:15!10		noun	γενεᾶς	γενεά	N-GSF		
+PHP 2:15!11		adj	σκολιᾶς	σκολιός	A-GSF		
+PHP 2:15!12		conj	καὶ	καί	CONJ		
+PHP 2:15!13	v	verb	διεστραμμένης	διαστρέφω	V-RPP-GSF		
+PHP 2:15!14		prep	ἐν	ἐν	PREP		
+PHP 2:15!15		pron	οἷς	ὅς	R-DPM		
+PHP 2:15!16	v	verb	φαίνεσθε	φαίνω	V-PPI-2P	ἀγαπητός	PHP 2:12!2
+PHP 2:15!17		conj	ὡς	ὡς	ADV		
+PHP 2:15!18	s	noun	φωστῆρες	φωστήρ	N-NPM		
+PHP 2:15!19		prep	ἐν	ἐν	PREP		
+PHP 2:15!20		noun	κόσμῳ	κόσμος	N-DSM		
+PHP 2:16!1		noun	λόγον	λόγος	N-ASM		
+PHP 2:16!2		noun	ζωῆς	ζωή	N-GSF		
+PHP 2:16!3	v	verb	ἐπέχοντες	ἐπέχω	V-PAP-NPM	ἀγαπητός	PHP 2:12!2
+PHP 2:16!4		prep	εἰς	εἰς	PREP		
+PHP 2:16!5		noun	καύχημα	καύχημα	N-ASN		
+PHP 2:16!6		pron	ἐμοὶ	ἐγώ	P-1DS		
+PHP 2:16!7		prep	εἰς	εἰς	PREP		
+PHP 2:16!8		noun	ἡμέραν	ἡμέρα	N-ASF		
+PHP 2:16!9		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 2:16!10		adv	ὅτι	ὅτι	CONJ		
+PHP 2:16!11		adv	οὐκ	οὐ	PRT-N		
+PHP 2:16!12		prep	εἰς	εἰς	PREP		
+PHP 2:16!13		adj	κενὸν	κενός	A-ASN		
+PHP 2:16!14	v	verb	ἔδραμον	τρέχω	V-2AAI-1S	Παῦλος	PHP 1:1!1
+PHP 2:16!15		conj	οὐδὲ	οὐδέ	CONJ-N		
+PHP 2:16!16		prep	εἰς	εἰς	PREP		
+PHP 2:16!17		adj	κενὸν	κενός	A-ASN		
+PHP 2:16!18	v	verb	ἐκοπίασα	κοπιάω	V-AAI-1S	Παῦλος	PHP 1:1!1
+PHP 2:17!1		conj	ἀλλὰ	ἀλλά	CONJ		
+PHP 2:17!2		conj	εἰ	εἰ	COND		
+PHP 2:17!3	adv	adv	καὶ	καί	CONJ		
+PHP 2:17!4	v	verb	σπένδομαι	σπένδομαι	V-PPI-1S		
+PHP 2:17!5		prep	ἐπὶ	ἐπί	PREP		
+PHP 2:17!6		det	τῇ	ὁ	T-DSF		
+PHP 2:17!7		noun	θυσίᾳ	θυσία	N-DSF		
+PHP 2:17!8		conj	καὶ	καί	CONJ		
+PHP 2:17!9		noun	λειτουργίᾳ	λειτουργία	N-DSF		
+PHP 2:17!10		det	τῆς	ὁ	T-GSF		
+PHP 2:17!11		noun	πίστεως	πίστις	N-GSF		
+PHP 2:17!12		pron	ὑμῶν	σύ	P-2GP		
+PHP 2:17!13	v	verb	χαίρω	χαίρω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 2:17!14		conj	καὶ	καί	CONJ		
+PHP 2:17!15	v	verb	συγχαίρω	συγχαίρω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 2:17!16		adj	πᾶσιν	πᾶς	A-DPM		
+PHP 2:17!17		pron	ὑμῖν	σύ	P-2DP		
+PHP 2:18!1		det	τὸ	ὁ	T-ASN		
+PHP 2:18!2		conj	δὲ	δέ	CONJ		
+PHP 2:18!3		adj	αὐτὸ	αὐτός	P-ASN		
+PHP 2:18!4		adv	καὶ	καί	CONJ		
+PHP 2:18!5		pron	ὑμεῖς	σύ	P-2NP		
+PHP 2:18!6	v	verb	χαίρετε	χαίρω	V-PAM-2P	σύ	PHP 2:18!5
+PHP 2:18!7		conj	καὶ	καί	CONJ		
+PHP 2:18!8	v	verb	συγχαίρετέ	συγχαίρω	V-PAM-2P	ἀγαπητός	PHP 2:12!2
+PHP 2:18!9	adv	pron	μοι	ἐγώ	P-1DS		
+PHP 2:19!1	v	verb	Ἐλπίζω	ἐλπίζω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 2:19!2		conj	δὲ	δέ	CONJ		
+PHP 2:19!3		prep	ἐν	ἐν	PREP		
+PHP 2:19!4		noun	κυρίῳ	κύριος	N-DSM		
+PHP 2:19!5		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+PHP 2:19!6	o	noun	Τιμόθεον	Τιμόθεος	N-ASM		
+PHP 2:19!7	adv	adv	ταχέως	ταχέως	ADV		
+PHP 2:19!8	v	verb	πέμψαι	πέμπω	V-AAN	Παῦλος	PHP 1:1!1
+PHP 2:19!9	io	pron	ὑμῖν	σύ	P-2DP		
+PHP 2:19!10		conj	ἵνα	ἵνα	CONJ		
+PHP 2:19!11	s	pron	κἀγὼ	κἀγώ	P-1NS-K		
+PHP 2:19!12	v	verb	εὐψυχῶ	εὐψυχέω	V-PAS-1S	κἀγώ	PHP 2:19!11
+PHP 2:19!13	v	verb	γνοὺς	γινώσκω	V-2AAP-NSM	Παῦλος	PHP 1:1!1
+PHP 2:19!14		det	τὰ	ὁ	T-APN		
+PHP 2:19!15		prep	περὶ	περί	PREP		
+PHP 2:19!16		pron	ὑμῶν	σύ	P-2GP		
+PHP 2:20!1		adj	οὐδένα	οὐδείς	A-ASM-N		
+PHP 2:20!2		conj	γὰρ	γάρ	CONJ		
+PHP 2:20!3	v	verb	ἔχω	ἔχω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 2:20!4		adj	ἰσόψυχον	ἰσόψυχος	A-ASM		
+PHP 2:20!5	s	pron	ὅστις	ὅστις	R-NSM		
+PHP 2:20!6	adv	adv	γνησίως	γνησίως	ADV		
+PHP 2:20!7		det	τὰ	ὁ	T-APN		
+PHP 2:20!8		prep	περὶ	περί	PREP		
+PHP 2:20!9		pron	ὑμῶν	σύ	P-2GP		
+PHP 2:20!10	v	verb	μεριμνήσει	μεριμνάω	V-FAI-3S	ὅστις	PHP 2:20!5
+PHP 2:21!1		det	οἱ	ὁ	T-NPM		
+PHP 2:21!2		adj	πάντες	πᾶς	A-NPM		
+PHP 2:21!3		conj	γὰρ	γάρ	CONJ		
+PHP 2:21!4		det	τὰ	ὁ	T-APN		
+PHP 2:21!5		pron	ἑαυτῶν	ἑαυτοῦ	F-3GPM		
+PHP 2:21!6	v	verb	ζητοῦσιν	ζητέω	V-PAI-3P	πᾶς	PHP 2:21!2
+PHP 2:21!7	adv	adv	οὐ	οὐ	PRT-N		
+PHP 2:21!8		det	τὰ	ὁ	T-APN		
+PHP 2:21!9		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHP 2:21!10		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 2:22!1		det	τὴν	ὁ	T-ASF		
+PHP 2:22!2		conj	δὲ	δέ	CONJ		
+PHP 2:22!3		noun	δοκιμὴν	δοκιμή	N-ASF		
+PHP 2:22!4		pron	αὐτοῦ	αὐτός	P-GSM		
+PHP 2:22!5	v	verb	γινώσκετε	γινώσκω	V-PAI-2P	ἀγαπητός	PHP 2:12!2
+PHP 2:22!6		adv	ὅτι	ὅτι	CONJ		
+PHP 2:22!7		conj	ὡς	ὡς	ADV		
+PHP 2:22!8	adv	noun	πατρὶ	πατήρ	N-DSM		
+PHP 2:22!9	s	noun	τέκνον	τέκνον	N-NSN		
+PHP 2:22!10		prep	σὺν	σύν	PREP		
+PHP 2:22!11		pron	ἐμοὶ	ἐγώ	P-1DS		
+PHP 2:22!12	v	verb	ἐδούλευσεν	δουλεύω	V-AAI-3S	Τιμόθεος	PHP 2:19!6
+PHP 2:22!13		prep	εἰς	εἰς	PREP		
+PHP 2:22!14		det	τὸ	ὁ	T-ASN		
+PHP 2:22!15		noun	εὐαγγέλιον	εὐαγγέλιον	N-ASN		
+PHP 2:23!1	o	pron	τοῦτον	οὗτος	D-ASM		
+PHP 2:23!2		conj	μὲν	μέν	PRT		
+PHP 2:23!3		conj	οὖν	οὖν	CONJ		
+PHP 2:23!4	v	verb	ἐλπίζω	ἐλπίζω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 2:23!5	v	verb	πέμψαι	πέμπω	V-AAN	Παῦλος	PHP 1:1!1
+PHP 2:23!6		conj	ὡς	ὡς	ADV		
+PHP 2:23!7		ptcl	ἂν	ἄν	PRT		
+PHP 2:23!8	v	verb	ἀφίδω	ἀφοράω	V-2AAS-1S	Παῦλος	PHP 1:1!1
+PHP 2:23!9		det	τὰ	ὁ	T-APN		
+PHP 2:23!10		prep	περὶ	περί	PREP		
+PHP 2:23!11		pron	ἐμὲ	ἐγώ	P-1AS		
+PHP 2:23!12	adv	adv	ἐξαυτῆς	ἐξαυτῆς	ADV		
+PHP 2:24!1	v	verb	πέποιθα	πείθω	V-2RAI-1S	Παῦλος	PHP 1:1!1
+PHP 2:24!2		conj	δὲ	δέ	CONJ		
+PHP 2:24!3		prep	ἐν	ἐν	PREP		
+PHP 2:24!4		noun	κυρίῳ	κύριος	N-DSM		
+PHP 2:24!5		conj	ὅτι	ὅτι	CONJ		
+PHP 2:24!6		adv	καὶ	καί	CONJ		
+PHP 2:24!7		pron	αὐτὸς	αὐτός	P-NSM		
+PHP 2:24!8	adv	adv	ταχέως	ταχέως	ADV		
+PHP 2:24!9	v	verb	ἐλεύσομαι	ἔρχομαι	V-FDI-1S	αὐτός	PHP 2:24!7
+PHP 2:25!1	o2	adj	Ἀναγκαῖον	ἀναγκαῖος	A-ASN		
+PHP 2:25!2		conj	δὲ	δέ	CONJ		
+PHP 2:25!3	v	verb	ἡγησάμην	ἡγέομαι	V-ADI-1S	Παῦλος	PHP 1:1!1
+PHP 2:25!4		noun	Ἐπαφρόδιτον	Ἐπαφρόδιτος	N-ASM		
+PHP 2:25!5		det	τὸν	ὁ	T-ASM		
+PHP 2:25!6		noun	ἀδελφὸν	ἀδελφός	N-ASM		
+PHP 2:25!7		conj	καὶ	καί	CONJ		
+PHP 2:25!8		adj	συνεργὸν	συνεργός	A-ASM		
+PHP 2:25!9		conj	καὶ	καί	CONJ		
+PHP 2:25!10		noun	συστρατιώτην	συστρατιώτης	N-ASM		
+PHP 2:25!11		pron	μου	ἐγώ	P-1GS		
+PHP 2:25!12		pron	ὑμῶν	σύ	P-2GP		
+PHP 2:25!13		conj	δὲ	δέ	CONJ		
+PHP 2:25!14		noun	ἀπόστολον	ἀπόστολος	N-ASM		
+PHP 2:25!15		conj	καὶ	καί	CONJ		
+PHP 2:25!16		noun	λειτουργὸν	λειτουργός	N-ASM		
+PHP 2:25!17		det	τῆς	ὁ	T-GSF		
+PHP 2:25!18		noun	χρείας	χρεία	N-GSF		
+PHP 2:25!19		pron	μου	ἐγώ	P-1GS		
+PHP 2:25!20	v	verb	πέμψαι	πέμπω	V-AAN	Παῦλος	PHP 1:1!1
+PHP 2:25!21		prep	πρὸς	πρός	PREP		
+PHP 2:25!22		pron	ὑμᾶς	σύ	P-2AP		
+PHP 2:26!1		conj	ἐπειδὴ	ἐπειδή	CONJ		
+PHP 2:26!2		verb	ἐπιποθῶν	ἐπιποθέω	V-PAP-NSM	Ἐπαφρόδιτος	PHP 2:25!4
+PHP 2:26!3		verb	ἦν	εἰμί	V-IAI-3S		
+PHP 2:26!4		adj	πάντας	πᾶς	A-APM		
+PHP 2:26!5		pron	ὑμᾶς	σύ	P-2AP		
+PHP 2:26!6		conj	καὶ	καί	CONJ		
+PHP 2:26!7	v	verb	ἀδημονῶν	ἀδημονέω	V-PAP-NSM	Ἐπαφρόδιτος	PHP 2:25!4
+PHP 2:26!8		conj	διότι	διότι	CONJ		
+PHP 2:26!9	v	verb	ἠκούσατε	ἀκούω	V-AAI-2P	ἀγαπητός	PHP 2:12!2
+PHP 2:26!10		conj	ὅτι	ὅτι	CONJ		
+PHP 2:26!11	v	verb	ἠσθένησεν	ἀσθενέω	V-AAI-3S	Ἐπαφρόδιτος	PHP 2:25!4
+PHP 2:27!1	adv	adv	καὶ	καί	CONJ		
+PHP 2:27!2		conj	γὰρ	γάρ	CONJ		
+PHP 2:27!3	v	verb	ἠσθένησεν	ἀσθενέω	V-AAI-3S	Ἐπαφρόδιτος	PHP 2:25!4
+PHP 2:27!4		adj	παραπλήσιον	παραπλήσιον	ADV		
+PHP 2:27!5		noun	θανάτῳ	θάνατος	N-DSM		
+PHP 2:27!6		conj	ἀλλὰ	ἀλλά	CONJ		
+PHP 2:27!7		det	ὁ	ὁ	T-NSM		
+PHP 2:27!8		noun	θεὸς	θεός	N-NSM		
+PHP 2:27!9	v	verb	ἠλέησεν	ἐλεάω	V-AAI-3S	θεός	PHP 2:27!8
+PHP 2:27!10		pron	αὐτόν	αὐτός	P-ASM		
+PHP 2:27!11		adv	οὐκ	οὐ	PRT-N		
+PHP 2:27!12		pron	αὐτὸν	αὐτός	P-ASM		
+PHP 2:27!13		conj	δὲ	δέ	CONJ		
+PHP 2:27!14		adj	μόνον	μόνος	A-ASM		
+PHP 2:27!15		conj	ἀλλὰ	ἀλλά	CONJ		
+PHP 2:27!16		adv	καὶ	καί	CONJ		
+PHP 2:27!17		pron	ἐμέ	ἐγώ	P-1AS		
+PHP 2:27!18		conj	ἵνα	ἵνα	CONJ		
+PHP 2:27!19	adv	adv	μὴ	μή	PRT-N		
+PHP 2:27!20	o	noun	λύπην	λύπη	N-ASF		
+PHP 2:27!21		prep	ἐπὶ	ἐπί	PREP		
+PHP 2:27!22		noun	λύπην	λύπη	N-ASF		
+PHP 2:27!23	v	verb	σχῶ	ἔχω	V-2AAS-1S	Παῦλος	PHP 1:1!1
+PHP 2:28!1	adv	adv	σπουδαιοτέρως	σπουδαίως	ADV-C		
+PHP 2:28!2		conj	οὖν	οὖν	CONJ		
+PHP 2:28!3	v	verb	ἔπεμψα	πέμπω	V-AAI-1S	Παῦλος	PHP 1:1!1
+PHP 2:28!4	o	pron	αὐτὸν	αὐτός	P-ASM		
+PHP 2:28!5		conj	ἵνα	ἵνα	CONJ		
+PHP 2:28!6	v	verb	ἰδόντες	ὁράω	V-2AAP-NPM	ἀγαπητός	PHP 2:12!2
+PHP 2:28!7	o	pron	αὐτὸν	αὐτός	P-ASM		
+PHP 2:28!8	adv	adv	πάλιν	πάλιν	ADV		
+PHP 2:28!9	v	verb	χαρῆτε	χαίρω	V-2AOS-2P		
+PHP 2:28!10	s	pron	κἀγὼ	κἀγώ	P-1NS-K		
+PHP 2:28!11	p	adj	ἀλυπότερος	ἀλυπότερος	A-NSM-C		
+PHP 2:28!12	vc	verb	ὦ	εἰμί	V-PAS-1S		
+PHP 2:29!1	v	verb	προσδέχεσθε	προσδέχομαι	V-PNM-2P	ἀγαπητός	PHP 2:12!2
+PHP 2:29!2		conj	οὖν	οὖν	CONJ		
+PHP 2:29!3	o	pron	αὐτὸν	αὐτός	P-ASM		
+PHP 2:29!4		prep	ἐν	ἐν	PREP		
+PHP 2:29!5		noun	κυρίῳ	κύριος	N-DSM		
+PHP 2:29!6		prep	μετὰ	μετά	PREP		
+PHP 2:29!7		adj	πάσης	πᾶς	A-GSF		
+PHP 2:29!8		noun	χαρᾶς	χαρά	N-GSF		
+PHP 2:29!9		conj	καὶ	καί	CONJ		
+PHP 2:29!10		det	τοὺς	ὁ	T-APM		
+PHP 2:29!11		pron	τοιούτους	τοιοῦτος	D-APM		
+PHP 2:29!12	o2	adj	ἐντίμους	ἔντιμος	A-APM		
+PHP 2:29!13	v	verb	ἔχετε	ἔχω	V-PAM-2P	ἀγαπητός	PHP 2:12!2
+PHP 2:30!1		conj	ὅτι	ὅτι	CONJ		
+PHP 2:30!2		prep	διὰ	διά	PREP		
+PHP 2:30!3		det	τὸ	ὁ	T-ASN		
+PHP 2:30!4		noun	ἔργον	ἔργον	N-ASN		
+PHP 2:30!5		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 2:30!6		prep	μέχρι	μέχρι(ς)	ADV		
+PHP 2:30!7		noun	θανάτου	θάνατος	N-GSM		
+PHP 2:30!8	v	verb	ἤγγισεν	ἐγγίζω	V-AAI-3S	Ἐπαφρόδιτος	PHP 2:25!4
+PHP 2:30!9	v	verb	παραβολευσάμενος	παραβολεύομαι	V-ADP-NSM	Ἐπαφρόδιτος	PHP 2:25!4
+PHP 2:30!10		det	τῇ	ὁ	T-DSF		
+PHP 2:30!11		noun	ψυχῇ	ψυχή	N-DSF		
+PHP 2:30!12		conj	ἵνα	ἵνα	CONJ		
+PHP 2:30!13	v	verb	ἀναπληρώσῃ	ἀναπληρόω	V-AAS-3S	Ἐπαφρόδιτος	PHP 2:25!4
+PHP 2:30!14		det	τὸ	ὁ	T-ASN		
+PHP 2:30!15		pron	ὑμῶν	σύ	P-2GP		
+PHP 2:30!16		noun	ὑστέρημα	ὑστέρημα	N-ASN		
+PHP 2:30!17		det	τῆς	ὁ	T-GSF		
+PHP 2:30!18		prep	πρός	πρός	PREP		
+PHP 2:30!19		pron	με	ἐγώ	P-1AS		
+PHP 2:30!20		noun	λειτουργίας	λειτουργία	N-GSF		
+PHP 3:1!1		det	Τὸ	ὁ	T-ASN		
+PHP 3:1!2		adj	λοιπόν	λοιπός	A-ASN		
+PHP 3:1!3		noun	ἀδελφοί	ἀδελφός	N-VPM		
+PHP 3:1!4		pron	μου	ἐγώ	P-1GS		
+PHP 3:1!5	v	verb	χαίρετε	χαίρω	V-PAM-2P	ἀδελφός	PHP 3:1!3
+PHP 3:1!6		prep	ἐν	ἐν	PREP		
+PHP 3:1!7		noun	κυρίῳ	κύριος	N-DSM		
+PHP 3:1!8		det	τὰ	ὁ	T-APN		
+PHP 3:1!9		adj	αὐτὰ	αὐτός	P-APN		
+PHP 3:1!10	v	verb	γράφειν	γράφω	V-PAN	Παῦλος	PHP 1:1!1
+PHP 3:1!11	io	pron	ὑμῖν	σύ	P-2DP		
+PHP 3:1!12	adv	pron	ἐμοὶ	ἐγώ	P-1DS		
+PHP 3:1!13		conj	μὲν	μέν	PRT		
+PHP 3:1!14	adv	adv	οὐκ	οὐ	PRT-N		
+PHP 3:1!15	p	adj	ὀκνηρόν	ὀκνηρός	A-NSN		
+PHP 3:1!16	adv	pron	ὑμῖν	σύ	P-2DP		
+PHP 3:1!17		conj	δὲ	δέ	CONJ		
+PHP 3:1!18	p	adj	ἀσφαλές	ἀσφαλής	A-NSN		
+PHP 3:2!1	v	verb	Βλέπετε	βλέπω	V-PAM-2P	ἀδελφός	PHP 3:1!3
+PHP 3:2!2		det	τοὺς	ὁ	T-APM		
+PHP 3:2!3		noun	κύνας	κύων	N-APM		
+PHP 3:2!4	v	verb	βλέπετε	βλέπω	V-PAM-2P	ἀδελφός	PHP 3:1!3
+PHP 3:2!5		det	τοὺς	ὁ	T-APM		
+PHP 3:2!6		adj	κακοὺς	κακός	A-APM		
+PHP 3:2!7		noun	ἐργάτας	ἐργάτης	N-APM		
+PHP 3:2!8	v	verb	βλέπετε	βλέπω	V-PAM-2P	ἀδελφός	PHP 3:1!3
+PHP 3:2!9		det	τὴν	ὁ	T-ASF		
+PHP 3:2!10		noun	κατατομήν	κατατομή	N-ASF		
+PHP 3:3!1		pron	ἡμεῖς	ἐγώ	P-1NP		
+PHP 3:3!2		conj	γάρ	γάρ	CONJ		
+PHP 3:3!3	vc	verb	ἐσμεν	εἰμί	V-PAI-1P		
+PHP 3:3!4		det	ἡ	ὁ	T-NSF		
+PHP 3:3!5		noun	περιτομή	περιτομή	N-NSF		
+PHP 3:3!6		det	οἱ	ὁ	T-NPM		
+PHP 3:3!7		noun	πνεύματι	πνεῦμα	N-DSN		
+PHP 3:3!8		noun	θεοῦ	θεός	N-GSM		
+PHP 3:3!9	v	verb	λατρεύοντες	λατρεύω	V-PAP-NPM		
+PHP 3:3!10		conj	καὶ	καί	CONJ		
+PHP 3:3!11	v	verb	καυχώμενοι	καυχάομαι	V-PNP-NPM		
+PHP 3:3!12		prep	ἐν	ἐν	PREP		
+PHP 3:3!13		noun	Χριστῷ	Χριστός	N-DSM		
+PHP 3:3!14		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+PHP 3:3!15		conj	καὶ	καί	CONJ		
+PHP 3:3!16	adv	adv	οὐκ	οὐ	PRT-N		
+PHP 3:3!17		prep	ἐν	ἐν	PREP		
+PHP 3:3!18		noun	σαρκὶ	σάρξ	N-DSF		
+PHP 3:3!19	v	verb	πεποιθότες	πείθω	V-2RAP-NPM		
+PHP 3:4!1		conj	καίπερ	καίπερ	CONJ		
+PHP 3:4!2	s	pron	ἐγὼ	ἐγώ	P-1NS		
+PHP 3:4!3	v	verb	ἔχων	ἔχω	V-PAP-NSM	ἐγώ	PHP 3:4!2
+PHP 3:4!4	o	noun	πεποίθησιν	πεποίθησις	N-ASF		
+PHP 3:4!5		adv	καὶ	καί	CONJ		
+PHP 3:4!6		prep	ἐν	ἐν	PREP		
+PHP 3:4!7		noun	σαρκί	σάρξ	N-DSF		
+PHP 3:4!8		conj	Εἴ	εἰ	COND		
+PHP 3:4!9		pron	τις	τις	X-NSM		
+PHP 3:4!10	v	verb	δοκεῖ	δοκέω	V-PAI-3S	τις	PHP 3:4!9
+PHP 3:4!11		adj	ἄλλος	ἄλλος	A-NSM		
+PHP 3:4!12	v	verb	πεποιθέναι	πείθω	V-2RAN	τις	PHP 3:4!9
+PHP 3:4!13		prep	ἐν	ἐν	PREP		
+PHP 3:4!14		noun	σαρκί	σάρξ	N-DSF		
+PHP 3:4!15	s	pron	ἐγὼ	ἐγώ	P-1NS		
+PHP 3:4!16	adv	adv	μᾶλλον	μᾶλλον	ADV		
+PHP 3:5!1	adv	noun	περιτομῇ	περιτομή	N-DSF		
+PHP 3:5!2	p	adj	ὀκταήμερος	ὀκταήμερος	A-NSM		
+PHP 3:5!3		prep	ἐκ	ἐκ	PREP		
+PHP 3:5!4		noun	γένους	γένος	N-GSN		
+PHP 3:5!5		noun	Ἰσραήλ	Ἰσραήλ	N-PRI		
+PHP 3:5!6		noun	φυλῆς	φυλή	N-GSF		
+PHP 3:5!7		noun	Βενιαμίν	Βενιαμίν	N-PRI		
+PHP 3:5!8		noun	Ἑβραῖος	Ἑβραῖος	A-NSM		
+PHP 3:5!9		prep	ἐξ	ἐκ	PREP		
+PHP 3:5!10		noun	Ἑβραίων	Ἑβραῖος	A-GPM		
+PHP 3:5!11		prep	κατὰ	κατά	PREP		
+PHP 3:5!12		noun	νόμον	νόμος	N-ASM		
+PHP 3:5!13	p	noun	Φαρισαῖος	Φαρισαῖος	N-NSM		
+PHP 3:6!1		prep	κατὰ	κατά	PREP		
+PHP 3:6!2		noun	ζῆλος	ζῆλος	N-ASN		
+PHP 3:6!3	v	verb	διώκων	διώκω	V-PAP-NSM	Παῦλος	PHP 1:1!1
+PHP 3:6!4		det	τὴν	ὁ	T-ASF		
+PHP 3:6!5		noun	ἐκκλησίαν	ἐκκλησία	N-ASF		
+PHP 3:6!6		prep	κατὰ	κατά	PREP		
+PHP 3:6!7		noun	δικαιοσύνην	δικαιοσύνη	N-ASF		
+PHP 3:6!8		det	τὴν	ὁ	T-ASF		
+PHP 3:6!9		prep	ἐν	ἐν	PREP		
+PHP 3:6!10		noun	νόμῳ	νόμος	N-DSM		
+PHP 3:6!11	vc	verb	γενόμενος	γίνομαι	V-2ADP-NSM		
+PHP 3:6!12	p	adj	ἄμεμπτος	ἄμεμπτος	A-NSM		
+PHP 3:7!1		conj	Ἀλλὰ	ἀλλά	CONJ		
+PHP 3:7!2	s	pron	ἅτινα	ὅστις	R-NPN		
+PHP 3:7!3	vc	verb	ἦν	εἰμί	V-IAI-3S		
+PHP 3:7!4	adv	pron	μοι	ἐγώ	P-1DS		
+PHP 3:7!5	p	noun	κέρδη	κέρδος	N-NPN		
+PHP 3:7!6	o	pron	ταῦτα	οὗτος	D-APN		
+PHP 3:7!7	v	verb	ἥγημαι	ἡγέομαι	V-RNI-1S	Παῦλος	PHP 1:1!1
+PHP 3:7!8		prep	διὰ	διά	PREP		
+PHP 3:7!9		det	τὸν	ὁ	T-ASM		
+PHP 3:7!10		noun	Χριστὸν	Χριστός	N-ASM		
+PHP 3:7!11	o2	noun	ζημίαν	ζημία	N-ASF		
+PHP 3:8!1		conj	ἀλλὰ	ἀλλά	CONJ		
+PHP 3:8!2		ptcl	μενοῦνγε	μενοῦνγε	PRT		
+PHP 3:8!3	adv	adv	καὶ	καί	CONJ		
+PHP 3:8!4	v	verb	ἡγοῦμαι	ἡγέομαι	V-PNI-1S	Παῦλος	PHP 1:1!1
+PHP 3:8!5	s	adj	πάντα	πᾶς	A-APN		
+PHP 3:8!6	p	noun	ζημίαν	ζημία	N-ASF		
+PHP 3:8!7	vc	verb	εἶναι	εἰμί	V-PAN		
+PHP 3:8!8		prep	διὰ	διά	PREP		
+PHP 3:8!9		det	τὸ	ὁ	T-ASN		
+PHP 3:8!10	v	verb	ὑπερέχον	ὑπερέχω	V-PAP-ASN		
+PHP 3:8!11		det	τῆς	ὁ	T-GSF		
+PHP 3:8!12		noun	γνώσεως	γνῶσις	N-GSF		
+PHP 3:8!13		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 3:8!14		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHP 3:8!15		det	τοῦ	ὁ	T-GSM		
+PHP 3:8!16		noun	κυρίου	κύριος	N-GSM		
+PHP 3:8!17		pron	μου	ἐγώ	P-1GS		
+PHP 3:8!18		prep	δι	διά	PREP		
+PHP 3:8!19		pron	ὃν	ὅς	R-ASM		
+PHP 3:8!20		det	τὰ	ὁ	T-APN		
+PHP 3:8!21		adj	πάντα	πᾶς	A-APN		
+PHP 3:8!22	v	verb	ἐζημιώθην	ζημιόω	V-API-1S		
+PHP 3:8!23		conj	καὶ	καί	CONJ		
+PHP 3:8!24	v	verb	ἡγοῦμαι	ἡγέομαι	V-PNI-1S	Παῦλος	PHP 1:1!1
+PHP 3:8!25	o2	noun	σκύβαλα	σκύβαλον	N-APN		
+PHP 3:8!26		conj	ἵνα	ἵνα	CONJ		
+PHP 3:8!27	o	noun	Χριστὸν	Χριστός	N-ASM		
+PHP 3:8!28	v	verb	κερδήσω	κερδαίνω	V-AAS-1S		
+PHP 3:9!1		conj	καὶ	καί	CONJ		
+PHP 3:9!2	v	verb	εὑρεθῶ	εὑρίσκω	V-APS-1S		
+PHP 3:9!3		prep	ἐν	ἐν	PREP		
+PHP 3:9!4		pron	αὐτῷ	αὐτός	P-DSM		
+PHP 3:9!5		adv	μὴ	μή	PRT-N		
+PHP 3:9!6	v	verb	ἔχων	ἔχω	V-PAP-NSM	Παῦλος	PHP 1:1!1
+PHP 3:9!7		adj	ἐμὴν	ἐμός	S-1SASF		
+PHP 3:9!8		noun	δικαιοσύνην	δικαιοσύνη	N-ASF		
+PHP 3:9!9		det	τὴν	ὁ	T-ASF		
+PHP 3:9!10		prep	ἐκ	ἐκ	PREP		
+PHP 3:9!11		noun	νόμου	νόμος	N-GSM		
+PHP 3:9!12		conj	ἀλλὰ	ἀλλά	CONJ		
+PHP 3:9!13		det	τὴν	ὁ	T-ASF		
+PHP 3:9!14		prep	διὰ	διά	PREP		
+PHP 3:9!15		noun	πίστεως	πίστις	N-GSF		
+PHP 3:9!16		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 3:9!17		det	τὴν	ὁ	T-ASF		
+PHP 3:9!18		prep	ἐκ	ἐκ	PREP		
+PHP 3:9!19		noun	θεοῦ	θεός	N-GSM		
+PHP 3:9!20		noun	δικαιοσύνην	δικαιοσύνη	N-ASF		
+PHP 3:9!21		prep	ἐπὶ	ἐπί	PREP		
+PHP 3:9!22		det	τῇ	ὁ	T-DSF		
+PHP 3:9!23		noun	πίστει	πίστις	N-DSF		
+PHP 3:10!1		det	τοῦ	ὁ	T-GSN		
+PHP 3:10!2	v	verb	γνῶναι	γινώσκω	V-2AAN	Παῦλος	PHP 1:1!1
+PHP 3:10!3		pron	αὐτὸν	αὐτός	P-ASM		
+PHP 3:10!4		conj	καὶ	καί	CONJ		
+PHP 3:10!5		det	τὴν	ὁ	T-ASF		
+PHP 3:10!6		noun	δύναμιν	δύναμις	N-ASF		
+PHP 3:10!7		det	τῆς	ὁ	T-GSF		
+PHP 3:10!8		noun	ἀναστάσεως	ἀνάστασις	N-GSF		
+PHP 3:10!9		pron	αὐτοῦ	αὐτός	P-GSM		
+PHP 3:10!10		conj	καὶ	καί	CONJ		
+PHP 3:10!11		noun	κοινωνίαν	κοινωνία	N-ASF		
+PHP 3:10!12		noun	παθημάτων	πάθημα	N-GPN		
+PHP 3:10!13		pron	αὐτοῦ	αὐτός	P-GSM		
+PHP 3:10!14	v	verb	συμμορφιζόμενος	συμμορφίζομαι	V-PPP-NSM		
+PHP 3:10!15		det	τῷ	ὁ	T-DSM		
+PHP 3:10!16		noun	θανάτῳ	θάνατος	N-DSM		
+PHP 3:10!17		pron	αὐτοῦ	αὐτός	P-GSM		
+PHP 3:11!1		ptcl	εἴ	εἰ	COND		
+PHP 3:11!2		adv	πως	πώς	ADV-I		
+PHP 3:11!3	v	verb	καταντήσω	καταντάω	V-AAS-1S	Παῦλος	PHP 1:1!1
+PHP 3:11!4		prep	εἰς	εἰς	PREP		
+PHP 3:11!5		det	τὴν	ὁ	T-ASF		
+PHP 3:11!6		noun	ἐξανάστασιν	ἐξανάστασις	N-ASF		
+PHP 3:11!7		det	τὴν	ὁ	T-ASF		
+PHP 3:11!8		prep	ἐκ	ἐκ	PREP		
+PHP 3:11!9		adj	νεκρῶν	νεκρός	A-GPM		
+PHP 3:12!1		adv	Οὐχ	οὐ	PRT-N		
+PHP 3:12!2		conj	ὅτι	ὅτι	CONJ		
+PHP 3:12!3	adv	adv	ἤδη	ἤδη	ADV		
+PHP 3:12!4	v	verb	ἔλαβον	λαμβάνω	V-2AAI-1S	Παῦλος	PHP 1:1!1
+PHP 3:12!5		conj	ἢ	ἤ	PRT		
+PHP 3:12!6	adv	adv	ἤδη	ἤδη	ADV		
+PHP 3:12!7	v	verb	τετελείωμαι	τελειόω	V-RPI-1S		
+PHP 3:12!8	v	verb	διώκω	διώκω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 3:12!9		conj	δὲ	δέ	CONJ		
+PHP 3:12!10		ptcl	εἰ	εἰ	COND		
+PHP 3:12!11	adv	adv	καὶ	καί	CONJ		
+PHP 3:12!12	v	verb	καταλάβω	καταλαμβάνω	V-2AAS-1S	Παῦλος	PHP 1:1!1
+PHP 3:12!13		prep	ἐφ	ἐπί	PREP		
+PHP 3:12!14		pron	ᾧ	ὅς	R-DSN		
+PHP 3:12!15	adv	adv	καὶ	καί	CONJ		
+PHP 3:12!16	v	verb	κατελήμφθην	καταλαμβάνω	V-API-1S		
+PHP 3:12!17		prep	ὑπὸ	ὑπό	PREP		
+PHP 3:12!18		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 3:13!1	aux	noun	ἀδελφοί	ἀδελφός	N-VPM		
+PHP 3:13!2	s	pron	ἐγὼ	ἐγώ	P-1NS		
+PHP 3:13!3	s	pron	ἐμαυτὸν	ἐμαυτοῦ	F-1ASM		
+PHP 3:13!4	adv	adv	οὐ	οὐ	ADV		
+PHP 3:13!5	v	verb	λογίζομαι	λογίζομαι	V-PNI-1S	ἐγώ	PHP 3:13!2
+PHP 3:13!6	v	verb	κατειληφέναι	καταλαμβάνω	V-2RAN	ἐμαυτοῦ	PHP 3:13!3
+PHP 3:13!7	o	adj	ἓν	εἷς	A-ASN		
+PHP 3:13!8		conj	δέ	δέ	CONJ		
+PHP 3:13!9		det	τὰ	ὁ	T-APN		
+PHP 3:13!10		conj	μὲν	μέν	PRT		
+PHP 3:13!11		adv	ὀπίσω	ὀπίσω	ADV		
+PHP 3:13!12	v	verb	ἐπιλανθανόμενος	ἐπιλανθάνομαι	V-PNP-NSM	Παῦλος	PHP 1:1!1
+PHP 3:13!13		det	τοῖς	ὁ	T-DPN		
+PHP 3:13!14		conj	δὲ	δέ	CONJ		
+PHP 3:13!15		adv	ἔμπροσθεν	ἔμπροσθεν	ADV		
+PHP 3:13!16	v	verb	ἐπεκτεινόμενος	ἐπεκτείνομαι	V-PNP-NSM	Παῦλος	PHP 1:1!1
+PHP 3:14!1		prep	κατὰ	κατά	PREP		
+PHP 3:14!2		noun	σκοπὸν	σκοπός	N-ASM		
+PHP 3:14!3	v	verb	διώκω	διώκω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 3:14!4		prep	εἰς	εἰς	PREP		
+PHP 3:14!5		det	τὸ	ὁ	T-ASN		
+PHP 3:14!6		noun	βραβεῖον	βραβεῖον	N-ASN		
+PHP 3:14!7		det	τῆς	ὁ	T-GSF		
+PHP 3:14!8		adv	ἄνω	ἄνω	ADV		
+PHP 3:14!9		noun	κλήσεως	κλῆσις	N-GSF		
+PHP 3:14!10		det	τοῦ	ὁ	T-GSM		
+PHP 3:14!11		noun	θεοῦ	θεός	N-GSM		
+PHP 3:14!12		prep	ἐν	ἐν	PREP		
+PHP 3:14!13		noun	Χριστῷ	Χριστός	N-DSM		
+PHP 3:14!14		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+PHP 3:15!1	s	pron	ὅσοι	ὅσος	K-NPM		
+PHP 3:15!2		conj	οὖν	οὖν	CONJ		
+PHP 3:15!3	p	adj	τέλειοι	τέλειος	A-NPM		
+PHP 3:15!4	o	pron	τοῦτο	οὗτος	D-ASN		
+PHP 3:15!5	v	verb	φρονῶμεν	φρονέω	V-PAS-1P	Παῦλος;Τιμόθεος;Ἐπαφρόδιτος;ἀδελφός;τέλειος	PHP 1:1!1;PHP 2:19!6;PHP 2:25!4;PHP 3:1!3;PHP 3:15!3
+PHP 3:15!6		conj	καὶ	καί	CONJ		
+PHP 3:15!7		conj	εἴ	εἰ	COND		
+PHP 3:15!8	o	pron	τι	τις	X-ASN		
+PHP 3:15!9	adv	adv	ἑτέρως	ἑτέρως	ADV		
+PHP 3:15!10	v	verb	φρονεῖτε	φρονέω	V-PAI-2P	ἀδελφός	PHP 3:13!1
+PHP 3:15!11		adv	καὶ	καί	CONJ		
+PHP 3:15!12		pron	τοῦτο	οὗτος	D-ASN		
+PHP 3:15!13		det	ὁ	ὁ	T-NSM		
+PHP 3:15!14		noun	θεὸς	θεός	N-NSM		
+PHP 3:15!15	io	pron	ὑμῖν	σύ	P-2DP		
+PHP 3:15!16	v	verb	ἀποκαλύψει	ἀποκαλύπτω	V-FAI-3S	θεός	PHP 3:15!14
+PHP 3:16!1		conj	πλὴν	πλήν	ADV		
+PHP 3:16!2		prep	εἰς	εἰς	PREP		
+PHP 3:16!3	o	pron	ὃ	ὅς	R-ASN		
+PHP 3:16!4	v	verb	ἐφθάσαμεν	φθάνω	V-AAI-1P	Παῦλος;Τιμόθεος;Ἐπαφρόδιτος;ἀδελφός	PHP 1:1!1;PHP 2:19!6;PHP 2:25!4;PHP 3:1!3
+PHP 3:16!5		det	τῷ	ὁ	T-DSM		
+PHP 3:16!6		adj	αὐτῷ	αὐτός	P-DSM		
+PHP 3:16!7	v	verb	στοιχεῖν	στοιχέω	V-PAN	Παῦλος;Τιμόθεος;Ἐπαφρόδιτος;ἀδελφός	PHP 1:1!1;PHP 2:19!6;PHP 2:25!4;PHP 3:1!3
+PHP 3:17!1		noun	Συμμιμηταί	συμμιμητής	N-NPM		
+PHP 3:17!2		pron	μου	ἐγώ	P-1GS		
+PHP 3:17!3	vc	verb	γίνεσθε	γίνομαι	V-PNM-2P		
+PHP 3:17!4	aux	noun	ἀδελφοί	ἀδελφός	N-VPM		
+PHP 3:17!5		conj	καὶ	καί	CONJ		
+PHP 3:17!6	v	verb	σκοπεῖτε	σκοπέω	V-PAM-2P	ἀδελφός	PHP 3:17!4
+PHP 3:17!7		det	τοὺς	ὁ	T-APM		
+PHP 3:17!8	adv	adv	οὕτω	οὕτω(ς)	ADV		
+PHP 3:17!9	v	verb	περιπατοῦντας	περιπατέω	V-PAP-APM		
+PHP 3:17!10		conj	καθὼς	καθώς	ADV		
+PHP 3:17!11	v	verb	ἔχετε	ἔχω	V-PAI-2P	ἀδελφός	PHP 3:17!4
+PHP 3:17!12	o2	noun	τύπον	τύπος	N-ASM		
+PHP 3:17!13	o	pron	ἡμᾶς	ἐγώ	P-1AP		
+PHP 3:18!1	s	adj	πολλοὶ	πολύς	A-NPM		
+PHP 3:18!2		conj	γὰρ	γάρ	CONJ		
+PHP 3:18!3	v	verb	περιπατοῦσιν	περιπατέω	V-PAI-3P	πολύς	PHP 3:18!1
+PHP 3:18!4	o	pron	οὓς	ὅς	R-APM		
+PHP 3:18!5	adv	adv	πολλάκις	πολλάκις	ADV		
+PHP 3:18!6	v	verb	ἔλεγον	λέγω	V-IAI-1S	Παῦλος	PHP 1:1!1
+PHP 3:18!7	io	pron	ὑμῖν	σύ	P-2DP		
+PHP 3:18!8	adv	adv	νῦν	νῦν	ADV		
+PHP 3:18!9		conj	δὲ	δέ	CONJ		
+PHP 3:18!10	adv	adv	καὶ	καί	CONJ		
+PHP 3:18!11	v	verb	κλαίων	κλαίω	V-PAP-NSM	Παῦλος	PHP 1:1!1
+PHP 3:18!12	v	verb	λέγω	λέγω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 3:18!13		det	τοὺς	ὁ	T-APM		
+PHP 3:18!14		adj	ἐχθροὺς	ἐχθρός	A-APM		
+PHP 3:18!15		det	τοῦ	ὁ	T-GSM		
+PHP 3:18!16		noun	σταυροῦ	σταυρός	N-GSM		
+PHP 3:18!17		det	τοῦ	ὁ	T-GSM		
+PHP 3:18!18		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 3:19!1		pron	ὧν	ὅς	R-GPM		
+PHP 3:19!2		det	τὸ	ὁ	T-NSN		
+PHP 3:19!3		noun	τέλος	τέλος	N-NSN		
+PHP 3:19!4	p	noun	ἀπώλεια	ἀπώλεια	N-NSF		
+PHP 3:19!5		pron	ὧν	ὅς	R-GPM		
+PHP 3:19!6		det	ὁ	ὁ	T-NSM		
+PHP 3:19!7		noun	θεὸς	θεός	N-NSM		
+PHP 3:19!8		det	ἡ	ὁ	T-NSF		
+PHP 3:19!9		noun	κοιλία	κοιλία	N-NSF		
+PHP 3:19!10		conj	καὶ	καί	CONJ		
+PHP 3:19!11		det	ἡ	ὁ	T-NSF		
+PHP 3:19!12		noun	δόξα	δόξα	N-NSF		
+PHP 3:19!13		prep	ἐν	ἐν	PREP		
+PHP 3:19!14		det	τῇ	ὁ	T-DSF		
+PHP 3:19!15		noun	αἰσχύνῃ	αἰσχύνη	N-DSF		
+PHP 3:19!16		pron	αὐτῶν	αὐτός	P-GPM		
+PHP 3:19!17		det	οἱ	ὁ	T-NPM		
+PHP 3:19!18		det	τὰ	ὁ	T-APN		
+PHP 3:19!19		adj	ἐπίγεια	ἐπίγειος	A-APN		
+PHP 3:19!20	v	verb	φρονοῦντες	φρονέω	V-PAP-NPM		
+PHP 3:20!1		pron	ἡμῶν	ἐγώ	P-1GP		
+PHP 3:20!2		conj	γὰρ	γάρ	CONJ		
+PHP 3:20!3		det	τὸ	ὁ	T-NSN		
+PHP 3:20!4		noun	πολίτευμα	πολίτευμα	N-NSN		
+PHP 3:20!5		prep	ἐν	ἐν	PREP		
+PHP 3:20!6		noun	οὐρανοῖς	οὐρανός	N-DPM		
+PHP 3:20!7	v	verb	ὑπάρχει	ὑπάρχω	V-PAI-3S	πολίτευμα	PHP 3:20!4
+PHP 3:20!8		prep	ἐξ	ἐκ	PREP		
+PHP 3:20!9		pron	οὗ	ὅς	R-GSM		
+PHP 3:20!10	adv	adv	καὶ	καί	CONJ		
+PHP 3:20!11		noun	σωτῆρα	σωτήρ	N-ASM		
+PHP 3:20!12	v	verb	ἀπεκδεχόμεθα	ἀπεκδέχομαι	V-PNI-1P	Παῦλος;Τιμόθεος;Ἐπαφρόδιτος;ἀδελφός	PHP 1:1!1;PHP 2:19!6;PHP 2:25!4;PHP 3:13!1
+PHP 3:20!13		noun	κύριον	κύριος	N-ASM		
+PHP 3:20!14		noun	Ἰησοῦν	Ἰησοῦς	N-ASM		
+PHP 3:20!15		noun	Χριστόν	Χριστός	N-ASM		
+PHP 3:21!1	s	pron	ὃς	ὅς	R-NSM		
+PHP 3:21!2	v	verb	μετασχηματίσει	μετασχηματίζω	V-FAI-3S	ὅς	PHP 3:21!1
+PHP 3:21!3		det	τὸ	ὁ	T-ASN		
+PHP 3:21!4		noun	σῶμα	σῶμα	N-ASN		
+PHP 3:21!5		det	τῆς	ὁ	T-GSF		
+PHP 3:21!6		noun	ταπεινώσεως	ταπείνωσις	N-GSF		
+PHP 3:21!7		pron	ἡμῶν	ἐγώ	P-1GP		
+PHP 3:21!8		adj	σύμμορφον	σύμμορφος	A-ASN		
+PHP 3:21!9		det	τῷ	ὁ	T-DSN		
+PHP 3:21!10		noun	σώματι	σῶμα	N-DSN		
+PHP 3:21!11		det	τῆς	ὁ	T-GSF		
+PHP 3:21!12		noun	δόξης	δόξα	N-GSF		
+PHP 3:21!13		pron	αὐτοῦ	αὐτός	P-GSM		
+PHP 3:21!14		prep	κατὰ	κατά	PREP		
+PHP 3:21!15		det	τὴν	ὁ	T-ASF		
+PHP 3:21!16		noun	ἐνέργειαν	ἐνέργεια	N-ASF		
+PHP 3:21!17		det	τοῦ	ὁ	T-GSN		
+PHP 3:21!18	v	verb	δύνασθαι	δύναμαι	V-PNN	αὐτός	PHP 3:21!19
+PHP 3:21!19	s	pron	αὐτὸν	αὐτός	P-ASM		
+PHP 3:21!20	adv	adv	καὶ	καί	CONJ		
+PHP 3:21!21	v	verb	ὑποτάξαι	ὑποτάσσω	V-AAN	σωτήρ	PHP 3:20!11
+PHP 3:21!22	io	pron	αὑτῷ	ἑαυτοῦ	P-DSM		
+PHP 3:21!23		det	τὰ	ὁ	T-APN		
+PHP 3:21!24		adj	πάντα	πᾶς	A-APN		
+PHP 4:1!1		conj	ὥστε	ὥστε	CONJ		
+PHP 4:1!2		noun	ἀδελφοί	ἀδελφός	N-VPM		
+PHP 4:1!3		pron	μου	ἐγώ	P-1GS		
+PHP 4:1!4		adj	ἀγαπητοὶ	ἀγαπητός	A-VPM		
+PHP 4:1!5		conj	καὶ	καί	CONJ		
+PHP 4:1!6		adj	ἐπιπόθητοι	ἐπιπόθητος	A-VPM		
+PHP 4:1!7		noun	χαρὰ	χαρά	N-NSF		
+PHP 4:1!8		conj	καὶ	καί	CONJ		
+PHP 4:1!9		noun	στέφανός	στέφανος	N-NSM		
+PHP 4:1!10		pron	μου	ἐγώ	P-1GS		
+PHP 4:1!11	adv	adv	οὕτως	οὕτω(ς)	ADV		
+PHP 4:1!12	v	verb	στήκετε	στήκω	V-PAM-2P	ἀδελφός	PHP 4:1!2
+PHP 4:1!13		prep	ἐν	ἐν	PREP		
+PHP 4:1!14		noun	κυρίῳ	κύριος	N-DSM		
+PHP 4:1!15	aux	adj	ἀγαπητοί	ἀγαπητός	A-VPM		
+PHP 4:2!1	o	noun	Εὐοδίαν	Εὐοδία	N-ASF		
+PHP 4:2!2	v	verb	παρακαλῶ	παρακαλέω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 4:2!3		conj	καὶ	καί	CONJ		
+PHP 4:2!4	o	noun	Συντύχην	Συντύχη	N-ASF		
+PHP 4:2!5	v	verb	παρακαλῶ	παρακαλέω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 4:2!6		det	τὸ	ὁ	T-ASN		
+PHP 4:2!7		adj	αὐτὸ	αὐτός	P-ASN		
+PHP 4:2!8	v	verb	φρονεῖν	φρονέω	V-PAN	Εὐοδία;Συντύχη	PHP 4:2!1;PHP 4:2!4
+PHP 4:2!9		prep	ἐν	ἐν	PREP		
+PHP 4:2!10		noun	κυρίῳ	κύριος	N-DSM		
+PHP 4:3!1	aux	ptcl	ναὶ	ναί	PRT		
+PHP 4:3!2	v	verb	ἐρωτῶ	ἐρωτάω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 4:3!3		adv	καὶ	καί	CONJ		
+PHP 4:3!4		pron	σέ	σύ	P-2AS		
+PHP 4:3!5		adj	γνήσιε	γνήσιος	A-VSM		
+PHP 4:3!6		adj	σύζυγε	σύζυγος	A-VSM		
+PHP 4:3!7	v	verb	συλλαμβάνου	συλλαμβάνω	V-PMM-2S	σύζυγος	PHP 4:3!6
+PHP 4:3!8		pron	αὐταῖς	αὐτός	P-DPF		
+PHP 4:3!9	s	pron	αἵτινες	ὅστις	R-NPF		
+PHP 4:3!10		prep	ἐν	ἐν	PREP		
+PHP 4:3!11		det	τῷ	ὁ	T-DSN		
+PHP 4:3!12		noun	εὐαγγελίῳ	εὐαγγέλιον	N-DSN		
+PHP 4:3!13	v	verb	συνήθλησάν	συναθλέω	V-AAI-3P	ὅστις	PHP 4:3!9
+PHP 4:3!14	adv	pron	μοι	ἐγώ	P-1DS		
+PHP 4:3!15		prep	μετὰ	μετά	PREP		
+PHP 4:3!16		conj	καὶ	καί	CONJ		
+PHP 4:3!17		noun	Κλήμεντος	Κλήμης	N-GSM		
+PHP 4:3!18		conj	καὶ	καί	CONJ		
+PHP 4:3!19		det	τῶν	ὁ	T-GPM		
+PHP 4:3!20		adj	λοιπῶν	λοιπός	A-GPM		
+PHP 4:3!21		adj	συνεργῶν	συνεργός	A-GPM		
+PHP 4:3!22		pron	μου	ἐγώ	P-1GS		
+PHP 4:3!23		pron	ὧν	ὅς	R-GPM		
+PHP 4:3!24		det	τὰ	ὁ	T-NPN		
+PHP 4:3!25		noun	ὀνόματα	ὄνομα	N-NPN		
+PHP 4:3!26		prep	ἐν	ἐν	PREP		
+PHP 4:3!27		noun	βίβλῳ	βίβλος	N-DSF		
+PHP 4:3!28		noun	ζωῆς	ζωή	N-GSF		
+PHP 4:4!1	v	verb	Χαίρετε	χαίρω	V-PAM-2P	ἀγαπητός	PHP 4:1!15
+PHP 4:4!2		prep	ἐν	ἐν	PREP		
+PHP 4:4!3		noun	κυρίῳ	κύριος	N-DSM		
+PHP 4:4!4	adv	adv	πάντοτε	πάντοτε	ADV		
+PHP 4:4!5	adv	adv	πάλιν	πάλιν	ADV		
+PHP 4:4!6	v	verb	ἐρῶ	λέγω	V-FAI-1S	Παῦλος	PHP 1:1!1
+PHP 4:4!7	v	verb	χαίρετε	χαίρω	V-PAM-2P	ἀγαπητός	PHP 4:1!15
+PHP 4:5!1		det	τὸ	ὁ	T-NSN		
+PHP 4:5!2		adj	ἐπιεικὲς	ἐπιεικής	A-NSN		
+PHP 4:5!3		pron	ὑμῶν	σύ	P-2GP		
+PHP 4:5!4	v	verb	γνωσθήτω	γινώσκω	V-APM-3S		
+PHP 4:5!5		adj	πᾶσιν	πᾶς	A-DPM		
+PHP 4:5!6		noun	ἀνθρώποις	ἄνθρωπος	N-DPM		
+PHP 4:5!7		det	ὁ	ὁ	T-NSM		
+PHP 4:5!8		noun	κύριος	κύριος	N-NSM		
+PHP 4:5!9	p	adv	ἐγγύς	ἐγγύς	ADV		
+PHP 4:6!1	o	adj	μηδὲν	μηδείς	A-ASN-N		
+PHP 4:6!2	v	verb	μεριμνᾶτε	μεριμνάω	V-PAM-2P	ἀγαπητός	PHP 4:1!15
+PHP 4:6!3		conj	ἀλλ	ἀλλά	CONJ		
+PHP 4:6!4		prep	ἐν	ἐν	PREP		
+PHP 4:6!5		adj	παντὶ	πᾶς	A-DSN		
+PHP 4:6!6		det	τῇ	ὁ	T-DSF		
+PHP 4:6!7		noun	προσευχῇ	προσευχή	N-DSF		
+PHP 4:6!8		conj	καὶ	καί	CONJ		
+PHP 4:6!9		det	τῇ	ὁ	T-DSF		
+PHP 4:6!10		noun	δεήσει	δέησις	N-DSF		
+PHP 4:6!11		prep	μετ	μετά	PREP		
+PHP 4:6!12		noun	εὐχαριστίας	εὐχαριστία	N-GSF		
+PHP 4:6!13		det	τὰ	ὁ	T-NPN		
+PHP 4:6!14		noun	αἰτήματα	αἴτημα	N-NPN		
+PHP 4:6!15		pron	ὑμῶν	σύ	P-2GP		
+PHP 4:6!16	v	verb	γνωριζέσθω	γνωρίζω	V-PPM-3S		
+PHP 4:6!17		prep	πρὸς	πρός	PREP		
+PHP 4:6!18		det	τὸν	ὁ	T-ASM		
+PHP 4:6!19		noun	θεόν	θεός	N-ASM		
+PHP 4:7!1		conj	καὶ	καί	CONJ		
+PHP 4:7!2		det	ἡ	ὁ	T-NSF		
+PHP 4:7!3		noun	εἰρήνη	εἰρήνη	N-NSF		
+PHP 4:7!4		det	τοῦ	ὁ	T-GSM		
+PHP 4:7!5		noun	θεοῦ	θεός	N-GSM		
+PHP 4:7!6		det	ἡ	ὁ	T-NSF		
+PHP 4:7!7	v	verb	ὑπερέχουσα	ὑπερέχω	V-PAP-NSF		
+PHP 4:7!8		adj	πάντα	πᾶς	A-ASM		
+PHP 4:7!9		noun	νοῦν	νοῦς	N-ASM		
+PHP 4:7!10	v	verb	φρουρήσει	φρουρέω	V-FAI-3S	εἰρήνη	PHP 4:7!3
+PHP 4:7!11		det	τὰς	ὁ	T-APF		
+PHP 4:7!12		noun	καρδίας	καρδία	N-APF		
+PHP 4:7!13		pron	ὑμῶν	σύ	P-2GP		
+PHP 4:7!14		conj	καὶ	καί	CONJ		
+PHP 4:7!15		det	τὰ	ὁ	T-APN		
+PHP 4:7!16		noun	νοήματα	νόημα	N-APN		
+PHP 4:7!17		pron	ὑμῶν	σύ	P-2GP		
+PHP 4:7!18		prep	ἐν	ἐν	PREP		
+PHP 4:7!19		noun	Χριστῷ	Χριστός	N-DSM		
+PHP 4:7!20		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+PHP 4:8!1		det	Τὸ	ὁ	T-ASN		
+PHP 4:8!2		adj	λοιπόν	λοιπός	A-ASN		
+PHP 4:8!3	aux	noun	ἀδελφοί	ἀδελφός	N-VPM		
+PHP 4:8!4	s	pron	ὅσα	ὅσος	K-NPN		
+PHP 4:8!5	vc	verb	ἐστὶν	εἰμί	V-PAI-3S		
+PHP 4:8!6	p	adj	ἀληθῆ	ἀληθής	A-NPN		
+PHP 4:8!7	s	pron	ὅσα	ὅσος	K-NPN		
+PHP 4:8!8	p	adj	σεμνά	σεμνός	A-NPN		
+PHP 4:8!9	s	pron	ὅσα	ὅσος	K-NPN		
+PHP 4:8!10	p	adj	δίκαια	δίκαιος	A-NPN		
+PHP 4:8!11	s	pron	ὅσα	ὅσος	K-NPN		
+PHP 4:8!12	p	adj	ἁγνά	ἁγνός	A-NPN		
+PHP 4:8!13	s	pron	ὅσα	ὅσος	K-NPN		
+PHP 4:8!14	p	adj	προσφιλῆ	προσφιλής	A-NPN		
+PHP 4:8!15	s	pron	ὅσα	ὅσος	K-NPN		
+PHP 4:8!16	p	adj	εὔφημα	εὔφημος	A-NPN		
+PHP 4:8!17		conj	εἴ	εἰ	COND		
+PHP 4:8!18	s	pron	τις	τις	X-NSF		
+PHP 4:8!19	p	noun	ἀρετὴ	ἀρετή	N-NSF		
+PHP 4:8!20		conj	καὶ	καί	CONJ		
+PHP 4:8!21		conj	εἴ	εἰ	COND		
+PHP 4:8!22	s	pron	τις	τις	X-NSM		
+PHP 4:8!23	p	noun	ἔπαινος	ἔπαινος	N-NSM		
+PHP 4:8!24	o	pron	ταῦτα	οὗτος	D-APN		
+PHP 4:8!25	v	verb	λογίζεσθε	λογίζομαι	V-PNM-2P	ἀδελφός	PHP 4:8!3
+PHP 4:9!1	o	pron	ἃ	ὅς	R-APN		
+PHP 4:9!2		conj	καὶ	καί	CONJ		
+PHP 4:9!3		verb	ἐμάθετε	μανθάνω	V-2AAI-2P	ἀδελφός	PHP 4:8!3
+PHP 4:9!4		conj	καὶ	καί	CONJ		
+PHP 4:9!5		verb	παρελάβετε	παραλαμβάνω	V-2AAI-2P	ἀδελφός	PHP 4:8!3
+PHP 4:9!6		conj	καὶ	καί	CONJ		
+PHP 4:9!7		verb	ἠκούσατε	ἀκούω	V-AAI-2P	ἀδελφός	PHP 4:8!3
+PHP 4:9!8		conj	καὶ	καί	CONJ		
+PHP 4:9!9		verb	εἴδετε	ὁράω	V-2AAI-2P	ἀδελφός	PHP 4:8!3
+PHP 4:9!10		prep	ἐν	ἐν	PREP		
+PHP 4:9!11		pron	ἐμοί	ἐγώ	P-1DS		
+PHP 4:9!12	o	pron	ταῦτα	οὗτος	D-APN		
+PHP 4:9!13	v	verb	πράσσετε	πράσσω	V-PAM-2P	ἀδελφός	PHP 4:8!3
+PHP 4:9!14		conj	καὶ	καί	CONJ		
+PHP 4:9!15		det	ὁ	ὁ	T-NSM		
+PHP 4:9!16		noun	θεὸς	θεός	N-NSM		
+PHP 4:9!17		det	τῆς	ὁ	T-GSF		
+PHP 4:9!18		noun	εἰρήνης	εἰρήνη	N-GSF		
+PHP 4:9!19	vc	verb	ἔσται	εἰμί	V-FDI-3S		
+PHP 4:9!20		prep	μεθ	μετά	PREP		
+PHP 4:9!21		pron	ὑμῶν	σύ	P-2GP		
+PHP 4:10!1	v	verb	Ἐχάρην	χαίρω	V-2AOI-1S		
+PHP 4:10!2		conj	δὲ	δέ	CONJ		
+PHP 4:10!3		prep	ἐν	ἐν	PREP		
+PHP 4:10!4		noun	κυρίῳ	κύριος	N-DSM		
+PHP 4:10!5	adv	adv	μεγάλως	μεγάλως	ADV		
+PHP 4:10!6		conj	ὅτι	ὅτι	CONJ		
+PHP 4:10!7	adv	adv	ἤδη	ἤδη	ADV		
+PHP 4:10!8	adv	adv	ποτὲ	ποτέ	PRT		
+PHP 4:10!9	v	verb	ἀνεθάλετε	ἀναθάλλω	V-2AAI-2P	ἀδελφός	PHP 4:8!3
+PHP 4:10!10		det	τὸ	ὁ	T-ASN		
+PHP 4:10!11		prep	ὑπὲρ	ὑπέρ	PREP		
+PHP 4:10!12		pron	ἐμοῦ	ἐγώ	P-1GS		
+PHP 4:10!13	v	verb	φρονεῖν	φρονέω	V-PAN	ἀδελφός	PHP 4:8!3
+PHP 4:10!14		prep	ἐφ	ἐπί	PREP		
+PHP 4:10!15		pron	ᾧ	ὅς	R-DSN		
+PHP 4:10!16	adv	adv	καὶ	καί	CONJ		
+PHP 4:10!17	v	verb	ἐφρονεῖτε	φρονέω	V-IAI-2P	ἀδελφός	PHP 4:8!3
+PHP 4:10!18	v	verb	ἠκαιρεῖσθε	ἀκαιρέομαι	V-INI-2P	ἀδελφός	PHP 4:8!3
+PHP 4:10!19		conj	δέ	δέ	CONJ		
+PHP 4:11!1	p	adv	οὐχ	οὐ	PRT-N		
+PHP 4:11!2		conj	ὅτι	ὅτι	CONJ		
+PHP 4:11!3		prep	καθ	κατά	PREP		
+PHP 4:11!4		noun	ὑστέρησιν	ὑστέρησις	N-ASF		
+PHP 4:11!5	v	verb	λέγω	λέγω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 4:11!6	s	pron	ἐγὼ	ἐγώ	P-1NS		
+PHP 4:11!7		conj	γὰρ	γάρ	CONJ		
+PHP 4:11!8	v	verb	ἔμαθον	μανθάνω	V-2AAI-1S	ἐγώ	PHP 4:11!6
+PHP 4:11!9		prep	ἐν	ἐν	PREP		
+PHP 4:11!10		pron	οἷς	ὅς	R-DPM		
+PHP 4:11!11	vc	verb	εἰμι	εἰμί	V-PAI-1S		
+PHP 4:11!12	p	adj	αὐτάρκης	αὐτάρκης	A-NSM		
+PHP 4:11!13	vc	verb	εἶναι	εἰμί	V-PAN		
+PHP 4:12!1	v	verb	οἶδα	οἶδα	V-RAI-1S	Παῦλος	PHP 1:1!1
+PHP 4:12!2	adv	conj	καὶ	καί	CONJ		
+PHP 4:12!3	v	verb	ταπεινοῦσθαι	ταπεινόω	V-PPN		
+PHP 4:12!4	v	verb	οἶδα	οἶδα	V-RAI-1S	Παῦλος	PHP 1:1!1
+PHP 4:12!5	adv	conj	καὶ	καί	CONJ		
+PHP 4:12!6	v	verb	περισσεύειν	περισσεύω	V-PAN	Παῦλος	PHP 1:1!1
+PHP 4:12!7		prep	ἐν	ἐν	PREP		
+PHP 4:12!8		adj	παντὶ	πᾶς	A-DSM		
+PHP 4:12!9		conj	καὶ	καί	CONJ		
+PHP 4:12!10		prep	ἐν	ἐν	PREP		
+PHP 4:12!11		adj	πᾶσιν	πᾶς	A-DPM		
+PHP 4:12!12	v	verb	μεμύημαι	μυέομαι	V-RPI-1S		
+PHP 4:12!13		conj	καὶ	καί	CONJ		
+PHP 4:12!14	v	verb	χορτάζεσθαι	χορτάζω	V-PPN		
+PHP 4:12!15		conj	καὶ	καί	CONJ		
+PHP 4:12!16	v	verb	πεινᾶν	πεινάω	V-PAN	Παῦλος	PHP 1:1!1
+PHP 4:12!17		conj	καὶ	καί	CONJ		
+PHP 4:12!18	v	verb	περισσεύειν	περισσεύω	V-PAN	Παῦλος	PHP 1:1!1
+PHP 4:12!19		conj	καὶ	καί	CONJ		
+PHP 4:12!20	v	verb	ὑστερεῖσθαι	ὑστερέω	V-PPN		
+PHP 4:13!1	o	adj	πάντα	πᾶς	A-APN		
+PHP 4:13!2	v	verb	ἰσχύω	ἰσχύω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 4:13!3		prep	ἐν	ἐν	PREP		
+PHP 4:13!4		det	τῷ	ὁ	T-DSM		
+PHP 4:13!5	v	verb	ἐνδυναμοῦντί	ἐνδυναμόω	V-PAP-DSM		
+PHP 4:13!6	o	pron	με	ἐγώ	P-1AS		
+PHP 4:14!1		conj	πλὴν	πλήν	ADV		
+PHP 4:14!2	adv	adv	καλῶς	καλῶς	ADV		
+PHP 4:14!3	v	verb	ἐποιήσατε	ποιέω	V-AAI-2P	ἀδελφός	PHP 4:8!3
+PHP 4:14!4	v	verb	συγκοινωνήσαντές	συγκοινωνέω	V-AAP-NPM	ἀδελφός	PHP 4:8!3
+PHP 4:14!5		pron	μου	ἐγώ	P-1GS		
+PHP 4:14!6		det	τῇ	ὁ	T-DSF		
+PHP 4:14!7		noun	θλίψει	θλῖψις	N-DSF		
+PHP 4:15!1	v	verb	Οἴδατε	οἶδα	V-RAI-2P	σύ	PHP 4:15!4
+PHP 4:15!2		conj	δὲ	δέ	CONJ		
+PHP 4:15!3		adv	καὶ	καί	CONJ		
+PHP 4:15!4		pron	ὑμεῖς	σύ	P-2NP		
+PHP 4:15!5	aux	noun	Φιλιππήσιοι	Φιλιππήσιος	N-VPM		
+PHP 4:15!6		conj	ὅτι	ὅτι	CONJ		
+PHP 4:15!7		prep	ἐν	ἐν	PREP		
+PHP 4:15!8		noun	ἀρχῇ	ἀρχή	N-DSF		
+PHP 4:15!9		det	τοῦ	ὁ	T-GSN		
+PHP 4:15!10		noun	εὐαγγελίου	εὐαγγέλιον	N-GSN		
+PHP 4:15!11		adv	ὅτε	ὅτε	ADV		
+PHP 4:15!12	v	verb	ἐξῆλθον	ἐξέρχομαι	V-2AAI-1S	Παῦλος	PHP 1:1!1
+PHP 4:15!13		prep	ἀπὸ	ἀπό	PREP		
+PHP 4:15!14		noun	Μακεδονίας	Μακεδονία	N-GSF		
+PHP 4:15!15		adj	οὐδεμία	οὐδείς	A-NSF-N		
+PHP 4:15!16	adv	pron	μοι	ἐγώ	P-1DS		
+PHP 4:15!17		noun	ἐκκλησία	ἐκκλησία	N-NSF		
+PHP 4:15!18	v	verb	ἐκοινώνησεν	κοινωνέω	V-AAI-3S	ἐκκλησία	PHP 4:15!17
+PHP 4:15!19		prep	εἰς	εἰς	PREP		
+PHP 4:15!20		noun	λόγον	λόγος	N-ASM		
+PHP 4:15!21		noun	δόσεως	δόσις	N-GSF		
+PHP 4:15!22		conj	καὶ	καί	CONJ		
+PHP 4:15!23		noun	λήμψεως	λῆμψις	N-GSF		
+PHP 4:15!24		conj	εἰ	εἰ	COND		
+PHP 4:15!25	adv	adv	μὴ	μή	PRT-N		
+PHP 4:15!26		pron	ὑμεῖς	σύ	P-2NP		
+PHP 4:15!27		adj	μόνοι	μόνος	A-NPM		
+PHP 4:16!1		conj	ὅτι	ὅτι	CONJ		
+PHP 4:16!2		adv	καὶ	καί	CONJ		
+PHP 4:16!3		prep	ἐν	ἐν	PREP		
+PHP 4:16!4		noun	Θεσσαλονίκῃ	Θεσσαλονίκη	N-DSF		
+PHP 4:16!5		conj	καὶ	καί	CONJ		
+PHP 4:16!6		adv	ἅπαξ	ἅπαξ	ADV		
+PHP 4:16!7		conj	καὶ	καί	CONJ		
+PHP 4:16!8		adv	δὶς	δίς	ADV		
+PHP 4:16!9		prep	εἰς	εἰς	PREP		
+PHP 4:16!10		det	τὴν	ὁ	T-ASF		
+PHP 4:16!11		noun	χρείαν	χρεία	N-ASF		
+PHP 4:16!12		pron	μοι	ἐγώ	P-1DS		
+PHP 4:16!13	v	verb	ἐπέμψατε	πέμπω	V-AAI-2P	Φιλιππήσιος	PHP 4:15!5
+PHP 4:17!1		adv	οὐχ	οὐ	PRT-N		
+PHP 4:17!2		conj	ὅτι	ὅτι	CONJ		
+PHP 4:17!3	v	verb	ἐπιζητῶ	ἐπιζητέω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 4:17!4		det	τὸ	ὁ	T-ASN		
+PHP 4:17!5		noun	δόμα	δόμα	N-ASN		
+PHP 4:17!6		conj	ἀλλὰ	ἀλλά	CONJ		
+PHP 4:17!7	v	verb	ἐπιζητῶ	ἐπιζητέω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 4:17!8		det	τὸν	ὁ	T-ASM		
+PHP 4:17!9		noun	καρπὸν	καρπός	N-ASM		
+PHP 4:17!10		det	τὸν	ὁ	T-ASM		
+PHP 4:17!11	v	verb	πλεονάζοντα	πλεονάζω	V-PAP-ASM		
+PHP 4:17!12		prep	εἰς	εἰς	PREP		
+PHP 4:17!13		noun	λόγον	λόγος	N-ASM		
+PHP 4:17!14		pron	ὑμῶν	σύ	P-2GP		
+PHP 4:18!1	v	verb	ἀπέχω	ἀπέχω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 4:18!2		conj	δὲ	δέ	CONJ		
+PHP 4:18!3	o	adj	πάντα	πᾶς	A-APN		
+PHP 4:18!4		conj	καὶ	καί	CONJ		
+PHP 4:18!5	v	verb	περισσεύω	περισσεύω	V-PAI-1S	Παῦλος	PHP 1:1!1
+PHP 4:18!6	v	verb	πεπλήρωμαι	πληρόω	V-RPI-1S		
+PHP 4:18!7	v	verb	δεξάμενος	δέχομαι	V-ADP-NSM	Παῦλος	PHP 1:1!1
+PHP 4:18!8		prep	παρὰ	παρά	PREP		
+PHP 4:18!9		noun	Ἐπαφροδίτου	Ἐπαφρόδιτος	N-GSM		
+PHP 4:18!10		det	τὰ	ὁ	T-APN		
+PHP 4:18!11		prep	παρ	παρά	PREP		
+PHP 4:18!12		pron	ὑμῶν	σύ	P-2GP		
+PHP 4:18!13		noun	ὀσμὴν	ὀσμή	N-ASF		
+PHP 4:18!14		noun	εὐωδίας	εὐωδία	N-GSF		
+PHP 4:18!15		noun	θυσίαν	θυσία	N-ASF		
+PHP 4:18!16		adj	δεκτήν	δεκτός	A-ASF		
+PHP 4:18!17		adj	εὐάρεστον	εὐάρεστος	A-ASF		
+PHP 4:18!18		det	τῷ	ὁ	T-DSM		
+PHP 4:18!19		noun	θεῷ	θεός	N-DSM		
+PHP 4:19!1		det	ὁ	ὁ	T-NSM		
+PHP 4:19!2		conj	δὲ	δέ	CONJ		
+PHP 4:19!3		noun	θεός	θεός	N-NSM		
+PHP 4:19!4		pron	μου	ἐγώ	P-1GS		
+PHP 4:19!5	v	verb	πληρώσει	πληρόω	V-FAI-3S	θεός	PHP 4:19!3
+PHP 4:19!6		adj	πᾶσαν	πᾶς	A-ASF		
+PHP 4:19!7		noun	χρείαν	χρεία	N-ASF		
+PHP 4:19!8		pron	ὑμῶν	σύ	P-2GP		
+PHP 4:19!9		prep	κατὰ	κατά	PREP		
+PHP 4:19!10		det	τὸ	ὁ	T-ASN		
+PHP 4:19!11		noun	πλοῦτος	πλοῦτος	N-ASN		
+PHP 4:19!12		pron	αὐτοῦ	αὐτός	P-GSM		
+PHP 4:19!13		prep	ἐν	ἐν	PREP		
+PHP 4:19!14		noun	δόξῃ	δόξα	N-DSF		
+PHP 4:19!15		prep	ἐν	ἐν	PREP		
+PHP 4:19!16		noun	Χριστῷ	Χριστός	N-DSM		
+PHP 4:19!17		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+PHP 4:20!1		det	τῷ	ὁ	T-DSM		
+PHP 4:20!2		conj	δὲ	δέ	CONJ		
+PHP 4:20!3		noun	θεῷ	θεός	N-DSM		
+PHP 4:20!4		conj	καὶ	καί	CONJ		
+PHP 4:20!5		noun	πατρὶ	πατήρ	N-DSM		
+PHP 4:20!6		pron	ἡμῶν	ἐγώ	P-1GP		
+PHP 4:20!7		det	ἡ	ὁ	T-NSF		
+PHP 4:20!8		noun	δόξα	δόξα	N-NSF		
+PHP 4:20!9		prep	εἰς	εἰς	PREP		
+PHP 4:20!10		det	τοὺς	ὁ	T-APM		
+PHP 4:20!11		noun	αἰῶνας	αἰών	N-APM		
+PHP 4:20!12		det	τῶν	ὁ	T-GPM		
+PHP 4:20!13		noun	αἰώνων	αἰών	N-GPM		
+PHP 4:20!14	aux	ptcl	ἀμήν	ἀμήν	HEB		
+PHP 4:21!1	v	verb	Ἀσπάσασθε	ἀσπάζομαι	V-ADM-2P	Φιλιππήσιος	PHP 4:15!5
+PHP 4:21!2		adj	πάντα	πᾶς	A-ASM		
+PHP 4:21!3		adj	ἅγιον	ἅγιος	A-ASM		
+PHP 4:21!4		prep	ἐν	ἐν	PREP		
+PHP 4:21!5		noun	Χριστῷ	Χριστός	N-DSM		
+PHP 4:21!6		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+PHP 4:21!7	v	verb	ἀσπάζονται	ἀσπάζομαι	V-PNI-3P	ἀδελφός	PHP 4:21!12
+PHP 4:21!8	o	pron	ὑμᾶς	σύ	P-2AP		
+PHP 4:21!9		det	οἱ	ὁ	T-NPM		
+PHP 4:21!10		prep	σὺν	σύν	PREP		
+PHP 4:21!11		pron	ἐμοὶ	ἐγώ	P-1DS		
+PHP 4:21!12		noun	ἀδελφοί	ἀδελφός	N-NPM		
+PHP 4:22!1	v	verb	ἀσπάζονται	ἀσπάζομαι	V-PNI-3P	ἅγιος	PHP 4:22!5
+PHP 4:22!2	o	pron	ὑμᾶς	σύ	P-2AP		
+PHP 4:22!3		adj	πάντες	πᾶς	A-NPM		
+PHP 4:22!4		det	οἱ	ὁ	T-NPM		
+PHP 4:22!5		adj	ἅγιοι	ἅγιος	A-NPM		
+PHP 4:22!6	adv	adv	μάλιστα	μάλιστα	ADV-S		
+PHP 4:22!7		conj	δὲ	δέ	CONJ		
+PHP 4:22!8		det	οἱ	ὁ	T-NPM		
+PHP 4:22!9		prep	ἐκ	ἐκ	PREP		
+PHP 4:22!10		det	τῆς	ὁ	T-GSF		
+PHP 4:22!11		noun	Καίσαρος	Καῖσαρ	N-GSM		
+PHP 4:22!12		noun	οἰκίας	οἰκία	N-GSF		
+PHP 4:23!1		det	ἡ	ὁ	T-NSF		
+PHP 4:23!2		noun	χάρις	χάρις	N-NSF		
+PHP 4:23!3		det	τοῦ	ὁ	T-GSM		
+PHP 4:23!4		noun	κυρίου	κύριος	N-GSM		
+PHP 4:23!5		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHP 4:23!6		noun	Χριστοῦ	Χριστός	N-GSM		
+PHP 4:23!7		prep	μετὰ	μετά	PREP		
+PHP 4:23!8		det	τοῦ	ὁ	T-GSN		
+PHP 4:23!9		noun	πνεύματος	πνεῦμα	N-GSN		
+PHP 4:23!10		pron	ὑμῶν	σύ	P-2GP		

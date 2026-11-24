@@ -4,6 +4,7 @@ import Testimony.Ontology.Relations
 import Testimony.Ontology.Time
 import Testimony.Ontology.Usage
 import Testimony.Ontology.Sense
+import Testimony.Ontology.Voice
 import Testimony.Ontology.Kinds
 
 /-!
@@ -32,13 +33,16 @@ are read under it.
 
 ## The articles
 
-- `Testimony.Ontology.Relations` — what three relation words commit a reader
-  to: "not a ground", "the only means", "the whole ground".
+- `Testimony.Ontology.Relations` — what five relation words commit a reader
+  to: "not a ground", "the only means", "the whole ground", "works through" and
+  "moves".
 - `Testimony.Ontology.Time` — an occurrence lasts one length of time.
 - `Testimony.Ontology.Usage` — a sense a word has in one passage of a text is a
   sense it has in that text's usage as a whole.
 - `Testimony.Ontology.Sense` — a word with the same sense at one place as at
   another has the same sense at the other as at the first.
+- `Testimony.Ontology.Voice` — a word of the Greek text in one voice is in no
+  other.
 - `Testimony.Ontology.Kinds` — what kind of thing each concept is, by DOLCE's
   categories, and the concepts whose kind is the dispute.
 -/

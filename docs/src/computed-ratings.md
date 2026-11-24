@@ -347,6 +347,22 @@ weigh the evidence that stands: Genesis 34:3 is answered by an argument, the sta
 and an argument strikes nothing. It is weighed, in a dispute, and the next section says what
 follows.
 
+A claim may also be refuted outright, where Scripture's own words rule it out. One way is a
+reading of the Greek that the word's spelling rules out: a passive reading of an active form,
+say. Such a claim's meaning says which word of the text it reads and in what voice
+(`Statement.parses`), and the library holds which voices the word's spelling allows, so it
+compares the two itself. The other is a reading that names as the one at work in a verb what
+its author never names there. The library holds every use of ἐνεργέω, "to work", in the
+letters that bear Paul's name, with who does the work in each (`Statement.againstUsage`), so
+that comparison is its own too. A claim either rules out is cited `refuted`, a rating no
+reader gives and the lowest a premise can have, and the build fails wherever a citation and
+the comparison differ (`#check_readers`). In a dispute such a claim ranks below every
+reader's rating, and so does a step that concludes it. Where the spelling allows two voices,
+as the present middle and passive are spelled alike, the spelling refutes nothing: the passive
+reading of ἐνεργουμένη in Galatians 5:6 is rated as readers rate it, `disputed`. What
+Bellarmine concludes from it, that love is the one at work, Paul's usage refutes
+(`TestimonyArguments.SolaFide.faiths_means_prevails`).
+
 ## Dissents overruled in a dispute
 
 A credible dissent can still lose when it is weighed. It is **overruled** (`Overruled`) when

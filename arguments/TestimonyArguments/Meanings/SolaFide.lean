@@ -50,6 +50,13 @@ open TestimonyArguments.SolaFide (Claim)
 @[nolint defsWithUnderscore] abbrev gal2_16 : PassageRange := vs .galatians 2 16
 /-- Romans 4:4–5. -/
 @[nolint defsWithUnderscore] abbrev rom4_4_5 : PassageRange := rg .romans 4 4 4 5
+/-- Galatians 5:6. -/
+@[nolint defsWithUnderscore] abbrev gal5_6 : PassageRange := vs .galatians 5 6
+
+open Testimony.Corpus.Greek in
+greek_word galatiansWorking from GAL 5 6 "ἐνεργέω"
+/-- Romans 11:6. -/
+@[nolint defsWithUnderscore] abbrev rom11_6 : PassageRange := vs .romans 11 6
 /-- Romans 4:6–8. -/
 @[nolint defsWithUnderscore] abbrev rom4_6_8 : PassageRange := rg .romans 4 6 4 8
 /-- Titus 3:5. -/
@@ -58,8 +65,6 @@ open TestimonyArguments.SolaFide (Claim)
 @[nolint defsWithUnderscore] abbrev titus3_5_7 : PassageRange := rg .titus 3 5 3 7
 /-- Romans 1:16–17. -/
 @[nolint defsWithUnderscore] abbrev rom1_16_17 : PassageRange := rg .romans 1 16 1 17
-/-- Romans 11:6. -/
-@[nolint defsWithUnderscore] abbrev rom11_6 : PassageRange := vs .romans 11 6
 /-- Acts 13:39. -/
 @[nolint defsWithUnderscore] abbrev acts13_39 : PassageRange := vs .acts 13 39
 /-- Acts 15:9–11. -/
@@ -394,7 +399,6 @@ def means : Claim → Statement
     .bears .dikaios (.passage (vs .romans 5 19)) .dikaioo (.usage .paul)
   | .godsVerdictIsEffective => .holds (rl .effects (cn .justification) (cn .sanctification))
   | .romans1_16_17 => .says rom1_16_17 (rl .instrumentOf (wd .pistis rom1_16_17) (cn .salvation))
-  | .romans11_6 => .says rom11_6 (rl .excludedFrom (wd .erga rom11_6) (cn .grace))
   | .acts13_39 => .says acts13_39 (rl .instrumentOf (wd .pisteuo acts13_39) (wd .dikaioo acts13_39))
   | .firstCorinthians13_2 => .opaque "1 Corinthians 13:2: all faith without love is nothing"
   | .galatians2_4_5 => .opaque "Galatians 2:4-5: that the truth of the gospel would remain"
@@ -424,6 +428,23 @@ def means : Claim → Statement
     .opaque "Hilary, Basil, Ambrosiaster, Chrysostom, Origen, Bernard, Aquinas: faith alone"
   | .justifiedByFaithWithoutPriorWorks =>
     .opaque "the ungodly are justified by faith alone, as a gift, no prior work earning it"
+  | .galatians5_6FaithWorkingThroughLove => .occurs .pistis gal5_6
+  | .romans11_6NoLongerOfWorks =>
+    .says rom11_6 (rl .excludedFrom (wd .erga rom11_6) (cn .grace))
+  | .james2_17FaithWithoutWorksIsDead => .occurs .pistis (vs .james 2 17)
+  | .faithFormedByCharityJustifies => .means .pistis (.passage gal5_6) .formedFaith
+  | .loveIsTheFruitOfFaith => .teaches gal5_6 (rl .fruitOf (cn .charity) (cn .faith))
+  | .abrahamOfRomans4WasABeliever =>
+    .opaque "the Abraham of Romans 4:1–5 already believed and did good works from faith"
+  | .paulExcludesOnlyWorksWithoutGrace => .means .erga (.usage .paul) .worksWithoutGrace
+  | .romans4_4ExplainsPaulsWorks => .sameSense .erga (.passage rom4_4_5) (.usage .paul)
+  | .john6_29WorkIsPaulsWorks => .sameSense .erga (.passage john6_29) (.usage .paul)
+  | .energoumeneIsPassive => .parses .energeo galatiansWorking .passive
+  | .energoumeneIsMiddle => .parses .energeo galatiansWorking .middle
+  | .loveMovesFaith =>
+    .also (.holds (rl .moves (wd .agape gal5_6) (wd .pistis gal5_6)))
+      (.worksBy .energeo galatiansWorking "ἀγάπη")
+  | .faithWorksThroughLove => .holds (rl .worksThrough (wd .pistis gal5_6) (wd .agape gal5_6))
   | .countingWasForTheTesting =>
     .opaque "What was counted at Gen 15:6 was credited for his faithfulness when tested"
   | .abrahamFoundFaithfulWhenTested =>
@@ -486,13 +507,19 @@ def all : List Claim :=
   , .jamesKeepsHisWordsThroughTheParagraph, .fruitTextsShareFaithAndWorks
   , .romans5_19ManyMadeRighteous, .romans5_19MadeInwardlyRighteous
   , .romans5_19BearsOnTheVerb, .godsVerdictIsEffective, .fathersWroteFaithAlone
-  , .justifiedByFaithWithoutPriorWorks, .romans1_16_17, .romans11_6
+  , .justifiedByFaithWithoutPriorWorks, .romans1_16_17
   , .acts13_39, .firstCorinthians13_2, .galatians2_4_5, .galatians5_6
   , .justifyingFaithIsFormedByCharity, .titus2_14, .philippians3_8_9
   , .restsOnChristsImputedRighteousness, .faithKeepsItsSenseInRomansAndEphesians
   , .worksKeepsItsSenseInRomans4And11, .faithEfficaciousThroughLove
   , .justifiedHaveAnInherentRighteousness, .romans5_5, .secondPeter1_4, .romans6_17_18
-  , .firstCorinthians7_22, .firstTimothy1_5, .galatians5_22, .romans3_10, .psalm143_2 ]
+  , .firstCorinthians7_22, .firstTimothy1_5, .galatians5_22, .romans3_10, .psalm143_2
+  , .galatians5_6FaithWorkingThroughLove
+  , .romans11_6NoLongerOfWorks, .james2_17FaithWithoutWorksIsDead
+  , .faithFormedByCharityJustifies, .loveIsTheFruitOfFaith, .abrahamOfRomans4WasABeliever
+  , .paulExcludesOnlyWorksWithoutGrace, .romans4_4ExplainsPaulsWorks
+  , .john6_29WorkIsPaulsWorks, .energoumeneIsPassive, .energoumeneIsMiddle, .loveMovesFaith
+  , .faithWorksThroughLove ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -507,15 +534,16 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **A hundred and sixteen of the hundred and sixty-six are analysed.** Of the
-fifty that are not, two are the claims of the chapter on what was read in Paul
-before Trent: what the fathers wrote of faith alone, and justification with no
-prior work earning it. Seventeen are the claims of the chapter on the
-Reformation's case: thirteen texts its voices argue from, the schoolmen's faith
-formed by love, the Regensburg article's faith efficacious through love,
-Contarini's righteousness inherent in us, and the resting on Christ's
-righteousness given, which need words the vocabulary lacks: a form, an efficacy,
-an inherence and a resting on. Fifteen are the claims of the chapters on whether
+/-- **A hundred and twenty-seven of the hundred and seventy-eight are analysed.** Of
+the fifty-one that are not, two are the claims of the chapter on what was read in
+Paul before Trent: what the fathers wrote of faith alone, and justification with
+no prior work earning it. One is the chapter on faith working through love: that
+the Abraham of Romans 4 was already a believer. Seventeen are the claims of the
+chapter on the Reformation's case: thirteen texts its voices argue from, the
+schoolmen's faith formed by love, the Regensburg article's faith efficacious
+through love, Contarini's righteousness inherent in us, and the resting on
+Christ's righteousness given, which need words the vocabulary lacks: a form, an
+efficacy, an inherence and a resting on. Fifteen are the claims of the chapters on whether
 justification has degrees and on Abraham, whose content (a verdict's degrees, a
 covenant rite, a grant, a testing) the vocabulary cannot yet state. Of the other
 sixteen, four are Pius XII's and Trent's claims about the Vulgate and one is the
@@ -527,7 +555,7 @@ of the obedience it requires, Galatians 1:6–9, Christ's command to baptise, Tr
 reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each needs a word
 the vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
 reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (116, 166) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (127, 178) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the
@@ -564,6 +592,12 @@ credibility check holds `a → ¬b` for each, as background
   meanings were read, before, only for denials of a whole claim.
 - Trent's Latin Revelation 22:11 and Sirach 18:22 exclude the Greek of each,
   which says the word is not there.
+- That ἐνεργουμένη in Galatians 5:6 is passive excludes that it is middle: a word
+  has one voice (`Testimony.Ontology.Voice.oneVoice`).
+- That love moves faith in Galatians 5:6 excludes that faith works through love
+  as its means: what works through a means moves it, and what moves a thing is
+  not moved by it (`Testimony.Ontology.Relations.meansIsMoved`,
+  `movingRunsOneWay`).
 
 No claim's meaning entails another's: none asserts all another does. The atom
 type keeps these claims apart; their meanings join them. The lists are proved to
@@ -573,14 +607,17 @@ Disputes hold them too, so every named reading a dispute is checked against
 respects them: where a reading is otherwise silent on a pair, it denies the
 claim its world does not hold — Paul's verb as renewal, the Latin of the two
 verses, James's word as Paul's, baptism as the instrument, justification as
-renewal — and holds the other. -/
+renewal, the passive of Galatians 5:6, love as what moves faith — and holds the
+other. -/
 instance joins : HasJoins Claim where
   exclusions :=
     [ (.james2_24Compatible, .jamesUsesDikaioAsPaul)
     , (.justificationByFaithAlone, .baptismIsInstrumentalCause)
     , (.justificationIsForensicOnly, .justificationIncludesSanctification)
     , (.rev22_11BeJustifiedStill, .rev22_11GreekDoRighteousness)
-    , (.sir18_22BeJustifiedToDeath, .sir18_22GreekIsAVow) ]
+    , (.sir18_22BeJustifiedToDeath, .sir18_22GreekIsAVow)
+    , (.energoumeneIsPassive, .energoumeneIsMiddle)
+    , (.loveMovesFaith, .faithWorksThroughLove) ]
   exclusions_pinned := by decide +kernel
   entailments := []
   entailments_pinned := by decide +kernel
@@ -594,7 +631,9 @@ argument's packages unfold to this list, so a named reading must satisfy it. -/
       , p .justificationByFaithAlone ➝ notP .baptismIsInstrumentalCause
       , p .justificationIsForensicOnly ➝ notP .justificationIncludesSanctification
       , p .rev22_11BeJustifiedStill ➝ notP .rev22_11GreekDoRighteousness
-      , p .sir18_22BeJustifiedToDeath ➝ notP .sir18_22GreekIsAVow ] :=
+      , p .sir18_22BeJustifiedToDeath ➝ notP .sir18_22GreekIsAVow
+      , p .energoumeneIsPassive ➝ notP .energoumeneIsMiddle
+      , p .loveMovesFaith ➝ notP .faithWorksThroughLove ] :=
   rfl
 
 attribute [solaFideDefs] Testimony.Logic.ArgumentPackage.held

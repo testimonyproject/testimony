@@ -1,12 +1,13 @@
 import Testimony.Semantics.Ontology
 
 /-!
-# Testimony.Ontology.Relations.Definitions — what three relation words say
+# Testimony.Ontology.Relations.Definitions — what five relation words say
 
 The vocabulary defines each of its relation words in a sentence
-(`Testimony.Semantics.Vocabulary`). Three of those sentences say more than the
-word's name does, and say it of another word: "not a ground", "the only
-means", "the whole ground". Each is written out here as a definition the
+(`Testimony.Semantics.Vocabulary`). Five of those sentences say more than the
+word's name does: "not a ground", "the only means", "the whole ground", say it
+of another word, "works through" says that a means is moved by its user, and
+"moves" that moving runs one way. Each is written out here as a definition the
 reasoner holds, with the sentence it comes from as its source.
 
 These are stipulations, not findings: they say what the library's own words
@@ -61,7 +62,32 @@ def wholeGround : Definition :=
   , source := stipulated "soleGroundOf"
       "The first is the whole ground of the second: nothing added completes it." }
 
+/-- **What works through a means moves it.** `worksThrough` is "the second is the
+means by which the first is at work, as the hand works through the stick", and
+`moves` "the second acts because, and as, the first moves it". A means is what
+its user is at work by, so the user moves it: the hand moves the stick. -/
+def meansIsMoved : Definition :=
+  { name := "a means is moved by its user"
+  , says := "What works through a means moves it."
+  , form := .implies .worksThrough .moves
+  , source := stipulated "worksThrough"
+      "The first works through the second: the second is the means by which the first \
+        is at work, as the hand works through the stick." }
+
+/-- **Moving runs one way.** `moves` is "the second acts because, and as, the
+first moves it", in one respect. So in that respect a thing moved does not move
+its mover: the stick does not move the hand that moves it. A thing moved in one
+respect may move its mover in another, and that is another relation, which this
+definition says nothing of. -/
+def movingRunsOneWay : Definition :=
+  { name := "moving runs one way"
+  , says := "What a thing moves does not move it, in the same respect."
+  , form := .asymmetric .moves
+  , source := stipulated "moves"
+      "The first moves the second: the second acts because, and as, the first moves it." }
+
 /-- The definitions this article writes out. -/
-def definitions : Ontology := [notAGround, onlyMeans, wholeGround]
+def definitions : Ontology :=
+  [notAGround, onlyMeans, wholeGround, meansIsMoved, movingRunsOneWay]
 
 end Testimony.Ontology.Relations

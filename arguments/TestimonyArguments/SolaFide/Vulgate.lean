@@ -152,6 +152,8 @@ def piusReading : Valuation Claim := fun a =>
   | .sir18_22BeJustifiedToDeath => False
   | .latinTextsConfirmedFromOriginals => False
   | .worksAreFruitNotGround => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Taken as Pius XII takes Trent's decree on the Vulgate, Rome is consistent.**

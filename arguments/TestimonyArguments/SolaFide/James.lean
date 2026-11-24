@@ -651,6 +651,8 @@ def reformedJamesReading : Valuation Claim := fun a =>
   | .sir18_22BeJustifiedToDeath => False
   | .scriptureTeachesIncreaseOfJustification => False
   | .rewardRenderedToMerits => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Trent's reading of James.** Every text as Trent reads it: James's "justified"
@@ -659,6 +661,8 @@ fruit, and Revelation 22:11 and Sirach 18:22 as the Latin has them. -/
 def tridentineJamesReading : Valuation Claim := fun a =>
   match a with
   | .worksAreFruitNotGround => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- The argument from James's word reaches its conclusion. -/
@@ -741,31 +745,31 @@ theorem renewalOnTheWord_is_satisfiable : Satisfiable renewalOnTheWord.premises 
 James uses "justify" as the Gospels and the Law use it, outside Paul. Calvin reads
 him so, and Trent, reading the same verses, says James's word is the increase of a
 righteousness already given (`jamesUsesDikaioAsOutsidePaul`). -/
-theorem jamesLexicalCase_strength : jamesLexicalCase.strength = 0 := by decide
+theorem jamesLexicalCase_strength : jamesLexicalCase.strength = 1 := by decide
 /-- The argument about James's faith rests on nothing rated below `wellSupported`. -/
-theorem jamesFaithCase_strength : jamesFaithCase.strength = 2 := by decide
+theorem jamesFaithCase_strength : jamesFaithCase.strength = 3 := by decide
 /-- The Reformed reconciliation rests on its reading of what James is attacking, and
 on works as fruit and not ground. Both are `disputed`. -/
-theorem jamesHarmonyCase_strength : jamesHarmonyCase.strength = 0 := by decide
+theorem jamesHarmonyCase_strength : jamesHarmonyCase.strength = 1 := by decide
 /-- Trent on James's word rests on its reading of the word, rated `disputed`. -/
-theorem catholicJamesOnTheWord_strength : catholicJamesOnTheWord.strength = 0 := by decide
+theorem catholicJamesOnTheWord_strength : catholicJamesOnTheWord.strength = 1 := by decide
 /-- Trent on what works do rests on canon 24, rated `disputed`. -/
-theorem catholicJamesOnWorks_strength : catholicJamesOnWorks.strength = 0 := by decide
+theorem catholicJamesOnWorks_strength : catholicJamesOnWorks.strength = 1 := by decide
 /-- Trent on Revelation 22:11 rests on the Latin reading, rated `disputed`. -/
-theorem trentOnRevelation_strength : trentOnRevelation.strength = 0 := by decide
+theorem trentOnRevelation_strength : trentOnRevelation.strength = 1 := by decide
 /-- Trent on Sirach 18:22 rests on the Latin reading, rated `disputed`. -/
-theorem trentOnSirach_strength : trentOnSirach.strength = 0 := by decide
+theorem trentOnSirach_strength : trentOnSirach.strength = 1 := by decide
 /-- The Greek of Revelation 22:11 rests on nothing below `wellSupported`. -/
-theorem revelationTextCase_strength : revelationTextCase.strength = 2 := by decide
+theorem revelationTextCase_strength : revelationTextCase.strength = 3 := by decide
 /-- The Greek of Sirach 18:22 rests on nothing below `wellSupported`. -/
-theorem sirachTextCase_strength : sirachTextCase.strength = 2 := by decide
+theorem sirachTextCase_strength : sirachTextCase.strength = 3 := by decide
 /-- Trent on the reward of works rests on its reading of the texts, rated
 `disputed`. -/
-theorem trentOnReward_strength : trentOnReward.strength = 0 := by decide
+theorem trentOnReward_strength : trentOnReward.strength = 1 := by decide
 /-- Westminster on the reward rests on its reading of the texts, rated `disputed`. -/
-theorem westminsterOnReward_strength : westminsterOnReward.strength = 0 := by decide
+theorem westminsterOnReward_strength : westminsterOnReward.strength = 1 := by decide
 /-- The reading through Paul rests on Paul's word as renewal, rated `disputed`. -/
-theorem renewalOnTheWord_strength : renewalOnTheWord.strength = 0 := by decide
+theorem renewalOnTheWord_strength : renewalOnTheWord.strength = 1 := by decide
 
 /-! ### The debate -/
 

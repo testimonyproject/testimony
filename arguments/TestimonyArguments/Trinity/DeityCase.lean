@@ -591,19 +591,19 @@ theorem son_is_god_burden :
 /-! ### The supplemented positions weighed -/
 
 /-- The supplemented Nicene case's weakest link is `disputed`. -/
-theorem nicenCase_strength : nicenCase.strength = 0 := by decide +kernel
+theorem nicenCase_strength : nicenCase.strength = 1 := by decide +kernel
 
 /-- So is the six-route case's. -/
-theorem sonIsGodCase_strength : sonIsGodCase.strength = 0 := by decide +kernel
+theorem sonIsGodCase_strength : sonIsGodCase.strength = 1 := by decide +kernel
 
 /-- So is the Witnesses', answering. -/
-theorem witnessesAnswering_strength : witnessesAnswering.strength = 0 := by decide +kernel
+theorem witnessesAnswering_strength : witnessesAnswering.strength = 1 := by decide +kernel
 
 /-- So is the Oneness position's, answering. -/
-theorem onenessAnswering_strength : onenessAnswering.strength = 0 := by decide +kernel
+theorem onenessAnswering_strength : onenessAnswering.strength = 1 := by decide +kernel
 
 /-- So is LST's. -/
-theorem lstDeityCase_strength : lstDeityCase.strength = 0 := by decide +kernel
+theorem lstDeityCase_strength : lstDeityCase.strength = 1 := by decide +kernel
 
 open Testimony.Logic.Framework in
 /-- The parties to the weighing of the supplemented positions. -/

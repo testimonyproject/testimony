@@ -164,6 +164,8 @@ renewal. -/
 def paulsWordReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Paul's word, by both roads, can be held without contradiction.** -/

@@ -3308,6 +3308,31 @@ Archive. -/
   , place := some "Paris"
   , volume := some "2" }
 
+/-- Bellarmine's *Opera omnia*, volume 6, with *De justificatione*. In book I,
+ch. 19 (pp. 192–194), he answers the texts brought for faith alone. He grants
+that Romans 4, Ephesians 2 and Titus 3 "simply exclude works, with no mention of
+the law of Moses", and holds that the works excluded are those done before
+faith, by the will's own strength, from Romans 4:4: to the one who works, wages
+are counted "as debt, not as grace". He answers Chemnitz that Abraham "was
+indeed reborn" when Paul speaks of him (p. 194). In book II, ch. 4 (pp.
+217–218), the faith that justifies is faith "formed, and as it were given life,
+by love" (Galatians 5:6). Read in the Latin, in the Internet Archive's scan; the
+title page gives Vivès, Paris, 1873. -/
+@[bib_entry] def bellarmineOpera6 : BibEntry := .book
+  { core :=
+      { key := "bellarmine-opera-omnia-6-1873"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "Robert" "Bellarmine"]
+          , editors := [.person "Justin" "Fèvre"] }
+      , title := "Opera omnia"
+      , year := some { value := 1873 }
+      , identifiers :=
+          [ .url "https://archive.org/details/operaomnia06bell_0" (some "2026-11-23") ] }
+  , publisher := "Ludovicus Vivès"
+  , place := some "Paris"
+  , volume := some "6" }
+
 /-- Turretin's *Institutio theologiae elencticae*, volume 1. The Church "can be
 grasped by us by human faith before Scripture ... but cannot be known and
 believed by divine faith except after Scripture is known" ("Ecclesia potest a
@@ -5867,6 +5892,127 @@ edition's introductory note says. -/
   , originalTitle := some "De spiritu et littera"
   , composed := some { value := 412 }
   , editionUsed := some "npnf1-05-1887" }
+
+/-! ### Faith working through love -/
+
+/-- Aquinas's lectures on Galatians, as a work of his own time, dated for the
+exchange on faith working through love. On 5:6 the faith that counts is "faith,
+not unformed, but the kind that worketh by charity" (c. 5, lect. 2). The year of
+the lectures is disputed, so the work is dated, like his lectures on 1 Timothy,
+by his death in 1274. Read in Larcher's translation and the Corpus Thomisticum's
+Latin. -/
+@[bib_entry] def aquinasGalatiansLectures : BibEntry := .ancientWork
+  { core :=
+      { key := "aquinas-galatians-1274"
+      , role := .witness
+      , contributors := { authors := [.person "Thomas" "Aquinas"] }
+      , title := "Commentary on the Epistle to the Galatians" }
+  , originalTitle := some "Super Epistolam B. Pauli ad Galatas lectura"
+  , composed := some { value := 1274, approximate := true }
+  , editionUsed := some "aquinas-commentary-galatians-1966" }
+
+/-- Calvin's answer to the decree of Trent's sixth session, written in 1547, the
+year the decree was published, dated for the exchange on faith working through
+love. Read in Beveridge's translation of 1851 (`calvinAntidote`), whose pages the
+library cites. -/
+@[bib_entry] def calvinAntidoteWork : BibEntry := .ancientWork
+  { core :=
+      { key := "calvin-antidote-1547"
+      , role := .witness
+      , contributors := { authors := [.person "John" "Calvin"] }
+      , title := "Acts of the Council of Trent, with the Antidote" }
+  , originalTitle := some "Acta synodi Tridentinae cum antidoto"
+  , composed := some { value := 1547 }
+  , editionUsed := some "calvin-antidote-trent-1851" }
+
+/-- Bellarmine's *De justificatione*, in the third volume of his *Disputationes
+de controversiis*, published at Ingolstadt in 1593, dated for the exchange on
+faith working through love. Read in Vivès's edition of 1873
+(`bellarmineOpera6`), whose pages the library cites. -/
+@[bib_entry] def bellarmineDeJustificatione : BibEntry := .ancientWork
+  { core :=
+      { key := "bellarmine-de-justificatione-1593"
+      , role := .witness
+      , contributors := { authors := [.person "Robert" "Bellarmine"] }
+      , title := "On Justification" }
+  , originalTitle := some "De justificatione"
+  , composed := some { value := 1593 }
+  , editionUsed := some "bellarmine-opera-omnia-6-1873" }
+
+/-- The Rheims New Testament of 1582, the English Catholic translation made at
+the English College then at Rheims, with its annotations. Galatians 5:6 reads
+"faith that worketh by charitie", and the note on the verse answers the
+Reformed reading: "when it is said that faith worketh by charitie, it is not as
+by an instrument, but as the body worketh by the soul, the matter by the forme
+… Wherupon the Schooles cal Charitie, the forme or life of faith". Read in the
+Internet Archive's scan; its page is not cited, because the scan's pages are not
+numbered there. -/
+@[bib_entry] def rheimsNewTestament : BibEntry := .ancientWork
+  { core :=
+      { key := "rheims-new-testament-1582"
+      , contributors := { authors := [.corporate "English College at Rheims"] }
+      , role := .witness
+      , title := "The New Testament of Jesus Christ, translated faithfully into English"
+      , identifiers :=
+          [ .url "https://archive.org/details/1582RhemesNewTestament" (some "2026-11-24") ] }
+  , composed := some { value := 1582 } }
+
+/-- Lightfoot's commentary on Galatians, in the tenth edition, published the year
+after his death. On 5:6: "ἐνεργουμένη] 'working'; the middle voice according to
+the general usage of St Paul … ἐνεργεῖσθαι is never passive in St Paul … and
+therefore this passage does not express the doctrine of 'fides caritate
+formata'" (pp. 204–205). Read in the Internet Archive's scan, whose catalogue
+record gives the tenth edition, Macmillan, London, 1890. -/
+@[bib_entry] def lightfootGalatians : BibEntry := .book
+  { core :=
+      { key := "lightfoot-galatians-1890"
+      , contributors := { authors := [.person "J. B." "Lightfoot"] }
+      , title := "Saint Paul's Epistle to the Galatians"
+      , subtitle := some "A Revised Text with Introduction, Notes, and Dissertations"
+      , year := some { value := 1890 }
+      , identifiers :=
+          [ .url "https://archive.org/details/saintpaulsepistl00lighuoft" (some "2026-11-24") ] }
+  , publisher := "Macmillan"
+  , place := some "London"
+  , edition := some "10th edition" }
+
+/-- Burton's commentary on Galatians in the International Critical Commentary.
+On 5:6: "Ἐνεργουμένη is to be taken, in accordance with the regular usage of
+ἐνεργεῖσθαι in Paul, as middle, not passive", and "That the preposition διά
+denotes not antecedent cause but mediate agency … is made practically certain
+not on grammatical grounds, but because of the nature of the two attitudes
+expressed by πίστις and ἀγάπη" (p. 281). Read in the Internet Archive's scan,
+whose catalogue record gives T. & T. Clark, Edinburgh, 1921. -/
+@[bib_entry] def burtonGalatians : BibEntry := .book
+  { core :=
+      { key := "burton-galatians-icc-1921"
+      , contributors := { authors := [.person "Ernest De Witt" "Burton"] }
+      , title := "A Critical and Exegetical Commentary on the Epistle to the Galatians"
+      , year := some { value := 1921 }
+      , identifiers :=
+          [ .url "https://archive.org/details/criticalexegetic00burtuoft" (some "2026-11-24") ] }
+  , publisher := "T. & T. Clark"
+  , place := some "Edinburgh"
+  , series := some "International Critical Commentary" }
+
+/-- J. Armitage Robinson's commentary on Ephesians, with its detached note "On
+ἐνεργεῖν and its cognates" (pp. 241–247). Against Lightfoot's "never passive in
+St Paul" he holds that ἐνεργεῖσθαι in Paul is passive, "is made operative", "the
+agent implied being God ὁ ἐνεργῶν", and of Galatians 5:6: "the sense appears to
+be: 'faith is made operative through love', without which it fails of its
+action" (p. 246). Read in the Internet Archive's scan of the first edition, whose
+title page gives Macmillan, London, 1903. -/
+@[bib_entry] def robinsonEphesians : BibEntry := .book
+  { core :=
+      { key := "robinson-ephesians-1903"
+      , contributors := { authors := [.person "J. Armitage" "Robinson"] }
+      , title := "St Paul's Epistle to the Ephesians"
+      , subtitle := some "A Revised Text and Translation with Exposition and Notes"
+      , year := some { value := 1903 }
+      , identifiers :=
+          [ .url "https://archive.org/details/cu31924075889307" (some "2026-11-24") ] }
+  , publisher := "Macmillan"
+  , place := some "London" }
 
 /-- Thomas Oden's reader of patristic texts on justification, which argues that
 leading fathers "anticipated standard classic Reformation teaching on

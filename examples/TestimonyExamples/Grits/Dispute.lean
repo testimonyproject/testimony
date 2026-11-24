@@ -107,13 +107,13 @@ theorem the_grits_undermine_the_breakfast :
 
 /-- Tipton's testimony's weakest link is `disputed`: the five-minute
 breakfast. -/
-theorem direct_strength : direct.strength = 0 := by decide
+theorem direct_strength : direct.strength = 1 := by decide
 /-- The cross-examination's weakest link is `wellSupported`: that regular grits
 take twenty minutes, and the step from the grits. -/
-theorem cross_strength : cross.strength = 2 := by decide
+theorem cross_strength : cross.strength = 3 := by decide
 /-- At the fast cook, the cross-examination's weakest link was `disputed`: the
 step from the grits, as Tipton then denied it. -/
-theorem crossAtTheFastCook_strength : crossAtTheFastCook.strength = 0 := by decide
+theorem crossAtTheFastCook_strength : crossAtTheFastCook.strength = 1 := by decide
 
 /-! ### The dispute -/
 
@@ -155,8 +155,8 @@ instance : DecidableRel sideDefeats := fun i j => by
 
 /-- Each side's weakest link. -/
 def sideStrength : Side → ℕ
-  | .direct => 0
-  | .cross => 2
+  | .direct => 1
+  | .cross => 3
 
 /-- Each side's weakest link, as its package computes it. -/
 theorem sideNode_strength : ∀ i, (sideNode i).strength = sideStrength i
@@ -273,7 +273,7 @@ instance : DecidableRel fastCookDefeats := fun i j => by
   cases i <;> cases j <;> unfold fastCookDefeats <;> infer_instance
 
 /-- Each side's weakest link at the fast cook: `disputed` for both. -/
-def fastCookStrength : Side → ℕ := fun _ => 0
+def fastCookStrength : Side → ℕ := fun _ => 1
 
 /-- Each side's weakest link at the fast cook, as its package computes it. -/
 theorem atTheFastCookNode_strength : ∀ i, (atTheFastCookNode i).strength = fastCookStrength i

@@ -1,0 +1,2227 @@
+ref	role	class	text	lemma	morph	actor	actor_ref
+GAL 1:1!1		noun	Παῦλος	Παῦλος	N-NSM		
+GAL 1:1!2		noun	ἀπόστολος	ἀπόστολος	N-NSM		
+GAL 1:1!3		adv	οὐκ	οὐ	PRT-N		
+GAL 1:1!4		prep	ἀπ	ἀπό	PREP		
+GAL 1:1!5		noun	ἀνθρώπων	ἄνθρωπος	N-GPM		
+GAL 1:1!6		conj	οὐδὲ	οὐδέ	CONJ-N		
+GAL 1:1!7		prep	δι	διά	PREP		
+GAL 1:1!8		noun	ἀνθρώπου	ἄνθρωπος	N-GSM		
+GAL 1:1!9		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 1:1!10		prep	διὰ	διά	PREP		
+GAL 1:1!11		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+GAL 1:1!12		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 1:1!13		conj	καὶ	καί	CONJ		
+GAL 1:1!14		noun	θεοῦ	θεός	N-GSM		
+GAL 1:1!15		noun	πατρὸς	πατήρ	N-GSM		
+GAL 1:1!16		det	τοῦ	ὁ	T-GSM		
+GAL 1:1!17	v	verb	ἐγείραντος	ἐγείρω	V-AAP-GSM	θεός	GAL 1:1!14
+GAL 1:1!18	o	pron	αὐτὸν	αὐτός	P-ASM		
+GAL 1:1!19		prep	ἐκ	ἐκ	PREP		
+GAL 1:1!20		adj	νεκρῶν	νεκρός	A-GPM		
+GAL 1:2!1		conj	καὶ	καί	CONJ		
+GAL 1:2!2		det	οἱ	ὁ	T-NPM		
+GAL 1:2!3		prep	σὺν	σύν	PREP		
+GAL 1:2!4		pron	ἐμοὶ	ἐγώ	P-1DS		
+GAL 1:2!5		adj	πάντες	πᾶς	A-NPM		
+GAL 1:2!6		noun	ἀδελφοί	ἀδελφός	N-NPM		
+GAL 1:2!7		det	ταῖς	ὁ	T-DPF		
+GAL 1:2!8		noun	ἐκκλησίαις	ἐκκλησία	N-DPF		
+GAL 1:2!9		det	τῆς	ὁ	T-GSF		
+GAL 1:2!10		noun	Γαλατίας	Γαλατία	N-GSF		
+GAL 1:3!1		noun	χάρις	χάρις	N-NSF		
+GAL 1:3!2	io	pron	ὑμῖν	σύ	P-2DP		
+GAL 1:3!3		conj	καὶ	καί	CONJ		
+GAL 1:3!4		noun	εἰρήνη	εἰρήνη	N-NSF		
+GAL 1:3!5		prep	ἀπὸ	ἀπό	PREP		
+GAL 1:3!6		noun	θεοῦ	θεός	N-GSM		
+GAL 1:3!7		noun	πατρὸς	πατήρ	N-GSM		
+GAL 1:3!8		conj	καὶ	καί	CONJ		
+GAL 1:3!9		noun	κυρίου	κύριος	N-GSM		
+GAL 1:3!10		pron	ἡμῶν	ἐγώ	P-1GP		
+GAL 1:3!11		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+GAL 1:3!12		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 1:4!1		det	τοῦ	ὁ	T-GSM		
+GAL 1:4!2	v	verb	δόντος	δίδωμι	V-2AAP-GSM	κύριος	GAL 1:3!9
+GAL 1:4!3	o	pron	ἑαυτὸν	ἑαυτοῦ	F-3ASM		
+GAL 1:4!4		prep	ὑπὲρ	ὑπέρ	PREP		
+GAL 1:4!5		det	τῶν	ὁ	T-GPF		
+GAL 1:4!6		noun	ἁμαρτιῶν	ἁμαρτία	N-GPF		
+GAL 1:4!7		pron	ἡμῶν	ἐγώ	P-1GP		
+GAL 1:4!8		conj	ὅπως	ὅπως	ADV		
+GAL 1:4!9	v	verb	ἐξέληται	ἐξαιρέω	V-2AMS-3S	κύριος	GAL 1:3!9
+GAL 1:4!10	o	pron	ἡμᾶς	ἐγώ	P-1AP		
+GAL 1:4!11		prep	ἐκ	ἐκ	PREP		
+GAL 1:4!12		det	τοῦ	ὁ	T-GSM		
+GAL 1:4!13		noun	αἰῶνος	αἰών	N-GSM		
+GAL 1:4!14		det	τοῦ	ὁ	T-GSM		
+GAL 1:4!15	v	verb	ἐνεστῶτος	ἐνίστημι	V-RAP-GSM	αἰών	GAL 1:4!13
+GAL 1:4!16		adj	πονηροῦ	πονηρός	A-GSM		
+GAL 1:4!17		prep	κατὰ	κατά	PREP		
+GAL 1:4!18		det	τὸ	ὁ	T-ASN		
+GAL 1:4!19		noun	θέλημα	θέλημα	N-ASN		
+GAL 1:4!20		det	τοῦ	ὁ	T-GSM		
+GAL 1:4!21		noun	θεοῦ	θεός	N-GSM		
+GAL 1:4!22		conj	καὶ	καί	CONJ		
+GAL 1:4!23		noun	πατρὸς	πατήρ	N-GSM		
+GAL 1:4!24		pron	ἡμῶν	ἐγώ	P-1GP		
+GAL 1:5!1	io	pron	ᾧ	ὅς	R-DSM		
+GAL 1:5!2		det	ἡ	ὁ	T-NSF		
+GAL 1:5!3		noun	δόξα	δόξα	N-NSF		
+GAL 1:5!4		prep	εἰς	εἰς	PREP		
+GAL 1:5!5		det	τοὺς	ὁ	T-APM		
+GAL 1:5!6		noun	αἰῶνας	αἰών	N-APM		
+GAL 1:5!7		det	τῶν	ὁ	T-GPM		
+GAL 1:5!8		noun	αἰώνων	αἰών	N-GPM		
+GAL 1:5!9	aux	ptcl	ἀμήν	ἀμήν	HEB		
+GAL 1:6!1	v	verb	Θαυμάζω	θαυμάζω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:6!2		conj	ὅτι	ὅτι	CONJ		
+GAL 1:6!3	adv	adv	οὕτως	οὕτω(ς)	ADV		
+GAL 1:6!4	adv	adv	ταχέως	ταχέως	ADV		
+GAL 1:6!5	v	verb	μετατίθεσθε	μετατίθημι	V-PEI-2P	ἐκκλησία	GAL 1:2!8
+GAL 1:6!6		prep	ἀπὸ	ἀπό	PREP		
+GAL 1:6!7		det	τοῦ	ὁ	T-GSM		
+GAL 1:6!8	v	verb	καλέσαντος	καλέω	V-AAP-GSM	θεός	GAL 1:4!21
+GAL 1:6!9	o	pron	ὑμᾶς	σύ	P-2AP		
+GAL 1:6!10		prep	ἐν	ἐν	PREP		
+GAL 1:6!11		noun	χάριτι	χάρις	N-DSF		
+GAL 1:6!12		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 1:6!13		prep	εἰς	εἰς	PREP		
+GAL 1:6!14		adj	ἕτερον	ἕτερος	A-ASN		
+GAL 1:6!15		noun	εὐαγγέλιον	εὐαγγέλιον	N-ASN		
+GAL 1:7!1	s	pron	ὃ	ὅς	R-NSN		
+GAL 1:7!2	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 1:7!3	vc	verb	ἔστιν	εἰμί	V-PAI-3S		
+GAL 1:7!4	p	adj	ἄλλο	ἄλλος	A-NSN		
+GAL 1:7!5		conj	εἰ	εἰ	COND		
+GAL 1:7!6	adv	adv	μή	μή	PRT-N		
+GAL 1:7!7	s	pron	τινές	τις	X-NPM		
+GAL 1:7!8	vc	verb	εἰσιν	εἰμί	V-PAI-3P		
+GAL 1:7!9		det	οἱ	ὁ	T-NPM		
+GAL 1:7!10	v	verb	ταράσσοντες	ταράσσω	V-PAP-NPM		
+GAL 1:7!11	o	pron	ὑμᾶς	σύ	P-2AP		
+GAL 1:7!12		conj	καὶ	καί	CONJ		
+GAL 1:7!13	v	verb	θέλοντες	θέλω	V-PAP-NPM		
+GAL 1:7!14	v	verb	μεταστρέψαι	μεταστρέφω	V-AAN		
+GAL 1:7!15		det	τὸ	ὁ	T-ASN		
+GAL 1:7!16		noun	εὐαγγέλιον	εὐαγγέλιον	N-ASN		
+GAL 1:7!17		det	τοῦ	ὁ	T-GSM		
+GAL 1:7!18		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 1:8!1		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 1:8!2		adv	καὶ	καί	CONJ		
+GAL 1:8!3		conj	ἐὰν	ἐάν	COND		
+GAL 1:8!4		pron	ἡμεῖς	ἐγώ	P-1NP		
+GAL 1:8!5		conj	ἢ	ἤ	PRT		
+GAL 1:8!6		noun	ἄγγελος	ἄγγελος	N-NSM		
+GAL 1:8!7		prep	ἐξ	ἐκ	PREP		
+GAL 1:8!8		noun	οὐρανοῦ	οὐρανός	N-GSM		
+GAL 1:8!9	v	verb	εὐαγγελίζηται	εὐαγγελίζω	V-PMS-3S	ἐγώ;ἄγγελος	GAL 1:8!4;GAL 1:8!6
+GAL 1:8!10	io	pron	ὑμῖν	σύ	P-2DP		
+GAL 1:8!11		prep	παρ	παρά	PREP		
+GAL 1:8!12	o	pron	ὃ	ὅς	R-ASN		
+GAL 1:8!13	v	verb	εὐηγγελισάμεθα	εὐαγγελίζω	V-AMI-1P	Παῦλος;ἀδελφός	GAL 1:1!1;GAL 1:2!6
+GAL 1:8!14	io	pron	ὑμῖν	σύ	P-2DP		
+GAL 1:8!15	p	noun	ἀνάθεμα	ἀνάθεμα	N-NSN		
+GAL 1:8!16	vc	verb	ἔστω	εἰμί	V-PAM-3S		
+GAL 1:9!1		conj	ὡς	ὡς	ADV		
+GAL 1:9!2	v	verb	προειρήκαμεν	προλέγω	V-RAI-1P	Παῦλος;ἀδελφός	GAL 1:1!1;GAL 1:2!6
+GAL 1:9!3		adv	καὶ	καί	CONJ		
+GAL 1:9!4	adv	adv	ἄρτι	ἄρτι	ADV		
+GAL 1:9!5	adv	adv	πάλιν	πάλιν	ADV		
+GAL 1:9!6	v	verb	λέγω	λέγω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:9!7		conj	εἴ	εἰ	COND		
+GAL 1:9!8	s	pron	τις	τις	X-NSM		
+GAL 1:9!9	o	pron	ὑμᾶς	σύ	P-2AP		
+GAL 1:9!10	v	verb	εὐαγγελίζεται	εὐαγγελίζω	V-PMI-3S	τις	GAL 1:9!8
+GAL 1:9!11		prep	παρ	παρά	PREP		
+GAL 1:9!12	o	pron	ὃ	ὅς	R-ASN		
+GAL 1:9!13	v	verb	παρελάβετε	παραλαμβάνω	V-2AAI-2P	ἐκκλησία	GAL 1:2!8
+GAL 1:9!14	p	noun	ἀνάθεμα	ἀνάθεμα	N-NSN		
+GAL 1:9!15	vc	verb	ἔστω	εἰμί	V-PAM-3S		
+GAL 1:10!1	adv	adv	Ἄρτι	ἄρτι	ADV		
+GAL 1:10!2		conj	γὰρ	γάρ	CONJ		
+GAL 1:10!3		noun	ἀνθρώπους	ἄνθρωπος	N-APM		
+GAL 1:10!4	v	verb	πείθω	πείθω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:10!5		conj	ἢ	ἤ	PRT		
+GAL 1:10!6		det	τὸν	ὁ	T-ASM		
+GAL 1:10!7		noun	θεόν	θεός	N-ASM		
+GAL 1:10!8		conj	ἢ	ἤ	PRT		
+GAL 1:10!9	v	verb	ζητῶ	ζητέω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:10!10	o	noun	ἀνθρώποις	ἄνθρωπος	N-DPM		
+GAL 1:10!11	v	verb	ἀρέσκειν	ἀρέσκω	V-PAN	Παῦλος	GAL 1:1!1
+GAL 1:10!12		conj	εἰ	εἰ	COND		
+GAL 1:10!13	adv	adv	ἔτι	ἔτι	ADV		
+GAL 1:10!14	o	noun	ἀνθρώποις	ἄνθρωπος	N-DPM		
+GAL 1:10!15	v	verb	ἤρεσκον	ἀρέσκω	V-IAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:10!16		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 1:10!17		noun	δοῦλος	δοῦλος	N-NSM		
+GAL 1:10!18	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 1:10!19		ptcl	ἂν	ἄν	PRT		
+GAL 1:10!20	vc	verb	ἤμην	εἰμί	V-IMI-1S		
+GAL 1:11!1	v	verb	Γνωρίζω	γνωρίζω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:11!2		conj	γὰρ	γάρ	CONJ		
+GAL 1:11!3	io	pron	ὑμῖν	σύ	P-2DP		
+GAL 1:11!4	aux	noun	ἀδελφοί	ἀδελφός	N-VPM		
+GAL 1:11!5		det	τὸ	ὁ	T-ASN		
+GAL 1:11!6		noun	εὐαγγέλιον	εὐαγγέλιον	N-ASN		
+GAL 1:11!7		det	τὸ	ὁ	T-ASN		
+GAL 1:11!8	v	verb	εὐαγγελισθὲν	εὐαγγελίζω	V-APP-ASN		
+GAL 1:11!9		prep	ὑπ	ὑπό	PREP		
+GAL 1:11!10		pron	ἐμοῦ	ἐγώ	P-1GS		
+GAL 1:11!11		conj	ὅτι	ὅτι	CONJ		
+GAL 1:11!12	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 1:11!13	vc	verb	ἔστιν	εἰμί	V-PAI-3S		
+GAL 1:11!14		prep	κατὰ	κατά	PREP		
+GAL 1:11!15		noun	ἄνθρωπον	ἄνθρωπος	N-ASM		
+GAL 1:12!1		adv	οὐδὲ	οὐδέ	CONJ-N		
+GAL 1:12!2		conj	γὰρ	γάρ	CONJ		
+GAL 1:12!3	s	pron	ἐγὼ	ἐγώ	P-1NS		
+GAL 1:12!4		prep	παρὰ	παρά	PREP		
+GAL 1:12!5		noun	ἀνθρώπου	ἄνθρωπος	N-GSM		
+GAL 1:12!6	v	verb	παρέλαβον	παραλαμβάνω	V-2AAI-1S	ἐγώ	GAL 1:12!3
+GAL 1:12!7	o	pron	αὐτό	αὐτός	P-ASN		
+GAL 1:12!8		conj	οὔτε	οὔτε	CONJ-N		
+GAL 1:12!9	v	verb	ἐδιδάχθην	διδάσκω	V-API-1S		
+GAL 1:12!10		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 1:12!11		prep	δι	διά	PREP		
+GAL 1:12!12		noun	ἀποκαλύψεως	ἀποκάλυψις	N-GSF		
+GAL 1:12!13		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+GAL 1:12!14		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 1:13!1	v	verb	Ἠκούσατε	ἀκούω	V-AAI-2P	ἀδελφός	GAL 1:11!4
+GAL 1:13!2		conj	γὰρ	γάρ	CONJ		
+GAL 1:13!3		det	τὴν	ὁ	T-ASF		
+GAL 1:13!4		adj	ἐμὴν	ἐμός	S-1SASF		
+GAL 1:13!5		noun	ἀναστροφήν	ἀναστροφή	N-ASF		
+GAL 1:13!6		adv	ποτε	ποτέ	PRT		
+GAL 1:13!7		prep	ἐν	ἐν	PREP		
+GAL 1:13!8		det	τῷ	ὁ	T-DSM		
+GAL 1:13!9		noun	Ἰουδαϊσμῷ	Ἰουδαϊσμός	N-DSM		
+GAL 1:13!10		adv	ὅτι	ὅτι	CONJ		
+GAL 1:13!11		prep	καθ	κατά	PREP		
+GAL 1:13!12		noun	ὑπερβολὴν	ὑπερβολή	N-ASF		
+GAL 1:13!13	v	verb	ἐδίωκον	διώκω	V-IAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:13!14		det	τὴν	ὁ	T-ASF		
+GAL 1:13!15		noun	ἐκκλησίαν	ἐκκλησία	N-ASF		
+GAL 1:13!16		det	τοῦ	ὁ	T-GSM		
+GAL 1:13!17		noun	θεοῦ	θεός	N-GSM		
+GAL 1:13!18		conj	καὶ	καί	CONJ		
+GAL 1:13!19	v	verb	ἐπόρθουν	πορθέω	V-IAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:13!20	o	pron	αὐτήν	ἑαυτοῦ	P-ASF		
+GAL 1:14!1		conj	καὶ	καί	CONJ		
+GAL 1:14!2	v	verb	προέκοπτον	προκόπτω	V-IAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:14!3		prep	ἐν	ἐν	PREP		
+GAL 1:14!4		det	τῷ	ὁ	T-DSM		
+GAL 1:14!5		noun	Ἰουδαϊσμῷ	Ἰουδαϊσμός	N-DSM		
+GAL 1:14!6		prep	ὑπὲρ	ὑπέρ	PREP		
+GAL 1:14!7		adj	πολλοὺς	πολύς	A-APM		
+GAL 1:14!8		noun	συνηλικιώτας	συνηλικιώτης	N-APM		
+GAL 1:14!9		prep	ἐν	ἐν	PREP		
+GAL 1:14!10		det	τῷ	ὁ	T-DSN		
+GAL 1:14!11		noun	γένει	γένος	N-DSN		
+GAL 1:14!12		pron	μου	ἐγώ	P-1GS		
+GAL 1:14!13	adv	adv	περισσοτέρως	περισσοτέρως	ADV-C		
+GAL 1:14!14		noun	ζηλωτὴς	ζηλωτής	N-NSM		
+GAL 1:14!15	vc	verb	ὑπάρχων	ὑπάρχω	V-PAP-NSM		
+GAL 1:14!16		det	τῶν	ὁ	T-GPF		
+GAL 1:14!17		adj	πατρικῶν	πατρικός	A-GPF		
+GAL 1:14!18		pron	μου	ἐγώ	P-1GS		
+GAL 1:14!19		noun	παραδόσεων	παράδοσις	N-GPF		
+GAL 1:15!1		conj	ὅτε	ὅτε	ADV		
+GAL 1:15!2		conj	δὲ	δέ	CONJ		
+GAL 1:15!3	v	verb	εὐδόκησεν	εὐδοκέω	V-AAI-3S	θεός	GAL 1:13!17
+GAL 1:15!4		det	ὁ	ὁ	T-NSM		
+GAL 1:15!5	v	verb	ἀφορίσας	ἀφορίζω	V-AAP-NSM	θεός	GAL 1:13!17
+GAL 1:15!6	o	pron	με	ἐγώ	P-1AS		
+GAL 1:15!7		prep	ἐκ	ἐκ	PREP		
+GAL 1:15!8		noun	κοιλίας	κοιλία	N-GSF		
+GAL 1:15!9		noun	μητρός	μήτηρ	N-GSF		
+GAL 1:15!10		pron	μου	ἐγώ	P-1GS		
+GAL 1:15!11		conj	καὶ	καί	CONJ		
+GAL 1:15!12	v	verb	καλέσας	καλέω	V-AAP-NSM	θεός	GAL 1:13!17
+GAL 1:15!13		prep	διὰ	διά	PREP		
+GAL 1:15!14		det	τῆς	ὁ	T-GSF		
+GAL 1:15!15		noun	χάριτος	χάρις	N-GSF		
+GAL 1:15!16		pron	αὐτοῦ	αὐτός	P-GSM		
+GAL 1:16!1	v	verb	ἀποκαλύψαι	ἀποκαλύπτω	V-AAN	θεός	GAL 1:13!17
+GAL 1:16!2		det	τὸν	ὁ	T-ASM		
+GAL 1:16!3		noun	υἱὸν	υἱός	N-ASM		
+GAL 1:16!4		pron	αὐτοῦ	αὐτός	P-GSM		
+GAL 1:16!5		prep	ἐν	ἐν	PREP		
+GAL 1:16!6		pron	ἐμοὶ	ἐγώ	P-1DS		
+GAL 1:16!7		conj	ἵνα	ἵνα	CONJ		
+GAL 1:16!8	v	verb	εὐαγγελίζωμαι	εὐαγγελίζω	V-PMS-1S	Παῦλος	GAL 1:1!1
+GAL 1:16!9	o	pron	αὐτὸν	αὐτός	P-ASM		
+GAL 1:16!10		prep	ἐν	ἐν	PREP		
+GAL 1:16!11		det	τοῖς	ὁ	T-DPN		
+GAL 1:16!12		noun	ἔθνεσιν	ἔθνος	N-DPN		
+GAL 1:16!13	adv	adv	εὐθέως	εὐθέως	ADV		
+GAL 1:16!14		adv	οὐ	οὐ	PRT-N		
+GAL 1:16!15	v	verb	προσανεθέμην	προσανατίθημι	V-2AMI-1S	Παῦλος	GAL 1:1!1
+GAL 1:16!16		noun	σαρκὶ	σάρξ	N-DSF		
+GAL 1:16!17		conj	καὶ	καί	CONJ		
+GAL 1:16!18		noun	αἵματι	αἷμα	N-DSN		
+GAL 1:17!1	adv	conj	οὐδὲ	οὐδέ	CONJ-N		
+GAL 1:17!2	v	verb	ἀνῆλθον	ἀνέρχομαι	V-2AAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:17!3		prep	εἰς	εἰς	PREP		
+GAL 1:17!4		noun	Ἱεροσόλυμα	Ἱεροσόλυμα	N-APN		
+GAL 1:17!5		prep	πρὸς	πρός	PREP		
+GAL 1:17!6		det	τοὺς	ὁ	T-APM		
+GAL 1:17!7		prep	πρὸ	πρό	PREP		
+GAL 1:17!8		pron	ἐμοῦ	ἐγώ	P-1GS		
+GAL 1:17!9		noun	ἀποστόλους	ἀπόστολος	N-APM		
+GAL 1:17!10		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 1:17!11	v	verb	ἀπῆλθον	ἀπέρχομαι	V-2AAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:17!12		prep	εἰς	εἰς	PREP		
+GAL 1:17!13		noun	Ἀραβίαν	Ἀραβία	N-ASF		
+GAL 1:17!14		conj	καὶ	καί	CONJ		
+GAL 1:17!15	adv	adv	πάλιν	πάλιν	ADV		
+GAL 1:17!16	v	verb	ὑπέστρεψα	ὑποστρέφω	V-AAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:17!17		prep	εἰς	εἰς	PREP		
+GAL 1:17!18		noun	Δαμασκόν	Δαμασκός	N-ASF		
+GAL 1:18!1	adv	adv	Ἔπειτα	ἔπειτα	ADV		
+GAL 1:18!2		prep	μετὰ	μετά	PREP		
+GAL 1:18!3		noun	ἔτη	ἔτος	N-APN		
+GAL 1:18!4		adj	τρία	τρεῖς	A-APN		
+GAL 1:18!5	v	verb	ἀνῆλθον	ἀνέρχομαι	V-2AAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:18!6		prep	εἰς	εἰς	PREP		
+GAL 1:18!7		noun	Ἱεροσόλυμα	Ἱεροσόλυμα	N-APN		
+GAL 1:18!8	v	verb	ἱστορῆσαι	ἱστορέω	V-AAN	Παῦλος	GAL 1:1!1
+GAL 1:18!9	o	noun	Κηφᾶν	Κηφᾶς	N-ASM		
+GAL 1:18!10		conj	καὶ	καί	CONJ		
+GAL 1:18!11	v	verb	ἐπέμεινα	ἐπιμένω	V-AAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:18!12		prep	πρὸς	πρός	PREP		
+GAL 1:18!13		pron	αὐτὸν	αὐτός	P-ASM		
+GAL 1:18!14		noun	ἡμέρας	ἡμέρα	N-APF		
+GAL 1:18!15		num	δεκαπέντε	δεκαπέντε	A-NUI		
+GAL 1:19!1		adj	ἕτερον	ἕτερος	A-ASM		
+GAL 1:19!2		conj	δὲ	δέ	CONJ		
+GAL 1:19!3		det	τῶν	ὁ	T-GPM		
+GAL 1:19!4		noun	ἀποστόλων	ἀπόστολος	N-GPM		
+GAL 1:19!5	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 1:19!6	v	verb	εἶδον	ὁράω	V-2AAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:19!7		conj	εἰ	εἰ	COND		
+GAL 1:19!8	adv	adv	μὴ	μή	PRT-N		
+GAL 1:19!9		noun	Ἰάκωβον	Ἰάκωβος	N-ASM		
+GAL 1:19!10		det	τὸν	ὁ	T-ASM		
+GAL 1:19!11		noun	ἀδελφὸν	ἀδελφός	N-ASM		
+GAL 1:19!12		det	τοῦ	ὁ	T-GSM		
+GAL 1:19!13		noun	κυρίου	κύριος	N-GSM		
+GAL 1:20!1	o	pron	ἃ	ὅς	R-APN		
+GAL 1:20!2		conj	δὲ	δέ	CONJ		
+GAL 1:20!3	v	verb	γράφω	γράφω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:20!4	io	pron	ὑμῖν	σύ	P-2DP		
+GAL 1:20!5	aux	ptcl	ἰδοὺ	ἰδού	V-2AMM-2S		
+GAL 1:20!6		prep	ἐνώπιον	ἐνώπιον	PREP		
+GAL 1:20!7		det	τοῦ	ὁ	T-GSM		
+GAL 1:20!8		noun	θεοῦ	θεός	N-GSM		
+GAL 1:20!9		conj	ὅτι	ὅτι	CONJ		
+GAL 1:20!10	adv	adv	οὐ	οὐ	PRT-N		
+GAL 1:20!11	v	verb	ψεύδομαι	ψεύδομαι	V-PNI-1S	Παῦλος	GAL 1:1!1
+GAL 1:21!1	adv	adv	ἔπειτα	ἔπειτα	ADV		
+GAL 1:21!2	v	verb	ἦλθον	ἔρχομαι	V-2AAI-1S	Παῦλος	GAL 1:1!1
+GAL 1:21!3		prep	εἰς	εἰς	PREP		
+GAL 1:21!4		det	τὰ	ὁ	T-APN		
+GAL 1:21!5		noun	κλίματα	κλίμα	N-APN		
+GAL 1:21!6		det	τῆς	ὁ	T-GSF		
+GAL 1:21!7		noun	Συρίας	Συρία	N-GSF		
+GAL 1:21!8		conj	καὶ	καί	CONJ		
+GAL 1:21!9		det	τῆς	ὁ	T-GSF		
+GAL 1:21!10		noun	Κιλικίας	Κιλικία	N-GSF		
+GAL 1:22!1		verb	ἤμην	εἰμί	V-IMI-1S		
+GAL 1:22!2		conj	δὲ	δέ	CONJ		
+GAL 1:22!3		verb	ἀγνοούμενος	ἀγνοέω	V-PPP-NSM		
+GAL 1:22!4		det	τῷ	ὁ	T-DSN		
+GAL 1:22!5		noun	προσώπῳ	πρόσωπον	N-DSN		
+GAL 1:22!6		det	ταῖς	ὁ	T-DPF		
+GAL 1:22!7		noun	ἐκκλησίαις	ἐκκλησία	N-DPF		
+GAL 1:22!8		det	τῆς	ὁ	T-GSF		
+GAL 1:22!9		noun	Ἰουδαίας	Ἰουδαία	N-GSF		
+GAL 1:22!10		det	ταῖς	ὁ	T-DPF		
+GAL 1:22!11		prep	ἐν	ἐν	PREP		
+GAL 1:22!12		noun	Χριστῷ	Χριστός	N-DSM		
+GAL 1:23!1	adv	adj	μόνον	μόνος	ADV		
+GAL 1:23!2		conj	δὲ	δέ	CONJ		
+GAL 1:23!3		verb	ἀκούοντες	ἀκούω	V-PAP-NPM	ἐκκλησία	GAL 1:22!7
+GAL 1:23!4		verb	ἦσαν	εἰμί	V-IAI-3P		
+GAL 1:23!5		conj	ὅτι	ὅτι	CONJ		
+GAL 1:23!6		det	Ὁ	ὁ	T-NSM		
+GAL 1:23!7	v	verb	διώκων	διώκω	V-PAP-NSM	Παῦλος	GAL 1:1!1
+GAL 1:23!8	o	pron	ἡμᾶς	ἐγώ	P-1AP		
+GAL 1:23!9	adv	adv	ποτε	ποτέ	ADV		
+GAL 1:23!10	adv	adv	νῦν	νῦν	ADV		
+GAL 1:23!11	v	verb	εὐαγγελίζεται	εὐαγγελίζω	V-PMI-3S	Παῦλος	GAL 1:1!1
+GAL 1:23!12		det	τὴν	ὁ	T-ASF		
+GAL 1:23!13		noun	πίστιν	πίστις	N-ASF		
+GAL 1:23!14	o	pron	ἥν	ὅς	R-ASF		
+GAL 1:23!15	adv	adv	ποτε	ποτέ	PRT		
+GAL 1:23!16	v	verb	ἐπόρθει	πορθέω	V-IAI-3S	Παῦλος	GAL 1:1!1
+GAL 1:24!1		conj	καὶ	καί	CONJ		
+GAL 1:24!2	v	verb	ἐδόξαζον	δοξάζω	V-IAI-3P	ἐκκλησία	GAL 1:22!7
+GAL 1:24!3		prep	ἐν	ἐν	PREP		
+GAL 1:24!4		pron	ἐμοὶ	ἐγώ	P-1DS		
+GAL 1:24!5		det	τὸν	ὁ	T-ASM		
+GAL 1:24!6		noun	θεόν	θεός	N-ASM		
+GAL 2:1!1	adv	adv	Ἔπειτα	ἔπειτα	ADV		
+GAL 2:1!2		prep	διὰ	διά	PREP		
+GAL 2:1!3		adj	δεκατεσσάρων	δεκατέσσαρες	A-GPN		
+GAL 2:1!4		noun	ἐτῶν	ἔτος	N-GPN		
+GAL 2:1!5	adv	adv	πάλιν	πάλιν	ADV		
+GAL 2:1!6	v	verb	ἀνέβην	ἀναβαίνω	V-2AAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:1!7		prep	εἰς	εἰς	PREP		
+GAL 2:1!8		noun	Ἱεροσόλυμα	Ἱεροσόλυμα	N-APN		
+GAL 2:1!9		prep	μετὰ	μετά	PREP		
+GAL 2:1!10		noun	Βαρναβᾶ	Βαρναβᾶς	N-GSM		
+GAL 2:1!11	v	verb	συμπαραλαβὼν	συμπαραλαμβάνω	V-2AAP-NSM	Παῦλος	GAL 1:1!1
+GAL 2:1!12		adv	καὶ	καί	CONJ		
+GAL 2:1!13		noun	Τίτον	Τίτος	N-ASM		
+GAL 2:2!1	v	verb	ἀνέβην	ἀναβαίνω	V-2AAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:2!2		conj	δὲ	δέ	CONJ		
+GAL 2:2!3		prep	κατὰ	κατά	PREP		
+GAL 2:2!4		noun	ἀποκάλυψιν	ἀποκάλυψις	N-ASF		
+GAL 2:2!5		conj	καὶ	καί	CONJ		
+GAL 2:2!6	v	verb	ἀνεθέμην	ἀνατίθεμαι	V-2AMI-1S	Παῦλος	GAL 1:1!1
+GAL 2:2!7	io	pron	αὐτοῖς	αὐτός	P-DPM		
+GAL 2:2!8		det	τὸ	ὁ	T-ASN		
+GAL 2:2!9		noun	εὐαγγέλιον	εὐαγγέλιον	N-ASN		
+GAL 2:2!10	o	pron	ὃ	ὅς	R-ASN		
+GAL 2:2!11	v	verb	κηρύσσω	κηρύσσω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:2!12		prep	ἐν	ἐν	PREP		
+GAL 2:2!13		det	τοῖς	ὁ	T-DPN		
+GAL 2:2!14		noun	ἔθνεσιν	ἔθνος	N-DPN		
+GAL 2:2!15		prep	κατ	κατά	PREP		
+GAL 2:2!16		adj	ἰδίαν	ἴδιος	A-ASF		
+GAL 2:2!17		conj	δὲ	δέ	CONJ		
+GAL 2:2!18		det	τοῖς	ὁ	T-DPM		
+GAL 2:2!19	v	verb	δοκοῦσιν	δοκέω	V-PAP-DPM		
+GAL 2:2!20		conj	μή	μή	PRT-N		
+GAL 2:2!21		adv	πως	πώς	ADV-I		
+GAL 2:2!22		prep	εἰς	εἰς	PREP		
+GAL 2:2!23		adj	κενὸν	κενός	A-ASM		
+GAL 2:2!24		verb	τρέχω	τρέχω	V-PAS-1S	Παῦλος	GAL 1:1!1
+GAL 2:2!25		conj	ἢ	ἤ	PRT		
+GAL 2:2!26		verb	ἔδραμον	τρέχω	V-2AAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:3!1		conj	ἀλλ	ἀλλά	CONJ		
+GAL 2:3!2	adv	adv	οὐδὲ	οὐδέ	CONJ-N		
+GAL 2:3!3		noun	Τίτος	Τίτος	N-NSM		
+GAL 2:3!4		det	ὁ	ὁ	T-NSM		
+GAL 2:3!5		prep	σὺν	σύν	PREP		
+GAL 2:3!6		pron	ἐμοί	ἐγώ	P-1DS		
+GAL 2:3!7	p	noun	Ἕλλην	Ἕλλην	N-NSM		
+GAL 2:3!8	vc	verb	ὤν	εἰμί	V-PAP-NSM		
+GAL 2:3!9	v	verb	ἠναγκάσθη	ἀναγκάζω	V-API-3S		
+GAL 2:3!10	v	verb	περιτμηθῆναι	περιτέμνω	V-APN		
+GAL 2:4!1		prep	διὰ	διά	PREP		
+GAL 2:4!2		conj	δὲ	δέ	CONJ		
+GAL 2:4!3		det	τοὺς	ὁ	T-APM		
+GAL 2:4!4		adj	παρεισάκτους	παρείσακτος	A-APM		
+GAL 2:4!5		noun	ψευδαδέλφους	ψευδάδελφος	N-APM		
+GAL 2:4!6	s	pron	οἵτινες	ὅστις	R-NPM		
+GAL 2:4!7	v	verb	παρεισῆλθον	παρεισέρχομαι	V-2AAI-3P	ὅστις	GAL 2:4!6
+GAL 2:4!8	v	verb	κατασκοπῆσαι	κατασκοπέω	V-AAN	ψευδάδελφος	GAL 2:4!5
+GAL 2:4!9		det	τὴν	ὁ	T-ASF		
+GAL 2:4!10		noun	ἐλευθερίαν	ἐλευθερία	N-ASF		
+GAL 2:4!11		pron	ἡμῶν	ἐγώ	P-1GP		
+GAL 2:4!12	o	pron	ἣν	ὅς	R-ASF		
+GAL 2:4!13	v	verb	ἔχομεν	ἔχω	V-PAI-1P	Παῦλος;Βαρναβᾶς;Τίτος;ἀδελφός;ἀδελφός	GAL 1:1!1;GAL 2:1!10;GAL 2:3!3;GAL 1:2!6;GAL 1:11!4
+GAL 2:4!14		prep	ἐν	ἐν	PREP		
+GAL 2:4!15		noun	Χριστῷ	Χριστός	N-DSM		
+GAL 2:4!16		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+GAL 2:4!17		conj	ἵνα	ἵνα	CONJ		
+GAL 2:4!18	o	pron	ἡμᾶς	ἐγώ	P-1AP		
+GAL 2:4!19	v	verb	καταδουλώσουσιν	καταδουλόω	V-FAI-3P	ψευδάδελφος	GAL 2:4!5
+GAL 2:5!1	adv	pron	οἷς	ὅς	R-DPM		
+GAL 2:5!2	adv	adv	οὐδὲ	οὐδέ	CONJ-N		
+GAL 2:5!3		prep	πρὸς	πρός	PREP		
+GAL 2:5!4		noun	ὥραν	ὥρα	N-ASF		
+GAL 2:5!5	v	verb	εἴξαμεν	εἴκω	V-AAI-1P	Παῦλος;Βαρναβᾶς;Τίτος	GAL 1:1!1;GAL 2:1!10;GAL 2:3!3
+GAL 2:5!6		det	τῇ	ὁ	T-DSF		
+GAL 2:5!7		noun	ὑποταγῇ	ὑποταγή	N-DSF		
+GAL 2:5!8		conj	ἵνα	ἵνα	CONJ		
+GAL 2:5!9		det	ἡ	ὁ	T-NSF		
+GAL 2:5!10		noun	ἀλήθεια	ἀλήθεια	N-NSF		
+GAL 2:5!11		det	τοῦ	ὁ	T-GSN		
+GAL 2:5!12		noun	εὐαγγελίου	εὐαγγέλιον	N-GSN		
+GAL 2:5!13	v	verb	διαμείνῃ	διαμένω	V-AAS-3S	ἀλήθεια	GAL 2:5!10
+GAL 2:5!14		prep	πρὸς	πρός	PREP		
+GAL 2:5!15		pron	ὑμᾶς	σύ	P-2AP		
+GAL 2:6!1		prep	ἀπὸ	ἀπό	PREP		
+GAL 2:6!2		conj	δὲ	δέ	CONJ		
+GAL 2:6!3		det	τῶν	ὁ	T-GPM		
+GAL 2:6!4	v	verb	δοκούντων	δοκέω	V-PAP-GPM		
+GAL 2:6!5	vc	verb	εἶναί	εἰμί	V-PAN		
+GAL 2:6!6	p	pron	τι	τις	X-ASN		
+GAL 2:6!7	p	pron	ὁποῖοί	ὁποῖος	A-NPM		
+GAL 2:6!8	adv	adv	ποτε	ποτέ	PRT		
+GAL 2:6!9	vc	verb	ἦσαν	εἰμί	V-IAI-3P		
+GAL 2:6!10	adv	adj	οὐδέν	οὐδείς	A-ASN-N		
+GAL 2:6!11	adv	pron	μοι	ἐγώ	P-1DS		
+GAL 2:6!12	v	verb	διαφέρει	διαφέρω	V-PAI-3S	ὁποῖος	GAL 2:6!7
+GAL 2:6!13		noun	πρόσωπον	πρόσωπον	N-ASN		
+GAL 2:6!14	s	noun	θεὸς	θεός	N-NSM		
+GAL 2:6!15		noun	ἀνθρώπου	ἄνθρωπος	N-GSM		
+GAL 2:6!16	adv	adv	οὐ	οὐ	PRT-N		
+GAL 2:6!17	v	verb	λαμβάνει	λαμβάνω	V-PAI-3S	θεός	GAL 2:6!14
+GAL 2:6!18	io	pron	ἐμοὶ	ἐγώ	P-1DS		
+GAL 2:6!19		conj	γὰρ	γάρ	CONJ		
+GAL 2:6!20		det	οἱ	ὁ	T-NPM		
+GAL 2:6!21	v	verb	δοκοῦντες	δοκέω	V-PAP-NPM		
+GAL 2:6!22	o	adj	οὐδὲν	οὐδείς	A-ASN-N		
+GAL 2:6!23	v	verb	προσανέθεντο	προσανατίθημι	V-2AMI-3P		
+GAL 2:7!1		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 2:7!2	adv	noun	τοὐναντίον	τοὐναντίον	ADV-K		
+GAL 2:7!3	v	verb	ἰδόντες	ὁράω	V-2AAP-NPM	Ἰάκωβος;Κηφᾶς;Ἰωάννης	GAL 2:9!8;GAL 2:9!10;GAL 2:9!12
+GAL 2:7!4		conj	ὅτι	ὅτι	CONJ		
+GAL 2:7!5	v	verb	πεπίστευμαι	πιστεύω	V-RPI-1S		
+GAL 2:7!6		det	τὸ	ὁ	T-ASN		
+GAL 2:7!7		noun	εὐαγγέλιον	εὐαγγέλιον	N-ASN		
+GAL 2:7!8		det	τῆς	ὁ	T-GSF		
+GAL 2:7!9		noun	ἀκροβυστίας	ἀκροβυστία	N-GSF		
+GAL 2:7!10		conj	καθὼς	καθώς	ADV		
+GAL 2:7!11	s	noun	Πέτρος	Πέτρος	N-NSM		
+GAL 2:7!12		det	τῆς	ὁ	T-GSF		
+GAL 2:7!13		noun	περιτομῆς	περιτομή	N-GSF		
+GAL 2:8!1		det	ὁ	ὁ	T-NSM		
+GAL 2:8!2		conj	γὰρ	γάρ	CONJ		
+GAL 2:8!3	v	verb	ἐνεργήσας	ἐνεργέω	V-AAP-NSM	θεός	GAL 2:6!14
+GAL 2:8!4	adv	noun	Πέτρῳ	Πέτρος	N-DSM		
+GAL 2:8!5		prep	εἰς	εἰς	PREP		
+GAL 2:8!6		noun	ἀποστολὴν	ἀποστολή	N-ASF		
+GAL 2:8!7		det	τῆς	ὁ	T-GSF		
+GAL 2:8!8		noun	περιτομῆς	περιτομή	N-GSF		
+GAL 2:8!9	v	verb	ἐνήργησεν	ἐνεργέω	V-AAI-3S	θεός	GAL 2:6!14
+GAL 2:8!10		adv	καὶ	καί	CONJ		
+GAL 2:8!11		pron	ἐμοὶ	ἐγώ	P-1DS		
+GAL 2:8!12		prep	εἰς	εἰς	PREP		
+GAL 2:8!13		det	τὰ	ὁ	T-APN		
+GAL 2:8!14		noun	ἔθνη	ἔθνος	N-APN		
+GAL 2:9!1		conj	καὶ	καί	CONJ		
+GAL 2:9!2	v	verb	γνόντες	γινώσκω	V-2AAP-NPM	Ἰάκωβος;Κηφᾶς;Ἰωάννης	GAL 2:9!8;GAL 2:9!10;GAL 2:9!12
+GAL 2:9!3		det	τὴν	ὁ	T-ASF		
+GAL 2:9!4		noun	χάριν	χάρις	N-ASF		
+GAL 2:9!5		det	τὴν	ὁ	T-ASF		
+GAL 2:9!6	v	verb	δοθεῖσάν	δίδωμι	V-APP-ASF		
+GAL 2:9!7	io	pron	μοι	ἐγώ	P-1DS		
+GAL 2:9!8		noun	Ἰάκωβος	Ἰάκωβος	N-NSM		
+GAL 2:9!9		conj	καὶ	καί	CONJ		
+GAL 2:9!10		noun	Κηφᾶς	Κηφᾶς	N-NSM		
+GAL 2:9!11		conj	καὶ	καί	CONJ		
+GAL 2:9!12		noun	Ἰωάννης	Ἰωάννης	N-NSM		
+GAL 2:9!13		det	οἱ	ὁ	T-NPM		
+GAL 2:9!14	v	verb	δοκοῦντες	δοκέω	V-PAP-NPM	Ἰάκωβος;Κηφᾶς;Ἰωάννης	GAL 2:9!8;GAL 2:9!10;GAL 2:9!12
+GAL 2:9!15	p	noun	στῦλοι	στῦλος	N-NPM		
+GAL 2:9!16	vc	verb	εἶναι	εἰμί	V-PAN		
+GAL 2:9!17		adj	δεξιὰς	δεξιός	A-APF		
+GAL 2:9!18	v	verb	ἔδωκαν	δίδωμι	V-AAI-3P	Ἰάκωβος;Κηφᾶς;Ἰωάννης	GAL 2:9!8;GAL 2:9!10;GAL 2:9!12
+GAL 2:9!19		pron	ἐμοὶ	ἐγώ	P-1DS		
+GAL 2:9!20		conj	καὶ	καί	CONJ		
+GAL 2:9!21		noun	Βαρναβᾷ	Βαρναβᾶς	N-GSM		
+GAL 2:9!22		noun	κοινωνίας	κοινωνία	N-GSF		
+GAL 2:9!23		conj	ἵνα	ἵνα	CONJ		
+GAL 2:9!24	s	pron	ἡμεῖς	ἐγώ	P-1NP		
+GAL 2:9!25		prep	εἰς	εἰς	PREP		
+GAL 2:9!26		det	τὰ	ὁ	T-APN		
+GAL 2:9!27		noun	ἔθνη	ἔθνος	N-APN		
+GAL 2:9!28	s	pron	αὐτοὶ	αὐτός	P-NPM		
+GAL 2:9!29		conj	δὲ	δέ	CONJ		
+GAL 2:9!30		prep	εἰς	εἰς	PREP		
+GAL 2:9!31		det	τὴν	ὁ	T-ASF		
+GAL 2:9!32		noun	περιτομήν	περιτομή	N-ASF		
+GAL 2:10!1	adv	adj	μόνον	μόνος	ADV		
+GAL 2:10!2		det	τῶν	ὁ	T-GPM		
+GAL 2:10!3		adj	πτωχῶν	πτωχός	A-GPM		
+GAL 2:10!4		conj	ἵνα	ἵνα	CONJ		
+GAL 2:10!5	v	verb	μνημονεύωμεν	μνημονεύω	V-PAS-1P	Παῦλος;Βαρναβᾶς	GAL 1:1!1;GAL 2:9!21
+GAL 2:10!6	adv	pron	ὃ	ὅς	R-ASN		
+GAL 2:10!7	adv	adv	καὶ	καί	CONJ		
+GAL 2:10!8	v	verb	ἐσπούδασα	σπουδάζω	V-AAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:10!9		adj	αὐτὸ	αὐτός	P-ASN		
+GAL 2:10!10		pron	τοῦτο	οὗτος	D-ASN		
+GAL 2:10!11	v	verb	ποιῆσαι	ποιέω	V-AAN	Παῦλος	GAL 1:1!1
+GAL 2:11!1		conj	Ὅτε	ὅτε	ADV		
+GAL 2:11!2		conj	δὲ	δέ	CONJ		
+GAL 2:11!3	v	verb	ἦλθεν	ἔρχομαι	V-2AAI-3S	Κηφᾶς	GAL 2:11!4
+GAL 2:11!4	s	noun	Κηφᾶς	Κηφᾶς	N-NSM		
+GAL 2:11!5		prep	εἰς	εἰς	PREP		
+GAL 2:11!6		noun	Ἀντιόχειαν	Ἀντιόχεια	N-ASF		
+GAL 2:11!7		prep	κατὰ	κατά	PREP		
+GAL 2:11!8		noun	πρόσωπον	πρόσωπον	N-ASN		
+GAL 2:11!9	o	pron	αὐτῷ	αὐτός	P-DSM		
+GAL 2:11!10	v	verb	ἀντέστην	ἀνθίστημι	V-2AAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:11!11		conj	ὅτι	ὅτι	CONJ		
+GAL 2:11!12		verb	κατεγνωσμένος	καταγινώσκω	V-RPP-NSM		
+GAL 2:11!13		verb	ἦν	εἰμί	V-IAI-3S		
+GAL 2:12!1		prep	πρὸ	πρό	PREP		
+GAL 2:12!2		det	τοῦ	ὁ	T-GSN		
+GAL 2:12!3		conj	γὰρ	γάρ	CONJ		
+GAL 2:12!4	v	verb	ἐλθεῖν	ἔρχομαι	V-2AAN	τις	GAL 2:12!5
+GAL 2:12!5	s	pron	τινας	τις	X-APM		
+GAL 2:12!6		prep	ἀπὸ	ἀπό	PREP		
+GAL 2:12!7		noun	Ἰακώβου	Ἰάκωβος	N-GSM		
+GAL 2:12!8		prep	μετὰ	μετά	PREP		
+GAL 2:12!9		det	τῶν	ὁ	T-GPN		
+GAL 2:12!10		noun	ἐθνῶν	ἔθνος	N-GPN		
+GAL 2:12!11	v	verb	συνήσθιεν	συνεσθίω	V-IAI-3S	Κηφᾶς	GAL 2:11!4
+GAL 2:12!12		conj	ὅτε	ὅτε	ADV		
+GAL 2:12!13		conj	δὲ	δέ	CONJ		
+GAL 2:12!14	v	verb	ἦλθον	ἔρχομαι	V-2AAI-3P	τις	GAL 2:12!5
+GAL 2:12!15		verb	ὑπέστελλεν	ὑποστέλλω	V-IAI-3S	Κηφᾶς	GAL 2:11!4
+GAL 2:12!16		conj	καὶ	καί	CONJ		
+GAL 2:12!17	v	verb	ἀφώριζεν	ἀφορίζω	V-IAI-3S	Κηφᾶς	GAL 2:11!4
+GAL 2:12!18	o	pron	ἑαυτόν	ἑαυτοῦ	F-3ASM		
+GAL 2:12!19	v	verb	φοβούμενος	φοβέομαι	V-PNP-NSM	Κηφᾶς	GAL 2:11!4
+GAL 2:12!20		det	τοὺς	ὁ	T-APM		
+GAL 2:12!21		prep	ἐκ	ἐκ	PREP		
+GAL 2:12!22		noun	περιτομῆς	περιτομή	N-GSF		
+GAL 2:13!1		conj	καὶ	καί	CONJ		
+GAL 2:13!2	v	verb	συνυπεκρίθησαν	συνυποκρίνομαι	V-API-3P	Ἰουδαῖος	GAL 2:13!7
+GAL 2:13!3	adv	pron	αὐτῷ	αὐτός	P-DSM		
+GAL 2:13!4		adv	καὶ	καί	CONJ		
+GAL 2:13!5		det	οἱ	ὁ	T-NPM		
+GAL 2:13!6		adj	λοιποὶ	λοιπός	A-NPM		
+GAL 2:13!7		adj	Ἰουδαῖοι	Ἰουδαῖος	A-NPM		
+GAL 2:13!8		conj	ὥστε	ὥστε	CONJ		
+GAL 2:13!9		adv	καὶ	καί	CONJ		
+GAL 2:13!10		noun	Βαρναβᾶς	Βαρναβᾶς	N-NSM		
+GAL 2:13!11	v	verb	συναπήχθη	συναπάγομαι	V-API-3S		
+GAL 2:13!12		pron	αὐτῶν	αὐτός	P-GPM		
+GAL 2:13!13		det	τῇ	ὁ	T-DSF		
+GAL 2:13!14		noun	ὑποκρίσει	ὑπόκρισις	N-DSF		
+GAL 2:14!1		conj	ἀλλ	ἀλλά	CONJ		
+GAL 2:14!2		conj	ὅτε	ὅτε	ADV		
+GAL 2:14!3	v	verb	εἶδον	ὁράω	V-2AAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:14!4		conj	ὅτι	ὅτι	CONJ		
+GAL 2:14!5	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 2:14!6	v	verb	ὀρθοποδοῦσιν	ὀρθοποδέω	V-PAI-3P	Ἰουδαῖος;Κηφᾶς;Βαρναβᾶς	GAL 2:13!7;GAL 2:11!4;GAL 2:13!10
+GAL 2:14!7		prep	πρὸς	πρός	PREP		
+GAL 2:14!8		det	τὴν	ὁ	T-ASF		
+GAL 2:14!9		noun	ἀλήθειαν	ἀλήθεια	N-ASF		
+GAL 2:14!10		det	τοῦ	ὁ	T-GSN		
+GAL 2:14!11		noun	εὐαγγελίου	εὐαγγέλιον	N-GSN		
+GAL 2:14!12	v	verb	εἶπον	λέγω	V-2AAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:14!13		det	τῷ	ὁ	T-DSM		
+GAL 2:14!14		noun	Κηφᾷ	Κηφᾶς	N-DSM		
+GAL 2:14!15		prep	ἔμπροσθεν	ἔμπροσθεν	PREP		
+GAL 2:14!16		adj	πάντων	πᾶς	A-GPM		
+GAL 2:14!17		conj	Εἰ	εἰ	COND		
+GAL 2:14!18	s	pron	σὺ	σύ	P-2NS		
+GAL 2:14!19	p	adj	Ἰουδαῖος	Ἰουδαῖος	A-NSM		
+GAL 2:14!20	vc	verb	ὑπάρχων	ὑπάρχω	V-PAP-NSM		
+GAL 2:14!21		adv	ἐθνικῶς	ἐθνικῶς	ADV		
+GAL 2:14!22		conj	καὶ	καί	CONJ		
+GAL 2:14!23		adv	οὐκ	οὐ	PRT-N		
+GAL 2:14!24		adv	Ἰουδαϊκῶς	Ἰουδαϊκῶς	ADV		
+GAL 2:14!25	v	verb	ζῇς	ζάω	V-PAI-2S	σύ	GAL 2:14!18
+GAL 2:14!26	adv	adv	πῶς	πῶς	ADV-I		
+GAL 2:14!27		det	τὰ	ὁ	T-APN		
+GAL 2:14!28		noun	ἔθνη	ἔθνος	N-APN		
+GAL 2:14!29	v	verb	ἀναγκάζεις	ἀναγκάζω	V-PAI-2S	Κηφᾶς	GAL 2:14!14
+GAL 2:14!30	v	verb	Ἰουδαΐζειν	ἰουδαΐζω	V-PAN	ἔθνος	GAL 2:14!28
+GAL 2:15!1	s	pron	Ἡμεῖς	ἐγώ	P-1NP		
+GAL 2:15!2	adv	noun	φύσει	φύσις	N-DSF		
+GAL 2:15!3	p	adj	Ἰουδαῖοι	Ἰουδαῖος	A-NPM		
+GAL 2:15!4		conj	καὶ	καί	CONJ		
+GAL 2:15!5	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 2:15!6		prep	ἐξ	ἐκ	PREP		
+GAL 2:15!7		noun	ἐθνῶν	ἔθνος	N-GPN		
+GAL 2:15!8	p	adj	ἁμαρτωλοί	ἁμαρτωλός	A-NPM		
+GAL 2:16!1	v	verb	εἰδότες	οἶδα	V-RAP-NPM	Παῦλος;Ἰουδαῖος;Βαρναβᾶς;Κηφᾶς	GAL 1:1!1;GAL 2:13!7;GAL 2:13!10;GAL 2:14!14
+GAL 2:16!2		conj	δὲ	δέ	CONJ		
+GAL 2:16!3		conj	ὅτι	ὅτι	CONJ		
+GAL 2:16!4	adv	adv	οὐ	οὐ	PRT-N		
+GAL 2:16!5	v	verb	δικαιοῦται	δικαιόω	V-PPI-3S		
+GAL 2:16!6	s	noun	ἄνθρωπος	ἄνθρωπος	N-NSM		
+GAL 2:16!7		prep	ἐξ	ἐκ	PREP		
+GAL 2:16!8		noun	ἔργων	ἔργον	N-GPN		
+GAL 2:16!9		noun	νόμου	νόμος	N-GSM		
+GAL 2:16!10		conj	ἐὰν	ἐάν	COND		
+GAL 2:16!11	adv	adv	μὴ	μή	PRT-N		
+GAL 2:16!12		prep	διὰ	διά	PREP		
+GAL 2:16!13		noun	πίστεως	πίστις	N-GSF		
+GAL 2:16!14		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+GAL 2:16!15		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 2:16!16		adv	καὶ	καί	CONJ		
+GAL 2:16!17		pron	ἡμεῖς	ἐγώ	P-1NP		
+GAL 2:16!18		prep	εἰς	εἰς	PREP		
+GAL 2:16!19		noun	Χριστὸν	Χριστός	N-ASM		
+GAL 2:16!20		noun	Ἰησοῦν	Ἰησοῦς	N-ASM		
+GAL 2:16!21	v	verb	ἐπιστεύσαμεν	πιστεύω	V-AAI-1P	ἐγώ	GAL 2:16!17
+GAL 2:16!22		conj	ἵνα	ἵνα	CONJ		
+GAL 2:16!23	v	verb	δικαιωθῶμεν	δικαιόω	V-APS-1P		
+GAL 2:16!24		prep	ἐκ	ἐκ	PREP		
+GAL 2:16!25		noun	πίστεως	πίστις	N-GSF		
+GAL 2:16!26		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 2:16!27		conj	καὶ	καί	CONJ		
+GAL 2:16!28	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 2:16!29		prep	ἐξ	ἐκ	PREP		
+GAL 2:16!30		noun	ἔργων	ἔργον	N-GPN		
+GAL 2:16!31		noun	νόμου	νόμος	N-GSM		
+GAL 2:16!32		conj	ὅτι	ὅτι	CONJ		
+GAL 2:16!33		prep	ἐξ	ἐκ	PREP		
+GAL 2:16!34		noun	ἔργων	ἔργον	N-GPN		
+GAL 2:16!35		noun	νόμου	νόμος	N-GSM		
+GAL 2:16!36	adv	adv	οὐ	οὐ	PRT-N		
+GAL 2:16!37	v	verb	δικαιωθήσεται	δικαιόω	V-FPI-3S		
+GAL 2:16!38		adj	πᾶσα	πᾶς	A-NSF		
+GAL 2:16!39		noun	σάρξ	σάρξ	N-NSF		
+GAL 2:17!1		conj	εἰ	εἰ	COND		
+GAL 2:17!2		conj	δὲ	δέ	CONJ		
+GAL 2:17!3	v	verb	ζητοῦντες	ζητέω	V-PAP-NPM	Παῦλος;Ἰουδαῖος;Βαρναβᾶς;Κηφᾶς	GAL 1:1!1;GAL 2:13!7;GAL 2:13!10;GAL 2:14!14
+GAL 2:17!4	v	verb	δικαιωθῆναι	δικαιόω	V-APN		
+GAL 2:17!5		prep	ἐν	ἐν	PREP		
+GAL 2:17!6		noun	Χριστῷ	Χριστός	N-DSM		
+GAL 2:17!7	v	verb	εὑρέθημεν	εὑρίσκω	V-API-1P		
+GAL 2:17!8		adv	καὶ	καί	CONJ		
+GAL 2:17!9		pron	αὐτοὶ	αὐτός	P-NPM		
+GAL 2:17!10	o	adj	ἁμαρτωλοί	ἁμαρτωλός	A-NPM		
+GAL 2:17!11		conj	ἆρα	ἆρα	PRT-I		
+GAL 2:17!12	s	noun	Χριστὸς	Χριστός	N-NSM		
+GAL 2:17!13		noun	ἁμαρτίας	ἁμαρτία	N-GSF		
+GAL 2:17!14		noun	διάκονος	διάκονος	N-NSM		
+GAL 2:17!15	adv	adv	μὴ	μή	PRT-N		
+GAL 2:17!16	v	verb	γένοιτο	γίνομαι	V-2ADO-3S	διάκονος	GAL 2:17!14
+GAL 2:18!1		conj	εἰ	εἰ	COND		
+GAL 2:18!2		conj	γὰρ	γάρ	CONJ		
+GAL 2:18!3	o	pron	ἃ	ὅς	R-APN		
+GAL 2:18!4	v	verb	κατέλυσα	καταλύω	V-AAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:18!5	o	pron	ταῦτα	οὗτος	D-APN		
+GAL 2:18!6	adv	adv	πάλιν	πάλιν	ADV		
+GAL 2:18!7	v	verb	οἰκοδομῶ	οἰκοδομέω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:18!8	o2	noun	παραβάτην	παραβάτης	N-ASM		
+GAL 2:18!9	o	pron	ἐμαυτὸν	ἐμαυτοῦ	F-1ASM		
+GAL 2:18!10	v	verb	συνιστάνω	συνιστάνω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:19!1	s	pron	ἐγὼ	ἐγώ	P-1NS		
+GAL 2:19!2		conj	γὰρ	γάρ	CONJ		
+GAL 2:19!3		prep	διὰ	διά	PREP		
+GAL 2:19!4		noun	νόμου	νόμος	N-GSM		
+GAL 2:19!5	adv	noun	νόμῳ	νόμος	N-DSM		
+GAL 2:19!6	v	verb	ἀπέθανον	ἀποθνῄσκω	V-2AAI-1S	ἐγώ	GAL 2:19!1
+GAL 2:19!7		conj	ἵνα	ἵνα	CONJ		
+GAL 2:19!8	adv	noun	θεῷ	θεός	N-DSM		
+GAL 2:19!9	v	verb	ζήσω	ζάω	V-AAS-1S	Παῦλος	GAL 1:1!1
+GAL 2:19!10	adv	noun	Χριστῷ	Χριστός	N-DSM		
+GAL 2:19!11	v	verb	συνεσταύρωμαι	συσταυρόομαι	V-RPI-1S		
+GAL 2:20!1	v	verb	ζῶ	ζάω	V-PAI-1S	ἐγώ	GAL 2:20!4
+GAL 2:20!2		conj	δὲ	δέ	CONJ		
+GAL 2:20!3	adv	adv	οὐκέτι	οὐκέτι	ADV-N		
+GAL 2:20!4	s	pron	ἐγώ	ἐγώ	P-1NS		
+GAL 2:20!5	v	verb	ζῇ	ζάω	V-PAI-3S	Χριστός	GAL 2:20!9
+GAL 2:20!6		conj	δὲ	δέ	CONJ		
+GAL 2:20!7		prep	ἐν	ἐν	PREP		
+GAL 2:20!8		pron	ἐμοὶ	ἐγώ	P-1DS		
+GAL 2:20!9	s	noun	Χριστός	Χριστός	N-NSM		
+GAL 2:20!10	o	pron	ὃ	ὅς	R-ASN		
+GAL 2:20!11		conj	δὲ	δέ	CONJ		
+GAL 2:20!12	adv	adv	νῦν	νῦν	ADV		
+GAL 2:20!13	v	verb	ζῶ	ζάω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:20!14		prep	ἐν	ἐν	PREP		
+GAL 2:20!15		noun	σαρκί	σάρξ	N-DSF		
+GAL 2:20!16		prep	ἐν	ἐν	PREP		
+GAL 2:20!17		noun	πίστει	πίστις	N-DSF		
+GAL 2:20!18	v	verb	ζῶ	ζάω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:20!19		det	τῇ	ὁ	T-DSF		
+GAL 2:20!20		det	τοῦ	ὁ	T-GSM		
+GAL 2:20!21		noun	υἱοῦ	υἱός	N-GSM		
+GAL 2:20!22		det	τοῦ	ὁ	T-GSM		
+GAL 2:20!23		noun	θεοῦ	θεός	N-GSM		
+GAL 2:20!24		det	τοῦ	ὁ	T-GSM		
+GAL 2:20!25	v	verb	ἀγαπήσαντός	ἀγαπάω	V-AAP-GSM	υἱός	GAL 2:20!21
+GAL 2:20!26	o	pron	με	ἐγώ	P-1AS		
+GAL 2:20!27		conj	καὶ	καί	CONJ		
+GAL 2:20!28	v	verb	παραδόντος	παραδίδωμι	V-2AAP-GSM	υἱός	GAL 2:20!21
+GAL 2:20!29	o	pron	ἑαυτὸν	ἑαυτοῦ	F-3ASM		
+GAL 2:20!30		prep	ὑπὲρ	ὑπέρ	PREP		
+GAL 2:20!31		pron	ἐμοῦ	ἐγώ	P-1GS		
+GAL 2:21!1	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 2:21!2	v	verb	ἀθετῶ	ἀθετέω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 2:21!3		det	τὴν	ὁ	T-ASF		
+GAL 2:21!4		noun	χάριν	χάρις	N-ASF		
+GAL 2:21!5		det	τοῦ	ὁ	T-GSM		
+GAL 2:21!6		noun	θεοῦ	θεός	N-GSM		
+GAL 2:21!7		conj	εἰ	εἰ	COND		
+GAL 2:21!8		conj	γὰρ	γάρ	CONJ		
+GAL 2:21!9		prep	διὰ	διά	PREP		
+GAL 2:21!10		noun	νόμου	νόμος	N-GSM		
+GAL 2:21!11	s	noun	δικαιοσύνη	δικαιοσύνη	N-NSF		
+GAL 2:21!12	adv	conj	ἄρα	ἄρα	PRT		
+GAL 2:21!13	s	noun	Χριστὸς	Χριστός	N-NSM		
+GAL 2:21!14	adv	adv	δωρεὰν	δωρεάν	ADV		
+GAL 2:21!15	v	verb	ἀπέθανεν	ἀποθνῄσκω	V-2AAI-3S	Χριστός	GAL 2:21!13
+GAL 3:1!1		ptcl	Ὦ	ὦ	INJ		
+GAL 3:1!2		adj	ἀνόητοι	ἀνόητος	A-VPM		
+GAL 3:1!3		noun	Γαλάται	Γαλάτης	N-VPM		
+GAL 3:1!4	s	pron	τίς	τίς	I-NSM		
+GAL 3:1!5	o	pron	ὑμᾶς	σύ	P-2AP		
+GAL 3:1!6	v	verb	ἐβάσκανεν	βασκαίνω	V-AAI-3S	τίς	GAL 3:1!4
+GAL 3:1!7	io	pron	οἷς	ὅς	R-DPM		
+GAL 3:1!8		prep	κατ	κατά	PREP		
+GAL 3:1!9		noun	ὀφθαλμοὺς	ὀφθαλμός	N-APM		
+GAL 3:1!10		noun	Ἰησοῦς	Ἰησοῦς	N-NSM		
+GAL 3:1!11		noun	Χριστὸς	Χριστός	N-NSM		
+GAL 3:1!12	v	verb	προεγράφη	προγράφω	V-2API-3S		
+GAL 3:1!13	v	verb	ἐσταυρωμένος	σταυρόω	V-RPP-NSM		
+GAL 3:2!1		pron	τοῦτο	οὗτος	D-ASN		
+GAL 3:2!2		adj	μόνον	μόνος	ADV		
+GAL 3:2!3	v	verb	θέλω	θέλω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 3:2!4	v	verb	μαθεῖν	μανθάνω	V-2AAN	Παῦλος	GAL 1:1!1
+GAL 3:2!5		prep	ἀφ	ἀπό	PREP		
+GAL 3:2!6		pron	ὑμῶν	σύ	P-2GP		
+GAL 3:2!7		prep	ἐξ	ἐκ	PREP		
+GAL 3:2!8		noun	ἔργων	ἔργον	N-GPN		
+GAL 3:2!9		noun	νόμου	νόμος	N-GSM		
+GAL 3:2!10		det	τὸ	ὁ	T-ASN		
+GAL 3:2!11		noun	πνεῦμα	πνεῦμα	N-ASN		
+GAL 3:2!12	v	verb	ἐλάβετε	λαμβάνω	V-2AAI-2P	Γαλάτης	GAL 3:1!3
+GAL 3:2!13		conj	ἢ	ἤ	PRT		
+GAL 3:2!14		prep	ἐξ	ἐκ	PREP		
+GAL 3:2!15		noun	ἀκοῆς	ἀκοή	N-GSF		
+GAL 3:2!16		noun	πίστεως	πίστις	N-GSF		
+GAL 3:3!1	adv	adv	οὕτως	οὕτω(ς)	ADV		
+GAL 3:3!2	p	adj	ἀνόητοί	ἀνόητος	A-NPM		
+GAL 3:3!3	vc	verb	ἐστε	εἰμί	V-PAI-2P		
+GAL 3:3!4	v	verb	ἐναρξάμενοι	ἐνάρχομαι	V-ADP-NPM	Γαλάτης	GAL 3:1!3
+GAL 3:3!5	adv	noun	πνεύματι	πνεῦμα	N-DSN		
+GAL 3:3!6	adv	adv	νῦν	νῦν	ADV		
+GAL 3:3!7	adv	noun	σαρκὶ	σάρξ	N-DSF		
+GAL 3:3!8	v	verb	ἐπιτελεῖσθε	ἐπιτελέω	V-PEI-2P	Γαλάτης	GAL 3:1!3
+GAL 3:4!1	o	pron	τοσαῦτα	τοσοῦτος	D-APN		
+GAL 3:4!2	v	verb	ἐπάθετε	πάσχω	V-2AAI-2P	Γαλάτης	GAL 3:1!3
+GAL 3:4!3	adv	adv	εἰκῇ	εἰκῇ	ADV		
+GAL 3:4!4		conj	εἴ	εἰ	COND		
+GAL 3:4!5	adv	ptcl	γε	γέ	PRT		
+GAL 3:4!6	adv	adv	καὶ	καί	CONJ		
+GAL 3:4!7	p	adv	εἰκῇ	εἰκῇ	ADV		
+GAL 3:5!1		det	ὁ	ὁ	T-NSM		
+GAL 3:5!2		conj	οὖν	οὖν	CONJ		
+GAL 3:5!3	v	verb	ἐπιχορηγῶν	ἐπιχορηγέω	V-PAP-NSM	θεός	GAL 2:21!6
+GAL 3:5!4	io	pron	ὑμῖν	σύ	P-2DP		
+GAL 3:5!5		det	τὸ	ὁ	T-ASN		
+GAL 3:5!6		noun	πνεῦμα	πνεῦμα	N-ASN		
+GAL 3:5!7		conj	καὶ	καί	CONJ		
+GAL 3:5!8	v	verb	ἐνεργῶν	ἐνεργέω	V-PAP-NSM	θεός	GAL 2:21!6
+GAL 3:5!9	o	noun	δυνάμεις	δύναμις	N-APF		
+GAL 3:5!10		prep	ἐν	ἐν	PREP		
+GAL 3:5!11		pron	ὑμῖν	σύ	P-2DP		
+GAL 3:5!12		prep	ἐξ	ἐκ	PREP		
+GAL 3:5!13		noun	ἔργων	ἔργον	N-GPN		
+GAL 3:5!14		noun	νόμου	νόμος	N-GSM		
+GAL 3:5!15		conj	ἢ	ἤ	PRT		
+GAL 3:5!16		prep	ἐξ	ἐκ	PREP		
+GAL 3:5!17		noun	ἀκοῆς	ἀκοή	N-GSF		
+GAL 3:5!18		noun	πίστεως	πίστις	N-GSF		
+GAL 3:6!1		conj	καθὼς	καθώς	ADV		
+GAL 3:6!2	s	noun	Ἀβραὰμ	Ἀβραάμ	N-PRI		
+GAL 3:6!3	v	verb	ἐπίστευσεν	πιστεύω	V-AAI-3S	Ἀβραάμ	GAL 3:6!2
+GAL 3:6!4		det	τῷ	ὁ	T-DSM		
+GAL 3:6!5		noun	θεῷ	θεός	N-DSM		
+GAL 3:6!6		conj	καὶ	καί	CONJ		
+GAL 3:6!7	v	verb	ἐλογίσθη	λογίζομαι	V-API-3S		
+GAL 3:6!8	io	pron	αὐτῷ	αὐτός	P-DSM		
+GAL 3:6!9		prep	εἰς	εἰς	PREP		
+GAL 3:6!10		noun	δικαιοσύνην	δικαιοσύνη	N-ASF		
+GAL 3:7!1	v	verb	Γινώσκετε	γινώσκω	V-PAI-2P	Γαλάτης	GAL 3:1!3
+GAL 3:7!2		conj	ἄρα	ἄρα	PRT		
+GAL 3:7!3		conj	ὅτι	ὅτι	CONJ		
+GAL 3:7!4		det	οἱ	ὁ	T-NPM		
+GAL 3:7!5		prep	ἐκ	ἐκ	PREP		
+GAL 3:7!6		noun	πίστεως	πίστις	N-GSF		
+GAL 3:7!7	s	pron	οὗτοι	οὗτος	D-NPM		
+GAL 3:7!8		noun	υἱοί	υἱός	N-NPM		
+GAL 3:7!9	vc	verb	εἰσιν	εἰμί	V-PAI-3P		
+GAL 3:7!10		noun	Ἀβραάμ	Ἀβραάμ	N-PRI		
+GAL 3:8!1	v	verb	προϊδοῦσα	προοράω	V-2AAP-NSF	γραφή	GAL 3:8!4
+GAL 3:8!2		conj	δὲ	δέ	CONJ		
+GAL 3:8!3		det	ἡ	ὁ	T-NSF		
+GAL 3:8!4		noun	γραφὴ	γραφή	N-NSF		
+GAL 3:8!5		conj	ὅτι	ὅτι	CONJ		
+GAL 3:8!6		prep	ἐκ	ἐκ	PREP		
+GAL 3:8!7		noun	πίστεως	πίστις	N-GSF		
+GAL 3:8!8	v	verb	δικαιοῖ	δικαιόω	V-PAI-3S	θεός	GAL 3:8!12
+GAL 3:8!9		det	τὰ	ὁ	T-APN		
+GAL 3:8!10		noun	ἔθνη	ἔθνος	N-APN		
+GAL 3:8!11		det	ὁ	ὁ	T-NSM		
+GAL 3:8!12		noun	θεὸς	θεός	N-NSM		
+GAL 3:8!13	v	verb	προευηγγελίσατο	προευαγγελίζομαι	V-ADI-3S	γραφή	GAL 3:8!4
+GAL 3:8!14		det	τῷ	ὁ	T-DSM		
+GAL 3:8!15		noun	Ἀβραὰμ	Ἀβραάμ	N-PRI		
+GAL 3:8!16		conj	ὅτι	ὅτι	CONJ		
+GAL 3:8!17	v	verb	Ἐνευλογηθήσονται	ἐνευλογέω	V-FPI-3P		
+GAL 3:8!18		prep	ἐν	ἐν	PREP		
+GAL 3:8!19		pron	σοὶ	σύ	P-2DS		
+GAL 3:8!20		adj	πάντα	πᾶς	A-NPN		
+GAL 3:8!21		det	τὰ	ὁ	T-NPN		
+GAL 3:8!22		noun	ἔθνη	ἔθνος	N-NPN		
+GAL 3:9!1		conj	ὥστε	ὥστε	CONJ		
+GAL 3:9!2		det	οἱ	ὁ	T-NPM		
+GAL 3:9!3		prep	ἐκ	ἐκ	PREP		
+GAL 3:9!4		noun	πίστεως	πίστις	N-GSF		
+GAL 3:9!5	v	verb	εὐλογοῦνται	εὐλογέω	V-PPI-3P		
+GAL 3:9!6		prep	σὺν	σύν	PREP		
+GAL 3:9!7		det	τῷ	ὁ	T-DSM		
+GAL 3:9!8		adj	πιστῷ	πιστός	A-DSM		
+GAL 3:9!9		noun	Ἀβραάμ	Ἀβραάμ	N-PRI		
+GAL 3:10!1	s	pron	Ὅσοι	ὅσος	K-NPM		
+GAL 3:10!2		conj	γὰρ	γάρ	CONJ		
+GAL 3:10!3		prep	ἐξ	ἐκ	PREP		
+GAL 3:10!4		noun	ἔργων	ἔργον	N-GPN		
+GAL 3:10!5		noun	νόμου	νόμος	N-GSM		
+GAL 3:10!6	vc	verb	εἰσὶν	εἰμί	V-PAI-3P		
+GAL 3:10!7		prep	ὑπὸ	ὑπό	PREP		
+GAL 3:10!8		noun	κατάραν	κατάρα	N-ASF		
+GAL 3:10!9	vc	verb	εἰσίν	εἰμί	V-PAI-3P		
+GAL 3:10!10	v	verb	γέγραπται	γράφω	V-RPI-3S		
+GAL 3:10!11		conj	γὰρ	γάρ	CONJ		
+GAL 3:10!12		conj	ὅτι	ὅτι	CONJ		
+GAL 3:10!13	p	adj	Ἐπικατάρατος	ἐπικατάρατος	A-NSM		
+GAL 3:10!14		adj	πᾶς	πᾶς	A-NSM		
+GAL 3:10!15	s	pron	ὃς	ὅς	R-NSM		
+GAL 3:10!16	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 3:10!17	v	verb	ἐμμένει	ἐμμένω	V-PAI-3S	ὅς	GAL 3:10!15
+GAL 3:10!18		adj	πᾶσιν	πᾶς	A-DPN		
+GAL 3:10!19		det	τοῖς	ὁ	T-DPN		
+GAL 3:10!20	v	verb	γεγραμμένοις	γράφω	V-RPP-DPN		
+GAL 3:10!21		prep	ἐν	ἐν	PREP		
+GAL 3:10!22		det	τῷ	ὁ	T-DSN		
+GAL 3:10!23		noun	βιβλίῳ	βιβλίον	N-DSN		
+GAL 3:10!24		det	τοῦ	ὁ	T-GSM		
+GAL 3:10!25		noun	νόμου	νόμος	N-GSM		
+GAL 3:10!26		det	τοῦ	ὁ	T-GSN		
+GAL 3:10!27	v	verb	ποιῆσαι	ποιέω	V-AAN	ὅς	GAL 3:10!15
+GAL 3:10!28	o	pron	αὐτά	αὐτός	P-APN		
+GAL 3:11!1		conj	ὅτι	ὅτι	CONJ		
+GAL 3:11!2		conj	δὲ	δέ	CONJ		
+GAL 3:11!3		prep	ἐν	ἐν	PREP		
+GAL 3:11!4		noun	νόμῳ	νόμος	N-DSM		
+GAL 3:11!5	s	adj	οὐδεὶς	οὐδείς	A-NSM-N		
+GAL 3:11!6	v	verb	δικαιοῦται	δικαιόω	V-PPI-3S		
+GAL 3:11!7		prep	παρὰ	παρά	PREP		
+GAL 3:11!8		det	τῷ	ὁ	T-DSM		
+GAL 3:11!9		noun	θεῷ	θεός	N-DSM		
+GAL 3:11!10	p	adj	δῆλον	δῆλος	A-NSN		
+GAL 3:11!11		conj	ὅτι	ὅτι	CONJ		
+GAL 3:11!12		det	Ὁ	ὁ	T-NSM		
+GAL 3:11!13		adj	δίκαιος	δίκαιος	A-NSM		
+GAL 3:11!14		prep	ἐκ	ἐκ	PREP		
+GAL 3:11!15		noun	πίστεως	πίστις	N-GSF		
+GAL 3:11!16	v	verb	ζήσεται	ζάω	V-FDI-3S	δίκαιος	GAL 3:11!13
+GAL 3:12!1		det	ὁ	ὁ	T-NSM		
+GAL 3:12!2		conj	δὲ	δέ	CONJ		
+GAL 3:12!3		noun	νόμος	νόμος	N-NSM		
+GAL 3:12!4	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 3:12!5	vc	verb	ἔστιν	εἰμί	V-PAI-3S		
+GAL 3:12!6		prep	ἐκ	ἐκ	PREP		
+GAL 3:12!7		noun	πίστεως	πίστις	N-GSF		
+GAL 3:12!8		conj	ἀλλ’·	ἀλλά	CONJ		
+GAL 3:12!9		det	Ὁ	ὁ	T-NSM		
+GAL 3:12!10	v	verb	ποιήσας	ποιέω	V-AAP-NSM		
+GAL 3:12!11	o	pron	αὐτὰ	αὐτός	P-APN		
+GAL 3:12!12	v	verb	ζήσεται	ζάω	V-FDI-3S		
+GAL 3:12!13		prep	ἐν	ἐν	PREP		
+GAL 3:12!14		pron	αὐτοῖς	αὐτός	P-DPN		
+GAL 3:13!1	s	noun	Χριστὸς	Χριστός	N-NSM		
+GAL 3:13!2	o	pron	ἡμᾶς	ἐγώ	P-1AP		
+GAL 3:13!3	v	verb	ἐξηγόρασεν	ἐξαγοράζω	V-AAI-3S	Χριστός	GAL 3:13!1
+GAL 3:13!4		prep	ἐκ	ἐκ	PREP		
+GAL 3:13!5		det	τῆς	ὁ	T-GSF		
+GAL 3:13!6		noun	κατάρας	κατάρα	N-GSF		
+GAL 3:13!7		det	τοῦ	ὁ	T-GSM		
+GAL 3:13!8		noun	νόμου	νόμος	N-GSM		
+GAL 3:13!9	vc	verb	γενόμενος	γίνομαι	V-2ADP-NSM		
+GAL 3:13!10		prep	ὑπὲρ	ὑπέρ	PREP		
+GAL 3:13!11		pron	ἡμῶν	ἐγώ	P-1GP		
+GAL 3:13!12	p	noun	κατάρα	κατάρα	N-NSF		
+GAL 3:13!13		conj	ὅτι	ὅτι	CONJ		
+GAL 3:13!14	v	verb	γέγραπται	γράφω	V-RPI-3S		
+GAL 3:13!15	p	adj	Ἐπικατάρατος	ἐπικατάρατος	A-NSM		
+GAL 3:13!16		adj	πᾶς	πᾶς	A-NSM		
+GAL 3:13!17		det	ὁ	ὁ	T-NSM		
+GAL 3:13!18	v	verb	κρεμάμενος	κρεμάννυμι	V-PMP-NSM		
+GAL 3:13!19		prep	ἐπὶ	ἐπί	PREP		
+GAL 3:13!20		noun	ξύλου	ξύλον	N-GSN		
+GAL 3:14!1		conj	ἵνα	ἵνα	CONJ		
+GAL 3:14!2		prep	εἰς	εἰς	PREP		
+GAL 3:14!3		det	τὰ	ὁ	T-APN		
+GAL 3:14!4		noun	ἔθνη	ἔθνος	N-APN		
+GAL 3:14!5		det	ἡ	ὁ	T-NSF		
+GAL 3:14!6		noun	εὐλογία	εὐλογία	N-NSF		
+GAL 3:14!7		det	τοῦ	ὁ	T-GSM		
+GAL 3:14!8		noun	Ἀβραὰμ	Ἀβραάμ	N-PRI		
+GAL 3:14!9	v	verb	γένηται	γίνομαι	V-2ADS-3S	εὐλογία	GAL 3:14!6
+GAL 3:14!10		prep	ἐν	ἐν	PREP		
+GAL 3:14!11		noun	Χριστῷ	Χριστός	N-DSM		
+GAL 3:14!12		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+GAL 3:14!13		conj	ἵνα	ἵνα	CONJ		
+GAL 3:14!14		det	τὴν	ὁ	T-ASF		
+GAL 3:14!15		noun	ἐπαγγελίαν	ἐπαγγελία	N-ASF		
+GAL 3:14!16		det	τοῦ	ὁ	T-GSN		
+GAL 3:14!17		noun	πνεύματος	πνεῦμα	N-GSN		
+GAL 3:14!18	v	verb	λάβωμεν	λαμβάνω	V-2AAS-1P	Παῦλος;ἀδελφός;Γαλάτης;Ἰουδαῖος;Βαρναβᾶς;Κηφᾶς	GAL 1:1!1;GAL 1:2!6;GAL 3:1!3;GAL 2:13!7;GAL 2:13!10;GAL 2:14!14
+GAL 3:14!19		prep	διὰ	διά	PREP		
+GAL 3:14!20		det	τῆς	ὁ	T-GSF		
+GAL 3:14!21		noun	πίστεως	πίστις	N-GSF		
+GAL 3:15!1	aux	noun	Ἀδελφοί	ἀδελφός	N-VPM		
+GAL 3:15!2		prep	κατὰ	κατά	PREP		
+GAL 3:15!3		noun	ἄνθρωπον	ἄνθρωπος	N-ASM		
+GAL 3:15!4	v	verb	λέγω	λέγω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 3:15!5	adv	adv	ὅμως	ὅμως	CONJ		
+GAL 3:15!6		noun	ἀνθρώπου	ἄνθρωπος	N-GSM		
+GAL 3:15!7	v	verb	κεκυρωμένην	κυρόω	V-RPP-ASF		
+GAL 3:15!8		noun	διαθήκην	διαθήκη	N-ASF		
+GAL 3:15!9	s	adj	οὐδεὶς	οὐδείς	A-NSM-N		
+GAL 3:15!10		verb	ἀθετεῖ	ἀθετέω	V-PAI-3S	οὐδείς	GAL 3:15!9
+GAL 3:15!11		conj	ἢ	ἤ	PRT		
+GAL 3:15!12		verb	ἐπιδιατάσσεται	ἐπιδιατάσσομαι	V-PNI-3S	οὐδείς	GAL 3:15!9
+GAL 3:16!1		det	τῷ	ὁ	T-DSM		
+GAL 3:16!2		conj	δὲ	δέ	CONJ		
+GAL 3:16!3		noun	Ἀβραὰμ	Ἀβραάμ	N-PRI		
+GAL 3:16!4	v	verb	ἐρρέθησαν	λέγω	V-API-3P		
+GAL 3:16!5		det	αἱ	ὁ	T-NPF		
+GAL 3:16!6		noun	ἐπαγγελίαι	ἐπαγγελία	N-NPF		
+GAL 3:16!7		conj	καὶ	καί	CONJ		
+GAL 3:16!8		det	τῷ	ὁ	T-DSN		
+GAL 3:16!9		noun	σπέρματι	σπέρμα	N-DSN		
+GAL 3:16!10		pron	αὐτοῦ	αὐτός	P-GSM		
+GAL 3:16!11		adv	οὐ	οὐ	PRT-N		
+GAL 3:16!12	v	verb	λέγει	λέγω	V-PAI-3S	γραφή	GAL 3:8!4
+GAL 3:16!13		conj	Καὶ	καί	CONJ		
+GAL 3:16!14		det	τοῖς	ὁ	T-DPN		
+GAL 3:16!15		noun	σπέρμασιν	σπέρμα	N-DPN		
+GAL 3:16!16		conj	ὡς	ὡς	ADV		
+GAL 3:16!17		prep	ἐπὶ	ἐπί	PREP		
+GAL 3:16!18		adj	πολλῶν	πολύς	A-GPN		
+GAL 3:16!19		conj	ἀλλ	ἀλλά	CONJ		
+GAL 3:16!20		conj	ὡς	ὡς	ADV		
+GAL 3:16!21		prep	ἐφ	ἐπί	PREP		
+GAL 3:16!22		adj	ἑνός	εἷς	A-GSN		
+GAL 3:16!23		conj	Καὶ	καί	CONJ		
+GAL 3:16!24		det	τῷ	ὁ	T-DSN		
+GAL 3:16!25		noun	σπέρματί	σπέρμα	N-DSN		
+GAL 3:16!26		pron	σου	σύ	P-2GS		
+GAL 3:16!27	s	pron	ὅς	ὅς	R-NSM		
+GAL 3:16!28	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+GAL 3:16!29	p	noun	Χριστός	Χριστός	N-NSM		
+GAL 3:17!1	o	pron	τοῦτο	οὗτος	D-ASN		
+GAL 3:17!2		conj	δὲ	δέ	CONJ		
+GAL 3:17!3	v	verb	λέγω	λέγω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 3:17!4		noun	διαθήκην	διαθήκη	N-ASF		
+GAL 3:17!5	v	verb	προκεκυρωμένην	προκυρόω	V-RPP-ASF		
+GAL 3:17!6		prep	ὑπὸ	ὑπό	PREP		
+GAL 3:17!7		det	τοῦ	ὁ	T-GSM		
+GAL 3:17!8		noun	θεοῦ	θεός	N-GSM		
+GAL 3:17!9		det	ὁ	ὁ	T-NSM		
+GAL 3:17!10		prep	μετὰ	μετά	PREP		
+GAL 3:17!11		adj	τετρακόσια	τετρακόσιοι	A-APN		
+GAL 3:17!12		conj	καὶ	καί	CONJ		
+GAL 3:17!13		num	τριάκοντα	τριάκοντα	A-NUI		
+GAL 3:17!14		noun	ἔτη	ἔτος	N-APN		
+GAL 3:17!15	v	verb	γεγονὼς	γίνομαι	V-2RAP-NSM	νόμος	GAL 3:17!16
+GAL 3:17!16		noun	νόμος	νόμος	N-NSM		
+GAL 3:17!17	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 3:17!18	v	verb	ἀκυροῖ	ἀκυρόω	V-PAI-3S	νόμος	GAL 3:17!16
+GAL 3:17!19		prep	εἰς	εἰς	PREP		
+GAL 3:17!20		det	τὸ	ὁ	T-ASN		
+GAL 3:17!21	v	verb	καταργῆσαι	καταργέω	V-AAN	νόμος	GAL 3:17!16
+GAL 3:17!22		det	τὴν	ὁ	T-ASF		
+GAL 3:17!23		noun	ἐπαγγελίαν	ἐπαγγελία	N-ASF		
+GAL 3:18!1		conj	εἰ	εἰ	COND		
+GAL 3:18!2		conj	γὰρ	γάρ	CONJ		
+GAL 3:18!3		prep	ἐκ	ἐκ	PREP		
+GAL 3:18!4		noun	νόμου	νόμος	N-GSM		
+GAL 3:18!5		det	ἡ	ὁ	T-NSF		
+GAL 3:18!6		noun	κληρονομία	κληρονομία	N-NSF		
+GAL 3:18!7	adv	adv	οὐκέτι	οὐκέτι	ADV-N		
+GAL 3:18!8		prep	ἐξ	ἐκ	PREP		
+GAL 3:18!9		noun	ἐπαγγελίας	ἐπαγγελία	N-GSF		
+GAL 3:18!10		det	τῷ	ὁ	T-DSM		
+GAL 3:18!11		conj	δὲ	δέ	CONJ		
+GAL 3:18!12		noun	Ἀβραὰμ	Ἀβραάμ	N-PRI		
+GAL 3:18!13		prep	δι	διά	PREP		
+GAL 3:18!14		noun	ἐπαγγελίας	ἐπαγγελία	N-GSF		
+GAL 3:18!15	v	verb	κεχάρισται	χαρίζομαι	V-RNI-3S	θεός	GAL 3:18!17
+GAL 3:18!16		det	ὁ	ὁ	T-NSM		
+GAL 3:18!17		noun	θεός	θεός	N-NSM		
+GAL 3:19!1	adv	pron	Τί	τίς	I-NSN		
+GAL 3:19!2		conj	οὖν	οὖν	CONJ		
+GAL 3:19!3		det	ὁ	ὁ	T-NSM		
+GAL 3:19!4		noun	νόμος	νόμος	N-NSM		
+GAL 3:19!5		det	τῶν	ὁ	T-GPF		
+GAL 3:19!6		noun	παραβάσεων	παράβασις	N-GPF		
+GAL 3:19!7		prep	χάριν	χάριν	PREP		
+GAL 3:19!8	v	verb	προσετέθη	προστίθημι	V-API-3S		
+GAL 3:19!9		prep	ἄχρις	ἄχρις	ADV		
+GAL 3:19!10	adv	pron	οὗ	ὅς	R-GSM		
+GAL 3:19!11	v	verb	ἔλθῃ	ἔρχομαι	V-2AAS-3S	σπέρμα	GAL 3:19!13
+GAL 3:19!12		det	τὸ	ὁ	T-NSN		
+GAL 3:19!13		noun	σπέρμα	σπέρμα	N-NSN		
+GAL 3:19!14	io	pron	ᾧ	ὅς	R-DSM		
+GAL 3:19!15	v	verb	ἐπήγγελται	ἐπαγγέλλομαι	V-RPI-3S		
+GAL 3:19!16	v	verb	διαταγεὶς	διατάσσω	V-2APP-NSM		
+GAL 3:19!17		prep	δι	διά	PREP		
+GAL 3:19!18		noun	ἀγγέλων	ἄγγελος	N-GPM		
+GAL 3:19!19		prep	ἐν	ἐν	PREP		
+GAL 3:19!20		noun	χειρὶ	χείρ	N-DSF		
+GAL 3:19!21		noun	μεσίτου	μεσίτης	N-GSM		
+GAL 3:20!1		det	ὁ	ὁ	T-NSM		
+GAL 3:20!2		conj	δὲ	δέ	CONJ		
+GAL 3:20!3		noun	μεσίτης	μεσίτης	N-NSM		
+GAL 3:20!4	p	adj	ἑνὸς	εἷς	A-GSM		
+GAL 3:20!5	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 3:20!6	vc	verb	ἔστιν	εἰμί	V-PAI-3S		
+GAL 3:20!7		det	ὁ	ὁ	T-NSM		
+GAL 3:20!8		conj	δὲ	δέ	CONJ		
+GAL 3:20!9		noun	θεὸς	θεός	N-NSM		
+GAL 3:20!10	p	adj	εἷς	εἷς	A-NSM		
+GAL 3:20!11	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+GAL 3:21!1		det	Ὁ	ὁ	T-NSM		
+GAL 3:21!2		conj	οὖν	οὖν	CONJ		
+GAL 3:21!3		noun	νόμος	νόμος	N-NSM		
+GAL 3:21!4		prep	κατὰ	κατά	PREP		
+GAL 3:21!5		det	τῶν	ὁ	T-GPF		
+GAL 3:21!6		noun	ἐπαγγελιῶν	ἐπαγγελία	N-GPF		
+GAL 3:21!7		det	τοῦ	ὁ	T-GSM		
+GAL 3:21!8		noun	θεοῦ	θεός	N-GSM		
+GAL 3:21!9	adv	adv	μὴ	μή	PRT-N		
+GAL 3:21!10	v	verb	γένοιτο	γίνομαι	V-2ADO-3S	ἐπαγγελία	GAL 3:21!6
+GAL 3:21!11		conj	εἰ	εἰ	COND		
+GAL 3:21!12		conj	γὰρ	γάρ	CONJ		
+GAL 3:21!13	v	verb	ἐδόθη	δίδωμι	V-API-3S		
+GAL 3:21!14		noun	νόμος	νόμος	N-NSM		
+GAL 3:21!15		det	ὁ	ὁ	T-NSM		
+GAL 3:21!16	v	verb	δυνάμενος	δύναμαι	V-PNP-NSM	νόμος	GAL 3:21!14
+GAL 3:21!17	v	verb	ζῳοποιῆσαι	ζῳοποιέω	V-AAN	νόμος	GAL 3:21!14
+GAL 3:21!18	adv	adv	ὄντως	ὄντως	ADV		
+GAL 3:21!19		prep	ἐκ	ἐκ	PREP		
+GAL 3:21!20		noun	νόμου	νόμος	N-GSM		
+GAL 3:21!21		ptcl	ἂν	ἄν	PRT		
+GAL 3:21!22	vc	verb	ἦν	εἰμί	V-IAI-3S		
+GAL 3:21!23		det	ἡ	ὁ	T-NSF		
+GAL 3:21!24		noun	δικαιοσύνη	δικαιοσύνη	N-NSF		
+GAL 3:22!1		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 3:22!2	v	verb	συνέκλεισεν	συγκλείω	V-AAI-3S	γραφή	GAL 3:22!4
+GAL 3:22!3		det	ἡ	ὁ	T-NSF		
+GAL 3:22!4		noun	γραφὴ	γραφή	N-NSF		
+GAL 3:22!5		det	τὰ	ὁ	T-APN		
+GAL 3:22!6		adj	πάντα	πᾶς	A-APN		
+GAL 3:22!7		prep	ὑπὸ	ὑπό	PREP		
+GAL 3:22!8		noun	ἁμαρτίαν	ἁμαρτία	N-ASF		
+GAL 3:22!9		conj	ἵνα	ἵνα	CONJ		
+GAL 3:22!10		det	ἡ	ὁ	T-NSF		
+GAL 3:22!11		noun	ἐπαγγελία	ἐπαγγελία	N-NSF		
+GAL 3:22!12		prep	ἐκ	ἐκ	PREP		
+GAL 3:22!13		noun	πίστεως	πίστις	N-GSF		
+GAL 3:22!14		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+GAL 3:22!15		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 3:22!16	v	verb	δοθῇ	δίδωμι	V-APS-3S		
+GAL 3:22!17		det	τοῖς	ὁ	T-DPM		
+GAL 3:22!18	v	verb	πιστεύουσιν	πιστεύω	V-PAP-DPM		
+GAL 3:23!1		prep	Πρὸ	πρό	PREP		
+GAL 3:23!2		det	τοῦ	ὁ	T-GSN		
+GAL 3:23!3		conj	δὲ	δέ	CONJ		
+GAL 3:23!4	v	verb	ἐλθεῖν	ἔρχομαι	V-2AAN	πίστις	GAL 3:23!6
+GAL 3:23!5		det	τὴν	ὁ	T-ASF		
+GAL 3:23!6		noun	πίστιν	πίστις	N-ASF		
+GAL 3:23!7		prep	ὑπὸ	ὑπό	PREP		
+GAL 3:23!8		noun	νόμον	νόμος	N-ASM		
+GAL 3:23!9	v	verb	ἐφρουρούμεθα	φρουρέω	V-IPI-1P		
+GAL 3:23!10	v	verb	συγκλειόμενοι	συγκλείω	V-PPP-NPM		
+GAL 3:23!11		prep	εἰς	εἰς	PREP		
+GAL 3:23!12		det	τὴν	ὁ	T-ASF		
+GAL 3:23!13	v	verb	μέλλουσαν	μέλλω	V-PAP-ASF	πίστις	GAL 3:23!14
+GAL 3:23!14		noun	πίστιν	πίστις	N-ASF		
+GAL 3:23!15	v	verb	ἀποκαλυφθῆναι	ἀποκαλύπτω	V-APN		
+GAL 3:24!1		conj	ὥστε	ὥστε	CONJ		
+GAL 3:24!2		det	ὁ	ὁ	T-NSM		
+GAL 3:24!3		noun	νόμος	νόμος	N-NSM		
+GAL 3:24!4		noun	παιδαγωγὸς	παιδαγωγός	N-NSM		
+GAL 3:24!5		pron	ἡμῶν	ἐγώ	P-1GP		
+GAL 3:24!6	vc	verb	γέγονεν	γίνομαι	V-2RAI-3S		
+GAL 3:24!7		prep	εἰς	εἰς	PREP		
+GAL 3:24!8		noun	Χριστόν	Χριστός	N-ASM		
+GAL 3:24!9		conj	ἵνα	ἵνα	CONJ		
+GAL 3:24!10		prep	ἐκ	ἐκ	PREP		
+GAL 3:24!11		noun	πίστεως	πίστις	N-GSF		
+GAL 3:24!12	v	verb	δικαιωθῶμεν	δικαιόω	V-APS-1P		
+GAL 3:25!1	v	verb	ἐλθούσης	ἔρχομαι	V-2AAP-GSF	πίστις	GAL 3:25!4
+GAL 3:25!2		conj	δὲ	δέ	CONJ		
+GAL 3:25!3		det	τῆς	ὁ	T-GSF		
+GAL 3:25!4		noun	πίστεως	πίστις	N-GSF		
+GAL 3:25!5	adv	adv	οὐκέτι	οὐκέτι	ADV-N		
+GAL 3:25!6		prep	ὑπὸ	ὑπό	PREP		
+GAL 3:25!7		noun	παιδαγωγόν	παιδαγωγός	N-ASM		
+GAL 3:25!8	vc	verb	ἐσμεν	εἰμί	V-PAI-1P		
+GAL 3:26!1	s	adj	πάντες	πᾶς	A-NPM		
+GAL 3:26!2		conj	γὰρ	γάρ	CONJ		
+GAL 3:26!3		noun	υἱοὶ	υἱός	N-NPM		
+GAL 3:26!4		noun	θεοῦ	θεός	N-GSM		
+GAL 3:26!5	vc	verb	ἐστε	εἰμί	V-PAI-2P		
+GAL 3:26!6		prep	διὰ	διά	PREP		
+GAL 3:26!7		det	τῆς	ὁ	T-GSF		
+GAL 3:26!8		noun	πίστεως	πίστις	N-GSF		
+GAL 3:26!9		prep	ἐν	ἐν	PREP		
+GAL 3:26!10		noun	Χριστῷ	Χριστός	N-DSM		
+GAL 3:26!11		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+GAL 3:27!1	s	pron	ὅσοι	ὅσος	K-NPM		
+GAL 3:27!2		conj	γὰρ	γάρ	CONJ		
+GAL 3:27!3		prep	εἰς	εἰς	PREP		
+GAL 3:27!4		noun	Χριστὸν	Χριστός	N-ASM		
+GAL 3:27!5	v	verb	ἐβαπτίσθητε	βαπτίζω	V-API-2P		
+GAL 3:27!6	o	noun	Χριστὸν	Χριστός	N-ASM		
+GAL 3:27!7	v	verb	ἐνεδύσασθε	ἐνδύω	V-AMI-2P		
+GAL 3:28!1	p	adv	οὐκ	οὐ	PRT-N		
+GAL 3:28!2	vc	verb	ἔνι	ἔνι	V-PAI-3S		
+GAL 3:28!3		adj	Ἰουδαῖος	Ἰουδαῖος	A-NSM		
+GAL 3:28!4		conj	οὐδὲ	οὐδέ	CONJ-N		
+GAL 3:28!5		noun	Ἕλλην	Ἕλλην	N-NSM		
+GAL 3:28!6	p	adv	οὐκ	οὐ	PRT-N		
+GAL 3:28!7	vc	verb	ἔνι	ἔνι	V-PAI-3S		
+GAL 3:28!8		noun	δοῦλος	δοῦλος	N-NSM		
+GAL 3:28!9		conj	οὐδὲ	οὐδέ	CONJ-N		
+GAL 3:28!10		adj	ἐλεύθερος	ἐλεύθερος	A-NSM		
+GAL 3:28!11	p	adv	οὐκ	οὐ	PRT-N		
+GAL 3:28!12	vc	verb	ἔνι	ἔνι	V-PAI-3S		
+GAL 3:28!13		adj	ἄρσεν	ἄρσην	A-NSN		
+GAL 3:28!14		conj	καὶ	καί	CONJ		
+GAL 3:28!15		adj	θῆλυ	θῆλυς	A-NSN		
+GAL 3:28!16		adj	πάντες	πᾶς	A-NPM		
+GAL 3:28!17		conj	γὰρ	γάρ	CONJ		
+GAL 3:28!18		pron	ὑμεῖς	σύ	P-2NP		
+GAL 3:28!19	p	adj	εἷς	εἷς	A-NSM		
+GAL 3:28!20	vc	verb	ἐστε	εἰμί	V-PAI-2P		
+GAL 3:28!21		prep	ἐν	ἐν	PREP		
+GAL 3:28!22		noun	Χριστῷ	Χριστός	N-DSM		
+GAL 3:28!23		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+GAL 3:29!1		conj	εἰ	εἰ	COND		
+GAL 3:29!2		conj	δὲ	δέ	CONJ		
+GAL 3:29!3	s	pron	ὑμεῖς	σύ	P-2NP		
+GAL 3:29!4	p	noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 3:29!5		conj	ἄρα	ἄρα	PRT		
+GAL 3:29!6		det	τοῦ	ὁ	T-GSM		
+GAL 3:29!7		noun	Ἀβραὰμ	Ἀβραάμ	N-PRI		
+GAL 3:29!8		noun	σπέρμα	σπέρμα	N-NSN		
+GAL 3:29!9	vc	verb	ἐστέ	εἰμί	V-PAI-2P		
+GAL 3:29!10		prep	κατ	κατά	PREP		
+GAL 3:29!11		noun	ἐπαγγελίαν	ἐπαγγελία	N-ASF		
+GAL 3:29!12	p	noun	κληρονόμοι	κληρονόμος	N-NPM		
+GAL 4:1!1	v	verb	Λέγω	λέγω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 4:1!2		conj	δέ	δέ	CONJ		
+GAL 4:1!3		prep	ἐφ	ἐπί	PREP		
+GAL 4:1!4		pron	ὅσον	ὅσος	K-ASM		
+GAL 4:1!5		noun	χρόνον	χρόνος	N-ASM		
+GAL 4:1!6		det	ὁ	ὁ	T-NSM		
+GAL 4:1!7		noun	κληρονόμος	κληρονόμος	N-NSM		
+GAL 4:1!8	p	adj	νήπιός	νήπιος	A-NSM		
+GAL 4:1!9	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+GAL 4:1!10	o	adj	οὐδὲν	οὐδείς	A-ASN-N		
+GAL 4:1!11	v	verb	διαφέρει	διαφέρω	V-PAI-3S	κληρονόμος	GAL 4:1!7
+GAL 4:1!12	adv	noun	δούλου	δοῦλος	N-GSM		
+GAL 4:1!13		noun	κύριος	κύριος	N-NSM		
+GAL 4:1!14		adj	πάντων	πᾶς	A-GPM		
+GAL 4:1!15	vc	verb	ὤν	εἰμί	V-PAP-NSM		
+GAL 4:2!1		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 4:2!2		prep	ὑπὸ	ὑπό	PREP		
+GAL 4:2!3		noun	ἐπιτρόπους	ἐπίτροπος	N-APM		
+GAL 4:2!4	vc	verb	ἐστὶ	εἰμί	V-PAI-3S		
+GAL 4:2!5		conj	καὶ	καί	CONJ		
+GAL 4:2!6		noun	οἰκονόμους	οἰκονόμος	N-APM		
+GAL 4:2!7		prep	ἄχρι	ἄχρι	ADV		
+GAL 4:2!8		det	τῆς	ὁ	T-GSF		
+GAL 4:2!9		noun	προθεσμίας	προθεσμία	N-GSF		
+GAL 4:2!10		det	τοῦ	ὁ	T-GSM		
+GAL 4:2!11		noun	πατρός	πατήρ	N-GSM		
+GAL 4:3!1	adv	adv	οὕτως	οὕτω(ς)	ADV		
+GAL 4:3!2		adv	καὶ	καί	CONJ		
+GAL 4:3!3		pron	ἡμεῖς	ἐγώ	P-1NP		
+GAL 4:3!4		conj	ὅτε	ὅτε	ADV		
+GAL 4:3!5	vc	verb	ἦμεν	εἰμί	V-IAI-1P		
+GAL 4:3!6	p	adj	νήπιοι	νήπιος	A-NPM		
+GAL 4:3!7		prep	ὑπὸ	ὑπό	PREP		
+GAL 4:3!8		det	τὰ	ὁ	T-APN		
+GAL 4:3!9		noun	στοιχεῖα	στοιχεῖα	N-APN		
+GAL 4:3!10		det	τοῦ	ὁ	T-GSM		
+GAL 4:3!11		noun	κόσμου	κόσμος	N-GSM		
+GAL 4:3!12		verb	ἤμεθα	εἰμί	V-IMI-1P		
+GAL 4:3!13		verb	δεδουλωμένοι	δουλεύω	V-RPP-NPM		
+GAL 4:4!1		conj	ὅτε	ὅτε	ADV		
+GAL 4:4!2		conj	δὲ	δέ	CONJ		
+GAL 4:4!3	v	verb	ἦλθεν	ἔρχομαι	V-2AAI-3S	πλήρωμα	GAL 4:4!5
+GAL 4:4!4		det	τὸ	ὁ	T-NSN		
+GAL 4:4!5		noun	πλήρωμα	πλήρωμα	N-NSN		
+GAL 4:4!6		det	τοῦ	ὁ	T-GSM		
+GAL 4:4!7		noun	χρόνου	χρόνος	N-GSM		
+GAL 4:4!8	v	verb	ἐξαπέστειλεν	ἐξαποστέλλω	V-AAI-3S	θεός	GAL 4:4!10
+GAL 4:4!9		det	ὁ	ὁ	T-NSM		
+GAL 4:4!10		noun	θεὸς	θεός	N-NSM		
+GAL 4:4!11		det	τὸν	ὁ	T-ASM		
+GAL 4:4!12		noun	υἱὸν	υἱός	N-ASM		
+GAL 4:4!13		pron	αὐτοῦ	αὐτός	P-GSM		
+GAL 4:4!14	v	verb	γενόμενον	γίνομαι	V-2ADP-ASM	υἱός	GAL 4:4!12
+GAL 4:4!15		prep	ἐκ	ἐκ	PREP		
+GAL 4:4!16		noun	γυναικός	γυνή	N-GSF		
+GAL 4:4!17	v	verb	γενόμενον	γίνομαι	V-2ADP-ASM	υἱός	GAL 4:4!12
+GAL 4:4!18		prep	ὑπὸ	ὑπό	PREP		
+GAL 4:4!19		noun	νόμον	νόμος	N-ASM		
+GAL 4:5!1		conj	ἵνα	ἵνα	CONJ		
+GAL 4:5!2		det	τοὺς	ὁ	T-APM		
+GAL 4:5!3		prep	ὑπὸ	ὑπό	PREP		
+GAL 4:5!4		noun	νόμον	νόμος	N-ASM		
+GAL 4:5!5	v	verb	ἐξαγοράσῃ	ἐξαγοράζω	V-AAS-3S	υἱός	GAL 4:4!12
+GAL 4:5!6		conj	ἵνα	ἵνα	CONJ		
+GAL 4:5!7		det	τὴν	ὁ	T-ASF		
+GAL 4:5!8		noun	υἱοθεσίαν	υἱοθεσία	N-ASF		
+GAL 4:5!9	v	verb	ἀπολάβωμεν	ἀπολαμβάνω	V-2AAS-1P	Παῦλος;ἀδελφός;Ἰουδαῖος;Βαρναβᾶς;Κηφᾶς	GAL 1:1!1;GAL 1:2!6;GAL 2:13!7;GAL 2:13!10;GAL 2:14!14
+GAL 4:6!1		conj	ὅτι	ὅτι	CONJ		
+GAL 4:6!2		conj	δέ	δέ	CONJ		
+GAL 4:6!3	vc	verb	ἐστε	εἰμί	V-PAI-2P		
+GAL 4:6!4	p	noun	υἱοί	υἱός	N-NPM		
+GAL 4:6!5	v	verb	ἐξαπέστειλεν	ἐξαποστέλλω	V-AAI-3S	θεός	GAL 4:6!7
+GAL 4:6!6		det	ὁ	ὁ	T-NSM		
+GAL 4:6!7		noun	θεὸς	θεός	N-NSM		
+GAL 4:6!8		det	τὸ	ὁ	T-ASN		
+GAL 4:6!9		noun	πνεῦμα	πνεῦμα	N-ASN		
+GAL 4:6!10		det	τοῦ	ὁ	T-GSM		
+GAL 4:6!11		noun	υἱοῦ	υἱός	N-GSM		
+GAL 4:6!12		pron	αὐτοῦ	αὐτός	P-GSM		
+GAL 4:6!13		prep	εἰς	εἰς	PREP		
+GAL 4:6!14		det	τὰς	ὁ	T-APF		
+GAL 4:6!15		noun	καρδίας	καρδία	N-APF		
+GAL 4:6!16		pron	ἡμῶν	ἐγώ	P-1GP		
+GAL 4:6!17	v	verb	κρᾶζον	κράζω	V-PAP-ASN	πνεῦμα	GAL 4:6!9
+GAL 4:6!18		noun	Αββα	αββα	N-PRI		
+GAL 4:6!19		det	ὁ	ὁ	T-NSM		
+GAL 4:6!20		noun	πατήρ	πατήρ	N-NSM		
+GAL 4:7!1		conj	ὥστε	ὥστε	CONJ		
+GAL 4:7!2		adv	οὐκέτι	οὐκέτι	ADV-N		
+GAL 4:7!3	vc	verb	εἶ	εἰμί	V-PAI-2S		
+GAL 4:7!4		noun	δοῦλος	δοῦλος	N-NSM		
+GAL 4:7!5		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 4:7!6		noun	υἱός	υἱός	N-NSM		
+GAL 4:7!7		conj	εἰ	εἰ	COND		
+GAL 4:7!8		conj	δὲ	δέ	CONJ		
+GAL 4:7!9	p	noun	υἱός	υἱός	N-NSM		
+GAL 4:7!10		adv	καὶ	καί	CONJ		
+GAL 4:7!11		noun	κληρονόμος	κληρονόμος	N-NSM		
+GAL 4:7!12		prep	διὰ	διά	PREP		
+GAL 4:7!13		noun	θεοῦ	θεός	N-GSM		
+GAL 4:8!1		conj	Ἀλλὰ	ἀλλά	CONJ		
+GAL 4:8!2	adv	adv	τότε	τότε	ADV		
+GAL 4:8!3		conj	μὲν	μέν	PRT		
+GAL 4:8!4	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 4:8!5	v	verb	εἰδότες	οἶδα	V-RAP-NPM		
+GAL 4:8!6	o	noun	θεὸν	θεός	N-ASM		
+GAL 4:8!7	v	verb	ἐδουλεύσατε	δουλεύω	V-AAI-2P		
+GAL 4:8!8		det	τοῖς	ὁ	T-DPM		
+GAL 4:8!9	adv	noun	φύσει	φύσις	N-DSF		
+GAL 4:8!10	adv	adv	μὴ	μή	PRT-N		
+GAL 4:8!11	vc	verb	οὖσι	εἰμί	V-PAP-DPM		
+GAL 4:8!12	p	noun	θεοῖς	θεός	N-DPM		
+GAL 4:9!1	adv	adv	νῦν	νῦν	ADV		
+GAL 4:9!2		conj	δὲ	δέ	CONJ		
+GAL 4:9!3	v	verb	γνόντες	γινώσκω	V-2AAP-NPM		
+GAL 4:9!4	o	noun	θεόν	θεός	N-ASM		
+GAL 4:9!5	adv	adv	μᾶλλον	μᾶλλον	ADV		
+GAL 4:9!6		conj	δὲ	δέ	CONJ		
+GAL 4:9!7	v	verb	γνωσθέντες	γινώσκω	V-APP-NPM		
+GAL 4:9!8		prep	ὑπὸ	ὑπό	PREP		
+GAL 4:9!9		noun	θεοῦ	θεός	N-GSM		
+GAL 4:9!10	adv	adv	πῶς	πῶς	ADV-I		
+GAL 4:9!11	v	verb	ἐπιστρέφετε	ἐπιστρέφω	V-PAI-2P		
+GAL 4:9!12	adv	adv	πάλιν	πάλιν	ADV		
+GAL 4:9!13		prep	ἐπὶ	ἐπί	PREP		
+GAL 4:9!14		det	τὰ	ὁ	T-APN		
+GAL 4:9!15		adj	ἀσθενῆ	ἀσθενής	A-APN		
+GAL 4:9!16		conj	καὶ	καί	CONJ		
+GAL 4:9!17		adj	πτωχὰ	πτωχός	A-APN		
+GAL 4:9!18		noun	στοιχεῖα	στοιχεῖον	N-APN		
+GAL 4:9!19	o	pron	οἷς	ὅς	R-DPN		
+GAL 4:9!20		adv	πάλιν	πάλιν	ADV		
+GAL 4:9!21		adv	ἄνωθεν	ἄνωθεν	ADV		
+GAL 4:9!22	v	verb	δουλεύειν	δουλεύω	V-PAN		
+GAL 4:9!23	v	verb	θέλετε	θέλω	V-PAI-2P		
+GAL 4:10!1		noun	ἡμέρας	ἡμέρα	N-APF		
+GAL 4:10!2	v	verb	παρατηρεῖσθε	παρατηρέω	V-PMI-2P		
+GAL 4:10!3		conj	καὶ	καί	CONJ		
+GAL 4:10!4		noun	μῆνας	μήν	N-APM		
+GAL 4:10!5		conj	καὶ	καί	CONJ		
+GAL 4:10!6		noun	καιροὺς	καιρός	N-APM		
+GAL 4:10!7		conj	καὶ	καί	CONJ		
+GAL 4:10!8		noun	ἐνιαυτούς	ἐνιαυτός	N-APM		
+GAL 4:11!1	v	verb	φοβοῦμαι	φοβέομαι	V-PNI-1S	Παῦλος	GAL 1:1!1
+GAL 4:11!2	adv	pron	ὑμᾶς	σύ	P-2AP		
+GAL 4:11!3		conj	μή	μή	PRT-N		
+GAL 4:11!4		adv	πως	πώς	ADV-I		
+GAL 4:11!5	adv	adv	εἰκῇ	εἰκῇ	ADV		
+GAL 4:11!6	v	verb	κεκοπίακα	κοπιάω	V-RAI-1S	Παῦλος	GAL 1:1!1
+GAL 4:11!7		prep	εἰς	εἰς	PREP		
+GAL 4:11!8		pron	ὑμᾶς	σύ	P-2AP		
+GAL 4:12!1	v	verb	Γίνεσθε	γίνομαι	V-PNM-2P		
+GAL 4:12!2		conj	ὡς	ὡς	ADV		
+GAL 4:12!3	s	pron	ἐγώ	ἐγώ	P-1NS		
+GAL 4:12!4		conj	ὅτι	ὅτι	CONJ		
+GAL 4:12!5	s	pron	κἀγὼ	κἀγώ	P-1NS-K		
+GAL 4:12!6		conj	ὡς	ὡς	ADV		
+GAL 4:12!7	s	pron	ὑμεῖς	σύ	P-2NP		
+GAL 4:12!8	aux	noun	ἀδελφοί	ἀδελφός	N-VPM		
+GAL 4:12!9	v	verb	δέομαι	δέομαι	V-PNI-1S	Παῦλος	GAL 1:1!1
+GAL 4:12!10	o	pron	ὑμῶν	σύ	P-2GP		
+GAL 4:12!11	adv	adj	οὐδέν	οὐδείς	A-ASN-N		
+GAL 4:12!12	o	pron	με	ἐγώ	P-1AS		
+GAL 4:12!13	v	verb	ἠδικήσατε	ἀδικέω	V-AAI-2P	ἀδελφός	GAL 4:12!8
+GAL 4:13!1	v	verb	οἴδατε	οἶδα	V-RAI-2P	ἀδελφός	GAL 4:12!8
+GAL 4:13!2		conj	δὲ	δέ	CONJ		
+GAL 4:13!3		conj	ὅτι	ὅτι	CONJ		
+GAL 4:13!4		prep	δι	διά	PREP		
+GAL 4:13!5		noun	ἀσθένειαν	ἀσθένεια	N-ASF		
+GAL 4:13!6		det	τῆς	ὁ	T-GSF		
+GAL 4:13!7		noun	σαρκὸς	σάρξ	N-GSF		
+GAL 4:13!8	v	verb	εὐηγγελισάμην	εὐαγγελίζω	V-AMI-1S	Παῦλος	GAL 1:1!1
+GAL 4:13!9	io	pron	ὑμῖν	σύ	P-2DP		
+GAL 4:13!10		det	τὸ	ὁ	T-ASN		
+GAL 4:13!11		adj	πρότερον	πρότερος	A-ASN-C		
+GAL 4:14!1		conj	καὶ	καί	CONJ		
+GAL 4:14!2		det	τὸν	ὁ	T-ASM		
+GAL 4:14!3		noun	πειρασμὸν	πειρασμός	N-ASM		
+GAL 4:14!4		pron	ὑμῶν	σύ	P-2GP		
+GAL 4:14!5		prep	ἐν	ἐν	PREP		
+GAL 4:14!6		det	τῇ	ὁ	T-DSF		
+GAL 4:14!7		noun	σαρκί	σάρξ	N-DSF		
+GAL 4:14!8		pron	μου	ἐγώ	P-1GS		
+GAL 4:14!9		adv	οὐκ	οὐ	PRT-N		
+GAL 4:14!10		verb	ἐξουθενήσατε	ἐξουθενέω	V-AAI-2P	ἀδελφός	GAL 4:12!8
+GAL 4:14!11		conj	οὐδὲ	οὐδέ	CONJ-N		
+GAL 4:14!12		verb	ἐξεπτύσατε	ἐκπτύω	V-AAI-2P	ἀδελφός	GAL 4:12!8
+GAL 4:14!13		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 4:14!14		conj	ὡς	ὡς	ADV		
+GAL 4:14!15		noun	ἄγγελον	ἄγγελος	N-ASM		
+GAL 4:14!16		noun	θεοῦ	θεός	N-GSM		
+GAL 4:14!17	v	verb	ἐδέξασθέ	δέχομαι	V-ADI-2P	ἀδελφός	GAL 4:12!8
+GAL 4:14!18	o	pron	με	ἐγώ	P-1AS		
+GAL 4:14!19		conj	ὡς	ὡς	ADV		
+GAL 4:14!20		noun	Χριστὸν	Χριστός	N-ASM		
+GAL 4:14!21		noun	Ἰησοῦν	Ἰησοῦς	N-ASM		
+GAL 4:15!1	p	adv	ποῦ	ποῦ	ADV-I		
+GAL 4:15!2		conj	οὖν	οὖν	CONJ		
+GAL 4:15!3		det	ὁ	ὁ	T-NSM		
+GAL 4:15!4		noun	μακαρισμὸς	μακαρισμός	N-NSM		
+GAL 4:15!5		pron	ὑμῶν	σύ	P-2GP		
+GAL 4:15!6	v	verb	μαρτυρῶ	μαρτυρέω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 4:15!7		conj	γὰρ	γάρ	CONJ		
+GAL 4:15!8	io	pron	ὑμῖν	σύ	P-2DP		
+GAL 4:15!9		conj	ὅτι	ὅτι	CONJ		
+GAL 4:15!10		conj	εἰ	εἰ	COND		
+GAL 4:15!11	p	adj	δυνατὸν	δυνατός	A-NSN		
+GAL 4:15!12		det	τοὺς	ὁ	T-APM		
+GAL 4:15!13		noun	ὀφθαλμοὺς	ὀφθαλμός	N-APM		
+GAL 4:15!14		pron	ὑμῶν	σύ	P-2GP		
+GAL 4:15!15	v	verb	ἐξορύξαντες	ἐξορύσσω	V-AAP-NPM	ἀδελφός	GAL 4:12!8
+GAL 4:15!16	v	verb	ἐδώκατέ	δίδωμι	V-AAI-2P	ἀδελφός	GAL 4:12!8
+GAL 4:15!17	io	pron	μοι	ἐγώ	P-1DS		
+GAL 4:16!1		conj	ὥστε	ὥστε	CONJ		
+GAL 4:16!2		adj	ἐχθρὸς	ἐχθρός	A-NSM		
+GAL 4:16!3		pron	ὑμῶν	σύ	P-2GP		
+GAL 4:16!4	vc	verb	γέγονα	γίνομαι	V-2RAI-1S		
+GAL 4:16!5	v	verb	ἀληθεύων	ἀληθεύω	V-PAP-NSM	Παῦλος	GAL 1:1!1
+GAL 4:16!6	io	pron	ὑμῖν	σύ	P-2DP		
+GAL 4:17!1	v	verb	ζηλοῦσιν	ζηλόω	V-PAI-3P	ψευδάδελφος	GAL 2:4!5
+GAL 4:17!2	o	pron	ὑμᾶς	σύ	P-2AP		
+GAL 4:17!3	adv	adv	οὐ	οὐ	PRT-N		
+GAL 4:17!4	adv	adv	καλῶς	καλῶς	ADV		
+GAL 4:17!5		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 4:17!6	v	verb	ἐκκλεῖσαι	ἐκκλείω	V-AAN	ψευδάδελφος	GAL 2:4!5
+GAL 4:17!7	o	pron	ὑμᾶς	σύ	P-2AP		
+GAL 4:17!8	v	verb	θέλουσιν	θέλω	V-PAI-3P	ψευδάδελφος	GAL 2:4!5
+GAL 4:17!9		conj	ἵνα	ἵνα	CONJ		
+GAL 4:17!10	o	pron	αὐτοὺς	ἑαυτοῦ	P-APM		
+GAL 4:17!11	v	verb	ζηλοῦτε	ζηλόω	V-PAS-2P	ἀδελφός	GAL 4:12!8
+GAL 4:18!1	p	adj	καλὸν	καλός	A-NSN		
+GAL 4:18!2		conj	δὲ	δέ	CONJ		
+GAL 4:18!3	v	verb	ζηλοῦσθαι	ζηλόω	V-PPN	ἀδελφός	GAL 4:12!8
+GAL 4:18!4		prep	ἐν	ἐν	PREP		
+GAL 4:18!5		adj	καλῷ	καλός	A-DSN		
+GAL 4:18!6		adv	πάντοτε	πάντοτε	ADV		
+GAL 4:18!7		conj	καὶ	καί	CONJ		
+GAL 4:18!8	adv	adv	μὴ	μή	PRT-N		
+GAL 4:18!9	adv	adj	μόνον	μόνος	ADV		
+GAL 4:18!10		prep	ἐν	ἐν	PREP		
+GAL 4:18!11		det	τῷ	ὁ	T-DSN		
+GAL 4:18!12	v	verb	παρεῖναί	πάρειμι	V-PAN	ἐγώ	GAL 4:18!13
+GAL 4:18!13	s	pron	με	ἐγώ	P-1AS		
+GAL 4:18!14		prep	πρὸς	πρός	PREP		
+GAL 4:18!15		pron	ὑμᾶς	σύ	P-2AP		
+GAL 4:19!1		noun	τέκνα	τέκνον	N-VPN		
+GAL 4:19!2		pron	μου	ἐγώ	P-1GS		
+GAL 4:19!3	o	pron	οὓς	ὅς	R-APM		
+GAL 4:19!4	adv	adv	πάλιν	πάλιν	ADV		
+GAL 4:19!5	v	verb	ὠδίνω	ὠδίνω	V-PAI-1S	Παῦλος	GAL 1:1!1
+GAL 4:19!6		prep	μέχρις	μέχρι(ς)	ADV		
+GAL 4:19!7	adv	pron	οὗ	ὅς	R-GSM		
+GAL 4:19!8	v	verb	μορφωθῇ	μορφόω	V-APS-3S		
+GAL 4:19!9	s	noun	Χριστὸς	Χριστός	N-NSM		
+GAL 4:19!10		prep	ἐν	ἐν	PREP		
+GAL 4:19!11		pron	ὑμῖν	σύ	P-2DP		
+GAL 4:20!1	v	verb	ἤθελον	θέλω	V-IAI-1S	Παῦλος	GAL 1:1!1
+GAL 4:20!2		conj	δὲ	δέ	CONJ		
+GAL 4:20!3	v	verb	παρεῖναι	πάρειμι	V-PAN	Παῦλος	GAL 1:1!1
+GAL 4:20!4		prep	πρὸς	πρός	PREP		
+GAL 4:20!5		pron	ὑμᾶς	σύ	P-2AP		
+GAL 4:20!6	adv	adv	ἄρτι	ἄρτι	ADV		
+GAL 4:20!7		conj	καὶ	καί	CONJ		
+GAL 4:20!8	v	verb	ἀλλάξαι	ἀλλάσσω	V-AAN	Παῦλος	GAL 1:1!1
+GAL 4:20!9		det	τὴν	ὁ	T-ASF		
+GAL 4:20!10		noun	φωνήν	φωνή	N-ASF		
+GAL 4:20!11		pron	μου	ἐγώ	P-1GS		
+GAL 4:20!12		conj	ὅτι	ὅτι	CONJ		
+GAL 4:20!13	v	verb	ἀποροῦμαι	ἀπορέω	V-PMI-1S	Παῦλος	GAL 1:1!1
+GAL 4:20!14		prep	ἐν	ἐν	PREP		
+GAL 4:20!15		pron	ὑμῖν	σύ	P-2DP		
+GAL 4:21!1	v	verb	Λέγετέ	λέγω	V-PAM-2P	τέκνον	GAL 4:19!1
+GAL 4:21!2	io	pron	μοι	ἐγώ	P-1DS		
+GAL 4:21!3		det	οἱ	ὁ	T-NPM		
+GAL 4:21!4		prep	ὑπὸ	ὑπό	PREP		
+GAL 4:21!5		noun	νόμον	νόμος	N-ASM		
+GAL 4:21!6	v	verb	θέλοντες	θέλω	V-PAP-NPM	τέκνον	GAL 4:19!1
+GAL 4:21!7	vc	verb	εἶναι	εἰμί	V-PAN		
+GAL 4:21!8		det	τὸν	ὁ	T-ASM		
+GAL 4:21!9		noun	νόμον	νόμος	N-ASM		
+GAL 4:21!10	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 4:21!11	v	verb	ἀκούετε	ἀκούω	V-PAI-2P	τέκνον	GAL 4:19!1
+GAL 4:22!1	v	verb	γέγραπται	γράφω	V-RPI-3S		
+GAL 4:22!2		conj	γὰρ	γάρ	CONJ		
+GAL 4:22!3		conj	ὅτι	ὅτι	CONJ		
+GAL 4:22!4	s	noun	Ἀβραὰμ	Ἀβραάμ	N-PRI		
+GAL 4:22!5		num	δύο	δύο	A-NUI		
+GAL 4:22!6		noun	υἱοὺς	υἱός	N-APM		
+GAL 4:22!7	v	verb	ἔσχεν	ἔχω	V-2AAI-3S	Ἀβραάμ	GAL 4:22!4
+GAL 4:22!8		adj	ἕνα	εἷς	A-ASM		
+GAL 4:22!9		prep	ἐκ	ἐκ	PREP		
+GAL 4:22!10		det	τῆς	ὁ	T-GSF		
+GAL 4:22!11		noun	παιδίσκης	παιδίσκη	N-GSF		
+GAL 4:22!12		conj	καὶ	καί	CONJ		
+GAL 4:22!13		adj	ἕνα	εἷς	A-ASM		
+GAL 4:22!14		prep	ἐκ	ἐκ	PREP		
+GAL 4:22!15		det	τῆς	ὁ	T-GSF		
+GAL 4:22!16		adj	ἐλευθέρας	ἐλεύθερος	A-GSF		
+GAL 4:23!1		conj	ἀλλ	ἀλλά	CONJ		
+GAL 4:23!2		det	ὁ	ὁ	T-NSM		
+GAL 4:23!3		conj	μὲν	μέν	PRT		
+GAL 4:23!4		prep	ἐκ	ἐκ	PREP		
+GAL 4:23!5		det	τῆς	ὁ	T-GSF		
+GAL 4:23!6		noun	παιδίσκης	παιδίσκη	N-GSF		
+GAL 4:23!7		prep	κατὰ	κατά	PREP		
+GAL 4:23!8		noun	σάρκα	σάρξ	N-ASF		
+GAL 4:23!9	v	verb	γεγέννηται	γεννάω	V-RPI-3S		
+GAL 4:23!10		det	ὁ	ὁ	T-NSM		
+GAL 4:23!11		conj	δὲ	δέ	CONJ		
+GAL 4:23!12		prep	ἐκ	ἐκ	PREP		
+GAL 4:23!13		det	τῆς	ὁ	T-GSF		
+GAL 4:23!14		adj	ἐλευθέρας	ἐλεύθερος	A-GSF		
+GAL 4:23!15		prep	δι	διά	PREP		
+GAL 4:23!16		noun	ἐπαγγελίας	ἐπαγγελία	N-GSF		
+GAL 4:24!1	s	pron	ἅτινά	ὅστις	R-NPN		
+GAL 4:24!2	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+GAL 4:24!3	v	verb	ἀλληγορούμενα	ἀλληγορέω	V-PPP-NPN		
+GAL 4:24!4	s	pron	αὗται	οὗτος	D-NPF		
+GAL 4:24!5		conj	γάρ	γάρ	CONJ		
+GAL 4:24!6	vc	verb	εἰσιν	εἰμί	V-PAI-3P		
+GAL 4:24!7		num	δύο	δύο	A-NUI		
+GAL 4:24!8		noun	διαθῆκαι	διαθήκη	N-NPF		
+GAL 4:24!9	s	adj	μία	εἷς	A-NSF		
+GAL 4:24!10		conj	μὲν	μέν	PRT		
+GAL 4:24!11		prep	ἀπὸ	ἀπό	PREP		
+GAL 4:24!12		noun	ὄρους	ὄρος	N-GSN		
+GAL 4:24!13		noun	Σινᾶ	Σινᾶ	N-PRI		
+GAL 4:24!14		prep	εἰς	εἰς	PREP		
+GAL 4:24!15		noun	δουλείαν	δουλεία	N-ASF		
+GAL 4:24!16	v	verb	γεννῶσα	γεννάω	V-PAP-NSF	εἷς	GAL 4:24!9
+GAL 4:24!17	s	pron	ἥτις	ὅστις	R-NSF		
+GAL 4:24!18	vc	verb	ἐστὶν	εἰμί	V-PAI-3S		
+GAL 4:24!19	p	noun	Ἁγάρ	Ἁγάρ	N-PRI		
+GAL 4:25!1		det	τὸ	ὁ	T-NSN		
+GAL 4:25!2		conj	δὲ	δέ	CONJ		
+GAL 4:25!3		noun	Ἁγὰρ	Ἁγάρ	N-PRI		
+GAL 4:25!4		noun	Σινᾶ	Σινᾶ	N-PRI		
+GAL 4:25!5		noun	ὄρος	ὄρος	N-NSN		
+GAL 4:25!6	vc	verb	ἐστὶν	εἰμί	V-PAI-3S		
+GAL 4:25!7		prep	ἐν	ἐν	PREP		
+GAL 4:25!8		det	τῇ	ὁ	T-DSF		
+GAL 4:25!9		noun	Ἀραβίᾳ	Ἀραβία	N-DSF		
+GAL 4:25!10	v	verb	συστοιχεῖ	συστοιχέω	V-PAI-3S	Ἁγάρ	GAL 4:25!3
+GAL 4:25!11		conj	δὲ	δέ	CONJ		
+GAL 4:25!12		det	τῇ	ὁ	T-DSF		
+GAL 4:25!13		adv	νῦν	νῦν	ADV		
+GAL 4:25!14		noun	Ἰερουσαλήμ	Ἰερουσαλήμ	N-PRI		
+GAL 4:25!15	v	verb	δουλεύει	δουλεύω	V-PAI-3S	Ἰερουσαλήμ	GAL 4:25!14
+GAL 4:25!16		conj	γὰρ	γάρ	CONJ		
+GAL 4:25!17		prep	μετὰ	μετά	PREP		
+GAL 4:25!18		det	τῶν	ὁ	T-GPN		
+GAL 4:25!19		noun	τέκνων	τέκνον	N-GPN		
+GAL 4:25!20		pron	αὐτῆς	αὐτός	P-GSF		
+GAL 4:26!1		det	ἡ	ὁ	T-NSF		
+GAL 4:26!2		conj	δὲ	δέ	CONJ		
+GAL 4:26!3		adv	ἄνω	ἄνω	ADV		
+GAL 4:26!4		noun	Ἰερουσαλὴμ	Ἰερουσαλήμ	N-PRI		
+GAL 4:26!5	p	adj	ἐλευθέρα	ἐλεύθερος	A-NSF		
+GAL 4:26!6	vc	verb	ἐστίν	εἰμί	V-PAI-3S		
+GAL 4:26!7	s	pron	ἥτις	ὅστις	R-NSF		
+GAL 4:26!8	vc	verb	ἐστὶν	εἰμί	V-PAI-3S		
+GAL 4:26!9		noun	μήτηρ	μήτηρ	N-NSF		
+GAL 4:26!10		pron	ἡμῶν	ἐγώ	P-1GP		
+GAL 4:27!1	v	verb	γέγραπται	γράφω	V-RPI-3S		
+GAL 4:27!2		conj	γάρ	γάρ	CONJ		
+GAL 4:27!3	v	verb	Εὐφράνθητι	εὐφραίνω	V-APM-2S		
+GAL 4:27!4		adj	στεῖρα	στεῖρα	N-VSF		
+GAL 4:27!5		det	ἡ	ὁ	T-NSF		
+GAL 4:27!6	adv	adv	οὐ	οὐ	PRT-N		
+GAL 4:27!7	v	verb	τίκτουσα	τίκτω	V-PAP-NSF	στεῖρα	GAL 4:27!4
+GAL 4:27!8	v	verb	ῥῆξον	ῥήγνυμι	V-AAM-2S		
+GAL 4:27!9		conj	καὶ	καί	CONJ		
+GAL 4:27!10	v	verb	βόησον	βοάω	V-AAM-2S		
+GAL 4:27!11		det	ἡ	ὁ	T-NSF		
+GAL 4:27!12	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 4:27!13	v	verb	ὠδίνουσα	ὠδίνω	V-PAP-NSF		
+GAL 4:27!14		conj	ὅτι	ὅτι	CONJ		
+GAL 4:27!15	p	adj	πολλὰ	πολύς	A-NPN		
+GAL 4:27!16		det	τὰ	ὁ	T-NPN		
+GAL 4:27!17		noun	τέκνα	τέκνον	N-NPN		
+GAL 4:27!18		det	τῆς	ὁ	T-GSF		
+GAL 4:27!19		adj	ἐρήμου	ἔρημος	A-GSF		
+GAL 4:27!20	adv	adv	μᾶλλον	μᾶλλον	ADV		
+GAL 4:27!21		conj	ἢ	ἤ	PRT		
+GAL 4:27!22		det	τῆς	ὁ	T-GSF		
+GAL 4:27!23	v	verb	ἐχούσης	ἔχω	V-PAP-GSF		
+GAL 4:27!24		det	τὸν	ὁ	T-ASM		
+GAL 4:27!25		noun	ἄνδρα	ἀνήρ	N-ASM		
+GAL 4:28!1	s	pron	ὑμεῖς	σύ	P-2NP		
+GAL 4:28!2		conj	δέ	δέ	CONJ		
+GAL 4:28!3	aux	noun	ἀδελφοί	ἀδελφός	N-VPM		
+GAL 4:28!4		prep	κατὰ	κατά	PREP		
+GAL 4:28!5		noun	Ἰσαὰκ	Ἰσαάκ	N-PRI		
+GAL 4:28!6		noun	ἐπαγγελίας	ἐπαγγελία	N-GSF		
+GAL 4:28!7		noun	τέκνα	τέκνον	N-NPN		
+GAL 4:28!8	vc	verb	ἐστέ	εἰμί	V-PAI-2P		
+GAL 4:29!1		conj	ἀλλ	ἀλλά	CONJ		
+GAL 4:29!2		conj	ὥσπερ	ὥσπερ	ADV		
+GAL 4:29!3	adv	adv	τότε	τότε	ADV		
+GAL 4:29!4		det	ὁ	ὁ	T-NSM		
+GAL 4:29!5		prep	κατὰ	κατά	PREP		
+GAL 4:29!6		noun	σάρκα	σάρξ	N-ASF		
+GAL 4:29!7	v	verb	γεννηθεὶς	γεννάω	V-APP-NSM		
+GAL 4:29!8	v	verb	ἐδίωκε	διώκω	V-IAI-3S	ὁ	GAL 4:23!2
+GAL 4:29!9		det	τὸν	ὁ	T-ASM		
+GAL 4:29!10		prep	κατὰ	κατά	PREP		
+GAL 4:29!11		noun	πνεῦμα	πνεῦμα	N-ASN		
+GAL 4:29!12	adv	adv	οὕτως	οὕτω(ς)	ADV		
+GAL 4:29!13	adv	adv	καὶ	καί	CONJ		
+GAL 4:29!14	adv	adv	νῦν	νῦν	ADV		
+GAL 4:30!1		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 4:30!2	o	pron	τί	τίς	I-ASN		
+GAL 4:30!3	v	verb	λέγει	λέγω	V-PAI-3S	γραφή	GAL 4:30!5
+GAL 4:30!4		det	ἡ	ὁ	T-NSF		
+GAL 4:30!5		noun	γραφή	γραφή	N-NSF		
+GAL 4:30!6	v	verb	Ἔκβαλε	ἐκβάλλω	V-2AAM-2S		
+GAL 4:30!7		det	τὴν	ὁ	T-ASF		
+GAL 4:30!8		noun	παιδίσκην	παιδίσκη	N-ASF		
+GAL 4:30!9		conj	καὶ	καί	CONJ		
+GAL 4:30!10		det	τὸν	ὁ	T-ASM		
+GAL 4:30!11		noun	υἱὸν	υἱός	N-ASM		
+GAL 4:30!12		pron	αὐτῆς	αὐτός	P-GSF		
+GAL 4:30!13		adv	οὐ	οὐ	PRT-N		
+GAL 4:30!14		conj	γὰρ	γάρ	CONJ		
+GAL 4:30!15		adv	μὴ	μή	PRT-N		
+GAL 4:30!16	v	verb	κληρονομήσει	κληρονομέω	V-FAI-3S	υἱός	GAL 4:30!18
+GAL 4:30!17		det	ὁ	ὁ	T-NSM		
+GAL 4:30!18		noun	υἱὸς	υἱός	N-NSM		
+GAL 4:30!19		det	τῆς	ὁ	T-GSF		
+GAL 4:30!20		noun	παιδίσκης	παιδίσκη	N-GSF		
+GAL 4:30!21		prep	μετὰ	μετά	PREP		
+GAL 4:30!22		det	τοῦ	ὁ	T-GSM		
+GAL 4:30!23		noun	υἱοῦ	υἱός	N-GSM		
+GAL 4:30!24		det	τῆς	ὁ	T-GSF		
+GAL 4:30!25		adj	ἐλευθέρας	ἐλεύθερος	A-GSF		
+GAL 4:31!1		conj	διό	διό	CONJ		
+GAL 4:31!2	aux	noun	ἀδελφοί	ἀδελφός	N-VPM		
+GAL 4:31!3		adv	οὐκ	οὐ	PRT-N		
+GAL 4:31!4	vc	verb	ἐσμὲν	εἰμί	V-PAI-1P		
+GAL 4:31!5		noun	παιδίσκης	παιδίσκη	N-GSF		
+GAL 4:31!6		noun	τέκνα	τέκνον	N-NPN		
+GAL 4:31!7		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 4:31!8		det	τῆς	ὁ	T-GSF		
+GAL 4:31!9		adj	ἐλευθέρας	ἐλεύθερος	A-GSF		
+GAL 5:1!1		det	τῇ	ὁ	T-DSF		
+GAL 5:1!2		noun	ἐλευθερίᾳ	ἐλευθερία	N-DSF		
+GAL 5:1!3	o	pron	ἡμᾶς	ἐγώ	P-1AP		
+GAL 5:1!4	s	noun	Χριστὸς	Χριστός	N-NSM		
+GAL 5:1!5	v	verb	ἠλευθέρωσεν	ἐλευθερόω	V-AAI-3S	Χριστός	GAL 5:1!4
+GAL 5:1!6	v	verb	στήκετε	στήκω	V-PAM-2P	ἀδελφός	GAL 4:31!2
+GAL 5:1!7		conj	οὖν	οὖν	CONJ		
+GAL 5:1!8		conj	καὶ	καί	CONJ		
+GAL 5:1!9	adv	adv	μὴ	μή	PRT-N		
+GAL 5:1!10	adv	adv	πάλιν	πάλιν	ADV		
+GAL 5:1!11		noun	ζυγῷ	ζυγός	N-DSM		
+GAL 5:1!12		noun	δουλείας	δουλεία	N-GSF		
+GAL 5:1!13	v	verb	ἐνέχεσθε	ἐνέχω	V-PPM-2P		
+GAL 5:2!1	aux	ptcl	Ἴδε	ἴδε	V-2AAM-2S		
+GAL 5:2!2		pron	ἐγὼ	ἐγώ	P-1NS		
+GAL 5:2!3		noun	Παῦλος	Παῦλος	N-NSM		
+GAL 5:2!4	v	verb	λέγω	λέγω	V-PAI-1S	ἐγώ	GAL 5:2!2
+GAL 5:2!5	io	pron	ὑμῖν	σύ	P-2DP		
+GAL 5:2!6		conj	ὅτι	ὅτι	CONJ		
+GAL 5:2!7		conj	ἐὰν	ἐάν	COND		
+GAL 5:2!8	v	verb	περιτέμνησθε	περιτέμνω	V-PPS-2P		
+GAL 5:2!9	s	noun	Χριστὸς	Χριστός	N-NSM		
+GAL 5:2!10	o	pron	ὑμᾶς	σύ	P-2AP		
+GAL 5:2!11	adv	adj	οὐδὲν	οὐδείς	A-ASN-N		
+GAL 5:2!12	v	verb	ὠφελήσει	ὠφελέω	V-FAI-3S	Χριστός	GAL 5:2!9
+GAL 5:3!1	v	verb	μαρτύρομαι	μαρτύρομαι	V-PNI-1S	Παῦλος	GAL 5:2!3
+GAL 5:3!2		conj	δὲ	δέ	CONJ		
+GAL 5:3!3	adv	adv	πάλιν	πάλιν	ADV		
+GAL 5:3!4		adj	παντὶ	πᾶς	A-DSM		
+GAL 5:3!5		noun	ἀνθρώπῳ	ἄνθρωπος	N-DSM		
+GAL 5:3!6	v	verb	περιτεμνομένῳ	περιτέμνω	V-PPP-DSM		
+GAL 5:3!7		conj	ὅτι	ὅτι	CONJ		
+GAL 5:3!8	p	noun	ὀφειλέτης	ὀφειλέτης	N-NSM		
+GAL 5:3!9	vc	verb	ἐστὶν	εἰμί	V-PAI-3S		
+GAL 5:3!10		adj	ὅλον	ὅλος	A-ASM		
+GAL 5:3!11		det	τὸν	ὁ	T-ASM		
+GAL 5:3!12		noun	νόμον	νόμος	N-ASM		
+GAL 5:3!13	v	verb	ποιῆσαι	ποιέω	V-AAN	ἄνθρωπος	GAL 5:3!5
+GAL 5:4!1	v	verb	κατηργήθητε	καταργέω	V-API-2P		
+GAL 5:4!2		prep	ἀπὸ	ἀπό	PREP		
+GAL 5:4!3		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 5:4!4	s	pron	οἵτινες	ὅστις	R-NPM		
+GAL 5:4!5		prep	ἐν	ἐν	PREP		
+GAL 5:4!6		noun	νόμῳ	νόμος	N-DSM		
+GAL 5:4!7	v	verb	δικαιοῦσθε	δικαιόω	V-PPI-2P		
+GAL 5:4!8		det	τῆς	ὁ	T-GSF		
+GAL 5:4!9		noun	χάριτος	χάρις	N-GSF		
+GAL 5:4!10	v	verb	ἐξεπέσατε	ἐκπίπτω	V-2AAI-2P		
+GAL 5:5!1	s	pron	ἡμεῖς	ἐγώ	P-1NP		
+GAL 5:5!2		conj	γὰρ	γάρ	CONJ		
+GAL 5:5!3	adv	noun	πνεύματι	πνεῦμα	N-DSN		
+GAL 5:5!4		prep	ἐκ	ἐκ	PREP		
+GAL 5:5!5		noun	πίστεως	πίστις	N-GSF		
+GAL 5:5!6		noun	ἐλπίδα	ἐλπίς	N-ASF		
+GAL 5:5!7		noun	δικαιοσύνης	δικαιοσύνη	N-GSF		
+GAL 5:5!8	v	verb	ἀπεκδεχόμεθα	ἀπεκδέχομαι	V-PNI-1P	ἐγώ	GAL 5:5!1
+GAL 5:6!1		prep	ἐν	ἐν	PREP		
+GAL 5:6!2		conj	γὰρ	γάρ	CONJ		
+GAL 5:6!3		noun	Χριστῷ	Χριστός	N-DSM		
+GAL 5:6!4		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+GAL 5:6!5		conj	οὔτε	οὔτε	CONJ-N		
+GAL 5:6!6		noun	περιτομή	περιτομή	N-NSF		
+GAL 5:6!7	o	pron	τι	τις	X-ASN		
+GAL 5:6!8	v	verb	ἰσχύει	ἰσχύω	V-PAI-3S	περιτομή;ἀκροβυστία	GAL 5:6!6;GAL 5:6!10
+GAL 5:6!9		conj	οὔτε	οὔτε	CONJ-N		
+GAL 5:6!10		noun	ἀκροβυστία	ἀκροβυστία	N-NSF		
+GAL 5:6!11		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 5:6!12		noun	πίστις	πίστις	N-NSF		
+GAL 5:6!13		prep	δι	διά	PREP		
+GAL 5:6!14		noun	ἀγάπης	ἀγάπη	N-GSF		
+GAL 5:6!15	v	verb	ἐνεργουμένη	ἐνεργέω	V-PMP-NSF	πίστις	GAL 5:6!12
+GAL 5:7!1	v	verb	Ἐτρέχετε	τρέχω	V-IAI-2P		
+GAL 5:7!2	adv	adv	καλῶς	καλῶς	ADV		
+GAL 5:7!3	s	pron	τίς	τίς	I-NSM		
+GAL 5:7!4	s	pron	ὑμᾶς	σύ	P-2AP		
+GAL 5:7!5	v	verb	ἐνέκοψεν	ἐγκόπτω	V-AAI-3S	τίς	GAL 5:7!3
+GAL 5:7!6		det	τῇ	ὁ	T-DSF		
+GAL 5:7!7		noun	ἀληθείᾳ	ἀλήθεια	N-DSF		
+GAL 5:7!8	adv	adv	μὴ	μή	PRT-N		
+GAL 5:7!9	v	verb	πείθεσθαι	πείθω	V-PPN		
+GAL 5:8!1		det	ἡ	ὁ	T-NSF		
+GAL 5:8!2		noun	πεισμονὴ	πεισμονή	N-NSF		
+GAL 5:8!3	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 5:8!4		prep	ἐκ	ἐκ	PREP		
+GAL 5:8!5		det	τοῦ	ὁ	T-GSM		
+GAL 5:8!6	v	verb	καλοῦντος	καλέω	V-PAP-GSM	θεός	GAL 4:14!16
+GAL 5:8!7	o	pron	ὑμᾶς	σύ	P-2AP		
+GAL 5:9!1		adj	μικρὰ	μικρός	A-NSF		
+GAL 5:9!2		noun	ζύμη	ζύμη	N-NSF		
+GAL 5:9!3		adj	ὅλον	ὅλος	A-ASN		
+GAL 5:9!4		det	τὸ	ὁ	T-ASN		
+GAL 5:9!5		noun	φύραμα	φύραμα	N-ASN		
+GAL 5:9!6	v	verb	ζυμοῖ	ζυμόω	V-PAI-3S	ζύμη	GAL 5:9!2
+GAL 5:10!1	s	pron	ἐγὼ	ἐγώ	P-1NS		
+GAL 5:10!2	v	verb	πέποιθα	πείθω	V-2RAI-1S	ἐγώ	GAL 5:10!1
+GAL 5:10!3		prep	εἰς	εἰς	PREP		
+GAL 5:10!4		pron	ὑμᾶς	σύ	P-2AP		
+GAL 5:10!5		prep	ἐν	ἐν	PREP		
+GAL 5:10!6		noun	κυρίῳ	κύριος	N-DSM		
+GAL 5:10!7		conj	ὅτι	ὅτι	CONJ		
+GAL 5:10!8		adj	οὐδὲν	οὐδείς	A-ASN-N		
+GAL 5:10!9		adj	ἄλλο	ἄλλος	A-ASN		
+GAL 5:10!10	v	verb	φρονήσετε	φρονέω	V-FAI-2P		
+GAL 5:10!11		det	ὁ	ὁ	T-NSM		
+GAL 5:10!12		conj	δὲ	δέ	CONJ		
+GAL 5:10!13	v	verb	ταράσσων	ταράσσω	V-PAP-NSM		
+GAL 5:10!14	o	pron	ὑμᾶς	σύ	P-2AP		
+GAL 5:10!15	v	verb	βαστάσει	βαστάζω	V-FAI-3S		
+GAL 5:10!16		det	τὸ	ὁ	T-ASN		
+GAL 5:10!17		noun	κρίμα	κρίμα	N-ASN		
+GAL 5:10!18	p	pron	ὅστις	ὅστις	R-NSM		
+GAL 5:10!19		ptcl	ἐὰν	ἐάν	COND		
+GAL 5:10!20	vc	verb	ᾖ	εἰμί	V-PAS-3S		
+GAL 5:11!1	s	pron	ἐγὼ	ἐγώ	P-1NS		
+GAL 5:11!2		conj	δέ	δέ	CONJ		
+GAL 5:11!3	aux	noun	ἀδελφοί	ἀδελφός	N-VPM		
+GAL 5:11!4		conj	εἰ	εἰ	COND		
+GAL 5:11!5	o	noun	περιτομὴν	περιτομή	N-ASF		
+GAL 5:11!6	adv	adv	ἔτι	ἔτι	ADV		
+GAL 5:11!7	v	verb	κηρύσσω	κηρύσσω	V-PAI-1S	ἐγώ	GAL 5:11!1
+GAL 5:11!8	adv	pron	τί	τίς	I-ASN		
+GAL 5:11!9	adv	adv	ἔτι	ἔτι	ADV		
+GAL 5:11!10	v	verb	διώκομαι	διώκω	V-PPI-1S		
+GAL 5:11!11		conj	ἄρα	ἄρα	PRT		
+GAL 5:11!12	v	verb	κατήργηται	καταργέω	V-RPI-3S		
+GAL 5:11!13		det	τὸ	ὁ	T-NSN		
+GAL 5:11!14		noun	σκάνδαλον	σκάνδαλον	N-NSN		
+GAL 5:11!15		det	τοῦ	ὁ	T-GSM		
+GAL 5:11!16		noun	σταυροῦ	σταυρός	N-GSM		
+GAL 5:12!1		ptcl	ὄφελον	ὄφελον	V-2AAI-1S		
+GAL 5:12!2	adv	adv	καὶ	καί	CONJ		
+GAL 5:12!3	v	verb	ἀποκόψονται	ἀποκόπτω	V-FMI-3P	ψευδάδελφος	GAL 2:4!5
+GAL 5:12!4		det	οἱ	ὁ	T-NPM		
+GAL 5:12!5	v	verb	ἀναστατοῦντες	ἀναστατόω	V-PAP-NPM	ψευδάδελφος	GAL 2:4!5
+GAL 5:12!6	o	pron	ὑμᾶς	σύ	P-2AP		
+GAL 5:13!1	s	pron	Ὑμεῖς	σύ	P-2NP		
+GAL 5:13!2		conj	γὰρ	γάρ	CONJ		
+GAL 5:13!3		prep	ἐπ	ἐπί	PREP		
+GAL 5:13!4		noun	ἐλευθερίᾳ	ἐλευθερία	N-DSF		
+GAL 5:13!5	v	verb	ἐκλήθητε	καλέω	V-API-2P		
+GAL 5:13!6	aux	noun	ἀδελφοί	ἀδελφός	N-VPM		
+GAL 5:13!7		adj	μόνον	μόνος	ADV		
+GAL 5:13!8		adv	μὴ	μή	PRT-N		
+GAL 5:13!9		det	τὴν	ὁ	T-ASF		
+GAL 5:13!10		noun	ἐλευθερίαν	ἐλευθερία	N-ASF		
+GAL 5:13!11		prep	εἰς	εἰς	PREP		
+GAL 5:13!12		noun	ἀφορμὴν	ἀφορμή	N-ASF		
+GAL 5:13!13		det	τῇ	ὁ	T-DSF		
+GAL 5:13!14		noun	σαρκί	σάρξ	N-DSF		
+GAL 5:13!15		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 5:13!16		prep	διὰ	διά	PREP		
+GAL 5:13!17		det	τῆς	ὁ	T-GSF		
+GAL 5:13!18		noun	ἀγάπης	ἀγάπη	N-GSF		
+GAL 5:13!19	v	verb	δουλεύετε	δουλεύω	V-PAM-2P	ἀδελφός	GAL 5:13!6
+GAL 5:13!20	o	pron	ἀλλήλοις	ἀλλήλων	C-DPM		
+GAL 5:14!1		det	ὁ	ὁ	T-NSM		
+GAL 5:14!2		conj	γὰρ	γάρ	CONJ		
+GAL 5:14!3		adj	πᾶς	πᾶς	A-NSM		
+GAL 5:14!4		noun	νόμος	νόμος	N-NSM		
+GAL 5:14!5		prep	ἐν	ἐν	PREP		
+GAL 5:14!6		adj	ἑνὶ	εἷς	A-DSM		
+GAL 5:14!7		noun	λόγῳ	λόγος	N-DSM		
+GAL 5:14!8	v	verb	πεπλήρωται	πληρόω	V-RPI-3S		
+GAL 5:14!9		prep	ἐν	ἐν	PREP		
+GAL 5:14!10		det	τῷ	ὁ	T-DSM		
+GAL 5:14!11	v	verb	Ἀγαπήσεις	ἀγαπάω	V-FAI-2S		
+GAL 5:14!12		det	τὸν	ὁ	T-ASM		
+GAL 5:14!13		adv	πλησίον	πλησίον	ADV		
+GAL 5:14!14		pron	σου	σύ	P-2GS		
+GAL 5:14!15		conj	ὡς	ὡς	ADV		
+GAL 5:14!16	o	pron	σεαυτόν	σεαυτοῦ	F-2ASM		
+GAL 5:15!1		conj	εἰ	εἰ	COND		
+GAL 5:15!2		conj	δὲ	δέ	CONJ		
+GAL 5:15!3	o	pron	ἀλλήλους	ἀλλήλων	C-APM		
+GAL 5:15!4		verb	δάκνετε	δάκνω	V-PAI-2P	ἀδελφός	GAL 5:13!6
+GAL 5:15!5		conj	καὶ	καί	CONJ		
+GAL 5:15!6		verb	κατεσθίετε	κατεσθίω	V-PAI-2P	ἀδελφός	GAL 5:13!6
+GAL 5:15!7	v	verb	βλέπετε	βλέπω	V-PAM-2P	ἀδελφός	GAL 5:13!6
+GAL 5:15!8		conj	μὴ	μή	PRT-N		
+GAL 5:15!9		prep	ὑπ	ὑπό	PREP		
+GAL 5:15!10		pron	ἀλλήλων	ἀλλήλων	C-GPM		
+GAL 5:15!11	v	verb	ἀναλωθῆτε	ἀναλίσκω	V-APS-2P		
+GAL 5:16!1	v	verb	Λέγω	λέγω	V-PAI-1S	Παῦλος	GAL 5:2!3
+GAL 5:16!2		conj	δέ	δέ	CONJ		
+GAL 5:16!3	adv	noun	πνεύματι	πνεῦμα	N-DSN		
+GAL 5:16!4	v	verb	περιπατεῖτε	περιπατέω	V-PAM-2P	ἀδελφός	GAL 5:13!6
+GAL 5:16!5		conj	καὶ	καί	CONJ		
+GAL 5:16!6		noun	ἐπιθυμίαν	ἐπιθυμία	N-ASF		
+GAL 5:16!7		noun	σαρκὸς	σάρξ	N-GSF		
+GAL 5:16!8		adv	οὐ	οὐ	PRT-N		
+GAL 5:16!9		adv	μὴ	μή	PRT-N		
+GAL 5:16!10	v	verb	τελέσητε	τελέω	V-AAS-2P	ἀδελφός	GAL 5:13!6
+GAL 5:17!1		det	ἡ	ὁ	T-NSF		
+GAL 5:17!2		conj	γὰρ	γάρ	CONJ		
+GAL 5:17!3		noun	σὰρξ	σάρξ	N-NSF		
+GAL 5:17!4	v	verb	ἐπιθυμεῖ	ἐπιθυμέω	V-PAI-3S	σάρξ	GAL 5:17!3
+GAL 5:17!5		prep	κατὰ	κατά	PREP		
+GAL 5:17!6		det	τοῦ	ὁ	T-GSN		
+GAL 5:17!7		noun	πνεύματος	πνεῦμα	N-GSN		
+GAL 5:17!8		det	τὸ	ὁ	T-NSN		
+GAL 5:17!9		conj	δὲ	δέ	CONJ		
+GAL 5:17!10		noun	πνεῦμα	πνεῦμα	N-NSN		
+GAL 5:17!11		prep	κατὰ	κατά	PREP		
+GAL 5:17!12		det	τῆς	ὁ	T-GSF		
+GAL 5:17!13		noun	σαρκός	σάρξ	N-GSF		
+GAL 5:17!14	s	pron	ταῦτα	οὗτος	D-NPN		
+GAL 5:17!15		conj	γὰρ	γάρ	CONJ		
+GAL 5:17!16	o	pron	ἀλλήλοις	ἀλλήλων	C-DPN		
+GAL 5:17!17	v	verb	ἀντίκειται	ἀντίκειμαι	V-PNI-3S	οὗτος	GAL 5:17!14
+GAL 5:17!18		conj	ἵνα	ἵνα	CONJ		
+GAL 5:17!19		adv	μὴ	μή	PRT-N		
+GAL 5:17!20	o	pron	ἃ	ὅς	R-APN		
+GAL 5:17!21		ptcl	ἐὰν	ἐάν	COND		
+GAL 5:17!22	v	verb	θέλητε	θέλω	V-PAS-2P	ἀδελφός	GAL 5:13!6
+GAL 5:17!23	o	pron	ταῦτα	οὗτος	D-APN		
+GAL 5:17!24	v	verb	ποιῆτε	ποιέω	V-PAS-2P	ἀδελφός	GAL 5:13!6
+GAL 5:18!1		conj	εἰ	εἰ	COND		
+GAL 5:18!2		conj	δὲ	δέ	CONJ		
+GAL 5:18!3	adv	noun	πνεύματι	πνεῦμα	N-DSN		
+GAL 5:18!4	v	verb	ἄγεσθε	ἄγω	V-PPI-2P		
+GAL 5:18!5	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 5:18!6	vc	verb	ἐστὲ	εἰμί	V-PAI-2P		
+GAL 5:18!7		prep	ὑπὸ	ὑπό	PREP		
+GAL 5:18!8		noun	νόμον	νόμος	N-ASM		
+GAL 5:19!1	p	adj	φανερὰ	φανερός	A-NPN		
+GAL 5:19!2		conj	δέ	δέ	CONJ		
+GAL 5:19!3	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+GAL 5:19!4		det	τὰ	ὁ	T-NPN		
+GAL 5:19!5		noun	ἔργα	ἔργον	N-NPN		
+GAL 5:19!6		det	τῆς	ὁ	T-GSF		
+GAL 5:19!7		noun	σαρκός	σάρξ	N-GSF		
+GAL 5:19!8	s	pron	ἅτινά	ὅστις	R-NPN		
+GAL 5:19!9	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+GAL 5:19!10		noun	πορνεία	πορνεία	N-NSF		
+GAL 5:19!11		noun	ἀκαθαρσία	ἀκαθαρσία	N-NSF		
+GAL 5:19!12		noun	ἀσέλγεια	ἀσέλγεια	N-NSF		
+GAL 5:20!1		noun	εἰδωλολατρία	εἰδωλολατρία	N-NSF		
+GAL 5:20!2		noun	φαρμακεία	φαρμακεία	N-NSF		
+GAL 5:20!3		noun	ἔχθραι	ἔχθρα	N-NPF		
+GAL 5:20!4		noun	ἔρις	ἔρις	N-NSF		
+GAL 5:20!5		noun	ζῆλος	ζῆλος	N-NSM		
+GAL 5:20!6		noun	θυμοί	θυμός	N-NPM		
+GAL 5:20!7		noun	ἐριθεῖαι	ἐριθεία	N-NPF		
+GAL 5:20!8		noun	διχοστασίαι	διχοστασία	N-NPF		
+GAL 5:20!9		noun	αἱρέσεις	αἵρεσις	N-NPF		
+GAL 5:21!1		noun	φθόνοι	φθόνος	N-NPM		
+GAL 5:21!2		noun	μέθαι	μέθη	N-NPF		
+GAL 5:21!3		noun	κῶμοι	κῶμος	N-NPM		
+GAL 5:21!4		conj	καὶ	καί	CONJ		
+GAL 5:21!5		det	τὰ	ὁ	T-NPN		
+GAL 5:21!6		adj	ὅμοια	ὅμοιος	A-NPN		
+GAL 5:21!7		pron	τούτοις	οὗτος	D-DPN		
+GAL 5:21!8	o	pron	ἃ	ὅς	R-APN		
+GAL 5:21!9	v	verb	προλέγω	προλέγω	V-PAI-1S	Παῦλος	GAL 5:2!3
+GAL 5:21!10	io	pron	ὑμῖν	σύ	P-2DP		
+GAL 5:21!11		conj	καθὼς	καθώς	ADV		
+GAL 5:21!12	v	verb	προεῖπον	προλέγω	V-2AAI-1S	Παῦλος	GAL 5:2!3
+GAL 5:21!13		conj	ὅτι	ὅτι	CONJ		
+GAL 5:21!14		det	οἱ	ὁ	T-NPM		
+GAL 5:21!15		det	τὰ	ὁ	T-APN		
+GAL 5:21!16		pron	τοιαῦτα	τοιοῦτος	D-APN		
+GAL 5:21!17	v	verb	πράσσοντες	πράσσω	V-PAP-NPM		
+GAL 5:21!18		noun	βασιλείαν	βασιλεία	N-ASF		
+GAL 5:21!19		noun	θεοῦ	θεός	N-GSM		
+GAL 5:21!20	adv	adv	οὐ	οὐ	PRT-N		
+GAL 5:21!21	v	verb	κληρονομήσουσιν	κληρονομέω	V-FAI-3P		
+GAL 5:22!1		det	Ὁ	ὁ	T-NSM		
+GAL 5:22!2		conj	δὲ	δέ	CONJ		
+GAL 5:22!3		noun	καρπὸς	καρπός	N-NSM		
+GAL 5:22!4		det	τοῦ	ὁ	T-GSN		
+GAL 5:22!5		noun	πνεύματός	πνεῦμα	N-GSN		
+GAL 5:22!6	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+GAL 5:22!7		noun	ἀγάπη	ἀγάπη	N-NSF		
+GAL 5:22!8		noun	χαρά	χαρά	N-NSF		
+GAL 5:22!9		noun	εἰρήνη	εἰρήνη	N-NSF		
+GAL 5:22!10		noun	μακροθυμία	μακροθυμία	N-NSF		
+GAL 5:22!11		noun	χρηστότης	χρηστότης	N-NSF		
+GAL 5:22!12		noun	ἀγαθωσύνη	ἀγαθωσύνη	N-NSF		
+GAL 5:22!13		noun	πίστις	πίστις	N-NSF		
+GAL 5:23!1		noun	πραΰτης	πραΰτης	N-NSF		
+GAL 5:23!2		noun	ἐγκράτεια	ἐγκράτεια	N-NSF		
+GAL 5:23!3		prep	κατὰ	κατά	PREP		
+GAL 5:23!4		det	τῶν	ὁ	T-GPN		
+GAL 5:23!5		pron	τοιούτων	τοιοῦτος	D-GPN		
+GAL 5:23!6	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 5:23!7	vc	verb	ἔστιν	εἰμί	V-PAI-3S		
+GAL 5:23!8	s	noun	νόμος	νόμος	N-NSM		
+GAL 5:24!1		det	οἱ	ὁ	T-NPM		
+GAL 5:24!2		conj	δὲ	δέ	CONJ		
+GAL 5:24!3		det	τοῦ	ὁ	T-GSM		
+GAL 5:24!4		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 5:24!5		det	τὴν	ὁ	T-ASF		
+GAL 5:24!6		noun	σάρκα	σάρξ	N-ASF		
+GAL 5:24!7	v	verb	ἐσταύρωσαν	σταυρόω	V-AAI-3P	ὁ	GAL 5:24!1
+GAL 5:24!8		prep	σὺν	σύν	PREP		
+GAL 5:24!9		det	τοῖς	ὁ	T-DPN		
+GAL 5:24!10		noun	παθήμασιν	πάθημα	N-DPN		
+GAL 5:24!11		conj	καὶ	καί	CONJ		
+GAL 5:24!12		det	ταῖς	ὁ	T-DPF		
+GAL 5:24!13		noun	ἐπιθυμίαις	ἐπιθυμία	N-DPF		
+GAL 5:25!1		conj	εἰ	εἰ	COND		
+GAL 5:25!2	v	verb	ζῶμεν	ζάω	V-PAI-1P	Παῦλος;ἀδελφός;Ἰουδαῖος;Βαρναβᾶς;Κηφᾶς;ἀδελφός	GAL 5:2!3;GAL 1:2!6;GAL 2:13!7;GAL 2:13!10;GAL 2:14!14;GAL 5:13!6
+GAL 5:25!3	adv	noun	πνεύματι	πνεῦμα	N-DSN		
+GAL 5:25!4	adv	noun	πνεύματι	πνεῦμα	N-DSN		
+GAL 5:25!5	adv	adv	καὶ	καί	CONJ		
+GAL 5:25!6	v	verb	στοιχῶμεν	στοιχέω	V-PAS-1P	Παῦλος;ἀδελφός;Ἰουδαῖος;Βαρναβᾶς;Κηφᾶς;ἀδελφός	GAL 5:2!3;GAL 1:2!6;GAL 2:13!7;GAL 2:13!10;GAL 2:14!14;GAL 5:13!6
+GAL 5:26!1	adv	adv	μὴ	μή	PRT-N		
+GAL 5:26!2	vc	verb	γινώμεθα	γίνομαι	V-PNS-1P		
+GAL 5:26!3	p	adj	κενόδοξοι	κενόδοξος	A-NPM		
+GAL 5:26!4	o	pron	ἀλλήλους	ἀλλήλων	C-APM		
+GAL 5:26!5	v	verb	προκαλούμενοι	προκαλέομαι	V-PMP-NPM	Παῦλος;ἀδελφός;Ἰουδαῖος;Βαρναβᾶς;Κηφᾶς;ἀδελφός	GAL 5:2!3;GAL 1:2!6;GAL 2:13!7;GAL 2:13!10;GAL 2:14!14;GAL 5:13!6
+GAL 5:26!6	o	pron	ἀλλήλοις	ἀλλήλων	C-DPM		
+GAL 5:26!7	v	verb	φθονοῦντες	φθονέω	V-PAP-NPM	Παῦλος;ἀδελφός;Ἰουδαῖος;Βαρναβᾶς;Κηφᾶς;ἀδελφός	GAL 5:2!3;GAL 1:2!6;GAL 2:13!7;GAL 2:13!10;GAL 2:14!14;GAL 5:13!6
+GAL 6:1!1	aux	noun	Ἀδελφοί	ἀδελφός	N-VPM		
+GAL 6:1!2		conj	ἐὰν	ἐάν	COND		
+GAL 6:1!3	adv	adv	καὶ	καί	CONJ		
+GAL 6:1!4	v	verb	προλημφθῇ	προλαμβάνω	V-APS-3S		
+GAL 6:1!5	s	noun	ἄνθρωπος	ἄνθρωπος	N-NSM		
+GAL 6:1!6		prep	ἔν	ἐν	PREP		
+GAL 6:1!7		pron	τινι	τις	X-DSN		
+GAL 6:1!8		noun	παραπτώματι	παράπτωμα	N-DSN		
+GAL 6:1!9		pron	ὑμεῖς	σύ	P-2NP		
+GAL 6:1!10		det	οἱ	ὁ	T-NPM		
+GAL 6:1!11		adj	πνευματικοὶ	πνευματικός	A-NPM		
+GAL 6:1!12	v	verb	καταρτίζετε	καταρτίζω	V-PAM-2P	σύ	GAL 6:1!9
+GAL 6:1!13		det	τὸν	ὁ	T-ASM		
+GAL 6:1!14		pron	τοιοῦτον	τοιοῦτος	D-ASM		
+GAL 6:1!15		prep	ἐν	ἐν	PREP		
+GAL 6:1!16		noun	πνεύματι	πνεῦμα	N-DSN		
+GAL 6:1!17		noun	πραΰτητος	πραΰτης	N-GSF		
+GAL 6:1!18	v	verb	σκοπῶν	σκοπέω	V-PAP-NSM	πνευματικός	GAL 6:1!11
+GAL 6:1!19	o	pron	σεαυτόν	σεαυτοῦ	F-2ASM		
+GAL 6:1!20		conj	μὴ	μή	PRT-N		
+GAL 6:1!21		adv	καὶ	καί	CONJ		
+GAL 6:1!22		pron	σὺ	σύ	P-2NS		
+GAL 6:1!23	v	verb	πειρασθῇς	πειράζω	V-APS-2S		
+GAL 6:2!1		pron	ἀλλήλων	ἀλλήλων	C-GPM		
+GAL 6:2!2		det	τὰ	ὁ	T-APN		
+GAL 6:2!3		noun	βάρη	βάρος	N-APN		
+GAL 6:2!4	v	verb	βαστάζετε	βαστάζω	V-PAM-2P	πνευματικός	GAL 6:1!11
+GAL 6:2!5		conj	καὶ	καί	CONJ		
+GAL 6:2!6	adv	adv	οὕτως	οὕτω(ς)	ADV		
+GAL 6:2!7	v	verb	ἀναπληρώσετε	ἀναπληρόω	V-FAI-2P	πνευματικός	GAL 6:1!11
+GAL 6:2!8		det	τὸν	ὁ	T-ASM		
+GAL 6:2!9		noun	νόμον	νόμος	N-ASM		
+GAL 6:2!10		det	τοῦ	ὁ	T-GSM		
+GAL 6:2!11		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 6:3!1		conj	εἰ	εἰ	COND		
+GAL 6:3!2		conj	γὰρ	γάρ	CONJ		
+GAL 6:3!3	v	verb	δοκεῖ	δοκέω	V-PAI-3S	τις	GAL 6:3!4
+GAL 6:3!4	s	pron	τις	τις	X-NSM		
+GAL 6:3!5	vc	verb	εἶναί	εἰμί	V-PAN		
+GAL 6:3!6	p	pron	τι	τις	X-NSN		
+GAL 6:3!7	p	adj	μηδὲν	μηδείς	A-NSN-N		
+GAL 6:3!8	vc	verb	ὤν	εἰμί	V-PAP-NSM		
+GAL 6:3!9	v	verb	φρεναπατᾷ	φρεναπατάω	V-PAI-3S	τις	GAL 6:3!4
+GAL 6:3!10	o	pron	ἑαυτόν	ἑαυτοῦ	F-3ASM		
+GAL 6:4!1		det	τὸ	ὁ	T-ASN		
+GAL 6:4!2		conj	δὲ	δέ	CONJ		
+GAL 6:4!3		noun	ἔργον	ἔργον	N-ASN		
+GAL 6:4!4		pron	ἑαυτοῦ	ἑαυτοῦ	F-3GSM		
+GAL 6:4!5	v	verb	δοκιμαζέτω	δοκιμάζω	V-PAM-3S	ἕκαστος	GAL 6:4!6
+GAL 6:4!6	s	adj	ἕκαστος	ἕκαστος	A-NSM		
+GAL 6:4!7		conj	καὶ	καί	CONJ		
+GAL 6:4!8	adv	adv	τότε	τότε	ADV		
+GAL 6:4!9		prep	εἰς	εἰς	PREP		
+GAL 6:4!10		pron	ἑαυτὸν	ἑαυτοῦ	F-3ASM		
+GAL 6:4!11	adv	adj	μόνον	μόνος	A-ASM		
+GAL 6:4!12		det	τὸ	ὁ	T-ASN		
+GAL 6:4!13		noun	καύχημα	καύχημα	N-ASN		
+GAL 6:4!14	v	verb	ἕξει	ἔχω	V-FAI-3S	ἕκαστος	GAL 6:4!6
+GAL 6:4!15		conj	καὶ	καί	CONJ		
+GAL 6:4!16	adv	adv	οὐκ	οὐ	PRT-N		
+GAL 6:4!17		prep	εἰς	εἰς	PREP		
+GAL 6:4!18		det	τὸν	ὁ	T-ASM		
+GAL 6:4!19		adj	ἕτερον	ἕτερος	A-ASM		
+GAL 6:5!1	s	adj	ἕκαστος	ἕκαστος	A-NSM		
+GAL 6:5!2		conj	γὰρ	γάρ	CONJ		
+GAL 6:5!3		det	τὸ	ὁ	T-ASN		
+GAL 6:5!4		adj	ἴδιον	ἴδιος	A-ASN		
+GAL 6:5!5		noun	φορτίον	φορτίον	N-ASN		
+GAL 6:5!6	v	verb	βαστάσει	βαστάζω	V-FAI-3S	ἕκαστος	GAL 6:5!1
+GAL 6:6!1	v	verb	Κοινωνείτω	κοινωνέω	V-PAM-3S		
+GAL 6:6!2		conj	δὲ	δέ	CONJ		
+GAL 6:6!3		det	ὁ	ὁ	T-NSM		
+GAL 6:6!4	v	verb	κατηχούμενος	κατηχέω	V-PPP-NSM		
+GAL 6:6!5		det	τὸν	ὁ	T-ASM		
+GAL 6:6!6		noun	λόγον	λόγος	N-ASM		
+GAL 6:6!7		det	τῷ	ὁ	T-DSM		
+GAL 6:6!8	v	verb	κατηχοῦντι	κατηχέω	V-PAP-DSM		
+GAL 6:6!9		prep	ἐν	ἐν	PREP		
+GAL 6:6!10		adj	πᾶσιν	πᾶς	A-DPN		
+GAL 6:6!11		adj	ἀγαθοῖς	ἀγαθός	A-DPN		
+GAL 6:7!1	adv	adv	μὴ	μή	PRT-N		
+GAL 6:7!2	v	verb	πλανᾶσθε	πλανάω	V-PPM-2P		
+GAL 6:7!3	s	noun	θεὸς	θεός	N-NSM		
+GAL 6:7!4	adv	adv	οὐ	οὐ	PRT-N		
+GAL 6:7!5	v	verb	μυκτηρίζεται	μυκτηρίζω	V-PPI-3S		
+GAL 6:7!6	o	pron	ὃ	ὅς	R-ASN		
+GAL 6:7!7		conj	γὰρ	γάρ	CONJ		
+GAL 6:7!8		ptcl	ἐὰν	ἐάν	COND		
+GAL 6:7!9	v	verb	σπείρῃ	σπείρω	V-PAS-3S	ἄνθρωπος	GAL 6:7!10
+GAL 6:7!10	s	noun	ἄνθρωπος	ἄνθρωπος	N-NSM		
+GAL 6:7!11	o	pron	τοῦτο	οὗτος	D-ASN		
+GAL 6:7!12	adv	adv	καὶ	καί	CONJ		
+GAL 6:7!13	v	verb	θερίσει	θερίζω	V-FAI-3S	ἄνθρωπος	GAL 6:7!10
+GAL 6:8!1		conj	ὅτι	ὅτι	CONJ		
+GAL 6:8!2		det	ὁ	ὁ	T-NSM		
+GAL 6:8!3	v	verb	σπείρων	σπείρω	V-PAP-NSM		
+GAL 6:8!4		prep	εἰς	εἰς	PREP		
+GAL 6:8!5		det	τὴν	ὁ	T-ASF		
+GAL 6:8!6		noun	σάρκα	σάρξ	N-ASF		
+GAL 6:8!7		pron	ἑαυτοῦ	ἑαυτοῦ	F-3GSM		
+GAL 6:8!8		prep	ἐκ	ἐκ	PREP		
+GAL 6:8!9		det	τῆς	ὁ	T-GSF		
+GAL 6:8!10		noun	σαρκὸς	σάρξ	N-GSF		
+GAL 6:8!11	v	verb	θερίσει	θερίζω	V-FAI-3S		
+GAL 6:8!12	o	noun	φθοράν	φθορά	N-ASF		
+GAL 6:8!13		det	ὁ	ὁ	T-NSM		
+GAL 6:8!14		conj	δὲ	δέ	CONJ		
+GAL 6:8!15	v	verb	σπείρων	σπείρω	V-PAP-NSM		
+GAL 6:8!16		prep	εἰς	εἰς	PREP		
+GAL 6:8!17		det	τὸ	ὁ	T-ASN		
+GAL 6:8!18		noun	πνεῦμα	πνεῦμα	N-ASN		
+GAL 6:8!19		prep	ἐκ	ἐκ	PREP		
+GAL 6:8!20		det	τοῦ	ὁ	T-GSN		
+GAL 6:8!21		noun	πνεύματος	πνεῦμα	N-GSN		
+GAL 6:8!22	v	verb	θερίσει	θερίζω	V-FAI-3S		
+GAL 6:8!23		noun	ζωὴν	ζωή	N-ASF		
+GAL 6:8!24		adj	αἰώνιον	αἰώνιος	A-ASF		
+GAL 6:9!1		det	τὸ	ὁ	T-ASN		
+GAL 6:9!2		conj	δὲ	δέ	CONJ		
+GAL 6:9!3		adj	καλὸν	καλός	A-ASN		
+GAL 6:9!4	v	verb	ποιοῦντες	ποιέω	V-PAP-NPM	Παῦλος;ἀδελφός;Ἰουδαῖος;Βαρναβᾶς;Κηφᾶς;πνευματικός	GAL 5:2!3;GAL 1:2!6;GAL 2:13!7;GAL 2:13!10;GAL 2:14!14;GAL 6:1!11
+GAL 6:9!5	adv	adv	μὴ	μή	PRT-N		
+GAL 6:9!6	v	verb	ἐγκακῶμεν	ἐγκακέω	V-PAS-1P	Παῦλος;ἀδελφός;Ἰουδαῖος;Βαρναβᾶς;Κηφᾶς;πνευματικός	GAL 5:2!3;GAL 1:2!6;GAL 2:13!7;GAL 2:13!10;GAL 2:14!14;GAL 6:1!11
+GAL 6:9!7		noun	καιρῷ	καιρός	N-DSM		
+GAL 6:9!8		conj	γὰρ	γάρ	CONJ		
+GAL 6:9!9		adj	ἰδίῳ	ἴδιος	A-DSM		
+GAL 6:9!10	v	verb	θερίσομεν	θερίζω	V-FAI-1P	Παῦλος;ἀδελφός;Ἰουδαῖος;Βαρναβᾶς;Κηφᾶς;πνευματικός	GAL 5:2!3;GAL 1:2!6;GAL 2:13!7;GAL 2:13!10;GAL 2:14!14;GAL 6:1!11
+GAL 6:9!11	adv	adv	μὴ	μή	PRT-N		
+GAL 6:9!12	v	verb	ἐκλυόμενοι	ἐκλύομαι	V-PPP-NPM		
+GAL 6:10!1		conj	ἄρα	ἄρα	PRT		
+GAL 6:10!2		conj	οὖν	οὖν	CONJ		
+GAL 6:10!3		conj	ὡς	ὡς	ADV		
+GAL 6:10!4	o	noun	καιρὸν	καιρός	N-ASM		
+GAL 6:10!5	v	verb	ἔχομεν	ἔχω	V-PAI-1P		
+GAL 6:10!6	v	verb	ἐργαζώμεθα	ἐργάζομαι	V-PNS-1P	Παῦλος;ἀδελφός;Ἰουδαῖος;Βαρναβᾶς;Κηφᾶς;πνευματικός	GAL 5:2!3;GAL 1:2!6;GAL 2:13!7;GAL 2:13!10;GAL 2:14!14;GAL 6:1!11
+GAL 6:10!7		det	τὸ	ὁ	T-ASN		
+GAL 6:10!8		adj	ἀγαθὸν	ἀγαθός	A-ASN		
+GAL 6:10!9		prep	πρὸς	πρός	PREP		
+GAL 6:10!10		adj	πάντας	πᾶς	A-APM		
+GAL 6:10!11	adv	adv	μάλιστα	μάλιστα	ADV-S		
+GAL 6:10!12		conj	δὲ	δέ	CONJ		
+GAL 6:10!13		prep	πρὸς	πρός	PREP		
+GAL 6:10!14		det	τοὺς	ὁ	T-APM		
+GAL 6:10!15		adj	οἰκείους	οἰκεῖος	A-APM		
+GAL 6:10!16		det	τῆς	ὁ	T-GSF		
+GAL 6:10!17		noun	πίστεως	πίστις	N-GSF		
+GAL 6:11!1	v	verb	Ἴδετε	ὁράω	V-2AAM-2P	πνευματικός	GAL 6:1!11
+GAL 6:11!2		pron	πηλίκοις	πηλίκος	A-DPN		
+GAL 6:11!3	io	pron	ὑμῖν	σύ	P-2DP		
+GAL 6:11!4		noun	γράμμασιν	γράμμα	N-DPN		
+GAL 6:11!5	v	verb	ἔγραψα	γράφω	V-AAI-1S	Παῦλος	GAL 5:2!3
+GAL 6:11!6		det	τῇ	ὁ	T-DSF		
+GAL 6:11!7		adj	ἐμῇ	ἐμός	S-1SDSF		
+GAL 6:11!8		noun	χειρί	χείρ	N-DSF		
+GAL 6:12!1	s	pron	ὅσοι	ὅσος	K-NPM		
+GAL 6:12!2	v	verb	θέλουσιν	θέλω	V-PAI-3P	ὅσος	GAL 6:12!1
+GAL 6:12!3	v	verb	εὐπροσωπῆσαι	εὐπροσωπέω	V-AAN	ὅσος	GAL 6:12!1
+GAL 6:12!4		prep	ἐν	ἐν	PREP		
+GAL 6:12!5		noun	σαρκί	σάρξ	N-DSF		
+GAL 6:12!6	s	pron	οὗτοι	οὗτος	D-NPM		
+GAL 6:12!7	v	verb	ἀναγκάζουσιν	ἀναγκάζω	V-PAI-3P	οὗτος	GAL 6:12!6
+GAL 6:12!8	s	pron	ὑμᾶς	σύ	P-2AP		
+GAL 6:12!9	v	verb	περιτέμνεσθαι	περιτέμνω	V-PPN		
+GAL 6:12!10	adv	adj	μόνον	μόνος	ADV		
+GAL 6:12!11		conj	ἵνα	ἵνα	CONJ		
+GAL 6:12!12		det	τῷ	ὁ	T-DSM		
+GAL 6:12!13		noun	σταυρῷ	σταυρός	N-DSM		
+GAL 6:12!14		det	τοῦ	ὁ	T-GSM		
+GAL 6:12!15		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 6:12!16	adv	adv	μὴ	μή	PRT-N		
+GAL 6:12!17	v	verb	διώκωνται	διώκω	V-PPS-3P		
+GAL 6:13!1		adv	οὐδὲ	οὐδέ	CONJ-N		
+GAL 6:13!2		conj	γὰρ	γάρ	CONJ		
+GAL 6:13!3		det	οἱ	ὁ	T-NPM		
+GAL 6:13!4	v	verb	περιτεμνόμενοι	περιτέμνω	V-PPP-NPM		
+GAL 6:13!5		pron	αὐτοὶ	αὐτός	P-NPM		
+GAL 6:13!6	o	noun	νόμον	νόμος	N-ASM		
+GAL 6:13!7	v	verb	φυλάσσουσιν	φυλάσσω	V-PAI-3P		
+GAL 6:13!8		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 6:13!9	v	verb	θέλουσιν	θέλω	V-PAI-3P		
+GAL 6:13!10	s	pron	ὑμᾶς	σύ	P-2AP		
+GAL 6:13!11	v	verb	περιτέμνεσθαι	περιτέμνω	V-PPN		
+GAL 6:13!12		conj	ἵνα	ἵνα	CONJ		
+GAL 6:13!13		prep	ἐν	ἐν	PREP		
+GAL 6:13!14		det	τῇ	ὁ	T-DSF		
+GAL 6:13!15		adj	ὑμετέρᾳ	ὑμέτερος	S-2PDSF		
+GAL 6:13!16		noun	σαρκὶ	σάρξ	N-DSF		
+GAL 6:13!17	v	verb	καυχήσωνται	καυχάομαι	V-ADS-3P		
+GAL 6:14!1	adv	pron	ἐμοὶ	ἐγώ	P-1DS		
+GAL 6:14!2		conj	δὲ	δέ	CONJ		
+GAL 6:14!3	adv	adv	μὴ	μή	PRT-N		
+GAL 6:14!4	v	verb	γένοιτο	γίνομαι	V-2ADO-3S		
+GAL 6:14!5	v	verb	καυχᾶσθαι	καυχάομαι	V-PNN		
+GAL 6:14!6		conj	εἰ	εἰ	COND		
+GAL 6:14!7	adv	adv	μὴ	μή	PRT-N		
+GAL 6:14!8		prep	ἐν	ἐν	PREP		
+GAL 6:14!9		det	τῷ	ὁ	T-DSM		
+GAL 6:14!10		noun	σταυρῷ	σταυρός	N-DSM		
+GAL 6:14!11		det	τοῦ	ὁ	T-GSM		
+GAL 6:14!12		noun	κυρίου	κύριος	N-GSM		
+GAL 6:14!13		pron	ἡμῶν	ἐγώ	P-1GP		
+GAL 6:14!14		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+GAL 6:14!15		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 6:14!16		prep	δι	διά	PREP		
+GAL 6:14!17		pron	οὗ	ὅς	R-GSM		
+GAL 6:14!18	io	pron	ἐμοὶ	ἐγώ	P-1DS		
+GAL 6:14!19	s	noun	κόσμος	κόσμος	N-NSM		
+GAL 6:14!20	v	verb	ἐσταύρωται	σταυρόω	V-RPI-3S		
+GAL 6:14!21	s	pron	κἀγὼ	κἀγώ	P-1NS-K		
+GAL 6:14!22	io	noun	κόσμῳ	κόσμος	N-DSM		
+GAL 6:15!1		conj	οὔτε	οὔτε	CONJ-N		
+GAL 6:15!2		conj	γὰρ	γάρ	CONJ		
+GAL 6:15!3		noun	περιτομή	περιτομή	N-NSF		
+GAL 6:15!4	p	pron	τί	τίς	X-NSN		
+GAL 6:15!5	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+GAL 6:15!6		conj	οὔτε	οὔτε	CONJ-N		
+GAL 6:15!7		noun	ἀκροβυστία	ἀκροβυστία	N-NSF		
+GAL 6:15!8		conj	ἀλλὰ	ἀλλά	CONJ		
+GAL 6:15!9		adj	καινὴ	καινός	A-NSF		
+GAL 6:15!10		noun	κτίσις	κτίσις	N-NSF		
+GAL 6:16!1		conj	καὶ	καί	CONJ		
+GAL 6:16!2	s	pron	ὅσοι	ὅσος	K-NPM		
+GAL 6:16!3		det	τῷ	ὁ	T-DSM		
+GAL 6:16!4		noun	κανόνι	κανών	N-DSM		
+GAL 6:16!5		pron	τούτῳ	οὗτος	D-DSM		
+GAL 6:16!6	v	verb	στοιχήσουσιν	στοιχέω	V-FAI-3P	ὅσος	GAL 6:16!2
+GAL 6:16!7		noun	εἰρήνη	εἰρήνη	N-NSF		
+GAL 6:16!8		prep	ἐπ	ἐπί	PREP		
+GAL 6:16!9		pron	αὐτοὺς	ἑαυτοῦ	P-APM		
+GAL 6:16!10		conj	καὶ	καί	CONJ		
+GAL 6:16!11		noun	ἔλεος	ἔλεος	N-NSN		
+GAL 6:16!12		conj	καὶ	καί	CONJ		
+GAL 6:16!13		prep	ἐπὶ	ἐπί	PREP		
+GAL 6:16!14		det	τὸν	ὁ	T-ASM		
+GAL 6:16!15		noun	Ἰσραὴλ	Ἰσραήλ	N-PRI		
+GAL 6:16!16		det	τοῦ	ὁ	T-GSM		
+GAL 6:16!17		noun	θεοῦ	θεός	N-GSM		
+GAL 6:17!1		det	Τοῦ	ὁ	T-GSN		
+GAL 6:17!2		adj	λοιποῦ	λοιπός	A-GSN		
+GAL 6:17!3	o	noun	κόπους	κόπος	N-APM		
+GAL 6:17!4	io	pron	μοι	ἐγώ	P-1DS		
+GAL 6:17!5	s	adj	μηδεὶς	μηδείς	A-NSM-N		
+GAL 6:17!6	v	verb	παρεχέτω	παρέχω	V-PAM-3S	μηδείς	GAL 6:17!5
+GAL 6:17!7	s	pron	ἐγὼ	ἐγώ	P-1NS		
+GAL 6:17!8		conj	γὰρ	γάρ	CONJ		
+GAL 6:17!9		det	τὰ	ὁ	T-APN		
+GAL 6:17!10		noun	στίγματα	στίγμα	N-APN		
+GAL 6:17!11		det	τοῦ	ὁ	T-GSM		
+GAL 6:17!12		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+GAL 6:17!13		prep	ἐν	ἐν	PREP		
+GAL 6:17!14		det	τῷ	ὁ	T-DSN		
+GAL 6:17!15		noun	σώματί	σῶμα	N-DSN		
+GAL 6:17!16		pron	μου	ἐγώ	P-1GS		
+GAL 6:17!17	v	verb	βαστάζω	βαστάζω	V-PAI-1S	ἐγώ	GAL 6:17!7
+GAL 6:18!1		det	Ἡ	ὁ	T-NSF		
+GAL 6:18!2		noun	χάρις	χάρις	N-NSF		
+GAL 6:18!3		det	τοῦ	ὁ	T-GSM		
+GAL 6:18!4		noun	κυρίου	κύριος	N-GSM		
+GAL 6:18!5		pron	ἡμῶν	ἐγώ	P-1GP		
+GAL 6:18!6		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+GAL 6:18!7		noun	Χριστοῦ	Χριστός	N-GSM		
+GAL 6:18!8		prep	μετὰ	μετά	PREP		
+GAL 6:18!9		det	τοῦ	ὁ	T-GSN		
+GAL 6:18!10		noun	πνεύματος	πνεῦμα	N-GSN		
+GAL 6:18!11		pron	ὑμῶν	σύ	P-2GP		
+GAL 6:18!12	aux	noun	ἀδελφοί	ἀδελφός	N-VPM		
+GAL 6:18!13	aux	ptcl	ἀμήν	ἀμήν	HEB		

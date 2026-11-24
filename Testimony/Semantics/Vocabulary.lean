@@ -81,6 +81,12 @@ inductive Lexeme
   | erga
   /-- πίστις, faith. -/
   | pistis
+  /-- ἐνεργέω, to work, to be at work: in Galatians 5:6, faith "working"
+  (ἐνεργουμένη) through love. -/
+  | energeo
+  /-- ἀγάπη, love: the word of Galatians 5:6, "faith working through love", which
+  the Latin renders *caritas* or *dilectio*. -/
+  | agape
   /-- πίστις Χριστοῦ, the faith of, or in, Christ. -/
   | pistisChristou
   /-- πιστεύω, to believe. -/
@@ -188,6 +194,9 @@ inductive Sense
   | lawAsCondition
   /-- Deeds that grow out of faith. -/
   | worksOfFaith
+  /-- Deeds done without grace, before faith, by the will's own strength: the
+  works Bellarmine holds Paul excludes from justification. -/
+  | worksWithoutGrace
   /-- Trust in Christ, receiving and bringing nothing: faith as Calvin's
   "passive work". -/
   | trust
@@ -466,6 +475,13 @@ inductive Rel
   binds. What Mark 7:13 says the elders' tradition does to the word of God
   (ἀκυρόω). -/
   | voids
+  /-- The first works through the second: the second is the means by which the
+  first is at work, as the hand works through the stick. -/
+  | worksThrough
+  /-- The first moves the second: the second acts because, and as, the first
+  moves it. Aristotle's mover and moved, in one respect: a thing moved in one
+  respect may move its mover in another, and that is another relation. -/
+  | moves
 deriving DecidableEq, Repr
 
 /-- **How two different words are kin**, so that an argument may be tempted to

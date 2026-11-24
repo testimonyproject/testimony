@@ -239,6 +239,7 @@ def tradition : Tradition → String := Latex.tradition
 
 /-- How firmly that tradition holds it. -/
 def confidence : Confidence → String
+  | .refuted => "refuted"
   | .disputed => "disputed"
   | .plausible => "plausible"
   | .wellSupported => "well supported"
