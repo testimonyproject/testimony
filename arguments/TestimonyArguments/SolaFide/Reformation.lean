@@ -135,7 +135,11 @@ a righteousness of his own beside Christ's. Both steps are the chapter's own,
 marked proposed.
 
 **What the debate decides.** Every step in it is rated `disputed`, because
-each side grants the other's texts and denies its conclusion: the Confutation
+each side grants the other's texts and denies its conclusion. Rome's reason is
+that God renders to each according to his works (Romans 2:6) and that without
+love all faith is nothing (1 Corinthians 13:2); the Reformers' reason is that
+Paul counts righteousness apart from works (Romans 4:6), and that love follows
+faith as its fruit and is not what makes it justify. So the Confutation
 and Eck cite Romans 3 and Galatians, the *Apology* and Tyndale take up James 2,
 Luther and Calvin read Galatians 5:6 and the texts on reward, and Calvin and
 Contarini read the same article. So each attack across the line is met by one in
@@ -210,7 +214,10 @@ def reformationCite : Claim → AtomMeta
 /-- **Who draws the step, in 1521.** Melanchthon, in the *Loci communes*,
 pp. 164 and 168 of Plitt and Kolde's edition. Rated `disputed`, because the
 Confutation of 1530 grants Paul's texts, citing Romans 3 itself, and denies that
-faith alone justifies. -/
+faith alone justifies. Its reason is that God "will render to every one
+according to his works" (Romans 2:6), and that Paul's "though I have all faith
+... and have not charity, I am nothing" (1 Corinthians 13:2) "certifies ... that
+faith alone does not justify" (Jacobs, pp. 212–213). -/
 def melanchthonLociStep : Source :=
   { primary := .work melanchthonLoci (.page 168)
   , supporting := [.work melanchthonLoci (.page 164)]
@@ -241,7 +248,11 @@ def melanchthonCase : ArgumentPackage Claim :=
 /-- **Who draws the step, in 1525.** Zwingli, in the *Commentary on True and
 False Religion*, p. 137 of Heller's English. Rated `disputed`, because the
 Confutation grants the texts and holds that "it is entirely contrary to Holy
-Scripture to deny that our works are meritorious" (Jacobs, p. 211). -/
+Scripture to deny that our works are meritorious" (Jacobs, p. 211). Its reason
+is that Scripture promises a reward, "every man shall receive his own reward,
+according to his own labor" (1 Corinthians 3:8), and that grace is not set aside
+by it: "our works of themselves have no merit, but ... God's grace makes them
+worthy of eternal life" (p. 211). -/
 def zwingliStep : Source :=
   { primary := .work zwingliTrueAndFalseReligion (.page 137)
   , tradition := .reformedProtestant
@@ -275,7 +286,13 @@ def zwingliCase : ArgumentPackage Claim :=
 /-- **Who draws the step against faith alone, in 1525.** Eck, in the
 *Enchiridion*, fols. 45r–51r of the 1536 printing. Rated `disputed`, because
 Melanchthon's *Apology* grants James 2 and Galatians 5:6 and denies that they
-exclude faith alone. -/
+exclude faith alone. On Galatians it grants "faith which worketh by love", and
+denies that "on account of this love we receive the remission of sins", because
+by faith "we are accounted righteous for Christ's sake before we love ...,
+although love necessarily follows" (Triglot p. 155). On James it grants that
+James "is right in denying that we are justified by such a faith as is without
+works", and says that he does not "describe the mode of justification, but only
+of what nature the just are, after they have been already justified" (p. 189). -/
 def eckStep : Source :=
   { primary := .work eckEnchiridion (.sectionRef "fols. 50v–51r")
   , supporting := [.work eckEnchiridion (.sectionRef "fols. 45r, 48v")]
@@ -301,7 +318,10 @@ def eckLine : Line Claim :=
 first proposition, and the Confutation, answering the Augsburg Confession's
 fourth article. Rated `disputed`, because the Reformed grant that God rewards
 the good works of believers and deny that the works merit it (Westminster
-Confession, XVI.6). -/
+Confession, XVI.6). Their reason is "the great disproportion that is between
+them and the glory to come, and the infinite distance that is between us and
+God", so that "when we have done all we can, we have done but our duty, and are
+unprofitable servants" (XVI.5, after Luke 17:10). -/
 def meritStep : Source :=
   { primary := .work romanConfutation (.page 211)
   , supporting := [.work eckEnchiridion (.sectionRef "fol. 45r")]
@@ -342,7 +362,8 @@ def eckCase : ArgumentPackage Claim :=
 /-- **Who draws the step to faith only, in 1528.** Tyndale, in *The Parable of
 the Wicked Mammon*, pp. 46–47 of Walter's edition. Rated `disputed`, as
 Melanchthon's is, because Eck and the Confutation grant Paul and deny the
-conclusion. -/
+conclusion: James says "not by faith only" (2:24), and without love all faith
+is nothing (1 Corinthians 13:2). -/
 def tyndaleStep : Source :=
   { primary := .work tyndaleWickedMammon (.pages 46 47)
   , tradition := .reformedProtestant
@@ -350,7 +371,9 @@ def tyndaleStep : Source :=
 
 /-- **Who reads James that way, in 1528.** Tyndale, pp. 61 and 119–120. Rated
 `disputed`, because Eck grants James 2 and reads it the other way, as excluding
-faith alone. -/
+faith alone: James speaks of justification itself when he says that "a man is
+justified by works, and not by faith only" (2:24), and so faith does not
+suffice without works. -/
 def tyndaleJamesStep : Source :=
   { primary := .work tyndaleWickedMammon (.pages 119 120)
   , supporting := [.work tyndaleWickedMammon (.page 61)]
@@ -402,7 +425,12 @@ def tyndaleCase : ArgumentPackage Claim :=
 
 /-- **Who draws the step, in June 1530.** The Augsburg Confession, Articles IV
 and VI, Triglot pp. 44–47. Rated `disputed`, because the Confutation answers
-these very articles, granting Romans 3 and denying faith alone. -/
+these very articles, granting Romans 3 and denying faith alone. It calls faith
+alone "diametrically opposite the truth of the Gospel, by which works are not
+excluded", because God "will render to every one according to his works"
+(Romans 2:6), and Christ says that not everyone who says "Lord, Lord" shall
+enter, "but he that doeth the will of my Father" (Matthew 7:21; Jacobs,
+p. 212). -/
 def augsburgStep : Source :=
   { primary := .work augsburgConfession (.pages 44 45)
   , supporting := [.work augsburgConfession (.pages 46 47)]
@@ -431,8 +459,12 @@ def augsburgCase : ArgumentPackage Claim :=
 
 /-- **Who draws the step to faith formed by love, in August 1530.** The
 Confutation, answering the fifth article, p. 212 in Jacobs. Rated `disputed`,
-because Luther grants Galatians and denies that the faith which justifies is
-formed by love. -/
+because the *Apology* and Luther grant Galatians and deny that the faith which
+justifies is formed by love. The *Apology* grants "faith which worketh by love",
+and denies that "on account of this love we receive the remission of sins",
+because the promise "cannot be received except by faith" (Triglot p. 155).
+Luther calls a faith that "justifieth not, except it be furnished with charity"
+the false apostles' gospel (p. 64). -/
 def confutationFormedStep : Source :=
   { primary := .work romanConfutation (.page 212)
   , tradition := .romanCatholic
@@ -441,7 +473,11 @@ def confutationFormedStep : Source :=
 /-- **Who draws the step against faith alone, in August 1530.** The Confutation,
 answering the sixth article, pp. 212–213. Rated `disputed`, because the
 *Apology* grants James 2 and 1 Corinthians 13 and denies that they exclude faith
-alone. -/
+alone. Of 1 Corinthians 13:2 it says: "No one can infer anything more from this
+text than that love is necessary. This we confess. So also not to commit theft
+is necessary", and not stealing does not justify (Triglot p. 181). Of James it
+says that he describes "of what nature the just are, after they have been
+already justified and regenerated" (p. 189). -/
 def confutationStep : Source :=
   { primary := .work romanConfutation (.pages 212 213)
   , tradition := .romanCatholic
@@ -493,7 +529,10 @@ def confutationCase : ArgumentPackage Claim :=
 
 /-- **Who draws the step, in 1531.** Melanchthon's *Apology*, IV.73–78, Triglot
 pp. 140–143. Rated `disputed`, because the Confutation grants the texts and
-denies the conclusion. -/
+denies the conclusion. It does not admit "their frequent ascription of
+justification to faith", "since it pertains to grace and love", and it cites
+"though I have all faith ... and have not charity, I am nothing" (1 Corinthians
+13:2; Jacobs, p. 213). -/
 def apologyStep : Source :=
   { primary := .work melanchthonApology (.pages 140 143)
   , tradition := .reformedProtestant
@@ -501,7 +540,10 @@ def apologyStep : Source :=
 
 /-- **Who reads James that way, in 1531.** The *Apology*, Triglot pp. 188–189.
 Rated `disputed`, as Tyndale's reading is, because Eck and the Confutation grant
-James 2 and read it as excluding faith alone. -/
+James 2 and read it as excluding faith alone. The Confutation cites "faith
+without works is dead" (James 2:17) and concludes that "however much one may
+believe, if he work not what is good, he is not a friend of God" (Jacobs,
+p. 212). -/
 def apologyJamesStep : Source :=
   { primary := .work melanchthonApology (.pages 188 189)
   , tradition := .reformedProtestant
@@ -551,7 +593,10 @@ def apologyCase : ArgumentPackage Claim :=
 /-! ### Barnes's *Supplication*, about 1531 -/
 
 /-- **Who draws the step, about 1531.** Robert Barnes, pp. 226 and 230 of Day's
-folio. Rated `disputed`, as Melanchthon's is. -/
+folio. Rated `disputed`, as Melanchthon's is, because the Confutation grants
+Paul and denies that faith alone justifies: God renders to each according to
+his works (Romans 2:6), and without love all faith is nothing (1 Corinthians
+13:2). -/
 def barnesStep : Source :=
   { primary := .work barnesSupplication (.page 226)
   , supporting := [.work barnesSupplication (.page 230)]
@@ -580,7 +625,11 @@ def barnesCase : ArgumentPackage Claim :=
 
 /-- **Who draws the step, in 1532.** Cajetan, *On Faith and Works*, ch. 4.
 Rated `disputed`, because Luther, lecturing on Galatians, grants the texts and
-denies that the faith which justifies is formed by charity. -/
+denies that the faith which justifies is formed by charity. His reason is that
+"the truth of the gospel is, that our righteousness cometh by faith alone,
+without the works of the law", so that a faith which "justifieth not, except it
+be furnished with charity" is the false apostles' gospel, one with something
+added (Galatians 1:6–9; p. 64). -/
 def cajetanStep : Source :=
   { primary := .work cajetanFaithAndWorks (.sectionRef "ch. 4")
   , tradition := .romanCatholic
@@ -611,7 +660,10 @@ def cajetanCase : ArgumentPackage Claim :=
 
 /-- **Who draws the step, in 1535.** Luther, on Galatians 2:4–5, p. 64 of the
 English of 1575 in Blake's edition. Rated `disputed`, because Cajetan and the
-Confutation grant Galatians and read 5:6 as faith formed by charity. -/
+Confutation grant Galatians and read 5:6 as faith formed by charity. Cajetan's
+reason is that in Galatians 5:6 Paul "clearly ascribes power in Christ not to
+faith of any kind but to faith working through love", and that without love
+all faith is nothing (1 Corinthians 13:2). -/
 def lutherGalatiansStep : Source :=
   { primary := .work lutherGalatians1535 (.page 64)
   , tradition := .reformedProtestant
@@ -645,7 +697,10 @@ def lutherTruthCase : ArgumentPackage Claim :=
 
 /-- **Who draws the step, in March 1539.** Sadoleto, pp. 9–10 in Beveridge.
 Rated `disputed`, because Calvin grants the texts and denies that love is any
-cause of justification. -/
+cause of justification. His reason is that Paul, "whenever he attributes to it
+the power of justifying, at the same time restricts it to a gratuitous promise
+of the divine favour", and counts righteousness "apart from works"
+(Romans 4:6; pp. 42–43). -/
 def sadoletoStep : Source :=
   { primary := .work sadoletoLetterToGenevans (.pages 9 10)
   , tradition := .romanCatholic
@@ -674,7 +729,10 @@ def sadoletoCase : ArgumentPackage Claim :=
 
 /-- **Who draws the step, in September 1539.** Calvin, pp. 42–44 in Beveridge.
 Rated `disputed`, because Sadoleto grants Paul's texts and holds love the chief
-cause of salvation. -/
+cause of salvation. His reason is that faith "is a term of full and ample
+signification", including "the hope and desire of obeying God, together with
+love", because Christ gave Himself for a people "zealous of good works" (Titus
+2:14; pp. 9–10). -/
 def calvinSadoletoStep : Source :=
   { primary := .work calvinReplyToSadoleto (.pages 42 43)
   , supporting := [.work calvinReplyToSadoleto (.page 44)]
@@ -708,7 +766,10 @@ def calvinSadoletoCase : ArgumentPackage Claim :=
 /-- **Who draws the step to Christ's righteousness, in May 1541.** The
 Regensburg article, col. 200, and Contarini, p. 592, from Philippians 3:8–9.
 Rated `disputed`, because Trent grants the text six years later and condemns
-justification "by the sole imputation of the justice of Christ" (canon 11). -/
+justification "by the sole imputation of the justice of Christ" (canon 11). Its
+reason is the charity "which is poured forth in their hearts by the Holy Ghost,
+and is inherent in them" (canon 11, after Romans 5:5): the justice that makes
+us just is God's justice given to us and inherent in us (ch. 7). -/
 def regensburgRestStep : Source :=
   { primary := .work regensburgArticleFive (.sectionRef "col. 200")
   , supporting := [.work contariniOnJustification (.page 592)]
@@ -745,7 +806,9 @@ def regensburgCase : ArgumentPackage Claim :=
 Regensburg, p. 260 in Bonnet; and the Protestant estates' answer to the Emperor
 of July 12, which says what "efficacious" means, col. 485. Rated `disputed`,
 because Contarini grants the article's words and reads them as faith formed by
-charity (p. 592). -/
+charity (p. 592). His reason is that "every motion is imperfect unless it
+reaches its end, and so the motion of faith, unless it reaches charity, is
+imperfect" (p. 592). -/
 def calvinFarelStep : Source :=
   { primary := .work calvinToFarelOnRegensburg (.page 260)
   , supporting := [.work protestantsOnTheRegensburgBook (.sectionRef "col. 485")]
@@ -779,7 +842,9 @@ def calvinFarelCase : ArgumentPackage Claim :=
 
 /-- **Who draws the step, on May 25, 1541.** Contarini, p. 592. Rated
 `disputed`, because the Protestant estates grant the article's words and deny
-that they mean faith with works (col. 485). -/
+that they mean faith with works (col. 485). Their reason is that "efficacious"
+names what faith is and does, not something added to it: "faith itself is a
+burning motion, consoling, obeying Christ, and giving life" (col. 485). -/
 def contariniFormedStep : Source :=
   { primary := .work contariniOnJustification (.page 592)
   , tradition := .romanCatholic
@@ -806,7 +871,9 @@ def contariniFormedCase : ArgumentPackage Claim :=
 
 /-- **Who draws the step, on May 25, 1541.** Contarini, p. 591. Rated
 `disputed`, because the answer proposed below grants both texts and denies that
-the righteousness is ours; no reader of 1541 has yet been found who does. -/
+the righteousness is ours, since "there is no one who is righteous, not even
+one" (Romans 3:10) and "no one living is righteous before you" (Psalm 143:2);
+no reader of 1541 has yet been found who denies it. -/
 def contariniInherentStep : Source :=
   { primary := .work contariniOnJustification (.page 591)
   , supporting := [.work regensburgArticleFive (.sectionRef "col. 200")]
@@ -1201,7 +1268,9 @@ theorem contariniFormedCase_is_satisfiable : Satisfiable contariniFormedCase.pre
 turns on one step, Calvin's: the article's faith, efficacious through love, is
 not faith formed by love. Contarini's reading says it is. The step is rated
 `disputed`, because Contarini grants the article's words and denies Calvin's
-conclusion. -/
+conclusion: "the motion of faith, unless it reaches charity, is imperfect", so
+the faith which justifies is "faith formed by charity, or efficacious through
+charity" (p. 592). -/
 def whereTheFormedReadingFalls : Because calvinFarelCase regensburgFormed :=
   Because.ofChecks calvinFarelLine.step calvinFarelLine.grounds [] calvinFarelLine.grounds
     [p .faithEfficaciousThroughLove ➝ p .justifyingFaithIsFormedByCharity]
@@ -1219,7 +1288,9 @@ def whereTheFormedReadingFalls : Because calvinFarelCase regensburgFormed :=
 turns on one step, Contarini's: the article's faith, efficacious through love, is
 faith formed by love. Calvin's reading says it is not. The step is rated
 `disputed`, because the Protestant estates grant the article's words and deny
-that they mean faith with works. -/
+that they mean faith with works: "faith itself is a burning motion, consoling,
+obeying Christ, and giving life" (col. 485), so its efficacy is what faith
+does, and not what forms it. -/
 def whereTheFruitReadingFalls : Because contariniFormedCase regensburgFruit :=
   Because.ofChecks contariniFormedLine.step contariniFormedLine.grounds []
     contariniFormedLine.grounds
@@ -1372,7 +1443,11 @@ declare_verdict reformationSettles for reformationDispute :
   Heard together, every other voice from 1521 to 1541 is defeated by one from
   the other side and defeats it in return, because every step on both sides is
   rated `disputed`: each side grants the other's texts and denies its
-  conclusion. The article that both sides' speakers accepted in May 1541 is
+  conclusion. Rome denies faith alone because God renders to each according
+  to his works (Romans 2:6) and without love faith is nothing (1 Corinthians
+  13:2); the Reformers deny that love forms faith because Paul counts
+  righteousness apart from works (Romans 4:6), and love follows faith as its
+  fruit. The article that both sides' speakers accepted in May 1541 is
   attacked by no one, because in its own words it says nothing either side
   denies: the faith that justifies is "efficacious through love", and the
   believer rests "on the righteousness of Christ alone, given to us". The sides
