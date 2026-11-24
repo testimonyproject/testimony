@@ -347,16 +347,21 @@ weigh the evidence that stands: Genesis 34:3 is answered by an argument, the sta
 and an argument strikes nothing. It is weighed, in a dispute, and the next section says what
 follows.
 
-A claim may also be refuted outright, where it is a reading of the Greek that the Greek text
-contradicts. Bellarmine read ἐνεργουμένη in Galatians 5:6 as passive, "moved and acted upon",
-and the MACULA data parses it middle. Such a claim's meaning says which word of the text it
-reads and in what voice (`Statement.parses`), so the library compares the two itself, and the
-claim is cited `refuted`, a rating no reader gives and the lowest a premise can have. The
-build fails wherever a citation says `refuted` and the data does not contradict the claim, or
-the data contradicts it and the citation says anything else (`#check_readers`). In a dispute
-the claim ranks below every reader's rating, so a position that rests on it defeats no one
-who contradicts it, and is defeated by anyone who does
-(`TestimonyArguments.SolaFide.faith_and_charity_is_a_tie`).
+A claim may also be refuted outright, where Scripture's own words rule it out. One way is a
+reading of the Greek that the word's spelling rules out: a passive reading of an active form,
+say. Such a claim's meaning says which word of the text it reads and in what voice
+(`Statement.parses`), and the library holds which voices the word's spelling allows, so it
+compares the two itself. The other is a reading that names as the one at work in a verb what
+its author never names there. The library holds every use of ἐνεργέω, "to work", in the
+letters that bear Paul's name, with who does the work in each (`Statement.againstUsage`), so
+that comparison is its own too. A claim either rules out is cited `refuted`, a rating no
+reader gives and the lowest a premise can have, and the build fails wherever a citation and
+the comparison differ (`#check_readers`). In a dispute such a claim ranks below every
+reader's rating, and so does a step that concludes it. Where the spelling allows two voices,
+as the present middle and passive are spelled alike, the spelling refutes nothing: the passive
+reading of ἐνεργουμένη in Galatians 5:6 is rated as readers rate it, `disputed`. What
+Bellarmine concludes from it, that love is the one at work, Paul's usage refutes
+(`TestimonyArguments.SolaFide.faiths_means_prevails`).
 
 ## Dissents overruled in a dispute
 

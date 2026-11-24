@@ -302,14 +302,48 @@ abbrev loveMovesFaith : Statement := .holds (rl .moves (wd .agape gal5_6) (wd .p
 abbrev faithThroughLove : Statement :=
   .holds (rl .worksThrough (wd .pistis gal5_6) (wd .agape gal5_6))
 
-/-- From the passive, that love moves faith: the classic case. -/
+open Testimony.Corpus.Greek in
+greek_word galatiansWorker from GAL 3 5 "ἐνεργέω"
+
+/-- That ὁ ἐνεργῶν in Galatians 3:5, "the one who works", is passive. -/
+abbrev workerPassive : Statement := .parses .energeo galatiansWorker .passive
+
+/-- That it is not active. -/
+abbrev workerNotActive : Statement := .denied (.parses .energeo galatiansWorker .active)
+
+/-- That ἐνεργουμένη in Galatians 5:6 is active. -/
+abbrev saysActive : Statement := .parses .energeo galatiansWorking .active
+
+/-- From the passive of an active form, that it is not active: the classic
+case. -/
+def fromThePassiveOfAnActive : Move := argues [workerPassive] workerNotActive
+
+/-- From the denial of the one voice the form allows, that it is passive: a
+misreading too. -/
+def denyingTheActive : Move := argues [workerNotActive] workerPassive
+
+/-- From the passive at Galatians 5:6, which the spelling allows, though the
+data's tag gives the middle: no misreading. -/
 def fromThePassive : Move := argues [saysPassive] loveMovesFaith
 
-/-- From the middle, that faith works through love: the near miss. -/
+/-- From the middle there, which the tag gives. -/
 def fromTheMiddle : Move := argues [saysMiddle] faithThroughLove
 
-/-- From the denial of the middle: a misreading too, since the data gives it. -/
-def denyingTheMiddle : Move := argues [.denied saysMiddle] loveMovesFaith
+/-- From the active there, which the spelling rules out. -/
+def fromTheActive : Move := argues [saysActive] faithThroughLove
+
+/-- That love is what works faith at Galatians 5:6: the one at work in
+ἐνεργουμένη, were it passive. -/
+abbrev workedByLove : Statement := .worksBy .energeo galatiansWorking "ἀγάπη"
+
+/-- That God is: J. Armitage Robinson's reading of the passive. -/
+abbrev workedByGod : Statement := .worksBy .energeo galatiansWorking "θεός"
+
+/-- From the passive, that love is what works faith. -/
+def loveAsWorker : Move := argues [saysPassive] workedByLove
+
+/-- From the passive, that God is. -/
+def godAsWorker : Move := argues [saysPassive] workedByGod
 
 /-- From faith working through love, that love moves faith: the means made the
 mover. -/
@@ -320,15 +354,28 @@ restated. -/
 def moverKept : Move := argues [loveMovesFaith] loveMovesFaith
 
 /-- **The Greek is read, not assumed, and a means is not made its user's
-mover.** The word of Galatians 5:6 read from the data is ἐνεργουμένη, parsed
-middle. A move from the claim that it is passive misreads the original, and so
-does one from the denial that it is middle; one from the claim that it is middle
-does not. A move from faith working through love to love moving faith reverses
-cause and effect; one that only restates that love moves faith does not. -/
+mover.** The word of Galatians 3:5 is ὁ ἐνεργῶν, a present active participle, and
+its spelling allows the active alone: a move from the claim that it is passive
+misreads the original, and so does one from the denial that it is active. The
+word of Galatians 5:6 is ἐνεργουμένη, whose spelling allows the middle or the
+passive, and the data's editors tag it middle: the check reads the letters, not
+the tag, so a move from the active misreads it, and moves from the passive and
+from the middle do not. Where Paul's spelling makes the verb active, the one at
+work is God, the Spirit, the evil spirit or believers, never love: a move
+concluding that love works faith reads against his usage, and one concluding
+that God does not. A move from faith working through love to love moving faith
+reverses cause and effect; one that only restates that love moves faith does
+not. -/
 theorem misreading_and_reversal_cases :
-    galatiansWorking.text = "ἐνεργουμένη" ∧ galatiansWorking.voice? = some .middle ∧
-      fromThePassive.misreadings = [saysPassive] ∧ fromTheMiddle.misreadings = [] ∧
-      denyingTheMiddle.misreadings = [.denied saysMiddle] ∧
+    galatiansWorker.text = "ἐνεργῶν" ∧ galatiansWorker.formVoices = [.active] ∧
+      galatiansWorking.text = "ἐνεργουμένη" ∧ galatiansWorking.voice? = some .middle ∧
+      galatiansWorking.formVoices = [.middle, .passive] ∧
+      fromThePassiveOfAnActive.misreadings = [workerPassive] ∧
+      denyingTheActive.misreadings = [workerNotActive] ∧
+      fromThePassive.misreadings = [] ∧ fromTheMiddle.misreadings = [] ∧
+      fromTheActive.misreadings = [saysActive] ∧
+      loveAsWorker.againstUsages = [workedByLove] ∧ godAsWorker.againstUsages = [] ∧
+      fromTheMiddle.againstUsages = [] ∧
       meansMadeMover.reversals = [(wd .agape gal5_6, wd .pistis gal5_6)] ∧
       moverKept.reversals = [] ∧ fromTheMiddle.reversals = [] := by
   decide

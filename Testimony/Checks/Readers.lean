@@ -22,11 +22,13 @@ way, a reading or a step that is the library's own and is presented as if the
 text alone gave it.
 
 It holds one rating to a rule of its own. `refuted` is the one rating no reader
-gives: a claim is cited `refuted` exactly where the library computes it, because
-what the claim says of the Greek, a word's voice where it stands, the Greek
-data's parsing contradicts (`Statement.misreads`). So the check fails on a claim
-cited `refuted` that the data does not refute, on a claim the data refutes that
-is cited at a reader's rating, and on a line whose step is cited `refuted`.
+gives: a claim is cited `refuted` exactly where the library computes it from
+Scripture's own words, because the word's spelling rules out the voice the claim
+gives it (`Statement.misreads`), or because the claim names as the one at work
+in a verb what the author, in every use whose spelling makes it active, never
+names (`Statement.againstUsage`). So the check fails on a claim cited `refuted`
+that neither refutes, on a claim one of them refutes that is cited at a reader's
+rating, and on a line whose step is cited `refuted`.
 
 It holds every line of reason under the namespace to the same rule. A line with
 no rating of its step (`Line.inference` left `none`) names no one who draws its
@@ -48,25 +50,30 @@ def unreadByAnyone {α : Type} [DecidableEq α] (pkg : Logic.ArgumentPackage α)
 
 /-- **Where a package's `refuted` ratings and the Greek disagree.** A claim is
 cited `refuted` exactly where the library computes the refutation: where what it
-asserts misreads the Greek data's parsing (`Statement.misreads`). Each label
-returned is a claim cited `refuted` that the data bears out or does not speak
-to, or a claim that misreads the data and is cited at a reader's rating. -/
+asserts gives a Greek word a voice its spelling rules out (`Statement.misreads`),
+or names as at work in a verb what its author's usage never does
+(`Statement.againstUsage`). Each label returned is a claim cited `refuted` that
+neither refutes, or a claim one of them refutes that is cited at a reader's
+rating. -/
 def refutedMismatches {α : Type} [Semantics.HasMeanings α]
     (pkg : Logic.ArgumentPackage α) : List String :=
   pkg.premises.filterMap fun
     | .atom a =>
       let m := pkg.cite a
       let cited := m.source.confidence == .refuted
-      let misread := (Semantics.HasMeanings.means a).misreads
+      let s := Semantics.HasMeanings.means a
+      let misread := s.misreads || s.againstUsage
       if cited && !misread then
         some (m.label ++ "\" is cited refuted, and nothing the library computes refutes it")
       else if misread && !cited then
-        some (m.label ++ "\" misreads the Greek data, and is not cited refuted")
+        some (m.label ++
+          "\" reads the Greek as its spelling or its author's usage rules out, " ++
+          "and is not cited refuted")
       else none
     | _ => none
 
 /-- Whether a line's step is cited `refuted`. No step is: the library computes
-`refuted` only of a claim whose reading of the Greek the data contradicts. -/
+`refuted` only of a claim whose reading of the Greek the text itself rules out. -/
 def lineCitedRefuted {α : Type} (l : Logic.Line α) : Bool :=
   l.inference.any (·.confidence == .refuted)
 

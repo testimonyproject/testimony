@@ -68,9 +68,10 @@ how firmly it is held. There are four ratings, from weakest to strongest:
 *disputed* (scholars actively contest it), *plausible* (defensible, not
 established), *well supported* (widely held, not universally) and *consensus*
 (accepted across traditions, including by people with no stake in it). A fifth,
-*refuted*, is never a reader's to give. The library gives it to a claim about
-the Greek that the Greek text, as its data parses it, contradicts, and the build
-fails wherever a citation says otherwise.
+*refuted*, is never a reader's to give. The library gives it to a claim that
+Scripture's own words rule out, a voice a Greek word's spelling rules out or a
+reading of a verb its author's use of it elsewhere rules out, and the build fails
+wherever a citation says otherwise.
 
 ```lean
 {{#include ../../examples/HelloWorld.lean:cite}}

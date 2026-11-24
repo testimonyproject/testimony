@@ -347,7 +347,7 @@ library states the claim as the party holds it. A
 package with no rated premise has no weakest link. -/
 def weakestLink (pkg : ArgumentPackage α) : List Page.Held :=
   let r := pkg.strength
-  let claims := pkg.premises.filterMap fun φ => match φ with
+  let claims : List Page.Held := pkg.premises.filterMap fun φ => match φ with
     | .atom a =>
       let m := pkg.cite a
       if m.source.confidence.rank == r then some ⟨m.label, m.source.confidence, m.source⟩
@@ -368,7 +368,19 @@ def weakestLink (pkg : ArgumentPackage α) : List Page.Held :=
       (pkg.inferences.filter (·.confidence.rank == r)).map fun s =>
         (⟨"an inference step", s.confidence, s⟩ : Page.Held)
     else []
-  claims.foldl (fun acc h => if acc.any (·.what == h.what) then acc else acc ++ [h]) [] ++ steps
+  let refutedSteps : List Page.Held := if r == Confidence.refuted.rank then
+      pkg.premises.filterMap fun φ => match φ with
+        | .imp (.atom _) .falsum => none
+        | .imp _ (.atom b) =>
+          let m := pkg.cite b
+          if m.source.confidence == .refuted then
+            some (⟨"a step to a refuted claim: " ++ m.label, .refuted, m.source⟩
+              : Page.Held)
+          else none
+        | _ => none
+    else []
+  (claims ++ refutedSteps).foldl
+    (fun acc h => if acc.any (·.what == h.what) then acc else acc ++ [h]) [] ++ steps
 
 /-- What a page renders: the claim and the reasons, generated from the witness,
 each party named by its package; the cells of the defeat table the reasons

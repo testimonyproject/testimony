@@ -5510,6 +5510,25 @@ whose catalogue record gives T. & T. Clark, Edinburgh, 1921. -/
   , place := some "Edinburgh"
   , series := some "International Critical Commentary" }
 
+/-- J. Armitage Robinson's commentary on Ephesians, with its detached note "On
+ἐνεργεῖν and its cognates" (pp. 241–247). Against Lightfoot's "never passive in
+St Paul" he holds that ἐνεργεῖσθαι in Paul is passive, "is made operative", "the
+agent implied being God ὁ ἐνεργῶν", and of Galatians 5:6: "the sense appears to
+be: 'faith is made operative through love', without which it fails of its
+action" (p. 246). Read in the Internet Archive's scan of the first edition, whose
+title page gives Macmillan, London, 1903. -/
+@[bib_entry] def robinsonEphesians : BibEntry := .book
+  { core :=
+      { key := "robinson-ephesians-1903"
+      , contributors := { authors := [.person "J. Armitage" "Robinson"] }
+      , title := "St Paul's Epistle to the Ephesians"
+      , subtitle := some "A Revised Text and Translation with Exposition and Notes"
+      , year := some { value := 1903 }
+      , identifiers :=
+          [ .url "https://archive.org/details/cu31924075889307" (some "2026-11-24") ] }
+  , publisher := "Macmillan"
+  , place := some "London" }
+
 /-- Thomas Oden's reader of patristic texts on justification, which argues that
 leading fathers "anticipated standard classic Reformation teaching on
 justification". Not read beyond the catalogue and search fragments; cited as a

@@ -149,10 +149,16 @@ def inferenceRank (pkg : ArgumentPackage α) : Option ℕ :=
 
 /-- The rank of a premise of this package, if it has one: an atom at its cited
 confidence, a denied atom at the bottom, an inference step at the package's
-inference rank. -/
+inference rank, and a step to a claim cited `refuted` at `refuted`. A step is no
+stronger than what it delivers where Scripture's own words refute that, and the
+library gives `refuted` only where it computes the refutation
+(`#check_readers`). -/
 def rankOf (pkg : ArgumentPackage α) : Formula α → Option ℕ
   | .atom a => some (pkg.cite a).source.confidence.rank
   | .imp (.atom _) .falsum => some Confidence.disputed.rank
+  | .imp _ (.atom b) =>
+    if (pkg.cite b).source.confidence == .refuted then some Confidence.refuted.rank
+    else pkg.inferenceRank
   | _ => pkg.inferenceRank
 
 /-- **Weakest link**: the lowest rank among the package's ranked premises. A

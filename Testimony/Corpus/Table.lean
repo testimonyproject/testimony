@@ -128,17 +128,27 @@ structure Row where
   lemma : String
   /-- Its parsing. -/
   morph : String
+  /-- For a verb, the dictionary forms of the words a text's syntax gives as its
+  first argument, who or what does what it says; empty where none is named. -/
+  actors : List String := []
+  /-- Where those words stand, in the same order: `GAL 2:6!14`. -/
+  actorRefs : List String := []
 
-/-- Read a row of a book's file: `JHN 1:1!14  p  noun  θεὸς  θεός  N-NSM`. -/
+/-- Read a row of a book's file: `JHN 1:1!14  p  noun  θεὸς  θεός  N-NSM`, with,
+in a file that has them, a verb's actors and where they stand, each list joined
+by `;`. -/
 def parseRow (line : String) : Option Row := do
-  match line.splitOn "\t" with
-  | [ref, role, cls, text, lemma, morph] =>
-    let [_, cv] := ref.splitOn " " | none
-    let [chv, pos] := cv.splitOn "!" | none
-    let [ch, v] := chv.splitOn ":" | none
-    pure { chapter := ← ch.toNat?, verse := ← v.toNat?, position := ← pos.toNat?
-         , role, wordClass := cls, text, lemma, morph }
-  | _ => none
+  let (ref, role, cls, text, lemma, morph, actors, actorRefs) ← match line.splitOn "\t" with
+    | [ref, role, cls, text, lemma, morph] => some (ref, role, cls, text, lemma, morph, "", "")
+    | [ref, role, cls, text, lemma, morph, a, r] => some (ref, role, cls, text, lemma, morph, a, r)
+    | _ => none
+  let [_, cv] := ref.splitOn " " | none
+  let [chv, pos] := cv.splitOn "!" | none
+  let [ch, v] := chv.splitOn ":" | none
+  let list (s : String) := if s.isEmpty then [] else s.splitOn ";"
+  pure { chapter := ← ch.toNat?, verse := ← v.toNat?, position := ← pos.toNat?
+       , role, wordClass := cls, text, lemma, morph
+       , actors := list actors, actorRefs := list actorRefs }
 
 /-- Every row of one book's file in a text, in the order of its words. -/
 def Corpus.readBook (c : Corpus) (code : String) : IO (Array Row) := do

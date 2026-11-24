@@ -411,7 +411,9 @@ def means : Claim → Statement
   | .john6_29WorkIsPaulsWorks => .sameSense .erga (.passage john6_29) (.usage .paul)
   | .energoumeneIsPassive => .parses .energeo galatiansWorking .passive
   | .energoumeneIsMiddle => .parses .energeo galatiansWorking .middle
-  | .loveMovesFaith => .holds (rl .moves (wd .agape gal5_6) (wd .pistis gal5_6))
+  | .loveMovesFaith =>
+    .also (.holds (rl .moves (wd .agape gal5_6) (wd .pistis gal5_6)))
+      (.worksBy .energeo galatiansWorking "ἀγάπη")
   | .faithWorksThroughLove => .holds (rl .worksThrough (wd .pistis gal5_6) (wd .agape gal5_6))
   | .countingWasForTheTesting =>
     .opaque "What was counted at Gen 15:6 was credited for his faithfulness when tested"

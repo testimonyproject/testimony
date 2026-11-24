@@ -53,9 +53,19 @@ info: the fallacy checks, over every argument's lines, each named with its reade
 Sola fide
   lines: 74, read: 51, Scripture's own: 0
   commit what they declare, as declared:
-    bellarminePassiveLine (Bellarmine): misreading of ἐνεργουμένη passive, parsed middle
-  argue from a reading of the Greek its parsing does not bear:
-    bellarminePassiveLine (Bellarmine): ἐνεργουμένη passive, parsed middle
+    bellarmineFormedFaithLine (Bellarmine): reading against usage: ἀγάπη at work in ἐνεργουμένη
+    bellarminePassiveLine (Bellarmine): reading against usage: ἀγάπη at work in ἐνεργουμένη
+    rheimsFormLine (English College at Rheims): reading against usage: ἀγάπη at work in ἐνεργουμένη
+    rheimsSoulLine (English College at Rheims): reading against usage: ἀγάπη at work in ἐνεργουμένη
+  name as at work in a verb what its author never does:
+    bellarmineFormedFaithLine (Bellarmine): ἀγάπη at work in ἐνεργουμένη;
+        the author's: θεός, εἷς, πνεῦμα, ἀγαπητός
+    bellarminePassiveLine (Bellarmine): ἀγάπη at work in ἐνεργουμένη;
+        the author's: θεός, εἷς, πνεῦμα, ἀγαπητός
+    rheimsFormLine (English College at Rheims): ἀγάπη at work in ἐνεργουμένη;
+        the author's: θεός, εἷς, πνεῦμα, ἀγαπητός
+    rheimsSoulLine (English College at Rheims): ἀγάπη at work in ἐνεργουμένη;
+        the author's: θεός, εἷς, πνεῦμα, ἀγαπητός
   attribute a view, against the argument's record:
     renewalLine (Augustine): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
     sandersLine (Dunn): secondTempleJudaism, unrecorded
@@ -90,7 +100,7 @@ info: every reading and step has a reader or is marked proposed: 102 packages, 7
 /--
 info: every dispute, as an AIF graph meeting Definition 1.1:
 beforeTrentDispute.finite: 6 I, 2 RA, 0 CA, 0 PA, 6 edges
-faithAndCharityDispute.finite: 26 I, 13 RA, 13 CA, 5 PA, 79 edges
+faithAndCharityDispute.finite: 26 I, 13 RA, 12 CA, 7 PA, 81 edges
 jamesDispute.finite: 38 I, 13 RA, 11 CA, 4 PA, 83 edges
 jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
 solaFideDispute.finite: 80 I, 36 RA, 42 CA, 0 PA, 196 edges

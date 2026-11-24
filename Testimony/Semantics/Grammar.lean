@@ -152,6 +152,12 @@ inductive Statement
   `greek_word`, so it is the text's word, at its place. -/
   | parses (w : Lexeme) (t : Testimony.Corpus.Greek.Token)
       (v : Testimony.Corpus.Greek.GreekVoice)
+  /-- **The one at work in this word of the Greek, where it stands, is what the
+  Greek word `agent` names**: its subject, were the verb active, and what works
+  on its subject, were it passive. Interpretive: a reading of who or what does
+  the work, which the author's use of the verb elsewhere bears out or does not
+  (`Statement.againstUsage`). -/
+  | worksBy (w : Lexeme) (t : Testimony.Corpus.Greek.Token) (agent : String)
   /-- This word occurs in this passage and nowhere else in the New Testament.
   -/
   | occursOnlyIn (w : Lexeme) (p : PassageRange)
@@ -197,23 +203,42 @@ def words : Statement → List (Lexeme × Scope)
   | .renders v p w => [(w, .usage v), (w, .passage p)]
   | .glosses v w _ => [(w, .usage v)]
   | .occurs w p | .occursOnlyIn w p => [(w, .passage p)]
-  | .parses w t _ => [(w, .passage t.verseOf)]
+  | .parses w t _ | .worksBy w t _ => [(w, .passage t.verseOf)]
   | .denied s => s.words
   | .also s t | .expects s t => s.words ++ t.words
   | .wrote .. | .principle _ | .opaque _ => []
 
-/-- **Whether a statement misreads the Greek**: it says a word stands in one
-voice where the Greek data's parsing gives it another, or denies it the voice the
-parsing gives. A form the parsing leaves open, middle or passive, is misread by
-neither. Read through conjunctions; a statement about anything else misreads
-nothing. -/
+/-- **Whether a statement misreads the Greek**: it says a word stands in a voice
+its spelling rules out, or denies it the only voice its spelling allows
+(`Testimony.Corpus.Greek.Token.formVoices`). Where the spelling allows two
+voices, as a present middle or passive does, the letters settle nothing between
+them: the editors' parsing is a reading of how the word is used, as a
+commentator's is, and the question between the two is argued from the passage
+and its author's usage, not charged here. A word whose voice the spelling leaves
+unknown is misread by neither reading. Read through conjunctions; a statement
+about anything else misreads nothing. -/
 def misreads : Statement → Bool
-  | .parses _ t v => match t.voice? with
-    | some v' => v' != v
-    | none => false
-  | .denied (.parses _ t v) => t.voice? == some v
+  | .parses _ t v => !t.formVoices.isEmpty && !t.formVoices.contains v
+  | .denied (.parses _ t v) => t.formVoices == [v]
   | .also s t => s.misreads || t.misreads
   | _ => false
+
+/-- **Where a statement reads a word against its author's usage**: each part of it
+that names as
+the one at work in a verb something the author never names as at work in that
+verb, wherever the spelling of another use makes it active and the text says
+who works (`Testimony.Corpus.Greek.agentsNamed`). A reading of a word with no
+such use, or whose usage the library has not read, is against nothing. Read
+through conjunctions; a statement about anything else is against nothing. -/
+def unusualWorkers : Statement → List Statement
+  | .worksBy w t a =>
+    let named := Testimony.Corpus.Greek.agentsNamed t.usage
+    if !named.isEmpty && !named.contains a then [.worksBy w t a] else []
+  | .also s t => s.unusualWorkers ++ t.unusualWorkers
+  | _ => []
+
+/-- Whether a statement names any such worker (`Statement.unusualWorkers`). -/
+def againstUsage (s : Statement) : Bool := !s.unusualWorkers.isEmpty
 
 /-- The lexemes a statement turns on. -/
 def lexemes (s : Statement) : List Lexeme := s.words.map Prod.fst

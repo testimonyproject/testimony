@@ -26,7 +26,8 @@ how they are spelled.
 | Begging the question | does a premise already assert the conclusion? | `Move.begsAgainst` | built |
 | Circular reasoning | does a chain of moves come back to where it began? | `circular` | built |
 | Argument from silence | does the move state the expectation its silence needs? | `Move.silences` | built |
-| Misreading the original | does a premise give a Greek word a voice its parsing does not? | `Move.misreadings` | built |
+| Misreading the original | does a premise give a Greek word a voice its spelling rules out? | `Move.misreadings` | built |
+| Reading against the author's usage | does a claim name as at work in a verb what its author never names there? | `Move.againstUsages` | built |
 | Reversed cause and effect | does the move make a thing the mover of what, by its premises, moves it? | `Move.reversals` | built |
 | Non sequitur | does the conclusion follow from what is stated? | `refute_with` | built |
 | Indefensible claim | can a position survive the dispute it is heard in? | a hearing | built |
@@ -329,33 +330,68 @@ until it is written in that form.
 
 ## Misreading the original
 
-An argument can rest on what the original says, and the original can say otherwise. Robert
-Bellarmine read Galatians 5:6, "faith working through love", as faith "moved and driven" by
-love, because, he wrote, "in the Greek it is ἐνεργουμένη", to be "taken passively, not
-actively" (*De justificatione* II.4). Paul uses the middle of this verb eight times, and each
-time the subject is the one at work. J. B. Lightfoot drew the conclusion: "ἐνεργεῖσθαι is never
-passive in St Paul … and therefore this passage does not express the doctrine of 'fides caritate
-formata'".
+An argument can rest on what the original says, and the original can say otherwise. "The one
+who supplies the Spirit to you and works miracles among you" in Galatians 3:5 is ὁ ἐνεργῶν, an
+active participle: the one who works. A reading that made him the one worked on, because the
+verb is passive, would misread the Greek, and the letters of the word show it, since an active
+form is spelled as no passive is.
 
 A claim of that kind is about the text's grammar, and the library holds the grammar as data:
 every word of the imported books of the Greek New Testament, with its parsing
 (`Testimony.Corpus.Greek`). `greek_word` reads one word from the data when the module is built,
 and a claim that the word, where it stands, is in a voice (`Statement.parses`) is read against
-its parsing. A move **misreads the original** when it argues from such a claim and the parsing
-gives the word another voice, or from the denial of the voice the parsing gives
-(`Move.misreadings`). The charge fails the build unless the line declares it, and the claim is
-the one claim the library rates `refuted`: `#check_readers` fails on a claim the data
-contradicts that is cited at a reader's rating, and on a claim cited `refuted` that the data
-does not contradict.
+the voices its spelling allows (`Token.formVoices`). A move **misreads the original** when it
+argues from such a claim and the spelling rules the voice out, or from the denial of the one
+voice the spelling allows (`Move.misreadings`). The charge fails the build unless the line
+declares it, and the claim is the one kind of claim the library rates `refuted`:
+`#check_readers` fails on a claim the spelling contradicts that is cited at a reader's rating,
+and on a claim cited `refuted` that the spelling does not contradict.
 
-The parsing is an interpretation where the spelling allows two. The present middle and
-passive are spelled alike, so MACULA's "middle" for ἐνεργουμένη is Clear Bible's reading of the
-word, made from how Paul uses it, and a page that reports the charge says so. Where the parsing
-itself leaves the voice open, nothing is charged.
+Where the spelling allows two voices, the data's tag is an interpretation. In the present the
+middle and the passive are spelled alike, so MACULA's "middle" for ἐνεργουμένη, "working", in
+Galatians 5:6 is its editors' reading of how Paul uses the verb. J. B. Lightfoot read it the
+same way: "ἐνεργεῖσθαι is never passive in St Paul". J. Armitage Robinson, answering Lightfoot by
+name, read it passive, "faith is made operative through love", with God the one who makes it so
+(*St Paul's Epistle to the Ephesians*, 1903, p. 246), and so had Robert Bellarmine before him.
+The spelling charges nothing there. The reading is a reader's claim, cited and rated like any
+other, and what a reader concludes from it about who does the work is weighed against Paul's
+other uses of the verb, as the next section explains.
 
-**Caught.** A move from the claim that ἐνεργουμένη in Galatians 5:6 is passive
-(`fromThePassive`), and one from the denial that it is middle (`denyingTheMiddle`). **Passed
-over.** A move from the claim that it is middle (`fromTheMiddle`).
+**Caught.** A move from the claim that ὁ ἐνεργῶν in Galatians 3:5 is passive
+(`fromThePassiveOfAnActive`), one from the denial that it is active (`denyingTheActive`), and one
+from the claim that ἐνεργουμένη in Galatians 5:6 is active (`fromTheActive`). **Passed over.** A
+move from the claim that ἐνεργουμένη is passive (`fromThePassive`), and one from the claim that
+it is middle (`fromTheMiddle`).
+
+## Reading against the author's usage
+
+A word does not change what it means between one sentence and the next unless the text marks
+the change, and the places where its sense is plain teach the reader what it means where its
+sense is hard. The Westminster Confession states the rule: "The infallible rule of
+interpretation of Scripture is the Scripture itself", and where the sense of a place is in
+question "it must be searched and known by other places that speak more clearly" (1.9).
+
+The library holds one such usage as data. `greek_usage` reads every use of ἐνεργέω, "to work",
+in the thirteen letters that bear Paul's name, and MACULA's analysis of each clause gives who
+or what does the work there (`Token.actors`). Ten of the eighteen uses are spelled so that only
+the active is possible, and in nine of those the text names who is at work: God, the one
+Spirit, "the spirit that is now at work in the sons of disobedience" (Ephesians 2:2), and the
+Philippians, in whom "it is God who works" (Philippians 2:13) (`energeo_in_paul`). A claim can
+say who is at work in a verb where its voice is in question (`Statement.worksBy`). It **reads
+against the author's usage** when it names someone or something the author never names there
+(`Statement.againstUsage`), and a move does so when it argues from such a claim or concludes
+it (`Move.againstUsages`). The charge fails the build unless the line declares it, and the claim
+is rated `refuted`, the rating the library gives only where it computes it from Scripture's
+own words.
+
+Robert Bellarmine read ἐνεργουμένη in Galatians 5:6 as passive, "moved and acted upon", with
+love the one that moves faith, and the Rheims New Testament of 1582 made charity faith's soul.
+Both make love the one at work, which Paul never does, and both are charged. J. Armitage
+Robinson read the same passive with God as the one at work, and he is not.
+
+**Caught.** A move from the passive to love as the one at work in ἐνεργουμένη (`loveAsWorker`).
+**Passed over.** A move from the passive to God as the one at work (`godAsWorker`), and one from
+the middle (`fromTheMiddle`).
 
 ## Reversed cause and effect
 

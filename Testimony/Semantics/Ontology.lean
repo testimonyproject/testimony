@@ -109,6 +109,9 @@ inductive Fact
   /-- This word of the Greek, where it stands, is in this voice. -/
   | parses (w : Lexeme) (t : Testimony.Corpus.Greek.Token)
       (v : Testimony.Corpus.Greek.GreekVoice)
+  /-- The one at work in this word of the Greek, where it stands, is what the
+  Greek word `agent` names. -/
+  | worksBy (w : Lexeme) (t : Testimony.Corpus.Greek.Token) (agent : String)
   /-- Were the first statement so, the second would be: kept whole. -/
   | expects (s t : Statement)
 deriving DecidableEq, Repr
@@ -194,6 +197,7 @@ def Statement.shape : Statement → Shape
   | .occurs w p => .lit ⟨true, .occurs w p⟩
   | .occursOnlyIn w p => .lit ⟨true, .occursOnlyIn w p⟩
   | .parses w t v => .lit ⟨true, .parses w t v⟩
+  | .worksBy w t a => .lit ⟨true, .worksBy w t a⟩
   | .expects s t => .lit ⟨true, .expects s t⟩
   | .denied s => s.shape.deny
   | .also s t => s.shape.union t.shape
@@ -288,11 +292,24 @@ def step (O : Ontology) (ls : List Lit) : List Lit :=
     (O.flatMap fun d => d.form.yields l).foldl
       (fun acc' m => if acc'.contains m then acc' else acc' ++ [m]) acc) ls
 
+/-- Rounds of `step` from a frontier: each round reads only the literals the
+last one added, since what a definition yields from a literal depends on that
+literal alone, and stops at the first round that adds nothing. -/
+def closeFrom (O : Ontology) : Nat → List Lit → List Lit → List Lit
+  | 0, acc, _ => acc
+  | n + 1, acc, frontier =>
+    let acc' := frontier.foldl (fun acc l =>
+      (O.flatMap fun d => d.form.yields l).foldl
+        (fun acc' m => if acc'.contains m then acc' else acc' ++ [m]) acc) acc
+    let new := acc'.drop acc.length
+    if new.isEmpty then acc' else closeFrom O n acc' new
+
 /-- **The closure of a set of literals**: rounds until nothing is new. A chain
 of definitions is never longer than the ontology, so as many rounds as there
-are definitions, and one more, reach the fixed point. -/
+are definitions, and one more, reach the fixed point; most sets reach it
+sooner, and the rounds stop there. -/
 def close (O : Ontology) (ls : List Lit) : List Lit :=
-  (List.range (O.length + 1)).foldl (fun acc _ => step O acc) ls
+  closeFrom O (O.length + 1) ls ls
 
 /-- **Whether a closed set of literals clashes**: one fact affirmed and denied;
 two things each held to be the only one; one thing related to two, in a relation

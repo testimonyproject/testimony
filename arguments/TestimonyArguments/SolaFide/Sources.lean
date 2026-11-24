@@ -1210,38 +1210,45 @@ def baseCite : Claim → AtomMeta
     , kind := .linguistic
       -- Bellarmine, II.4, p. 219: "Ubi illud (operatur) passive accipiendum est,
       -- non active. Est enim in Graeco ἐνεργουμένη, id est mota atque acta".
-      -- `refuted`: the Greek data parses the word middle (V-PMP-NSF), and
-      -- `#check_readers` holds the citation to that computation.
+      -- Robinson, p. 246: "'faith is made operative through love'". `disputed`:
+      -- the present middle and passive are spelled alike, so the letters settle
+      -- nothing, and Lightfoot (pp. 204–205) and Burton (p. 281) read the middle.
     , source :=
         { primary := .work bellarmineOpera6 (.page 219)
+        , supporting := [.work robinsonEphesians (.pages 245 246)]
         , tradition := .romanCatholic
-        , confidence := .refuted } }
+        , confidence := .disputed } }
   | .energoumeneIsMiddle =>
     { label := "Galatians 5:6: ἐνεργουμένη is middle, faith the one at work"
     , kind := .linguistic
       -- Lightfoot, pp. 204–205: "the middle voice according to the general usage
       -- of St Paul … ἐνεργεῖσθαι is never passive in St Paul". Burton, p. 281:
-      -- "middle, not passive". MACULA parses it V-PMP-NSF, present middle.
-      -- `consensus`: the one reader cited for the passive is refuted by the data.
+      -- "middle, not passive". MACULA tags it V-PMP-NSF, present middle.
+      -- `disputed`: Robinson, answering Lightfoot by name, reads it passive
+      -- (pp. 245–246), and the present middle and passive are spelled alike.
     , source :=
         { primary := .work lightfootGalatians (.pages 204 205)
         , supporting :=
             [ .work burtonGalatians (.page 281)
             , .work maculaGreek (.sectionRef "Galatians 5:6, word 15") ]
         , tradition := .christianHistoricalGrammatical
-        , confidence := .consensus } }
+        , confidence := .disputed } }
   | .loveMovesFaith =>
     { label := "In Galatians 5:6 love moves faith, as the soul moves the body"
     , kind := .interpretive
       -- Bellarmine, II.4, p. 218: "fides, quae agitur, ac movetur … per
       -- dilectionem"; the Rheims New Testament (1582), on 5:6: "not as by an
-      -- instrument, but as the body worketh by the soul". `disputed`: Calvin
-      -- grants the verse and reads the love as faith's fruit (*Antidote*, p. 119).
+      -- instrument, but as the body worketh by the soul". `refuted`, computed from
+      -- Paul's own letters: it makes love the one at work in ἐνεργουμένη, and
+      -- wherever Paul's spelling makes ἐνεργέω active the one at work is God,
+      -- the Spirit, the evil spirit or believers, never love
+      -- (`Testimony.Corpus.Greek.energeo_in_paul`); `#check_readers` holds the
+      -- citation to that.
     , source :=
         { primary := .work bellarmineOpera6 (.page 218)
         , supporting := [.work rheimsNewTestament (.adLoc ⟨.galatians, 5, 6⟩)]
         , tradition := .romanCatholic
-        , confidence := .disputed } }
+        , confidence := .refuted } }
   | .faithWorksThroughLove =>
     { label := "In Galatians 5:6 faith works through love as its means"
     , kind := .interpretive
