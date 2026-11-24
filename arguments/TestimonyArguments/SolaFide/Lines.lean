@@ -103,7 +103,9 @@ The disputed reading is that this believing is trust, which brings nothing of
 its own to God (`johannineBelievingIsTrust`). Calvin reads it so. Aquinas reads
 it as faith formed by charity, that is, faith made alive by love, which is how
 Trent describes the faith that justifies. Luther answers Aquinas from Galatians
-3:11–12, and his answer rests on a step Aquinas denies. The chapter on John sets
+3:11–12, and his answer rests on a step Aquinas denies, because Paul
+distinguishes faith "only from external works" (*Super Ioannem* 6, lect. 3,
+n. 901). The chapter on John sets
 this out, and takes up John 3:36 as well, "whoever does not obey the Son shall
 not see life", with Chrysostom's reading of it.
 
@@ -404,7 +406,8 @@ def calvinOnJohnSix : Source :=
 
 /-- John's argument rests on Jesus' words in John's Gospel, texts no other strand
 reads. The reading it needs is that believing is trust, and Aquinas denies
-it. -/
+it, because to believe in God as one's end "is proper to faith living through
+the love of charity" (*Super Ioannem* 6, lect. 3, n. 901). -/
 @[solaFideDefs]
 def johannineLine : Line Claim :=
   { name := "Johannine strand (John 6:29)"
@@ -534,7 +537,9 @@ def jervellLine : Line Claim :=
 /-- Trent's step from its definition to merit. If justification *is* the renewal of
 the inward person, and that renewal grows through good works, then good works
 increase justification (Session VI, ch. 10 and canon 24). Rated `consensus`, as
-`trentOnMerit` is. The Reformed deny the definition, not the inference, and
+`trentOnMerit` is. The Reformed deny the definition, not the inference, since
+God justifies "not by infusing righteousness into them, but by pardoning their
+sins" (Westminster XI.1), and
 canon 24 condemns the Reformed alternative by name: that works are "merely the
 fruits and signs of Justification obtained". -/
 def trentOnIncrease : Source :=
@@ -548,8 +553,10 @@ def trentOnIncrease : Source :=
 /-- **Trent's line of argument.** Justification is the renewal of the inward person
 and not remission of sins only. That renewal grows through good works. So good
 works increase justification (Session VI, ch. 10, canon 24). The Reformed accept
-that the renewal grows and deny the definition, so the step carries the
-objection only as far as the definition does. -/
+that the renewal grows, calling it sanctification (Westminster XIII.1), and deny
+the definition, because God justifies "not by infusing righteousness into them,
+but by pardoning their sins" (XI.1). So the step carries the objection only as
+far as the definition does. -/
 @[solaFideDefs]
 def tridentineLine : Line Claim :=
   { name := "Trent (justification as renewal)"
@@ -609,7 +616,9 @@ def closingSteps : List (Formula Claim) := jamesLine.step :: conclusionSteps
 justification, and to add a ground is to preach another gospel. Cited to Moo on
 Galatians and to the Westminster Confession. Rated `disputed`: Trent accepts
 every text, and that Christ's passion merited justification (ch. 7), and denies
-that nothing is added (canons 24, 32). -/
+that nothing is added, because the good works of the justified "truly merit
+increase of grace, eternal life" (canon 32) and are "a cause of the increase" of
+justification (canon 24). -/
 def galatianGospelReadingSource : Source :=
   { primary := .work mooGalatians (.adLoc ⟨.galatians, 1, 6⟩)
   , supporting := [.work westminsterConfession (.sectionRef "XI.1")]
@@ -848,7 +857,9 @@ def glossByLeastMeaning : Formula Claim :=
   ➝ notP .paulsJustifyDenotesRenewal
 
 /-- From Paul's explanation, with the courtroom sense of the verb: renewal is no
-part of justification. This is the step Augustine denies. -/
+part of justification. This is the step Augustine denies, because for him "being
+justified" signifies "being made righteous" (*On the Spirit and the Letter*
+26.45). -/
 @[solaFideDefs]
 def countedExcludesRenewal : Formula Claim :=
   ⋀ [p .countedRighteousnessIsSinNotCounted, p .dikaioIsForensic]

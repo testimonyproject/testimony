@@ -171,7 +171,9 @@ years before. And the chapter "Does justification have degrees?" adds a reason
 of its own. If justification is a verdict, which has no degrees, then James's
 "justified" at Genesis 22 cannot mean the *increase* of the justice Abraham
 already had (`no_degrees_answers_james_on_abraham`). That reason rests, as
-before, on the Reformed definition of justification, which Trent denies.
+before, on the Reformed definition of justification, which Trent denies, because
+for the council justification is "not remission of sins merely, but also the
+sanctification and renewal of the inward man" (Session VI, ch. 7).
 
 ## What the promise was, and what the obedience was for
 
@@ -391,7 +393,9 @@ increase.** On the Reformed position on degrees, Abraham's being "justified by
 works when he offered up his son Isaac" (James 2:21) cannot mean the increase of
 the justice he already had. That leaves the Reformed reading of James's word,
 "shown to be righteous". The position that justification has no degrees rests on
-the Reformed definition, which Trent denies (`degrees_turn_on_the_definition`). -/
+the Reformed definition, which Trent denies (`degrees_turn_on_the_definition`),
+because for the council justification is "not remission of sins merely, but
+also the sanctification and renewal of the inward man" (Session VI, ch. 7). -/
 @[headline]
 theorem no_degrees_answers_james_on_abraham : Establishes verdictOnJamesIncrease := by
   establish [solaFideDefs]

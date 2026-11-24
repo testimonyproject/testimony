@@ -62,7 +62,14 @@ holds that the verse's adjective does not settle the verb. Calvin grants that
 God renews whom He justifies and denies that the verdict is what renews: light
 and heat come together from the sun, "and yet reason itself prohibits us from
 transferring the peculiar properties of the one to the other" (*Institutes*
-III.xi.6). Trent is heard with Fitzmyer's and Kertelge's roads
+III.xi.6). On the other side, Trent denies the step from the courtroom sense
+because the justified "are not only reputed, but are truly called, and are,
+just" (Session VI, ch. 7), and Fitzmyer because "the effective sense seems to be
+supported by 5:19" (*Romans*, 118–19). The Reformers deny the step from the
+Latin, for Calvin grants that Augustine is "admirable in stripping man of all
+merit of righteousness", and still "he classes the grace by which we are
+regenerated to newness of life under the head of sanctification" (*Institutes*
+III.xi.15). Trent is heard with Fitzmyer's and Kertelge's roads
 (`tridentineOnPaulsWordAtItsStrongest`).
 
 No position wins this outright, and the defeat table says so plainly. A
@@ -185,7 +192,11 @@ word takes the second way: it meets the case at the two steps that apply the
 rule of least meaning (`whereTrentsWordReadingFalls`,
 `whereRomansFourMeetsTheWordReading`), and accepts the reading of Romans 4:6–8,
 as Augustine does. Both steps are rated `disputed`, because Trent and Fitzmyer
-grant their grounds and deny what they conclude.
+grant their grounds and deny what they conclude. Trent's reason is that the
+justified "are not only reputed, but are truly called, and are, just, receiving
+justice within us" (Session VI, ch. 7). Fitzmyer's is Romans 5:19: "many
+instances are ambiguous, and the effective sense seems to be supported by 5:19,
+'through the obedience of one many will be made upright'" (*Romans*, 118–19).
 
 What is novel: both roads are old. The proof that these are the only two ways
 to overturn the case, so that no single denial is enough, is the library's. -/

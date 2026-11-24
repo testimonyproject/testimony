@@ -79,7 +79,10 @@ Wright hold. It keeps "faith in Christ" as Dunn does, so the one reading of
 Paul's that it denies is the first.
 
 The denial is not assumed. `sandersLine` derives it from Sanders' account of
-Judaism by Dunn's inference, which is where its critics engage it.
+Judaism by Dunn's inference: if Judaism taught entry into the covenant by grace
+and staying in by obedience, Paul's opponents were not trying to earn salvation,
+and what he refuses is the practices that kept gentiles out. That is where its
+critics engage it.
 
 It takes no position on the yoke of Acts 15:10, or on what believing is in John
 6:29. Each of those lines keeps its step and loses its disputed reading, so the

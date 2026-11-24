@@ -119,7 +119,8 @@ def calvinAgainstBaptismInJohnThreeFive : Source :=
 the water is natural birth, or Ezekiel's cleansing and not baptism, or the
 Spirit's own cleansing, the verse does not require water baptism. No reader was
 found who holds one of these readings and still requires baptism from the verse.
-Those who require it deny the reading (Trent, Session VII, On Baptism, canon 2). -/
+Those who require it deny the reading: Trent condemns whoever "wrests, to some
+sort of metaphor" the water of John 3:5 (Session VII, On Baptism, canon 2). -/
 def readingsWithoutTheWater : Source :=
   { primary := .work oliverWaterJohn .whole
   , supporting := [.work calvinInstitutes (.sectionRef "IV.xvi.25")]
@@ -143,7 +144,8 @@ def augustineOnTheThief : Source :=
 the desire for baptism brings about its fruits, the washing itself is not
 necessary for salvation: the Catechism says it "assures them the salvation that
 they were not able to receive through the sacrament" (1259). Feeney accepts that
-the desire justifies and denies that it saves. So what he denies is the starting
+the desire justifies and denies that it saves; his own words for that denial
+have not been read and checked here. So what he denies is the starting
 point, this saving fruit as the Catechism states it, and not the step. -/
 def catechismOnDesire : Source :=
   { primary := .work catechismCatholicChurch (.sectionRef "1259")
@@ -204,7 +206,10 @@ def campbellOnDeliverance : Source :=
 
 /-- The Reformed reading of "works of the law" (ἔργα νόμου), cited to the tradition
 that holds it and to those who defend it today against the New Perspective. It
-is `disputed` because the New Perspective denies it; see `newPerspectiveCite`. -/
+is `disputed` because the New Perspective denies it: Dunn reads "works of the
+law" as the practices that marked Israel off from gentiles, following Sanders'
+account of Judaism as entry by grace and staying in by obedience (see
+`newPerspectiveCite`). -/
 def reformedWorksOfLawSource : Source :=
   { primary := .work calvinInstitutes (.sectionRef "III.xi.19")
   , supporting :=

@@ -38,12 +38,14 @@ them their sin" (§22), without a word on the sense of the verb.
 
 Trent denies one step, which the Westminster Confession states (XI.1): that a
 verdict given on the ground of Christ's finished work leaves no room for the
-renewal worked in us to be part of justification. A modern Catholic text says
-the same as Trent. The same paragraph of the *Joint Declaration* holds that
-forgiveness and the love the Spirit brings about are "not to be separated", and
-its Annex defines justification as "forgiveness of sins and being made
-righteous" (Annex 2 A). Gorman reads the verdict as a word that does what it
-says and changes the person.
+renewal worked in us to be part of justification. Trent denies it because
+justification is itself "not remission of sins merely, but also the
+sanctification and renewal of the inward man" (Session VI, ch. 7). A modern
+Catholic text says the same as Trent. The same paragraph of the *Joint
+Declaration* holds that forgiveness and the love the Spirit brings about are
+"not to be separated", and its Annex defines justification as "forgiveness of
+sins and being made righteous" (Annex 2 A). Gorman reads the verdict as a word
+that does what it says and changes the person.
 
 ### Where they part
 

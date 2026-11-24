@@ -151,7 +151,11 @@ def fathersCase : ArgumentPackage Claim :=
 /-- **Who draws the step to renewal.** Augustine himself: "what else does the
 phrase 'being justified' signify than being made righteous" (*On the Spirit and
 the Letter*, ch. 45). Rated `disputed`, because the Reformers grant that
-Augustine wrote it and deny that justification therefore includes renewal. -/
+Augustine wrote it and deny that justification therefore includes renewal.
+Calvin's reason is that renewal belongs to sanctification: "Even the sentiment
+of Augustine, or at least his mode of expressing it, cannot be entirely approved
+of", because "he classes the grace by which we are regenerated to newness of
+life under the head of sanctification" (*Institutes* III.xi.15). -/
 def augustineStep : Source :=
   { primary := .work augustineSpiritAndLetter (.sectionRef "ch. 45")
   , tradition := .christianHistoricalGrammatical
