@@ -601,6 +601,76 @@ inductive Claim
   meaning" (Kertelge, quoted by Fitzmyer). A claim about what God's declaration
   does. -/
   | godsVerdictIsEffective
+  /-- Romans 1:16–17: the gospel is God's power for salvation to everyone who
+  believes, for in it God's righteousness is revealed, "from faith to faith", as
+  it is written, "the righteous by faith will live". -/
+  | romans1_16_17
+  /-- Acts 13:39: by Jesus everyone who believes is justified from everything
+  from which the law of Moses could not justify. Paul preaching at Pisidian
+  Antioch, as Luke reports him. -/
+  | acts13_39
+  /-- 1 Corinthians 13:2: though one has all faith, so as to remove mountains, and
+  has not love, he is nothing. -/
+  | firstCorinthians13_2
+  /-- Galatians 2:4–5: Paul did not yield to the false brothers for a moment,
+  "so that the truth of the gospel would remain" with the Galatians. -/
+  | galatians2_4_5
+  /-- Galatians 5:6: in Christ Jesus neither circumcision nor uncircumcision
+  counts for anything, but faith working through love. -/
+  | galatians5_6
+  /-- The faith that justifies is faith formed by love (*fides caritate
+  formata*): faith justifies as love gives it life, and not without it. The
+  schoolmen's reading of Galatians 5:6, which the Confutation of 1530 holds and
+  Luther denies. -/
+  | justifyingFaithIsFormedByCharity
+  /-- Titus 2:14: Christ gave Himself for us to redeem us and to purify for
+  Himself a people of His own, zealous for good works. -/
+  | titus2_14
+  /-- Philippians 3:8–9: Paul counts everything loss, to be found in Christ, not
+  having a righteousness of his own from the law, but the righteousness from God
+  that comes through faith in Christ. -/
+  | philippians3_8_9
+  /-- Before God the believer rests on the righteousness of Christ, given and
+  counted to him, and not on the righteousness worked in him, which is begun and
+  imperfect. The double righteousness of Regensburg (1541) and Contarini. -/
+  | restsOnChristsImputedRighteousness
+  /-- "Faith" (πίστις) keeps one sense between Romans 3:28 and Ephesians 2:8–9.
+  The *Apology* sets the two verses together as one argument for faith alone, so
+  it needs this. -/
+  | faithKeepsItsSenseInRomansAndEphesians
+  /-- "Works" (ἔργα) keeps one sense between Romans 4:4–5 and Romans 11:6.
+  Zwingli sets the two together as one argument that salvation is not of works,
+  so he needs this. -/
+  | worksKeepsItsSenseInRomans4And11
+  /-- The Regensburg article's own words, May 1541: "the justifying faith is that
+  faith which is efficacious through love" (col. 200). A claim about what the
+  article says, before it is read either way. -/
+  | faithEfficaciousThroughLove
+  /-- The justified have a righteousness of their own, inherent in them, by which
+  they begin to be righteous, beside Christ's righteousness given to them.
+  Contarini's "double righteousness" (1541). -/
+  | justifiedHaveAnInherentRighteousness
+  /-- Romans 5:5: God's love has been poured into our hearts through the Holy
+  Spirit. -/
+  | romans5_5
+  /-- 2 Peter 1:4: that through His promises we may become participants of the
+  divine nature. -/
+  | secondPeter1_4
+  /-- Romans 6:17–18: those who were slaves of sin have become obedient from the
+  heart, and, set free from sin, have become enslaved to righteousness. -/
+  | romans6_17_18
+  /-- 1 Corinthians 7:22: whoever was free when called is a slave belonging to
+  Christ. -/
+  | firstCorinthians7_22
+  /-- 1 Timothy 1:5: the aim of the instruction is love that comes from a pure
+  heart, a good conscience, and sincere faith. -/
+  | firstTimothy1_5
+  /-- Galatians 5:22: the fruit of the Spirit is love. -/
+  | galatians5_22
+  /-- Romans 3:10: "There is no one who is righteous, not even one." -/
+  | romans3_10
+  /-- Psalm 143:2: "no one living is righteous before you." -/
+  | psalm143_2
   /-- Before Trent, readers of Paul in the East and the West wrote that the
   ungodly are justified by faith alone: Hilary of Poitiers ("faith alone
   justifies"), Basil of Caesarea, Ambrosiaster ("justified by faith alone, a gift

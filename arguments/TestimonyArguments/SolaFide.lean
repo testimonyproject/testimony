@@ -10,6 +10,7 @@ import TestimonyArguments.SolaFide.Definition
 import TestimonyArguments.SolaFide.Hearings
 import TestimonyArguments.SolaFide.BeforeTrent
 import TestimonyArguments.SolaFide.FaithAndCharity
+import TestimonyArguments.SolaFide.Reformation
 import TestimonyArguments.SolaFide.JesusWords
 import TestimonyArguments.SolaFide.Baptism
 import TestimonyArguments.SolaFide.James

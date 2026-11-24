@@ -1,0 +1,34 @@
+# PR #382: Luther's contemporaries, 1521-1541, as a chapter of sola fide.
+# The chapter adds twenty-two sola fide claims (the texts its voices argue from,
+# faith formed by charity, Regensburg's double righteousness and efficacy, and
+# two stated same-sense conditions) and a seventeen-party dispute of its own.
+
+[[accept]]
+benchmark = "satisfied_by: the Pauline case"
+metric = "time"
+up_to = 0.30
+reason = "The sola fide claim type is twenty-two claims larger, so each valuation over it costs more to reduce; the Pauline case itself is unchanged. CI measured +12% with twelve claims, +21.6% with twenty-two"
+
+[[accept]]
+benchmark = "satisfied_by: Trent grants the subjective genitive"
+metric = "time"
+up_to = 0.30
+reason = "The sola fide claim type is twenty-two claims larger, so each valuation over it costs more to reduce; Trent's case itself is unchanged. CI measured +14.3% with twelve claims, +21.8% with twenty-two"
+
+[[accept]]
+benchmark = "checks: AIF, every dispute"
+metric = "time"
+up_to = 0.15
+reason = "One more dispute to check: the Reformation exchange, seventeen parties, 83 edges in its AIF graph. CI measured +5.2% to +8.8%"
+
+[[accept]]
+benchmark = "checks: postulates, every package"
+metric = "time"
+up_to = 0.12
+reason = "Thirteen new sola fide packages, each checked for a model with its postulates (108 packages, from 95 on main). CI measured +5.5%"
+
+[[accept]]
+benchmark = "checks: ontology"
+metric = "time"
+up_to = 0.12
+reason = "Twelve new sola fide claims, two with same-sense meanings the ontology check reads in every argument line. CI measured +6.7%"

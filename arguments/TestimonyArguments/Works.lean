@@ -5177,6 +5177,491 @@ know "the story of the birth in Bethlehem" (p. 97). -/
   , place := some "London"
   , edition := some "second edition" }
 
+/-! ### The Reformation's case: Luther's contemporaries, 1521–1546
+
+Added for `SolaFide.Reformation`. Each work is cited through the printed edition
+its words were read in, on the Internet Archive's scan, and dated by the year it
+was written or first printed, so that the exchange is told in the order it
+happened. -/
+
+/-- The 1521 *Loci communes* in Plitt's text of the first edition, third edition
+revised by Theodor Kolde. Read in the Internet Archive's scan. -/
+@[bib_entry] def plittKoldeLoci : BibEntry := .book
+  { core :=
+      { key := "plitt-kolde-loci-1900"
+      , role := .text
+      , contributors :=
+          { editors := [.person "G. L." "Plitt", .person "Theodor" "Kolde"] }
+      , title := "Die Loci communes Philipp Melanchthons in ihrer Urgestalt"
+      , year := some { value := 1900 }
+      , identifiers :=
+          [.url "https://archive.org/details/dielocicommunesi00mela" (some "2026-11-23")] }
+  , publisher := "A. Deichert'sche Verlagsbuchhandlung Nachf. (Georg Böhme)"
+  , place := some "Leipzig"
+  , edition := some "third edition" }
+
+/-- Melanchthon's *Loci communes* of 1521, the first Protestant handbook of
+doctrine, for the locus on justification and faith: "nothing of our works,
+however good they seem or are, is righteousness, but faith alone in the mercy and
+grace of God in Jesus Christ is righteousness" (p. 164), and "therefore faith
+alone justifies" (*Justificat igitur sola fides*, p. 168). Read in Plitt and
+Kolde's Latin; the renderings are the library's own. Kolde's introduction says
+the book appeared in December 1521 (p. 51). -/
+@[bib_entry] def melanchthonLoci : BibEntry := .ancientWork
+  { core :=
+      { key := "melanchthon-loci-communes-1521"
+      , role := .witness
+      , contributors := { authors := [.person "Philipp" "Melanchthon"] }
+      , title := "Loci communes" }
+  , originalTitle := some "Loci communes rerum theologicarum"
+  , composed := some { value := 1521 }
+  , editionUsed := some "plitt-kolde-loci-1900" }
+
+/-- The Augsburg Confession, presented to the Emperor at Augsburg on June 25,
+1530 (Triglot introduction, pp. 22–23). Article IV: men "are freely justified for
+Christ's sake, through faith" (pp. 44–45); Article VI quotes Ambrose: "he who
+believes in Christ is saved, freely receiving remission of sins, without works,
+by faith alone" (pp. 46–47). Read in the Triglot's Latin and English. -/
+@[bib_entry] def augsburgConfession : BibEntry := .ancientWork
+  { core :=
+      { key := "augsburg-confession-1530"
+      , role := .authority
+      , contributors := { authors := [.person "Philipp" "Melanchthon"] }
+      , title := "The Augsburg Confession" }
+  , originalTitle := some "Confessio Augustana"
+  , composed := some { value := 1530 }
+  , editionUsed := some "concordia-triglotta-1921" }
+
+/-- Jacobs's *Book of Concord*, volume 2, which prints in English the Roman
+Confutation of the Augsburg Confession among "the non-Lutheran confessions of
+Augsburg". Read in the Internet Archive's scan, whose copyright page reads
+1888. -/
+@[bib_entry] def jacobsBookOfConcord2 : BibEntry := .book
+  { core :=
+      { key := "jacobs-book-of-concord-2-1888"
+      , role := .text
+      , contributors := { editors := [.person "Henry Eyster" "Jacobs"] }
+      , title := "The Book of Concord"
+      , subtitle := some "Volume II: Historical Introduction, Appendixes and Indexes"
+      , year := some { value := 1888 }
+      , identifiers :=
+          [.url "https://archive.org/details/jacobs_introductions" (some "2026-11-23")] }
+  , publisher := "G. W. Frederick"
+  , place := some "Philadelphia"
+  , volume := some "2" }
+
+/-- The Roman Confutation of the Augsburg Confession, the Catholic theologians'
+answer read to the Diet on August 3, 1530 (Jacobs, p. 209). On Article VI: "their
+ascription of justification to faith alone is diametrically opposite the truth
+of the Gospel, by which works are not excluded", and from 1 Corinthians 13:2,
+"Here St. Paul certifies to the princes and the entire Church that faith alone
+does not justify" (pp. 212–213). On Article IV: "it is entirely contrary to Holy
+Scripture to deny that our works are meritorious" (p. 211). Read in Jacobs's
+English. -/
+@[bib_entry] def romanConfutation : BibEntry := .ancientWork
+  { core :=
+      { key := "roman-confutation-1530"
+      , role := .authority
+      , contributors :=
+          { authors := [.corporate "Catholic theologians at the Diet of Augsburg"] }
+      , title := "The Roman Confutation of the Augsburg Confession" }
+  , originalTitle := some "Confutatio Pontificia"
+  , composed := some { value := 1530 }
+  , editionUsed := some "jacobs-book-of-concord-2-1888" }
+
+/-- Melanchthon's *Apology of the Augsburg Confession*, his answer to the
+Confutation, printed in 1531. Article IV: "The particle alone offends some,
+although even Paul says, Rom. 3, 28" (IV.73), and "Therefore by faith alone we
+are justified" (IV.77–78), Triglot pp. 140–143. On James 2:24: "If the
+adversaries do not attach their own opinions concerning the merits of works,
+the words of James have in them nothing that is of disadvantage" (pp. 188–189).
+Read in the Triglot's Latin and English. -/
+@[bib_entry] def melanchthonApology : BibEntry := .ancientWork
+  { core :=
+      { key := "melanchthon-apology-1531"
+      , role := .authority
+      , contributors := { authors := [.person "Philipp" "Melanchthon"] }
+      , title := "Apology of the Augsburg Confession" }
+  , originalTitle := some "Apologia Confessionis Augustanae"
+  , composed := some { value := 1531 }
+  , editionUsed := some "concordia-triglotta-1921" }
+
+/-- *The Latin Works of Huldreich Zwingli*, volume 3, which prints in English
+the *Commentary on True and False Religion*. Read in the Internet Archive's scan
+(whose record dates it 1912; the volume's own copyright line reads 1929). -/
+@[bib_entry] def hellerZwingliLatinWorks3 : BibEntry := .book
+  { core :=
+      { key := "heller-zwingli-latin-works-3-1929"
+      , role := .text
+      , contributors := { editors := [.person "Clarence Nevin" "Heller"] }
+      , title := "The Latin Works of Huldreich Zwingli"
+      , subtitle := some "Volume III"
+      , year := some { value := 1929 }
+      , identifiers :=
+          [.url "https://archive.org/details/latinworkscorres03zwin" (some "2026-11-23")] }
+  , publisher := "The Heidelberg Press"
+  , place := some "Philadelphia"
+  , volume := some "3" }
+
+/-- Zwingli's *Commentary on True and False Religion*, printed at Zurich by
+Froschauer in March 1525, for the end of its section on repentance: Paul "says
+that Christ is of no use to us if righteousness come from our works, Gal. 2:16;
+and that grace through Christ is of no avail if salvation be due to works,
+Rom. 4:4 and 11:6", so that believers "through faith … are sure of salvation",
+their sins "not imputed to them as such because of their faith" (Heller, p. 137).
+Read in Heller's English. -/
+@[bib_entry] def zwingliTrueAndFalseReligion : BibEntry := .ancientWork
+  { core :=
+      { key := "zwingli-true-false-religion-1525"
+      , role := .witness
+      , contributors := { authors := [.person "Huldrych" "Zwingli"] }
+      , title := "Commentary on True and False Religion" }
+  , originalTitle := some "De vera et falsa religione commentarius"
+  , composed := some { value := 1525 }
+  , editionUsed := some "heller-zwingli-latin-works-3-1929" }
+
+/-- Tyndale's *Doctrinal Treatises*, edited for the Parker Society by Henry
+Walter, with the spelling modernised. Read in the Internet Archive's scan. -/
+@[bib_entry] def walterTyndaleDoctrinal : BibEntry := .book
+  { core :=
+      { key := "walter-tyndale-doctrinal-treatises-1848"
+      , role := .text
+      , contributors := { editors := [.person "Henry" "Walter"] }
+      , title :=
+          "Doctrinal Treatises and Introductions to Different Portions of the Holy Scriptures"
+      , year := some { value := 1848 }
+      , identifiers :=
+          [.url "https://archive.org/details/doctrinaltreatis00tynduoft" (some "2026-11-23")] }
+  , publisher := "Cambridge University Press for the Parker Society"
+  , place := some "Cambridge" }
+
+/-- Tyndale's *Parable of the Wicked Mammon*, printed at Marburg by Hans Luft,
+May 8, 1528 (Walter's notice). Its thesis: "That faith only before all works and
+without all merits, but Christ's only, justifieth and setteth us at peace with
+God, is proved by Paul in the first chapter to the Romans" (pp. 46–47). On
+James: "a man inwardly in the heart, and before God, is righteous and good
+through faith only, before all works: notwithstanding, yet outwardly and openly
+before the people … is he righteous through the work" (p. 61), and "Faith
+therefore justifieth in the heart, and before God; and the deeds justify
+outwardly before the world" (p. 119). Read in Walter's edition. -/
+@[bib_entry] def tyndaleWickedMammon : BibEntry := .ancientWork
+  { core :=
+      { key := "tyndale-wicked-mammon-1528"
+      , role := .witness
+      , contributors := { authors := [.person "William" "Tyndale"] }
+      , title := "The Parable of the Wicked Mammon" }
+  , composed := some { value := 1528 }
+  , editionUsed := some "walter-tyndale-doctrinal-treatises-1848" }
+
+/-- The 1573 folio of Tyndale, Frith and Barnes printed by John Day, whose
+Barnes section is paginated on its own. Read in the Internet Archive's scan of
+the Boston Public Library's copy. -/
+@[bib_entry] def dayWholeWorkes : BibEntry := .book
+  { core :=
+      { key := "day-whole-workes-tyndall-frith-barnes-1573"
+      , role := .text
+      , contributors := {}
+      , title := "The Whole Workes of W. Tyndall, Iohn Frith, and Doct. Barnes"
+      , year := some { value := 1573 }
+      , identifiers :=
+          [.url "https://archive.org/details/wholeworkesofwty00tynd" (some "2026-11-23")] }
+  , publisher := "Iohn Daye"
+  , place := some "London" }
+
+/-- Robert Barnes's article "Onely fayth iustifieth before God", from his
+*Supplication* to Henry VIII: "they proue that fayth in Iesus Christ, onely
+iustifieth afore God" (p. 226), citing Acts 13:39, "by hym are all that beleue,
+iustified from all thynges"; and for the fathers, Ambrose on Romans 3, "they
+doing nothing, nor nothing deseruing, alonely by fayth are iustified by the gift
+of God" (p. 230). Read in Day's folio of 1573, in Day's spelling. Catalogue
+records date the *Supplication* to 1531 (STC 1470), revised 1534 (STC 1471);
+which printing Day follows was not read. -/
+@[bib_entry] def barnesSupplication : BibEntry := .ancientWork
+  { core :=
+      { key := "barnes-supplication-1531"
+      , role := .witness
+      , contributors := { authors := [.person "Robert" "Barnes"] }
+      , title := "A Supplication unto King Henry VIII" }
+  , composed := some { value := 1531, approximate := true }
+  , editionUsed := some "day-whole-workes-tyndall-frith-barnes-1573" }
+
+/-- Luther's commentary on Galatians in the English of 1575, in the 1839 London
+edition, prefixed by Erasmus Middleton's life of Luther. Read in the Internet Archive's scan of
+Princeton Theological Seminary's copy. -/
+@[bib_entry] def blakeLutherGalatians : BibEntry := .book
+  { core :=
+      { key := "luther-galatians-blake-1839"
+      , role := .text
+      , contributors := { authors := [.person "Martin" "Luther"] }
+      , title := "A Commentary on St. Paul's Epistle to the Galatians"
+      , year := some { value := 1839 }
+      , identifiers :=
+          [.url "https://archive.org/details/commentaryonst00luth" (some "2026-11-23")] }
+  , publisher := "B. Blake"
+  , place := some "London" }
+
+/-- Luther's lectures of 1535 on Galatians, for 2:4–5: "the truth of the gospel
+is, that our righteousness cometh by faith alone, without the works of the law.
+The corruption, or falsehood of the gospel is, that we are justified by faith,
+but not without the works of the law. … Even so do our Papists at this day. For
+they say, that we must believe in Christ, and that faith is the foundation of our
+salvation: but it justifieth not, except it be furnished with charity" (p. 64).
+Read in the English of 1575, in Blake's edition. -/
+@[bib_entry] def lutherGalatians1535 : BibEntry := .ancientWork
+  { core :=
+      { key := "luther-galatians-1535"
+      , role := .witness
+      , contributors := { authors := [.person "Martin" "Luther"] }
+      , title := "Lectures on Galatians" }
+  , originalTitle := some "In epistolam S. Pauli ad Galatas commentarius"
+  , composed := some { value := 1535 }
+  , editionUsed := some "luther-galatians-blake-1839" }
+
+/-- The 1536 printing of Eck's *Enchiridion*, which Eck had revised for the
+seventh time, as its title page says. Read in the Internet Archive's scan of a
+Google Books copy; the imprint was not read. -/
+@[bib_entry] def eckEnchiridion1536 : BibEntry := .webPage
+  { core :=
+      { key := "eck-enchiridion-scan-1536"
+      , role := .text
+      , contributors := { authors := [.person "Johann" "Eck"] }
+      , title := "Enchiridion locorum communium adversus Lutherum et alios hostes Ecclesiae"
+      , year := some { value := 1536 }
+      , identifiers :=
+          [.url "https://archive.org/details/bub_gb_Iw5cAAAAQAAJ" (some "2026-11-23")] }
+  , site := some "Internet Archive" }
+
+/-- Eck's *Enchiridion*, the Catholic handbook against Luther, first printed in
+1525, for its chapter on faith and works: "that faith does not suffice without
+works" (*Fidem non sufficere sine operibus*, Proposition I, fol. 45r); that a
+faith without works is empty, from James 2:14–20 (Proposition III, fol. 48v);
+that the heretic who takes "the righteous shall live by faith" as "by faith
+alone" "tears and falsifies the text, since it nowhere says that the righteous
+lives by faith alone" (fol. 50v); and James 2:24, "a man is justified by works,
+and not by faith only" (fol. 51r). Read in the Latin of the 1536 printing; the
+translations are the library's own. -/
+@[bib_entry] def eckEnchiridion : BibEntry := .ancientWork
+  { core :=
+      { key := "eck-enchiridion-1525"
+      , role := .witness
+      , contributors := { authors := [.person "Johann" "Eck"] }
+      , title := "Handbook of Commonplaces against Luther"
+      , note := some "First printed 1525; read in the revised printing of 1536." }
+  , originalTitle := some "Enchiridion locorum communium adversus Lutherum"
+  , composed := some { value := 1525 }
+  , editionUsed := some "eck-enchiridion-scan-1536" }
+
+/-- Cajetan's treatises against the Lutherans, in a printing of 1536. Read in the
+Internet Archive's scan of a Google Books copy; the imprint was not read. -/
+@[bib_entry] def cajetanAdversusLutheranos : BibEntry := .webPage
+  { core :=
+      { key := "cajetan-adversus-lutheranos-scan-1536"
+      , role := .text
+      , contributors := { authors := [.person "Tommaso de Vio" "Cajetan"] }
+      , title := "Adversus Lutheranos tractatus"
+      , year := some { value := 1536 }
+      , identifiers :=
+          [.url "https://archive.org/details/bub_gb_sKiRRxO2LuoC" (some "2026-11-23")] }
+  , site := some "Internet Archive" }
+
+/-- Cardinal Cajetan's *On Faith and Works*, dated at Rome, May 13, 1532, in its
+colophon. Chapter 4: "the common teaching of the church is most true, that the
+remission of sins comes not through unformed faith but through faith formed by
+charity, so that the authoritative texts which say we are justified by faith
+are understood, to the letter, of faith formed by divine friendship, which we
+call charity"; and of Galatians 5:6, Paul "clearly ascribes power in Christ not
+to faith of any kind but to faith working through love" (sig. A4r). Read in the
+Latin of the 1536 printing; the translation is the library's own. -/
+@[bib_entry] def cajetanFaithAndWorks : BibEntry := .ancientWork
+  { core :=
+      { key := "cajetan-de-fide-et-operibus-1532"
+      , role := .witness
+      , contributors := { authors := [.person "Tommaso de Vio" "Cajetan"] }
+      , title := "On Faith and Works" }
+  , originalTitle := some "De fide et operibus"
+  , composed := some { value := 1532 }
+  , editionUsed := some "cajetan-adversus-lutheranos-scan-1536" }
+
+/-- Calvin's *Tracts relating to the Reformation*, volume 1, in Henry
+Beveridge's translation, which prints Sadoleto's letter to the Genevans
+(pp. 3–22) before Calvin's reply. Read in the Internet Archive's scan. -/
+@[bib_entry] def beveridgeCalvinTracts1 : BibEntry := .book
+  { core :=
+      { key := "beveridge-calvin-tracts-1-1844"
+      , role := .text
+      , contributors := { translators := [.person "Henry" "Beveridge"] }
+      , title := "Tracts relating to the Reformation"
+      , subtitle := some "Volume 1"
+      , year := some { value := 1844 }
+      , identifiers :=
+          [.url "https://archive.org/details/tractsrelatingto01calv" (some "2026-11-23")] }
+  , publisher := "Calvin Translation Society"
+  , place := some "Edinburgh"
+  , volume := some "1" }
+
+/-- Cardinal Jacopo Sadoleto's letter to the senate and people of Geneva, dated
+at Carpentras, March 18, 1539 (Beveridge, p. 22): "we obtain this blessing of
+complete and perpetual salvation by faith alone in God and in Jesus Christ. When
+I say by faith alone, I do not mean, as those inventors of novelties do, a mere
+credulity and confidence in God … For faith is a term of full and ample
+signification, and not only includes in it credulity and confidence, but also
+the hope and desire of obeying God, together with love … When we say, then, that
+we can be saved by faith alone in God and Jesus Christ, we hold that in this very
+faith love is essentially comprehended as the chief and primary cause of our
+salvation" (pp. 9–10). Read in Beveridge's English. -/
+@[bib_entry] def sadoletoLetterToGenevans : BibEntry := .ancientWork
+  { core :=
+      { key := "sadoleto-letter-genevans-1539"
+      , role := .witness
+      , contributors := { authors := [.person "Jacopo" "Sadoleto"] }
+      , title := "Letter to the Senate and People of Geneva" }
+  , composed := some { value := 1539 }
+  , editionUsed := some "beveridge-calvin-tracts-1-1844" }
+
+/-- Calvin's reply to Sadoleto, dated September 1, 1539 (Beveridge, p. 68): "But
+faith, you say, is a general term, and has a larger signification. I answer,
+that Paul, whenever he attributes to it the power of justifying, at the same time
+restricts it to a gratuitous promise of the divine favour" (pp. 42–43); "We deny
+that good works have any share in justification, but we claim full authority for
+them in the lives of the righteous" (p. 43); and "I was amazed when I read your
+assertion, that love is the first and chief cause of our salvation" (p. 44).
+He argues from Romans 4:6–8. Read in Beveridge's English. -/
+@[bib_entry] def calvinReplyToSadoleto : BibEntry := .ancientWork
+  { core :=
+      { key := "calvin-reply-sadoleto-1539"
+      , role := .witness
+      , contributors := { authors := [.person "John" "Calvin"] }
+      , title := "Reply to Sadoleto" }
+  , originalTitle := some "Responsio ad Sadoleti epistolam"
+  , composed := some { value := 1539 }
+  , editionUsed := some "beveridge-calvin-tracts-1-1844" }
+
+/-- Melanchthon's works in the *Corpus Reformatorum*, volume 4, edited by
+Bretschneider, which prints the Regensburg book's article on justification as
+document no. 2207. Read in the Internet Archive's scan. -/
+@[bib_entry] def corpusReformatorum4 : BibEntry := .book
+  { core :=
+      { key := "corpus-reformatorum-4"
+      , role := .text
+      , contributors := { editors := [.person "Karl Gottlieb" "Bretschneider"] }
+      , title := "Philippi Melanthonis Opera quae supersunt omnia"
+      , subtitle := some "Corpus Reformatorum, volume 4"
+      , identifiers :=
+          [.url "https://archive.org/details/philippimelantho04mela" (some "2026-11-23")] }
+  , publisher := "C. A. Schwetschke"
+  , place := some "Halle"
+  , volume := some "4" }
+
+/-- Article V of the Regensburg book, "On the justification of man", the formula
+the Catholic and Protestant speakers at the colloquy of Regensburg accepted in
+May 1541 (the editor's note, col. 198, citing Melanchthon's letter of May 5):
+"it is a firm and sound doctrine that the sinner is justified through a living
+and efficacious faith" (col. 199); "the justifying faith is that faith which is
+efficacious through love; but meanwhile this is true, that we are justified by
+this faith in so far as it lays hold of the mercy and righteousness which is
+imputed to us for Christ's sake" (col. 200); and the faithful soul "does not
+rest on" the righteousness inherent in it, "but on the righteousness of Christ
+alone, given to us" (col. 200). Read in the Latin; the translations are the
+library's own. -/
+@[bib_entry] def regensburgArticleFive : BibEntry := .ancientWork
+  { core :=
+      { key := "regensburg-article-v-1541"
+      , role := .authority
+      , contributors := { authors := [.corporate "Colloquy of Regensburg"] }
+      , title := "On the Justification of Man (Regensburg book, article 5)" }
+  , originalTitle := some "De iustificatione hominis"
+  , composed := some { value := 1541 }
+  , editionUsed := some "corpus-reformatorum-4" }
+
+/-- Contarini's collected works, printed at Paris by Sébastien Nivelle in 1571.
+Read in the Internet Archive's scan of a Google Books copy. -/
+@[bib_entry] def contariniOpera : BibEntry := .book
+  { core :=
+      { key := "contarini-opera-1571"
+      , role := .text
+      , contributors := { authors := [.person "Gasparo" "Contarini"] }
+      , title := "Gasparis Contareni cardinalis Opera"
+      , year := some { value := 1571 }
+      , identifiers :=
+          [.url "https://archive.org/details/bub_gb_GvKfPdT-aogC" (some "2026-11-23")] }
+  , publisher := "Sébastien Nivelle"
+  , place := some "Paris" }
+
+/-- Cardinal Gasparo Contarini's letter on justification, written at Regensburg
+after the article was agreed and dated there May 25, 1541 (p. 596): "we attain a
+double righteousness, one inherent in us … the other not inherent, but given to
+us with Christ, the righteousness of Christ and all His merit; both are given to
+us at the same time, and we attain both through faith" (p. 591); "the faith that
+justifies is faith formed by charity, or efficacious through charity", and "we
+ought to rest, rest I say as on a firm thing that surely holds us up, on the
+righteousness of Christ given to us, and not on the holiness and grace inherent
+in us" (p. 592), citing Philippians 3:8–9. Read in the Latin of the 1571 *Opera*;
+the translations are the library's own. -/
+@[bib_entry] def contariniOnJustification : BibEntry := .ancientWork
+  { core :=
+      { key := "contarini-epistola-de-iustificatione-1541"
+      , role := .witness
+      , contributors := { authors := [.person "Gasparo" "Contarini"] }
+      , title := "Letter on Justification" }
+  , originalTitle := some "Epistola de iustificatione"
+  , composed := some { value := 1541 }
+  , editionUsed := some "contarini-opera-1571" }
+
+/-- *Letters of John Calvin*, volume 1, compiled from the original manuscripts and
+edited by Jules Bonnet, translated from the Latin and French, printed at
+Philadelphia by the Presbyterian Board of Publication (entered 1858). Read in the
+Internet Archive's scan of Princeton Theological Seminary's copy. -/
+@[bib_entry] def bonnetCalvinLetters1 : BibEntry := .book
+  { core :=
+      { key := "bonnet-letters-of-calvin-1-1858"
+      , role := .text
+      , contributors := { editors := [.person "Jules" "Bonnet"] }
+      , title := "Letters of John Calvin"
+      , subtitle := some "Volume 1"
+      , year := some { value := 1858 }
+      , identifiers :=
+          [.url "https://archive.org/details/lettersofjohncal01calv" (some "2026-11-24")] }
+  , publisher := "Presbyterian Board of Publication"
+  , place := some "Philadelphia"
+  , volume := some "1" }
+
+/-- Calvin's letter to Farel from Regensburg, May 11, 1541 (Bonnet, letter 67,
+pp. 260–261), on the article on justification: "You will be astonished, I am
+sure, that our opponents have yielded so much, when you read the extracted
+copy"; "Our friends have thus retained also the substance of the true doctrine,
+so that nothing can be comprehended within it which is not to be found in our
+writings" (p. 260). Read in Bonnet's English. -/
+@[bib_entry] def calvinToFarelOnRegensburg : BibEntry := .ancientWork
+  { core :=
+      { key := "calvin-to-farel-1541-05-11"
+      , role := .witness
+      , contributors := { authors := [.person "John" "Calvin"] }
+      , title := "Letter to Farel from Regensburg, May 11, 1541" }
+  , composed := some { value := 1541 }
+  , editionUsed := some "bonnet-letters-of-calvin-1-1858" }
+
+/-- The Protestant estates' answer to the Emperor on the Regensburg book, given
+him on July 12, 1541, which Melanchthon wrote (*Corpus Reformatorum* 4, nos.
+2300–2302, the editor's note at col. 476). With it go the preachers' notes on
+the agreed articles, "In conciliatis articulis annotata aut omissa" (col. 483).
+On the article on justification: some read "efficacious faith" as "faith with
+works"; "ours, when they said 'living or efficacious faith', meant that they
+spoke not of a bare knowledge of the history, … but of trust laying hold of the
+mercy promised for Christ's sake"; "faith itself is a burning motion, consoling,
+obeying Christ, and giving life"; so "either this declaration should be added,
+or the word 'efficacious' taken out" (col. 485). Against those who think "their
+own purity or perfection is the price of eternal life", they cite "no one living
+is righteous before you" (Psalm 143:2, col. 486). Read in the Latin; the
+translations are the library's own. -/
+@[bib_entry] def protestantsOnTheRegensburgBook : BibEntry := .ancientWork
+  { core :=
+      { key := "protestants-on-regensburg-book-1541"
+      , role := .authority
+      , contributors := { authors := [.person "Philipp" "Melanchthon"] }
+      , title := "The Protestants' Answer to the Emperor on the Regensburg Book" }
+  , originalTitle := some "Protestantes ad Caesarem de libro Ratisbonensi"
+  , composed := some { value := 1541 }
+  , editionUsed := some "corpus-reformatorum-4" }
 /-! ### Before Trent: the fathers and schoolmen on faith alone
 
 Added for `SolaFide.BeforeTrent`. Each father is cited through the edition his

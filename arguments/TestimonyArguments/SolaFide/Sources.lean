@@ -1100,6 +1100,174 @@ def baseCite : Claim → AtomMeta
         { primary := .work fitzmyerRomans (.pages 118 119)
         , tradition := .romanCatholic
         , confidence := .disputed } }
+  | .romans1_16_17 =>
+    { label := "Romans 1:16–17: the gospel is God's power for salvation to everyone who believes"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.romans, 1, 16, 1, 17⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .acts13_39 =>
+    { label := "Acts 13:39: everyone who believes is justified by Jesus"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.acts, 13, 39⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .firstCorinthians13_2 =>
+    { label := "1 Corinthians 13:2: all faith without love is nothing"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.firstCorinthians, 13, 2⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .galatians2_4_5 =>
+    { label := "Galatians 2:4–5: Paul did not yield, so that the truth of the gospel would remain"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.galatians, 2, 4, 2, 5⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .galatians5_6 =>
+    { label := "Galatians 5:6: what counts in Christ is faith working through love"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.galatians, 5, 6⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .justifyingFaithIsFormedByCharity =>
+    { label := "The faith that justifies is faith formed by love"
+    , kind := .theological
+      -- The Confutation of 1530, to Article V: "not faith alone ... but faith
+      -- which worketh by love" (Jacobs, p. 212).
+    , source :=
+        { primary := .work romanConfutation (.page 212)
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .titus2_14 =>
+    { label := "Titus 2:14: Christ purifies a people zealous for good works"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.titus, 2, 14⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .philippians3_8_9 =>
+    { label := "Philippians 3:8–9: not a righteousness of my own, but the righteousness from God"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.philippians, 3, 8, 3, 9⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .restsOnChristsImputedRighteousness =>
+    { label := "Before God the believer rests on Christ's righteousness given, not on his own"
+    , kind := .theological
+      -- `disputed`: Trent grants the texts and anathematises justification "by
+      -- the sole imputation of the justice of Christ" (Session VI, canon 11).
+    , source :=
+        { primary := .work contariniOnJustification (.page 592)
+        , supporting := [.work regensburgArticleFive (.sectionRef "col. 200")]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .faithKeepsItsSenseInRomansAndEphesians =>
+    { label := "‘Faith’ keeps one sense in Romans 3:28 and Ephesians 2:8–9"
+    , kind := .linguistic
+      -- The Apology joins the two verses in one argument (IV.73, Triglot
+      -- pp. 140–141), and so reads the word one way in both. No reader found
+      -- grants both verses and denies that the word keeps its sense.
+    , source :=
+        { primary := .work melanchthonApology (.pages 140 141)
+        , tradition := .reformedProtestant
+        , confidence := .wellSupported } }
+  | .worksKeepsItsSenseInRomans4And11 =>
+    { label := "‘Works’ keeps one sense in Romans 4:4–5 and Romans 11:6"
+    , kind := .linguistic
+      -- Zwingli joins the two verses in one sentence (Heller, p. 137), and so
+      -- reads the word one way in both. No reader found grants both verses and
+      -- denies that the word keeps its sense.
+    , source :=
+        { primary := .work zwingliTrueAndFalseReligion (.page 137)
+        , tradition := .reformedProtestant
+        , confidence := .wellSupported } }
+  | .faithEfficaciousThroughLove =>
+    { label := "The Regensburg article: the justifying faith is efficacious through love"
+    , kind := .theological
+      -- The article's own words, which both sides' speakers accepted in May 1541.
+      -- `disputed`: the Protestant estates asked in July that "efficacious" be
+      -- explained or struck out, because some read it as faith with works (CR 4,
+      -- col. 485).
+    , source :=
+        { primary := .work regensburgArticleFive (.sectionRef "col. 200")
+        , supporting := [.work protestantsOnTheRegensburgBook (.sectionRef "col. 485")]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .justifiedHaveAnInherentRighteousness =>
+    { label := "The justified have a righteousness of their own, inherent in them"
+    , kind := .theological
+      -- Contarini, p. 591: "a double righteousness, one inherent in us, by which
+      -- we begin to be righteous". The article says the justified "are called
+      -- righteous on account of inherent righteousness, because we do what is
+      -- righteous" (col. 200). `disputed`: see `noneRighteousLine`.
+    , source :=
+        { primary := .work contariniOnJustification (.page 591)
+        , supporting := [.work regensburgArticleFive (.sectionRef "col. 200")]
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .romans5_5 =>
+    { label := "Romans 5:5: God's love has been poured into our hearts through the Holy Spirit"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.romans, 5, 5⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .secondPeter1_4 =>
+    { label := "2 Peter 1:4: participants of the divine nature"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.secondPeter, 1, 4⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .romans6_17_18 =>
+    { label := "Romans 6:17–18: obedient from the heart, enslaved to righteousness"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.romans, 6, 17, 6, 18⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .firstCorinthians7_22 =>
+    { label := "1 Corinthians 7:22: whoever was free when called is a slave belonging to Christ"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.firstCorinthians, 7, 22⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .firstTimothy1_5 =>
+    { label := "1 Timothy 1:5: love that comes from sincere faith"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.firstTimothy, 1, 5⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .galatians5_22 =>
+    { label := "Galatians 5:22: the fruit of the Spirit is love"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.galatians, 5, 22⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .romans3_10 =>
+    { label := "Romans 3:10: there is no one who is righteous, not even one"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.romans, 3, 10⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .psalm143_2 =>
+    { label := "Psalm 143:2: no one living is righteous before you"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.psalms, 143, 2⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
   | .fathersWroteFaithAlone =>
     { label := "Before Trent, readers of Paul East and West wrote that the ungodly are " ++
         "justified by faith alone"

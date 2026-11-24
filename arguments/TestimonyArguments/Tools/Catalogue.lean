@@ -26,6 +26,8 @@ def solaFideChapters : List Chapter :=
     , modules := [`TestimonyArguments.SolaFide.Johannine] }
   , { slug := "before-trent", title := "Was faith alone read in Paul before Trent?"
     , modules := [`TestimonyArguments.SolaFide.BeforeTrent] }
+  , { slug := "reformation", title := "The Reformation's case, 1521–1541"
+    , modules := [`TestimonyArguments.SolaFide.Reformation] }
   , { slug := "trent-and-paul", title := "Where Trent parts from Paul"
     , modules := [`TestimonyArguments.SolaFide.Gospel] }
   , { slug := "faith-and-charity", title := "Faith working through love"

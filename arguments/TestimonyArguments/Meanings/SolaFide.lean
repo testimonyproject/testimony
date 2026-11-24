@@ -63,6 +63,10 @@ greek_word galatiansWorking from GAL 5 6 "ἐνεργέω"
 @[nolint defsWithUnderscore] abbrev titus3_5 : PassageRange := vs .titus 3 5
 /-- Titus 3:5–7. -/
 @[nolint defsWithUnderscore] abbrev titus3_5_7 : PassageRange := rg .titus 3 5 3 7
+/-- Romans 1:16–17. -/
+@[nolint defsWithUnderscore] abbrev rom1_16_17 : PassageRange := rg .romans 1 16 1 17
+/-- Acts 13:39. -/
+@[nolint defsWithUnderscore] abbrev acts13_39 : PassageRange := vs .acts 13 39
 /-- Acts 15:9–11. -/
 @[nolint defsWithUnderscore] abbrev acts15_9_11 : PassageRange := rg .acts 15 9 15 11
 /-- Luke 7:50. -/
@@ -394,6 +398,32 @@ def means : Claim → Statement
   | .romans5_19BearsOnTheVerb =>
     .bears .dikaios (.passage (vs .romans 5 19)) .dikaioo (.usage .paul)
   | .godsVerdictIsEffective => .holds (rl .effects (cn .justification) (cn .sanctification))
+  | .romans1_16_17 => .says rom1_16_17 (rl .instrumentOf (wd .pistis rom1_16_17) (cn .salvation))
+  | .acts13_39 => .says acts13_39 (rl .instrumentOf (wd .pisteuo acts13_39) (wd .dikaioo acts13_39))
+  | .firstCorinthians13_2 => .opaque "1 Corinthians 13:2: all faith without love is nothing"
+  | .galatians2_4_5 => .opaque "Galatians 2:4-5: that the truth of the gospel would remain"
+  | .galatians5_6 => .opaque "Galatians 5:6: faith working through love"
+  | .justifyingFaithIsFormedByCharity =>
+    .opaque "the faith that justifies is faith formed by love"
+  | .titus2_14 => .opaque "Titus 2:14: a people zealous for good works"
+  | .philippians3_8_9 => .opaque "Philippians 3:8-9: not a righteousness of my own"
+  | .restsOnChristsImputedRighteousness =>
+    .opaque "before God the believer rests on Christ's righteousness given, not his own"
+  | .faithKeepsItsSenseInRomansAndEphesians =>
+    .sameSense .pistis (.passage rom3_28) (.passage eph2_8_9)
+  | .worksKeepsItsSenseInRomans4And11 => .sameSense .erga (.passage rom4_4_5) (.passage rom11_6)
+  | .faithEfficaciousThroughLove =>
+    .opaque "the article's words: the justifying faith is efficacious through love"
+  | .justifiedHaveAnInherentRighteousness =>
+    .opaque "the justified have a righteousness of their own, inherent in them"
+  | .romans5_5 => .opaque "Romans 5:5: God's love poured into our hearts"
+  | .secondPeter1_4 => .opaque "2 Peter 1:4: participants of the divine nature"
+  | .romans6_17_18 => .opaque "Romans 6:17-18: enslaved to righteousness"
+  | .firstCorinthians7_22 => .opaque "1 Corinthians 7:22: a slave belonging to Christ"
+  | .firstTimothy1_5 => .opaque "1 Timothy 1:5: love that comes from sincere faith"
+  | .galatians5_22 => .opaque "Galatians 5:22: the fruit of the Spirit is love"
+  | .romans3_10 => .opaque "Romans 3:10: no one is righteous, not even one"
+  | .psalm143_2 => .opaque "Psalm 143:2: no one living is righteous before you"
   | .fathersWroteFaithAlone =>
     .opaque "Hilary, Basil, Ambrosiaster, Chrysostom, Origen, Bernard, Aquinas: faith alone"
   | .justifiedByFaithWithoutPriorWorks =>
@@ -477,7 +507,14 @@ def all : List Claim :=
   , .jamesKeepsHisWordsThroughTheParagraph, .fruitTextsShareFaithAndWorks
   , .romans5_19ManyMadeRighteous, .romans5_19MadeInwardlyRighteous
   , .romans5_19BearsOnTheVerb, .godsVerdictIsEffective, .fathersWroteFaithAlone
-  , .justifiedByFaithWithoutPriorWorks, .galatians5_6FaithWorkingThroughLove
+  , .justifiedByFaithWithoutPriorWorks, .romans1_16_17
+  , .acts13_39, .firstCorinthians13_2, .galatians2_4_5, .galatians5_6
+  , .justifyingFaithIsFormedByCharity, .titus2_14, .philippians3_8_9
+  , .restsOnChristsImputedRighteousness, .faithKeepsItsSenseInRomansAndEphesians
+  , .worksKeepsItsSenseInRomans4And11, .faithEfficaciousThroughLove
+  , .justifiedHaveAnInherentRighteousness, .romans5_5, .secondPeter1_4, .romans6_17_18
+  , .firstCorinthians7_22, .firstTimothy1_5, .galatians5_22, .romans3_10, .psalm143_2
+  , .galatians5_6FaithWorkingThroughLove
   , .romans11_6NoLongerOfWorks, .james2_17FaithWithoutWorksIsDead
   , .faithFormedByCharityJustifies, .loveIsTheFruitOfFaith, .abrahamOfRomans4WasABeliever
   , .paulExcludesOnlyWorksWithoutGrace, .romans4_4ExplainsPaulsWorks
@@ -497,11 +534,16 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **A hundred and twenty-three of the hundred and fifty-seven are analysed.** Of the
-thirty-four that are not, two are the claims of the chapter on what was read in
+/-- **A hundred and twenty-seven of the hundred and seventy-eight are analysed.** Of
+the fifty-one that are not, two are the claims of the chapter on what was read in
 Paul before Trent: what the fathers wrote of faith alone, and justification with
 no prior work earning it. One is the chapter on faith working through love: that
-the Abraham of Romans 4 was already a believer. Fifteen are the claims of the chapters on whether
+the Abraham of Romans 4 was already a believer. Seventeen are the claims of the
+chapter on the Reformation's case: thirteen texts its voices argue from, the
+schoolmen's faith formed by love, the Regensburg article's faith efficacious
+through love, Contarini's righteousness inherent in us, and the resting on
+Christ's righteousness given, which need words the vocabulary lacks: a form, an
+efficacy, an inherence and a resting on. Fifteen are the claims of the chapters on whether
 justification has degrees and on Abraham, whose content (a verdict's degrees, a
 covenant rite, a grant, a testing) the vocabulary cannot yet state. Of the other
 sixteen, four are Pius XII's and Trent's claims about the Vulgate and one is the
@@ -513,7 +555,7 @@ of the obedience it requires, Galatians 1:6–9, Christ's command to baptise, Tr
 reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each needs a word
 the vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
 reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (123, 157) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (127, 178) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the
@@ -530,9 +572,10 @@ sense; that Romans 5:19's "righteous" bears on it; that it keeps one sense in Ro
 and the tax collector of Luke 18; James 2:21–25, James 2:24, and whether 2:24 is
 compatible with Paul; the word outside Paul, Trent's reading of James's word, the
 claim that James's word is Paul's, the claim that it is the word as used outside
-Paul, and that it keeps one sense through James 2:21–25; and Revelation 22:11 and
-Sirach 18:22, each in the Latin and in the Greek. -/
-theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 28 := by decide
+Paul, and that it keeps one sense through James 2:21–25; Revelation 22:11 and
+Sirach 18:22, each in the Latin and in the Greek; and Acts 13:39, where everyone who
+believes is justified. -/
+theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 29 := by decide
 
 /-- **The sola fide joins**: each pair of claims whose meanings exclude each
 other, read for what their words mean (`Testimony.Ontology.shared`). Every
