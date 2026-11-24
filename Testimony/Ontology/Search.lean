@@ -89,13 +89,23 @@ def bearing : Axiom → List α × List α
   | .oneVoice => (statingVoice, [])
   | ax => (holding ax.rels, framing ax.rels)
 
+/-- **What one definition contributes, of joins already found**: of the
+exclusions `ex` and entailments `en` found under the ontology, those that do not
+hold under it with that definition taken out. Each pair is asked again on its
+own, so the joins under the whole ontology are found once for every definition
+rather than once for each. -/
+def contributedFrom (ex en : List (α × α)) (O : Ontology) (i : Nat) :
+    List (α × α) × List (α × α) :=
+  let without := O.eraseIdx i
+  let shape (a : α) := Ontology.closed without (means a)
+  (ex.filter fun (a, b) => !Ontology.excludes without (shape a) (shape b),
+   en.filter fun (a, b) => !Ontology.entails without (shape a) (shape b))
+
 /-- **What one definition of an ontology contributes**: the exclusions, and the
 entailments, found under the ontology and not under it with that definition
 taken out. -/
 def contributed [DecidableEq α] (O : Ontology) (i : Nat) : List (α × α) × List (α × α) :=
-  let without := O.eraseIdx i
-  ((exclusionsUnder O).filter fun e => !(exclusionsUnder without).contains e,
-   (entailmentsUnder O).filter fun e => !(entailmentsUnder without).contains e)
+  contributedFrom (exclusionsUnder O) (entailmentsUnder O) O i
 
 end HasMeanings
 

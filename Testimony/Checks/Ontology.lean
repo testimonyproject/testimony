@@ -35,16 +35,18 @@ def atomName {α : Type} [Repr α] (a : α) : String := ((reprStr a).splitOn "."
 it, and how many of its meanings contradict themselves. -/
 def ontologyReport (α : Type) [HasMeanings α] [DecidableEq α] [Repr α] : String × Nat :=
   let O := Testimony.Ontology.shared
-  let joins := (HasMeanings.exclusions (α := α)).length + (HasMeanings.entailments (α := α)).length
+  let ex := HasMeanings.exclusionsUnder (α := α) O
+  let en := HasMeanings.entailmentsUnder (α := α) O
   let bare := (HasMeanings.exclusionsUnder (α := α) []).length +
     (HasMeanings.entailmentsUnder (α := α) []).length
-  let head := [HasMeanings.argument α, s!"  joins: {joins}, with no definition: {bare}"]
+  let head := [HasMeanings.argument α,
+    s!"  joins: {ex.length + en.length}, with no definition: {bare}"]
   let lines := O.zipIdx.flatMap fun (d, i) =>
     let (h, f) := HasMeanings.bearing (α := α) d.form
     let held := h.length
     let framed := f.length
     if held + framed == 0 then [] else
-      let (ex, en) := HasMeanings.contributed (α := α) O i
+      let (ex, en) := HasMeanings.contributedFrom ex en O i
       let derived := ex.map (fun (a, b) => "    " ++ atomName a ++ " excludes " ++ atomName b) ++
         en.map (fun (a, b) => "    " ++ atomName a ++ " entails " ++ atomName b)
       let uses := match d.form with

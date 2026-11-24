@@ -5,21 +5,70 @@
 # sameness conditions), so every valuation over it is larger to reduce.
 # CI measured +8.5% and +7.3% on the two model checks, and +5.2% on the
 # ontology check, which reads the new claims' meanings.
+#
+# The refutation of Bellarmine's reading from Paul's use of the verb adds a
+# rule to a package's strength: a step to a claim rated refuted ranks refuted,
+# so every package's strength now looks up the rating of each step's
+# conclusion, in every defeat table and every check that reads strengths. CI
+# measured the tables, rows and the AIF check 6% to 16% slower on runners
+# whose calibration drifted up to 13% in the same run.
 
 [[accept]]
 benchmark = "satisfied_by: the Pauline case"
 metric = "time"
-up_to = 0.15
-reason = "Nine new sola fide claims for the faith-and-charity chapter, including the two sameness conditions the conditions check requires Bellarmine's lines to state, so each valuation over the larger claim type costs more; CI measured +8.5%"
+up_to = 0.18
+reason = "Nine new sola fide claims for the faith-and-charity chapter, including the two sameness conditions the conditions check requires Bellarmine's lines to state, so each valuation over the larger claim type costs more; CI measured +8.5%, then +12.1%"
 
 [[accept]]
 benchmark = "satisfied_by: Trent grants the subjective genitive"
 metric = "time"
-up_to = 0.15
-reason = "Nine new sola fide claims for the faith-and-charity chapter, including the two sameness conditions the conditions check requires Bellarmine's lines to state, so each valuation over the larger claim type costs more; CI measured +7.3%"
+up_to = 0.20
+reason = "Nine new sola fide claims for the faith-and-charity chapter, including the two sameness conditions the conditions check requires Bellarmine's lines to state, so each valuation over the larger claim type costs more; CI measured +7.3%, then +14.4%"
 
 [[accept]]
 benchmark = "checks: ontology"
 metric = "time"
 up_to = 0.12
 reason = "Eight new sola fide claims gain meanings the ontology check now reads (Galatians 5:6, Romans 11:6, formed faith, love as faith's fruit, works without grace, and the two sameness conditions on Romans 4:4 and John 6:29); CI measured +5.2%"
+
+[[accept]]
+benchmark = "table: sola fide, first six rows, 102 cells"
+metric = "time"
+up_to = 0.18
+reason = "A step to a claim rated refuted now ranks refuted, so each package's strength looks up the rating of every step's conclusion; CI measured +10.9%"
+
+[[accept]]
+benchmark = "table, prepared: sola fide, first six rows, 102 cells"
+metric = "time"
+up_to = 0.12
+reason = "A step to a claim rated refuted now ranks refuted, so each package's strength looks up the rating of every step's conclusion; CI measured +6.3%"
+
+[[accept]]
+benchmark = "table, certified: sola fide, first six rows, 102 cells"
+metric = "time"
+up_to = 0.15
+reason = "A step to a claim rated refuted now ranks refuted, so each package's strength looks up the rating of every step's conclusion; CI measured +9.8%"
+
+[[accept]]
+benchmark = "row, certified: James hearing under evidence, Trent's word, 12 cells"
+metric = "time"
+up_to = 0.18
+reason = "A step to a claim rated refuted now ranks refuted, so each package's strength looks up the rating of every step's conclusion; CI measured +11.9%"
+
+[[accept]]
+benchmark = "cross cells, searched: sola fide against Mark 7, 85 cells"
+metric = "time"
+up_to = 0.22
+reason = "A step to a claim rated refuted now ranks refuted, so each package's strength looks up the rating of every step's conclusion; CI measured +15.5%"
+
+[[accept]]
+benchmark = "checks: AIF, every dispute"
+metric = "time"
+up_to = 0.20
+reason = "A step to a claim rated refuted now ranks refuted, so each package's strength looks up the rating of every step's conclusion; CI measured +12.9%"
+
+[[accept]]
+benchmark = "establish: Miller's case"
+metric = "time"
+up_to = 0.15
+reason = "A step to a claim rated refuted now ranks refuted, so each package's strength looks up the rating of every step's conclusion; CI measured +7.8%"
