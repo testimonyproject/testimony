@@ -105,11 +105,13 @@ disputed premise of every dispute that uses it.
 ## How a premise is ranked
 
 A premise that is an atom ranks at the confidence its source is cited with. A
-premise that *denies* an atom ranks as `disputed`, the lowest rank. The citation
-for an atom rates the claim as its label states it; nothing in the library rates
-that claim's denial, and a denial of a consensus claim does not inherit the
-consensus. Ranking denials at the bottom is the conservative choice: a denial
-never outranks anything by default.
+premise that *denies* an atom ranks as `disputed`, the lowest rank a reader can
+give. The citation for an atom rates the claim as its label states it; nothing in
+the library rates that claim's denial, and a denial of a consensus claim does not
+inherit the consensus. Ranking denials at the bottom is the conservative choice: a
+denial never outranks anything by default. One rank lies below it, `refuted`, and
+no reader gives it: the library computes it, where the text read denies the claim,
+and `#check_readers` holds every citation to it.
 
 Any other formula is an inference step, and ranks at the lowest of the
 package's `inferences` — every step as weak as the weakest cited inference, the
@@ -119,12 +121,14 @@ and a `Dispute` refuses it: every node must carry at least one.
 
 namespace Testimony
 
-/-- The order on confidence: `disputed` lowest, `consensus` highest. -/
+/-- The order on confidence: `refuted` lowest, then `disputed`; `consensus`
+highest. -/
 def Confidence.rank : Confidence → ℕ
-  | .disputed => 0
-  | .plausible => 1
-  | .wellSupported => 2
-  | .consensus => 3
+  | .refuted => 0
+  | .disputed => 1
+  | .plausible => 2
+  | .wellSupported => 3
+  | .consensus => 4
 
 end Testimony
 
@@ -145,16 +149,22 @@ def inferenceRank (pkg : ArgumentPackage α) : Option ℕ :=
 
 /-- The rank of a premise of this package, if it has one: an atom at its cited
 confidence, a denied atom at the bottom, an inference step at the package's
-inference rank. -/
+inference rank, and a step to a claim cited `refuted` at `refuted`. A step is no
+stronger than what it delivers where Scripture's own words refute that, and the
+library gives `refuted` only where it computes the refutation
+(`#check_readers`). -/
 def rankOf (pkg : ArgumentPackage α) : Formula α → Option ℕ
   | .atom a => some (pkg.cite a).source.confidence.rank
-  | .imp (.atom _) .falsum => some 0
+  | .imp (.atom _) .falsum => some Confidence.disputed.rank
+  | .imp _ (.atom b) =>
+    if (pkg.cite b).source.confidence == .refuted then some Confidence.refuted.rank
+    else pkg.inferenceRank
   | _ => pkg.inferenceRank
 
 /-- **Weakest link**: the lowest rank among the package's ranked premises. A
 package with no ranked premise is as strong as a package can be. -/
 def strength (pkg : ArgumentPackage α) : ℕ :=
-  (pkg.premises.filterMap pkg.rankOf).foldr min 3
+  (pkg.premises.filterMap pkg.rankOf).foldr min Confidence.consensus.rank
 
 
 end ArgumentPackage

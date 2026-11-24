@@ -317,27 +317,27 @@ supported thing it assumes, and an inference is something it assumes. -/
 
 /-- The scriptural reading is no stronger than its least supported premise,
 which is cited `disputed`. -/
-theorem christian_strength : christian.strength = 0 := by decide
+theorem christian_strength : christian.strength = 1 := by decide
 
 /-- Both of the critical denial's premises are contested, and cited
 `disputed`. -/
-theorem criticalDenial_strength : criticalDenial.strength = 0 := by decide
+theorem criticalDenial_strength : criticalDenial.strength = 1 := by decide
 
 /-- Berry's premise is cited `wellSupported`, but his inference is `disputed`,
 and he is no stronger than it. -/
-theorem berryObjection_strength : berryObjection.strength = 0 := by decide
+theorem berryObjection_strength : berryObjection.strength = 1 := by decide
 
 /-- Postell's premises are cited `wellSupported` and his inference `plausible`. -/
-theorem postellParity_strength : postellParity.strength = 1 := by decide
+theorem postellParity_strength : postellParity.strength = 2 := by decide
 
 /-- The Micah counterexample's grounds are cited `consensus` and
 `wellSupported`, but its inference is `disputed`: Rashi grants both grounds and
 keeps 7:14 a sign for Ahaz's day. So it is no stronger than that step. -/
-theorem micahParity_strength : micahParity.strength = 0 := by decide
+theorem micahParity_strength : micahParity.strength = 1 := by decide
 
 /-- Motyer's observations are cited `consensus` and `wellSupported`, but his
 inference is `disputed`, and he is no stronger than it. -/
-theorem motyerReply_strength : motyerReply.strength = 0 := by decide
+theorem motyerReply_strength : motyerReply.strength = 1 := by decide
 
 /-! #### The defeats
 

@@ -1,0 +1,1592 @@
+ref	role	class	text	lemma	morph	actor	actor_ref
+1TI 1:1!1		noun	Παῦλος	Παῦλος	N-NSM		
+1TI 1:1!2		noun	ἀπόστολος	ἀπόστολος	N-NSM		
+1TI 1:1!3		noun	Χριστοῦ	Χριστός	N-GSM		
+1TI 1:1!4		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+1TI 1:1!5		prep	κατ	κατά	PREP		
+1TI 1:1!6		noun	ἐπιταγὴν	ἐπιταγή	N-ASF		
+1TI 1:1!7		noun	θεοῦ	θεός	N-GSM		
+1TI 1:1!8		noun	σωτῆρος	σωτήρ	N-GSM		
+1TI 1:1!9		pron	ἡμῶν	ἐγώ	P-1GP		
+1TI 1:1!10		conj	καὶ	καί	CONJ		
+1TI 1:1!11		noun	Χριστοῦ	Χριστός	N-GSM		
+1TI 1:1!12		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+1TI 1:1!13		det	τῆς	ὁ	T-GSF		
+1TI 1:1!14		noun	ἐλπίδος	ἐλπίς	N-GSF		
+1TI 1:1!15		pron	ἡμῶν	ἐγώ	P-1GP		
+1TI 1:2!1		noun	Τιμοθέῳ	Τιμόθεος	N-DSM		
+1TI 1:2!2		adj	γνησίῳ	γνήσιος	A-DSN		
+1TI 1:2!3		noun	τέκνῳ	τέκνον	N-DSN		
+1TI 1:2!4		prep	ἐν	ἐν	PREP		
+1TI 1:2!5		noun	πίστει	πίστις	N-DSF		
+1TI 1:2!6		noun	χάρις	χάρις	N-NSF		
+1TI 1:2!7		noun	ἔλεος	ἔλεος	N-NSN		
+1TI 1:2!8		noun	εἰρήνη	εἰρήνη	N-NSF		
+1TI 1:2!9		prep	ἀπὸ	ἀπό	PREP		
+1TI 1:2!10		noun	θεοῦ	θεός	N-GSM		
+1TI 1:2!11		noun	πατρὸς	πατήρ	N-GSM		
+1TI 1:2!12		conj	καὶ	καί	CONJ		
+1TI 1:2!13		noun	Χριστοῦ	Χριστός	N-GSM		
+1TI 1:2!14		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+1TI 1:2!15		det	τοῦ	ὁ	T-GSM		
+1TI 1:2!16		noun	κυρίου	κύριος	N-GSM		
+1TI 1:2!17		pron	ἡμῶν	ἐγώ	P-1GP		
+1TI 1:3!1		conj	Καθὼς	καθώς	ADV		
+1TI 1:3!2	v	verb	παρεκάλεσά	παρακαλέω	V-AAI-1S	Παῦλος	1TI 1:1!1
+1TI 1:3!3	s	pron	σε	σύ	P-2AS		
+1TI 1:3!4	v	verb	προσμεῖναι	προσμένω	V-AAN	σύ	1TI 1:3!3
+1TI 1:3!5		prep	ἐν	ἐν	PREP		
+1TI 1:3!6		noun	Ἐφέσῳ	Ἔφεσος	N-DSF		
+1TI 1:3!7	v	verb	πορευόμενος	πορεύομαι	V-PNP-NSM	Παῦλος	1TI 1:1!1
+1TI 1:3!8		prep	εἰς	εἰς	PREP		
+1TI 1:3!9		noun	Μακεδονίαν	Μακεδονία	N-ASF		
+1TI 1:3!10		conj	ἵνα	ἵνα	CONJ		
+1TI 1:3!11	v	verb	παραγγείλῃς	παραγγέλλω	V-AAS-2S	Τιμόθεος	1TI 1:2!1
+1TI 1:3!12	io	pron	τισὶν	τις	X-DPM		
+1TI 1:3!13	adv	adv	μὴ	μή	PRT-N		
+1TI 1:3!14	v	verb	ἑτεροδιδασκαλεῖν	ἑτεροδιδασκαλέω	V-PAN	τις	1TI 1:3!12
+1TI 1:4!1		conj	μηδὲ	μηδέ	CONJ-N		
+1TI 1:4!2	v	verb	προσέχειν	προσέχω	V-PAN	τις	1TI 1:3!12
+1TI 1:4!3		noun	μύθοις	μῦθος	N-DPM		
+1TI 1:4!4		conj	καὶ	καί	CONJ		
+1TI 1:4!5		noun	γενεαλογίαις	γενεαλογία	N-DPF		
+1TI 1:4!6		adj	ἀπεράντοις	ἀπέραντος	A-DPF		
+1TI 1:4!7	s	pron	αἵτινες	ὅστις	R-NPF		
+1TI 1:4!8	o	noun	ἐκζητήσεις	ἐκζήτησις	N-APF		
+1TI 1:4!9	v	verb	παρέχουσι	παρέχω	V-PAI-3P	ὅστις	1TI 1:4!7
+1TI 1:4!10	adv	adv	μᾶλλον	μᾶλλον	ADV		
+1TI 1:4!11		conj	ἢ	ἤ	PRT		
+1TI 1:4!12		noun	οἰκονομίαν	οἰκονομία	N-ASF		
+1TI 1:4!13		noun	θεοῦ	θεός	N-GSM		
+1TI 1:4!14		det	τὴν	ὁ	T-ASF		
+1TI 1:4!15		prep	ἐν	ἐν	PREP		
+1TI 1:4!16		noun	πίστει	πίστις	N-DSF		
+1TI 1:5!1		det	τὸ	ὁ	T-NSN		
+1TI 1:5!2		conj	δὲ	δέ	CONJ		
+1TI 1:5!3		noun	τέλος	τέλος	N-NSN		
+1TI 1:5!4		det	τῆς	ὁ	T-GSF		
+1TI 1:5!5		noun	παραγγελίας	παραγγελία	N-GSF		
+1TI 1:5!6	vc	verb	ἐστὶν	εἰμί	V-PAI-3S		
+1TI 1:5!7		noun	ἀγάπη	ἀγάπη	N-NSF		
+1TI 1:5!8		prep	ἐκ	ἐκ	PREP		
+1TI 1:5!9		adj	καθαρᾶς	καθαρός	A-GSF		
+1TI 1:5!10		noun	καρδίας	καρδία	N-GSF		
+1TI 1:5!11		conj	καὶ	καί	CONJ		
+1TI 1:5!12		noun	συνειδήσεως	συνείδησις	N-GSF		
+1TI 1:5!13		adj	ἀγαθῆς	ἀγαθός	A-GSF		
+1TI 1:5!14		conj	καὶ	καί	CONJ		
+1TI 1:5!15		noun	πίστεως	πίστις	N-GSF		
+1TI 1:5!16		adj	ἀνυποκρίτου	ἀνυπόκριτος	A-GSF		
+1TI 1:6!1	adv	pron	ὧν	ὅς	R-GPF		
+1TI 1:6!2	s	pron	τινες	τις	X-NPM		
+1TI 1:6!3	v	verb	ἀστοχήσαντες	ἀστοχέω	V-AAP-NPM	τις	1TI 1:6!2
+1TI 1:6!4	v	verb	ἐξετράπησαν	ἐκτρέπομαι	V-2API-3P	τις	1TI 1:6!2
+1TI 1:6!5		prep	εἰς	εἰς	PREP		
+1TI 1:6!6		noun	ματαιολογίαν	ματαιολογία	N-ASF		
+1TI 1:7!1	v	verb	θέλοντες	θέλω	V-PAP-NPM	τις	1TI 1:6!2
+1TI 1:7!2	vc	verb	εἶναι	εἰμί	V-PAN		
+1TI 1:7!3	p	noun	νομοδιδάσκαλοι	νομοδιδάσκαλος	N-NPM		
+1TI 1:7!4	adv	adv	μὴ	μή	PRT-N		
+1TI 1:7!5	v	verb	νοοῦντες	νοέω	V-PAP-NPM	τις	1TI 1:6!2
+1TI 1:7!6		conj	μήτε	μήτε	CONJ-N		
+1TI 1:7!7	o	pron	ἃ	ὅς	R-APN		
+1TI 1:7!8	v	verb	λέγουσιν	λέγω	V-PAI-3P	τις	1TI 1:6!2
+1TI 1:7!9		conj	μήτε	μήτε	CONJ-N		
+1TI 1:7!10		prep	περὶ	περί	PREP		
+1TI 1:7!11		pron	τίνων	τίς	I-GPN		
+1TI 1:7!12	v	verb	διαβεβαιοῦνται	διαβεβαιόομαι	V-PNI-3P	τις	1TI 1:6!2
+1TI 1:8!1	v	verb	Οἴδαμεν	οἶδα	V-RAI-1P	Παῦλος;Τιμόθεος	1TI 1:1!1;1TI 1:2!1
+1TI 1:8!2		conj	δὲ	δέ	CONJ		
+1TI 1:8!3		conj	ὅτι	ὅτι	CONJ		
+1TI 1:8!4	p	adj	καλὸς	καλός	A-NSM		
+1TI 1:8!5		det	ὁ	ὁ	T-NSM		
+1TI 1:8!6		noun	νόμος	νόμος	N-NSM		
+1TI 1:8!7		conj	ἐάν	ἐάν	COND		
+1TI 1:8!8	s	pron	τις	τις	X-NSM		
+1TI 1:8!9	o	pron	αὐτῷ	αὐτός	P-DSM		
+1TI 1:8!10	adv	adv	νομίμως	νομίμως	ADV		
+1TI 1:8!11	v	verb	χρῆται	χράομαι	V-PNS-3S	τις	1TI 1:8!8
+1TI 1:9!1	v	verb	εἰδὼς	ὁράω	V-RAP-NSM	τις	1TI 1:8!8
+1TI 1:9!2	o	pron	τοῦτο	οὗτος	D-ASN		
+1TI 1:9!3		adv	ὅτι	ὅτι	CONJ		
+1TI 1:9!4	adv	adj	δικαίῳ	δίκαιος	A-DSM		
+1TI 1:9!5	s	noun	νόμος	νόμος	N-NSM		
+1TI 1:9!6		adv	οὐ	οὐ	PRT-N		
+1TI 1:9!7	v	verb	κεῖται	κεῖμαι	V-PNI-3S	νόμος	1TI 1:9!5
+1TI 1:9!8		adj	ἀνόμοις	ἄνομος	A-DPM		
+1TI 1:9!9		conj	δὲ	δέ	CONJ		
+1TI 1:9!10		conj	καὶ	καί	CONJ		
+1TI 1:9!11		adj	ἀνυποτάκτοις	ἀνυπότακτος	A-DPM		
+1TI 1:9!12		adj	ἀσεβέσι	ἀσεβής	A-DPM		
+1TI 1:9!13		conj	καὶ	καί	CONJ		
+1TI 1:9!14		adj	ἁμαρτωλοῖς	ἁμαρτωλός	A-DPM		
+1TI 1:9!15		adj	ἀνοσίοις	ἀνόσιος	A-DPM		
+1TI 1:9!16		conj	καὶ	καί	CONJ		
+1TI 1:9!17		adj	βεβήλοις	βέβηλος	A-DPM		
+1TI 1:9!18		noun	πατρολῴαις	πατρολῴας	N-DPM		
+1TI 1:9!19		conj	καὶ	καί	CONJ		
+1TI 1:9!20		noun	μητρολῴαις	μητρολῴας	N-DPM		
+1TI 1:9!21		noun	ἀνδροφόνοις	ἀνδροφόνος	N-DPM		
+1TI 1:10!1		noun	πόρνοις	πόρνος	N-DPM		
+1TI 1:10!2		noun	ἀρσενοκοίταις	ἀρσενοκοίτης	N-DPM		
+1TI 1:10!3		noun	ἀνδραποδισταῖς	ἀνδραποδιστής	N-DPM		
+1TI 1:10!4		noun	ψεύσταις	ψεύστης	N-DPM		
+1TI 1:10!5		adj	ἐπιόρκοις	ἐπίορκος	A-DPM		
+1TI 1:10!6		conj	καὶ	καί	CONJ		
+1TI 1:10!7		conj	εἴ	εἰ	COND		
+1TI 1:10!8		pron	τι	τις	X-NSN		
+1TI 1:10!9		adj	ἕτερον	ἕτερος	A-NSN		
+1TI 1:10!10		det	τῇ	ὁ	T-DSF		
+1TI 1:10!11	v	verb	ὑγιαινούσῃ	ὑγιαίνω	V-PAP-DSF	διδασκαλία	1TI 1:10!12
+1TI 1:10!12		noun	διδασκαλίᾳ	διδασκαλία	N-DSF		
+1TI 1:10!13	v	verb	ἀντίκειται	ἀντίκειμαι	V-PNI-3S	τις	1TI 1:10!8
+1TI 1:11!1		prep	κατὰ	κατά	PREP		
+1TI 1:11!2		det	τὸ	ὁ	T-ASN		
+1TI 1:11!3		noun	εὐαγγέλιον	εὐαγγέλιον	N-ASN		
+1TI 1:11!4		det	τῆς	ὁ	T-GSF		
+1TI 1:11!5		noun	δόξης	δόξα	N-GSF		
+1TI 1:11!6		det	τοῦ	ὁ	T-GSM		
+1TI 1:11!7		adj	μακαρίου	μακάριος	A-GSM		
+1TI 1:11!8		noun	θεοῦ	θεός	N-GSM		
+1TI 1:11!9	o	pron	ὃ	ὅς	R-ASN		
+1TI 1:11!10	v	verb	ἐπιστεύθην	πιστεύω	V-API-1S		
+1TI 1:11!11	s	pron	ἐγώ	ἐγώ	P-1NS		
+1TI 1:12!1	o	noun	Χάριν	χάρις	N-ASF		
+1TI 1:12!2	v	verb	ἔχω	ἔχω	V-PAI-1S	Παῦλος	1TI 1:1!1
+1TI 1:12!3		det	τῷ	ὁ	T-DSM		
+1TI 1:12!4	v	verb	ἐνδυναμώσαντί	ἐνδυναμόω	V-AAP-DSM	Χριστός	1TI 1:12!6
+1TI 1:12!5	o	pron	με	ἐγώ	P-1AS		
+1TI 1:12!6		noun	Χριστῷ	Χριστός	N-DSM		
+1TI 1:12!7		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+1TI 1:12!8		det	τῷ	ὁ	T-DSM		
+1TI 1:12!9		noun	κυρίῳ	κύριος	N-DSM		
+1TI 1:12!10		pron	ἡμῶν	ἐγώ	P-1GP		
+1TI 1:12!11		conj	ὅτι	ὅτι	CONJ		
+1TI 1:12!12	o2	adj	πιστόν	πιστός	A-ASM		
+1TI 1:12!13	o	pron	με	ἐγώ	P-1AS		
+1TI 1:12!14	v	verb	ἡγήσατο	ἡγέομαι	V-ADI-3S	Χριστός	1TI 1:12!6
+1TI 1:12!15	v	verb	θέμενος	τίθημι	V-2AMP-NSM	Χριστός	1TI 1:12!6
+1TI 1:12!16		prep	εἰς	εἰς	PREP		
+1TI 1:12!17		noun	διακονίαν	διακονία	N-ASF		
+1TI 1:13!1		det	τὸ	ὁ	T-ASN		
+1TI 1:13!2		adj	πρότερον	πρότερος	A-ASN-C		
+1TI 1:13!3	vc	verb	ὄντα	εἰμί	V-PAP-ASM		
+1TI 1:13!4		adj	βλάσφημον	βλάσφημος	A-ASM		
+1TI 1:13!5		conj	καὶ	καί	CONJ		
+1TI 1:13!6		noun	διώκτην	διώκτης	N-ASM		
+1TI 1:13!7		conj	καὶ	καί	CONJ		
+1TI 1:13!8		noun	ὑβριστήν	ὑβριστής	N-ASM		
+1TI 1:13!9		conj	ἀλλὰ	ἀλλά	CONJ		
+1TI 1:13!10	v	verb	ἠλεήθην	ἐλεάω	V-API-1S		
+1TI 1:13!11		conj	ὅτι	ὅτι	CONJ		
+1TI 1:13!12	v	verb	ἀγνοῶν	ἀγνοέω	V-PAP-NSM	Παῦλος	1TI 1:1!1
+1TI 1:13!13	v	verb	ἐποίησα	ποιέω	V-AAI-1S	Παῦλος	1TI 1:1!1
+1TI 1:13!14		prep	ἐν	ἐν	PREP		
+1TI 1:13!15		noun	ἀπιστίᾳ	ἀπιστία	N-DSF		
+1TI 1:14!1	v	verb	ὑπερεπλεόνασεν	ὑπερπλεονάζω	V-AAI-3S	χάρις	1TI 1:14!4
+1TI 1:14!2		conj	δὲ	δέ	CONJ		
+1TI 1:14!3		det	ἡ	ὁ	T-NSF		
+1TI 1:14!4		noun	χάρις	χάρις	N-NSF		
+1TI 1:14!5		det	τοῦ	ὁ	T-GSM		
+1TI 1:14!6		noun	κυρίου	κύριος	N-GSM		
+1TI 1:14!7		pron	ἡμῶν	ἐγώ	P-1GP		
+1TI 1:14!8		prep	μετὰ	μετά	PREP		
+1TI 1:14!9		noun	πίστεως	πίστις	N-GSF		
+1TI 1:14!10		conj	καὶ	καί	CONJ		
+1TI 1:14!11		noun	ἀγάπης	ἀγάπη	N-GSF		
+1TI 1:14!12		det	τῆς	ὁ	T-GSF		
+1TI 1:14!13		prep	ἐν	ἐν	PREP		
+1TI 1:14!14		noun	Χριστῷ	Χριστός	N-DSM		
+1TI 1:14!15		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+1TI 1:15!1		adj	πιστὸς	πιστός	A-NSM		
+1TI 1:15!2		det	ὁ	ὁ	T-NSM		
+1TI 1:15!3		noun	λόγος	λόγος	N-NSM		
+1TI 1:15!4		conj	καὶ	καί	CONJ		
+1TI 1:15!5		adj	πάσης	πᾶς	A-GSF		
+1TI 1:15!6		noun	ἀποδοχῆς	ἀποδοχή	N-GSF		
+1TI 1:15!7		adj	ἄξιος	ἄξιος	A-NSM		
+1TI 1:15!8		adv	ὅτι	ὅτι	CONJ		
+1TI 1:15!9		noun	Χριστὸς	Χριστός	N-NSM		
+1TI 1:15!10		noun	Ἰησοῦς	Ἰησοῦς	N-NSM		
+1TI 1:15!11	v	verb	ἦλθεν	ἔρχομαι	V-2AAI-3S	Χριστός	1TI 1:15!9
+1TI 1:15!12		prep	εἰς	εἰς	PREP		
+1TI 1:15!13		det	τὸν	ὁ	T-ASM		
+1TI 1:15!14		noun	κόσμον	κόσμος	N-ASM		
+1TI 1:15!15	o	adj	ἁμαρτωλοὺς	ἁμαρτωλός	A-APM		
+1TI 1:15!16	v	verb	σῶσαι	σῴζω	V-AAN	Χριστός	1TI 1:15!9
+1TI 1:15!17		pron	ὧν	ὅς	R-GPM		
+1TI 1:15!18		adj	πρῶτός	πρῶτος	A-NSM-S		
+1TI 1:15!19	vc	verb	εἰμι	εἰμί	V-PAI-1S		
+1TI 1:15!20	s	pron	ἐγώ	ἐγώ	P-1NS		
+1TI 1:16!1		conj	ἀλλὰ	ἀλλά	CONJ		
+1TI 1:16!2		prep	διὰ	διά	PREP		
+1TI 1:16!3		pron	τοῦτο	οὗτος	D-ASN		
+1TI 1:16!4	v	verb	ἠλεήθην	ἐλεάω	V-API-1S		
+1TI 1:16!5		conj	ἵνα	ἵνα	CONJ		
+1TI 1:16!6		prep	ἐν	ἐν	PREP		
+1TI 1:16!7		pron	ἐμοὶ	ἐγώ	P-1DS		
+1TI 1:16!8		adj	πρώτῳ	πρῶτος	A-DSM-S		
+1TI 1:16!9	v	verb	ἐνδείξηται	ἐνδείκνυμι	V-AMS-3S	Ἰησοῦς	1TI 1:16!11
+1TI 1:16!10		noun	Χριστὸς	Χριστός	N-NSM		
+1TI 1:16!11		noun	Ἰησοῦς	Ἰησοῦς	N-NSM		
+1TI 1:16!12		det	τὴν	ὁ	T-ASF		
+1TI 1:16!13		adj	ἅπασαν	ἅπας	A-ASF		
+1TI 1:16!14		noun	μακροθυμίαν	μακροθυμία	N-ASF		
+1TI 1:16!15		prep	πρὸς	πρός	PREP		
+1TI 1:16!16		noun	ὑποτύπωσιν	ὑποτύπωσις	N-ASF		
+1TI 1:16!17		det	τῶν	ὁ	T-GPM		
+1TI 1:16!18	v	verb	μελλόντων	μέλλω	V-PAP-GPM		
+1TI 1:16!19	v	verb	πιστεύειν	πιστεύω	V-PAN		
+1TI 1:16!20		prep	ἐπ	ἐπί	PREP		
+1TI 1:16!21		pron	αὐτῷ	αὐτός	P-DSM		
+1TI 1:16!22		prep	εἰς	εἰς	PREP		
+1TI 1:16!23		noun	ζωὴν	ζωή	N-ASF		
+1TI 1:16!24		adj	αἰώνιον	αἰώνιος	A-ASF		
+1TI 1:17!1		det	τῷ	ὁ	T-DSM		
+1TI 1:17!2		conj	δὲ	δέ	CONJ		
+1TI 1:17!3		noun	βασιλεῖ	βασιλεύς	N-DSM		
+1TI 1:17!4		det	τῶν	ὁ	T-GPM		
+1TI 1:17!5		noun	αἰώνων	αἰών	N-GPM		
+1TI 1:17!6		adj	ἀφθάρτῳ	ἄφθαρτος	A-DSM		
+1TI 1:17!7		adj	ἀοράτῳ	ἀόρατος	A-DSM		
+1TI 1:17!8		adj	μόνῳ	μόνος	A-DSM		
+1TI 1:17!9		noun	θεῷ	θεός	N-DSM		
+1TI 1:17!10		noun	τιμὴ	τιμή	N-NSF		
+1TI 1:17!11		conj	καὶ	καί	CONJ		
+1TI 1:17!12		noun	δόξα	δόξα	N-NSF		
+1TI 1:17!13		prep	εἰς	εἰς	PREP		
+1TI 1:17!14		det	τοὺς	ὁ	T-APM		
+1TI 1:17!15		noun	αἰῶνας	αἰών	N-APM		
+1TI 1:17!16		det	τῶν	ὁ	T-GPM		
+1TI 1:17!17		noun	αἰώνων	αἰών	N-GPM		
+1TI 1:17!18	aux	ptcl	ἀμήν	ἀμήν	HEB		
+1TI 1:18!1		pron	Ταύτην	οὗτος	D-ASF		
+1TI 1:18!2		det	τὴν	ὁ	T-ASF		
+1TI 1:18!3		noun	παραγγελίαν	παραγγελία	N-ASF		
+1TI 1:18!4	v	verb	παρατίθεμαί	παρατίθημι	V-PMI-1S	Παῦλος	1TI 1:1!1
+1TI 1:18!5	io	pron	σοι	σύ	P-2DS		
+1TI 1:18!6		noun	τέκνον	τέκνον	N-VSN		
+1TI 1:18!7		noun	Τιμόθεε	Τιμόθεος	N-VSM		
+1TI 1:18!8		prep	κατὰ	κατά	PREP		
+1TI 1:18!9		det	τὰς	ὁ	T-APF		
+1TI 1:18!10	v	verb	προαγούσας	προάγω	V-PAP-APF	προφητεία	1TI 1:18!13
+1TI 1:18!11		prep	ἐπὶ	ἐπί	PREP		
+1TI 1:18!12		pron	σὲ	σύ	P-2AS		
+1TI 1:18!13		noun	προφητείας	προφητεία	N-APF		
+1TI 1:18!14		adv	ἵνα	ἵνα	CONJ		
+1TI 1:18!15	v	verb	στρατεύῃ	στρατεύομαι	V-PMS-2S	τέκνον	1TI 1:18!6
+1TI 1:18!16		prep	ἐν	ἐν	PREP		
+1TI 1:18!17		pron	αὐταῖς	αὐτός	P-DPF		
+1TI 1:18!18		det	τὴν	ὁ	T-ASF		
+1TI 1:18!19		adj	καλὴν	καλός	A-ASF		
+1TI 1:18!20		noun	στρατείαν	στρατεία	N-ASF		
+1TI 1:19!1	v	verb	ἔχων	ἔχω	V-PAP-NSM	τέκνον	1TI 1:18!6
+1TI 1:19!2		noun	πίστιν	πίστις	N-ASF		
+1TI 1:19!3		conj	καὶ	καί	CONJ		
+1TI 1:19!4		adj	ἀγαθὴν	ἀγαθός	A-ASF		
+1TI 1:19!5		noun	συνείδησιν	συνείδησις	N-ASF		
+1TI 1:19!6	o	pron	ἥν	ὅς	R-ASF		
+1TI 1:19!7	s	pron	τινες	τις	X-NPM		
+1TI 1:19!8	v	verb	ἀπωσάμενοι	ἀπωθέομαι	V-ADP-NPM	τις	1TI 1:19!7
+1TI 1:19!9		prep	περὶ	περί	PREP		
+1TI 1:19!10		det	τὴν	ὁ	T-ASF		
+1TI 1:19!11		noun	πίστιν	πίστις	N-ASF		
+1TI 1:19!12	v	verb	ἐναυάγησαν	ναυαγέω	V-AAI-3P	τις	1TI 1:19!7
+1TI 1:20!1	p	pron	ὧν	ὅς	R-GPM		
+1TI 1:20!2	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+1TI 1:20!3		noun	Ὑμέναιος	Ὑμέναιος	N-NSM		
+1TI 1:20!4		conj	καὶ	καί	CONJ		
+1TI 1:20!5		noun	Ἀλέξανδρος	Ἀλέξανδρος	N-NSM		
+1TI 1:20!6	o	pron	οὓς	ὅς	R-APM		
+1TI 1:20!7	v	verb	παρέδωκα	παραδίδωμι	V-AAI-1S	Παῦλος	1TI 1:1!1
+1TI 1:20!8		det	τῷ	ὁ	T-DSM		
+1TI 1:20!9		noun	Σατανᾷ	Σατανᾶς	N-DSM		
+1TI 1:20!10		conj	ἵνα	ἵνα	CONJ		
+1TI 1:20!11	v	verb	παιδευθῶσι	παιδεύω	V-APS-3P		
+1TI 1:20!12	adv	adv	μὴ	μή	PRT-N		
+1TI 1:20!13	v	verb	βλασφημεῖν	βλασφημέω	V-PAN	Ὑμέναιος;Ἀλέξανδρος	1TI 1:20!3;1TI 1:20!5
+1TI 2:1!1	v	verb	Παρακαλῶ	παρακαλέω	V-PAI-1S	Παῦλος	1TI 1:1!1
+1TI 2:1!2		conj	οὖν	οὖν	CONJ		
+1TI 2:1!3		adj	πρῶτον	πρῶτος	ADV-S		
+1TI 2:1!4		adj	πάντων	πᾶς	A-GPN		
+1TI 2:1!5	v	verb	ποιεῖσθαι	ποιέω	V-PPN		
+1TI 2:1!6		noun	δεήσεις	δέησις	N-APF		
+1TI 2:1!7		noun	προσευχάς	προσευχή	N-APF		
+1TI 2:1!8		noun	ἐντεύξεις	ἔντευξις	N-APF		
+1TI 2:1!9		noun	εὐχαριστίας	εὐχαριστία	N-APF		
+1TI 2:1!10		prep	ὑπὲρ	ὑπέρ	PREP		
+1TI 2:1!11		adj	πάντων	πᾶς	A-GPM		
+1TI 2:1!12		noun	ἀνθρώπων	ἄνθρωπος	N-GPM		
+1TI 2:2!1		prep	ὑπὲρ	ὑπέρ	PREP		
+1TI 2:2!2		noun	βασιλέων	βασιλεύς	N-GPM		
+1TI 2:2!3		conj	καὶ	καί	CONJ		
+1TI 2:2!4		adj	πάντων	πᾶς	A-GPM		
+1TI 2:2!5		det	τῶν	ὁ	T-GPM		
+1TI 2:2!6		prep	ἐν	ἐν	PREP		
+1TI 2:2!7		noun	ὑπεροχῇ	ὑπεροχή	N-DSF		
+1TI 2:2!8	vc	verb	ὄντων	εἰμί	V-PAP-GPM		
+1TI 2:2!9		conj	ἵνα	ἵνα	CONJ		
+1TI 2:2!10		adj	ἤρεμον	ἤρεμος	A-ASM		
+1TI 2:2!11		conj	καὶ	καί	CONJ		
+1TI 2:2!12		adj	ἡσύχιον	ἡσύχιος	A-ASM		
+1TI 2:2!13		noun	βίον	βίος	N-ASM		
+1TI 2:2!14	v	verb	διάγωμεν	διάγω	V-PAS-1P	Παῦλος;τέκνον	1TI 1:1!1;1TI 1:18!6
+1TI 2:2!15		prep	ἐν	ἐν	PREP		
+1TI 2:2!16		adj	πάσῃ	πᾶς	A-DSF		
+1TI 2:2!17		noun	εὐσεβείᾳ	εὐσέβεια	N-DSF		
+1TI 2:2!18		conj	καὶ	καί	CONJ		
+1TI 2:2!19		noun	σεμνότητι	σεμνότης	N-DSF		
+1TI 2:3!1	s	pron	τοῦτο	οὗτος	D-NSN		
+1TI 2:3!2		adj	καλὸν	καλός	A-NSN		
+1TI 2:3!3		conj	καὶ	καί	CONJ		
+1TI 2:3!4		adj	ἀπόδεκτον	ἀπόδεκτος	A-NSN		
+1TI 2:3!5		prep	ἐνώπιον	ἐνώπιον	PREP		
+1TI 2:3!6		det	τοῦ	ὁ	T-GSM		
+1TI 2:3!7		noun	σωτῆρος	σωτήρ	N-GSM		
+1TI 2:3!8		pron	ἡμῶν	ἐγώ	P-1GP		
+1TI 2:3!9		noun	θεοῦ	θεός	N-GSM		
+1TI 2:4!1	s	pron	ὃς	ὅς	R-NSM		
+1TI 2:4!2		adj	πάντας	πᾶς	A-APM		
+1TI 2:4!3		noun	ἀνθρώπους	ἄνθρωπος	N-APM		
+1TI 2:4!4	v	verb	θέλει	θέλω	V-PAI-3S	ὅς	1TI 2:4!1
+1TI 2:4!5	v	verb	σωθῆναι	σῴζω	V-APN		
+1TI 2:4!6		conj	καὶ	καί	CONJ		
+1TI 2:4!7		prep	εἰς	εἰς	PREP		
+1TI 2:4!8		noun	ἐπίγνωσιν	ἐπίγνωσις	N-ASF		
+1TI 2:4!9		noun	ἀληθείας	ἀλήθεια	N-GSF		
+1TI 2:4!10	v	verb	ἐλθεῖν	ἔρχομαι	V-2AAN		
+1TI 2:5!1	p	adj	εἷς	εἷς	A-NSM		
+1TI 2:5!2		conj	γὰρ	γάρ	CONJ		
+1TI 2:5!3	s	noun	θεός	θεός	N-NSM		
+1TI 2:5!4	p	adj	εἷς	εἷς	A-NSM		
+1TI 2:5!5		adv	καὶ	καί	CONJ		
+1TI 2:5!6		noun	μεσίτης	μεσίτης	N-NSM		
+1TI 2:5!7		noun	θεοῦ	θεός	N-GSM		
+1TI 2:5!8		conj	καὶ	καί	CONJ		
+1TI 2:5!9		noun	ἀνθρώπων	ἄνθρωπος	N-GPM		
+1TI 2:5!10		noun	ἄνθρωπος	ἄνθρωπος	N-NSM		
+1TI 2:5!11		noun	Χριστὸς	Χριστός	N-NSM		
+1TI 2:5!12		noun	Ἰησοῦς	Ἰησοῦς	N-NSM		
+1TI 2:6!1		det	ὁ	ὁ	T-NSM		
+1TI 2:6!2	v	verb	δοὺς	δίδωμι	V-2AAP-NSM	ἄνθρωπος	1TI 2:5!10
+1TI 2:6!3	o	pron	ἑαυτὸν	ἑαυτοῦ	F-3ASM		
+1TI 2:6!4	o2	noun	ἀντίλυτρον	ἀντίλυτρον	N-ASN		
+1TI 2:6!5		prep	ὑπὲρ	ὑπέρ	PREP		
+1TI 2:6!6		adj	πάντων	πᾶς	A-GPM		
+1TI 2:6!7		det	τὸ	ὁ	T-ASN		
+1TI 2:6!8		noun	μαρτύριον	μαρτύριον	N-ASN		
+1TI 2:6!9		noun	καιροῖς	καιρός	N-DPM		
+1TI 2:6!10		adj	ἰδίοις	ἴδιος	A-DPM		
+1TI 2:7!1		prep	εἰς	εἰς	PREP		
+1TI 2:7!2		pron	ὃ	ὅς	R-ASN		
+1TI 2:7!3	vc	verb	ἐτέθην	τίθημι	V-API-1S		
+1TI 2:7!4	s	pron	ἐγὼ	ἐγώ	P-1NS		
+1TI 2:7!5		noun	κῆρυξ	κῆρυξ	N-NSM		
+1TI 2:7!6		conj	καὶ	καί	CONJ		
+1TI 2:7!7		noun	ἀπόστολος	ἀπόστολος	N-NSM		
+1TI 2:7!8	o	noun	ἀλήθειαν	ἀλήθεια	N-ASF		
+1TI 2:7!9	v	verb	λέγω	λέγω	V-PAI-1S	Παῦλος	1TI 1:1!1
+1TI 2:7!10	adv	adv	οὐ	οὐ	PRT-N		
+1TI 2:7!11	v	verb	ψεύδομαι	ψεύδομαι	V-PNI-1S	Παῦλος	1TI 1:1!1
+1TI 2:7!12		noun	διδάσκαλος	διδάσκαλος	N-NSM		
+1TI 2:7!13		noun	ἐθνῶν	ἔθνος	N-GPN		
+1TI 2:7!14		prep	ἐν	ἐν	PREP		
+1TI 2:7!15		noun	πίστει	πίστις	N-DSF		
+1TI 2:7!16		conj	καὶ	καί	CONJ		
+1TI 2:7!17		noun	ἀληθείᾳ	ἀλήθεια	N-DSF		
+1TI 2:8!1	v	verb	Βούλομαι	βούλομαι	V-PNI-1S	Παῦλος	1TI 1:1!1
+1TI 2:8!2		conj	οὖν	οὖν	CONJ		
+1TI 2:8!3	v	verb	προσεύχεσθαι	προσεύχομαι	V-PNN	ἀνήρ	1TI 2:8!5
+1TI 2:8!4		det	τοὺς	ὁ	T-APM		
+1TI 2:8!5		noun	ἄνδρας	ἀνήρ	N-APM		
+1TI 2:8!6		prep	ἐν	ἐν	PREP		
+1TI 2:8!7		adj	παντὶ	πᾶς	A-DSM		
+1TI 2:8!8		noun	τόπῳ	τόπος	N-DSM		
+1TI 2:8!9	v	verb	ἐπαίροντας	ἐπαίρω	V-PAP-APM	ἀνήρ	1TI 2:8!5
+1TI 2:8!10		adj	ὁσίους	ὅσιος	A-APF		
+1TI 2:8!11		noun	χεῖρας	χείρ	N-APF		
+1TI 2:8!12		prep	χωρὶς	χωρίς	ADV		
+1TI 2:8!13		noun	ὀργῆς	ὀργή	N-GSF		
+1TI 2:8!14		conj	καὶ	καί	CONJ		
+1TI 2:8!15		noun	διαλογισμοῦ	διαλογισμός	N-GSM		
+1TI 2:9!1		adv	ὡσαύτως	ὡσαύτως	ADV		
+1TI 2:9!2		adv	καὶ	καί	ADV		
+1TI 2:9!3		noun	γυναῖκας	γυνή	N-APF		
+1TI 2:9!4		prep	ἐν	ἐν	PREP		
+1TI 2:9!5		noun	καταστολῇ	καταστολή	N-DSF		
+1TI 2:9!6		adj	κοσμίῳ	κόσμιος	A-DSF		
+1TI 2:9!7		prep	μετὰ	μετά	PREP		
+1TI 2:9!8		noun	αἰδοῦς	αἰδώς	N-GSF		
+1TI 2:9!9		conj	καὶ	καί	CONJ		
+1TI 2:9!10		noun	σωφροσύνης	σωφροσύνη	N-GSF		
+1TI 2:9!11	v	verb	κοσμεῖν	κοσμέω	V-PAN	γυνή	1TI 2:9!3
+1TI 2:9!12	o	pron	ἑαυτάς	ἑαυτοῦ	F-3APF		
+1TI 2:9!13		adv	μὴ	μή	PRT-N		
+1TI 2:9!14		prep	ἐν	ἐν	PREP		
+1TI 2:9!15		noun	πλέγμασιν	πλέγμα	N-DPN		
+1TI 2:9!16		conj	καὶ	καί	CONJ		
+1TI 2:9!17		noun	χρυσίῳ	χρυσίον	N-DSN		
+1TI 2:9!18		conj	ἢ	ἤ	PRT		
+1TI 2:9!19		noun	μαργαρίταις	μαργαρίτης	N-DPM		
+1TI 2:9!20		conj	ἢ	ἤ	PRT		
+1TI 2:9!21		noun	ἱματισμῷ	ἱματισμός	N-DSM		
+1TI 2:9!22		adj	πολυτελεῖ	πολυτελής	A-DSM		
+1TI 2:10!1		conj	ἀλλ	ἀλλά	CONJ		
+1TI 2:10!2	s	pron	ὃ	ὅς	R-NSN		
+1TI 2:10!3	v	verb	πρέπει	πρέπω	V-PAI-3S	ὅς	1TI 2:10!2
+1TI 2:10!4		noun	γυναιξὶν	γυνή	N-DPF		
+1TI 2:10!5	v	verb	ἐπαγγελλομέναις	ἐπαγγέλλομαι	V-PNP-DPF	γυνή	1TI 2:10!4
+1TI 2:10!6	o	noun	θεοσέβειαν	θεοσέβεια	N-ASF		
+1TI 2:10!7		prep	δι	διά	PREP		
+1TI 2:10!8		noun	ἔργων	ἔργον	N-GPN		
+1TI 2:10!9		adj	ἀγαθῶν	ἀγαθός	A-GPN		
+1TI 2:11!1	s	noun	γυνὴ	γυνή	N-NSF		
+1TI 2:11!2		prep	ἐν	ἐν	PREP		
+1TI 2:11!3		noun	ἡσυχίᾳ	ἡσυχία	N-DSF		
+1TI 2:11!4	v	verb	μανθανέτω	μανθάνω	V-PAM-3S	γυνή	1TI 2:11!1
+1TI 2:11!5		prep	ἐν	ἐν	PREP		
+1TI 2:11!6		adj	πάσῃ	πᾶς	A-DSF		
+1TI 2:11!7		noun	ὑποταγῇ	ὑποταγή	N-DSF		
+1TI 2:12!1	v	verb	διδάσκειν	διδάσκω	V-PAN	γυνή	1TI 2:12!3
+1TI 2:12!2		conj	δὲ	δέ	CONJ		
+1TI 2:12!3	s	noun	γυναικὶ	γυνή	N-DSF		
+1TI 2:12!4		adv	οὐκ	οὐ	PRT-N		
+1TI 2:12!5	v	verb	ἐπιτρέπω	ἐπιτρέπω	V-PAI-1S	Παῦλος	1TI 1:1!1
+1TI 2:12!6		conj	οὐδὲ	οὐδέ	CONJ-N		
+1TI 2:12!7	v	verb	αὐθεντεῖν	αὐθεντέω	V-PAN	γυνή	1TI 2:12!3
+1TI 2:12!8	o	noun	ἀνδρός	ἀνήρ	N-GSM		
+1TI 2:12!9		conj	ἀλλ	ἀλλά	CONJ		
+1TI 2:12!10	vc	verb	εἶναι	εἰμί	V-PAN		
+1TI 2:12!11		prep	ἐν	ἐν	PREP		
+1TI 2:12!12		noun	ἡσυχίᾳ	ἡσυχία	N-DSF		
+1TI 2:13!1	s	noun	Ἀδὰμ	Ἀδάμ	N-PRI		
+1TI 2:13!2		conj	γὰρ	γάρ	CONJ		
+1TI 2:13!3	adv	adj	πρῶτος	πρῶτος	A-NSM-S		
+1TI 2:13!4	v	verb	ἐπλάσθη	πλάσσω	V-API-3S		
+1TI 2:13!5	adv	adv	εἶτα	εἶτα	ADV		
+1TI 2:13!6	s	noun	Εὕα	Εὕα	N-NSF		
+1TI 2:14!1		conj	καὶ	καί	CONJ		
+1TI 2:14!2	s	noun	Ἀδὰμ	Ἀδάμ	N-PRI		
+1TI 2:14!3	adv	adv	οὐκ	οὐ	PRT-N		
+1TI 2:14!4	v	verb	ἠπατήθη	ἀπατάω	V-API-3S		
+1TI 2:14!5		det	ἡ	ὁ	T-NSF		
+1TI 2:14!6		conj	δὲ	δέ	CONJ		
+1TI 2:14!7		noun	γυνὴ	γυνή	N-NSF		
+1TI 2:14!8	v	verb	ἐξαπατηθεῖσα	ἐξαπατάω	V-APP-NSF		
+1TI 2:14!9		prep	ἐν	ἐν	PREP		
+1TI 2:14!10		noun	παραβάσει	παράβασις	N-DSF		
+1TI 2:14!11	v	verb	γέγονεν	γίνομαι	V-2RAI-3S		
+1TI 2:15!1	v	verb	σωθήσεται	σῴζω	V-FPI-3S		
+1TI 2:15!2		conj	δὲ	δέ	CONJ		
+1TI 2:15!3		prep	διὰ	διά	PREP		
+1TI 2:15!4		det	τῆς	ὁ	T-GSF		
+1TI 2:15!5		noun	τεκνογονίας	τεκνογονία	N-GSF		
+1TI 2:15!6		conj	ἐὰν	ἐάν	COND		
+1TI 2:15!7	v	verb	μείνωσιν	μένω	V-AAS-3P	γυνή	1TI 2:12!3
+1TI 2:15!8		prep	ἐν	ἐν	PREP		
+1TI 2:15!9		noun	πίστει	πίστις	N-DSF		
+1TI 2:15!10		conj	καὶ	καί	CONJ		
+1TI 2:15!11		noun	ἀγάπῃ	ἀγάπη	N-DSF		
+1TI 2:15!12		conj	καὶ	καί	CONJ		
+1TI 2:15!13		noun	ἁγιασμῷ	ἁγιασμός	N-DSM		
+1TI 2:15!14		prep	μετὰ	μετά	PREP		
+1TI 2:15!15		noun	σωφροσύνης	σωφροσύνη	N-GSF		
+1TI 3:1!1	p	adj	Πιστὸς	πιστός	A-NSM		
+1TI 3:1!2		det	ὁ	ὁ	T-NSM		
+1TI 3:1!3		noun	λόγος	λόγος	N-NSM		
+1TI 3:1!4		conj	εἴ	εἰ	COND		
+1TI 3:1!5	s	pron	τις	τις	X-NSM		
+1TI 3:1!6	o	noun	ἐπισκοπῆς	ἐπισκοπή	N-GSF		
+1TI 3:1!7	v	verb	ὀρέγεται	ὀρέγομαι	V-PMI-3S	τις	1TI 3:1!5
+1TI 3:1!8		adj	καλοῦ	καλός	A-GSN		
+1TI 3:1!9		noun	ἔργου	ἔργον	N-GSN		
+1TI 3:1!10	v	verb	ἐπιθυμεῖ	ἐπιθυμέω	V-PAI-3S	τις	1TI 3:1!5
+1TI 3:2!1	v	verb	δεῖ	δέω	V-PAI-3S	ἀνεπίλημπτος;ἀνήρ;νηφάλιος;σώφρων;κόσμιος;φιλόξενος;διδακτικός;πάροινος;μή;πλήκτης;ἐπιεικής;ἄμαχος;ἀφιλάργυρος	1TI 3:2!5;1TI 3:2!9;1TI 3:2!10;1TI 3:2!11;1TI 3:2!12;1TI 3:2!13;1TI 3:2!14;1TI 3:3!2;1TI 3:3!3;1TI 3:3!4;1TI 3:3!6;1TI 3:3!7;1TI 3:3!8
+1TI 3:2!2		conj	οὖν	οὖν	CONJ		
+1TI 3:2!3		det	τὸν	ὁ	T-ASM		
+1TI 3:2!4		noun	ἐπίσκοπον	ἐπίσκοπος	N-ASM		
+1TI 3:2!5		adj	ἀνεπίλημπτον	ἀνεπίλημπτος	A-ASM		
+1TI 3:2!6	vc	verb	εἶναι	εἰμί	V-PAN		
+1TI 3:2!7		adj	μιᾶς	εἷς	A-GSF		
+1TI 3:2!8		noun	γυναικὸς	γυνή	N-GSF		
+1TI 3:2!9		noun	ἄνδρα	ἀνήρ	N-ASM		
+1TI 3:2!10		adj	νηφάλιον	νηφάλιος	A-ASM		
+1TI 3:2!11		adj	σώφρονα	σώφρων	A-ASM		
+1TI 3:2!12		adj	κόσμιον	κόσμιος	A-ASM		
+1TI 3:2!13		adj	φιλόξενον	φιλόξενος	A-ASM		
+1TI 3:2!14		adj	διδακτικόν	διδακτικός	A-ASM		
+1TI 3:3!1		adv	μὴ	μή	PRT-N		
+1TI 3:3!2		adj	πάροινον	πάροινος	A-ASM		
+1TI 3:3!3		adv	μὴ	μή	PRT-N		
+1TI 3:3!4		noun	πλήκτην	πλήκτης	N-ASM		
+1TI 3:3!5		conj	ἀλλὰ	ἀλλά	CONJ		
+1TI 3:3!6		adj	ἐπιεικῆ	ἐπιεικής	A-ASM		
+1TI 3:3!7		adj	ἄμαχον	ἄμαχος	A-ASM		
+1TI 3:3!8		adj	ἀφιλάργυρον	ἀφιλάργυρος	A-ASM		
+1TI 3:4!1		det	τοῦ	ὁ	T-GSM		
+1TI 3:4!2		adj	ἰδίου	ἴδιος	A-GSM		
+1TI 3:4!3		noun	οἴκου	οἶκος	N-GSM		
+1TI 3:4!4	adv	adv	καλῶς	καλῶς	ADV		
+1TI 3:4!5	v	verb	προϊστάμενον	προΐστημι	V-PMP-ASM	ἐπίσκοπος	1TI 3:2!4
+1TI 3:4!6	o	noun	τέκνα	τέκνον	N-APN		
+1TI 3:4!7	v	verb	ἔχοντα	ἔχω	V-PAP-ASM	ἐπίσκοπος	1TI 3:2!4
+1TI 3:4!8		prep	ἐν	ἐν	PREP		
+1TI 3:4!9		noun	ὑποταγῇ	ὑποταγή	N-DSF		
+1TI 3:4!10		prep	μετὰ	μετά	PREP		
+1TI 3:4!11		adj	πάσης	πᾶς	A-GSF		
+1TI 3:4!12		noun	σεμνότητος	σεμνότης	N-GSF		
+1TI 3:5!1		conj	εἰ	εἰ	COND		
+1TI 3:5!2		conj	δέ	δέ	CONJ		
+1TI 3:5!3	s	pron	τις	τις	X-NSM		
+1TI 3:5!4		det	τοῦ	ὁ	T-GSM		
+1TI 3:5!5		adj	ἰδίου	ἴδιος	A-GSM		
+1TI 3:5!6		noun	οἴκου	οἶκος	N-GSM		
+1TI 3:5!7	v	verb	προστῆναι	προΐστημι	V-2AAN	τις	1TI 3:5!3
+1TI 3:5!8	adv	adv	οὐκ	οὐ	PRT-N		
+1TI 3:5!9	v	verb	οἶδεν	οἶδα	V-RAI-3S	τις	1TI 3:5!3
+1TI 3:5!10	adv	adv	πῶς	πῶς	ADV-I		
+1TI 3:5!11		noun	ἐκκλησίας	ἐκκλησία	N-GSF		
+1TI 3:5!12		noun	θεοῦ	θεός	N-GSM		
+1TI 3:5!13	v	verb	ἐπιμελήσεται	ἐπιμελέομαι	V-FDI-3S		
+1TI 3:6!1	adv	adv	μὴ	μή	PRT-N		
+1TI 3:6!2	p	adj	νεόφυτον	νεόφυτος	A-ASM		
+1TI 3:6!3		conj	ἵνα	ἵνα	CONJ		
+1TI 3:6!4	adv	adv	μὴ	μή	PRT-N		
+1TI 3:6!5	v	verb	τυφωθεὶς	τυφόομαι	V-APP-NSM		
+1TI 3:6!6		prep	εἰς	εἰς	PREP		
+1TI 3:6!7		noun	κρίμα	κρίμα	N-ASN		
+1TI 3:6!8	v	verb	ἐμπέσῃ	ἐμπίπτω	V-2AAS-3S	ἐπίσκοπος	1TI 3:2!4
+1TI 3:6!9		det	τοῦ	ὁ	T-GSM		
+1TI 3:6!10		adj	διαβόλου	διάβολος	A-GSM		
+1TI 3:7!1	v	verb	δεῖ	δέω	V-PAI-3S	ἐπίσκοπος	1TI 3:2!4
+1TI 3:7!2		conj	δὲ	δέ	CONJ		
+1TI 3:7!3	adv	adv	καὶ	καί	CONJ		
+1TI 3:7!4		noun	μαρτυρίαν	μαρτυρία	N-ASF		
+1TI 3:7!5		adj	καλὴν	καλός	A-ASF		
+1TI 3:7!6	v	verb	ἔχειν	ἔχω	V-PAN	ἐπίσκοπος	1TI 3:2!4
+1TI 3:7!7		prep	ἀπὸ	ἀπό	PREP		
+1TI 3:7!8		det	τῶν	ὁ	T-GPM		
+1TI 3:7!9		adv	ἔξωθεν	ἔξωθεν	ADV		
+1TI 3:7!10		conj	ἵνα	ἵνα	CONJ		
+1TI 3:7!11	adv	adv	μὴ	μή	PRT-N		
+1TI 3:7!12		prep	εἰς	εἰς	PREP		
+1TI 3:7!13		noun	ὀνειδισμὸν	ὀνειδισμός	N-ASM		
+1TI 3:7!14	v	verb	ἐμπέσῃ	ἐμπίπτω	V-2AAS-3S	ἐπίσκοπος	1TI 3:2!4
+1TI 3:7!15		conj	καὶ	καί	CONJ		
+1TI 3:7!16		noun	παγίδα	παγίς	N-ASF		
+1TI 3:7!17		det	τοῦ	ὁ	T-GSM		
+1TI 3:7!18		adj	διαβόλου	διάβολος	A-GSM		
+1TI 3:8!1	s	noun	Διακόνους	διάκονος	N-APM		
+1TI 3:8!2	adv	adv	ὡσαύτως	ὡσαύτως	ADV		
+1TI 3:8!3		adj	σεμνούς	σεμνός	A-APM		
+1TI 3:8!4		adv	μὴ	μή	PRT-N		
+1TI 3:8!5		adj	διλόγους	δίλογος	A-APM		
+1TI 3:8!6	adv	adv	μὴ	μή	PRT-N		
+1TI 3:8!7		noun	οἴνῳ	οἶνος	N-DSM		
+1TI 3:8!8		adj	πολλῷ	πολύς	A-DSM		
+1TI 3:8!9	v	verb	προσέχοντας	προσέχω	V-PAP-APM	διάκονος	1TI 3:8!1
+1TI 3:8!10		adv	μὴ	μή	PRT-N		
+1TI 3:8!11		adj	αἰσχροκερδεῖς	αἰσχροκερδής	A-APM		
+1TI 3:9!1	v	verb	ἔχοντας	ἔχω	V-PAP-APM	διάκονος	1TI 3:8!1
+1TI 3:9!2		det	τὸ	ὁ	T-ASN		
+1TI 3:9!3		noun	μυστήριον	μυστήριον	N-ASN		
+1TI 3:9!4		det	τῆς	ὁ	T-GSF		
+1TI 3:9!5		noun	πίστεως	πίστις	N-GSF		
+1TI 3:9!6		prep	ἐν	ἐν	PREP		
+1TI 3:9!7		adj	καθαρᾷ	καθαρός	A-DSF		
+1TI 3:9!8		noun	συνειδήσει	συνείδησις	N-DSF		
+1TI 3:10!1		adv	καὶ	καί	CONJ		
+1TI 3:10!2		pron	οὗτοι	οὗτος	D-NPM		
+1TI 3:10!3		conj	δὲ	δέ	CONJ		
+1TI 3:10!4	v	verb	δοκιμαζέσθωσαν	δοκιμάζω	V-PPM-3P		
+1TI 3:10!5	adv	adj	πρῶτον	πρῶτος	ADV-S		
+1TI 3:10!6	adv	adv	εἶτα	εἶτα	ADV		
+1TI 3:10!7	v	verb	διακονείτωσαν	διακονέω	V-PAM-3P	διάκονος	1TI 3:8!1
+1TI 3:10!8	p	adj	ἀνέγκλητοι	ἀνέγκλητος	A-NPM		
+1TI 3:10!9	vc	verb	ὄντες	εἰμί	V-PAP-NPM		
+1TI 3:11!1	s	noun	γυναῖκας	γυνή	N-APF		
+1TI 3:11!2	adv	adv	ὡσαύτως	ὡσαύτως	ADV		
+1TI 3:11!3		adj	σεμνάς	σεμνός	A-APF		
+1TI 3:11!4		adv	μὴ	μή	PRT-N		
+1TI 3:11!5		adj	διαβόλους	διάβολος	A-APF		
+1TI 3:11!6		adj	νηφαλίους	νηφάλιος	A-APM		
+1TI 3:11!7		adj	πιστὰς	πιστός	A-APF		
+1TI 3:11!8		prep	ἐν	ἐν	PREP		
+1TI 3:11!9		adj	πᾶσιν	πᾶς	A-DPN		
+1TI 3:12!1	s	noun	διάκονοι	διάκονος	N-NPM		
+1TI 3:12!2	vc	verb	ἔστωσαν	εἰμί	V-PAM-3P		
+1TI 3:12!3		adj	μιᾶς	εἷς	A-GSF		
+1TI 3:12!4		noun	γυναικὸς	γυνή	N-GSF		
+1TI 3:12!5		noun	ἄνδρες	ἀνήρ	N-NPM		
+1TI 3:12!6		noun	τέκνων	τέκνον	N-GPN		
+1TI 3:12!7	adv	adv	καλῶς	καλῶς	ADV		
+1TI 3:12!8	v	verb	προϊστάμενοι	προΐστημι	V-PMP-NPM	διάκονος	1TI 3:12!1
+1TI 3:12!9		conj	καὶ	καί	CONJ		
+1TI 3:12!10		det	τῶν	ὁ	T-GPM		
+1TI 3:12!11		adj	ἰδίων	ἴδιος	A-GPM		
+1TI 3:12!12		noun	οἴκων	οἶκος	N-GPM		
+1TI 3:13!1		det	οἱ	ὁ	T-NPM		
+1TI 3:13!2		conj	γὰρ	γάρ	CONJ		
+1TI 3:13!3	adv	adv	καλῶς	καλῶς	ADV		
+1TI 3:13!4	v	verb	διακονήσαντες	διακονέω	V-AAP-NPM		
+1TI 3:13!5		noun	βαθμὸν	βαθμός	N-ASM		
+1TI 3:13!6	io	pron	ἑαυτοῖς	ἑαυτοῦ	F-3DPM		
+1TI 3:13!7		adj	καλὸν	καλός	A-ASM		
+1TI 3:13!8	v	verb	περιποιοῦνται	περιποιέομαι	V-PMI-3P		
+1TI 3:13!9		conj	καὶ	καί	CONJ		
+1TI 3:13!10		adj	πολλὴν	πολύς	A-ASF		
+1TI 3:13!11		noun	παρρησίαν	παρρησία	N-ASF		
+1TI 3:13!12		prep	ἐν	ἐν	PREP		
+1TI 3:13!13		noun	πίστει	πίστις	N-DSF		
+1TI 3:13!14		det	τῇ	ὁ	T-DSF		
+1TI 3:13!15		prep	ἐν	ἐν	PREP		
+1TI 3:13!16		noun	Χριστῷ	Χριστός	N-DSM		
+1TI 3:13!17		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+1TI 3:14!1	o	pron	Ταῦτά	οὗτος	D-APN		
+1TI 3:14!2	io	pron	σοι	σύ	P-2DS		
+1TI 3:14!3	v	verb	γράφω	γράφω	V-PAI-1S	Παῦλος	1TI 1:1!1
+1TI 3:14!4	v	verb	ἐλπίζων	ἐλπίζω	V-PAP-NSM	Παῦλος	1TI 1:1!1
+1TI 3:14!5	v	verb	ἐλθεῖν	ἔρχομαι	V-2AAN	Παῦλος	1TI 1:1!1
+1TI 3:14!6		prep	πρὸς	πρός	PREP		
+1TI 3:14!7		pron	σὲ	σύ	P-2AS		
+1TI 3:14!8		prep	ἐν	ἐν	PREP		
+1TI 3:14!9		noun	τάχει	τάχος	N-DSN		
+1TI 3:15!1		conj	ἐὰν	ἐάν	COND		
+1TI 3:15!2		conj	δὲ	δέ	CONJ		
+1TI 3:15!3	v	verb	βραδύνω	βραδύνω	V-PAS-1S	Παῦλος	1TI 1:1!1
+1TI 3:15!4		conj	ἵνα	ἵνα	CONJ		
+1TI 3:15!5	v	verb	εἰδῇς	οἶδα	V-RAS-2S	τέκνον	1TI 1:18!6
+1TI 3:15!6	adv	adv	πῶς	πῶς	ADV		
+1TI 3:15!7	v	verb	δεῖ	δέω	V-PAI-3S	τέκνον	1TI 1:18!6
+1TI 3:15!8		prep	ἐν	ἐν	PREP		
+1TI 3:15!9		noun	οἴκῳ	οἶκος	N-DSM		
+1TI 3:15!10		noun	θεοῦ	θεός	N-GSM		
+1TI 3:15!11	v	verb	ἀναστρέφεσθαι	ἀναστρέφω	V-PPN		
+1TI 3:15!12	s	pron	ἥτις	ὅστις	R-NSF		
+1TI 3:15!13	vc	verb	ἐστὶν	εἰμί	V-PAI-3S		
+1TI 3:15!14		noun	ἐκκλησία	ἐκκλησία	N-NSF		
+1TI 3:15!15		noun	θεοῦ	θεός	N-GSM		
+1TI 3:15!16	v	verb	ζῶντος	ζάω	V-PAP-GSM	θεός	1TI 3:15!15
+1TI 3:15!17		noun	στῦλος	στῦλος	N-NSM		
+1TI 3:15!18		conj	καὶ	καί	CONJ		
+1TI 3:15!19		noun	ἑδραίωμα	ἑδραίωμα	N-NSN		
+1TI 3:15!20		det	τῆς	ὁ	T-GSF		
+1TI 3:15!21		noun	ἀληθείας	ἀλήθεια	N-GSF		
+1TI 3:16!1		conj	καὶ	καί	CONJ		
+1TI 3:16!2	adv	adv	ὁμολογουμένως	ὁμολογουμένως	ADV		
+1TI 3:16!3	p	adj	μέγα	μέγας	A-NSN		
+1TI 3:16!4	vc	verb	ἐστὶν	εἰμί	V-PAI-3S		
+1TI 3:16!5		det	τὸ	ὁ	T-NSN		
+1TI 3:16!6		det	τῆς	ὁ	T-GSF		
+1TI 3:16!7		noun	εὐσεβείας	εὐσέβεια	N-GSF		
+1TI 3:16!8		noun	μυστήριον	μυστήριον	N-NSN		
+1TI 3:16!9	s	pron	Ὃς	ὅς	R-NSM		
+1TI 3:16!10	v	verb	ἐφανερώθη	φανερόω	V-API-3S		
+1TI 3:16!11		prep	ἐν	ἐν	PREP		
+1TI 3:16!12		noun	σαρκί	σάρξ	N-DSF		
+1TI 3:16!13	v	verb	ἐδικαιώθη	δικαιόω	V-API-3S		
+1TI 3:16!14		prep	ἐν	ἐν	PREP		
+1TI 3:16!15		noun	πνεύματι	πνεῦμα	N-DSN		
+1TI 3:16!16	v	verb	ὤφθη	ὁράω	V-API-3S		
+1TI 3:16!17	io	noun	ἀγγέλοις	ἄγγελος	N-DPM		
+1TI 3:16!18	v	verb	ἐκηρύχθη	κηρύσσω	V-API-3S		
+1TI 3:16!19		prep	ἐν	ἐν	PREP		
+1TI 3:16!20		noun	ἔθνεσιν	ἔθνος	N-DPN		
+1TI 3:16!21	v	verb	ἐπιστεύθη	πιστεύω	V-API-3S		
+1TI 3:16!22		prep	ἐν	ἐν	PREP		
+1TI 3:16!23		noun	κόσμῳ	κόσμος	N-DSM		
+1TI 3:16!24	v	verb	ἀνελήμφθη	ἀναλαμβάνω	V-API-3S		
+1TI 3:16!25		prep	ἐν	ἐν	PREP		
+1TI 3:16!26		noun	δόξῃ	δόξα	N-DSF		
+1TI 4:1!1		det	Τὸ	ὁ	T-NSN		
+1TI 4:1!2		conj	δὲ	δέ	CONJ		
+1TI 4:1!3		noun	πνεῦμα	πνεῦμα	N-NSN		
+1TI 4:1!4	adv	adv	ῥητῶς	ῥητῶς	ADV		
+1TI 4:1!5	v	verb	λέγει	λέγω	V-PAI-3S	πνεῦμα	1TI 4:1!3
+1TI 4:1!6		conj	ὅτι	ὅτι	CONJ		
+1TI 4:1!7		prep	ἐν	ἐν	PREP		
+1TI 4:1!8		adj	ὑστέροις	ὕστερος	A-DPM		
+1TI 4:1!9		noun	καιροῖς	καιρός	N-DPM		
+1TI 4:1!10	v	verb	ἀποστήσονταί	ἀφίσταμαι	V-FDI-3P	τις	1TI 4:1!11
+1TI 4:1!11	s	pron	τινες	τις	X-NPM		
+1TI 4:1!12		det	τῆς	ὁ	T-GSF		
+1TI 4:1!13		noun	πίστεως	πίστις	N-GSF		
+1TI 4:1!14	v	verb	προσέχοντες	προσέχω	V-PAP-NPM	τις	1TI 4:1!11
+1TI 4:1!15		noun	πνεύμασι	πνεῦμα	N-DPN		
+1TI 4:1!16		adj	πλάνοις	πλάνος	A-DPN		
+1TI 4:1!17		conj	καὶ	καί	CONJ		
+1TI 4:1!18		noun	διδασκαλίαις	διδασκαλία	N-DPF		
+1TI 4:1!19		noun	δαιμονίων	δαιμόνιον	N-GPN		
+1TI 4:2!1		prep	ἐν	ἐν	PREP		
+1TI 4:2!2		noun	ὑποκρίσει	ὑπόκρισις	N-DSF		
+1TI 4:2!3		adj	ψευδολόγων	ψευδολόγος	A-GPM		
+1TI 4:2!4	v	verb	κεκαυστηριασμένων	καυστηριάζω	V-RPP-GPM		
+1TI 4:2!5		det	τὴν	ὁ	T-ASF		
+1TI 4:2!6		adj	ἰδίαν	ἴδιος	A-ASF		
+1TI 4:2!7		noun	συνείδησιν	συνείδησις	N-ASF		
+1TI 4:3!1	v	verb	κωλυόντων	κωλύω	V-PAP-GPM	ψευδολόγος	1TI 4:2!3
+1TI 4:3!2	v	verb	γαμεῖν	γαμέω	V-PAN		
+1TI 4:3!3	v	verb	ἀπέχεσθαι	ἀπέχω	V-PMN		
+1TI 4:3!4		noun	βρωμάτων	βρῶμα	N-GPN		
+1TI 4:3!5	o	pron	ἃ	ὅς	R-APN		
+1TI 4:3!6		det	ὁ	ὁ	T-NSM		
+1TI 4:3!7		noun	θεὸς	θεός	N-NSM		
+1TI 4:3!8	v	verb	ἔκτισεν	κτίζω	V-AAI-3S	θεός	1TI 4:3!7
+1TI 4:3!9		prep	εἰς	εἰς	PREP		
+1TI 4:3!10		noun	μετάλημψιν	μετάλημψις	N-ASF		
+1TI 4:3!11		prep	μετὰ	μετά	PREP		
+1TI 4:3!12		noun	εὐχαριστίας	εὐχαριστία	N-GSF		
+1TI 4:3!13		det	τοῖς	ὁ	T-DPM		
+1TI 4:3!14		adj	πιστοῖς	πιστός	A-DPM		
+1TI 4:3!15		conj	καὶ	καί	CONJ		
+1TI 4:3!16	v	verb	ἐπεγνωκόσι	ἐπιγινώσκω	V-RAP-DPM		
+1TI 4:3!17		det	τὴν	ὁ	T-ASF		
+1TI 4:3!18		noun	ἀλήθειαν	ἀλήθεια	N-ASF		
+1TI 4:4!1		conj	ὅτι	ὅτι	CONJ		
+1TI 4:4!2		adj	πᾶν	πᾶς	A-NSN		
+1TI 4:4!3		noun	κτίσμα	κτίσμα	N-NSN		
+1TI 4:4!4		noun	θεοῦ	θεός	N-GSM		
+1TI 4:4!5	p	adj	καλόν	καλός	A-NSN		
+1TI 4:4!6		conj	καὶ	καί	CONJ		
+1TI 4:4!7	s	adj	οὐδὲν	οὐδείς	A-NSN-N		
+1TI 4:4!8	p	adj	ἀπόβλητον	ἀπόβλητος	A-NSN		
+1TI 4:4!9		prep	μετὰ	μετά	PREP		
+1TI 4:4!10		noun	εὐχαριστίας	εὐχαριστία	N-GSF		
+1TI 4:4!11	v	verb	λαμβανόμενον	λαμβάνω	V-PPP-NSN		
+1TI 4:5!1	v	verb	ἁγιάζεται	ἁγιάζω	V-PPI-3S		
+1TI 4:5!2		conj	γὰρ	γάρ	CONJ		
+1TI 4:5!3		prep	διὰ	διά	PREP		
+1TI 4:5!4		noun	λόγου	λόγος	N-GSM		
+1TI 4:5!5		noun	θεοῦ	θεός	N-GSM		
+1TI 4:5!6		conj	καὶ	καί	CONJ		
+1TI 4:5!7		noun	ἐντεύξεως	ἔντευξις	N-GSF		
+1TI 4:6!1	o	pron	Ταῦτα	οὗτος	D-APN		
+1TI 4:6!2	v	verb	ὑποτιθέμενος	ὑποτίθημι	V-PMP-NSM	τέκνον	1TI 1:18!6
+1TI 4:6!3		det	τοῖς	ὁ	T-DPM		
+1TI 4:6!4		noun	ἀδελφοῖς	ἀδελφός	N-DPM		
+1TI 4:6!5		adj	καλὸς	καλός	A-NSM		
+1TI 4:6!6	vc	verb	ἔσῃ	εἰμί	V-FDI-2S		
+1TI 4:6!7		noun	διάκονος	διάκονος	N-NSM		
+1TI 4:6!8		noun	Χριστοῦ	Χριστός	N-GSM		
+1TI 4:6!9		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+1TI 4:6!10	v	verb	ἐντρεφόμενος	ἐντρέφομαι	V-PPP-NSM		
+1TI 4:6!11		det	τοῖς	ὁ	T-DPM		
+1TI 4:6!12		noun	λόγοις	λόγος	N-DPM		
+1TI 4:6!13		det	τῆς	ὁ	T-GSF		
+1TI 4:6!14		noun	πίστεως	πίστις	N-GSF		
+1TI 4:6!15		conj	καὶ	καί	CONJ		
+1TI 4:6!16		det	τῆς	ὁ	T-GSF		
+1TI 4:6!17		adj	καλῆς	καλός	A-GSF		
+1TI 4:6!18		noun	διδασκαλίας	διδασκαλία	N-GSF		
+1TI 4:6!19	adv	pron	ᾗ	ὅς	R-DSF		
+1TI 4:6!20	v	verb	παρηκολούθηκας	παρακολουθέω	V-RAI-2S	τέκνον	1TI 1:18!6
+1TI 4:7!1		det	τοὺς	ὁ	T-APM		
+1TI 4:7!2		conj	δὲ	δέ	CONJ		
+1TI 4:7!3		adj	βεβήλους	βέβηλος	A-APM		
+1TI 4:7!4		conj	καὶ	καί	CONJ		
+1TI 4:7!5		adj	γραώδεις	γραώδης	A-APM		
+1TI 4:7!6		noun	μύθους	μῦθος	N-APM		
+1TI 4:7!7	v	verb	παραιτοῦ	παραιτέομαι	V-PNM-2S	τέκνον	1TI 1:18!6
+1TI 4:7!8	v	verb	γύμναζε	γυμνάζω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 4:7!9		conj	δὲ	δέ	CONJ		
+1TI 4:7!10	o	pron	σεαυτὸν	σεαυτοῦ	F-2ASM		
+1TI 4:7!11		prep	πρὸς	πρός	PREP		
+1TI 4:7!12		noun	εὐσέβειαν	εὐσέβεια	N-ASF		
+1TI 4:8!1		det	ἡ	ὁ	T-NSF		
+1TI 4:8!2		conj	γὰρ	γάρ	CONJ		
+1TI 4:8!3		adj	σωματικὴ	σωματικός	A-NSF		
+1TI 4:8!4		noun	γυμνασία	γυμνασία	N-NSF		
+1TI 4:8!5		prep	πρὸς	πρός	PREP		
+1TI 4:8!6		adj	ὀλίγον	ὀλίγος	A-ASN		
+1TI 4:8!7	vc	verb	ἐστὶν	εἰμί	V-PAI-3S		
+1TI 4:8!8	p	adj	ὠφέλιμος	ὠφέλιμος	A-NSM		
+1TI 4:8!9		det	ἡ	ὁ	T-NSF		
+1TI 4:8!10		conj	δὲ	δέ	CONJ		
+1TI 4:8!11		noun	εὐσέβεια	εὐσέβεια	N-NSF		
+1TI 4:8!12		prep	πρὸς	πρός	PREP		
+1TI 4:8!13		adj	πάντα	πᾶς	A-APN		
+1TI 4:8!14	p	adj	ὠφέλιμός	ὠφέλιμος	A-NSM		
+1TI 4:8!15	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+1TI 4:8!16		noun	ἐπαγγελίαν	ἐπαγγελία	N-ASF		
+1TI 4:8!17	v	verb	ἔχουσα	ἔχω	V-PAP-NSF	εὐσέβεια	1TI 4:8!11
+1TI 4:8!18		noun	ζωῆς	ζωή	N-GSF		
+1TI 4:8!19		det	τῆς	ὁ	T-GSF		
+1TI 4:8!20		adv	νῦν	νῦν	ADV		
+1TI 4:8!21		conj	καὶ	καί	CONJ		
+1TI 4:8!22		det	τῆς	ὁ	T-GSF		
+1TI 4:8!23	v	verb	μελλούσης	μέλλω	V-PAP-GSF	ζωή	1TI 4:8!18
+1TI 4:9!1		adj	πιστὸς	πιστός	A-NSM		
+1TI 4:9!2		det	ὁ	ὁ	T-NSM		
+1TI 4:9!3		noun	λόγος	λόγος	N-NSM		
+1TI 4:9!4		conj	καὶ	καί	CONJ		
+1TI 4:9!5		adj	πάσης	πᾶς	A-GSF		
+1TI 4:9!6		noun	ἀποδοχῆς	ἀποδοχή	N-GSF		
+1TI 4:9!7		adj	ἄξιος	ἄξιος	A-NSM		
+1TI 4:10!1		prep	εἰς	εἰς	PREP		
+1TI 4:10!2		pron	τοῦτο	οὗτος	D-ASN		
+1TI 4:10!3		conj	γὰρ	γάρ	CONJ		
+1TI 4:10!4		verb	κοπιῶμεν	κοπιάω	V-PAI-1P	Παῦλος;τέκνον;ἀδελφός	1TI 1:1!1;1TI 1:18!6;1TI 4:6!4
+1TI 4:10!5		conj	καὶ	καί	CONJ		
+1TI 4:10!6		verb	ὀνειδιζόμεθα	ὀνειδίζω	V-PPI-1P		
+1TI 4:10!7		conj	ὅτι	ὅτι	CONJ		
+1TI 4:10!8	v	verb	ἠλπίκαμεν	ἐλπίζω	V-RAI-1P	Παῦλος;τέκνον;ἀδελφός	1TI 1:1!1;1TI 1:18!6;1TI 4:6!4
+1TI 4:10!9		prep	ἐπὶ	ἐπί	PREP		
+1TI 4:10!10		noun	θεῷ	θεός	N-DSM		
+1TI 4:10!11	v	verb	ζῶντι	ζάω	V-PAP-DSM	θεός	1TI 4:10!10
+1TI 4:10!12	s	pron	ὅς	ὅς	R-NSM		
+1TI 4:10!13	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+1TI 4:10!14		noun	σωτὴρ	σωτήρ	N-NSM		
+1TI 4:10!15		adj	πάντων	πᾶς	A-GPM		
+1TI 4:10!16		noun	ἀνθρώπων	ἄνθρωπος	N-GPM		
+1TI 4:10!17		adv	μάλιστα	μάλιστα	ADV-S		
+1TI 4:10!18		adj	πιστῶν	πιστός	A-GPM		
+1TI 4:11!1		verb	Παράγγελλε	παραγγέλλω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 4:11!2	o	pron	ταῦτα	οὗτος	D-APN		
+1TI 4:11!3		conj	καὶ	καί	CONJ		
+1TI 4:11!4		verb	δίδασκε	διδάσκω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 4:12!1	s	adj	μηδείς	μηδείς	A-NSM-N		
+1TI 4:12!2		pron	σου	σύ	P-2GS		
+1TI 4:12!3		det	τῆς	ὁ	T-GSF		
+1TI 4:12!4		noun	νεότητος	νεότης	N-GSF		
+1TI 4:12!5	v	verb	καταφρονείτω	καταφρονέω	V-PAM-3S	μηδείς	1TI 4:12!1
+1TI 4:12!6		conj	ἀλλὰ	ἀλλά	CONJ		
+1TI 4:12!7		noun	τύπος	τύπος	N-NSM		
+1TI 4:12!8	vc	verb	γίνου	γίνομαι	V-PNM-2S		
+1TI 4:12!9		det	τῶν	ὁ	T-GPM		
+1TI 4:12!10		adj	πιστῶν	πιστός	A-GPM		
+1TI 4:12!11		prep	ἐν	ἐν	PREP		
+1TI 4:12!12		noun	λόγῳ	λόγος	N-DSM		
+1TI 4:12!13		prep	ἐν	ἐν	PREP		
+1TI 4:12!14		noun	ἀναστροφῇ	ἀναστροφή	N-DSF		
+1TI 4:12!15		prep	ἐν	ἐν	PREP		
+1TI 4:12!16		noun	ἀγάπῃ	ἀγάπη	N-DSF		
+1TI 4:12!17		prep	ἐν	ἐν	PREP		
+1TI 4:12!18		noun	πίστει	πίστις	N-DSF		
+1TI 4:12!19		prep	ἐν	ἐν	PREP		
+1TI 4:12!20		noun	ἁγνείᾳ	ἁγνεία	N-DSF		
+1TI 4:13!1		conj	ἕως	ἕως	ADV		
+1TI 4:13!2	v	verb	ἔρχομαι	ἔρχομαι	V-PNI-1S	Παῦλος	1TI 1:1!1
+1TI 4:13!3	v	verb	πρόσεχε	προσέχω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 4:13!4		det	τῇ	ὁ	T-DSF		
+1TI 4:13!5		noun	ἀναγνώσει	ἀνάγνωσις	N-DSF		
+1TI 4:13!6		det	τῇ	ὁ	T-DSF		
+1TI 4:13!7		noun	παρακλήσει	παράκλησις	N-DSF		
+1TI 4:13!8		det	τῇ	ὁ	T-DSF		
+1TI 4:13!9		noun	διδασκαλίᾳ	διδασκαλία	N-DSF		
+1TI 4:14!1	adv	adv	μὴ	μή	PRT-N		
+1TI 4:14!2	v	verb	ἀμέλει	ἀμελέω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 4:14!3		det	τοῦ	ὁ	T-GSN		
+1TI 4:14!4		prep	ἐν	ἐν	PREP		
+1TI 4:14!5		pron	σοὶ	σύ	P-2DS		
+1TI 4:14!6		noun	χαρίσματος	χάρισμα	N-GSN		
+1TI 4:14!7	s	pron	ὃ	ὅς	R-NSN		
+1TI 4:14!8	v	verb	ἐδόθη	δίδωμι	V-API-3S		
+1TI 4:14!9	io	pron	σοι	σύ	P-2DS		
+1TI 4:14!10		prep	διὰ	διά	PREP		
+1TI 4:14!11		noun	προφητείας	προφητεία	N-GSF		
+1TI 4:14!12		prep	μετὰ	μετά	PREP		
+1TI 4:14!13		noun	ἐπιθέσεως	ἐπίθεσις	N-GSF		
+1TI 4:14!14		det	τῶν	ὁ	T-GPF		
+1TI 4:14!15		noun	χειρῶν	χείρ	N-GPF		
+1TI 4:14!16		det	τοῦ	ὁ	T-GSN		
+1TI 4:14!17		noun	πρεσβυτερίου	πρεσβυτέριον	N-GSN		
+1TI 4:15!1	o	pron	ταῦτα	οὗτος	D-APN		
+1TI 4:15!2	v	verb	μελέτα	μελετάω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 4:15!3		prep	ἐν	ἐν	PREP		
+1TI 4:15!4		pron	τούτοις	οὗτος	D-DPN		
+1TI 4:15!5	vc	verb	ἴσθι	εἰμί	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 4:15!6		conj	ἵνα	ἵνα	CONJ		
+1TI 4:15!7		pron	σου	σύ	P-2GS		
+1TI 4:15!8		det	ἡ	ὁ	T-NSF		
+1TI 4:15!9		noun	προκοπὴ	προκοπή	N-NSF		
+1TI 4:15!10	p	adj	φανερὰ	φανερός	A-NSF		
+1TI 4:15!11	vc	verb	ᾖ	εἰμί	V-PAS-3S		
+1TI 4:15!12	adv	adj	πᾶσιν	πᾶς	A-DPM		
+1TI 4:16!1	v	verb	ἔπεχε	ἐπέχω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 4:16!2		pron	σεαυτῷ	σεαυτοῦ	F-2DSM		
+1TI 4:16!3		conj	καὶ	καί	CONJ		
+1TI 4:16!4		det	τῇ	ὁ	T-DSF		
+1TI 4:16!5		noun	διδασκαλίᾳ	διδασκαλία	N-DSF		
+1TI 4:16!6	v	verb	ἐπίμενε	ἐπιμένω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 4:16!7	adv	pron	αὐτοῖς	αὐτός	P-DPM		
+1TI 4:16!8	o	pron	τοῦτο	οὗτος	D-ASN		
+1TI 4:16!9		conj	γὰρ	γάρ	CONJ		
+1TI 4:16!10	v	verb	ποιῶν	ποιέω	V-PAP-NSM	τέκνον	1TI 1:18!6
+1TI 4:16!11		conj	καὶ	καί	CONJ		
+1TI 4:16!12		pron	σεαυτὸν	σεαυτοῦ	F-2ASM		
+1TI 4:16!13	v	verb	σώσεις	σῴζω	V-FAI-2S	τέκνον	1TI 1:18!6
+1TI 4:16!14		conj	καὶ	καί	CONJ		
+1TI 4:16!15		det	τοὺς	ὁ	T-APM		
+1TI 4:16!16	v	verb	ἀκούοντάς	ἀκούω	V-PAP-APM		
+1TI 4:16!17	o	pron	σου	σύ	P-2GS		
+1TI 5:1!1	o	adj	Πρεσβυτέρῳ	πρεσβύτερος	A-DSM-C		
+1TI 5:1!2	adv	adv	μὴ	μή	PRT-N		
+1TI 5:1!3	v	verb	ἐπιπλήξῃς	ἐπιπλήσσω	V-AAS-2S	τέκνον	1TI 1:18!6
+1TI 5:1!4		conj	ἀλλὰ	ἀλλά	CONJ		
+1TI 5:1!5	v	verb	παρακάλει	παρακαλέω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 5:1!6		conj	ὡς	ὡς	ADV		
+1TI 5:1!7		noun	πατέρα	πατήρ	N-ASM		
+1TI 5:1!8	o	adj	νεωτέρους	νέος	A-APM-C		
+1TI 5:1!9		conj	ὡς	ὡς	ADV		
+1TI 5:1!10		noun	ἀδελφούς	ἀδελφός	N-APM		
+1TI 5:2!1	o	adj	πρεσβυτέρας	πρεσβύτερος	A-APF-C		
+1TI 5:2!2		conj	ὡς	ὡς	ADV		
+1TI 5:2!3		noun	μητέρας	μήτηρ	N-APF		
+1TI 5:2!4	o	adj	νεωτέρας	νέος	A-APF-C		
+1TI 5:2!5		conj	ὡς	ὡς	ADV		
+1TI 5:2!6		noun	ἀδελφὰς	ἀδελφή	N-APF		
+1TI 5:2!7		prep	ἐν	ἐν	PREP		
+1TI 5:2!8		adj	πάσῃ	πᾶς	A-DSF		
+1TI 5:2!9		noun	ἁγνείᾳ	ἁγνεία	N-DSF		
+1TI 5:3!1		adj	Χήρας	χήρα	N-APF		
+1TI 5:3!2	v	verb	τίμα	τιμάω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 5:3!3		det	τὰς	ὁ	T-APF		
+1TI 5:3!4		adv	ὄντως	ὄντως	ADV		
+1TI 5:3!5		adj	χήρας	χήρα	N-APF		
+1TI 5:4!1		conj	εἰ	εἰ	COND		
+1TI 5:4!2		conj	δέ	δέ	CONJ		
+1TI 5:4!3		pron	τις	τις	X-NSM		
+1TI 5:4!4		adj	χήρα	χήρα	N-NSF		
+1TI 5:4!5		noun	τέκνα	τέκνον	N-APN		
+1TI 5:4!6		conj	ἢ	ἤ	PRT		
+1TI 5:4!7		adj	ἔκγονα	ἔκγονον	A-APN		
+1TI 5:4!8	v	verb	ἔχει	ἔχω	V-PAI-3S	χήρα	1TI 5:4!4
+1TI 5:4!9	v	verb	μανθανέτωσαν	μανθάνω	V-PAM-3P	τέκνον;ἔκγονον	1TI 5:4!5;1TI 5:4!7
+1TI 5:4!10	adv	adv	πρῶτον	πρῶτον	ADV-S		
+1TI 5:4!11		det	τὸν	ὁ	T-ASM		
+1TI 5:4!12		adj	ἴδιον	ἴδιος	A-ASM		
+1TI 5:4!13		noun	οἶκον	οἶκος	N-ASM		
+1TI 5:4!14	v	verb	εὐσεβεῖν	εὐσεβέω	V-PAN	τέκνον;ἔκγονον	1TI 5:4!5;1TI 5:4!7
+1TI 5:4!15		conj	καὶ	καί	CONJ		
+1TI 5:4!16	o	noun	ἀμοιβὰς	ἀμοιβή	N-APF		
+1TI 5:4!17	v	verb	ἀποδιδόναι	ἀποδίδωμι	V-PAN	τέκνον;ἔκγονον	1TI 5:4!5;1TI 5:4!7
+1TI 5:4!18		det	τοῖς	ὁ	T-DPM		
+1TI 5:4!19		adj	προγόνοις	πρόγονος	N-DPM		
+1TI 5:4!20	s	pron	τοῦτο	οὗτος	D-NSN		
+1TI 5:4!21		conj	γάρ	γάρ	CONJ		
+1TI 5:4!22	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+1TI 5:4!23	p	adj	ἀπόδεκτον	ἀπόδεκτος	A-NSN		
+1TI 5:4!24		prep	ἐνώπιον	ἐνώπιον	PREP		
+1TI 5:4!25		det	τοῦ	ὁ	T-GSM		
+1TI 5:4!26		noun	θεοῦ	θεός	N-GSM		
+1TI 5:5!1		det	ἡ	ὁ	T-NSF		
+1TI 5:5!2		conj	δὲ	δέ	CONJ		
+1TI 5:5!3		adv	ὄντως	ὄντως	ADV		
+1TI 5:5!4		adj	χήρα	χήρα	N-NSF		
+1TI 5:5!5		conj	καὶ	καί	CONJ		
+1TI 5:5!6	v	verb	μεμονωμένη	μονόομαι	V-RPP-NSF		
+1TI 5:5!7	v	verb	ἤλπικεν	ἐλπίζω	V-RAI-3S	χήρα	1TI 5:5!4
+1TI 5:5!8		prep	ἐπὶ	ἐπί	PREP		
+1TI 5:5!9		noun	θεὸν	θεός	N-ASM		
+1TI 5:5!10		conj	καὶ	καί	CONJ		
+1TI 5:5!11	v	verb	προσμένει	προσμένω	V-PAI-3S	χήρα	1TI 5:5!4
+1TI 5:5!12		det	ταῖς	ὁ	T-DPF		
+1TI 5:5!13		noun	δεήσεσιν	δέησις	N-DPF		
+1TI 5:5!14		conj	καὶ	καί	CONJ		
+1TI 5:5!15		det	ταῖς	ὁ	T-DPF		
+1TI 5:5!16		noun	προσευχαῖς	προσευχή	N-DPF		
+1TI 5:5!17		noun	νυκτὸς	νύξ	N-GSF		
+1TI 5:5!18		conj	καὶ	καί	CONJ		
+1TI 5:5!19		noun	ἡμέρας	ἡμέρα	N-GSF		
+1TI 5:6!1		det	ἡ	ὁ	T-NSF		
+1TI 5:6!2		conj	δὲ	δέ	CONJ		
+1TI 5:6!3	v	verb	σπαταλῶσα	σπαταλάω	V-PAP-NSF		
+1TI 5:6!4	v	verb	ζῶσα	ζάω	V-PAP-NSF		
+1TI 5:6!5	v	verb	τέθνηκεν	θνῄσκω	V-RAI-3S		
+1TI 5:7!1		adv	καὶ	καί	CONJ		
+1TI 5:7!2		pron	ταῦτα	οὗτος	D-APN		
+1TI 5:7!3	v	verb	παράγγελλε	παραγγέλλω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 5:7!4		conj	ἵνα	ἵνα	CONJ		
+1TI 5:7!5	p	adj	ἀνεπίλημπτοι	ἀνεπίλημπτος	A-NPM		
+1TI 5:7!6	vc	verb	ὦσιν	εἰμί	V-PAS-3P		
+1TI 5:8!1		conj	εἰ	εἰ	COND		
+1TI 5:8!2		conj	δέ	δέ	CONJ		
+1TI 5:8!3	s	pron	τις	τις	X-NSM		
+1TI 5:8!4		det	τῶν	ὁ	T-GPM		
+1TI 5:8!5		adj	ἰδίων	ἴδιος	A-GPM		
+1TI 5:8!6		conj	καὶ	καί	CONJ		
+1TI 5:8!7		adv	μάλιστα	μάλιστα	ADV-S		
+1TI 5:8!8		adj	οἰκείων	οἰκεῖος	A-GPM		
+1TI 5:8!9	adv	adv	οὐ	οὐ	PRT-N		
+1TI 5:8!10	v	verb	προνοεῖ	προνοέω	V-PAI-3S	τις	1TI 5:8!3
+1TI 5:8!11		det	τὴν	ὁ	T-ASF		
+1TI 5:8!12		noun	πίστιν	πίστις	N-ASF		
+1TI 5:8!13	v	verb	ἤρνηται	ἀρνέομαι	V-RDI-3S	τις	1TI 5:8!3
+1TI 5:8!14		conj	καὶ	καί	CONJ		
+1TI 5:8!15	vc	verb	ἔστιν	εἰμί	V-PAI-3S		
+1TI 5:8!16	adv	adj	ἀπίστου	ἄπιστος	A-GSM		
+1TI 5:8!17	p	adj	χείρων	χείρων	A-NSM-C		
+1TI 5:9!1	s	adj	Χήρα	χήρα	N-NSF		
+1TI 5:9!2	v	verb	καταλεγέσθω	καταλέγω	V-PPM-3S		
+1TI 5:9!3		adv	μὴ	μή	PRT-N		
+1TI 5:9!4		adj	ἔλαττον	ἐλάσσων	A-NSN		
+1TI 5:9!5		noun	ἐτῶν	ἔτος	N-GPN		
+1TI 5:9!6		num	ἑξήκοντα	ἑξήκοντα	A-NUI		
+1TI 5:9!7	vc	verb	γεγονυῖα	γίνομαι	V-2RAP-NSF		
+1TI 5:9!8		adj	ἑνὸς	εἷς	A-GSM		
+1TI 5:9!9		noun	ἀνδρὸς	ἀνήρ	N-GSM		
+1TI 5:9!10		noun	γυνή	γυνή	N-NSF		
+1TI 5:10!1		prep	ἐν	ἐν	PREP		
+1TI 5:10!2		noun	ἔργοις	ἔργον	N-DPN		
+1TI 5:10!3		adj	καλοῖς	καλός	A-DPN		
+1TI 5:10!4	v	verb	μαρτυρουμένη	μαρτυρέω	V-PPP-NSF		
+1TI 5:10!5		conj	εἰ	εἰ	COND		
+1TI 5:10!6	v	verb	ἐτεκνοτρόφησεν	τεκνοτροφέω	V-AAI-3S	χήρα	1TI 5:9!1
+1TI 5:10!7		conj	εἰ	εἰ	COND		
+1TI 5:10!8	v	verb	ἐξενοδόχησεν	ξενοδοχέω	V-AAI-3S	χήρα	1TI 5:9!1
+1TI 5:10!9		conj	εἰ	εἰ	COND		
+1TI 5:10!10		adj	ἁγίων	ἅγιος	A-GPM		
+1TI 5:10!11		noun	πόδας	πούς	N-APM		
+1TI 5:10!12	v	verb	ἔνιψεν	νίπτω	V-AAI-3S	χήρα	1TI 5:9!1
+1TI 5:10!13		conj	εἰ	εἰ	COND		
+1TI 5:10!14	v	verb	θλιβομένοις	θλίβω	V-PPP-DPM		
+1TI 5:10!15	v	verb	ἐπήρκεσεν	ἐπαρκέω	V-AAI-3S	χήρα	1TI 5:9!1
+1TI 5:10!16		conj	εἰ	εἰ	COND		
+1TI 5:10!17		adj	παντὶ	πᾶς	A-DSN		
+1TI 5:10!18		noun	ἔργῳ	ἔργον	N-DSN		
+1TI 5:10!19		adj	ἀγαθῷ	ἀγαθός	A-DSN		
+1TI 5:10!20	v	verb	ἐπηκολούθησεν	ἐπακολουθέω	V-AAI-3S	χήρα	1TI 5:9!1
+1TI 5:11!1		adj	νεωτέρας	νέος	A-APF-C		
+1TI 5:11!2		conj	δὲ	δέ	CONJ		
+1TI 5:11!3		adj	χήρας	χήρα	N-APF		
+1TI 5:11!4	v	verb	παραιτοῦ	παραιτέομαι	V-PNM-2S	τέκνον	1TI 1:18!6
+1TI 5:11!5		conj	ὅταν	ὅταν	CONJ		
+1TI 5:11!6		conj	γὰρ	γάρ	CONJ		
+1TI 5:11!7	v	verb	καταστρηνιάσωσιν	καταστρηνιάω	V-AAS-3P	χήρα	1TI 5:11!3
+1TI 5:11!8		det	τοῦ	ὁ	T-GSM		
+1TI 5:11!9		noun	Χριστοῦ	Χριστός	N-GSM		
+1TI 5:11!10	v	verb	γαμεῖν	γαμέω	V-PAN	χήρα	1TI 5:11!3
+1TI 5:11!11	v	verb	θέλουσιν	θέλω	V-PAI-3P	χήρα	1TI 5:11!3
+1TI 5:12!1	v	verb	ἔχουσαι	ἔχω	V-PAP-NPF	χήρα	1TI 5:11!3
+1TI 5:12!2	o	noun	κρίμα	κρίμα	N-ASN		
+1TI 5:12!3		conj	ὅτι	ὅτι	CONJ		
+1TI 5:12!4		det	τὴν	ὁ	T-ASF		
+1TI 5:12!5		adj	πρώτην	πρῶτος	A-ASF-S		
+1TI 5:12!6		noun	πίστιν	πίστις	N-ASF		
+1TI 5:12!7	v	verb	ἠθέτησαν	ἀθετέω	V-AAI-3P	χήρα	1TI 5:11!3
+1TI 5:13!1	adv	adv	ἅμα	ἅμα	ADV		
+1TI 5:13!2		conj	δὲ	δέ	CONJ		
+1TI 5:13!3		adv	καὶ	καί	CONJ		
+1TI 5:13!4		adj	ἀργαὶ	ἀργός	A-NPF		
+1TI 5:13!5	v	verb	μανθάνουσιν	μανθάνω	V-PAI-3P	χήρα	1TI 5:11!3
+1TI 5:13!6	v	verb	περιερχόμεναι	περιέρχομαι	V-PNP-NPF	χήρα	1TI 5:11!3
+1TI 5:13!7		det	τὰς	ὁ	T-APF		
+1TI 5:13!8		noun	οἰκίας	οἰκία	N-APF		
+1TI 5:13!9		adv	οὐ	οὐ	PRT-N		
+1TI 5:13!10	adv	adj	μόνον	μόνος	ADV		
+1TI 5:13!11		conj	δὲ	δέ	CONJ		
+1TI 5:13!12	p	adj	ἀργαὶ	ἀργός	A-NPF		
+1TI 5:13!13		conj	ἀλλὰ	ἀλλά	CONJ		
+1TI 5:13!14		adv	καὶ	καί	CONJ		
+1TI 5:13!15		adj	φλύαροι	φλύαρος	A-NPF		
+1TI 5:13!16		conj	καὶ	καί	CONJ		
+1TI 5:13!17		adj	περίεργοι	περίεργος	A-NPF		
+1TI 5:13!18	v	verb	λαλοῦσαι	λαλέω	V-PAP-NPF	χήρα	1TI 5:11!3
+1TI 5:13!19		det	τὰ	ὁ	T-APN		
+1TI 5:13!20	adv	adv	μὴ	μή	PRT-N		
+1TI 5:13!21	v	verb	δέοντα	δέω	V-PAP-APN		
+1TI 5:14!1	v	verb	βούλομαι	βούλομαι	V-PNI-1S	Παῦλος	1TI 1:1!1
+1TI 5:14!2		conj	οὖν	οὖν	CONJ		
+1TI 5:14!3	s	adj	νεωτέρας	νέος	A-APF-C		
+1TI 5:14!4	v	verb	γαμεῖν	γαμέω	V-PAN		
+1TI 5:14!5	v	verb	τεκνογονεῖν	τεκνογονέω	V-PAN		
+1TI 5:14!6	v	verb	οἰκοδεσποτεῖν	οἰκοδεσποτέω	V-PAN		
+1TI 5:14!7		adj	μηδεμίαν	μηδείς	A-ASF-N		
+1TI 5:14!8		noun	ἀφορμὴν	ἀφορμή	N-ASF		
+1TI 5:14!9	v	verb	διδόναι	δίδωμι	V-PAN		
+1TI 5:14!10		det	τῷ	ὁ	T-DSM		
+1TI 5:14!11	v	verb	ἀντικειμένῳ	ἀντίκειμαι	V-PNP-DSM		
+1TI 5:14!12		noun	λοιδορίας	λοιδορία	N-GSF		
+1TI 5:14!13		prep	χάριν	χάριν	PREP		
+1TI 5:15!1	adv	adv	ἤδη	ἤδη	ADV		
+1TI 5:15!2		conj	γάρ	γάρ	CONJ		
+1TI 5:15!3	s	pron	τινες	τις	X-NPM		
+1TI 5:15!4	v	verb	ἐξετράπησαν	ἐκτρέπομαι	V-2API-3P	τις	1TI 5:15!3
+1TI 5:15!5		prep	ὀπίσω	ὀπίσω	ADV		
+1TI 5:15!6		det	τοῦ	ὁ	T-GSM		
+1TI 5:15!7		noun	Σατανᾶ	Σατανᾶς	N-GSM		
+1TI 5:16!1		conj	εἴ	εἰ	COND		
+1TI 5:16!2		pron	τις	τις	X-NSF		
+1TI 5:16!3		adj	πιστὴ	πιστός	A-NSF		
+1TI 5:16!4	v	verb	ἔχει	ἔχω	V-PAI-3S	πιστός	1TI 5:16!3
+1TI 5:16!5	o	adj	χήρας	χήρα	N-APF		
+1TI 5:16!6	v	verb	ἐπαρκείτω	ἐπαρκέω	V-PAM-3S	πιστός	1TI 5:16!3
+1TI 5:16!7	o	pron	αὐταῖς	αὐτός	P-DPF		
+1TI 5:16!8		conj	καὶ	καί	CONJ		
+1TI 5:16!9	adv	adv	μὴ	μή	PRT-N		
+1TI 5:16!10	v	verb	βαρείσθω	βαρέω	V-PPM-3S		
+1TI 5:16!11		det	ἡ	ὁ	T-NSF		
+1TI 5:16!12		noun	ἐκκλησία	ἐκκλησία	N-NSF		
+1TI 5:16!13		conj	ἵνα	ἵνα	CONJ		
+1TI 5:16!14		det	ταῖς	ὁ	T-DPF		
+1TI 5:16!15		adv	ὄντως	ὄντως	ADV		
+1TI 5:16!16		adj	χήραις	χήρα	N-DPF		
+1TI 5:16!17	v	verb	ἐπαρκέσῃ	ἐπαρκέω	V-AAS-3S	ἐκκλησία	1TI 5:16!12
+1TI 5:17!1		det	Οἱ	ὁ	T-NPM		
+1TI 5:17!2	adv	adv	καλῶς	καλῶς	ADV		
+1TI 5:17!3	v	verb	προεστῶτες	προΐστημι	V-RAP-NPM	πρεσβύτερος	1TI 5:17!4
+1TI 5:17!4		adj	πρεσβύτεροι	πρεσβύτερος	A-NPM-C		
+1TI 5:17!5		adj	διπλῆς	διπλοῦς	A-GSF		
+1TI 5:17!6		noun	τιμῆς	τιμή	N-GSF		
+1TI 5:17!7	v	verb	ἀξιούσθωσαν	ἀξιόω	V-PPM-3P		
+1TI 5:17!8	adv	adv	μάλιστα	μάλιστα	ADV-S		
+1TI 5:17!9		det	οἱ	ὁ	T-NPM		
+1TI 5:17!10	v	verb	κοπιῶντες	κοπιάω	V-PAP-NPM		
+1TI 5:17!11		prep	ἐν	ἐν	PREP		
+1TI 5:17!12		noun	λόγῳ	λόγος	N-DSM		
+1TI 5:17!13		conj	καὶ	καί	CONJ		
+1TI 5:17!14		noun	διδασκαλίᾳ	διδασκαλία	N-DSF		
+1TI 5:18!1	v	verb	λέγει	λέγω	V-PAI-3S	γραφή	1TI 5:18!4
+1TI 5:18!2		conj	γὰρ	γάρ	CONJ		
+1TI 5:18!3		det	ἡ	ὁ	T-NSF		
+1TI 5:18!4		noun	γραφή	γραφή	N-NSF		
+1TI 5:18!5		noun	Βοῦν	βοῦς	N-ASM		
+1TI 5:18!6	v	verb	ἀλοῶντα	ἀλοάω	V-PAP-ASM	βοῦς	1TI 5:18!5
+1TI 5:18!7	adv	adv	οὐ	οὐ	PRT-N		
+1TI 5:18!8	v	verb	φιμώσεις	φιμόω	V-FAI-2S		
+1TI 5:18!9		conj	καί	καί	CONJ		
+1TI 5:18!10	p	adj	Ἄξιος	ἄξιος	A-NSM		
+1TI 5:18!11		det	ὁ	ὁ	T-NSM		
+1TI 5:18!12		noun	ἐργάτης	ἐργάτης	N-NSM		
+1TI 5:18!13		det	τοῦ	ὁ	T-GSM		
+1TI 5:18!14		noun	μισθοῦ	μισθός	N-GSM		
+1TI 5:18!15		pron	αὐτοῦ	αὐτός	P-GSM		
+1TI 5:19!1		prep	κατὰ	κατά	PREP		
+1TI 5:19!2		adj	πρεσβυτέρου	πρεσβύτερος	A-GSM-C		
+1TI 5:19!3	o	noun	κατηγορίαν	κατηγορία	N-ASF		
+1TI 5:19!4	adv	adv	μὴ	μή	PRT-N		
+1TI 5:19!5	v	verb	παραδέχου	παραδέχομαι	V-PNM-2S	τέκνον	1TI 1:18!6
+1TI 5:19!6		adv	ἐκτὸς	ἐκτός	ADV		
+1TI 5:19!7		conj	εἰ	εἰ	COND		
+1TI 5:19!8	adv	adv	μὴ	μή	PRT-N		
+1TI 5:19!9		prep	ἐπὶ	ἐπί	PREP		
+1TI 5:19!10		num	δύο	δύο	A-NUI		
+1TI 5:19!11		conj	ἢ	ἤ	PRT		
+1TI 5:19!12		adj	τριῶν	τρεῖς	A-GPM		
+1TI 5:19!13		noun	μαρτύρων	μάρτυς	N-GPM		
+1TI 5:20!1		det	τοὺς	ὁ	T-APM		
+1TI 5:20!2	v	verb	ἁμαρτάνοντας	ἁμαρτάνω	V-PAP-APM		
+1TI 5:20!3		prep	ἐνώπιον	ἐνώπιον	PREP		
+1TI 5:20!4		adj	πάντων	πᾶς	A-GPM		
+1TI 5:20!5	v	verb	ἔλεγχε	ἐλέγχω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 5:20!6		conj	ἵνα	ἵνα	CONJ		
+1TI 5:20!7		adv	καὶ	καί	CONJ		
+1TI 5:20!8		det	οἱ	ὁ	T-NPM		
+1TI 5:20!9		adj	λοιποὶ	λοιπός	A-NPM		
+1TI 5:20!10	o	noun	φόβον	φόβος	N-ASM		
+1TI 5:20!11	v	verb	ἔχωσιν	ἔχω	V-PAS-3P	λοιπός	1TI 5:20!9
+1TI 5:21!1	v	verb	διαμαρτύρομαι	διαμαρτύρομαι	V-PNI-1S	Παῦλος	1TI 1:1!1
+1TI 5:21!2		prep	ἐνώπιον	ἐνώπιον	PREP		
+1TI 5:21!3		det	τοῦ	ὁ	T-GSM		
+1TI 5:21!4		noun	θεοῦ	θεός	N-GSM		
+1TI 5:21!5		conj	καὶ	καί	CONJ		
+1TI 5:21!6		noun	Χριστοῦ	Χριστός	N-GSM		
+1TI 5:21!7		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+1TI 5:21!8		conj	καὶ	καί	CONJ		
+1TI 5:21!9		det	τῶν	ὁ	T-GPM		
+1TI 5:21!10		adj	ἐκλεκτῶν	ἐκλεκτός	A-GPM		
+1TI 5:21!11		noun	ἀγγέλων	ἄγγελος	N-GPM		
+1TI 5:21!12		conj	ἵνα	ἵνα	CONJ		
+1TI 5:21!13	o	pron	ταῦτα	οὗτος	D-APN		
+1TI 5:21!14	v	verb	φυλάξῃς	φυλάσσω	V-AAS-2S	τέκνον	1TI 1:18!6
+1TI 5:21!15		prep	χωρὶς	χωρίς	ADV		
+1TI 5:21!16		noun	προκρίματος	πρόκριμα	N-GSN		
+1TI 5:21!17	o	adj	μηδὲν	μηδείς	A-ASN-N		
+1TI 5:21!18	v	verb	ποιῶν	ποιέω	V-PAP-NSM	τέκνον	1TI 1:18!6
+1TI 5:21!19		prep	κατὰ	κατά	PREP		
+1TI 5:21!20		noun	πρόσκλισιν	πρόσκλισις	N-ASF		
+1TI 5:22!1	o	noun	χεῖρας	χείρ	N-APF		
+1TI 5:22!2	adv	adv	ταχέως	ταχέως	ADV		
+1TI 5:22!3	io	adj	μηδενὶ	μηδείς	A-DSM-N		
+1TI 5:22!4	v	verb	ἐπιτίθει	ἐπιτίθημι	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 5:22!5		conj	μηδὲ	μηδέ	CONJ-N		
+1TI 5:22!6	v	verb	κοινώνει	κοινωνέω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 5:22!7		noun	ἁμαρτίαις	ἁμαρτία	N-DPF		
+1TI 5:22!8		adj	ἀλλοτρίαις	ἀλλότριος	A-DPF		
+1TI 5:22!9	o	pron	σεαυτὸν	σεαυτοῦ	F-2ASM		
+1TI 5:22!10	o2	adj	ἁγνὸν	ἁγνός	A-ASM		
+1TI 5:22!11	v	verb	τήρει	τηρέω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 5:23!1		adv	μηκέτι	μηκέτι	ADV-N		
+1TI 5:23!2	v	verb	ὑδροπότει	ὑδροποτέω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 5:23!3		conj	ἀλλὰ	ἀλλά	CONJ		
+1TI 5:23!4		noun	οἴνῳ	οἶνος	N-DSM		
+1TI 5:23!5		adj	ὀλίγῳ	ὀλίγος	A-DSM		
+1TI 5:23!6	v	verb	χρῶ	χράομαι	V-PNM-2S	τέκνον	1TI 1:18!6
+1TI 5:23!7		prep	διὰ	διά	PREP		
+1TI 5:23!8		det	τὸν	ὁ	T-ASM		
+1TI 5:23!9		noun	στόμαχον	στόμαχος	N-ASM		
+1TI 5:23!10		conj	καὶ	καί	CONJ		
+1TI 5:23!11		det	τὰς	ὁ	T-APF		
+1TI 5:23!12		adj	πυκνάς	πυκνός	A-APF		
+1TI 5:23!13		pron	σου	σύ	P-2GS		
+1TI 5:23!14		noun	ἀσθενείας	ἀσθένεια	N-APF		
+1TI 5:24!1		pron	Τινῶν	τις	X-GPM		
+1TI 5:24!2		noun	ἀνθρώπων	ἄνθρωπος	N-GPM		
+1TI 5:24!3		det	αἱ	ὁ	T-NPF		
+1TI 5:24!4		noun	ἁμαρτίαι	ἁμαρτία	N-NPF		
+1TI 5:24!5	p	adj	πρόδηλοί	πρόδηλος	A-NPF		
+1TI 5:24!6	vc	verb	εἰσιν	εἰμί	V-PAI-3P		
+1TI 5:24!7	v	verb	προάγουσαι	προάγω	V-PAP-NPF	ἁμαρτία	1TI 5:24!4
+1TI 5:24!8		prep	εἰς	εἰς	PREP		
+1TI 5:24!9		noun	κρίσιν	κρίσις	N-ASF		
+1TI 5:24!10	adv	pron	τισὶν	τις	X-DPM		
+1TI 5:24!11		conj	δὲ	δέ	CONJ		
+1TI 5:24!12	adv	adv	καὶ	καί	CONJ		
+1TI 5:24!13	v	verb	ἐπακολουθοῦσιν	ἐπακολουθέω	V-PAI-3P	ἁμαρτία	1TI 5:24!4
+1TI 5:25!1		adv	ὡσαύτως	ὡσαύτως	ADV		
+1TI 5:25!2		adv	καὶ	καί	CONJ		
+1TI 5:25!3		det	τὰ	ὁ	T-NPN		
+1TI 5:25!4		noun	ἔργα	ἔργον	N-NPN		
+1TI 5:25!5		det	τὰ	ὁ	T-NPN		
+1TI 5:25!6		adj	καλὰ	καλός	A-NPN		
+1TI 5:25!7	p	adj	πρόδηλα	πρόδηλος	A-NPN		
+1TI 5:25!8		conj	καὶ	καί	CONJ		
+1TI 5:25!9		det	τὰ	ὁ	T-NPN		
+1TI 5:25!10	adv	adv	ἄλλως	ἄλλως	ADV		
+1TI 5:25!11	v	verb	ἔχοντα	ἔχω	V-PAP-NPN		
+1TI 5:25!12	v	verb	κρυβῆναι	κρύπτω	V-2APN		
+1TI 5:25!13	adv	adv	οὐ	οὐ	PRT-N		
+1TI 5:25!14	v	verb	δύνανται	δύναμαι	V-PNI-3P		
+1TI 6:1!1	s	pron	Ὅσοι	ὅσος	K-NPM		
+1TI 6:1!2	vc	verb	εἰσὶν	εἰμί	V-PAI-3P		
+1TI 6:1!3		prep	ὑπὸ	ὑπό	PREP		
+1TI 6:1!4		noun	ζυγὸν	ζυγός	N-ASM		
+1TI 6:1!5	p	noun	δοῦλοι	δοῦλος	N-NPM		
+1TI 6:1!6		det	τοὺς	ὁ	T-APM		
+1TI 6:1!7		adj	ἰδίους	ἴδιος	A-APM		
+1TI 6:1!8		noun	δεσπότας	δεσπότης	N-APM		
+1TI 6:1!9		adj	πάσης	πᾶς	A-GSF		
+1TI 6:1!10		noun	τιμῆς	τιμή	N-GSF		
+1TI 6:1!11		adj	ἀξίους	ἄξιος	A-APM		
+1TI 6:1!12	v	verb	ἡγείσθωσαν	ἡγέομαι	V-PNM-3P	δοῦλος	1TI 6:1!5
+1TI 6:1!13		conj	ἵνα	ἵνα	CONJ		
+1TI 6:1!14	adv	adv	μὴ	μή	PRT-N		
+1TI 6:1!15		det	τὸ	ὁ	T-NSN		
+1TI 6:1!16		noun	ὄνομα	ὄνομα	N-NSN		
+1TI 6:1!17		det	τοῦ	ὁ	T-GSM		
+1TI 6:1!18		noun	θεοῦ	θεός	N-GSM		
+1TI 6:1!19		conj	καὶ	καί	CONJ		
+1TI 6:1!20		det	ἡ	ὁ	T-NSF		
+1TI 6:1!21		noun	διδασκαλία	διδασκαλία	N-NSF		
+1TI 6:1!22	v	verb	βλασφημῆται	βλασφημέω	V-PPS-3S		
+1TI 6:2!1		det	οἱ	ὁ	T-NPM		
+1TI 6:2!2		conj	δὲ	δέ	CONJ		
+1TI 6:2!3		adj	πιστοὺς	πιστός	A-APM		
+1TI 6:2!4	v	verb	ἔχοντες	ἔχω	V-PAP-NPM		
+1TI 6:2!5		noun	δεσπότας	δεσπότης	N-APM		
+1TI 6:2!6	adv	adv	μὴ	μή	PRT-N		
+1TI 6:2!7	v	verb	καταφρονείτωσαν	καταφρονέω	V-PAM-3P		
+1TI 6:2!8		conj	ὅτι	ὅτι	CONJ		
+1TI 6:2!9	p	noun	ἀδελφοί	ἀδελφός	N-NPM		
+1TI 6:2!10	vc	verb	εἰσιν	εἰμί	V-PAI-3P		
+1TI 6:2!11		conj	ἀλλὰ	ἀλλά	CONJ		
+1TI 6:2!12	adv	adv	μᾶλλον	μᾶλλον	ADV		
+1TI 6:2!13	v	verb	δουλευέτωσαν	δουλεύω	V-PAM-3P		
+1TI 6:2!14		conj	ὅτι	ὅτι	CONJ		
+1TI 6:2!15		adj	πιστοί	πιστός	A-NPM		
+1TI 6:2!16	vc	verb	εἰσιν	εἰμί	V-PAI-3P		
+1TI 6:2!17		conj	καὶ	καί	CONJ		
+1TI 6:2!18		adj	ἀγαπητοὶ	ἀγαπητός	A-NPM		
+1TI 6:2!19		det	οἱ	ὁ	T-NPM		
+1TI 6:2!20		det	τῆς	ὁ	T-GSF		
+1TI 6:2!21		noun	εὐεργεσίας	εὐεργεσία	N-GSF		
+1TI 6:2!22	v	verb	ἀντιλαμβανόμενοι	ἀντιλαμβάνομαι	V-PNP-NPM		
+1TI 6:2!23	o	pron	Ταῦτα	οὗτος	D-APN		
+1TI 6:2!24		verb	δίδασκε	διδάσκω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 6:2!25		conj	καὶ	καί	CONJ		
+1TI 6:2!26		verb	παρακάλει	παρακαλέω	V-PAM-2S	τέκνον	1TI 1:18!6
+1TI 6:3!1		conj	εἴ	εἰ	COND		
+1TI 6:3!2	s	pron	τις	τις	X-NSM		
+1TI 6:3!3	v	verb	ἑτεροδιδασκαλεῖ	ἑτεροδιδασκαλέω	V-PAI-3S	τις	1TI 6:3!2
+1TI 6:3!4		conj	καὶ	καί	CONJ		
+1TI 6:3!5	adv	adv	μὴ	μή	PRT-N		
+1TI 6:3!6	v	verb	προσέρχεται	προσέρχομαι	V-PNI-3S	τις	1TI 6:3!2
+1TI 6:3!7	v	verb	ὑγιαίνουσι	ὑγιαίνω	V-PAP-DPM	λόγος	1TI 6:3!8
+1TI 6:3!8		noun	λόγοις	λόγος	N-DPM		
+1TI 6:3!9		det	τοῖς	ὁ	T-DPM		
+1TI 6:3!10		det	τοῦ	ὁ	T-GSM		
+1TI 6:3!11		noun	κυρίου	κύριος	N-GSM		
+1TI 6:3!12		pron	ἡμῶν	ἐγώ	P-1GP		
+1TI 6:3!13		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+1TI 6:3!14		noun	Χριστοῦ	Χριστός	N-GSM		
+1TI 6:3!15		conj	καὶ	καί	CONJ		
+1TI 6:3!16		det	τῇ	ὁ	T-DSF		
+1TI 6:3!17		prep	κατ	κατά	PREP		
+1TI 6:3!18		noun	εὐσέβειαν	εὐσέβεια	N-ASF		
+1TI 6:3!19		noun	διδασκαλίᾳ	διδασκαλία	N-DSF		
+1TI 6:4!1	v	verb	τετύφωται	τυφόομαι	V-RPI-3S		
+1TI 6:4!2	o	adj	μηδὲν	μηδείς	A-ASN-N		
+1TI 6:4!3	v	verb	ἐπιστάμενος	ἐπίσταμαι	V-PNP-NSM	τις	1TI 6:3!2
+1TI 6:4!4		conj	ἀλλὰ	ἀλλά	CONJ		
+1TI 6:4!5	v	verb	νοσῶν	νοσέω	V-PAP-NSM	τις	1TI 6:3!2
+1TI 6:4!6		prep	περὶ	περί	PREP		
+1TI 6:4!7		noun	ζητήσεις	ζήτησις	N-APF		
+1TI 6:4!8		conj	καὶ	καί	CONJ		
+1TI 6:4!9		noun	λογομαχίας	λογομαχία	N-APF		
+1TI 6:4!10		prep	ἐξ	ἐκ	PREP		
+1TI 6:4!11		pron	ὧν	ὅς	R-GPF		
+1TI 6:4!12	v	verb	γίνεται	γίνομαι	V-PNI-3S	φθόνος;ἔρις;βλασφημία;ὑπόνοια;διαπαρατριβή	1TI 6:4!13;1TI 6:4!14;1TI 6:4!15;1TI 6:4!16;1TI 6:5!1
+1TI 6:4!13		noun	φθόνος	φθόνος	N-NSM		
+1TI 6:4!14		noun	ἔρις	ἔρις	N-NSF		
+1TI 6:4!15		noun	βλασφημίαι	βλασφημία	N-NPF		
+1TI 6:4!16		noun	ὑπόνοιαι	ὑπόνοια	N-NPF		
+1TI 6:4!17		adj	πονηραί	πονηρός	A-NPF		
+1TI 6:5!1		noun	διαπαρατριβαὶ	διαπαρατριβή	N-NPF		
+1TI 6:5!2	v	verb	διεφθαρμένων	διαφθείρω	V-RPP-GPM		
+1TI 6:5!3		noun	ἀνθρώπων	ἄνθρωπος	N-GPM		
+1TI 6:5!4		det	τὸν	ὁ	T-ASM		
+1TI 6:5!5		noun	νοῦν	νοῦς	N-ASM		
+1TI 6:5!6		conj	καὶ	καί	CONJ		
+1TI 6:5!7	v	verb	ἀπεστερημένων	ἀποστερέω	V-RPP-GPM		
+1TI 6:5!8		det	τῆς	ὁ	T-GSF		
+1TI 6:5!9		noun	ἀληθείας	ἀλήθεια	N-GSF		
+1TI 6:5!10	v	verb	νομιζόντων	νομίζω	V-PAP-GPM	ἄνθρωπος	1TI 6:5!3
+1TI 6:5!11	p	noun	πορισμὸν	πορισμός	N-ASM		
+1TI 6:5!12	vc	verb	εἶναι	εἰμί	V-PAN		
+1TI 6:5!13		det	τὴν	ὁ	T-ASF		
+1TI 6:5!14		noun	εὐσέβειαν	εὐσέβεια	N-ASF		
+1TI 6:6!1	vc	verb	ἔστιν	εἰμί	V-PAI-3S		
+1TI 6:6!2		conj	δὲ	δέ	CONJ		
+1TI 6:6!3		noun	πορισμὸς	πορισμός	N-NSM		
+1TI 6:6!4		adj	μέγας	μέγας	A-NSM		
+1TI 6:6!5		det	ἡ	ὁ	T-NSF		
+1TI 6:6!6		noun	εὐσέβεια	εὐσέβεια	N-NSF		
+1TI 6:6!7		prep	μετὰ	μετά	PREP		
+1TI 6:6!8		noun	αὐταρκείας	αὐτάρκεια	N-GSF		
+1TI 6:7!1	o	adj	οὐδὲν	οὐδείς	A-ASN-N		
+1TI 6:7!2		conj	γὰρ	γάρ	CONJ		
+1TI 6:7!3	v	verb	εἰσηνέγκαμεν	εἰσφέρω	V-AAI-1P	Παῦλος;τέκνον;ἀδελφός	1TI 1:1!1;1TI 1:18!6;1TI 4:6!4
+1TI 6:7!4		prep	εἰς	εἰς	PREP		
+1TI 6:7!5		det	τὸν	ὁ	T-ASM		
+1TI 6:7!6		noun	κόσμον	κόσμος	N-ASM		
+1TI 6:7!7		conj	ὅτι	ὅτι	CONJ		
+1TI 6:7!8	adv	adv	οὐδὲ	οὐδέ	CONJ-N		
+1TI 6:7!9	v	verb	ἐξενεγκεῖν	ἐκφέρω	V-2AAN	Παῦλος;τέκνον;ἀδελφός	1TI 1:1!1;1TI 1:18!6;1TI 4:6!4
+1TI 6:7!10	o	pron	τι	τις	X-ASN		
+1TI 6:7!11	v	verb	δυνάμεθα	δύναμαι	V-PNI-1P	Παῦλος;τέκνον;ἀδελφός	1TI 1:1!1;1TI 1:18!6;1TI 4:6!4
+1TI 6:8!1	v	verb	ἔχοντες	ἔχω	V-PAP-NPM	Παῦλος;τέκνον;ἀδελφός	1TI 1:1!1;1TI 1:18!6;1TI 4:6!4
+1TI 6:8!2		conj	δὲ	δέ	CONJ		
+1TI 6:8!3		noun	διατροφὰς	διατροφή	N-APF		
+1TI 6:8!4		conj	καὶ	καί	CONJ		
+1TI 6:8!5		noun	σκεπάσματα	σκέπασμα	N-APN		
+1TI 6:8!6	adv	pron	τούτοις	οὗτος	D-DPN		
+1TI 6:8!7	v	verb	ἀρκεσθησόμεθα	ἀρκέω	V-FPI-1P		
+1TI 6:9!1		det	οἱ	ὁ	T-NPM		
+1TI 6:9!2		conj	δὲ	δέ	CONJ		
+1TI 6:9!3	v	verb	βουλόμενοι	βούλομαι	V-PNP-NPM		
+1TI 6:9!4	v	verb	πλουτεῖν	πλουτέω	V-PAN		
+1TI 6:9!5	v	verb	ἐμπίπτουσιν	ἐμπίπτω	V-PAI-3P		
+1TI 6:9!6		prep	εἰς	εἰς	PREP		
+1TI 6:9!7		noun	πειρασμὸν	πειρασμός	N-ASM		
+1TI 6:9!8		conj	καὶ	καί	CONJ		
+1TI 6:9!9		noun	παγίδα	παγίς	N-ASF		
+1TI 6:9!10		conj	καὶ	καί	CONJ		
+1TI 6:9!11		noun	ἐπιθυμίας	ἐπιθυμία	N-APF		
+1TI 6:9!12		adj	πολλὰς	πολύς	A-APF		
+1TI 6:9!13		adj	ἀνοήτους	ἀνόητος	A-APF		
+1TI 6:9!14		conj	καὶ	καί	CONJ		
+1TI 6:9!15		adj	βλαβεράς	βλαβερός	A-APF		
+1TI 6:9!16	s	pron	αἵτινες	ὅστις	R-NPF		
+1TI 6:9!17	v	verb	βυθίζουσι	βυθίζω	V-PAI-3P	ὅστις	1TI 6:9!16
+1TI 6:9!18		det	τοὺς	ὁ	T-APM		
+1TI 6:9!19		noun	ἀνθρώπους	ἄνθρωπος	N-APM		
+1TI 6:9!20		prep	εἰς	εἰς	PREP		
+1TI 6:9!21		noun	ὄλεθρον	ὄλεθρος	N-ASM		
+1TI 6:9!22		conj	καὶ	καί	CONJ		
+1TI 6:9!23		noun	ἀπώλειαν	ἀπώλεια	N-ASF		
+1TI 6:10!1		noun	ῥίζα	ῥίζα	N-NSF		
+1TI 6:10!2		conj	γὰρ	γάρ	CONJ		
+1TI 6:10!3		adj	πάντων	πᾶς	A-GPN		
+1TI 6:10!4		det	τῶν	ὁ	T-GPN		
+1TI 6:10!5		adj	κακῶν	κακός	A-GPN		
+1TI 6:10!6	vc	verb	ἐστιν	εἰμί	V-PAI-3S		
+1TI 6:10!7		det	ἡ	ὁ	T-NSF		
+1TI 6:10!8		noun	φιλαργυρία	φιλαργυρία	N-NSF		
+1TI 6:10!9	o	pron	ἧς	ὅς	R-GSF		
+1TI 6:10!10	s	pron	τινες	τις	X-NPM		
+1TI 6:10!11	v	verb	ὀρεγόμενοι	ὀρέγομαι	V-PMP-NPM	τις	1TI 6:10!10
+1TI 6:10!12	v	verb	ἀπεπλανήθησαν	ἀποπλανάω	V-API-3P		
+1TI 6:10!13		prep	ἀπὸ	ἀπό	PREP		
+1TI 6:10!14		det	τῆς	ὁ	T-GSF		
+1TI 6:10!15		noun	πίστεως	πίστις	N-GSF		
+1TI 6:10!16		conj	καὶ	καί	CONJ		
+1TI 6:10!17	o	pron	ἑαυτοὺς	ἑαυτοῦ	F-3APM		
+1TI 6:10!18	v	verb	περιέπειραν	περιπείρω	V-AAI-3P	τις	1TI 6:10!10
+1TI 6:10!19		noun	ὀδύναις	ὀδύνη	N-DPF		
+1TI 6:10!20		adj	πολλαῖς	πολύς	A-DPF		
+1TI 6:11!1	s	pron	Σὺ	σύ	P-2NS		
+1TI 6:11!2		conj	δέ	δέ	CONJ		
+1TI 6:11!3		intj	ὦ	ὦ	INJ		
+1TI 6:11!4		noun	ἄνθρωπε	ἄνθρωπος	N-VSM		
+1TI 6:11!5		noun	θεοῦ	θεός	N-GSM		
+1TI 6:11!6	o	pron	ταῦτα	οὗτος	D-APN		
+1TI 6:11!7	v	verb	φεῦγε	φεύγω	V-PAM-2S	σύ	1TI 6:11!1
+1TI 6:11!8	v	verb	δίωκε	διώκω	V-PAM-2S	ἄνθρωπος	1TI 6:11!4
+1TI 6:11!9		conj	δὲ	δέ	CONJ		
+1TI 6:11!10		noun	δικαιοσύνην	δικαιοσύνη	N-ASF		
+1TI 6:11!11		noun	εὐσέβειαν	εὐσέβεια	N-ASF		
+1TI 6:11!12		noun	πίστιν	πίστις	N-ASF		
+1TI 6:11!13		noun	ἀγάπην	ἀγάπη	N-ASF		
+1TI 6:11!14		noun	ὑπομονήν	ὑπομονή	N-ASF		
+1TI 6:11!15		noun	πραϋπαθίαν	πραϋπάθια	N-ASF		
+1TI 6:12!1	v	verb	ἀγωνίζου	ἀγωνίζομαι	V-PNM-2S	ἄνθρωπος	1TI 6:11!4
+1TI 6:12!2		det	τὸν	ὁ	T-ASM		
+1TI 6:12!3		adj	καλὸν	καλός	A-ASM		
+1TI 6:12!4		noun	ἀγῶνα	ἀγών	N-ASM		
+1TI 6:12!5		det	τῆς	ὁ	T-GSF		
+1TI 6:12!6		noun	πίστεως	πίστις	N-GSF		
+1TI 6:12!7	v	verb	ἐπιλαβοῦ	ἐπιλαμβάνομαι	V-2ADM-2S	ἄνθρωπος	1TI 6:11!4
+1TI 6:12!8		det	τῆς	ὁ	T-GSF		
+1TI 6:12!9		adj	αἰωνίου	αἰώνιος	A-GSF		
+1TI 6:12!10		noun	ζωῆς	ζωή	N-GSF		
+1TI 6:12!11		prep	εἰς	εἰς	PREP		
+1TI 6:12!12		pron	ἣν	ὅς	R-ASF		
+1TI 6:12!13	v	verb	ἐκλήθης	καλέω	V-API-2S		
+1TI 6:12!14		conj	καὶ	καί	CONJ		
+1TI 6:12!15	v	verb	ὡμολόγησας	ὁμολογέω	V-AAI-2S	ἄνθρωπος	1TI 6:11!4
+1TI 6:12!16		det	τὴν	ὁ	T-ASF		
+1TI 6:12!17		adj	καλὴν	καλός	A-ASF		
+1TI 6:12!18		noun	ὁμολογίαν	ὁμολογία	N-ASF		
+1TI 6:12!19		prep	ἐνώπιον	ἐνώπιον	PREP		
+1TI 6:12!20		adj	πολλῶν	πολύς	A-GPM		
+1TI 6:12!21		noun	μαρτύρων	μάρτυς	N-GPM		
+1TI 6:13!1	v	verb	παραγγέλλω	παραγγέλλω	V-PAI-1S	Παῦλος	1TI 1:1!1
+1TI 6:13!2	io	pron	σοι	σύ	P-DS-		
+1TI 6:13!3		prep	ἐνώπιον	ἐνώπιον	PREP		
+1TI 6:13!4		det	τοῦ	ὁ	T-GSM		
+1TI 6:13!5		noun	θεοῦ	θεός	N-GSM		
+1TI 6:13!6		det	τοῦ	ὁ	T-GSM		
+1TI 6:13!7	v	verb	ζῳογονοῦντος	ζῳογονέω	V-PAP-GSM	θεός	1TI 6:13!5
+1TI 6:13!8		det	τὰ	ὁ	T-APN		
+1TI 6:13!9		adj	πάντα	πᾶς	A-APN		
+1TI 6:13!10		conj	καὶ	καί	CONJ		
+1TI 6:13!11		noun	Χριστοῦ	Χριστός	N-GSM		
+1TI 6:13!12		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+1TI 6:13!13		det	τοῦ	ὁ	T-GSM		
+1TI 6:13!14	v	verb	μαρτυρήσαντος	μαρτυρέω	V-AAP-GSM	Χριστός	1TI 6:13!11
+1TI 6:13!15		prep	ἐπὶ	ἐπί	PREP		
+1TI 6:13!16		noun	Ποντίου	Πόντιος	N-GSM		
+1TI 6:13!17		noun	Πιλάτου	Πιλᾶτος	N-GSM		
+1TI 6:13!18		det	τὴν	ὁ	T-ASF		
+1TI 6:13!19		adj	καλὴν	καλός	A-ASF		
+1TI 6:13!20		noun	ὁμολογίαν	ὁμολογία	N-ASF		
+1TI 6:14!1	v	verb	τηρῆσαί	τηρέω	V-AAN	σύ	1TI 6:14!2
+1TI 6:14!2	s	pron	σε	σύ	P-2AS		
+1TI 6:14!3		det	τὴν	ὁ	T-ASF		
+1TI 6:14!4		noun	ἐντολὴν	ἐντολή	N-ASF		
+1TI 6:14!5		adj	ἄσπιλον	ἄσπιλος	A-ASF		
+1TI 6:14!6		adj	ἀνεπίλημπτον	ἀνεπίλημπτος	A-ASF		
+1TI 6:14!7		prep	μέχρι	μέχρι(ς)	ADV		
+1TI 6:14!8		det	τῆς	ὁ	T-GSF		
+1TI 6:14!9		noun	ἐπιφανείας	ἐπιφάνεια	N-GSF		
+1TI 6:14!10		det	τοῦ	ὁ	T-GSM		
+1TI 6:14!11		noun	κυρίου	κύριος	N-GSM		
+1TI 6:14!12		pron	ἡμῶν	ἐγώ	P-1GP		
+1TI 6:14!13		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+1TI 6:14!14		noun	Χριστοῦ	Χριστός	N-GSM		
+1TI 6:15!1	o	pron	ἣν	ὅς	R-ASF		
+1TI 6:15!2		noun	καιροῖς	καιρός	N-DPM		
+1TI 6:15!3		adj	ἰδίοις	ἴδιος	A-DPM		
+1TI 6:15!4	v	verb	δείξει	δείκνυμι	V-FAI-3S	δυνάστης	1TI 6:15!9
+1TI 6:15!5		det	ὁ	ὁ	T-NSM		
+1TI 6:15!6		adj	μακάριος	μακάριος	A-NSM		
+1TI 6:15!7		conj	καὶ	καί	CONJ		
+1TI 6:15!8		adj	μόνος	μόνος	A-NSM		
+1TI 6:15!9		noun	δυνάστης	δυνάστης	N-NSM		
+1TI 6:15!10		det	ὁ	ὁ	T-NSM		
+1TI 6:15!11		noun	βασιλεὺς	βασιλεύς	N-NSM		
+1TI 6:15!12		det	τῶν	ὁ	T-GPM		
+1TI 6:15!13	v	verb	βασιλευόντων	βασιλεύω	V-PAP-GPM		
+1TI 6:15!14		conj	καὶ	καί	CONJ		
+1TI 6:15!15		noun	κύριος	κύριος	N-NSM		
+1TI 6:15!16		det	τῶν	ὁ	T-GPM		
+1TI 6:15!17	v	verb	κυριευόντων	κυριεύω	V-PAP-GPM		
+1TI 6:16!1		det	ὁ	ὁ	T-NSM		
+1TI 6:16!2		adj	μόνος	μόνος	A-NSM		
+1TI 6:16!3	v	verb	ἔχων	ἔχω	V-PAP-NSM	μόνος	1TI 6:16!2
+1TI 6:16!4	o	noun	ἀθανασίαν	ἀθανασία	N-ASF		
+1TI 6:16!5		noun	φῶς	φῶς	N-ASN		
+1TI 6:16!6	v	verb	οἰκῶν	οἰκέω	V-PAP-NSM	μόνος	1TI 6:16!2
+1TI 6:16!7		adj	ἀπρόσιτον	ἀπρόσιτος	A-ASN		
+1TI 6:16!8	o	pron	ὃν	ὅς	R-ASM		
+1TI 6:16!9	v	verb	εἶδεν	ὁράω	V-2AAI-3S	οὐδείς	1TI 6:16!10
+1TI 6:16!10		adj	οὐδεὶς	οὐδείς	A-NSM-N		
+1TI 6:16!11		noun	ἀνθρώπων	ἄνθρωπος	N-GPM		
+1TI 6:16!12		conj	οὐδὲ	οὐδέ	CONJ-N		
+1TI 6:16!13	v	verb	ἰδεῖν	ὁράω	V-2AAN	οὐδείς	1TI 6:16!10
+1TI 6:16!14	v	verb	δύναται	δύναμαι	V-PNI-3S	οὐδείς	1TI 6:16!10
+1TI 6:16!15	io	pron	ᾧ	ὅς	R-DSM		
+1TI 6:16!16		noun	τιμὴ	τιμή	N-NSF		
+1TI 6:16!17		conj	καὶ	καί	CONJ		
+1TI 6:16!18		noun	κράτος	κράτος	N-NSN		
+1TI 6:16!19		adj	αἰώνιον	αἰώνιος	A-NSN		
+1TI 6:16!20	aux	ptcl	ἀμήν	ἀμήν	HEB		
+1TI 6:17!1		det	Τοῖς	ὁ	T-DPM		
+1TI 6:17!2		adj	πλουσίοις	πλούσιος	A-DPM		
+1TI 6:17!3		prep	ἐν	ἐν	PREP		
+1TI 6:17!4		det	τῷ	ὁ	T-DSM		
+1TI 6:17!5		adv	νῦν	νῦν	ADV		
+1TI 6:17!6		noun	αἰῶνι	αἰών	N-DSM		
+1TI 6:17!7	v	verb	παράγγελλε	παραγγέλλω	V-PAM-2S	ἄνθρωπος	1TI 6:11!4
+1TI 6:17!8		adv	μὴ	μή	PRT-N		
+1TI 6:17!9	v	verb	ὑψηλοφρονεῖν	ὑψηλοφρονέω	V-PAN	πλούσιος	1TI 6:17!2
+1TI 6:17!10		conj	μηδὲ	μηδέ	CONJ-N		
+1TI 6:17!11	v	verb	ἠλπικέναι	ἐλπίζω	V-RAN	πλούσιος	1TI 6:17!2
+1TI 6:17!12		prep	ἐπὶ	ἐπί	PREP		
+1TI 6:17!13		noun	πλούτου	πλοῦτος	N-GSM		
+1TI 6:17!14		noun	ἀδηλότητι	ἀδηλότης	N-DSF		
+1TI 6:17!15		conj	ἀλλ	ἀλλά	CONJ		
+1TI 6:17!16		prep	ἐπὶ	ἐπί	PREP		
+1TI 6:17!17		noun	θεῷ	θεός	N-DSM		
+1TI 6:17!18		det	τῷ	ὁ	T-DSM		
+1TI 6:17!19	v	verb	παρέχοντι	παρέχω	V-PAP-DSM	θεός	1TI 6:17!17
+1TI 6:17!20	io	pron	ἡμῖν	ἐγώ	P-1DP		
+1TI 6:17!21	o	adj	πάντα	πᾶς	A-APN		
+1TI 6:17!22	adv	adv	πλουσίως	πλουσίως	ADV		
+1TI 6:17!23		prep	εἰς	εἰς	PREP		
+1TI 6:17!24		noun	ἀπόλαυσιν	ἀπόλαυσις	N-ASF		
+1TI 6:18!1	v	verb	ἀγαθοεργεῖν	ἀγαθοεργέω	V-PAN	πλούσιος	1TI 6:17!2
+1TI 6:18!2	v	verb	πλουτεῖν	πλουτέω	V-PAN	πλούσιος	1TI 6:17!2
+1TI 6:18!3		prep	ἐν	ἐν	PREP		
+1TI 6:18!4		noun	ἔργοις	ἔργον	N-DPN		
+1TI 6:18!5		adj	καλοῖς	καλός	A-DPN		
+1TI 6:18!6	p	adj	εὐμεταδότους	εὐμετάδοτος	A-APM		
+1TI 6:18!7	vc	verb	εἶναι	εἰμί	V-PAN		
+1TI 6:18!8	p	adj	κοινωνικούς	κοινωνικός	A-APM		
+1TI 6:19!1	v	verb	ἀποθησαυρίζοντας	ἀποθησαυρίζω	V-PAP-APM	πλούσιος	1TI 6:17!2
+1TI 6:19!2	io	pron	ἑαυτοῖς	ἑαυτοῦ	F-3DPM		
+1TI 6:19!3		noun	θεμέλιον	θεμέλιος	N-ASM		
+1TI 6:19!4		adj	καλὸν	καλός	A-ASM		
+1TI 6:19!5		prep	εἰς	εἰς	PREP		
+1TI 6:19!6		det	τὸ	ὁ	T-ASN		
+1TI 6:19!7	v	verb	μέλλον	μέλλω	V-PAP-ASN		
+1TI 6:19!8		conj	ἵνα	ἵνα	CONJ		
+1TI 6:19!9	v	verb	ἐπιλάβωνται	ἐπιλαμβάνομαι	V-2ADS-3P	πλούσιος	1TI 6:17!2
+1TI 6:19!10		det	τῆς	ὁ	T-GSF		
+1TI 6:19!11		adv	ὄντως	ὄντως	ADV		
+1TI 6:19!12		noun	ζωῆς	ζωή	N-GSF		
+1TI 6:20!1		ptcl	Ὦ	ὦ	INJ		
+1TI 6:20!2		noun	Τιμόθεε	Τιμόθεος	N-VSM		
+1TI 6:20!3		det	τὴν	ὁ	T-ASF		
+1TI 6:20!4		noun	παραθήκην	παραθήκη	N-ASF		
+1TI 6:20!5	v	verb	φύλαξον	φυλάσσω	V-AAM-2S	Τιμόθεος	1TI 6:20!2
+1TI 6:20!6	v	verb	ἐκτρεπόμενος	ἐκτρέπομαι	V-PMP-NSM	Τιμόθεος	1TI 6:20!2
+1TI 6:20!7		det	τὰς	ὁ	T-APF		
+1TI 6:20!8		adj	βεβήλους	βέβηλος	A-APF		
+1TI 6:20!9		noun	κενοφωνίας	κενοφωνία	N-APF		
+1TI 6:20!10		conj	καὶ	καί	CONJ		
+1TI 6:20!11		noun	ἀντιθέσεις	ἀντίθεσις	N-APF		
+1TI 6:20!12		det	τῆς	ὁ	T-GSF		
+1TI 6:20!13		adj	ψευδωνύμου	ψευδώνυμος	A-GSF		
+1TI 6:20!14		noun	γνώσεως	γνῶσις	N-GSF		
+1TI 6:21!1	o	pron	ἥν	ὅς	R-ASF		
+1TI 6:21!2	s	pron	τινες	τις	X-NPM		
+1TI 6:21!3	v	verb	ἐπαγγελλόμενοι	ἐπαγγέλλομαι	V-PNP-NPM	τις	1TI 6:21!2
+1TI 6:21!4		prep	περὶ	περί	PREP		
+1TI 6:21!5		det	τὴν	ὁ	T-ASF		
+1TI 6:21!6		noun	πίστιν	πίστις	N-ASF		
+1TI 6:21!7	v	verb	ἠστόχησαν	ἀστοχέω	V-AAI-3P	τις	1TI 6:21!2
+1TI 6:21!8		det	Ἡ	ὁ	T-NSF		
+1TI 6:21!9		noun	χάρις	χάρις	N-NSF		
+1TI 6:21!10		prep	μεθ	μετά	PREP		
+1TI 6:21!11		pron	ὑμῶν	σύ	P-2GP		

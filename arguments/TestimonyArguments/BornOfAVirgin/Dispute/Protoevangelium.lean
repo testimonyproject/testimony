@@ -286,19 +286,19 @@ theorem scene_rests_on_its_step :
 
 /-- The fulfilment's grounds are `consensus`, what the texts read; its
 confirmation is `plausible`; its fulfilment step is `disputed`, on Westermann. -/
-theorem fulfilmentCase_strength : fulfilmentCase.strength = 0 := by decide
+theorem fulfilmentCase_strength : fulfilmentCase.strength = 1 := by decide
 
 /-- Westermann's ground that "her seed" is a line of descendants and not an
 individual is `disputed`, and so is his step, on Calvin. -/
-theorem westermannCase_strength : westermannCase.strength = 0 := by decide
+theorem westermannCase_strength : westermannCase.strength = 1 := by decide
 
 /-- The syntax's grounds are `consensus` and `wellSupported`, but its step is
 `disputed`, on Keil. -/
-theorem syntaxCase_strength : syntaxCase.strength = 0 := by decide
+theorem syntaxCase_strength : syntaxCase.strength = 1 := by decide
 
 /-- The scene's step is `plausible`, but its ground that the serpent is the
 instrument of an evil power is `disputed`, on Westermann. -/
-theorem sceneCase_strength : sceneCase.strength = 0 := by decide
+theorem sceneCase_strength : sceneCase.strength = 1 := by decide
 
 /-! ### The defeats -/
 

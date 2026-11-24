@@ -101,7 +101,7 @@ theorem matthew_rests_on_its_inference :
 
 /-- Matthew's grounds are `consensus`, what the texts read, but his step is cited
 `disputed`, on Wegner. -/
-theorem matthewCase_strength : matthewCase.strength = 0 := by decide
+theorem matthewCase_strength : matthewCase.strength = 1 := by decide
 
 /-- **Wegner defeats Matthew's reading.** That the word had not yet come to mean
 "virgin" excludes that the text Matthew quotes uses it in that sense, and

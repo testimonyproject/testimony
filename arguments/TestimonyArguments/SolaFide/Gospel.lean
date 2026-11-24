@@ -72,6 +72,8 @@ inward person. -/
 def galatianGospelReading : Valuation Claim := fun a =>
   match a with
   | .justificationIncludesSanctification => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Paul's gospel, read this way, denies Trent's definition.** From Galatians
@@ -100,7 +102,8 @@ Having granted that the verb is a courtroom word, this reading does not also
 hold that Paul's verb means renewal: the two exclude each other
 (`TestimonyArguments.Meanings.SolaFide.joins`). Of the other pairs of claims
 that exclude each other, it holds the Greek text of Revelation 22:11 and Sirach
-18:22, and that James uses "justify" as Paul does. -/
+18:22, that James uses "justify" as Paul does, that ἐνεργουμένη in Galatians 5:6
+is middle, and that faith works through love as its means. -/
 def jointDeclarationReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
@@ -112,6 +115,8 @@ def jointDeclarationReading : Valuation Claim := fun a =>
   | .justificationDistinctFromSanctification => False
   | .faithIsSufficient => False
   | .justificationByFaithAlone => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Trent can accept every text of the gospel line.** Nothing Trent holds denies

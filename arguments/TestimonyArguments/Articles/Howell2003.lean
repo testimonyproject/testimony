@@ -292,7 +292,7 @@ theorem howellCase_is_satisfiable : Satisfiable howellCase.premises := by
 
 /-- Its weakest link is at the bottom: the senses it needs are denials, and a
 denial ranks `disputed`. -/
-theorem howellCase_strength : howellCase.strength = 0 := by decide
+theorem howellCase_strength : howellCase.strength = 1 := by decide
 
 /-- The parties: Howell's move, James's faith, and every party to the sola fide
 dispute. -/
@@ -350,8 +350,8 @@ instance : DecidableRel defeatsTable := fun i j => by
 
 /-- Each party's weakest link. -/
 def strength : Party → ℕ
-  | .howell => 0
-  | .faith => 2
+  | .howell => 1
+  | .faith => 3
   | .sola q => solaFideDispute.strength q
 
 /-- Each party's weakest link, as its package computes it. -/

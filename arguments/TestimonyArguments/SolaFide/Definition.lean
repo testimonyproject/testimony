@@ -117,6 +117,8 @@ argument takes it, and "justify" meaning the verdict and not renewal. -/
 def lexicalReading : Valuation Claim := fun a =>
   match a with
   | .paulsJustifyDenotesRenewal => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Paul's "justify" (δικαιόω) does not mean the renewal of the inward person.**
@@ -462,6 +464,8 @@ def trentOnPaulsWordReading : Valuation Claim := fun a =>
   | .faithIsSufficient => False
   | .justificationByFaithAlone => False
   | .dikaioIsForensic => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Trent, taken as a claim about Paul's word, can be held without
@@ -528,6 +532,8 @@ def answeringTheGreekReading : Valuation Claim := fun a =>
   | .romans5_19MadeInwardlyRighteous => False
   | .romans5_19BearsOnTheVerb => False
   | .godsVerdictIsEffective => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- The argument from Paul's word still concludes what it concludes. -/
@@ -553,6 +559,8 @@ def trentGrantsTheWordReading : Valuation Claim := fun a =>
   | .faithIsSufficient => False
   | .justificationByFaithAlone => False
   | .paulsJustifyDenotesRenewal => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Trent, taken as a claim about what God does, can be held without

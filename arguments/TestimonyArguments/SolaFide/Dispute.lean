@@ -459,6 +459,8 @@ def reformedDistinctionReading : Valuation Claim := fun a =>
   match a with
   | .justificationIncludesSanctification => False
   | .worksMeritIncreaseOfJustification => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Trent's objection depends on its definition of justification.** Keep all of
@@ -559,6 +561,8 @@ def chrysostomReading : Valuation Claim := fun a =>
   | .justificationByFaithAlone => False
   | .matthew7DoingIncludesBelieving => False
   | .matthew19LawExposesInability => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Chrysostom contradicts no text of Paul's.** His position can be held
@@ -591,71 +595,71 @@ are truly called, and are, just" (Session VI, ch. 7). -/
 
 /-- Paul's case rests on its two disputed readings, and on the Reformed distinction.
 All are rated `disputed`. -/
-theorem paulineCase_strength : paulineCase.strength = 0 := by decide
+theorem paulineCase_strength : paulineCase.strength = 1 := by decide
 /-- Luke's case uses a step that Trent's canon 9 denies, because faith without hope
 and charity "neither unites man perfectly with Christ" (Session VI, ch. 7), so
 its weakest link is `disputed`. Of its own two premises, the sense of "saved"
 (σῴζω) is rated `wellSupported`. The reading of 7:47 is `disputed`, because
 Marshall names the commentators who read her love as the cause of her
 forgiveness. -/
-theorem dominicalCase_strength : dominicalCase.strength = 0 := by decide
+theorem dominicalCase_strength : dominicalCase.strength = 1 := by decide
 /-- Peter's case rests on the reading of the yoke, rated `disputed`. -/
-theorem apostolicCase_strength : apostolicCase.strength = 0 := by decide
+theorem apostolicCase_strength : apostolicCase.strength = 1 := by decide
 /-- Trent rests on its definition of justification, rated `disputed`. -/
-theorem tridentineCase_strength : tridentineCase.strength = 0 := by decide
+theorem tridentineCase_strength : tridentineCase.strength = 1 := by decide
 /-- The apocalyptic case denies that Galatians 2:16 speaks of faith *in* Christ,
 reading it as Christ's own faithfulness, and a denial ranks at the bottom. -/
-theorem apocalypticCase_strength : apocalypticCase.strength = 0 := by decide
+theorem apocalypticCase_strength : apocalypticCase.strength = 1 := by decide
 /-- Sanders' case rests on his account of Judaism, rated `disputed`. -/
-theorem sandersCase_strength : sandersCase.strength = 0 := by decide
+theorem sandersCase_strength : sandersCase.strength = 1 := by decide
 /-- The critics' case denies that account, because Jewish texts of the period also
 speak of final vindication according to works (Gathercole). -/
-theorem criticsCase_strength : criticsCase.strength = 0 := by decide
+theorem criticsCase_strength : criticsCase.strength = 1 := by decide
 /-- Jervell's step is contested, by Bruce. -/
-theorem jervellCase_strength : jervellCase.strength = 0 := by decide
+theorem jervellCase_strength : jervellCase.strength = 1 := by decide
 /-- Paul's gospel rests on its reading of Galatians, and on the step from a verdict
 to "renewal is no part of justification". Both are rated `disputed`. -/
-theorem galatianGospel_strength : galatianGospel.strength = 0 := by decide
+theorem galatianGospel_strength : galatianGospel.strength = 1 := by decide
 /-- John's case rests on the Reformed distinction and on a step that Trent's canon 9
 denies, because faith without hope and charity "neither unites man perfectly
 with Christ" (Session VI, ch. 7), both `disputed`. Its own reading, believing as
 trust, is `disputed` too: Aquinas denies it, because to believe in God as one's
 end "is proper to faith living through the love of charity" (*Super Ioannem* 6,
 lect. 3, n. 901). -/
-theorem johannineParty_strength : johannineParty.strength = 0 := by decide
+theorem johannineParty_strength : johannineParty.strength = 1 := by decide
 /-- Aquinas's case rests on his reading of John 6:29, rated `disputed`: Calvin
 denies it, because faith "brings nothing to God, but, on the contrary, places man
 before God as empty and poor, that he may be filled with Christ" (on John
 6:29). -/
-theorem aquinasCase_strength : aquinasCase.strength = 0 := by decide
+theorem aquinasCase_strength : aquinasCase.strength = 1 := by decide
 /-- Luther's answer rests on his step, which Aquinas denies, because Paul
 distinguishes faith "only from external works" (*Super Ioannem* 6, lect. 3,
 n. 901), so a faith formed by charity does not justify by the law. -/
-theorem lutherOnGalatians_strength : lutherOnGalatians.strength = 0 := by decide
+theorem lutherOnGalatians_strength : lutherOnGalatians.strength = 1 := by decide
 /-- Chrysostom's case rests on his step, rated `disputed`: Calvin accepts both
 texts and denies it, because the words of Matthew 7:21 "do not exclude faith,
 but presuppose it as the principle from which other good works flow" (*Harmony*,
 pp. 367–68). -/
-theorem chrysostomCase_strength : chrysostomOnJohn.strength = 0 := by decide
+theorem chrysostomCase_strength : chrysostomOnJohn.strength = 1 := by decide
 /-- The Reformed answer rests on its reading of the obedience, rated `disputed`:
 Chrysostom denies it, because "though a man believe rightly on the Father, the
 Son, and the Holy Ghost, yet if he lead not a right life, his faith will avail
 nothing towards his salvation" (*Homilies on John* 31). -/
-theorem sanctificationCase_strength : sanctificationCase.strength = 0 := by decide
+theorem sanctificationCase_strength : sanctificationCase.strength = 1 := by decide
 /-- **The argument from Paul's word rests on one disputed step.** That the verb is a
 courtroom word, and the rule of least meaning, are `wellSupported`. That Paul
 has other words for renewal is `consensus`. The step from them to "and so it
 does not mean renewal" is `disputed`, because Trent grants those starting points
 and denies it: the justified "are truly called, and are, just" (Session VI,
 ch. 7). So its weakest link ranks at the bottom. -/
-theorem lexicalCase_strength : lexicalCase.strength = 0 := by decide
+theorem lexicalCase_strength : lexicalCase.strength = 1 := by decide
 /-- Trent, taken as a claim about Paul's word, rests on everything Trent rests on. -/
-theorem tridentineOnPaulsWord_strength : tridentineOnPaulsWord.strength = 0 := by decide
+theorem tridentineOnPaulsWord_strength : tridentineOnPaulsWord.strength = 1 := by decide
 /-- **So does Romans 4, read for Paul's word.** Its texts are rated `wellSupported`
 or better. So are the sense of "count" (λογίζομαι), Paul's explanation and the
 rule of least meaning. But it takes the same step from the rule of least
 meaning, rated `disputed`. -/
-theorem romansFourOnTheWord_strength : romansFourOnTheWord.strength = 0 := by decide
+theorem romansFourOnTheWord_strength : romansFourOnTheWord.strength = 1 := by decide
 
 /-! #### The defeats
 
@@ -781,6 +785,8 @@ def criticsJervellReading : Valuation Claim := fun a =>
   | .acts15YokeIsLawAsCondition => False
   | .baptismIsInstrumentalCause => False
   | .justificationIncludesSanctification => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- Trent's position together with Sanders' and Jervell's. With Trent, it denies
@@ -798,6 +804,8 @@ def trentSandersJervellReading : Valuation Claim := fun a =>
   | .justificationDistinctFromSanctification => False
   | .faithIsSufficient => False
   | .justificationByFaithAlone => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- Trent's position together with the critics' and Jervell's. With Trent, it denies
@@ -815,6 +823,8 @@ def trentCriticsJervellReading : Valuation Claim := fun a =>
   | .justificationDistinctFromSanctification => False
   | .faithIsSufficient => False
   | .justificationByFaithAlone => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- The apocalyptic reading together with Sanders' and Jervell's. Justification is a
@@ -831,6 +841,8 @@ def apocalypticSandersJervellReading : Valuation Claim := fun a =>
   | .worksOfLawMeansWorksGenerally => False
   | .acts15YokeIsLawAsCondition => False
   | .justificationIncludesSanctification => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- The apocalyptic reading together with the critics' and Jervell's. Justification
@@ -847,6 +859,8 @@ def apocalypticCriticsJervellReading : Valuation Claim := fun a =>
   | .secondTempleCovenantalNomism => False
   | .acts15YokeIsLawAsCondition => False
   | .justificationIncludesSanctification => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **The apocalyptic reading does not defeat Luke's case.** It contradicts nothing
@@ -924,6 +938,8 @@ def apocalypticWithFaithReading : Valuation Claim := fun a =>
   | .pistisChristouObjective => False
   | .justificationByFaithAlone => False
   | .justificationIncludesSanctification => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **The apocalyptic reading can grant what the Reformed strands conclude.** Grace,
@@ -959,6 +975,8 @@ def lukeWithoutAloneReading : Valuation Claim := fun a =>
   | .jamesUsesDikaioAsPaul => False
   | .justificationByFaithAlone => False
   | .justificationIncludesSanctification => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Luke's case can grant the apocalyptic conclusion.** Everything Luke's case
@@ -990,6 +1008,8 @@ def trentWithoutDeliveranceReading : Valuation Claim := fun a =>
   | .justificationDistinctFromSanctification => False
   | .faithIsSufficient => False
   | .justificationByFaithAlone => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Trent can grant Hays's reading of "faith of Christ".** Nothing Trent holds
@@ -1012,6 +1032,8 @@ def trentWithoutFaithAloneReading : Valuation Claim := fun a =>
   | .justificationByFaithAlone => False
   | .justificationDistinctFromSanctification => False
   | .faithIsSufficient => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **Trent grants the apocalyptic reading's conclusion**: justification is not by

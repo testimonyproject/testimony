@@ -335,6 +335,8 @@ def genesisFifteenReading : Valuation Claim := fun a =>
   | .worksMeritIncreaseOfJustification => False
   | .jamesJustifyDenotesIncrease => False
   | .justificationIncludesSanctification => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- The reading tied to Genesis 22: every text holds, and the righteousness
@@ -344,6 +346,8 @@ def secondTempleAbrahamReading : Valuation Claim := fun a =>
   match a with
   | .abrahamCountedRighteousWithoutWorks => False
   | .gen15CovenantIsGodsOathAlone => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-! ### Results -/
@@ -450,6 +454,8 @@ without works. -/
 def weinfeldWithWorksReading : Valuation Claim := fun a =>
   match a with
   | .abrahamCountedRighteousWithoutWorks => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- Weinfeld's reading, with the counting of Genesis 15:6 left as the text gives
@@ -458,6 +464,8 @@ believing, with no work as its condition. -/
 def weinfeldWithFaithReading : Valuation Claim := fun a =>
   match a with
   | .countingWasForTheTesting => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **What Genesis reads**: Genesis 15:6 counts Abram's believing as

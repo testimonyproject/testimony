@@ -121,15 +121,15 @@ open Testimony Testimony.Logic Testimony.Logic.Framework
 
 /-- Luther's case is no stronger than its step, rated `disputed`, and its claim
 that Genesis 3:15 is the first promise of a redeemer, cited `disputed`. -/
-theorem herSeedCase_strength : herSeedCase.strength = 0 := by decide
+theorem herSeedCase_strength : herSeedCase.strength = 1 := by decide
 
 /-- Leupold's case is no stronger than its step and its reading of "her seed"
 as first collective, both `disputed`. -/
-theorem posterityCase_strength : posterityCase.strength = 0 := by decide
+theorem posterityCase_strength : posterityCase.strength = 1 := by decide
 
 /-- Lewis's case is no stronger than its step, rated `disputed`; his grounds
 are `consensus`. -/
-theorem idiomCase_strength : idiomCase.strength = 0 := by decide
+theorem idiomCase_strength : idiomCase.strength = 1 := by decide
 
 /-! ### The defeats -/
 

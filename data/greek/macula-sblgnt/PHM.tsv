@@ -1,0 +1,335 @@
+ref	role	class	text	lemma	morph	actor	actor_ref
+PHM 1:1!1		noun	Παῦλος	Παῦλος	N-NSM		
+PHM 1:1!2		noun	δέσμιος	δέσμιος	N-NSM		
+PHM 1:1!3		noun	Χριστοῦ	Χριστός	N-GSM		
+PHM 1:1!4		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHM 1:1!5		conj	καὶ	καί	CONJ		
+PHM 1:1!6		noun	Τιμόθεος	Τιμόθεος	N-NSM		
+PHM 1:1!7		det	ὁ	ὁ	T-NSM		
+PHM 1:1!8		noun	ἀδελφὸς	ἀδελφός	N-NSM		
+PHM 1:1!9		noun	Φιλήμονι	Φιλήμων	N-DSM		
+PHM 1:1!10		det	τῷ	ὁ	T-DSM		
+PHM 1:1!11		adj	ἀγαπητῷ	ἀγαπητός	A-DSM		
+PHM 1:1!12		conj	καὶ	καί	CONJ		
+PHM 1:1!13		adj	συνεργῷ	συνεργός	A-DSM		
+PHM 1:1!14		pron	ἡμῶν	ἐγώ	P-1GP		
+PHM 1:2!1		conj	καὶ	καί	CONJ		
+PHM 1:2!2		noun	Ἀπφίᾳ	Ἀπφία	N-DSF		
+PHM 1:2!3		det	τῇ	ὁ	T-DSF		
+PHM 1:2!4		noun	ἀδελφῇ	ἀδελφή	N-DSF		
+PHM 1:2!5		conj	καὶ	καί	CONJ		
+PHM 1:2!6		noun	Ἀρχίππῳ	Ἄρχιππος	N-DSM		
+PHM 1:2!7		det	τῷ	ὁ	T-DSM		
+PHM 1:2!8		noun	συστρατιώτῃ	συστρατιώτης	N-DSM		
+PHM 1:2!9		pron	ἡμῶν	ἐγώ	P-1GP		
+PHM 1:2!10		conj	καὶ	καί	CONJ		
+PHM 1:2!11		det	τῇ	ὁ	T-DSF		
+PHM 1:2!12		prep	κατ	κατά	PREP		
+PHM 1:2!13		noun	οἶκόν	οἶκος	N-ASM		
+PHM 1:2!14		pron	σου	σύ	P-2GS		
+PHM 1:2!15		noun	ἐκκλησίᾳ	ἐκκλησία	N-DSF		
+PHM 1:3!1		noun	χάρις	χάρις	N-NSF		
+PHM 1:3!2	io	pron	ὑμῖν	σύ	P-2DP		
+PHM 1:3!3		conj	καὶ	καί	CONJ		
+PHM 1:3!4		noun	εἰρήνη	εἰρήνη	N-NSF		
+PHM 1:3!5		prep	ἀπὸ	ἀπό	PREP		
+PHM 1:3!6		noun	θεοῦ	θεός	N-GSM		
+PHM 1:3!7		noun	πατρὸς	πατήρ	N-GSM		
+PHM 1:3!8		pron	ἡμῶν	ἐγώ	P-1GP		
+PHM 1:3!9		conj	καὶ	καί	CONJ		
+PHM 1:3!10		noun	κυρίου	κύριος	N-GSM		
+PHM 1:3!11		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHM 1:3!12		noun	Χριστοῦ	Χριστός	N-GSM		
+PHM 1:4!1	v	verb	Εὐχαριστῶ	εὐχαριστέω	V-PAI-1S	Παῦλος	PHM 1:1!1
+PHM 1:4!2		det	τῷ	ὁ	T-DSM		
+PHM 1:4!3		noun	θεῷ	θεός	N-DSM		
+PHM 1:4!4		pron	μου	ἐγώ	P-1GS		
+PHM 1:4!5	adv	adv	πάντοτε	πάντοτε	ADV		
+PHM 1:4!6		noun	μνείαν	μνεία	N-ASF		
+PHM 1:4!7		pron	σου	σύ	P-2GS		
+PHM 1:4!8	v	verb	ποιούμενος	ποιέω	V-PMP-NSM	Παῦλος	PHM 1:1!1
+PHM 1:4!9		prep	ἐπὶ	ἐπί	PREP		
+PHM 1:4!10		det	τῶν	ὁ	T-GPF		
+PHM 1:4!11		noun	προσευχῶν	προσευχή	N-GPF		
+PHM 1:4!12		pron	μου	ἐγώ	P-1GS		
+PHM 1:5!1	v	verb	ἀκούων	ἀκούω	V-PAP-NSM	Παῦλος	PHM 1:1!1
+PHM 1:5!2		pron	σου	σύ	P-2GS		
+PHM 1:5!3		det	τὴν	ὁ	T-ASF		
+PHM 1:5!4		noun	ἀγάπην	ἀγάπη	N-ASF		
+PHM 1:5!5		conj	καὶ	καί	CONJ		
+PHM 1:5!6		det	τὴν	ὁ	T-ASF		
+PHM 1:5!7		noun	πίστιν	πίστις	N-ASF		
+PHM 1:5!8	o	pron	ἣν	ὅς	R-ASF		
+PHM 1:5!9	v	verb	ἔχεις	ἔχω	V-PAI-2S	Φιλήμων	PHM 1:1!9
+PHM 1:5!10		prep	πρὸς	πρός	PREP		
+PHM 1:5!11		det	τὸν	ὁ	T-ASM		
+PHM 1:5!12		noun	κύριον	κύριος	N-ASM		
+PHM 1:5!13		noun	Ἰησοῦν	Ἰησοῦς	N-ASM		
+PHM 1:5!14		conj	καὶ	καί	CONJ		
+PHM 1:5!15		prep	εἰς	εἰς	PREP		
+PHM 1:5!16		adj	πάντας	πᾶς	A-APM		
+PHM 1:5!17		det	τοὺς	ὁ	T-APM		
+PHM 1:5!18		adj	ἁγίους	ἅγιος	A-APM		
+PHM 1:6!1		conj	ὅπως	ὅπως	ADV		
+PHM 1:6!2		det	ἡ	ὁ	T-NSF		
+PHM 1:6!3		noun	κοινωνία	κοινωνία	N-NSF		
+PHM 1:6!4		det	τῆς	ὁ	T-GSF		
+PHM 1:6!5		noun	πίστεώς	πίστις	N-GSF		
+PHM 1:6!6		pron	σου	σύ	P-2GS		
+PHM 1:6!7	p	adj	ἐνεργὴς	ἐνεργής	A-NSF		
+PHM 1:6!8	vc	verb	γένηται	γίνομαι	V-2ADS-3S		
+PHM 1:6!9		prep	ἐν	ἐν	PREP		
+PHM 1:6!10		noun	ἐπιγνώσει	ἐπίγνωσις	N-DSF		
+PHM 1:6!11		adj	παντὸς	πᾶς	A-GSN		
+PHM 1:6!12		adj	ἀγαθοῦ	ἀγαθός	A-GSN		
+PHM 1:6!13		det	τοῦ	ὁ	T-GSN		
+PHM 1:6!14		prep	ἐν	ἐν	PREP		
+PHM 1:6!15		pron	ἡμῖν	ἐγώ	P-1DP		
+PHM 1:6!16		prep	εἰς	εἰς	PREP		
+PHM 1:6!17		noun	Χριστόν	Χριστός	N-ASM		
+PHM 1:7!1		noun	χαρὰν	χαρά	N-ASF		
+PHM 1:7!2		conj	γὰρ	γάρ	CONJ		
+PHM 1:7!3		adj	πολλὴν	πολύς	A-ASF		
+PHM 1:7!4	v	verb	ἔσχον	ἔχω	V-2AAI-1S	Παῦλος	PHM 1:1!1
+PHM 1:7!5		conj	καὶ	καί	CONJ		
+PHM 1:7!6		noun	παράκλησιν	παράκλησις	N-ASF		
+PHM 1:7!7		prep	ἐπὶ	ἐπί	PREP		
+PHM 1:7!8		det	τῇ	ὁ	T-DSF		
+PHM 1:7!9		noun	ἀγάπῃ	ἀγάπη	N-DSF		
+PHM 1:7!10		pron	σου	σύ	P-2GS		
+PHM 1:7!11		conj	ὅτι	ὅτι	CONJ		
+PHM 1:7!12		det	τὰ	ὁ	T-NPN		
+PHM 1:7!13		noun	σπλάγχνα	σπλάγχνον	N-NPN		
+PHM 1:7!14		det	τῶν	ὁ	T-GPM		
+PHM 1:7!15		adj	ἁγίων	ἅγιος	A-GPM		
+PHM 1:7!16	v	verb	ἀναπέπαυται	ἀναπαύω	V-RPI-3S		
+PHM 1:7!17		prep	διὰ	διά	PREP		
+PHM 1:7!18		pron	σοῦ	σύ	P-2GS		
+PHM 1:7!19	aux	noun	ἀδελφέ	ἀδελφός	N-VSM		
+PHM 1:8!1		conj	Διό	διό	CONJ		
+PHM 1:8!2		adj	πολλὴν	πολύς	A-ASF		
+PHM 1:8!3		prep	ἐν	ἐν	PREP		
+PHM 1:8!4		noun	Χριστῷ	Χριστός	N-DSM		
+PHM 1:8!5		noun	παρρησίαν	παρρησία	N-ASF		
+PHM 1:8!6	v	verb	ἔχων	ἔχω	V-PAP-NSM	Παῦλος	PHM 1:1!1
+PHM 1:8!7	v	verb	ἐπιτάσσειν	ἐπιτάσσω	V-PAN	Παῦλος	PHM 1:1!1
+PHM 1:8!8	io	pron	σοι	σύ	P-2DS		
+PHM 1:8!9		det	τὸ	ὁ	T-ASN		
+PHM 1:8!10	v	verb	ἀνῆκον	ἀνήκω	V-PAP-ASN		
+PHM 1:9!1		prep	διὰ	διά	PREP		
+PHM 1:9!2		det	τὴν	ὁ	T-ASF		
+PHM 1:9!3		noun	ἀγάπην	ἀγάπη	N-ASF		
+PHM 1:9!4	adv	adv	μᾶλλον	μᾶλλον	ADV		
+PHM 1:9!5	v	verb	παρακαλῶ	παρακαλέω	V-PAI-1S	Παῦλος	PHM 1:1!1
+PHM 1:9!6	p	pron	τοιοῦτος	τοιοῦτος	D-NSM		
+PHM 1:9!7	vc	verb	ὢν	εἰμί	V-PAP-NSM		
+PHM 1:9!8		conj	ὡς	ὡς	ADV		
+PHM 1:9!9		noun	Παῦλος	Παῦλος	N-NSM		
+PHM 1:9!10		noun	πρεσβύτης	πρεσβύτης	N-NSM		
+PHM 1:9!11	adv	adv	νυνὶ	νυνί	ADV		
+PHM 1:9!12		conj	δὲ	δέ	CONJ		
+PHM 1:9!13		adv	καὶ	καί	CONJ		
+PHM 1:9!14		noun	δέσμιος	δέσμιος	N-NSM		
+PHM 1:9!15		noun	Χριστοῦ	Χριστός	N-GSM		
+PHM 1:9!16		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHM 1:10!1	v	verb	παρακαλῶ	παρακαλέω	V-PAI-1S	Παῦλος	PHM 1:9!9
+PHM 1:10!2	o	pron	σε	σύ	P-2AS		
+PHM 1:10!3		prep	περὶ	περί	PREP		
+PHM 1:10!4		det	τοῦ	ὁ	T-GSN		
+PHM 1:10!5		adj	ἐμοῦ	ἐμός	S-1SGSN		
+PHM 1:10!6		noun	τέκνου	τέκνον	N-GSN		
+PHM 1:10!7		pron	ὃν	ὅς	R-ASM		
+PHM 1:10!8	v	verb	ἐγέννησα	γεννάω	V-AAI-1S	Παῦλος	PHM 1:9!9
+PHM 1:10!9		prep	ἐν	ἐν	PREP		
+PHM 1:10!10		det	τοῖς	ὁ	T-DPM		
+PHM 1:10!11		noun	δεσμοῖς	δεσμός	N-DPM		
+PHM 1:10!12		noun	Ὀνήσιμον	Ὀνήσιμος	N-ASM		
+PHM 1:11!1		det	τόν	ὁ	T-ASM		
+PHM 1:11!2		ptcl	ποτέ	ποτέ	PRT		
+PHM 1:11!3		pron	σοι	σύ	P-2DS		
+PHM 1:11!4		adj	ἄχρηστον	ἄχρηστος	A-ASM		
+PHM 1:11!5		adv	νυνὶ	νυνί	ADV		
+PHM 1:11!6		conj	δὲ	δέ	CONJ		
+PHM 1:11!7		pron	σοὶ	σύ	P-2DS		
+PHM 1:11!8		conj	καὶ	καί	CONJ		
+PHM 1:11!9		pron	ἐμοὶ	ἐγώ	P-1DS		
+PHM 1:11!10		adj	εὔχρηστον	εὔχρηστος	A-ASM		
+PHM 1:12!1		pron	ὃν	ὅς	R-ASM		
+PHM 1:12!2	v	verb	ἀνέπεμψά	ἀναπέμπω	V-AAI-1S	Παῦλος	PHM 1:9!9
+PHM 1:12!3	io	pron	σοι	σύ	P-2DS		
+PHM 1:12!4		pron	αὐτόν	αὐτός	P-ASM		
+PHM 1:12!5	s	pron	τοῦτ	οὗτος	D-NSN		
+PHM 1:12!6	vc	verb	ἔστιν	εἰμί	V-PAI-3S		
+PHM 1:12!7		det	τὰ	ὁ	T-NPN		
+PHM 1:12!8		adj	ἐμὰ	ἐμός	S-1SNPN		
+PHM 1:12!9		noun	σπλάγχνα	σπλάγχνον	N-NPN		
+PHM 1:13!1	o	pron	ὃν	ὅς	R-ASM		
+PHM 1:13!2	s	pron	ἐγὼ	ἐγώ	P-1NS		
+PHM 1:13!3	v	verb	ἐβουλόμην	βούλομαι	V-INI-1S	ἐγώ	PHM 1:13!2
+PHM 1:13!4		prep	πρὸς	πρός	PREP		
+PHM 1:13!5		pron	ἐμαυτὸν	ἐμαυτοῦ	F-1ASM		
+PHM 1:13!6	v	verb	κατέχειν	κατέχω	V-PAN	Παῦλος	PHM 1:9!9
+PHM 1:13!7		conj	ἵνα	ἵνα	CONJ		
+PHM 1:13!8		prep	ὑπὲρ	ὑπέρ	PREP		
+PHM 1:13!9		pron	σοῦ	σύ	P-2GS		
+PHM 1:13!10	o	pron	μοι	ἐγώ	P-1DS		
+PHM 1:13!11	v	verb	διακονῇ	διακονέω	V-PAS-3S	Ὀνήσιμος	PHM 1:10!12
+PHM 1:13!12		prep	ἐν	ἐν	PREP		
+PHM 1:13!13		det	τοῖς	ὁ	T-DPM		
+PHM 1:13!14		noun	δεσμοῖς	δεσμός	N-DPM		
+PHM 1:13!15		det	τοῦ	ὁ	T-GSN		
+PHM 1:13!16		noun	εὐαγγελίου	εὐαγγέλιον	N-GSN		
+PHM 1:14!1		prep	χωρὶς	χωρίς	ADV		
+PHM 1:14!2		conj	δὲ	δέ	CONJ		
+PHM 1:14!3		det	τῆς	ὁ	T-GSF		
+PHM 1:14!4		adj	σῆς	σός	S-2SGSF		
+PHM 1:14!5		noun	γνώμης	γνώμη	N-GSF		
+PHM 1:14!6	o	adj	οὐδὲν	οὐδείς	A-ASN-N		
+PHM 1:14!7	v	verb	ἠθέλησα	θέλω	V-AAI-1S	Παῦλος	PHM 1:9!9
+PHM 1:14!8	v	verb	ποιῆσαι	ποιέω	V-AAN	Παῦλος	PHM 1:9!9
+PHM 1:14!9		conj	ἵνα	ἵνα	CONJ		
+PHM 1:14!10		adv	μὴ	μή	PRT-N		
+PHM 1:14!11		conj	ὡς	ὡς	ADV		
+PHM 1:14!12		prep	κατὰ	κατά	PREP		
+PHM 1:14!13		noun	ἀνάγκην	ἀνάγκη	N-ASF		
+PHM 1:14!14		det	τὸ	ὁ	T-NSN		
+PHM 1:14!15		adj	ἀγαθόν	ἀγαθός	A-NSN		
+PHM 1:14!16		pron	σου	σύ	P-2GS		
+PHM 1:14!17	vc	verb	ᾖ	εἰμί	V-PAS-3S		
+PHM 1:14!18		conj	ἀλλὰ	ἀλλά	CONJ		
+PHM 1:14!19		prep	κατὰ	κατά	PREP		
+PHM 1:14!20		adj	ἑκούσιον	ἑκούσιος	A-ASN		
+PHM 1:15!1	adv	adv	τάχα	τάχα	ADV		
+PHM 1:15!2		conj	γὰρ	γάρ	CONJ		
+PHM 1:15!3		prep	διὰ	διά	PREP		
+PHM 1:15!4		pron	τοῦτο	οὗτος	D-ASN		
+PHM 1:15!5	v	verb	ἐχωρίσθη	χωρίζω	V-API-3S		
+PHM 1:15!6		prep	πρὸς	πρός	PREP		
+PHM 1:15!7		noun	ὥραν	ὥρα	N-ASF		
+PHM 1:15!8		conj	ἵνα	ἵνα	CONJ		
+PHM 1:15!9	adv	adj	αἰώνιον	αἰώνιος	A-ASM		
+PHM 1:15!10	o	pron	αὐτὸν	αὐτός	P-ASM		
+PHM 1:15!11	v	verb	ἀπέχῃς	ἀπέχω	V-PAS-2S	ἀδελφός	PHM 1:7!19
+PHM 1:16!1		adv	οὐκέτι	οὐκέτι	ADV-N		
+PHM 1:16!2		conj	ὡς	ὡς	ADV		
+PHM 1:16!3		noun	δοῦλον	δοῦλος	N-ASM		
+PHM 1:16!4		conj	ἀλλὰ	ἀλλά	CONJ		
+PHM 1:16!5		prep	ὑπὲρ	ὑπέρ	PREP		
+PHM 1:16!6		noun	δοῦλον	δοῦλος	N-ASM		
+PHM 1:16!7		noun	ἀδελφὸν	ἀδελφός	N-ASM		
+PHM 1:16!8		adj	ἀγαπητόν	ἀγαπητός	A-ASM		
+PHM 1:16!9	adv	adv	μάλιστα	μάλιστα	ADV-S		
+PHM 1:16!10	io	pron	ἐμοί	ἐγώ	P-1DS		
+PHM 1:16!11		pron	πόσῳ	πόσος	Q-DSN		
+PHM 1:16!12		conj	δὲ	δέ	CONJ		
+PHM 1:16!13		adv	μᾶλλον	μᾶλλον	ADV		
+PHM 1:16!14	io	pron	σοὶ	σύ	P-2DS		
+PHM 1:16!15		conj	καὶ	καί	CONJ		
+PHM 1:16!16		prep	ἐν	ἐν	PREP		
+PHM 1:16!17		noun	σαρκὶ	σάρξ	N-DSF		
+PHM 1:16!18		conj	καὶ	καί	CONJ		
+PHM 1:16!19		prep	ἐν	ἐν	PREP		
+PHM 1:16!20		noun	κυρίῳ	κύριος	N-DSM		
+PHM 1:17!1		conj	Εἰ	εἰ	COND		
+PHM 1:17!2		conj	οὖν	οὖν	CONJ		
+PHM 1:17!3	o	pron	με	ἐγώ	P-1AS		
+PHM 1:17!4	v	verb	ἔχεις	ἔχω	V-PAI-2S	ἀδελφός	PHM 1:7!19
+PHM 1:17!5	o2	noun	κοινωνόν	κοινωνός	N-ASM		
+PHM 1:17!6	v	verb	προσλαβοῦ	προσλαμβάνομαι	V-2AMM-2S	ἀδελφός	PHM 1:7!19
+PHM 1:17!7	o	pron	αὐτὸν	αὐτός	P-ASM		
+PHM 1:17!8		conj	ὡς	ὡς	ADV		
+PHM 1:17!9	o	pron	ἐμέ	ἐγώ	P-1AS		
+PHM 1:18!1		conj	εἰ	εἰ	COND		
+PHM 1:18!2		conj	δέ	δέ	CONJ		
+PHM 1:18!3	adv	pron	τι	τις	X-ASN		
+PHM 1:18!4	v	verb	ἠδίκησέν	ἀδικέω	V-AAI-3S	Ὀνήσιμος	PHM 1:10!12
+PHM 1:18!5	o	pron	σε	σύ	P-2AS		
+PHM 1:18!6		conj	ἢ	ἤ	PRT		
+PHM 1:18!7	v	verb	ὀφείλει	ὀφείλω	V-PAI-3S	Ὀνήσιμος	PHM 1:10!12
+PHM 1:18!8	o	pron	τοῦτο	οὗτος	D-ASN		
+PHM 1:18!9	io	pron	ἐμοὶ	ἐγώ	P-1DS		
+PHM 1:18!10	v	verb	ἐλλόγα	ἐλλογέω	V-PAM-2S	ἀδελφός	PHM 1:7!19
+PHM 1:19!1		pron	ἐγὼ	ἐγώ	P-1NS		
+PHM 1:19!2		noun	Παῦλος	Παῦλος	N-NSM		
+PHM 1:19!3	v	verb	ἔγραψα	γράφω	V-AAI-1S	ἐγώ	PHM 1:19!1
+PHM 1:19!4		det	τῇ	ὁ	T-DSF		
+PHM 1:19!5		adj	ἐμῇ	ἐμός	S-1SDSF		
+PHM 1:19!6		noun	χειρί	χείρ	N-DSF		
+PHM 1:19!7	s	pron	ἐγὼ	ἐγώ	P-1NS		
+PHM 1:19!8	v	verb	ἀποτίσω	ἀποτίνω	V-FAI-1S	ἐγώ	PHM 1:19!7
+PHM 1:19!9		conj	ἵνα	ἵνα	CONJ		
+PHM 1:19!10	adv	adv	μὴ	μή	PRT-N		
+PHM 1:19!11	v	verb	λέγω	λέγω	V-PAS-1S	Παῦλος	PHM 1:19!2
+PHM 1:19!12	io	pron	σοι	σύ	P-2DS		
+PHM 1:19!13		conj	ὅτι	ὅτι	CONJ		
+PHM 1:19!14		adv	καὶ	καί	CONJ		
+PHM 1:19!15		pron	σεαυτόν	σεαυτοῦ	F-2ASM		
+PHM 1:19!16	io	pron	μοι	ἐγώ	P-1DS		
+PHM 1:19!17	v	verb	προσοφείλεις	προσοφείλω	V-PAI-2S	ἀδελφός	PHM 1:7!19
+PHM 1:20!1	aux	ptcl	ναί	ναί	PRT		
+PHM 1:20!2	aux	noun	ἀδελφέ	ἀδελφός	N-VSM		
+PHM 1:20!3	s	pron	ἐγώ	ἐγώ	P-1NS		
+PHM 1:20!4	adv	pron	σου	σύ	P-2GS		
+PHM 1:20!5	v	verb	ὀναίμην	ὀνίνημι	V-2ADO-1S	ἐγώ	PHM 1:20!3
+PHM 1:20!6		prep	ἐν	ἐν	PREP		
+PHM 1:20!7		noun	κυρίῳ	κύριος	N-DSM		
+PHM 1:20!8	v	verb	ἀνάπαυσόν	ἀναπαύω	V-AAM-2S	ἀδελφός	PHM 1:20!2
+PHM 1:20!9		pron	μου	ἐγώ	P-1GS		
+PHM 1:20!10		det	τὰ	ὁ	T-APN		
+PHM 1:20!11		noun	σπλάγχνα	σπλάγχνον	N-APN		
+PHM 1:20!12		prep	ἐν	ἐν	PREP		
+PHM 1:20!13		noun	Χριστῷ	Χριστός	N-DSM		
+PHM 1:21!1	v	verb	πεποιθὼς	πείθω	V-2RAP-NSM	Παῦλος	PHM 1:19!2
+PHM 1:21!2		det	τῇ	ὁ	T-DSF		
+PHM 1:21!3		noun	ὑπακοῇ	ὑπακοή	N-DSF		
+PHM 1:21!4		pron	σου	σύ	P-2GS		
+PHM 1:21!5	v	verb	ἔγραψά	γράφω	V-AAI-1S	Παῦλος	PHM 1:19!2
+PHM 1:21!6	io	pron	σοι	σύ	P-2DS		
+PHM 1:21!7	v	verb	εἰδὼς	ὁράω	V-RAP-NSM	Παῦλος	PHM 1:19!2
+PHM 1:21!8		conj	ὅτι	ὅτι	CONJ		
+PHM 1:21!9		adv	καὶ	καί	CONJ		
+PHM 1:21!10		prep	ὑπὲρ	ὑπέρ	PREP		
+PHM 1:21!11	o	pron	ἃ	ὅς	R-APN		
+PHM 1:21!12	v	verb	λέγω	λέγω	V-PAI-1S	Παῦλος	PHM 1:19!2
+PHM 1:21!13	v	verb	ποιήσεις	ποιέω	V-FAI-2S	ἀδελφός	PHM 1:20!2
+PHM 1:22!1		adv	ἅμα	ἅμα	ADV		
+PHM 1:22!2		conj	δὲ	δέ	CONJ		
+PHM 1:22!3		adv	καὶ	καί	CONJ		
+PHM 1:22!4	v	verb	ἑτοίμαζέ	ἑτοιμάζω	V-PAM-2S	ἀδελφός	PHM 1:20!2
+PHM 1:22!5	io	pron	μοι	ἐγώ	P-1DS		
+PHM 1:22!6	o	noun	ξενίαν	ξενία	N-ASF		
+PHM 1:22!7	v	verb	ἐλπίζω	ἐλπίζω	V-PAI-1S	Παῦλος	PHM 1:19!2
+PHM 1:22!8		conj	γὰρ	γάρ	CONJ		
+PHM 1:22!9		conj	ὅτι	ὅτι	CONJ		
+PHM 1:22!10		prep	διὰ	διά	PREP		
+PHM 1:22!11		det	τῶν	ὁ	T-GPF		
+PHM 1:22!12		noun	προσευχῶν	προσευχή	N-GPF		
+PHM 1:22!13		pron	ὑμῶν	σύ	P-2GP		
+PHM 1:22!14	v	verb	χαρισθήσομαι	χαρίζομαι	V-FPI-1S		
+PHM 1:22!15	io	pron	ὑμῖν	σύ	P-2DP		
+PHM 1:23!1	v	verb	Ἀσπάζεταί	ἀσπάζομαι	V-PNI-3S	Ἐπαφρᾶς;Μᾶρκος;Ἀρίσταρχος;Δημᾶς;Λουκᾶς	PHM 1:23!3;PHM 1:24!1;PHM 1:24!2;PHM 1:24!3;PHM 1:24!4
+PHM 1:23!2	o	pron	σε	σύ	P-2AS		
+PHM 1:23!3		noun	Ἐπαφρᾶς	Ἐπαφρᾶς	N-NSM		
+PHM 1:23!4		det	ὁ	ὁ	T-NSM		
+PHM 1:23!5		noun	συναιχμάλωτός	συναιχμάλωτος	A-NSM		
+PHM 1:23!6		pron	μου	ἐγώ	P-1GS		
+PHM 1:23!7		prep	ἐν	ἐν	PREP		
+PHM 1:23!8		noun	Χριστῷ	Χριστός	N-DSM		
+PHM 1:23!9		noun	Ἰησοῦ	Ἰησοῦς	N-DSM		
+PHM 1:24!1		noun	Μᾶρκος	Μᾶρκος	N-NSM		
+PHM 1:24!2		noun	Ἀρίσταρχος	Ἀρίσταρχος	N-NSM		
+PHM 1:24!3		noun	Δημᾶς	Δημᾶς	N-NSM		
+PHM 1:24!4		noun	Λουκᾶς	Λουκᾶς	N-NSM		
+PHM 1:24!5		det	οἱ	ὁ	T-NPM		
+PHM 1:24!6		adj	συνεργοί	συνεργός	A-NPM		
+PHM 1:24!7		pron	μου	ἐγώ	P-1GS		
+PHM 1:25!1		det	Ἡ	ὁ	T-NSF		
+PHM 1:25!2		noun	χάρις	χάρις	N-NSF		
+PHM 1:25!3		det	τοῦ	ὁ	T-GSM		
+PHM 1:25!4		noun	κυρίου	κύριος	N-GSM		
+PHM 1:25!5		noun	Ἰησοῦ	Ἰησοῦς	N-GSM		
+PHM 1:25!6		noun	Χριστοῦ	Χριστός	N-GSM		
+PHM 1:25!7		prep	μετὰ	μετά	PREP		
+PHM 1:25!8		det	τοῦ	ὁ	T-GSN		
+PHM 1:25!9		noun	πνεύματος	πνεῦμα	N-GSN		
+PHM 1:25!10		pron	ὑμῶν	σύ	P-2GP		

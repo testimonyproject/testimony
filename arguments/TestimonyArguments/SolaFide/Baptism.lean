@@ -254,6 +254,8 @@ def romeOnBaptismReading : Valuation Claim := fun a =>
   | .john3_5WaterIsTheSpiritsCleansing => False
   | .justificationByFaithAlone => False
   | .justificationIsForensicOnly => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- A consistent way of holding Feeney's reading: baptism is the instrumental cause,
@@ -271,6 +273,8 @@ def feeneyReading : Valuation Claim := fun a =>
   | .john3_5WaterIsTheSpiritsCleansing => False
   | .justificationByFaithAlone => False
   | .justificationIsForensicOnly => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- The Reformed position. Faith is the instrument, and baptism is not.
@@ -284,6 +288,8 @@ def reformedOnBaptismReading : Valuation Claim := fun a =>
   | .john3_5RequiresWaterBaptism => False
   | .john3_5WaterIsBaptism => False
   | .justificationIncludesSanctification => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-! ### Each position holds together -/
@@ -589,6 +595,8 @@ def noWaterInJohnThreeFiveReading : Valuation Claim := fun a =>
   match a with
   | .john3_5RequiresWaterBaptism => False
   | .john3_5WaterIsBaptism => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- Grant the verse and Trent's step from it, and the requirement of water baptism
@@ -654,6 +662,8 @@ def trentReadingOfJohnThreeFive : Valuation Claim := fun a =>
   | .john3_5WaterIsNaturalBirth => False
   | .john3_5WaterIsEzekielsCleansing => False
   | .john3_5WaterIsTheSpiritsCleansing => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- The verse read with its water as natural birth, and Trent's step kept. By itself
@@ -663,6 +673,8 @@ def trentWithBirthReading : Valuation Claim := fun a =>
   match a with
   | .john3_5WaterIsEzekielsCleansing => False
   | .john3_5WaterIsTheSpiritsCleansing => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- Trent's step, with the water read as Ezekiel's cleansing. -/
@@ -670,6 +682,8 @@ def trentWithEzekielReading : Valuation Claim := fun a =>
   match a with
   | .john3_5WaterIsNaturalBirth => False
   | .john3_5WaterIsTheSpiritsCleansing => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- Trent's step, with the water read as the Spirit's own cleansing. -/
@@ -677,6 +691,8 @@ def trentWithSpiritReading : Valuation Claim := fun a =>
   match a with
   | .john3_5WaterIsNaturalBirth => False
   | .john3_5WaterIsEzekielsCleansing => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- The baptismal reading of Trent's step can be held without contradiction. -/
@@ -856,6 +872,8 @@ def fireAsJudgmentReading : Valuation Claim := fun a =>
   match a with
   | .fireIsPurification => False
   | .fireIsPentecost => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- A reading on which the fire is purification, and neither of the other readings
@@ -864,6 +882,8 @@ def fireAsPurificationReading : Valuation Claim := fun a =>
   match a with
   | .fireIsJudgment => False
   | .fireIsPentecost => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- **John the Baptist's words leave open whether the fire is judgement.** "He will

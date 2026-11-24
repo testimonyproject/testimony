@@ -27,7 +27,7 @@ These parts are **not** checked, and need a human reader:
 - the prose around the results;
 - whether a cited source says what the entry says it does;
 - whether a rating (`consensus`, `wellSupported`, `plausible`, `disputed`)
-  is the right rating;
+  is the right rating (`refuted` is computed, and checked);
 - whether a formal statement faithfully represents the argument it names.
 
 The last three are the review this project most needs. It needs a theologian

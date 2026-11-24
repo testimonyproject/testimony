@@ -321,6 +321,8 @@ def romeOnJesusWordsReading : Valuation Claim := fun a =>
   | .justificationByFaithAlone => False
   | .matthew7DoingIncludesBelieving => False
   | .matthew19LawExposesInability => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- Calvin's reading of Jesus' words. In Matthew 7 the doing includes believing and
@@ -331,6 +333,8 @@ def calvinOnJesusWordsReading : Valuation Claim := fun a =>
   match a with
   | .matthew7ObedienceIsAGround => False
   | .matthew19CommandmentsAreTheWayToLife => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-! ### What each position holds -/
@@ -462,17 +466,17 @@ here every weakest link is `disputed`, and every attack stands. -/
 
 /-- Luke 18's case rests on a step Trent contests, so its weakest link is
 `disputed`. -/
-theorem luke18Case_strength : luke18Case.strength = 0 := by decide
+theorem luke18Case_strength : luke18Case.strength = 1 := by decide
 /-- Rome's reading of Matthew 7 rests on that reading, so its weakest link is
 `disputed`. -/
-theorem matthew7ObedienceCase_strength : matthew7ObedienceCase.strength = 0 := by decide
+theorem matthew7ObedienceCase_strength : matthew7ObedienceCase.strength = 1 := by decide
 /-- Calvin's reading of Matthew 7 rests on his, so its weakest link is `disputed`. -/
-theorem matthew7FaithCase_strength : matthew7FaithCase.strength = 0 := by decide
+theorem matthew7FaithCase_strength : matthew7FaithCase.strength = 1 := by decide
 /-- Rome's reading of Matthew 19 rests on that reading, so its weakest link is
 `disputed`. -/
-theorem matthew19WayCase_strength : matthew19WayCase.strength = 0 := by decide
+theorem matthew19WayCase_strength : matthew19WayCase.strength = 1 := by decide
 /-- Calvin's reading of Matthew 19 rests on his, so its weakest link is `disputed`. -/
-theorem matthew19LegalCase_strength : matthew19LegalCase.strength = 0 := by decide
+theorem matthew19LegalCase_strength : matthew19LegalCase.strength = 1 := by decide
 
 /-! ### The debate over Jesus' words -/
 
@@ -546,6 +550,8 @@ def lukeWithRomeOnMatthewReading : Valuation Claim := fun a =>
   | .matthew19LawExposesInability => False
   | .baptismIsInstrumentalCause => False
   | .justificationIncludesSanctification => False
+  | .energoumeneIsPassive => False
+  | .loveMovesFaith => False
   | _ => True
 
 /-- Luke's two sayings can be held together with Rome's readings of Matthew. -/
