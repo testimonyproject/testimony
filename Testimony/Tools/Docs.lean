@@ -41,6 +41,11 @@ structure Chapter where
   /-- Whether the table of numbered claims is set here. One chapter of an
   argument carries it, usually an appendix, and every formula links to it. -/
   legend : Bool := false
+  /-- The title of the part this chapter opens, when the argument's chapters
+  are grouped in parts, such as the story told in order and the questions
+  taken one at a time. The part runs until the next chapter that opens one.
+  Empty for a chapter that opens none. -/
+  part : String := ""
 deriving Inhabited, Repr
 
 /-- One worked argument, as the generated documentation presents it. -/

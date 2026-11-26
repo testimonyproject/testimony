@@ -336,6 +336,26 @@ gives, which on a web page must link to LSBible.org. -/
       , identifiers := [.url "https://lsbible.org/" (some "2026-11-18")] }
   , site := some "LSBible.org" }
 
+/-- The NET Bible, which the chapter "What Scripture says" of sola fide quotes,
+each quotation marked (NET). Published by Biblical Studies Press, its second
+edition in 2019; the text is read through Bible.org's own service
+(labs.bible.org), so no single printing's ISBN is recorded. The publisher allows
+the text to be quoted without written permission in a work given away free, so
+long as each quotation is followed by "(NET)" and the work carries the notice
+the entry's note gives (netbible.com/copyright, read 24 November 2026). -/
+@[bib_entry] def netBible : BibEntry := .webPage
+  { core :=
+      { key := "bsp-net-bible-2019"
+      , role := .text
+      , contributors := { authors := [.corporate "Biblical Studies Press"] }
+      , title := "The NET Bible"
+      , year := some { value := 2019 }
+      , note := some ("Scripture quoted by permission. Quotations designated (NET) are " ++
+          "from the NET Bible® copyright ©1996, 2019 by Biblical Studies Press, L.L.C. " ++
+          "http://netbible.com All rights reserved.")
+      , identifiers := [.url "https://netbible.com/copyright" (some "2026-11-24")] }
+  , site := some "netbible.com" }
+
 /-- Calvin's *Antidote* to the decree on justification of Trent's sixth session,
 written in 1547. Beveridge's translation numbers the decree's chapter on
 the increase of justification XI ("Under the eleventh head"); in Trent's own
@@ -5924,6 +5944,41 @@ library cites. -/
   , originalTitle := some "Acta synodi Tridentinae cum antidoto"
   , composed := some { value := 1547 }
   , editionUsed := some "calvin-antidote-trent-1851" }
+
+/-- Chemnitz's *Examen Concilii Tridentini* in Eduard Preuss's edition (Berlin,
+Gustav Schlawitz, 1861), which follows the Frankfurt edition of 1578, the last
+Chemnitz revised, collated with that of 1707. The eighth topic, on
+justification, is at pp. 144–175. Read in the Internet Archive's scan, whose
+catalogue entry wrongly dates it 1573; the title page gives 1861. Published
+without an ISBN. -/
+@[bib_entry] def chemnitzExamenPreuss : BibEntry := .book
+  { core :=
+      { key := "chemnitz-examen-preuss-1861"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "Martin" "Chemnitz"]
+          , editors := [.person "Eduard" "Preuss"] }
+      , title := "Examen Concilii Tridentini"
+      , year := some { value := 1861 }
+      , identifiers :=
+          [ .url "https://archive.org/details/Chemnitz_Examen_1573" (some "2026-11-26") ] }
+  , publisher := "Gustav Schlawitz"
+  , place := some "Berlin" }
+
+/-- Chemnitz's examination of the decrees of Trent. He finished its first part,
+which holds the topic on justification, in March 1565, and its title page is
+dated 1566 (Preuss, "Historia libri impressi", pp. 959–961); the four parts were
+complete in 1573. Dated by the first part. Read in Preuss's edition
+(`chemnitzExamenPreuss`), whose pages the library cites. -/
+@[bib_entry] def chemnitzExamen : BibEntry := .ancientWork
+  { core :=
+      { key := "chemnitz-examen-1566"
+      , role := .witness
+      , contributors := { authors := [.person "Martin" "Chemnitz"] }
+      , title := "Examination of the Council of Trent" }
+  , originalTitle := some "Examen Concilii Tridentini"
+  , composed := some { value := 1566 }
+  , editionUsed := some "chemnitz-examen-preuss-1861" }
 
 /-- Bellarmine's *De justificatione*, in the third volume of his *Disputationes
 de controversiis*, published at Ingolstadt in 1593, dated for the exchange on

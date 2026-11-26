@@ -92,11 +92,12 @@ def scripture : String × List String :=
   ("The library quotes Scripture from the translations below, by permission of " ++
     "their publishers. Most quotations are from the English Standard Version " ++
     "(ESV); the chapters on Scripture alone quote the Legacy Standard Bible " ++
-    "(LSB), and any other quotation from the LSB or the New American Bible, " ++
-    "Revised Edition (NABRE), is marked with its name. Where a cited author " ++
-    "quotes a verse in another translation, such as the King James Version, " ++
-    "the verse is given as the author gives it.",
-   [TestimonyArguments.esv, TestimonyArguments.lsb, TestimonyArguments.nabre].filterMap
+    "(LSB), and any other quotation from the LSB, the NET Bible (NET) or the " ++
+    "New American Bible, Revised Edition (NABRE), is marked with its name. " ++
+    "Where a cited author quotes a verse in another translation, such as the " ++
+    "King James Version, the verse is given as the author gives it.",
+   [ TestimonyArguments.esv, TestimonyArguments.lsb, TestimonyArguments.netBible
+    , TestimonyArguments.nabre ].filterMap
      (·.core.note))
 
 /-- How the book is made again: `argtex`, in `arguments/`, writes it. -/

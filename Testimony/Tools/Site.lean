@@ -201,9 +201,15 @@ def chapterText (a : Argument) (b : Body) (i : Nat) (c : Chapter) : String :=
   let title := if i == 0 then a.title else c.title
   let contents := if i == 0 then
       "This argument is set in " ++ toString a.chapters.length ++ " chapters:\n\n" ++
-      String.join (a.chapters.zipIdx.map fun (ch, k) =>
-        "- [" ++ ch.title ++ "](" ++ relativeLink (chapterFile a 0 ch)
-          (chapterFile a k ch) ++ ")\n") ++ "\n"
+      (a.chapters.zipIdx.foldl (fun (acc, inPart) (ch, k) =>
+        -- A chapter that opens a part is listed under the part's title, and so
+        -- is every chapter after it until the next part.
+        let head := if ch.part.isEmpty then "" else "- " ++ ch.part ++ "\n"
+        let inPart := inPart || !ch.part.isEmpty
+        let indent := if inPart then "  " else ""
+        (acc ++ head ++ indent ++ "- [" ++ ch.title ++ "](" ++
+          relativeLink (chapterFile a 0 ch) (chapterFile a k ch) ++ ")\n", inPart))
+        ("", false)).1 ++ "\n"
     else ""
   "# " ++ title ++ "\n\n" ++ contents ++ prose ++ legend ++ checked
 

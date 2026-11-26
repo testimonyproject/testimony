@@ -13,21 +13,32 @@ namespace TestimonyArguments.Doc
 
 open Lean Testimony.Doc
 
-/-- Sola fide, set as a book: one chapter for each question a reader brings to
-it, in the order a reader would ask them. The claims and their sources, which
-every chapter's formulas point to, are an appendix. -/
+/-- Sola fide, set as a book. After the opening chapter come two parts: the
+story of the doctrine, told in the order its voices wrote, each group hearing
+the voices of its own time with the earlier voices they answer; and then one
+chapter for each question a reader
+brings to it, in the order a reader would ask them. The claims and their
+sources, which every chapter's formulas point to, are an appendix. -/
 def solaFideChapters : List Chapter :=
   [ { slug := "sola-fide", title := "What sola fide claims"
     , modules := [`TestimonyArguments.SolaFide] }
-  , { slug := "four-witnesses", title := "Four witnesses: Paul, Luke, Acts and John"
-    , modules := [ `TestimonyArguments.SolaFide.Lines, `TestimonyArguments.SolaFide.Packages
-                 , `TestimonyArguments.SolaFide.Results ] }
-  , { slug := "john", title := "John: \"this is the work of God, that you believe\""
-    , modules := [`TestimonyArguments.SolaFide.Johannine] }
+  , { slug := "scripture", title := "What Scripture says"
+    , modules := [`TestimonyArguments.SolaFide.WhatScriptureSays]
+    , part := "The story, in the order it was told" }
   , { slug := "before-trent", title := "Was faith alone read in Paul before Trent?"
     , modules := [`TestimonyArguments.SolaFide.BeforeTrent] }
   , { slug := "reformation", title := "The Reformation's case, 1521–1541"
     , modules := [`TestimonyArguments.SolaFide.Reformation] }
+  , { slug := "trent-answers", title := "The council answers, 1547"
+    , modules := [`TestimonyArguments.SolaFide.TrentAnswers] }
+  , { slug := "reformers-answer", title := "The Reformers answer the council, 1547–1647"
+    , modules := [`TestimonyArguments.SolaFide.ReformersAnswer] }
+  , { slug := "four-witnesses", title := "Four witnesses: Paul, Luke, Acts and John"
+    , modules := [ `TestimonyArguments.SolaFide.Lines, `TestimonyArguments.SolaFide.Packages
+                 , `TestimonyArguments.SolaFide.Results ]
+    , part := "The questions, one at a time" }
+  , { slug := "john", title := "John: \"this is the work of God, that you believe\""
+    , modules := [`TestimonyArguments.SolaFide.Johannine] }
   , { slug := "trent-and-paul", title := "Where Trent parts from Paul"
     , modules := [`TestimonyArguments.SolaFide.Gospel] }
   , { slug := "faith-and-charity", title := "Faith working through love"
