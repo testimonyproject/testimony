@@ -15,7 +15,8 @@ open Lean Testimony.Doc
 
 /-- Sola fide, set as a book. After the opening chapter come two parts: the
 story of the doctrine, told in the order its voices wrote, each group hearing
-only the voices of its own time; and then one chapter for each question a reader
+the voices of its own time with the earlier voices they answer; and then one
+chapter for each question a reader
 brings to it, in the order a reader would ask them. The claims and their
 sources, which every chapter's formulas point to, are an appendix. -/
 def solaFideChapters : List Chapter :=
@@ -30,6 +31,8 @@ def solaFideChapters : List Chapter :=
     , modules := [`TestimonyArguments.SolaFide.Reformation] }
   , { slug := "trent-answers", title := "The council answers, 1547"
     , modules := [`TestimonyArguments.SolaFide.TrentAnswers] }
+  , { slug := "reformers-answer", title := "The Reformers answer the council, 1547–1647"
+    , modules := [`TestimonyArguments.SolaFide.ReformersAnswer] }
   , { slug := "four-witnesses", title := "Four witnesses: Paul, Luke, Acts and John"
     , modules := [ `TestimonyArguments.SolaFide.Lines, `TestimonyArguments.SolaFide.Packages
                  , `TestimonyArguments.SolaFide.Results ]

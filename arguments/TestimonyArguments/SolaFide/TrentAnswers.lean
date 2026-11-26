@@ -53,9 +53,10 @@ The third is what justification is. It is "not remission of sins merely, but
 also the sanctification and renewal of the inward man" (ch. 7), and the
 justified, "faith co-operating with good works, increase in that justice which
 they have received through the grace of Christ, and are still further
-justified" (ch. 10). The Reformers answered that after the decree, so the
-chapters "What Trent means by justification" and
-"Does justification have degrees?" weigh it.
+justified" (ch. 10). The Reformers answered that after the decree, so the next
+chapter, "The Reformers answer the council, 1547–1647", hears it with their
+answers, and the chapters "What Trent means by justification" and
+"Does justification have degrees?" weigh it at length.
 
 ## Who stands
 

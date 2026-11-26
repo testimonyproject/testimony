@@ -12,6 +12,7 @@ import TestimonyArguments.SolaFide.BeforeTrent
 import TestimonyArguments.SolaFide.FaithAndCharity
 import TestimonyArguments.SolaFide.Reformation
 import TestimonyArguments.SolaFide.TrentAnswers
+import TestimonyArguments.SolaFide.ReformersAnswer
 import TestimonyArguments.SolaFide.WhatScriptureSays
 import TestimonyArguments.SolaFide.JesusWords
 import TestimonyArguments.SolaFide.Baptism
@@ -203,10 +204,13 @@ doctrine in the order its voices wrote. It begins with the texts themselves
 the fathers and the schoolmen, from the 350s to the 1270s ("Was faith alone read
 in Paul before Trent?"), follows the Reformers and their Catholic opponents from
 1521 to the colloquy at Regensburg ("The Reformation's case, 1521–1541"), and
-ends with the council's decree of 1547 ("The council answers, 1547"). Each
-chapter after the texts cites, for what its voices hold, only what was written
-in their own time, so that a reply never comes before what it answers; the
-ratings name readers of any date. Each closes with which positions survive the
+comes to the council's decree of 1547 ("The council answers, 1547"), and ends
+with the Reformers' answer to it, from Calvin that same year to the Westminster
+Confession of 1647 ("The Reformers answer the council, 1547–1647"). Each
+chapter after the texts hears the voices of its own time, with the earlier
+voices they answer, and cites for what they hold only what was written by then,
+so that a reply never comes before what it answers; the ratings name readers of
+any date. Each closes with which positions survive the
 others and which have been defeated so far.
 
 ## The questions the later chapters take

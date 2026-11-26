@@ -5945,6 +5945,41 @@ library cites. -/
   , composed := some { value := 1547 }
   , editionUsed := some "calvin-antidote-trent-1851" }
 
+/-- Chemnitz's *Examen Concilii Tridentini* in Eduard Preuss's edition (Berlin,
+Gustav Schlawitz, 1861), which follows the Frankfurt edition of 1578, the last
+Chemnitz revised, collated with that of 1707. The eighth topic, on
+justification, is at pp. 144–175. Read in the Internet Archive's scan, whose
+catalogue entry wrongly dates it 1573; the title page gives 1861. Published
+without an ISBN. -/
+@[bib_entry] def chemnitzExamenPreuss : BibEntry := .book
+  { core :=
+      { key := "chemnitz-examen-preuss-1861"
+      , role := .witness
+      , contributors :=
+          { authors := [.person "Martin" "Chemnitz"]
+          , editors := [.person "Eduard" "Preuss"] }
+      , title := "Examen Concilii Tridentini"
+      , year := some { value := 1861 }
+      , identifiers :=
+          [ .url "https://archive.org/details/Chemnitz_Examen_1573" (some "2026-11-26") ] }
+  , publisher := "Gustav Schlawitz"
+  , place := some "Berlin" }
+
+/-- Chemnitz's examination of the decrees of Trent. He finished its first part,
+which holds the topic on justification, in March 1565, and its title page is
+dated 1566 (Preuss, "Historia libri impressi", pp. 959–961); the four parts were
+complete in 1573. Dated by the first part. Read in Preuss's edition
+(`chemnitzExamenPreuss`), whose pages the library cites. -/
+@[bib_entry] def chemnitzExamen : BibEntry := .ancientWork
+  { core :=
+      { key := "chemnitz-examen-1566"
+      , role := .witness
+      , contributors := { authors := [.person "Martin" "Chemnitz"] }
+      , title := "Examination of the Council of Trent" }
+  , originalTitle := some "Examen Concilii Tridentini"
+  , composed := some { value := 1566 }
+  , editionUsed := some "chemnitz-examen-preuss-1861" }
+
 /-- Bellarmine's *De justificatione*, in the third volume of his *Disputationes
 de controversiis*, published at Ingolstadt in 1593, dated for the exchange on
 faith working through love. Read in Vivès's edition of 1873
