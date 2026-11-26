@@ -1,5 +1,7 @@
 import TestimonyArguments.SolaFide.TrentAnswers
 import TestimonyArguments.SolaFide.Verdict
+import TestimonyArguments.SolaFide.Ratings
+import TestimonyArguments.SolaFide.BeforeTrent
 
 /-!
 # TestimonyArguments.SolaFide.ReformersAnswer — the Reformers answer the council, 1547–1647
@@ -98,8 +100,18 @@ stand is to survive however the open disagreements are settled, and here every
 position is defeated by another. What is left are two sides, each consistent:
 the council alone, and the three answers together, since one reading satisfies
 them all (`the_reformers_answers_stand_together`).
-Which side holds turns on the two definitions, and between the readers of 1547
-to 1647 each definition is denied by the other side in terms. Whether Scripture
+Which side holds turns on the two definitions, and they fare alike when the
+objections to each are checked (`both_definitions_disputed_alike`). Each
+confession's denial of the other is only a denial: canon 11 holds the council's
+definition as a premise against Calvin's, and Calvin holds his own against the
+council's. Each definition is also met by an argument that every standard
+admits. Augustine argues from his explanation of the word, "what else does the
+phrase 'being justified' signify than being made righteous", that justification
+includes renewal. Paul's gospel and Romans 4 argue from the texts and the
+courtroom sense of the verb that it does not. Westminster's own answer from
+Romans 4 is an argument only where a theologian's word counts, because it needs
+Chemnitz's reading that "count" and "works" keep one sense through 4:4–8. So
+neither definition is refuted, and each is *disputed* under every standard. Whether Scripture
 settles that question is the work of the chapter "What Trent means by
 justification", which weighs both definitions against Paul's own uses of the
 verb.
@@ -514,5 +526,117 @@ declare_verdict reformersAnswerSettle for reformersAnswerDispute :
   proves @[headline] after_the_reformers_answer_nothing_stands
 
 #print axioms after_the_reformers_answer_nothing_stands
+
+/-! ### The two definitions, by the same checks -/
+
+/-- **Augustine, against the definition that justification is a verdict only.**
+"What else does the phrase 'being justified' signify than being made righteous,
+by Him, of course, who justifies the ungodly man, that he may become a godly
+one?" (*On the Spirit and the Letter*, ch. 45). His starting point is that he
+explained the word so, which is a fact about his book, and he argues from it
+that justification includes the renewal of the person (`renewalLine`). So he
+reaches his denial by a step, and rests on nothing a standard refuses: an
+argument under all three standards. -/
+def augustineOnForensicAssessment : Assessment Claim where
+  dissenter := "Augustine (On the Spirit and the Letter, ch. 45)"
+  against := "Calvin: justification is a verdict only (Antidote, p. 116)"
+  dissent :=
+    { claim := p .justificationIsForensicOnly
+    , position := augustineCase }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
+    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
+  checked := by horn_certify
+
+/-- **The council, against the same definition.** Canon 11 condemns
+justification "by the sole imputation of the justice of Christ, or by the sole
+remission of sins". The council holds its own definition as a premise (ch. 7),
+and that premise alone denies Calvin's, because the two exclude each other by
+what they mean. So it is a disagreement, not an argument, under every standard,
+and under the evidence and the Scripture standards it also rests on the
+council's word. -/
+def canon11OnForensicAssessment : Assessment Claim where
+  dissenter := "Trent, canon 11"
+  against := "Calvin: justification is a verdict only (Antidote, p. 116)"
+  dissent :=
+    { claim := p .justificationIsForensicOnly
+    , position := councilOnIncreaseCase }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
+    , unadmitted :=
+        [ (.evidence, [.justificationIncludesSanctification, .renewalGrowsThroughGoodWorks])
+        , (.tradition, [])
+        , (.scriptural, [.justificationIncludesSanctification, .renewalGrowsThroughGoodWorks]) ] }
+  checked := by horn_certify
+
+/-- **Calvin, against the council's definition.** He holds his own definition as
+a premise, and it alone denies the council's. A disagreement, not an argument,
+under every standard, as canon 11 is against him. -/
+def calvinOnDefinitionAssessment : Assessment Claim where
+  dissenter := "Calvin (Antidote, pp. 116, 158)"
+  against := "Trent: justification is the renewal of the inward man (ch. 7)"
+  dissent :=
+    { claim := p .justificationIncludesSanctification
+    , position := calvinAgainstIncreaseCase }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := false, bareDenial := false
+    , unadmitted :=
+        [ (.evidence, [.justificationIsForensicOnly])
+        , (.tradition, [])
+        , (.scriptural, [.justificationIsForensicOnly]) ] }
+  checked := by horn_certify
+
+/-- **Westminster, against the council's definition.** It argues from Romans
+4:5–8 that God justifies by not counting sin, and not by infusing
+righteousness (XI.1). So it reaches its denial by a step. But the step needs
+"count" and "works" to keep one sense from 4:4–5 to 4:6–8, and those two
+readings are cited to Chemnitz (*Examen*, p. 169), a theologian's word. So it is
+an argument under the tradition standard only. -/
+def westminsterOnDefinitionAssessment : Assessment Claim where
+  dissenter := "Westminster XI.1, from Romans 4:5–8"
+  against := "Trent: justification is the renewal of the inward man (ch. 7)"
+  dissent :=
+    { claim := p .justificationIncludesSanctification
+    , position := westminsterOnJustificationCase }
+  findings :=
+    { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
+    , unadmitted :=
+        [ (.evidence, [.romans4CountKeepsItsSense, .romans4WorksKeepsItsSense])
+        , (.tradition, [])
+        , (.scriptural, [.romans4CountKeepsItsSense, .romans4WorksKeepsItsSense]) ] }
+  checked := by horn_certify
+
+/-- **Calvin's definition, with the objections to it**: Augustine, the strongest
+known, and canon 11. -/
+def forensicPremise : RatedStep Claim where
+  step := "Calvin: justification is a verdict only (Antidote, p. 116)"
+  support := (reformersAnswerCite .justificationIsForensicOnly).source
+  register := [augustineOnForensicAssessment, canon11OnForensicAssessment]
+  strongest := some 0
+
+/-- **Both definitions are disputed under every standard, each by an argument
+and not only by the other side's denial.** Calvin's, that justification is a
+verdict only, is met by Augustine, who argues from his explanation of the word
+that it includes renewal. Trent's, that it includes renewal, is met by Paul's
+gospel and by Romans 4, each argued from the texts and the courtroom sense of
+the verb (`trent_definition_ratings`). Each confession's denial of the other is
+a disagreement only: canon 11 against Calvin, and Calvin's own definition
+against the council's. Westminster's answer from Romans 4 is an argument under
+the tradition standard only, because it needs Chemnitz's word that "count" and
+"works" keep their sense through the passage. -/
+@[headline]
+theorem both_definitions_disputed_alike :
+    forensicPremise.ratings =
+        [ (.evidence, .disputedBy ["Augustine (On the Spirit and the Letter, ch. 45)"])
+        , (.tradition, .disputedBy ["Augustine (On the Spirit and the Letter, ch. 45)"])
+        , (.scriptural, .disputedBy ["Augustine (On the Spirit and the Letter, ch. 45)"]) ] ∧
+      canon11OnForensicAssessment.findings.kind = .asserted ∧
+      calvinOnDefinitionAssessment.findings.kind = .asserted ∧
+      westminsterOnDefinitionAssessment.profile =
+        [(.evidence, false), (.tradition, true), (.scriptural, false)] ∧
+      definitionPremise.ratings.map (·.2.confidence) = [.disputed, .disputed, .disputed] := by
+  decide +kernel
+
+#print axioms both_definitions_disputed_alike
 
 end TestimonyArguments.SolaFide
