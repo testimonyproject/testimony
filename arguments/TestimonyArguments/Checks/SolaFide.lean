@@ -112,7 +112,7 @@ faithAndCharityDispute.finite: 26 I, 13 RA, 12 CA, 7 PA, 81 edges
 jamesDispute.finite: 38 I, 13 RA, 11 CA, 4 PA, 83 edges
 jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
 reformationDispute.finite: 41 I, 20 RA, 11 CA, 0 PA, 83 edges
-reformersAnswerDispute.finite: 14 I, 5 RA, 7 CA, 3 PA, 39 edges
+reformersAnswerDispute.finite: 14 I, 5 RA, 9 CA, 0 PA, 37 edges
 solaFideDispute.finite: 80 I, 36 RA, 42 CA, 0 PA, 196 edges
 trentAnswersDispute.finite: 19 I, 7 RA, 2 CA, 0 PA, 26 edges
 and 3 hearings, drawn with the disputes they restrict

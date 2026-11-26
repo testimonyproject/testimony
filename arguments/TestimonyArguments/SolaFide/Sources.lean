@@ -1588,13 +1588,17 @@ def baseCite : Claim → AtomMeta
       -- The Epistle to Diognetus, 9: "that the wickedness of many should be hid
       -- in a single righteous One, and that the righteousness of One should
       -- justify many transgressors" — the exchange, not the renewal.
+      -- `disputed`, as Trent's definition is: Trent's canon 11 denies it in
+      -- terms, condemning justification "by the sole imputation of the justice
+      -- of Christ, or by the sole remission of sins", just as Westminster XI.1
+      -- denies Trent's definition in terms.
     , source :=
         { primary := .work westminsterConfession (.sectionRef "XI.1")
         , supporting :=
             [ .work calvinInstitutes (.sectionRef "III.xi.2")
             , .work anf1 (.sectionRef "Epistle to Diognetus 9") ]
         , tradition := .reformedProtestant
-        , confidence := .wellSupported } }
+        , confidence := .disputed } }
   | .secondTempleCovenantalNomism =>
     { label := "Second Temple Judaism: in by grace, staying in by works"
     , kind := .historical
@@ -2377,11 +2381,13 @@ def tridentineCite : Claim → AtomMeta
   | .justificationIsForensicOnly =>
     { label := "Justification is not a verdict only: it renews the inward man"
     , kind := .theological
+      -- `disputed`: Westminster XI.1 denies it in terms, as canon 11 denies the
+      -- Reformed claim in terms.
     , source :=
         { primary := .work tannerDecrees
             (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 7")
         , tradition := .romanCatholic
-        , confidence := .wellSupported } }
+        , confidence := .disputed } }
   | c => baseCite c
 
 /-- The Finnish reading of Luther: justification is not a verdict only, because

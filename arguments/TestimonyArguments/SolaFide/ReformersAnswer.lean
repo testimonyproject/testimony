@@ -80,26 +80,29 @@ works Paul excludes are only those done before faith; Augustine reads "justifies
 the ungodly" as making the ungodly godly. So those steps are rated *disputed*,
 and they and the council defeat each other.
 
-Calvin's case is different. His step runs from "justification is a verdict" and
-"a verdict has no degrees" to "justification has no degrees", and nothing in the
-council's position denies the step: it can grant that a verdict has no degrees,
-and denies only that justification is a verdict and nothing more. The step and
-both its premises are rated *well supported*, while the council's own
-definition is rated *disputed*, because Westminster denies it in terms. So
-Calvin defeats the council and the council does not defeat Calvin, and with the
-council defeated, Chemnitz and Westminster stand too
-(`after_the_reformers_answer_the_increase_falls`). To stand is to survive
-however the open disagreements are settled. The three answers also stand
-together, since one reading satisfies them all
-(`the_reformers_answers_stand_together`).
+Calvin's step runs from "justification is a verdict" and "a verdict has no
+degrees" to "justification has no degrees", and nothing in the council's
+position denies the step: it can grant that a verdict has no degrees, and
+denies only that justification is a verdict and nothing more. So the step is
+rated *well supported*. His first premise is not. That justification is a
+verdict only is rated *disputed*, because canon 11 denies it in terms,
+condemning justification "by the sole imputation of the justice of Christ, or
+by the sole remission of sins". The council's definition, that justification
+is also renewal (ch. 7), is rated *disputed* for the same kind of reason:
+Westminster XI.1 denies it in terms. The two definitions are rated by one rule,
+and so Calvin and the council defeat each other, as Chemnitz and Westminster do
+with the council.
 
-The verdict rests on a difference in two ratings. Calvin's premise that
-justification is a verdict only is rated *well supported*, although canon 11
-denies it in terms, and the council's definition is rated *disputed* because
-Westminster denies it in terms. Rated alike, the two would defeat each other,
-as Chemnitz and Westminster do with the council. Whether justification is a
-verdict and nothing more is the question the chapter "What Trent means by
-justification" weighs, with the readers who came after.
+So none of the four stands (`after_the_reformers_answer_nothing_stands`). To
+stand is to survive however the open disagreements are settled, and here every
+position is defeated by another. What is left are two sides, each consistent:
+the council alone, and the three answers together, since one reading satisfies
+them all (`the_reformers_answers_stand_together`).
+Which side holds turns on the two definitions, and between the readers of 1547
+to 1647 each definition is denied by the other side in terms. Whether Scripture
+settles that question is the work of the chapter "What Trent means by
+justification", which weighs both definitions against Paul's own uses of the
+verb.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -405,12 +408,13 @@ def reformersAnswerNode : ReformersAnswerParty → ArgumentPackage Claim
 /-- The Reformers' answer to the council, heard with the council. -/
 declare_dispute reformersAnswerDispute := reformersAnswerNode using solaFideDefs
   /-- **Who defeats whom.** Calvin, Chemnitz and Westminster each defeat the
-  council. The council defeats Chemnitz and Westminster but not Calvin, for the
-  reason the verdict below gives. The three answers deny nothing of one another.
+  council, and the council defeats each of them, because each side's weakest
+  premise is its definition of justification, rated *disputed*. The three
+  answers deny nothing of one another.
   Each pair is checked by the proof checker. -/
   defeats [ (.calvin, .trentOnIncrease), (.chemnitz, .trentOnIncrease)
           , (.westminster, .trentOnIncrease), (.trentOnIncrease, .chemnitz)
-          , (.trentOnIncrease, .westminster) ]
+          , (.trentOnIncrease, .calvin), (.trentOnIncrease, .westminster) ]
   /-- None of the four positions lends another a premise. Each pair is checked
   by the proof checker. -/
   supports []
@@ -444,7 +448,7 @@ declare_bundle reformersAnswerExchange in reformersAnswerDispute.finite where
   /-- Calvin: "whosoever asserts that works have the effect of increasing
   justification, understands neither what is the meaning of justification nor
   its cause" (*Antidote*, p. 158). -/
-  turn ReformersAnswerParty.calvin answers ReformersAnswerParty.trentOnIncrease
+  turn ReformersAnswerParty.calvin meets ReformersAnswerParty.trentOnIncrease
     from calvinAntidoteWork
   /-- Chemnitz: "one and the same is the justification, both at the beginning of
   conversion, and that by which we come at last to eternal life" (*Examen*,
@@ -486,35 +490,29 @@ theorem the_reformers_answers_stand_together :
     reformersAnswerDispute.StandTogether [.calvin, .chemnitz, .westminster] := by
   satisfied_by reformersAnswerReading [Dispute.StandTogether, solaFideDefs]
 
-/-- Why the three answers stand, that is, survive however the open disagreements
-are settled, and the council's increase does not: nothing defeats Calvin, Calvin
-defeats the council, and with the council defeated nothing is left to defeat
-Chemnitz or Westminster. -/
+/-- Why nothing stands: the council defeats Calvin, and Calvin, Chemnitz and
+Westminster each defeat the council. -/
 declare_verdict reformersAnswerSettle for reformersAnswerDispute :
-    .groundedExactly [[.calvin], [.chemnitz, .westminster]] [(.trentOnIncrease, .calvin)]
-  /-- **Among the voices of 1547 to 1647, the Protestant answers stand and the
-  council's increase of justification is defeated.** Calvin holds that
-  justification is "wholly included in the gratuitous acceptance of God", a
-  verdict, and that a verdict has no degrees, so that works do not cause it to
-  increase. The council holds that justification is also renewal, and that good
-  works are a cause of its increase (canon 24). Each attacks the other, and an
-  attack defeats unless the attacker's weakest premise or step is rated lower
-  than the position it attacks. The council's weakest premise is its own
-  definition (ch. 7), rated *disputed* because Westminster XI.1 denies it in
-  terms. Calvin's premises, that justification is a verdict only and that a
-  verdict has no degrees, and his step from them, are all rated *well
-  supported*. So Calvin's attack defeats the council, and the council's does not
-  defeat Calvin. Calvin's step is rated so because nothing in the council's
-  position denies that a verdict has no degrees. His first premise is rated so
-  although canon 11 denies it in terms, condemning justification "by the sole
-  imputation of the justice of Christ, or by the sole remission of sins".
-  Chemnitz, from Abraham in Romans 4, and Westminster, from Romans 4:5–8, each
-  defeat the council and are defeated by it, on steps rated *disputed*; they
-  stand because Calvin has defeated the council. So the verdict turns on three
-  ratings: of Calvin's first premise, of his step, and of the council's
-  definition. -/
-  proves @[headline] after_the_reformers_answer_the_increase_falls
+    .nothingGrounded
+      [ (.trentOnIncrease, .calvin), (.calvin, .trentOnIncrease)
+      , (.chemnitz, .trentOnIncrease), (.westminster, .trentOnIncrease) ]
+  /-- **Among the voices of 1547 to 1647, the council and its three answerers
+  defeat one another, and none of them stands.** The council holds that
+  justification is also renewal, and that good works are a cause of its
+  increase (canon 24). Calvin, Chemnitz and Westminster each deny it, from what
+  justification is: a verdict, which has no degrees (Calvin), one and the same
+  from conversion to eternal life (Chemnitz), and a pardon and an accounting
+  "not by infusing righteousness" (Westminster XI.1). An attack defeats unless
+  the attacker's weakest premise or step is rated lower than the position it
+  attacks. On each side the weakest premise is its definition of
+  justification, rated *disputed*: the council's because Westminster XI.1
+  denies it in terms, Calvin's because canon 11 denies it in terms. Chemnitz's
+  and Westminster's readings of Romans 4 are rated *disputed* too, because
+  Bellarmine and Augustine grant their texts and deny where they end. So every
+  attack defeats, each position is defeated, and nothing is left that survives
+  however the disagreements are settled. -/
+  proves @[headline] after_the_reformers_answer_nothing_stands
 
-#print axioms after_the_reformers_answer_the_increase_falls
+#print axioms after_the_reformers_answer_nothing_stands
 
 end TestimonyArguments.SolaFide
