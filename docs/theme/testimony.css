@@ -153,3 +153,35 @@ details.testimony-checked[open] > summary {
   padding-left: 2.2rem;
   text-indent: -2.2rem;
 }
+
+/* A result stated twice: logic notation on the left, its English on the right.
+   On a narrow screen the two stack, the notation first. */
+.testimony-stated {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 1.5rem;
+  align-items: start;
+  margin: 0.5rem 0 1rem;
+}
+
+.testimony-stated-logic {
+  overflow-x: auto;
+}
+
+/* A light rule between a statement's logic and its words. */
+.testimony-stated-words {
+  border-left: 1px solid color-mix(in srgb, var(--fg) 20%, transparent);
+  padding-left: 1.5rem;
+}
+
+@media (max-width: 700px) {
+  .testimony-stated {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0.25rem;
+  }
+
+  .testimony-stated-words {
+    border-left: none;
+    padding-left: 0;
+  }
+}
