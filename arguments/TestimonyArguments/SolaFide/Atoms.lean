@@ -69,6 +69,19 @@ inductive Claim
   | ephesiansIsPauline
   /-- Titus was written by Paul. -/
   | titusIsPauline
+  /-- Romans was written by Paul. The letter opens with his name (1:1), and
+  nearly every reader, Fitzmyer and Moo among them, takes it as his. The claim is
+  rated `disputed` all the same, because Nina Livesey (*The Letters of Paul in
+  their Roman Literary Context*, 2024) grants that the letter names Paul and reads
+  it as written in his name in the second century. It is what lets a reading of
+  Paul's usage as a whole bear on a verse of Romans. -/
+  | romansIsPauline
+  /-- Galatians was written by Paul. The letter opens with his name (1:1); Moo
+  writes that his authorship "has been acknowledged and never seriously
+  challenged" (*Galatians*, p. 1). It was challenged, by Rudolf Steck in 1888 and
+  by Livesey in 2024, so the claim is rated `disputed`, as `romansIsPauline` is.
+  It lets a reading of Paul's usage bear on a verse of Galatians. -/
+  | galatiansIsPauline
   /-- 1 Peter was written by the apostle Peter. -/
   | firstPeterIsPetrine
   /-- 2 Peter was written by the apostle Peter. -/
@@ -159,7 +172,7 @@ inductive Claim
   | johnLifeThroughBelieving
   /-- John 3:36 — "Whoever believes in the Son has eternal life; whoever does not obey
   the Son shall not see life, but the wrath of God remains on him." The opposite
-  of believing is put, in Greek, as not obeying (ὁ ἀπειθῶν). Every reader here
+  of believing is put, in Greek, as not obeying (ὁ ἀπειθῶν, "rejects"). Every reader here
   grants the wording. -/
   | john3_36WhoeverDoesNotObey
   /-- The obedience John 3:36 sets beside believing, and the doing of the
@@ -205,7 +218,7 @@ inductive Claim
   more: that it does not *also* mean to make a person good is what the line on
   Paul's word argues from it, and is not part of it. -/
   | dikaioIsForensic
-  /-- Paul has words of his own for renewal: "renewal" (ἀνακαίνωσις; Titus 3:5,
+  /-- Paul has words of his own for renewal: "renewal" (ἀνακαίνωσις ("renewing"); Titus 3:5,
   Romans 12:2) and "sanctification" (ἁγιασμός; Romans 6:19, 22). He sets them
   beside "justify" and not inside it: "the washing of regeneration and renewal
   of the Holy Spirit … so that being justified by his grace" (Titus 3:5–7); "you
@@ -377,12 +390,12 @@ inductive Claim
   | james2JustifiedByWorks
   /-- Outside Paul, "justify" (δικαιόω) declares, acquits or vindicates. The judges
   "justify the righteous and condemn the wicked" (Deuteronomy 25:1). "Wisdom is
-  justified by her deeds" (Matthew 11:19, ESV; "deeds" translates ἔργα, the word
+  justified by her deeds" (Matthew 11:19, ESV; "deeds" translates ἔργα ("works"), the word
   James uses for "works"): shown to be in the right by what she does. It does
   not mean making a person inwardly righteous. **The premise about the word, for
   James.** -/
   | dikaioIsDeclarativeOutsidePaul
-  /-- James's "justified by works" (δικαιόω; 2:21, 24, 25) means the increase of the
+  /-- James's "justified by works" (δικαιόω ("justify"); 2:21, 24, 25) means the increase of the
   justice already received: being made more just. **The Catholic reading of
   James's word**, which is Trent's (Session VI, ch. 10). On it, James 2:24
   teaches the increase of justification. -/
@@ -422,7 +435,7 @@ inductive Claim
   | sir18_22BeJustifiedToDeath
   /-- Sirach 18:22, in the Greek, is about paying a vow promptly. It says "let
   nothing hinder you from paying a vow in due time, and do not wait until death
-  to be justified" (μὴ μείνῃς ἕως θανάτου δικαιωθῆναι), which the Catholic
+  to be justified" (καὶ μὴ μείνῃς ἕως θανάτου δικαιωθῆναι), which the Catholic
   Church's own translation renders "do not wait until death to fulfill them". It
   has the verb "to be justified", where the Vulgate has "be not afraid" and "pray
   always". -/
@@ -562,7 +575,7 @@ inductive Claim
   phrase as Paul's usage, so it needs this. -/
   | paulsWordsKeepTheirSense
   /-- The Latin *iustificare*, as the Latin West read it ("to be made just"),
-  bears the sense of Paul's Greek δικαιόω. Trent's reading of Paul's word goes
+  bears the sense of Paul's Greek δικαιόω ("justify"). Trent's reading of Paul's word goes
   from Augustine's Latin gloss to the Greek, and so needs this. -/
   | latinWordBearsPaulsSense
   /-- "Works" (ἔργα) keeps one sense from Romans 4:4–5, the one who works and the
@@ -597,8 +610,8 @@ inductive Claim
   /-- In Romans 5:19, "made righteous" means made righteous within: the many "will
   really be righteous", as Ziesler, who reads the verb "justify" otherwise, holds,
   and Fitzmyer with him. A reading of the verse, which Hodge and Calvin deny.
-  Hodge's reason is the verb: καθίστημι "never, in the New Testament, means to
-  make, in the sense of effecting, or causing a person or thing, to be in its
+  Hodge's reason is the verb: καθίστημι ("constitute" or "make") "never, in the New Testament, means
+  to make, in the sense of effecting, or causing a person or thing, to be in its
   character or nature other than it was before" (*Romans*, p. 271). Calvin's is
   that we could not be made righteous by Christ's obedience "were it not that we
   are deemed righteous in the sight of God in him and not in ourselves"

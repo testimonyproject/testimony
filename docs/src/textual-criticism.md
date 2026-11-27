@@ -182,12 +182,13 @@ far more common finding, and a reader deserves to see it.
 
 Sola fide cites Matthew 19:17. The manuscripts differ in the verse's first half. In the
 Byzantine text Jesus asks why the young man calls Him good, and says that no one is good but
-one, God (Τί με λέγεις ἀγαθόν; Οὐδεὶς ἀγαθός, εἰ μὴ εἷς, ὁ θεός), as in Mark 10:18 and Luke
-18:19. In the critical text He asks why the man asks Him about what is good, and says that
-there is one who is good (Τί με ἐρωτᾷς περὶ τοῦ ἀγαθοῦ; εἷς ἐστιν ὁ ἀγαθός). The argument's
-claim rests on the second half, "If you would enter life, keep the commandments"
-(`matthew19_17KeepTheCommandments`), which every edition prints alike. Located to the word, it
-cites 19:17b, and lies outside the unit at 19:17a.
+one, God (Τί με λέγεις ἀγαθόν; Οὐδεὶς ἀγαθός, εἰ μὴ εἷς, ὁ θεός, "Why do you call me good? No one is
+good except God alone"), as in Mark 10:18 and Luke 18:19. In the critical text He asks why the man
+asks Him about what is good, and says that there is one who is good (Τί με ἐρωτᾷς περὶ τοῦ ἀγαθοῦ;
+εἷς ἐστιν ὁ ἀγαθός, "Why do you ask me about what is good? There is only one who is good"). The
+argument's claim rests on the second half, "If you would enter life, keep the commandments"
+(`matthew19_17KeepTheCommandments`), which every edition prints alike. Located to the word, it cites
+19:17b, and lies outside the unit at 19:17a.
 
 The Trinity argument cites John 8:17–18, "the testimony of two people is true"
 (`twoWitnesses`). The passage about the woman taken in adultery, John 7:53–8:11, is missing
@@ -200,8 +201,8 @@ O God, is forever and ever" (`throneOGod`), and those words are not in dispute. 
 are. Most manuscripts read "the scepter of *your* kingdom"; the oldest collection of Paul's
 letters, a papyrus from about AD 200, and the two great fourth-century codices read "the scepter
 of *his* kingdom". B. F. Westcott takes the verse as "God is Thy throne", a rendering he says is
-"required if we adopt the reading αὐτοῦ for σου" (*The Epistle to the Hebrews*, 1892, pp.
-25–26). A variant outside a
+"required if we adopt the reading αὐτοῦ [his] for σου [your]" (*The Epistle to the Hebrews*, 1892,
+pp. 25–26). A variant outside a
 claim's words can bear on how they are read. So the dependence of a claim on a unit is computed
 where the words overlap, and declared, with the reader who draws it, where a reader holds that
 a reading nearby bears on the claim. A declared dependence is a step like any other: it cites

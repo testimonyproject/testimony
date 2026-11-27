@@ -814,6 +814,140 @@ record whose position it is. -/
 def recordOf (α : Type) [HasMeanings α] (v : Voice) : List α :=
   (HasMeanings.all : List α).filter fun a => (HasMeanings.means a).about v
 
+/-! ### Univocality
+
+Equivocation reads one word two ways where the argument needs one. Its converse
+reads one word one way where the readers find two: it takes a word to mean the
+same wherever it is used, so that its sense at one place settles its sense at
+another. James Barr argued against the habit at length in *The Semantics of
+Biblical Language*, and Moisés Silva after him in *Biblical Words and Their
+Meaning*: a word's sense is fixed by the sentence it is used in, and the same word
+in another sentence may mean something else. So a move that needs "justify" in
+James 2:24 to mean what it means in Paul is answerable to every cited reading that
+gives it, in James or in Paul, a sense the other place is never given.
+
+The check is held against the argument's record, as the straw-man check is. A
+move **reads univocally** (`Move.univocal`) when, for a word it needs to keep one
+sense between two places, whether it says so in a premise or leaves it unstated,
+the argument holds a reading of the word at one of the places that gives it a
+sense no reading, of the move's premises or of the record's, gives it at any of
+the places the move needs it to share a sense with, and nothing the move says
+answers that reading by denying it. What the move concludes the word means is not
+counted as a reading, since a move that carries Paul's sense over to James
+against a reader of Paul disputes Paul's sense, not the sameness. A reading of the word
+throughout an author's usage bears on each passage of a book the author wrote,
+where the vocabulary names the voice by its book (James, "the author of the
+letter") or the argument's record says who wrote it (`Statement.wrote`); a
+reading of one passage bears on every passage it overlaps.
+
+What it passes over is what the equivocation check passes over: a move whose
+conclusion is that the senses differ, or are the same, and a survey that only
+reports what the word means. A move that reads the word apart itself is charged
+with equivocation instead. And it does not charge a move whose two places no
+reading tells apart: a rival who reads "justify" as "make righteous" in Paul and
+in James alike disputes the sense, not the sameness, and the dispute weighs that
+elsewhere. -/
+
+namespace Voice
+
+/-- **The books a voice is named by**: where the vocabulary defines the voice as
+the author of a book, as James is "the author of the letter" and Luke "the author
+of Luke–Acts", those books. A voice defined otherwise, as Paul is "the apostle",
+wrote what the argument's record says he wrote, and nothing here. -/
+def namedBy : Voice → List Book
+  | .james => [.james]
+  | .luke => [.luke, .acts]
+  | .john => [.john]
+  | .matthew => [.matthew]
+  | _ => []
+
+end Voice
+
+/-- Every authorship a statement states, taken apart at "and". -/
+def Statement.authorships : Statement → List (Voice × Book)
+  | .wrote v b => [(v, b)]
+  | .also s t => s.authorships ++ t.authorships
+  | _ => []
+
+/-- Whether a place is an author's usage as a whole. -/
+def Scope.isUsage : Scope → Bool
+  | .usage _ => true
+  | _ => false
+
+/-- **Whether what a word means at one place bears on what it means at another**,
+given who wrote which book: two passages that overlap, or passages of one voice's
+text that do; a voice's usage and a passage of a book the voice wrote, or one of
+the voice's own text; and a usage and itself. -/
+def Scope.bearsOn (wrote : List (Voice × Book)) : Scope → Scope → Bool
+  | .usage v, .passage p | .passage p, .usage v =>
+    v.namedBy.contains p.book || wrote.contains (v, p.book)
+  | .usage v, .passageOf v' _ | .passageOf v' _, .usage v => v == v'
+  | x, y => x.overlaps y
+
+namespace Move
+
+variable {α : Type} [HasMeanings α]
+
+/-- Every sense a statement denies a word has at a place, taken apart at "and". -/
+def _root_.Testimony.Semantics.Statement.deniedSenses : Statement → List (Lexeme × Scope × Sense)
+  | .denied (.means w sc s) => [(w, sc, s)]
+  | .also s t => s.deniedSenses ++ t.deniedSenses
+  | _ => []
+
+/-- **Where a move reads a word univocally**, against `record`, the argument's
+readings. For each place at which the move needs a word to keep the sense it has
+at other places, the claims of the record that give the word there a sense that
+neither the move's premises nor any claim of the record gives it at any of those
+other places, where at least one of them is given a sense, and that no statement
+of the move denies. What the move concludes a word means is not evidence of what
+it means: a move that carries Paul's sense to James, against a reader of Paul,
+disputes Paul's sense, and is not charged for the sense it gave James. Each word
+with those claims. A reading the move denies is answered, and gives no sense at
+another place either; a denial of what the word means
+throughout an author's usage answers a reading of it at a passage of that
+author's. A word the move itself reads apart is the equivocation check's, and is
+left out. -/
+def univocal [DecidableEq α] (record : List α) (m : Move) : List (Lexeme × List α) :=
+  let wrote := (record.flatMap fun r => (HasMeanings.means r).authorships) ++
+    m.statements.flatMap Statement.authorships
+  let read : List (α × Lexeme × Scope × Sense) := record.flatMap fun r =>
+    (HasMeanings.means r).senses.map fun (w, x, s) => (r, w, x, s)
+  let own := m.premises.flatMap Statement.senses
+  let denied := m.statements.flatMap Statement.deniedSenses
+  let answered (w : Lexeme) (x : Scope) (s : Sense) : Bool :=
+    m.statements.any (·.excludes (.means w x s)) ||
+      denied.any fun (w', y, s') =>
+        w' = w ∧ s' = s ∧ y.bearsOn wrote x ∧ (y.isUsage || !x.isUsage)
+  let sensesNear (w : Lexeme) (place : Scope) : List Sense :=
+    (own.filterMap fun (w', x, s) =>
+      if w' = w ∧ x.bearsOn wrote place then some s else none) ++
+    (read.filterMap fun (_, w', x, s) =>
+      if w' = w ∧ x.bearsOn wrote place ∧ !answered w x s then some s else none)
+  let needed := m.needs.filter fun (w, a, b) =>
+    match m.sameness w a b with
+    | .readApart _ _ => false
+    | _ => true
+  let partners (w : Lexeme) (p : Scope) : List Scope :=
+    needed.filterMap fun (w', a, b) =>
+      if w' ≠ w then none else if a = p then some b else if b = p then some a else none
+  let against (w : Lexeme) (here : Scope) : List α :=
+    let others := partners w here
+    let known := others.filter fun q => !(sensesNear w q).isEmpty
+    if known.isEmpty then [] else
+      read.filterMap fun (r, w', x, s) =>
+        if w' = w ∧ x.bearsOn wrote here ∧ !(others.any (x.bearsOn wrote ·)) ∧
+            known.all (fun q => !(sensesNear w q).contains s) ∧ !answered w x s
+        then some r else none
+  let places := needed.flatMap fun (w, a, b) => [(w, a), (w, b)]
+  let found := places.filterMap fun (w, p) =>
+    match against w p with
+    | [] => none
+    | rs => some (w, rs)
+  (found.map (·.1)).eraseDups.map fun w =>
+    (w, (found.filter (·.1 == w)).flatMap (·.2) |>.eraseDups)
+
+end Move
+
 /-! ### A line of reason, as a move
 
 The library's own arguments are made of lines of reason

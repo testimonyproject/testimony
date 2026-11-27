@@ -1365,12 +1365,12 @@ The texts are Paul's, Hebrews' and John's, and one step from James is proposed.
   the kingdom (7:21); the table does not decide what that will includes.
 - If he believes, he does good works, because the works come out of the faith.
   This is the step proposed here, from James's grammar: "faith was active along
-  with his works" (συνήργει, worked together with them), "and by works faith was
-  brought to completion" (ἐκ τῶν ἔργων ἐτελειώθη, James 2:22), and "faith by
-  itself, if it has no works, is dead" (James 2:17). James says what the works
-  do: "I by my works will show you faith" (James 2:18), κἀγώ σοι δείξω ἐκ τῶν
-  ἔργων μου τὴν πίστιν, "I will show you, out of my works, my faith". The works
-  show the faith; they are its evidence. The order of James's own examples
+  with his works" (συνήργει ("was working with"), worked together with them), "and by works faith
+  was brought to completion" (ἐκ τῶν ἔργων ἐτελειώθη ("as a result of the works, faith was
+  perfected"), James 2:22), and "faith by itself, if it has no works, is dead" (James 2:17). James
+  says what the works do: "I by my works will show you faith" (James 2:18), κἀγώ σοι δείξω ἐκ τῶν
+  ἔργων μου τὴν πίστιν ("I will show you my faith by my works"), "I will show you, out of my works,
+  my faith". The works show the faith; they are its evidence. The order of James's own examples
   bears it out. He quotes "Abraham believed God, and it was reckoned to
   him as righteousness" (James 2:23, from Genesis 15:6), which comes years
   before the offering of Isaac (Genesis 22). Rahab confessed "the Lord your God
@@ -1389,7 +1389,7 @@ The texts are Paul's, Hebrews' and John's, and one step from James is proposed.
   righteous. Nor do they part at who justifies. James's verb is passive,
   δικαιοῦται, "is justified", and his "by works" is ἐξ ἔργων, "out of works",
   which marks where the verdict comes from, not who gives it, for Greek names the
-  doer of a passive with ὑπό. Paul names Him: "It is God who justifies" (Romans
+  doer of a passive with ὑπό ("by"). Paul names Him: "It is God who justifies" (Romans
   8:33). Trent says the same, naming "a merciful God" the efficient cause of
   justification (Session VI, ch. 7).
 

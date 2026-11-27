@@ -6,9 +6,9 @@ import Testimony.Logic.Credibility
 # TestimonyArguments.BornOfAVirgin.Dispute.Matthew — Scripture's own reading of the Greek word
 
 The chapter "What the Septuagint's word meant" weighs what the Septuagint's
-παρθένος meant by what scholars say of the Greek. A reader of the Bible asks
-another question first: **what does Scripture itself make of the word?** Matthew
-quotes the Septuagint's Isaiah 7:14 word for word, ἡ παρθένος, of Mary, who
+παρθένος ("virgin" or "young woman") meant by what scholars say of the Greek. A reader of the Bible
+asks another question first: **what does Scripture itself make of the word?** Matthew
+quotes the Septuagint's Isaiah 7:14 word for word, ἡ παρθένος ("the virgin"), of Mary, who
 conceived "before they came together" (1:18) and whom Joseph "knew not until she
 had borne a son" (1:25). If Scripture is its own interpreter, the word in the
 text Matthew quotes has the sense he gives it: "virgin".
@@ -20,7 +20,7 @@ Two positions meet:
   Its principle is Westminster's: "The infallible rule of interpretation of
   Scripture is the Scripture itself" (I.ix). Irenaeus, on the apostles'
   agreement with the Seventy (*Against Heresies* III.21.3).
-- **Wegner on παρθένος**, as in the chapter before. He grants both of
+- **Wegner on παρθένος ("virgin" or "young woman")**, as in the chapter before. He grants both of
   Matthew's grounds — by the New Testament the word was "a suitable term to
   describe Mary" — and holds that it had changed in meaning since the translator
   wrote it (483).
@@ -31,7 +31,7 @@ Matthew's reading concludes that the word has the sense "virgin" at one passage
 of the Septuagint's text, Isaiah 7:14 as Matthew quotes it. A sense a word has
 in a passage of a text is a sense of that text's usage
 (`Testimony.Ontology.Usage`), so the claim excludes Wegner's "not yet 'virgin'"
-by what it means. It says nothing of the Hebrew עַלְמָה.
+by what it means. It says nothing of the Hebrew עַלְמָה ("virgin" or "young woman").
 
 ## As the evidence weighs it
 
@@ -88,7 +88,7 @@ theorem matthewCase_is_satisfiable : Satisfiable matthewCase.premises := by
   satisfied_by virginConceivesReading [bornOfAVirginDefs]
 
 /-- **Matthew's reading rests on its inference.** Grant that Matthew quotes ἡ
-παρθένος, and that he says Mary conceived before she and Joseph came together:
+παρθένος ("the virgin"), and that he says Mary conceived before she and Joseph came together:
 on Wegner's reading the word was by then a suitable term for Mary, and still did
 not mean "virgin" in the text the translator wrote. The texts do not decide
 which; the step does, and the standards weigh it differently. -/
@@ -118,10 +118,11 @@ theorem matthew_defeats_drift : Defeats matthewCase driftObjection :=
 
 /-- The parties to the dispute over Scripture's reading of the Greek word. -/
 inductive MatthewParty
-  /-- Matthew's reading: in the Greek he quotes, παρθένος means "virgin". -/
+  /-- Matthew's reading: in the Greek he quotes, παρθένος ("virgin" or "young woman") means
+  "virgin". -/
   | matthew
-  /-- Wegner on παρθένος: in the Septuagint's day, the word meant a young
-  woman. -/
+  /-- Wegner on παρθένος ("virgin" or "young woman"): in the Septuagint's day, the word meant a
+  young woman. -/
   | drift
 deriving DecidableEq
 
@@ -159,7 +160,7 @@ two of Wegner's grounds do not. His early Greek usage rests on the lexica; his
 premise that the noun of Genesis 34:3 describes Dinah as she then was is his
 reading of the verse, not the text. -/
 def wegnerOnMatthewAssessment : Assessment Claim where
-  dissenter := "Wegner on παρθένος (JETS 54, 482–83)"
+  dissenter := "Wegner on παρθένος (“virgin” or “young woman”) (JETS 54, 482–83)"
   against := matthewLine.name
   dissent :=
     { claim := p .lxxIsaiahUsesParthenosAsVirgin
@@ -191,8 +192,10 @@ Under the Scripture standard it is not heard, and the step's support stands at
 @[headline]
 theorem matthew_step_ratings :
     matthewStep.ratings =
-      [ (.evidence, .disputedBy ["Wegner on παρθένος (JETS 54, 482–83)"])
-      , (.tradition, .disputedBy ["Wegner on παρθένος (JETS 54, 482–83)"])
+      [ (.evidence, .disputedBy [("Wegner on παρθένος (“virgin” or “young woman”) (JETS 54, \
+          482–83)")])
+      , (.tradition, .disputedBy [("Wegner on παρθένος (“virgin” or “young woman”) (JETS 54, \
+          482–83)")])
       , (.scriptural, .stands .plausible) ] := by
   decide +kernel
 
@@ -240,7 +243,7 @@ declare_verdict matthewUnderScriptureSettled for (matthewRegister.hearing .scrip
 /-- **Matthew's step turns on the standard, and the hearing and the rating
 agree.** Under the evidence standard Wegner is heard and nothing prevails. Under
 the Scripture standard he is not, and Matthew's reading prevails: in the text
-Matthew quotes, παρθένος means "virgin". -/
+Matthew quotes, παρθένος ("virgin" or "young woman") means "virgin". -/
 @[headline]
 theorem matthew_step_turns_on_the_standard :
     grounded (matthewRegister.hearing .evidence).defeats = ∅ ∧

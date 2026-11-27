@@ -248,11 +248,11 @@ In symbols, the step is (P₂ ∧ P₃ ∧ P₈ ∧ P₇ ∧ P₆) → P₂₅.
 That is sola fide as it stood with three strands; John's has since been added
 (see the [sola fide page](./arguments/sola-fide.md) for the current listing).
 Three strands reach the sufficiency of faith (`P₂₆`): Paul,
-by way of `P₆` and `P₇` (Paul's ἔργα νόμου, and πίστις Χριστοῦ read as faith in
-Christ) to justification by faith alone (17), and from there to `P₂₆` (23);
-Jesus' words at Luke 7:50, by way of `P₁₈` and `P₁₉` (σῴζω there, and 7:47 read
-as love evidencing forgiveness) (18); and Peter at Acts 15, by way of `P₁₀` (the
-yoke of 15:10) (19). That redundancy — the reason no strand's disputed premise
+by way of `P₆` and `P₇` (Paul's ἔργα νόμου ("works of the law"), and πίστις Χριστοῦ ("faith in
+Christ" or "faithfulness of Christ") read as faith in Christ) to justification by faith alone (17),
+and from there to `P₂₆` (23); Jesus' words at Luke 7:50, by way of `P₁₈` and `P₁₉` (σῴζω ("save" or
+"healed") there, and 7:47 read as love evidencing forgiveness) (18); and Peter at Acts 15, by way of
+`P₁₀` (the yoke of 15:10) (19). That redundancy — the reason no strand's disputed premise
 carries the argument on its own (`lexical_premises_jointly_load_bearing`) — is
 visible on the page before you read a word of the legend. So is the split in
 the conclusion, one step per part: (21) reaches grace (`P₂₇`) from the texts
@@ -420,8 +420,8 @@ affirms.
 
 Arguments overlap in the texts they read. `Testimony.Scripture` names the
 passages once and collects the groups that travel together — the two infancy
-narratives, the pair of Genesis verses calling Rebekah both עַלְמָה and בְּתוּלָה,
-the Assyrian timeline of Isaiah 8–10 — as `List ScriptureCitation` bundles. A
+narratives, the pair of Genesis verses calling Rebekah both עַלְמָה ("virgin" or "young woman") and
+בְּתוּלָה ("virgin"), the Assyrian timeline of Isaiah 8–10 — as `List ScriptureCitation` bundles. A
 bundle is a clique in the citation graph, and naming it means an argument cites
 the evidence rather than assembling it:
 
@@ -586,7 +586,7 @@ package's premises *and* its argument's meaning postulates (`ArgumentPackage.hel
 [computed ratings](computed-ratings.md#meaning-postulates)). Two claims the atom type keeps
 apart, but whose meanings exclude each other, cannot be held together by either party. In
 the James dispute, the Reformed harmony ("James 2:24 is compatible with Paul") and the
-renewal reading ("James's δικαιόω is Paul's") defeat each other for that reason alone. The
+renewal reading ("James's δικαιόω [justify] is Paul's") defeat each other for that reason alone. The
 postulates are the same for every party and are not ranked, so they cannot favour a side or
 change a strength. A node must hold together with them. `establish` does not use them:
 they could only add entailments, and `Testimony.Checks.Postulates` shows that no
@@ -835,7 +835,7 @@ tables of how parties stand together (`Testimony.Logic.Support`).
   which is agreement, not support. Both happen in the library's disputes.
 - **Part of.** One party's case is part of another's when every premise of the
   first follows from the second's premises. The Pauline strand derives its ἔργα
-  νόμου premise from the critics' line, which denies covenantal nomism, instead
+  νόμου ("works of the law") premise from the critics' line, which denies covenantal nomism, instead
   of assuming it. So the critics' case is part of Paul's, and Sanders meets Paul
   on the history of Second Temple Judaism, where the literature has the dispute.
 
@@ -980,7 +980,7 @@ docstring is the prose above the explanation.
 **5. Answer every reading of an ambiguous claim.** A rival's premise can be read
 more than one way, and the readings can meet different objections. Trent defines
 justification as "the sanctification and renewal of the inward man". Read as a
-claim about what Paul's word δικαιόω means, it is a lexical claim. Read as a
+claim about what Paul's word δικαιόω ("justify") means, it is a lexical claim. Read as a
 claim about what God does in justifying, no lexical argument touches it. An
 argument that answers only one reading has answered a rival of its own choosing.
 

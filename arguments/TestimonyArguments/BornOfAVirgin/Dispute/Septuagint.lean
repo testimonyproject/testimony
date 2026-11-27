@@ -5,30 +5,31 @@ import TestimonyArguments.BornOfAVirgin.Results.Septuagint
 /-!
 # TestimonyArguments.BornOfAVirgin.Dispute.Septuagint — the word weighed against its rivals
 
-The Septuagint's witness rests on one claim, that παρθένος, in its
+The Septuagint's witness rests on one claim, that παρθένος ("virgin" or "young woman"), in its
 translator's Greek, means a virgin. Here that claim is weighed against its
 rival. Six positions meet:
 
 - **The Septuagint as a witness** (Irenaeus): Jews translated Isaiah before
   Christ and wrote a word that means a virgin, so they read the woman as one.
-- **Wegner on παρθένος** (with Rhodea and Meade): in the Septuagint's day the
-  word meant a young woman of marriageable age, and the sense "virgin" came
-  later. Genesis 34:3 calls Dinah a παρθένος after Shechem has lain with her.
-- **Rico and Gentry's case from usage**: παρθένος means a virgin "whenever it
-  appears in Semitic Koine Greek", or the Jewish objection to it — Trypho's, and
-  the Three's νεᾶνις — would have had no point. The library adds a ground of its
-  own, encoded with theirs: the Greek Isaiah uses the word elsewhere only for
-  בְּתוּלָה.
+- **Wegner on παρθένος ("virgin" or "young woman")** (with Rhodea and Meade): in the Septuagint's
+  day the word meant a young woman of marriageable age, and the sense "virgin" came
+  later. Genesis 34:3 calls Dinah a παρθένος ("virgin" or "young woman") after Shechem has lain with
+  her.
+- **Rico and Gentry's case from usage**: παρθένος ("virgin" or "young woman") means a virgin
+  "whenever it appears in Semitic Koine Greek", or the Jewish objection to it — Trypho's, and
+  the Three's νεᾶνις ("young woman" or "girl") — would have had no point. The library adds a ground
+  of its own, encoded with theirs: the Greek Isaiah uses the word elsewhere only for
+  בְּתוּלָה ("virgin").
 - **The case from the laws** (Bratcher's): the Greek Pentateuch, the corpus
   Genesis 34:3 comes from, uses the word in two laws where virginity is the
-  point. The high priest marries a παρθένος — "a woman in her virginity", in the
-  Hebrew — and not a widow, a woman put away, a defiled woman or a harlot
+  point. The high priest marries a παρθένος ("virgin" or "young woman") — "a woman in her
+  virginity", in the Hebrew — and not a widow, a woman put away, a defiled woman or a harlot
   (Leviticus 21:13–14). A bride without τὰ παρθένια, the tokens of virginity,
   dies for playing the harlot (Deuteronomy 22:13–21).
 - **The status reading of Genesis 34:3**: Wegner's counterexample read under
-  the law of the seduced παρθένος. The Greek Exodus still calls the woman a man
-  has lain with a παρθένος, and has him pay "the bride-price of virgins"
-  (22:15–16); Genesis 34 tells Shechem's act in that law's words. So at 34:3 the
+  the law of the seduced παρθένος ("virgin" or "young woman"). The Greek Exodus still calls the
+  woman a man has lain with a παρθένος ("virgin" or "young woman"), and has him pay "the bride-price
+  of virgins" (22:15–16); Genesis 34 tells Shechem's act in that law's words. So at 34:3 the
   word names Dinah by the standing he took from her, in the sense "virgin".
 - **Miller from Genesis 34:3**: "In one passage, this term refers to a rape
   victim after she has been attacked" (*Born Divine*). The word is said there of
@@ -46,7 +47,8 @@ the scriptural reading prevails once the replies are heard
 of the prediction belongs to no position that can be defended
 (`critical_denial_indefensible`). That shows that the case against the
 prediction does not survive the replies, on those premises and ratings; it does
-not prove the prediction. And it needs neither side's claim about παρθένος.
+not prove the prediction. And it needs neither side's claim about παρθένος ("virgin" or "young
+woman").
 
 Nor does it weigh Matthew's own reading of the word, from his quotation of it of
 Mary. That is weighed in the chapter "Matthew's reading of the word", under each
@@ -62,8 +64,8 @@ demands it, so Isaiah gave him no reason to (76).
 ## What the claims say, and how they are joined
 
 The claims about the word are claims about its senses. Rico and Gentry's,
-encoded, is that "virgin" is a sense of παρθένος in the Septuagint's Greek;
-they say more, "whenever it appears". Wegner's is that the word meant "young
+encoded, is that "virgin" is a sense of παρθένος ("virgin" or "young woman") in the Septuagint's
+Greek; they say more, "whenever it appears". Wegner's is that the word meant "young
 woman" there, and did not yet have the sense "virgin". Two senses of one word do
 not exclude each other, so the two claims contradict each other only through
 Wegner's "not yet": the library's account of what each claim means finds that
@@ -153,15 +155,16 @@ What each side brings is not alike, and a reader should see it.
 
 For "virgin" as a sense of the word in the Septuagint's Greek:
 
-- **The Greek Pentateuch's own usage.** Every בְּתוּלָה and בְּתוּלִים in the Hebrew
-  Pentateuch — fifteen words in fourteen verses — has a παρθεν- word in the
-  Greek, and its laws use the word where virginity is the point (read from
+- **The Greek Pentateuch's own usage.** Every בְּתוּלָה ("virgin") and בְּתוּלִים ("evidence of
+  virginity") in the Hebrew Pentateuch — fifteen words in fourteen verses — has a παρθεν ("virgin")-
+  word in the Greek, and its laws use the word where virginity is the point (read from
   Rahlfs's text and the Masoretic). Across the whole Septuagint, Bratcher counts
-  παρθένος for בְּתוּלָה forty-five times out of fifty-two (113).
+  παρθένος ("virgin" or "young woman") for בְּתוּלָה ("virgin") forty-five times out of fifty-two
+  (113).
 - **The lexica on the laws.** LSJ glosses τὰ παρθένια "signs of virginity", from
   Deuteronomy 22 (1339); Muraoka, "tokens of virginity" (535); LEH, "signs
-  pertaining to virginity, virginity". LEH glosses παρθένος itself "virgin"
-  first.
+  pertaining to virginity, virginity". LEH glosses παρθένος ("virgin" or "young woman") itself
+  "virgin" first.
 - **Readers who hold the sense, whatever they make of the prophecy.** Rico and
   Gentry; Bratcher, for whom the word "definitely means 'virgin' in the LXX"
   (113), though he reads 7:14 of a woman then a virgin who conceives "in the
@@ -169,13 +172,13 @@ For "virgin" as a sense of the word in the Septuagint's Greek:
   demands "no more than the sense of a 'woman untouched by a man up to the
   moment of the conception'" (as Rhodea quotes him, 67 n. 42): a virgin until
   then, whatever followed. Rhodea, who follows Wegner, still writes that
-  παρθένος "more properly means 'virgin'" (67), and holds that in the Septuagint
-  it "need not refer to a virgo intacta".
+  παρθένος ("virgin" or "young woman") "more properly means 'virgin'" (67), and holds that in the
+  Septuagint it "need not refer to a virgo intacta".
 
 For "young woman, and not yet 'virgin'":
 
 - **Early Greek usage.** Early Greek had both senses. LSJ gives "maiden, girl",
-  "virgin, opp. γυνή", and "of unmarried women who are not virgins" (1339);
+  "virgin, opp. γυνή [woman]", and "of unmarried women who are not virgins" (1339);
   BDAG gives the general use "of a young woman of marriageable age, w. or
   without focus on virginity" from Homer on (777), and the sense "virgin" in the
   New Testament and the early Christian writings. Every side grants it.
@@ -199,8 +202,8 @@ rule, with that passage the exception.
 ## What the ratings decide
 
 **The verdict turns on the status reading's step**, from the law of the seduced
-παρθένος and the law's words in Genesis 34 to the sense of the word at 34:3. It
-is rated `plausible` (`dinahLine` gives the reasons in full). No cited reader
+παρθένος ("virgin" or "young woman") and the law's words in Genesis 34 to the sense of the word at
+34:3. It is rated `plausible` (`dinahLine` gives the reasons in full). No cited reader
 grants its grounds and denies its conclusion. Wegner, Rhodea, Meade, Rico and
 Gentry and Bratcher read 34:3 as said of a woman no longer a virgin, but none
 takes up Exodus 22:15–16 or the law's words in Genesis 34. Frymer-Kensky reads
@@ -221,8 +224,8 @@ sense, is rated `disputed`, the lowest rating. Rico and Gentry, and Bratcher,
 grant all its grounds and deny its conclusion: to Rico and Gentry, Genesis 34:3
 is "the exception that proves the rule", an archaism of the Greek Pentateuch
 (18, 21); to Bratcher, it is "surprising" (113). The higher ratings belong to
-the grounds, not the step: that early Greek used παρθένος of a young woman (well
-supported), that the Greek of Genesis 34:3 calls Dinah one (`consensus`), and
+the grounds, not the step: that early Greek used παρθένος ("virgin" or "young woman") of a young
+woman (well supported), that the Greek of Genesis 34:3 calls Dinah one (`consensus`), and
 that the noun there describes her as she then was (well supported). That last
 ground is Wegner's reading of the verse, not the text; every reader on record
 who takes up the verse holds it, and only the status reading denies it. Neither
@@ -234,16 +237,16 @@ laws' from what the two laws read, and the witness's own ground, are each
 
 - **Rico and Gentry's step.** It is `disputed` because Davidson (1899) and Meade
   (2013) grant the objection and read it the other way: the revisers wrote
-  νεᾶνις against a sense Christians had put on the word, not one its translator
-  gave it.
+  νεᾶνις ("young woman" or "girl") against a sense Christians had put on the word, not one its
+  translator gave it.
 - **The laws' step** (`laws_rest_on_their_inference`). It is `disputed` on one
   reader. Miller grants that the laws require virgins, and holds that the
   virginity "has to be inferred from the context": "parthenos in the Septuagint
   did not by itself connote what we mean by virginity". Of what he says of the
   Greek, the young widow he finds at Joel 1:8 is not there in the Greek, which
   calls her a bride; the translators did not "consistently" use the word for
-  עַלְמָה; and Genesis 34:3 is what the status reading reads otherwise. His point
-  that the Greek adds "who has not known a man" where virginity matters
+  עַלְמָה ("virgin" or "young woman"); and Genesis 34:3 is what the status reading reads otherwise.
+  His point that the Greek adds "who has not known a man" where virginity matters
   (Genesis 24:16) translates a clause the Hebrew already has. The rating rests
   on him all the same. The Joel 1:8 example is struck, because the text refutes
   it, and his dissent still stands on Genesis 34:3, which the Greek reads as he
@@ -264,18 +267,18 @@ open Testimony Testimony.Logic Testimony.Logic.Framework
 
 /-! ### Wegner and Rico and Gentry as positions -/
 
-/-- Wegner on παρθένος delivers its conclusion. -/
+/-- Wegner on παρθένος ("virgin" or "young woman") delivers its conclusion. -/
 theorem driftObjection_establishes : Establishes driftObjection := by
   establish [bornOfAVirginDefs]
 
-/-- Wegner on παρθένος has a model: his own reading, in which the word had not
-yet come to mean "virgin". -/
+/-- Wegner on παρθένος ("virgin" or "young woman") has a model: his own reading, in which the word
+had not yet come to mean "virgin". -/
 theorem driftObjection_is_satisfiable : Satisfiable driftObjection.premises := by
   satisfied_by wegnerDriftReading [bornOfAVirginDefs]
 
-/-- **Wegner on παρθένος rests on its inference.** On Rico and Gentry's reading
-all three grounds are granted: the older Greek usage, the Greek's παρθένος at
-Genesis 34:3, and that the noun there describes Dinah as she then was, no longer
+/-- **Wegner on παρθένος ("virgin" or "young woman") rests on its inference.** On Rico and Gentry's
+reading all three grounds are granted: the older Greek usage, the Greek's παρθένος ("virgin" or
+"young woman") at Genesis 34:3, and that the noun there describes Dinah as she then was, no longer
 a virgin. And the word still means a virgin in the Septuagint at large: the verse
 is an archaism of the Greek Pentateuch. The grounds do not decide the question;
 the step does, and that is why it is rated `disputed`. -/
@@ -295,10 +298,10 @@ theorem usageCase_is_satisfiable : Satisfiable usageCase.premises := by
   satisfied_by virginConceivesReading [bornOfAVirginDefs]
 
 /-- **Rico and Gentry's case rests on its inference.** On the reading Davidson
-(1899, 456) and Meade (2013) give, Trypho objects to παρθένος and the Three
-write νεᾶνις because by then Christians had put the sense "virgin" on the word,
-while in the translator's day it still meant a young woman; and the Greek
-Isaiah's other παρθένοι still render בְּתוּלָה. The countermodel is Wegner's
+(1899, 456) and Meade (2013) give, Trypho objects to παρθένος ("virgin" or "young woman") and the
+Three write νεᾶνις ("young woman" or "girl") because by then Christians had put the sense "virgin"
+on the word, while in the translator's day it still meant a young woman; and the Greek
+Isaiah's other παρθένοι ("virgins") still render בְּתוּלָה ("virgin"). The countermodel is Wegner's
 reading, which allows all of this. The grounds do not decide the question; the
 step does, and that is why it is rated `disputed`. -/
 @[headline]
@@ -319,9 +322,9 @@ theorem lawsCase_is_satisfiable : Satisfiable lawsCase.premises := by
   satisfied_by virginConceivesReading [bornOfAVirginDefs]
 
 /-- **The case from the laws rests on its inference.** The high priest's
-παρθένος is set against the widow and the harlot, and the bride without τὰ
-παρθένια dies as a harlot; and still, on Miller's reading, which Wegner's thesis
-requires, the word itself means a young woman there, as at Genesis 34:3. What the
+παρθένος ("virgin" or "young woman") is set against the widow and the harlot, and the bride without
+τὰ παρθένια ("tokens of virginity") dies as a harlot; and still, on Miller's reading, which Wegner's
+thesis requires, the word itself means a young woman there, as at Genesis 34:3. What the
 laws read does not decide the word's sense; the step does, and its rating is one
 of the four that would decide the dispute. -/
 @[headline]
@@ -344,8 +347,8 @@ theorem dinahCase_is_satisfiable : Satisfiable dinahCase.premises := by
 /-- **The status reading rests on its inference.** Grant what Exodus 22:15–16
 reads, and that Genesis 34 tells Shechem's act in the words of the laws: on
 Wegner's reading, which Rico and Gentry share for this verse, the Greek still
-calls Dinah a παρθένος in the older sense, "young woman", and not as the law's
-virgin. The texts do not decide which; the step does, and that is why it is
+calls Dinah a παρθένος ("virgin" or "young woman") in the older sense, "young woman", and not as the
+law's virgin. The texts do not decide which; the step does, and that is why it is
 rated `disputed`. -/
 @[headline]
 theorem dinah_rests_on_its_inference :
@@ -395,8 +398,8 @@ theorem dinahCase_strength : dinahCase.strength = 2 := by decide
 /-! ### The defeats -/
 
 /-- **Wegner defeats the Septuagint's witness.** What he holds — his conclusion,
-with what it means — denies the witness's ground that παρθένος means a virgin,
-which, cited `disputed`, does not outrank him. -/
+with what it means — denies the witness's ground that παρθένος ("virgin" or "young woman") means a
+virgin, which, cited `disputed`, does not outrank him. -/
 theorem drift_defeats_septuagint : Defeats driftObjection septuagintWitness :=
   Horn.defeats_of_certified driftObjection_strength septuagintWitness_strength
     (by horn_certify)
@@ -448,16 +451,16 @@ theorem dinah_defeats_drift : Defeats dinahCase driftObjection :=
 inductive SeptuagintParty
   /-- The Septuagint as a witness: its translator read the woman as a virgin. -/
   | witness
-  /-- Wegner on παρθένος: in the Septuagint's day, the word meant a young
-  woman. -/
+  /-- Wegner on παρθένος ("virgin" or "young woman"): in the Septuagint's day, the word meant a
+  young woman. -/
   | drift
-  /-- Rico and Gentry's case from usage: παρθένος means a virgin. -/
+  /-- Rico and Gentry's case from usage: παρθένος ("virgin" or "young woman") means a virgin. -/
   | usage
-  /-- The case from the laws: in the Greek Pentateuch's laws, παρθένος is used in
-  the sense "virgin". -/
+  /-- The case from the laws: in the Greek Pentateuch's laws, παρθένος ("virgin" or "young woman")
+  is used in the sense "virgin". -/
   | laws
-  /-- The status reading: at Genesis 34:3 the Greek names Dinah a παρθένος as
-  the law names the seduced virgin. -/
+  /-- The status reading: at Genesis 34:3 the Greek names Dinah a παρθένος ("virgin" or "young
+  woman") as the law names the seduced virgin. -/
   | dinah
   /-- Miller from Genesis 34:3: the word is said there of a woman no longer a
   virgin, so it does not by itself connote virginity, and the laws' virginity is
@@ -491,8 +494,8 @@ declare_dispute septuagintDispute := septuagintPartyNode using bornOfAVirginDefs
     , (.miller, .witness), (.witness, .miller), (.miller, .usage), (.usage, .miller)
     , (.miller, .laws), (.laws, .miller), (.dinah, .miller) ]
   /-- **One support**, in all thirty-six pairs: Rico and Gentry's conclusion is the
-  witness's contested ground, that "virgin" is a sense of παρθένος. The library
-  draws a support only where one party's conclusion is, word for word, another's
+  witness's contested ground, that "virgin" is a sense of παρθένος ("virgin" or "young woman"). The
+  library draws a support only where one party's conclusion is, word for word, another's
   premise. The laws and the status reading reach the witness's ground through a
   definition, so no support is drawn from them, though they lead to the same
   ground. Every cell is computed
@@ -544,11 +547,11 @@ declare_verdict millerAnsweredByDinah for septuagintDispute :
 
 #print axioms miller_indefensible
 
-/-- Why Wegner on παρθένος cannot be defended: the status reading defeats him,
-and nothing answers it. -/
+/-- Why Wegner on παρθένος ("virgin" or "young woman") cannot be defended: the status reading
+defeats him, and nothing answers it. -/
 declare_verdict driftAnsweredByDinah for septuagintDispute : .indefensible .drift [(.drift, .dinah)]
-  /-- **Wegner on παρθένος cannot be defended.** No admissible set contains it:
-  the status reading defeats it, and nothing defeats the status reading. -/
+  /-- **Wegner on παρθένος ("virgin" or "young woman") cannot be defended.** No admissible set
+  contains it: the status reading defeats it, and nothing defeats the status reading. -/
   proves @[headline] drift_indefensible
 
 #print axioms drift_indefensible
@@ -558,7 +561,7 @@ theorem septuagint_skeptically_accepted :
     SkepticallyAccepted septuagintDispute.defeats .witness :=
   .of_grounded (by rw [septuagint_prevails_over_wegner]; simp)
 
-/-- And none accepts Wegner on παρθένος. -/
+/-- And none accepts Wegner on παρθένος ("virgin" or "young woman"). -/
 theorem drift_not_credulously_accepted :
     ¬ CredulouslyAccepted septuagintDispute.defeats .drift :=
   fun ⟨S, hS, hc⟩ => drift_indefensible S hS.1 hc

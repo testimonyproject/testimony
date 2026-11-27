@@ -1,6 +1,7 @@
 -- TestimonyArguments: the worked arguments, built on the Testimony library.
 -- See README.md beside this file.
 import TestimonyArguments.Works
+import TestimonyArguments.Glossary
 import TestimonyArguments.BornInBethlehem
 import TestimonyArguments.BornOfAVirgin
 import TestimonyArguments.CanonicalWitness

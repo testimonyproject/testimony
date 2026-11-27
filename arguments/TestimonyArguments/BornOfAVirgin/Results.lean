@@ -63,8 +63,8 @@ theorem magisterialOnly_establishes : Establishes magisterialOnly := by
 
 #print axioms magisterialOnly_establishes
 
-/-- The critical reading, written down: עַלְמָה means "young woman", Isaiah's
-sign was given to Ahaz, Genesis 3:15 is an etiology, and Micah's silence about a
+/-- The critical reading, written down: עַלְמָה ("virgin" or "young woman") means "young woman",
+Isaiah's sign was given to Ahaz, Genesis 3:15 is an etiology, and Micah's silence about a
 father is only silence. No virgin-birth criterion arises. -/
 def criticalReading : Valuation Claim := fun a =>
   match a with
@@ -195,8 +195,8 @@ theorem almah_is_load_bearing_alone : ¬ Establishes isaianicStrandWithoutAlmah 
 #print axioms almah_is_load_bearing_alone
 
 /-- **Admissibility is not enough.** Berry's lexical point is defensive — the
-semantic range of עַלְמָה does not *exclude* the sense "virgin" — and defensive
-is all it is. Substitute it for `almahMeansVirgin` and the Isaianic strand
+semantic range of עַלְמָה ("virgin" or "young woman") does not *exclude* the sense "virgin" — and
+defensive is all it is. Substitute it for `almahMeansVirgin` and the Isaianic strand
 yields nothing, on the same reading that refutes the strand without any lexical
 premise at all.
 
@@ -211,12 +211,12 @@ theorem admissibility_is_not_enough : ¬ Establishes isaianicStrandOnAdmissibili
 /-! #### The referential strand -/
 
 /-- **The referential argument goes through.** Granted only what both sides
-grant about the word — that עַלְמָה denotes a young woman of marriageable age,
-and that being a virgin does not exclude a woman from that denotation — and
+grant about the word — that עַלְמָה ("virgin" or "young woman") denotes a young woman of
+marriageable age, and that being a virgin does not exclude a woman from that denotation — and
 granted that Mary was such a woman and conceived as a virgin, Matthew's claim
 turns out not to have required the lexical sense at all.
 
-Nothing here asserts that עַלְמָה *means* virgin. The argument is about
+Nothing here asserts that עַלְמָה ("virgin" or "young woman") *means* virgin. The argument is about
 reference, not sense, and it is cheaper for exactly that reason. -/
 @[headline]
 theorem semantic_establishes : Establishes semantic := by
@@ -241,9 +241,10 @@ def compatibilityReading : Valuation Claim := fun a =>
   | _ => True
 
 /-- **The referential reply defeats the lexical objection.** Keep every
-versional datum — the Targum's עוּלֵימְתָא, the Three's νεᾶνις, the Septuagint's
-παρθένος, the Peshitta's ܒܬܘܠܬܐ, Qumran's confirmation of the Hebrew — add the
-referential premises, and the objection no longer reaches its conclusion.
+versional datum — the Targum's עוּלֵימְתָא ("young woman"), the Three's νεᾶνις ("young woman" or
+"girl"), the Septuagint's παρθένος ("virgin" or "young woman"), the Peshitta's ܒܬܘܠܬܐ, Qumran's
+confirmation of the Hebrew — add the referential premises, and the objection no longer reaches its
+conclusion.
 
 The tension in the versions is not evidence against the reading once virginity
 is compatible with the word. It is evidence that four translators made four
@@ -301,8 +302,8 @@ def noHingeReading : Valuation Claim := fun a =>
 four of them jointly do: remove all four and the criterion no longer follows,
 with every textual and historical premise retained.
 
-So the argument no longer hangs on the sense of עַלְמָה alone. It hangs on that
-*or* on the matrilineal wording of Genesis 3:15 *or* on Micah's maternal
+So the argument no longer hangs on the sense of עַלְמָה ("virgin" or "young woman") alone. It hangs
+on that *or* on the matrilineal wording of Genesis 3:15 *or* on Micah's maternal
 silence *or* on Postell's compositional reading — and an opponent must defeat
 all four. That is a materially stronger position than the single-stranded
 version, and a materially weaker one than four independent arguments would be:
@@ -383,7 +384,7 @@ theorem semantic_is_satisfiable : Satisfiable semantic.premises := by
   satisfied_by referentialOwnReading [bornOfAVirginDefs]
 
 /-- The lexical objection's own world: the versions read the broad term, so
-עַלְמָה does not denote virginity and the criterion is not met. -/
+עַלְמָה ("virgin" or "young woman") does not denote virginity and the criterion is not met. -/
 def lexicalObjectionOwnReading : Valuation Claim := fun a =>
   match a with
   | .almahMeansVirgin => False

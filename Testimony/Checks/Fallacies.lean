@@ -29,6 +29,10 @@ types, and reports, for each argument:
   record of a voice is the argument's other claims about what the voice held or
   how it read a word (`Testimony.Semantics.recordOf`), without the line's own
   claims, which cannot bear themselves out;
+- the lines that need a word to keep one sense where a reading among the
+  argument's other claims gives it, at one of the places, a sense no reading
+  gives it at the other, and that leave the reading unanswered
+  (`Testimony.Semantics.Move.univocal`), with the word and the readings;
 - the lines that need a word to keep its sense and do not say so, with the
   words. These are conditions, not faults;
 - the lines that read one word by a kindred one, a verb by its adjective or the
@@ -51,7 +55,8 @@ reader must hold to follow the text (`Testimony.Semantics.Fallacy`, "Whose
 reasoning is checked").
 
 The report is pinned. It fails the build if a line equivocates on its own terms,
-argues from silence alone, or answers a straw man, and does not declare it: the
+argues from silence alone, answers a straw man, or reads a word univocally against
+a reading it leaves unanswered, and does not declare it: the
 library may not do what it checks articles for. A rival's line may declare the
 fault it commits, beside it, as `<line>.expected` (`Testimony.Semantics.Finding`),
 and the declaration is checked both ways: it fails the build if the checks do not
@@ -101,6 +106,8 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
       atomsOf l.step).getD []
   let recordFor (n : String) (v : Voice) : List α :=
     (recordOf α v).filter fun a => !(ownClaims n).contains a
+  let readingsFor (n : String) : List α :=
+    (HasMeanings.all : List α).filter fun a => !(ownClaims n).contains a
   let names (cs : List α) := ", ".intercalate (cs.map atomName)
   let declaredFor (k : String) : List (Finding α) :=
     ((declared.find? (·.1 == k)).map (·.2)).getD []
@@ -149,6 +156,8 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
         | .worksBy _ t a => a ++ " at work in " ++ t.text
         | _ => "a word")
     | .reversesCause ps => "reversal of " ++ "; ".intercalate (ps.map showPair)
+    | .univocal rs => "univocality on " ++ "; ".intercalate (rs.map fun (w, cs) =>
+        atomName w ++ ", against " ++ names cs)
   let showMismatch : Mismatch α → String
     | .absent d => "declares " ++ showFinding d ++ "; not found"
     | .differs d f => "declares " ++ showFinding d ++ ",\n        but finds " ++ showFinding f
@@ -167,12 +176,13 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
   let strawMen := moves.filterMap fun (n, m) =>
     if (m.strawMen (recordFor n)).isEmpty then none else some n
   let mismatched := moves.filterMap fun (n, m) =>
-    match m.mismatches (recordFor n) (declOf n) with
+    match m.mismatches (recordFor n) (readingsFor n) (declOf n) with
     | [] => none
     | ms => some (n ++ ":" ++ String.join (ms.map fun x => "\n      " ++ showMismatch x))
   let borneOut := moves.filterMap fun (n, m) =>
     let ds := declOf n
-    if ds.isEmpty || n.endsWith "(proposed here)" || !(m.mismatches (recordFor n) ds).isEmpty
+    if ds.isEmpty || n.endsWith "(proposed here)" ||
+        !(m.mismatches (recordFor n) (readingsFor n) ds).isEmpty
     then none
     else some (n ++ ": " ++ "; ".intercalate (ds.map showFinding))
   -- A declaration belongs on a reader's step, never the library's own or Scripture's, and
@@ -199,12 +209,20 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
   let elsewhere := moves.filterMap fun (n, m) =>
     if m.sensesFromElsewhere.isEmpty then none else
       some (n ++ ": " ++ ", ".intercalate (fromElsewhere m))
+  let showUnivocal (rs : List (Lexeme × List α)) : String :=
+    "; ".intercalate (rs.map fun (w, cs) => atomName w ++ ", against " ++ names cs)
+  let univocal := moves.filterMap fun (n, m) =>
+    match m.univocal (readingsFor n) with
+    | [] => none
+    | rs => some (n ++ ": " ++ showUnivocal rs)
   let conditional := moves.filterMap fun (n, m) =>
     if m.conditionalOn.isEmpty then none else
       some (n ++ ": " ++ ", ".intercalate (m.conditionalOn.map fun w => atomName w))
   -- Scripture's own reasoning: what a reader must hold to follow it, never a charge.
   let toFollow := scriptural.filterMap fun (n, _, m) =>
     let needs :=
+      ((m.univocal (readingsFor n)).map fun (w, cs) =>
+        atomName w ++ " kept in one sense, against " ++ names cs) ++
       (m.conditionalOn.map fun w => atomName w ++ " kept in one sense") ++
       (m.equivocates.map fun _ => "the encoding gives a word two senses") ++
       (m.misreadings.map fun _ => "the encoding misreads the Greek") ++
@@ -231,6 +249,8 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
     part "conclude that a thing moves what, by their premises, moves it" reversing ++
     part "rest on one another in a circle" onCircle ++
     part "answer a view the argument's record says its holder does not hold" strawMen ++
+    part "need a word in one sense where a reading they leave unanswered gives it another"
+      univocal ++
     part "attribute a view, against the argument's record" attributing ++
     part "need a word to keep its sense, unstated" conditional ++
     part "read one word by a kindred one, the bridge unstated" shifting ++

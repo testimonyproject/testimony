@@ -73,7 +73,7 @@ it as an issue before the pull request is opened.
 When the argument turns on a word, check that the translation you quote does
 not settle the question for one side. The LSB prints "He shall bruise you on the
 head" (Genesis 3:15) with a capital, because it reads the verse of Christ; the
-modern translations give "contrary to" for παρ' ὅ in Galatians 1:8, where the
+modern translations give "contrary to" for παρ' ὅ ("contrary to") in Galatians 1:8, where the
 older "other than" suits Calvin and "contrary to" suits Aquinas. Where that
 happens, give the Greek or Hebrew in brackets and say how the translations part,
 rather than choosing the wording that helps.
@@ -88,7 +88,16 @@ not quoted before needs an entry, with its notice, before its first quotation.
 **English first, then the original term in brackets.** Write "works of the law"
 (ἔργα νόμου), not ἔργα νόμου alone. The English is what the lay reader holds
 on to. The Greek or Hebrew is the handle a scholar needs to look the question
-up. Give both, once, where the term first appears in a section.
+up. Give both, once, where the term first appears in a section. A claim's label
+is a section of its own, because the page prints it alone in a list of claims.
+
+Where the translations part, give both renderings: ἐνεργουμένη ("working" or
+"made operative"). The English comes from the glossary,
+`arguments/TestimonyArguments/Glossary.lean`, where each rendering names the
+translation or lexicon that gives it, or says why the library gives it itself.
+A new word goes into the glossary first, with its source, and rule L13 of the
+linter fails on a Greek or Hebrew word printed without one of its renderings
+beside it.
 
 **Say what a technical word means where you use it.** This applies to theology
 as much as to logic. "Forensic" needs "a verdict, as in a court". "Objective
@@ -167,17 +176,19 @@ look rather than a rule.
 
 ## An example
 
-Before:
+Before, set as text because it breaks the rule this page states:
 
-> The dominical strand rests on Jesus' own words rather than Paul's. ἡ πίστις
-> σου σέσωκέν σε occurs four times in Luke. It is not a free win: σῴζω means
-> both *save* and *heal*, and carries `sozoIsSoteriological` as its own premise.
+```text
+The dominical strand rests on Jesus' own words rather than Paul's. ἡ πίστις
+σου σέσωκέν σε occurs four times in Luke. It is not a free win: σῴζω means
+both *save* and *heal*, and carries `sozoIsSoteriological` as its own premise.
+```
 
 After:
 
 > **Jesus, in Luke.** "Your faith has saved you; go in peace" (Luke 7:50), said
 > to the woman who anointed his feet. The saying occurs four times in Luke. The
-> Greek verb (σῴζω) means both *save* and *heal*, and in the other three places
+> Greek verb for "saved" (σῴζω) means both *save* and *heal*, and in the other three places
 > the person has just been healed, which is why most English Bibles print "made
 > you well" there. So the strand rests on 7:50 alone, where the saying follows
 > "your sins are forgiven" and no one is ill. That the word means *saved* there

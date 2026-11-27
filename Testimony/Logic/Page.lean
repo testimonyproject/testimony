@@ -1,4 +1,5 @@
 import Testimony.Logic.Line
+import Testimony.Argument
 
 /-!
 # Testimony.Logic.Page — what a generated page is made of
@@ -235,6 +236,24 @@ def position (n k : Nat) : Float × Float :=
   let θ := 3.141592653589793 / 2 - 2 * 3.141592653589793 * k.toFloat / n.toFloat
   (Float.cos θ, Float.sin θ)
 
+/-- A dispute with no edge to draw, said in words: its positions, named by
+`name`, stand apart. Both renderings print this in place of an empty picture
+and an empty table. -/
+def apartWords (g : Graph) (name : String → String) : String :=
+  let names := g.nodes.map name
+  let list := match names.reverse with
+    | [] => ""
+    | [a] => a
+    | [b, a] => a ++ " and " ++ b
+    | z :: rest => ", ".intercalate rest.reverse ++ ", and " ++ z
+  match names.length with
+  | 0 => "The dispute hears no positions, so there is nothing to draw."
+  | 1 => list ++ " is the only position heard, so there is nothing to draw."
+  | 2 => list ++ " stand apart: neither defeats the other, supports it, or is part of it, " ++
+      "so there is nothing to draw."
+  | _ => list ++ " stand apart: none defeats another, supports it, or is part of it, " ++
+      "so there is nothing to draw."
+
 /-- What an edge is, in words, for the table. -/
 def EdgeKind.describe : EdgeKind → String
   | .defeat => "defeats"
@@ -421,6 +440,31 @@ def summary (x : Exchange) : List Seg :=
 
 end Exchange
 
+/-- **A statement in logic notation**, as a page sets it beside its English: a
+string of mathematics with the argument's claims and formulas left in, so each
+rendering can number a claim as its legend does and link it there. `tex` is
+mathematics as LaTeX writes it, which MathJax reads on the site too. -/
+inductive Sym (α : Type) where
+  /-- A claim: its variable, numbered and linked as the legend numbers it. -/
+  | atom (a : α)
+  /-- A formula over the claims, set as the derivations set one. -/
+  | formula (φ : Formula α)
+  /-- Mathematics as LaTeX writes it. -/
+  | tex (s : String)
+  /-- Pieces set one after another. -/
+  | seq (parts : List (Sym α))
+
+namespace Sym
+
+/-- Every claim a statement mentions, in the order it mentions them. -/
+def atoms : Sym α → List α
+  | .atom a => [a]
+  | .formula φ => atomsOf φ
+  | .tex _ => []
+  | .seq ps => ps.attach.flatMap fun ⟨p, _⟩ => atoms p
+
+end Sym
+
 /-- One element of a generated page.
 
 `prose` is a module docstring, lifted whole; the rest are declarations, each
@@ -448,17 +492,66 @@ inductive Item (α : Type)
   the page, with whether the reading takes it as true. Read off the definition
   when the page is harvested, one claim at a time. -/
   | reading (decl doc : String) (truth : List (α × Bool))
+  /-- A position made from a line of reason as it stands (`Line.asPackage`): the
+  line it argues, by name, so the page points to the line instead of setting
+  its grounds and step out a second time. -/
+  | fromLine (decl doc line : String) (pkg : ArgumentPackage α)
+  /-- Which position each party argues from (`Party → ArgumentPackage Claim`):
+  the name of each party's position, in the order the parties are declared. -/
+  | positions (decl doc : String) (names : List String)
+  /-- A dispute: the names of the positions it hears, and the declaration that
+  gives each party its position, if it has one by name (empty if not). -/
+  | dispute (decl doc : String) (parties : List String) (node : String)
+  /-- A register of dissents for a dispute: the positions it assesses as
+  dissents, and the steps they are rated against. -/
+  | register (decl doc : String) (assessed steps : List String)
+  /-- A claim refuted by what a text reads: the claim, what the text reads, and
+  its citation. -/
+  | refutation (decl doc : String) (claim : α) (reads : String) (reading : Source)
+  /-- Words of the Greek New Testament: where they stand, and the words. -/
+  | greek (decl doc : String) (place : String) (words : List String)
+  /-- A source that takes its rating where it is used (`Confidence → Source`):
+  its references, read at one rating. -/
+  | sourceFn (decl doc : String) (s : Source)
+  /-- A named list, said as a lead sentence and its entries: the lines a
+  position gathers, say. The entries are plain text. -/
+  | listing (decl doc lead : String) (entries : List String)
+  /-- A list of sources, each said in words. -/
+  | sources (decl doc : String) (ss : List Source)
+  /-- A declaration said in one plain sentence: a passage, a pinpoint. -/
+  | said (decl doc text : String)
+  /-- How a later text stands to an earlier one: an `IntertextEdge`. -/
+  | edge (decl doc : String) (e : IntertextEdge)
+  /-- A tradition's reading of a passage: an `Interpretation`, under the name of
+  the criterion it serves, if it serves one (empty if not). -/
+  | interpretation (decl doc criterion : String) (i : Interpretation)
+  /-- One reading of a rival's ambiguous claim: its name, what it commits the
+  reader to, and who reads it so. -/
+  | dilemmaReading (decl doc name : String) (commits : Formula α) (s : Source)
+  /-- A rule written as a table of true and false: its inputs, by name, and for
+  each row of inputs whether the rule allows it. -/
+  | truthTable (decl doc : String) (inputs : List String) (rows : List (List Bool × Bool))
+  /-- A claim one position holds and another denies, both defensible: the names
+  of the two positions, and the claim. -/
+  | contested (decl doc holder denier : String) (φ : Formula α)
+  /-- A helper for writing the argument down, said by its docstring alone: what
+  it gives is set out where it is used. -/
+  | helper (decl doc : String)
+  /-- A citation function, `Claim → AtomMeta`: what it cites each claim to.
+  Read off the definition when the page is harvested, one claim at a time,
+  so the page shows the citations and not a function's signature. -/
+  | citation (decl doc : String) (cite : α → AtomMeta)
   /-- A declaration shown as Lean: anything the renderer does not read. -/
   | other (decl doc source : String)
-  /-- A result, with the statement as Lean states it. -/
-  | result (decl doc statement : String) (proposed : Bool)
+  /-- A result: its statement in logic notation, set beside its docstring. -/
+  | result (decl doc : String) (stated : Sym α) (proposed : Bool)
   /-- Why one position stands against another: a `Because`. -/
   | because (decl doc : String) (e : Explanation α)
   /-- Every reading of a rival's claim, answered: a `Dilemma`. -/
   | dilemma (decl doc : String) (d : Dilemma α)
-  /-- What an opponent must reject: an `OpponentsBurden` result, with the
-  statement as Lean states it. -/
-  | burden (decl doc statement : String) (b : Burden)
+  /-- What an opponent must reject: an `OpponentsBurden` result, its statement
+  in logic notation beside its docstring. -/
+  | burden (decl doc : String) (stated : Sym α) (b : Burden)
   /-- A dispute's verdict, with the reasons generated from its witness, the
   page's `Because` declarations to link its defeats to, and the theorem that
   proves the defeat table (empty if none was found). -/
@@ -480,6 +573,12 @@ namespace Item
 /-- Every atom this item mentions, in the order it mentions them. -/
 def atoms [DecidableEq α] : Item α → List α
   | .package _ _ pkg => pkg.atoms
+  | .fromLine _ _ _ pkg => pkg.atoms
+  | .refutation _ _ a _ _ => [a]
+  | .dilemmaReading _ _ _ φ _ => atomsOf φ
+  | .contested _ _ _ _ φ => atomsOf φ
+  | .result _ _ st _ => st.atoms
+  | .burden _ _ st _ => st.atoms
   | .line _ _ l => (l.premises ++ [l.delivers]).flatMap atomsOf
   | .formula _ _ φ => atomsOf φ
   | .formulas _ _ φs => φs.flatMap atomsOf
@@ -505,6 +604,43 @@ def atomOrder [DecidableEq α] (allAtoms : List α) (items : List (Item α)) : L
   let mentioned := (items.flatMap Item.atoms).eraseDups
   allAtoms.filter (mentioned.contains ·) ++ mentioned.filter (!allAtoms.contains ·)
 
+/-- How a later text stands to an earlier one, in words. -/
+def relationWords : RelationType → String
+  | .quotation => "quotes"
+  | .allusion => "alludes to"
+  | .echo => "echoes"
+  | .typology => "reads as a type fulfilled"
+  | .promise => "takes up the promise of"
+  | .prediction => "reads as fulfilling the prediction of"
+  | .messianicTheme => "takes up the royal, messianic motif of"
+  | .retrospective => "reinterprets"
+  | .thematic => "shares a theme, with no direct dependence, with"
+
+/-- How a reading construes its passage, in words. -/
+def asRelationWords : RelationType → String
+  | .quotation => "a text quoted later"
+  | .allusion => "a text alluded to later"
+  | .echo => "a text echoed later"
+  | .typology => "a type, fulfilled later"
+  | .promise => "a promise, taken up later"
+  | .prediction => "a prediction"
+  | .messianicTheme => "a royal, messianic motif"
+  | .retrospective => "a text reinterpreted later"
+  | .thematic => "a theme shared with later texts"
+
+/-- Whether two citations say the same thing: the same claim, of the same kind,
+held in the same tradition, as firmly, on the same references. Compared as the
+values print, because a citation's types derive no equality. -/
+def sameCitation (m₁ m₂ : AtomMeta) : Bool :=
+  toString (repr m₁) == toString (repr m₂)
+
+/-- **What a citation function says differently from the legend.** The claims
+on the page, in the page's order, that `cite` cites otherwise than `legend`
+does, each with its citation under `cite`. A function that agrees with the
+legend on every claim on the page gives nothing. -/
+def citedOtherwise (order : List α) (legend cite : α → AtomMeta) : List (α × AtomMeta) :=
+  (order.filter fun a => !sameCitation (cite a) (legend a)).map fun a => (a, cite a)
+
 /-- The `cite` of the first package on the page.
 
 Every package in an argument shares one `cite` — it is what makes the atom
@@ -514,6 +650,7 @@ and cannot occur: rule L5 requires at least two. -/
 def citeOf : List (Item α) → Option (α → AtomMeta)
   | [] => none
   | .package _ _ pkg :: _ => some pkg.cite
+  | .fromLine _ _ _ pkg :: _ => some pkg.cite
   | _ :: rest => citeOf rest
 
 end Testimony.Logic.Page

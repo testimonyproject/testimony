@@ -374,6 +374,28 @@ def baseCite : Claim → AtomMeta
         , supporting := [.scripture [{ ref := .verse ⟨.titus, 1, 1⟩ }]]
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
+  | .romansIsPauline =>
+    { label := "Romans was written by Paul"
+    , kind := .historical
+    , source :=
+        { primary := .work fitzmyerRomans .whole
+        , supporting :=
+            [.scripture [{ ref := .verse ⟨.romans, 1, 1⟩ }], .work mooRomans .whole]
+        , tradition := .christianHistoricalGrammatical
+        -- `disputed`, as `ephesiansIsPauline` is: Livesey, *The Letters of Paul in
+        -- their Roman Literary Context* (Cambridge, 2024; doi 10.1017/9781009487061),
+        -- grants that 1:1 names Paul and reads the letter as a second-century
+        -- composition in his name. So for Galatians below.
+        , confidence := .disputed } }
+  | .galatiansIsPauline =>
+    { label := "Galatians was written by Paul"
+    , kind := .historical
+    , source :=
+        { primary := .work mooGalatians (.page 1)
+        , supporting :=
+            [.scripture [{ ref := .verse ⟨.galatians, 1, 1⟩ }], .work martynGalatians .whole]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
   | .firstPeterIsPetrine =>
     { label := "1 Peter was written by the apostle Peter"
     , kind := .historical
@@ -949,7 +971,8 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .latinWordBearsPaulsSense =>
-    { label := "The Latin ‘iustificare’, read as ‘made just’, bears the sense of Paul’s δικαιόω"
+    { label := ("The Latin ‘iustificare’, read as ‘made just’, bears the sense of Paul’s \
+        δικαιόω (“justify”)")
     , kind := .linguistic
       -- Trent reads Paul's word through the Latin (ch. 7–8), with Augustine's
       -- gloss. `disputed`: the Reformers read the same verses and deny that the
@@ -1380,7 +1403,8 @@ def baseCite : Claim → AtomMeta
         , tradition := .romanCatholic
         , confidence := .disputed } }
   | .energoumeneIsPassive =>
-    { label := "Galatians 5:6: ἐνεργουμένη is passive, faith moved by love"
+    { label := ("Galatians 5:6: ἐνεργουμένη (“working” or “made operative”) is passive, faith \
+        moved by love")
     , kind := .linguistic
       -- Bellarmine, II.4, p. 219: "Ubi illud (operatur) passive accipiendum est,
       -- non active. Est enim in Graeco ἐνεργουμένη, id est mota atque acta".
@@ -1393,7 +1417,8 @@ def baseCite : Claim → AtomMeta
         , tradition := .romanCatholic
         , confidence := .disputed } }
   | .energoumeneIsMiddle =>
-    { label := "Galatians 5:6: ἐνεργουμένη is middle, faith the one at work"
+    { label := ("Galatians 5:6: ἐνεργουμένη (“working” or “made operative”) is middle, faith \
+        the one at work")
     , kind := .linguistic
       -- Lightfoot, pp. 204–205: "the middle voice according to the general usage
       -- of St Paul … ἐνεργεῖσθαι is never passive in St Paul". Burton, p. 281:
@@ -1588,13 +1613,17 @@ def baseCite : Claim → AtomMeta
       -- The Epistle to Diognetus, 9: "that the wickedness of many should be hid
       -- in a single righteous One, and that the righteousness of One should
       -- justify many transgressors" — the exchange, not the renewal.
+      -- `disputed`, as Trent's definition is: Trent's canon 11 denies it in
+      -- terms, condemning justification "by the sole imputation of the justice
+      -- of Christ, or by the sole remission of sins", just as Westminster XI.1
+      -- denies Trent's definition in terms.
     , source :=
         { primary := .work westminsterConfession (.sectionRef "XI.1")
         , supporting :=
             [ .work calvinInstitutes (.sectionRef "III.xi.2")
             , .work anf1 (.sectionRef "Epistle to Diognetus 9") ]
         , tradition := .reformedProtestant
-        , confidence := .wellSupported } }
+        , confidence := .disputed } }
   | .secondTempleCovenantalNomism =>
     { label := "Second Temple Judaism: in by grace, staying in by works"
     , kind := .historical
@@ -2150,8 +2179,8 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .paulNamesRenewalOtherwise =>
-    { label := "Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them " ++
-        "beside ‘justify’"
+    { label := "Paul names renewal with other words (‘renewing’, ἀνακαίνωσις; ‘sanctification’, \
+        ἁγιασμός, “sanctification”) and sets them beside ‘justify’"
     , kind := .textual
       -- `consensus`: what the texts say, and no more. Trent itself builds its
       -- chapter 7 on Titus 3:5–7, where renewal and being justified are named
@@ -2498,11 +2527,13 @@ def tridentineCite : Claim → AtomMeta
   | .justificationIsForensicOnly =>
     { label := "Justification is not a verdict only: it renews the inward man"
     , kind := .theological
+      -- `disputed`: Westminster XI.1 denies it in terms, as canon 11 denies the
+      -- Reformed claim in terms.
     , source :=
         { primary := .work tannerDecrees
             (.sectionRef "Trent, Session VI (1547), Decree on Justification, ch. 7")
         , tradition := .romanCatholic
-        , confidence := .wellSupported } }
+        , confidence := .disputed } }
   | c => baseCite c
 
 /-- The Finnish reading of Luther: justification is not a verdict only, because

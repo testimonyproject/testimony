@@ -31,6 +31,11 @@ Then the word-shift cases, a verb read by its adjective and the Greek by the
 Latin, and the omission cases, with a record in which Augustine read "justify"
 two ways, so that a move citing one of them is seen to leave out the other.
 
+Then the univocality cases, with a record of readings of "justify": a move that
+needs the word one in Romans and James is charged with the readings that tell the
+letters apart, and passed over once it answers them, or where the only reading
+makes the word one in both.
+
 The case the build itself must refuse: an argument of its own
 whose lines equivocate and argue from silence alone, run through
 `#check_fallacies`, with the failure pinned by `#guard_msgs`.
@@ -766,6 +771,112 @@ theorem omission_cases :
 
 end Testimony.Checks.FallacyCases.Omission
 
+/-! ### Univocality
+
+The univocality check reads a move against an argument's readings of a word, so
+its cases come with a small record of readings of "justify" (δικαιόω): one of
+James 2:24, one of Paul's usage as a whole, one reading both letters alike, and
+the authorship that lets a reading of Paul's usage bear on Romans. -/
+
+namespace Testimony.Checks.FallacyCases.Univocality
+
+open Testimony Testimony.Semantics Testimony.Semantics.Notation
+open Testimony.Checks.FallacyCases (argues rom3_28 jas2_24)
+
+/-- The readings. -/
+inductive Reading
+  /-- In James 2:24, "justify" means to show to be righteous. -/
+  | jamesShows
+  /-- In Paul's usage, "justify" means a verdict. -/
+  | paulVerdict
+  /-- In Romans 3:28 and in James 2:24 alike, "justify" means to make righteous. -/
+  | bothMakeRighteous
+  /-- In James 2:24, "justify" means to make righteous. -/
+  | jamesMakes
+  /-- Paul wrote Romans. -/
+  | romansIsPauline
+deriving DecidableEq, Repr
+
+/-- What each reading means. -/
+def means : Reading → Statement
+  | .jamesShows => .means .dikaioo (.passage jas2_24) .showRighteous
+  | .paulVerdict => .means .dikaioo (.usage .paul) .verdict
+  | .bothMakeRighteous =>
+    .also (.means .dikaioo (.passage rom3_28) .makeRighteous)
+      (.means .dikaioo (.passage jas2_24) .makeRighteous)
+  | .jamesMakes => .means .dikaioo (.passage jas2_24) .makeRighteous
+  | .romansIsPauline => .wrote .paul .romans
+
+/-- The readings' meanings. -/
+instance meanings : HasMeanings Reading :=
+  { argument := "A record for the univocality cases"
+  , all := [.jamesShows, .paulVerdict, .bothMakeRighteous, .jamesMakes, .romansIsPauline]
+  , means
+  , complete := by intro a; cases a <;> decide }
+
+/-- A record that reads the word differently in the two letters. -/
+def apart : List Reading := [.jamesShows, .paulVerdict, .romansIsPauline]
+
+/-- A record whose only reading gives the word one sense in both letters. -/
+def alike : List Reading := [.bothMakeRighteous]
+
+/-- Romans 3:28 says a person is justified by faith apart from works of the law. -/
+abbrev romansSays : Statement :=
+  .says rom3_28 (rl .instrumentOf (wd .pistis rom3_28) (wd .dikaioo rom3_28))
+
+/-- James 2:24 says a person is justified by works and not by faith alone. -/
+abbrev jamesSays : Statement :=
+  .says jas2_24 (.not (rl .instrumentOf (wd .pistis jas2_24) (wd .dikaioo jas2_24)))
+
+/-- **Caught: James set against Paul, the word granted one sense.** Romans 3:28
+and James 2:24 are set against each other, with a premise that "justify" is the
+same in both. Against a record that reads it as "show to be righteous" in James and
+as a verdict in Paul, the premise is a ground no reading supports, and the move
+answers neither reading. -/
+def setAgainst : Move :=
+  argues [romansSays, jamesSays, .sameSense .dikaioo (.passage rom3_28) (.passage jas2_24)]
+    (.holds (.not (rl .instrumentOf (wd .pistis rom3_28) (wd .dikaioo rom3_28))))
+
+/-- **Caught: the same, the sameness left unstated.** -/
+def setAgainstSilently : Move :=
+  argues [romansSays, jamesSays]
+    (.holds (.not (rl .instrumentOf (wd .pistis rom3_28) (wd .dikaioo rom3_28))))
+
+/-- **Passed over: the reading of James answered.** The same move, with a premise
+denying that "justify" in James 2:24 means to show to be righteous. Whether the
+denial is right is the dispute's to weigh; the move has met the reading. -/
+def jamesAnswered : Move :=
+  argues
+    [ romansSays, jamesSays, .sameSense .dikaioo (.passage rom3_28) (.passage jas2_24)
+    , .denied (.means .dikaioo (.passage jas2_24) .showRighteous) ]
+    (.holds (.not (rl .instrumentOf (wd .pistis rom3_28) (wd .dikaioo rom3_28))))
+
+/-- **The univocality check, caught and passed over.** Against readings that give
+"justify" one sense in James and another in Paul, a move needing it the same is
+charged with both readings, whether it grants the sameness or leaves it unstated.
+A move that denies the reading of James has answered it, and the reading of Paul
+then stands against nothing given at James. Against a record whose only reading
+makes the word one in both letters, nothing is charged: that reading disputes the
+sense, not the sameness. The survey of "justify" in Matthew and Deuteronomy
+needs James's word to share a sense with one of them, and the reading of James
+as "show to be righteous" gives it Matthew's, so the survey is not charged; a
+reading of James as "make righteous" is the very sense its conclusion denies of
+James's usage, so it is answered. The move concluding that "works" differs needs
+no sameness, and the move that reads "faith" two ways is charged with
+equivocation, not with this. -/
+theorem univocality_cases :
+    setAgainst.univocal apart = [(.dikaioo, [.paulVerdict, .jamesShows])] ∧
+      setAgainstSilently.univocal apart = [(.dikaioo, [.paulVerdict, .jamesShows])] ∧
+      jamesAnswered.univocal apart = [] ∧
+      setAgainst.univocal alike = [] ∧
+      FallacyCases.survey.univocal apart = [] ∧
+      FallacyCases.survey.univocal [Reading.jamesMakes] = [] ∧
+      FallacyCases.worksDiffer.univocal apart = [] ∧
+      FallacyCases.thatFaith.univocal apart = [] := by
+  decide
+
+end Testimony.Checks.FallacyCases.Univocality
+
 /-! ### Scripture's own reasoning, never charged
 
 The checks read lines of reason, and a line of reason is someone's. Most are a
@@ -870,12 +981,12 @@ nothing. Declared with no contradicting claim, it differs from what is found.
 Declared on Trent taken at his word, it is absent. Left undeclared, it is
 reported. Declared twice, the second is reported. -/
 theorem declared_cases :
-    ownWorks.mismatches record [ownWorksStrawMan] = [] ∧
-      ownWorks.mismatches record [.strawMan [(.heldBy .trent worksSuffice, [])]] =
+    ownWorks.mismatches record [] [ownWorksStrawMan] = [] ∧
+      ownWorks.mismatches record [] [.strawMan [(.heldBy .trent worksSuffice, [])]] =
         [.differs (.strawMan [(.heldBy .trent worksSuffice, [])]) ownWorksStrawMan] ∧
-      meritAnswered.mismatches record [ownWorksStrawMan] = [.absent ownWorksStrawMan] ∧
-      ownWorks.mismatches record [] = [.undeclared ownWorksStrawMan] ∧
-      ownWorks.mismatches record [ownWorksStrawMan, ownWorksStrawMan] =
+      meritAnswered.mismatches record [] [ownWorksStrawMan] = [.absent ownWorksStrawMan] ∧
+      ownWorks.mismatches record [] [] = [.undeclared ownWorksStrawMan] ∧
+      ownWorks.mismatches record [] [ownWorksStrawMan, ownWorksStrawMan] =
         [.twice ownWorksStrawMan] := by
   decide
 

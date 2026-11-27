@@ -128,7 +128,7 @@ ground almost word for word, the
 Father "the sole Trinitarian Cause (Aitia) or principle (principium) of the Son
 and the Holy Spirit", and still confesses the Father, "with the Son, the single
 principle from which the Spirit proceeds". It does so by distinguishing two
-senses of "proceed": the Greek ἐκπόρευσις, origin from the Father alone, and
+senses of "proceed": the Greek ἐκπόρευσις ("procession"), origin from the Father alone, and
 the Latin *processio*, which may be from the Son. -/
 def onTheMonarchy : Source :=
   { primary := .work tannerDecrees florenceOnTheProcession

@@ -4,11 +4,11 @@ import Testimony.Logic.Tactic
 /-!
 # TestimonyArguments.BornOfAVirgin.Results.Wegner — was the woman already pregnant?
 
-Paul Wegner does not merely say that עַלְמָה means "young woman". He makes an
-argument from Isaiah's grammar. The word translated "shall conceive", הָרָה, is
+Paul Wegner does not merely say that עַלְמָה ("virgin" or "young woman") means "young woman". He
+makes an argument from Isaiah's grammar. The word translated "shall conceive", הָרָה, is
 an adjective, "pregnant", and it stands as the predicate of the clause: it says
-what the woman *is*. So the clause reads "the עַלְמָה *is* pregnant", already,
-when the sign is given. A pregnant woman is not a virgin, and since this is the
+what the woman *is*. So the clause reads "the עַלְמָה [virgin or young woman] *is* pregnant",
+already, when the sign is given. A pregnant woman is not a virgin, and since this is the
 one clear case in Isaiah, it settles what the word means there. The argument is
 encoded at full strength first, with every premise it needs granted, and it is
 valid (`wegner_establishes`), because a rival worth answering has to be stated
@@ -30,8 +30,8 @@ turned back against the predictive reading, as the critical case turns it. So
 the two legs close into a circle. The pregnancy is ordinary because Isaiah
 foretells no virgin birth, and Isaiah foretells none because the word does not
 mean a virgin. Postell names it: "because Wegner rejects the messianic
-interpretation on grammatical-historical grounds, he assumes that עַלְמָה cannot
-mean 'virgin' in Isaiah 7:14" (468 n. 22).
+interpretation on grammatical-historical grounds, he assumes that עַלְמָה [virgin or young woman]
+cannot mean 'virgin' in Isaiah 7:14" (468 n. 22).
 
 Keep every datum no one disputes, and *neither* end of the circle is settled.
 Wegner's conclusion about the word is not established, and it is not refuted
@@ -44,8 +44,8 @@ deny that the ordinary pregnancy comes from the near-term reading this way, and
 argue that the near-term reading stands on the historical evidence alone.
 
 Postell's second reply is independent of the first and survives that defence.
-The other clear עַלְמָה passages Wegner himself lists are cases of virgins, so a
-single referent cannot be what settles the word's sense: the same principle
+The other clear עַלְמָה ("virgin" or "young woman") passages Wegner himself lists are cases of
+virgins, so a single referent cannot be what settles the word's sense: the same principle
 would settle it the other way (`usage_parity_blocks_wegner`). That premise is
 rated `plausible`, not `wellSupported`, because Postell's "in fact virgins" is
 stronger than Wegner's own discussion of Song of Songs 6:8.
@@ -81,8 +81,8 @@ theorem wegner_establishes : Establishes wegnerLexical := by
 
 #print axioms wegner_establishes
 
-/-- Rydelnik's reading, written down: הָרָה is the predicate adjective Wegner
-says it is, and what it announces is the miracle rather than an ordinary
+/-- Rydelnik's reading, written down: הָרָה ("with child" or "pregnant") is the predicate adjective
+Wegner says it is, and what it announces is the miracle rather than an ordinary
 conception — the virgin is pregnant, a sign as deep as Sheol. -/
 def rydelnikReading : Valuation Claim := fun a =>
   match a with
@@ -104,8 +104,8 @@ theorem wegner_needs_ordinary_pregnancy : ¬ Establishes wegnerWithoutOrdinaryPr
 
 #print axioms wegner_needs_ordinary_pregnancy
 
-/-- Wegner's own conclusion granted: עַלְמָה does not denote a virgin, and
-Isaiah 7:14 is not a prediction of a virgin birth. The same two legs of the
+/-- Wegner's own conclusion granted: עַלְמָה ("virgin" or "young woman") does not denote a virgin,
+and Isaiah 7:14 is not a prediction of a virgin birth. The same two legs of the
 circle are satisfied on this reading as on the one below — the first because
 its antecedent fails, the second because its consequent holds — which is what
 makes the circle silent in *both* directions rather than merely unhelpful in
@@ -122,8 +122,8 @@ def wegnerConclusionGrantedReading : Valuation Claim := fun a =>
   | _ => True
 
 /-- The reading that exhibits the circle: the predictive reading of Isaiah 7:14
-stands, עַלְמָה may denote a virgin, and the pregnancy the sign announces is not
-an ordinary one. Every uncontested datum in Wegner's case is granted — the
+stands, עַלְמָה ("virgin" or "young woman") may denote a virgin, and the pregnancy the sign
+announces is not an ordinary one. Every uncontested datum in Wegner's case is granted — the
 parse, the near-term setting, the referent principle — and the two legs of the
 circle are satisfied because each is an implication whose antecedent fails. -/
 def circleUngroundedReading : Valuation Claim := fun a =>
@@ -174,8 +174,8 @@ theorem circle_leaves_the_denial_open :
 
 #print axioms circle_leaves_the_denial_open
 
-/-- Postell's usage reading, written down: the עַלְמָה of Isaiah 7:14 is granted
-to be no virgin, and a single referent still does not settle what the word
+/-- Postell's usage reading, written down: the עַלְמָה ("virgin" or "young woman") of Isaiah 7:14 is
+granted to be no virgin, and a single referent still does not settle what the word
 denotes — because the other clear cases would settle it the other way. -/
 def usageParityReading : Valuation Claim := fun a =>
   match a with
@@ -221,9 +221,9 @@ Wegner's ordinary pregnancy (`reply_leaves_the_pregnancy_open`).
 The chapter goes on to weigh the three: Wegner, the fathers and the reply. -/
 
 /-- The fathers' sign, with the word left to the lexicon: the pregnancy of 7:14
-is no ordinary one, and עַלְמָה still does not denote a virgin. It is the
-referential reading's world, in which Mary is an עַלְמָה without the word
-carrying the sense. Every premise of Wegner's objection under the sign argument
+is no ordinary one, and עַלְמָה ("virgin" or "young woman") still does not denote a virgin. It is
+the referential reading's world, in which Mary is an עַלְמָה ("virgin" or "young woman") without the
+word carrying the sense. Every premise of Wegner's objection under the sign argument
 holds in it, and so does his lexical conclusion. -/
 def referentialSignReading : Valuation Claim := fun a =>
   match a with
@@ -240,8 +240,8 @@ virgin is pregnant, a sign as deep as Sheol. On `referentialSignReading` it
 holds.
 
 So the argument answers the objection where `wegner_needs_ordinary_pregnancy`
-says its weight rests, and does no more. It does not show that עַלְמָה denotes a
-virgin, because it is not about the word at all. -/
+says its weight rests, and does no more. It does not show that עַלְמָה ("virgin" or "young woman")
+denotes a virgin, because it is not about the word at all. -/
 @[headline]
 theorem sign_leaves_the_lexical_conclusion_open :
     Independent wegnerUnderTheSign.premises (notP .almahMeansVirgin) := by
@@ -251,8 +251,8 @@ theorem sign_leaves_the_lexical_conclusion_open :
 #print axioms sign_leaves_the_lexical_conclusion_open
 
 /-- The near-term reading of the sign, in Wegner's world: a sign need not be a
-miracle, the pregnancy is an ordinary one, עַלְמָה does not denote a virgin, and
-nor, in the Septuagint's day, did παρθένος. -/
+miracle, the pregnancy is an ordinary one, עַלְמָה ("virgin" or "young woman") does not denote a
+virgin, and nor, in the Septuagint's day, did παρθένος ("virgin" or "young woman"). -/
 def nearTermSignReading : Valuation Claim := fun a =>
   match a with
   | .maternalSilenceImpliesNoHumanFather => False

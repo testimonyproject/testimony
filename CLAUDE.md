@@ -154,6 +154,12 @@ Stated as prohibitions on purpose. Each one is enforced by a command.
   checkout the rule asks for. Work there, on that branch, and run
   `lake exe cache get` before the first build.
 
+- **Never print a Greek or Hebrew word without its English.** Rule L13
+  fails on a word in an argument's docstring or label, or on a hand-written
+  page, with none of its renderings from `arguments/TestimonyArguments/Glossary.lean`
+  beside it. A new word goes into the glossary first, each rendering with the
+  translation or lexicon that gives it.
+
 ## Commands, in order
 
 ```sh
@@ -164,7 +170,7 @@ lake build TestimonyTools            # ... and the tools the generators are buil
 lake lint                            # tier 2: Batteries environment linters
 lake exe axiom-audit                 # tier 3: trust base
 scripts/kernel-replay.sh             # tier 3, continued: kernel replay of every module
-python3 scripts/testimony_lint.py    # tier 4: project rules L1-L12
+python3 scripts/testimony_lint.py    # tier 4: project rules L1-L13
 python3 scripts/test_testimony_lint.py   # after touching the linter
 scripts/generate-docs.sh             # every generated page, bibliography and .tex (not committed)
 mdbook build docs                    # docs site, after generating

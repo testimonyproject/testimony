@@ -46,8 +46,9 @@ listed and pinned, or whose meaning postulates come from anywhere but those list
 
 Every argument names its atomic claims in a type of its own. `dikaioIsForensic` is a name with
 a docstring; to the library it is opaque. So it cannot answer the questions a reader asks of the
-whole collection — every claim about δικαιόω, every passage read two ways, the same claim in two
-arguments — and it cannot see an article move from one passage to another under one word.
+whole collection — every claim about δικαιόω ("justify"), every passage read two ways, the same
+claim in two arguments — and it cannot see an article move from one passage to another under one
+word.
 
 A meaning is a term built from the shared vocabulary. Its parts were each added because a claim
 in the library needed them:
@@ -55,7 +56,7 @@ in the library needed them:
 | Part | What it is | Examples |
 |---|---|---|
 | `Voice` | who speaks, writes, holds or reads | Paul, James, Trent, Augustine, the Septuagint |
-| `Lexeme` | a word or fixed phrase, in its own language | δικαιόω, ἔργα νόμου, πίστις, παρθένος |
+| `Lexeme` | a word or fixed phrase, in its own language | δικαιόω ("justify"), ἔργα νόμου ("works of the law"), πίστις ("faith"), παρθένος ("virgin" or "young woman") |
 | `Sense` | what a word can mean, named for what it denotes | a verdict; a virgin; a young woman |
 | `Concept` | what doctrinal claims are about | justification, faith, works, baptism |
 | `Rel` | how one term stands to another | ground of; only means of; includes |
@@ -183,8 +184,8 @@ article to come.
   module, and its meanings, say *justified*.
 - **Senses and concepts overlap, and voices repeat the traditions.** `salvation` and
   `worksOfFaith` are both a sense and a concept; the kinds of faith a word can mean — trust,
-  faith formed by charity, bare assent — are senses of πίστις but not kinds of faith. And the
-  vocabulary's voices name again what `Tradition` already names: the Reformed, Rome, Second
+  faith formed by charity, bare assent — are senses of πίστις ("faith") but not kinds of faith. And
+  the vocabulary's voices name again what `Tradition` already names: the Reformed, Rome, Second
   Temple Judaism.
 
 
@@ -249,7 +250,8 @@ James 2:24 share three words, not one — works, justify and faith — and their
 three the same. The Bible's consistency rules out only that all three agree; it does not choose
 *works* (`consistency_does_not_choose_works`, refuted by the reading on which James uses
 "justify" otherwise, as Moo and Calvin read him). The article does give a reason for its choice —
-Paul's "works *of the law*" — and that reason is weighed where the library weighs ἔργα νόμου.
+Paul's "works *of the law*" — and that reason is weighed where the library weighs ἔργα νόμου ("works
+of the law").
 
 **The argument from the phrase.** *"The phrase 'faith alone' does occur in the New Testament:
 one time, in James 2:24. There the inspired apostle denies that justification is from faith
@@ -313,8 +315,8 @@ critique (`howell_asserts_his_denial`). Trent's denial that works are fruit, not
 one claim on the council's word, so that step stands under the evidence standard and is disputed
 under the tradition standard. The Reformed harmony is held to the same test, and it rests on
 Westminster's word that the fruit texts share their terms, so under the evidence standard neither
-side is heard (`fruit_turns_on_the_standard`). What James's δικαιόω denotes turns on the standard
-in the same way (`james_word_turns_on_the_standard`). `Contested` and
+side is heard (`fruit_turns_on_the_standard`). What James's δικαιόω ("justify") denotes turns on the
+standard in the same way (`james_word_turns_on_the_standard`). `Contested` and
 `DenialAnswered` remain the checks of whether a dissent survives the weighing: the Howell hearing
 shows one that does not (`faithDenialAnswered`), the James dispute one that does
 (`worksContested`).
@@ -333,10 +335,10 @@ For James, four things are missing.
    Each can be defended and neither is forced. The first meets the argument from James's word,
    and the two part at whether James uses the word as it is used outside Paul
    (`james_word_contested`). The second meets the Reformed harmony.
-2. **The question splits by word and by verse.** What δικαιόω denotes at 2:21, 2:24 and 2:25;
-   what πίστις denotes at 2:14, 2:17, 2:19 and 2:24; and whether each keeps its sense through
-   the paragraph. The grammar can now state each as its own claim, and `sameSense` the claim that
-   one word means the same at two verses.
+2. **The question splits by word and by verse.** What δικαιόω ("justify") denotes at 2:21, 2:24 and
+   2:25; what πίστις ("faith") denotes at 2:14, 2:17, 2:19 and 2:24; and whether each keeps its
+   sense through the paragraph. The grammar can now state each as its own claim, and `sameSense` the
+   claim that one word means the same at two verses.
 3. **Evidence that discriminates between the readings**, each a cited premise:
    - 2:14 asks whether "*the* faith" can save — the faith just described, said and not shown. The
      article is in the Greek; that it points back is a reading, to be rated.
@@ -344,8 +346,8 @@ For James, four things are missing.
      says this fulfilled Genesis 15:6, said of him years before. That one justification follows
      the other is in the texts; whether "justify" then means a second verdict, a showing, or an
      increase is where the readings part.
-   - 2:18, "show me your faith", and the uses of δικαιόω elsewhere for being shown to be in the
-     right (to be verified against a lexicon before any is cited).
+   - 2:18, "show me your faith", and the uses of δικαιόω ("justify") elsewhere for being shown to be
+     in the right (to be verified against a lexicon before any is cited).
 4. **Ratings audited, not assumed.** Each step stays `disputed` until the rating auditor finds
    no cited reader who grants its grounds and denies its conclusion. If every step on both sides
    stays `disputed`, the solver will report that James is contested — as it now does — and the
@@ -387,8 +389,8 @@ words mean and what the shared definitions commit a reader to. None of them retu
 - **Equivocation.** A word *used* at two places — inside what a text says, what a reader held,
   what is held to be so — must keep its sense between them if the move sets one against the
   other. A word only *talked about*, in a claim of what it means, need not: a survey of what
-  δικαιόω means in Matthew and in Deuteronomy needs the two no more alike than a dictionary
-  needs its entries alike. For each word the move needs the same, it either says so
+  δικαιόω ("justify") means in Matthew and in Deuteronomy needs the two no more alike than a
+  dictionary needs its entries alike. For each word the move needs the same, it either says so
   (*granted*), gives the word different senses at the two places itself (*read apart*, an
   equivocation on its own terms), or says nothing (*unstated*, and the move is conditional on
   it).
@@ -440,8 +442,8 @@ or every argument from silence a fallacy, is a debater's reflex written down.
 a near miss it must pass over, and runs `#check_fallacies` over an argument of its own whose
 lines equivocate and argue from silence alone, with the refusal pinned. The first near miss
 came from the library: the check's first version flagged sola fide's line on James's word,
-which gathers what δικαιόω means in Matthew and Deuteronomy, until it learned to tell a word
-used from a word talked about.
+which gathers what δικαιόω ("justify") means in Matthew and Deuteronomy, until it learned to tell a
+word used from a word talked about.
 
 **What the checks needed from the ontology.** The lookup of who denies a premise compares
 meanings under the shared definitions, and those did not know that "the same sense" runs both

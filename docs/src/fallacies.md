@@ -22,6 +22,7 @@ how they are spelled.
 | Charge | The question the check asks | Where it is | State |
 |---|---|---|---|
 | Equivocation | does the move give a word two senses where it needs one? | `Move.equivocation` | built |
+| Univocality | does the move need a word in one sense where a cited reading gives it another? | `Move.univocal` | built |
 | Word shift | does the move read one word by a kindred one without saying so? | `Move.unbridged` | built |
 | Begging the question | does a premise already assert the conclusion? | `Move.begsAgainst` | built |
 | Circular reasoning | does a chain of moves come back to where it began? | `circular` | built |
@@ -186,6 +187,57 @@ line on James's word, which gathers the senses of δικαιόω outside Paul, a
 was not one, and the check now tells a word used from a word talked about. `equivocation_cases`
 pins all seven results.
 
+## Univocality
+
+Equivocation reads one word two ways where the argument needs one. Univocality is the opposite
+mistake. It takes a word to mean the same wherever it is used, so that what the word means in one
+sentence settles what it means in another. James Barr argued against the habit in *The
+Semantics of Biblical Language*, and Moisés Silva after him in *Biblical Words and Their
+Meaning*: a word's sense is fixed by the sentence it stands in. "Justify" (δικαιόω) in James 2:24
+need not mean what it means in Romans 3:28, and an argument that sets the two verses against
+each other has to show that it does.
+
+The equivocation check cannot see this. A move that says nothing of the senses, or that states
+in a premise that the word is the same at both places, gives the check nothing to read apart, so
+it is reported as conditional or as granted and is never charged. The univocality check holds
+the move against the argument's record instead, as the straw-man check does. For each word the
+move needs to keep its sense between places, it looks for a claim of the argument, a reading cited
+to a reader or marked as the library's own, that gives the word at one of those places a sense
+which nothing gives it at the others: neither the move's premises nor any other reading in the
+record. What the move concludes a word means is not counted, because a move that carries Paul's
+sense over to James, against a reader of Paul, is disputing Paul's sense. If the move does not
+answer that reading by denying it, the move **reads univocally**, and the check names the
+readings it left standing (`Move.univocal`).
+
+Two things decide where a reading bears. A reading of one passage bears on every passage it
+overlaps. A reading of a word throughout an author's usage bears on each passage of a book that
+author wrote. The vocabulary names some voices by their books, as James is "the author of the
+letter", and for the rest the argument's own record must say who wrote what, as it says that
+Paul wrote Titus. So a reading of Paul's usage does not yet bear on Romans 6:7 unless the
+argument says Paul wrote Romans.
+
+A reading that makes the word one in both places is no charge against the move. A reader who
+takes "justify" to mean "make righteous" in Paul and in James alike disputes the sense, not the
+sameness, and the dispute weighs that elsewhere. Neither is a survey: a move that gathers what
+the word means in Matthew 11:19 and Deuteronomy 25:1 to say what it does not mean in James needs
+James's word to share a sense with one of them, not with both, and a reading of James as "show
+to be righteous" gives it Matthew's.
+
+**Caught.** Set Romans 3:28 against James 2:24 with a premise that "justify" is the same in
+both (`setAgainst`), or without one (`setAgainstSilently`), against a record that reads the word
+as "show to be righteous" in James and as a verdict in Paul. Each reading gives the word a sense
+the other letter is never given, and the move answers neither, so the check names both.
+
+**Passed over.** The same move with a premise denying that "justify" in James 2:24 means "show
+to be righteous" (`jamesAnswered`) has answered that reading; whether the denial is right is for
+the dispute to weigh. Against a record whose only reading gives the word one sense in both
+letters, nothing is charged. `univocality_cases` pins these, with the survey and the move that
+reads "faith" two ways, which is the equivocation check's.
+
+A step of the library's own that reads a word univocally fails the build, as a straw man does. A
+reader's step that does it may declare the finding beside the step, and the declaration is then
+checked both ways, like every other.
+
 ## A word read by a kindred one
 
 Equivocation is one word in two senses. Its neighbour is two words read as one. A verb and its
@@ -331,10 +383,10 @@ until it is written in that form.
 ## Misreading the original
 
 An argument can rest on what the original says, and the original can say otherwise. "The one
-who supplies the Spirit to you and works miracles among you" in Galatians 3:5 is ὁ ἐνεργῶν, an
-active participle: the one who works. A reading that made him the one worked on, because the
-verb is passive, would misread the Greek, and the letters of the word show it, since an active
-form is spelled as no passive is.
+who supplies the Spirit to you and works miracles among you" in Galatians 3:5 is ὁ ἐνεργῶν
+("works"), an active participle: the one who works. A reading that made him the one worked on,
+because the verb is passive, would misread the Greek, and the letters of the word show it, since an
+active form is spelled as no passive is.
 
 A claim of that kind is about the text's grammar, and the library holds the grammar as data:
 every word of the imported books of the Greek New Testament, with its parsing
@@ -350,14 +402,14 @@ and on a claim cited `refuted` that the spelling does not contradict.
 Where the spelling allows two voices, the data's tag is an interpretation. In the present the
 middle and the passive are spelled alike, so MACULA's "middle" for ἐνεργουμένη, "working", in
 Galatians 5:6 is its editors' reading of how Paul uses the verb. J. B. Lightfoot read it the
-same way: "ἐνεργεῖσθαι is never passive in St Paul". J. Armitage Robinson, answering Lightfoot by
-name, read it passive, "faith is made operative through love", with God the one who makes it so
-(*St Paul's Epistle to the Ephesians*, 1903, p. 246), and so had Robert Bellarmine before him.
-The spelling charges nothing there. The reading is a reader's claim, cited and rated like any
-other, and what a reader concludes from it about who does the work is weighed against Paul's
-other uses of the verb, as the next section explains.
+same way: "ἐνεργεῖσθαι [to be effective] is never passive in St Paul". J. Armitage Robinson,
+answering Lightfoot by name, read it passive, "faith is made operative through love", with God the
+one who makes it so (*St Paul's Epistle to the Ephesians*, 1903, p. 246), and so had Robert
+Bellarmine before him. The spelling charges nothing there. The reading is a reader's claim, cited
+and rated like any other, and what a reader concludes from it about who does the work is weighed
+against Paul's other uses of the verb, as the next section explains.
 
-**Caught.** A move from the claim that ὁ ἐνεργῶν in Galatians 3:5 is passive
+**Caught.** A move from the claim that ὁ ἐνεργῶν ("works") in Galatians 3:5 is passive
 (`fromThePassiveOfAnActive`), one from the denial that it is active (`denyingTheActive`), and one
 from the claim that ἐνεργουμένη in Galatians 5:6 is active (`fromTheActive`). **Passed over.** A
 move from the claim that ἐνεργουμένη is passive (`fromThePassive`), and one from the claim that
@@ -371,8 +423,8 @@ sense is hard. The Westminster Confession states the rule: "The infallible rule 
 interpretation of Scripture is the Scripture itself", and where the sense of a place is in
 question "it must be searched and known by other places that speak more clearly" (1.9).
 
-The library holds one such usage as data. `greek_usage` reads every use of ἐνεργέω, "to work",
-in the thirteen letters that bear Paul's name, and MACULA's analysis of each clause gives who
+The library holds one such usage as data. `greek_usage` reads every use of ἐνεργέω ("work"), "to
+work", in the thirteen letters that bear Paul's name, and MACULA's analysis of each clause gives who
 or what does the work there (`Token.actors`). Ten of the eighteen uses are spelled so that only
 the active is possible, and in nine of those the text names who is at work: God, the one
 Spirit, "the spirit that is now at work in the sons of disobedience" (Ephesians 2:2), and the
@@ -384,14 +436,14 @@ it (`Move.againstUsages`). The charge fails the build unless the line declares i
 is rated `refuted`, the rating the library gives only where it computes it from Scripture's
 own words.
 
-Robert Bellarmine read ἐνεργουμένη in Galatians 5:6 as passive, "moved and acted upon", with
-love the one that moves faith, and the Rheims New Testament of 1582 made charity faith's soul.
-Both make love the one at work, which Paul never does, and both are charged. J. Armitage
-Robinson read the same passive with God as the one at work, and he is not.
+Robert Bellarmine read ἐνεργουμένη ("working" or "made operative") in Galatians 5:6 as passive,
+"moved and acted upon", with love the one that moves faith, and the Rheims New Testament of 1582
+made charity faith's soul. Both make love the one at work, which Paul never does, and both are
+charged. J. Armitage Robinson read the same passive with God as the one at work, and he is not.
 
-**Caught.** A move from the passive to love as the one at work in ἐνεργουμένη (`loveAsWorker`).
-**Passed over.** A move from the passive to God as the one at work (`godAsWorker`), and one from
-the middle (`fromTheMiddle`).
+**Caught.** A move from the passive to love as the one at work in ἐνεργουμένη ("working" or "made
+operative") (`loveAsWorker`). **Passed over.** A move from the passive to God as the one at work
+(`godAsWorker`), and one from the middle (`fromTheMiddle`).
 
 ## Reversed cause and effect
 
@@ -504,16 +556,16 @@ are not a way of finding fault with it. A verse enters a move only as a premise,
 verse says, and the checks read moves, never premises. A move is someone's reasoning from the
 texts: Trent's, Calvin's, Moo's, or a line the library proposes. Every line of reason cites who
 draws its step, and every finding names that reader, so the report says "Schreiner's line needs
-δικαιόω to keep one sense", never "Paul's".
+δικαιόω [justify] to keep one sense", never "Paul's".
 
 Scripture also reasons. Paul argues in Romans 4:3–5 from Genesis 15:6: "Abraham believed God,
 and it was counted to him as righteousness", so "to the one who does not work but believes …
 his faith is counted as righteousness". A line that sets out such reasoning cites its step to
-Scripture itself, and it is never charged. If it needs "counted" (λογίζομαι) to keep one sense
-from Genesis to Romans, that is reported as what a reader must hold to follow the text, apart
-from the findings against readers. If the encoding of such a line would read a word two ways or
-argue from silence alone, the build still fails, and the fault is the encoding's: it has read
-the text wrongly. The case `FallacyCases.Scriptural` sets out Paul's reasoning both ways, once
+Scripture itself, and it is never charged. If it needs "counted" (λογίζομαι, "credit" or "count") to
+keep one sense from Genesis to Romans, that is reported as what a reader must hold to follow the
+text, apart from the findings against readers. If the encoding of such a line would read a word two
+ways or argue from silence alone, the build still fails, and the fault is the encoding's: it has
+read the text wrongly. The case `FallacyCases.Scriptural` sets out Paul's reasoning both ways, once
 cited to Scripture and once as a reader's line, and pins how each is reported.
 
 ## Checking your own lines

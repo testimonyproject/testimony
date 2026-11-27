@@ -256,7 +256,7 @@ inductive Claim
   | john10_35ScriptureCannotBeBroken
   /-- Matthew 5:18 — "until heaven and earth pass away, not the smallest letter
   or stroke shall pass from the Law until all is accomplished". The smallest
-  letter is the iota (ἰῶτα), and the stroke (κεραία) the smallest mark of one.
+  letter is the iota (ἰῶτα, "smallest letter"), and the stroke (κεραία) the smallest mark of one.
   -/
   | matthew5_18LawShallNotPass
   /-- Galatians 1:8–9 — "But even if we, or an angel from heaven, should
@@ -264,7 +264,7 @@ inductive Claim
   him be accursed! As we have said before, so I say again now, if any man is
   proclaiming to you a gospel contrary to what you received, let him be
   accursed!" Paul puts his own later preaching, and an angel's, under the gospel
-  he had already preached. "Contrary to" translates παρ' ὅ, which can also be
+  he had already preached. "Contrary to" translates παρ' ὅ ("contrary to"), which can also be
   rendered "besides" or "other than"; how far it reaches, to any addition or
   only to what is alien, is the point Calvin and Aquinas dispute, and the step's
   rating weighs it. -/
@@ -359,7 +359,7 @@ inductive Claim
   | salutationsApostleAndBrother
   /-- 1 Thessalonians 2:6, with 1:1 — the letter is from "Paul and Silvanus and
   Timothy", and it says "as apostles of Christ we could have been a burden to
-  you" (2:7 in the Greek editions, where "a burden" is ἐν βάρει, "of weight").
+  you" (2:7 in the Greek editions, where "a burden" is ἐν βάρει ("a burden"), "of weight").
   Whether "apostles" here takes in Silvanus and Timothy the text does not
   settle. Calvin takes it of Paul, "inasmuch as he was an Apostle of Christ";
   Coppieters, in the *Catholic Encyclopedia*, lists the verse among the passages

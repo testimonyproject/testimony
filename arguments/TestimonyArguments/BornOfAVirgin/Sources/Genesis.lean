@@ -133,8 +133,8 @@ def womanNamedForTheDeceptionCited : AtomMeta :=
       , confidence := .wellSupported } }
 
 /-- `womansSeedSaidOfOrdinaryBirths`. What the Hebrew reads: the angel promises
-Hagar that her seed, זַרְעֵךְ, will be multiplied (Genesis 16:10), and Rebekah's
-family blesses her seed, זַרְעֵךְ, to possess the gate of its enemies (24:60).
+Hagar that her seed, זַרְעֵךְ ("your seed"), will be multiplied (Genesis 16:10), and Rebekah's
+family blesses her seed, זַרְעֵךְ ("your seed"), to possess the gate of its enemies (24:60).
 Each seed has a father named, Abraham and Isaac. Lewis: "While it is normal in
 Hebrew to describe descendants by the noun zeraʿ, it is unusual (though not
 unique) to use the term with a feminine possessive pronoun" (299). Scripture
@@ -150,12 +150,13 @@ def womansSeedSaidOfOrdinaryBirthsCited : AtomMeta :=
 
 /-- `lxxCallsTheSeedHe`. What the Greek reads, from Rahlfs's text: καὶ ἀνὰ μέσον
 τοῦ σπέρματος αὐτῆς· αὐτός σου τηρήσει κεφαλήν, "and between her seed: he will
-watch for your head". The pronoun αὐτός is masculine, and σπέρμα is neuter.
-Collins: "The mismatch in gender between pronoun and antecedent is held to be
+watch for your head". The pronoun αὐτός ("he") is masculine, and σπέρμα ("seed" or "offspring") is
+neuter. Collins: "The mismatch in gender between pronoun and antecedent is held to be
 evidence that the LXX translator saw this as a prophecy of a specific
 individual" (141). `consensus`: no one denies the reading. -/
 def lxxCallsTheSeedHeCited : AtomMeta :=
-  { label := "The Greek of Genesis 3:15 calls the woman's seed 'he', though σπέρμα is neuter"
+  { label := ("The Greek of Genesis 3:15 calls the woman's seed 'he', though σπέρμα (“seed” \
+      or “offspring”) is neuter")
   , kind := .textual
   , source :=
       { primary := .scripture [verseIn .septuagint genesis3_15]
@@ -169,8 +170,9 @@ that an individual was promised" (145). The reading "is generally acknowledged"
 (141), and Martin's article is its usual citation: as Collins quotes him, Martin
 calls the Greek "the earliest evidence of an individual messianic
 interpretation" (Collins 141 n. 4). Elsewhere the Greek translators use a
-masculine pronoun after the neuter σπέρμα when one person is meant: αὐτόν at 1
-Samuel 1:11, and ὅς, αὐτός and αὐτόν at 2 Samuel 7:12–14 (Collins 144).
+masculine pronoun after the neuter σπέρμα ("seed" or "offspring") when one person is meant: αὐτόν
+("him") at 1 Samuel 1:11, and ὅς ("who"), αὐτός ("he") and αὐτόν at 2 Samuel 7:12–14
+(Collins 144).
 
 `disputed`, on Philo, the earliest known reader of this Greek. He grants that
 it says "he", and reads it as a "barbarism" that is correct in meaning, of the
@@ -202,7 +204,7 @@ What the New Testament says, cited to its text: each is a claim about what a
 passage reads, and none about what it means for Genesis. -/
 
 /-- `serpentNamedTheDevil`. "The serpent of old who is called the devil and
-Satan" (Revelation 12:9, LSB; again at 20:2): ὁ ὄφις ὁ ἀρχαῖος. Collins gives
+Satan" (Revelation 12:9, LSB; again at 20:2): ὁ ὄφις ὁ ἀρχαῖος ("the serpent of old"). Collins gives
 these, with John 8:44, as the New Testament's identification of the serpent (147
 n. 21). `consensus`: it is what the text reads. -/
 def serpentNamedTheDevilCited : AtomMeta :=
@@ -330,7 +332,8 @@ parallel (145), Genesis 21:13, 38:9 and 1 Samuel 1:11. Keil grants it: "the
 posterity of a man may consist of a whole tribe or of one son only" (101); so
 does Leupold (168). `consensus`: no reader found denies the readings. -/
 def seedUsedOfOneDescendantCited : AtomMeta :=
-  { label := "Elsewhere זֶרַע with singular verbs and pronouns denotes one descendant"
+  { label := ("Elsewhere זֶרַע (“seed” or “offspring”) with singular verbs and pronouns \
+      denotes one descendant")
   , kind := .textual
   , source :=
       { primary := .work collinsSyntacticalNote (.pages 144 145)

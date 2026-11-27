@@ -59,6 +59,10 @@ inductive Finding (α : Type)
   (`Move.conditionalOn`). A condition, not a fault: declared, it is checked like
   the others, and undeclared it is only reported. -/
   | conditionalOn (words : List Lexeme)
+  /-- The step needs each of these words to keep one sense where the listed
+  claims of the argument's readings give it another, and answers none of them
+  (`Move.univocal`). -/
+  | univocal (readings : List (Lexeme × List α))
 deriving DecidableEq, Repr
 
 namespace Finding
@@ -74,6 +78,7 @@ def kind : Finding α → String
   | .againstUsage _ => "reading against the author's usage"
   | .reversesCause _ => "reversal of cause and effect"
   | .conditionalOn _ => "a word's sense kept, unstated"
+  | .univocal _ => "univocality"
 
 /-- Whether two findings are of one kind, whatever their witnesses. -/
 def sameKind : Finding α → Finding α → Bool
@@ -84,6 +89,7 @@ def sameKind : Finding α → Finding α → Bool
   | .againstUsage _, .againstUsage _ => true
   | .reversesCause _, .reversesCause _ => true
   | .conditionalOn _, .conditionalOn _ => true
+  | .univocal _, .univocal _ => true
   | _, _ => false
 
 /-- Whether the finding has no witness: nothing was found. -/
@@ -95,6 +101,7 @@ def isEmpty : Finding α → Bool
   | .againstUsage rs => rs.isEmpty
   | .reversesCause ps => ps.isEmpty
   | .conditionalOn ws => ws.isEmpty
+  | .univocal rs => rs.isEmpty
 
 end Finding
 
@@ -112,11 +119,13 @@ deriving DecidableEq, Repr
 
 namespace Move
 
-variable {α : Type} [HasMeanings α]
+variable {α : Type} [HasMeanings α] [DecidableEq α]
 
 /-- **What the checks find of one kind in a move**, as a finding of that kind:
-the witness the move has, where `record` is the argument's record of each voice. -/
-def found (record : Voice → List α) (m : Move) : Finding α → Finding α
+the witness the move has, where `record` is the argument's record of each voice
+and `readings` its claims, read for what they say a word means. -/
+def found (record : Voice → List α) (readings : List α) (m : Move) :
+    Finding α → Finding α
   | .equivocates _ => .equivocates m.equivocates
   | .fromSilence _ => .fromSilence m.fromSilenceAlone
   | .strawMan _ => .strawMan (m.strawMen record)
@@ -124,32 +133,32 @@ def found (record : Voice → List α) (m : Move) : Finding α → Finding α
   | .againstUsage _ => .againstUsage m.againstUsages
   | .reversesCause _ => .reversesCause m.reversals
   | .conditionalOn _ => .conditionalOn m.conditionalOn
+  | .univocal _ => .univocal (m.univocal readings)
 
 /-- **The faults the checks find in a move**: equivocation, arguing from silence
 alone, answering a straw man, misreading the original, reading against the
-author's usage and reversing cause and effect, each with its witness, those found
-only. A
-step of the library's own that commits any of them fails the build. -/
-def faults (record : Voice → List α) (m : Move) : List (Finding α) :=
+author's usage, reversing cause and effect and reading a word univocally against
+a reading left unanswered, each with its witness, those found only. A step of the
+library's own that commits any of them fails the build. -/
+def faults (record : Voice → List α) (readings : List α) (m : Move) : List (Finding α) :=
   [ .equivocates m.equivocates, .fromSilence m.fromSilenceAlone
   , .strawMan (m.strawMen record), .misreadsOriginal m.misreadings
-  , .againstUsage m.againstUsages, .reversesCause m.reversals ].filter (!·.isEmpty)
-
-variable [DecidableEq α]
+  , .againstUsage m.againstUsages, .reversesCause m.reversals
+  , .univocal (m.univocal readings) ].filter (!·.isEmpty)
 
 /-- **Every way a move's declarations fail to match what the checks find**:
 each declaration found absent or with another witness, each kind declared twice,
 and each fault found that no declaration names. Empty when every declaration is
 borne out exactly and every fault is declared. -/
-def mismatches (record : Voice → List α) (expected : List (Finding α)) (m : Move) :
-    List (Mismatch α) :=
+def mismatches (record : Voice → List α) (readings : List α) (expected : List (Finding α))
+    (m : Move) : List (Mismatch α) :=
   let checked := expected.map fun d =>
-    let f := m.found record d
+    let f := m.found record readings d
     if f.isEmpty then some (Mismatch.absent d) else if f = d then none
     else some (.differs d f)
   let twice := (expected.zipIdx.filter fun (d, i) =>
     (expected.take i).any (·.sameKind d)).map fun (d, _) => Mismatch.twice d
-  let undeclared := (m.faults record).filter (fun f => !expected.any (·.sameKind f))
+  let undeclared := (m.faults record readings).filter (fun f => !expected.any (·.sameKind f))
     |>.map Mismatch.undeclared
   checked.filterMap id ++ twice ++ undeclared
 

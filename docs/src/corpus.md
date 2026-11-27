@@ -44,7 +44,7 @@ as readings are.
   library cites them as theirs, and a dispute over a parsing is argued like any
   other.
 - **A role is given only to a word that is a whole constituent.** In John 1:1c,
-  θεός on its own is the predicate and carries the role `p`; the subject is the
+  θεός ("God") on its own is the predicate and carries the role `p`; the subject is the
   phrase "ὁ λόγος", "the Word", and the word table leaves the role blank on both
   its words, because the role belongs to the phrase.
 

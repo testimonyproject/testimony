@@ -756,6 +756,98 @@ def readingWords [DecidableEq α] (n : Numbering α) (truth : List (α × Bool))
         "  \\item[] " ++ claimWords n cite a false ++ "\n")) ++
       "\\noindent " ++ rest ++ "\n"
 
+/-- **A citation function in words.** A function from claims to their
+citations is, set as Lean, a `match` that runs to pages, and its signature alone
+says nothing. In words it is what it cites differently from the table of
+numbered claims: each such claim on the page with its variable, linked, its
+words, what kind of claim it is, how firmly it is held and its references; and
+then that it cites every other claim on the page as the table does. A function
+that cites every claim as the table does says so, and on a page with no table
+every claim on the page is listed. A claim the page never mentions is left out,
+since nothing on the page turns on it. -/
+def citationWords [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) : String :=
+  let row (a : α) : String :=
+    "  \\item[] " ++ claimWords n cite a false ++
+      "\\gloss{" ++ kind (cite a).kind ++ "; " ++ confidence (cite a).source.confidence ++
+      ": " ++ source (cite a).source ++ "}\n"
+  match n.cite with
+  | none =>
+    if n.order.isEmpty then ""
+    else
+      "\\par\\smallskip\\noindent It cites each claim on this page so:\n" ++
+      rows (String.join (n.order.map row))
+  | some legendCite =>
+    match Page.citedOtherwise n.order legendCite cite with
+    | [] =>
+      "\\par\\smallskip\\noindent It cites every claim on this page as the table of " ++
+        "numbered claims does.\n"
+    | differs =>
+      "\\par\\smallskip\\noindent It cites these claims otherwise than the table of " ++
+        "numbered claims does:\n" ++
+      rows (String.join (differs.map (row ·.1))) ++
+      "\\noindent Every other claim on this page it cites as the table does.\n"
+
+/-- Names set as a list, each in italics. -/
+def nameList (names : List String) : String :=
+  rows (String.join (names.map fun x => "  \\item[] \\emph{" ++ escape x ++ "}\n"))
+
+/-- **A position made from a line, in words**: the line it argues, by name, and
+the conclusion it reaches, so the grounds and the step are set out once, at the
+line. -/
+def fromLineWords [DecidableEq α] (n : Numbering α) (line : String) (pkg : ArgumentPackage α) :
+    String :=
+  "\\par\\smallskip\\noindent It argues the line \\texttt{" ++ codeEscape line ++
+    "}, set out above, as it stands: the same grounds and the same step, to the same " ++
+    "conclusion.\n" ++
+  rows (row n "\\item[\\(\\vdash\\)]" pkg.conclusion
+    (n.cite.bind fun cite => inWords n cite .atIssue pkg.conclusion))
+
+/-- **A refutation in words**: the claim struck, what the text reads, and the
+text's citation. -/
+def refutationWords [DecidableEq α] (n : Numbering α) (a : α) (reads : String) (s : Source) :
+    String :=
+  "\\par\\smallskip\\noindent The claim struck: " ++
+    (match n.cite with
+     | some cite => claimWords n cite a false
+     | none => "") ++
+    ". What the text reads: " ++ escape reads ++ "." ++ sourceWords s
+
+/-- **A rule written as a table, in words**: a table with a column for each
+input and one for whether the rule allows the row. -/
+def truthTableWords (inputs : List String) (rowsOf : List (List Bool × Bool)) : String :=
+  let yn (b : Bool) := if b then "true" else "false"
+  "\\par\\smallskip\\noindent The rule, row by row:\n\n" ++
+  "\\begin{tabular}{" ++ String.join (inputs.map fun _ => "l ") ++ "l}\n\\toprule\n" ++
+  String.intercalate " & " (inputs.map escape ++ ["allowed"]) ++ " \\\\\n\\midrule\n" ++
+  String.join (rowsOf.map fun (ins, out) =>
+    String.intercalate " & " (ins.map yn ++ [if out then "yes" else "no"]) ++ " \\\\\n") ++
+  "\\bottomrule\n\\end{tabular}\n\n"
+
+/-- **A reading of a passage, in words**: the passage, how the reading
+construes it, the reading, and who reads it so. -/
+def interpretationWords (i : Interpretation) : String :=
+  "\\par\\smallskip\\noindent " ++ escape i.passage.render ++
+    (match i.asRelation with
+     | some r => ", read as " ++ escape (Page.asRelationWords r)
+     | none => "") ++
+    ": \\emph{" ++ escape i.reading ++ "}." ++ sourceWords i.source
+
+/-- A statement in logic notation, as mathematics: each claim its variable,
+linked to the legend, and each formula as a derivation sets it. -/
+def symTex [DecidableEq α] (n : Numbering α) : Page.Sym α → String
+  | .atom a => varLink n.anchor (n.order.idxOf a)
+  | .formula φ => linked n φ
+  | .tex t => t
+  | .seq ps => String.join (ps.attach.map fun ⟨p, _⟩ => symTex n p)
+
+/-- **A result, stated twice, side by side**: on the left in logic notation, on
+the right in the docstring's English, so a reader who does not read the symbols
+reads the sentence beside them, and one who does can check that the two say the
+same. The columns run on together across a page break. -/
+def stated [DecidableEq α] (n : Numbering α) (st : Page.Sym α) (doc : String) : String :=
+  "\\begin{paracol}{2}\n\\raggedright\\noindent\\(" ++ symTex n st ++ "\\)\n" ++
+  "\\switchcolumn\n" ++ prose doc ++ "\\end{paracol}\n"
+
 /-- Which of a package's premises are readings taken from the text alone
 (`AtomMeta.readsScriptureAlone`), as a note under its derivation; nothing when
 there are none. A quotation of the text is not such a reading, so a package
@@ -957,36 +1049,33 @@ def nested (lines : List (Nat × String)) : String :=
       closes ++ opens ++ "\\item " ++ l ++ "\n" ++ go depth rest
   go 0 lines
 
-/-- What a verdict rests on: how many cells of the table its reasons state,
-which of those defeats a `Because` explains, and every party involved at its
-weakest link. -/
+/-- What a verdict rests on, for a reader: that each reason is an entry of the
+table of who defeats whom, what defeat turns on, every party involved where it
+is weakest, and which defeats a `Because` explains claim by claim. -/
 def restsOn (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) : String :=
-  let defeats := (v.cells.filter (·.2.2)).length
-  let absences := v.cells.length - defeats
-  let count (n : Nat) (one many : String) := toString n ++ " " ++ (if n == 1 then one else many)
   let tableRef := if table.isEmpty then "the defeat table"
-    else "the defeat table, \\texttt{" ++ codeEscape table ++ "}"
+    else "\\texttt{" ++ codeEscape table ++ "}"
   let explained := (v.cells.filterMap fun (a, b, d) =>
     if d then (Page.becauseFor links a b).map (a, b, ·) else none)
   let held (h : Page.Held) : String :=
     "\\item " ++ escape h.what ++ " --- " ++ source h.source ++ "\n"
   let reading (r : Page.Reading) : String :=
     match r.weakest with
-    | [] => "\\item \\emph{" ++ escape r.party ++ "}: no rated premise.\n"
+    | [] => "\\item \\emph{" ++ escape r.party ++ "}: none of its claims is rated.\n"
     | h :: _ =>
-      "\\item \\emph{" ++ escape r.party ++ "}, weakest at \\emph{" ++
-      confidence h.confidence ++ "}:\n\\begin{itemize}\n" ++
+      "\\item \\emph{" ++ escape r.party ++ "}, held as \\emph{" ++
+      confidence h.confidence ++ "} at its weakest, at:\n\\begin{itemize}\n" ++
       String.join (r.weakest.map held) ++ "\\end{itemize}\n"
-  "\\par\\noindent\\textbf{What this rests on.} The reasons state " ++
-  count defeats "defeat" "defeats" ++ " and " ++
-  count absences "absence of defeat" "absences of defeat" ++ ", each a cell of " ++
-  tableRef ++ ", computed from the two parties' premises and checked by the kernel. " ++
-  "Whether an attack survives turns on the attacker's weakest link and on the rating " ++
-  "of what it attacks, so a changed rating can change the verdict. The weakest links:\n" ++
+  "\\par\\noindent\\textbf{Why.} Each reason above is one entry in the table of who " ++
+  "defeats whom (" ++ tableRef ++ "), worked out from what each position claims and " ++
+  "checked by the computer when the library is built. One position defeats another when " ++
+  "it denies something the other rests on and, where it is weakest, is held at least as " ++
+  "firmly as what it denies; so if a claim were rated differently, the verdict could " ++
+  "change. Where each position is weakest:\n" ++
   "\\begin{itemize}\n" ++ String.join (v.readings.map reading) ++ "\\end{itemize}\n" ++
   String.join (explained.map fun (a, b, d) =>
     "\\noindent Why \\emph{" ++ escape a ++ "} defeats \\emph{" ++ escape b ++
-    "}, at the level of the claims: \\texttt{" ++ codeEscape d ++ "}.\n")
+    "}, claim by claim, is set out at \\texttt{" ++ codeEscape d ++ "}.\n")
 
 /-- A verdict: its claim, its reasons as nested lists, and what they rest on. -/
 def verdict (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) : String :=
@@ -1031,6 +1120,12 @@ def graph (g : Page.Graph) (defeatTable supportTable partTable : String) : Strin
   let name (k : Nat) := "\\emph{" ++ escape (g.nodes.getD k "") ++ "}"
   let ref (t fallback : String) :=
     if t.isEmpty then fallback else "\\texttt{" ++ codeEscape t ++ "}"
+  if g.edges.isEmpty then
+    "\\noindent " ++ Page.Graph.apartWords g (fun nm => "\\emph{" ++ escape nm ++ "}") ++
+    " This is read from the cells of " ++ ref defeatTable "the defeat table" ++ ", " ++
+    ref supportTable "the support table" ++ " and " ++ ref partTable "the part-of table" ++
+    ", each computed from the parties' premises and checked by the kernel.\n"
+  else
   graphTikz g ++
   "\\noindent Solid: defeats. Dashed: supports. Dotted: one party's case is part of " ++
   "another's.\n" ++
@@ -1079,13 +1174,61 @@ def item [DecidableEq α] (n : Numbering α) : Page.Item α → String
   | .source d doc s => declLabel d "" ++ prose doc ++ sourceWords s
   | .claim d doc m => declLabel d "" ++ prose doc ++ claimWords' m
   | .reading d doc truth => declLabel d "" ++ prose doc ++ readingWords n truth
+  | .citation d doc c => declLabel d "" ++ prose doc ++ citationWords n c
+  | .listing d doc lead entries => declLabel d "" ++ prose doc ++
+      (if entries.isEmpty then "" else
+        "\\par\\smallskip\\noindent " ++ escape lead ++ "\n" ++ nameList entries)
+  | .sources d doc ss => declLabel d "" ++ prose doc ++ String.join (ss.map sourceWords)
+  | .said d doc text => declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent " ++ escape text ++ "\n"
+  | .edge d doc e => declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent " ++ escape e.fromPassage.render ++ " " ++
+        escape (Page.relationWords e.relation) ++ " " ++ escape e.toPassage.render ++ "." ++
+        sourceWords e.source
+  | .interpretation d doc crit i => declLabel d (if crit.isEmpty then "" else
+        " --- " ++ escape crit) ++ prose doc ++ interpretationWords i
+  | .dilemmaReading d doc name φ src => declLabel d (" --- " ++ escape name) ++ prose doc ++
+      "\\par\\smallskip\\noindent Read so, the claim commits its holder to:\n" ++
+      rows (row n "\\item[]" φ (loneGloss n φ)) ++ sourceWords src
+  | .truthTable d doc inputs rs => declLabel d "" ++ prose doc ++ truthTableWords inputs rs
+  | .contested d doc holder denier φ => declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent \\emph{" ++ escape holder ++ "} holds this claim, and \\emph{" ++
+        escape denier ++ "} denies it; each can be defended in the dispute:\n" ++
+      rows (row n "\\item[]" φ (loneGloss n φ))
+  | .helper d doc => declLabel d "" ++ prose doc
+  | .fromLine d doc line pkg =>
+      declLabel d (" --- " ++ escape pkg.name) ++ prose doc ++ fromLineWords n line pkg ++
+      scriptureNote n.order pkg
+  | .positions d doc names =>
+      declLabel d "" ++ prose doc ++ nameList names
+  | .dispute d doc names node =>
+      declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent " ++
+      (if node.isEmpty then "It hears these positions, each"
+       else "It hears the positions \\texttt{" ++ codeEscape node ++ "} gives the parties, each") ++
+      " checked when the library is built to be consistent, to reach its conclusion, and to " ++
+      "rest on at least one rated step" ++
+      (if node.isEmpty then ":\n" ++ nameList names else ".\n")
+  | .register d doc assessed steps =>
+      declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent The positions it assesses as dissents:\n" ++
+        nameList assessed ++
+      "\\noindent The steps their dissents are rated against:\n" ++ nameList steps
+  | .refutation d doc a reads s => declLabel d "" ++ prose doc ++ refutationWords n a reads s
+  | .greek d doc place words =>
+      declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent " ++ escape place ++ " in the SBL Greek New Testament: " ++
+        escape (" ".intercalate words) ++ "\n"
+  | .sourceFn d doc s =>
+      declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent Cited to " ++ source s ++
+        ", at whatever rating the place that cites it gives.\n"
   | .other d doc src => declLabel d "" ++ prose doc ++ verbatim src
-  | .result d doc stmt proposed =>
-      declLabel d (if proposed then " \\textsuperscript{(proposed)}" else "") ++
-      prose doc ++ verbatim stmt
+  | .result d doc st proposed =>
+      declLabel d (if proposed then " \\textsuperscript{(proposed)}" else "") ++ stated n st doc
   | .because d doc e => declLabel d "" ++ prose doc ++ explanation n e
   | .dilemma d doc dl => declLabel d "" ++ prose doc ++ dilemma n dl
-  | .burden d doc stmt b => declLabel d "" ++ prose doc ++ verbatim stmt ++ burden b
+  | .burden d doc st b => declLabel d "" ++ stated n st doc ++ burden b
   | .verdict d doc v links table => declLabel d "" ++ prose doc ++ verdict v links table
   | .graph d doc g defeats supports parts =>
       declLabel d "" ++ prose doc ++ graph g defeats supports parts
@@ -1408,6 +1551,9 @@ def style : String :=
   "\\ProvidesPackage{testimony}[Testimony house style, written by the generators]\n" ++
   "\\usepackage{amsmath,amssymb,array,booktabs,longtable,fontspec,xcolor,alltt}\n" ++
   "\\usepackage{tikz}\\usetikzlibrary{arrows.meta}\n" ++
+  "\\usepackage{paracol}\\setcolumnwidth{0.4\\textwidth,0.56\\textwidth}\n" ++
+  -- A light rule between a statement's logic and its words.
+  "\\setlength{\\columnseprule}{0.4pt}\\colseprulecolor{black!25}\n" ++
   "\\usepackage[hidelinks]{hyperref}\n" ++
   -- A variable links to its row in the legend, and is coloured so a reader can
   -- see that it does: `hidelinks` sets every other link as plain text. The blue

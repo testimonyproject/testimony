@@ -52,7 +52,7 @@ Sola fide
 /--
 info: the fallacy checks, over every argument's lines, each named with its reader:
 Sola fide
-  lines: 109, read: 61, Scripture's own: 0
+  lines: 110, read: 62, Scripture's own: 0
   commit what they declare, as declared:
     bellarmineFormedFaithLine (Bellarmine): reading against usage: ἀγάπη at work in ἐνεργουμένη
     bellarminePassiveLine (Bellarmine): reading against usage: ἀγάπη at work in ἐνεργουμένη
@@ -68,10 +68,12 @@ Sola fide
     rheimsSoulLine (English College at Rheims): ἀγάπη at work in ἐνεργουμένη;
         the author's: θεός, εἷς, πνεῦμα, ἀγαπητός
   attribute a view, against the argument's record:
+    hippoLine (Augustine): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
     renewalLine (Augustine): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
     sandersLine (Dunn): secondTempleJudaism, unrecorded
     trentWordLine (Trent): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
   cite a voice for one reading, leaving out another the record has:
+    hippoLine (Augustine): augustine, also verdict in augustineGivesBothSenses
     renewalLine (Augustine): augustine, also verdict in augustineGivesBothSenses
     trentWordLine (Trent): augustine, also verdict in augustineGivesBothSenses
   conclude a word's sense from no use or reading of the word:
@@ -80,19 +82,19 @@ Sola fide
 #guard_msgs in
 #check_fallacies under TestimonyArguments.SolaFide
 
-/-- info: every package has a model with its postulates: 137, and 0 undecided -/
+/-- info: every package has a model with its postulates: 138, and 0 undecided -/
 #guard_msgs in
 #check_postulates under TestimonyArguments.SolaFide
 
 /--
-info: every reading and step has a reader or is marked proposed: 137 packages, 109 lines
+info: every reading and step has a reader or is marked proposed: 138 packages, 110 lines
 -/
 #guard_msgs in
 #check_readers under TestimonyArguments.SolaFide
 
 /--
 info: every claim resting where the copies differ takes a reading, rated no higher:
-137 packages, 102 claims citing Scripture, 0 naming the edition they read
+138 packages, 102 claims citing Scripture, 0 naming the edition they read
 -/
 #guard_msgs in
 #check_readings under TestimonyArguments.SolaFide
@@ -114,7 +116,7 @@ historyDispute.finite: 5 I, 2 RA, 2 CA, 0 PA, 9 edges
 jamesDispute.finite: 38 I, 13 RA, 11 CA, 4 PA, 83 edges
 jesusWordsDispute.finite: 27 I, 11 RA, 6 CA, 0 PA, 43 edges
 reformationDispute.finite: 41 I, 20 RA, 11 CA, 0 PA, 83 edges
-reformersAnswerDispute.finite: 14 I, 5 RA, 7 CA, 3 PA, 39 edges
+reformersAnswerDispute.finite: 14 I, 5 RA, 9 CA, 0 PA, 37 edges
 solaFideDispute.finite: 80 I, 36 RA, 42 CA, 0 PA, 196 edges
 trentAnswersDispute.finite: 19 I, 7 RA, 2 CA, 0 PA, 26 edges
 and 3 hearings, drawn with the disputes they restrict

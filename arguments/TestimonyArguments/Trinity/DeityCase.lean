@@ -64,7 +64,7 @@ voices?" Bernard answers both: the two witnesses, he says, are "the Father (the
 divine Spirit) and the man Jesus", and the voice is "only another manifestation of
 the omnipresent Spirit of God". Tertullian's own account comes close to the
 Oneness reading at one point: before creation, he says, the Word was God's "own
-Thought", what "the Greeks call λόγος" (*logos*, "word" or "reason") (ch. 5),
+Thought", what "the Greeks call λόγος [Word]" (*logos*, "word" or "reason") (ch. 5),
 and only at creation a second person (ch. 7). That concession is not encoded.
 
 Arius, the Alexandrian priest who held the Son a creature, read "firstborn of all

@@ -49,7 +49,7 @@ def paulineReadingSource : Source :=
   , confidence := .disputed }
 
 /-- Paul's reading on faith: that it is necessary — "not justified by works of
-the law except through faith" (Galatians 2:16, ἐὰν μή), "the righteous shall
+the law except through faith" (Galatians 2:16, ἐὰν μή, "unless"), "the righteous shall
 live by faith" (3:11) — and sufficient — "to the one who does not work but
 believes … his faith is counted as righteousness" (Romans 4:5). Trent makes the
 first half of it: its chapter 8 reads the Apostle's "justified by faith" as

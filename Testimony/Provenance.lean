@@ -61,7 +61,8 @@ inductive Confidence
   citation carries it exactly where the library computes the refutation, from
   the spelling of the Greek word the claim reads or from its author's use of the
   word elsewhere, and
-  `#check_readers` fails the build wherever the two differ. -/
+  `#check_readers` fails the build wherever the two differ. No step is cited
+  `refuted`: a dispute computes a step's rank from what it concludes. -/
   | refuted
   /-- Actively contested by competent scholars. -/
   | disputed

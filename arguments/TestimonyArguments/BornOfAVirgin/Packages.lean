@@ -11,7 +11,7 @@ written out:
 - **the critical denial**, which grants the texts and denies every inference
   drawn from them;
 - **the objection from the ancient versions**, the Targum's "young woman" and
-  the Three's νεᾶνις, with the referential reply set against it;
+  the Three's νεᾶνις ("young woman" or "girl"), with the referential reply set against it;
 - **Wegner's objection**, at full strength, and in variants that take one of
   its grounds away to ask what supplies it;
 - and the positions in the disputes over the sign, the Septuagint's word and
@@ -146,7 +146,8 @@ def christianWithoutAnyHinge : ArgumentPackage Claim :=
         sharedGrounds [toFulfilment] }
 
 /-- The Isaianic strand with Berry's defensive lexical premise in place of the
-assertive one: עַלְמָה *admits* the sense "virgin" rather than *bearing* it. -/
+assertive one: עַלְמָה ("virgin" or "young woman") *admits* the sense "virgin" rather than *bearing*
+it. -/
 @[bornOfAVirginDefs]
 def isaianicStrandOnAdmissibility : ArgumentPackage Claim :=
   { christian with
@@ -242,16 +243,17 @@ def criticalDenialUnderParity : ArgumentPackage Claim :=
         , parityDefeatsNearTermExclusion ]).premises }
 
 /-- The referential argument: Mary answers Isaiah's description, so Matthew's
-claim never required עַלְמָה to denote virginity. Its conclusion is the *denial
-of the objection's premise*, not the criterion — see
+claim never required עַלְמָה ("virgin" or "young woman") to denote virginity. Its conclusion is the
+*denial of the objection's premise*, not the criterion — see
 `compatibility_does_not_establish_criterion`. -/
 @[bornOfAVirginDefs]
 def semantic : ArgumentPackage Claim :=
-  { name := "Referential reading: a virgin is an עַלְמָה"
+  { name := "Referential reading: a virgin is an עַלְמָה (“virgin” or “young woman”)"
   , cite := cite
   , premises := caseOf [referentialLine] [] [descriptionFitDefeatsLexicalDemand]
   , conclusion := notP .lexicalSenseRequiredForFulfilment
-  , conclusionLabel := "Matthew's claim does not require עַלְמָה to denote virginity" }
+  , conclusionLabel := ("Matthew's claim does not require עַלְמָה (“virgin” or “young woman”) \
+      to denote virginity") }
 
 /-- The same premises, asked to deliver the criterion instead. They do not. -/
 @[bornOfAVirginDefs]
@@ -277,11 +279,12 @@ Stated first and in full, because the results that follow are about where its
 weight rests and are worth nothing against a weakened rival. -/
 @[bornOfAVirginDefs]
 def wegnerLexical : ArgumentPackage Claim :=
-  { name := "Wegner's grammatical objection: the עַלְמָה is already pregnant"
+  { name := ("Wegner's grammatical objection: the עַלְמָה (“virgin” or “young woman”) is \
+      already pregnant")
   , cite := cite
   , premises := caseOf [wegnerLine] [] wegnerClosingSteps
   , conclusion := notP .almahMeansVirgin
-  , conclusionLabel := "עַלְמָה at Isaiah 7:14 does not denote a virgin"
+  , conclusionLabel := "עַלְמָה (“virgin” or “young woman”) at Isaiah 7:14 does not denote a virgin"
     -- `consensus`: each step only draws out its grounds — a present pregnancy
     -- from the parse, no virgin from an ordinary one, the word from the
     -- referent — and anyone who grants the grounds grants them. Wegner's
@@ -309,8 +312,8 @@ def wegnerWithoutOrdinaryPregnancy : ArgumentPackage Claim :=
         (readingSuppliesOrdinaryPregnancy :: wegnerClosingSteps) }
 
 /-- Wegner's line as it stands inside the circle: the ordinary pregnancy gone
-from its grounds, and the demand that עַלְמָה carry the sense — which is what the
-return leg needs — put in. -/
+from its grounds, and the demand that עַלְמָה ("virgin" or "young woman") carry the sense — which is
+what the return leg needs — put in. -/
 @[bornOfAVirginDefs]
 def wegnerInTheCircle : Line Claim :=
   wegnerLine.onGrounds
@@ -319,7 +322,7 @@ def wegnerInTheCircle : Line Claim :=
 
 /-- **Both legs of the circle at once**, with every uncontested datum retained:
 the parse, the near-term setting, the referent principle, and the demand that
-עַלְמָה carry the sense. Asked for the lexical conclusion. -/
+עַלְמָה ("virgin" or "young woman") carry the sense. Asked for the lexical conclusion. -/
 @[bornOfAVirginDefs]
 def wegnerCircle : ArgumentPackage Claim :=
   { wegnerLexical with
@@ -409,29 +412,34 @@ def septuagintWitness : ArgumentPackage Claim :=
   septuagintLine.asPackage cite
     "Before Christ, a Jewish translator read the woman of Isaiah 7:14 as a virgin"
 
-/-- Wegner on παρθένος, as a position of its own: in the Septuagint's day the
-word meant "young woman", and not yet "virgin". -/
+/-- Wegner on παρθένος ("virgin" or "young woman"), as a position of its own: in the Septuagint's
+day the word meant "young woman", and not yet "virgin". -/
 @[bornOfAVirginDefs]
 def driftObjection : ArgumentPackage Claim :=
-  driftLine.asPackage cite "In the Septuagint's day, παρθένος meant 'young woman', not 'virgin'"
+  driftLine.asPackage cite ("In the Septuagint's day, παρθένος (“virgin” or “young woman”) \
+      meant 'young woman', not 'virgin'")
 
 /-- Rico and Gentry's case from usage as a position of its own: "virgin" is a
-sense of παρθένος in the Septuagint's Greek. -/
+sense of παρθένος ("virgin" or "young woman") in the Septuagint's Greek. -/
 @[bornOfAVirginDefs]
 def usageCase : ArgumentPackage Claim :=
-  usageLine.asPackage cite "In the Greek of the Scriptures, παρθένος means a virgin"
+  usageLine.asPackage cite ("In the Greek of the Scriptures, παρθένος (“virgin” or “young \
+      woman”) means a virgin")
 
 /-- The case from the laws as a position of its own: in the Greek Pentateuch's
-laws, παρθένος is used in the sense "virgin". -/
+laws, παρθένος ("virgin" or "young woman") is used in the sense "virgin". -/
 @[bornOfAVirginDefs]
 def lawsCase : ArgumentPackage Claim :=
-  lawsLine.asPackage cite "In the Greek Pentateuch's laws, παρθένος is used in the sense 'virgin'"
+  lawsLine.asPackage cite ("In the Greek Pentateuch's laws, παρθένος (“virgin” or “young \
+      woman”) is used in the sense 'virgin'")
 
 /-- The status reading of Genesis 34:3 as a position of its own: the Greek names
-Dinah a παρθένος as the law names the seduced virgin, in the sense "virgin". -/
+Dinah a παρθένος ("virgin" or "young woman") as the law names the seduced virgin, in the sense
+"virgin". -/
 @[bornOfAVirginDefs]
 def dinahCase : ArgumentPackage Claim :=
-  dinahLine.asPackage cite "At Genesis 34:3, παρθένος names Dinah in the sense 'virgin'"
+  dinahLine.asPackage cite ("At Genesis 34:3, παρθένος (“virgin” or “young woman”) names \
+      Dinah in the sense 'virgin'")
 
 /-- **Miller on the laws**, as he argues it: two uses of the word of women who
 are not virgins, so the word does not by itself connote virginity, so the laws'
@@ -443,7 +451,8 @@ def millerOnTheLaws : ArgumentPackage Claim :=
   , premises := caseOf [millerJoelLine, millerDinahLine] [] [contextNotWordInTheLaws]
   , conclusion := notP .lawsUseParthenosAsVirgin
   , conclusionLabel :=
-      "In the Greek Pentateuch's laws, παρθένος is not used in the sense 'virgin'"
+      ("In the Greek Pentateuch's laws, παρθένος (“virgin” or “young woman”) is not used in \
+          the sense 'virgin'")
   , inferences := [millerSource] }
 
 /-- **Miller from Genesis 34:3**, his case on the evidence the texts leave
@@ -464,11 +473,12 @@ def millerOnJoelAlone : ArgumentPackage Claim :=
     premises := caseOf [millerJoelLine] [] [contextNotWordInTheLaws] }
 
 /-- Matthew's quotation as a position of its own: in the Greek of Isaiah 7:14,
-which Matthew quotes, παρθένος has the sense "virgin". -/
+which Matthew quotes, παρθένος ("virgin" or "young woman") has the sense "virgin". -/
 @[bornOfAVirginDefs]
 def matthewCase : ArgumentPackage Claim :=
   matthewLine.asPackage cite
-    "In the Greek of Isaiah 7:14, παρθένος means 'virgin', as Matthew reads it"
+    ("In the Greek of Isaiah 7:14, παρθένος (“virgin” or “young woman”) means 'virgin', as \
+        Matthew reads it")
 
 /-- **The fulfilment, confirming the promise**, as a position: every term of
 Genesis 3:15 met in Jesus as the New Testament names it, and so the verse a
@@ -523,12 +533,13 @@ def aloneCase : ArgumentPackage Claim :=
   , inferences := fulfilmentLine.inference.toList ++ aloneLine.inference.toList }
 
 /-- The Septuagint as a witness, with the claim about its word taken away: the
-rendering and its date stay, and nothing is granted about what παρθένος meant.
-Its conclusion no longer follows (`parthenos_is_load_bearing`). -/
+rendering and its date stay, and nothing is granted about what παρθένος ("virgin" or "young woman")
+meant. Its conclusion no longer follows (`parthenos_is_load_bearing`). -/
 @[bornOfAVirginDefs]
 def septuagintWithoutTheSense : ArgumentPackage Claim :=
   { septuagintWitness with
-    name := "The Septuagint as a witness, with nothing granted about παρθένος"
+    name := ("The Septuagint as a witness, with nothing granted about παρθένος (“virgin” or \
+        “young woman”)")
     premises :=
       (septuagintLine.onGrounds [p .lxxRendersParthenos, p .lxxIsPreChristian]).premises }
 
@@ -536,8 +547,8 @@ def septuagintWithoutTheSense : ArgumentPackage Claim :=
 Irenaeus takes it, against Theodotion and Aquila (*Against Heresies* III.21.1),
 because he holds the Greek "interpreted by the inspiration of God" (III.21.2).
 `disputed`: Bratcher grants that the translator read a virgin (115) and denies
-that עַלְמָה says so (105–106); Brown grants the translator's "deliberate
-preference" (*Birth of the Messiah* 148) and denies that the Hebrew stresses
+that עַלְמָה ("virgin" or "young woman") says so (105–106); Brown grants the translator's
+"deliberate preference" (*Birth of the Messiah* 148) and denies that the Hebrew stresses
 virginity (147); and Walton holds that the Greek shows at best "an
 interpretational preference rather than a linguistic necessity" (293). See
 `translatorsReadingFixesTheWord`. -/
@@ -553,15 +564,15 @@ def septuagintToTheWordSource : Source :=
   , confidence := .disputed }
 
 /-- **The Septuagint asked for Isaiah's word**: its witness, with the step from
-the translator's reading to what עַלְמָה denotes added. That step is rated
-`disputed`, and the case is only as good as it is. -/
+the translator's reading to what עַלְמָה ("virgin" or "young woman") denotes added. That step is
+rated `disputed`, and the case is only as good as it is. -/
 @[bornOfAVirginDefs]
 def septuagintOnTheWord : ArgumentPackage Claim :=
   { septuagintWitness with
-    name := "The Septuagint as a witness to what עַלְמָה means"
+    name := "The Septuagint as a witness to what עַלְמָה (“virgin” or “young woman”) means"
     premises := caseOf [septuagintLine] [] [translatorsReadingFixesTheWord]
     conclusion := p .almahMeansVirgin
-    conclusionLabel := "עַלְמָה at Isaiah 7:14 denotes a virgin"
+    conclusionLabel := "עַלְמָה (“virgin” or “young woman”) at Isaiah 7:14 denotes a virgin"
     inferences := septuagintWitness.inferences ++ [septuagintToTheWordSource] }
 
 /-- The Septuagint's line with the tense of its verb among the grounds: the
