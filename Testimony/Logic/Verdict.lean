@@ -133,9 +133,14 @@ def party (i : ι) : Seg := .party (name i)
 /-- `a` defeats `b`. -/
 def edge (a b : ι) : Seg := .defeat (name a) (name b)
 
-/-- Parties, listed. -/
+/-- Parties, listed as a sentence lists them: "A and B", or "A; B; and C",
+since a position's name may hold a comma of its own. -/
 def partyList (l : List ι) : List Seg :=
-  (l.map (party name)).intersperse (.text ", ")
+  match l.map (party name) with
+  | [] => []
+  | [a] => [a]
+  | [a, b] => [a, .text " and ", b]
+  | ps => (ps.dropLast.intersperse (.text "; ")) ++ [.text "; and "] ++ ps.drop (ps.length - 1)
 
 /-- How `x` and `y` conflict: who defeats whom. -/
 def conflictSegs (x y : ι) : List Seg :=
@@ -172,10 +177,10 @@ def whyAdmissible (s : List ι) : List (ℕ × List Seg) :=
     | none => (1, [edge name y m, .text ", unanswered."])
   let head := match s with
     | [m] => [party name m, .text (if lines.isEmpty then
-        " does not defeat itself, and nothing attacks it."
+        " does not defeat itself, and nothing defeats it."
         else " does not defeat itself, and answers each attack on it:")]
     | _ => [.text "None of "] ++ partyList name s ++
-        [.text (if lines.isEmpty then " defeats another, and nothing attacks them."
+        [.text (if lines.isEmpty then " defeats another, and nothing defeats them."
           else " defeats another, and each attack on them is answered from among them:")]
   (0, head) :: lines
 
@@ -184,10 +189,21 @@ on one of them, the party of an earlier stage that answers it. -/
 def whyStages : List ι → ℕ → List (List ι) → List (ℕ × List Seg)
   | _, _, [] => []
   | acc, k, st :: rest =>
-    (0, [.text ("Stage " ++ toString k ++ ": ")] ++ partyList name st ++ [.text "."]) ::
+    let unattacked := st.all fun x => (attackersOf F x).isEmpty
+    let they := if st.length == 1 then "it" else "them"
+    (0, (if unattacked then
+          [.text "Nothing defeats "] ++ partyList name st ++
+            [.text (if k == 1 then ", so whichever way the dispute is settled, " ++
+                (if st.length == 1 then "it stands." else "they stand.")
+              else ", so they stand next.")]
+        else
+          [.text (if k == 1 then "First, " else "Then ")] ++ partyList name st ++
+            [.text (", because every position that defeats " ++ they ++
+              " is itself defeated by one already standing:")])) ::
     (st.flatMap fun x =>
       let as := attackersOf F x
-      if as.isEmpty then [(1, [party name x, .text " is defeated by nothing."])]
+      if as.isEmpty then (if unattacked then [] else [(1, [.text "Nothing defeats ", party name x,
+        .text "."])])
       else as.map fun y => match acc.find? (F.defeats · y) with
         | some z => (1, [edge name y x, .text ", and ", edge name z y, .text "."])
         | none => (1, [edge name y x, .text ", unanswered."])) ++
@@ -203,14 +219,15 @@ structure Words where
 /-- **The words for a claim**, generated from its witness. -/
 def explain : Claim ι → Words
   | .nothingGrounded t =>
-    { claim := [.text "Nothing prevails outright: every party is defeated by another."]
+    { claim := [.text "Nothing is forced: every position is defeated by another."]
       reasons := t.map fun (x, y) => (0, [edge name y x, .text "."]) }
   | .grounded sts =>
-    { claim := [.text "Grounded: "] ++ partyList name sts.flatten ++ [.text "."]
+    { claim := [.text "Forced, whichever way the dispute is settled: "] ++
+        partyList name sts.flatten ++ [.text "."]
       reasons := whyStages F name [] 1 sts }
   | .groundedExactly sts t =>
-    { claim := [.text "What the dispute forces is exactly "] ++ partyList name sts.flatten ++
-        [.text "."]
+    { claim := [.text "Forced, whichever way the dispute is settled: "] ++
+        partyList name sts.flatten ++ [.text ", and nothing else."]
       reasons := whyStages F name [] 1 sts ++
         (let out := F.parties.filter (· ∉ sts.flatten)
          if out.isEmpty then [] else
@@ -219,14 +236,15 @@ def explain : Claim ι → Words
                (1, [edge name y x, .text ", and nothing forced defeats ", party name y,
                  .text "."])) }
   | .indefensible b t =>
-    { claim := [party name b, .text " cannot be defended: no admissible position holds it."]
+    { claim := [party name b, .text (" cannot be defended: no way of settling the dispute " ++
+        "keeps it.")]
       reasons := whyIndefensible F name t (t.length + 1) 0 b }
   | .skeptical a t =>
     let as := attackersOf F a
     let rivals := F.parties.filter fun x => x != a && conflicts F x a
-    { claim := [party name a, .text " is accepted on every resolution."]
+    { claim := [party name a, .text " is forced: every way of settling the dispute keeps it."]
       reasons :=
-        (if as.isEmpty then [(0, [party name a, .text " is defeated by nothing."])] else
+        (if as.isEmpty then [(0, [.text "Nothing defeats ", party name a, .text "."])] else
           (0, [party name a, .text " answers each of its attackers itself:"]) ::
           as.map fun b => (1, [edge name a b, .text "."])) ++
         (if rivals.isEmpty then [] else
@@ -235,21 +253,24 @@ def explain : Claim ι → Words
             (1, [party name x, .text " cannot:"]) ::
               whyIndefensible F name t (t.length + 1) 2 x) }
   | .notSkeptical a x s =>
-    { claim := [party name a, .text " is not accepted on every resolution."]
+    { claim := [party name a, .text (" is not forced: one way of settling the dispute " ++
+        "leaves it out.")]
       reasons :=
-        (0, (if s == [x] then [party name x, .text " can be held alone"]
-            else [.text "A position holding "] ++ partyList name s ++
-              [.text " can be held, and it holds ", party name x]) ++
+        (0, (if s == [x] then [party name x, .text " can be held on its own"]
+            else [.text "One can hold "] ++ partyList name s ++
+              [.text " together, and that holds ", party name x]) ++
           [.text "; ", party name x, .text " conflicts with ", party name a, .text ": "] ++
           conflictSegs F name x a ++ [.text "."]) ::
         whyAdmissible F name s }
   | .credulous a s =>
-    { claim := [party name a, .text " is accepted on some resolution."]
-      reasons := (0, [.text "A position holding "] ++ partyList name s ++
-          [.text " can be held."]) :: whyAdmissible F name s }
+    { claim := [party name a, .text (" can be defended: one way of settling the dispute " ++
+        "keeps it.")]
+      reasons := (0, [.text "One can hold "] ++ partyList name s ++
+          [.text " together."]) :: whyAdmissible F name s }
   | .preferred s =>
     let out := F.parties.filter (· ∉ s)
-    { claim := [.text "A maximal defensible position: "] ++ partyList name s ++ [.text "."]
+    { claim := [.text ("One way of settling the dispute, to which no other position can be " ++
+        "added: ")] ++ partyList name s ++ [.text "."]
       reasons := whyAdmissible F name s ++
         (if out.isEmpty then [] else
           (0, [.text "Nothing can be added to it:"]) :: out.filterMap fun x =>
@@ -366,7 +387,7 @@ def weakestLink (pkg : ArgumentPackage α) : List Page.Held :=
     | _ => true
   let steps := if hasStep && pkg.inferenceRank == some r then
       (pkg.inferences.filter (·.confidence.rank == r)).map fun s =>
-        (⟨"an inference step", s.confidence, s⟩ : Page.Held)
+        (⟨"the step from its grounds to its conclusion", s.confidence, s⟩ : Page.Held)
     else []
   let refutedSteps : List Page.Held := if r == Confidence.refuted.rank then
       pkg.premises.filterMap fun φ => match φ with

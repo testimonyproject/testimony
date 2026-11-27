@@ -422,6 +422,31 @@ def summary (x : Exchange) : List Seg :=
 
 end Exchange
 
+/-- **A statement in logic notation**, as a page sets it beside its English: a
+string of mathematics with the argument's claims and formulas left in, so each
+rendering can number a claim as its legend does and link it there. `tex` is
+mathematics as LaTeX writes it, which MathJax reads on the site too. -/
+inductive Sym (α : Type) where
+  /-- A claim: its variable, numbered and linked as the legend numbers it. -/
+  | atom (a : α)
+  /-- A formula over the claims, set as the derivations set one. -/
+  | formula (φ : Formula α)
+  /-- Mathematics as LaTeX writes it. -/
+  | tex (s : String)
+  /-- Pieces set one after another. -/
+  | seq (parts : List (Sym α))
+
+namespace Sym
+
+/-- Every claim a statement mentions, in the order it mentions them. -/
+def atoms : Sym α → List α
+  | .atom a => [a]
+  | .formula φ => atomsOf φ
+  | .tex _ => []
+  | .seq ps => ps.attach.flatMap fun ⟨p, _⟩ => atoms p
+
+end Sym
+
 /-- One element of a generated page.
 
 `prose` is a module docstring, lifted whole; the rest are declarations, each
@@ -500,15 +525,15 @@ inductive Item (α : Type)
   | citation (decl doc : String) (cite : α → AtomMeta)
   /-- A declaration shown as Lean: anything the renderer does not read. -/
   | other (decl doc source : String)
-  /-- A result, with the statement as Lean states it. -/
-  | result (decl doc statement : String) (proposed : Bool)
+  /-- A result: its statement in logic notation, set beside its docstring. -/
+  | result (decl doc : String) (stated : Sym α) (proposed : Bool)
   /-- Why one position stands against another: a `Because`. -/
   | because (decl doc : String) (e : Explanation α)
   /-- Every reading of a rival's claim, answered: a `Dilemma`. -/
   | dilemma (decl doc : String) (d : Dilemma α)
-  /-- What an opponent must reject: an `OpponentsBurden` result, with the
-  statement as Lean states it. -/
-  | burden (decl doc statement : String) (b : Burden)
+  /-- What an opponent must reject: an `OpponentsBurden` result, its statement
+  in logic notation beside its docstring. -/
+  | burden (decl doc : String) (stated : Sym α) (b : Burden)
   /-- A dispute's verdict, with the reasons generated from its witness, the
   page's `Because` declarations to link its defeats to, and the theorem that
   proves the defeat table (empty if none was found). -/
@@ -534,6 +559,8 @@ def atoms [DecidableEq α] : Item α → List α
   | .refutation _ _ a _ _ => [a]
   | .dilemmaReading _ _ _ φ _ => atomsOf φ
   | .contested _ _ _ _ φ => atomsOf φ
+  | .result _ _ st _ => st.atoms
+  | .burden _ _ st _ => st.atoms
   | .line _ _ l => (l.premises ++ [l.delivers]).flatMap atomsOf
   | .formula _ _ φ => atomsOf φ
   | .formulas _ _ φs => φs.flatMap atomsOf

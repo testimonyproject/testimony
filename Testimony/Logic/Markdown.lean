@@ -424,36 +424,31 @@ def exchange (links : List Page.BecauseLink) (x : Page.Exchange) : String :=
   String.join (x.turns.map turn) ++
     (if summary.isEmpty then "" else segs summary ++ "\n\n") ++ table
 
-/-- A count with its noun, singular or plural. -/
-def count (n : Nat) (one many : String) : String :=
-  toString n ++ " " ++ (if n == 1 then one else many)
-
-/-- What a verdict rests on: how many cells of the table its reasons state,
-which of those defeats a `Because` explains, and every party involved at its
-weakest link. -/
+/-- What a verdict rests on, for a reader: that each reason is an entry of the
+table of who defeats whom, what defeat turns on, every party involved where it
+is weakest, and which defeats a `Because` explains claim by claim. -/
 def restsOn (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) : String :=
-  let defeats := (v.cells.filter (·.2.2)).length
-  let absences := v.cells.length - defeats
   let tableRef := if table.isEmpty then "the defeat table"
-    else "the defeat table, [`" ++ table ++ "`](#" ++ table ++ ")"
+    else "[`" ++ table ++ "`](#" ++ table ++ ")"
   let explained := (v.cells.filterMap fun (a, b, d) =>
     if d then (Page.becauseFor links a b).map (a, b, ·) else none)
   let held (h : Page.Held) : String :=
     "  - " ++ escape h.what ++ " — " ++ source h.source ++ "\n"
   let reading (r : Page.Reading) : String :=
     match r.weakest with
-    | [] => "- *" ++ escape r.party ++ "*: no rated premise.\n"
+    | [] => "- *" ++ escape r.party ++ "*: none of its claims is rated.\n"
     | h :: _ =>
-      "- *" ++ escape r.party ++ "*, weakest at *" ++ confidence h.confidence ++ "*:\n" ++
-      String.join (r.weakest.map held)
-  "\n**What this rests on.** The reasons state " ++ count defeats "defeat" "defeats" ++
-  " and " ++ count absences "absence of defeat" "absences of defeat" ++ ", each a cell of " ++
-  tableRef ++ ", computed from the two parties' premises and checked by the kernel. " ++
-  "Whether an attack survives turns on the attacker's weakest link and on the rating " ++
-  "of what it attacks, so a changed rating can change the verdict. The weakest links:\n\n" ++
+      "- *" ++ escape r.party ++ "*, held as *" ++ confidence h.confidence ++
+      "* at its weakest, at:\n" ++ String.join (r.weakest.map held)
+  "\n**Why.** Each reason above is one entry in the table of who defeats whom (" ++
+  tableRef ++ "), worked out from what each position claims and checked by the computer " ++
+  "when the library is built. One position defeats another when it denies something the " ++
+  "other rests on and, where it is weakest, is held at least as firmly as what it denies; " ++
+  "so if a claim were rated differently, the verdict could change. Where each position is " ++
+  "weakest:\n\n" ++
   String.join (v.readings.map reading) ++
   String.join (explained.map fun (a, b, d) =>
-    "\nWhy *" ++ escape a ++ "* defeats *" ++ escape b ++ "*, at the level of the claims: [`" ++
+    "\nWhy *" ++ escape a ++ "* defeats *" ++ escape b ++ "*, claim by claim, is set out at [`" ++
     d ++ "`](#" ++ d ++ ").\n")
 
 /-- A verdict: its claim in bold, then its reasons as a nested list, then what
@@ -667,6 +662,34 @@ def citationWords [DecidableEq α] (order : List α) (legendCite : Option (α �
 def nameList (names : List String) : String :=
   String.join (names.map fun x => "- *" ++ escape x ++ "*\n") ++ "\n"
 
+/-- Mathematics written so that Markdown's escaping pass leaves MathJax what it
+was given: a backslash before punctuation, `\{` say, is one Markdown would eat. -/
+def mathEscape (t : String) : String :=
+  let step := fun (acc : String × Bool) (c : Char) =>
+    let (out, afterSlash) := acc
+    if afterSlash && "{}_,;!|#*[]()".contains c then (out ++ "\\\\" ++ c.toString, false)
+    else if afterSlash then (out ++ "\\" ++ c.toString, false)
+    else if c == '\\' then (out, true)
+    else (out.push c, false)
+  let (out, pending) := t.foldl step ("", false)
+  if pending then out ++ "\\" else out
+
+/-- A statement in logic notation, as the site sets it: `Latex.symTex`, each
+claim linked to its legend row. The browser wraps a long statement itself, so
+print's break points (`\allowbreak`) are left out. -/
+def symMd [DecidableEq α] (order : List α) : Sym α → String
+  | .atom a => varLink (order.idxOf a)
+  | .formula φ => formula order φ
+  | .tex t => mathEscape (t.replace "\\allowbreak " " ")
+  | .seq ps => String.join (ps.attach.map fun ⟨p, _⟩ => symMd order p)
+
+/-- A result stated twice, side by side, as print sets it (`Latex.stated`): the
+logic notation on the left, the docstring on the right. -/
+def stated [DecidableEq α] (order : List α) (st : Sym α) (doc : String) : String :=
+  "<div class=\"testimony-stated\">\n<div class=\"testimony-stated-logic\">\n\n" ++
+  inlineMath (symMd order st) ++ "\n\n</div>\n<div class=\"testimony-stated-words\">\n\n" ++
+  doc ++ "\n\n</div>\n</div>\n"
+
 /-- Render one item against the page's atom ordering, and the legend's citations
 where the page has a legend. A lone formula, or a list of them, is set as rows of
 a derivation, as in print, so a step says what it delivers there too. -/
@@ -768,15 +791,14 @@ def item [DecidableEq α] (order : List α) (cite : Option (α → AtomMeta)) :
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ citationWords order cite c
   | .other d doc sig =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ leanBlock sig
-  | .result d doc stmt proposed =>
-      declLabel d (if proposed then " ⚗" else "") ++ "\n" ++ doc ++ "\n\n" ++
-      leanBlock stmt
+  | .result d doc st proposed =>
+      declLabel d (if proposed then " ⚗" else "") ++ "\n" ++ stated order st doc
   | .because d doc e =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ explanation order e
   | .dilemma d doc dl =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ dilemma order dl
-  | .burden d doc stmt b =>
-      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ leanBlock stmt ++ "\n" ++ burden b
+  | .burden d doc st b =>
+      declLabel d "" ++ "\n" ++ stated order st doc ++ "\n" ++ burden b
   | .verdict d doc v links table =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ verdict v links table
   | .graph d doc g defeats supports parts =>

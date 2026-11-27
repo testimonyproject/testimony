@@ -223,6 +223,231 @@ def wrapStatement (s : String) : String :=
   let (lines, last) := ((s.splitOn " ").filter (· ≠ "")).foldl step (([] : List String), "")
   String.intercalate "\n" (lines ++ [last])
 
+/-- An identifier set in mathematics: the last component of its name, in sans
+serif, its underscores escaped. -/
+def mathIdent (n : Name) : String :=
+  let s := match n with
+    | .str _ s => s
+    | _ => n.toString
+  "\\mathsf{" ++ s.replace "_" "\\_" ++ "}"
+
+/-- A bound variable set in mathematics, in italics. -/
+def mathVar (n : Name) : String :=
+  "\\mathit{" ++ (n.eraseMacroScopes.toString).replace "_" "\\_" ++ "}"
+
+section Sym
+open Meta
+
+/-- The syntax of a `Sym` made of pieces. -/
+def symSeq (xs : Array (TSyntax `term)) : MetaM (TSyntax `term) :=
+  `(Logic.Page.Sym.seq [$(xs),*])
+
+/-- The syntax of a `Sym` that is mathematics as LaTeX writes it. -/
+def symTex (t : String) : MetaM (TSyntax `term) :=
+  `(Logic.Page.Sym.tex $(quote t))
+
+/-- Whether an expression is a connective, which a part of a larger statement
+is set in parentheses for. -/
+def isCompound (e : Expr) : Bool :=
+  e.isAppOfArity ``Iff 2 || e.isAppOfArity ``And 2 || e.isAppOfArity ``Or 2 ||
+    (e.isForall && !e.bindingBody!.hasLooseBVars)
+
+/-- The elements of a list written out, `[a, b]`, or `none` if it is not one. -/
+partial def listElems (e : Expr) : Option (List Expr) :=
+  if e.isAppOfArity ``List.nil 1 then some []
+  else if e.isAppOfArity ``List.cons 3 then
+    (listElems (e.getArg! 2)).map (e.getArg! 1 :: ·)
+  else none
+
+/-- **A statement in logic notation**, as `Sym` syntax to elaborate: the
+statement's connectives as logic writes them (∀, →, ↔, ∧, ∨, ¬, =, ∈), the
+library's own relations as argumentation theory writes them (Γ ⊨ φ for
+entailment, a ⇝ b for defeat, Pref and Gr for the preferred and grounded
+semantics), each claim of `atomTy` as its numbered variable, and each closed
+formula as a derivation sets it. Anything else is a function applied to its
+arguments, under its own name. -/
+partial def symOf (atomTy : Option Name) (e : Expr) : MetaM (TSyntax `term) := do
+  let e := (← instantiateMVars e).consumeMData
+  let go := symOf atomTy
+  let paren (x : Expr) : MetaM (TSyntax `term) := do
+    if isCompound x then symSeq #[← symTex "(", ← go x, ← symTex ")"] else go x
+  let bin (a : Expr) (op : String) (b : Expr) : MetaM (TSyntax `term) := do
+    symSeq #[← paren a, ← symTex (" " ++ op ++ " "), ← paren b]
+  let call (f : String) (args : Array Expr) : MetaM (TSyntax `term) := do
+    let mut parts : Array (TSyntax `term) := #[← symTex (f ++ "(")]
+    for (a, i) in args.toList.zipIdx do
+      if i > 0 then parts := parts.push (← symTex ",\\allowbreak ")
+      parts := parts.push (← go a)
+    symSeq (parts.push (← symTex ")"))
+  -- A closed formula over the claims is set as the derivations set it.
+  if !e.hasFVar && !e.hasLooseBVars then
+    let ty ← try whnfR (← inferType e) catch _ => pure (mkConst ``Unit)
+    if ty.isAppOf ``FFL.Propositional.Formula then
+      let stx ← withOptions (fun o => o.setBool `pp.fullNames true
+          |>.setBool `pp.notation false |>.setBool `pp.coercions false) do
+        PrettyPrinter.delab e
+      return ← `(Logic.Page.Sym.formula $(⟨stx.raw⟩))
+  match e with
+  | .fvar id => symTex (mathVar (← id.getUserName))
+  | .lit (.natVal k) => symTex (toString k)
+  | .lit (.strVal t) => symTex ("\\text{“" ++ Logic.Latex.escape t ++ "”}")
+  | .lam .. =>
+    lambdaTelescope e fun xs body => do
+      let names ← xs.mapM fun x => do pure (mathVar (← x.fvarId!.getUserName))
+      symSeq #[← symTex ("(" ++ ", ".intercalate names.toList ++ " \\mapsto "), ← go body,
+        ← symTex ")"]
+  | .forallE .. =>
+    if !e.bindingBody!.hasLooseBVars && (← isProp e.bindingDomain!) then
+      bin e.bindingDomain! "\\rightarrow" e.bindingBody!
+    else
+      forallTelescope e fun xs body => do
+        let mut parts : Array (TSyntax `term) := #[]
+        let mut groups : Array (Expr × Array Name) := #[]
+        for x in xs do
+          let ty ← inferType x
+          let nm ← x.fvarId!.getUserName
+          if (← isClass? ty).isSome then continue
+          match groups.back? with
+          | some (t, ns) =>
+            if t == ty then groups := groups.pop.push (t, ns.push nm)
+            else groups := groups.push (ty, #[nm])
+          | none => groups := groups.push (ty, #[nm])
+        for (ty, ns) in groups do
+          parts := parts.push (← symTex ("\\forall " ++
+            ", ".intercalate (ns.toList.map mathVar) ++ " \\in "))
+          parts := parts.push (← go ty)
+          parts := parts.push (← symTex ".\\ ")
+        symSeq (parts.push (← go body))
+  | .const c _ =>
+    if c == ``True then symTex "\\top"
+    else if c == ``False then symTex "\\bot"
+    else if c == ``Bool.true then symTex "\\mathsf{true}"
+    else if c == ``Bool.false then symTex "\\mathsf{false}"
+    else
+      let ty ← inferType e
+      if atomTy.isSome && ty.constName? == atomTy then `(Logic.Page.Sym.atom $(mkIdent c))
+      else symTex (mathIdent c)
+  | .app .. =>
+    let f := e.getAppFn
+    let args := e.getAppArgs
+    let n := args.size
+    let some c := f.constName? | do
+      -- A bound variable applied: a function of the statement's own.
+      call (← symTex' f) args
+    -- A list written out is set as the set of its elements, which is what the
+    -- statements here use one for: `(i, j) ∈ [...]`, the parties of a hearing.
+    if let some xs := listElems e then
+      if xs.isEmpty then return ← symTex "\\varnothing"
+      let mut parts : Array (TSyntax `term) := #[← symTex "\\{"]
+      for (x, i) in xs.zipIdx do
+        if i > 0 then parts := parts.push (← symTex ",\\allowbreak ")
+        parts := parts.push (← go x)
+      return ← symSeq (parts.push (← symTex "\\}"))
+    match c, n with
+    | ``Iff, 2 => bin args[0]! "\\leftrightarrow" args[1]!
+    | ``And, 2 => bin args[0]! "\\wedge" args[1]!
+    | ``Or, 2 => bin args[0]! "\\vee" args[1]!
+    | ``Not, 1 => symSeq #[← symTex "\\neg ", ← paren args[0]!]
+    | ``Eq, 3 => bin args[1]! "=" args[2]!
+    | ``Ne, 3 => bin args[1]! "\\neq" args[2]!
+    | ``LT.lt, 4 => bin args[2]! "<" args[3]!
+    | ``LE.le, 4 => bin args[2]! "\\leq" args[3]!
+    | ``Membership.mem, 5 => bin args[4]! "\\in" args[3]!
+    | ``Prod.mk, 4 => symSeq #[← symTex "(", ← go args[2]!, ← symTex ", ", ← go args[3]!,
+        ← symTex ")"]
+    | ``HAppend.hAppend, 6 => bin args[4]! "\\cup" args[5]!
+    | ``OfNat.ofNat, 3 => go args[1]!
+    | ``Subtype.val, 3 => go args[2]!
+    | ``Subtype.mk, 4 => go args[2]!
+    | ``EmptyCollection.emptyCollection, 2 => symTex "\\varnothing"
+    | ``Singleton.singleton, 4 => symSeq #[← symTex "\\{", ← go args[3]!, ← symTex "\\}"]
+    | ``Insert.insert, 5 =>
+      -- `{a, b, c}`: the elements inserted, then the last as a singleton.
+      let rec elems (x : Expr) (fuel : Nat) : List Expr :=
+        match fuel with
+        | 0 => [x]
+        | k + 1 =>
+          if x.isAppOfArity ``Insert.insert 5 then x.getArg! 3 :: elems (x.getArg! 4) k
+          else if x.isAppOfArity ``Singleton.singleton 4 then [x.getArg! 3]
+          else [x]
+      let xs := elems e 64
+      let mut parts : Array (TSyntax `term) := #[← symTex "\\{"]
+      for (x, i) in xs.zipIdx do
+        if i > 0 then parts := parts.push (← symTex ",\\allowbreak ")
+        parts := parts.push (← go x)
+      symSeq (parts.push (← symTex "\\}"))
+    | ``Subtype, 2 =>
+      let p := args[1]!
+      if p.isLambda then
+        lambdaTelescope p fun xs body => do
+          let nm ← xs[0]!.fvarId!.getUserName
+          symSeq #[← symTex ("\\{" ++ mathVar nm ++ " \\in "), ← go args[0]!,
+            ← symTex " \\mid ", ← go body, ← symTex "\\}"]
+      else call "\\mathsf{Subtype}" #[args[0]!, p]
+    | ``Logic.ArgumentPackage.strength, _ => call "\\mathrm{strength}" #[args[n - 1]!]
+    | ``Logic.Establishes, _ =>
+      let p := args[n - 1]!
+      symSeq #[← symTex "\\Gamma_{", ← go p, ← symTex "} \\models \\varphi_{", ← go p,
+        ← symTex "}"]
+    | ``Logic.Entails, _ => bin args[n - 2]! "\\models" args[n - 1]!
+    | ``Logic.Satisfiable, _ =>
+      symSeq #[← symTex "\\exists v.\\ v \\models ", ← paren args[n - 1]!]
+    | ``Logic.Independent, _ =>
+      symSeq #[← paren args[n - 2]!, ← symTex " \\not\\models ", ← paren args[n - 1]!,
+        ← symTex " \\wedge ", ← paren args[n - 2]!, ← symTex " \\not\\models \\neg ",
+        ← paren args[n - 1]!]
+    | ``Logic.Defeats, _ => bin args[n - 2]! "\\rightsquigarrow" args[n - 1]!
+    | ``Logic.Dispute.defeats, _ => bin args[n - 2]! "\\rightsquigarrow" args[n - 1]!
+    | ``Logic.Dispute.supports, _ => bin args[n - 2]! "\\Rightarrow" args[n - 1]!
+    | ``Logic.Dispute.partOf, _ => bin args[n - 2]! "\\sqsubseteq" args[n - 1]!
+    | ``Logic.Grants, _ =>
+      symSeq #[← symTex "\\exists v.\\ v \\models \\Gamma_{", ← go args[n - 2]!,
+        ← symTex "} \\cup \\{", ← go args[n - 1]!, ← symTex "\\}"]
+    | ``Logic.Dispute.StandTogether, _ =>
+      symSeq #[← symTex "\\exists v.\\ v \\models \\bigcup_{i \\in ", ← go args[n - 1]!,
+        ← symTex "} (\\Gamma_{i} \\cup \\{\\varphi_{i}\\})"]
+    | ``Logic.Dispute.node, _ => go args[n - 1]!
+    | ``Logic.ArgumentPackage.premises, _ =>
+      symSeq #[← symTex "\\Gamma_{", ← go args[n - 1]!, ← symTex "}"]
+    | ``Logic.ArgumentPackage.held, _ =>
+      symSeq #[← symTex "\\Gamma_{", ← go args[n - 1]!, ← symTex "}"]
+    | ``Logic.ArgumentPackage.conclusion, _ =>
+      symSeq #[← symTex "\\varphi_{", ← go args[n - 1]!, ← symTex "}"]
+    | ``Logic.Framework.CredulouslyAccepted, _ =>
+      symSeq #[← go args[n - 1]!, ← symTex " \\in \\bigcup \\mathrm{Pref}(", ← go args[n - 2]!,
+        ← symTex ")"]
+    | ``Logic.Framework.SkepticallyAccepted, _ =>
+      symSeq #[← go args[n - 1]!, ← symTex " \\in \\bigcap \\mathrm{Pref}(", ← go args[n - 2]!,
+        ← symTex ")"]
+    | ``Logic.Framework.grounded, _ => call "\\mathrm{Gr}" #[args[n - 1]!]
+    | ``Logic.Framework.Admissible, _ => call "\\mathrm{Adm}" #[args[n - 2]!, args[n - 1]!]
+    | ``Logic.Solver.toSet, _ =>
+      match listElems args[n - 1]! with
+      | some xs => do
+        let mut parts : Array (TSyntax `term) := #[← symTex "\\{"]
+        for (x, i) in xs.zipIdx do
+          if i > 0 then parts := parts.push (← symTex ",\\allowbreak ")
+          parts := parts.push (← go x)
+        symSeq (parts.push (← symTex "\\}"))
+      | none => go args[n - 1]!
+    | _, _ =>
+      -- A function applied to its explicit arguments, under its own name.
+      let info ← getFunInfoNArgs f n
+      let explicit := (args.zip info.paramInfo).filterMap fun (a, (pi : ParamInfo)) =>
+        if pi.binderInfo.isExplicit then some a else none
+      let explicit := explicit ++ args.extract info.paramInfo.size n
+      if explicit.isEmpty then symTex (mathIdent c)
+      else call (mathIdent c) explicit
+  | _ => symTex ("\\text{" ++ Logic.Latex.escape (toString (← ppExpr e)) ++ "}")
+where
+  /-- The name a bound function is set under. -/
+  symTex' (f : Expr) : MetaM String := do
+    match f with
+    | .fvar id => pure (mathVar (← id.getUserName))
+    | _ => pure ("\\text{" ++ Logic.Latex.escape (toString (← ppExpr f)) ++ "}")
+
+end Sym
+
 /-- The repository path an argument's sources live at, for the "do not edit"
 header. A directory argument and a single-file one both answer to it: the
 former has the directory, the latter the module of the same name. -/
@@ -404,6 +629,19 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
         guard (ci.numFields == 0)
         pure c
 
+    -- The solver's form of each dispute, `D.finite` or any `Solver.Finite
+    -- D.defeats` the argument declares, by the dispute it is the form of.
+    let mut finiteOf : Std.HashMap Name Name := {}
+    for n in (declsOf.getD ns #[]) do
+      let some i := env.find? n | continue
+      unless i.type.isAppOf ``Logic.Solver.Finite do continue
+      let r := i.type.getAppArgs.back!
+      if r.isAppOf ``Logic.Dispute.defeats then
+        if let some d := r.getAppArgs.back!.constName? then
+          finiteOf := finiteOf.insert d n
+    let finiteFor (d : Name) : Option Name :=
+      if env.contains (d ++ `finite) then some (d ++ `finite) else finiteOf[d]?
+
     -- A rule over true and false, `Bool → … → Bool`: its inputs' names.
     let boolRule (ty : Expr) : Option (List String) := Id.run do
       let mut t := ty
@@ -456,6 +694,15 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
             if c.getPrefix == ns && (positionsOf i.type).isSome then return c.getString!
       return ""
 
+    -- The argument's claims: the atom type of its positions, which a statement
+    -- sets each claim of as its numbered variable.
+    let claimTy : Option Name := (declsOf.getD ns #[]).findSome? fun n => do
+      let i ← env.find? n
+      guard (i.type.getAppFn.constName? == some ``Logic.ArgumentPackage)
+      match i.type.getAppArgs[0]? with
+      | some (Expr.const c _) => some c
+      | _ => none
+
     -- The declarations: each rendered by what its type says it is.
     let mut atomTy : Option Name := none
     -- Those that would be shown by their signature alone.
@@ -482,18 +729,12 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
         let headIs (c : Name) : Bool := headOf info.type == some c
         let term ←
           if info matches .thmInfo _ then do
-            let stmt ← statement ns info.type
-            let axioms ← collectAxioms n
-            let note :=
-              if axioms.isEmpty then "-- axioms: none beyond Lean's own"
-              else "-- axioms: " ++ String.intercalate ", " (axioms.toList.map toString)
-            let shown := wrapStatement ("theorem " ++ dname ++ " : " ++ stmt)
+            let st ← liftTermElabM (symOf claimTy info.type)
             if headIs ``Logic.OpponentsBurden then
-              `(Logic.Page.Item.burden $(quote dname) $(quote doc)
-                  $(quote (shown ++ "\n" ++ note)) (Logic.OpponentsBurden.view $(mkIdent n)))
+              `(Logic.Page.Item.burden $(quote dname) $(quote doc) $st
+                  (Logic.OpponentsBurden.view $(mkIdent n)))
             else
-              `(Logic.Page.Item.result $(quote dname) $(quote doc)
-                  $(quote (shown ++ "\n" ++ note))
+              `(Logic.Page.Item.result $(quote dname) $(quote doc) $st
                   $(quote (proposedAttr.hasTag env n)))
           else if headIs ``Logic.ArgumentPackage then do
             if atomTy.isNone then
@@ -509,10 +750,14 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
           else if let some ctors := positionsOf info.type then do
             let names ← ctors.mapM fun c => `(($(mkIdent n) $(mkIdent c)).name)
             `(Logic.Page.Item.positions $(quote dname) $(quote doc) [$(names.toArray),*])
-          else if headIs ``Logic.Dispute && env.contains (n ++ `finite) then do
+          else if let some fin := (if headIs ``Logic.Dispute then finiteFor n else none) then do
             `(Logic.Page.Item.dispute $(quote dname) $(quote doc)
-                ($(mkIdent (n ++ `finite)).parties.map fun i => ($(mkIdent n).node i).name)
+                ($(mkIdent fin).parties.map fun i => ($(mkIdent n).node i).name)
                 $(quote (nodeOf info)))
+          else if headIs ``Logic.Solver.Finite || Meta.isInstanceCore env n then
+            -- The solver's form of a dispute, and an instance the checks need:
+            -- machinery, said by its docstring.
+            `(Logic.Page.Item.helper $(quote dname) $(quote doc))
           else if headIs ``Logic.Register then do
             match info.type.getAppArgs.back? with
             | some (.const d _) =>

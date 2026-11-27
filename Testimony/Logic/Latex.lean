@@ -832,6 +832,22 @@ def interpretationWords (i : Interpretation) : String :=
      | none => "") ++
     ": \\emph{" ++ escape i.reading ++ "}." ++ sourceWords i.source
 
+/-- A statement in logic notation, as mathematics: each claim its variable,
+linked to the legend, and each formula as a derivation sets it. -/
+def symTex [DecidableEq α] (n : Numbering α) : Page.Sym α → String
+  | .atom a => varLink n.anchor (n.order.idxOf a)
+  | .formula φ => linked n φ
+  | .tex t => t
+  | .seq ps => String.join (ps.attach.map fun ⟨p, _⟩ => symTex n p)
+
+/-- **A result, stated twice, side by side**: on the left in logic notation, on
+the right in the docstring's English, so a reader who does not read the symbols
+reads the sentence beside them, and one who does can check that the two say the
+same. The columns run on together across a page break. -/
+def stated [DecidableEq α] (n : Numbering α) (st : Page.Sym α) (doc : String) : String :=
+  "\\begin{paracol}{2}\n\\raggedright\\noindent\\(" ++ symTex n st ++ "\\)\n" ++
+  "\\switchcolumn\n" ++ prose doc ++ "\\end{paracol}\n"
+
 /-- Which of a package's premises are readings taken from the text alone
 (`AtomMeta.readsScriptureAlone`), as a note under its derivation; nothing when
 there are none. A quotation of the text is not such a reading, so a package
@@ -1033,36 +1049,33 @@ def nested (lines : List (Nat × String)) : String :=
       closes ++ opens ++ "\\item " ++ l ++ "\n" ++ go depth rest
   go 0 lines
 
-/-- What a verdict rests on: how many cells of the table its reasons state,
-which of those defeats a `Because` explains, and every party involved at its
-weakest link. -/
+/-- What a verdict rests on, for a reader: that each reason is an entry of the
+table of who defeats whom, what defeat turns on, every party involved where it
+is weakest, and which defeats a `Because` explains claim by claim. -/
 def restsOn (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) : String :=
-  let defeats := (v.cells.filter (·.2.2)).length
-  let absences := v.cells.length - defeats
-  let count (n : Nat) (one many : String) := toString n ++ " " ++ (if n == 1 then one else many)
   let tableRef := if table.isEmpty then "the defeat table"
-    else "the defeat table, \\texttt{" ++ codeEscape table ++ "}"
+    else "\\texttt{" ++ codeEscape table ++ "}"
   let explained := (v.cells.filterMap fun (a, b, d) =>
     if d then (Page.becauseFor links a b).map (a, b, ·) else none)
   let held (h : Page.Held) : String :=
     "\\item " ++ escape h.what ++ " --- " ++ source h.source ++ "\n"
   let reading (r : Page.Reading) : String :=
     match r.weakest with
-    | [] => "\\item \\emph{" ++ escape r.party ++ "}: no rated premise.\n"
+    | [] => "\\item \\emph{" ++ escape r.party ++ "}: none of its claims is rated.\n"
     | h :: _ =>
-      "\\item \\emph{" ++ escape r.party ++ "}, weakest at \\emph{" ++
-      confidence h.confidence ++ "}:\n\\begin{itemize}\n" ++
+      "\\item \\emph{" ++ escape r.party ++ "}, held as \\emph{" ++
+      confidence h.confidence ++ "} at its weakest, at:\n\\begin{itemize}\n" ++
       String.join (r.weakest.map held) ++ "\\end{itemize}\n"
-  "\\par\\noindent\\textbf{What this rests on.} The reasons state " ++
-  count defeats "defeat" "defeats" ++ " and " ++
-  count absences "absence of defeat" "absences of defeat" ++ ", each a cell of " ++
-  tableRef ++ ", computed from the two parties' premises and checked by the kernel. " ++
-  "Whether an attack survives turns on the attacker's weakest link and on the rating " ++
-  "of what it attacks, so a changed rating can change the verdict. The weakest links:\n" ++
+  "\\par\\noindent\\textbf{Why.} Each reason above is one entry in the table of who " ++
+  "defeats whom (" ++ tableRef ++ "), worked out from what each position claims and " ++
+  "checked by the computer when the library is built. One position defeats another when " ++
+  "it denies something the other rests on and, where it is weakest, is held at least as " ++
+  "firmly as what it denies; so if a claim were rated differently, the verdict could " ++
+  "change. Where each position is weakest:\n" ++
   "\\begin{itemize}\n" ++ String.join (v.readings.map reading) ++ "\\end{itemize}\n" ++
   String.join (explained.map fun (a, b, d) =>
     "\\noindent Why \\emph{" ++ escape a ++ "} defeats \\emph{" ++ escape b ++
-    "}, at the level of the claims: \\texttt{" ++ codeEscape d ++ "}.\n")
+    "}, claim by claim, is set out at \\texttt{" ++ codeEscape d ++ "}.\n")
 
 /-- A verdict: its claim, its reasons as nested lists, and what they rest on. -/
 def verdict (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) : String :=
@@ -1205,12 +1218,11 @@ def item [DecidableEq α] (n : Numbering α) : Page.Item α → String
       "\\par\\smallskip\\noindent Cited to " ++ source s ++
         ", at whatever rating the place that cites it gives.\n"
   | .other d doc src => declLabel d "" ++ prose doc ++ verbatim src
-  | .result d doc stmt proposed =>
-      declLabel d (if proposed then " \\textsuperscript{(proposed)}" else "") ++
-      prose doc ++ verbatim stmt
+  | .result d doc st proposed =>
+      declLabel d (if proposed then " \\textsuperscript{(proposed)}" else "") ++ stated n st doc
   | .because d doc e => declLabel d "" ++ prose doc ++ explanation n e
   | .dilemma d doc dl => declLabel d "" ++ prose doc ++ dilemma n dl
-  | .burden d doc stmt b => declLabel d "" ++ prose doc ++ verbatim stmt ++ burden b
+  | .burden d doc st b => declLabel d "" ++ stated n st doc ++ burden b
   | .verdict d doc v links table => declLabel d "" ++ prose doc ++ verdict v links table
   | .graph d doc g defeats supports parts =>
       declLabel d "" ++ prose doc ++ graph g defeats supports parts
@@ -1533,6 +1545,7 @@ def style : String :=
   "\\ProvidesPackage{testimony}[Testimony house style, written by the generators]\n" ++
   "\\usepackage{amsmath,amssymb,array,booktabs,longtable,fontspec,xcolor,alltt}\n" ++
   "\\usepackage{tikz}\\usetikzlibrary{arrows.meta}\n" ++
+  "\\usepackage{paracol}\\setcolumnwidth{0.4\\textwidth,0.56\\textwidth}\n" ++
   "\\usepackage[hidelinks]{hyperref}\n" ++
   -- A variable links to its row in the legend, and is coloured so a reader can
   -- see that it does: `hidelinks` sets every other link as plain text. The blue
