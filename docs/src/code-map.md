@@ -72,6 +72,7 @@ docstring is the manual; read that before the code.
 | What kind of thing is a concept? | `Testimony/Ontology/Kinds.lean`, `Testimony/Semantics/Upper.lean` |
 | How is a dispute declared with its verdicts? | `Testimony/Logic/Declare.lean` |
 | Who defeats whom, and why? | `Testimony/Logic/Dispute.lean`, then `Testimony/Logic/Horn.lean` only if a cell fails |
+| How do I set a claim out as a truth table, every row checked? | `Testimony/Logic/TruthTable.lean` |
 | Where do two positions part? | `Testimony/Logic/Because.lean` |
 | What must an opponent give up? | `Testimony/Logic/Burden.lean` |
 | How is every reading of a claim answered? | `Testimony/Logic/Dilemma.lean` |
