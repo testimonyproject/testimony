@@ -727,6 +727,43 @@ def item [DecidableEq α] (order : List α) (cite : Option (α → AtomMeta)) :
   | .sourceFn d doc src =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\nCited to " ++ source src ++
         ", at whatever rating the place that cites it gives.\n"
+  | .listing d doc lead entries =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++
+        (if entries.isEmpty then "" else escape lead ++ "\n\n" ++ nameList entries)
+  | .sources d doc ss =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ String.join (ss.map fun x => sourceWords x ++ "\n")
+  | .said d doc text => declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ escape text ++ "\n"
+  | .edge d doc e =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ escape e.fromPassage.render ++ " " ++
+        escape (relationWords e.relation) ++ " " ++ escape e.toPassage.render ++ ". " ++
+        sourceWords e.source
+  | .interpretation d doc crit i =>
+      declLabel d (if crit.isEmpty then "" else " — " ++ escape crit) ++ "\n" ++ doc ++ "\n\n" ++
+        escape i.passage.render ++
+        (match i.asRelation with
+         | some r => ", read as " ++ escape (asRelationWords r)
+         | none => "") ++
+        ": *" ++ escape i.reading ++ "*. " ++ sourceWords i.source
+  | .dilemmaReading d doc name φ src =>
+      declLabel d (" — " ++ escape name) ++ "\n" ++ doc ++ "\n\n" ++
+        "Read so, the claim commits its holder to:\n\n" ++
+        derivationRows [derivationRow order "" φ
+          (cite.bind fun c => Latex.loneGlossWith (inWords order c) φ)] ++ "\n" ++
+        sourceWords src
+  | .truthTable d doc inputs rs =>
+      let yn (b : Bool) := if b then "true" else "false"
+      declLabel d "" ++ "\n" ++ doc ++ "\n\nThe rule, row by row:\n\n" ++
+        "| " ++ " | ".intercalate (inputs ++ ["allowed"]) ++ " |\n" ++
+        "|" ++ String.join ((inputs ++ ["allowed"]).map fun _ => "---|") ++ "\n" ++
+        String.join (rs.map fun (ins, out) =>
+          "| " ++ " | ".intercalate (ins.map yn ++ [if out then "yes" else "no"]) ++ " |\n") ++
+        "\n"
+  | .contested d doc holder denier φ =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n*" ++ escape holder ++ "* holds this claim, and *" ++
+        escape denier ++ "* denies it; each can be defended in the dispute:\n\n" ++
+        derivationRows [derivationRow order "" φ
+          (cite.bind fun c => Latex.loneGlossWith (inWords order c) φ)]
+  | .helper d doc => declLabel d "" ++ "\n" ++ doc ++ "\n"
   | .citation d doc c =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ citationWords order cite c
   | .other d doc sig =>

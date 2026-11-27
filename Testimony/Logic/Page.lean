@@ -1,4 +1,5 @@
 import Testimony.Logic.Line
+import Testimony.Argument
 
 /-!
 # Testimony.Logic.Page — what a generated page is made of
@@ -469,6 +470,30 @@ inductive Item (α : Type)
   /-- A source that takes its rating where it is used (`Confidence → Source`):
   its references, read at one rating. -/
   | sourceFn (decl doc : String) (s : Source)
+  /-- A named list, said as a lead sentence and its entries: the lines a
+  position gathers, say. The entries are plain text. -/
+  | listing (decl doc lead : String) (entries : List String)
+  /-- A list of sources, each said in words. -/
+  | sources (decl doc : String) (ss : List Source)
+  /-- A declaration said in one plain sentence: a passage, a pinpoint. -/
+  | said (decl doc text : String)
+  /-- How a later text stands to an earlier one: an `IntertextEdge`. -/
+  | edge (decl doc : String) (e : IntertextEdge)
+  /-- A tradition's reading of a passage: an `Interpretation`, under the name of
+  the criterion it serves, if it serves one (empty if not). -/
+  | interpretation (decl doc criterion : String) (i : Interpretation)
+  /-- One reading of a rival's ambiguous claim: its name, what it commits the
+  reader to, and who reads it so. -/
+  | dilemmaReading (decl doc name : String) (commits : Formula α) (s : Source)
+  /-- A rule written as a table of true and false: its inputs, by name, and for
+  each row of inputs whether the rule allows it. -/
+  | truthTable (decl doc : String) (inputs : List String) (rows : List (List Bool × Bool))
+  /-- A claim one position holds and another denies, both defensible: the names
+  of the two positions, and the claim. -/
+  | contested (decl doc holder denier : String) (φ : Formula α)
+  /-- A helper for writing the argument down, said by its docstring alone: what
+  it gives is set out where it is used. -/
+  | helper (decl doc : String)
   /-- A citation function, `Claim → AtomMeta`: what it cites each claim to.
   Read off the definition when the page is harvested, one claim at a time,
   so the page shows the citations and not a function's signature. -/
@@ -507,6 +532,8 @@ def atoms [DecidableEq α] : Item α → List α
   | .package _ _ pkg => pkg.atoms
   | .fromLine _ _ _ pkg => pkg.atoms
   | .refutation _ _ a _ _ => [a]
+  | .dilemmaReading _ _ _ φ _ => atomsOf φ
+  | .contested _ _ _ _ φ => atomsOf φ
   | .line _ _ l => (l.premises ++ [l.delivers]).flatMap atomsOf
   | .formula _ _ φ => atomsOf φ
   | .formulas _ _ φs => φs.flatMap atomsOf
@@ -531,6 +558,30 @@ rather than silently dropped. -/
 def atomOrder [DecidableEq α] (allAtoms : List α) (items : List (Item α)) : List α :=
   let mentioned := (items.flatMap Item.atoms).eraseDups
   allAtoms.filter (mentioned.contains ·) ++ mentioned.filter (!allAtoms.contains ·)
+
+/-- How a later text stands to an earlier one, in words. -/
+def relationWords : RelationType → String
+  | .quotation => "quotes"
+  | .allusion => "alludes to"
+  | .echo => "echoes"
+  | .typology => "reads as a type fulfilled"
+  | .promise => "takes up the promise of"
+  | .prediction => "reads as fulfilling the prediction of"
+  | .messianicTheme => "takes up the royal, messianic motif of"
+  | .retrospective => "reinterprets"
+  | .thematic => "shares a theme, with no direct dependence, with"
+
+/-- How a reading construes its passage, in words. -/
+def asRelationWords : RelationType → String
+  | .quotation => "a text quoted later"
+  | .allusion => "a text alluded to later"
+  | .echo => "a text echoed later"
+  | .typology => "a type, fulfilled later"
+  | .promise => "a promise, taken up later"
+  | .prediction => "a prediction"
+  | .messianicTheme => "a royal, messianic motif"
+  | .retrospective => "a text reinterpreted later"
+  | .thematic => "a theme shared with later texts"
 
 /-- Whether two citations say the same thing: the same claim, of the same kind,
 held in the same tradition, as firmly, on the same references. Compared as the

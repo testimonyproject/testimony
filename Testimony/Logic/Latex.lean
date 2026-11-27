@@ -812,6 +812,26 @@ def refutationWords [DecidableEq α] (n : Numbering α) (a : α) (reads : String
      | none => "") ++
     ". What the text reads: " ++ escape reads ++ "." ++ sourceWords s
 
+/-- **A rule written as a table, in words**: a table with a column for each
+input and one for whether the rule allows the row. -/
+def truthTableWords (inputs : List String) (rowsOf : List (List Bool × Bool)) : String :=
+  let yn (b : Bool) := if b then "true" else "false"
+  "\\par\\smallskip\\noindent The rule, row by row:\n\n" ++
+  "\\begin{tabular}{" ++ String.join (inputs.map fun _ => "l ") ++ "l}\n\\toprule\n" ++
+  String.intercalate " & " (inputs.map escape ++ ["allowed"]) ++ " \\\\\n\\midrule\n" ++
+  String.join (rowsOf.map fun (ins, out) =>
+    String.intercalate " & " (ins.map yn ++ [if out then "yes" else "no"]) ++ " \\\\\n") ++
+  "\\bottomrule\n\\end{tabular}\n\n"
+
+/-- **A reading of a passage, in words**: the passage, how the reading
+construes it, the reading, and who reads it so. -/
+def interpretationWords (i : Interpretation) : String :=
+  "\\par\\smallskip\\noindent " ++ escape i.passage.render ++
+    (match i.asRelation with
+     | some r => ", read as " ++ escape (Page.asRelationWords r)
+     | none => "") ++
+    ": \\emph{" ++ escape i.reading ++ "}." ++ sourceWords i.source
+
 /-- Which of a package's premises are readings taken from the text alone
 (`AtomMeta.readsScriptureAlone`), as a note under its derivation; nothing when
 there are none. A quotation of the text is not such a reading, so a package
@@ -1136,6 +1156,27 @@ def item [DecidableEq α] (n : Numbering α) : Page.Item α → String
   | .claim d doc m => declLabel d "" ++ prose doc ++ claimWords' m
   | .reading d doc truth => declLabel d "" ++ prose doc ++ readingWords n truth
   | .citation d doc c => declLabel d "" ++ prose doc ++ citationWords n c
+  | .listing d doc lead entries => declLabel d "" ++ prose doc ++
+      (if entries.isEmpty then "" else
+        "\\par\\smallskip\\noindent " ++ escape lead ++ "\n" ++ nameList entries)
+  | .sources d doc ss => declLabel d "" ++ prose doc ++ String.join (ss.map sourceWords)
+  | .said d doc text => declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent " ++ escape text ++ "\n"
+  | .edge d doc e => declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent " ++ escape e.fromPassage.render ++ " " ++
+        escape (Page.relationWords e.relation) ++ " " ++ escape e.toPassage.render ++ "." ++
+        sourceWords e.source
+  | .interpretation d doc crit i => declLabel d (if crit.isEmpty then "" else
+        " --- " ++ escape crit) ++ prose doc ++ interpretationWords i
+  | .dilemmaReading d doc name φ src => declLabel d (" --- " ++ escape name) ++ prose doc ++
+      "\\par\\smallskip\\noindent Read so, the claim commits its holder to:\n" ++
+      rows (row n "\\item[]" φ (loneGloss n φ)) ++ sourceWords src
+  | .truthTable d doc inputs rs => declLabel d "" ++ prose doc ++ truthTableWords inputs rs
+  | .contested d doc holder denier φ => declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent \\emph{" ++ escape holder ++ "} holds this claim, and \\emph{" ++
+        escape denier ++ "} denies it; each can be defended in the dispute:\n" ++
+      rows (row n "\\item[]" φ (loneGloss n φ))
+  | .helper d doc => declLabel d "" ++ prose doc
   | .fromLine d doc line pkg =>
       declLabel d (" --- " ++ escape pkg.name) ++ prose doc ++ fromLineWords n line pkg ++
       scriptureNote n.order pkg

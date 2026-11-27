@@ -11,6 +11,8 @@ import Testimony.Logic.Credibility
 import Testimony.Logic.Latex
 import Testimony.Logic.Markdown
 import Testimony.Corpus.Greek
+import Testimony.Logic.Contest
+import Testimony.Semantics.Grammar
 import Testimony.Tools.Docs
 
 /-!
@@ -45,14 +47,14 @@ an enumeration, the harvest applies it to each claim and reduces the result to
 false in words. A citation function, `Claim → AtomMeta`, is said in words
 too: the claims on the page it cites otherwise than the legend, each with its
 citation, so a variant `cite` written for one hearing shows what it changes
-rather than its signature. Everything else — a `FulfillmentCriterion`, a
-dispute — is shown as Lean source, the honest fallback, and so is a valuation
-that does not reduce.
+rather than its signature. So is every other kind of definition an argument
+declares: a map from parties to positions, a dispute and a hearing, a register,
+a refutation, Greek words, a passage, a pinpoint, a link between two texts, a
+reading of a passage, a reading of a rival's claim, a rule over true and false,
+a contested claim, and a helper, which its docstring says.
 
-Values above `valueWidth` characters would be shown by signature alone, and
-the harvest fails the build on every one, naming it: a page that shows a reader
-a definition's header and nothing it defines has told them nothing. Such a
-declaration needs a rendering in words, as the cases above are.
+A reader is not shown Lean. A definition the harvest has no rendering in words
+for stops the build, named, until it has one.
 -/
 
 open Lean Elab Command Testimony
@@ -191,9 +193,11 @@ def render [DecidableEq α] (ns : Name) (allAtoms : List α)
 
 variable {α : Type}
 
-/-- How much of a declaration's value a page will show before falling back to
-its signature alone. -/
-def valueWidth : Nat := 600
+/-- A contested claim as a page sets it: the names of the position that holds
+it and the position that denies it, and the claim. -/
+def contestedView [Logic.HasPostulates α] {ι : Type} {D : Logic.Dispute α ι} {φ : Logic.Formula α}
+    (c : Logic.Contested D φ) : String × String × Logic.Formula α :=
+  ((D.node c.holder).name, (D.node c.denier).name, φ)
 
 /-- How wide a rendered statement is allowed to be: narrow enough that a long
 one wraps inside a code block rather than scrolling off it, and inside a LaTeX
@@ -218,11 +222,6 @@ def wrapStatement (s : String) : String :=
     else (lines ++ [cur], indent ++ w)
   let (lines, last) := ((s.splitOn " ").filter (· ≠ "")).foldl step (([] : List String), "")
   String.intercalate "\n" (lines ++ [last])
-
-/-- Indent a pretty-printed value so it reads as the body of the definition it
-is being shown as. -/
-def indentLines (s : String) : String :=
-  String.intercalate "\n" ((s.splitOn "\n").map fun l => if l.isEmpty then l else "  " ++ l)
 
 /-- The repository path an argument's sources live at, for the "do not edit"
 header. A directory argument and a single-file one both answer to it: the
@@ -405,6 +404,47 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
         guard (ci.numFields == 0)
         pure c
 
+    -- A rule over true and false, `Bool → … → Bool`: its inputs' names.
+    let boolRule (ty : Expr) : Option (List String) := Id.run do
+      let mut t := ty
+      let mut names : Array String := #[]
+      while t.isForall do
+        let .forallE nm dom body _ := t | return none
+        unless dom.isConstOf ``Bool do return none
+        names := names.push (nm.eraseMacroScopes.toString.dropWhile (· == '_')).toString
+        t := body
+      if names.isEmpty || names.size > 4 || !t.isConstOf ``Bool then return none
+      return some names.toList
+
+    -- A source that takes its pinpoint or rating where it is used: the
+    -- arguments that read it at the whole work and at `disputed`.
+    let sourceArgs (ty : Expr) : Option (Array (TSyntax `term)) := Id.run do
+      let mut t := ty
+      let mut args : Array (TSyntax `term) := #[]
+      while t.isForall do
+        let .forallE _ dom body _ := t | return none
+        let dom := dom.consumeTypeAnnotations
+        let dom := if dom.isAppOfArity ``optParam 2 then dom.getArg! 0 else dom
+        if dom.isConstOf ``Testimony.Confidence then
+          args := args.push (mkIdent ``Testimony.Confidence.disputed)
+        else if dom.isConstOf ``Testimony.Bib.Locus then
+          args := args.push (mkIdent ``Testimony.Bib.Locus.whole)
+        else return none
+        t := body
+      if args.isEmpty || !t.isConstOf ``Testimony.Source then return none
+      return some args
+
+    -- A hearing under a register's standard, `R.hearing s`: the register and
+    -- the standard, when both are named.
+    let hearingOf (info : ConstantInfo) : Option (Name × Name) := do
+      let v ← info.value?
+      guard (v.isAppOf ``Logic.Register.hearing)
+      let args := v.getAppArgs
+      let r ← args[args.size - 2]!.constName?
+      let st ← args[args.size - 1]!.constName?
+      guard (env.contains (r ++ `finite))
+      pure (r, st)
+
     -- The map a dispute takes its positions from, when it is declared by name
     -- in the argument and set out on the page; empty otherwise.
     let nodeOf (info : ConstantInfo) : String := Id.run do
@@ -504,12 +544,6 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
                     else first.render ++ "–" ++ toString l.chapter ++ ":" ++ toString l.verse
                   | _, _ => "")
                 ($(mkIdent n).map (·.text)))
-          else if (match info.type with
-              | .forallE _ (.const c _) (.const s _) _ =>
-                c == ``Testimony.Confidence && s == ``Testimony.Source
-              | _ => false) then
-            `(Logic.Page.Item.sourceFn $(quote dname) $(quote doc)
-                ($(mkIdent n) Testimony.Confidence.disputed))
           else if headIs ``Logic.Because then
             `(Logic.Page.Item.because $(quote dname) $(quote doc)
                 (Logic.Because.view $(mkIdent n)))
@@ -549,33 +583,72 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
               | .forallE _ (.const _ _) (.const c _) _ => c == ``Logic.AtomMeta
               | _ => false) then
             `(Logic.Page.Item.citation $(quote dname) $(quote doc) $(mkIdent n))
+          else if headIs ``List &&
+              (info.type.getAppArgs[0]?.any fun a => headOf a == some ``Logic.Line) then
+            `(Logic.Page.Item.listing $(quote dname) $(quote doc) "The lines it gathers:"
+                ($(mkIdent n).map (·.name)))
+          else if headIs ``List &&
+              (info.type.getAppArgs[0]?.any fun a => a.constName? == some ``Testimony.Source) then
+            `(Logic.Page.Item.sources $(quote dname) $(quote doc) $(mkIdent n))
+          else if headIs ``Testimony.Bib.Locus then
+            `(Logic.Page.Item.said $(quote dname) $(quote doc)
+                (match Logic.Markdown.locus $(mkIdent n) with
+                  | "" => "The pinpoint: the work as a whole."
+                  | l => "The pinpoint: " ++ l ++ "."))
+          else if headIs ``Testimony.Passage then
+            `(Logic.Page.Item.said $(quote dname) $(quote doc)
+                ("The passage: " ++ ($(mkIdent n)).render ++ "."))
+          else if headIs ``Testimony.IntertextEdge then
+            `(Logic.Page.Item.edge $(quote dname) $(quote doc) $(mkIdent n))
+          else if headIs ``Testimony.Interpretation then
+            `(Logic.Page.Item.interpretation $(quote dname) $(quote doc) "" $(mkIdent n))
+          else if headIs ``Testimony.FulfillmentCriterion then
+            `(Logic.Page.Item.interpretation $(quote dname) $(quote doc) $(mkIdent n).name
+                $(mkIdent n).basis)
+          else if headIs ``Logic.Reading then
+            `(Logic.Page.Item.dilemmaReading $(quote dname) $(quote doc) $(mkIdent n).name
+                $(mkIdent n).commits $(mkIdent n).source)
+          else if headIs ``Logic.Contested then
+            `(Logic.Page.Item.contested $(quote dname) $(quote doc)
+                (contestedView $(mkIdent n)).1 (contestedView $(mkIdent n)).2.1
+                (contestedView $(mkIdent n)).2.2)
+          else if let some inputs := boolRule info.type then do
+            let combos := (List.range (2 ^ inputs.length)).map fun k =>
+              (List.range inputs.length).map fun j => (k >>> (inputs.length - 1 - j)) % 2 == 1
+            let rowTerms ← combos.toArray.mapM fun bs => do
+              let lits : Array (TSyntax `term) := bs.toArray.map fun b => quote b
+              `(([$(lits),*], $(mkIdent n) $(lits)*))
+            `(Logic.Page.Item.truthTable $(quote dname) $(quote doc) $(quote inputs)
+                [$(rowTerms),*])
+          else if let some args := sourceArgs info.type then do
+            `(Logic.Page.Item.sourceFn $(quote dname) $(quote doc) ($(mkIdent n) $(args)*))
+          else if let some (r, st) := hearingOf info then do
+            let some (.const d _) := (env.find? r).bind (·.type.getAppArgs.back?) | do
+              bare := bare.push n
+              `(Logic.Page.Item.other $(quote dname) $(quote doc) "")
+            `(Logic.Page.Item.dispute $(quote dname) $(quote doc)
+                ((($(mkIdent (r ++ `finite)) $(mkIdent st)).parties.filter
+                    fun i => decide ($(mkIdent r).admits $(mkIdent st) i)).map
+                  fun i => ($(mkIdent d).node i).name) "")
+          else if info.type.isForall || headIs ``Testimony.Semantics.Statement then
+            `(Logic.Page.Item.helper $(quote dname) $(quote doc))
           else if let some truth ← readingTruth info then
             let pairs ← truth.mapM fun (c, b) => `(($(mkIdent c), $(quote b)))
             `(Logic.Page.Item.reading $(quote dname) $(quote doc) [$(pairs),*])
           else do
-            let sig ← statement ns info.type
-            let value ← match info.value? with
-              | some v => do
-                  let s ← render printWidth ns v
-                  pure (if s.length > valueWidth then none else some s)
-              | none => pure none
-            let head := wrapStatement ("def " ++ dname ++ " : " ++ sig)
-            let src ← match value with
-              | some v => pure (head ++ " :=\n" ++ indentLines v)
-              | none => do
-                bare := bare.push n
-                pure head
-            `(Logic.Page.Item.other $(quote dname) $(quote doc) $(quote src))
+            bare := bare.push n
+            `(Logic.Page.Item.other $(quote dname) $(quote doc) "")
         items := items.push (k, line, false, term)
 
-    -- A page that shows a reader a definition's header and nothing it defines
-    -- has told them nothing, so the harvest refuses one: such a declaration
-    -- needs a rendering in words (`Logic.Page.Item`), or a shorter value.
+    -- A reader is not shown Lean: a declaration with no rendering in words
+    -- stops the build, named, until it has one.
     unless bare.isEmpty do
-      logError m!"derive_argument_bodies: {bare.size} declaration(s) under {ns} would be \
-        shown by signature alone, with nothing of what they define: \
-        {", ".intercalate (bare.toList.map toString)}. Give each a rendering in words \
-        (a case of `Logic.Page.Item`), or a value under {valueWidth} characters."
+      logError m!"derive_argument_bodies: {bare.size} declaration(s) under {ns} have no \
+        rendering in words, and a page shows a reader no Lean: \
+        {", ".intercalate (bare.toList.map toString)}. Give each kind a case of \
+        `Logic.Page.Item`, rendered by `Logic.Latex.item` and `Logic.Markdown.item`, and \
+        harvest it in `deriveArgumentBodies`."
+
     let sorted := (items.qsort fun (k₁, l₁, _) (k₂, l₂, _) =>
       if k₁ == k₂ then l₁ < l₂ else k₁ < k₂).toList
     -- The leading prose is the argument's own introduction; the legend goes
