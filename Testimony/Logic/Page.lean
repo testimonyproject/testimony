@@ -236,6 +236,24 @@ def position (n k : Nat) : Float × Float :=
   let θ := 3.141592653589793 / 2 - 2 * 3.141592653589793 * k.toFloat / n.toFloat
   (Float.cos θ, Float.sin θ)
 
+/-- A dispute with no edge to draw, said in words: its positions, named by
+`name`, stand apart. Both renderings print this in place of an empty picture
+and an empty table. -/
+def apartWords (g : Graph) (name : String → String) : String :=
+  let names := g.nodes.map name
+  let list := match names.reverse with
+    | [] => ""
+    | [a] => a
+    | [b, a] => a ++ " and " ++ b
+    | z :: rest => ", ".intercalate rest.reverse ++ ", and " ++ z
+  match names.length with
+  | 0 => "The dispute hears no positions, so there is nothing to draw."
+  | 1 => list ++ " is the only position heard, so there is nothing to draw."
+  | 2 => list ++ " stand apart: neither defeats the other, supports it, or is part of it, " ++
+      "so there is nothing to draw."
+  | _ => list ++ " stand apart: none defeats another, supports it, or is part of it, " ++
+      "so there is nothing to draw."
+
 /-- What an edge is, in words, for the table. -/
 def EdgeKind.describe : EdgeKind → String
   | .defeat => "defeats"

@@ -1120,6 +1120,12 @@ def graph (g : Page.Graph) (defeatTable supportTable partTable : String) : Strin
   let name (k : Nat) := "\\emph{" ++ escape (g.nodes.getD k "") ++ "}"
   let ref (t fallback : String) :=
     if t.isEmpty then fallback else "\\texttt{" ++ codeEscape t ++ "}"
+  if g.edges.isEmpty then
+    "\\noindent " ++ Page.Graph.apartWords g (fun nm => "\\emph{" ++ escape nm ++ "}") ++
+    " This is read from the cells of " ++ ref defeatTable "the defeat table" ++ ", " ++
+    ref supportTable "the support table" ++ " and " ++ ref partTable "the part-of table" ++
+    ", each computed from the parties' premises and checked by the kernel.\n"
+  else
   graphTikz g ++
   "\\noindent Solid: defeats. Dashed: supports. Dotted: one party's case is part of " ++
   "another's.\n" ++
@@ -1546,6 +1552,8 @@ def style : String :=
   "\\usepackage{amsmath,amssymb,array,booktabs,longtable,fontspec,xcolor,alltt}\n" ++
   "\\usepackage{tikz}\\usetikzlibrary{arrows.meta}\n" ++
   "\\usepackage{paracol}\\setcolumnwidth{0.4\\textwidth,0.56\\textwidth}\n" ++
+  -- A light rule between a statement's logic and its words.
+  "\\setlength{\\columnseprule}{0.4pt}\\colseprulecolor{black!25}\n" ++
   "\\usepackage[hidelinks]{hyperref}\n" ++
   -- A variable links to its row in the legend, and is coloured so a reader can
   -- see that it does: `hidelinks` sets every other link as plain text. The blue

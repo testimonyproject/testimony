@@ -525,6 +525,12 @@ def graph (g : Page.Graph) (defeatTable supportTable partTable : String) : Strin
   let name (k : Nat) := "*" ++ escape (g.nodes.getD k "") ++ "*"
   let ref (t : String) (fallback : String) :=
     if t.isEmpty then fallback else "[`" ++ t ++ "`](#" ++ t ++ ")"
+  if g.edges.isEmpty then
+    Page.Graph.apartWords g (fun nm => "*" ++ escape nm ++ "*") ++
+    " This is read from the cells of " ++ ref defeatTable "the defeat table" ++ ", " ++
+    ref supportTable "the support table" ++ " and " ++ ref partTable "the part-of table" ++
+    ", each computed from the parties' premises and checked by the kernel.\n"
+  else
   graphSvg g ++
   "Solid red: defeats. Dashed green: supports. Dotted blue: one party's case is " ++
   "part of another's.\n\n" ++
