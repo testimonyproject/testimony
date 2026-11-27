@@ -1013,8 +1013,8 @@ def trentWithoutDeliveranceReading : Valuation Claim := fun a =>
   | _ => True
 
 /-- **Trent can grant Hays's reading of "faith of Christ".** Nothing Trent holds
-settles how the phrase (πίστις Χριστοῦ) is read, so the apocalyptic reading's
-denial that it means faith *in* Christ is not something Trent answers. -/
+settles how the phrase (πίστις Χριστοῦ, "faith in Christ" or "faithfulness of Christ") is read, so
+the apocalyptic reading's denial that it means faith *in* Christ is not something Trent answers. -/
 theorem trent_grants_the_subjective_genitive :
     Grants tridentineCase (notP .pistisChristouObjective) := by
   satisfied_by trentWithoutDeliveranceReading [Grants, solaFideDefs]

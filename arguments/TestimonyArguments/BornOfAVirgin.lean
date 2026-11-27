@@ -33,10 +33,10 @@ The prophet is Isaiah, speaking to King Ahaz of Judah:
 Micah 5:2, which Matthew reads of the Messiah's birthplace, is disputed too, but
 there the dispute is only over whether the oracle looks forward at all (see the
 argument "Born in Bethlehem"). Isaiah 7:14 is fought over more fiercely, and
-the fight is about a word. Isaiah's Hebrew calls the woman an עַלְמָה (*almah*). Both sides grant
-that the word names a young woman of marriageable age; they part over whether
-it names a virgin. The Greek translation made by Jews before Christ, the
-Septuagint, which Matthew quotes, renders it παρθένος, read as "virgin",
+the fight is about a word. Isaiah's Hebrew calls the woman an עַלְמָה ("virgin" or "young woman")
+(*almah*). Both sides grant that the word names a young woman of marriageable age; they part over
+whether it names a virgin. The Greek translation made by Jews before Christ, the
+Septuagint, which Matthew quotes, renders it παρθένος ("virgin" or "young woman"), read as "virgin",
 though whether the word meant that in the translator's own day is disputed
 too. And the setting tells against Matthew's reading on its face. The sign is
 given to Ahaz, and Isaiah 8:3–4 seems to fulfil it within the prophet's own
@@ -70,8 +70,8 @@ itself if its own disputed reading is granted.
 
 Beside them stands a reply that delivers nothing of its own but takes away the
 objection. *Almah* need not *mean* "virgin" for Mary to *be* an *almah*.
-Rebekah is called an עַלְמָה at Genesis 24:43 and a virgin "whom no man had
-known" at 24:16, the same woman under both words. Mary was a betrothed young
+Rebekah is called an עַלְמָה ("virgin" or "young woman") at Genesis 24:43 and a virgin "whom no man
+had known" at 24:16, the same woman under both words. Mary was a betrothed young
 woman who conceived as a virgin, so she answers Isaiah's description on anyone's
 dictionary. The chapter "Four strands, and what each depends on" takes the
 strands and this reply in turn.

@@ -56,9 +56,9 @@ def nearTermFulfilmentIsUnclearCited : AtomMeta :=
       , tradition := .christianHistoricalGrammatical
       , confidence := .wellSupported } }
 
-/-- `signGivenToHouseOfDavid`. What the Hebrew says: שִׁמְעוּ־נָא בֵּית דָּוִד and
-לָכֶם in 7:13–14 are plural, אַתָּה in 7:16 is singular. Compton builds on it
-(12), Motyer notes the address to the dynasty (122). The grammar is not in
+/-- `signGivenToHouseOfDavid`. What the Hebrew says: שִׁמְעוּ־נָא בֵּית דָּוִד ("Listen now, O house
+of David") and לָכֶם ("you") in 7:13–14 are plural, אַתָּה ("you") in 7:16 is singular. Compton
+builds on it (12), Motyer notes the address to the dynasty (122). The grammar is not in
 dispute; what it implies is, and that is left to the step that uses it. -/
 def signGivenToHouseOfDavidCited : AtomMeta :=
   { label := "Isaiah 7:13–14 gives the sign to David's house, in the plural; 7:16's 'you' is Ahaz"

@@ -63,7 +63,7 @@ inductive Claim
   says; or that the Holy Ghost is from the Son". No party here holds otherwise. -/
   | sonNotFromTheSpirit
   /-- **The reading of John 15:26 as eternal origin.** "Who proceeds from the
-  Father" (ἐκπορεύεται) speaks of where the Spirit is from eternally, not only of
+  Father" (ἐκπορεύεται, "proceeds") speaks of where the Spirit is from eternally, not only of
   his being sent in time. Photius and Ware read it so, and so does Aquinas. LST
   says the texts do not settle it. -/
   | john15_26SpeaksOfEternalOrigin

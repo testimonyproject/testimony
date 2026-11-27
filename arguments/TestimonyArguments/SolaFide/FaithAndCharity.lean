@@ -67,20 +67,20 @@ too that faith is itself a work, for Christ calls believing "the work of God"
 (John 6:29), so "without works of the law" cannot mean without every work
 (I.16). And on Galatians 5:6 he went to the Greek. The Latin has *operatur*,
 "works", and "that word is to be taken passively, not actively. For in the
-Greek it is ἐνεργουμένη, that is, moved and acted upon" (II.4, p. 219). So love
-is "not a sign of living faith", but "the very life of faith", and faith is
+Greek it is ἐνεργουμένη [working or made operative], that is, moved and acted upon" (II.4, p. 219).
+So love is "not a sign of living faith", but "the very life of faith", and faith is
 "formed, and as it were given life, by love" (p. 218). His Latin is quoted in
 the library's own English.
 
-Whether ἐνεργουμένη is passive is a question about the Greek, and the library
-reads the Greek word by word, from MACULA, an open analysis of the Greek New
+Whether ἐνεργουμένη ("working" or "made operative") is passive is a question about the Greek, and
+the library reads the Greek word by word, from MACULA, an open analysis of the Greek New
 Testament that gives each word its parsing and the part it plays in its clause.
 The word is a present participle, and in the present the middle and the passive
 are spelled alike. In the middle the subject does the action, here faith doing
 the working; in the passive it is acted on, faith being worked. So the letters
 of the word allow either. J. B. Lightfoot, the Cambridge scholar and Anglican
 bishop, read it middle in his commentary on Galatians (first published in 1865,
-cited here from the 1890 edition): "ἐνεργεῖσθαι is never passive in St Paul … and
+cited here from the 1890 edition): "ἐνεργεῖσθαι [to be effective] is never passive in St Paul … and
 therefore this passage does not express the doctrine of 'fides caritate
 formata'", faith formed by charity (pp. 204–205). J. Armitage Robinson, Dean of
 Westminster, answered him by name in 1903 and read it passive: of Galatians 5:6
@@ -125,8 +125,8 @@ so a position that reaches it is weighed at `refuted` too.
 The middle, for its part, makes faith the one at work. How love stands to that
 working is a second question. One step further, proposed here because no reader
 cited has drawn it in these words, reads the preposition: faith works "through"
-love (δι᾽ ἀγάπης), as a worker through what he works with. Burton grants that
-διά here "denotes not antecedent cause but mediate agency", that is, love is not
+love (δι᾽ ἀγάπης, "through love"), as a worker through what he works with. Burton grants that
+διά ("through") here "denotes not antecedent cause but mediate agency", that is, love is not
 what sets faith going beforehand but what faith works through, though he says
 this is made certain "not on grammatical grounds" (p. 281). What works through a
 means moves it, and what moves a thing is not moved by it in the same respect,
@@ -361,7 +361,7 @@ def calvinOnCharityCase : ArgumentPackage Claim :=
 
 open Testimony.Semantics in
 /-- What the Rheims note and Bellarmine say of the verb of Galatians 5:6: that love is the
-one at work in ἐνεργουμένη, the one that works faith. -/
+one at work in ἐνεργουμένη ("working" or "made operative"), the one that works faith. -/
 abbrev workedByLove : Statement := .worksBy .energeo Meanings.SolaFide.galatiansWorking "ἀγάπη"
 
 
@@ -393,8 +393,8 @@ def rheimsSoulLine : Line Claim :=
 open Testimony.Semantics in
 /-- **The fault this line commits: it concludes a reading of the verb against
 Paul's usage.** Love as the soul that moves faith is love as the one at work in
-ἐνεργουμένη, and wherever Paul's spelling makes ἐνεργέω active the one at work
-is God, the Spirit, the evil spirit or believers, never love. -/
+ἐνεργουμένη ("working" or "made operative"), and wherever Paul's spelling makes ἐνεργέω ("work")
+active the one at work is God, the Spirit, the evil spirit or believers, never love. -/
 def rheimsSoulLine.expected : List (Finding Claim) :=
   [.againstUsage [workedByLove]]
 
@@ -505,8 +505,8 @@ def bellarmineFaithIsAWorkLine : Line Claim :=
 
 /-- **Who draws the step from the passive.** Bellarmine on Galatians 5:6: "there
 that word (*operatur*, works) is to be taken passively, not actively. For in the
-Greek it is ἐνεργουμένη, that is, moved and acted upon", so that love is "not a
-sign of living faith … but the very life of faith" (*De justificatione* II.4,
+Greek it is ἐνεργουμένη [working or made operative], that is, moved and acted upon", so that love is
+"not a sign of living faith … but the very life of faith" (*De justificatione* II.4,
 p. 219). Rated `disputed`, because J. Armitage Robinson grants the passive and
 denies that love is what moves faith: faith "is made operative through love",
 "the agent implied being God" (*Ephesians*, p. 246). A dispute weighs the step at
@@ -519,8 +519,8 @@ def bellarminePassiveStep : Source :=
 
 /-- **Faith moved by love, as Bellarmine read the Greek of Galatians 5:6.** Paul
 writes that what counts is faith "working" through love, and the Greek word,
-ἐνεργουμένη, is passive: faith is worked, moved and acted upon. So love moves
-faith, as the soul moves the body. -/
+ἐνεργουμένη ("working" or "made operative"), is passive: faith is worked, moved and acted upon. So
+love moves faith, as the soul moves the body. -/
 @[solaFideDefs]
 def bellarminePassiveLine : Line Claim :=
   { name := "Faith moved by love (Bellarmine on the Greek of Galatians 5:6)"
@@ -534,7 +534,7 @@ open Testimony.Semantics in
 /-- **The fault Bellarmine's line commits: it reads the verb against Paul's
 usage.** The passive is a reading the spelling allows. What the line concludes
 from it is that love is what works faith, and in every one of Paul's uses of
-ἐνεργέω whose spelling makes it active, the one at work is God, the Spirit, the
+ἐνεργέω ("work") whose spelling makes it active, the one at work is God, the Spirit, the
 evil spirit or believers, never love. The check finds it from Paul's letters,
 and the claim is rated `refuted`. -/
 def bellarminePassiveLine.expected : List (Finding Claim) :=
@@ -566,7 +566,7 @@ def bellarmineFormedFaithLine : Line Claim :=
 open Testimony.Semantics in
 /-- **The fault this line commits: it argues from a reading of the verb against
 Paul's usage**, that love is what works faith, which every active use of
-ἐνεργέω in his letters denies love. -/
+ἐνεργέω ("work") in his letters denies love. -/
 def bellarmineFormedFaithLine.expected : List (Finding Claim) :=
   [.againstUsage [workedByLove]]
 
@@ -621,7 +621,7 @@ def bellarmineOnCharityCase : ArgumentPackage Claim :=
 
 /-- **Who draws the step from the middle voice.** J. B. Lightfoot on Galatians
 5:6: "ἐνεργουμένη] 'working'; the middle voice according to the general usage of
-St Paul … ἐνεργεῖσθαι is never passive in St Paul … and therefore this passage
+St Paul … ἐνεργεῖσθαι [to be effective] is never passive in St Paul … and therefore this passage
 does not express the doctrine of 'fides caritate formata'" (pp. 204–205). Rated
 `disputed`, because the Rheims New Testament, translating the Latin *operatur*,
 gives faith as the one at work, "faith that worketh by charitie", as the middle
@@ -655,16 +655,16 @@ def lightfootOnCharityCase : ArgumentPackage Claim :=
 
 /-- **Who draws the step to love as faith's means.** No reader cited here draws
 it in these words, so it is proposed: the subject of a middle verb is the one at
-work, and διά with the genitive names what it works through. Burton grants the
+work, and διά ("through") with the genitive names what it works through. Burton grants the
 second: Ernest DeWitt Burton, in the International Critical Commentary (1921),
-says that διά here "denotes not antecedent cause but mediate agency", that is,
+says that διά ("through") here "denotes not antecedent cause but mediate agency", that is,
 love is not what sets faith going beforehand but what faith works through, and
 that this is made certain "not on grammatical grounds" (p. 281). Rated `disputed`, because the
 Rheims note grants that faith is what works and denies that charity is its
 instrument. -/
 def faithsMeansStep : Source :=
   { primary := .proposal ("in Galatians 5:6 the participle is middle, so faith is the one " ++
-      "at work, and δι᾽ ἀγάπης names love as the means it works through")
+      "at work, and δι᾽ ἀγάπης (“through love”) names love as the means it works through")
   , supporting := [.work burtonGalatians (.page 281)]
   , tradition := .christianHistoricalGrammatical
   , confidence := .disputed }
@@ -778,8 +778,8 @@ declare_bundle faithAndCharityExchange in faithAndCharityDispute.finite where
   /-- Bellarmine grants that Paul excludes moral works as well as ceremonies, and
   that Abraham was a believer. He holds that the works excluded are those done
   without grace, from Romans 4:4, and that faith is itself a work (John 6:29). On
-  Galatians 5:6 he goes to the Greek: the word is ἐνεργουμένη, "that is, moved
-  and acted upon", so love moves faith and is "the very life of faith". The
+  Galatians 5:6 he goes to the Greek: the word is ἐνεργουμένη ("working" or "made operative"), "that
+  is, moved and acted upon", so love moves faith and is "the very life of faith". The
   passive is a reading the word's spelling allows. What he concludes from it,
   that love is the one at work, is what Paul's usage rules out, so his line reads
   the verb against that usage, and his case is weighed at the refuted claim it
@@ -787,7 +787,7 @@ declare_bundle faithAndCharityExchange in faithAndCharityDispute.finite where
   Calvin's in return. -/
   turn CharityParty.bellarmine quoting bellarminePassiveLine from bellarmineDeJustificatione
   /-- Three centuries later Lightfoot answers from the grammar. The participle is
-  middle, "according to the general usage of St Paul", for "ἐνεργεῖσθαι is never
+  middle, "according to the general usage of St Paul", for "ἐνεργεῖσθαι [to be effective] is never
   passive in St Paul", "and therefore this passage does not express the doctrine
   of 'fides caritate formata'", faith formed by charity. Lightfoot denies the
   passive Bellarmine reasons from, and Bellarmine's case, weighed at the refuted
@@ -802,8 +802,8 @@ declare_bundle faithAndCharityExchange in faithAndCharityDispute.finite where
   turn CharityParty.means answers CharityParty.rheims
 
 /-- The reading on which Trent, Aquinas and Bellarmine hold together: the faith
-that justifies is formed by charity, ἐνεργουμένη is passive and love moves
-faith, the works Paul excludes are works without grace, "works of the law" is
+that justifies is formed by charity, ἐνεργουμένη ("working" or "made operative") is passive and love
+moves faith, the works Paul excludes are works without grace, "works of the law" is
 not every work, and faith alone does not suffice.
 Every other claim of the sola fide argument it takes as true, except the few that
 cannot be held beside these or beside one another. -/
@@ -823,8 +823,8 @@ def formedFaithReading : Valuation Claim := fun a =>
 /-- **Aquinas, Trent and Bellarmine can be held together.** One reading satisfies
 all three: the faith that justifies is formed by charity, love moves faith, Paul
 excludes only works done without grace, and faith alone does not suffice. It
-takes ἐνεργουμένη as passive and love as what moves faith, as Bellarmine does,
-so it holds the one claim of theirs that Paul's use of the verb refutes. -/
+takes ἐνεργουμένη ("working" or "made operative") as passive and love as what moves faith, as
+Bellarmine does, so it holds the one claim of theirs that Paul's use of the verb refutes. -/
 theorem rome_holds_together_on_charity :
     faithAndCharityDispute.StandTogether [.aquinas, .trent, .bellarmine] := by
   satisfied_by formedFaithReading [Dispute.StandTogether, solaFideDefs]
@@ -839,9 +839,9 @@ declare_verdict faithsMeansUnanswered for faithAndCharityDispute :
   exchange settles.** The reading proposed here, that love is the means faith
   works through, is the one position nothing defeats, so it prevails. The only
   readers who deny it are the Rheims note and Bellarmine, and both rest on the
-  claim that love is what moves faith, the one at work in ἐνεργουμένη. Paul never
-  makes love the one at work in that verb, so that claim is rated `refuted`, and
-  neither of them defeats anyone. The step itself is the library's own, rated
+  claim that love is what moves faith, the one at work in ἐνεργουμένη ("working" or "made
+  operative"). Paul never makes love the one at work in that verb, so that claim is rated `refuted`,
+  and neither of them defeats anyone. The step itself is the library's own, rated
   `disputed` because the Rheims note denies it. Aquinas, Trent, Calvin and
   Lightfoot are left undecided, because each is answered by another whose
   reasons are rated no weaker: Calvin and each of Aquinas and Trent defeat each

@@ -76,9 +76,9 @@ it. So the standard is named, and every result is computed under each:
   hold Westminster's rule reads the evidence standard's verdict, and nothing is decided for
   that reader by fiat.
 
-The third standard's first use is Matthew's reading of the Septuagint's παρθένος
-(`TestimonyArguments.BornOfAVirgin.Dispute.Matthew`). Matthew quotes the Greek of Isaiah 7:14
-of Mary, so in the text he quotes the word means "virgin". Wegner grants Matthew's grounds and
+The third standard's first use is Matthew's reading of the Septuagint's παρθένος ("virgin" or "young
+woman") (`TestimonyArguments.BornOfAVirgin.Dispute.Matthew`). Matthew quotes the Greek of Isaiah
+7:14 of Mary, so in the text he quotes the word means "virgin". Wegner grants Matthew's grounds and
 holds that the word had changed in meaning since the translator wrote it, from early Greek usage.
 Under the evidence and tradition standards that is a credible critique, and the step is
 `disputed` (`matthew_step_ratings`); in the hearing under the evidence standard nothing
@@ -116,8 +116,8 @@ it prefers. It cannot hide the preference: the other standard's rating is on the
 
 ## Meaning postulates
 
-Some claims the atom type keeps apart are joined by their meanings. "In Paul, δικαιόω is
-forensic: a verdict, and *not* making righteous" denies, in so many words, "Paul's δικαιόω
+Some claims the atom type keeps apart are joined by their meanings. "In Paul, δικαιόω [justify] is
+forensic: a verdict, and *not* making righteous" denies, in so many words, "Paul's δικαιόω [justify]
 denotes making righteous". A propositional check cannot see that: the two are separate atoms.
 So each check holds the argument's **meaning postulates** as background. For every pair of
 claims whose meanings cannot both be held, the postulate is `a → ¬b`; where one claim's meaning
@@ -142,7 +142,7 @@ A claim whose meaning says *and not that sense* does exclude the other, and is l
 Sola fide has five exclusions and no entailments (`TestimonyArguments.Meanings.SolaFide.joins`):
 - Trent's Latin of Revelation 22:11, against the Greek;
 - Trent's Latin of Sirach 18:22, against the Greek;
-- "James's δικαιόω is Paul's", against "James 2:24 is compatible with Paul";
+- "James's δικαιόω [justify] is Paul's", against "James 2:24 is compatible with Paul";
 - *faith alone*, against Trent's baptism as the instrumental cause of justification, by what
   "the only means" means;
 - justification as forensic only, against Trent's "justification includes sanctification".
@@ -157,19 +157,20 @@ and two entailments (`TestimonyArguments.Meanings.SolaScriptura.joins`): Mark 7'
 binding a commandment of men as God's word, and "Scripture is the sole infallible rule" asserting
 that it is infallible and that no other rule is. The virgin birth has eleven exclusions and five
 entailments (`TestimonyArguments.Meanings.BornOfAVirgin.joins`): Wegner's claim that in the
-Septuagint's day παρθένος meant "young woman" and did not yet mean "virgin", against Rico and
-Gentry's that it meant "virgin", against the laws of the Greek Pentateuch, which use it in that
-sense, against the status reading of Genesis 34:3, which reads it so there, and against Matthew's
-reading of the Greek of Isaiah 7:14; Miller's thesis that the word did not by itself connote
-virginity, against each of those senses, and Wegner's claim asserting it; Miller's premise that the
-noun of Genesis 34:3 describes Dinah as she then was, against the status reading; Brown's "Micah's
-silence proves nothing" against Miravalle's "it indicates a fatherless birth"; Westminster's supreme
-judge against "magisterial teaching settles the question"; "עַלְמָה denotes a virgin" asserting that
-its range admits the sense; and the laws' sense, the status reading's and Matthew's, each asserting
-Rico and Gentry's claim. The joins of the laws, of Genesis 34:3 and of Isaiah 7:14 are derived by
-what a usage is (`Testimony.Ontology.Usage`). The exclusions on παρθένος are the ones the
-Septuagint dispute turns on: Wegner's case and Miller's attack the Septuagint's witness, the laws
-and the status reading through them, and each attacks back. Spirit baptism has two exclusions
+Septuagint's day παρθένος ("virgin" or "young woman") meant "young woman" and did not yet mean
+"virgin", against Rico and Gentry's that it meant "virgin", against the laws of the Greek
+Pentateuch, which use it in that sense, against the status reading of Genesis 34:3, which reads it
+so there, and against Matthew's reading of the Greek of Isaiah 7:14; Miller's thesis that the word
+did not by itself connote virginity, against each of those senses, and Wegner's claim asserting it;
+Miller's premise that the noun of Genesis 34:3 describes Dinah as she then was, against the status
+reading; Brown's "Micah's silence proves nothing" against Miravalle's "it indicates a fatherless
+birth"; Westminster's supreme judge against "magisterial teaching settles the question"; "עַלְמָה
+[virgin or young woman] denotes a virgin" asserting that its range admits the sense; and the laws'
+sense, the status reading's and Matthew's, each asserting Rico and Gentry's claim. The joins of the
+laws, of Genesis 34:3 and of Isaiah 7:14 are derived by what a usage is
+(`Testimony.Ontology.Usage`). The exclusions on παρθένος ("virgin" or "young woman") are the ones
+the Septuagint dispute turns on: Wegner's case and Miller's attack the Septuagint's witness, the
+laws and the status reading through them, and each attacks back. Spirit baptism has two exclusions
 (`TestimonyArguments.Meanings.SpiritBaptism.joins`): the Assemblies of God's reading of 1
 Corinthians 12:13, "not Christ baptizing in the Spirit", against Dunn's and Stott's; and Luke's
 narratives as a pattern for believers today against Stott's "not a pattern". The second removed a
@@ -222,17 +223,17 @@ a verdict and a rating cannot disagree about which standard they assume.
 |---|---|---|---|---|
 | Works are fruit, not ground (`fruitLine`) | Trent, canon 24 | not credible | credible | "works cause the increase" rests on Trent alone |
 | Works are fruit, not ground (`fruitLine`) | Trent, ch. 16, from the reward texts | not credible | credible | "the reward is rendered to merits" rests on Trent alone |
-| James's δικαιόω is not the increase (`jamesLexicalLine`) | Trent, on the word | not credible | not credible | asserts the increase as a premise |
-| James's δικαιόω is not the increase (`jamesLexicalLine`) | The renewal reading | not credible | credible | "James's word is Paul's" rests on Trent alone |
+| James's δικαιόω ("justify") is not the increase (`jamesLexicalLine`) | Trent, on the word | not credible | not credible | asserts the increase as a premise |
+| James's δικαιόω ("justify") is not the increase (`jamesLexicalLine`) | The renewal reading | not credible | credible | "James's word is Paul's" rests on Trent alone |
 | James's faith is not the Reformers' (`jamesFaithLine`) | Howell (2003) | not credible | not credible | asserts the denial as a premise |
 | The reward is rendered to merits (Trent, ch. 16) | Westminster XVI.5, XVI.6 | credible | credible | every asserted claim is a text it cites |
 | Works cause the increase, not merely fruit (canon 24) | The Reformed harmony | credible | credible | argued from Westminster's proof texts |
 | Works are not merely fruit (Trent, ch. 16) | The Reformed harmony | credible | credible | argued from Westminster's proof texts |
 | Justification is renewal (Trent, ch. 7) | Paul's gospel; Romans 4 | credible | credible | argued from the texts |
-| Paul's δικαιόω denotes renewal (Trent, ch. 8) | Romans 4, on Paul's word | credible | credible | glosses the verb by Paul's text |
-| Paul's δικαιόω denotes renewal (Trent, ch. 8) | The lexical case | credible | credible | argues "no more than the verdict" from the forensic sense, Paul's renewal words and least meaning |
+| Paul's δικαιόω ("justify") denotes renewal (Trent, ch. 8) | Romans 4, on Paul's word | credible | credible | glosses the verb by Paul's text |
+| Paul's δικαιόω ("justify") denotes renewal (Trent, ch. 8) | The lexical case | credible | credible | argues "no more than the verdict" from the forensic sense, Paul's renewal words and least meaning |
 | Faith does not suffice (Trent, ch. 7, canon 9) | Luke 18:9–14 | credible | credible | argued from the parable |
-| Paul's δικαιόω is not renewal (`lexicalLine`) | Trent, with Augustine | credible | credible | grants the verdict ("not only reputed", ch. 7) and argues renewal from Augustine |
+| Paul's δικαιόω ("justify") is not renewal (`lexicalLine`) | Trent, with Augustine | credible | credible | grants the verdict ("not only reputed", ch. 7) and argues renewal from Augustine |
 | A verdict on a finished work is no renewal | Trent, read as what God does | not credible | not credible | holds the definition as a premise |
 | Faith suffices (`luke18Line`) | Trent, ch. 7, canon 9 | not credible | credible | its one ground, the definition, rests on Trent |
 
@@ -244,7 +245,7 @@ claims a standard does not admit named. Disagreements are marked as disagreement
   so no dissent was credible. But the strongest known dissent was missing, so the computed
   rating was **withheld** under both standards (`lexical_step_before_the_steelman`).
 - **The steelman.** The renewal reading argues the increase from Paul's word: Paul's δικαιόω
-  denotes renewal, as VanLandingham argues and Augustine glossed it, and James's word is
+  ("justify") denotes renewal, as VanLandingham argues and Augustine glossed it, and James's word is
   Paul's.
 - **After it.** The step's support **stands** at `wellSupported` under the evidence standard,
   and it is **disputed** under the tradition standard (`lexical_step_ratings`).
@@ -336,31 +337,31 @@ any standard; one whose denial stands on other evidence stays credible, and the 
 was struck.
 
 The first case is Miller's dissent from the laws of the Greek Pentateuch
-(`TestimonyArguments.BornOfAVirgin.Dispute.Miller`). He gives two uses of παρθένος of women
-who are not virgins. One is his "young widow" at Joel 1:8, where the Greek calls the woman
-νύμφην, a bride; that claim is struck. The other is Genesis 34:3, where the Greek calls Dinah a
-παρθένος in the verse after Shechem lies with her. That reading stands. His denial needs more
-than it: his premise that the noun describes Dinah as she then was, which is his reading of
-the verse, not the text (`miller_rests_on_the_noun`). Had Joel 1:8 been all his evidence, the
-dissent would not count (`miller_on_joel_alone_does_not_count`). What the rule does not do is
-weigh the evidence that stands: Genesis 34:3 is answered by an argument, the status reading,
-and an argument strikes nothing. It is weighed, in a dispute, and the next section says what
-follows.
+(`TestimonyArguments.BornOfAVirgin.Dispute.Miller`). He gives two uses of παρθένος ("virgin" or
+"young woman") of women who are not virgins. One is his "young widow" at Joel 1:8, where the Greek
+calls the woman νύμφην, a bride; that claim is struck. The other is Genesis 34:3, where the Greek
+calls Dinah a παρθένος ("virgin" or "young woman") in the verse after Shechem lies with her. That
+reading stands. His denial needs more than it: his premise that the noun describes Dinah as she then
+was, which is his reading of the verse, not the text (`miller_rests_on_the_noun`). Had Joel 1:8 been
+all his evidence, the dissent would not count (`miller_on_joel_alone_does_not_count`). What the rule
+does not do is weigh the evidence that stands: Genesis 34:3 is answered by an argument, the status
+reading, and an argument strikes nothing. It is weighed, in a dispute, and the next section says
+what follows.
 
 A claim may also be refuted outright, where Scripture's own words rule it out. One way is a
 reading of the Greek that the word's spelling rules out: a passive reading of an active form,
 say. Such a claim's meaning says which word of the text it reads and in what voice
 (`Statement.parses`), and the library holds which voices the word's spelling allows, so it
 compares the two itself. The other is a reading that names as the one at work in a verb what
-its author never names there. The library holds every use of ἐνεργέω, "to work", in the
+its author never names there. The library holds every use of ἐνεργέω ("work"), "to work", in the
 letters that bear Paul's name, with who does the work in each (`Statement.againstUsage`), so
 that comparison is its own too. A claim either rules out is cited `refuted`, a rating no
 reader gives and the lowest a premise can have, and the build fails wherever a citation and
 the comparison differ (`#check_readers`). In a dispute such a claim ranks below every
 reader's rating, and so does a step that concludes it. Where the spelling allows two voices,
 as the present middle and passive are spelled alike, the spelling refutes nothing: the passive
-reading of ἐνεργουμένη in Galatians 5:6 is rated as readers rate it, `disputed`. What
-Bellarmine concludes from it, that love is the one at work, Paul's usage refutes
+reading of ἐνεργουμένη ("working" or "made operative") in Galatians 5:6 is rated as readers rate it,
+`disputed`. What Bellarmine concludes from it, that love is the one at work, Paul's usage refutes
 (`TestimonyArguments.SolaFide.faiths_means_prevails`).
 
 A reader's step is held to what its reasoning does, and its refutation is computed, never

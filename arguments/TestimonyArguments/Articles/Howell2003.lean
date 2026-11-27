@@ -33,8 +33,8 @@ It does not say which one differs (`consistency_does_not_choose_works`): taking
 *works* the same. The move needs a further reason to prefer its own choice — and
 the article gives one, in Paul's "works of the law" (Romans 3:20, 28;
 Galatians 2:16). That reason is argued, not assumed; the move as stated is
-**conditional** on it, and the library's own dispute over ἔργα νόμου is where it
-is weighed (`worksOfLawMeansWorksGenerally`, rated `disputed`).
+**conditional** on it, and the library's own dispute over ἔργα νόμου ("works of the law") is where
+it is weighed (`worksOfLawMeansWorksGenerally`, rated `disputed`).
 
 **The argument from the phrase "faith alone".** "The phrase 'faith alone' does
 occur in the New Testament: one time, in James 2:24. There the inspired apostle
@@ -58,7 +58,7 @@ it needs does not survive the weighing (`faithDenialAnswered`).
 **What that does not reach.** The article's other case from James — "works
 actually justify", Abraham "justified by doing a work that grew out of his faith"
 — is the Catholic reading of James's "by works", weighed in `SolaFide.James`.
-Read as a claim about James's word δικαιόω (the increase of justice) it can be
+Read as a claim about James's word δικαιόω ("justify") (the increase of justice) it can be
 defended there, and the question is contested (`james_word_contested`): the two
 readings part at whether James uses the word as it is used outside Paul. Read as
 a claim about what works do before God (Trent, canon 24) it can be defended too,
@@ -232,7 +232,7 @@ these two passages, does not entail that Paul and James mean different things by
 *works*: the reading on which they differ over "justify" keeps both passages,
 and consistency, with *works* the same. What the article's conclusion needs
 beyond consistency is a reason to prefer its choice of word — which it goes on to
-give, and which is weighed where the library weighs ἔργα νόμου. -/
+give, and which is weighed where the library weighs ἔργα νόμου ("works of the law"). -/
 theorem consistency_does_not_choose_works :
     ¬ Entails consistencyHere (∼ p .erga) := by
   refute_with justifyDiffers [consistencyHere]

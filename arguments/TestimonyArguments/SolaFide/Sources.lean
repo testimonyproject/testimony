@@ -971,7 +971,8 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .latinWordBearsPaulsSense =>
-    { label := "The Latin ‘iustificare’, read as ‘made just’, bears the sense of Paul’s δικαιόω"
+    { label := ("The Latin ‘iustificare’, read as ‘made just’, bears the sense of Paul’s \
+        δικαιόω (“justify”)")
     , kind := .linguistic
       -- Trent reads Paul's word through the Latin (ch. 7–8), with Augustine's
       -- gloss. `disputed`: the Reformers read the same verses and deny that the
@@ -1402,7 +1403,8 @@ def baseCite : Claim → AtomMeta
         , tradition := .romanCatholic
         , confidence := .disputed } }
   | .energoumeneIsPassive =>
-    { label := "Galatians 5:6: ἐνεργουμένη is passive, faith moved by love"
+    { label := ("Galatians 5:6: ἐνεργουμένη (“working” or “made operative”) is passive, faith \
+        moved by love")
     , kind := .linguistic
       -- Bellarmine, II.4, p. 219: "Ubi illud (operatur) passive accipiendum est,
       -- non active. Est enim in Graeco ἐνεργουμένη, id est mota atque acta".
@@ -1415,7 +1417,8 @@ def baseCite : Claim → AtomMeta
         , tradition := .romanCatholic
         , confidence := .disputed } }
   | .energoumeneIsMiddle =>
-    { label := "Galatians 5:6: ἐνεργουμένη is middle, faith the one at work"
+    { label := ("Galatians 5:6: ἐνεργουμένη (“working” or “made operative”) is middle, faith \
+        the one at work")
     , kind := .linguistic
       -- Lightfoot, pp. 204–205: "the middle voice according to the general usage
       -- of St Paul … ἐνεργεῖσθαι is never passive in St Paul". Burton, p. 281:
@@ -2176,8 +2179,8 @@ def baseCite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .paulNamesRenewalOtherwise =>
-    { label := "Paul names renewal with other words (ἀνακαίνωσις, ἁγιασμός) and sets them " ++
-        "beside ‘justify’"
+    { label := "Paul names renewal with other words (‘renewing’, ἀνακαίνωσις; ‘sanctification’, \
+        ἁγιασμός, “sanctification”) and sets them beside ‘justify’"
     , kind := .textual
       -- `consensus`: what the texts say, and no more. Trent itself builds its
       -- chapter 7 on Titus 3:5–7, where renewal and being justified are named

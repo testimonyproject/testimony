@@ -53,7 +53,7 @@ to their own destruction" (2 Peter 3:15–16). Earlier in the same chapter he se
 words spoken beforehand by the holy prophets" (3:2). In 1 Timothy 5:18, "the
 Scripture says" introduces a line of Deuteronomy and then "The laborer is worthy
 of his wages", a saying of Jesus that Luke 10:7 records in the same words
-(μισθός, "wages", in both).
+(μισθός ("wage"), "wages", in both).
 
 Being an apostle is not enough by itself. Paul holds even himself to the
 gospel already given: "But even if we, or an angel from heaven, should proclaim

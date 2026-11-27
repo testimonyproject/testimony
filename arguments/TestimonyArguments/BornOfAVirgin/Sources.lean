@@ -68,7 +68,8 @@ def cite : Claim → AtomMeta
             , .work irenaeusAgainstHeresies (.sectionRef "III.21.6")
             , .work origenAgainstCelsus (.sectionRef "I.35") ] } }
   | .almahMeansVirgin =>
-    { label := "עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman"
+    { label := ("עַלְמָה (“virgin” or “young woman”) in Isaiah 7:14 denotes a virgin, not \
+        merely a young woman")
     , kind := .linguistic
       -- The Isaianic crux. The Hebrew term does not by itself carry the sense;
       -- the Septuagint's παρθένος does, on Rico and Gentry's reading of its
@@ -87,7 +88,8 @@ def cite : Claim → AtomMeta
             , .work comptonImmanuelProphecy (.pages 7 8)
             , .work jeromeAgainstJovinianus (.sectionRef "I.32") ] } }
   | .almahAdmitsVirginSense =>
-    { label := "The semantic range of עַלְמָה does not exclude 'virgin' at Isaiah 7:14"
+    { label := ("The semantic range of עַלְמָה (“virgin” or “young woman”) does not exclude \
+        'virgin' at Isaiah 7:14")
     , kind := .linguistic
       -- Berry's defensive claim, and all the lexical evidence actually
       -- supports. עַלְמָה is used of a virgin at Gen 24:43 and, some argue, of a
@@ -100,7 +102,7 @@ def cite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .wellSupported } }
   | .almahDenotesMarriageableYoungWoman =>
-    { label := "עַלְמָה denotes a young woman of marriageable age"
+    { label := "עַלְמָה (“virgin” or “young woman”) denotes a young woman of marriageable age"
     , kind := .linguistic
       -- Shared ground. Rico and Gentry and Wegner disagree about almost
       -- everything else here and not about this, which is why it is the only
@@ -111,7 +113,8 @@ def cite : Claim → AtomMeta
         , tradition := .criticalScholarship
         , confidence := .consensus } }
   | .virginityCompatibleWithAlmah =>
-    { label := "Being a virgin does not exclude a woman from the denotation of עַלְמָה"
+    { label := ("Being a virgin does not exclude a woman from what עַלְמָה (“virgin” or \
+        “young woman”) denotes")
     , kind := .linguistic
       -- The Rebekah datum settles this and neither side disputes it: Genesis
       -- calls the same woman עַלְמָה (24:43) and בְּתוּלָה whom no man had known
@@ -131,7 +134,8 @@ def cite : Claim → AtomMeta
         , confidence := .consensus } }
   | .maryFitsIsaianicDescription => maryFitsIsaianicDescriptionCited
   | .lexicalSenseRequiredForFulfilment =>
-    { label := "Matthew's fulfilment claim requires that עַלְמָה itself denote virginity"
+    { label := ("Matthew's fulfilment claim requires that עַלְמָה (“virgin” or “young woman”) \
+        itself denote virginity")
     , kind := .interpretive
       -- Attributed carefully. This is what the popular form of the lexical
       -- objection needs, and Brown's case against an OT basis for the virginal
@@ -140,7 +144,8 @@ def cite : Claim → AtomMeta
       -- cited here even though he is the module's main lexical rival.
     , source := brownOnBirth .disputed }
   | .lxxRendersParthenos =>
-    { label := "The Septuagint renders עַלְמָה at Isaiah 7:14 as παρθένος"
+    { label := ("The Septuagint renders עַלְמָה (“virgin” or “young woman”) at Isaiah 7:14 as \
+        παρθένος (“virgin” or “young woman”)")
     , kind := .textual
     , source :=
         { primary := .work na28 (.apparatus matthew1_23)
@@ -148,7 +153,8 @@ def cite : Claim → AtomMeta
         , tradition := .criticalScholarship
         , confidence := .consensus } }
   | .targumRendersUlemta =>
-    { label := "Targum Jonathan renders עַלְמָה at Isaiah 7:14 as עוּלֵימְתָא, 'young woman'"
+    { label := ("Targum Jonathan renders עַלְמָה (“virgin” or “young woman”) at Isaiah 7:14 \
+        as עוּלֵימְתָא, 'young woman'")
     , kind := .textual
     , source :=
         { primary := .work chiltonIsaiahTargum (.adLoc isaiah7_14)
@@ -156,7 +162,7 @@ def cite : Claim → AtomMeta
         , tradition := .criticalScholarship
         , confidence := .consensus } }
   | .theThreeRenderNeanis =>
-    { label := "Aquila, Symmachus and Theodotion render Isaiah 7:14 with νεᾶνις"
+    { label := ("Aquila, Symmachus and Theodotion render Isaiah 7:14 with νεᾶνις, “young woman”")
     , kind := .textual
       -- Often explained as anti-Christian revision. Justin records the Jewish
       -- reading "young woman" (Dial. 43, 71, 84; Trypho gives it at 67) but
@@ -173,7 +179,8 @@ def cite : Claim → AtomMeta
   | .peshittaRendersBtulta => peshittaRendersBtultaCited
   | .qumranConfirmsAlmah => qumranConfirmsAlmahCited
   | .versionalDivergenceRefutesVirginSense =>
-    { label := "The split among the ancient versions shows עַלְמָה does not denote virginity"
+    { label := ("The split among the ancient versions shows עַלְמָה (“virgin” or “young \
+        woman”) does not denote virginity")
     , kind := .interpretive
     , source :=
         { brownOnBirth with supporting := [.work chiltonIsaiahTargum .whole] } }
@@ -302,7 +309,7 @@ def cite : Claim → AtomMeta
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
   | .seedReckonedThroughFather =>
-    { label := "Hebrew זֶרַע is ordinarily reckoned through the father"
+    { label := "Hebrew זֶרַע (“seed” or “offspring”) is ordinarily reckoned through the father"
     , kind := .linguistic
       -- Granted by the reader who denies most of what is built on it: Lewis,
       -- "it is normal in Hebrew to describe descendants by the noun zeraʿ" and

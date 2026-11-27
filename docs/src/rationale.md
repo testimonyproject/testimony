@@ -48,13 +48,14 @@ valid.
 **Disagreement becomes locatable.** This is the real payoff. Encode the
 Reformed reading of justification, encode the New Perspective alongside it, and
 the library will tell you that the two packages differ in exactly one premise —
-whether Paul's ἔργα νόμου means works in general or Jewish covenant boundary
+whether Paul's ἔργα νόμου ("works of the law") means works in general or Jewish covenant boundary
 markers — and then tell you what that premise is worth. It turns out not to be
 worth the argument: `worksOfLaw_not_load_bearing` holds, because the dominical
 strand at Luke 7:50 carries the conclusion without it, and the New Perspective
 package establishes the conclusion too. What is load-bearing is a
-*disjunction*: Paul's two disputed readings of Galatians 2:16 — ἔργα νόμου and
-πίστις Χριστοῦ — or Jesus' σῴζω at Luke 7:50, or Peter's yoke at Acts 15:10.
+*disjunction*: Paul's two disputed readings of Galatians 2:16 — ἔργα νόμου ("works of the law") and
+πίστις Χριστοῦ ("faith in Christ" or "faithfulness of Christ") — or Jesus' σῴζω ("save" or "healed")
+at Luke 7:50, or Peter's yoke at Acts 15:10.
 
 That result is not Protestant or Catholic. It is a description of the
 disagreement that both sides can accept — including the part neither side
