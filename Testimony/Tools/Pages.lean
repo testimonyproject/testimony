@@ -155,9 +155,11 @@ def render [DecidableEq α] (ns : Name) (allAtoms : List α)
   let modules := (mods.eraseDups)
   let parts := modules.map fun m =>
     let mine := (tagged.filter (·.1 == m)).map (·.2)
-    -- A `####` section is about the machinery, and goes behind the chapter.
+    -- A `####` section is about the machinery, and goes behind the chapter. A
+    -- truth table is read with the prose that names its rows, so it stays in it.
     let isProse : Logic.Page.Item α → Bool
       | .prose md => !headingOnly md && !md.startsWith "####"
+      | .table .. => true
       | _ => false
     let opening := mine.find? isProse
     let (subtitle, _) := match opening with
@@ -792,6 +794,9 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
           else if headIs ``Logic.Because then
             `(Logic.Page.Item.because $(quote dname) $(quote doc)
                 (Logic.Because.view $(mkIdent n)))
+          else if headIs ``Logic.TruthTable then
+            `(Logic.Page.Item.table $(quote dname) $(quote doc)
+                (Logic.Page.tableView $(mkIdent n)))
           else if headIs ``Logic.Dilemma then
             `(Logic.Page.Item.dilemma $(quote dname) $(quote doc)
                 (Logic.Dilemma.view $(mkIdent n)))

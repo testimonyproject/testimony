@@ -1,4 +1,5 @@
 import Testimony.Logic.Line
+import Testimony.Logic.TruthTable
 import Testimony.Argument
 
 /-!
@@ -465,6 +466,109 @@ def atoms : Sym α → List α
 
 end Sym
 
+/-- One column of a truth table's tests or of what follows, as a page sets it:
+its label, its words, its formula in symbols (as text and as LaTeX), and, for a
+test, its source. -/
+structure TableColumnView where
+  /-- The mark that heads the column (①, Ⓐ). -/
+  label : String
+  /-- What it says, in words. -/
+  words : String
+  /-- The formula in symbols, as text. -/
+  formula : String
+  /-- The formula as LaTeX mathematics. -/
+  formulaTex : String
+  /-- The source a test rests on; `none` for what follows. -/
+  source : Option Source
+  /-- Whether the test is proposed here rather than drawn by a cited reader. -/
+  proposed : Bool
+
+/-- **A truth table as a page sets it**: the claims' headings and letters, the
+tests, what follows, and every row, numbered from 1 in list order. A row gives
+each claim's value, each test's, whether the row is allowed, and each
+statement's that follows. -/
+structure TableView where
+  /-- Each claim's heading and letter. -/
+  claims : List (String × String)
+  /-- The tests. -/
+  tests : List TableColumnView
+  /-- What follows. -/
+  follows : List TableColumnView
+  /-- Every row: claims, tests, allowed, what follows. -/
+  rows : List (List Bool × List Bool × Bool × List Bool)
+
+section tableView
+
+variable {β : Type} [DecidableEq β]
+
+/-- A formula in symbols, with each claim written as its letter. A conditional
+brackets a conditional on its left and anything compound on its right; a
+conjunction or disjunction brackets any compound part but its own kind. So
+`B ∧ (W ∨ ¬W) → J` and `B → (J ∧ (W ∨ ¬W))`, as they are written by hand. -/
+def formulaIn (letter : β → String) (tex : Bool) : Formula β → String
+  | .atom a => letter a
+  | .falsum => if tex then "\\bot" else "⊥"
+  | .imp p .falsum =>
+      (if tex then "\\neg " else "¬") ++ wrap (formulaIn letter tex p) (simple p)
+  | .and p q =>
+      wrap (formulaIn letter tex p) (simple p || isAnd p) ++ (if tex then " \\wedge " else " ∧ ") ++
+        wrap (formulaIn letter tex q) (simple q || isAnd q)
+  | .or p q =>
+      wrap (formulaIn letter tex p) (simple p || isOr p) ++ (if tex then " \\vee " else " ∨ ") ++
+        wrap (formulaIn letter tex q) (simple q || isOr q)
+  | .imp p q =>
+      wrap (formulaIn letter tex p) (!isImp p) ++ (if tex then " \\to " else " → ") ++
+        wrap (formulaIn letter tex q) (simple q)
+where
+  /-- A part, in brackets unless `bare`. -/
+  wrap (s : String) (bare : Bool) : String := if bare then s else "(" ++ s ++ ")"
+  /-- Whether a formula is a letter, or the negation of one. -/
+  simple : Formula β → Bool
+    | .atom _ => true
+    | .falsum => true
+    | .imp p .falsum => simple p
+    | _ => false
+  /-- Whether a formula is a conditional, and not a negation. -/
+  isImp : Formula β → Bool
+    | .imp _ .falsum => false
+    | .imp _ _ => true
+    | _ => false
+  /-- Whether a formula is a conjunction. -/
+  isAnd : Formula β → Bool
+    | .and _ _ => true
+    | _ => false
+  /-- Whether a formula is a disjunction. -/
+  isOr : Formula β → Bool
+    | .or _ _ => true
+    | _ => false
+
+/-- A letter as LaTeX mathematics: a prime as TeX writes it. -/
+def texLetter (s : String) : String := s.replace "′" "'"
+
+/-- **A truth table as a page sets it** (`TableView`), every row evaluated. -/
+def tableView (t : TruthTable β) : TableView :=
+  let letter (a : β) : String := ((t.claims.find? (·.claim == a)).map (·.letter)).getD "?"
+  let col (c : TableColumn β) : TableColumnView :=
+    { label := c.label, words := c.words
+    , formula := formulaIn letter false c.formula
+    , formulaTex := formulaIn (texLetter ∘ letter) true c.formula
+    , source := c.source
+    , proposed := match c.source with
+        | some s => match s.primary with
+          | .proposal _ => true
+          | _ => false
+        | none => false }
+  { claims := t.claims.map fun c => (c.heading, c.letter)
+  , tests := t.tests.map col
+  , follows := t.follows.map col
+  , rows := t.rows.map fun r =>
+      ( t.claimList.map r
+      , t.tests.map (holdsB r ·.formula)
+      , t.allowed r
+      , t.follows.map (holdsB r ·.formula) ) }
+
+end tableView
+
 /-- One element of a generated page.
 
 `prose` is a module docstring, lifted whole; the rest are declarations, each
@@ -531,6 +635,9 @@ inductive Item (α : Type)
   /-- A rule written as a table of true and false: its inputs, by name, and for
   each row of inputs whether the rule allows it. -/
   | truthTable (decl doc : String) (inputs : List String) (rows : List (List Bool × Bool))
+  /-- A truth table over claims, with its tests and what follows from them:
+  every row evaluated (`TableView`). -/
+  | table (decl doc : String) (t : TableView)
   /-- A claim one position holds and another denies, both defensible: the names
   of the two positions, and the claim. -/
   | contested (decl doc holder denier : String) (φ : Formula α)
