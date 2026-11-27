@@ -36,9 +36,12 @@ When the `lean-lsp` MCP server is connected (configured in `.mcp.json`, from the
 | find a Mathlib lemma by its type | `lean_loogle`, `lean_leansearch` (external services; use sparingly) |
 
 The server elaborates one file against the compiled modules it imports, so it answers in seconds
-for a file whose imports are built. If its imports are stale (a module it imports changed and was
-not rebuilt), build that module first with `quick-check.sh`. The server is set not to run builds
-or code itself, because two builds at once can corrupt each other's compiled files.
+(about five for a sola fide chapter) for a file whose imports are built. Pass `severity: "error"` to
+`lean_diagnostic_messages` to leave out the `#print axioms` lines every file reports, and
+`start_line`/`end_line` or `declaration_name` to ask about one declaration. If its imports are stale
+(a module it imports changed and was not rebuilt), build that module first with `quick-check.sh`.
+The server is set not to run builds or code itself, because two builds at once can corrupt each
+other's compiled files.
 
 If the tools are not listed, the server is not connected in this session; use the script below.
 

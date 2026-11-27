@@ -29,7 +29,7 @@ fi
 [ ${#files[@]} -eq 0 ] && { echo "quick-check: no Lean files to check"; exit 0; }
 
 status=0
-declare -A modules
+declare -A modules relpaths
 for f in "${files[@]}"; do
   f=${f#./}
   [ -f "$f" ] || { echo "quick-check: $f is gone, skipped"; continue; }
@@ -40,21 +40,44 @@ for f in "${files[@]}"; do
   esac
   mod=${rel%.lean}; mod=${mod//\//.}
   modules[$pkg]+=" $mod"
+  relpaths[$pkg]+=" $rel"
 done
 
 # The library first, so that a package built on it sees its change.
 for pkg in . arguments examples; do
   mods=${modules[$pkg]:-}
+  rels=${relpaths[$pkg]:-}
   [ -z "$mods" ] && continue
   echo "== lake build$mods  (in $pkg)"
   # shellcheck disable=SC2086
   out=$(cd "$pkg" && lake build $mods 2>&1)
   code=$?
-  printf '%s\n' "$out" | grep -E -A6 '^(error|warning)|error:|warning:|guard_msgs' \
-    | grep -v -E "depends on axioms|^info:" | head -120
+  # Errors from anywhere; warnings only from the files asked about, because a
+  # replayed dependency repeats warnings that are not this change's.
+  printf '%s\n' "$out" | python3 -c '
+import re, sys
+mine = sys.argv[1:]
+block, keep, shown = [], False, 0
+def flush():
+    global shown
+    if keep and block and shown < 120:
+        print("\n".join(block[:12])); shown += len(block[:12])
+for line in sys.stdin.read().splitlines():
+    m = re.match(r"(error|warning|info): (\S+?):\d+:\d+: ", line)
+    if m or re.match(r"(✖|⚠|ℹ|✔) \[", line) or line.startswith("error:"):
+        flush(); block = [line]
+        if line.startswith("error"):
+            keep = True
+        elif m and m.group(1) == "warning":
+            keep = any(m.group(2).endswith(f) or f.endswith(m.group(2)) for f in mine)
+        else:
+            keep = False
+    else:
+        block.append(line)
+flush()
+' $rels
   if [ $code -ne 0 ]; then
     status=1
-    printf '%s\n' "$out" | tail -3
   else
     echo "   built"
   fi

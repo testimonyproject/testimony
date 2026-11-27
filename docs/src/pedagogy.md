@@ -1,15 +1,16 @@
 # How a page teaches
 
-Every page of this library is read by three people at once. A logician wants to see that each
-step follows and that nothing is assumed in silence. A theologian wants each position stated as
-its holders would state it, with the place they state it. And a Christian with an English Bible,
-who has never met a turnstile or a Greek lexicon, wants to follow the argument, and in time to
-read the next page without help. The first two check the page. The third learns from it, and
-the page is written so that the learning is possible.
+Every page of this library is read by three people at once. A logician wants to see that each step
+follows and that nothing is assumed in silence. A theologian wants each position stated as its
+holders would state it, with the place they state it. And a Christian with an English Bible, who has
+never met a logician's symbols or a Greek lexicon, wants to follow the argument, and in time to read
+the next page without help. The first two check the page. The third learns from it, and the page is
+written so that the learning is possible.
 
 The library does this by doing four things for every argument, in the order a reader needs
 them. It says what each claim means. It shows what follows from the claims a position holds. It
-sets the positions against each other and computes who prevails. And it tells the exchange in
+sets the positions against each other and computes which survive, which may be neither of a
+pair. And it tells the exchange in
 the order it happened. Each of the four is checked by the machine, and each is written out in
 words beside what the machine checked, so that the three readers are reading the same thing.
 
@@ -37,18 +38,14 @@ Trent, Augustine), words (δικαιόω ("justify"), πίστις ("faith"), �
 law")), the senses those words can have, the things doctrine is about, and the relations between
 them (*ground of*, *only means of*, *includes*).
 
-Three distinctions do most of the work, and a reader meets them on every page.
-
-- **What a passage says is kept apart from what it teaches.** James 2:24 *says* "justified by
-  works". That the verse *teaches* works as the evidence of a justification already given, and
-  not its ground, is a reading, which the Reformed hold and others deny. The page never lets a
-  reading pass as the text.
-- **The word is kept apart from what it means.** That the verse uses δικαιόω is a fact about the
-  text. That δικαιόω there means "shown to be righteous", or means what it means in Paul, is a
-  further claim, cited and rated like any other.
-- **A word may or may not keep its sense between two places.** Every contradiction between two
-  texts depends on it, and most arguments never say so. Here the library says so: the claim that
-  James's δικαιόω has Paul's sense is a claim of its own, with its readers named.
+Three distinctions do most of the work, and a reader meets them on every page. What James 2:24
+*says*, "justified by works", is kept apart from what it *teaches*, which the Reformed read as
+works being the evidence of a justification already given, and not its ground, and others read
+otherwise; a reading never passes as the text. The word δικαιόω ("justify") is kept apart from
+its sense there: that the verse uses the word is a fact about the text, and that the word means
+"shown to be righteous", or means what it means in Paul, is a further claim, cited and rated. And
+whether a word keeps its sense between two places is a claim of its own, with its readers named,
+because every contradiction between two texts depends on it and most arguments never say so.
 
 Meanings are not written once for one argument. The vocabulary is shared, so a claim about
 δικαιόω in one argument is a claim about δικαιόω in every other, and the vocabulary grows by
@@ -71,13 +68,14 @@ show that a conclusion does *not* follow, it names a **countermodel**: a way thi
 which every claim of the position holds and the conclusion fails. The page states the
 countermodel as what it is, a rival's reading in the words its holders would use.
 
-Where a doctrine has a shape of its own, the page sets the shape out as a table. Its claims are
-the columns, such as "believes", "has works" and "is justified"; each row is one way they could
-fall out; and each text or reader's rule marks the rows it allows. A row every rule allows, such
-as one who believes, has no works yet and is justified, is a case the texts leave open, and a
-reader can find the thief on the cross in it. The rules are the holders' own, stated as they
+Where a doctrine has a shape of its own, the page sets the shape out as a table. The sola fide
+chapter on the Reformation's case has one: its columns are "believes", "has works at first", "has
+works afterwards" and "is justified"; each row is one way they could fall out; and each text's
+rule marks the rows it allows. A row every rule allows, as one who believes, has no works at
+first, does works afterwards and is justified, is a case the texts leave open, and the page finds
+Abraham, Rahab and the thief on the cross in it. The rules are the holders' own, stated as they
 state them, and the table is checked row by row, so a reader who learns to read one such table
-can check the next.
+can read the next.
 
 ## Who stands against whom
 
@@ -85,9 +83,10 @@ Two positions that cannot both be held **attack** each other. In James's case th
 meaning: the Reformed harmony says James's δικαιόω ("justify") does not have Paul's sense, and the
 renewal reading says it does, so neither can hold what the other holds. Whether an attack
 **defeats** what it attacks depends on how firmly each is held, and that is a matter of citation:
-each claim and each step is rated, from consensus down to disputed, by who grants its grounds and
-who denies its conclusion. A position is as strong as its weakest link. No rating moves because more
-people hold a view; it moves only with a new argument, cited.
+each claim and each step is rated, from consensus down to refuted, by who grants its grounds and who
+denies its conclusion. A position counts as strong as the lowest-rated claim or step it rests on,
+its weakest link. No rating moves because more people hold a view; it moves only with a new
+argument, cited.
 
 From the defeats, the machine computes what survives. A page says so in a sentence ("each of
 these defeats the other, so neither gives way") and then gives the reason in a form a reader can
@@ -95,13 +94,14 @@ check: the defeat, the claims it rests on, and their ratings. Three further ques
 of their own.
 
 - *Where exactly do the two part?* The page names the **crux**, the one claim of the first that
-  the second cannot hold, and the smallest set of the second's claims that breaks on it.
-- *What would the other side have to give up?* The page lists the smallest sets of readings an
-  opponent must reject, and every such set.
+  the second cannot hold, and a set of the second's claims that breaks on it, none of which could
+  be dropped and the set still break.
+- *What would the other side have to give up?* The page lists every set of readings, none
+  superfluous, that an opponent must reject.
 - *What if a claim means more than one thing?* The page takes each reading in turn. Each reading
-  is shown to be one its holders could hold, and each is answered: where it cannot be held,
-  against what, at which crux; or that nothing reaches it. This is a **dilemma**, and a reading
-  left unanswered stops the build.
+  is shown to be consistent, so that its holders could hold it, and each is answered: where it
+  cannot be held, against what, at which crux; or that nothing reaches it. This is a
+  **dilemma**, and a reading left unanswered stops the build.
 
 The fallacy checks run over the library's own lines as over anyone's. A line that sets two texts
 against each other is read for the words they share, and if it needs a word to keep its sense
@@ -111,18 +111,19 @@ read a claim that has a meaning, which is the practical reason every claim is gi
 ## When it was said
 
 An exchange over Scripture took place over centuries, and a reader needs that order to see a
-doctrine develop. Paul wrote long before the Council of Trent and never answers it. Augustine
-read Paul in Latin; the Reformers read him in Greek; Trent decreed on justification in 1547 and
-the Reformers answered the decree within the year; modern scholars came later still. So each turn
-of a told exchange names the work it comes from, and the turns must come in the order of those
-works' dates. A hearing can be limited to the works written before a year, and so ask what
-could be said in 1520, before anyone could cite what came after.
+doctrine develop. Paul wrote long before the Council of Trent and never answers it. Augustine read
+Paul in Latin; the Reformers read him in Greek; Trent decreed on justification in 1547 and Calvin
+answered the decree within the year and Chemnitz two decades later; modern scholars came later
+still. So each turn of a told exchange names the work it comes from, and the turns must come in the
+order of those works' dates. A hearing can be limited to the works written before a year, and so ask
+what could be said in 1545, before Trent opened and before anyone could cite what came after.
 
 Each side's own ground is stated on the page beside its reading of the history. For Rome that is
-Scripture with tradition and the teaching office of the church. For the Reformers it is Scripture
-alone, read with the fathers. Where the history is itself in dispute, as when the Reformers called
-a teaching an addition and later Catholic writers called it a development, both readings are set
-out and cited, and the machine weighs them as it weighs any two positions.
+Scripture with tradition and the teaching office of the church. For the Reformers it is Scripture as
+the only infallible rule, with the fathers and the creeds as witnesses under it. Where the history
+is itself in dispute, as when Chemnitz said that purgatory was "not ancient, but first revealed in
+Gregory's time" and Newman read such teachings as developments of what was held from the start, both
+readings are set out and cited, and the machine weighs them as it weighs any two positions.
 
 ## Learning to read a page
 
