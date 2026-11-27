@@ -88,45 +88,50 @@ degrees" to "justification has no degrees", and nothing in the council's
 position denies the step: it can grant that a verdict has no degrees, and
 denies only that justification is a verdict and nothing more. So the step is
 rated *well supported*. His first premise is not. That justification is a
-verdict only is rated *disputed*, which means there is an argued objection to
-it, still to be weighed: Augustine's, that "being justified" signifies "being
-made righteous". Canon 11 condemns the same premise, justification "by the sole
-imputation of the justice of Christ, or by the sole remission of sins". The
-council's definition, that justification is also renewal (ch. 7), is rated
-*disputed* by the same rule, because Paul's gospel and Romans 4 argue against it
-from the texts and the courtroom sense of the verb, and Westminster XI.1 denies
-it. So Calvin and the council defeat each other, as Chemnitz and Westminster do
-with the council.
+verdict only is cited *disputed*, because canon 11 denies it in terms,
+condemning justification "by the sole imputation of the justice of Christ, or
+by the sole remission of sins". The council's definition, that justification is
+also renewal (ch. 7), is cited *disputed* by the same rule, because Westminster
+XI.1 denies it in terms. So Calvin and the council defeat each other, as
+Chemnitz and Westminster do with the council.
 
 So none of the four stands (`after_the_reformers_answer_nothing_stands`). To
 stand is to survive however the open disagreements are settled, and here every
 position is defeated by another. What is left are two sides, each consistent:
 the council alone, and the three answers together, since one reading satisfies
 them all (`the_reformers_answers_stand_together`).
-Which side holds turns on the two definitions, and they fare alike when the
-objections to each are checked (`both_definitions_disputed_alike`). Each
-objection is checked under three standards of what it may rest on: the evidence
-standard admits texts and what anyone can check, the Scripture standard asks an
-objection to a step resting on Scripture to rest on Scripture too, and the
-tradition standard also admits a council's or a theologian's word. An objection
-counts as an argument under a standard when it can be held with the step's
-grounds and reaches its denial by a step of its own, resting only on what that
-standard admits. Canon 11 and Calvin each answer the other only by asserting
-their own definition, which excludes the other's, and neither argues its denial
-by a step. But each definition is also met by an argument that every standard
-admits. Augustine argues from his explanation of the word, "what else does the
-phrase 'being justified' signify than being made righteous", that justification
-includes renewal (in the same passage he gives a second sense, "deemed, or
-reckoned as just", which his line here leaves out). Paul's gospel and Romans 4
-argue from the texts and the courtroom sense of the verb that it does not.
-Westminster's own answer from Romans 4 is an argument only under the tradition
-standard, because its step needs "count" and "works" to keep one sense through
-4:4–8, a reading this chapter cites to Chemnitz (*Examen*, p. 169), not to the
-text. So neither definition is refuted, and each is *disputed* under every
-standard. Whether Scripture
-settles that question is the work of the chapter "What Trent means by
-justification", which weighs both definitions against Paul's own uses of the
-verb.
+
+Which side holds turns on the two definitions, and they do not fare alike when
+the objections to each are checked (`the_definitions_under_each_standard`).
+Each objection is checked under three standards of what it may rest on: the
+evidence standard admits texts and what anyone can check, the Scripture
+standard asks an objection to a step resting on Scripture to rest on Scripture
+too, and the tradition standard also admits a council's or a theologian's word.
+An objection counts as an argument under a standard when it can be held with
+what it objects to, and reaches its denial by a step of its own, resting only
+on what that standard admits.
+
+Canon 11 and Calvin each answer the other only by asserting their own
+definition, which excludes the other's, and neither argues its denial by a
+step. Trent's definition is also met by Paul's gospel and by Romans 4, which
+argue from the texts and the courtroom sense of the verb that justification is
+no renewal, and every standard admits them. Calvin's is met by Augustine:
+"what else does the phrase 'being justified' signify than being made
+righteous" (in the same passage he gives a second sense, "deemed, or reckoned
+as just", which his line leaves out). Augustine explained the Latin word, and
+his argument bears on Paul only if the Latin carries the sense of Paul's Greek.
+That is Trent's claim (ch. 7–8), which Melanchthon and Calvin deny because the
+Greek word is a courtroom word, so Augustine's objection counts under the
+tradition standard only, as Trent's own reading of the word does. Westminster's
+answer from Romans 4 also counts under the tradition standard only, because
+its step needs "count" and "works" to keep one sense through 4:4–8, a reading
+this chapter cites to Chemnitz (*Examen*, p. 169), not to the text.
+
+So under the evidence and the Scripture standards, Trent's definition meets an
+argument and Calvin's meets none. Under the tradition standard each meets one.
+Neither is refuted, since no text, read word by word, rules either out. The
+verdict above weighs each definition at its cited rating, *disputed* for both,
+and so it does not change with the standard.
 -/
 
 namespace TestimonyArguments.SolaFide
@@ -544,25 +549,51 @@ declare_verdict reformersAnswerSettle for reformersAnswerDispute :
 
 /-! ### The two definitions, by the same checks -/
 
+/-- **Augustine's reading, as a claim about Paul.** Augustine explained the
+Latin *iustificare*, and his line (`renewalLine`) argues from that explanation
+to what justification is. Against a claim about Paul's justification, the
+argument needs the Latin word to bear the sense of Paul's Greek one, δικαιόω,
+as Trent's reading of the word does (`trentWordLine`). Augustine does not state
+that bridge; Trent does (ch. 7–8), so it is a ground here, cited to Trent. The
+same rule holds for a father of the church as for a council. -/
+@[solaFideDefs]
+def hippoLine : Line Claim :=
+  { renewalLine with
+    name := "Justification makes righteous (Augustine), read as a claim about Paul"
+    grounds := [p .augustineReadsJustifyAsMakeRighteous, p .latinWordBearsPaulsSense]
+    step :=
+      ⋀ [p .augustineReadsJustifyAsMakeRighteous, p .latinWordBearsPaulsSense]
+      ➝ p .justificationIncludesSanctification }
+
+/-- Augustine's reading, as a claim about Paul, as a position of its own. -/
+@[solaFideDefs]
+def augustineOnPaul : ArgumentPackage Claim :=
+  hippoLine.asPackage baseCite "justification includes the renewal of the person"
+
 /-- **Augustine, against the definition that justification is a verdict only.**
 "What else does the phrase 'being justified' signify than being made righteous,
 by Him, of course, who justifies the ungodly man, that he may become a godly
 one?" (*On the Spirit and the Letter*, ch. 45). In the same passage he gives a
-second sense, "deemed, or reckoned as just", which this line leaves out. His
-starting point is that he explained the word so, which is a fact about his
-book, and from it he argues that justification includes the renewal of the
-person, a step rated *disputed* (`renewalLine`). So he reaches his denial by a
-step whose only ground is a fact anyone can check, and it counts as an argument
-under all three standards. -/
+second sense, "deemed, or reckoned as just", which this line leaves out. He
+argues from his explanation of the word that justification includes the renewal
+of the person, so he reaches his denial by a step. But to bear on Paul the
+argument needs the Latin word to carry the sense of the Greek one, and that
+ground is cited to Trent alone (`hippoLine`). Melanchthon and Calvin
+deny it, because the Greek word is a courtroom word. So it is an argument under
+the tradition standard only, as Trent's own reading of the word is
+(`trentWordOnLexicalAssessment`). -/
 def augustineOnForensicAssessment : Assessment Claim where
   dissenter := "Augustine (On the Spirit and the Letter, ch. 45)"
   against := "Calvin: justification is a verdict only (Antidote, p. 116)"
   dissent :=
     { claim := p .justificationIsForensicOnly
-    , position := augustineCase }
+    , position := augustineOnPaul }
   findings :=
     { consistent := true, denies := true, grants := true, argued := true, bareDenial := false
-    , unadmitted := [(.evidence, []), (.tradition, []), (.scriptural, [])] }
+    , unadmitted :=
+        [ (.evidence, [.latinWordBearsPaulsSense])
+        , (.tradition, [])
+        , (.scriptural, [.latinWordBearsPaulsSense]) ] }
   checked := by horn_certify
 
 /-- **The council, against the same definition.** Canon 11 condemns
@@ -636,22 +667,27 @@ def forensicPremise : RatedStep Claim where
   register := [augustineOnForensicAssessment, canon11OnForensicAssessment]
   strongest := some 0
 
-/-- **Both definitions are disputed under every standard, and in each case by an
-argued objection.** Calvin's, that justification is a
-verdict only, is met by Augustine, who argues from his explanation of the word
-that it includes renewal. Trent's, that it includes renewal, is met by Paul's
+/-- **Under the evidence and the Scripture standards only Trent's definition
+meets an argument; under the tradition standard both do.** Trent's definition,
+that justification includes renewal, is met under every standard by Paul's
 gospel and by Romans 4, each argued from the texts and the courtroom sense of
-the verb (`trent_definition_ratings`). Canon 11 against Calvin, and Calvin
-against the council, each assert their own definition and argue nothing, so
-each is a disagreement only. Westminster's answer from Romans 4 is an argument
-under the tradition standard only, because its step needs "count" and "works"
-to keep their sense through the passage, readings cited here to Chemnitz. -/
+the verb (`trent_definition_ratings`). Calvin's, that justification is a verdict
+only, is met by Augustine, who argues from his explanation of the Latin word
+that it includes renewal. That argument bears on Paul only if the Latin word
+carries the sense of the Greek, a ground cited to Trent alone, so it counts
+under the tradition standard and under no other. Where no objection counts,
+Calvin's definition keeps its cited rating, *disputed*, which canon 11's denial
+in terms gives it. Canon 11 against Calvin, and Calvin against the council,
+each assert their own definition and argue nothing, so each is a disagreement
+only. Westminster's answer from Romans 4 is an argument under the tradition
+standard only, because its step needs "count" and "works" to keep their sense
+through the passage, readings cited here to Chemnitz. -/
 @[headline]
-theorem both_definitions_disputed_alike :
+theorem the_definitions_under_each_standard :
     forensicPremise.ratings =
-        [ (.evidence, .disputedBy ["Augustine (On the Spirit and the Letter, ch. 45)"])
+        [ (.evidence, .stands .disputed)
         , (.tradition, .disputedBy ["Augustine (On the Spirit and the Letter, ch. 45)"])
-        , (.scriptural, .disputedBy ["Augustine (On the Spirit and the Letter, ch. 45)"]) ] ∧
+        , (.scriptural, .stands .disputed) ] ∧
       canon11OnForensicAssessment.findings.kind = .asserted ∧
       calvinOnDefinitionAssessment.findings.kind = .asserted ∧
       westminsterOnDefinitionAssessment.profile =
@@ -659,6 +695,6 @@ theorem both_definitions_disputed_alike :
       definitionPremise.ratings.map (·.2.confidence) = [.disputed, .disputed, .disputed] := by
   decide +kernel
 
-#print axioms both_definitions_disputed_alike
+#print axioms the_definitions_under_each_standard
 
 end TestimonyArguments.SolaFide
