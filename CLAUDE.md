@@ -84,6 +84,8 @@ on it; the grits case is `TestimonyExamples`, in `examples/`. Each requires the
 library by path and shares its `.lake/packages`.
 
 Full docs: `docs/src/`. Read `docs/src/style-guide.md` before writing Lean.
+`docs/src/code-map.md` says which few files each kind of task touches, and which
+long files to search rather than read: start there instead of exploring.
 `docs/src/getting-started.md` is the contributor's guide, for people and agents.
 
 ## Hard rules
@@ -165,6 +167,7 @@ Stated as prohibitions on purpose. Each one is enforced by a command.
 ```sh
 scripts/new-worktree.sh <branch>     # always first: worktree + cache, ready to build
 lake exe cache get                   # what that script runs; fetches Mathlib oleans
+scripts/quick-check.sh [files…]      # while working: build what changed, print only errors
 lake build                           # tier 1: missingDocs + Lean linters
 lake build TestimonyTools            # ... and the tools the generators are built from
 lake lint                            # tier 2: Batteries environment linters
@@ -248,6 +251,22 @@ name as `/<skill>`.
   rating, and reporting what the solver then computes
 - `adding-a-citation` — verifying and adding a bibliography entry
 - `checking-the-build` — the four tiers and what each catches
+- `standing-rules` — every discipline a reviewer holds the work to, each with
+  the check that enforces it or "review only"; load it with the task's skill
+- `encoding-meanings` — every new claim's meaning, growing the shared
+  vocabulary, and ontology articles with their definitions; coverage and joins
+- `encoding-a-dispute` — positions set against each other: ratings, the defeat
+  table, verdicts with witnesses, `Because`, `Grants`, burdens and hearings
+- `encoding-a-dilemma` — every reading of a rival's ambiguous claim, each
+  cited, fair and answered
+- `historical-framing` — a story told in the order it happened: eras, dated
+  turns, cut-off hearings, each side's ground truths, development and accretion
+- `encoding-a-chapter` — a chapter from request to draft pull request, with the
+  numbered claims confirmed before any Lean
+- `reading-the-original` — Greek and Hebrew checked against the corpus,
+  translations, glossary renderings and variants
+- `fast-lean-loop` — checking Lean quickly: the lean-lsp MCP tools,
+  `scripts/quick-check.sh`, reading only what failed
 - `optimising-the-engine` — making the engine faster or lighter: the benchmark
   suite, the ablation A/B and its statistics, the fixed-point loop, the CI
   regression gate, and accepting a regression on purpose

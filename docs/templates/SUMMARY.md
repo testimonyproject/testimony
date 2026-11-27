@@ -6,6 +6,7 @@
 
 - [Rationale](./rationale.md)
 - [Scope and limits](./scope-and-limits.md)
+- [How a page teaches](./pedagogy.md)
 - [Who wrote what](./authorship.md)
 
 # How
@@ -14,6 +15,7 @@
 - [Hello world: your first argument](./hello-world.md)
 - [Reading the logic](./reading-the-logic.md)
 - [Architecture](./architecture.md)
+- [Code map](./code-map.md)
 - [Encoding arguments](./logic.md)
 - [Citations](./citations.md)
 - [Writing for the reader](./writing-for-readers.md)

@@ -26,7 +26,9 @@ Write the question down in the reader's words before touching Lean:
 
 The question picks the construction (see `encoding-an-argument`, "Explaining a
 result"): a `Because`, a `Dilemma`, an `OpponentsBurden`, a `Verdict`, or a
-hearing. If no question needs it, don't build it.
+hearing. If no question needs it, don't build it. `encoding-a-dispute`,
+`encoding-a-dilemma` and `historical-framing` hold the detail of each, and any
+claim the supplement adds gets its meaning (`encoding-meanings`).
 
 ## 2 — Locate the crux before researching
 

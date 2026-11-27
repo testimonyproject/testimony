@@ -26,6 +26,29 @@ person you are working with does not write Lean, load
 `working-with-a-contributor` too; it says what to read back to them before you
 start.
 
+## What a complete line of reason has
+
+Encode whole lines, never fragments to be finished later. A line is complete when every one of
+these is in the same pull request:
+
+1. **Each claim** has a docstring a reader could quote, a citation (`cite`) at a verified place,
+   and a **meaning** in `Meanings/<Argument>.lean` (`encoding-meanings`). Every Greek or Hebrew
+   word in it is in the glossary.
+2. **The step** names who draws it (`inference`), or is the library's proposal with a
+   rationale, and is rated by the rule: `disputed` when a cited reader grants its grounds and
+   denies its conclusion, with that reader's reason quoted.
+3. **Any condition the step needs**, such as a word keeping its sense between the texts it
+   joins, is a premise of its own, cited and rated (`#check_conditions` fails without it).
+4. **The rival** is a line too, in its holders' words, complete by the same standard.
+5. **The meeting** of the two: a dispute with its verdict, and a `Because` for the defeat the
+   prose explains (`encoding-a-dispute`); a dilemma if the rival's claim has two readings
+   (`encoding-a-dilemma`).
+6. **Its place in time**: the work each voice comes from, dated, and the line told in the order
+   the voices spoke (`historical-framing`).
+7. **Its page**, read after generating, for the lay reader and the theologian.
+
+The `standing-rules` skill lists every discipline the line is reviewed against.
+
 ## Before writing any Lean
 
 Get these from the source literature, not from memory:
@@ -91,6 +114,15 @@ Where packages disagree about an atom, give each its own `cite`, sharing a
 the people who actually hold its premises.
 
 See the `adding-a-citation` skill for new bibliography entries.
+
+## 2b — the meanings
+
+`means` in `arguments/TestimonyArguments/Meanings/<Argument>.lean` is total over the atoms, as
+`cite` is, so a new atom does not compile without a meaning. Give it a real one, not `opaque`:
+the `encoding-meanings` skill says how to choose the form, grow the shared vocabulary by the
+word you need, write a definition in an article when a join depends on a word's meaning, and
+re-pin coverage and joins. A new argument registers its `HasMeanings` and `HasJoins` instances
+in the same pull request; `#check_meanings` fails the build without them.
 
 ## 3 — the lines of reason
 
@@ -288,7 +320,10 @@ question. Reach for them before writing prose that explains by hand.
 | What if only these parties were heard? | a hearing — `D.restrict` with its own verdicts | `Logic.Dispute` |
 
 The sola fide argument uses all five: `whereTrentPartsFromPaul`,
-`whatTrentsDefinitionClaims`, and the hearings in `SolaFide/Hearings.lean`.
+`whatTrentsDefinitionClaims`, and the hearings in `SolaFide/Hearings.lean`. The
+`encoding-a-dispute` skill covers disputes, verdicts, `Because` and burdens in
+order; `encoding-a-dilemma` covers dilemmas; `historical-framing` covers dated
+exchanges and hearings limited to a year.
 
 ## 6 — read the manifest
 
