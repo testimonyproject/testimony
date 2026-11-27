@@ -449,6 +449,30 @@ def means : Claim → Statement
     .opaque "What was counted at Gen 15:6 was credited for his faithfulness when tested"
   | .abrahamFoundFaithfulWhenTested =>
     .opaque "Abraham found faithful in trial, and it was credited to him (1 Macc 2:52)"
+  | .matthew12_32NotForgivenInTheAgeToCome =>
+    .opaque "Matthew 12:32: not forgiven, either in this age or in the age to come"
+  | .soulsAreCleansedAfterDeath =>
+    .opaque "the souls of penitents who die before making satisfaction are cleansed after death"
+  | .secondSamuel12_13_14ForgivenYetPunished =>
+    .opaque "2 Samuel 12:13-14: the Lord forgave David's sin, yet his son would die"
+  | .sinTurnsToAMutableGood =>
+    .opaque "sin turns from the unchangeable good and to a changeable good"
+  | .temporalDebtRemainsAfterForgiveness =>
+    .opaque "when guilt is forgiven, a debt of temporal punishment may remain"
+  | .christsMeritSuperabounds => .opaque "Christ's merit far exceeds what redemption needed"
+  | .treasuryIsMeritsOfChristAndSaints =>
+    .opaque "the treasure of indulgences is the merits of Christ and the saints"
+  | .christsMeritsWorkGraceWithoutThePope =>
+    .opaque "the merits of Christ work grace for the inner man without the pope"
+  | .matthew4_17Repent => .opaque "Matthew 4:17: Repent, for the kingdom of heaven is near"
+  | .metanoiaIsAChangeOfHeart => .opaque "to repent is a change of heart, not an act done"
+  | .matthew4_17MeansSacramentalPenance =>
+    .opaque "the repentance of Matthew 4:17 is sacramental penance"
+  | .earlyChurchPrayedForTheDead => .opaque "the early church made offerings for the dead"
+  | .augustineLeftTheFireOpen => .opaque "Augustine left a fire after death an open question"
+  | .gregoryTaughtItFromVisions =>
+    .opaque "Gregory first wrote that a cleansing fire must be believed"
+  | .purgatoryIsAncientTeaching => .opaque "purgatory belongs to the faith from the beginning"
 
 /-- Every sola fide atom, in declaration order. -/
 def all : List Claim :=
@@ -519,7 +543,13 @@ def all : List Claim :=
   , .faithFormedByCharityJustifies, .loveIsTheFruitOfFaith, .abrahamOfRomans4WasABeliever
   , .paulExcludesOnlyWorksWithoutGrace, .romans4_4ExplainsPaulsWorks
   , .john6_29WorkIsPaulsWorks, .energoumeneIsPassive, .energoumeneIsMiddle, .loveMovesFaith
-  , .faithWorksThroughLove ]
+  , .faithWorksThroughLove, .matthew12_32NotForgivenInTheAgeToCome, .soulsAreCleansedAfterDeath
+  , .secondSamuel12_13_14ForgivenYetPunished, .sinTurnsToAMutableGood
+  , .temporalDebtRemainsAfterForgiveness, .christsMeritSuperabounds
+  , .treasuryIsMeritsOfChristAndSaints, .christsMeritsWorkGraceWithoutThePope
+  , .matthew4_17Repent, .metanoiaIsAChangeOfHeart, .matthew4_17MeansSacramentalPenance
+  , .earlyChurchPrayedForTheDead, .augustineLeftTheFireOpen, .gregoryTaughtItFromVisions
+  , .purgatoryIsAncientTeaching ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -534,8 +564,8 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **A hundred and twenty-seven of the hundred and seventy-eight are analysed.** Of
-the fifty-one that are not, two are the claims of the chapter on what was read in
+/-- **A hundred and twenty-seven of the hundred and ninety-three are analysed.** Of
+the sixty-six that are not, two are the claims of the chapter on what was read in
 Paul before Trent: what the fathers wrote of faith alone, and justification with
 no prior work earning it. One is the chapter on faith working through love: that
 the Abraham of Romans 4 was already a believer. Seventeen are the claims of the
@@ -545,7 +575,10 @@ through love, Contarini's righteousness inherent in us, and the resting on
 Christ's righteousness given, which need words the vocabulary lacks: a form, an
 efficacy, an inherence and a resting on. Fifteen are the claims of the chapters on whether
 justification has degrees and on Abraham, whose content (a verdict's degrees, a
-covenant rite, a grant, a testing) the vocabulary cannot yet state. Of the other
+covenant rite, a grant, a testing) the vocabulary cannot yet state. Fifteen more are
+the claims of the chapter on what forgiveness left unpaid, whose content (a penalty
+still owed after pardon, a treasury of merit, a cleansing after death, a change of
+heart) the vocabulary cannot yet state either. Of the other
 sixteen, four are Pius XII's and Trent's claims about the Vulgate and one is the
 textual principle, whose content is a rule about texts and translations the
 vocabulary cannot yet state; the other eleven are the narrative texts of the thief
@@ -555,7 +588,7 @@ of the obedience it requires, Galatians 1:6–9, Christ's command to baptise, Tr
 reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each needs a word
 the vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
 reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (127, 178) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (127, 193) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the

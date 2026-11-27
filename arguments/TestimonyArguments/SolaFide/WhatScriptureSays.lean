@@ -154,7 +154,8 @@ what James means by them.
 
 Each chapter of the story that follows hears the voices of its own time, so
 that a reply never comes before what it answers: first the church's readers of
-Paul from the 350s to the 1270s, then the Reformers and their Catholic
-opponents from 1521 to 1541, then the council itself in 1547, and then the
+Paul from the 350s to the 1270s, then the debt of punishment the medieval church
+held was left after forgiveness, from about 203 to 1520, then the Reformers and
+their Catholic opponents from 1521 to 1541, then the council itself in 1547, and then the
 Reformers' answer to it, from 1547 to 1647.
 -/

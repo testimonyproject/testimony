@@ -6100,6 +6100,212 @@ that come only through justifying faith", and Hilary's commentary on Matthew
   , issue := some "4"
   , pages := some (649, 667) }
 
+/-- Gregory the Great's *Dialogues*, written in 593–594, whose fourth book
+asks what becomes of souls after death. In IV.39 Gregory writes that "we must
+believe that before the day of judgment there is a Purgatory fire for certain
+small sins" (*de quibusdam levibus culpis esse ante judicium purgatorius ignis
+credendus est*). Read in Gardner's edition of the English of 1608
+(`gardnerGregoryDialogues`), pp. 232–234, and in the Latin of PL 77. -/
+@[bib_entry] def gregoryDialogues : BibEntry := .ancientWork
+  { core :=
+      { key := "gregory-dialogues-593"
+      , role := .witness
+      , contributors := { authors := [.single "Gregory the Great"] }
+      , title := "Dialogues" }
+  , originalTitle := some "Dialogi"
+  , composed := some { value := 593, approximate := true }
+  , editionUsed := some "gardner-gregory-dialogues-1911" }
+
+/-- *The Dialogues of Saint Gregory*, the English translation of 1608 by "P.
+W.", re-edited by Edmund G. Gardner, London, Philip Lee Warner, 1911, as the
+title page reads in the Internet Archive's scan. Published without an ISBN. -/
+@[bib_entry] def gardnerGregoryDialogues : BibEntry := .book
+  { core :=
+      { key := "gardner-gregory-dialogues-1911"
+      , role := .witness
+      , contributors :=
+          { authors := [.single "Gregory the Great"]
+          , editors := [.person "Edmund G." "Gardner"] }
+      , title := "The Dialogues of Saint Gregory"
+      , year := some { value := 1911 }
+      , identifiers :=
+          [ .url "https://archive.org/details/dialoguesofsaint00greg" (some "2026-11-27") ] }
+  , publisher := "Philip Lee Warner"
+  , place := some "London" }
+
+/-- Tertullian, *De corona* 3, on the customs the church kept without a written
+command: "As often as the anniversary comes round, we make offerings for the
+dead as birthday honours" (ANF 3, p. 94). Written about 211. -/
+@[bib_entry] def tertullianDeCorona : BibEntry := .ancientWork
+  { core :=
+      { key := "tertullian-de-corona-211"
+      , role := .witness
+      , contributors := { authors := [.single "Tertullian"] }
+      , title := "The Chaplet" }
+  , originalTitle := some "De corona militis"
+  , composed := some { value := 211, approximate := true }
+  , editionUsed := some "roberts-ante-nicene-fathers-3-1885" }
+
+/-- Augustine's *Enchiridion*, written about 421. In ch. 68 he reads the fire of
+1 Corinthians 3:15 of this life, and in ch. 69 he leaves a cleansing fire after
+death an open question (NPNF1 3, pp. 259–260). -/
+@[bib_entry] def augustineEnchiridion : BibEntry := .ancientWork
+  { core :=
+      { key := "augustine-enchiridion-421"
+      , role := .witness
+      , contributors := { authors := [.single "Augustine of Hippo"] }
+      , title := "The Enchiridion" }
+  , originalTitle := some "Enchiridion de fide, spe et caritate"
+  , composed := some { value := 421, approximate := true }
+  , editionUsed := some "schaff-nicene-post-nicene-fathers-1-3-1887" }
+
+/-- The third part of Aquinas's *Summa theologiae*, which Weisheipl's catalogue
+dates to Naples, from September 1272 to December 1273, where the work breaks
+off in the treatise on penance (q. 90 a. 4). Question 86, article 4, holds that
+when guilt is pardoned "a debt of some temporal punishment may yet remain".
+Read in the Dominican translation (`aquinasSumma`). -/
+@[bib_entry] def aquinasTertiaPars : BibEntry := .ancientWork
+  { core :=
+      { key := "aquinas-summa-tertia-pars-1273"
+      , role := .witness
+      , contributors := { authors := [.person "Thomas" "Aquinas"] }
+      , title := "Summa Theologiae, Third Part" }
+  , originalTitle := some "Summa theologiae, tertia pars"
+  , composed := some { value := 1273, approximate := true }
+  , editionUsed := some "aquinas-summa-1920" }
+
+/-- Denzinger's *Enchiridion symbolorum*, in the English read at
+patristica.net, which prints each paragraph under Denzinger's older number,
+with the Latin and the Denzinger–Hünermann number on the site's Latin pages.
+The site does not name its translator, so no printed edition or page is cited:
+the library cites the paragraph number. -/
+@[bib_entry] def denzingerPatristica : BibEntry := .webPage
+  { core :=
+      { key := "denzinger-enchiridion-patristica"
+      , role := .authority
+      , contributors := { editors := [.person "Heinrich" "Denzinger"] }
+      , title := "Enchiridion symbolorum"
+      , identifiers := [.url "https://patristica.net/denzinger" (some "2026-11-27")] }
+  , site := some "patristica.net" }
+
+/-- Clement VI's bull of jubilee *Unigenitus Dei Filius*, of January 1343, on the
+treasure of the church: Christ "poured out not a little drop of blood, which
+however on account of union with the Word would have been sufficient for the
+redemption of the whole human race, but copiously", and the treasure "He has
+committed to be dispensed" through Peter and his successors "for ... remission
+of temporal punishment due to sins" (Denzinger 550–552; DH 1025–1027). The
+English heading dates it 25 January, the Latin 27 January. -/
+@[bib_entry] def clementUnigenitus : BibEntry := .ancientWork
+  { core :=
+      { key := "clement-vi-unigenitus-1343"
+      , role := .authority
+      , contributors := { authors := [.single "Clement VI"] }
+      , title := "Unigenitus Dei Filius" }
+  , composed := some { value := 1343 }
+  , editionUsed := some "denzinger-enchiridion-patristica" }
+
+/-- The decree of union with the Greeks, *Laetentur caeli*, read at the Council
+of Florence's sixth session, 6 July 1439. Its sentence on purgatory: "if truly
+penitent people die in the love of God before they have made satisfaction for
+acts and omissions by worthy fruits of repentance, their souls are cleansed
+after death by cleansing pains". Quoted in Tanner's translation, as
+Papal Encyclicals Online reproduces it (read 2026-11-27); the decree falls on
+Tanner's pp. 520–528 by his own introduction, and the sentence's page was not
+seen. Denzinger 693; DH 1304. -/
+@[bib_entry] def florenceLaetentur : BibEntry := .ancientWork
+  { core :=
+      { key := "florence-laetentur-caeli-1439"
+      , role := .authority
+      , contributors := { authors := [.corporate "Council of Florence"] }
+      , title := "Laetentur caeli: Decree of Union with the Greeks" }
+  , composed := some { value := 1439 }
+  , editionUsed := some "tanner-decrees-1990" }
+
+/-- *Works of Martin Luther*, volume 1, Philadelphia, A. J. Holman, 1915, with
+the Ninety-Five Theses translated by C. M. Jacobs (pp. 29–38) and the letter to
+Staupitz that went with the *Resolutions* (pp. 39–43). Read in the Internet
+Archive's scan; Project Gutenberg's EBook #31604 is the same volume. Published
+without an ISBN. -/
+@[bib_entry] def worksOfLuther1 : BibEntry := .book
+  { core :=
+      { key := "works-of-martin-luther-1-1915"
+      , role := .witness
+      , contributors := { authors := [.person "Martin" "Luther"] }
+      , title := "Works of Martin Luther"
+      , year := some { value := 1915 }
+      , identifiers :=
+          [ .url "https://archive.org/details/worksofmartinlut01luth" (some "2026-11-27") ] }
+  , publisher := "A. J. Holman"
+  , place := some "Philadelphia"
+  , volume := some "1" }
+
+/-- Luther's *Disputation on the Power and Efficacy of Indulgences*, the
+Ninety-Five Theses of October 1517. Read in Jacobs's translation
+(`worksOfLuther1`, pp. 29–38). -/
+@[bib_entry] def lutherNinetyFiveTheses : BibEntry := .ancientWork
+  { core :=
+      { key := "luther-ninety-five-theses-1517"
+      , role := .witness
+      , contributors := { authors := [.person "Martin" "Luther"] }
+      , title := "Disputation on the Power and Efficacy of Indulgences" }
+  , originalTitle := some "Disputatio pro declaratione virtutis indulgentiarum"
+  , composed := some { value := 1517 }
+  , editionUsed := some "works-of-martin-luther-1-1915" }
+
+/-- Luther's letter to John Staupitz, sent with the *Resolutions* on the theses,
+dated "Wittenberg, Day of the Holy Trinity, MDXVIII". He writes that the Greek
+*metanoia*, "repentance", is "a 'coming to one's senses'", and that *poenitentiam
+agere*, "to do penance", indicates "an action, rather than a change of heart"
+(`worksOfLuther1`, pp. 40–41). -/
+@[bib_entry] def lutherToStaupitz : BibEntry := .ancientWork
+  { core :=
+      { key := "luther-letter-to-staupitz-1518"
+      , role := .witness
+      , contributors := { authors := [.person "Martin" "Luther"] }
+      , title := "Letter to John Staupitz Accompanying the Resolutions" }
+  , composed := some { value := 1518 }
+  , editionUsed := some "works-of-martin-luther-1-1915" }
+
+/-- Leo X's decretal *Cum postquam*, sent to the legate Cajetan on 9 November
+1518, which defines that the pope, "by the power of the keys", grants
+indulgences "from the superabundant merits of Christ and the saints", to the
+living and, "by means of suffrage", to the dead (Denzinger 740a; DH
+1447–1448). -/
+@[bib_entry] def leoCumPostquam : BibEntry := .ancientWork
+  { core :=
+      { key := "leo-x-cum-postquam-1518"
+      , role := .authority
+      , contributors := { authors := [.single "Leo X"] }
+      , title := "Cum postquam" }
+  , composed := some { value := 1518 }
+  , editionUsed := some "denzinger-enchiridion-patristica" }
+
+/-- Project Gutenberg's text of Newman's *Essay on the Development of Christian
+Doctrine*, EBook #35110, transcribed from the "Sixth edition" printed by the
+University of Notre Dame Press, which is the text Newman revised in 1878 (its
+"Preface to the edition of 1878"). The page numbers cited are those the
+transcription keeps in its notes. -/
+@[bib_entry] def newmanDevelopmentGutenberg : BibEntry := .webPage
+  { core :=
+      { key := "newman-development-gutenberg-35110"
+      , role := .witness
+      , contributors := { authors := [.person "John Henry" "Newman"] }
+      , title := "An Essay on the Development of Christian Doctrine"
+      , identifiers := [.url "https://www.gutenberg.org/ebooks/35110" (some "2026-11-27")] }
+  , site := some "Project Gutenberg" }
+
+/-- Newman's *Essay on the Development of Christian Doctrine* in the text he
+revised in 1878, dated by that revision, and read in Project Gutenberg's
+transcription (`newmanDevelopmentGutenberg`). -/
+@[bib_entry] def newmanDevelopment1878 : BibEntry := .ancientWork
+  { core :=
+      { key := "newman-development-1878"
+      , role := .witness
+      , contributors := { authors := [.person "John Henry" "Newman"] }
+      , title := "An Essay on the Development of Christian Doctrine (revised text)" }
+  , composed := some { value := 1878 }
+  , editionUsed := some "newman-development-gutenberg-35110" }
+
 derive_bib_registry registry
 
 /-- **The arguments' bibliography**: the library's entries and the arguments'
