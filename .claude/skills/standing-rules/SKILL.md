@@ -55,7 +55,7 @@ checklist at the end before the pull request.
 11. **A doctrine's structure is kept as its holders state it.** If a position is an implication
     ("whoever believes is justified, with works or without"), encode the implication, not a
     Boolean filter over rows. A truth table sets out the rows; the rules are the texts' and the
-    readers', each cited. *Review only.*
+    readers', each cited (`extracting-a-truth-table`). *Review only.*
 12. **Refutations are computed**, from named readings checked by the kernel, never cited as
     someone's say-so. A step's refutation is the countermodel that shows it. *Enforced*:
     `#check_refutations`, and the tactics (`refute_with` takes only a named reading).

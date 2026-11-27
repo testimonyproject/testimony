@@ -318,12 +318,14 @@ question. Reach for them before writing prose that explains by hand.
 | What if the rival's claim means something else? | `Dilemma R` — every reading, each answered | `Logic.Dilemma` |
 | What does the dispute decide, and why? | a `Verdict` — the claim with its checked witness | `Logic.Verdict` |
 | What if only these parties were heard? | a hearing — `D.restrict` with its own verdicts | `Logic.Dispute` |
+| What does the claim say in every case? | a `TruthTable` — the terms, each construction, the texts as tests, every row checked | `Logic.TruthTable` |
 
 The sola fide argument uses all five: `whereTrentPartsFromPaul`,
 `whatTrentsDefinitionClaims`, and the hearings in `SolaFide/Hearings.lean`. The
 `encoding-a-dispute` skill covers disputes, verdicts, `Because` and burdens in
 order; `encoding-a-dilemma` covers dilemmas; `historical-framing` covers dated
-exchanges and hearings limited to a year.
+exchanges and hearings limited to a year; `extracting-a-truth-table` covers
+tables.
 
 ## 6 — read the manifest
 

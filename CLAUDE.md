@@ -265,6 +265,8 @@ name as `/<skill>`.
   numbered claims confirmed before any Lean
 - `reading-the-original` — Greek and Hebrew checked against the corpus,
   translations, glossary renderings and variants
+- `extracting-a-truth-table` — a claim's terms, its constructions, the texts
+  as tests and every row checked, with prose that names the rows
 - `fast-lean-loop` — checking Lean quickly: the lean-lsp MCP tools,
   `scripts/quick-check.sh`, reading only what failed
 - `optimising-the-engine` — making the engine faster or lighter: the benchmark
