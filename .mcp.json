@@ -1,0 +1,11 @@
+{
+  "mcpServers": {
+    "lean-lsp": {
+      "command": "sh",
+      "args": [
+        "-c",
+        "PATH=\"$HOME/.elan/bin:$HOME/.local/bin:$PATH\" exec uvx lean-lsp-mcp==0.33.0 --lean-project-path arguments --disable-tools lean_build,lean_run_code,lean_multi_attempt"
+      ]
+    }
+  }
+}

@@ -33,6 +33,10 @@ scripts/generate-docs.sh             # generated files, not committed
 The library and each package built on it (`arguments/`, `examples/`) are
 separate Lake packages, and each is held to the gates in its own directory.
 
+While working, use the short loop instead (`fast-lean-loop`):
+`scripts/quick-check.sh` builds only the modules a change touched and prints
+only what failed. It is not a gate; run the tiers above before the commit.
+
 ### Tier 1 — `lake build`
 
 Catches type errors, and missing docstrings via `linter.missingDocs`. It also
