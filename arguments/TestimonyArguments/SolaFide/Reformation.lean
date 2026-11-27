@@ -149,8 +149,9 @@ says. It can be held with the Reformers (`the_reformers_stand_together`) and
 with Rome (`rome_and_regensburg_stand_together`). Where it stands is decided by
 how its "efficacious through love" is read, and each reading falls at a step
 rated `disputed` (`whatTheRegensburgFaithIs`). Put as a truth table for one
-person, the texts from Paul, Hebrews and John make him justified exactly when he
-believes, whatever his works (`justified_exactly_when_he_believes`). The sides
+person, the texts from Paul, Hebrews and John, with the step proposed from James,
+make him justified whenever he believes, with works or without them at first,
+and works follow (`what_follows_from_the_table`). The sides
 part at two claims: whether the faith that justifies does so alone or as formed
 by love, and whether good works, made worthy by grace, are a ground of
 salvation. Trent took up both in 1547.
@@ -1344,104 +1345,174 @@ def whatTheRegensburgFaithIs : Dilemma regensburgCase where
 
 /-! ### Faith, works and being justified, as a table
 
-The answer proposed here can also be put as a truth table for one person: does
-he believe, does he do good works, and is he justified? Each row is one way
-those three could stand, and a row is allowed when every text below holds of it.
-The texts are Paul's, Hebrews' and John's, and one step from James is proposed.
+The answer proposed here can also be put as a truth table for one person. Four
+things are asked of him: does he believe, does he have good works when he first
+believes, does he have them afterwards, and is he justified? Each row of the
+table is one way those four could stand, sixteen in all. A row is allowed when
+every text holds of it, and a statement follows from the texts when it is true
+in every allowed row, so it can be checked by reading down its column.
 
-- If he believes, he is justified: "by grace you have been saved through faith"
-  (Ephesians 2:8); "those who believe in him are not condemned" (John 3:18);
-  "one believes with the heart, leading to righteousness, and one confesses
-  with the mouth, leading to salvation" (Romans 10:10). The confession comes out
-  of what the heart already believes.
-- If he does not believe, he is not justified, whatever his works: "if Abraham
-  was justified by works, he has something to boast about, but not before God"
-  (Romans 4:2); "without faith it is impossible to please Him" (Hebrews 11:6);
-  "those who do not believe are condemned already" (John 3:18). Jesus says the
-  same of works done in His name without knowing Him: "did we not prophesy in
-  your name, and cast out demons in your name, and do many mighty works in your
-  name?" "I never knew you; go away from me" (Matthew 7:22–23). The verse before
-  it says that only "the one who does the will of my Father in heaven" enters
-  the kingdom (7:21); the table does not decide what that will includes.
-- If he believes, he does good works, because the works come out of the faith.
-  This is the step proposed here, from James's grammar: "faith was active along
-  with his works" (συνήργει, worked together with them), "and by works faith was
-  brought to completion" (ἐκ τῶν ἔργων ἐτελειώθη, James 2:22), and "faith by
-  itself, if it has no works, is dead" (James 2:17). James says what the works
-  do: "I by my works will show you faith" (James 2:18), κἀγώ σοι δείξω ἐκ τῶν
-  ἔργων μου τὴν πίστιν, "I will show you, out of my works, my faith". The works
-  show the faith; they are its evidence. The order of James's own examples
-  bears it out. He quotes "Abraham believed God, and it was reckoned to
-  him as righteousness" (James 2:23, from Genesis 15:6), which comes years
-  before the offering of Isaac (Genesis 22). Rahab confessed "the Lord your God
-  is indeed God in heaven above and on earth below" (Joshua 2:11) before she hid
-  the spies. Tyndale drew the same order from both in 1528: Abraham's deed
-  "declared and uttered the faith which both justified him before God, and
-  wrought that wonderful work", and Rahab "before God … was justified by faith,
-  which wrought that outward deed" (*Wicked Mammon*, pp. 119–120).
+Works are asked about twice, at first and afterwards, because every example
+Scripture gives believes first and acts after. Abraham "believed God, and it was
+reckoned to him as righteousness" (Genesis 15:6) years before he offered Isaac
+(Genesis 22). Rahab confessed "the Lord your God is indeed God in heaven above
+and on earth below" (Joshua 2:11) before she hid the spies. A table with one
+column for works would have to strike them or leave James out.
+-/
 
-  Trent reads the same chapter the other way: it cites James 2:24, "a person is
-  justified by works and not by faith alone", for the increase of justification by
-  works (Session VI, ch. 10). The Latin is not the cause: the Vulgate renders both
-  verses word for word, *fides cooperabatur operibus illius, et ex operibus fides
-  consummata est* and *ex operibus iustificatur homo, et non ex fide tantum*. The
-  two readings part at what "justify" means, to declare righteous or to make
-  righteous. Nor do they part at who justifies. James's verb is passive,
-  δικαιοῦται, "is justified", and his "by works" is ἐξ ἔργων, "out of works",
-  which marks where the verdict comes from, not who gives it, for Greek names the
-  doer of a passive with ὑπό. Paul names Him: "It is God who justifies" (Romans
-  8:33). Trent says the same, naming "a merciful God" the efficient cause of
-  justification (Session VI, ch. 7).
+/-- The four things the table asks of one person. -/
+inductive OnePerson
+  /-- He believes. -/
+  | believes
+  /-- He has good works when he first believes. -/
+  | worksAtFirst
+  /-- He has good works afterwards. -/
+  | worksAfter
+  /-- He is justified. -/
+  | justified
+  deriving DecidableEq, Repr
 
-The kernel checks every one of the eight rows. -/
+/-- The tests are the texts. ① and ② are Paul's, Hebrews' and John's: if he
+believes he is justified, and if he does not believe he is not, whatever his
+works. ③ is the step proposed here from James: if he believes, works follow.
+What follows is Ⓐ and Ⓑ, two ways of saying that he is justified whether or not
+he has works at first, and Ⓒ, that a believer is justified and works will
+follow. -/
+def faithTable : TruthTable OnePerson where
+  claims :=
+    [ ⟨.believes, "Believes", "B"⟩
+    , ⟨.worksAtFirst, "Works at first", "W"⟩
+    , ⟨.worksAfter, "Works after", "W′"⟩
+    , ⟨.justified, "Justified", "J"⟩ ]
+  tests :=
+    [ { label := "①"
+      , words := "If he believes, he is justified."
+      , formula := p .believes ➝ p .justified
+      , source := some
+          { primary := .scripture
+              [ { ref := .verse ⟨.ephesians, 2, 8⟩ }, { ref := .verse ⟨.john, 3, 18⟩ }
+              , { ref := .verse ⟨.romans, 10, 10⟩ } ]
+          , tradition := .reformedProtestant
+          , confidence := .disputed } }
+    , { label := "②"
+      , words := "If he does not believe, he is not justified, whatever his works."
+      , formula := notP .believes ➝ notP .justified
+      , source := some
+          { primary := .scripture
+              [ { ref := .verse ⟨.hebrews, 11, 6⟩ }, { ref := .verse ⟨.romans, 4, 2⟩ }
+              , { ref := .verse ⟨.john, 3, 18⟩ } ]
+          , tradition := .reformedProtestant
+          , confidence := .wellSupported } }
+    , { label := "③"
+      , words := "If he believes, works follow."
+      , formula := p .believes ➝ p .worksAfter
+      , source := some
+          { primary := .proposal
+              "from James's grammar: faith works with the works and is shown by them"
+          , supporting :=
+              [ .scripture [{ ref := .verse ⟨.james, 2, 17⟩ }, { ref := .verse ⟨.james, 2, 18⟩ }
+                , { ref := .verse ⟨.james, 2, 22⟩ }] ]
+          , tradition := .reformedProtestant
+          , confidence := .disputed } } ]
+  follows :=
+    [ { label := "Ⓐ"
+      , words := "If he believes, with works or without them at first, he is justified."
+      , formula := (p .believes ⋏ (p .worksAtFirst ⋎ notP .worksAtFirst)) ➝ p .justified }
+    , { label := "Ⓑ"
+      , words := "If he believes, he is justified, with works or without them at first."
+      , formula := p .believes ➝ (p .justified ⋏ (p .worksAtFirst ⋎ notP .worksAtFirst)) }
+    , { label := "Ⓒ"
+      , words := "If he believes, he is justified, and works will follow."
+      , formula := p .believes ➝ (p .justified ⋏ p .worksAfter) } ]
 
-/-- Whether a row is allowed by the texts from Paul, Hebrews and John: if he
-believes he is justified, and if he does not believe he is not. Works are a
-column of the table and appear in no condition. -/
-def paulsRow (faith _works justified : Bool) : Bool :=
-  (!faith || justified) && (faith || !justified)
+/-! Read down the columns. Rows 2, 4, 6 and 8 break ①: he believes and is not
+justified. Rows 9, 11, 13 and 15 break ②: he is justified without believing,
+which Romans 4:2 calls something "to boast about, but not before God". Rows 3
+and 7 break only ③. They are the faith James calls dead, of one who "says he has
+faith" (James 2:14) and whose works never come: "faith by itself, if it has no
+works, is dead" (James 2:17). They are struck because such faith is not the
+faith of ①, not because a believer is condemned for lacking works.
 
-/-- Whether a row is allowed when the step proposed from James is added: if he
-believes, he does good works. -/
-def fruitRow (faith works justified : Bool) : Bool :=
-  paulsRow faith works justified && (!faith || works)
+Six rows are left: 1, 5, 10, 12, 14 and 16. In each of them Ⓐ, Ⓑ and Ⓒ are
+true, so the table derives all three from the texts. Rows 1 and 5 differ only in
+works at first, and both are justified: works at first make no difference.
 
-/-- **On the texts from Paul, Hebrews and John, he is justified exactly when he
-believes, and his works make no difference.** In every allowed row of the
-eight, "justified" has the value "believes" has, whichever value "works" has.
-This is the table Dean proposed, faith ∧ (works ∨ ¬works) → justified, together
-with its converse, checked row by row. -/
-theorem justified_exactly_when_he_believes :
-    ∀ faith works justified : Bool,
-      paulsRow faith works justified = true → justified = faith := by
-  decide
+Row 5 is Abraham, Rahab and the thief on the cross. Each believed with no works
+yet, was justified from the first, and the works came after. Abraham's offering
+of Isaac came years after Genesis 15:6, and James says it showed his faith:
+"faith was active along with his works" (συνήργει, worked together with them),
+"and by works faith was brought to completion" (ἐκ τῶν ἔργων ἐτελειώθη, James
+2:22). Rahab confessed before she acted (James 2:25). The thief believed, and his
+one work was to confess Jesus with his mouth: "Jesus, remember me when you come
+into your kingdom" (Luke 23:42). Romans 10:10 joins the two: "one believes with
+the heart, leading to righteousness, and one confesses with the mouth, leading to
+salvation". He heard "today you will be with me in paradise" (Luke 23:43). Row 1
+is a believer whose works are there from the start.
 
-/-- **On those texts alone, a believer with no works is justified.** The row
-"believes, no works, justified" is allowed. It is the thief on the cross, who
-had no time for works and was told, "today you will be with me in paradise"
-(Luke 23:43). -/
-theorem a_believer_without_works_is_justified : paulsRow true false true = true := rfl
+James says what the works do: "I by my works will show you faith" (James 2:18),
+κἀγώ σοι δείξω ἐκ τῶν ἔργων μου τὴν πίστιν, "I will show you, out of my works,
+my faith". The works show the faith; they are its evidence. Tyndale drew the
+same order from Abraham and Rahab in 1528: Abraham's deed "declared and uttered
+the faith which both justified him before God, and wrought that wonderful work",
+and Rahab "before God … was justified by faith, which wrought that outward
+deed" (*Wicked Mammon*, pp. 119–120).
 
-/-- **With the step proposed from James, every believer has works, and still
-works decide nothing.** Adding "if he believes, he does good works" rules out the
-row "believes, no works", and in every row that is left he is justified exactly
-when he believes. -/
-theorem with_james_works_follow_and_decide_nothing :
-    (∀ justified : Bool, fruitRow true false justified = false) ∧
-    ∀ faith works justified : Bool,
-      fruitRow faith works justified = true → justified = faith := by
-  decide
+Row 10 is the man of Matthew 7:22–23, who had works and no faith: "did we not
+prophesy in your name, and cast out demons in your name, and do many mighty works
+in your name?" "I never knew you; go away from me." The verse before it says
+that only "the one who does the will of my Father in heaven" enters the kingdom
+(7:21); the table does not decide what that will includes.
 
-/-- **The table cannot tell a fruit from a condition.** With the step proposed
-from James, in every allowed row "justified" also has the value of "believes
-and has works". So the rows alone fit "works are faith's fruit" and "works are a
-condition with faith" equally. What tells them apart is not the table but the
-direction of the step from James: whether works come out of faith, as proposed
-here, or are added to it, as Trent reads James 2:24. -/
-theorem the_table_cannot_tell_fruit_from_condition :
-    ∀ faith works justified : Bool,
-      fruitRow faith works justified = true → justified = (faith && works) := by
-  decide
+Trent reads James's chapter the other way. It cites James 2:24, "a person is
+justified by works and not by faith alone", for the increase of justification by
+works (Session VI, ch. 10), and denies ① as Paul's texts are read here: its
+canon 9 condemns the teaching that the ungodly is justified by faith alone. It
+grants ②: faith is "the beginning of human salvation … without which it is
+impossible to please God" (ch. 8, quoting Hebrews 11:6). The Latin is not the
+cause of the difference: the Vulgate renders both verses of James word for word,
+*fides cooperabatur operibus illius, et ex operibus fides consummata est* and *ex
+operibus iustificatur homo, et non ex fide tantum*. The two readings part at what
+"justify" means, to declare righteous or to make righteous. Nor do they part at
+who justifies. James's verb is passive, δικαιοῦται, "is justified", and his "by
+works" is ἐξ ἔργων, "out of works", which marks where the verdict comes from,
+not who gives it, for Greek names the doer of a passive with ὑπό. Paul names Him:
+"It is God who justifies" (Romans 8:33). Trent says the same, naming "a merciful
+God" the efficient cause of justification (Session VI, ch. 7).
+-/
+
+/-- **The table derives what follows.** Every test and statement is about the
+four things the table asks, and in every one of the sixteen rows that ①, ② and
+③ allow, Ⓐ, Ⓑ and Ⓒ are true. The kernel evaluates every row. -/
+theorem the_table_derives_what_follows : faithTable.Checked := by
+  decide +kernel
+
+/-- **So the texts entail what follows.** On ① and ②, the texts from Paul,
+Hebrews and John, and ③, the step proposed from James, a believer is justified
+whether or not he has works at first, and works will follow. This is entailment
+in the library's own sense, over every valuation, not only over the table's
+sixteen rows; it holds as firmly as ③, which is proposed, and ①, which Trent
+denies. -/
+theorem what_follows_from_the_table : faithTable.EntailsWhatFollows :=
+  TruthTable.entails_of_checked the_table_derives_what_follows
+
+/-- **The texts can all hold together.** Row 5, believing with no works at
+first, works afterwards, and justified, passes ①, ② and ③, so the entailment
+above is not the empty one a contradictory set of texts would give. -/
+theorem abraham_rahab_and_the_thief_are_allowed : faithTable.allowedRow 5 = true := by
+  decide +kernel
+
+/-- The texts are satisfiable: row 5 is a model of them. -/
+theorem the_table_texts_hold_together : Satisfiable faithTable.premises :=
+  TruthTable.satisfiable_of_allowedRow abraham_rahab_and_the_thief_are_allowed
+
+/-- **Dead faith is struck by James's step alone.** Rows 3 and 7, believing and
+justified with no works ever, are struck, and they pass ① and ②: only ③ strikes
+them. Without ③ they would stand. -/
+theorem dead_faith_is_struck_by_james_alone :
+    faithTable.allowedRow 3 = false ∧ faithTable.allowedRow 7 = false ∧
+    (faithTable.firstTests 2).allowedRow 3 = true ∧
+    (faithTable.firstTests 2).allowedRow 7 = true := by
+  decide +kernel
 
 /-- Why nothing is forced but the article: every voice but the article is
 defeated by one from the other side, and defeats it in return. -/

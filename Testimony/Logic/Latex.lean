@@ -823,6 +823,59 @@ def truthTableWords (inputs : List String) (rowsOf : List (List Bool × Bool)) :
     String.intercalate " & " (ins.map yn ++ [if out then "yes" else "no"]) ++ " \\\\\n") ++
   "\\bottomrule\n\\end{tabular}\n\n"
 
+/-- **A truth table, set out**: a column for each claim, one for each test,
+whether the row is allowed, and one for each statement that follows, shaded.
+Each test and statement is said in words under the table, with what a test
+rests on. A struck row is set in grey; a test proposed here is shaded. Rows are
+numbered from 1, as the prose after a table names them, and the table shrinks
+to the text's width only when it is wider. -/
+def tableWords (t : Page.TableView) : String :=
+  let yn (b : Bool) := if b then "Yes" else "No"
+  let mark (b : Bool) := if b then "\\textcolor{tablekept}{✓}" else "\\textcolor{tablebroken}{✗}"
+  let grey (keep : Bool) (x : String) := if keep then x else "\\textcolor{tablestruck}{" ++ x ++ "}"
+  let nc := t.claims.length
+  let nt := t.tests.length
+  let nf := t.follows.length
+  let testSpec (c : Page.TableColumnView) :=
+    if c.proposed then ">{\\columncolor{tableproposed}}c " else "c "
+  let spec := "@{}r " ++ String.join (t.claims.map fun _ => "c ") ++
+    String.join (t.tests.map testSpec) ++ "c " ++
+    String.join (t.follows.map fun _ => ">{\\columncolor{tablefollows}}c ") ++ "@{}"
+  let head (c : Page.TableColumnView) :=
+    "\\shortstack{" ++ escape c.label ++ "\\\\[1pt]$" ++ c.formulaTex ++ "$}"
+  let first := 2 + nc
+  let lastTest := first + nt - 1
+  let firstFollow := lastTest + 2
+  let header :=
+    String.intercalate " & " ("" :: t.claims.map (fun (h, _) => escape h) ++
+      ["\\multicolumn{" ++ toString nt ++ "}{c}{Tests}", ""] ++
+      (if nf == 0 then [] else ["\\multicolumn{" ++ toString nf ++ "}{c}{What follows}"])) ++
+      " \\\\\n" ++
+    "\\cmidrule(lr){" ++ toString first ++ "-" ++ toString lastTest ++ "}" ++
+    (if nf == 0 then "" else
+      "\\cmidrule(l){" ++ toString firstFollow ++ "-" ++ toString (firstFollow + nf - 1) ++ "}") ++
+      "\n" ++
+    String.intercalate " & "
+      ("Row" :: t.claims.map (fun (_, l) => "$" ++ Page.texLetter l ++ "$") ++
+      t.tests.map head ++ ["Allowed"] ++ t.follows.map head) ++ " \\\\\n\\midrule\n"
+  let body := String.join ((t.rows.zip (List.range t.rows.length)).map
+    fun ((cs, ts, ok, fs), k) =>
+      String.intercalate " & " ([grey ok (toString (k + 1))] ++ cs.map (grey ok ∘ yn) ++
+        ts.map mark ++ [grey ok (yn ok)] ++
+        fs.map (grey ok ∘ fun b => if b then "true" else "false")) ++ " \\\\\n")
+  let said (c : Page.TableColumnView) :=
+    "\\item[" ++ escape c.label ++ "] \\textbf{" ++ inlineProse c.words ++ "}" ++
+      (match c.source with
+       | some s => " " ++ source s ++ "."
+       | none => "") ++ "\n"
+  "\\par\\medskip\\noindent\\begin{center}\\small\n" ++
+  "\\resizebox{\\ifdim\\width>\\textwidth\\textwidth\\else\\width\\fi}{!}{%\n" ++
+  "\\begin{tabular}{" ++ spec ++ "}\n\\toprule\n" ++ header ++ body ++
+  "\\bottomrule\n\\end{tabular}}\n\\end{center}\n" ++
+  "{\\footnotesize\\begin{list}{}{\\setlength{\\leftmargin}{2em}\\setlength{\\labelwidth}{1.6em}" ++
+  "\\setlength{\\itemsep}{1pt}\\setlength{\\topsep}{2pt}}\n" ++
+  String.join ((t.tests ++ t.follows).map said) ++ "\\end{list}}\n"
+
 /-- **A reading of a passage, in words**: the passage, how the reading
 construes it, the reading, and who reads it so. -/
 def interpretationWords (i : Interpretation) : String :=
@@ -1191,6 +1244,7 @@ def item [DecidableEq α] (n : Numbering α) : Page.Item α → String
       "\\par\\smallskip\\noindent Read so, the claim commits its holder to:\n" ++
       rows (row n "\\item[]" φ (loneGloss n φ)) ++ sourceWords src
   | .truthTable d doc inputs rs => declLabel d "" ++ prose doc ++ truthTableWords inputs rs
+  | .table _ doc t => prose doc ++ tableWords t
   | .contested d doc holder denier φ => declLabel d "" ++ prose doc ++
       "\\par\\smallskip\\noindent \\emph{" ++ escape holder ++ "} holds this claim, and \\emph{" ++
         escape denier ++ "} denies it; each can be defended in the dispute:\n" ++
@@ -1503,7 +1557,15 @@ def fonts : String :=
       "\\XeTeXinterchartoks " ++ cls ++ " \\" ++ other ++ "class " ++
       "{\\endgroup\\begingroup\\" ++ other ++ "font}\n")) ++
   "\\usepackage{newunicodechar}\n" ++
-  "\\newunicodechar{🡒}{→}\n"
+  "\\newunicodechar{🡒}{→}\n" ++
+  -- Ⓐ to Ⓩ label what follows in a truth table, and no font here has them, so
+  -- each is drawn: the letter in a circle, as ① to ⑳ are set.
+  "\\newcommand{\\circledletter}[1]{\\tikz[baseline=(c.base)]\\node[draw,circle," ++
+  "inner sep=0.4pt,minimum size=1.1em,font=\\footnotesize](c){#1};}\n" ++
+  String.join ((List.range 26).map fun k =>
+    let letter := Char.ofNat ('A'.toNat + k)
+    "\\newunicodechar{" ++ (Char.ofNat (0x24B6 + k)).toString ++ "}{\\circledletter{" ++
+      letter.toString ++ "}}\n")
 where
   /-- Each fallback: its name, its font's file, the OpenType script it is
   shaped as, and the ranges of code points it sets, in hexadecimal. -/
@@ -1551,6 +1613,12 @@ def style : String :=
   "\\ProvidesPackage{testimony}[Testimony house style, written by the generators]\n" ++
   "\\usepackage{amsmath,amssymb,array,booktabs,longtable,fontspec,xcolor,alltt}\n" ++
   "\\usepackage{tikz}\\usetikzlibrary{arrows.meta}\n" ++
+  -- A truth table's colours (`tableWords`): what follows shaded blue, a test
+  -- proposed here shaded gold, a struck row in grey.
+  "\\usepackage{colortbl}\n" ++
+  "\\definecolor{tablefollows}{RGB}{232,240,250}\\definecolor{tableproposed}{RGB}{251,244,226}\n" ++
+  "\\definecolor{tablestruck}{RGB}{140,140,140}\\definecolor{tablekept}{RGB}{46,125,50}\n" ++
+  "\\definecolor{tablebroken}{RGB}{179,38,30}\n" ++
   "\\usepackage{paracol}\\setcolumnwidth{0.4\\textwidth,0.56\\textwidth}\n" ++
   -- A light rule between a statement's logic and its words.
   "\\setlength{\\columnseprule}{0.4pt}\\colseprulecolor{black!25}\n" ++

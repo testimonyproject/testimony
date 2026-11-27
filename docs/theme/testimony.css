@@ -185,3 +185,29 @@ details.testimony-checked[open] > summary {
     padding-left: 0;
   }
 }
+
+/* Truth tables (Testimony.Logic.Markdown.table): a row per way the claims could
+   stand, a column per test, whether the row is allowed, and what follows. */
+.testimony-table { overflow-x: auto; margin: 1em 0 0.5em; }
+.testimony-table table { border-collapse: collapse; font-size: 0.85em; }
+.testimony-table th, .testimony-table td {
+  padding: 0.25rem 0.4rem; border: 1px solid var(--table-border-color); text-align: center;
+}
+.testimony-table thead th { background: var(--table-header-bg); font-weight: 600; }
+.testimony-table th .formula { font-weight: 400; }
+.testimony-table th.test .formula { white-space: nowrap; }
+.testimony-table td:first-child { font-variant-numeric: tabular-nums; font-weight: 600; }
+.testimony-table th.follows, .testimony-table td.follows { background: #eaf1fa; }
+.testimony-table th.proposed, .testimony-table td.proposed { background: #fbf4e2; }
+.testimony-table .kept { color: #2e7d32; }
+.testimony-table .broken { color: #b3261e; font-weight: 700; }
+.testimony-table tr.struck td { color: #8a8f98; }
+.testimony-table tr.struck td.allowed { text-decoration: line-through; }
+.testimony-table tr.struck td .kept, .testimony-table tr.struck td .broken { opacity: 0.6; }
+.testimony-table tr:target td { outline: 2px solid #1f5fa8; outline-offset: -2px; }
+.ayu .testimony-table th.follows, .ayu .testimony-table td.follows,
+.coal .testimony-table th.follows, .coal .testimony-table td.follows,
+.navy .testimony-table th.follows, .navy .testimony-table td.follows { background: #1d2a3a; }
+.ayu .testimony-table th.proposed, .ayu .testimony-table td.proposed,
+.coal .testimony-table th.proposed, .coal .testimony-table td.proposed,
+.navy .testimony-table th.proposed, .navy .testimony-table td.proposed { background: #3a3220; }
