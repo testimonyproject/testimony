@@ -363,6 +363,19 @@ reading of ἐνεργουμένη in Galatians 5:6 is rated as readers rate it,
 Bellarmine concludes from it, that love is the one at work, Paul's usage refutes
 (`TestimonyArguments.SolaFide.faiths_means_prevails`).
 
+A reader's step is held to the same rule by what its reasoning does. The fallacy checks
+([Fallacies](./fallacies.md)) find some faults from the text and the step's own terms alone: a
+word read in two senses where the step needs one, an argument from a text's silence with no
+expectation to carry it, a cause made the effect of its own effect, and a conclusion that names
+as at work in a verb what its author never names there. A step that commits one of them is
+cited `refuted`, and one cited `refuted` must commit one; `#check_readers` fails the build
+wherever the two differ (`lineTextFaults`). A step that only argues from a claim the text rules
+out is not refuted for it, since the claim already is. A straw man and a univocal reading do not
+refute a step either. Each shows what the step leaves unanswered, a view its holder did not hold
+or a reading of a word it did not meet, and not that the step fails, so each stays a charge on
+the page. Today two steps are cited `refuted` this way, the Rheims note's and Bellarmine's on
+Galatians 5:6, which conclude that love is the one at work in ἐνεργουμένη.
+
 ## Dissents overruled in a dispute
 
 A credible dissent can still lose when it is weighed. It is **overruled** (`Overruled`) when

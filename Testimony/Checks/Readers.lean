@@ -27,8 +27,19 @@ Scripture's own words, because the word's spelling rules out the voice the claim
 gives it (`Statement.misreads`), or because the claim names as the one at work
 in a verb what the author, in every use whose spelling makes it active, never
 names (`Statement.againstUsage`). So the check fails on a claim cited `refuted`
-that neither refutes, on a claim one of them refutes that is cited at a reader's
-rating, and on a line whose step is cited `refuted`.
+that neither refutes, and on a claim one of them refutes that is cited at a reader's
+rating.
+
+A step is held to the same rule by what its reasoning does. A reader's step is
+cited `refuted` exactly where it commits a fault the text itself shows, as the
+fallacy checks compute it (`lineTextFaults`): an equivocation on its own terms,
+an argument from silence alone, a conclusion against the author's usage, or a
+reversal of cause and effect. A step that only argues from a claim the text rules
+out is not refuted for it, because the claim is already cited `refuted`. So the
+check fails on a step cited `refuted` that commits none of them, and on a step
+that commits one and is cited at a reader's rating. A straw man and a univocal
+reading do not refute a step, because each shows what the step leaves unanswered
+and not that it fails; they stay charges on the page.
 
 It holds every line of reason under the namespace to the same rule. A line with
 no rating of its step (`Line.inference` left `none`) names no one who draws its
@@ -72,10 +83,45 @@ def refutedMismatches {α : Type} [Semantics.HasMeanings α]
       else none
     | _ => none
 
-/-- Whether a line's step is cited `refuted`. No step is: the library computes
-`refuted` only of a claim whose reading of the Greek the text itself rules out. -/
-def lineCitedRefuted {α : Type} (l : Logic.Line α) : Bool :=
-  l.inference.any (·.confidence == .refuted)
+/-- **The faults a line's step commits that the text itself shows**: an
+equivocation on its own terms, an argument from silence alone, a conclusion that
+names as at work in a verb what its author never names there, and a cause made the
+effect of its effect, each by name, as the fallacy checks find them
+(`Testimony.Semantics.Fallacy`). A reading the text rules out that the step only
+argues from is not the step's fault: the claim is cited `refuted` where it is
+cited, and the step that draws on it is weighed with it, so a misreading of the
+Greek, which a premise always carries, is not counted here. A straw man and a
+univocal reading are not counted either: each shows what the step leaves
+unanswered, not that it fails. A line whose claims are not all analysed is not
+read, and shows none. -/
+def lineTextFaults {α : Type} [Semantics.HasMeanings α] (l : Logic.Line α) : List String :=
+  match l.asMove? with
+  | none => []
+  | some m =>
+    if !m.statements.all Semantics.Statement.analysed then [] else
+      (if m.equivocates.isEmpty then [] else ["an equivocation"]) ++
+      (if m.fromSilenceAlone.isEmpty then [] else ["an argument from silence alone"]) ++
+      (if ((m.conclusion?.map Semantics.Statement.unusualWorkers).getD []).isEmpty then []
+        else ["a conclusion against the author's usage"]) ++
+      (if m.reversals.isEmpty then [] else ["a reversal of cause and effect"])
+
+/-- **Where a line's `refuted` rating and its faults disagree.** A reader's step
+is cited `refuted` exactly where it commits a fault the text itself shows
+(`lineTextFaults`), so that what the fallacy checks compute moves the step's
+weight in every dispute it is heard in. A step cited `refuted` that commits none,
+and a step that commits one and is cited at a reader's rating, are each returned
+with the reason. Scripture's own reasoning is never charged, so a line cited to
+Scripture is left to the fallacy check, which fails the build on the encoding. -/
+def lineRefutedMismatch {α : Type} [Semantics.HasMeanings α] (l : Logic.Line α) :
+    Option String :=
+  let cited := l.inference.any (·.confidence == .refuted)
+  let faults := if l.drawnByScripture then [] else lineTextFaults l
+  if cited && faults.isEmpty then
+    some "the line's step is cited refuted, and it commits no fault the text shows"
+  else if !cited && !faults.isEmpty then
+    some ("the line's step commits " ++ " and ".intercalate faults ++
+      ", and is not cited refuted")
+  else none
 
 /-- Whether a line of reason carries no rating of its step at all. Such a line
 cannot enter a dispute, which refuses a step nobody has rated, but it can stand
@@ -124,14 +170,15 @@ def checkReaders (roots : List Name) : CommandElabM Unit := do
         let e ← mkAppM ``lineUnrated #[mkConst name]
         some <$> unsafe evalExpr Bool (← inferType e) e
       catch _ => pure none
-    let citedRefuted? ← liftTermElabM do
+    let refuted? ← liftTermElabM do
       try
-        let e ← mkAppM ``lineCitedRefuted #[mkConst name]
-        some <$> unsafe evalExpr Bool (← inferType e) e
+        let e ← mkAppM ``lineRefutedMismatch #[mkConst name]
+        some <$> unsafe evalExpr (Option String) (← inferType e) e
       catch _ => pure none
-    if citedRefuted? == some true then
-      problems := problems.push m!"{name}: the line's step is cited refuted, which no reader \
-        may rate it"
+    match refuted? with
+    | some (some why) => problems := problems.push m!"{name}: {why}"
+    | some none => pure ()
+    | none => problems := problems.push m!"{name}: the check could not be run"
     match unrated? with
     | some false => lines := lines + 1
     | some true => problems := problems.push m!"{name}: the line's step is rated by no one"
