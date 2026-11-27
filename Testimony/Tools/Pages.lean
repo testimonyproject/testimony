@@ -10,6 +10,7 @@ import Testimony.Logic.Bundle
 import Testimony.Logic.Credibility
 import Testimony.Logic.Latex
 import Testimony.Logic.Markdown
+import Testimony.Corpus.Greek
 import Testimony.Tools.Docs
 
 /-!
@@ -41,14 +42,17 @@ as the legend says them. A countermodel is a `Valuation`, a function into
 `Prop`, so there is nothing to enumerate at run time; but when its atom type is
 an enumeration, the harvest applies it to each claim and reduces the result to
 `True` or `False` (`readingTruth`), and the page lists the claims it takes as
-false in words. Everything else — a `FulfillmentCriterion`, a cite function, a
+false in words. A citation function, `Claim → AtomMeta`, is said in words
+too: the claims on the page it cites otherwise than the legend, each with its
+citation, so a variant `cite` written for one hearing shows what it changes
+rather than its signature. Everything else — a `FulfillmentCriterion`, a
 dispute — is shown as Lean source, the honest fallback, and so is a valuation
 that does not reduce.
 
-Values above `valueWidth` characters are shown by signature alone. That is
-aimed at one declaration in particular: `cite` is a total function from every
-atom to its citation, and printing it would repeat the legend at ten times the
-length.
+Values above `valueWidth` characters would be shown by signature alone, and
+the harvest fails the build on every one, naming it: a page that shows a reader
+a definition's header and nothing it defines has told them nothing. Such a
+declaration needs a rendering in words, as the cases above are.
 -/
 
 open Lean Elab Command Testimony
@@ -378,8 +382,44 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
           else return none
         return some out
 
+    -- The line a position is made from, when it is `Line.asPackage` of a line
+    -- declared by name: so the page points to the line.
+    let lineOf (info : ConstantInfo) : Option Name := do
+      let v ← info.value?
+      guard (v.getAppFn.constName? == some ``Logic.Line.asPackage)
+      v.getAppArgs.findSome? fun a => do
+        let c ← a.constName?
+        let i ← env.find? c
+        guard (i.type.getAppFn.constName? == some ``Logic.Line)
+        pure c
+
+    -- The parties of a map from each party to its position, when the parties
+    -- are an enumeration: its constructors, in the order they are declared.
+    let positionsOf (ty : Expr) : Option (List Name) := do
+      let .forallE _ (.const ι _) body _ := ty | none
+      guard (body.getAppFn.constName? == some ``Logic.ArgumentPackage)
+      let .inductInfo ind ← env.find? ι | none
+      guard (ind.numParams == 0 && ind.numIndices == 0)
+      ind.ctors.mapM fun c => do
+        let .ctorInfo ci ← env.find? c | none
+        guard (ci.numFields == 0)
+        pure c
+
+    -- The map a dispute takes its positions from, when it is declared by name
+    -- in the argument and set out on the page; empty otherwise.
+    let nodeOf (info : ConstantInfo) : String := Id.run do
+      let some v := info.value? | return ""
+      unless v.getAppFn.constName? == some ``Logic.Dispute.mk do return ""
+      for a in v.getAppArgs do
+        if let some c := a.constName? then
+          if let some i := env.find? c then
+            if c.getPrefix == ns && (positionsOf i.type).isSome then return c.getString!
+      return ""
+
     -- The declarations: each rendered by what its type says it is.
     let mut atomTy : Option Name := none
+    -- Those that would be shown by their signature alone.
+    let mut bare : Array Name := #[]
     for n in (declsOf.getD ns #[]) do
       let some info := env.find? n | continue
       let some rawDoc ← findDocString? env n | continue
@@ -420,7 +460,56 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
               atomTy := match info.type.getAppArgs[0]? with
                 | some (Expr.const c _) => some c
                 | _ => none
-            `(Logic.Page.Item.package $(quote dname) $(quote doc) $(mkIdent n))
+            -- A position made from a line as it stands points to the line.
+            match lineOf info with
+            | some l =>
+              `(Logic.Page.Item.fromLine $(quote dname) $(quote doc) $(quote l.getString!)
+                  $(mkIdent n))
+            | none => `(Logic.Page.Item.package $(quote dname) $(quote doc) $(mkIdent n))
+          else if let some ctors := positionsOf info.type then do
+            let names ← ctors.mapM fun c => `(($(mkIdent n) $(mkIdent c)).name)
+            `(Logic.Page.Item.positions $(quote dname) $(quote doc) [$(names.toArray),*])
+          else if headIs ``Logic.Dispute && env.contains (n ++ `finite) then do
+            `(Logic.Page.Item.dispute $(quote dname) $(quote doc)
+                ($(mkIdent (n ++ `finite)).parties.map fun i => ($(mkIdent n).node i).name)
+                $(quote (nodeOf info)))
+          else if headIs ``Logic.Register then do
+            match info.type.getAppArgs.back? with
+            | some (.const d _) =>
+              if env.contains (d ++ `finite) then
+                `(Logic.Page.Item.register $(quote dname) $(quote doc)
+                    (($(mkIdent (d ++ `finite)).parties.filter
+                        fun i => ($(mkIdent n).assessmentOf i).isSome).map
+                      fun i => ($(mkIdent d).node i).name)
+                    ($(mkIdent n).steps.map (·.step)))
+              else do
+                bare := bare.push n
+                `(Logic.Page.Item.other $(quote dname) $(quote doc) "")
+            | _ => do
+              bare := bare.push n
+              `(Logic.Page.Item.other $(quote dname) $(quote doc) "")
+          else if headIs ``Logic.Refutation then
+            `(Logic.Page.Item.refutation $(quote dname) $(quote doc) $(mkIdent n).claim
+                $(mkIdent n).reads $(mkIdent n).reading)
+          else if headIs ``List &&
+              (info.type.getAppArgs[0]?.any fun a => a.constName? == some ``Corpus.Greek.Token) then
+            `(Logic.Page.Item.greek $(quote dname) $(quote doc)
+                (let ws := $(mkIdent n)
+                 match ws.head?, ws.getLast? with
+                  | some f, some l =>
+                    let first : Testimony.Passage := ⟨f.book, f.chapter, f.verse⟩
+                    if f.chapter == l.chapter && f.verse == l.verse then first.render
+                    else if f.chapter == l.chapter then
+                      first.render ++ "–" ++ toString l.verse
+                    else first.render ++ "–" ++ toString l.chapter ++ ":" ++ toString l.verse
+                  | _, _ => "")
+                ($(mkIdent n).map (·.text)))
+          else if (match info.type with
+              | .forallE _ (.const c _) (.const s _) _ =>
+                c == ``Testimony.Confidence && s == ``Testimony.Source
+              | _ => false) then
+            `(Logic.Page.Item.sourceFn $(quote dname) $(quote doc)
+                ($(mkIdent n) Testimony.Confidence.disputed))
           else if headIs ``Logic.Because then
             `(Logic.Page.Item.because $(quote dname) $(quote doc)
                 (Logic.Because.view $(mkIdent n)))
@@ -456,6 +545,10 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
             `(Logic.Page.Item.source $(quote dname) $(quote doc) $(mkIdent n))
           else if headIs ``Logic.AtomMeta then
             `(Logic.Page.Item.claim $(quote dname) $(quote doc) $(mkIdent n))
+          else if (match info.type with
+              | .forallE _ (.const _ _) (.const c _) _ => c == ``Logic.AtomMeta
+              | _ => false) then
+            `(Logic.Page.Item.citation $(quote dname) $(quote doc) $(mkIdent n))
           else if let some truth ← readingTruth info then
             let pairs ← truth.mapM fun (c, b) => `(($(mkIdent c), $(quote b)))
             `(Logic.Page.Item.reading $(quote dname) $(quote doc) [$(pairs),*])
@@ -467,12 +560,22 @@ def deriveArgumentBodies (tableName : Ident) (root : Name) : CommandElabM Unit :
                   pure (if s.length > valueWidth then none else some s)
               | none => pure none
             let head := wrapStatement ("def " ++ dname ++ " : " ++ sig)
-            let src := match value with
-              | some v => head ++ " :=\n" ++ indentLines v
-              | none => head
+            let src ← match value with
+              | some v => pure (head ++ " :=\n" ++ indentLines v)
+              | none => do
+                bare := bare.push n
+                pure head
             `(Logic.Page.Item.other $(quote dname) $(quote doc) $(quote src))
         items := items.push (k, line, false, term)
 
+    -- A page that shows a reader a definition's header and nothing it defines
+    -- has told them nothing, so the harvest refuses one: such a declaration
+    -- needs a rendering in words (`Logic.Page.Item`), or a shorter value.
+    unless bare.isEmpty do
+      logError m!"derive_argument_bodies: {bare.size} declaration(s) under {ns} would be \
+        shown by signature alone, with nothing of what they define: \
+        {", ".intercalate (bare.toList.map toString)}. Give each a rendering in words \
+        (a case of `Logic.Page.Item`), or a value under {valueWidth} characters."
     let sorted := (items.qsort fun (k₁, l₁, _) (k₂, l₂, _) =>
       if k₁ == k₂ then l₁ < l₂ else k₁ < k₂).toList
     -- The leading prose is the argument's own introduction; the legend goes

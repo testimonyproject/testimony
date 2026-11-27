@@ -756,6 +756,62 @@ def readingWords [DecidableEq α] (n : Numbering α) (truth : List (α × Bool))
         "  \\item[] " ++ claimWords n cite a false ++ "\n")) ++
       "\\noindent " ++ rest ++ "\n"
 
+/-- **A citation function in words.** A function from claims to their
+citations is, set as Lean, a `match` that runs to pages, and its signature alone
+says nothing. In words it is what it cites differently from the table of
+numbered claims: each such claim on the page with its variable, linked, its
+words, what kind of claim it is, how firmly it is held and its references; and
+then that it cites every other claim on the page as the table does. A function
+that cites every claim as the table does says so, and on a page with no table
+every claim on the page is listed. A claim the page never mentions is left out,
+since nothing on the page turns on it. -/
+def citationWords [DecidableEq α] (n : Numbering α) (cite : α → AtomMeta) : String :=
+  let row (a : α) : String :=
+    "  \\item[] " ++ claimWords n cite a false ++
+      "\\gloss{" ++ kind (cite a).kind ++ "; " ++ confidence (cite a).source.confidence ++
+      ": " ++ source (cite a).source ++ "}\n"
+  match n.cite with
+  | none =>
+    if n.order.isEmpty then ""
+    else
+      "\\par\\smallskip\\noindent It cites each claim on this page so:\n" ++
+      rows (String.join (n.order.map row))
+  | some legendCite =>
+    match Page.citedOtherwise n.order legendCite cite with
+    | [] =>
+      "\\par\\smallskip\\noindent It cites every claim on this page as the table of " ++
+        "numbered claims does.\n"
+    | differs =>
+      "\\par\\smallskip\\noindent It cites these claims otherwise than the table of " ++
+        "numbered claims does:\n" ++
+      rows (String.join (differs.map (row ·.1))) ++
+      "\\noindent Every other claim on this page it cites as the table does.\n"
+
+/-- Names set as a list, each in italics. -/
+def nameList (names : List String) : String :=
+  rows (String.join (names.map fun x => "  \\item[] \\emph{" ++ escape x ++ "}\n"))
+
+/-- **A position made from a line, in words**: the line it argues, by name, and
+the conclusion it reaches, so the grounds and the step are set out once, at the
+line. -/
+def fromLineWords [DecidableEq α] (n : Numbering α) (line : String) (pkg : ArgumentPackage α) :
+    String :=
+  "\\par\\smallskip\\noindent It argues the line \\texttt{" ++ codeEscape line ++
+    "}, set out above, as it stands: the same grounds and the same step, to the same " ++
+    "conclusion.\n" ++
+  rows (row n "\\item[\\(\\vdash\\)]" pkg.conclusion
+    (n.cite.bind fun cite => inWords n cite .atIssue pkg.conclusion))
+
+/-- **A refutation in words**: the claim struck, what the text reads, and the
+text's citation. -/
+def refutationWords [DecidableEq α] (n : Numbering α) (a : α) (reads : String) (s : Source) :
+    String :=
+  "\\par\\smallskip\\noindent The claim struck: " ++
+    (match n.cite with
+     | some cite => claimWords n cite a false
+     | none => "") ++
+    ". What the text reads: " ++ escape reads ++ "." ++ sourceWords s
+
 /-- Which of a package's premises are readings taken from the text alone
 (`AtomMeta.readsScriptureAlone`), as a note under its derivation; nothing when
 there are none. A quotation of the text is not such a reading, so a package
@@ -1079,6 +1135,34 @@ def item [DecidableEq α] (n : Numbering α) : Page.Item α → String
   | .source d doc s => declLabel d "" ++ prose doc ++ sourceWords s
   | .claim d doc m => declLabel d "" ++ prose doc ++ claimWords' m
   | .reading d doc truth => declLabel d "" ++ prose doc ++ readingWords n truth
+  | .citation d doc c => declLabel d "" ++ prose doc ++ citationWords n c
+  | .fromLine d doc line pkg =>
+      declLabel d (" --- " ++ escape pkg.name) ++ prose doc ++ fromLineWords n line pkg ++
+      scriptureNote n.order pkg
+  | .positions d doc names =>
+      declLabel d "" ++ prose doc ++ nameList names
+  | .dispute d doc names node =>
+      declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent " ++
+      (if node.isEmpty then "It hears these positions, each"
+       else "It hears the positions \\texttt{" ++ codeEscape node ++ "} gives the parties, each") ++
+      " checked when the library is built to be consistent, to reach its conclusion, and to " ++
+      "rest on at least one rated step" ++
+      (if node.isEmpty then ":\n" ++ nameList names else ".\n")
+  | .register d doc assessed steps =>
+      declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent The positions it assesses as dissents:\n" ++
+        nameList assessed ++
+      "\\noindent The steps their dissents are rated against:\n" ++ nameList steps
+  | .refutation d doc a reads s => declLabel d "" ++ prose doc ++ refutationWords n a reads s
+  | .greek d doc place words =>
+      declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent " ++ escape place ++ " in the SBL Greek New Testament: " ++
+        escape (" ".intercalate words) ++ "\n"
+  | .sourceFn d doc s =>
+      declLabel d "" ++ prose doc ++
+      "\\par\\smallskip\\noindent Cited to " ++ source s ++
+        ", at whatever rating the place that cites it gives.\n"
   | .other d doc src => declLabel d "" ++ prose doc ++ verbatim src
   | .result d doc stmt proposed =>
       declLabel d (if proposed then " \\textsuperscript{(proposed)}" else "") ++

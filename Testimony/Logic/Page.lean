@@ -448,6 +448,31 @@ inductive Item (α : Type)
   the page, with whether the reading takes it as true. Read off the definition
   when the page is harvested, one claim at a time. -/
   | reading (decl doc : String) (truth : List (α × Bool))
+  /-- A position made from a line of reason as it stands (`Line.asPackage`): the
+  line it argues, by name, so the page points to the line instead of setting
+  its grounds and step out a second time. -/
+  | fromLine (decl doc line : String) (pkg : ArgumentPackage α)
+  /-- Which position each party argues from (`Party → ArgumentPackage Claim`):
+  the name of each party's position, in the order the parties are declared. -/
+  | positions (decl doc : String) (names : List String)
+  /-- A dispute: the names of the positions it hears, and the declaration that
+  gives each party its position, if it has one by name (empty if not). -/
+  | dispute (decl doc : String) (parties : List String) (node : String)
+  /-- A register of dissents for a dispute: the positions it assesses as
+  dissents, and the steps they are rated against. -/
+  | register (decl doc : String) (assessed steps : List String)
+  /-- A claim refuted by what a text reads: the claim, what the text reads, and
+  its citation. -/
+  | refutation (decl doc : String) (claim : α) (reads : String) (reading : Source)
+  /-- Words of the Greek New Testament: where they stand, and the words. -/
+  | greek (decl doc : String) (place : String) (words : List String)
+  /-- A source that takes its rating where it is used (`Confidence → Source`):
+  its references, read at one rating. -/
+  | sourceFn (decl doc : String) (s : Source)
+  /-- A citation function, `Claim → AtomMeta`: what it cites each claim to.
+  Read off the definition when the page is harvested, one claim at a time,
+  so the page shows the citations and not a function's signature. -/
+  | citation (decl doc : String) (cite : α → AtomMeta)
   /-- A declaration shown as Lean: anything the renderer does not read. -/
   | other (decl doc source : String)
   /-- A result, with the statement as Lean states it. -/
@@ -480,6 +505,8 @@ namespace Item
 /-- Every atom this item mentions, in the order it mentions them. -/
 def atoms [DecidableEq α] : Item α → List α
   | .package _ _ pkg => pkg.atoms
+  | .fromLine _ _ _ pkg => pkg.atoms
+  | .refutation _ _ a _ _ => [a]
   | .line _ _ l => (l.premises ++ [l.delivers]).flatMap atomsOf
   | .formula _ _ φ => atomsOf φ
   | .formulas _ _ φs => φs.flatMap atomsOf
@@ -505,6 +532,19 @@ def atomOrder [DecidableEq α] (allAtoms : List α) (items : List (Item α)) : L
   let mentioned := (items.flatMap Item.atoms).eraseDups
   allAtoms.filter (mentioned.contains ·) ++ mentioned.filter (!allAtoms.contains ·)
 
+/-- Whether two citations say the same thing: the same claim, of the same kind,
+held in the same tradition, as firmly, on the same references. Compared as the
+values print, because a citation's types derive no equality. -/
+def sameCitation (m₁ m₂ : AtomMeta) : Bool :=
+  toString (repr m₁) == toString (repr m₂)
+
+/-- **What a citation function says differently from the legend.** The claims
+on the page, in the page's order, that `cite` cites otherwise than `legend`
+does, each with its citation under `cite`. A function that agrees with the
+legend on every claim on the page gives nothing. -/
+def citedOtherwise (order : List α) (legend cite : α → AtomMeta) : List (α × AtomMeta) :=
+  (order.filter fun a => !sameCitation (cite a) (legend a)).map fun a => (a, cite a)
+
 /-- The `cite` of the first package on the page.
 
 Every package in an argument shares one `cite` — it is what makes the atom
@@ -514,6 +554,7 @@ and cannot occur: rule L5 requires at least two. -/
 def citeOf : List (Item α) → Option (α → AtomMeta)
   | [] => none
   | .package _ _ pkg :: _ => some pkg.cite
+  | .fromLine _ _ _ pkg :: _ => some pkg.cite
   | _ :: rest => citeOf rest
 
 end Testimony.Logic.Page

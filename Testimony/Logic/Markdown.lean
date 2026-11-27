@@ -642,6 +642,31 @@ def readingWords [DecidableEq α] (order : List α) (cite : Option (α → AtomM
         "- " ++ inlineMath (varLink (order.idxOf a)) ++ " " ++ escape (c a).label ++ "\n") ++
       "\n" ++ rest ++ "\n"
 
+/-- A citation function in words, as print says it (`Latex.citationWords`): the
+claims on the page it cites otherwise than the table of numbered claims, each
+with its citation, and that it cites the rest as the table does. -/
+def citationWords [DecidableEq α] (order : List α) (legendCite : Option (α → AtomMeta))
+    (cite : α → AtomMeta) : String :=
+  let row (a : α) : String :=
+    "- " ++ inlineMath (varLink (order.idxOf a)) ++ " " ++ escape (cite a).label ++ " — *" ++
+      kind (cite a).kind ++ "; " ++ confidence (cite a).source.confidence ++ ": " ++
+      source (cite a).source ++ "*\n"
+  match legendCite with
+  | none =>
+    if order.isEmpty then ""
+    else "It cites each claim on this page so:\n\n" ++ derivationRows (order.map row)
+  | some l =>
+    match Page.citedOtherwise order l cite with
+    | [] => "It cites every claim on this page as the table of numbered claims does.\n"
+    | differs =>
+      "It cites these claims otherwise than the table of numbered claims does:\n\n" ++
+      derivationRows (differs.map (row ·.1)) ++
+      "\nEvery other claim on this page it cites as the table does.\n"
+
+/-- Names set as a list, each in italics. -/
+def nameList (names : List String) : String :=
+  String.join (names.map fun x => "- *" ++ escape x ++ "*\n") ++ "\n"
+
 /-- Render one item against the page's atom ordering, and the legend's citations
 where the page has a legend. A lone formula, or a list of them, is set as rows of
 a derivation, as in print, so a step says what it delivers there too. -/
@@ -672,6 +697,38 @@ def item [DecidableEq α] (order : List α) (cite : Option (α → AtomMeta)) :
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ claimWords m
   | .reading d doc truth =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ readingWords order cite truth
+  | .fromLine d doc line pkg =>
+      declLabel d (" — " ++ escape pkg.name) ++ "\n" ++ doc ++ "\n\n" ++
+      "It argues the line [`" ++ line ++ "`](#" ++ line ++ "), set out above, as it stands: " ++
+      "the same grounds and the same step, to the same conclusion.\n\n" ++
+      derivationRows [derivationRow order (inlineMath "\\vdash") pkg.conclusion
+        (cite.bind fun c => inWords order c .atIssue pkg.conclusion)]
+  | .positions d doc names =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ nameList names
+  | .dispute d doc names node =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++
+      (if node.isEmpty then "It hears these positions, each"
+       else "It hears the positions [`" ++ node ++ "`](#" ++ node ++ ") gives the parties, each") ++
+      " checked when the library is built to be consistent, to reach its conclusion, and to " ++
+      "rest on at least one rated step" ++
+      (if node.isEmpty then ":\n\n" ++ nameList names else ".\n")
+  | .register d doc assessed steps =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\nThe positions it assesses as dissents:\n\n" ++
+        nameList assessed ++ "The steps their dissents are rated against:\n\n" ++
+        nameList steps
+  | .refutation d doc a reads src =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\nThe claim struck: " ++
+        inlineMath (varLink (order.idxOf a)) ++
+        (match cite with | some c => " " ++ escape (c a).label | none => "") ++
+        ". What the text reads: " ++ escape reads ++ ". " ++ sourceWords src
+  | .greek d doc place words =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ escape place ++
+        " in the SBL Greek New Testament: " ++ escape (" ".intercalate words) ++ "\n"
+  | .sourceFn d doc src =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\nCited to " ++ source src ++
+        ", at whatever rating the place that cites it gives.\n"
+  | .citation d doc c =>
+      declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ citationWords order cite c
   | .other d doc sig =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n" ++ leanBlock sig
   | .result d doc stmt proposed =>
