@@ -55,7 +55,7 @@ to the verb's sense, which no cited reader denies once both are granted.
 The Reformed side now answers each of those readings in the debate itself, not
 only in the ratings. The argument from Paul's word is heard with three answers
 from the Greek (`lexicalCaseAnsweringTheGreek`). Hodge reads Romans 5:19 as a
-standing: the verb there, καθίστημι, "never, in the New Testament, means to
+standing: the verb there, καθίστημι ("constitute" or "make"), "never, in the New Testament, means to
 make, in the sense of effecting", so the many are "constituted legally
 righteous" (*Commentary on the Epistle to the Romans*, 1864, 271–72). Ziesler
 holds that the verse's adjective does not settle the verb. Calvin grants that
@@ -163,7 +163,7 @@ def paulsWordCase : ArgumentPackage Claim :=
   , cite := baseCite
   , premises := caseOf paulsWordRoads [] []
   , conclusion := notP .paulsJustifyDenotesRenewal
-  , conclusionLabel := "Paul's δικαιόω does not denote the renewal of the inward man"
+  , conclusionLabel := "Paul's δικαιόω (“justify”) does not denote the renewal of the inward man"
   , inferences := [leastMeaningSource, romansFourExegesisSource] }
 
 /-- Every premise of Paul's word, by both roads, granted: the word does not mean
@@ -218,7 +218,7 @@ def trentsWordCase : ArgumentPackage Claim :=
   , cite := baseCite
   , premises := caseOf [trentWordLine] [] []
   , conclusion := p .paulsJustifyDenotesRenewal
-  , conclusionLabel := "Paul's δικαιόω denotes renewal"
+  , conclusionLabel := "Paul's δικαιόω (“justify”) denotes renewal"
   , inferences := [trentReadsPaulsWord] }
 
 /-- Every premise of Trent's reading granted: the word means renewal. -/
@@ -236,7 +236,7 @@ and it is enough: the case has no second road.
 
 That step is rated `disputed`. Augustine himself gives the courtroom sense as a
 second way of taking the word (`augustineGivesBothSenses`), and the Latin
-*iustificare* is not the Greek δικαιόω, which is what the argument from Paul's
+*iustificare* is not the Greek δικαιόω ("justify"), which is what the argument from Paul's
 word denies at this point.
 
 What is novel: the reading is Augustine's and Trent's. The proof that it stands
@@ -262,7 +262,7 @@ def trentsWordAtItsStrongest : ArgumentPackage Claim :=
   , cite := baseCite
   , premises := caseOf trentsWordRoads [] []
   , conclusion := p .paulsJustifyDenotesRenewal
-  , conclusionLabel := "Paul's δικαιόω denotes renewal"
+  , conclusionLabel := "Paul's δικαιόω (“justify”) denotes renewal"
   , inferences :=
       [trentReadsPaulsWord, inwardOnRomansFiveNineteen, fitzmyerOnTheAdjective,
         fitzmyerOnRomansFiveNineteen, kertelgeOnTheVerdictItself, kertelgeOnTheVerdict] }

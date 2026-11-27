@@ -1440,22 +1440,24 @@ works at first, and both are justified: works at first make no difference.
 Row 5 is Abraham, Rahab and the thief on the cross. Each believed with no works
 yet, was justified from the first, and the works came after. Abraham's offering
 of Isaac came years after Genesis 15:6, and James says it showed his faith:
-"faith was active along with his works" (συνήργει, worked together with them),
-"and by works faith was brought to completion" (ἐκ τῶν ἔργων ἐτελειώθη, James
-2:22). Rahab confessed before she acted (James 2:25). The thief believed, and his
-one work was to confess Jesus with his mouth: "Jesus, remember me when you come
-into your kingdom" (Luke 23:42). Romans 10:10 joins the two: "one believes with
-the heart, leading to righteousness, and one confesses with the mouth, leading to
+"faith was active along with his works" (συνήργει ("was working with"), worked
+together with them), "and by works faith was brought to completion" (ἐκ τῶν
+ἔργων ἐτελειώθη ("as a result of the works, faith was perfected"), James 2:22).
+Rahab confessed before she acted (James 2:25). The thief believed, and his one
+work was to confess Jesus with his mouth: "Jesus, remember me when you come into
+your kingdom" (Luke 23:42). Romans 10:10 joins the two: "one believes with the
+heart, leading to righteousness, and one confesses with the mouth, leading to
 salvation". He heard "today you will be with me in paradise" (Luke 23:43). Row 1
 is a believer whose works are there from the start.
 
 James says what the works do: "I by my works will show you faith" (James 2:18),
-κἀγώ σοι δείξω ἐκ τῶν ἔργων μου τὴν πίστιν, "I will show you, out of my works,
-my faith". The works show the faith; they are its evidence. Tyndale drew the
-same order from Abraham and Rahab in 1528: Abraham's deed "declared and uttered
-the faith which both justified him before God, and wrought that wonderful work",
-and Rahab "before God … was justified by faith, which wrought that outward
-deed" (*Wicked Mammon*, pp. 119–120).
+κἀγώ σοι δείξω ἐκ τῶν ἔργων μου τὴν πίστιν ("I will show you my faith by my
+works"), "I will show you, out of my works, my faith". The works show the faith;
+they are its evidence. Tyndale drew the same order from Abraham and Rahab in
+1528: Abraham's deed "declared and uttered the faith which both justified him
+before God, and wrought that wonderful work", and Rahab "before God … was
+justified by faith, which wrought that outward deed" (*Wicked Mammon*, pp.
+119–120).
 
 Row 10 is the man of Matthew 7:22–23, who had works and no faith: "did we not
 prophesy in your name, and cast out demons in your name, and do many mighty works
@@ -1475,7 +1477,7 @@ operibus iustificatur homo, et non ex fide tantum*. The two readings part at wha
 "justify" means, to declare righteous or to make righteous. Nor do they part at
 who justifies. James's verb is passive, δικαιοῦται, "is justified", and his "by
 works" is ἐξ ἔργων, "out of works", which marks where the verdict comes from,
-not who gives it, for Greek names the doer of a passive with ὑπό. Paul names Him:
+not who gives it, for Greek names the doer of a passive with ὑπό ("by"). Paul names Him:
 "It is God who justifies" (Romans 8:33). Trent says the same, naming "a merciful
 God" the efficient cause of justification (Session VI, ch. 7).
 -/

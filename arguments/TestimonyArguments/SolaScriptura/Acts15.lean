@@ -25,8 +25,8 @@ is written" (`acts15QuotesAmos`). Calvin notes that the place "is not cited word
 for word as it is in the prophet". Luke gives Amos close to the Greek
 translation, the Septuagint. Where the Hebrew of Amos 9:12 reads "That they may
 possess the remnant of Edom", the Septuagint reads "that the remnant of men may
-seek" (ὅπως ἐκζητήσωσιν οἱ κατάλοιποι τῶν ἀνθρώπων), and so does Acts: "So that
-the rest of mankind may seek the Lord" (15:17).
+seek" (ὅπως ἐκζητήσωσιν οἱ κατάλοιποι τῶν ἀνθρώπων, "so that the rest of mankind may seek"), and so
+does Acts: "So that the rest of mankind may seek the Lord" (15:17).
 
 ## The Reformed reading
 
@@ -53,7 +53,7 @@ they "put the seal of supreme authority on their decisions in attributing them
 to the joint action of the Spirit of God and of themselves", and general
 councils in union with the pope have the same "infallible authority". The
 decrees were then handed on to the churches to keep: "delivering" in 16:4
-(παρεδίδοσαν) is the verb whose noun is "tradition" (παράδοσις). Tradition III,
+(παρεδίδοσαν, "delivering") is the verb whose noun is "tradition" (παράδοσις). Tradition III,
 the position resting on Vatican I, reads Acts 15 this way (`acts15RomanLine`).
 
 ## Where the readings part: the apostles' office

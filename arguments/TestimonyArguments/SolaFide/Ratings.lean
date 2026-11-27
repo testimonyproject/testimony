@@ -486,7 +486,7 @@ James 2:21), and that James keeps his words in one sense through 2:21–25 (Calv
 on James 2:24, with Trent). So it is an argument under the tradition standard,
 and not under the evidence or the Scripture standard. -/
 def lexicalOnRenewalAssessment : Assessment Claim where
-  dissenter := "James's word (δικαιόω, by the rule of least meaning)"
+  dissenter := "James's word (δικαιόω, “justify”, by the rule of least meaning)"
   against := renewalWordLine.name
   dissent :=
     { claim := p .jamesJustifyDenotesIncrease
@@ -524,7 +524,8 @@ reason: each needs a reader's word for how James uses "justify". -/
 theorem renewal_step_ratings :
     renewalStep.ratings =
       [ (.evidence, .stands .disputed)
-      , (.tradition, .disputedBy ["James's word (δικαιόω, by the rule of least meaning)"])
+      , (.tradition,
+          .disputedBy ["James's word (δικαιόω, “justify”, by the rule of least meaning)"])
       , (.scriptural, .stands .disputed) ] := by
   decide +kernel
 
@@ -655,7 +656,7 @@ def trentWordLine : Line Claim :=
 /-- Trent's reading of Paul's word, as a position of its own. -/
 @[solaFideDefs]
 def trentOnTheWordOfPaul : ArgumentPackage Claim :=
-  trentWordLine.asPackage baseCite "Paul's δικαιόω denotes renewal"
+  trentWordLine.asPackage baseCite "Paul's δικαιόω (“justify”) denotes renewal"
 
 /-- **Paul's gospel, against Trent's definition taken as a claim about what God
 does.** It argues from Galatians 1:6–9, 2:21 and 5:2–4, 1 Corinthians 15:3,
@@ -695,7 +696,7 @@ sense. So it is an argument under all three standards, and the strongest known
 against taking the definition this way. -/
 def romansFourOnWordAssessment : Assessment Claim where
   dissenter := "Romans 4:3–8, on Paul's word"
-  against := "Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)"
+  against := "Trent: Paul's δικαιόω (“justify”) denotes renewal (ch. 8, with Augustine)"
   dissent :=
     { claim := p .paulsJustifyDenotesRenewal
     , position := romansFourOnTheWord }
@@ -714,7 +715,7 @@ Trent's reading stands against it in the same way
 its own answer to whether that is all the word means. -/
 def lexicalOnWordAssessment : Assessment Claim where
   dissenter := "Paul's word (by the rule of least meaning)"
-  against := "Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)"
+  against := "Trent: Paul's δικαιόω (“justify”) denotes renewal (ch. 8, with Augustine)"
   dissent :=
     { claim := p .paulsJustifyDenotesRenewal
     , position := lexicalCase }
@@ -749,7 +750,7 @@ def definitionPremise : RatedStep Claim where
 /-- **Trent's reading of Paul's word, with the objections to it**: Romans 4 on the
 word, the strongest known, and the argument from Paul's word. -/
 def wordPremise : RatedStep Claim where
-  step := "Trent: Paul's δικαιόω denotes renewal (ch. 8, with Augustine)"
+  step := "Trent: Paul's δικαιόω (“justify”) denotes renewal (ch. 8, with Augustine)"
   support := (baseCite .paulsJustifyDenotesRenewal).source
   register := [romansFourOnWordAssessment, lexicalOnWordAssessment]
   strongest := some 0
@@ -869,7 +870,7 @@ Reformed steps over its definition.
   (Session VI, ch. 7), and argues from Augustine that the word means making
   righteous too. So it grants the step's starting points and denies what the
   step draws from them. But Augustine wrote of the Latin *iustificare*, and the
-  argument needs the Latin word to bear the sense of Paul's Greek one, δικαιόω.
+  argument needs the Latin word to bear the sense of Paul's Greek one, δικαιόω ("justify").
   Trent says it does (ch. 7–8), and Melanchthon and Calvin deny it, because the
   Greek word is a courtroom word. Melanchthon: "to justify signifies, according
   to forensic usage, to acquit a guilty one and declare him righteous" (*Apology*

@@ -44,7 +44,7 @@ rating.
 
 The standoff rests on reading "proceeds" the same way on both sides. The
 Pontifical Council for Promoting Christian Unity (1995) distinguishes the
-Greek ἐκπόρευσις, origin from the Father alone, from the Latin *processio*.
+Greek ἐκπόρευσις ("procession"), origin from the Father alone, from the Latin *processio*.
 On that distinction "and the Son" and "not from the Son" may not contradict each
 other, and the two defeats would not exist. The chapter on the procession says
 what testing that would take.

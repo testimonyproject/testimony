@@ -65,8 +65,8 @@ chapter "Is Genesis 3:15 a promise, fulfilled in Jesus?" weighs the fulfilment
 against Westermann's denial that the verse is a promise at all.
 
 **The Greek's "he".** The Septuagint calls the woman's seed "he", αὐτός, though
-σπέρμα is neuter, and Collins finds it "beyond question that the translator of
-Genesis 3:15 meant to convey that an individual was promised" (145)
+σπέρμα ("seed" or "offspring") is neuter, and Collins finds it "beyond question that the translator
+of Genesis 3:15 meant to convey that an individual was promised" (145)
 (`greekHeCase_establishes`). If so, it shows how one Jewish translator before
 Christ read the promise, and reading it of one person is no Christian invention.
 But the earliest known reader of that Greek did not read it so: Philo calls the
@@ -103,8 +103,8 @@ Each reading below is a model: one way every claim of the argument could be true
 at once, named for what it says of the wording of Genesis 3:15. Some pairs of
 claims in this argument cannot both be true, so each model has to take a side on
 them; on questions this module does not touch it takes the scriptural reading's
-side: that the Septuagint's παρθένος means a virgin, that Micah's mention of a
-mother and no father does mean something, and that Scripture, not the
+side: that the Septuagint's παρθένος ("virgin" or "young woman") means a virgin, that Micah's
+mention of a mother and no father does mean something, and that Scripture, not the
 magisterium, is the judge. Every other claim it leaves true, and none of them
 bears on the results it is used for. -/
 
@@ -194,8 +194,8 @@ theorem idiomCase_is_satisfiable : Satisfiable idiomCase.premises := by
 /-! ### The Greek's "he" -/
 
 /-- **The Greek reads one person.** Grant that the Septuagint refers to the
-woman's seed with the masculine αὐτός, though σπέρμα is neuter, and the step
-Collins and Martin take from it, and its translator read the seed as one person.
+woman's seed with the masculine αὐτός ("he"), though σπέρμα ("seed" or "offspring") is neuter, and
+the step Collins and Martin take from it, and its translator read the seed as one person.
 
 That is all it delivers: who that person is, and how he is born, it does not
 say. -/

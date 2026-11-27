@@ -278,9 +278,10 @@ def heldToNone : List Party := parties.filter fun q => (professes q).isNone
 /-- **Every party to the sola fide dispute keeps the rule it professes.** Every claim each party
 held to a rule asserts rests on what its rule admits. Sola fide from John 6 needs "believe" to
 keep its sense between John 6:29 and "whoever believes in him" at John 3:16 and 3:18. That rests
-on the Greek both passages share, πιστεύειν εἰς, on Thayer's lexicon, which lists the three
-verses under one sense, and on Moulton's grammar, as well as on Calvin and Aquinas; so it rests
-on evidence, which Westminster's rule admits. Aquinas, Luther and Chrysostom are held to none.
+on the Greek both passages share, πιστεύειν εἰς ("believe in" or "believe into"), on Thayer's
+lexicon, which lists the three verses under one sense, and on Moulton's grammar, as well as on
+Calvin and Aquinas; so it rests on evidence, which Westminster's rule admits. Aquinas, Luther and
+Chrysostom are held to none.
 
 It did not, when this check was first run. Four Reformed readings — sola fide from Paul, from
 Peter and from John 6, and the Reformed answer to Chrysostom — asserted that justification and

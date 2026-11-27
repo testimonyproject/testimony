@@ -86,9 +86,9 @@ inferred.
 - **A model's docstring says whose world it is.** Same rule, opposite sign: the
   way things look if the position is right.
 - **Gloss logical vocabulary exactly as you gloss Greek and Hebrew.** This
-  library already explains ἔργα νόμου and עַלְמָה where they appear, because it
-  does not assume its reader is a Semitist. "Independent", "satisfiable",
-  "countermodel" and "vacuous" get the same courtesy, for the same reason.
+  library already explains ἔργα νόμου ("works of the law") and עַלְמָה ("virgin" or "young woman")
+  where they appear, because it does not assume its reader is a Semitist. "Independent",
+  "satisfiable", "countermodel" and "vacuous" get the same courtesy, for the same reason.
 - **A notion the primer cannot carry is a reason to reconsider the encoding**,
   not a reason to shrug. If an argument can only be stated in a fragment whose
   countermodels are unreadable, say so in the module docstring and explain them
@@ -329,6 +329,7 @@ linter.
 | L10 | Every `@[proposed]` result says what is novel about it |
 | L11 | A package with a positive `Establishes` result is shown satisfiable |
 | L12 | Hand-written markdown is at most 100 columns |
+| L13 | A Greek or Hebrew word a reader sees has one of its glossary renderings beside it |
 
 Run its own tests with `python3 scripts/test_testimony_lint.py`.
 

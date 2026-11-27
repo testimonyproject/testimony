@@ -72,7 +72,7 @@ words that carry a reading are kept as the text has them.
   was by the Holy Spirit and by the apostles and elders: "it seemed good to the
   Holy Spirit and to us". Whether the Spirit is its ground or its means is left
   open, as the text leaves it. **16:4** says that the decree was delivered
-  (παρεδίδοσαν) to the churches to keep. The decree is one particular in all
+  (παρεδίδοσαν, "delivering") to the churches to keep. The decree is one particular in all
   three, because 16:4 names it as "the decrees which had been decided upon by
   the apostles and elders who were in Jerusalem".
 - **Acts 1:21–22** says that the one chosen in Judas's place had to be one of
@@ -89,7 +89,7 @@ words that carry a reading are kept as the text has them.
   the apostles' and the elders'. **1 Clement 42 and 44** is given as what
   Clement records, not as what the apostles did.
 - **Matthew 23:2–3** says that the scribes and the Pharisees sit in "the chair
-  of Moses" (καθέδρα), that all they tell the hearers is what they are to "do
+  of Moses" (καθέδρα, "chair"), that all they tell the hearers is what they are to "do
   and keep" (ποιήσατε καὶ τηρεῖτε), and that their works are not. **23:16–22**
   says that
   their teaching on oaths is the teaching of "blind guides". Whether the seat is
@@ -534,7 +534,7 @@ def means : Claim → Statement
       (pt "what cannot be broken (οὐ δύναται λυθῆναι)" .quality)
   | .matthew5_18LawShallNotPass =>
     .says matt5_18 <| rl .isA
-      (pt "the smallest letter or stroke of the Law (ἰῶτα ἓν ἢ μία κεραία)" .informationObject)
+      (pt "the smallest letter or stroke (ἰῶτα ἓν ἢ μία κεραία) of the Law" .informationObject)
       (pt "what shall not pass from the Law until all is accomplished" .quality)
   | .galatians1_8AnotherGospelAccursed =>
     .says gal1_8_9 <| rl .isA
@@ -571,7 +571,7 @@ def means : Claim → Statement
       (rl .saidBy (pt "the apostles and elders at Jerusalem" .agent) jerusalemDecree)
   | .acts16_4DecreesDelivered =>
     .says acts16_4 <| rl .bindsAs jerusalemDecree
-      (pt "what the churches were delivered (παρεδίδοσαν) to keep" .informationObject)
+      (pt "what the churches were delivered (παρεδίδοσαν, “delivering”) to keep" .informationObject)
   | .councilBindsWithTheSpiritsAuthority =>
     .holds <| .both (rl .isA councilDefinition (cn .infallible))
       (rl .saidBy holyGhost councilDefinition)

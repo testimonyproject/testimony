@@ -9,6 +9,7 @@ import Testimony.Bib.Works
 import Testimony.Bib.Registry
 import Testimony.Bib.Render
 import Testimony.Provenance
+import Testimony.Gloss
 import Testimony.Variants
 import Testimony.Intertext
 import Testimony.Scripture

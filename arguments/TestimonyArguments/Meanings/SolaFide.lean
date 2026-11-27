@@ -19,7 +19,7 @@ Three things the labelling made visible, which the atom names alone did not:
   evidence of forgiveness, not its ground.
 - **The disputed readings are found, not listed.** `contested` is computed from
   the meanings alone: every word given two senses at one place. It finds the
-  readings the argument disputes — δικαιόω in Paul, the believing of John 6:29,
+  readings the argument disputes — δικαιόω ("justify") in Paul, the believing of John 6:29,
   doing the will in Matthew 7, keeping the commandments in Matthew 19, the water
   of John 3:5, the fire of Matthew 3:11 — and nothing else.
 - **`james2_24Compatible` is a claim about senses.** It denies that James 2:24
@@ -86,7 +86,7 @@ greek_word galatiansWorking from GAL 5 6 "ἐνεργέω"
 @[nolint defsWithUnderscore] abbrev john3_16 : PassageRange := vs .john 3 16
 
 /-- John 3:18a, "whoever believes in him is not condemned": the verse's first six words, anchored
-in the Greek by its one πιστεύω (`Testimony.Corpus.Greek.johnThreeEighteenA`). -/
+in the Greek by its one πιστεύω ("believe") (`Testimony.Corpus.Greek.johnThreeEighteenA`). -/
 @[nolint defsWithUnderscore] abbrev john3_18a : PassageRange :=
   Testimony.Corpus.Greek.johnThreeEighteenA
 /-- John 3:5. -/
@@ -140,6 +140,8 @@ def means : Claim → Statement
     .opaque "Acts 15:20–21 and 21:20–24: the decree, and Jerusalem's zeal for the law"
   | .ephesiansIsPauline => .wrote .paul .ephesians
   | .titusIsPauline => .wrote .paul .titus
+  | .romansIsPauline => .wrote .paul .romans
+  | .galatiansIsPauline => .wrote .paul .galatians
   | .firstPeterIsPetrine => .wrote .peter .firstPeter
   | .secondPeterIsPetrine => .wrote .peter .secondPeter
   | .righteousnessOfGodIsDeliverance =>
@@ -455,7 +457,8 @@ def all : List Claim :=
   [ .ephesians2_8_9, .romans3_28, .galatians2_16, .romans4_4_5, .titus3_5
   , .worksOfLawMeansWorksGenerally, .pistisChristouObjective
   , .galatiansOpposesCircumcisionAsRequirement, .acts15_9_11, .acts15YokeIsLawAsCondition
-  , .lukeKeepsTheLaw, .ephesiansIsPauline, .titusIsPauline, .firstPeterIsPetrine
+  , .lukeKeepsTheLaw, .ephesiansIsPauline, .titusIsPauline, .romansIsPauline
+  , .galatiansIsPauline, .firstPeterIsPetrine
   , .secondPeterIsPetrine, .righteousnessOfGodIsDeliverance, .luke7_50FaithHasSavedYou
   , .sozoIsSoteriological, .luke7_47LoveIsEvidence, .james2TargetsDeadFaith
   , .worksAreFruitNotGround, .james2_24Compatible, .james2_24NotByFaithAlone
@@ -534,7 +537,7 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **A hundred and twenty-seven of the hundred and seventy-eight are analysed.** Of
+/-- **A hundred and twenty-nine of the hundred and eighty are analysed.** Of
 the fifty-one that are not, two are the claims of the chapter on what was read in
 Paul before Trent: what the fathers wrote of faith alone, and justification with
 no prior work earning it. One is the chapter on faith working through love: that
@@ -555,16 +558,16 @@ of the obedience it requires, Galatians 1:6–9, Christ's command to baptise, Tr
 reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each needs a word
 the vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
 reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (127, 178) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (129, 180) := by decide +kernel
 
-/-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
+/-- **The disputed readings, found from the meanings alone**: δικαιόω ("justify") in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the
 commandments in Matthew 19; the water of John 3:5, four ways; the fire of
 Matthew 3:11, three ways. Fifteen readings at six places; each pair is counted
 in both orders, so twenty-six ordered pairs. -/
 theorem contested_length : (HasMeanings.contested (α := Claim)).length = 26 := by decide
 
-/-- **Twenty-eight claims turn on δικαιόω**: six Pauline texts that use it or name
+/-- **Twenty-eight claims turn on δικαιόω ("justify")**: six Pauline texts that use it or name
 renewal beside it; the forensic reading of Paul's word, the renewal reading,
 Augustine's gloss, and the two senses he gives; that Titus 3:5–7 uses it in Paul's
 sense; that Romans 5:19's "righteous" bears on it; that it keeps one sense in Romans
@@ -582,7 +585,7 @@ other, read for what their words mean (`Testimony.Ontology.shared`). Every
 credibility check holds `a → ¬b` for each, as background
 (`Testimony.Logic.Dissent`), for a dissent on either side.
 
-- That James 2:24 is compatible with Paul, which says James's δικαιόω has not
+- That James 2:24 is compatible with Paul, which says James's δικαιόω ("justify") has not
   Paul's sense, excludes that it has.
 - That faith is the only means by which justification is received excludes
   Trent's baptism as its instrumental cause: the only means of a thing is a
@@ -592,8 +595,8 @@ credibility check holds `a → ¬b` for each, as background
   meanings were read, before, only for denials of a whole claim.
 - Trent's Latin Revelation 22:11 and Sirach 18:22 exclude the Greek of each,
   which says the word is not there.
-- That ἐνεργουμένη in Galatians 5:6 is passive excludes that it is middle: a word
-  has one voice (`Testimony.Ontology.Voice.oneVoice`).
+- That ἐνεργουμένη ("working" or "made operative") in Galatians 5:6 is passive excludes that it is
+  middle: a word has one voice (`Testimony.Ontology.Voice.oneVoice`).
 - That love moves faith in Galatians 5:6 excludes that faith works through love
   as its means: what works through a means moves it, and what moves a thing is
   not moved by it (`Testimony.Ontology.Relations.meansIsMoved`,

@@ -24,7 +24,7 @@ each side cites are mostly the same texts.
 
 The Witnesses' brochure *Should You Believe in the Trinity?* (1989) reads John
 1:1 from the Greek. The first "God" in "the Word was with God" has the article,
-"the" (τὸν θεόν); the second, in "the Word was God", has none (θεός). "So John
+"the" (τὸν θεόν, "God"); the second, in "the Word was God", has none (θεός, "God"). "So John
 1:1 highlights the quality of the Word, that he was 'divine,' 'godlike,' 'a
 god,' but not Almighty God" (p. 27). Their New World Translation renders the
 clause "and the Word was a god". Colossians 1:15 calls the Son "the firstborn of
@@ -41,7 +41,7 @@ supplemented" gives answers Christians have made to these readings, Athanasius's
 and Metzger's among them, and the Witnesses' replies to them.
 
 Philip Harner's study of the same grammar (1973) agrees that a noun placed
-before the verb without "the", as θεός is here, is "primarily qualitative": it
+before the verb without "the", as θεός ("God") is here, is "primarily qualitative": it
 says what kind of thing the Word is. He draws a different conclusion from the
 brochure's. For Harner the quality is God's own: such nouns "indicate that the
 logos [the Word] has the nature of theos [God]" (as the New World Translation's

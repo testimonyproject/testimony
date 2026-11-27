@@ -33,8 +33,8 @@ the candidates, finds that none fits. Grant Berry that much and the critic's
 exclusion no longer follows (`berry_blocks_critical_denial`). It does no more
 than that: it does not establish the predictive reading, and it does not touch
 the dispute over the word. Berry also supplies a defensive premise about the
-word, that the range of עַלְמָה does not exclude "virgin", and on its own that
-is worth nothing (`admissibility_is_not_enough`). *May mean* is not *does
+word, that the range of עַלְמָה ("virgin" or "young woman") does not exclude "virgin", and on its
+own that is worth nothing (`admissibility_is_not_enough`). *May mean* is not *does
 mean*, and the Isaianic strand lives in that gap.
 
 Postell answers with a counterexample. Isaiah 9:5–6 (9:6–7 in English
@@ -158,15 +158,15 @@ the critic he answers, is the likeliest; it has not been read.
 
 The predictive reading is not a modern apologetic. Justin, Irenaeus, Origen and
 Jerome all argue it, and they are cited for it: for the prediction
-itself, and for עַלְמָה as a virgin. Every father the library has read on
-the verse — Tertullian, Eusebius, Cyril of Jerusalem, Chrysostom, Cyril of
+itself, and for עַלְמָה ("virgin" or "young woman") as a virgin. Every father the library has read
+on the verse — Tertullian, Eusebius, Cyril of Jerusalem, Chrysostom, Cyril of
 Alexandria and Theodoret besides — argues that an ordinary conception would have
 been no sign at all. Several grant the Jewish "young woman" and answer as the
-referential reading does: a young woman can be a virgin, as the betrothed νεᾶνις
-of Deuteronomy 22:23–27 is, whom 22:23 calls a παῖς παρθένος. None asks whether
-παρθένος could itself mean a girl who is not a virgin; the question Wegner raises
-was not theirs. That strengthens the attestation of the scriptural premises, and
-none of it changes a rating.
+referential reading does: a young woman can be a virgin, as the betrothed νεᾶνις ("young woman" or
+"girl") of Deuteronomy 22:23–27 is, whom 22:23 calls a παῖς παρθένος ("a girl who is a virgin").
+None asks whether παρθένος ("virgin" or "young woman") could itself mean a girl who is not a virgin;
+the question Wegner raises was not theirs. That strengthens the attestation of the scriptural
+premises, and none of it changes a rating.
 
 The fathers' witness cannot change a rating, because of what `disputed` means
 here: *actively contested by competent scholars*. The fathers are the earliest
@@ -196,8 +196,8 @@ deliver its conclusion before it can take part in a dispute. -/
 
 /-- The world Berry and Postell describe: everything holds except that a
 near-term sign excludes a messianic sense. The scriptural reading holds in it
-too. A reading cannot hold both claims about the Septuagint's παρθένος, and this
-one takes Rico and Gentry's; the scriptural reading needs neither, and
+too. A reading cannot hold both claims about the Septuagint's παρθένος ("virgin" or "young woman"),
+and this one takes Rico and Gentry's; the scriptural reading needs neither, and
 `Dispute.Septuagint` weighs the two. -/
 def repliesStandReading : Valuation Claim := fun a =>
   match a with
@@ -290,7 +290,7 @@ theorem motyer_rests_on_his_inference :
 near-term one, and a near-term sign would not exclude a messianic sense anyway.
 Everything else holds — the scriptural reading and all four replies with it —
 and, as in `repliesStandReading`, Rico and Gentry's side is taken on
-παρθένος. -/
+παρθένος ("virgin" or "young woman"). -/
 def motyerReading : Valuation Claim := fun a =>
   match a with
   | .maternalSilenceProvesNothing => False
@@ -358,8 +358,8 @@ theorem christian_rebuts_critical : Rebuts christian criticalDenial := by
 /-- The scriptural reader's world, with everything else holding that can: Micah's
 silence indicates a fatherless birth, so it is not nothing; Scripture, not the
 magisterium, is the judge that settles; and, as in `repliesStandReading`, Rico
-and Gentry's side is taken on παρθένος, which the scriptural reading does not
-need. -/
+and Gentry's side is taken on παρθένος ("virgin" or "young woman"), which the scriptural reading
+does not need. -/
 def scripturalWorldReading : Valuation Claim := fun a =>
   match a with
   | .maternalSilenceProvesNothing => False
@@ -454,8 +454,8 @@ each counterexample's step without giving up the exclusion. -/
 /-- The critic's world, with Isaiah 9 and 11 taken off the Assyrian timeline of
 7:14 — the way out of the parity argument open to a reader who dates them
 later. Postell's step holds in it, because one of its grounds fails. On the
-Septuagint's παρθένος the critic sides with Wegner, as Walton cites Brown for
-the word's broader sense (Walton 293 n. 15). -/
+Septuagint's παρθένος ("virgin" or "young woman") the critic sides with Wegner, as Walton cites
+Brown for the word's broader sense (Walton 293 n. 15). -/
 def laterOraclesReading : Valuation Claim := fun a =>
   match a with
   | .maternalSilenceImpliesNoHumanFather => False
@@ -477,7 +477,8 @@ theorem critic_grants_postells_step_by_dating_the_oracles_later :
 
 /-- The critic's world, with Micah 5:2 read of a near-term Davidic king and not
 messianically. The Micah step holds in it, because one of its grounds fails.
-As in `laterOraclesReading`, the critic sides with Wegner on παρθένος. -/
+As in `laterOraclesReading`, the critic sides with Wegner on παρθένος ("virgin" or "young woman").
+-/
 def royalMicahReading : Valuation Claim := fun a =>
   match a with
   | .maternalSilenceImpliesNoHumanFather => False

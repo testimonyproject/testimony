@@ -28,9 +28,9 @@ circumcision, food laws and the sabbath. Their reading is known as the New
 Perspective on Paul. Only on the first answer does refusing circumcision mean
 refusing every work as a requirement (`worksOfLawMeansWorksGenerally`).
 
-The second question is what "faith in Jesus Christ" (πίστις Χριστοῦ) means:
-our faith in Christ, or Christ's own faithfulness, as Hays holds. Only on the
-first does the verse name the believer's faith as the means
+The second question is what "faith in Jesus Christ" (πίστις Χριστοῦ, "faith in Christ" or
+"faithfulness of Christ") means: our faith in Christ, or Christ's own faithfulness, as Hays holds.
+Only on the first does the verse name the believer's faith as the means
 (`pistisChristouObjective`). This is a premise inside Paul's strand rather than
 a strand of its own, because every verse with the phrase sets it against the
 law, so no route through it avoids the first question. Nor does it divide the
@@ -44,7 +44,7 @@ Jesus, in Luke, speaks to the woman who anointed His feet:
 > "Your faith has saved you; go in peace" (Luke 7:50).
 
 Luke has the saying four times (7:50, 8:48, 17:19, 18:42). The Greek verb
-(σῴζω) means both *save* and *heal*, and in the other three places the person
+(σῴζω, "save" or "healed") means both *save* and *heal*, and in the other three places the person
 has just been healed, which is why most English Bibles print "made you well"
 there. So the strand rests on 7:50 alone, where the saying follows "your sins
 are forgiven" and no one is ill. That the word means *saved* there is a reading
@@ -326,7 +326,7 @@ reader who denies one of the readings takes away the reading and leaves the
 texts. -/
 @[solaFideDefs]
 def paulineLine : Line Claim :=
-  { name := "Pauline strand (ἔργα νόμου, πίστις Χριστοῦ)"
+  { name := "Pauline strand (‘works of the law’, ἔργα νόμου; ‘faith of Christ’, πίστις Χριστοῦ)"
   , grounds :=
       [ p .galatiansOpposesCircumcisionAsRequirement, p .worksOfLawMeansWorksGenerally
       , p .pistisChristouObjective, p .paulsWordsKeepTheirSense ]
@@ -356,7 +356,7 @@ own: that "saved" at Luke 7:50 means saved, and that at 7:47 the woman's love is
 not the cause of her forgiveness. -/
 @[solaFideDefs]
 def dominicalLine : Line Claim :=
-  { name := "Dominical strand (σῴζω at Luke 7:50)"
+  { name := "Dominical strand (σῴζω (“save” or “healed”) at Luke 7:50)"
   , grounds := [p .sozoIsSoteriological, p .luke7_47LoveIsEvidence]
   , step := dominicalToSufficiency
   , delivers := p .faithIsSufficient
@@ -468,7 +468,7 @@ def deliveranceIsGrace : Formula Claim :=
 denying what Paul's strand concludes: that justification is by faith alone. -/
 @[solaFideDefs]
 def apocalypticLine : Line Claim :=
-  { name := "Apocalyptic reading (δικαιοσύνη θεοῦ as deliverance)"
+  { name := "Apocalyptic reading (δικαιοσύνη θεοῦ (“the righteousness of God”) as deliverance)"
   , grounds := [notP .pistisChristouObjective, p .righteousnessOfGodIsDeliverance]
   , step := deliveranceNotFaithAlone
   , delivers := notP .justificationByFaithAlone
@@ -775,7 +775,7 @@ reading Trent's definition, and the argument from the word does not reach it
 (the chapter "What Trent means by justification"). -/
 @[solaFideDefs]
 def lexicalLine : Line Claim :=
-  { name := "Paul's word (δικαιόω, by the rule of least meaning)"
+  { name := "Paul's word (δικαιόω, “justify”, by the rule of least meaning)"
   , grounds :=
       [ p .dikaioIsForensic, p .paulNamesRenewalOtherwise, p .titus3_7UsesDikaioAsPaul
       , p .leastMeaning ]
@@ -789,7 +789,7 @@ def lexicalLine : Line Claim :=
 /-! ### Romans 4: the ungodly, justified -/
 
 /-- The reading of Romans 4:3–8. Paul uses the language of an account ("counted",
-λογίζομαι), sets it against wages, and explains what is counted by quoting a
+λογίζομαι, "credit" or "count"), sets it against wages, and explains what is counted by quoting a
 psalm. It explains the one "count" by the other, so the reading needs the word
 to keep its sense from 4:4–5 to 4:6–8, and takes that as a premise
 (`romans4CountKeepsItsSense`). Cited

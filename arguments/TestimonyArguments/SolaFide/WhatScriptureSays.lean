@@ -11,13 +11,13 @@ follow.
 
 The texts here are quoted from the NET Bible, marked (NET). Where its wording
 takes a side in a question the later chapters weigh, the Greek is given beside
-it. Two such places recur. The NET renders Paul's verb δικαιόω as "declared
+it. Two such places recur. The NET renders Paul's verb δικαιόω ("justify") as "declared
 righteous" in Romans 3:28 and 4:5 and in Galatians 5:4, and as "justified" in
 Galatians 2:16, Luke 18:14 and James 2:21–24; it is one Greek verb throughout,
 and whether it means only declared righteous, or also made righteous, is the
 question between the Reformers and Trent. And in Galatians 2:16 it gives
-πίστεως Ἰησοῦ Χριστοῦ as "the faithfulness of Jesus Christ", Christ's own
-faithfulness, where most translations and the Reformers read "faith in Jesus
+πίστεως Ἰησοῦ Χριστοῦ ("the faithfulness of Jesus Christ") as "the faithfulness of Jesus Christ",
+Christ's own faithfulness, where most translations and the Reformers read "faith in Jesus
 Christ".
 
 ## Paul to the Galatians
@@ -35,7 +35,7 @@ belongs to God's people. Paul called it a different gospel:
 > "But even if we (or an angel from heaven) should preach a gospel contrary to
 > the one we preached to you, let him be condemned to hell!" (1:8, NET).
 
-"Contrary to" renders παρ' ὅ, which older translations give as "other than".
+"Contrary to" renders παρ' ὅ ("contrary to"), which older translations give as "other than".
 
 He told them how he had opposed Peter to his face at Antioch, when Peter drew
 back from eating with Gentile believers, and went on:
@@ -113,7 +113,7 @@ God requires?", He answered:
 > "This is the deed God requires—to believe in the one whom he sent" (John 6:29,
 > NET).
 
-"Deed" and "deeds" render ἔργον and ἔργα, the word Paul and James use for
+"Deed" and "deeds" render ἔργον ("work") and ἔργα ("works"), the word Paul and James use for
 "works".
 
 He said other things that the Council of Trent would quote. At the end of the

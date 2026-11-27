@@ -46,15 +46,15 @@ On Aquinas's it does not (`johannine_strand_rests_on_believing_as_trust`).
 
 The strand reads the believing of 6:29 by the believing of 3:16–18, so it needs the word to mean the
 same in both. The Greek shows why a reader would expect it to. "Whoever believes in him" at 3:16 and
-3:18 is ὁ πιστεύων εἰς αὐτόν, and "that you believe in him whom he has sent" at 6:29 is πιστεύητε
-εἰς ὃν ἀπέστειλεν. Both are "believe into" (πιστεύειν εἰς) (`john_believing_into_in_both_passages`),
-a phrase Westcott calls "peculiarly characteristic of St John" (on 2:11, p. 39). The manuscripts do
-not unsettle it: no edition in the apparatus of the SBL Greek New Testament reads otherwise at those
-verses. Thayer's lexicon lists the three verses under one sense, "to have a faith directed unto,
-believing or in faith to give one's self up to, Jesus" (p. 511). Moulton's grammar gives the
-construction one meaning, "believe in", and sets it apart from "believe" with a bare dative (pp.
-67–68), as when the crowd at 6:30 asks for a sign so that they may believe Him, with no "in"
-(πιστεύσωμέν σοι).
+3:18 is ὁ πιστεύων εἰς αὐτόν ("whoever believes in him"), and "that you believe in him whom he has
+sent" at 6:29 is πιστεύητε εἰς ὃν ἀπέστειλεν ("believe in Him whom He has sent"). Both are "believe
+into" (πιστεύειν εἰς) (`john_believing_into_in_both_passages`), a phrase Westcott calls "peculiarly
+characteristic of St John" (on 2:11, p. 39). The manuscripts do not unsettle it: no edition in the
+apparatus of the SBL Greek New Testament reads otherwise at those verses. Thayer's lexicon lists the
+three verses under one sense, "to have a faith directed unto, believing or in faith to give one's
+self up to, Jesus" (p. 511). Moulton's grammar gives the construction one meaning, "believe in", and
+sets it apart from "believe" with a bare dative (pp. 67–68), as when the crowd at 6:30 asks for a
+sign so that they may believe Him, with no "in" (πιστεύσωμέν σοι, "believe You").
 Calvin, on 6:29, refers the reader back to chapter 3 for what "believe" means there, and Aquinas
 reads both verses of faith formed by charity. The two divide over what the believing is, and agree
 that it is one believing.
@@ -197,10 +197,10 @@ def believingInto (ws : List Corpus.Greek.Token) : List (Nat × Nat × String) :
 
 /-- **John 3:16–18 and 6:29 share the construction "believe into" (πιστεύειν εἰς), read from the
 Greek.** In the SBL Greek New Testament, "whoever believes in him" at 3:16 and at 3:18 is ὁ
-πιστεύων εἰς αὐτόν, and 3:18 goes on to "has not believed in the name" (πεπίστευκεν εἰς τὸ
-ὄνομα). At 6:29 "that you believe in him whom he has sent" is πιστεύητε εἰς ὃν ἀπέστειλεν. No
-other form of the verb in these verses is followed by εἰς: the "whoever does not believe" of
-3:18 has no object.
+πιστεύων εἰς αὐτόν ("whoever believes in him"), and 3:18 goes on to "has not believed in the name"
+(πεπίστευκεν εἰς τὸ ὄνομα). At 6:29 "that you believe in him whom he has sent" is πιστεύητε εἰς ὃν
+ἀπέστειλεν ("believe in Him whom He has sent"). No other form of the verb in these verses is
+followed by εἰς ("into"): the "whoever does not believe" of 3:18 has no object.
 
 The shared construction is the ground the premise that "believe" keeps its sense rests on
 (`johnBelievingKeepsItsSense`), and the sense itself is argued there, from the lexicon and the

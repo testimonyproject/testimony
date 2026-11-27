@@ -35,92 +35,94 @@ open Testimony Testimony.Bib Testimony.Logic Testimony.Scripture
 inductive Claim
   /-- Isaiah 7:14 predicts a virgin conceiving, fulfilled in the Messiah. -/
   | isaiahPredictsVirginBirth
-  /-- עַלְמָה in Isaiah 7:14 denotes a virgin, not merely a young woman.
+  /-- עַלְמָה ("virgin" or "young woman") in Isaiah 7:14 denotes a virgin, not merely a young woman.
   **The Isaianic hinge.** -/
   | almahMeansVirgin
-  /-- The semantic range of עַלְמָה does not exclude the sense "virgin" at
-  Isaiah 7:14. Weaker than `almahMeansVirgin`, and deliberately so. -/
+  /-- The semantic range of עַלְמָה ("virgin" or "young woman") does not exclude the sense "virgin"
+  at Isaiah 7:14. Weaker than `almahMeansVirgin`, and deliberately so. -/
   | almahAdmitsVirginSense
-  /-- עַלְמָה denotes a young woman of marriageable age. The lexical ground both
-  sides of the dispute actually share. -/
+  /-- עַלְמָה ("virgin" or "young woman") denotes a young woman of marriageable age. The lexical
+  ground both sides of the dispute actually share. -/
   | almahDenotesMarriageableYoungWoman
   /-- Being a virgin does not exclude a woman from that denotation: Rebekah is
-  an עַלְמָה at Genesis 24:43 and a בְּתוּלָה "whom no man had known" at 24:16. -/
+  an עַלְמָה ("virgin" or "young woman") at Genesis 24:43 and a בְּתוּלָה ("virgin") "whom no man
+  had known" at 24:16. -/
   | virginityCompatibleWithAlmah
   /-- Mary at the conception was a betrothed young woman of marriageable age —
-  an עַלְמָה on anyone's lexicon. -/
+  an עַלְמָה ("virgin" or "young woman") on anyone's lexicon. -/
   | maryWasAnAlmah
-  /-- Mary answers the description at Isaiah 7:14 whether or not עַלְמָה denotes
-  virginity. **The conclusion of the referential argument.** -/
+  /-- Mary answers the description at Isaiah 7:14 whether or not עַלְמָה ("virgin" or "young woman")
+  denotes virginity. **The conclusion of the referential argument.** -/
   | maryFitsIsaianicDescription
-  /-- Matthew's fulfilment claim requires that עַלְמָה itself denote virginity.
-  **The assumption the lexical objection needs**, and the one the referential
+  /-- Matthew's fulfilment claim requires that עַלְמָה ("virgin" or "young woman") itself denote
+  virginity. **The assumption the lexical objection needs**, and the one the referential
   argument attacks. -/
   | lexicalSenseRequiredForFulfilment
-  /-- The Septuagint renders עַלְמָה as παρθένος. -/
+  /-- The Septuagint renders עַלְמָה ("virgin" or "young woman") as παρθένος ("virgin" or "young
+  woman"). -/
   | lxxRendersParthenos
-  /-- Targum Jonathan renders עַלְמָה as עוּלֵימְתָא, "young woman". -/
+  /-- Targum Jonathan renders עַלְמָה ("virgin" or "young woman") as עוּלֵימְתָא, "young woman". -/
   | targumRendersUlemta
   /-- Aquila, Symmachus and Theodotion render νεᾶνις, "young woman". -/
   | theThreeRenderNeanis
   /-- The Syriac Peshitta renders ܒܬܘܠܬܐ, "virgin". -/
   | peshittaRendersBtulta
-  /-- 1QIsaᵃ, copied before Christ, reads הָעַלְמָה at Isaiah 7:14 as the Masoretic
-  Text does: the verse has variants, but none at the word, so the dispute over
+  /-- 1QIsaᵃ, copied before Christ, reads הָעַלְמָה ("the virgin" or "the young woman") at Isaiah
+  7:14 as the Masoretic Text does: the verse has variants, but none at the word, so the dispute over
   it is about its sense and not its text. -/
   | qumranConfirmsAlmah
-  /-- The split among the ancient versions shows עַלְמָה does not denote
+  /-- The split among the ancient versions shows עַלְמָה ("virgin" or "young woman") does not denote
   virginity. The critical inference from the versions. -/
   | versionalDivergenceRefutesVirginSense
   /-- The Greek Isaiah was translated by Jews, before the coming of Christ. -/
   | lxxIsPreChristian
-  /-- In the Greek of the Septuagint, παρθένος means a virgin. **The Septuagint's
-  hinge**, and what Rico and Gentry hold of the word wherever it appears in the
+  /-- In the Greek of the Septuagint, παρθένος ("virgin" or "young woman") means a virgin. **The
+  Septuagint's hinge**, and what Rico and Gentry hold of the word wherever it appears in the
   Greek of the Jewish Scriptures. -/
   | parthenosMeansVirgin
-  /-- In the Greek of the Septuagint's day, παρθένος meant a young woman of
-  marriageable age, and not yet a virgin as such: that sense came later.
+  /-- In the Greek of the Septuagint's day, παρθένος ("virgin" or "young woman") meant a young woman
+  of marriageable age, and not yet a virgin as such: that sense came later.
   **Wegner's thesis**, and the rival to the hinge above. -/
   | parthenosMeantYoungWoman
-  /-- In early Greek literature παρθένος meant a young woman of marriageable age,
-  with or without virginity. -/
+  /-- In early Greek literature παρθένος ("virgin" or "young woman") meant a young woman of
+  marriageable age, with or without virginity. -/
   | earlyGreekParthenosIsYoungWoman
-  /-- The Septuagint calls Dinah a παρθένος at Genesis 34:3, the verse after
-  Shechem lies with her (34:2). What the text reads, and nothing about when the
+  /-- The Septuagint calls Dinah a παρθένος ("virgin" or "young woman") at Genesis 34:3, the verse
+  after Shechem lies with her (34:2). What the text reads, and nothing about when the
   noun's description held of her. -/
   | greekCallsDinahParthenos
-  /-- Wherever else the Greek Isaiah has παρθένος — 23:4, 37:22, 47:1 and 62:5 —
-  it renders בְּתוּלָה. -/
+  /-- Wherever else the Greek Isaiah has παρθένος ("virgin" or "young woman") — 23:4, 37:22, 47:1
+  and 62:5 — it renders בְּתוּלָה ("virgin"). -/
   | isaiahUsesParthenosForBetulah
-  /-- The Greek Leviticus has the high priest marry a παρθένος, "a woman in her
-  virginity" in the Hebrew, and not a widow, a divorced woman, a defiled woman or
+  /-- The Greek Leviticus has the high priest marry a παρθένος ("virgin" or "young woman"), "a woman
+  in her virginity" in the Hebrew, and not a widow, a divorced woman, a defiled woman or
   a harlot (21:13–14). -/
   | priestMarriesAParthenos
-  /-- In the Greek Deuteronomy, a bride in whom τὰ παρθένια are not found dies for
-  playing the harlot (22:13–21). -/
+  /-- In the Greek Deuteronomy, a bride in whom τὰ παρθένια ("tokens of virginity") are not found
+  dies for playing the harlot (22:13–21). -/
   | partheniaProveTheBride
-  /-- In the Greek Pentateuch's laws, παρθένος is used in the sense "virgin".
-  **The laws' sense**, and a claim about two passages, not about Isaiah 7:14. -/
+  /-- In the Greek Pentateuch's laws, παρθένος ("virgin" or "young woman") is used in the sense
+  "virgin". **The laws' sense**, and a claim about two passages, not about Isaiah 7:14. -/
   | lawsUseParthenosAsVirgin
-  /-- In the Greek Exodus, a man who seduces a παρθένος not betrothed and lies
-  with her shall take her as his wife with a bride-price, or pay "the bride-price
+  /-- In the Greek Exodus, a man who seduces a παρθένος ("virgin" or "young woman") not betrothed
+  and lies with her shall take her as his wife with a bride-price, or pay "the bride-price
   of virgins" (22:15–16). -/
   | seductionLawPricesAParthenos
   /-- Genesis 34 tells Shechem's act in the words of the laws of the violated
   virgin: he "humbled" her (34:2), it was "folly in Israel" (34:7), and he offers
   the bride-price (34:12). -/
   | shechemActsUnderTheLaw
-  /-- At Genesis 34:3 the Greek calls Dinah a παρθένος in the sense "virgin",
-  naming her by the standing the law gives the woman Shechem took. **The status
+  /-- At Genesis 34:3 the Greek calls Dinah a παρθένος ("virgin" or "young woman") in the sense
+  "virgin", naming her by the standing the law gives the woman Shechem took. **The status
   reading** of Wegner's counterexample. -/
   | dinahIsTheLawsParthenos
-  /-- Matthew 1:23 quotes Isaiah 7:14 in the Greek's own words: ἡ παρθένος. -/
+  /-- Matthew 1:23 quotes Isaiah 7:14 in the Greek's own words: ἡ παρθένος ("the virgin"). -/
   | matthewQuotesTheGreekVirgin
   /-- Matthew says that Mary was found with child before she and Joseph came
   together, and that he knew her not until she had borne a son (1:18, 25). -/
   | matthewSaysMaryKnewNoMan
-  /-- In the Greek of Isaiah 7:14, which Matthew quotes, παρθένος has the sense
-  "virgin". **Scripture's own reading of the word**, by Matthew's use of it. -/
+  /-- In the Greek of Isaiah 7:14, which Matthew quotes, παρθένος ("virgin" or "young woman") has
+  the sense "virgin". **Scripture's own reading of the word**, by Matthew's use of it. -/
   | lxxIsaiahUsesParthenosAsVirgin
   /-- Trypho rejects the Septuagint's "the virgin" at Isaiah 7:14 and reads "the
   young woman" (Justin, *Dialogue* 67 and 71). -/
@@ -129,30 +131,31 @@ inductive Claim
   virgin. **What the Septuagint shows**, if its word means what Rico and Gentry
   say it means. -/
   | lxxReadsAVirgin
-  /-- The Septuagint puts the conception in the future: ἐν γαστρὶ ἕξει, "she shall
-  be with child". -/
+  /-- The Septuagint puts the conception in the future: ἐν γαστρὶ ἕξει ("shall be with child"), "she
+  shall be with child". -/
   | lxxPutsTheConceptionInTheFuture
   /-- The translator of Isaiah meant that the woman conceives while still a
   virgin: a conception without a man. -/
   | lxxEnvisagesAVirginalConception
-  /-- הָרָה at Isaiah 7:14 is a predicate adjective, so the clause reads "the
-  עַלְמָה *is* pregnant". **Wegner's grammatical premise**, and not the contested
-  step: Rydelnik parses it the same way. -/
+  /-- הָרָה ("with child" or "pregnant") at Isaiah 7:14 is a predicate adjective, so the clause
+  reads "the עַלְמָה [virgin or young woman] *is* pregnant". **Wegner's grammatical premise**, and
+  not the contested step: Rydelnik parses it the same way. -/
   | harahIsPredicateAdjective
-  /-- The עַלְמָה of Isaiah 7:14 is already pregnant at the moment the sign is
-  given. -/
+  /-- The עַלְמָה ("virgin" or "young woman") of Isaiah 7:14 is already pregnant at the moment the
+  sign is given. -/
   | isaianicAlmahIsAlreadyPregnant
   /-- The pregnancy the sign announces is an ordinary conception. **The step
   the parse does not supply**, and the one Rydelnik denies. -/
   | pregnancyAtTheSignIsOrdinary
-  /-- The עַלְמָה of Isaiah 7:14 is not a virgin. Wegner's conclusion about the
-  referent, and his ground for the lexical conclusion. -/
+  /-- The עַלְמָה ("virgin" or "young woman") of Isaiah 7:14 is not a virgin. Wegner's conclusion
+  about the referent, and his ground for the lexical conclusion. -/
   | isaianicAlmahIsNotAVirgin
-  /-- What the עַלְמָה of Isaiah 7:14 turns out to be settles what עַלְמָה denotes.
-  **Wegner's method**, and the principle Rico and Gentry reject. -/
+  /-- What the עַלְמָה ("virgin" or "young woman") of Isaiah 7:14 turns out to be settles what
+  עַלְמָה ("virgin" or "young woman") denotes. **Wegner's method**, and the principle Rico and
+  Gentry reject. -/
   | oneReferentSettlesDenotation
-  /-- In the other clear עַלְמָה passages Wegner lists — Genesis 24:43 and Song
-  6:8 — the women are virgins. Postell's usage reply. -/
+  /-- In the other clear עַלְמָה ("virgin" or "young woman") passages Wegner lists — Genesis 24:43
+  and Song 6:8 — the women are virgins. Postell's usage reply. -/
   | otherClearAlmahCasesAreVirgins
   /-- The sign given at Isaiah 7:14 must be extraordinary, as the sign offered
   "deep as Sheol or high as heaven" at 7:11 would have been. **The fathers'
@@ -190,8 +193,8 @@ inductive Claim
   | genesis3_15SeedOfTheWoman
   /-- Genesis 3:15 is the protoevangelium: the first promise of a redeemer. -/
   | genesis3_15IsProtoevangelium
-  /-- Hebrew זֶרַע is ordinarily reckoned through the father: a man's seed is his
-  descendants. -/
+  /-- Hebrew זֶרַע ("seed" or "offspring") is ordinarily reckoned through the father: a man's seed
+  is his descendants. -/
   | seedReckonedThroughFather
   /-- The seed being named as the woman's marks a birth with no human father.
   **The protoevangelium hinge**, and an ambiguous one: "marks" can mean what the
@@ -241,8 +244,8 @@ inductive Claim
   /-- At Genesis 3:15 "her seed" is a line of descendants, and not an individual.
   **Westermann's reading of the word.** -/
   | seedIsLineNotIndividual
-  /-- Elsewhere זֶרַע with singular verbs and pronouns denotes one descendant
-  (Genesis 21:13; 38:9; 1 Samuel 1:11; 2 Samuel 7:12–15). -/
+  /-- Elsewhere זֶרַע ("seed" or "offspring") with singular verbs and pronouns denotes one
+  descendant (Genesis 21:13; 38:9; 1 Samuel 1:11; 2 Samuel 7:12–15). -/
   | seedUsedOfOneDescendant
   /-- At Genesis 3:15b the one who strikes is "he", הוּא, masculine singular, with a
   singular verb, and strikes the serpent's own head, "your head". -/
@@ -255,13 +258,14 @@ inductive Claim
   /-- The serpent of Genesis 3 is the instrument of an evil power, and the
   sentence of 3:15 falls on that power. -/
   | serpentIsTheInstrumentOfAPower
-  /-- The Greek of Joel 1:8 calls a young widow a παρθένος. **Miller's claim.** -/
+  /-- The Greek of Joel 1:8 calls a young widow a παρθένος ("virgin" or "young woman"). **Miller's
+  claim.** -/
   | joelGreekCallsTheWidowParthenos
-  /-- In the Septuagint, παρθένος did not by itself connote virginity.
+  /-- In the Septuagint, παρθένος ("virgin" or "young woman") did not by itself connote virginity.
   **Miller's thesis.** -/
   | parthenosDoesNotItselfConnoteVirginity
-  /-- At Genesis 34:3 the Greek's παρθένος describes Dinah as she was after the
-  attack, no longer a virgin. **Miller's premise.** -/
+  /-- At Genesis 34:3 the Greek's παρθένος ("virgin" or "young woman") describes Dinah as she was
+  after the attack, no longer a virgin. **Miller's premise.** -/
   | parthenosDescribesDinahAsSheThenWas
   /-- Micah 5:3 names only "she who is in labour" as bearing the coming ruler,
   with no father mentioned. -/
@@ -378,7 +382,7 @@ def postellOnIsaiah (l : Locus) (confidence : Confidence) : Source :=
   , tradition := .christianHistoricalGrammatical
   , confidence := confidence }
 
-/-- Wegner on the sense of עַלְמָה, at a given pinpoint.
+/-- Wegner on the sense of עַלְמָה ("virgin" or "young woman"), at a given pinpoint.
 
 Like `postellOnIsaiah`, the pinpoint carries weight: the grammatical claim is
 at 471 and the near-term reconstruction that makes its conclusion bite is at
@@ -399,7 +403,7 @@ def franceOnMatthew (confidence : Confidence := .wellSupported) : Source :=
 
 /-! ### Intertextual edges and readings -/
 
-/-- Matthew explicitly quotes Isaiah, via the Septuagint's παρθένος. -/
+/-- Matthew explicitly quotes Isaiah, via the Septuagint's παρθένος ("virgin" or "young woman"). -/
 def quotationEdge : IntertextEdge :=
   { fromPassage := matthew1_23
   , toPassage := isaiah7_14

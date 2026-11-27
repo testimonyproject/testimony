@@ -17,16 +17,16 @@ from the start (`coverage_now`);
 The lexical dispute is about two words and one woman, and the meanings keep the
 three apart.
 
-- **What a version wrote** is a `renders`: the Septuagint's παρθένος, the
-  Targum's עוּלֵימְתָא, the Three's νεᾶνις, the Peshitta's ܒܬܘܠܬܐ. Each version
-  is named as the voice of its textual tradition (`Voice.version`).
-- **What a word means** is a `means`. עַלְמָה at Isaiah 7:14 is read two ways —
-  as "virgin" by the Isaianic strand, as "young woman of marriageable age" by
-  the ground both sides share — and so is παρθένος in the Septuagint's Greek, by
-  Rico and Gentry and by Wegner (`HasMeanings.contested`).
+- **What a version wrote** is a `renders`: the Septuagint's παρθένος ("virgin" or "young woman"),
+  the Targum's עוּלֵימְתָא ("young woman"), the Three's νεᾶνις ("young woman" or "girl"), the
+  Peshitta's ܒܬܘܠܬܐ. Each version is named as the voice of its textual tradition (`Voice.version`).
+- **What a word means** is a `means`. עַלְמָה ("virgin" or "young woman") at Isaiah 7:14 is read two
+  ways — as "virgin" by the Isaianic strand, as "young woman of marriageable age" by
+  the ground both sides share — and so is παρθένος ("virgin" or "young woman") in the Septuagint's
+  Greek, by Rico and Gentry and by Wegner (`HasMeanings.contested`).
 - **Who the woman is** is a claim about a particular, of DOLCE's category
-  `agent`: whether she has the quality of virginity. Wegner's "the עַלְמָה of
-  Isaiah 7:14 is not a virgin" is such a claim; so is "Mary conceived as a
+  `agent`: whether she has the quality of virginity. Wegner's "the עַלְמָה [virgin or young woman]
+  of Isaiah 7:14 is not a virgin" is such a claim; so is "Mary conceived as a
   virgin", about another woman. What the Septuagint's translator took her to be
   is held *by him*, inside a frame, where it contradicts no claim about her.
 
@@ -37,8 +37,8 @@ definitions of `Testimony.Ontology`: one of them, that a sense found in a passag
 of a text is a sense of its usage (`Testimony.Ontology.Usage`), joins the laws,
 and Genesis 34:3 as the status reading reads it.
 
-- **Wegner's claim that παρθένος meant "young woman" and did not yet mean
-  "virgin" excludes Rico and Gentry's claim that it meant "virgin".** Both are
+- **Wegner's claim that παρθένος ("virgin" or "young woman") meant "young woman" and did not yet
+  mean "virgin" excludes Rico and Gentry's claim that it meant "virgin".** Both are
   about the word in the Septuagint's Greek, and Wegner's says *and not that
   sense*: by New Testament times, he writes, the word "developed the more
   technical meaning of 'virgin'" (482). That is the join the Septuagint dispute
@@ -51,11 +51,11 @@ and Genesis 34:3 as the status reading reads it.
   So "virgin" is a sense of the word in the Septuagint's Greek, which Wegner's
   "not yet" denies and Rico and Gentry's claim asserts.
 - **The status reading of Genesis 34:3 does the same.** It holds that the Greek
-  calls Dinah a παρθένος in the sense "virgin", at one passage of the
+  calls Dinah a παρθένος ("virgin" or "young woman") in the sense "virgin", at one passage of the
   Septuagint's text, and the same definition carries that sense to the
   Septuagint's usage.
-- **Miller's thesis is excluded by each of these.** That παρθένος "did not by
-  itself connote" virginity in the Septuagint is the denial of the sense
+- **Miller's thesis is excluded by each of these.** That παρθένος ("virgin" or "young woman") "did
+  not by itself connote" virginity in the Septuagint is the denial of the sense
   "virgin" in its Greek, so every claim that gives the word that sense in the
   Septuagint, or in a passage of it, excludes it. Wegner's claim entails it: his
   "not yet 'virgin'" is the same denial.
@@ -76,24 +76,24 @@ and Genesis 34:3 as the status reading reads it.
   The supreme judge of controversies "can be no other but the Holy Spirit
   speaking in the Scripture", and the decrees of councils are among what it
   examines; the other claim makes the magisterium the judge that settles.
-- **"עַלְמָה denotes a virgin" entails that its range does not exclude
+- **"עַלְמָה [virgin or young woman] denotes a virgin" entails that its range does not exclude
   "virgin".** A word's range includes what it denotes; the atom calls the
   second "weaker … deliberately so".
 
 Five pairs are left apart, on purpose.
 
-- "עַלְמָה denotes a virgin" and "עַלְמָה denotes a young woman of marriageable
-  age". Two senses of one word are not held to exclude each other: Rico and
-  Gentry hold both, a young virgin. Only a claim that says *and not* the other
+- "עַלְמָה [virgin or young woman] denotes a virgin" and "עַלְמָה [virgin or young woman] denotes a
+  young woman of marriageable age". Two senses of one word are not held to exclude each other: Rico
+  and Gentry hold both, a young virgin. Only a claim that says *and not* the other
   sense excludes it, and neither does.
 - That the split among the ancient versions refutes the virgin sense, and that
-  עַלְמָה means virgin. The first is an inference from the versions, and the
-  library weighs it as a rated step
+  עַלְמָה ("virgin" or "young woman") means virgin. The first is an inference from the versions, and
+  the library weighs it as a rated step
   (`TestimonyArguments.BornOfAVirgin.versionalObjection`), not as a meaning.
-- Wegner's "the עַלְמָה of Isaiah 7:14 is not a virgin", and the Septuagint's
-  reading of her as one. The translator's reading is his; he may have been wrong,
+- Wegner's "the עַלְמָה [virgin or young woman] of Isaiah 7:14 is not a virgin", and the
+  Septuagint's reading of her as one. The translator's reading is his; he may have been wrong,
   and Wegner holds that he did not mean "virgin" at all.
-- Wegner's "the עַלְמָה of Isaiah 7:14 is not a virgin", and the predictive
+- Wegner's "the עַלְמָה [virgin or young woman] of Isaiah 7:14 is not a virgin", and the predictive
   reading. A reader who takes the sign as fulfilled twice, in Ahaz's day and in
   Christ, holds both.
 - Brown's etiology of Genesis 3:15, and the protoevangelium. A fuller sense can
@@ -185,7 +185,8 @@ abbrev micahTeachesFatherlessBirth : Statement := .teaches mic5_3 fatherlessBirt
 abbrev magisteriumSettles : Statement :=
   .holds (rl .settles (cn .magisterium) (cn .controversiesOfReligion))
 
-/-- The range of עַלְמָה at Isaiah 7:14 does not exclude the sense "virgin". -/
+/-- The range of עַלְמָה ("virgin" or "young woman") at Isaiah 7:14 does not exclude the sense
+"virgin". -/
 abbrev almahAdmitsVirgin : Statement :=
   .holds (rl .consistentWith (wd .almah isa7_14) (cn .virginity))
 
@@ -240,11 +241,11 @@ them to another claim, and the ones about the words, the woman and the
 birth. -/
 theorem coverage_now : HasMeanings.coverage (α := Claim) = (25, 95) := by decide
 
-/-- **The words read two ways**: עַלְמָה at Isaiah 7:14, as "virgin" and as "young
-woman of marriageable age", and παρθένος in the Septuagint's Greek, the same two
-ways. Each pair is listed in both orders. Two senses of a word are not a join
-in themselves (see the module docstring); the claims about παρθένος are joined
-only because Wegner's adds "and not 'virgin'". -/
+/-- **The words read two ways**: עַלְמָה ("virgin" or "young woman") at Isaiah 7:14, as "virgin" and
+as "young woman of marriageable age", and παρθένος ("virgin" or "young woman") in the Septuagint's
+Greek, the same two ways. Each pair is listed in both orders. Two senses of a word are not a join
+in themselves (see the module docstring); the claims about παρθένος ("virgin" or "young woman") are
+joined only because Wegner's adds "and not 'virgin'". -/
 theorem contested_now :
     HasMeanings.contested (α := Claim) =
       [ (.almah, .passage isa7_14, .virgin, .youngWoman)
@@ -256,12 +257,12 @@ theorem contested_now :
 /-- **The born of a virgin joins**: each pair of claims whose meanings exclude or
 entail one another, listed, and proved to be exactly what the meanings contain.
 
-- That παρθένος means "virgin" in the Septuagint's Greek is excluded by Wegner's
-  claim that it meant "young woman" and did not yet mean "virgin".
+- That παρθένος ("virgin" or "young woman") means "virgin" in the Septuagint's Greek is excluded by
+  Wegner's claim that it meant "young woman" and did not yet mean "virgin".
 - That the Greek Pentateuch's laws use the word in the sense "virgin" is excluded
   by the same claim of Wegner's, and entails that the word means "virgin" in the
   Septuagint's Greek. So does the status reading of Genesis 34:3, that the Greek
-  names Dinah a παρθένος in that sense.
+  names Dinah a παρθένος ("virgin" or "young woman") in that sense.
 - Miller's thesis, that the word did not by itself connote virginity in the
   Septuagint, is excluded by every claim that gives it the sense "virgin" there,
   in its Greek or in a passage of it, and entailed by Wegner's. His premise that
@@ -271,14 +272,15 @@ entail one another, listed, and proved to be exactly what the meanings contain.
   proves nothing".
 - That magisterial teaching settles the question is excluded by Westminster's
   supreme judge.
-- That עַלְמָה denotes a virgin entails that its range does not exclude it.
+- That עַלְמָה ("virgin" or "young woman") denotes a virgin entails that its range does not exclude
+  it.
 
 Disputes hold them too, so every named reading a dispute is checked against
 respects them: a scriptural reader's world holds that Micah's silence indicates
 a fatherless birth, a critic's or Wegner's that it proves nothing; and, none of
 these worlds being Rome's, each denies that magisterial teaching settles the
-question. Each also settles παρθένος, since it cannot hold both claims about
-the word: the scriptural readers' worlds take Rico and Gentry's, Wegner's and
+question. Each also settles παρθένος ("virgin" or "young woman"), since it cannot hold both claims
+about the word: the scriptural readers' worlds take Rico and Gentry's, Wegner's and
 the critic's take Wegner's, and deny the laws' sense, and the status reading's,
 with it. The scriptural reading itself rests on neither. -/
 instance joins : HasJoins Claim where

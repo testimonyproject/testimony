@@ -52,7 +52,7 @@ Bible. Unverified for the same reason as `ubs5`. -/
   , siglum := some "BHS" }
 
 /-- Dunn's collected essays on the New Perspective. The source for the rival
-reading of ἔργα νόμου as covenant boundary markers. -/
+reading of ἔργα νόμου ("works of the law") as covenant boundary markers. -/
 @[bib_entry] def dunnNewPerspective : BibEntry := .book
   { core :=
       { key := "dunn-new-perspective-2005"
@@ -106,7 +106,7 @@ through Tanner's edition. -/
   , editionUsed := some "tanner-decrees-1990" }
 
 /-- Marshall's NIGTC commentary on Luke — a commentary on the Greek text, which
-is what an argument about the sense of σῴζω needs. -/
+is what an argument about the sense of σῴζω ("save" or "healed") needs. -/
 @[bib_entry] def marshallLuke : BibEntry := .book
   { core :=
       { key := "marshall-luke-1978"
@@ -160,7 +160,7 @@ and transcribed by the Christian Classics Ethereal Library. -/
   , volume := some "1" }
 
 /-- Westcott's commentary on John, for his note on "believeth not" at 3:36: the
-Greek is "disobeyeth" (ὁ ἀπειθῶν), and "Disbelief is regarded in its activity"
+Greek is "disobeyeth" (ὁ ἀπειθῶν, "rejects"), and "Disbelief is regarded in its activity"
 (p. 62). The edition read is the 1892 printing scanned at the Internet Archive,
 which Open Library records as OL7171440M. It carries no ISBN. -/
 @[bib_entry] def westcottJohn : BibEntry := .book
@@ -276,8 +276,9 @@ through the book's search; cited as a whole. -/
   , series := some "Evangelical Theological Society Monograph Series" }
 
 /-- Swete's edition of the Septuagint, volume 2, for the Greek of Sirach 18:22:
-"μὴ ἐμποδισθῇς τοῦ ἀποδοῦναι εὐχὴν εὐκαίρως, καὶ μὴ μείνῃς ἕως θανάτου
-δικαιωθῆναι". Read in the Internet Archive's scan, whose record gives the
+"μὴ ἐμποδισθῇς τοῦ ἀποδοῦναι εὐχὴν εὐκαίρως [let nothing hinder you from paying
+a vow in due time], καὶ μὴ μείνῃς ἕως θανάτου δικαιωθῆναι [and do not wait until
+death to be justified]". Read in the Internet Archive's scan, whose record gives the
 publisher as Cambridge University Press and the set's dates as 1896–1905; no
 year is given for the volume, because the record does not give one. -/
 @[bib_entry] def sweteSeptuagint : BibEntry := .book
@@ -480,7 +481,7 @@ quotes Moberly (VT 38, 1988, 320–21) and Wenham. Read in the ETS PDF. -/
 /-- Hahn on Galatians 3:15–18 and the binding of Isaac. The covenant Paul means
 is "the Abrahamic covenant in its final form, as ratified most solemnly by God's
 oath after the Aqedah (Gen 22:15-18)" (p. 92), and "the binding of Isaac ...
-merits from God a covenant oath to bless the ἔθνη through Abraham's 'seed'" (p.
+merits from God a covenant oath to bless the ἔθνη [the nations] through Abraham's 'seed'" (p.
 93). He calls the oath "unilaterally" sworn (p. 95). Read in the scan on the
 author's site, pp. 79 and 88–100; no DOI found. -/
 @[bib_entry] def hahnCovenantOathAqedah : BibEntry := .article
@@ -708,9 +709,9 @@ year and place are not. -/
   , place := some "Goleta, CA" }
 
 /-- Rico and Gentry's linguistic monograph on Isaiah 7:14 — the hardest
-sustained case that עַלְמָה denotes a young virgin and that παρθένος means
-virgin throughout Semitic Koine. Open Library records the three 2020 Wipf &
-Stock ISBNs without their bindings; the book's copyright page and the
+sustained case that עַלְמָה ("virgin" or "young woman") denotes a young virgin and that παρθένος
+("virgin" or "young woman") means virgin throughout Semitic Koine. Open Library records the three
+2020 Wipf & Stock ISBNs without their bindings; the book's copyright page and the
 publisher's page tie 9781498230162 to the paperback, 9781498230179 to the
 hardcover and 9781498230186 to the ebook. Pages are cited from the paperback,
 read in its Google Books preview, so that is the identifier recorded. -/
@@ -731,7 +732,7 @@ read in its Google Books preview, so that is the identifier recorded. -/
   , place := some "Eugene, OR" }
 
 /-- Walton's study of the name and sign of Isaiah 7:14. Cited for the rival
-reading of the Septuagint: παρθένος had a broader sense before the New
+reading of the Septuagint: παρθένος ("virgin" or "young woman") had a broader sense before the New
 Testament, "Therefore the LXX is not necessarily betraying an interpretation as
 virgin by choosing this term" (293). Read from the society's scan of the
 printed pages; JETS registers no DOIs, so the identifier is that scan. -/
@@ -751,11 +752,11 @@ printed pages; JETS registers no DOIs, so the identifier is that scan. -/
   , pages := some (289, 306) }
 
 /-- Bratcher's study of Isaiah 7:14 for translators. Cited on both sides of the
-Septuagint dispute, as he stands: παρθένος "definitely means 'virgin' in the
-LXX", Genesis 34:3 being an inexplicable exception (113); the translator meant a
+Septuagint dispute, as he stands: παρθένος ("virgin" or "young woman") "definitely means 'virgin' in
+the LXX", Genesis 34:3 being an inexplicable exception (113); the translator meant a
 young woman "at that time virgin" who would conceive "in the normal way" (115);
-and עַלְמָה is "neutral, so far as virginity is concerned" (105), so the Greek
-does not fix the Hebrew. Read in full from the United Bible Societies' copy;
+and עַלְמָה ("virgin" or "young woman") is "neutral, so far as virginity is concerned" (105), so the
+Greek does not fix the Hebrew. Read in full from the United Bible Societies' copy;
 verified at Crossref, DOI 10.1177/000608445800900301. -/
 @[bib_entry] def bratcherStudyOfIsaiah : BibEntry := .article
   { core :=
@@ -774,9 +775,9 @@ verified at Crossref, DOI 10.1177/000608445800900301. -/
 
 /-- Meade's comment on his own post on the ancient versions of Isaiah 7:14: one of
 two readers found who grant Rico and Gentry's evidence — Trypho's objection and
-the revisers' νεᾶνις — and deny their conclusion about the Septuagint's
-παρθένος; Davidson is the other. An informal comment, which revises his own
-earlier view in the same thread; cited for what it says, and the citations of it
+the revisers' νεᾶνις ("young woman" or "girl") — and deny their conclusion about the Septuagint's
+παρθένος ("virgin" or "young woman"); Davidson is the other. An informal comment, which revises his
+own earlier view in the same thread; cited for what it says, and the citations of it
 say what it is. Read on the blog itself, where the comment is signed John Meade
 and dated 9 January 2013, 8:39 pm. -/
 @[bib_entry] def meadeAncientVersionsComment : BibEntry := .webPage
@@ -793,8 +794,8 @@ and dated 9 January 2013, 8:39 pm. -/
 
 /-- The standard lexicon of ancient Greek (LSJ), ninth edition. Cited for what
 the Septuagint's law calls τὰ παρθένια: "signs of virginity, LxxDe.22.15"; and
-for παρθένος "of unmarried women who are not virgins" in classical Greek (1339).
-Read in the 1940 printing; the 1968 Supplement (116) withdraws *Iliad* 2.514 from
+for παρθένος ("virgin" or "young woman") "of unmarried women who are not virgins" in classical Greek
+(1339). Read in the 1940 printing; the 1968 Supplement (116) withdraws *Iliad* 2.514 from
 that sense. Verified at Open Library, ISBN 0198642148: the 1968 reprint with the
 Supplement, whose lexicon pages are the 1940 ones. -/
 @[bib_entry] def liddellScottJones : BibEntry := .book
@@ -812,9 +813,28 @@ Supplement, whose lexicon pages are the 1940 ones. -/
   , place := some "Oxford"
   , edition := some "9th" }
 
+/-- The *Middle Liddell*: Liddell and Scott's abridgement of their lexicon for students,
+founded on its seventh edition. Cited for the plain English of a word where it is shorter
+than the great lexicon's: νεᾶνις, "a young woman, girl, maiden"; σπέρμα, "seed,
+offspring"; the husband of a woman's maidenhood, her "first husband"; and παῖς, "a
+child". Read in the Perseus Project's digitization, at Logeion, accessed 27 November 2026.
+The 1889 printing carries no ISBN; Open Library lists it under Clarendon Press. -/
+@[bib_entry] def middleLiddell : BibEntry := .book
+  { core :=
+      { key := "liddell-scott-intermediate-lexicon-1889"
+      , role := .text
+      , contributors := { authors := [.person "Henry George" "Liddell", .person "Robert" "Scott"] }
+      , title := "An Intermediate Greek-English Lexicon"
+      , subtitle :=
+          some "Founded upon the Seventh Edition of Liddell and Scott's Greek-English Lexicon"
+      , year := some { value := 1889 }
+      , identifiers := [ .url "https://logeion.uchicago.edu/" (some "2026-11-27") ] }
+  , publisher := "Clarendon Press"
+  , place := some "Oxford" }
+
 /-- Muraoka's lexicon of the Septuagint. Cited for τὰ παρθένια, "tokens of
-virginity: De 22.14, 15, 17, 20", and for παρθένος, glossed "young woman", with
-the Septuagint's uses sorted under it: "not yet touched by a man" (Genesis
+virginity: De 22.14, 15, 17, 20", and for παρθένος ("virgin" or "young woman"), glossed "young
+woman", with the Septuagint's uses sorted under it: "not yet touched by a man" (Genesis
 24:16), "so called just after having been raped" (Genesis 34:3), "virginity
 stressed (?)" (Deuteronomy 22:23, 28) (535). Verified at Open Library, ISBN
 9789042922488 (Peeters, 2009). -/
@@ -830,8 +850,8 @@ stressed (?)" (Deuteronomy 22:23, 28) (535). Verified at Open Library, ISBN
   , place := some "Louvain" }
 
 /-- The Septuagint lexicon of Lust, Eynikel and Hauspie (LEH), revised edition.
-Cited for παρθένος, glossed "virgin" first, then "young woman" and "a girl of
-marriage-able age", and for παρθένια, "signs pertaining to virginity,
+Cited for παρθένος ("virgin" or "young woman"), glossed "virgin" first, then "young woman" and "a
+girl of marriage-able age", and for παρθένια, "signs pertaining to virginity,
 virginity", s.vv. Read in an electronic transcription whose title page gives the
 Deutsche Bibelgesellschaft, 2003, and ISBN 3-438-05124-9; its print pages were
 not seen. Open Library resolves the ISBN, but names the American Bible Society,
@@ -923,7 +943,7 @@ images, so it is cited whole. Verified at Open Library, ISBN 9780944344958
 7:14. Its agreement with the Septuagint there "prevents us from drawing any
 certain conclusion", and "any individual other than the translators/correctors
 can be tempted to tamper with this verse" (104–5); yet "a loyal translator would
-have no difficulty finding the cognate of עלמה" (78). Read in Harvard's
+have no difficulty finding the cognate of עלמה [virgin or young woman]" (78). Read in Harvard's
 repository, whose record gives the degree, the date and the persistent
 address. -/
 @[bib_entry] def chenPeshittaIsaiah : BibEntry := .thesis
@@ -938,9 +958,9 @@ address. -/
   , institution := "Harvard University" }
 
 /-- Davidson's article "Immanuel" in Hastings's dictionary. Cited for the older
-answer to Rico and Gentry's evidence: the revisers wrote νεᾶνις "possibly to
-evade the technical sense put on the word by the Christians", παρθένος having
-been "used generally for 'girl' or 'young woman'" (456). Bratcher quotes the
+answer to Rico and Gentry's evidence: the revisers wrote νεᾶνις ("young woman" or "girl") "possibly
+to evade the technical sense put on the word by the Christians", παρθένος ("virgin" or "young
+woman") having been "used generally for 'girl' or 'young woman'" (456). Bratcher quotes the
 second clause (114). Read from the University of California's copy at the
 Internet Archive: its copy of the volume is the third impression, of 1902, and
 its title page gives the copyright as 1899. Published jointly with T. & T.
@@ -1011,7 +1031,7 @@ JETS registers no DOIs; the identifier is the publisher's own open PDF. -/
 "The evidence of the Greek translators makes it beyond question that the
 translator of Genesis 3:15 meant to convey that an individual was promised"
 (145), with the parallels in the Greek of 1 Samuel 1:11 and 2 Samuel 7:12–14,
-where a masculine pronoun follows the neuter σπέρμα when one person is meant
+where a masculine pronoun follows the neuter σπέρμα ("seed" or "offspring") when one person is meant
 (144). Whether that individual is the Messiah he leaves "outside the scope of a
 mere syntactical note" (147). Printed under the name Jack Collins. Read in full
 from the publisher's PDF; DOI verified at Crossref. -/
@@ -1068,7 +1088,7 @@ edition, as scanned by the Internet Archive. -/
   , volume := some "1" }
 
 /-- Lewis's history of the reading of "the woman's seed". Cited for the idiom:
-"it is unusual (though not unique)" to give זֶרַע a feminine possessive, and
+"it is unusual (though not unique)" to give זֶרַע ("seed" or "offspring") a feminine possessive, and
 Genesis does so of Hagar's descendants (16:10) and Rebekah's (24:60), each with
 a father named (299–300); and for the conclusion: "To say that the passage is messianic
 does not necessarily imply that it is virgin-birth messianic" (319). Read from
@@ -1471,8 +1491,8 @@ John, Jesus — and Immanuel (Isa 7:14–17) itself (270 n. 6). -/
 concluded)", and its verdict on a near-term fulfilment belongs to the second
 part, which is not cited here. What this part establishes: the imposed sign is
 given in the plural, in contrast with the singular of the sign offered in 7:11
-(112); הָרָה is a verbal adjective with present reference, not a participle
-(115–117); the "behold" formula is the one used to announce the births to Hagar
+(112); הָרָה ("with child" or "pregnant") is a verbal adjective with present reference, not a
+participle (115–117); the "behold" formula is the one used to announce the births to Hagar
 and to Samson's mother (113–114); and Ugaritic *ǵlmt* is never used of a married
 woman (120–124). Read from the Galaxie text, which preserves the journal's
 pagination. -/
@@ -2566,8 +2586,8 @@ doubtful". Read at New Advent; cited by section. -/
 /-! ### Sola fide: the wider debate
 
 The positions `SolaFide` did not yet cite from their own sources (#27): the
-origin of the New Perspective, both sides of the πίστις Χριστοῦ dispute, the
-apocalyptic reading, the New Perspective's critics and a reply to them, the
+origin of the New Perspective, both sides of the πίστις Χριστοῦ ("faith in Christ" or "faithfulness
+of Christ") dispute, the apocalyptic reading, the New Perspective's critics and a reply to them, the
 Finnish reading of Luther, and Catholic exegesis alongside the conciliar text.
 Each identifier was resolved at edition level in Open Library, or in Crossref
 for a DOI. -/
@@ -2590,9 +2610,9 @@ Wright, who build on it. -/
   , place := some "Philadelphia" }
 
 /-- Hays on the narrative substructure of Galatians: the case for reading
-πίστις Χριστοῦ as a subjective genitive, "the faithfulness of Christ". On that
-reading Galatians 2:16 and Romans 3:22 name Christ's faithfulness as the ground
-of justification, not the believer's faith, and the Pauline strand reaches its
+πίστις Χριστοῦ ("faith in Christ" or "faithfulness of Christ") as a subjective genitive, "the
+faithfulness of Christ". On that reading Galatians 2:16 and Romans 3:22 name Christ's faithfulness
+as the ground of justification, not the believer's faith, and the Pauline strand reaches its
 conclusion by a different route. -/
 @[bib_entry] def haysFaithOfJesusChrist : BibEntry := .book
   { core :=
@@ -2610,9 +2630,9 @@ conclusion by a different route. -/
   , series := some "The Biblical Resource Series" }
 
 /-- Dunn's reply to Hays, the standard statement of the objective genitive:
-πίστις Χριστοῦ is "faith in Christ". Cited so that the traditional reading of
-the phrase is stated by a New Perspective scholar, which shows the genitive
-dispute cuts across the Old/New Perspective line. -/
+πίστις Χριστοῦ ("faith in Christ" or "faithfulness of Christ") is "faith in Christ". Cited so that
+the traditional reading of the phrase is stated by a New Perspective scholar, which shows the
+genitive dispute cuts across the Old/New Perspective line. -/
 @[bib_entry] def dunnOnceMorePistisChristou : BibEntry := .inCollection
   { core :=
       { key := "dunn-once-more-pistis-christou-1991"
@@ -2629,8 +2649,8 @@ dispute cuts across the Old/New Perspective line. -/
   , publisher := "Scholars Press"
   , pages := some (730, 744) }
 
-/-- Matlock's lexical-semantic critique of the πίστις Χριστοῦ debate. Its
-argument is that the grammar of the genitive cannot settle the question, which
+/-- Matlock's lexical-semantic critique of the πίστις Χριστοῦ ("faith in Christ" or "faithfulness of
+Christ") debate. Its argument is that the grammar of the genitive cannot settle the question, which
 counts against letting either reading bear weight on grammar alone. -/
 @[bib_entry] def matlockDetheologizing : BibEntry := .article
   { core :=
@@ -2798,7 +2818,7 @@ to the 1972 edition. -/
   , series := some "Society for New Testament Studies Monograph Series"
   , seriesNumber := some "20" }
 
-/-- The standard lexicon of New Testament Greek (BDAG). Cited for δικαιόω, whose
+/-- The standard lexicon of New Testament Greek (BDAG). Cited for δικαιόω ("justify"), whose
 senses include "render a favorable verdict, vindicate". Verified at Open
 Library, ISBN 9780226039336 (3rd ed., University of Chicago Press, 2000). -/
 @[bib_entry] def bdag : BibEntry := .book
@@ -2818,12 +2838,12 @@ Library, ISBN 9780226039336 (3rd ed., University of Chicago Press, 2000). -/
   , edition := some "3rd" }
 
 /-- Thayer's lexicon, his translation and enlargement of Grimm's edition of Wilke's *Clavis
-Novi Testamenti*. Cited for πιστεύω, sense 1.b.γ (p. 511): "the phrase πιστεύειν εἰς τὸν
-Ἰησοῦν, εἰς τ. υἱὸν τοῦ θεοῦ, etc., is very common; prop. to have a faith directed unto,
-believing or in faith to give one's self up to, Jesus", listing John 3:16, 18 and 6:29 under
-the one sense. Read in the American Book Company's corrected edition scanned at the Internet
-Archive, whose title page is undated and gives copyright 1886 and 1889 to Harper & Brothers.
-It carries no ISBN; the Hendrickson reprint (ISBN 9781565632097) has not been read. -/
+Novi Testamenti*. Cited for πιστεύω ("believe"), sense 1.b.γ (p. 511): "the phrase πιστεύειν εἰς τὸν
+Ἰησοῦν [to believe in Jesus], εἰς τ. υἱὸν τοῦ θεοῦ [in the Son of God], etc., is very common; prop.
+to have a faith directed unto, believing or in faith to give one's self up to, Jesus", listing John
+3:16, 18 and 6:29 under the one sense. Read in the American Book Company's corrected edition scanned
+at the Internet Archive, whose title page is undated and gives copyright 1886 and 1889 to Harper &
+Brothers. It carries no ISBN; the Hendrickson reprint (ISBN 9781565632097) has not been read. -/
 @[bib_entry] def thayerLexicon : BibEntry := .book
   { core :=
       { key := "thayer-lexicon-1889"
@@ -2840,11 +2860,11 @@ It carries no ISBN; the Hendrickson reprint (ISBN 9781565632097) has not been re
   , edition := some "corrected" }
 
 /-- Moulton's *Prolegomena*, the first volume of his grammar of New Testament Greek. Cited for
-πιστεύειν εἰς (pp. 67–68): "The really important matter is the recognition of a clear
-distinction between believe on or in and believe with the dative simply", with a count of the
-constructions in which John's Gospel and First John have 37 of the New Testament's 45 uses of
-εἰς. Read in the second edition, with corrections and additions, scanned at the Internet
-Archive; it carries no ISBN. -/
+πιστεύειν εἰς ("believe in" or "believe into") (pp. 67–68): "The really important matter is the
+recognition of a clear distinction between believe on or in and believe with the dative simply",
+with a count of the constructions in which John's Gospel and First John have 37 of the New
+Testament's 45 uses of εἰς ("into"). Read in the second edition, with corrections and additions,
+scanned at the Internet Archive; it carries no ISBN. -/
 @[bib_entry] def moultonProlegomena : BibEntry := .book
   { core :=
       { key := "moulton-prolegomena-1906"
@@ -2862,7 +2882,7 @@ Archive; it carries no ISBN. -/
 
 /-- Morris's lexical study of the apostolic vocabulary of salvation — redeem,
 propitiate, reconcile, justify — against its Old Testament background. Cited for
-the forensic sense of δικαιόω and its antithesis with condemnation. Verified at
+the forensic sense of δικαιόω ("justify") and its antithesis with condemnation. Verified at
 Open Library, ISBN 9780802815125 (3rd ed., Eerdmans, 1965). -/
 @[bib_entry] def morrisApostolicPreaching : BibEntry := .book
   { core :=
@@ -2888,7 +2908,7 @@ Open Library, ISBN 9780802815125 (3rd ed., Eerdmans, 1965). -/
   , place := some "Grand Rapids"
   , series := some "New International Commentary on the New Testament" }
 
-/-- Irons's lexical examination of δικαιοσύνη and its Hebrew counterparts, against
+/-- Irons's lexical examination of δικαιοσύνη ("righteousness") and its Hebrew counterparts, against
 the covenant-faithfulness reading. Verified at Open Library, ISBN 9783161535185
 (Mohr Siebeck, 2015; WUNT II/386). -/
 @[bib_entry] def ironsRighteousnessOfGod : BibEntry := .book
@@ -2919,7 +2939,7 @@ ISBN 9780802862655 (Eerdmans, 2009). -/
   , publisher := "Eerdmans"
   , place := some "Grand Rapids" }
 
-/-- VanLandingham's argument that δικαιόω in Paul is best rendered "make
+/-- VanLandingham's argument that δικαιόω ("justify") in Paul is best rendered "make
 righteous": the principal modern lexical dissent from the forensic sense.
 Verified at Open Library, ISBN 9781565633988 (Hendrickson, 2006). -/
 @[bib_entry] def vanLandinghamJudgment : BibEntry := .book
@@ -3579,8 +3599,8 @@ He reads the verse of the mind and pleasure, not of a person. -/
   , editionUsed := some "yonge-works-of-philo-1-1854" }
 
 /-- Irenaeus, *Against Heresies* III.21: the defence of the Septuagint's
-παρθένος against the renderings of Theodotion and Aquila, and the argument that
-a young woman's ordinary conception would be no sign. -/
+παρθένος ("virgin" or "young woman") against the renderings of Theodotion and Aquila, and the
+argument that a young woman's ordinary conception would be no sign. -/
 @[bib_entry] def irenaeusAgainstHeresies : BibEntry := .ancientWork
   { core :=
       { key := "irenaeus-against-heresies-180"
@@ -3603,8 +3623,8 @@ the question which child of Ahaz's day was called Immanuel. -/
   , composed := some { value := 248, approximate := true }
   , editionUsed := some "roberts-ante-nicene-fathers-4-1885" }
 
-/-- Jerome, *Against Jovinianus* I.32: the lexical argument that עַלְמָה is a
-"hidden" virgin, from Genesis 24:43, with the challenge to produce a passage
+/-- Jerome, *Against Jovinianus* I.32: the lexical argument that עַלְמָה ("virgin" or "young woman")
+is a "hidden" virgin, from Genesis 24:43, with the challenge to produce a passage
 where it is used of a married woman. -/
 @[bib_entry] def jeromeAgainstJovinianus : BibEntry := .ancientWork
   { core :=
@@ -3620,8 +3640,8 @@ where it is used of a married woman. -/
 
 The fathers below were read for the argument from the sign, for the reading of
 the woman as a virgin whatever the word, and for what they say of the Seventy.
-None asks whether παρθένος could itself mean a girl who is not a virgin. The
-English series are cited in the text CCEL publishes; the Latin and Greek
+None asks whether παρθένος ("virgin" or "young woman") could itself mean a girl who is not a virgin.
+The English series are cited in the text CCEL publishes; the Latin and Greek
 commentaries, from the page images of Migne's volumes at the Internet Archive. -/
 
 /-- *The Ante-Nicene Fathers*, volume 3: the edition through which Tertullian's
@@ -3831,8 +3851,8 @@ life? By no means." No date of composition is given: none was verified. -/
   , editionUsed := some "schaff-nicene-post-nicene-fathers-1-14" }
 
 /-- Jerome, *Commentary on Isaiah*, Book III, on 7:14: the sign "novum debet
-esse atque mirabile"; עַלְמָה "verbum ambiguum", rendered "adolescentula" by every
-version but the Septuagint; and Deuteronomy 22's "puella" understood of a
+esse atque mirabile"; עַלְמָה ("virgin" or "young woman") "verbum ambiguum", rendered
+"adolescentula" by every version but the Septuagint; and Deuteronomy 22's "puella" understood of a
 virgin. -/
 @[bib_entry] def jeromeCommentaryIsaiah : BibEntry := .ancientWork
   { core :=
@@ -4119,7 +4139,7 @@ Cited because it grants the Eastern grounds almost word for word, the Father
 "the sole Trinitarian Cause (Aitia) or principle (principium) of the Son and the
 Holy Spirit", and still confesses the Father, "with the Son, the single
 principle from which the Spirit proceeds" (quoting the Catechism, 248), by
-distinguishing the Greek ἐκπόρευσις from the Latin *processio*. Read on the
+distinguishing the Greek ἐκπόρευσις ("procession") from the Latin *processio*. Read on the
 EWTN library's page. -/
 @[bib_entry] def pcpcuGreekAndLatinTraditions : BibEntry := .webPage
   { core :=
@@ -4210,7 +4230,7 @@ transcription; the scan is the University of Toronto's copy. -/
   , volume := some "3" }
 
 /-- Robertson's *Word Pictures*, volume 4, on the epistles of Paul. Cited for his
-note on Ephesians 2:8, that "this" (καὶ τοῦτο), being neuter, "refers not to
+note on Ephesians 2:8, that "this" (καὶ τοῦτο, "and this"), being neuter, "refers not to
 [pistis] (feminine) or to [charis] (feminine also), but to the act of being
 saved by grace conditioned on faith on our part". Read in CCEL's text, which
 gives no print pagination; cited by verse. The identifier is Broadman's reprint
@@ -4233,7 +4253,7 @@ of the volume. -/
 (1854). Cited for his note on Ephesians 2:9, pp. 228–229: "Many persons restrict
 the word gift to faith alone. But Paul is only repeating in other words the
 former sentiment. His meaning is, not that faith is the gift of God, but that
-salvation is given to us by God." The footnote on καὶ τοῦτο at pp. 227–228 is
+salvation is given to us by God." The footnote on καὶ τοῦτο ("and this") at pp. 227–228 is
 Pringle's, quoting Bloomfield, and is not cited as Calvin's. -/
 @[bib_entry] def calvinGalatiansEphesians : BibEntry := .book
   { core :=
@@ -5071,7 +5091,7 @@ chapter 11; the volume's date was not checked, so none is given. -/
   , publisher := "Christian Classics Ethereal Library" }
 
 /-- Charles Hodge on Romans, in the revised edition of 1864, for 5:19 (pp. 270–74):
-καθίστημι "never, in the New Testament, means to make, in the sense of
+καθίστημι ("constitute" or "make") "never, in the New Testament, means to make, in the sense of
 effecting, or causing a person or thing, to be in its character or nature other
 than it was before" (p. 271), so the many are "constituted legally righteous"
 (p. 272). The title page reads "New edition, revised, and in great measure
@@ -5847,8 +5867,8 @@ scholars date it (Beckwith, *Journal of Ecclesiastical History* 58, 2007). -/
 
 /-- Basil of Caesarea's homily *On Humility*, for §3: one who knows himself
 lacking true righteousness, justified "by faith alone, the faith in Christ"
-(πίστει δὲ μόνῃ τῇ εἰς Χριστὸν δεδικαιωμένον). Read in Migne's Greek. Likely
-preached c. 375, while Basil was bishop (Ford, *Themelios* 44.2). -/
+(πίστει δὲ μόνῃ τῇ εἰς Χριστὸν δεδικαιωμένον, "justified by faith alone, the faith in Christ"). Read
+in Migne's Greek. Likely preached c. 375, while Basil was bishop (Ford, *Themelios* 44.2). -/
 @[bib_entry] def basilHumility : BibEntry := .ancientWork
   { core :=
       { key := "basil-humility-375"
@@ -6014,7 +6034,7 @@ numbered there. -/
 
 /-- Lightfoot's commentary on Galatians, in the tenth edition, published the year
 after his death. On 5:6: "ἐνεργουμένη] 'working'; the middle voice according to
-the general usage of St Paul … ἐνεργεῖσθαι is never passive in St Paul … and
+the general usage of St Paul … ἐνεργεῖσθαι [to be effective] is never passive in St Paul … and
 therefore this passage does not express the doctrine of 'fides caritate
 formata'" (pp. 204–205). Read in the Internet Archive's scan, whose catalogue
 record gives the tenth edition, Macmillan, London, 1890. -/
@@ -6032,11 +6052,11 @@ record gives the tenth edition, Macmillan, London, 1890. -/
   , edition := some "10th edition" }
 
 /-- Burton's commentary on Galatians in the International Critical Commentary.
-On 5:6: "Ἐνεργουμένη is to be taken, in accordance with the regular usage of
-ἐνεργεῖσθαι in Paul, as middle, not passive", and "That the preposition διά
-denotes not antecedent cause but mediate agency … is made practically certain
+On 5:6: "Ἐνεργουμένη [working or made operative] is to be taken, in accordance with the regular
+usage of ἐνεργεῖσθαι [to be effective] in Paul, as middle, not passive", and "That the preposition
+διά [through] denotes not antecedent cause but mediate agency … is made practically certain
 not on grammatical grounds, but because of the nature of the two attitudes
-expressed by πίστις and ἀγάπη" (p. 281). Read in the Internet Archive's scan,
+expressed by πίστις [faith] and ἀγάπη [love]" (p. 281). Read in the Internet Archive's scan,
 whose catalogue record gives T. & T. Clark, Edinburgh, 1921. -/
 @[bib_entry] def burtonGalatians : BibEntry := .book
   { core :=
@@ -6051,9 +6071,9 @@ whose catalogue record gives T. & T. Clark, Edinburgh, 1921. -/
   , series := some "International Critical Commentary" }
 
 /-- J. Armitage Robinson's commentary on Ephesians, with its detached note "On
-ἐνεργεῖν and its cognates" (pp. 241–247). Against Lightfoot's "never passive in
-St Paul" he holds that ἐνεργεῖσθαι in Paul is passive, "is made operative", "the
-agent implied being God ὁ ἐνεργῶν", and of Galatians 5:6: "the sense appears to
+ἐνεργεῖν [to work] and its cognates" (pp. 241–247). Against Lightfoot's "never passive in
+St Paul" he holds that ἐνεργεῖσθαι ("to be effective") in Paul is passive, "is made operative", "the
+agent implied being God ὁ ἐνεργῶν [the one who works]", and of Galatians 5:6: "the sense appears to
 be: 'faith is made operative through love', without which it fails of its
 action" (p. 246). Read in the Internet Archive's scan of the first edition, whose
 title page gives Macmillan, London, 1903. -/
