@@ -1,0 +1,15 @@
+# PR #418: what forgiveness left unpaid, 203-1520, as a chapter of sola fide.
+# The chapter adds fifteen sola fide claims (penance, purgatory, the treasury
+# of indulgences, and Luther's reading of Matthew 4:17) and two disputes of its own.
+
+[[accept]]
+benchmark = "satisfied_by: the Pauline case"
+metric = "time"
+up_to = 0.25
+reason = "The sola fide claim type is fifteen claims larger, so each valuation over it costs more to reduce; the Pauline case itself is unchanged. CI measured +13.2%"
+
+[[accept]]
+benchmark = "satisfied_by: Trent grants the subjective genitive"
+metric = "time"
+up_to = 0.25
+reason = "The sola fide claim type is fifteen claims larger, so each valuation over it costs more to reduce; Trent's case itself is unchanged. CI measured +14.4%"
