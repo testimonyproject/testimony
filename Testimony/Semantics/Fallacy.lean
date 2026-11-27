@@ -35,8 +35,12 @@ between two places where its premises only report the word's sense
 (`Move.needs`). For each such word the move stands in one of three ways
 (`Sameness`):
 
-- **granted** — a premise says the word keeps its sense, so the move is
-  answerable for that premise and nothing is hidden;
+- **granted** — a premise says the word keeps its sense, and is cited to a reader
+  who argues it at both places, so the move is answerable for that premise and
+  nothing is hidden;
+- **assumed** — a premise says it, and no reader the premise is cited to argues it
+  at both places. The move is *conditional* on the sameness, as it is on one left
+  unstated ("Whether a stated sameness is argued", below);
 - **read apart** — the move's own statements give the word one sense at one
   place and a different sense at the other, and the inference still needs them
   the same. That is an equivocation on the move's own terms;
@@ -241,8 +245,14 @@ end Statement
 
 /-- **How a move stands to one sameness of sense it needs.** -/
 inductive Sameness
-  /-- A premise says the word keeps its sense between the two places. -/
+  /-- A premise says the word keeps its sense between the two places, and is cited
+  to a reader who argues it at both. -/
   | granted
+  /-- A premise says the word keeps its sense between the two places, and no reader
+  it is cited to argues it at both: it is cited to no one, to Scripture alone, to the
+  library's own proposal, or to a reader of only one of the places. The move states
+  the sameness, and holds on it as on one left unstated. -/
+  | assumed
   /-- The move's own statements give the word these senses at the first place
   and those at the second, with none in common, and the move still needs the
   word the same at both. -/
@@ -279,6 +289,14 @@ def establishesSameness (m : Move) (w : Lexeme) (a b : Scope) : Bool :=
   (m.samenessesGranted w).any fun (a', b') =>
     (a.within a' && b.within b') || (a.within b' && b.within a')
 
+/-- Whether a premise that states the word keeps its sense between two places
+covering `a` and `b` is cited to a reader who argues it at both: a pair the move
+does not list among its unargued samenesses (`Move.unargued`). -/
+def arguedSameness (m : Move) (w : Lexeme) (a b : Scope) : Bool :=
+  (m.samenessesGranted w).any fun (a', b') =>
+    ((a.within a' && b.within b') || (a.within b' && b.within a')) &&
+      !(m.unargued.contains (w, a', b') || m.unargued.contains (w, b', a'))
+
 /-- The places a premise grants the word's sameness between that only overlap
 the two the move needs, without covering them: the premise speaks of part of
 what the move uses, as one about 3:18a does of a move that uses all of 3:18. -/
@@ -313,7 +331,8 @@ def sameness (m : Move) (w : Lexeme) (a b : Scope) : Sameness :=
   let here := m.sensesAt w a
   let there := m.sensesAt w b
   if !here.isEmpty && !there.isEmpty && here.all (!there.contains ·) then .readApart here there
-  else if m.establishesSameness w a b then .granted
+  else if m.establishesSameness w a b then
+    if m.arguedSameness w a b then .granted else .assumed
   else match m.partlyGranted w a b with
     | [] => .unstated
     | ps => .partly ps
@@ -334,10 +353,78 @@ def equivocates (m : Move) : List Lexeme :=
 it holds on. -/
 def conditionalOn (m : Move) : List Lexeme :=
   (m.equivocation.filterMap fun
+    | (w, _, _, .unstated) | (w, _, _, .partly _) | (w, _, _, .assumed) => some w
+    | _ => none).eraseDups
+
+/-- The words whose sameness the move needs and neither states nor denies, wholly
+or in part: the conditions it holds on that it does not say. -/
+def unstatedOn (m : Move) : List Lexeme :=
+  (m.equivocation.filterMap fun
     | (w, _, _, .unstated) | (w, _, _, .partly _) => some w
     | _ => none).eraseDups
 
+/-- The words whose sameness the move states in a premise that no reader it is
+cited to argues at both places: conditions it holds on, as it holds on those it
+leaves unstated, and among them. -/
+def assumedOn (m : Move) : List Lexeme :=
+  (m.equivocation.filterMap fun
+    | (w, _, _, .assumed) => some w
+    | _ => none).eraseDups
+
 end Move
+
+/-! ### Whether a stated sameness is argued
+
+A premise that a word keeps its sense between two places is a reading, and a
+reading is someone's. Whether "justify" means the same in James 2:24 as in Paul
+turns on how much of the text the reader takes as the word's context, and Frederick
+Greenspahn, summing up Moisés Silva's *Biblical Words and Their Meaning*, puts the
+difficulty plainly: "Defining context can be a surprisingly subjective judgment.
+In some cases only the immediate phrase is taken into consideration; at other times
+a whole book is examined, or even the entire Bible" (*Hebrew Studies* 27, 1986,
+p. 140). So a sameness of sense is granted only where the premise that states it
+is cited to a reader who makes that judgment for both places. One that is cited to
+no one, to Scripture alone, to the library's own proposal, or to a reader who is
+cited at only one of the places, the move is said to **assume** (`Sameness.assumed`):
+it holds on the sameness as on one it left unstated.
+
+Which citations make that judgment is the library's own rule, proposed here. The
+reader is the one the premise principally rests on, its primary citation, and not
+a supporting one: a premise's supporting citations include readers who grant its
+grounds and deny it, cited for the rating, as Barclay is cited against the premise
+that Paul's "works of the law" keeps one sense in Romans 3:28 and Galatians 2:16.
+That reader argues a place (`Testimony.Reference.arguesAt`) when cited at a page, a
+section, or a lexicon's entry for the word, because that is where the reader is
+cited as arguing the claim the premise states, at every place it names; or when
+cited as commenting on a verse (*ad loc.*) that the place lies within. A commentary
+on James 2:24 argues James 2:24, not the paragraph 2:21–25 around it, nor James's
+usage as a whole. The same reader may be cited again among the supporting
+citations, as a commentary cited at each of two verses is, and then argues both. A
+work cited as a whole names no place where it argues anything, and a critical
+apparatus reports the copies, not the sense.
+-/
+
+/-- **Whether a reference argues what a word means at a place**: a work cited at
+a page, a section or a lexicon entry, or a commentary cited at a verse the place
+lies within; not a work cited as a whole, a critical apparatus, Scripture, or the
+library's own proposal. The library's rule, proposed here (see above). -/
+def _root_.Testimony.Reference.arguesAt (sc : Scope) : Reference → Bool
+  | .work _ (.adLoc p) => sc.within (.passage (.verse p))
+  | .work _ .whole | .work _ (.apparatus _) => false
+  | .work _ _ => true
+  | .scripture _ | .proposal _ => false
+
+/-- **Whether a source argues that a word keeps its sense between two places**: the
+work it principally rests on argues the first place and argues the second, at its
+primary citation or where the same work is cited again among the supporting ones.
+A supporting citation of another work does not count: it may be a dissenter, cited
+for the rating. -/
+def _root_.Testimony.Source.arguesSameness (s : Source) (a b : Scope) : Bool :=
+  match s.primary.entry with
+  | none => false
+  | some e =>
+    let own := s.references.filter fun r => (r.entry.map (·.core.key)) == some e.core.key
+    own.any (·.arguesAt a) && own.any (·.arguesAt b)
 
 /-! ### A move from one word to a kindred one -/
 
@@ -983,15 +1070,39 @@ def Formula.meaning? : Formula α → Option Statement
     pure (.also s t)
   | _ => none
 
+/-- The samenesses of sense a claim states, read for what its words mean: each
+word with the two places. -/
+def samenessesStated (a : α) : List (Lexeme × Scope × Scope) :=
+  (Ontology.closed Testimony.Ontology.shared (HasMeanings.means a)).lits.filterMap fun
+    | ⟨true, .sameSense w x y⟩ => some (w, x, y)
+    | _ => none
+
+/-- **The samenesses a step's premises state that no reader argues**: each word
+and two places that a premise of the step says the word keeps its sense between,
+where no premise that says so is cited, in any of the argument's positions, to a
+reader who argues it at both places (`Testimony.Source.arguesSameness`). -/
+def Line.unargued [HasSources α] (parts : List (Formula α)) : List (Lexeme × Scope × Scope) :=
+  let cited := parts.filterMap fun
+    | .atom x => some x
+    | _ => none
+  let stated := cited.flatMap fun x => (samenessesStated x).map fun p => (x, p)
+  let argued (w : Lexeme) (a b : Scope) : Bool :=
+    stated.any fun (x, (w', a', b')) =>
+      w' == w && ((a' == a && b' == b) || (a' == b && b' == a)) &&
+        (HasSources.sources x).any (·.arguesSameness a b)
+  (stated.filterMap fun (_, (w, a, b)) => if argued w a b then none else some (w, a, b)).eraseDups
+
 /-- **A line's step, as a move** of the library's own: the antecedent's parts as
 premises, the consequent as conclusion. None when the step is not an implication,
 or a part of it is not read. -/
-def Line.asMove? (l : Line α) : Option Move :=
+def Line.asMove? [HasSources α] (l : Line α) : Option Move :=
   match l.step with
   | .imp a c => do
-    let ps ← (Formula.conjuncts a).mapM Formula.meaning?
+    let parts := Formula.conjuncts a
+    let ps ← parts.mapM Formula.meaning?
     let c' ← Formula.meaning? c
-    pure { speaker := "the library", words := l.name, act := .argues ps c' }
+    pure { speaker := "the library", words := l.name, act := .argues ps c'
+         , unargued := Line.unargued parts }
   | _ => none
 
 end Testimony.Logic

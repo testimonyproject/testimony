@@ -35,6 +35,12 @@ types, and reports, for each argument:
   (`Testimony.Semantics.Move.univocal`), with the word and the readings;
 - the lines that need a word to keep its sense and do not say so, with the
   words. These are conditions, not faults;
+- the lines that say so in a premise, where no reader the premise is cited to
+  argues the sameness at both places (`Testimony.Semantics.Move.assumedOn`): it is
+  cited to no one, to Scripture alone, to the library's own proposal, or to a
+  reader of only one of the places. The line holds on the sameness as on one left
+  unstated, and these are conditions too. An argument passes its citations on by
+  declaring `Testimony.Semantics.HasSources` for its claims;
 - the lines that read one word by a kindred one, a verb by its adjective or the
   Greek by the Latin, without a premise saying the one bears on the other
   (`Testimony.Semantics.Move.unbridged`). Conditions too, not faults;
@@ -84,7 +90,7 @@ reader its step is cited to (`Testimony.Logic.Line.drawnBy`). A line that sets
 out Scripture's own reasoning (`Testimony.Logic.Line.drawnByScripture`) is never
 listed among the findings against readers: what it needs is reported apart, as
 what a reader must hold to follow the text. -/
-def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
+def fallacyReport (α : Type) [HasMeanings α] [HasSources α] [Repr α] [DecidableEq α]
     (lines : List (String × Line α)) (declared : List (String × List (Finding α)) := []) :
     String × Nat :=
   let read := lines.filterMap fun (n, l) =>
@@ -216,8 +222,11 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
     | [] => none
     | rs => some (n ++ ": " ++ showUnivocal rs)
   let conditional := moves.filterMap fun (n, m) =>
-    if m.conditionalOn.isEmpty then none else
-      some (n ++ ": " ++ ", ".intercalate (m.conditionalOn.map fun w => atomName w))
+    if m.unstatedOn.isEmpty then none else
+      some (n ++ ": " ++ ", ".intercalate (m.unstatedOn.map fun w => atomName w))
+  let assumed := moves.filterMap fun (n, m) =>
+    if m.assumedOn.isEmpty then none else
+      some (n ++ ": " ++ ", ".intercalate (m.assumedOn.map fun w => atomName w))
   -- Scripture's own reasoning: what a reader must hold to follow it, never a charge.
   let toFollow := scriptural.filterMap fun (n, _, m) =>
     let needs :=
@@ -253,6 +262,8 @@ def fallacyReport (α : Type) [HasMeanings α] [Repr α] [DecidableEq α]
       univocal ++
     part "attribute a view, against the argument's record" attributing ++
     part "need a word to keep its sense, unstated" conditional ++
+    part "state that a word keeps its sense, argued by no reader they cite at both places"
+      assumed ++
     part "read one word by a kindred one, the bridge unstated" shifting ++
     part "cite a voice for one reading, leaving out another the record has" omitting ++
     part "conclude a word's sense from no use or reading of the word" elsewhere ++
@@ -318,7 +329,7 @@ def checkFallacies (root : Name) : CommandElabM Unit := do
           mkAppM ``Prod.mk #[toExpr n.getString!, mkConst (n.str "expected")]
         let declLst ← mkListLit declTy decls
         let e ← mkAppOptM ``fallacyReport
-          #[some (mkConst c), none, none, none, some lst, some declLst]
+          #[some (mkConst c), none, none, none, none, some lst, some declLst]
         some <$> unsafe evalExpr (String × Nat) (toTypeExpr (String × Nat)) e
       catch _ => pure none
     match r? with

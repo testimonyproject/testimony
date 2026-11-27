@@ -59,7 +59,7 @@ checks themselves use (`fallacyReport`, `ontologyReport`). Equivocation and
 arguing from silence alone are not counted: a line that commits either without
 declaring it fails the build, and a declared one is a rival's fault set out to be
 answered, not a gap in the argument's checks. -/
-def maturityOf (α : Type) [HasMeanings α] [DecidableEq α] (argument : Name)
+def maturityOf (α : Type) [HasMeanings α] [HasSources α] [DecidableEq α] (argument : Name)
     (lines : List (Line α)) : Maturity :=
   let read := lines.filterMap fun l =>
     (l.asMove? (α := α)).bind fun m => if m.statements.all Statement.analysed then some (l, m)
@@ -101,7 +101,7 @@ def deriveMaturityTable (tableName : Ident) (root : Name) : CommandElabM Unit :=
         let lineTy := mkApp (mkConst ``Testimony.Logic.Line) (mkConst c)
         let lst ← mkListLit lineTy (names.toList.map mkConst)
         let e ← mkAppOptM ``maturityOf
-          #[some (mkConst c), none, none, some (toExpr c.getPrefix), some lst]
+          #[some (mkConst c), none, none, none, some (toExpr c.getPrefix), some lst]
         some <$> unsafe evalExpr Maturity (mkConst ``Maturity) e
       catch _ => pure none
     match r? with

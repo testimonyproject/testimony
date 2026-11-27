@@ -26,6 +26,20 @@ open Lean in
 def unfoldSet : List (Name × Name) :=
   [(`TestimonyArguments.SolaFide, `solaFideDefs)]
 
+/-- **Every source this argument cites each claim to**, in the base citations and
+in each chapter's own, for the fallacy checks. A claim can be cited to more than
+one reader, because each chapter's positions cite it to their own: that Paul's
+"works" keeps its sense through Romans 4 is Moo's reading at 4:4 in the base
+citations and Chemnitz's in the *Examen* where the Reformers answer Trent. A premise
+saying a word keeps its sense between two places counts as argued when any of them
+argues it at both (`Testimony.Source.arguesSameness`). -/
+instance sources : Testimony.Semantics.HasSources TestimonyArguments.SolaFide.Claim where
+  sources c := open TestimonyArguments.SolaFide in
+    [baseCite, beforeTrentCite, reformationCite, reformersAnswerCite, councilCite,
+      reformedCite, newPerspectiveCite, subjectiveGenitiveCite, lawObservantLukeCite,
+      criticalAuthorshipCite, criticsCite, tridentineCite, finnishCite,
+      apocalypticCite].map fun f => (f c).source
+
 /-- info: every argument has meanings and pinned joins: 1 claim types -/
 #guard_msgs in
 #check_meanings under TestimonyArguments.SolaFide
@@ -71,6 +85,15 @@ Sola fide
     renewalLine (Augustine): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
     sandersLine (Dunn): secondTempleJudaism, unrecorded
     trentWordLine (Trent): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
+  state that a word keeps its sense, argued by no reader they cite at both places:
+    bellarmineFaithIsAWorkLine (Bellarmine): ergaNomou
+    catholicJamesWordLine (Trent): erga, dikaioo
+    catholicJamesWorksLine (Trent): erga, dikaioo
+    jamesLexicalLine (Moo): dikaioo
+    paulineLine (Calvin): dikaioo, ergaNomou
+    paulineWithoutPistisChristou (Calvin): dikaioo, ergaNomou
+    paulineWithoutWorksOfLaw (Calvin): dikaioo, ergaNomou
+    renewalWordLine (Trent): dikaioo
   cite a voice for one reading, leaving out another the record has:
     renewalLine (Augustine): augustine, also verdict in augustineGivesBothSenses
     trentWordLine (Trent): augustine, also verdict in augustineGivesBothSenses

@@ -58,6 +58,12 @@ structure Move where
   words : String
   /-- What the words do. -/
   act : Act
+  /-- Each word, and two places, that a premise says the word keeps its sense
+  between and that no reader the premise is cited to argues at both places. An
+  article's own premises are its author's, who argues them, so an article's move
+  lists none; a line of the library's lists those its citations do not bear
+  (`Testimony.Logic.Line.asMove?`), and the move holds on them as conditions. -/
+  unargued : List (Lexeme × Scope × Scope) := []
 deriving Repr
 
 namespace Move

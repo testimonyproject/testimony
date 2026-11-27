@@ -119,11 +119,14 @@ it.
 An equivocation uses one word in two senses and relies on it meaning the same throughout. The
 check looks at every word the move *uses* at two places. A word is used inside what a text
 says, what a reader held, or what is held to be so. A word only *talked about*, in a claim of
-what it means, is not used. For each word the move needs alike, the check reports one of four
+what it means, is not used. For each word the move needs alike, the check reports one of five
 things:
 
 - **granted** — a premise says the word keeps its sense, between the two places or between two
-  places they lie within: what a premise says of John 3:16–18, it says of 3:16;
+  places they lie within: what a premise says of John 3:16–18, it says of 3:16. For a line of
+  the library's, the premise must also be cited to a reader who argues it at both places;
+- **assumed** — a premise says so, and no reader it is cited to argues it at both places
+  ([A sameness a reader argues](#a-sameness-a-reader-argues)). The move is conditional on it;
 - **read apart** — the move's own statements give it different senses at the two places, and
   it still needs them one. That is the fallacy, on the move's own terms;
 - **granted only in part** — a premise says the word keeps its sense between places that
@@ -237,6 +240,45 @@ reads "faith" two ways, which is the equivocation check's.
 A step of the library's own that reads a word univocally fails the build, as a straw man does. A
 reader's step that does it may declare the finding beside the step, and the declaration is then
 checked both ways, like every other.
+
+### A sameness a reader argues
+
+A premise that "justify" means the same in James 2:24 as in Romans 3:28 is itself a reading, and
+someone has to make it. How much of the text counts as a word's context is a judgment, and not an
+easy one. Frederick Greenspahn, reviewing Moisés Silva's *Biblical Words and Their Meaning*, sums
+up Silva's point: "Defining context can be a surprisingly subjective judgment. In some cases only
+the immediate phrase is taken into consideration; at other times a whole book is examined, or
+even the entire Bible" (*Hebrew Studies* 27, 1986, p. 140). So a stated sameness is granted only
+when the premise that states it is cited to a reader who makes that judgment for both places.
+Otherwise the move **assumes** it, and holds on it as it would on a sameness left unstated
+(`Sameness.assumed`).
+
+When a reader counts as arguing both places is the library's own rule, proposed here. The reader
+is the work the premise principally rests on, its primary citation. A supporting citation does
+not count, because supporting citations include readers who grant a premise's grounds and deny
+it, cited for its rating. That work argues a place when it is cited at a page, a section or a
+lexicon's entry for the word, because that is where the reader argues the claim the premise
+states, or when it is cited as commenting on a verse (*ad loc.*) the place lies within. Calvin on
+James 2:24 argues James 2:24, not the paragraph 2:21–25 around it, nor James's usage as a whole.
+The same commentary cited at both verses argues both. A work cited as a whole, a critical
+apparatus, Scripture alone and the library's own proposal argue neither
+(`Source.arguesSameness`). An argument passes its citations to the check by declaring
+`HasSources` for its claims, gathering every position's.
+
+In sola fide this moves eight lines from granted to assumed. Calvin's three lines on Romans 3:28
+and Galatians 2:16 rest on the library's own proposal that "justify" and "works of the law" keep
+one sense in both, and Bellarmine's line that faith is a work rests on it too. Trent's two lines
+on James 2 rest on Calvin cited at James 2:24 for the whole paragraph and for James's usage.
+Moo's survey of Matthew 11:19 and Deuteronomy 25:1 rests on Calvin at James 2:21, who, as the
+source notes, cites neither verse. Trent's line carrying Paul's word to James assumes that the
+word keeps one sense through James 2:21–25 and James's usage, though Trent is cited for its
+sameness with Paul's. None of this charges
+a line, because an assumed sameness is a condition, not a fault, and no verdict moves.
+
+**Caught.** `setAgainst` with its sameness argued by no reader (`setAgainstUnargued`) assumes it.
+**Passed over.** `setAgainst` itself, whose sameness is argued. A work cited at a page argues
+both verses; a commentary cited at Romans 3:28 argues one, and both when cited again at James
+2:24, but not when another work is. `argued_sameness_cases` pins them.
 
 ## A word read by a kindred one
 

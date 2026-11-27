@@ -875,6 +875,53 @@ theorem univocality_cases :
       FallacyCases.thatFaith.univocal apart = [] := by
   decide
 
+/-! #### A sameness a reader argues
+
+A premise that "justify" is the same in Romans 3:28 and James 2:24 is a ground only
+if a reader it is cited to argues it at both verses. The library reads its own
+lines' citations into the move (`Testimony.Logic.Line.asMove?`); here the move says
+directly which of its samenesses no reader argues. -/
+
+/-- **Caught: the sameness stated, and argued by no reader.** `setAgainst`, whose
+premise that "justify" is one in both verses is cited to no reader who argues it at
+both. The move holds on the sameness, as on one it left unstated. -/
+def setAgainstUnargued : Move :=
+  { setAgainst with unargued := [(.dikaioo, .passage rom3_28, .passage jas2_24)] }
+
+/-- A commentary cited at one verse, standing in for any. -/
+abbrev commentaryAt (b : Book) (c v : Nat) : Reference :=
+  .work Testimony.Bib.franceMatthew (.adLoc ⟨b, c, v⟩)
+
+/-- A source resting on `primary`, with `supporting` beside it. -/
+abbrev citedTo (primary : Reference) (supporting : List Reference := []) : Source :=
+  { primary, supporting, tradition := .christianHistoricalGrammatical
+  , confidence := .disputed }
+
+/-- **Who argues a sameness.** The move with its sameness argued grants it, and the
+one without assumes it, and holds on it as on "faith", which it leaves unstated. A
+work cited at a page argues both verses;
+a commentary cited at Romans 3:28 argues only that verse, and argues both when the
+same commentary is cited again at James 2:24, but not when another work is, which
+may be a dissenter cited for the rating; and the library's own proposal argues
+neither. -/
+theorem argued_sameness_cases :
+    setAgainst.sameness .dikaioo (.passage rom3_28) (.passage jas2_24) = .granted ∧
+      setAgainstUnargued.sameness .dikaioo (.passage rom3_28) (.passage jas2_24) = .assumed ∧
+      setAgainstUnargued.assumedOn = [.dikaioo] ∧
+      setAgainstUnargued.conditionalOn = [.pistis, .dikaioo] ∧
+      (citedTo (.work Testimony.Bib.franceMatthew (.page 10))).arguesSameness
+        (.passage rom3_28) (.passage jas2_24) = true ∧
+      (citedTo (commentaryAt .romans 3 28)).arguesSameness
+        (.passage rom3_28) (.passage jas2_24) = false ∧
+      (citedTo (commentaryAt .romans 3 28) [commentaryAt .james 2 24]).arguesSameness
+        (.passage rom3_28) (.passage jas2_24) = true ∧
+      (citedTo (commentaryAt .romans 3 28)
+          [.work Testimony.Bib.motyerIsaiah (.adLoc ⟨.james, 2, 24⟩)]).arguesSameness
+        (.passage rom3_28) (.passage jas2_24) = false ∧
+      (citedTo (.proposal "the two verses share the word")).arguesSameness
+        (.passage rom3_28) (.passage jas2_24) = false := by
+  decide +kernel
+
 end Testimony.Checks.FallacyCases.Univocality
 
 /-! ### Scripture's own reasoning, never charged
