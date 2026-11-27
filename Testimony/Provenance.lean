@@ -60,9 +60,9 @@ inductive Confidence
   /-- Refuted: Scripture's own words deny it. Never a reader's rating: a
   citation carries it exactly where the library computes the refutation, from
   the spelling of the Greek word the claim reads or from its author's use of the
-  word elsewhere, or, for a step, where the step commits a fault the text itself
-  shows (`Testimony.Checks.lineTextFaults`), and
-  `#check_readers` fails the build wherever the two differ. -/
+  word elsewhere, and
+  `#check_readers` fails the build wherever the two differ. No step is cited
+  `refuted`: a dispute computes a step's rank from what it concludes. -/
   | refuted
   /-- Actively contested by competent scholars. -/
   | disputed

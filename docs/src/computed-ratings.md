@@ -363,18 +363,20 @@ reading of ἐνεργουμένη in Galatians 5:6 is rated as readers rate it,
 Bellarmine concludes from it, that love is the one at work, Paul's usage refutes
 (`TestimonyArguments.SolaFide.faiths_means_prevails`).
 
-A reader's step is held to the same rule by what its reasoning does. The fallacy checks
-([Fallacies](./fallacies.md)) find some faults from the text and the step's own terms alone: a
-word read in two senses where the step needs one, an argument from a text's silence with no
-expectation to carry it, a cause made the effect of its own effect, and a conclusion that names
-as at work in a verb what its author never names there. A step that commits one of them is
-cited `refuted`, and one cited `refuted` must commit one; `#check_readers` fails the build
-wherever the two differ (`lineTextFaults`). A step that only argues from a claim the text rules
-out is not refuted for it, since the claim already is. A straw man and a univocal reading do not
-refute a step either. Each shows what the step leaves unanswered, a view its holder did not hold
-or a reading of a word it did not meet, and not that the step fails, so each stays a charge on
-the page. Today two steps are cited `refuted` this way, the Rheims note's and Bellarmine's on
-Galatians 5:6, which conclude that love is the one at work in ἐνεργουμένη.
+A reader's step is held to what its reasoning does, and its refutation is computed, never
+cited: no step may be cited `refuted`. The fallacy checks ([Fallacies](./fallacies.md)) find
+some faults from the text and the step's own terms alone: a word read in two senses where the
+step needs one, an argument from a text's silence with no expectation to carry it, a cause made
+the effect of its own effect, and a conclusion that names as at work in a verb what its author
+never names there. A reader's step that commits one must be one a dispute already weighs at
+`refuted` by computation, as it weighs every step that concludes a claim the text refutes, and
+`#check_readers` fails the build on a step with such a fault that nothing computes so
+(`lineWeighedRefuted`). A step that only argues from a claim the text rules out is not refuted
+for it, since the claim already is. A straw man and a univocal reading do not refute a step
+either. Each shows what the step leaves unanswered, a view its holder did not hold or a reading
+of a word it did not meet, and not that the step fails, so each stays a charge on the page.
+Today two steps commit such a fault, the Rheims note's and Bellarmine's on Galatians 5:6, which
+conclude that love is the one at work in ἐνεργουμένη, and a dispute weighs both at `refuted`.
 
 ## Dissents overruled in a dispute
 
