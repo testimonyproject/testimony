@@ -369,7 +369,9 @@ abbrev workedByLove : Statement := .worksBy .energeo Meanings.SolaFide.galatians
 1582, in its note on Galatians 5:6: "when it is said that faith worketh by
 charitie, it is not as by an instrument, but as the body worketh by the soul".
 Rated `disputed`, because Calvin grants the verse and denies the step: the love
-is "the fruit and effect of faith" (*Antidote*, p. 119). -/
+is "the fruit and effect of faith" (*Antidote*, p. 119). A dispute weighs the step
+at `refuted` all the same, because what it concludes, that love is the one at work
+in ἐνεργουμένη, is the claim Paul's own use of the verb refutes. -/
 def rheimsSoulStep : Source :=
   { primary := .work rheimsNewTestament (.adLoc ⟨.galatians, 5, 6⟩)
   , tradition := .romanCatholic
@@ -507,7 +509,9 @@ Greek it is ἐνεργουμένη, that is, moved and acted upon", so that lov
 sign of living faith … but the very life of faith" (*De justificatione* II.4,
 p. 219). Rated `disputed`, because J. Armitage Robinson grants the passive and
 denies that love is what moves faith: faith "is made operative through love",
-"the agent implied being God" (*Ephesians*, p. 246). -/
+"the agent implied being God" (*Ephesians*, p. 246). A dispute weighs the step at
+`refuted` all the same, because what it concludes, that love moves faith, is the
+claim Paul's own use of the verb refutes. -/
 def bellarminePassiveStep : Source :=
   { primary := .work bellarmineOpera6 (.page 219)
   , tradition := .romanCatholic

@@ -22,6 +22,7 @@ how they are spelled.
 | Charge | The question the check asks | Where it is | State |
 |---|---|---|---|
 | Equivocation | does the move give a word two senses where it needs one? | `Move.equivocation` | built |
+| Univocality | does the move need a word in one sense where a cited reading gives it another? | `Move.univocal` | built |
 | Word shift | does the move read one word by a kindred one without saying so? | `Move.unbridged` | built |
 | Begging the question | does a premise already assert the conclusion? | `Move.begsAgainst` | built |
 | Circular reasoning | does a chain of moves come back to where it began? | `circular` | built |
@@ -185,6 +186,57 @@ The survey is here because the check once got it wrong. Its first version flagge
 line on James's word, which gathers the senses of δικαιόω outside Paul, as an equivocation. It
 was not one, and the check now tells a word used from a word talked about. `equivocation_cases`
 pins all seven results.
+
+## Univocality
+
+Equivocation reads one word two ways where the argument needs one. Univocality is the opposite
+mistake. It takes a word to mean the same wherever it is used, so that what the word means in one
+sentence settles what it means in another. James Barr argued against the habit in *The
+Semantics of Biblical Language*, and Moisés Silva after him in *Biblical Words and Their
+Meaning*: a word's sense is fixed by the sentence it stands in. "Justify" (δικαιόω) in James 2:24
+need not mean what it means in Romans 3:28, and an argument that sets the two verses against
+each other has to show that it does.
+
+The equivocation check cannot see this. A move that says nothing of the senses, or that states
+in a premise that the word is the same at both places, gives the check nothing to read apart, so
+it is reported as conditional or as granted and is never charged. The univocality check holds
+the move against the argument's record instead, as the straw-man check does. For each word the
+move needs to keep its sense between places, it looks for a claim of the argument, a reading cited
+to a reader or marked as the library's own, that gives the word at one of those places a sense
+which nothing gives it at the others: neither the move's premises nor any other reading in the
+record. What the move concludes a word means is not counted, because a move that carries Paul's
+sense over to James, against a reader of Paul, is disputing Paul's sense. If the move does not
+answer that reading by denying it, the move **reads univocally**, and the check names the
+readings it left standing (`Move.univocal`).
+
+Two things decide where a reading bears. A reading of one passage bears on every passage it
+overlaps. A reading of a word throughout an author's usage bears on each passage of a book that
+author wrote. The vocabulary names some voices by their books, as James is "the author of the
+letter", and for the rest the argument's own record must say who wrote what, as it says that
+Paul wrote Titus. So a reading of Paul's usage does not yet bear on Romans 6:7 unless the
+argument says Paul wrote Romans.
+
+A reading that makes the word one in both places is no charge against the move. A reader who
+takes "justify" to mean "make righteous" in Paul and in James alike disputes the sense, not the
+sameness, and the dispute weighs that elsewhere. Neither is a survey: a move that gathers what
+the word means in Matthew 11:19 and Deuteronomy 25:1 to say what it does not mean in James needs
+James's word to share a sense with one of them, not with both, and a reading of James as "show
+to be righteous" gives it Matthew's.
+
+**Caught.** Set Romans 3:28 against James 2:24 with a premise that "justify" is the same in
+both (`setAgainst`), or without one (`setAgainstSilently`), against a record that reads the word
+as "show to be righteous" in James and as a verdict in Paul. Each reading gives the word a sense
+the other letter is never given, and the move answers neither, so the check names both.
+
+**Passed over.** The same move with a premise denying that "justify" in James 2:24 means "show
+to be righteous" (`jamesAnswered`) has answered that reading; whether the denial is right is for
+the dispute to weigh. Against a record whose only reading gives the word one sense in both
+letters, nothing is charged. `univocality_cases` pins these, with the survey and the move that
+reads "faith" two ways, which is the equivocation check's.
+
+A step of the library's own that reads a word univocally fails the build, as a straw man does. A
+reader's step that does it may declare the finding beside the step, and the declaration is then
+checked both ways, like every other.
 
 ## A word read by a kindred one
 

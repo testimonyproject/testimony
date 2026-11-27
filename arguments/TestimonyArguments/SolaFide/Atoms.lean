@@ -69,6 +69,19 @@ inductive Claim
   | ephesiansIsPauline
   /-- Titus was written by Paul. -/
   | titusIsPauline
+  /-- Romans was written by Paul. The letter opens with his name (1:1), and
+  nearly every reader, Fitzmyer and Moo among them, takes it as his. The claim is
+  rated `disputed` all the same, because Nina Livesey (*The Letters of Paul in
+  their Roman Literary Context*, 2024) grants that the letter names Paul and reads
+  it as written in his name in the second century. It is what lets a reading of
+  Paul's usage as a whole bear on a verse of Romans. -/
+  | romansIsPauline
+  /-- Galatians was written by Paul. The letter opens with his name (1:1); Moo
+  writes that his authorship "has been acknowledged and never seriously
+  challenged" (*Galatians*, p. 1). It was challenged, by Rudolf Steck in 1888 and
+  by Livesey in 2024, so the claim is rated `disputed`, as `romansIsPauline` is.
+  It lets a reading of Paul's usage bear on a verse of Galatians. -/
+  | galatiansIsPauline
   /-- 1 Peter was written by the apostle Peter. -/
   | firstPeterIsPetrine
   /-- 2 Peter was written by the apostle Peter. -/
