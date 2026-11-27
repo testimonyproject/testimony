@@ -22,9 +22,13 @@ library does not decide between them. It holds every claim resting on these word
 reading it takes, and rates the claim no higher than that reading (`VariationUnit.rating`):
 where cited readers disagree, no higher than `disputed`.
 
-Bruce Metzger's *Textual Commentary on the Greek New Testament*, which gives the reasons of the
-committee behind the United Bible Societies' edition and grades each decision from {A} to {D},
-is not yet cited: its pages and grades are still to be read.
+Bruce Metzger's *Textual Commentary on the Greek New Testament* gives the reasons of the
+committee behind the United Bible Societies' edition, and grades most of its decisions from {A},
+certain, to {D}, made with great difficulty. It is cited at six of the seven places, with its
+grade where it prints one. Where the committee graded the reading it chose {C} or {D}, the library
+holds that reading no higher than `disputed`, on the committee's own word that the choice was
+hard; that cap is the library's proposal, not the committee's. Metzger has no note on Matthew
+28:19, because the committee found no variation in the manuscripts there worth recording.
 -/
 
 namespace Testimony.Variants
@@ -50,7 +54,10 @@ private def byzantinePriority : Source :=
 complete Greek Bibles, end Mark at 16:8, "for they were afraid"; most later copies go on to 16:20,
 with the risen Jesus appearing to Mary Magdalene and sending out the eleven. Westcott and Hort
 judge the twelve verses later than Mark: "It manifestly cannot claim apostolic authority; but it
-is doubtless founded on some tradition of the apostolic age." Robinson and Pierpont print them,
+is doubtless founded on some tradition of the apostolic age." Bruce Metzger,
+for the committee of the United Bible Societies' edition, finds that "the earliest ascertainable
+form of the Gospel of Mark ended with 16.8"; it prints the verses in double brackets, "the work of
+an author other than the evangelist", and gives them no grade. Robinson and Pierpont print them,
 and Maurice Robinson argues for their authenticity in *Perspectives on the Ending of Mark*. -/
 @[variation_unit]
 def markLongerEnding : VariationUnit :=
@@ -63,6 +70,8 @@ def markLongerEnding : VariationUnit :=
   , judgements :=
       [ { question := .originality, prefers := "ending at 16:8"
         , source := critic westcottHortAppendix (.adLoc ⟨.mark, 16, 9⟩) .wellSupported }
+      , { question := .originality, prefers := "ending at 16:8"
+        , source := critic metzgerTextualCommentary (.pages 122 126) .wellSupported }
       , { question := .originality, prefers := "with verses 9–20", source := byzantinePriority }
       , { question := .originality, prefers := "with verses 9–20"
         , source := critic blackEndingOfMark .whole .plausible } ] }
@@ -72,7 +81,9 @@ def markLongerEnding : VariationUnit :=
 /-- **John 7:53–8:11, the woman taken in adultery.** The oldest copies of John lack the passage,
 and some later ones place it elsewhere. Westcott and Hort judge it no part of John: "it presents
 serious differences from the diction of St John's Gospel, which, to say the least, strongly
-suggest diversity of authorship." Robinson and Pierpont print it, and say in their Preface that
+suggest diversity of authorship." Metzger reports the committee
+"unanimous that the pericope was originally no part of the Fourth Gospel", and prints it in double
+brackets, without a grade. Robinson and Pierpont print it, and say in their Preface that
 "the autograph form of the Pericope Adulterae" is more likely one of the two main lines of
 its transmission within the Byzantine copies. -/
 @[variation_unit]
@@ -86,6 +97,8 @@ def johnPericopeAdulterae : VariationUnit :=
   , judgements :=
       [ { question := .originality, prefers := "without it"
         , source := critic westcottHortAppendix (.pages 82 88) .wellSupported }
+      , { question := .originality, prefers := "without it"
+        , source := critic metzgerTextualCommentary (.pages 219 222) .wellSupported }
       , { question := .originality, prefers := "with the passage"
         , source := critic robinsonPierpont (.sectionRef "Preface, The Pericope Adulterae")
             .plausible } ] }
@@ -97,7 +110,9 @@ testify, the Spirit, the water and the blood. The Textus Receptus, the text the 
 Version translated, adds three witnesses in heaven, the Father, the Word and the Holy Spirit,
 "and these three are one": words found in Latin manuscripts and in a handful of late Greek
 ones. Robinson and Pierpont, who print the Byzantine text, leave them out with the critical
-editions. R. L. Dabney argued in
+editions. Metzger grades their absence {A}: "That these words are spurious and have no right to
+stand in the New Testament is certain", because no Greek Father quotes them, and they appear in
+Greek first in a translation of the Acts of the Lateran Council of 1215. R. L. Dabney argued in
 1871 for the probability of the received reading, his object being "to keep it an open
 question". -/
 @[variation_unit]
@@ -110,6 +125,9 @@ def firstJohnHeavenlyWitnesses : VariationUnit :=
       , { label := "without them", editions := [.byzantine] } ]
   , judgements :=
       [ { question := .originality, prefers := "without them", source := byzantinePriority }
+      , { question := .originality, prefers := "without them"
+        , source := critic metzgerTextualCommentary (.pages 715 717) .wellSupported
+        , grade := some .a }
       , { question := .originality, prefers := "with the heavenly witnesses"
         , source := churchman dabneyDoctrinalReadings (.page 221) .reformedProtestant
             .disputed } ] }
@@ -122,9 +140,10 @@ verse_part matthewNineteenSeventeenA from MAT 19 17 1 14 "a" "ἐρωτάω"
 ask me about what is good? There is one who is good" (Τί με ἐρωτᾷς περὶ τοῦ ἀγαθοῦ; εἷς ἐστιν ὁ
 ἀγαθός); the Byzantine text has "Why do you call me good? No one is good but one, God", as in
 Mark 10:18 and Luke 18:19. Westcott and Hort judge the Byzantine words borrowed from those
-Gospels. J. W. Burgon called the critical reading "an absurd fabrication". The verse's second
-half, "If you would enter life, keep the commandments", is the same in both, and lies outside
-the unit. -/
+Gospels, and Metzger grades the critical reading {B}: "scribal assimilation to Synoptic
+parallels occurs frequently". J. W. Burgon called the critical reading "an absurd
+fabrication". The verse's second half, "If you would enter life, keep the commandments", is the
+same in both, and lies outside the unit. -/
 @[variation_unit]
 def matthewWhyCallMeGood : VariationUnit :=
   { place := "Matthew 19:17a, what is good"
@@ -139,6 +158,8 @@ def matthewWhyCallMeGood : VariationUnit :=
   , judgements :=
       [ { question := .originality, prefers := "why do you ask me about what is good"
         , source := critic westcottHortAppendix (.pages 14 15) .wellSupported }
+      , { question := .originality, prefers := "why do you ask me about what is good"
+        , source := critic metzgerTextualCommentary (.page 49) .wellSupported, grade := some .b }
       , { question := .originality, prefers := "why do you call me good"
         , source := churchman burgonRevisionRevised (.page 139) .christianHistoricalGrammatical
             .wellSupported }
@@ -183,7 +204,10 @@ blessing of God. Westcott and Hort, who agree on almost every reading, part here
 note. Hort holds the full stop the one punctuation "which alone seems adequate to account for the
 whole of the language employed"; Westcott answers that "the juxtaposition of ὁ χριστὸς κατὰ σάρκα
 and ὁ ὢν κ.τ.λ. seems to make a change of subject improbable". Robinson and Pierpont print the
-comma. -/
+comma. The committee of the United Bible Societies' edition split as Westcott and Hort did, and
+Metzger reports both sides without a grade: the majority chose the full stop, "particularly
+since nowhere else in his genuine epistles does Paul ever designate ὁ Χριστός as θεός", and a
+minority preferred the comma, for reasons that include Westcott's. -/
 @[variation_unit]
 def romansGodOverAll : VariationUnit :=
   { place := "Romans 9:5, the punctuation"
@@ -197,6 +221,8 @@ def romansGodOverAll : VariationUnit :=
         , source := critic westcottHortAppendix (.page 110) .plausible }
       , { question := .originality, prefers := "a full stop: a blessing of God"
         , source := critic westcottHortAppendix (.pages 109 110) .plausible }
+      , { question := .originality, prefers := "a full stop: a blessing of God"
+        , source := critic metzgerTextualCommentary (.pages 520 522) .plausible }
       , { question := .originality, prefers := "a comma: Christ is God over all"
         , source := byzantinePriority } ] }
 
@@ -210,7 +236,10 @@ codices Sinaiticus and Vaticanus read "his kingdom" (αὐτοῦ). Murray Harri
 critics and the vast majority of commentators", takes σου as the earlier text. B. F. Westcott's
 text reads αὐτοῦ, and he holds that reading to bear on the verse's first words, outside the unit:
 "God is Thy throne", not "Your throne, O God", a rendering "required if we adopt the reading
-αὐτοῦ for σου". So a claim that quotes "Your throne, O God" takes σου. -/
+αὐτοῦ for σου". The committee of the United Bible Societies' edition chose σου and graded it
+{C}, a decision it found difficult: Metzger grants that αὐτοῦ "has early and good support",
+and says a majority was "more impressed" by the spread of the copies for σου and by how hard
+αὐτοῦ is to construe. So a claim that quotes "Your throne, O God" takes σου. -/
 @[variation_unit]
 def hebrewsYourKingdom : VariationUnit :=
   { place := "Hebrews 1:8b, your kingdom or his"
@@ -223,6 +252,8 @@ def hebrewsYourKingdom : VariationUnit :=
       [ { question := .originality, prefers := "your kingdom"
         , source := churchman harrisHebrewsTheos (.pages 136 138) .christianHistoricalGrammatical
             .wellSupported }
+      , { question := .originality, prefers := "your kingdom"
+        , source := critic metzgerTextualCommentary (.page 662) .plausible, grade := some .c }
       , { question := .originality, prefers := "his kingdom"
         , source := critic westcottHebrews (.pages 25 26) .plausible } ] }
 
@@ -255,5 +286,17 @@ reader, and both sides heard on what the author wrote: 7 places
 prefers the full stop. -/
 example : romansGodOverAll.rating .originality "a comma: Christ is God over all" =
     some .disputed := by decide
+
+/-- "Your kingdom" at Hebrews 1:8 would be no firmer than `disputed` on the committee's {C} alone,
+without Westcott on the other side: the library's cap for a decision the committee found hard. -/
+example : { hebrewsYourKingdom with
+      judgements := hebrewsYourKingdom.judgements.filter (·.prefers == "your kingdom") }.rating
+      .originality "your kingdom" = some .disputed := by decide
+
+/-- And without the committee's {C}, Harris alone would hold it `wellSupported`. -/
+example : { hebrewsYourKingdom with
+      judgements := hebrewsYourKingdom.judgements.filter
+        (fun j => j.prefers == "your kingdom" && j.grade.isNone) }.rating
+      .originality "your kingdom" = some .wellSupported := by decide
 
 end Testimony.Variants

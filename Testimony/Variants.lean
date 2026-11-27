@@ -73,6 +73,28 @@ structure VariantReading where
   editions : List TextualTradition := []
 deriving Repr, DecidableEq
 
+/-- **The letter the United Bible Societies' committee gives a decision**, as Bruce Metzger's
+*Textual Commentary* prints it beside each reading the committee chose: {A} where the text is
+certain, {B} almost certain, {C} where the committee had difficulty deciding, and {D} where it
+had great difficulty. -/
+inductive UbsGrade
+  /-- The text is certain. -/
+  | a
+  /-- The text is almost certain. -/
+  | b
+  /-- The committee had difficulty deciding which reading to place in the text. -/
+  | c
+  /-- The committee had great difficulty arriving at a decision. -/
+  | d
+deriving Repr, DecidableEq
+
+/-- How the grade is printed: "{C}". -/
+def UbsGrade.render : UbsGrade → String
+  | .a => "{A}"
+  | .b => "{B}"
+  | .c => "{C}"
+  | .d => "{D}"
+
 /-- **A cited judgement on a variation unit**: who prefers which reading, on which of the
 three questions, at what confidence. The source names the reader; a judgement cited to
 Scripture alone names no one and fails `#check_variation_units`. -/
@@ -83,6 +105,9 @@ structure VariantJudgement where
   prefers : String
   /-- Who judges so, where, and how firmly. -/
   source : Source
+  /-- The committee's letter, where the judgement is the United Bible Societies' committee's
+  and Metzger prints one. -/
+  grade : Option UbsGrade := none
 deriving Repr, DecidableEq
 
 /-- **A place where the copies differ.** `place` names it as a reader sees it and as a claim
@@ -107,21 +132,30 @@ def Confidence.max (a b : Confidence) : Confidence := if a.rank ≥ b.rank then 
 /-- The lower of two confidences. -/
 def Confidence.min (a b : Confidence) : Confidence := if a.rank ≤ b.rank then a else b
 
+/-- Whether a committee that graded its own decision {C} or {D} said that it found the
+decision hard. -/
+def UbsGrade.hard : UbsGrade → Bool
+  | .c | .d => true
+  | _ => false
+
 /-- **How firmly the library may hold a reading, on one question.** The firmest confidence of
 any cited reader who prefers it, and no higher than `disputed` if any cited reader prefers
 another reading on the same question, because that reader grants the copies and denies the
-reading. Nothing, where no cited reader prefers it at all: a claim cannot rest on a reading
-nobody holds. -/
+reading. No higher than `disputed`, too, where the committee that chose the reading graded its
+choice {C} or {D}, because it says itself that it found the choice hard; that second cap is the
+library's own proposal, not a rule of the committee's. Nothing, where no cited reader prefers it
+at all: a claim cannot rest on a reading nobody holds. -/
 def VariationUnit.rating (u : VariationUnit) (q : TextQuestion) (reading : String) :
     Option Confidence :=
   let js := u.judgements.filter (·.question == q)
-  let pro := (js.filter (·.prefers == reading)).map (·.source.confidence)
+  let pros := js.filter (·.prefers == reading)
   let dissent := js.any (·.prefers != reading)
-  match pro with
+  let hard := pros.any fun j => j.grade.any UbsGrade.hard
+  match pros.map (·.source.confidence) with
   | [] => none
   | c :: cs =>
     let best := cs.foldl Confidence.max c
-    some (if dissent then best.min .disputed else best)
+    some (if dissent || hard then best.min .disputed else best)
 
 /-- The reading with this label, if the unit has one. -/
 def VariationUnit.reading? (u : VariationUnit) (label : String) : Option VariantReading :=

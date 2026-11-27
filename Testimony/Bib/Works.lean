@@ -511,6 +511,23 @@ Internet Archive's scan of the 1892 printing. -/
   , place := some "London and New York"
   , edition := some "2nd edition" }
 
+/-- Bruce Metzger's commentary on the decisions of the committee that edited the United Bible
+Societies' Greek New Testament, third edition: the reasons for each reading chosen, and the
+committee's grade for it, {A} to {D}. Read in the Internet Archive's lending scan of the
+corrected edition of 1975, whose copyright page reads "Corrected Edition, 1975" and "© 1971 by the
+United Bible Societies". The scan's catalogue record names the second edition of 1994 and its
+ISBN, which the copyright page contradicts, so no ISBN is given. -/
+@[bib_entry] def metzgerTextualCommentary : BibEntry := .book
+  { core :=
+      { key := "metzger-textual-commentary-1975"
+      , contributors := { authors := [.person "Bruce M." "Metzger"] }
+      , title := "A Textual Commentary on the Greek New Testament"
+      , year := some { value := 1975 }
+      , identifiers :=
+          [.url "https://archive.org/details/textualcommentar0000metz" (some "2026-11-27")] }
+  , publisher := "United Bible Societies"
+  , edition := some "corrected edition" }
+
 /-- J. W. Burgon's attack on the Revised Version of 1881 and the Greek text behind it. He calls
 the critical reading of Matthew 19:17, "Why do you ask me about what is good?", "an absurd
 fabrication". Read in the Internet Archive's scan of the 1883 printing. -/

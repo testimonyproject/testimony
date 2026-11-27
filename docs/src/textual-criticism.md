@@ -68,6 +68,14 @@ The first phase is in the library.
   above the reading it rests on. It runs over every argument, and its pinned report counts how
   many claims citing Scripture name the edition they read, so that the count shows how far the
   next step has come.
+- **The committee's grades.** Bruce Metzger's *Textual Commentary*, in the corrected edition of
+  1975, is cited at six of the seven units, with the committee's letter where he prints one
+  (`UbsGrade`): {A} for leaving out the heavenly witnesses, {B} for "why do you ask me about
+  what is good" in Matthew 19:17, and {C} for "your kingdom" in Hebrews 1:8. The committee gave
+  no letter to the two long passages, which it judged no part of Mark or John and printed in
+  double brackets, nor to the punctuation of Romans 9:5, where its majority chose the full stop
+  and a minority the comma. Metzger has no note on Matthew 28:19. A reading the committee
+  graded {C} or {D} is rated no higher than `disputed` (`VariationUnit.rating`).
 
 The ceiling lowered four ratings from `consensus` to `disputed`, and moved no verdict. In the
 Trinity argument, Romans 9:5 (`godOverAll`) takes the comma, which Hort answers with a full stop;
@@ -76,8 +84,10 @@ Hebrews 1:8 (`throneOGod`) takes "your kingdom", which Westcott answers with "hi
 Conybeare answered with the shorter form Eusebius quotes. In sola fide, the claim that Christ
 commands baptism (`baptismCommandedByChrist`) rests on the same words of Matthew 28:19. The claim
 on Matthew 19:17 (`matthew19_17KeepTheCommandments`) now cites the half of the verse it rests
-on, 19:17b, which lies outside the unit, and keeps its rating. No claim in any argument rests on
-the longer ending of Mark, the woman taken in adultery or the heavenly witnesses.
+on, 19:17b, which lies outside the unit, and keeps its rating. Metzger's grades moved no rating
+further: the one {C}, on Hebrews 1:8, caps a reading that Westcott's dissent had already capped.
+No claim in any argument rests on the longer ending of Mark, the woman taken in adultery or the
+heavenly witnesses.
 
 ## Three questions a reader asks of a verse
 
@@ -160,10 +170,10 @@ rule moves weight exactly where the text is uncertain, and nowhere else.
 
 The United Bible Societies' edition grades its decisions with letters, from {A}, "the text is
 certain", to {D}, the committee "had great difficulty" deciding. A letter is the committee's
-own confidence, and the library would cite it as such, beside the rating, never in place of it.
-One step further is the library's own proposal, and would be marked as one: a reading graded
-{C} or {D} is rated no higher than `disputed`, because the committee that chose it is itself a
-cited reader in doubt.
+own confidence, and the library cites it as such, beside the rating, never in place of it.
+One step further is the library's own proposal, and is marked as one: a reading graded {C} or
+{D} is rated no higher than `disputed`, because the committee that chose it is itself a cited
+reader in doubt.
 
 ### The rule runs both ways
 
@@ -386,9 +396,9 @@ allows.
    reads the threefold name), Romans 9:5, Hebrews 1:8 and Matthew 19:17. Every textual claim the
    arguments already make is then given its text, and any rating the ceiling moves is reported.
    Built ([What is built](#what-is-built)), except that naming every claim's edition is left to
-   one pull request per argument, after which an unnamed edition fails the build, and Metzger's
-   pages and his committee's {A}–{D} grades wait to be read. A reading graded {C} or {D} will be
-   rated no higher than `disputed`, as the library's own proposal.
+   one pull request per argument, after which an unnamed edition fails the build. Metzger's
+   pages and his committee's grades are cited, and a reading graded {C} or {D} is rated no
+   higher than `disputed`, as the library's own proposal.
 2. **Where the editions differ, from the data.** Import the edition-agreement data the licences
    allow for the books the library reads, and compute every place where the editions differ.
    Check 2, no silent dependence, runs over every argument. The misquotation check runs over
