@@ -2363,10 +2363,13 @@ def baseCite : Claim → AtomMeta
   | .metanoiaIsAChangeOfHeart =>
     { label := "μετανοέω, ‘repent’, means a change of heart, not an act done"
     , kind := .linguistic
+      -- `disputed`: the Rheims annotators, on Matthew 3:2, hold that the Greek
+      -- word "must needes signifie, sorowful, payneful, and satisfactorie
+      -- repentance".
     , source :=
         { primary := .work lutherToStaupitz (.sectionRef "Works 1, pp. 40–41")
         , tradition := .reformedProtestant
-        , confidence := .wellSupported } }
+        , confidence := .disputed } }
   | .matthew4_17MeansSacramentalPenance =>
     { label := "The repentance of Matthew 4:17 is the sacramental penance of " ++
         "confession and satisfaction"

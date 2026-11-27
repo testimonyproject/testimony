@@ -18,6 +18,15 @@ alone has not settled the account. This chapter asks where the teaching came
 from, and tells it in the order it was written, up to the year Luther was
 condemned.
 
+Both sides in this story argue from Scripture. Gregory reads Matthew 12:32,
+Aquinas the story of David, Clement VI the blood of Christ, and Luther the word
+of Matthew 4:17 and its Greek. Rome also binds by councils and popes: Florence
+defines, and Leo X grants indulgences "by the power of the keys". So on Rome's
+side a teaching rests on Scripture and the church's teaching office together.
+The rules each side later professed in its own words are
+those of Trent's fourth session (1546) and the Westminster Confession (1647),
+and the sola fide argument holds every party to the rule it professes.
+
 ## Satisfaction, from Tertullian to Lombard
 
 The word is older than the doctrine. About 203 Tertullian, writing *On
@@ -135,7 +144,10 @@ before 1521 (`forgiveness_heard_before_1521`). Gregory, Aquinas and Florence
 stand: nothing in the hearing denies what they hold, because Luther in 1517
 grants purgatory and a penalty after forgiveness. Luther and the two popes
 defeat each other over the treasury, on steps each rated `disputed`, so none of
-the three stands (`to_1520_purgatory_stands_and_the_treasury_ties`). Luther's
+the three stands (`to_1520_purgatory_stands_and_the_treasury_ties`). Where Luther
+and Clement part is thesis 58 alone: Luther grants the debt Clement builds on,
+and denies only that the merits of Christ and the saints are a treasure the pope
+dispenses (`whereLutherMeetsClement`). Luther's
 reading of Matthew 4:17 meets no one, because no voice of these years is read
 here holding the repentance of that verse to be the sacrament, and the reading
 Luther rejects is his own report of it. One reading holds Gregory, Aquinas,
@@ -291,16 +303,19 @@ def clementTreasuryCase : ArgumentPackage Claim :=
 /-- **Who draws the step from the debt to purgatory.** The council: the souls of
 the truly penitent who die "before they have made satisfaction for acts and
 omissions by worthy fruits of repentance" "are cleansed after death by
-cleansing pains" (*Laetentur caeli*). Rated `wellSupported`: no reader has been
-read who grants that a debt of temporal punishment remains and denies that the
-debt unpaid at death is paid after it. Calvin grants the link and denies the
-debt: "what is this purgatory but the satisfaction for sin paid after death by
-the souls of the dead? Hence when this idea of satisfaction is refuted,
-purgatory itself is forthwith completely overturned" (*Institutes* III.5.6). -/
+cleansing pains" (*Laetentur caeli*). Rated `disputed`, because Melanchthon in
+1531 grants that God still punishes a sin He has forgiven and denies that
+purgatory follows: "Upon David a peculiar punishment was imposed, therefore, in
+addition to common afflictions, there is another punishment of purgatory", he
+writes, is a rule that does not follow (*Apology* XII, 59). Calvin grants the
+link and denies the debt: "what is this purgatory but the satisfaction for sin
+paid after death by the souls of the dead? Hence when this idea of satisfaction
+is refuted, purgatory itself is forthwith completely overturned" (*Institutes*
+III.5.6). -/
 def florencePurgatoryStep : Source :=
   { primary := .work florenceLaetentur (.sectionRef "Session 6, on purgatory")
   , tradition := .romanCatholic
-  , confidence := .wellSupported }
+  , confidence := .disputed }
 
 /-- **Purgatory as satisfaction not yet made (Florence).** A debt of temporal
 punishment may remain after the guilt is forgiven. So the penitent who die
@@ -349,8 +364,11 @@ in thesis 2, and in his letter to Staupitz, where he calls false the teachers
 who "had derived their idea from the Latin words *poenitentiam agere*, which
 indicate an action, rather than a change of heart, and are in no way an
 equivalent for the Greek *metanoia*" (*Works* vol. 1, p. 41). Rated
-`wellSupported`: no reader of these years has been read who grants what the
-Greek word means and still reads the verse of the sacrament. -/
+`wellSupported`: no reader has been read who grants what Luther says the Greek
+word means and still reads the verse of the sacrament. The Rheims annotators of
+1582, who keep "do penance", deny the meaning itself: if Protestants "pretend
+the Greeke word", the places where it is used show that it "must needes
+signifie, sorowful, payneful, and satisfactorie repentance" (on Matthew 3:2). -/
 def lutherRepentStep : Source :=
   { primary := .work lutherNinetyFiveTheses (.sectionRef "theses 1–2; Works 1, p. 29")
   , supporting := [.work lutherToStaupitz (.sectionRef "Works 1, pp. 40–41")]
@@ -522,6 +540,39 @@ is not the merits of Christ. -/
 theorem in_1517_luther_held_purgatory :
     forgivenessDispute.StandTogether [.gregory, .aquinas, .florence, .luther] := by
   satisfied_by lutherIn1517Reading [Dispute.StandTogether, solaFideDefs]
+
+/-- Luther's theses deliver what they conclude. -/
+theorem lutherThesesCase_establishes : Establishes lutherThesesCase := by
+  establish [solaFideDefs]
+
+/-- Luther's theses can be held without contradiction: the reading of 1517 holds
+every premise. -/
+theorem lutherThesesCase_is_satisfiable : Satisfiable lutherThesesCase.premises := by
+  satisfied_by lutherIn1517Reading [solaFideDefs]
+
+/-- **Where Luther and Clement VI part.** Everything turns on Luther's step in
+thesis 58: the merits of Christ and the saints work grace "even without the
+pope", so they are not the treasure the pope dispenses. What that contradicts is
+the whole of Clement's case, and each part is needed: Christ's blood shed more
+than redemption needed, the debt of temporal punishment left after forgiveness,
+and Clement's step from the two to the treasury. Luther in 1517 grants the debt,
+so the break is over the treasury and nothing before it. The step is rated
+`disputed`, because Leo X grants the merits of Christ and the saints and defines
+that the pope grants indulgences from them (*Cum postquam*). -/
+def whereLutherMeetsClement : Because lutherThesesCase clementTreasuryCase :=
+  Because.ofChecks lutherTreasuryLine.step
+    [p .christsMeritsWorkGraceWithoutThePope, p .matthew4_17Repent, p .metanoiaIsAChangeOfHeart]
+    [lutherRepentLine.step]
+    [p .christsMeritsWorkGraceWithoutThePope]
+    [ p .christsMeritSuperabounds, p .temporalDebtRemainsAfterForgiveness
+    , clementTreasuryLine.step ]
+    .derives lutherThesesCase_establishes lutherThesesCase_is_satisfiable
+    (by simp [lutherThesesCase, caseOf, lutherTreasuryLine, lutherRepentLine])
+    (by simp [lutherThesesCase, caseOf, lutherTreasuryLine, lutherRepentLine])
+    (by simp [clementTreasuryCase, clementTreasuryLine, treasuryGrounds, Line.asPackage,
+      Line.premises])
+    (by decide +kernel)
+  |>.ratedBy lutherTreasuryStep (by simp [lutherThesesCase, solaFideDefs])
 
 /-- Why Gregory, Aquinas and Florence stand and the treasury's three voices do
 not: nothing attacks the first three, and Luther and each pope defeat each

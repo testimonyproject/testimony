@@ -761,8 +761,8 @@ inductive Claim
   to a changeable good, and the second turning, being finite, incurs a debt of
   punishment that is not eternal. -/
   | sinTurnsToAMutableGood
-  /-- When God forgives the guilt of sin, a debt of temporal punishment may remain,
-  to be paid by satisfaction in this life or after it. -/
+  /-- When God forgives the guilt of sin, a debt of temporal punishment may
+  remain. -/
   | temporalDebtRemainsAfterForgiveness
   /-- Christ shed far more of His blood than the one drop that, by its union with
   the Word, would have sufficed to redeem the whole human race. -/
@@ -776,8 +776,8 @@ inductive Claim
   /-- Matthew 4:17 says that Jesus began to preach "Repent, for the kingdom of
   heaven is near!" (μετανοεῖτε, "repent"). -/
   | matthew4_17Repent
-  /-- The Greek μετανοέω, "repent", means a change of mind and heart, a "coming
-  to one's senses", not an act done. -/
+  /-- The Greek μετανοέω, "repent", as Matthew 4:17 uses it, means a change of
+  mind and heart, a "coming to one's senses", not an act done. -/
   | metanoiaIsAChangeOfHeart
   /-- The repentance Jesus calls for in Matthew 4:17 is the sacramental penance of
   confession and satisfaction that the priests administer. -/

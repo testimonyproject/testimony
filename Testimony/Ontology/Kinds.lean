@@ -59,6 +59,15 @@ category would have answered it for them.
   takes the same consensus for a set of texts that agree, an information object
   to be measured by Scripture. Which it is lies close to the Orthodox claim that
   it interprets Scripture infallibly, so its category is left open.
+- **The merits of Christ and of the saints**, and **the treasury of the
+  church**. Clement VI's *Unigenitus* (1343) speaks of Christ's merits as a
+  treasure "committed to be dispensed" through Peter and his successors, a store
+  the pope draws on (Denzinger 550–552). Luther's thesis 58 denies that the
+  treasure is these merits, "for even without the pope, these always work grace
+  for the inner man", and thesis 62 names "the true treasure of the Church" as
+  "the Most Holy Gospel" (*Works of Martin Luther* vol. 1, p. 35). A store to be
+  dispensed is a social object; Christ's work at work in the believer, or the
+  Gospel, is not. The category is the dispute.
 -/
 
 namespace Testimony.Ontology.Kinds
@@ -136,6 +145,16 @@ def category : Concept → Option Category
   | .privateJudgment => some .event
   | .circularArgument => some .informationObject
   | .appealToUltimateAuthority => some .informationObject
+  | .temporalPunishment => some .event
+  | .remissionOfTemporalPunishment => some .event
+  | .cleansingAfterDeath => some .process
+  | .turningToAMutableGood => some .event
+  | .meritsOfChrist => none
+  | .meritsOfTheSaints => none
+  | .superabundance => some .quality
+  | .treasuryOfTheChurch => none
+  | .pope => some .role
+  | .visionsOfTheDead => some .event
   | .minutes _ => some .temporalRegion
 
 /-- The concepts whose category is in dispute: each named in the module

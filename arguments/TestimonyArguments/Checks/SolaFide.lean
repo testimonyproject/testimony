@@ -34,10 +34,10 @@ def unfoldSet : List (Name × Name) :=
 info: the shared ontology, in every argument:
 Sola fide
   joins: 7, with no definition: 4
-  not a ground: held by 4, used of a text or voice by 14; derives nothing
-  the only means: held by 3, used of a text or voice by 11; derives:
+  not a ground: held by 5, used of a text or voice by 14; derives nothing
+  the only means: held by 4, used of a text or voice by 14; derives:
     justificationByFaithAlone excludes baptismIsInstrumentalCause
-  the whole ground: held by 3, used of a text or voice by 6; derives nothing
+  the whole ground: held by 4, used of a text or voice by 6; derives nothing
   a means is moved by its user: held by 2, used of a text or voice by 0; derives:
     loveMovesFaith excludes faithWorksThroughLove
   moving runs one way: held by 1, used of a text or voice by 0; derives:
@@ -52,7 +52,7 @@ Sola fide
 /--
 info: the fallacy checks, over every argument's lines, each named with its reader:
 Sola fide
-  lines: 110, read: 62, Scripture's own: 0
+  lines: 110, read: 68, Scripture's own: 0
   commit what they declare, as declared:
     bellarmineFormedFaithLine (Bellarmine): reading against usage: ἀγάπη at work in ἐνεργουμένη
     bellarminePassiveLine (Bellarmine): reading against usage: ἀγάπη at work in ἐνεργουμένη
@@ -68,6 +68,7 @@ Sola fide
     rheimsSoulLine (English College at Rheims): ἀγάπη at work in ἐνεργουμένη;
         the author's: θεός, εἷς, πνεῦμα, ἀγαπητός
   attribute a view, against the argument's record:
+    chemnitzAccretionLine (Chemnitz): gregoryTheGreat, unrecorded
     hippoLine (Augustine): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
     renewalLine (Augustine): augustine, borne out by augustineGivesBothSenses; latinWest, unrecorded
     sandersLine (Dunn): secondTempleJudaism, unrecorded
@@ -131,9 +132,9 @@ beforeTrentDispute.finite:
 faithAndCharityDispute.finite:
   hidden premises: 0; lines not read: 2
 forgivenessDispute.finite:
-  hidden premises: 0; lines not read: 6
-historyDispute.finite:
   hidden premises: 0; lines not read: 2
+historyDispute.finite:
+  hidden premises: 0; lines not read: 1
 jamesDispute.finite:
   hidden premises: 0; lines not read: 4
 jesusWordsDispute.finite:
