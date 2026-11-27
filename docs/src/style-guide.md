@@ -205,6 +205,16 @@ and `leaves_open` have the kernel evaluate every premise under it
 it with `simp` took a second. A reading written any other way, through another
 reading or as an equation, still proves what it did, by the slower recipe.
 
+**Show a few claims whole as a truth table.** When an argument turns on a few
+claims about one case (does he believe, does he have works, is he justified?),
+write it as a `TruthTable` (`Testimony.Logic.TruthTable`): its claims in column
+order, its tests each with the `Source` it rests on, and the statements that
+follow. Prove `Checked` with `decide +kernel`, so the kernel evaluates every
+row, and get the entailment from `entails_of_checked`; name an allowed row
+(`allowedRow`) so the tests are shown satisfiable. The page sets the table in
+the chapter's prose, rows numbered from 1, so the prose after it can say "row 5".
+A test marked `.proposal` is shaded as proposed.
+
 **Prefer `Independent` to a pair of refutations.** When a reply is recorded as
 "it blocks the objection" and "it establishes nothing" over the *same* premise
 set, those are the two halves of one independence claim and should be stated as

@@ -371,7 +371,7 @@ charitie, it is not as by an instrument, but as the body worketh by the soul".
 Rated `disputed`, because Calvin grants the verse and denies the step: the love
 is "the fruit and effect of faith" (*Antidote*, p. 119). A dispute weighs the step
 at `refuted` all the same, because what it concludes, that love is the one at work
-in ἐνεργουμένη, is the claim Paul's own use of the verb refutes. -/
+in ἐνεργουμένη ("working"), is the claim Paul's own use of the verb refutes. -/
 def rheimsSoulStep : Source :=
   { primary := .work rheimsNewTestament (.adLoc ⟨.galatians, 5, 6⟩)
   , tradition := .romanCatholic
