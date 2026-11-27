@@ -10,6 +10,7 @@ import Testimony.Logic.Bundle
 import Testimony.Logic.Credibility
 import Testimony.Logic.Latex
 import Testimony.Logic.Markdown
+import Testimony.Logic.Symbols
 import Testimony.Corpus.Greek
 import Testimony.Logic.Contest
 import Testimony.Semantics.Grammar
@@ -1024,7 +1025,9 @@ def latexAbstract (a : Argument) (alone : Bool) : String :=
 /-- **A printable document**: a title, the abstract of the argument it holds if
 it holds one, a standing note, and a section for each argument — its heading
 the catalogue's title, its abstract under it, its body the harvest's LaTeX —
-and last, how the edition was made (`Logic.Latex.reproduction`). Every package
+then the symbols its logic uses, each one's first use linked to its entry
+(`Logic.Symbols`), and last, how the edition was made
+(`Logic.Latex.reproduction`). Every package
 built on the library sets its documents with it, so they are set alike. `made`
 says what makes this document: the package, its generator and the file.
 
@@ -1049,6 +1052,7 @@ def latexDocument (title note : String) (sections : List (Argument × Body))
       (if credits && !alone then "\\creditline{" ++ a.ns.toString ++ "}\n\n" else "") ++
       (if alone then "" else latexAbstract a false) ++
       (if a.chapters.isEmpty then b.latex else latexChapters a b))
+  let (body, used) := Logic.Symbols.linkLatex body
   let licensed := (Logic.Latex.citedIn body works).filter (·.core.licence.isSome)
   (if credits then
     Logic.Latex.preamble title ("\\credit{" ++ key ++ "}")
@@ -1057,7 +1061,8 @@ def latexDocument (title note : String) (sections : List (Argument × Body))
    | [(a, _)] => latexAbstract a true
    | _ => "") ++
   note ++ Logic.Latex.contents ++ body ++
-  Logic.Latex.postamble (Logic.Latex.reproduction { made with credits, licensed })
+  Logic.Latex.postamble (Logic.Symbols.latexAppendix used ++
+    Logic.Latex.reproduction { made with credits, licensed })
 
 -- A work is credited where it is cited, with or without a pinpoint, and only there;
 -- its credit names its licence, escaped for LaTeX.

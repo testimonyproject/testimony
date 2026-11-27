@@ -1628,6 +1628,9 @@ def style : String :=
   -- is dark enough to print as near-black.
   "\\definecolor{claimlink}{RGB}{25,70,150}\n" ++
   "\\newcommand{\\pvar}[2]{\\hyperlink{#1-P#2}{\\textcolor{claimlink}{P_{#2}}}}\n" ++
+  -- The first use of a symbol links to its entry in the appendix of symbols
+  -- (`Logic.Symbols.latexAppendix`), coloured as a claim's link is.
+  "\\newcommand{\\symref}[2]{\\hyperlink{sym-#1}{\\textcolor{claimlink}{#2}}}\n" ++
   -- The target sits at the top of its row, so following a link shows the whole
   -- row rather than starting below its first line.
   "\\newcommand{\\pvartarget}[2]{\\raisebox{\\ht\\strutbox}{\\hypertarget{#1-P#2}{}}}\n" ++
