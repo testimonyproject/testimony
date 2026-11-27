@@ -13,3 +13,9 @@ benchmark = "satisfied_by: Trent grants the subjective genitive"
 metric = "time"
 up_to = 0.25
 reason = "The sola fide claim type is fifteen claims larger, so each valuation over it costs more to reduce; Trent's case itself is unchanged. CI measured +14.4%"
+
+[[accept]]
+benchmark = "checks: ontology"
+metric = "time"
+up_to = 0.12
+reason = "Twelve more sola fide claims now carry meanings (141 of 195), and the ontology check reads each one in every argument line. CI measured +6.6%"
