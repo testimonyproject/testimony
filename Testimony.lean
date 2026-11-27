@@ -20,6 +20,7 @@ import Testimony.Logic.Package
 import Testimony.Logic.Line
 import Testimony.Logic.Compose
 import Testimony.Logic.ModelCheck
+import Testimony.Logic.TruthTable
 import Testimony.Logic.Tactic
 import Testimony.Logic.Framework
 import Testimony.Logic.Dispute

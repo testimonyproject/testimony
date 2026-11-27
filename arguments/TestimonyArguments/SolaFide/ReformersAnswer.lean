@@ -552,7 +552,7 @@ declare_verdict reformersAnswerSettle for reformersAnswerDispute :
 /-- **Augustine's reading, as a claim about Paul.** Augustine explained the
 Latin *iustificare*, and his line (`renewalLine`) argues from that explanation
 to what justification is. Against a claim about Paul's justification, the
-argument needs the Latin word to bear the sense of Paul's Greek one, δικαιόω [justify],
+argument needs the Latin word to bear the sense of Paul's Greek one, δικαιόω ("justify"),
 as Trent's reading of the word does (`trentWordLine`). Augustine does not state
 that bridge; Trent does (ch. 7–8), so it is a ground here, cited to Trent. The
 same rule holds for a father of the church as for a council. -/

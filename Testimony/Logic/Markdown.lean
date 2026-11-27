@@ -463,6 +463,62 @@ def verdict (v : Page.Verdict) (links : List Page.BecauseLink) (table : String) 
 /-- A coordinate, rounded to a whole pixel. -/
 def px (x : Float) : String := toString x.round.toUInt64.toNat
 
+/-- Text for an HTML element: the three characters HTML reserves. -/
+def html (s : String) : String :=
+  s.foldl (init := "") fun acc c =>
+    acc ++ match c with
+      | '<' => "&lt;" | '>' => "&gt;" | '&' => "&amp;" | '"' => "&quot;"
+      | c => c.toString
+
+/-- **A truth table, set out** (`Latex.tableWords`): a column for each claim,
+one for each test, whether the row is allowed, and one for each statement that
+follows, shaded. Each row has an anchor, `decl-row-k`, so prose after the table
+can link "row 5" to it. Each test and statement is said in words under the
+table, with what a test rests on.
+
+The table is a raw HTML block, which Markdown passes through only up to the
+first blank line; it therefore contains none. -/
+def table (d : String) (t : Page.TableView) : String :=
+  let yn (b : Bool) := if b then "Yes" else "No"
+  let mark (b : Bool) :=
+    if b then "<span class=\"kept\">✓</span>" else "<span class=\"broken\">✗</span>"
+  let cls (c : Page.TableColumnView) (base : String) :=
+    " class=\"" ++ base ++ (if c.proposed then " proposed" else "") ++ "\""
+  let anchorOf (k : Nat) := d ++ "-col-" ++ toString k
+  let head (c : Page.TableColumnView) (k : Nat) (base : String) :=
+    "<th" ++ cls c base ++ "><a href=\"#" ++ anchorOf k ++ "\">" ++ html c.label ++
+      "</a><br><span class=\"formula\">" ++ html c.formula ++ "</span></th>"
+  let nt := t.tests.length
+  let nf := t.follows.length
+  let cols := t.tests.map (·, "test") ++ t.follows.map (·, "follows")
+  let numbered := cols.zip (List.range cols.length)
+  "<div class=\"testimony-table\">\n<table>\n<thead>\n<tr><th rowspan=\"2\">Row</th>" ++
+  String.join (t.claims.map fun (h, l) =>
+    "<th rowspan=\"2\">" ++ html h ++ "<br><i>" ++ html l ++ "</i></th>") ++
+  "<th colspan=\"" ++ toString nt ++ "\" class=\"group\">Tests</th>" ++
+  "<th rowspan=\"2\">Allowed</th>" ++
+  (if nf == 0 then "" else
+    "<th colspan=\"" ++ toString nf ++ "\" class=\"group follows\">What follows</th>") ++
+  "</tr>\n<tr>" ++
+  String.join (numbered.map fun ((c, base), k) => head c k base) ++ "</tr>\n</thead>\n<tbody>\n" ++
+  String.join ((t.rows.zip (List.range t.rows.length)).map fun ((cs, ts, ok, fs), k) =>
+    "<tr id=\"" ++ d ++ "-row-" ++ toString (k + 1) ++ "\"" ++
+      (if ok then "" else " class=\"struck\"") ++ "><td>" ++ toString (k + 1) ++ "</td>" ++
+      String.join (cs.map fun b => "<td>" ++ yn b ++ "</td>") ++
+      String.join ((ts.zip t.tests).map fun (b, c) =>
+        "<td" ++ cls c "test" ++ ">" ++ mark b ++ "</td>") ++
+      "<td class=\"allowed\">" ++ yn ok ++ "</td>" ++
+      String.join (fs.map fun b =>
+        "<td class=\"follows\">" ++ (if b then "true" else "false") ++ "</td>") ++
+      "</tr>\n") ++
+  "</tbody>\n</table>\n</div>\n\n" ++
+  String.join (numbered.map fun ((c, _), k) =>
+    "- <a id=\"" ++ anchorOf k ++ "\"></a>" ++ escape c.label ++ " **" ++ c.words ++ "**" ++
+      (match c.source with
+       | some s => " " ++ source s ++ "."
+       | none => "") ++ "\n") ++
+  "\n"
+
 /-- A dispute's graph drawn as an inline SVG: the parties numbered on a circle,
 defeats as solid arrows, supports as dashed ones. Each edge bends a little to
 its left, so a mutual defeat is two arrows rather than one line.
@@ -787,6 +843,7 @@ def item [DecidableEq α] (order : List α) (cite : Option (α → AtomMeta)) :
         String.join (rs.map fun (ins, out) =>
           "| " ++ " | ".intercalate (ins.map yn ++ [if out then "yes" else "no"]) ++ " |\n") ++
         "\n"
+  | .table d doc t => "<a id=\"" ++ d ++ "\"></a>\n\n" ++ doc ++ "\n\n" ++ table d t
   | .contested d doc holder denier φ =>
       declLabel d "" ++ "\n" ++ doc ++ "\n\n*" ++ escape holder ++ "* holds this claim, and *" ++
         escape denier ++ "* denies it; each can be defended in the dispute:\n\n" ++
