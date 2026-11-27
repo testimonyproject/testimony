@@ -69,17 +69,18 @@ The growth it called sanctification, not justification.
 
 Every position here cites, for what it holds, only Scripture and works written
 before 1648 (`reformers_answer_hears_no_later_voice`). The ratings, though, name
-readers of any date who grant a step's grounds and deny its conclusion, so
-Bellarmine, writing later, can count against a step.
+readers of any date who grant a step's grounds and deny its conclusion: here
+Bellarmine and Augustine.
 
 The council and each of its three answerers attack one another, because each
 side denies what the other says justification is. An attack defeats unless the
-attacker's weakest premise or step is rated lower than the position it attacks.
-Two of the answers, Chemnitz's and Westminster's, go through a reading of Romans
-4, and each has a reader who grants its texts and denies where it ends.
-Bellarmine agrees that Paul's Abraham was already reborn, and holds that the
-works Paul excludes are only those done before faith; Augustine reads "justifies
-the ungodly" as making the ungodly godly. So those steps are rated *disputed*,
+weakest premise or step it relies on (its weakest link) is rated lower than the
+weakest link of the position it attacks. Two of the answers, Chemnitz's and
+Westminster's, go through a reading of Romans 4, and each has a reader who
+grants its texts and denies where it ends. Bellarmine agrees that Paul's
+Abraham was already reborn, and holds that the works Paul excludes are only
+those done before faith; Augustine reads "justifies the ungodly" as making the
+ungodly godly. So those steps are rated *disputed*,
 and they and the council defeat each other.
 
 Calvin's step runs from "justification is a verdict" and "a verdict has no
@@ -87,12 +88,14 @@ degrees" to "justification has no degrees", and nothing in the council's
 position denies the step: it can grant that a verdict has no degrees, and
 denies only that justification is a verdict and nothing more. So the step is
 rated *well supported*. His first premise is not. That justification is a
-verdict only is rated *disputed*, because canon 11 denies it in terms,
-condemning justification "by the sole imputation of the justice of Christ, or
-by the sole remission of sins". The council's definition, that justification
-is also renewal (ch. 7), is rated *disputed* for the same kind of reason:
-Westminster XI.1 denies it in terms. The two definitions are rated by one rule,
-and so Calvin and the council defeat each other, as Chemnitz and Westminster do
+verdict only is rated *disputed*, which means there is an argued objection to
+it, still to be weighed: Augustine's, that "being justified" signifies "being
+made righteous". Canon 11 condemns the same premise, justification "by the sole
+imputation of the justice of Christ, or by the sole remission of sins". The
+council's definition, that justification is also renewal (ch. 7), is rated
+*disputed* by the same rule, because Paul's gospel and Romans 4 argue against it
+from the texts and the courtroom sense of the verb, and Westminster XI.1 denies
+it. So Calvin and the council defeat each other, as Chemnitz and Westminster do
 with the council.
 
 So none of the four stands (`after_the_reformers_answer_nothing_stands`). To
@@ -102,16 +105,25 @@ the council alone, and the three answers together, since one reading satisfies
 them all (`the_reformers_answers_stand_together`).
 Which side holds turns on the two definitions, and they fare alike when the
 objections to each are checked (`both_definitions_disputed_alike`). Each
-confession's denial of the other is only a denial: canon 11 holds the council's
-definition as a premise against Calvin's, and Calvin holds his own against the
-council's. Each definition is also met by an argument that every standard
+objection is checked under three standards of what it may rest on: the evidence
+standard admits texts and what anyone can check, the Scripture standard asks an
+objection to a step resting on Scripture to rest on Scripture too, and the
+tradition standard also admits a council's or a theologian's word. An objection
+counts as an argument under a standard when it can be held with the step's
+grounds and reaches its denial by a step of its own, resting only on what that
+standard admits. Canon 11 and Calvin each answer the other only by asserting
+their own definition, which excludes the other's, and neither argues its denial
+by a step. But each definition is also met by an argument that every standard
 admits. Augustine argues from his explanation of the word, "what else does the
 phrase 'being justified' signify than being made righteous", that justification
-includes renewal. Paul's gospel and Romans 4 argue from the texts and the
-courtroom sense of the verb that it does not. Westminster's own answer from
-Romans 4 is an argument only where a theologian's word counts, because it needs
-Chemnitz's reading that "count" and "works" keep one sense through 4:4–8. So
-neither definition is refuted, and each is *disputed* under every standard. Whether Scripture
+includes renewal (in the same passage he gives a second sense, "deemed, or
+reckoned as just", which his line here leaves out). Paul's gospel and Romans 4
+argue from the texts and the courtroom sense of the verb that it does not.
+Westminster's own answer from Romans 4 is an argument only under the tradition
+standard, because its step needs "count" and "works" to keep one sense through
+4:4–8, a reading this chapter cites to Chemnitz (*Examen*, p. 169), not to the
+text. So neither definition is refuted, and each is *disputed* under every
+standard. Whether Scripture
 settles that question is the work of the chapter "What Trent means by
 justification", which weighs both definitions against Paul's own uses of the
 verb.
@@ -420,8 +432,10 @@ def reformersAnswerNode : ReformersAnswerParty → ArgumentPackage Claim
 /-- The Reformers' answer to the council, heard with the council. -/
 declare_dispute reformersAnswerDispute := reformersAnswerNode using solaFideDefs
   /-- **Who defeats whom.** Calvin, Chemnitz and Westminster each defeat the
-  council, and the council defeats each of them, because each side's weakest
-  premise is its definition of justification, rated *disputed*. The three
+  council, and the council defeats each of them, because the weakest link on
+  each side is rated *disputed*: for the council and Calvin it is their
+  definition of justification, and for Chemnitz and Westminster the step each
+  draws from Romans 4. The three
   answers deny nothing of one another.
   Each pair is checked by the proof checker. -/
   defeats [ (.calvin, .trentOnIncrease), (.chemnitz, .trentOnIncrease)
@@ -515,11 +529,12 @@ declare_verdict reformersAnswerSettle for reformersAnswerDispute :
   justification is: a verdict, which has no degrees (Calvin), one and the same
   from conversion to eternal life (Chemnitz), and a pardon and an accounting
   "not by infusing righteousness" (Westminster XI.1). An attack defeats unless
-  the attacker's weakest premise or step is rated lower than the position it
-  attacks. On each side the weakest premise is its definition of
-  justification, rated *disputed*: the council's because Westminster XI.1
-  denies it in terms, Calvin's because canon 11 denies it in terms. Chemnitz's
-  and Westminster's readings of Romans 4 are rated *disputed* too, because
+  the weakest premise or step it relies on (its weakest link) is rated lower
+  than the weakest link of the position it attacks. The council's weakest link
+  is its definition, rated *disputed* because Paul's gospel and Romans 4 argue
+  against it. Calvin's is his
+  definition, rated *disputed* because Augustine argues against it. Chemnitz's
+  and Westminster's are their readings of Romans 4, rated *disputed* because
   Bellarmine and Augustine grant their texts and deny where they end. So every
   attack defeats, each position is defeated, and nothing is left that survives
   however the disagreements are settled. -/
@@ -532,11 +547,13 @@ declare_verdict reformersAnswerSettle for reformersAnswerDispute :
 /-- **Augustine, against the definition that justification is a verdict only.**
 "What else does the phrase 'being justified' signify than being made righteous,
 by Him, of course, who justifies the ungodly man, that he may become a godly
-one?" (*On the Spirit and the Letter*, ch. 45). His starting point is that he
-explained the word so, which is a fact about his book, and he argues from it
-that justification includes the renewal of the person (`renewalLine`). So he
-reaches his denial by a step, and rests on nothing a standard refuses: an
-argument under all three standards. -/
+one?" (*On the Spirit and the Letter*, ch. 45). In the same passage he gives a
+second sense, "deemed, or reckoned as just", which this line leaves out. His
+starting point is that he explained the word so, which is a fact about his
+book, and from it he argues that justification includes the renewal of the
+person, a step rated *disputed* (`renewalLine`). So he reaches his denial by a
+step whose only ground is a fact anyone can check, and it counts as an argument
+under all three standards. -/
 def augustineOnForensicAssessment : Assessment Claim where
   dissenter := "Augustine (On the Spirit and the Letter, ch. 45)"
   against := "Calvin: justification is a verdict only (Antidote, p. 116)"
@@ -569,9 +586,11 @@ def canon11OnForensicAssessment : Assessment Claim where
         , (.scriptural, [.justificationIncludesSanctification, .renewalGrowsThroughGoodWorks]) ] }
   checked := by horn_certify
 
-/-- **Calvin, against the council's definition.** He holds his own definition as
-a premise, and it alone denies the council's. A disagreement, not an argument,
-under every standard, as canon 11 is against him. -/
+/-- **Calvin, against the council's definition.** Calvin answers chapter 7 with
+his own definition, that justification is "wholly included in the gratuitous
+acceptance of God" (*Antidote*, p. 116), and that premise alone excludes the
+council's. No step of his argues the denial, so under every standard it is a
+disagreement, not an argument. -/
 def calvinOnDefinitionAssessment : Assessment Claim where
   dissenter := "Calvin (Antidote, pp. 116, 158)"
   against := "Trent: justification is the renewal of the inward man (ch. 7)"
@@ -589,9 +608,11 @@ def calvinOnDefinitionAssessment : Assessment Claim where
 /-- **Westminster, against the council's definition.** It argues from Romans
 4:5–8 that God justifies by not counting sin, and not by infusing
 righteousness (XI.1). So it reaches its denial by a step. But the step needs
-"count" and "works" to keep one sense from 4:4–5 to 4:6–8, and those two
-readings are cited to Chemnitz (*Examen*, p. 169), a theologian's word. So it is
-an argument under the tradition standard only. -/
+"count" and "works" to keep one sense from 4:4–5 to 4:6–8, readings this chapter
+cites to Chemnitz (*Examen*, p. 169), a theologian's word, and not to the text.
+So it is an argument under the tradition standard only. The argument from Paul's
+gospel, which Westminster XI.1 also states, rests on Galatians 1 and the lexicon
+and counts under all three (`gospelOnDefinitionAssessment`). -/
 def westminsterOnDefinitionAssessment : Assessment Claim where
   dissenter := "Westminster XI.1, from Romans 4:5–8"
   against := "Trent: justification is the renewal of the inward man (ch. 7)"
@@ -607,23 +628,24 @@ def westminsterOnDefinitionAssessment : Assessment Claim where
   checked := by horn_certify
 
 /-- **Calvin's definition, with the objections to it**: Augustine, the strongest
-known, and canon 11. -/
+known, because his alone argues its denial by a step, and canon 11, which only
+asserts the council's definition. -/
 def forensicPremise : RatedStep Claim where
   step := "Calvin: justification is a verdict only (Antidote, p. 116)"
   support := (reformersAnswerCite .justificationIsForensicOnly).source
   register := [augustineOnForensicAssessment, canon11OnForensicAssessment]
   strongest := some 0
 
-/-- **Both definitions are disputed under every standard, each by an argument
-and not only by the other side's denial.** Calvin's, that justification is a
+/-- **Both definitions are disputed under every standard, and in each case by an
+argued objection.** Calvin's, that justification is a
 verdict only, is met by Augustine, who argues from his explanation of the word
 that it includes renewal. Trent's, that it includes renewal, is met by Paul's
 gospel and by Romans 4, each argued from the texts and the courtroom sense of
-the verb (`trent_definition_ratings`). Each confession's denial of the other is
-a disagreement only: canon 11 against Calvin, and Calvin's own definition
-against the council's. Westminster's answer from Romans 4 is an argument under
-the tradition standard only, because it needs Chemnitz's word that "count" and
-"works" keep their sense through the passage. -/
+the verb (`trent_definition_ratings`). Canon 11 against Calvin, and Calvin
+against the council, each assert their own definition and argue nothing, so
+each is a disagreement only. Westminster's answer from Romans 4 is an argument
+under the tradition standard only, because its step needs "count" and "works"
+to keep their sense through the passage, readings cited here to Chemnitz. -/
 @[headline]
 theorem both_definitions_disputed_alike :
     forensicPremise.ratings =
