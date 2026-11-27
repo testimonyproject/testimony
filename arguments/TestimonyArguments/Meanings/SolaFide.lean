@@ -140,6 +140,8 @@ def means : Claim → Statement
     .opaque "Acts 15:20–21 and 21:20–24: the decree, and Jerusalem's zeal for the law"
   | .ephesiansIsPauline => .wrote .paul .ephesians
   | .titusIsPauline => .wrote .paul .titus
+  | .romansIsPauline => .wrote .paul .romans
+  | .galatiansIsPauline => .wrote .paul .galatians
   | .firstPeterIsPetrine => .wrote .peter .firstPeter
   | .secondPeterIsPetrine => .wrote .peter .secondPeter
   | .righteousnessOfGodIsDeliverance =>
@@ -455,7 +457,8 @@ def all : List Claim :=
   [ .ephesians2_8_9, .romans3_28, .galatians2_16, .romans4_4_5, .titus3_5
   , .worksOfLawMeansWorksGenerally, .pistisChristouObjective
   , .galatiansOpposesCircumcisionAsRequirement, .acts15_9_11, .acts15YokeIsLawAsCondition
-  , .lukeKeepsTheLaw, .ephesiansIsPauline, .titusIsPauline, .firstPeterIsPetrine
+  , .lukeKeepsTheLaw, .ephesiansIsPauline, .titusIsPauline, .romansIsPauline
+  , .galatiansIsPauline, .firstPeterIsPetrine
   , .secondPeterIsPetrine, .righteousnessOfGodIsDeliverance, .luke7_50FaithHasSavedYou
   , .sozoIsSoteriological, .luke7_47LoveIsEvidence, .james2TargetsDeadFaith
   , .worksAreFruitNotGround, .james2_24Compatible, .james2_24NotByFaithAlone
@@ -534,7 +537,7 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **A hundred and twenty-seven of the hundred and seventy-eight are analysed.** Of
+/-- **A hundred and twenty-nine of the hundred and eighty are analysed.** Of
 the fifty-one that are not, two are the claims of the chapter on what was read in
 Paul before Trent: what the fathers wrote of faith alone, and justification with
 no prior work earning it. One is the chapter on faith working through love: that
@@ -555,7 +558,7 @@ of the obedience it requires, Galatians 1:6–9, Christ's command to baptise, Tr
 reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each needs a word
 the vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
 reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (127, 178) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (129, 180) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the

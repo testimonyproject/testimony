@@ -374,6 +374,28 @@ def baseCite : Claim → AtomMeta
         , supporting := [.scripture [{ ref := .verse ⟨.titus, 1, 1⟩ }]]
         , tradition := .christianHistoricalGrammatical
         , confidence := .disputed } }
+  | .romansIsPauline =>
+    { label := "Romans was written by Paul"
+    , kind := .historical
+    , source :=
+        { primary := .work fitzmyerRomans .whole
+        , supporting :=
+            [.scripture [{ ref := .verse ⟨.romans, 1, 1⟩ }], .work mooRomans .whole]
+        , tradition := .christianHistoricalGrammatical
+        -- `disputed`, as `ephesiansIsPauline` is: Livesey, *The Letters of Paul in
+        -- their Roman Literary Context* (Cambridge, 2024; doi 10.1017/9781009487061),
+        -- grants that 1:1 names Paul and reads the letter as a second-century
+        -- composition in his name. So for Galatians below.
+        , confidence := .disputed } }
+  | .galatiansIsPauline =>
+    { label := "Galatians was written by Paul"
+    , kind := .historical
+    , source :=
+        { primary := .work mooGalatians (.page 1)
+        , supporting :=
+            [.scripture [{ ref := .verse ⟨.galatians, 1, 1⟩ }], .work martynGalatians .whole]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .disputed } }
   | .firstPeterIsPetrine =>
     { label := "1 Peter was written by the apostle Peter"
     , kind := .historical
