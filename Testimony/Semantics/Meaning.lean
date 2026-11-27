@@ -49,6 +49,19 @@ class HasMeanings (α : Type) where
   /-- The list has every atom. -/
   complete : ∀ a, a ∈ all
 
+/-- **Whom an argument's claims are cited to**: every source the argument cites
+each atom to, in any of its positions. The fallacy checks read it to tell a
+sameness of sense a reader argues from one the library only states
+(`Testimony.Source.arguesSameness`). An argument declares it where all its
+citations are in scope, which may be later than its meanings. -/
+class HasSources (α : Type) where
+  /-- Every source the argument cites the atom to. -/
+  sources : α → List Source
+
+/-- An argument that passes no citations on: every claim cited to no one, so that
+no sameness of sense it states counts as argued by a reader. -/
+instance (priority := low) HasSources.none {α : Type} : HasSources α := ⟨fun _ => []⟩
+
 namespace Statement
 
 /-- The statements a statement asserts together: `also` taken apart. -/
