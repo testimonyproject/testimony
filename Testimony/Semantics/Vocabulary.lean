@@ -63,6 +63,11 @@ inductive Voice
   /-- Aquila, Symmachus and Theodotion: the Jewish versions of the Greek
   Scriptures that the fathers name together, against the Septuagint. -/
   | theThree
+  /-- Gregory the Great, bishop of Rome 590–604, author of the *Dialogues*. -/
+  | gregoryTheGreat
+  /-- The church of the first four centuries, as its writers witness to what it
+  held and did. -/
+  | earlyChurch
 deriving DecidableEq, Repr
 
 /-- A word or fixed phrase, in the language its text is written in. A lexeme is
@@ -169,6 +174,9 @@ inductive Lexeme
   /-- παράδοσις, tradition: what is handed on. 2 Thessalonians 2:15's
   "traditions", and Mark 7's "tradition of the elders". -/
   | paradosis
+  /-- μετανοέω, repent: the verb of Matthew 4:17's "Repent" (μετανοεῖτε), which
+  the Vulgate renders *poenitentiam agite*. -/
+  | metanoeo
 deriving DecidableEq, Repr
 
 /-- What a word can mean: a fixed inventory of senses, each named for what it
@@ -239,6 +247,12 @@ inductive Sense
   | lawsOwnTerms
   /-- Including believing in Christ. -/
   | includesBelieving
+  /-- A change of mind and heart: a turning, not a deed done. Luther's reading of
+  μετανοέω, "a 'coming to one's senses'". -/
+  | changeOfMind
+  /-- Penance as the sacrament administers it: confession, and the satisfaction
+  the priest enjoins. -/
+  | sacramentalPenance
 deriving DecidableEq, Repr
 
 /-- The things doctrinal claims are about. -/
@@ -401,6 +415,35 @@ inductive Concept
   /-- An appeal to an ultimate authority: arguing for a rule of faith from that
   rule itself, there being no higher authority to appeal to. -/
   | appealToUltimateAuthority
+  /-- A punishment of sin that is not eternal: what Aquinas and the Council of
+  Florence hold may still be owed after the guilt is forgiven. -/
+  | temporalPunishment
+  /-- The remission of temporal punishment: its being no longer owed. -/
+  | remissionOfTemporalPunishment
+  /-- The cleansing, after death and by pains, of the souls of the penitent who
+  die before they have made satisfaction: what the Western church calls
+  purgatory. -/
+  | cleansingAfterDeath
+  /-- Sin's inordinate turning to a changeable good, which Aquinas distinguishes
+  from its turning away from God, the unchangeable Good. -/
+  | turningToAMutableGood
+  /-- The merits of Christ: the worth before God of what He did and suffered. -/
+  | meritsOfChrist
+  /-- The merits of Mary and the saints: the worth before God of what they did
+  and suffered, beyond what their own sins required. -/
+  | meritsOfTheSaints
+  /-- More than was needed for what it was given for: the measure Clement VI
+  gives Christ's blood, shed "copiously" where one drop would have redeemed the
+  human race. -/
+  | superabundance
+  /-- The treasury of the church: what indulgences are granted from. -/
+  | treasuryOfTheChurch
+  /-- The bishop of Rome, in the office the medieval church gave him of granting
+  indulgences. -/
+  | pope
+  /-- Accounts of the dead seen or heard after death, such as fill the fourth book
+  of Gregory's *Dialogues*. -/
+  | visionsOfTheDead
   /-- A length of time, in minutes. -/
   | minutes (n : Nat)
 deriving DecidableEq, Repr

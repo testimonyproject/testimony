@@ -9,6 +9,7 @@ import TestimonyArguments.SolaFide.Gospel
 import TestimonyArguments.SolaFide.Definition
 import TestimonyArguments.SolaFide.Hearings
 import TestimonyArguments.SolaFide.BeforeTrent
+import TestimonyArguments.SolaFide.WhatForgivenessLeft
 import TestimonyArguments.SolaFide.FaithAndCharity
 import TestimonyArguments.SolaFide.Reformation
 import TestimonyArguments.SolaFide.TrentAnswers
@@ -202,9 +203,12 @@ The chapters after this one come in two parts. The first tells the story of the
 doctrine in the order its voices wrote. It begins with the texts themselves
 ("What Scripture says"). Then it asks whether faith alone was read in Paul by
 the fathers and the schoolmen, from the 350s to the 1270s ("Was faith alone read
-in Paul before Trent?"), follows the Reformers and their Catholic opponents from
-1521 to the colloquy at Regensburg ("The Reformation's case, 1521–1541"), and
-comes to the council's decree of 1547 ("The council answers, 1547"), and ends
+in Paul before Trent?"), and traces the penalty the medieval church held was still
+owed after forgiveness, from Tertullian's satisfaction to purgatory, the treasury
+of indulgences and Luther's theses ("What forgiveness left unpaid, 203–1520"). It
+follows the Reformers and their Catholic opponents from 1521 to the colloquy at
+Regensburg ("The Reformation's case, 1521–1541"), comes to the council's decree
+of 1547 ("The council answers, 1547"), and ends
 with the Reformers' answer to it, from Calvin that same year to the Westminster
 Confession of 1647 ("The Reformers answer the council, 1547–1647"). Each
 chapter after the texts hears the voices of its own time, with the earlier

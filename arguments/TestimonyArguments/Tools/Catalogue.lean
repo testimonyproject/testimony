@@ -27,6 +27,8 @@ def solaFideChapters : List Chapter :=
     , part := "The story, in the order it was told" }
   , { slug := "before-trent", title := "Was faith alone read in Paul before Trent?"
     , modules := [`TestimonyArguments.SolaFide.BeforeTrent] }
+  , { slug := "what-forgiveness-left", title := "What forgiveness left unpaid, 203–1520"
+    , modules := [`TestimonyArguments.SolaFide.WhatForgivenessLeft] }
   , { slug := "reformation", title := "The Reformation's case, 1521–1541"
     , modules := [`TestimonyArguments.SolaFide.Reformation] }
   , { slug := "trent-answers", title := "The council answers, 1547"

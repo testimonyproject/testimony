@@ -110,6 +110,14 @@ abbrev galatians : PassageRange := rg .galatians 1 1 6 18
 only means by which justification is received. -/
 abbrev faithAlone : Content := rl .soleInstrumentOf (cn .faith) (cn .justification)
 
+/-- Matthew 4:17. -/
+@[nolint defsWithUnderscore] abbrev matt4_17 : PassageRange := vs .matthew 4 17
+
+/-- **Purgatory, as the Council of Florence defines it**: the cleansing after
+death is how the penitent who die owing temporal punishment have it remitted. -/
+abbrev purgatory : Content :=
+  rl .instrumentOf (cn .cleansingAfterDeath) (cn .remissionOfTemporalPunishment)
+
 /-- **What each sola fide atom asserts.** Total, so no atom is left without a
 meaning; `opaque` where the vocabulary cannot yet say it. -/
 def means : Claim → Statement
@@ -451,6 +459,32 @@ def means : Claim → Statement
     .opaque "What was counted at Gen 15:6 was credited for his faithfulness when tested"
   | .abrahamFoundFaithfulWhenTested =>
     .opaque "Abraham found faithful in trial, and it was credited to him (1 Macc 2:52)"
+  | .matthew12_32NotForgivenInTheAgeToCome =>
+    .opaque "Matthew 12:32: not forgiven, either in this age or in the age to come"
+  | .soulsAreCleansedAfterDeath => .holds purgatory
+  | .secondSamuel12_13_14ForgivenYetPunished =>
+    .opaque "2 Samuel 12:13-14: the Lord forgave David's sin, yet his son would die"
+  | .sinTurnsToAMutableGood =>
+    .holds (rl .groundOf (cn .turningToAMutableGood) (cn .temporalPunishment))
+  | .temporalDebtRemainsAfterForgiveness =>
+    .holds (.not (rl .inseparableFrom (cn .forgiveness) (cn .remissionOfTemporalPunishment)))
+  | .christsMeritSuperabounds => .holds (rl .isA (cn .meritsOfChrist) (cn .superabundance))
+  | .treasuryIsMeritsOfChristAndSaints =>
+    .holds <| .both (rl .partOf (cn .meritsOfChrist) (cn .treasuryOfTheChurch))
+      (rl .partOf (cn .meritsOfTheSaints) (cn .treasuryOfTheChurch))
+  | .christsMeritsWorkGraceWithoutThePope =>
+    .holds <| .both (rl .effects (cn .meritsOfChrist) (cn .grace)) <|
+      .both (rl .effects (cn .meritsOfTheSaints) (cn .grace))
+        (.not (rl .boundTo (cn .grace) (cn .pope)))
+  | .matthew4_17Repent => .occurs .metanoeo matt4_17
+  | .metanoiaIsAChangeOfHeart => .means .metanoeo (.passage matt4_17) .changeOfMind
+  | .matthew4_17MeansSacramentalPenance =>
+    .means .metanoeo (.passage matt4_17) .sacramentalPenance
+  | .earlyChurchPrayedForTheDead => .opaque "the early church made offerings for the dead"
+  | .augustineLeftTheFireOpen =>
+    .also (.denied (.heldBy .augustine purgatory)) (.denied (.heldBy .augustine (.not purgatory)))
+  | .gregoryTaughtItFromVisions => .heldBy .gregoryTheGreat purgatory
+  | .purgatoryIsAncientTeaching => .heldBy .earlyChurch purgatory
 
 /-- Every sola fide atom, in declaration order. -/
 def all : List Claim :=
@@ -522,7 +556,13 @@ def all : List Claim :=
   , .faithFormedByCharityJustifies, .loveIsTheFruitOfFaith, .abrahamOfRomans4WasABeliever
   , .paulExcludesOnlyWorksWithoutGrace, .romans4_4ExplainsPaulsWorks
   , .john6_29WorkIsPaulsWorks, .energoumeneIsPassive, .energoumeneIsMiddle, .loveMovesFaith
-  , .faithWorksThroughLove ]
+  , .faithWorksThroughLove, .matthew12_32NotForgivenInTheAgeToCome, .soulsAreCleansedAfterDeath
+  , .secondSamuel12_13_14ForgivenYetPunished, .sinTurnsToAMutableGood
+  , .temporalDebtRemainsAfterForgiveness, .christsMeritSuperabounds
+  , .treasuryIsMeritsOfChristAndSaints, .christsMeritsWorkGraceWithoutThePope
+  , .matthew4_17Repent, .metanoiaIsAChangeOfHeart, .matthew4_17MeansSacramentalPenance
+  , .earlyChurchPrayedForTheDead, .augustineLeftTheFireOpen, .gregoryTaughtItFromVisions
+  , .purgatoryIsAncientTeaching ]
 
 /-- `all` has every atom. -/
 theorem all_complete : ∀ a, a ∈ all := by intro a; cases a <;> decide
@@ -537,8 +577,8 @@ instance meanings : HasMeanings Claim where
   means := means
   complete := all_complete
 
-/-- **A hundred and twenty-nine of the hundred and eighty are analysed.** Of
-the fifty-one that are not, two are the claims of the chapter on what was read in
+/-- **A hundred and forty-one of the hundred and ninety-five are analysed.** Of
+the fifty-four that are not, two are the claims of the chapter on what was read in
 Paul before Trent: what the fathers wrote of faith alone, and justification with
 no prior work earning it. One is the chapter on faith working through love: that
 the Abraham of Romans 4 was already a believer. Seventeen are the claims of the
@@ -548,7 +588,11 @@ through love, Contarini's righteousness inherent in us, and the resting on
 Christ's righteousness given, which need words the vocabulary lacks: a form, an
 efficacy, an inherence and a resting on. Fifteen are the claims of the chapters on whether
 justification has degrees and on Abraham, whose content (a verdict's degrees, a
-covenant rite, a grant, a testing) the vocabulary cannot yet state. Of the other
+covenant rite, a grant, a testing) the vocabulary cannot yet state. Three are the claims of
+the chapter on what forgiveness left unpaid that need a word the vocabulary
+lacks: Matthew 12:32's "in the age to come" (a time), David forgiven and his son
+dying (a story's outcome), and the early church's offerings for the dead (a
+practice, as against a teaching). Of the other
 sixteen, four are Pius XII's and Trent's claims about the Vulgate and one is the
 textual principle, whose content is a rule about texts and translations the
 vocabulary cannot yet state; the other eleven are the narrative texts of the thief
@@ -558,14 +602,14 @@ of the obedience it requires, Galatians 1:6–9, Christ's command to baptise, Tr
 reward, and 1 Peter 2:5 on sacrifices acceptable through Christ. Each needs a word
 the vocabulary lacks — a command, a curse, a disjunction, a story's outcome, a
 reward, acceptance, an opposite. -/
-theorem coverage_now : HasMeanings.coverage (α := Claim) = (129, 180) := by decide +kernel
+theorem coverage_now : HasMeanings.coverage (α := Claim) = (141, 195) := by decide +kernel
 
 /-- **The disputed readings, found from the meanings alone**: δικαιόω ("justify") in Paul;
 the believing of John 6:29; doing the will in Matthew 7; keeping the
 commandments in Matthew 19; the water of John 3:5, four ways; the fire of
 Matthew 3:11, three ways. Fifteen readings at six places; each pair is counted
 in both orders, so twenty-six ordered pairs. -/
-theorem contested_length : (HasMeanings.contested (α := Claim)).length = 26 := by decide
+theorem contested_length : (HasMeanings.contested (α := Claim)).length = 28 := by decide
 
 /-- **Twenty-eight claims turn on δικαιόω ("justify")**: six Pauline texts that use it or name
 renewal beside it; the forensic reading of Paul's word, the renewal reading,
@@ -579,6 +623,24 @@ Paul, and that it keeps one sense through James 2:21–25; Revelation 22:11 and
 Sirach 18:22, each in the Latin and in the Greek; and Acts 13:39, where everyone who
 believes is justified. -/
 theorem about_dikaioo : (HasMeanings.about (α := Claim) .dikaioo).length = 29 := by decide
+
+/-- The sola fide exclusions, as the joins below list them. -/
+def exclusionList : List (Claim × Claim) :=
+    [ (.james2_24Compatible, .jamesUsesDikaioAsPaul)
+    , (.justificationByFaithAlone, .baptismIsInstrumentalCause)
+    , (.justificationIsForensicOnly, .justificationIncludesSanctification)
+    , (.rev22_11BeJustifiedStill, .rev22_11GreekDoRighteousness)
+    , (.sir18_22BeJustifiedToDeath, .sir18_22GreekIsAVow)
+    , (.energoumeneIsPassive, .energoumeneIsMiddle)
+    , (.loveMovesFaith, .faithWorksThroughLove) ]
+
+/-- The exclusions are exactly what the meanings contain. -/
+theorem exclusionList_eq : exclusionList = HasMeanings.exclusions (α := Claim) := by
+  decide +kernel
+
+/-- No sola fide meaning entails another's. -/
+theorem no_entailments : ([] : List (Claim × Claim)) = HasMeanings.entailments (α := Claim) := by
+  decide +kernel
 
 /-- **The sola fide joins**: each pair of claims whose meanings exclude each
 other, read for what their words mean (`Testimony.Ontology.shared`). Every
@@ -613,17 +675,10 @@ verses, James's word as Paul's, baptism as the instrument, justification as
 renewal, the passive of Galatians 5:6, love as what moves faith — and holds the
 other. -/
 instance joins : HasJoins Claim where
-  exclusions :=
-    [ (.james2_24Compatible, .jamesUsesDikaioAsPaul)
-    , (.justificationByFaithAlone, .baptismIsInstrumentalCause)
-    , (.justificationIsForensicOnly, .justificationIncludesSanctification)
-    , (.rev22_11BeJustifiedStill, .rev22_11GreekDoRighteousness)
-    , (.sir18_22BeJustifiedToDeath, .sir18_22GreekIsAVow)
-    , (.energoumeneIsPassive, .energoumeneIsMiddle)
-    , (.loveMovesFaith, .faithWorksThroughLove) ]
-  exclusions_pinned := by decide +kernel
+  exclusions := exclusionList
+  exclusions_pinned := exclusionList_eq
   entailments := []
-  entailments_pinned := by decide +kernel
+  entailments_pinned := no_entailments
 
 open Testimony.Logic in
 /-- **The postulates, written out**: `a → ¬b` for each exclusion. Proofs over the

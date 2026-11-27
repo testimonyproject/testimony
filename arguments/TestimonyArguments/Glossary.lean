@@ -363,6 +363,12 @@ def glossary : List Gloss :=
       [ cite "and this" netBible (.sectionRef "Ephesians 2:8") ]
   , gloss "πιστεύω"
       [ cite "believe" netBible (.sectionRef "John 3:16") ]
+  , gloss "μετανοέω"
+      [ cite "repent" netBible (.sectionRef "Matthew 4:17")
+      , cite "repent" lsb (.sectionRef "Matthew 4:17") ]
+  , gloss "μετανοεῖτε"
+      [ cite "Repent" netBible (.sectionRef "Matthew 4:17")
+      , cite "Repent" lsb (.sectionRef "Matthew 4:17") ]
   , gloss "πιστεύειν εἰς"
       [ cite "believe in" netBible (.sectionRef "Acts 16:31")
       , propose "believe into"

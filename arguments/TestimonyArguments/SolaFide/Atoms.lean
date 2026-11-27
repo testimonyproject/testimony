@@ -747,6 +747,54 @@ inductive Claim
   /-- In Galatians 5:6 faith works through love as its means: faith is the one at
   work, and love is how it works. -/
   | faithWorksThroughLove
+  /-- Matthew 12:32 says that whoever speaks against the Holy Spirit "will not be
+  forgiven, either in this age or in the age to come". -/
+  | matthew12_32NotForgivenInTheAgeToCome
+  /-- The souls of the penitent who die before they have made satisfaction for
+  their sins are cleansed after death by cleansing pains, before the judgment:
+  the doctrine of purgatory. -/
+  | soulsAreCleansedAfterDeath
+  /-- 2 Samuel 12:13–14 says that the Lord forgave David's sin, and that the son
+  born to him would nonetheless die. -/
+  | secondSamuel12_13_14ForgivenYetPunished
+  /-- Sin turns the sinner from God, the unchangeable good, and also, inordinately,
+  to a changeable good, and the second turning, being finite, incurs a debt of
+  punishment that is not eternal. -/
+  | sinTurnsToAMutableGood
+  /-- When God forgives the guilt of sin, a debt of temporal punishment may
+  remain. -/
+  | temporalDebtRemainsAfterForgiveness
+  /-- Christ shed far more of His blood than the one drop that, by its union with
+  the Word, would have sufficed to redeem the whole human race. -/
+  | christsMeritSuperabounds
+  /-- The treasure from which the pope grants indulgences, remitting temporal
+  punishment, is the merits of Christ and of the saints. -/
+  | treasuryIsMeritsOfChristAndSaints
+  /-- The merits of Christ and the saints always work grace for the inner man, and
+  the cross, death and hell for the outward man, even without the pope. -/
+  | christsMeritsWorkGraceWithoutThePope
+  /-- Matthew 4:17 says that Jesus began to preach "Repent, for the kingdom of
+  heaven is near!" (μετανοεῖτε, "repent"). -/
+  | matthew4_17Repent
+  /-- The Greek μετανοέω, "repent", as Matthew 4:17 uses it, means a change of
+  mind and heart, a "coming to one's senses", not an act done. -/
+  | metanoiaIsAChangeOfHeart
+  /-- The repentance Jesus calls for in Matthew 4:17 is the sacramental penance of
+  confession and satisfaction that the priests administer. -/
+  | matthew4_17MeansSacramentalPenance
+  /-- The church prayed and made offerings for the dead from the early third
+  century. -/
+  | earlyChurchPrayedForTheDead
+  /-- Augustine left it an open question whether some believers pass through a
+  cleansing fire after death. -/
+  | augustineLeftTheFireOpen
+  /-- Gregory the Great was the first to write that a cleansing fire before the
+  judgment "must be believed", and he set it among accounts of souls seen and
+  heard after death. -/
+  | gregoryTaughtItFromVisions
+  /-- The doctrine of purgatory belongs to the church's faith from the beginning,
+  held at first in vaguer forms and stated more fully as time went on. -/
+  | purgatoryIsAncientTeaching
 deriving DecidableEq, Repr
 
 end TestimonyArguments.SolaFide

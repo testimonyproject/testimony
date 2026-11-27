@@ -2287,6 +2287,130 @@ def baseCite : Claim → AtomMeta
     { label := "Paul's ‘works of the law’ (ἔργα νόμου) means human works in general"
     , kind := .linguistic
     , source := reformedWorksOfLawSource }
+  | .matthew12_32NotForgivenInTheAgeToCome =>
+    { label := "Matthew 12:32: not forgiven, either in this age or in the age to come"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.matthew, 12, 32⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .soulsAreCleansedAfterDeath =>
+    { label := "The souls of penitents who die before making satisfaction are cleansed " ++
+        "after death"
+    , kind := .theological
+      -- `disputed`: Calvin calls purgatory "the satisfaction for sin paid after
+      -- death by the souls of the dead", and denies it (Institutes III.5.6).
+    , source :=
+        { primary := .work florenceLaetentur (.sectionRef "Session 6, on purgatory")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .secondSamuel12_13_14ForgivenYetPunished =>
+    { label := "2 Samuel 12:13–14: the Lord forgave David's sin, yet his son would die"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .range ⟨.secondSamuel, 12, 13, 12, 14⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .sinTurnsToAMutableGood =>
+    { label := "Sin turns from the unchangeable good and to a changeable good, and the " ++
+        "second incurs a finite debt"
+    , kind := .theological
+    , source :=
+        { primary := .work aquinasTertiaPars (.sectionRef "q. 86 a. 4")
+        , tradition := .romanCatholic
+        , confidence := .wellSupported } }
+  | .temporalDebtRemainsAfterForgiveness =>
+    { label := "When guilt is forgiven, a debt of temporal punishment may remain"
+    , kind := .theological
+      -- `disputed`: Calvin, "if we are freed from guilt by Christ, the
+      -- punishment consequent upon guilt must cease with it" (III.4.30).
+    , source :=
+        { primary := .work aquinasTertiaPars (.sectionRef "q. 86 a. 4")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .christsMeritSuperabounds =>
+    { label := "Christ shed more of His blood than the one drop that would have " ++
+        "redeemed the human race"
+    , kind := .theological
+    , source :=
+        { primary := .work clementUnigenitus (.sectionRef "Denzinger 550")
+        , tradition := .romanCatholic
+        , confidence := .wellSupported } }
+  | .treasuryIsMeritsOfChristAndSaints =>
+    { label := "The treasure of indulgences is the merits of Christ and the saints"
+    , kind := .theological
+      -- `disputed`: Luther's thesis 58 denies it in terms.
+    , source :=
+        { primary := .work clementUnigenitus (.sectionRef "Denzinger 551–552")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .christsMeritsWorkGraceWithoutThePope =>
+    { label := "The merits of Christ and the saints work grace for the inner man " ++
+        "without the pope"
+    , kind := .theological
+    , source :=
+        { primary := .work lutherNinetyFiveTheses (.sectionRef "thesis 58; Works 1, p. 35")
+        , tradition := .reformedProtestant
+        , confidence := .wellSupported } }
+  | .matthew4_17Repent =>
+    { label := "Matthew 4:17: Jesus began to preach, Repent, for the kingdom of heaven " ++
+        "is near"
+    , kind := .textual
+    , source :=
+        { primary := .scripture [{ ref := .verse ⟨.matthew, 4, 17⟩ }]
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .metanoiaIsAChangeOfHeart =>
+    { label := "μετανοέω, ‘repent’, means a change of heart, not an act done"
+    , kind := .linguistic
+      -- `disputed`: the Rheims annotators, on Matthew 3:2, hold that the Greek
+      -- word "must needes signifie, sorowful, payneful, and satisfactorie
+      -- repentance".
+    , source :=
+        { primary := .work lutherToStaupitz (.sectionRef "Works 1, pp. 40–41")
+        , tradition := .reformedProtestant
+        , confidence := .disputed } }
+  | .matthew4_17MeansSacramentalPenance =>
+    { label := "The repentance of Matthew 4:17 is the sacramental penance of " ++
+        "confession and satisfaction"
+    , kind := .interpretive
+      -- The reading Luther's letter rejects, held by those who "had derived
+      -- their idea from the Latin words poenitentiam agere" (p. 41).
+    , source :=
+        { primary := .work lutherToStaupitz (.sectionRef "Works 1, p. 41")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
+  | .earlyChurchPrayedForTheDead =>
+    { label := "From the early third century the church made offerings for the dead"
+    , kind := .historical
+    , source :=
+        { primary := .work tertullianDeCorona (.sectionRef "3; ANF 3, p. 94")
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .augustineLeftTheFireOpen =>
+    { label := "Augustine left a cleansing fire after death an open question"
+    , kind := .historical
+    , source :=
+        { primary := .work augustineEnchiridion (.sectionRef "69; NPNF1 3, p. 260")
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .gregoryTaughtItFromVisions =>
+    { label := "Gregory first wrote that a cleansing fire must be believed, among " ++
+        "accounts of souls seen after death"
+    , kind := .historical
+    , source :=
+        { primary := .work gregoryDialogues (.sectionRef "IV.39; Gardner, pp. 232–234")
+        , tradition := .christianHistoricalGrammatical
+        , confidence := .consensus } }
+  | .purgatoryIsAncientTeaching =>
+    { label := "Purgatory belongs to the faith from the beginning, stated more fully " ++
+        "over time"
+    , kind := .theological
+      -- `disputed`: Chemnitz, "not ancient, but first revealed in Gregory's time".
+    , source :=
+        { primary := .work newmanDevelopment1878 (.sectionRef "Introduction §15, p. 22")
+        , tradition := .romanCatholic
+        , confidence := .disputed } }
 
 /-- The Reformed sources for the disputed readings. -/
 def reformedCite : Claim → AtomMeta
