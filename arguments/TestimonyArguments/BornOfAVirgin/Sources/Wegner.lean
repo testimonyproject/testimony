@@ -3,8 +3,8 @@ import TestimonyArguments.BornOfAVirgin.Atoms
 /-!
 # TestimonyArguments.BornOfAVirgin.Sources.Wegner — the citations of the sign dispute
 
-The claims of the dispute over Wegner's objection: the parse of הָרָה, the
-pregnancy it reports, what that pregnancy is taken to show, and the fathers'
+The claims of the dispute over Wegner's objection: the parse of הָרָה ("with child" or "pregnant"),
+the pregnancy it reports, what that pregnancy is taken to show, and the fathers'
 sign argument against it with the near-term reply to that.
 -/
 
@@ -20,7 +20,8 @@ Rydelnik parses the clause exactly the same way and draws the opposite conclusio
 from it, that the virgin *is* pregnant and the sign is therefore as deep as Sheol
 (Isa 7:11). -/
 def harahIsPredicateAdjectiveCited : AtomMeta :=
-  { label := "הָרָה at Isaiah 7:14 is a predicate adjective: the עַלְמָה is pregnant"
+  { label := ("הָרָה (“with child” or “pregnant”) at Isaiah 7:14 is a predicate adjective: \
+      the עַלְמָה (“virgin” or “young woman”) is pregnant")
   , kind := .linguistic
   , source :=
       { wegnerOnAlmah (.page 471) .wellSupported with
@@ -32,7 +33,8 @@ def harahIsPredicateAdjectiveCited : AtomMeta :=
 this verse: Wegner reads a present pregnancy and so does Rydelnik. What they
 disagree about is what kind of pregnancy it is. -/
 def isaianicAlmahIsAlreadyPregnantCited : AtomMeta :=
-  { label := "The עַלְמָה of Isaiah 7:14 is already pregnant when the sign is given"
+  { label := ("The עַלְמָה (“virgin” or “young woman”) of Isaiah 7:14 is already pregnant \
+      when the sign is given")
   , kind := .interpretive
   , source :=
       { wegnerOnAlmah (.pages 471 472) .wellSupported with
@@ -43,8 +45,8 @@ def isaianicAlmahIsAlreadyPregnantCited : AtomMeta :=
 /-- `pregnancyAtTheSignIsOrdinary`. The hinge of Wegner's objection, and not a
 lexical claim at all. He gets it from the near-term reading of the sign: the
 child born within nine months, everything in the oracle discharged by 701 BC.
-Rydelnik, parsing הָרָה as Wegner does, denies it outright. So do the fathers, on
-the ground that an ordinary conception would be no sign, and `signLine` is that
+Rydelnik, parsing הָרָה ("with child" or "pregnant") as Wegner does, denies it outright. So do the
+fathers, on the ground that an ordinary conception would be no sign, and `signLine` is that
 argument. -/
 def pregnancyAtTheSignIsOrdinaryCited : AtomMeta :=
   { label := "The pregnancy Isaiah 7:14 announces is an ordinary conception"
@@ -54,10 +56,10 @@ def pregnancyAtTheSignIsOrdinaryCited : AtomMeta :=
         supporting := [.work postellIsaiahMessianic (.page 474)] } }
 
 /-- `isaianicAlmahIsNotAVirgin`. Wegner's conclusion about the referent. Postell
-states the step it rests on baldly: "since the עַלְמָה in Isaiah 7:14 is already
-pregnant, she obviously cannot be a virgin" (468). -/
+states the step it rests on baldly: "since the עַלְמָה [virgin or young woman] in Isaiah 7:14 is
+already pregnant, she obviously cannot be a virgin" (468). -/
 def isaianicAlmahIsNotAVirginCited : AtomMeta :=
-  { label := "The עַלְמָה of Isaiah 7:14 is not a virgin"
+  { label := "The עַלְמָה (“virgin” or “young woman”) of Isaiah 7:14 is not a virgin"
   , kind := .interpretive
   , source :=
       { wegnerOnAlmah (.pages 471 472) .disputed with
@@ -69,7 +71,8 @@ analysis of the Immanuel oracle does not by itself allow one to draw a conclusio
 concerning the meaning of the word" — and hold that the other occurrences settle
 it the other way (quoted at Postell 468 n. 22). -/
 def oneReferentSettlesDenotationCited : AtomMeta :=
-  { label := "What the עַלְמָה of Isaiah 7:14 turns out to be settles what the word denotes"
+  { label := ("What the עַלְמָה (“virgin” or “young woman”) of Isaiah 7:14 turns out to be \
+      settles what the word denotes")
   , kind := .linguistic
   , source :=
       { wegnerOnAlmah (.pages 471 472) .disputed with
@@ -80,10 +83,11 @@ def oneReferentSettlesDenotationCited : AtomMeta :=
 /-- `otherClearAlmahCasesAreVirgins`. Postell at 468 n. 22, of the three passages
 Wegner calls clearest. Marked `plausible` rather than `wellSupported` because it
 is stronger than Wegner's own text: Genesis 24:43 is uncontested, but Wegner's
-discussion of Song 6:8 allows that some of the עֲלָמוֹת in the harem would not be
+discussion of Song 6:8 allows that some of the עֲלָמוֹת ("maidens") in the harem would not be
 virgins. -/
 def otherClearAlmahCasesAreVirginsCited : AtomMeta :=
-  { label := "In the other clear עַלְמָה passages Wegner lists, the women are virgins"
+  { label := ("In the other clear עַלְמָה (“virgin” or “young woman”) passages Wegner lists, \
+      the women are virgins")
   , kind := .linguistic
   , source :=
       { postellOnIsaiah (.page 468) .plausible with

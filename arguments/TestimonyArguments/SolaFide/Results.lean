@@ -82,7 +82,7 @@ theorem tridentine_not_establishes : ¬ Establishes tridentine := by
 #print axioms tridentine_not_establishes
 
 /-- **The argument does not depend on the reading of "works of the law".** Remove
-the premise that Paul's phrase (ἔργα νόμου) means works in general, keep
+the premise that Paul's phrase (ἔργα νόμου, "works of the law") means works in general, keep
 everything else, and sola fide still follows by the other strands. -/
 @[headline]
 theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw := by
@@ -91,7 +91,7 @@ theorem worksOfLaw_not_load_bearing : Establishes reformedWithoutWorksOfLaw := b
 #print axioms worksOfLaw_not_load_bearing
 
 /-- **Nor on the reading of "saved" at Luke 7:50.** Remove the premise that the word
-there (σῴζω) means saved and not healed, keep everything else, and sola fide
+there (σῴζω, "save" or "healed") means saved and not healed, keep everything else, and sola fide
 still follows by the other strands. -/
 @[headline]
 theorem sozo_not_load_bearing : Establishes reformedWithoutSozo := by
@@ -141,8 +141,8 @@ theorem johannine_strand_survives_the_other_three :
 #print axioms johannine_strand_survives_the_other_three
 
 /-- **Nor on "faith in Christ".** Grant Hays that the phrase in Galatians 2:16
-(πίστις Χριστοῦ) means Christ's own faithfulness and not our faith in Him. Keep
-everything else. Sola fide still follows.
+(πίστις Χριστοῦ, "faith in Christ" or "faithfulness of Christ") means Christ's own faithfulness and
+not our faith in Him. Keep everything else. Sola fide still follows.
 
 A reader who wins this point for Hays has cost the Reformed case its route
 through Paul, and not its conclusion. Within Paul's strand, though, everything

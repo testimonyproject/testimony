@@ -3,8 +3,8 @@ import TestimonyArguments.BornOfAVirgin.Atoms
 /-!
 # TestimonyArguments.BornOfAVirgin.Sources.Septuagint — the citations of the Septuagint dispute
 
-The claims of the dispute over what the Septuagint's παρθένος shows: when and by
-whom the Greek Isaiah was made, what its word for the woman of 7:14 meant, the
+The claims of the dispute over what the Septuagint's παρθένος ("virgin" or "young woman") shows:
+when and by whom the Greek Isaiah was made, what its word for the woman of 7:14 meant, the
 evidence each side reads, and what the translator can be taken to have meant.
 
 Rico and Gentry are cited from their book; Bratcher, Walton, Wegner, Rhodea and
@@ -57,11 +57,11 @@ in Gen. 34:3) is it used otherwise" (113).
 the translator's day the word meant "a young woman of marriageable age", and
 came to mean "virgin" only by the time of the New Testament (482–83). Walton:
 "Therefore the LXX is not necessarily betraying an interpretation as virgin by
-choosing this term" (293). Rhodea: "in the LXX, παρθένος need not refer to a
-virgo intacta" (67). Meade: "παρθενος simply means young woman in this verse and
-in other places in the LXX" (comment of 9 January 2013). -/
+choosing this term" (293). Rhodea: "in the LXX, παρθένος [virgin or young woman] need not refer to a
+virgo intacta" (67). Meade: "παρθενος [virgin or young woman] simply means young woman in this verse
+and in other places in the LXX" (comment of 9 January 2013). -/
 def parthenosMeansVirginCited : AtomMeta :=
-  { label := "In the Greek of the Septuagint, παρθένος means a virgin"
+  { label := "In the Greek of the Septuagint, παρθένος (“virgin” or “young woman”) means a virgin"
   , kind := .linguistic
   , source :=
       { primary := .work ricoGentryInfantKing (.page 21)
@@ -72,8 +72,8 @@ def parthenosMeansVirginCited : AtomMeta :=
       , confidence := .disputed } }
 
 /-- `parthenosMeantYoungWoman`. A claim about the word, not about any woman: in
-the translator's Greek, παρθένος meant "young woman", and did not yet mean
-"virgin". Wegner and Walton grant that by the New Testament it meant "virgin";
+the translator's Greek, παρθένος ("virgin" or "young woman") meant "young woman", and did not yet
+mean "virgin". Wegner and Walton grant that by the New Testament it meant "virgin";
 Meade and Davidson put that sense down to Christian use. The dispute is over the
 translator's day, two or three centuries before Matthew.
 
@@ -82,14 +82,15 @@ woman of marriageable age' (with or without the focus on virginity), but by NT
 times this word developed the more technical meaning of 'virgin'" (482). So the
 translator of Isaiah chose a word for a young woman, "an excellent word choice to
 convey what the LXX's author meant", and "in the intervening time between the
-LXX and the NT book of Matthew, the word παρθένος changed in meaning" (483).
-Rhodea follows him, with an "apparently" (67). Meade holds it too: παρθένος
-"simply means young woman in this verse and in other places in the LXX", and by
+LXX and the NT book of Matthew, the word παρθένος [virgin or young woman] changed in meaning" (483).
+Rhodea follows him, with an "apparently" (67). Meade holds it too: παρθένος ("virgin" or "young
+woman") "simply means young woman in this verse and in other places in the LXX", and by
 the time of Justin it had been "hijacked or used to mean 'chaste woman' only"
 (comment of 9 January 2013). `disputed`: Rico and Gentry deny it, and so does
 Bratcher. -/
 def parthenosMeantYoungWomanCited : AtomMeta :=
-  { label := "In the Septuagint's day, παρθένος meant 'young woman'; not yet 'virgin'"
+  { label := ("In the Septuagint's day, παρθένος (“virgin” or “young woman”) meant 'young \
+      woman'; not yet 'virgin'")
   , kind := .linguistic
   , source :=
       { wegnerOnAlmah (.pages 482 483) .disputed with
@@ -105,7 +106,7 @@ early Christian writings: "one who has never engaged in sexual intercourse,
 virgin". So the contrast in BDAG is between bodies of writing, not between
 periods; "early Greek" is Wegner's and Rhodea's narrowing of it, and the claim
 here is no more than the narrowing. BDAG gives no sense for the Septuagint.
-LSJ, for classical Greek: "maiden, girl", "virgin, opp. γυνή", and "of unmarried
+LSJ, for classical Greek: "maiden, girl", "virgin, opp. γυνή [woman]", and "of unmarried
 women who are not virgins" (1339). Walton: the word "does not always mean 'virgin' in
 classical Greek" (293). Bratcher, who holds the opposite of Wegner about the
 Septuagint, grants it: "at first the word was used in a general sense of
@@ -117,7 +118,8 @@ the Pentateuch", whose language is "more elevated and classical than the
 language of the later texts" (18). What they deny is that the older usage is the
 Septuagint's at large. -/
 def earlyGreekParthenosIsYoungWomanCited : AtomMeta :=
-  { label := "In early Greek, παρθένος meant a young woman, with or without virginity"
+  { label := ("In early Greek, παρθένος (“virgin” or “young woman”) meant a young woman, with \
+      or without virginity")
   , kind := .linguistic
   , source :=
       { wegnerOnAlmah (.page 482) .wellSupported with
@@ -129,11 +131,11 @@ def earlyGreekParthenosIsYoungWomanCited : AtomMeta :=
           , .work bratcherStudyOfIsaiah (.page 112) ] } }
 
 /-- `greekCallsDinahParthenos`. What the Greek reads: Shechem "lay with her
-and humbled her" (34:2), and "he loved the παρθένος, and spoke to her according
-to the mind of the παρθένος" (34:3), where the Hebrew has נַעֲרָה, "girl", both
-times. Read from Rahlfs's text and the Masoretic. Wegner calls it "a good
-example of the meaning of παρθένος in the LXX" (483), and Rhodea draws from it
-that "παρθένος need not refer to a virgo intacta" (67). No one denies the
+and humbled her" (34:2), and "he loved the παρθένος [virgin or young woman], and spoke to her
+according to the mind of the παρθένος [virgin or young woman]" (34:3), where the Hebrew has נַעֲרָה,
+"girl", both times. Read from Rahlfs's text and the Masoretic. Wegner calls it "a good
+example of the meaning of παρθένος [virgin or young woman] in the LXX" (483), and Rhodea draws from
+it that "παρθένος [virgin or young woman] need not refer to a virgo intacta" (67). No one denies the
 reading. Rico and Gentry call it "the exception that proves the rule" (21);
 Bratcher, an exception made "inexplicably" (113).
 
@@ -141,7 +143,8 @@ The claim is what the text reads: the word, and the verse it stands in, after
 34:2. Whether the noun describes Dinah as she was after 34:2 is a further claim,
 and a reader's (`parthenosDescribesDinahAsSheThenWas`). -/
 def greekCallsDinahParthenosCited : AtomMeta :=
-  { label := "The Septuagint calls Dinah a παρθένος at 34:3, after Shechem lies with her (34:2)"
+  { label := ("The Septuagint calls Dinah a παρθένος (“virgin” or “young woman”) at 34:3, \
+      after Shechem lies with her (34:2)")
   , kind := .textual
   , source :=
       { primary := .scripture dinahAfterShechem
@@ -155,12 +158,13 @@ def greekCallsDinahParthenosCited : AtomMeta :=
 
 /-- `isaiahUsesParthenosForBetulah`. What the two texts read, and nothing more:
 read from Rahlfs's text of the Greek and from the Masoretic Text, the Greek
-Isaiah has παρθένος at 23:4, 37:22, 47:1 and 62:5 besides 7:14, and in each the
-Hebrew has בְּתוּלָה. The converse does not hold — at 23:12 the Greek has no
-παρθένος for בְּתוּלַת — and the atom does not claim it. Scripture alone, and
-legitimately so: the claim is about what a version reads. -/
+Isaiah has παρθένος ("virgin" or "young woman") at 23:4, 37:22, 47:1 and 62:5 besides 7:14, and in
+each the Hebrew has בְּתוּלָה ("virgin"). The converse does not hold — at 23:12 the Greek has no
+παρθένος ("virgin" or "young woman") for בְּתוּלַת ("virgin") — and the atom does not claim it.
+Scripture alone, and legitimately so: the claim is about what a version reads. -/
 def isaiahUsesParthenosForBetulahCited : AtomMeta :=
-  { label := "Elsewhere in the Greek Isaiah, παρθένος renders בְּתוּלָה"
+  { label := ("Elsewhere in the Greek Isaiah, παρθένος (“virgin” or “young woman”) renders \
+      בְּתוּלָה (“virgin”)")
   , kind := .textual
   , source :=
       { primary := .scripture isaianicParthenoi
@@ -168,14 +172,15 @@ def isaiahUsesParthenosForBetulahCited : AtomMeta :=
       , confidence := .consensus } }
 
 /-- `priestMarriesAParthenos`. What the Greek reads, from Rahlfs's text: the high
-priest "shall take a wife, a παρθένος, from his own kin" (γυναῖκα παρθένον ἐκ τοῦ
-γένους αὐτοῦ, 21:13), where the Hebrew has אִשָּׁה בִבְתוּלֶיהָ, "a woman in her
-virginity"; and "a widow, a woman put away, a defiled woman and a harlot, these he
-shall not take, but a παρθένος from his own kin" (21:14). Read from Rahlfs's text
-and the Masoretic. Scripture alone, and legitimately so: the claim is about what
-a version reads. `consensus`. -/
+priest "shall take a wife, a παρθένος [virgin or young woman], from his own kin" (γυναῖκα παρθένον
+ἐκ τοῦ γένους αὐτοῦ ("a wife, a virgin, from his own kin"), 21:13), where the Hebrew has אִשָּׁה
+בִבְתוּלֶיהָ ("a wife in her virginity"), "a woman in her virginity"; and "a widow, a woman put
+away, a defiled woman and a harlot, these he shall not take, but a παρθένος [virgin or young woman]
+from his own kin" (21:14). Read from Rahlfs's text and the Masoretic. Scripture alone, and
+legitimately so: the claim is about what a version reads. `consensus`. -/
 def priestMarriesAParthenosCited : AtomMeta :=
-  { label := "The high priest of the Greek Leviticus marries a παρθένος, not a widow or a harlot"
+  { label := ("The high priest of the Greek Leviticus marries a παρθένος (“virgin” or “young \
+      woman”), not a widow or a harlot")
   , kind := .textual
   , source :=
       { primary := .scripture priestsBride
@@ -183,18 +188,19 @@ def priestMarriesAParthenosCited : AtomMeta :=
       , confidence := .consensus } }
 
 /-- `partheniaProveTheBride`. What the Greek reads, from Rahlfs's text: a husband
-says of his bride "I did not find τὰ παρθένια in her" (22:14), and her parents
-bring out "τὰ παρθένια of the girl" (22:15); if the charge is true and "παρθένια
-are not found for the girl", she is stoned, "for she has done folly among the
-sons of Israel, to play the harlot in her father's house" (22:20–21). A man who
-brings the charge falsely has brought "an evil name upon a παρθένος of Israel"
-(22:19). The Hebrew has בְּתוּלִים for the tokens.
+says of his bride "I did not find τὰ παρθένια [tokens of virginity] in her" (22:14), and her parents
+bring out "τὰ παρθένια [tokens of virginity] of the girl" (22:15); if the charge is true and
+"παρθένια [signs pertaining to virginity] are not found for the girl", she is stoned, "for she has
+done folly among the sons of Israel, to play the harlot in her father's house" (22:20–21). A man who
+brings the charge falsely has brought "an evil name upon a παρθένος [virgin or young woman] of
+Israel" (22:19). The Hebrew has בְּתוּלִים ("evidence of virginity") for the tokens.
 
 The lexica gloss the Greek word alike: "signs of virginity, LxxDe.22.15" (LSJ
 1339); "tokens of virginity" (Muraoka 535); "signs pertaining to virginity,
 virginity" (LEH s.v.). `consensus`: no reader found denies the reading. -/
 def partheniaProveTheBrideCited : AtomMeta :=
-  { label := "In the Greek Deuteronomy, a bride without τὰ παρθένια dies for playing the harlot"
+  { label := ("In the Greek Deuteronomy, a bride without τὰ παρθένια (“tokens of virginity”) \
+      dies for playing the harlot")
   , kind := .textual
   , source :=
       { primary := .scripture tokensOfVirginity
@@ -206,8 +212,8 @@ def partheniaProveTheBrideCited : AtomMeta :=
       , confidence := .consensus } }
 
 /-- `lawsUseParthenosAsVirgin`. Bratcher makes the argument from the Greek of
-the laws: in Deuteronomy 22 the Hebrew's בְּתוּלִים "stands concretely for 'tokens
-of virginity' (LXX partheneia)", and in Leviticus 21 "the young woman so
+the laws: in Deuteronomy 22 the Hebrew's בְּתוּלִים ("evidence of virginity") "stands concretely for
+'tokens of virginity' (LXX partheneia)", and in Leviticus 21 "the young woman so
 characterized is clearly a virgin (LXX parthenos)" (102, where "Lev. 21:3" is a
 misprint for 21:13); "The use of the cognates of parthenos in the LXX bears out
 the conclusion that parthenos is 'virgin'", and "All this indicates that
@@ -216,16 +222,17 @@ parthenos is 'virgin' in the exact sense of the word" (113).
 These are not uses of the word *of* a virgin, which would show nothing about its
 sense: Walton observes that a thousand uses of "fiancée" of virgins would not
 make it mean "virgin" (292). In these laws virginity is what the law turns on.
-The priest's παρθένος is set against the widow, the woman put away, the defiled
-woman and the harlot, and stands for "a woman in her virginity". The bride's τὰ
-παρθένια are the tokens whose absence proves her a harlot, and Walton's own test
-is that a word meaning "virgin" should have an abstract meaning "virginity"
+The priest's παρθένος ("virgin" or "young woman") is set against the widow, the woman put away, the
+defiled woman and the harlot, and stands for "a woman in her virginity". The bride's τὰ
+παρθένια ("tokens of virginity") are the tokens whose absence proves her a harlot, and Walton's own
+test is that a word meaning "virgin" should have an abstract meaning "virginity"
 (292).
 
 `disputed`, as its step is, on Miller (`lawsLine` gives his dissent, and where
 it breaks). -/
 def lawsUseParthenosAsVirginCited : AtomMeta :=
-  { label := "In the Greek Pentateuch's laws, παρθένος is used in the sense 'virgin'"
+  { label := ("In the Greek Pentateuch's laws, παρθένος (“virgin” or “young woman”) is used \
+      in the sense 'virgin'")
   , kind := .linguistic
   , source :=
       { primary := .work bratcherStudyOfIsaiah (.page 113)
@@ -237,15 +244,16 @@ def lawsUseParthenosAsVirginCited : AtomMeta :=
       , confidence := .disputed } }
 
 /-- `seductionLawPricesAParthenos`. What the Greek reads, from Rahlfs's text:
-"if anyone deceives a παρθένος not betrothed and lies with her, he shall endow
-her with a bride-price as his wife" (22:15), and if her father will not give her,
+"if anyone deceives a παρθένος [virgin or young woman] not betrothed and lies with her, he shall
+endow her with a bride-price as his wife" (22:15), and if her father will not give her,
 "he shall pay the father silver, as much as is the bride-price of virgins", ἡ
-φερνὴ τῶν παρθένων (22:16), where the Hebrew has בְּתוּלָה and מֹהַר הַבְּתוּלֹת. The
-law calls her a παρθένος, and names what the man owes "the bride-price of
-virgins", after he has lain with her. What that price says of her is the step's
-to read (`dinahLine`). `consensus`: it is what the text reads. -/
+φερνὴ τῶν παρθένων (22:16), where the Hebrew has בְּתוּלָה ("virgin") and מֹהַר הַבְּתוּלֹת ("the
+bride price of virgins"). The law calls her a παρθένος ("virgin" or "young woman"), and names what
+the man owes "the bride-price of virgins", after he has lain with her. What that price says of her
+is the step's to read (`dinahLine`). `consensus`: it is what the text reads. -/
 def seductionLawPricesAParthenosCited : AtomMeta :=
-  { label := "In the Greek Exodus, the seduced παρθένος is owed 'the bride-price of virgins'"
+  { label := ("In the Greek Exodus, the seduced παρθένος (“virgin” or “young woman”) is owed \
+      'the bride-price of virgins'")
   , kind := .textual
   , source :=
       { primary := .scripture seductionLaw
@@ -256,15 +264,18 @@ def seductionLawPricesAParthenosCited : AtomMeta :=
 Masoretic. Three words of Genesis 34 are words of the laws of the violated
 virgin:
 
-- Shechem "humbled her", ἐταπείνωσεν αὐτήν, וַיְעַנֶּהָ (34:2), the verb of the
-  man who seizes a virgin not betrothed: he shall marry her "because he humbled
-  her" (Deuteronomy 22:29, in both texts).
-- Jacob's sons say he "did folly in Israel", נְבָלָה עָשָׂה בְיִשְׂרָאֵל (34:7), the
-  words of the bride found without the tokens of virginity, who "did folly in
-  Israel" (Deuteronomy 22:21). The link is the Hebrew's: the Greek has
-  ἄσχημον at 34:7 and ἀφροσύνην at Deuteronomy 22:21.
-- Shechem offers the bride-price, φερνή, מֹהַר (34:12), the payment Exodus
-  22:15–16 requires of the man who has lain with a παρθένος.
+- Shechem "violated her" (34:2, LSB), in the Greek ἐταπείνωσεν αὐτήν, "humbled
+  her", and in the Hebrew וַיְעַנֶּהָ ("violated her"), the verb of the man who seizes a virgin not
+  betrothed: he shall marry her "because he has violated her" (Deuteronomy
+  22:29, LSB, the same verb in both texts).
+- Jacob's sons say he "had done a disgraceful thing in Israel" (נְבָלָה עָשָׂה
+  בְיִשְׂרָאֵל ("he had done a disgraceful thing in Israel"), 34:7, LSB), the words of the bride
+  found without the tokens of virginity, who "has committed a disgraceful act in Israel"
+  (Deuteronomy 22:21, LSB). The link is the Hebrew's: the Greek has ἄσχημον ("unseemly") at 34:7 and
+  ἀφροσύνην ("folly") at Deuteronomy 22:21.
+- Shechem offers the "bridal payment" (34:12, LSB), φερνή ("dowry") in the Greek
+  and מֹהַר ("bride price") in the Hebrew, the payment Exodus 22:15–16 requires of the man who has
+  lain with a παρθένος ("virgin" or "young woman").
 
 `consensus`: the words are the texts', whatever is made of them. -/
 def shechemActsUnderTheLawCited : AtomMeta :=
@@ -277,12 +288,13 @@ def shechemActsUnderTheLawCited : AtomMeta :=
       , confidence := .consensus } }
 
 /-- `dinahIsTheLawsParthenos`. The status reading of Genesis 34:3: the Greek
-calls Dinah "the παρθένος" as the law of Exodus 22:15–16 calls the woman a man
-has lain with, naming her by the standing he took from her, and the word keeps
+calls Dinah "the παρθένος [virgin or young woman]" as the law of Exodus 22:15–16 calls the woman a
+man has lain with, naming her by the standing he took from her, and the word keeps
 its sense "virgin". `dinahLine` gives the argument and its rating. `plausible`,
 as its step is. -/
 def dinahIsTheLawsParthenosCited : AtomMeta :=
-  { label := "At Genesis 34:3 the Greek names Dinah a παρθένος as the law names the seduced virgin"
+  { label := ("At Genesis 34:3 the Greek names Dinah a παρθένος (“virgin” or “young woman”) \
+      as the law names the seduced virgin")
   , kind := .linguistic
   , source :=
       { primary := .scripture seductionLaw
@@ -295,11 +307,11 @@ def dinahIsTheLawsParthenosCited : AtomMeta :=
       , confidence := .plausible } }
 
 /-- `matthewQuotesTheGreekVirgin`. What Matthew reads: "ἰδοὺ ἡ παρθένος ἐν γαστρὶ
-ἕξει καὶ τέξεται υἱόν" (1:23), the Septuagint's words for Isaiah 7:14. Scripture
-alone, and legitimately so: the claim is about what the texts read.
-`consensus`. -/
+ἕξει καὶ τέξεται υἱόν [Behold, the virgin shall be with child and shall bear a Son]" (1:23), the
+Septuagint's words for Isaiah 7:14. Scripture alone, and legitimately so: the claim is about what
+the texts read. `consensus`. -/
 def matthewQuotesTheGreekVirginCited : AtomMeta :=
-  { label := "Matthew 1:23 quotes Isaiah 7:14 in the Greek's own words: ἡ παρθένος"
+  { label := "Matthew 1:23 quotes Isaiah 7:14 in the Greek's own words: ἡ παρθένος (“the virgin”)"
   , kind := .textual
   , source :=
       { primary := .scripture matthewQuotesTheSeptuagint
@@ -319,7 +331,7 @@ def matthewSaysMaryKnewNoManCited : AtomMeta :=
       , confidence := .consensus } }
 
 /-- `lxxIsaiahUsesParthenosAsVirgin`. Scripture's own reading of the Greek word:
-Matthew quotes the Septuagint's ἡ παρθένος of a woman who conceived before she
+Matthew quotes the Septuagint's ἡ παρθένος ("the virgin") of a woman who conceived before she
 and Joseph came together, so in the text he quotes, the word has the sense
 "virgin". The principle is Westminster's: "The infallible rule of interpretation
 of Scripture is the Scripture itself" (I.ix). Irenaeus: the apostles "agree with
@@ -332,7 +344,8 @@ virgin, and holds that it had changed in meaning since the translator wrote it,
 "from 'young woman' to 'virgin,' thus also making it a suitable term to describe
 Mary in the first century AD" (483). -/
 def lxxIsaiahUsesParthenosAsVirginCited : AtomMeta :=
-  { label := "In the Greek of Isaiah 7:14, which Matthew quotes, παρθένος means 'virgin'"
+  { label := ("In the Greek of Isaiah 7:14, which Matthew quotes, παρθένος (“virgin” or \
+      “young woman”) means 'virgin'")
   , kind := .linguistic
   , source :=
       { primary := .work westminsterConfession (.sectionRef "I.ix")
@@ -345,11 +358,13 @@ def lxxIsaiahUsesParthenosAsVirginCited : AtomMeta :=
 /-- `joelGreekCallsTheWidowParthenos`. Miller's claim about the Greek: "Lament
 like a parthenos dressed in sackcloth for the husband of her youth (Joel 1:8)",
 given as a use of the word of a woman who is not a virgin (*Born Divine*). The
-Greek of Joel 1:8 does not read so: it calls the woman νύμφην, a bride, and its
-παρθεν- word, τὸν παρθενικόν, is of the husband (Rahlfs). Cited for what Miller
+Greek of Joel 1:8 does not read so: it calls the woman a "bride" (νύμφην), and
+its word built on παρθεν- ("virgin"), τὸν παρθενικόν ("the bridegroom of her
+youth"), is of the husband (Rahlfs). Cited for what Miller
 holds; the text refutes it (`Dispute.Miller`). -/
 def joelGreekCallsTheWidowParthenosCited : AtomMeta :=
-  { label := "The Greek of Joel 1:8 calls a young widow a παρθένος (Miller)"
+  { label := ("The Greek of Joel 1:8 calls a young widow a παρθένος (“virgin” or “young \
+      woman”) (Miller)")
   , kind := .textual
   , source :=
       { primary := .work millerBornDivine .whole
@@ -362,7 +377,8 @@ virginity", so that where virginity matters it "has to be inferred from the
 context" (*Born Divine*). `disputed`: Bratcher (113), and Rico and Gentry, hold
 the opposite. -/
 def parthenosDoesNotItselfConnoteVirginityCited : AtomMeta :=
-  { label := "In the Septuagint, παρθένος did not by itself connote virginity (Miller)"
+  { label := ("In the Septuagint, παρθένος (“virgin” or “young woman”) did not by itself \
+      connote virginity (Miller)")
   , kind := .linguistic
   , source :=
       { primary := .work millerBornDivine .whole
@@ -372,8 +388,8 @@ def parthenosDoesNotItselfConnoteVirginityCited : AtomMeta :=
 
 /-- `parthenosDescribesDinahAsSheThenWas`. Miller's premise: "In one passage,
 this term refers to a rape victim after she has been attacked (Gen 34:3)" (*Born
-Divine*). Wegner says the same, that Dinah "is called a παρθένος even after she
-was raped by Shechem" (483), and Muraoka's lexicon glosses the verse "so called
+Divine*). Wegner says the same, that Dinah "is called a παρθένος [virgin or young woman] even after
+she was raped by Shechem" (483), and Muraoka's lexicon glosses the verse "so called
 just after having been raped" (535). It is more than the reading of the text
 (`greekCallsDinahParthenos`): that the noun says what Dinah was at the time of
 the verse, and so, since she was then no longer a virgin, that the word is not
@@ -392,7 +408,8 @@ it, and Rico and Gentry and Bratcher, who read the word as "virgin", grant it.
 The status reading and the argument from the noun contest it, but both are the
 library's own, and no reader has been found who makes either. -/
 def parthenosDescribesDinahAsSheThenWasCited : AtomMeta :=
-  { label := "At 34:3 παρθένος describes Dinah as she then was, no longer a virgin (Miller)"
+  { label := ("At 34:3 παρθένος (“virgin” or “young woman”) describes Dinah as she then was, \
+      no longer a virgin (Miller)")
   , kind := .linguistic
   , source :=
       { primary := .work millerBornDivine .whole
@@ -426,7 +443,7 @@ Septuagint's usage "demands no more than the sense of a 'woman untouched by a
 man up to the moment of the conception (of Immanuel)'" (Rhodea 67, citing TDNT
 5.833 in n. 42).
 
-`disputed`, because it stands or falls with the claim about παρθένος: on
+`disputed`, because it stands or falls with the claim about παρθένος ("virgin" or "young woman"): on
 Wegner's reading the translator wrote a word for a young woman, and said nothing
 of her virginity. -/
 def lxxReadsAVirginCited : AtomMeta :=
@@ -441,8 +458,9 @@ def lxxReadsAVirginCited : AtomMeta :=
       , confidence := .disputed } }
 
 /-- `lxxPutsTheConceptionInTheFuture`. What the Greek reads: ἰδοὺ ἡ παρθένος ἐν
-γαστρὶ ἕξει, "look, the virgin shall be with child", a future, where Wegner reads
-the Hebrew הָרָה as a present pregnancy. Rhodea notes it (67). `consensus`. -/
+γαστρὶ ἕξει ("Behold, the virgin shall be with child"), "look, the virgin shall be with child", a
+future, where Wegner reads the Hebrew הָרָה ("with child" or "pregnant") as a present pregnancy.
+Rhodea notes it (67). `consensus`. -/
 def lxxPutsTheConceptionInTheFutureCited : AtomMeta :=
   { label := "The Septuagint puts the conception in the future: 'she shall be with child'"
   , kind := .textual

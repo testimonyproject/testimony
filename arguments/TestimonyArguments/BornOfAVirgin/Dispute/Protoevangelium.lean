@@ -35,8 +35,8 @@ allusion, and a disputed one (`fulfilmentLine` gives both sides).
   form that cannot carry "promise or prophecy as its primary or even as its
   secondary meaning" (*Genesis 1–11*, 259–60).
 - **The syntax of the striker** (`syntaxCase`), against Westermann's first
-  ground: elsewhere זֶרַע with singular verbs and pronouns names one descendant,
-  at 3:15b it is "he" who strikes the serpent's own head, and the Greek
+  ground: elsewhere זֶרַע ("seed" or "offspring") with singular verbs and pronouns names one
+  descendant, at 3:15b it is "he" who strikes the serpent's own head, and the Greek
   translator read one person; so "her seed" is not only a line of descendants
   (Collins, Alexander, Leupold, Hamilton).
 - **The scene read whole** (`sceneCase`): the serpent speaks and twists God's
@@ -249,7 +249,7 @@ theorem syntaxCase_establishes : Establishes syntaxCase := by
 theorem syntaxCase_is_satisfiable : Satisfiable syntaxCase.premises := by
   satisfied_by leupoldReading [bornOfAVirginDefs]
 
-/-- **The syntax rests on its step.** Grant that זֶרַע names one descendant
+/-- **The syntax rests on its step.** Grant that זֶרַע ("seed" or "offspring") names one descendant
 elsewhere with singular forms, that the striker at 3:15b is singular "he", and
 that the Greek translator read one person: on Calvin's reading "her seed" is
 still the woman's posterity, and not one man. -/

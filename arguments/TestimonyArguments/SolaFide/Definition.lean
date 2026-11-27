@@ -182,8 +182,8 @@ deny, and each step has the reader who denies it beside it. -/
 `disputed`. Ziesler holds that "certainly something more than forensic" is meant,
 that the many "will really be righteous" (*The Meaning of Righteousness in Paul*,
 199), and Fitzmyer reads it in the "effective sense" (*Romans*, 118–19). Charles
-Hodge grants the verse and denies the reading, because καθίστημι "never, in the
-New Testament, means to make, in the sense of effecting, or causing a person or
+Hodge grants the verse and denies the reading, because καθίστημι ("constitute" or "make") "never, in
+the New Testament, means to make, in the sense of effecting, or causing a person or
 thing, to be in its character or nature other than it was before" (*Romans*,
 p. 271; `hodgeOnRomansFiveNineteen`). -/
 def inwardOnRomansFiveNineteen : Source :=
@@ -329,8 +329,8 @@ def modernCatholicWordRoads : List (Line Claim) :=
     effectiveVerdictLine]
 
 /-- Hodge's reading of Romans 5:19, rated `disputed`, because Ziesler and Fitzmyer
-grant the verse and read it as renewal. Charles Hodge: καθίστημι "never, in the
-New Testament, means to make, in the sense of effecting, or causing a person or
+grant the verse and read it as renewal. Charles Hodge: καθίστημι ("constitute" or "make") "never, in
+the New Testament, means to make, in the sense of effecting, or causing a person or
 thing, to be in its character or nature other than it was before"
 (*Commentary on the Epistle to the Romans*, 1864, p. 271). So "this cannot mean,
 that by the obedience of one the many shall be made holy": "as by the
@@ -345,8 +345,8 @@ def hodgeOnRomansFiveNineteen : Source :=
   , confidence := .disputed }
 
 /-- **Romans 5:19, read as a verdict.** The verb in "will be made righteous" is
-καθίστημι, "to set down" or "constitute", and Hodge argues that it never means
-to make a person other in nature than he was. So the many are set in the rank of
+καθίστημι ("constitute" or "make"), "to set down" or "constitute", and Hodge argues that it never
+means to make a person other in nature than he was. So the many are set in the rank of
 the righteous on the ground of Christ's obedience, as by Adam's disobedience
 they were set in the rank of sinners. "Made righteous" here is a standing, not a
 renewal. This is the Reformed answer to the first of Fitzmyer's readings. -/

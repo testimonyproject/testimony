@@ -97,7 +97,7 @@ Nor does it settle what "proceeds" means. The Pontifical Council for Promoting
 Christian Unity (1995) grants the Eastern grounds almost word for word, calling
 the Father "the sole Trinitarian Cause (Aitia) or principle (principium) of the
 Son and the Holy Spirit", and still confesses the Filioque. It reads the Greek
-ἐκπόρευσις as origin from the Father alone and the Latin *processio* as a
+ἐκπόρευσις ("procession") as origin from the Father alone and the Latin *processio* as a
 wider word, which can be from the Son. If that distinction holds, the two
 conclusions here may not contradict each other at all. Testing that means
 reading "the Spirit proceeds from the Son" both ways and answering each reading,
@@ -289,7 +289,7 @@ def easternReading : Valuation Claim := fun a =>
 
 /-- **The reading of John 15:26 as mission**, Westcott's: the verse speaks of
 the Spirit being sent, not of where he is from eternally. Westcott notes that
-"from the Father" is παρά, which "expresses properly position ('from the side
+"from the Father" is παρά ("from"), which "expresses properly position ('from the side
 of'), and not source (ἐκ, 'out of')", and concludes that "the reference here is
 to the temporal mission of the Holy Spirit, and not to the eternal Procession"
 (pp. 224–225). Otherwise everything is as the Western reading has it. -/

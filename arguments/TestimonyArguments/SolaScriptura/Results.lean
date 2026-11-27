@@ -435,7 +435,7 @@ does its failure, because the same grounds are satisfied by the reading on
 which universal circularity convicts everyone rather than excusing anyone.
 
 The sixth instance of one move. Kruger on the canon, Mathison on interpretive
-authority, Athanasius on ὁμοούσιος, Whitaker on unwritten tradition, Geisler
+authority, Athanasius on ὁμοούσιος ("of one substance"), Whitaker on unwritten tradition, Geisler
 himself on who may interpret the Old Testament, and now Barrett on perspicuity
 — against Geisler, who deploys it himself elsewhere.
 

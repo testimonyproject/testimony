@@ -18,12 +18,13 @@ texts it cites are read?**
 Miller gives two uses of the word of a woman who is not a virgin.
 
 - **Joel 1:8**, "Lament like a parthenos dressed in sackcloth for the husband of
-  her youth", a young widow. The Greek does not read so: it calls the woman
-  νύμφην, a bride, and its παρθεν- word, τὸν παρθενικόν, is of the husband
-  (Rahlfs). The text refutes the claim.
+  her youth", a young widow. The Greek does not read so: it calls the woman a
+  "bride" (νύμφην), and its word built on παρθεν- ("virgin"), τὸν παρθενικόν
+  ("the bridegroom of her youth"), is of the husband (Rahlfs). The text refutes
+  the claim.
 - **Genesis 34:3**: "In one passage, this term refers to a rape victim after she
-  has been attacked." The Greek calls Dinah a παρθένος in the verse after
-  Shechem lies with her, and that much the text reads. But Miller's claim is
+  has been attacked." The Greek calls Dinah a παρθένος ("virgin" or "young woman") in the verse
+  after Shechem lies with her, and that much the text reads. But Miller's claim is
   more: that the noun describes her as she then was, no longer a virgin, so that
   it is not used there in the sense "virgin". That is his premise, not the
   text's. The order of the verses puts Shechem's love after his act; it does not
@@ -91,12 +92,13 @@ open Testimony Testimony.Logic Testimony.Bib Testimony.Scripture
 
 /-! ### Miller's dissent -/
 
-/-- **What the Greek of Joel 1:8 reads**: the woman is νύμφην, a bride, and
-τὸν παρθενικόν is said of her husband. A reading of the text, from Rahlfs. -/
+/-- **What the Greek of Joel 1:8 reads**: the woman is a "bride" (νύμφην), and
+τὸν παρθενικόν, "the bridegroom of her youth", is said of her husband. A reading
+of the text, from Rahlfs. -/
 def joelReadsABride : Refutation Claim :=
   { claim := .joelGreekCallsTheWidowParthenos
-  , reads := "the Greek of Joel 1:8 calls the woman νύμφην, a bride; its παρθεν- word, " ++
-      "τὸν παρθενικόν, is of the husband"
+  , reads := "the Greek of Joel 1:8 calls the woman a “bride” (νύμφην); its word built on \
+      παρθεν- (“virgin”), τὸν παρθενικόν (“the bridegroom of her youth”), is of the husband"
   , reading :=
       { primary := .scripture [verseIn .septuagint ⟨.joel, 1, 8⟩]
       , tradition := .criticalScholarship
@@ -202,7 +204,7 @@ theorem miller_on_joel_alone_does_not_count :
 
 /-- **The laws' step, rated by its register**: Miller's dissent, the strongest
 known, with what the texts refute struck. Its support is cited `wellSupported`:
-Bratcher, and the lexica on τὰ παρθένια.
+Bratcher, and the lexica on τὰ παρθένια ("tokens of virginity").
 
 Miller's dissent is overruled in the dispute over the Septuagint's word, where
 his case from Genesis 34:3 is a party and nothing defends it

@@ -119,7 +119,7 @@ of justification. Everything else in the Reformed case is granted. -/
 @[solaFideDefs]
 def subjectiveGenitive : ArgumentPackage Claim :=
   { reformed with
-    name := "Subjective genitive (πίστις Χριστοῦ as Christ's faithfulness)"
+    name := "Subjective genitive (πίστις Χριστοῦ, “faith of Christ”, read as Christ's faithfulness)"
     cite := subjectiveGenitiveCite
     premises :=
       caseOf
@@ -227,7 +227,7 @@ strand rests on two disputed readings, so it has two reduced forms. -/
 @[solaFideDefs]
 def reformedWithoutWorksOfLaw : ArgumentPackage Claim :=
   { reformed with
-    name := "Reformed, minus the ἔργα νόμου premise"
+    name := "Reformed, minus the ἔργα νόμου (“works of the law”) premise"
     premises :=
       caseOf [paulineWithoutWorksOfLaw, dominicalLine, apostolicLine, johannineLine]
         sharedGrounds closingSteps }
@@ -242,8 +242,8 @@ def reformedWithoutSozo : ArgumentPackage Claim :=
         sharedGrounds closingSteps }
 
 /-- The Reformed package resting on Acts alone. The disputed reading is removed
-from each of the other three strands: ἔργα νόμου from Paul, σῴζω from Luke,
-believing as trust from John. Peter's speech is untouched. -/
+from each of the other three strands: ἔργα νόμου ("works of the law") from Paul, σῴζω ("save" or
+"healed") from Luke, believing as trust from John. Peter's speech is untouched. -/
 @[solaFideDefs]
 def reformedRestingOnActs : ArgumentPackage Claim :=
   { reformed with
@@ -254,8 +254,8 @@ def reformedRestingOnActs : ArgumentPackage Claim :=
         sharedGrounds closingSteps }
 
 /-- The Reformed package resting on John alone. The disputed reading is removed
-from each of the other three strands: ἔργα νόμου from Paul, σῴζω from Luke, the
-yoke from Acts. John's strand is untouched. -/
+from each of the other three strands: ἔργα νόμου ("works of the law") from Paul, σῴζω ("save" or
+"healed") from Luke, the yoke from Acts. John's strand is untouched. -/
 @[solaFideDefs]
 def reformedRestingOnJohn : ArgumentPackage Claim :=
   { reformed with
@@ -267,26 +267,28 @@ def reformedRestingOnJohn : ArgumentPackage Claim :=
         sharedGrounds closingSteps }
 
 /-- The Reformed package with a disputed reading removed from **every** strand:
-ἔργα νόμου from Paul, σῴζω from Luke, the yoke from Acts, believing as trust
-from John. The objective genitive stays. -/
+ἔργα νόμου ("works of the law") from Paul, σῴζω ("save" or "healed") from Luke, the yoke from Acts,
+believing as trust from John. The objective genitive stays. -/
 @[solaFideDefs]
 def reformedWithoutEveryStrandsPremise : ArgumentPackage Claim :=
   { reformed with
-    name := "Reformed, minus the ἔργα νόμου, σῴζω, yoke and trust premises"
+    name := "Reformed, minus the ‘works of the law’ (ἔργα νόμου), ‘saved’ (σῴζω), yoke and \
+      trust premises"
     premises :=
       caseOf
         [ paulineWithoutWorksOfLaw, dominicalWithoutSozo, apostolicLine.onGrounds []
         , johannineWithoutTrust ]
         sharedGrounds closingSteps }
 
-/-- The same with the objective genitive removed in place of ἔργα νόμου: the
+/-- The same with the objective genitive removed in place of ἔργα νόμου ("works of the law"): the
 Pauline strand loses its other disputed reading, and the other three strands
 theirs. The name lists Luke's and Peter's; John's reading of believing as trust
 is removed too. -/
 @[solaFideDefs]
 def reformedWithoutPistisChristouSozoOrYoke : ArgumentPackage Claim :=
   { reformed with
-    name := "Reformed, minus the πίστις Χριστοῦ, σῴζω, yoke and trust premises"
+    name := "Reformed, minus the ‘faith of Christ’ (πίστις Χριστοῦ), ‘saved’ (σῴζω), yoke and \
+      trust premises"
     premises :=
       caseOf
         [ paulineWithoutPistisChristou, dominicalWithoutSozo
@@ -391,7 +393,7 @@ def romansFourOnTheWord : ArgumentPackage Claim :=
   , cite := baseCite
   , premises := caseOf [romansFourExegesisLine] [p .leastMeaning] [glossByLeastMeaning]
   , conclusion := notP .paulsJustifyDenotesRenewal
-  , conclusionLabel := "Paul's δικαιόω does not denote the renewal of the inward man"
+  , conclusionLabel := "Paul's δικαιόω (“justify”) does not denote the renewal of the inward man"
   , inferences := [romansFourExegesisSource, leastMeaningSource] }
 
 /-- **Romans 4, against justification as renewal.** Paul explains the righteousness
@@ -413,6 +415,7 @@ with words of its own. And a word contributes the least meaning its context
 requires. So Paul's "justify" does not mean the renewal of the inward person. -/
 @[solaFideDefs]
 def lexicalCase : ArgumentPackage Claim :=
-  lexicalLine.asPackage baseCite "Paul's δικαιόω does not denote the renewal of the inward man"
+  lexicalLine.asPackage baseCite ("Paul's δικαιόω (“justify”) does not denote the renewal of \
+      the inward man")
 
 end TestimonyArguments.SolaFide

@@ -34,7 +34,7 @@ grants the text and the principle with it: "nothing is to be taught except what
 is contained, either implicitly or explicitly, in the Gospels and epistles and
 Sacred Scripture". What he denies is Calvin's reading of Paul's words, that the
 gospel accursed is any gospel "to which the inventions of other men are added".
-The Greek is παρ' ὅ, which can be rendered "contrary to", "besides" or "other
+The Greek is παρ' ὅ ("contrary to"), which can be rendered "contrary to", "besides" or "other
 than", and for Aquinas Paul's "besides" means "adding something completely
 alien". That is a dispute about how far the principle reaches, not about the
 principle.

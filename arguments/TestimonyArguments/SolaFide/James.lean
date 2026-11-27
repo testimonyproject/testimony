@@ -33,7 +33,7 @@ evidence.
   increase of the justice already received: being made more just. Then it meets
   the evidence about the word. Outside Paul, the word declares, acquits or
   vindicates: "wisdom is justified by her deeds" (Matthew 11:19, ESV), where
-  "deeds" translates ἔργα, the word James uses for "works". James uses it of
+  "deeds" translates ἔργα ("works"), the word James uses for "works". James uses it of
   Abraham offering Isaac (Genesis 22), long after "Abraham believed God, and it
   was counted to him as righteousness" (James 2:23, quoting Genesis 15:6), and
   of Rahab. And a word contributes the least meaning its context requires. But
@@ -258,7 +258,7 @@ open Testimony Testimony.Bib Testimony.Logic Testimony.Logic.Framework Testimony
 /-! ### How each step is rated -/
 
 /-- The step from three things to "James's 'justified' does not mean the increase of
-justice": how the word (δικαιόω) is used outside Paul, how James himself uses
+justice": how the word (δικαιόω, "justify") is used outside Paul, how James himself uses
 it, and the rule of least meaning. Its rating has yet to be re-examined. -/
 def jamesLexicalSource : Source :=
   { primary := .work mooJames (.adLoc ⟨.james, 2, 21⟩)
@@ -362,7 +362,7 @@ least meaning its context requires. So James's "justified" does not mean the
 increase of justice. -/
 @[solaFideDefs]
 def jamesLexicalLine : Line Claim :=
-  { name := "James's word (δικαιόω, by the rule of least meaning)"
+  { name := "James's word (δικαιόω, “justify”, by the rule of least meaning)"
   , grounds :=
       [ p .dikaioIsDeclarativeOutsidePaul, p .james2JustifiedByWorks, p .leastMeaning
       , p .jamesUsesDikaioAsOutsidePaul, p .jamesKeepsHisWordsThroughTheParagraph ]
@@ -527,7 +527,8 @@ def westminsterRewardLine : Line Claim :=
 /-- James's word: "justified" in James does not mean the increase of justice. -/
 @[solaFideDefs]
 def jamesLexicalCase : ArgumentPackage Claim :=
-  jamesLexicalLine.asPackage baseCite "James's δικαιόω does not denote the increase of justice"
+  jamesLexicalLine.asPackage baseCite ("James's δικαιόω (“justify”) does not denote the \
+      increase of justice")
 
 /-- James's faith: the phrase James denies is not the Reformers' formula. -/
 @[solaFideDefs]
@@ -640,7 +641,7 @@ def westminsterOnReward : ArgumentPackage Claim :=
 because Paul's word means renewal and James's is Paul's. -/
 @[solaFideDefs]
 def renewalOnTheWord : ArgumentPackage Claim :=
-  renewalWordLine.asPackage baseCite "James's δικαιόω denotes the increase of justice"
+  renewalWordLine.asPackage baseCite "James's δικαιόω (“justify”) denotes the increase of justice"
 
 /-! ### Each position holds together and reaches its conclusion -/
 

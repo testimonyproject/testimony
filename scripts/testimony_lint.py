@@ -14,7 +14,9 @@ naming a theorem the library no longer has is drift of exactly the kind this
 project exists to rule out, and it has happened. It runs only over the whole
 library, because deciding that a name does not exist means having read every
 declaration. L12 is about the prose too, but about its shape rather than its
-claims: hand-written markdown is held to the same 100 columns as Lean.
+claims: hand-written markdown is held to the same 100 columns as Lean. L13 is
+about the reader of that prose: a Greek or Hebrew word reaches them only with
+English beside it.
 
 Usage:
     python3 scripts/testimony_lint.py            # every package, and the prose docs
@@ -166,6 +168,7 @@ RULE_TEXT = {
     "L10": "every @[proposed] result must say what is novel about it",
     "L11": "a package with an Establishes result must be shown satisfiable",
     "L12": f"hand-written markdown: lines at most {MAX_LINE} columns",
+    "L13": "a Greek or Hebrew word needs its English beside it, from the glossary",
 }
 
 # L12. A generated block inside a hand-written page: `statusgen` writes the
@@ -334,6 +337,208 @@ def lint_text(path: str, text: str) -> list[Finding]:
             add("L10", n, f'{name or "?"} — docstring must contain "{NOVELTY_PHRASE}"')
 
     return sorted(findings, key=lambda f: (f.line, f.rule))
+
+
+# L13. Greek and Hebrew letters, with the accents and points written on them.
+# Hebrew's points (U+0591-U+05C7) sit inside its block; Greek's polytonic
+# letters are the Greek Extended block. Words are joined into one phrase across
+# spaces, elision marks and the punctuation inside a sentence, so that works of
+# the law (ἔργα νόμου) is one gloss for one phrase rather than two for two
+# words, and a sentence quoted in Greek is glossed by its translation once.
+ORIGINAL_LETTERS = "\u0370-\u03FF\u1F00-\u1FFF\u0590-\u05FF\uFB1D-\uFB4F"
+ORIGINAL_RUN_RE = re.compile(
+    rf"[{ORIGINAL_LETTERS}]"
+    rf"(?:[{ORIGINAL_LETTERS}\u0300-\u036F'’᾽ \t\n,;.·\u0387]*[{ORIGINAL_LETTERS}])?"
+)
+# Where each package keeps its glossary: every Greek or Hebrew word or phrase
+# its prose uses, with each English rendering and the lexicon or translation
+# that gives it (`Testimony.Gloss`). The rule reads the English from here, so a
+# rendering nobody cited does not pass.
+GLOSSARY_FILES = (
+    "arguments/TestimonyArguments/Glossary.lean",
+    "examples/TestimonyExamples/Glossary.lean",
+)
+GLOSS_ORIGINAL_RE = re.compile(r'\bgloss\s+"([^"]+)"')
+GLOSS_ENGLISH_RE = re.compile(r'\b(?:cite|propose)\s+"((?:[^"\\]|\\.)+)"')
+# What may stand between a word and its English: brackets, a comma, quotation
+# marks, the stars of an italic. "working" (ἐνεργουμένη), ἐνεργουμένη,
+# "working", and the ἔθνη [the nations] are all the word beside its English.
+JOIN_BEFORE_RE = re.compile(r"""[\s(\[,"“”'‘’*_]*$""")
+JOIN_AFTER_RE = re.compile(r"""^[\s)\],;:"“”'‘’*_(\[-]*""")
+ARTICLE_RE = re.compile(r"^(?:the|a|an)\s+", re.I)
+# Inline code and fenced code are code: `Γ ⊢ φ` is a sample of the notation.
+CODE_SPAN_RE = re.compile(r"`[^`\n]*`")
+FENCED_CODE_RE = re.compile(r"^ {0,3}(```|~~~).*?^ {0,3}\1", re.M | re.S)
+HEADING_RE = re.compile(r"^\s{0,3}#{1,6}\s", re.M)
+DOC_COMMENT_RE = re.compile(r"/-[-!](.*?)-/", re.S)
+GUARD_MSGS_KINDS = ("info:", "warning:", "error:", "trace:")
+# The strings a reader meets are the ones written in English: a claim's label,
+# a line's name, the parts of a meaning, what a reading of a text says. A
+# string with no English word in it ("ἀγάπη", "πιστεύων") is the letters a
+# corpus lookup matches on, which is data and never printed as prose; so is a
+# locator ("s.v. δικαιόω"). A work's title is the title its author gave it.
+STRING_LITERAL_RE = re.compile(r'"((?:[^"\\]|\\.)*)"')
+ENGLISH_WORD_RE = re.compile(r"[A-Za-z]{2,}")
+NOT_READER_FIELD_RE = re.compile(
+    r"\b(?:title|originalTitle|subtitle|shortTitle|journal|booktitle|series|publisher"
+    r"|text|lemma|key|url|doi|isbn|original|english)\s*:=\s*(?:some\s+)?$"
+)
+
+Glossary = dict[str, tuple[str, ...]]
+
+
+def _fold(text: str) -> str:
+    """Case and spacing folded away, so that a phrase broken across a line of a
+    docstring, or capitalised at the start of a sentence, is the same phrase."""
+    return " ".join(text.split()).casefold()
+
+
+def read_glossary(texts: dict[str, str] | None = None) -> Glossary:
+    """Every word the packages' glossaries give English for, with that English.
+
+    Read from the Lean source by pattern, as L3 and L4 read the bibliography:
+    each entry is `gloss "…"` followed by its renderings, each `cite "…"` or
+    `propose "…"`. `texts` overrides the files on disk, for the tests.
+    """
+    if texts is None:
+        texts = {f: Path(f).read_text(encoding="utf-8") for f in GLOSSARY_FILES if Path(f).is_file()}
+    glossary: dict[str, list[str]] = {}
+    for text in texts.values():
+        code = "\n".join(_strip_comments(text.splitlines()))
+        starts = list(GLOSS_ORIGINAL_RE.finditer(code))
+        for m, nxt in zip(starts, starts[1:] + [None]):
+            body = code[m.end() : nxt.start() if nxt else len(code)]
+            english = [_fold(e.replace('\\"', '"')) for e in GLOSS_ENGLISH_RE.findall(body)]
+            glossary.setdefault(_fold(m.group(1)), []).extend(english)
+    return {word: tuple(english) for word, english in glossary.items()}
+
+
+def _glossed_by(before: str, after: str, english: tuple[str, ...]) -> bool:
+    """Whether one of a word's renderings stands right beside it: ending the
+    text before it, or opening the text after it, with at most brackets, a
+    comma or quotation marks between, and an article allowed in front."""
+    left = _fold(before[: len(before) - len(JOIN_BEFORE_RE.search(before).group())])
+    right = _fold(after[len(JOIN_AFTER_RE.match(after).group()) :])
+    right = ARTICLE_RE.sub("", right)
+    for e in {ARTICLE_RE.sub("", e) for e in english}:
+        if left.endswith(e) and (len(left) == len(e) or not left[-len(e) - 1].isalnum()):
+            return True
+        if right.startswith(e) and (len(right) == len(e) or not right[len(e)].isalnum()):
+            return True
+    return False
+
+
+def unglossed(unit: str, glossary: Glossary) -> list[tuple[int, str]]:
+    """L13 over one stretch of prose: the offset and text of each Greek or
+    Hebrew phrase that appears with none of its glossary's English beside it.
+
+    A phrase glossed once in the stretch is glossed for the rest of it, as
+    `writing-for-readers.md` asks ("give both, once, where the term first
+    appears in a section"); another form of the word is a new word to a reader
+    who has no Greek, even if it shares a root with the first. A single letter
+    is notation (φ, Γ), not a word.
+    """
+    prose = _blank(_blank(unit, FENCED_CODE_RE), CODE_SPAN_RE)
+    glossed: set[str] = set()
+    found: list[tuple[int, str]] = []
+    for m in ORIGINAL_RUN_RE.finditer(prose):
+        word = _fold(m.group())
+        if len(word) < 2 or word in glossed:
+            continue
+        english = glossary.get(word, ())
+        if english and _glossed_by(
+            prose[max(0, m.start() - 200) : m.start()], prose[m.end() : m.end() + 200], english
+        ):
+            glossed.add(word)
+            continue
+        found.append((m.start(), " ".join(m.group().split())))
+    return found
+
+
+def _l13(path: str, line: int, word: str, glossary: Glossary) -> Finding:
+    why = "" if _fold(word) in glossary else "; it is not in the glossary yet"
+    return Finding("L13", path, line, RULE_TEXT["L13"] + f" ({word}{why})")
+
+
+def _blank(text: str, pattern: re.Pattern[str]) -> str:
+    """Spaces in place of each match, so offsets and line numbers survive."""
+    return pattern.sub(lambda m: re.sub(r"[^\n]", " ", m.group()), text)
+
+
+def _sections(text: str, start: int) -> list[tuple[int, str]]:
+    """A piece of prose cut at its markdown headings, each with its offset."""
+    cuts = [0] + [m.start() for m in HEADING_RE.finditer(text)] + [len(text)]
+    return [(start + a, text[a:b]) for a, b in zip(cuts, cuts[1:]) if b > a]
+
+
+def lint_glosses(path: str, text: str, glossary: Glossary) -> list[Finding]:
+    """L13: every Greek or Hebrew word a reader meets comes with its English.
+
+    A reader with an English Bible and no Greek reads "ἐνεργουμένη is passive"
+    as a row of shapes. Dean asked, over a claim printed exactly so, that every
+    such word carry its English, and two renderings where the translations
+    part; `writing-for-readers.md` has asked the same of the prose all along,
+    and nothing checked it. The English has to be a rendering the glossary
+    gives, with the lexicon or translation it comes from, so a gloss cannot be
+    made up on the spot: a new word is added to the glossary first.
+
+    The units are what a reader meets as one piece: each docstring, cut at its
+    headings into sections, and each reader-facing string (a claim's label, a
+    line's or a party's name, a part of a meaning). A label is its own unit
+    because the page prints it alone, in a list of claims, far from any
+    paragraph that glossed the word. Only `arguments/` and `examples/` are read,
+    with the hand-written pages (`lint_markdown_glosses`): their docstrings are
+    what `argdoc` and `argtex` publish. The library's own docstrings are the API
+    reference, for whoever writes Lean against it.
+    """
+    if not path.startswith(ARGUMENTS_DIRS):
+        return []
+    # Each unit with where it starts: an offset into `text` for a docstring
+    # section, a line number for a string (the strings are read from `text`
+    # with its comments blanked, whose offsets are not `text`'s).
+    docs: list[tuple[int, str]] = []
+    for m in DOC_COMMENT_RE.finditer(text):
+        # The expected output of a `#guard_msgs` is a report pinned for the
+        # build to compare, not prose, and no page prints it.
+        if m.group(1).lstrip().startswith(GUARD_MSGS_KINDS):
+            continue
+        docs.extend(_sections(m.group(1), m.start(1)))
+    units: list[tuple[int, str]] = []
+    code = "\n".join(_strip_comments(text.splitlines()))
+    for m in STRING_LITERAL_RE.finditer(code):
+        literal = m.group(1)
+        if not ENGLISH_WORD_RE.search(literal):
+            continue
+        if NOT_READER_FIELD_RE.search(code[max(0, m.start() - 40) : m.start()]):
+            continue
+        # `code` keeps every line, so a line counted in it is a line of `text`.
+        line = code.count("\n", 0, m.start()) + 1
+        # A string gap (a backslash ending the line) joins the two lines.
+        literal = re.sub(r"\\\n\s*", "", literal)
+        units.append((line, literal.replace('\\"', '" ')))
+    findings: list[Finding] = []
+    for start, unit in docs:
+        for offset, word in unglossed(unit, glossary):
+            findings.append(_l13(path, text.count("\n", 0, start + offset) + 1, word, glossary))
+    for line, unit in units:
+        for _, word in unglossed(unit, glossary):
+            findings.append(_l13(path, line, word, glossary))
+    return findings
+
+
+def lint_markdown_glosses(path: str, text: str, glossary: Glossary) -> list[Finding]:
+    """L13 over a hand-written page of the site, section by section.
+
+    Only `docs/src/`, which mdbook publishes; the skills and the notes for
+    contributors are read by people writing the library, not by its readers.
+    """
+    if not path.startswith("docs/src/") or is_generated_doc(path):
+        return []
+    findings: list[Finding] = []
+    for start, unit in _sections(text, 0):
+        for offset, word in unglossed(unit, glossary):
+            findings.append(_l13(path, text.count("\n", 0, start + offset) + 1, word, glossary))
+    return findings
 
 
 def _doc_comment_above(lines: list[str], lineno: int) -> str:
@@ -880,6 +1085,8 @@ def main(argv: list[str]) -> int:
             files.append(t)
     texts = {_rel(p): p.read_text(encoding="utf-8") for p in files}
     findings = [f for path, text in texts.items() for f in lint_text(path, text)]
+    glossary = read_glossary()
+    findings += [f for path, text in texts.items() for f in lint_glosses(path, text, glossary)]
     findings += lint_units(texts)
 
     # L9 asks whether a name exists, which only the whole library can answer.
@@ -904,7 +1111,9 @@ def main(argv: list[str]) -> int:
     # and over all of the hand-written markdown when nothing was.
     pages = markdown_files(Path(".")) if whole_library else named_markdown
     for p in pages:
-        findings += lint_markdown(_rel(p), p.read_text(encoding="utf-8"))
+        page = p.read_text(encoding="utf-8")
+        findings += lint_markdown(_rel(p), page)
+        findings += lint_markdown_glosses(_rel(p), page, glossary)
 
     findings.sort(key=lambda f: (f.path, f.line, f.rule))
     for f in findings:

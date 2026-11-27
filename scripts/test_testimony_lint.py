@@ -662,6 +662,73 @@ class RuleTests(unittest.TestCase):
         self.assertIn("docs/templates/roadmap.md", found)
         self.assertNotIn("docs/src/bibliography.md", found)
 
+    # L13: a Greek or Hebrew word needs its English beside it.
+
+    GLOSSARY = L.read_glossary(
+        {
+            "Glossary.lean": (
+                'gloss "ἐνεργουμένη" [ cite "working" netBible (.page 1), '
+                'propose "made operative" "why" ]\n'
+                'gloss "παρθένος" [ cite "virgin" netBible (.page 1) ]\n'
+            )
+        }
+    )
+    ARG = "arguments/TestimonyArguments/X.lean"
+
+    def glosses(self, text, path=ARG):
+        return [f for f in L.lint_glosses(path, text, self.GLOSSARY) if f.rule == "L13"]
+
+    def test_glossary_reads_every_rendering(self):
+        self.assertEqual(("working", "made operative"), self.GLOSSARY["ἐνεργουμένη"])
+
+    def test_gloss_after_the_word_passes(self):
+        self.assertEqual([], self.glosses('/-- ἐνεργουμένη ("working") is passive. -/\ndef x := 1\n'))
+
+    def test_gloss_before_the_word_passes(self):
+        self.assertEqual([], self.glosses("/-- The word for working, ἐνεργουμένη, is read. -/\n"))
+
+    def test_gloss_in_brackets_and_second_rendering_pass(self):
+        self.assertEqual([], self.glosses("/-- read as ἐνεργουμένη [made operative] here. -/\n"))
+
+    def test_unglossed_word_fails(self):
+        found = self.glosses("/-- Galatians 5:6: ἐνεργουμένη is passive. -/\n")
+        self.assertEqual(["L13"], [f.rule for f in found])
+
+    def test_rendering_not_in_the_glossary_fails(self):
+        """English beside the word passes only if the glossary gives it."""
+        self.assertTrue(self.glosses('/-- ἐνεργουμένη ("energised") is passive. -/\n'))
+
+    def test_word_missing_from_the_glossary_says_so(self):
+        found = self.glosses('/-- ἀγάπη ("love") abides. -/\n')
+        self.assertIn("not in the glossary yet", found[0].message)
+
+    def test_glossed_once_per_section(self):
+        text = '/-- παρθένος ("virgin") once, then παρθένος again.\n\n# Next\n\nπαρθένος. -/\n'
+        found = self.glosses(text)
+        self.assertEqual([5], [f.line for f in found])
+
+    def test_label_string_is_its_own_unit(self):
+        text = '/-- παρθένος ("virgin"). -/\ndef x := { label := "Isaiah: παρθένος is read" }\n'
+        self.assertEqual([2], [f.line for f in self.glosses(text)])
+
+    def test_string_gap_joins_word_and_gloss(self):
+        text = 'def x := { label := "the word ἐνεργουμένη \\\n    (“working”) is passive" }\n'
+        self.assertEqual([], self.glosses(text))
+
+    def test_code_span_and_guard_msgs_are_exempt(self):
+        self.assertEqual([], self.glosses("/-- The atom `ἐνεργουμένη` is named. -/\n"))
+        self.assertEqual([], self.glosses("/-- info: ἐνεργουμένη at work -/\n#guard_msgs in\n"))
+
+    def test_library_docstrings_are_not_read(self):
+        self.assertEqual([], self.glosses("/-- ἐνεργουμένη -/\n", path="Testimony/X.lean"))
+
+    def test_hand_written_page_is_read_by_section(self):
+        found = L.lint_markdown_glosses("docs/src/x.md", "ἐνεργουμένη is passive.\n", self.GLOSSARY)
+        self.assertEqual(["L13"], [f.rule for f in found])
+        self.assertEqual(
+            [], L.lint_markdown_glosses("docs/src/arguments/x.md", "ἐνεργουμένη\n", self.GLOSSARY)
+        )
+
     def test_clean_file_has_no_findings(self):
         text = "/-- A thing. -/\ndef x : Nat := 1\n"
         self.assertEqual([], self.lint(text))

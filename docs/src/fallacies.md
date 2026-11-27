@@ -331,10 +331,10 @@ until it is written in that form.
 ## Misreading the original
 
 An argument can rest on what the original says, and the original can say otherwise. "The one
-who supplies the Spirit to you and works miracles among you" in Galatians 3:5 is ὁ ἐνεργῶν, an
-active participle: the one who works. A reading that made him the one worked on, because the
-verb is passive, would misread the Greek, and the letters of the word show it, since an active
-form is spelled as no passive is.
+who supplies the Spirit to you and works miracles among you" in Galatians 3:5 is ὁ ἐνεργῶν
+("works"), an active participle: the one who works. A reading that made him the one worked on,
+because the verb is passive, would misread the Greek, and the letters of the word show it, since an
+active form is spelled as no passive is.
 
 A claim of that kind is about the text's grammar, and the library holds the grammar as data:
 every word of the imported books of the Greek New Testament, with its parsing
@@ -350,14 +350,14 @@ and on a claim cited `refuted` that the spelling does not contradict.
 Where the spelling allows two voices, the data's tag is an interpretation. In the present the
 middle and the passive are spelled alike, so MACULA's "middle" for ἐνεργουμένη, "working", in
 Galatians 5:6 is its editors' reading of how Paul uses the verb. J. B. Lightfoot read it the
-same way: "ἐνεργεῖσθαι is never passive in St Paul". J. Armitage Robinson, answering Lightfoot by
-name, read it passive, "faith is made operative through love", with God the one who makes it so
-(*St Paul's Epistle to the Ephesians*, 1903, p. 246), and so had Robert Bellarmine before him.
-The spelling charges nothing there. The reading is a reader's claim, cited and rated like any
-other, and what a reader concludes from it about who does the work is weighed against Paul's
-other uses of the verb, as the next section explains.
+same way: "ἐνεργεῖσθαι [to be effective] is never passive in St Paul". J. Armitage Robinson,
+answering Lightfoot by name, read it passive, "faith is made operative through love", with God the
+one who makes it so (*St Paul's Epistle to the Ephesians*, 1903, p. 246), and so had Robert
+Bellarmine before him. The spelling charges nothing there. The reading is a reader's claim, cited
+and rated like any other, and what a reader concludes from it about who does the work is weighed
+against Paul's other uses of the verb, as the next section explains.
 
-**Caught.** A move from the claim that ὁ ἐνεργῶν in Galatians 3:5 is passive
+**Caught.** A move from the claim that ὁ ἐνεργῶν ("works") in Galatians 3:5 is passive
 (`fromThePassiveOfAnActive`), one from the denial that it is active (`denyingTheActive`), and one
 from the claim that ἐνεργουμένη in Galatians 5:6 is active (`fromTheActive`). **Passed over.** A
 move from the claim that ἐνεργουμένη is passive (`fromThePassive`), and one from the claim that
@@ -371,8 +371,8 @@ sense is hard. The Westminster Confession states the rule: "The infallible rule 
 interpretation of Scripture is the Scripture itself", and where the sense of a place is in
 question "it must be searched and known by other places that speak more clearly" (1.9).
 
-The library holds one such usage as data. `greek_usage` reads every use of ἐνεργέω, "to work",
-in the thirteen letters that bear Paul's name, and MACULA's analysis of each clause gives who
+The library holds one such usage as data. `greek_usage` reads every use of ἐνεργέω ("work"), "to
+work", in the thirteen letters that bear Paul's name, and MACULA's analysis of each clause gives who
 or what does the work there (`Token.actors`). Ten of the eighteen uses are spelled so that only
 the active is possible, and in nine of those the text names who is at work: God, the one
 Spirit, "the spirit that is now at work in the sons of disobedience" (Ephesians 2:2), and the
@@ -384,14 +384,14 @@ it (`Move.againstUsages`). The charge fails the build unless the line declares i
 is rated `refuted`, the rating the library gives only where it computes it from Scripture's
 own words.
 
-Robert Bellarmine read ἐνεργουμένη in Galatians 5:6 as passive, "moved and acted upon", with
-love the one that moves faith, and the Rheims New Testament of 1582 made charity faith's soul.
-Both make love the one at work, which Paul never does, and both are charged. J. Armitage
-Robinson read the same passive with God as the one at work, and he is not.
+Robert Bellarmine read ἐνεργουμένη ("working" or "made operative") in Galatians 5:6 as passive,
+"moved and acted upon", with love the one that moves faith, and the Rheims New Testament of 1582
+made charity faith's soul. Both make love the one at work, which Paul never does, and both are
+charged. J. Armitage Robinson read the same passive with God as the one at work, and he is not.
 
-**Caught.** A move from the passive to love as the one at work in ἐνεργουμένη (`loveAsWorker`).
-**Passed over.** A move from the passive to God as the one at work (`godAsWorker`), and one from
-the middle (`fromTheMiddle`).
+**Caught.** A move from the passive to love as the one at work in ἐνεργουμένη ("working" or "made
+operative") (`loveAsWorker`). **Passed over.** A move from the passive to God as the one at work
+(`godAsWorker`), and one from the middle (`fromTheMiddle`).
 
 ## Reversed cause and effect
 
@@ -504,16 +504,16 @@ are not a way of finding fault with it. A verse enters a move only as a premise,
 verse says, and the checks read moves, never premises. A move is someone's reasoning from the
 texts: Trent's, Calvin's, Moo's, or a line the library proposes. Every line of reason cites who
 draws its step, and every finding names that reader, so the report says "Schreiner's line needs
-δικαιόω to keep one sense", never "Paul's".
+δικαιόω [justify] to keep one sense", never "Paul's".
 
 Scripture also reasons. Paul argues in Romans 4:3–5 from Genesis 15:6: "Abraham believed God,
 and it was counted to him as righteousness", so "to the one who does not work but believes …
 his faith is counted as righteousness". A line that sets out such reasoning cites its step to
-Scripture itself, and it is never charged. If it needs "counted" (λογίζομαι) to keep one sense
-from Genesis to Romans, that is reported as what a reader must hold to follow the text, apart
-from the findings against readers. If the encoding of such a line would read a word two ways or
-argue from silence alone, the build still fails, and the fault is the encoding's: it has read
-the text wrongly. The case `FallacyCases.Scriptural` sets out Paul's reasoning both ways, once
+Scripture itself, and it is never charged. If it needs "counted" (λογίζομαι, "credit" or "count") to
+keep one sense from Genesis to Romans, that is reported as what a reader must hold to follow the
+text, apart from the findings against readers. If the encoding of such a line would read a word two
+ways or argue from silence alone, the build still fails, and the fault is the encoding's: it has
+read the text wrongly. The case `FallacyCases.Scriptural` sets out Paul's reasoning both ways, once
 cited to Scripture and once as a reader's line, and pins how each is reported.
 
 ## Checking your own lines
